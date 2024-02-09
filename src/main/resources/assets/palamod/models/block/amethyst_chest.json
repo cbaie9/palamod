@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/chest_v1ame",
+  "textures": {
+    "all": "palamod:block/amethyst_down",
+    "particle": "palamod:block/amethyst_down",
+    "texture": "palamod:block/amethystchest"
+  },
+  "render_type": "solid"
+}

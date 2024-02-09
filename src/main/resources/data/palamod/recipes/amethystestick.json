@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    }
+  ],
+  "result": {
+    "item": "palamod:amethyst_stick",
+    "count": 4
+  }
+}

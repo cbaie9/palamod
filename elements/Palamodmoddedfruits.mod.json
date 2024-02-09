@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Kiwano"
+      },
+      {
+        "value": "CUSTOM:Eggplant"
+      },
+      {
+        "value": "CUSTOM:Orangeblue"
+      },
+      {
+        "value": "CUSTOM:Chervil"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "palamd_fruits",
+    "namespace": "forge"
+  }
+}

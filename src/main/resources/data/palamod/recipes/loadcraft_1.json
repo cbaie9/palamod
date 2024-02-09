@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_ingot"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    },
+    "c": {
+      "item": "minecraft:compass"
+    }
+  },
+  "result": {
+    "item": "palamod:loadblock_1t",
+    "count": 1
+  }
+}

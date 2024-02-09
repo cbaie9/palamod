@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Goldmixedcoal"
+      },
+      {
+        "value": "CUSTOM:Amethystmixedcoal"
+      },
+      {
+        "value": "CUSTOM:Titanemixedcoal"
+      },
+      {
+        "value": "CUSTOM:Palamixedcharoal"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "palamodmoddedfuel",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 220,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_golem_level_vargolem_level",
+          "text": {
+            "fixedValue": "Golem level : <VAR:Golem_level> Pv : <VAR:Golem_pv>",
+            "name": "Getgolempvleveltree"
+          },
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "x": 20,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_usable_point_vargolem_usable",
+          "text": {
+            "fixedValue": "Usable point : <VAR:Golem_usable_point>",
+            "name": "Getgolemusablepoint"
+          },
+          "color": {
+            "value": -16777012,
+            "falpha": 0.0
+          },
+          "x": 20,
+          "y": 28
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "upgarde_base",
+          "text": "The begining",
+          "x": 195,
+          "y": 109
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_see_ultilitary_branch",
+          "text": "See ultilitary branch",
+          "isUndecorated": false,
+          "width": 140,
+          "height": 20,
+          "x": 20,
+          "y": 75
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy_selected_upgrade",
+          "text": "buy selected upgrade",
+          "isUndecorated": false,
+          "width": 129,
+          "height": 20,
+          "x": 277,
+          "y": 39
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "golem_v_hunter1",
+          "text": "la voie hunter",
+          "x": 60,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golem_llh.png",
+          "use1Xscale": false,
+          "x": 80,
+          "y": 166
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golem_llh.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golem_ltf.png",
+          "use1Xscale": false,
+          "x": 206,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golem_ltf.png",
+          "use1Xscale": false,
+          "x": 269,
+          "y": 166
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "golem_v_farmer1",
+          "text": "",
+          "x": 332,
+          "y": 203
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

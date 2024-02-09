@@ -1,0 +1,275 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 205,
+    "height": 206,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshopblock.png",
+          "use1Xscale": false,
+          "x": 111,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_dirt",
+          "text": "Dirt",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkdirt"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 124,
+          "y": 48
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_grass",
+          "text": "Grass",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkgrass"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 256,
+          "y": 47
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_stone",
+          "text": "Cobblestone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkstone"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 124,
+          "y": 75
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_netherrack",
+          "text": "Netherrack",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblknetherrack"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 124,
+          "y": 102
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_soul_sand",
+          "text": "Soul sand",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblksoulsand"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 124,
+          "y": 130
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_sand",
+          "text": "Sand",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblksand"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 261,
+          "y": 75
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_gravel",
+          "text": "Gravel",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkgravel"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 252,
+          "y": 102
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_glowstone",
+          "text": "Glowstone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkglowstone"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 124,
+          "y": 157
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_oak_wood",
+          "text": "Oak wood",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkoakwood"
+          },
+          "width": 66,
+          "height": 20,
+          "x": 124,
+          "y": 186
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_blackstone",
+          "text": "blackstone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkblackstone"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 231,
+          "y": 130
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 111,
+          "y": 17
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 216,
+          "y": 17
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 184,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_adminshop_block_menu",
+          "text": {
+            "fixedValue": "Adminshop block menu"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 119,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 296,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Adminshop_open"
+          },
+          "x": 276,
+          "y": 21
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 296,
+          "y": 21
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_the_adminshop_menu",
+          "text": {
+            "fixedValue": "Return to the adminshop menu"
+          },
+          "width": 15,
+          "height": 14,
+          "x": 277,
+          "y": 23
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

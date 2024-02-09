@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Erable_Planks"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Planks"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodPlanks"
+      },
+      {
+        "value": "CUSTOM:Jacaranda_Planks"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "planks",
+    "namespace": "minecraft"
+  }
+}

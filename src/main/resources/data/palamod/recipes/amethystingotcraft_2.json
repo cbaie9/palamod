@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_particle"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyst",
+    "count": 1
+  }
+}

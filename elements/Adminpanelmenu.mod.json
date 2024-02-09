@@ -1,0 +1,121 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_admin_panel",
+          "text": {
+            "fixedValue": "Admin Panel"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 42
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hdv_stocks_panel",
+          "text": "Admin storage",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Hdvstocksopen"
+          },
+          "width": 108,
+          "height": 20,
+          "x": 156,
+          "y": 61
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_money_panel",
+          "text": "Money Panel",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Moneypanelconnect"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 169,
+          "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_spawn_panel",
+          "text": "Spawn Panel",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Spawnpanelconnect"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 169,
+          "y": 115
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_trixium_panel",
+          "text": "Trixium Panel",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Palaerror6connect"
+          },
+          "width": 93,
+          "height": 20,
+          "x": 164,
+          "y": 145
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_jobs_panel",
+          "text": "Jobs Panel",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Palaerror6connect"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 174,
+          "y": 172
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:endium_big_ring"
+    },
+    "title": {
+      "translate": "advancements.achmringendium.title"
+    },
+    "description": {
+      "translate": "advancements.achmringendium.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "achmringendium": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:achmringpaladium"
+}

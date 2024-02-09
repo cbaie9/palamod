@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_ingot"
+    },
+    "b": {
+      "item": "palamod:gold_mixedcoal"
+    }
+  },
+  "result": {
+    "item": "palamod:titane_mixed_coal",
+    "count": 1
+  }
+}

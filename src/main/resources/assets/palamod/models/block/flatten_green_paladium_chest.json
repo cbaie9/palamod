@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/palavert_down",
+    "up": "palamod:block/palavert_up",
+    "north": "palamod:block/palavert_face",
+    "east": "palamod:block/palavert_side",
+    "south": "palamod:block/palavert_side",
+    "west": "palamod:block/palavert_side",
+    "particle": "palamod:block/palavert_down"
+  },
+  "render_type": "solid"
+}

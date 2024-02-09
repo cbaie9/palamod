@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "trixium",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">Connecttrxiumdeposit</field><next><block type=\"literal\"><field name=\"name\">score</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Trixiumscore</field></block></statement><next><block type=\"literal\"><field name=\"name\">globalscore</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Trxiumtotalscore</field></block></statement></block></next></block></next></block></next></block><block type=\"literal\" x=\"331\" y=\"115\"><field name=\"name\">deposit</field></block></xml>"
+  }
+}

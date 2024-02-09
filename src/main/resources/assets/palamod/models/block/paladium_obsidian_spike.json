@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/spike_obsi_6",
+    "particle": "palamod:block/spike_obsi_6"
+  },
+  "render_type": "solid"
+}

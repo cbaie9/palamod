@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreenblock"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Paladiumseedplanter"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Greenpaladiumseedplanter"
+    },
+    "name": "green_paladium_seedplanter_craft",
+    "namespace": "mod"
+  }
+}

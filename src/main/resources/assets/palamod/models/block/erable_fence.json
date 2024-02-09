@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "palamod:block/erable_planks",
+    "particle": "palamod:block/erable_planks"
+  },
+  "render_type": "solid"
+}

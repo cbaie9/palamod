@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/fake_obsi",
+    "particle": "palamod:block/fake_obsi"
+  },
+  "render_type": "solid"
+}

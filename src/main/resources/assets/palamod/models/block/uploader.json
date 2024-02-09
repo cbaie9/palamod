@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/uploader_down",
+    "up": "palamod:block/uploader_top",
+    "north": "palamod:block/uploder_side",
+    "east": "palamod:block/uploader",
+    "south": "palamod:block/uploder_side",
+    "west": "palamod:block/uploader",
+    "particle": "palamod:block/uploader_down"
+  },
+  "render_type": "solid"
+}

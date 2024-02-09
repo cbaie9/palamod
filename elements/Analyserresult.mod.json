@@ -1,0 +1,551 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 220,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "analyserresult.png",
+          "use1Xscale": false,
+          "x": 13,
+          "y": 10
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "end_stone.png",
+          "use1Xscale": false,
+          "x": 20,
+          "y": 17
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clay.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 16
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ore.png",
+          "use1Xscale": false,
+          "x": 19,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "planks_oak.png",
+          "use1Xscale": true,
+          "x": 19,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ores",
+          "text": {
+            "fixedValue": "ores :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 54,
+          "y": 50
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_endstone",
+          "text": {
+            "fixedValue": "Endstone"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_planks",
+          "text": {
+            "fixedValue": "Planks :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_clay",
+          "text": {
+            "fixedValue": "Clay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 16
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "cobblestone.png",
+          "use1Xscale": false,
+          "x": 19,
+          "y": 112
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cobblestone",
+          "text": {
+            "fixedValue": "Cobblestone"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 109
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "chest_ico32.png",
+          "use1Xscale": true,
+          "x": 17,
+          "y": 145
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_chests",
+          "text": {
+            "fixedValue": "Chests"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 49,
+          "y": 147
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dirt.png",
+          "use1Xscale": false,
+          "x": 19,
+          "y": 176
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_dirt",
+          "text": {
+            "fixedValue": "dirt"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "erable_log.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_logs",
+          "text": {
+            "fixedValue": "Logs"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wool_colored_white.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wool",
+          "text": {
+            "fixedValue": "Wool"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 81
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bedrock.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_bedrock",
+          "text": {
+            "fixedValue": "Bedrock"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 111
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "air_scre.png",
+          "use1Xscale": true,
+          "x": 132,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "shulker_screen.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 175
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_ores",
+          "text": {
+            "fixedValue": "<VAR:analy_ores>",
+            "name": "Analyreturnores"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 69
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varintegeranaly_dirt",
+          "text": {
+            "fixedValue": "<VAR:integer:analy_dirt>",
+            "name": "Analyreturndirt"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_stone",
+          "text": {
+            "fixedValue": "<VAR:analy_stone>",
+            "name": "Analyreturnstone"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 282,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "stone32.png",
+          "use1Xscale": false,
+          "x": 245,
+          "y": 19
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_endstone",
+          "text": {
+            "fixedValue": "<VAR:analy_endstone>",
+            "name": "Analyreturnendstone"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 54,
+          "y": 29
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_air",
+          "text": {
+            "fixedValue": "<VAR:analy_air>",
+            "name": "Analyreturnair"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 158
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_shulker",
+          "text": {
+            "fixedValue": "<VAR:analy_shulker>",
+            "name": "Analyreturnshulker"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_chest",
+          "text": {
+            "fixedValue": "<VAR:analy_chest>",
+            "name": "Analyreturnchest"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 48,
+          "y": 158
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_wool",
+          "text": {
+            "fixedValue": "<VAR:analy_wool>",
+            "name": "Analyreturnwool"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_bedrock",
+          "text": {
+            "fixedValue": "<VAR:analy_bedrock>",
+            "name": "Analyreturnbedrock"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 122
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_cobble",
+          "text": {
+            "fixedValue": "<VAR:analy_cobble>",
+            "name": "Analyreturncobble"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 39,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_logs",
+          "text": {
+            "fixedValue": "<VAR:analy_logs>",
+            "name": "Analyreturnlogs"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 61
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_planks",
+          "text": {
+            "fixedValue": "<VAR:analy_planks>",
+            "name": "Analyreturnplanks"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_air",
+          "text": {
+            "fixedValue": "Air :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 140
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_stone",
+          "text": {
+            "fixedValue": "Stone :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 281,
+          "y": 19
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_shulker",
+          "text": {
+            "fixedValue": "Shulker :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 175
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varanaly_clay",
+          "text": {
+            "fixedValue": "<VAR:analy_clay>",
+            "name": "Analyreturnclay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 32
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

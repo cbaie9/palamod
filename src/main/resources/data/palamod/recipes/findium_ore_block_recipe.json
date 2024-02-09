@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:findium"
+    }
+  },
+  "result": {
+    "item": "palamod:findium_block",
+    "count": 1
+  }
+}

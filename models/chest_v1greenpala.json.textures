@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "texture": "gpaladium_chest"
+      },
+      "name": "default"
+    }
+  }
+}

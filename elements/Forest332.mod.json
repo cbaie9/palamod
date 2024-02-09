@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "painting",
+  "definition": {
+    "texture": "forest16x32.png",
+    "width": 16,
+    "height": 32,
+    "title": "Forest 16x32",
+    "author": "Unknown"
+  }
+}

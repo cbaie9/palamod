@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:green_paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:compressed_green_paladum"
+    },
+    "c": {
+      "item": "palamod:flatten_paladium_chest"
+    }
+  },
+  "result": {
+    "item": "palamod:green_paladium_chest",
+    "count": 1
+  }
+}

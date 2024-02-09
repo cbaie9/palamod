@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Judeecercis_Wood"
+      },
+      {
+        "value": "CUSTOM:Judeecercis_Log"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "judeecercis__log",
+    "namespace": "forge"
+  }
+}

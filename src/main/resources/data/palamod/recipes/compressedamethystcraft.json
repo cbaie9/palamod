@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_block"
+    },
+    "b": {
+      "item": "palamod:amethyst"
+    }
+  },
+  "result": {
+    "item": "palamod:compressed_amethyst",
+    "count": 1
+  }
+}

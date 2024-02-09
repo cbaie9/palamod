@@ -1,0 +1,229 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium",
+          "text": {
+            "fixedValue": "Honey comb"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 184,
+          "y": 43
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "number here",
+          "name": "number_buy",
+          "width": 120,
+          "height": 20,
+          "x": 152,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mode_set",
+          "text": {
+            "fixedValue": "Amount :",
+            "name": "Adshoppreviewamounthoneycomb"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 155,
+          "y": 111
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy",
+          "text": "buy",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Adhmobs2buyhoneycomb"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 152,
+          "y": 146
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_sell",
+          "text": "sell",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Adhmobs2sellhoneycomb"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 225,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_sell_price_120",
+          "text": {
+            "fixedValue": "Sell price :  7.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 151,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_buy_price_125",
+          "text": {
+            "fixedValue": "Buy Price : 16"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 81
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 201,
+          "y": 37
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 280,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Connectadminshopmobs2"
+          },
+          "x": 262,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Adminshop_open"
+          },
+          "x": 244,
+          "y": 41
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the Gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 280,
+          "y": 41
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_the_adminshops_mobs_m",
+          "text": {
+            "fixedValue": "Return to the adminshop's mobs menu ( page 2 )"
+          },
+          "width": 15,
+          "height": 14,
+          "x": 263,
+          "y": 43
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_the_adminshops_main_m",
+          "text": {
+            "fixedValue": "Return to the adminshop's main menu"
+          },
+          "width": 12,
+          "height": 15,
+          "x": 246,
+          "y": 42
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

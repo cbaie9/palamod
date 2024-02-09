@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "palamod:block/redstone_obsi_top",
+    "top": "palamod:block/redstone_obsi_top",
+    "side": "palamod:block/redstone_obsi_top"
+  },
+  "render_type": "solid"
+}

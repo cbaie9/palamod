@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:green_paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:greenpaladiumarmor_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 177,
+    "height": 186,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshopmenu.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 47
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_adminshop",
+          "text": {
+            "fixedValue": "Adminshop"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 33
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 28
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 201,
+          "y": 28
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 281,
+          "y": 31
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_admin_btte_ore",
+          "image": "admin_btte_ore.png",
+          "hoveredImage": "admin_btte_ore_poi.png",
+          "onClick": {
+            "name": "Connectadhore"
+          },
+          "x": 186,
+          "y": 92
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_btte_block",
+          "image": "btte_block.png",
+          "hoveredImage": "btte_block_poi.png",
+          "onClick": {
+            "name": "Adminshopblockconnect"
+          },
+          "x": 185,
+          "y": 62
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_btte_plant",
+          "image": "btte_plant.png",
+          "hoveredImage": "btte_plant_poi.png",
+          "onClick": {
+            "name": "Connectadminshopplant"
+          },
+          "x": 186,
+          "y": 123
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_btte_mobs",
+          "image": "btte_mobs.png",
+          "hoveredImage": "btte_mobs_poi.png",
+          "onClick": {
+            "name": "Connectadminshopmobs"
+          },
+          "x": 185,
+          "y": 155
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_btte_utilities",
+          "image": "btte_utilities.png",
+          "hoveredImage": "btte_utilities_poi.png",
+          "onClick": {
+            "name": "Connectadminshoputilities"
+          },
+          "x": 185,
+          "y": 186
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 281,
+          "y": 31
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

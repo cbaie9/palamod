@@ -1,0 +1,9 @@
+{
+  "type": "palamod:structure_feature",
+  "config": {
+    "structure": "palamod:ostrya",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:structure_block"
+  }
+}

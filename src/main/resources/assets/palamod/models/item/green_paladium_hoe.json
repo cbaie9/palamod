@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "palamod:item/green_paladium_radius_hoe"
+  }
+}

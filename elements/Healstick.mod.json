@@ -1,0 +1,43 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "heal_stick",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Heal stick",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Pvpcreativetab"
+    },
+    "harvestLevel": 0,
+    "efficiency": 0.0,
+    "attackSpeed": 1.0,
+    "enchantability": 0,
+    "damageVsEntity": 1.0,
+    "usageCount": 15,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": true,
+      "name": "Legendarystoneglintcondition"
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "Healstickprocess"
+    },
+    "onRightClickedOnBlock": {
+      "name": "Healstickprocess"
+    },
+    "onItemInInventoryTick": {
+      "name": "Legendarystonestick"
+    }
+  }
+}

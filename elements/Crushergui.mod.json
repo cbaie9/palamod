@@ -1,0 +1,3057 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 335,
+    "height": 205,
+    "inventoryOffsetX": -72,
+    "inventoryOffsetY": 19,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "crushergui.png",
+          "use1Xscale": false,
+          "x": 46,
+          "y": 18
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium_crusher",
+          "text": {
+            "fixedValue": "Paladium crusher"
+          },
+          "color": {
+            "value": -3407821,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 21
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "TAG:forge:palamd_fruits"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Crusherluncherv2"
+          },
+          "x": 52,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_inventaire",
+          "text": {
+            "fixedValue": "Inventory"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 59,
+          "y": 129
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "TAG:palamod:palamodmoddedfuel"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Crusherluncherv2"
+          },
+          "x": 52,
+          "y": 73
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Crusherluncherv2"
+          },
+          "x": 204,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fuel",
+          "text": {
+            "fixedValue": "Fuel"
+          },
+          "color": {
+            "value": -3394816,
+            "falpha": 0.0
+          },
+          "x": 73,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fruits",
+          "text": {
+            "fixedValue": "Fruits"
+          },
+          "color": {
+            "value": -3407668,
+            "falpha": 0.0
+          },
+          "x": 72,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethystmixedcoal.png",
+          "use1Xscale": false,
+          "x": 223,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titanemixedcoal.png",
+          "use1Xscale": false,
+          "x": 223,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "goldmixedcoal.png",
+          "use1Xscale": false,
+          "x": 223,
+          "y": 140
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamixedcoal.png",
+          "use1Xscale": false,
+          "x": 221,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "orangeblue_1.png",
+          "use1Xscale": true,
+          "x": 53,
+          "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_ingot.png",
+          "use1Xscale": false,
+          "x": 240,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_ingot.png",
+          "use1Xscale": false,
+          "x": 240,
+          "y": 69
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_ingot_vfufu.png",
+          "use1Xscale": false,
+          "x": 358,
+          "y": 69
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ingot.png",
+          "use1Xscale": false,
+          "x": 358,
+          "y": 38
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher0.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n0"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n1"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n2"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n3"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n4"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n5"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n6"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n7"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n8"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n9"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flame_crusher10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2n10"
+          },
+          "x": 54,
+          "y": 56
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_blank",
+          "image": "button_white.png",
+          "hoveredImage": "button_blue.png",
+          "onClick": {
+            "name": "Crusherluncherv2endium"
+          },
+          "x": 260,
+          "y": 66
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_white",
+          "image": "button_white.png",
+          "hoveredImage": "button_red.png",
+          "onClick": {
+            "name": "Crusherluncherv2paladium"
+          },
+          "x": 261,
+          "y": 40
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_white1",
+          "image": "button_white.png",
+          "hoveredImage": "button_gray.png",
+          "onClick": {
+            "name": "Crusherluncherv2titane"
+          },
+          "x": 145,
+          "y": 66
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_white2",
+          "image": "button_white.png",
+          "hoveredImage": "button_purple.png",
+          "onClick": {
+            "name": "Crusherluncherv2amethyst"
+          },
+          "x": 145,
+          "y": 36
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_mixed_coaltrans.png",
+          "use1Xscale": false,
+          "x": 52,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_v2004",
+          "text": {
+            "fixedValue": "v2.4 force.release"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 265,
+          "y": 208
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar1"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar2"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar3"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar4"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar5"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar6"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar7"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar8"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar9"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar11"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst12.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar12"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst13.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar13"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar14"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst15.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar15"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_ame_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar16"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_amethyst10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar10"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_empty.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbar0"
+          },
+          "x": 254,
+          "y": 141
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_empty.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane0"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane1"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane2"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane3"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane4"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane5"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane6"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane7"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane8"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane9"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane10"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane11"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane12.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane12"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane13.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane13"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane14"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane15.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane15"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane16.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane16"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane17.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane17"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane18.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane18"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane19.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane19"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane20.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane20"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane21.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane21"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane22.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane22"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane23.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane23"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane24.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane24"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane25.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane25"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane26.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane26"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane27.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane27"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane28.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane28"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane29.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane29"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane30.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane30"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane31.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane31"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_titane_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbartitane32"
+          },
+          "x": 254,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_empty.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium0"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium1"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium2"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium3"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium5"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium6"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium7"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium8"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium9"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium10"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium11"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium12.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium12"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium13.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium13"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium14"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium14"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium15.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium15"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium16.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium16"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium17.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium17"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium18.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium18"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium19.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium19"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium20.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium20"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium21.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium21"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium22.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium22"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium23.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium23"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium24.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium24"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium25.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium25"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium26.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium26"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium27.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium27"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium28.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium28"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium29.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium29"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium30.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium30"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium31.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium31"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_paladium_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarpaladium32"
+          },
+          "x": 254,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_100empty.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium0"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium1"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium2"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium3"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium4"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium5"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium6"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium7"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium8"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium9"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium10"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium11"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium12.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium12"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium13.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium13"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium14"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium15.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium15"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium16.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium16"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium17.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium17"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium18.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium18"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium19.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium19"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium20.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium20"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium21.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium21"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium22.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium22"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium23.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium23"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium24.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium24"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium25.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium25"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium26.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium26"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium27.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium27"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium28.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium28"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium29.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium29"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium30.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium30"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium31.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium31"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium32.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium32"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium33.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium33"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium34.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium34"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium35.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium35"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium36.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium36"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium37.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium37"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium38.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium38"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium39.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium39"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium40.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium40"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium41.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium41"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium42.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium42"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium43.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium43"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium44.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium44"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium45.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium45"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium46.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium46"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium47.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium47"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium48.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium48"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium49.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium49"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium50.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium50"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium51.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium51"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium52.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium52"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium53.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium53"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium54.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium54"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium55.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium55"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium56.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium56"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium57.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium57"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium58.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium58"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium59.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium59"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium60.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium60"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium61.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium61"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium62.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium62"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium63.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium63"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium64.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium64"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium65.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium65"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium66.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium66"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium67.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium67"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium68.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium68"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium69.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium69"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium70.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium70"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium71.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium71"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium72.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium72"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium73.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium73"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium74.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium74"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium75.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium75"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium76.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium76"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium77.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium77"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium78.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium78"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium79.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium79"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium80.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium80"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium81.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium81"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium82.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium82"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium83.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium83"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium84.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium84"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium85.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium85"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium86.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium86"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium87.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium87"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium88.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium88"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium89.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium89"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium90.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium90"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium91.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium91"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium92.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium92"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium93.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium93"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium94.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium94"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium95.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium95"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium96.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium96"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium97.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium97"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium98.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium98"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium99.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium99"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium100.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium100"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium101.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium101"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium102.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium102"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium103.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium103"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium104.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium104"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium105.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium105"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium106.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium106"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium107.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium107"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium108.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium108"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium109.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium109"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium110.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium110"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium111.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium111"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium112.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium112"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium113.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium113"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium114.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium114"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium115.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium115"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium116.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium116"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium117.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium117"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium118.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium118"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium119.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium119"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium120.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium120"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium121.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium121"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium122.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium122"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium123.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium123"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium124.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium124"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium125.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium125"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium126.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium126"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium127.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium127"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_endium_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Crushersubprocessv2progressbarendium128"
+          },
+          "x": 239,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_aue",
+          "text": {
+            "fixedValue": "//ame",
+            "name": "Crushercustominfoame"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Crushertextad4"
+          },
+          "x": 169,
+          "y": 56
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_crushercustominfotitane",
+          "text": {
+            "fixedValue": "",
+            "name": "Crushercustominfotitane"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Crushertextad3"
+          },
+          "x": 170,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_crushercustominfopaladium",
+          "text": {
+            "fixedValue": "",
+            "name": "Crushercustominfopaladium"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Crushertextad2"
+          },
+          "x": 290,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_crushercustominfoendium",
+          "text": {
+            "fixedValue": "",
+            "name": "Crushercustominfoendium"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Crushertextad"
+          },
+          "x": 291,
+          "y": 88
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

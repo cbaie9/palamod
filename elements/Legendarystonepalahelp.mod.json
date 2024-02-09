@@ -1,0 +1,331 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 220,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "legendarystonepalahelp.png",
+          "use1Xscale": false,
+          "x": 103,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_fortune.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_legendary_stone_wiki",
+          "text": {
+            "fixedValue": "Palahelp : Legendary stone"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 107,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_forturne_permet_de_vous_give",
+          "text": {
+            "fixedValue": "Forturne : can give you ingots"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_note_utilisable_une_fois_tous_l",
+          "text": {
+            "fixedValue": "note : usable every 40 minute"
+          },
+          "color": {
+            "value": -16777012,
+            "falpha": 0.0
+          },
+          "x": 107,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_invisibility.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_invisible_vous_rend_invisible",
+          "text": {
+            "fixedValue": "Invisible : give you the invisibily "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_jobs.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 115
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jobs_vous_donne_de_lxp",
+          "text": {
+            "fixedValue": "Jobs : give you jobs xp"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 129,
+          "y": 118
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_power.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_power_vous_permet_detre_prote",
+          "text": {
+            "fixedValue": "Power : give an effect that protect"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_contre_la_fake_water",
+          "text": {
+            "fixedValue": "you against fake water damage"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 118,
+          "y": 150
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_tp.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 160
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_teleportation_vous_tp_aletorem",
+          "text": {
+            "fixedValue": "Teleportation : teleport you at a "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 164
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_sur_la_map",
+          "text": {
+            "fixedValue": "random location in the map"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 117,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_random.png",
+          "use1Xscale": false,
+          "x": 115,
+          "y": 187
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_random_vous_donne_une_des_5_pi",
+          "text": {
+            "fixedValue": "Random : give you one of the five "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 193
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_au_dessus",
+          "text": {
+            "fixedValue": "legendary stones"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 116,
+          "y": 203
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect",
+          "text": {
+            "fixedValue": "effect"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 105
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 103,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 192,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 223,
+          "y": 20
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 302,
+          "y": 25
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 268,
+          "y": 25
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "x": 284,
+          "y": 25
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

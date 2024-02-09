@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:feather"
+    },
+    "b": {
+      "item": "palamod:titane_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:travelarmor_boots",
+    "count": 1
+  }
+}

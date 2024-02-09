@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " a ",
+    "aba",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:golden_sword"
+    },
+    "b": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "palamod:diamond_spike",
+    "count": 1
+  }
+}

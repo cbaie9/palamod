@@ -1,0 +1,15 @@
+{
+  "_fv": 57,
+  "_type": "itemextension",
+  "definition": {
+    "item": {
+      "value": "CUSTOM:Goldmixedcoal"
+    },
+    "enableFuel": true,
+    "fuelPower": {
+      "fixedValue": 16000.0
+    },
+    "hasDispenseBehavior": false,
+    "compostLayerChance": 0.0
+  }
+}

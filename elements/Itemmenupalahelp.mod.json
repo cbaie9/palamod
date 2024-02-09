@@ -1,0 +1,214 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 38
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "forest32.png",
+          "use1Xscale": false,
+          "x": 158,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "desert16.png",
+          "use1Xscale": false,
+          "x": 134,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fish32.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lake32.png",
+          "use1Xscale": false,
+          "x": 134,
+          "y": 93
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "nether32.png",
+          "use1Xscale": false,
+          "x": 134,
+          "y": 124
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plains16.png",
+          "use1Xscale": false,
+          "x": 134,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_item_menu",
+          "text": {
+            "fixedValue": "Palahelp : Item menu"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 129,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_legendary_stone",
+          "text": "Legendary stone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectlegendarystone"
+          },
+          "width": 100,
+          "height": 20,
+          "x": 191,
+          "y": 63
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_armor",
+          "text": "Armors",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectarmorpalahelp"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 230,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_xp_bush_xp_berries",
+          "text": "Xp bush / Xp berries",
+          "isUndecorated": false,
+          "width": 125,
+          "height": 20,
+          "x": 166,
+          "y": 138
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 201,
+          "y": 37
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 280,
+          "y": 42
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "x": 259,
+          "y": 42
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 240,
+          "y": 43
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_newstck",
+          "text": "Sticks",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Opennewstickgui"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 230,
+          "y": 88
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

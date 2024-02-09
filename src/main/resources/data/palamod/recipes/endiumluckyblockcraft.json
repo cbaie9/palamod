@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:endium_nugget"
+    },
+    "b": {
+      "item": "palamod:lucky_block"
+    },
+    "c": {
+      "item": "palamod:compressed_paladium"
+    }
+  },
+  "result": {
+    "item": "palamod:endium_lucky_block",
+    "count": 4
+  }
+}

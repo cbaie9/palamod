@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "gm",
+    "type": "STANDARD",
+    "permissionLevel": "1",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"number_min_max\"><field name=\"name\">gamenumber</field><field name=\"min\">0</field><field name=\"max\">3</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Gamechangev2</field></block></statement></block></next></block></xml>"
+  }
+}

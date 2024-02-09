@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bbb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:titane_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_core",
+    "count": 1
+  }
+}

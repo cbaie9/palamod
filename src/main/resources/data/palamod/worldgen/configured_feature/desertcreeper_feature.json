@@ -1,0 +1,17 @@
+{
+  "type": "palamod:structure_feature",
+  "config": {
+    "structure": "palamod:desert_creeper",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": [
+      "minecraft:structure_block",
+      "minecraft:air"
+    ],
+    "offset": [
+      0,
+      -6,
+      0
+    ]
+  }
+}

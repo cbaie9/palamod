@@ -1,0 +1,34 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "endium_sword_vfufu",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Endium Sword",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "harvestLevel": 8,
+    "efficiency": 1.0,
+    "attackSpeed": 1.75,
+    "enchantability": 50,
+    "damageVsEntity": 10.0,
+    "usageCount": 10000,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:EndiumIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

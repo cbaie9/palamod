@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_stick"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    },
+    "c": {
+      "item": "palamod:gold_mixedcoal"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_mixed_charcoal",
+    "count": 1
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Obsidiantrapdoor"
+      },
+      {
+        "value": "CUSTOM:Renforcedobsidian"
+      },
+      {
+        "value": "CUSTOM:Obsidiandoor"
+      },
+      {
+        "value": "CUSTOM:Compactedobsidian"
+      },
+      {
+        "value": "CUSTOM:Fakewaterobsidian"
+      },
+      {
+        "value": "CUSTOM:Lavaobsidian"
+      },
+      {
+        "value": "CUSTOM:Renforcedobsidianstairs"
+      },
+      {
+        "value": "CUSTOM:Spikeobsidianwood"
+      },
+      {
+        "value": "CUSTOM:Ironobsidianspike"
+      },
+      {
+        "value": "CUSTOM:Goldenobsidianspike"
+      },
+      {
+        "value": "CUSTOM:Diamondobsidianspike"
+      },
+      {
+        "value": "CUSTOM:Amethystobsidianspike"
+      },
+      {
+        "value": "CUSTOM:Titaneobsidianspike"
+      },
+      {
+        "value": "CUSTOM:Paladiumobsidianspike"
+      },
+      {
+        "value": "CUSTOM:Hardenedobsidianslab"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "omt",
+    "namespace": "mod"
+  }
+}

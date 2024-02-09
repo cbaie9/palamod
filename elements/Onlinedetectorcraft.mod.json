@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.DYE#0"
+      },
+      {
+        "value": "Items.DYE#0"
+      },
+      {
+        "value": "Items.DYE#0"
+      },
+      {
+        "value": "Items.DYE#0"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "Items.DYE#0"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Onlinedetector"
+    },
+    "name": "onlinedetectorcraft",
+    "namespace": "mod"
+  }
+}

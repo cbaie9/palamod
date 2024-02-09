@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "palatools",
+    "type": "STANDARD",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"72\" y=\"49\"><next><block type=\"literal\"><field name=\"name\">adminshop</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">price</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">set</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">paladium</field><next><block type=\"literal\"><field name=\"name\">paladium</field></block></next></block></statement><next><block type=\"literal\"><field name=\"name\">reset</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">all</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Adminshoppricesetup</field></block></statement></block></statement></block></next></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">Clear</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Clearore</field></block></statement><next><block type=\"literal\"><field name=\"name\">defaultreset</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Toolresetall</field></block></statement><next><block type=\"literal\"><field name=\"name\">lucky</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">random</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Luckyprocess1admin</field></block></statement></block></statement></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

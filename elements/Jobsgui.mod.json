@@ -1,0 +1,249 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 350,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta_template_jobs",
+          "image": "screen_beta3_famer_jobs.png",
+          "hoveredImage": "screen_beta3_farm2.png",
+          "x": 84,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jobs_main_menu_bar20.png",
+          "use1Xscale": false,
+          "x": 91,
+          "y": 121
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta2_template_jobs",
+          "image": "screen_beta3_jobs_miner.png",
+          "hoveredImage": "screen_beta3_jobs_miner2.png",
+          "onClick": {
+            "name": "Connectjobsminergui"
+          },
+          "x": 161,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jobs_main_menu_bar20.png",
+          "use1Xscale": false,
+          "x": 169,
+          "y": 121
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta2_template_jobs1",
+          "image": "screen_beta3_jobs_hunter.png",
+          "hoveredImage": "screen_beta3_jobs_hunter2.png",
+          "x": 240,
+          "y": 77
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta2_template_jobs2",
+          "image": "screen_beta3_jobs_alchi.png",
+          "hoveredImage": "screen_beta3_jobs_alchi2.png",
+          "x": 311,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jobs_main_menu_bar20.png",
+          "use1Xscale": false,
+          "x": 248,
+          "y": 121
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jobs_main_menu_bar20.png",
+          "use1Xscale": false,
+          "x": 318,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jobs",
+          "text": {
+            "fixedValue": "Jobs"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 173,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_last_unlocked_items",
+          "text": {
+            "fixedValue": "Last unlocked items"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 44,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_miner",
+          "text": {
+            "fixedValue": "Miner"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 63
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_farmer",
+          "text": {
+            "fixedValue": "Farmer"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 85,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_le_hunter",
+          "text": {
+            "fixedValue": "Hunter"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 246,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_alchimist",
+          "text": {
+            "fixedValue": "Alchimist"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 308,
+          "y": 64
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jobsgui.png",
+          "use1Xscale": false,
+          "x": 39,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 39,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 239,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 289,
+          "y": 20
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 367,
+          "y": 24
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

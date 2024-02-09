@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_block"
+    },
+    "b": {
+      "item": "palamod:titane_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:compressed_titane",
+    "count": 1
+  }
+}

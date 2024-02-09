@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    " b ",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_shovel"
+    },
+    "b": {
+      "item": "palamod:titane_stick"
+    }
+  },
+  "result": {
+    "item": "palamod:titaneexcavator",
+    "count": 1
+  }
+}

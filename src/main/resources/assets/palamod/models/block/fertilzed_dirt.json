@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/dirt3",
+  "textures": {
+    "all": "palamod:block/connect2dirt",
+    "particle": "palamod:block/connect2dirt",
+    "1": "palamod:block/connect2dirt"
+  },
+  "render_type": "solid"
+}

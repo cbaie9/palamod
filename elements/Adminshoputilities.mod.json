@@ -1,0 +1,296 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshoputilities.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_adminshop_plant_section",
+          "text": {
+            "fixedValue": "Adminshop - fast action "
+          },
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "x": 147,
+          "y": 22
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_honey_comb",
+          "text": "Diamond pickaxe",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshoputilitiesdiampic"
+          },
+          "width": 81,
+          "height": 20,
+          "x": 217,
+          "y": 94
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_leather",
+          "text": "Netherrack",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblknetherrack"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 130,
+          "y": 188
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_feather",
+          "text": "Redstone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshoputilitiesredstone"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 237,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_ink_sac",
+          "text": "Coal",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhorecoal"
+          },
+          "width": 43,
+          "height": 20,
+          "x": 255,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_glow_in_sac",
+          "text": "Oak wood",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkoakwood"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 130,
+          "y": 95
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_blaze",
+          "text": "Bone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopmobsbone"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 130,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_gun_powder",
+          "text": "Ender pearl",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopmobsenderpearl"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 221,
+          "y": 46
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_steak",
+          "text": "Steak",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2steak"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 130,
+          "y": 46
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_wip",
+          "text": {
+            "fixedValue": "Useful"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 33
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fast_sell",
+          "text": {
+            "fixedValue": "Fast sell"
+          },
+          "color": {
+            "value": -16724788,
+            "falpha": 0.0
+          },
+          "x": 193,
+          "y": 176
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_stone",
+          "text": "Cobblestone",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadhblkstone"
+          },
+          "width": 68,
+          "height": 20,
+          "x": 230,
+          "y": 189
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_emeraude",
+          "text": "Emerald",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshoputilitiesemerald"
+          },
+          "width": 67,
+          "height": 20,
+          "x": 129,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 208,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Adminshop_open"
+          },
+          "x": 123,
+          "y": 25
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 281,
+          "y": 25
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the Gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 281,
+          "y": 25
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_the_adminshop_menu",
+          "text": {
+            "fixedValue": "Return to the adminshop menu"
+          },
+          "width": 15,
+          "height": 14,
+          "x": 124,
+          "y": 27
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

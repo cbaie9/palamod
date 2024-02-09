@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "palamod:iron_spike"
+    }
+  ],
+  "result": {
+    "item": "palamod:iron_obsidian_spike",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/black_luckyblock",
+    "up": "palamod:block/black_luckyblock",
+    "north": "palamod:block/black_luckyblock",
+    "east": "palamod:block/black_luckyblock",
+    "south": "palamod:block/black_luckyblock",
+    "west": "palamod:block/black_luckyblock",
+    "particle": "palamod:block/black_luckyblock"
+  },
+  "render_type": "solid"
+}

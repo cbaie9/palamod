@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "palamod:green_paladium_ingot"
+    },
+    {
+      "item": "palamod:green_paladium_ingot"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "item": "palamod:green_paladium_hoe",
+    "count": 1
+  }
+}

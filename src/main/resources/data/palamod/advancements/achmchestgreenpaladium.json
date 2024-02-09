@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:green_paladium_chest"
+    },
+    "title": {
+      "translate": "advancements.achmchestgreenpaladium.title"
+    },
+    "description": {
+      "translate": "advancements.achmchestgreenpaladium.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "achmchestgreenpaladium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "palamod:green_paladium_chest"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:achmchestpaladium"
+}

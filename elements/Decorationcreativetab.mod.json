@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Palamod : Decoration tab",
+    "icon": {
+      "value": "CUSTOM:Ostrya_woodPlanks"
+    },
+    "showSearch": false
+  }
+}

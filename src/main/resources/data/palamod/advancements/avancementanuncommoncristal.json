@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:amethyst"
+    },
+    "title": {
+      "translate": "advancements.avancementanuncommoncristal.title"
+    },
+    "description": {
+      "translate": "advancements.avancementanuncommoncristal.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementanuncommoncristal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "palamod:amethyst"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "palamod:amethyste_pickaxe_recipe",
+      "palamod:amethyste_axe_recipe",
+      "palamod:amethyste_sword_recipe",
+      "palamod:amethyste_shovel_recipe",
+      "palamod:amethyste_armor_helmet_recipe",
+      "palamod:amethyste_armor_body_recipe",
+      "palamod:amethyste_armor_leggings_recipe",
+      "palamod:amethyste_armor_boots_recipe",
+      "palamod:ametystemixedcoalcraft"
+    ]
+  },
+  "parent": "palamod:palamodavancement"
+}

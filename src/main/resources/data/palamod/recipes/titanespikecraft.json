@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " a ",
+    "aba",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_sword"
+    },
+    "b": {
+      "item": "palamod:titane_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:titane_spike",
+    "count": 1
+  }
+}

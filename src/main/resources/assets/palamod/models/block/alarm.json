@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/alarm_v2",
+  "textures": {
+    "all": "palamod:block/alarm_v2gray",
+    "particle": "palamod:block/alarm_v2gray",
+    "0": "palamod:block/alarm_v2gray"
+  },
+  "render_type": "solid"
+}

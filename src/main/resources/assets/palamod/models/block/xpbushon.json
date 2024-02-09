@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/xp_bush",
+    "particle": "palamod:block/xp_bush"
+  },
+  "render_type": "solid"
+}

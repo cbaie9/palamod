@@ -1,0 +1,346 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 330,
+    "height": 185,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "grinderpalahelpgui.png",
+          "use1Xscale": false,
+          "x": 48,
+          "y": 28
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 248,
+          "y": 28
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 48,
+          "y": 28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_grinder",
+          "text": {
+            "fixedValue": "Palahelp : Grinder"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 147,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_le_grinder_est_une_machine_perme",
+          "text": {
+            "fixedValue": "Le grinder est une machine permettant de",
+            "name": "Palahelpgrinder10"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_certain_outil_dont_le_hammerla",
+          "text": {
+            "fixedValue": "Certain outil dont le hammer,la fastsword",
+            "name": "Palahelpgrinder11"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_et_la_broadsword_vous_pouvez_y_a",
+          "text": {
+            "fixedValue": "et la broadsword Vous pouvez y ajouter",
+            "name": "Palahelpgrinder12"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_des_upgrade_amliorent_les_outil",
+          "text": {
+            "fixedValue": "des upgrade am�liorent les outils",
+            "name": "Palahelpgrinder13"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 106
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fortune_permet_de_dupliquer_le",
+          "text": {
+            "fixedValue": "Fortune : permet de dupliquer les objet ",
+            "name": "Palahelpgrinder14"
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 118
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mins_hammer",
+          "text": {
+            "fixedValue": "min�s -) hammer",
+            "name": "Palahelpgrinder15"
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 127
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_smelt_cuit_les_minerais_mins",
+          "text": {
+            "fixedValue": "Smelt : cuit les minerais min�s -) hammer",
+            "name": "Palahelpgrindet16"
+          },
+          "color": {
+            "value": -8504309,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 138
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_speed_augmante_la_vitesse_h",
+          "text": {
+            "fixedValue": "Speed : augmante la vitesse -) hammer",
+            "name": "Palahelpgrinder17"
+          },
+          "color": {
+            "value": -816878,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 148
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": ""
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 103,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_flame_fire_aspect_pour_fast",
+          "text": {
+            "fixedValue": "Flame : -) fire aspect pour fastsword et",
+            "name": "Palahelpgrinder18"
+          },
+          "color": {
+            "value": -3335911,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 160
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_damage_augmante_les_dgats",
+          "text": {
+            "fixedValue": "Damage : augmante les d�gats -) fastsword",
+            "name": "Palahelpgrinder19"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_2_min_12",
+          "text": {
+            "fixedValue": "2 min 1/2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 69,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 278,
+          "y": 28
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 357,
+          "y": 32
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_revert_adminshop_arrow",
+          "image": "revert_adminshop_arrow.png",
+          "hoveredImage": "pointed_revert_adminshop_arrow.png",
+          "onClick": {
+            "name": "Connectgrinderpag2"
+          },
+          "x": 319,
+          "y": 32
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "x": 299,
+          "y": 32
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 279,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_block_front16.png",
+          "use1Xscale": false,
+          "x": 52,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 148,
+          "y": 28
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_example_gui_button",
+          "image": "example_gui_button.png",
+          "hoveredImage": "example_gui_button_poi.png",
+          "onClick": {
+            "name": "Openexamplegrinder"
+          },
+          "x": 337,
+          "y": 32
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

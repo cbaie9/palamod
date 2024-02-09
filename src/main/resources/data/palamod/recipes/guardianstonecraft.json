@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:stone"
+    },
+    "b": {
+      "item": "palamod:compressed_paladium"
+    }
+  },
+  "result": {
+    "item": "palamod:guardian_stone",
+    "count": 1
+  }
+}

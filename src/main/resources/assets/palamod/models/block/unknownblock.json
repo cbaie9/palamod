@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/nbeta",
+    "particle": "palamod:block/nbeta"
+  },
+  "render_type": "solid"
+}

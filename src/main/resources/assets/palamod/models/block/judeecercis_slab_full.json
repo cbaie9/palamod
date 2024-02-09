@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "palamod:block/judeecercis_planks",
+    "top": "palamod:block/judeecercis_planks",
+    "side": "palamod:block/judeecercis_planks"
+  },
+  "render_type": "solid"
+}

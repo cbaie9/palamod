@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "features": "palamod:paladium_green_ore",
+  "step": "underground_ores"
+}

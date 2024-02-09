@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:big_ring"
+    },
+    "title": {
+      "translate": "advancements.achmringchest.title"
+    },
+    "description": {
+      "translate": "advancements.achmringchest.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "achmringchest": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:achmringpaladium"
+}

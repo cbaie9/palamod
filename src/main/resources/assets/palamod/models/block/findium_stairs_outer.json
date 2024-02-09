@@ -1,0 +1,9 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "palamod:block/findium_block",
+    "top": "palamod:block/findium_block",
+    "side": "palamod:block/findium_block"
+  },
+  "render_type": "solid"
+}

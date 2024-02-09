@@ -1,0 +1,8 @@
+{
+  "criteria": {
+    "advinvicrea": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:palamodavancement"
+}

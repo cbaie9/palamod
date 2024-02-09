@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "palamod:endium_slab"
+    }
+  ],
+  "result": {
+    "item": "palamod:endium_ingot",
+    "count": 1
+  }
+}

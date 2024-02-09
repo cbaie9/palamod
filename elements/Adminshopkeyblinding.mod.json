@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "O",
+    "keyBindingName": "Open the Adminshop",
+    "keyBindingCategoryKey": "palamod",
+    "onKeyPressed": {
+      "name": "Adminshoptadban"
+    }
+  }
+}

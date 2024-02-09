@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F",
+    "keyBindingName": "Open or create the faction menu ( wip )",
+    "keyBindingCategoryKey": "palamod",
+    "onKeyPressed": {
+      "name": "Openfhgui"
+    }
+  }
+}

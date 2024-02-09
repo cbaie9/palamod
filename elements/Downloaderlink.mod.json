@@ -1,0 +1,136 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_this_will_link_your_palamod",
+          "text": {
+            "fixedValue": "This will link your palamod's"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_money_account_to_this_block",
+          "text": {
+            "fixedValue": "money account to this block"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 140,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_are_your_sure",
+          "text": {
+            "fixedValue": "Are your sure..?"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 162,
+          "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_no",
+          "text": "No",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectdownloader"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 151,
+          "y": 108
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_process",
+          "text": "Process",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Downloaderlinkprocess"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 210,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_you_can_unlink_the_account_at",
+          "text": {
+            "fixedValue": "You can unlink the account at"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 158
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_any_time",
+          "text": {
+            "fixedValue": "any time"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 168
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "downloaderlink.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

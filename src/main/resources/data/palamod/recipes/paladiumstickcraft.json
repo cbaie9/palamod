@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    }
+  ],
+  "result": {
+    "item": "palamod:paladium_stick",
+    "count": 4
+  }
+}

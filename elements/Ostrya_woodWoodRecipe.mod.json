@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 3,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Ostrya_woodWood"
+    },
+    "name": "ostrya_wood_wood_recipe",
+    "namespace": "mod"
+  }
+}

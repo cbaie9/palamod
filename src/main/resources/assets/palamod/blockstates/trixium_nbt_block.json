@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "palamod:block/trixium_nbt_block"
+    }
+  }
+}

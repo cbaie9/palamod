@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_furnace",
+    "count": 1
+  }
+}

@@ -1,0 +1,1576 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 300,
+    "height": 210,
+    "inventoryOffsetX": -63,
+    "inventoryOffsetY": 23,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "jobsminercraftgui.png",
+          "use1Xscale": false,
+          "x": 64,
+          "y": 15
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 64,
+          "y": 15
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 164,
+          "y": 15
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 254,
+          "y": 15
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 264,
+          "y": 15
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jobs_miner_crafts",
+          "text": {
+            "fixedValue": "Jobs : Miner crafts"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 170,
+          "y": 22
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 345,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 329,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 313,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 297,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 281,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 265,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_ver.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 206
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_ver.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 190
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_ver.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_ver.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_ver.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 142
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_hor.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 127
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line_ver.png",
+          "use1Xscale": false,
+          "x": 235,
+          "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_information",
+          "text": {
+            "fixedValue": "Information"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 238,
+          "y": 130
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 247,
+          "y": 51
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 265,
+          "y": 51
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 283,
+          "y": 51
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 247,
+          "y": 69
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 265,
+          "y": 69
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 283,
+          "y": 69
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 247,
+          "y": 87
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 265,
+          "y": 87
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 283,
+          "y": 87
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_right20.png",
+          "use1Xscale": true,
+          "x": 305,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 325,
+          "y": 69
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 341,
+          "y": 19
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the Gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 341,
+          "y": 19
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_endium_pickaxe",
+          "image": "endium_pickaxe.png",
+          "hoveredImage": "endium_pickaxe_white.png",
+          "onClick": {
+            "name": "Jobsminercraftendiumpickaxe"
+          },
+          "x": 74,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_potg_of_1",
+          "image": "potg_of_1.png",
+          "hoveredImage": "potg_of_white.png",
+          "x": 94,
+          "y": 43
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_amethyste_exca",
+          "image": "amethyste_exca.png",
+          "hoveredImage": "amethyst_excavator_white.png",
+          "onClick": {
+            "name": "Jobsminercraftamethystexcavator"
+          },
+          "x": 112,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_titane_excavator",
+          "image": "titane_excavator.png",
+          "hoveredImage": "titane_excavator_white.png",
+          "onClick": {
+            "name": "Jobsminercraftamethystexcavator"
+          },
+          "x": 131,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_paladium_excavator",
+          "image": "paladium_excavator.png",
+          "hoveredImage": "paladium_excavator.png",
+          "onClick": {
+            "name": "Jobsminercraftamethystexcavator"
+          },
+          "x": 150,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_magical_tool16",
+          "image": "magical_tool16.png",
+          "hoveredImage": "magical_tool16_white.png",
+          "onClick": {
+            "name": "Jobsminercraftmagicialtool"
+          },
+          "x": 169,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_voidstone",
+          "image": "voidstone.png",
+          "hoveredImage": "voidstone_white.png",
+          "onClick": {
+            "name": "Jobsminercraftvoidstone"
+          },
+          "x": 188,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_obsidian_pickaxe",
+          "image": "obsidian_pickaxe.png",
+          "hoveredImage": "obsidian_pickaxe_white.png",
+          "onClick": {
+            "name": "Jobsminercraftobsidianpickaxe"
+          },
+          "x": 207,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_boom_obsi",
+          "image": "boom_obsi.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftboomtnt"
+          },
+          "x": 226,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_big_obsi",
+          "image": "big_obsi.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftcompactobsidian"
+          },
+          "x": 74,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi",
+          "image": "spike_obsi.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftwoddenspike"
+          },
+          "x": 112,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi_1",
+          "image": "spike_obsi_1.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftironspike"
+          },
+          "x": 131,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi_2",
+          "image": "spike_obsi_2.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftgoldenspike"
+          },
+          "x": 150,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi_3",
+          "image": "spike_obsi_3.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftdiamondspike"
+          },
+          "x": 169,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi_4",
+          "image": "spike_obsi_4.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftamethystspike"
+          },
+          "x": 188,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi_5",
+          "image": "spike_obsi_5.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercrafttitanespike"
+          },
+          "x": 207,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spike_obsi_6",
+          "image": "spike_obsi_6.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftpaladiumspike"
+          },
+          "x": 226,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_lava_obsi",
+          "image": "lava_obsi.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftlavaobsidian"
+          },
+          "x": 74,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_obsi",
+          "image": "fake_obsi.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftfakewaterobsidian"
+          },
+          "x": 93,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slime_obsi",
+          "image": "slime_obsi.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftslimeobsidian"
+          },
+          "x": 112,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_poison_obsi",
+          "image": "poison_obsi.png",
+          "hoveredImage": "block_white.png",
+          "x": 131,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cave_block_vfufu",
+          "image": "cave_block_vfufu.png",
+          "hoveredImage": "block_white.png",
+          "x": 150,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_big_tnt_side",
+          "image": "big_tnt_side.png",
+          "hoveredImage": "block_white.png",
+          "x": 169,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_effect_tnt_side",
+          "image": "effect_tnt_side.png",
+          "hoveredImage": "block_white.png",
+          "x": 188,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wither_tnt_side",
+          "image": "wither_tnt_side.png",
+          "hoveredImage": "block_white.png",
+          "x": 207,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sponge_tnt_side",
+          "image": "sponge_tnt_side.png",
+          "hoveredImage": "block_white.png",
+          "x": 226,
+          "y": 82
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sponge",
+          "image": "sponge.png",
+          "hoveredImage": "block_white.png",
+          "x": 74,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_endium_tnt_side",
+          "image": "endium_tnt_side.png",
+          "hoveredImage": "block_white.png",
+          "x": 93,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beta_block",
+          "image": "beta_block.png",
+          "hoveredImage": "block_white.png",
+          "x": 93,
+          "y": 63
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beta_block1",
+          "image": "beta_block.png",
+          "hoveredImage": "block_white.png",
+          "x": 112,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beta_block2",
+          "image": "beta_block.png",
+          "hoveredImage": "block_white.png",
+          "x": 131,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beta_block3",
+          "image": "beta_block.png",
+          "hoveredImage": "block_white.png",
+          "x": 150,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beta_block4",
+          "image": "beta_block.png",
+          "hoveredImage": "block_white.png",
+          "x": 169,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cobblebreaker_front",
+          "image": "cobblebreaker_front.png",
+          "hoveredImage": "block_white.png",
+          "x": 188,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cobblebreaker_amethyst_upgrade",
+          "image": "cobblebreaker_amethyst_upgrade.png",
+          "hoveredImage": "upgrade_white.png",
+          "x": 207,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cobblebreaker_titane_upgrade",
+          "image": "cobblebreaker_titane_upgrade.png",
+          "hoveredImage": "upgrade_white.png",
+          "x": 226,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cobblebreaker_paladium_upgrade",
+          "image": "cobblebreaker_paladium_upgrade.png",
+          "hoveredImage": "upgrade_white.png",
+          "x": 74,
+          "y": 120
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_voidstone_minage",
+          "image": "voidstone_minage.png",
+          "hoveredImage": "voidstone_minage_white.png",
+          "x": 93,
+          "y": 120
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_moula_stone",
+          "image": "moula_stone.png",
+          "hoveredImage": "white_moulastone.png",
+          "x": 111,
+          "y": 120
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sealed_xp_bottle",
+          "image": "sealed_xp_bottle.png",
+          "hoveredImage": "white_sealed_xp_bottle.png",
+          "x": 134,
+          "y": 121
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_forge_front_off",
+          "image": "forge_front_off.png",
+          "hoveredImage": "forge_front_on.png",
+          "x": 150,
+          "y": 120
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beta_block5",
+          "image": "beta_block.png",
+          "hoveredImage": "block_white.png",
+          "x": 169,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_pickaxe",
+          "text": {
+            "fixedValue": "Endium pickaxe"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 74,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_pickaxe_of_the_gods",
+          "text": {
+            "fixedValue": "Pickaxe of the gods"
+          },
+          "width": 15,
+          "height": 16,
+          "x": 94,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_amethyst_excavator",
+          "text": {
+            "fixedValue": "Amethyst excavator"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 112,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_titane_excavator",
+          "text": {
+            "fixedValue": "Titane excavator"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 131,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_excavator",
+          "text": {
+            "fixedValue": "Paladium excavator"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 150,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_magical_tool",
+          "text": {
+            "fixedValue": "Magical tool"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 169,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_voidstone",
+          "text": {
+            "fixedValue": "Voidstone"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 188,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_obsidian_pickaxe",
+          "text": {
+            "fixedValue": "Obsidian pickaxe"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 207,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_obsidian_tnt",
+          "text": {
+            "fixedValue": "Boom tnt"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 226,
+          "y": 44
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_compressed_obsidian",
+          "text": {
+            "fixedValue": "Compressed obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 74,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mega_boom_tnt_soon",
+          "text": {
+            "fixedValue": "Mega boom tnt ( soon )"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 93,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_wodden_spike_obsidian",
+          "text": {
+            "fixedValue": "Wodden spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 112,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_iron_spike_obsidian",
+          "text": {
+            "fixedValue": "Iron spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 131,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_spike_obsidian",
+          "text": {
+            "fixedValue": "Golden spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 150,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_diamond_spike_obsidian",
+          "text": {
+            "fixedValue": "Diamond spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 169,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_amethyst_spike_obsidian",
+          "text": {
+            "fixedValue": "Amethyst spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 188,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_titane_spike_obsidian",
+          "text": {
+            "fixedValue": "Titane spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 207,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_spike_obsidian",
+          "text": {
+            "fixedValue": "Paladium spike obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 226,
+          "y": 63
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_lava_obsidian",
+          "text": {
+            "fixedValue": "Lava obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 74,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_fake_water_obsidian",
+          "text": {
+            "fixedValue": "Fake water obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 93,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slime_obsidian",
+          "text": {
+            "fixedValue": "Slime Obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 112,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_poison_obsidian",
+          "text": {
+            "fixedValue": "Poison Obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 131,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cave_block",
+          "text": {
+            "fixedValue": "Cave block"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 150,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_compact_tnt",
+          "text": {
+            "fixedValue": "Compact tnt"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 169,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_magic_tnt",
+          "text": {
+            "fixedValue": "Magic tnt"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 188,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_wither_tnt",
+          "text": {
+            "fixedValue": "Wither tnt"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 207,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sponge_tnt",
+          "text": {
+            "fixedValue": "Sponge tnt"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 226,
+          "y": 82
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_compressed_sponge",
+          "text": {
+            "fixedValue": "Compressed sponge"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 74,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_tnt",
+          "text": {
+            "fixedValue": "Endium tnt"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 93,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_amethyst_builder_wand",
+          "text": {
+            "fixedValue": "Amethyst builder wand"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 112,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_titane_builder_wand",
+          "text": {
+            "fixedValue": "Titane builder wand"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 131,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_builder_wand",
+          "text": {
+            "fixedValue": "Paladium builder wand"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 150,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_builder_wand",
+          "text": {
+            "fixedValue": "Endium builder wand"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 169,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cobblebreaker",
+          "text": {
+            "fixedValue": "Cobblebreaker"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 188,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cobblebreaker_amethyst_upgrade",
+          "text": {
+            "fixedValue": "Cobblebreaker amethyst upgrade"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 207,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cobblebreakers_titane_upgrade",
+          "text": {
+            "fixedValue": "Cobblebreaker's titane upgrade"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 226,
+          "y": 101
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cobblebreakers_paladium_upgrade",
+          "text": {
+            "fixedValue": "Cobblebreaker's paladium upgrade"
+          },
+          "width": 15,
+          "height": 16,
+          "x": 75,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_minage_voidstone",
+          "text": {
+            "fixedValue": "Minage Voidstone"
+          },
+          "width": 15,
+          "height": 16,
+          "x": 94,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_dollard_stone",
+          "text": {
+            "fixedValue": "Dollard stone "
+          },
+          "width": 16,
+          "height": 16,
+          "x": 112,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sealed_xp_bottle",
+          "text": {
+            "fixedValue": "Sealed xp bottle"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 131,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_palaforge",
+          "text": {
+            "fixedValue": "Palaforge"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 150,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_autocrafter",
+          "text": {
+            "fixedValue": "Autocrafter"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 169,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetinfotext",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetinfotext"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetlvlrequired",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetlvlrequired"
+          },
+          "color": {
+            "value": -16738048,
+            "falpha": 0.0
+          },
+          "x": 241,
+          "y": 208
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetinfotext_2",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetinfotext2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 154
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetinfotext_3",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetinfotext3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 164
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetdurability",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetdurability"
+          },
+          "color": {
+            "value": -16737895,
+            "falpha": 0.0
+          },
+          "x": 241,
+          "y": 198
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetinfotext_4",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetinfotext4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_jobsgetinfotext_5",
+          "text": {
+            "fixedValue": "",
+            "name": "Jobsgetinfotext5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 182
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "Jobscraftsetup"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

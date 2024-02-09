@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "palamod:renforced_obsidian"
+  },
+  "result": "palamod:renforcedobsidianstairs"
+}

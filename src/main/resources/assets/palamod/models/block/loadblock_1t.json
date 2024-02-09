@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/chiseled_top",
+    "up": "palamod:block/crystal",
+    "north": "palamod:block/crystal",
+    "east": "palamod:block/crystal",
+    "south": "palamod:block/crystal",
+    "west": "palamod:block/crystal",
+    "particle": "palamod:block/chiseled_top"
+  },
+  "render_type": "solid"
+}

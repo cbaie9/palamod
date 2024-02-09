@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:jacaranda_log"
+    }
+  },
+  "result": {
+    "item": "palamod:jacaranda_wood",
+    "count": 3
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "abc",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:sponge"
+    },
+    "b": {
+      "item": "palamod:paladium_core"
+    },
+    "c": {
+      "item": "minecraft:sponge"
+    }
+  },
+  "result": {
+    "item": "palamod:compressedsponge",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:wooden_obsidian_spike",
+    "palamod:iron_obsidian_spike",
+    "palamod:golden_obsidian_spike",
+    "palamod:diamond_obsidian_spike",
+    "palamod:amethys_tobsidian_spike",
+    "palamod:titane_obsidian_spike",
+    "palamod:paladium_obsidian_spike"
+  ]
+}

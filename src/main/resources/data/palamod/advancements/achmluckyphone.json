@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:paladium_phone"
+    },
+    "title": {
+      "translate": "advancements.achmluckyphone.title"
+    },
+    "description": {
+      "translate": "advancements.achmluckyphone.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "achmluckyphone": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:avancementluckytoday"
+}

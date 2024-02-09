@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "m_fd6cd3aa-0f87-348b-bc93-18443c7cbc81": "ferti_dirt"
+      },
+      "name": "default"
+    }
+  }
+}

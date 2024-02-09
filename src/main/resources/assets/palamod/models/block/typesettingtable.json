@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/type_setting_table",
+  "textures": {
+    "all": "palamod:block/typesettingtable",
+    "particle": "palamod:block/typesettingtable",
+    "0": "palamod:block/typesettingtable"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/endium_down",
+    "up": "palamod:block/endium_up",
+    "north": "palamod:block/endium_face",
+    "east": "palamod:block/endium_side",
+    "south": "palamod:block/endium_side",
+    "west": "palamod:block/endium_side",
+    "particle": "palamod:block/endium_down"
+  },
+  "render_type": "solid"
+}

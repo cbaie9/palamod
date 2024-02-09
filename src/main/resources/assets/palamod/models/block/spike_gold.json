@@ -1,0 +1,10 @@
+{
+  "parent": "palamod:custom/spike_gold",
+  "textures": {
+    "all": "palamod:block/spike_gold_1",
+    "particle": "palamod:block/spike_gold_1",
+    "0": "palamod:block/spike_gold_2",
+    "1": "palamod:block/spike_gold_1"
+  },
+  "render_type": "solid"
+}

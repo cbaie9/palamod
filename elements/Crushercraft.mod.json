@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Compressedamethyste"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Paladiumcrusher"
+    },
+    "name": "crushercraft",
+    "namespace": "mod"
+  }
+}

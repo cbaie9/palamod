@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:stick"
+    },
+    "b": {
+      "item": "palamod:ostrya_wood_planks"
+    }
+  },
+  "result": {
+    "item": "palamod:ostrya_wood_fence_gate",
+    "count": 1
+  }
+}

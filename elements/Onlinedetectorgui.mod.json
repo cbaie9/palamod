@@ -1,0 +1,106 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 150,
+    "height": 60,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "onlinedetectorgui.png",
+          "use1Xscale": false,
+          "x": 138,
+          "y": 90
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Player's name",
+          "name": "player_name",
+          "width": 137,
+          "height": 20,
+          "x": 143,
+          "y": 106
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_insert_player_to_detect",
+          "text": {
+            "fixedValue": "Insert player to detect"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 145,
+          "y": 94
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_detect",
+          "text": "Detect",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Onlinedetectorsetplayer"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 143,
+          "y": 127
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_status",
+          "text": {
+            "fixedValue": "Actual player :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 202,
+          "y": 127
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_dev",
+          "text": {
+            "fixedValue": "dev",
+            "name": "Onlinedetectorgetplayer"
+          },
+          "color": {
+            "value": -12828690,
+            "falpha": 0.0
+          },
+          "x": 202,
+          "y": 137
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "Onlinedetectoropengui"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

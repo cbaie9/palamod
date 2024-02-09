@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreenblock"
+      },
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumseedplanter"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Endiumseedplanter"
+    },
+    "name": "endium_seedplanter_craft",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyst_armor_helmet",
+    "count": 1
+  }
+}

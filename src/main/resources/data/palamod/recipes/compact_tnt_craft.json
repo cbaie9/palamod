@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:tnt"
+    },
+    "b": {
+      "item": "palamod:paladium_core"
+    }
+  },
+  "result": {
+    "item": "palamod:compacttnt",
+    "count": 3
+  }
+}

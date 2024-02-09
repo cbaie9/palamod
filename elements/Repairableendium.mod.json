@@ -1,0 +1,37 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:EndiumPickaxe"
+      },
+      {
+        "value": "CUSTOM:EndiumAxe"
+      },
+      {
+        "value": "CUSTOM:EndiumSword"
+      },
+      {
+        "value": "CUSTOM:EndiumArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:EndiumArmor.body"
+      },
+      {
+        "value": "CUSTOM:EndiumArmor.legs"
+      },
+      {
+        "value": "CUSTOM:EndiumArmor.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "repairable_endium",
+    "namespace": "forge"
+  }
+}

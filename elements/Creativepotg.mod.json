@@ -1,0 +1,32 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "MultiTool",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "potg_of_20",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Creative Pickaxe of the gods",
+    "specialInformation": {
+      "fixedValue": [
+        "Level 20+"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Pickaxeofgodstab"
+    },
+    "harvestLevel": 5,
+    "efficiency": 11050.0,
+    "attackSpeed": 1.5,
+    "enchantability": 1000,
+    "damageVsEntity": 6.5,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

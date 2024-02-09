@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "pap",
+    "type": "STANDARD",
+    "permissionLevel": "4",
+    "argsxml": "<xml><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"old_command\"><field name=\"procedure\">AdminpanelCommandExecuted</field></block></next></block></xml>"
+  }
+}

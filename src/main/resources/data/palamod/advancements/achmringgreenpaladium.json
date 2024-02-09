@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:green_paladium_big_ring"
+    },
+    "title": {
+      "translate": "advancements.achmringgreenpaladium.title"
+    },
+    "description": {
+      "translate": "advancements.achmringgreenpaladium.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "achmringgreenpaladium": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:achmringpaladium"
+}

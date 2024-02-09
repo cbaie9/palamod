@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/drawbridge"
+    },
+    "facing=east": {
+      "model": "palamod:block/drawbridge",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/drawbridge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/drawbridge",
+      "y": 270
+    }
+  }
+}

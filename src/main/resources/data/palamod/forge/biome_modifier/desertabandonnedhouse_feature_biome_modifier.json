@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "desert",
+    "plains",
+    "palamod:forestender"
+  ],
+  "features": "palamod:desertabandonnedhouse_feature",
+  "step": "surface_structures"
+}

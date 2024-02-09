@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst_stick"
+    },
+    {
+      "item": "palamod:amethyst_stick"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "item": "palamod:amethyst_fastsword",
+    "count": 1
+  }
+}

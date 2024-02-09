@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "palamod:deepslate_green_paladium_ore"
+  },
+  "result": "palamod:green_paladium_ingot"
+}

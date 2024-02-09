@@ -1,0 +1,515 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 280,
+    "height": 160,
+    "inventoryOffsetX": -50,
+    "inventoryOffsetY": -7,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "drawbrigegui.png",
+          "use1Xscale": false,
+          "x": 73,
+          "y": 40
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 92,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 119,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 146,
+          "y": 52
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_down0001",
+          "image": "arrow_down0001.png",
+          "hoveredImage": "arrow_down0001.png",
+          "onClick": {
+            "name": "Setblocksouth"
+          },
+          "x": 286,
+          "y": 165
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_right01",
+          "image": "arrow_right01.png",
+          "hoveredImage": "arrow_right01.png",
+          "onClick": {
+            "name": "Setblockeast"
+          },
+          "x": 314,
+          "y": 135
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_up01",
+          "image": "arrow_up01.png",
+          "hoveredImage": "arrow_up01.png",
+          "onClick": {
+            "name": "Setblocknorth"
+          },
+          "x": 286,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 115,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 89,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 89,
+          "y": 74
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 173,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 198,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 223,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 249,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 275,
+          "y": 52
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 92,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 119,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 10,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 146,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 11,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 173,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 12,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 198,
+          "y": 78
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 13,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 224,
+          "y": 79
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 14,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 249,
+          "y": 79
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 15,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 275,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 167,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 141,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 115,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 141,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 167,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 193,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 193,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 219,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 219,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 245,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 245,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 271,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 271,
+          "y": 74
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_left01",
+          "image": "arrow_left01.png",
+          "hoveredImage": "arrow_left01.png",
+          "onClick": {
+            "name": "Setblockwest"
+          },
+          "x": 253,
+          "y": 135
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

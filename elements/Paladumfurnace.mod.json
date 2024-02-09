@@ -1,0 +1,493 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 180,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium_furnace",
+          "text": {
+            "fixedValue": "Paladium Furnace"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 162,
+          "y": 40
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 184,
+          "y": 58
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_inventory",
+          "text": {
+            "fixedValue": "Inventory"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 110
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_upgrades",
+          "text": {
+            "fixedValue": "Upgrades"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "big_slot.png",
+          "use1Xscale": true,
+          "x": 241,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varintegerg_num",
+          "text": {
+            "fixedValue": "<VAR:integer:g_num>"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 213,
+          "y": 103
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 183,
+          "y": 96
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 245,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_1red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess0"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_2red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess1"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_3red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess2"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_4red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess3"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_5red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess4"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_6red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess5"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_7red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess6"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_8red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess7"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_9red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess8"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_10red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess9"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_11red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess10"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_12red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess11"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_13red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess12"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_14red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess13"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_15red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess14"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_16red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess15"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_17red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess16"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_18red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess17"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_19red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess18"
+          },
+          "x": 209,
+          "y": 80
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Furnaceupgrade"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 137,
+          "y": 70
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining2"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining3"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining4"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining5"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining6"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining7"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining8"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining9"
+          },
+          "x": 184,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining10"
+          },
+          "x": 184,
+          "y": 79
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "_fv": 57,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "CUSTOM:Santa"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:PaladiumBlock"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 2,
+            "offer": {
+              "value": "CUSTOM:Endiumnugget"
+            },
+            "countOffer": 1,
+            "level": 5,
+            "maxTrades": 1,
+            "xp": 5000,
+            "priceMultiplier": 0.0
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:PaladiumBlock"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 2,
+            "offer": {
+              "value": "Blocks.DIRT#0"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 1000,
+            "xp": 500,
+            "priceMultiplier": 0.0
+          },
+          {
+            "price1": {
+              "value": "Blocks.SNOW"
+            },
+            "countPrice1": 2,
+            "price2": {
+              "value": "Items.SNOWBALL"
+            },
+            "countPrice2": 8,
+            "offer": {
+              "value": "Items.POWDER_SNOW_BUCKET"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 20,
+            "xp": 7,
+            "priceMultiplier": 0.049999999999999996
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:Uploader"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": "CUSTOM:Paladiumapple"
+            },
+            "countPrice2": 6,
+            "offer": {
+              "value": "Items.RECORD_CAT"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 2,
+            "xp": 45,
+            "priceMultiplier": 0.1
+          },
+          {
+            "price1": {
+              "value": "Blocks.AMETHYST_BLOCK"
+            },
+            "countPrice1": 10,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "Blocks.JUKEBOX"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:PaladiumGreenblock"
+            },
+            "countPrice1": 2,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:Endiumnugget"
+            },
+            "countOffer": 2,
+            "level": 5,
+            "maxTrades": 1,
+            "xp": 5000,
+            "priceMultiplier": 0.0
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:PaladiumGreenblock"
+            },
+            "countPrice1": 4,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "Blocks.DIRT#0"
+            },
+            "countOffer": 2,
+            "level": 4,
+            "maxTrades": 10,
+            "xp": 1500,
+            "priceMultiplier": 0.05
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:paladium_crusher"
+    },
+    "title": {
+      "translate": "advancements.avancementrecyclingisgood.title"
+    },
+    "description": {
+      "translate": "advancements.avancementrecyclingisgood.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementrecyclingisgood": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "palamod:paladium_crusher"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementcompressedavantur"
+}

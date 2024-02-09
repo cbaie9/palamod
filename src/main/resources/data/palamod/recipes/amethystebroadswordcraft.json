@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "item": "palamod:amethyst_broadsword",
+    "count": 1
+  }
+}

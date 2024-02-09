@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:block/eggplant_stage_0",
+    "particle": "palamod:block/eggplant_stage_0"
+  },
+  "render_type": "cutout"
+}

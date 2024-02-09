@@ -1,0 +1,130 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "next_palahelpgui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp",
+          "text": {
+            "fixedValue": "Palahelp"
+          },
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_22",
+          "text": {
+            "fixedValue": "2/2"
+          },
+          "color": {
+            "value": -16750951,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 139
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palablock_green_palahelp2-removebg-preview_1.png",
+          "use1Xscale": true,
+          "x": 131,
+          "y": 57
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_commands",
+          "text": " /..Commands",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectnotyetgui"
+          },
+          "width": 80,
+          "height": 20,
+          "x": 213,
+          "y": 61
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_lucky_stats",
+          "text": "Lucky Stats",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectnotyetgui"
+          },
+          "width": 80,
+          "height": 20,
+          "x": 213,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "(---- Back",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 132,
+          "y": 171
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_more_in_the_future",
+          "text": {
+            "fixedValue": "more in the future :)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 189,
+          "y": 148
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

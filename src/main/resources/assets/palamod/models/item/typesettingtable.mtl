@@ -1,0 +1,7 @@
+newmtl Default
+Ka 0.0 0.0 0.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd palamod:block/purple
+Ns 100.0
+d 1.0

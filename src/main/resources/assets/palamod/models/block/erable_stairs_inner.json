@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "palamod:block/erable_planks",
+    "top": "palamod:block/erable_planks",
+    "side": "palamod:block/erable_planks"
+  },
+  "render_type": "solid"
+}

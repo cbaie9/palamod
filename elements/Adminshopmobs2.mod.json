@@ -1,0 +1,274 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshopmobs.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_honey_comb",
+          "text": "Honey comb",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2honeycomb"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 128,
+          "y": 155
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_leather",
+          "text": "Leather",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2leather"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 234,
+          "y": 155
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_feather",
+          "text": "Feather",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2feather"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 235,
+          "y": 124
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_ink_sac",
+          "text": "Ink sac",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2inksac"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 235,
+          "y": 97
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_glow_in_sac",
+          "text": "Glow ink sac",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2glowinksac"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 129,
+          "y": 124
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_blaze",
+          "text": "Blaze",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2blaze"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 129,
+          "y": 97
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_gun_powder",
+          "text": "Gunpowder",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2gunpowder"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 219,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_steak",
+          "text": "Steak",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectAdminshopmobs2steak"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 129,
+          "y": 66
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "x": 284,
+          "y": 24
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 208,
+          "y": 20
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Adminshop_open"
+          },
+          "x": 127,
+          "y": 25
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Connectadminshopmobs"
+          },
+          "x": 145,
+          "y": 25
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_adminshop_mobs",
+          "text": {
+            "fixedValue": "Adminshop : mobs"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 173,
+          "y": 22
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_page_2",
+          "text": {
+            "fixedValue": "Page 2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 32
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_the_adminshop_menu",
+          "text": {
+            "fixedValue": "Return to the adminshop menu"
+          },
+          "width": 12,
+          "height": 15,
+          "x": 129,
+          "y": 26
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_the_page_1",
+          "text": {
+            "fixedValue": "Go the page 1"
+          },
+          "width": 15,
+          "height": 14,
+          "x": 146,
+          "y": 27
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the Gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 284,
+          "y": 24
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

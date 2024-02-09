@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:endium_ingot"
+    },
+    "b": {
+      "item": "palamod:compressed_paladium"
+    },
+    "c": {
+      "item": "palamod:flatten_paladium_chest"
+    }
+  },
+  "result": {
+    "item": "palamod:endium_chest",
+    "count": 1
+  }
+}

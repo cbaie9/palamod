@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/drawbridge_top",
+    "up": "palamod:block/drawbridge_top",
+    "north": "palamod:block/drawbridge_front",
+    "east": "palamod:block/drawbridge_side",
+    "south": "palamod:block/drawbridge_side",
+    "west": "palamod:block/drawbridge_side",
+    "particle": "palamod:block/drawbridge_top"
+  },
+  "render_type": "solid"
+}

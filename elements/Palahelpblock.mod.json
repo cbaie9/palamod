@@ -1,0 +1,142 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshopblockoakwood.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_block_menu",
+          "text": {
+            "fixedValue": "Palahelp : block menu"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 48
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_ore",
+          "text": "ore",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectpalahelpore"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 222,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_trees",
+          "text": "trees",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 222,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 50,
+          "height": 20,
+          "x": 132,
+          "y": 132
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_machine",
+          "text": "Machine",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "width": 60,
+          "height": 20,
+          "x": 221,
+          "y": 120
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_fluid",
+          "text": "fluid",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectfluidpalahelp"
+          },
+          "width": 50,
+          "height": 20,
+          "x": 222,
+          "y": 149
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pack.png",
+          "use1Xscale": true,
+          "x": 132,
+          "y": 61
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_close",
+          "text": "Close",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Closepalahelp"
+          },
+          "width": 50,
+          "height": 20,
+          "x": 132,
+          "y": 159
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

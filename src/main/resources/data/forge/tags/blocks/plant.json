@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:eggplant_0",
+    "palamod:eggplant_1",
+    "palamod:eggplant_2",
+    "palamod:eggplant_3",
+    "palamod:chervil_1",
+    "palamod:chervil_0",
+    "palamod:chervil_2",
+    "palamod:chervil_3",
+    "palamod:kiwano_4",
+    "palamod:kiwano_3",
+    "palamod:kiwano_2",
+    "palamod:kiwano_1",
+    "palamod:kiwano_0",
+    "palamod:orangeblue_0",
+    "palamod:orangeblue_1",
+    "palamod:orangeblue_2",
+    "palamod:orangeblue_3",
+    "palamod:orangeblue_4",
+    "minecraft:wheat",
+    "minecraft:melon_stem",
+    "minecraft:attached_melon_stem",
+    "minecraft:pumpkin_stem",
+    "minecraft:attached_pumpkin_stem",
+    "minecraft:potatoes",
+    "minecraft:beetroots",
+    "minecraft:carrots"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "painting",
+  "definition": {
+    "texture": "lake32.png",
+    "width": 32,
+    "height": 16,
+    "title": "Sunset 32x",
+    "author": "Unknown"
+  }
+}

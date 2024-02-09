@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "setspawn",
+    "type": "STANDARD",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"number_default\"><field name=\"name\">x_pos</field><statement name=\"args\"><block type=\"number_min_max\"><field name=\"name\">y_pos</field><field name=\"min\">-64</field><field name=\"max\">320</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">z_pos</field><statement name=\"args\"><block type=\"old_command\"><field name=\"procedure\">Setspawndynablock</field></block></statement></block></statement></block></statement><next><block type=\"call_procedure\"><field name=\"procedure\">Setspawnprocess</field></block></next></block></next></block></xml>"
+  }
+}

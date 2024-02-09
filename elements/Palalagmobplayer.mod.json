@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "# Enter the function code here\nkill @e[type=experience_orb]\nkill @e[type=egg]\nkill @e[type=leash_knot]\nkill @e[type=boat]\nkill @e[type=minecart]\nkill @e[type=chest_minecart]\nkill @e[type=furnace_minecart]\nkill @e[type=tnt_minecart]\nkill @e[type=command_block_minecart]\nkill @e[type=spawner_minecart]\nkill @e[type=hopper_minecart]\nkill @e[type=ender_pearl]\nkill @e[type=eye_of_ender]\n\n",
+    "name": "palalag_mob_player",
+    "namespace": "mod"
+  }
+}

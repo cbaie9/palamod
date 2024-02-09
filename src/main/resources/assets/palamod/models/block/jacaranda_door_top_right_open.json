@@ -1,0 +1,8 @@
+{
+  "parent": "block/door_top_right_open",
+  "textures": {
+    "bottom": "palamod:block/door_5",
+    "top": "palamod:block/door_6"
+  },
+  "render_type": "solid"
+}

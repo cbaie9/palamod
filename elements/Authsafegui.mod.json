@@ -1,0 +1,72 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 150,
+    "height": 60,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_enter_code",
+          "text": {
+            "fixedValue": "Enter code"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 142,
+          "y": 96
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "code_check",
+          "width": 120,
+          "height": 20,
+          "x": 142,
+          "y": 105
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_open",
+          "text": "open",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Safecodecheck"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 142,
+          "y": 126
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "authsafegui.png",
+          "use1Xscale": false,
+          "x": 138,
+          "y": 90
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

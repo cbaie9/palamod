@@ -1,0 +1,13 @@
+newmtl m_fd6cd3aa-0f87-348b-bc93-18443c7cbc81
+Ns 100.0
+d 1.0
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+map_Kd palamod:block/ferti_dirt
+newmtl none
+Ns 100.0
+d 1.0
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0

@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "# Enter the function code here\nkill @e[type=zombie_horse]\nkill @e[type=skeleton_horse]\nkill @e[type=donkey]\nkill @e[type=mule]\nkill @e[type=pig]\nkill @e[type=sheep]\nkill @e[type=cow]\nkill @e[type=chicken]\nkill @e[type=squid]\nkill @e[type=wolf]\nkill @e[type=cat]\nkill @e[type=mooshroom]\nkill @e[type=snow_golem]\nkill @e[type=ocelot]\nkill @e[type=villager]\nkill @e[type=iron_golem]\nkill @e[type=horse]\nkill @e[type=rabbit]\nkill @e[type=polar_bear]\nkill @e[type=llama]\nkill @e[type=llama_spit]\nkill @e[type=parrot]\nkill @e[type=end_crystal]\nkill @e[type=axolotl]\nkill @e[type=dolphin]\nkill @e[type=fox]\nkill @e[type=glow_squid]\nkill @e[type=goat]\nkill @e[type=hoglin]\nkill @e[type=tropical_fish]\nkill @e[type=pufferfish]\nkill @e[type=cod]\nkill @e[type=salmon]\nkill @e[type=squid]\nkill @e[type=strider]\nkill @e[type=trader_llama]\nkill @e[type=turtle]\nkill @e[type=wandering_trader]",
+    "name": "palalag_mob_passive",
+    "namespace": "mod"
+  }
+}

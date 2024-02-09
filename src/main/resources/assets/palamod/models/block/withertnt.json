@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/wither_tnt_bottom",
+    "up": "palamod:block/wither_tnt_top",
+    "north": "palamod:block/wither_tnt_side",
+    "east": "palamod:block/wither_tnt_side",
+    "south": "palamod:block/wither_tnt_side",
+    "west": "palamod:block/wither_tnt_side",
+    "particle": "palamod:block/wither_tnt_bottom"
+  },
+  "render_type": "solid"
+}

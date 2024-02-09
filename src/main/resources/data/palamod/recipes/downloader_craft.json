@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "palamod:uploader"
+    }
+  ],
+  "result": {
+    "item": "palamod:downloader",
+    "count": 1
+  }
+}

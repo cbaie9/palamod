@@ -1,0 +1,217 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "palahelpmachine.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_machine_menu",
+          "text": {
+            "fixedValue": "Palahelp : Machine menu"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 128,
+          "y": 43
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_grinder",
+          "text": "Grinder",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectgrinderpag1"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 218,
+          "y": 66
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_palamachine",
+          "text": "Palamachine",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectpalamachinepalahelp"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 218,
+          "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_crusher",
+          "text": "Crusher",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectpalahelpcrusher"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 218,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_forge",
+          "text": "forge",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectforgepalahelp"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 218,
+          "y": 133
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_uploader",
+          "text": "Uploader",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectnotyetgui"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 218,
+          "y": 155
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_downloader",
+          "text": "Downloader",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectnotyetgui"
+          },
+          "width": 75,
+          "height": 20,
+          "x": 218,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 201,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "golem64.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 65
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "x": 248,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 265,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 281,
+          "y": 41
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_drawbridge",
+          "text": "Drawbridge",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectnotyetgui"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 130,
+          "y": 134
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

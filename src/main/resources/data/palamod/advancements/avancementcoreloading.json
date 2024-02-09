@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:paladium_core"
+    },
+    "title": {
+      "translate": "advancements.avancementcoreloading.title"
+    },
+    "description": {
+      "translate": "advancements.avancementcoreloading.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementcoreloading": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "palamod:paladium_core"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

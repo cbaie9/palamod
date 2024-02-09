@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/printing_press",
+  "textures": {
+    "all": "palamod:block/printpress",
+    "particle": "palamod:block/printpress",
+    "1": "palamod:block/printpress"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "when_caused_by_living_non_player",
+    "effects": "drowning",
+    "normalDeathMessage": "%1$s sufforcated in the fake water",
+    "itemDeathMessage": "%1$s was killed by %2$s using %3$s",
+    "playerDeathMessage": "%1$s sufforcated in the fake water whilst trying to escape %2$s"
+  }
+}

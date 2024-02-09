@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:big_ring"
+    },
+    "title": {
+      "translate": "advancements.achmringpaladium.title"
+    },
+    "description": {
+      "translate": "advancements.achmringpaladium.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "achmringpaladium": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

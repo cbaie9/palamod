@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:pickaxeofthegodslv_1"
+    },
+    "title": {
+      "translate": "advancements.achmpotg_17new.title"
+    },
+    "description": {
+      "translate": "advancements.achmpotg_17new.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "achmpotg_17new": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:achmpotg_12new"
+}

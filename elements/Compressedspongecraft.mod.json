@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.SPONGE"
+      },
+      {
+        "value": "Blocks.SPONGE"
+      },
+      {
+        "value": "Blocks.SPONGE"
+      },
+      {
+        "value": "Blocks.SPONGE"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "Blocks.SPONGE#0"
+      },
+      {
+        "value": "Blocks.SPONGE#0"
+      },
+      {
+        "value": "Blocks.SPONGE#0"
+      },
+      {
+        "value": "Blocks.SPONGE#0"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Compressedsponge"
+    },
+    "name": "compressed_sponge_craft",
+    "namespace": "mod"
+  }
+}

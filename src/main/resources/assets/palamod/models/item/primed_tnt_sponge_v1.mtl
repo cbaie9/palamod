@@ -1,0 +1,13 @@
+newmtl m_579e8f54-6b94-f30c-3510-c4aa4dfb0a7a
+Ns 100.0
+d 1.0
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+map_Kd palamod:block/sponge_tnt_top
+newmtl none
+Ns 100.0
+d 1.0
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0

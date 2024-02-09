@@ -1,0 +1,475 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "forgegui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Forgeprocess"
+          },
+          "x": 186,
+          "y": 53
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Forgeprocess"
+          },
+          "x": 186,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Forgeprocess"
+          },
+          "x": 232,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_forge",
+          "text": {
+            "fixedValue": "Forge"
+          },
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "x": 197,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_inventory",
+          "text": {
+            "fixedValue": "Inventory"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 109
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_fullred_new.png",
+          "use1Xscale": true,
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_1red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui0"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_2red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui1"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_3red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui2"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_4red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui3"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_5red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui4"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_6red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui5"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_7red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui6"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_8red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui7"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_9red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui8"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_10red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui9"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_11red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui10"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_12red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui11"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_13red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui12"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_14red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui13"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_15red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui14"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_16red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui15"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_17red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui16"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_18red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui17"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_19red_new.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Forgesubprocessgui18"
+          },
+          "x": 207,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_1.png",
+          "use1Xscale": false,
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining2"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining3"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining4"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining5"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining6"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining7"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining8"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining9"
+          },
+          "x": 187,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fire_10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Forgesubprocessfuelremaining10"
+          },
+          "x": 187,
+          "y": 72
+        }
+      }
+    ],
+    "onTick": {
+      "name": "Forgeprocess"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

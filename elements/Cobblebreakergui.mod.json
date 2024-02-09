@@ -1,0 +1,508 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 180,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 6,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "cobblebreakergui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 30
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 206,
+          "y": 37
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakerironxp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebreakerironxp"
+          },
+          "x": 143,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakgoldxp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebreakgoldxp"
+          },
+          "x": 164,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakerdiamondxp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebreakerdiamondxp"
+          },
+          "x": 185,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakeramethystxp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebreakeramethystxp"
+          },
+          "x": 206,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakertitanexp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebreakertitanexp"
+          },
+          "x": 227,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakerpaladiumxp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebreakerpaladiumxp"
+          },
+          "x": 248,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebrekergreenpaladiumxp"
+          },
+          "onStackTransfer": {
+            "name": "Cobblebrekergreenpaladiumxp"
+          },
+          "x": 269,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_iron.png",
+          "use1Xscale": false,
+          "x": 144,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_gold.png",
+          "use1Xscale": false,
+          "x": 165,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_diamond.png",
+          "use1Xscale": false,
+          "x": 186,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_titane.png",
+          "use1Xscale": false,
+          "x": 228,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_paladium.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_paladium_particle.png",
+          "use1Xscale": false,
+          "x": 270,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_amethyst.png",
+          "use1Xscale": false,
+          "x": 207,
+          "y": 74
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 273,
+          "y": 43
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0001.png",
+          "use1Xscale": true,
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0002.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick2"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0003.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick3"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0004.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick4"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0005.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick5"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0006.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick6"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0007.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick7"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0008.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick8"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0009.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick9"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0010.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick10"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0011.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick11"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0012.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick12"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0013.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick13"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0014.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick14"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0015.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick15"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0016.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick16"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0017.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick17"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0018.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick18"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0019.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick19"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down0020.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Cobblebreakergetcobbletick20"
+          },
+          "x": 208,
+          "y": 57
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "upgrade_cobblebreaker.png",
+          "use1Xscale": false,
+          "x": 274,
+          "y": 44
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

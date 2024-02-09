@@ -1,0 +1,38 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "MultiTool",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "potg_of_6",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Pickaxe of the gods",
+    "specialInformation": {
+      "fixedValue": [
+        "Level 6"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Pickaxeofgodstab"
+    },
+    "harvestLevel": 4,
+    "efficiency": 14.0,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 5.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "Moucepotg"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "Upgradepotgv2"
+    }
+  }
+}

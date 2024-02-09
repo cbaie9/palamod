@@ -1,0 +1,210 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "downloadergui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_filter",
+          "text": {
+            "fixedValue": "Filter"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 264,
+          "y": 40
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 204,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_output",
+          "text": {
+            "fixedValue": "Output"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 197,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_reload",
+          "text": "reload",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Downloaderreload"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 239,
+          "y": 97
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "download_state",
+          "text": "State",
+          "isCheckedProcedure": {
+            "name": "Downloaderchecked"
+          },
+          "x": 130,
+          "y": 41
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_down_downloader_gray.png",
+          "use1Xscale": false,
+          "x": 205,
+          "y": 99
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_link",
+          "text": "Link",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectdownloaderlink"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 129,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_grindertrans_0",
+          "text": {
+            "fixedValue": "",
+            "name": "Grindertrans0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 108
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 270,
+          "y": 53
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reboot_the_downloader_change_t",
+          "text": {
+            "fixedValue": "Reboot the downloader ( change the filter / Turn on/off the machine"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 239,
+          "y": 97
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_link_a_bank_account_who_will_be",
+          "text": {
+            "fixedValue": "Link a bank account who will be charged for the bought items "
+          },
+          "width": 46,
+          "height": 19,
+          "x": 129,
+          "y": 85
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_turn_onoff_the_machine",
+          "text": {
+            "fixedValue": "Turn on/off the machine"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 130,
+          "y": 41
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_what_you_will_buy_with_the_machi",
+          "text": {
+            "fixedValue": "What you will buy with the machine ( need to be available in the adminshop"
+          },
+          "width": 32,
+          "height": 30,
+          "x": 264,
+          "y": 41
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

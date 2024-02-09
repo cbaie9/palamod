@@ -1,0 +1,275 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 190,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshoputilities.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adminshopplant.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cactus",
+          "text": "Cactus",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantcactus"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 130,
+          "y": 46
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_red_mushroom",
+          "text": "Red Mushroom",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantredmushroom"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 212,
+          "y": 46
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_brown_mushroom",
+          "text": "Brown Mushroom",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantbrownmushroom"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 212,
+          "y": 72
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_warped_fungus",
+          "text": "Warped fungus",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantwarpedfungus"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 212,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_crimson_fungun",
+          "text": "Crimson Fungus",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantcrimsonfungus"
+          },
+          "width": 86,
+          "height": 20,
+          "x": 212,
+          "y": 126
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_potato",
+          "text": "Potato",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantpotato"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 130,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_wheat_seed",
+          "text": "Wheat",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantwheat"
+          },
+          "width": 53,
+          "height": 20,
+          "x": 130,
+          "y": 153
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_carrot",
+          "text": "Carrot",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantcarrot"
+          },
+          "width": 55,
+          "height": 20,
+          "x": 131,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_melon",
+          "text": "Melon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantmelon"
+          },
+          "width": 54,
+          "height": 20,
+          "x": 131,
+          "y": 126
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_sugar_cane",
+          "text": "Sugar cane",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopplantsugarcane"
+          },
+          "width": 85,
+          "height": 20,
+          "x": 212,
+          "y": 154
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 118,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 208,
+          "y": 20
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_adminshop_seed_menu",
+          "text": {
+            "fixedValue": "Adminshop seed menu"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 285,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Adminshop_open"
+          },
+          "x": 125,
+          "y": 24
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_close_the_gui",
+          "text": {
+            "fixedValue": "Close the Gui"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 285,
+          "y": 24
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_the_adminshop_menu",
+          "text": {
+            "fixedValue": "Return to the adminshop menu"
+          },
+          "width": 15,
+          "height": 14,
+          "x": 126,
+          "y": 26
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

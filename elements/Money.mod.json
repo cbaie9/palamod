@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "money",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">Moneyprocess</field><next><block type=\"literal\"><field name=\"name\">set</field><statement name=\"args\"><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">player</field><statement name=\"args\"><block type=\"number_min\"><field name=\"name\">money</field><field name=\"min\">0</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Moneychangecommand</field></block></statement></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">add</field><statement name=\"args\"><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">player</field><statement name=\"args\"><block type=\"number_min\"><field name=\"name\">money</field><field name=\"min\">0</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Moneyaddprocess</field></block></statement></block></statement></block></statement></block></next></block></next></block></next></block><block type=\"message\" x=\"-211\" y=\"440\"><field name=\"name\">name</field></block></xml>"
+  }
+}

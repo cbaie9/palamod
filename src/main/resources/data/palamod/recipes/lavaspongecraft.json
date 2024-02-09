@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lava_bucket"
+    },
+    "b": {
+      "item": "minecraft:soul_sand"
+    },
+    "c": {
+      "item": "minecraft:sponge"
+    }
+  },
+  "result": {
+    "item": "palamod:lavasponge",
+    "count": 1
+  }
+}

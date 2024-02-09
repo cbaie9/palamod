@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "palamod:renforced_obsidian"
+    },
+    {
+      "item": "palamod:renforced_obsidian"
+    },
+    {
+      "item": "palamod:renforced_obsidian"
+    }
+  ],
+  "result": {
+    "item": "palamod:hardenedobsidianslab",
+    "count": 6
+  }
+}

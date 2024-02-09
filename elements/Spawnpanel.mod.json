@@ -1,0 +1,80 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 150,
+    "height": 100,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_varcoor_spawn",
+          "text": {
+            "fixedValue": "<VAR:coor_spawn>",
+            "name": "Spawnpanel_get_spawn"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 144,
+          "y": 126
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spawn_panel",
+          "text": {
+            "fixedValue": "Spawn Panel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 185,
+          "y": 72
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_change_spawn",
+          "text": "change Spawn ",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Setspawnprocess"
+          },
+          "width": 92,
+          "height": 20,
+          "x": 142,
+          "y": 145
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spawnpanel.png",
+          "use1Xscale": false,
+          "x": 138,
+          "y": 70
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "Spawnpanel_get_spawn"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

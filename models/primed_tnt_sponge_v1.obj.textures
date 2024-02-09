@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "m_579e8f54-6b94-f30c-3510-c4aa4dfb0a7a": "sponge_tnt_top"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_ingot"
+    },
+    "b": {
+      "item": "palamod:compressed_titane"
+    },
+    "c": {
+      "item": "palamod:flatten_amethyst_chest"
+    }
+  },
+  "result": {
+    "item": "palamod:titane_chest",
+    "count": 1
+  }
+}

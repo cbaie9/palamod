@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "cdc",
+    "eee"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:compressed_paladium"
+    },
+    "b": {
+      "item": "palamod:paladium_green_block"
+    },
+    "c": {
+      "item": "palamod:endium_ingot"
+    },
+    "d": {
+      "item": "palamod:green_paladium_seedplanter"
+    },
+    "e": {
+      "item": "palamod:paladium_stick"
+    }
+  },
+  "result": {
+    "item": "palamod:endium_seedplanter",
+    "count": 1
+  }
+}

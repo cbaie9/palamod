@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/iron_spike"
+    },
+    "facing=east": {
+      "model": "palamod:block/iron_spike",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/iron_spike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/iron_spike",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_block"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:compressed_paladium",
+    "count": 1
+  }
+}

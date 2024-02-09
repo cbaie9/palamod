@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "painting",
+  "definition": {
+    "texture": "cherrytree.png",
+    "width": 64,
+    "height": 48,
+    "title": "Cherrytree",
+    "author": "Unknown"
+  }
+}

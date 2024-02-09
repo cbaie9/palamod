@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/chest_v1",
+  "textures": {
+    "all": "palamod:block/pala_face1",
+    "particle": "palamod:block/pala_face1",
+    "texture": "palamod:block/paladiumchest"
+  },
+  "render_type": "solid"
+}

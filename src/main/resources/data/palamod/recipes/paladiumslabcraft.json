@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_slab",
+    "count": 6
+  }
+}

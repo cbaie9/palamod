@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/findium_slab"
+    },
+    "type=top": {
+      "model": "palamod:block/findium_slab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/findium_slab_full"
+    }
+  }
+}

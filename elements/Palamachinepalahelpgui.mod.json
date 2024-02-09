@@ -1,0 +1,156 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 215,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palamachine",
+          "text": {
+            "fixedValue": "Palamachine"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 183,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_la_palamachine_permet_de_crafter",
+          "text": {
+            "fixedValue": "La palamachine permet de crafter",
+            "name": "Palahelppalamachine0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 110,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_batn_qui_vous_permeteront_davo",
+          "text": {
+            "fixedValue": "Bat�n qui vous permeteront d'avoir des",
+            "name": "Palahelppalamachine1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 110,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effets_diffrent_force_soin",
+          "text": {
+            "fixedValue": "effets diff�rent ( force, soin, sant�,",
+            "name": "Palahelppalamachine2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 110,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_la_palamachine_se_presente_comme",
+          "text": {
+            "fixedValue": "La palamachine se presente comme ceci",
+            "name": "Palahelppalamachine3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 112,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_voir_bton_pour_les_craft",
+          "text": {
+            "fixedValue": "Voir B�ton pour les craft",
+            "name": "Palahelppalamachine4"
+          },
+          "color": {
+            "value": -3394816,
+            "falpha": 0.0
+          },
+          "x": 161,
+          "y": 204
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "back",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Blockconnecthelp"
+          },
+          "width": 45,
+          "height": 20,
+          "x": 123,
+          "y": 27
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_menu",
+          "text": "menu",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "width": 45,
+          "height": 20,
+          "x": 251,
+          "y": 27
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_guiscreenshotnew.png",
+          "use1Xscale": true,
+          "x": 134,
+          "y": 113
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

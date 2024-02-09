@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/false_tresure_top",
+    "up": "palamod:block/false_tresure_top",
+    "north": "palamod:block/tresure_side",
+    "east": "palamod:block/tresure_side",
+    "south": "palamod:block/tresure_side",
+    "west": "palamod:block/tresure_side",
+    "particle": "palamod:block/false_tresure_top"
+  },
+  "render_type": "solid"
+}

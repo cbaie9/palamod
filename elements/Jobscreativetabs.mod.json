@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Jobs tabs",
+    "icon": {
+      "value": "CUSTOM:Paladiumhoe"
+    },
+    "showSearch": false
+  }
+}

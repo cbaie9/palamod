@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blaze_powder"
+    },
+    "b": {
+      "item": "palamod:compressed_paladium"
+    },
+    "c": {
+      "item": "palamod:titane_ingot"
+    },
+    "d": {
+      "item": "palamod:paladium_core"
+    }
+  },
+  "result": {
+    "item": "palamod:alchimet_1",
+    "count": 1
+  }
+}

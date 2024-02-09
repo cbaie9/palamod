@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " a ",
+    "aba",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond_sword"
+    },
+    "b": {
+      "item": "palamod:amethyst"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyst_spike",
+    "count": 1
+  }
+}

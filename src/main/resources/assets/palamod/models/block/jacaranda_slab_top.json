@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "palamod:block/jacaranda_planks",
+    "top": "palamod:block/jacaranda_planks",
+    "side": "palamod:block/jacaranda_planks"
+  },
+  "render_type": "solid"
+}

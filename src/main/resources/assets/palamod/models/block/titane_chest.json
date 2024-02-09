@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/chest_v1titane",
+  "textures": {
+    "all": "palamod:block/titane_face2",
+    "particle": "palamod:block/titane_face2",
+    "texture": "palamod:block/titanechest"
+  },
+  "render_type": "solid"
+}

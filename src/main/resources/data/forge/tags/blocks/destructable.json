@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:ostrya_wood_wood",
+    "palamod:ostrya_wood_log",
+    "palamod:jacaranda_wood",
+    "palamod:jacaranda_log",
+    "palamod:judeecercis_wood",
+    "palamod:judeecercis_log",
+    "palamod:erable_wood",
+    "palamod:erable_log",
+    "minecraft:dirt",
+    "#minecraft:logs",
+    "minecraft:grass_block",
+    "minecraft:stone",
+    "minecraft:cobblestone"
+  ]
+}

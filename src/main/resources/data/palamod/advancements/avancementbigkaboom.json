@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:endium_dynamite"
+    },
+    "title": {
+      "translate": "advancements.avancementbigkaboom.title"
+    },
+    "description": {
+      "translate": "advancements.avancementbigkaboom.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementbigkaboom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "palamod:endium_dynamite"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementkaboom"
+}

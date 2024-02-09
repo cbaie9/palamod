@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "palamod:block/eggplant_stage_0"
+  }
+}

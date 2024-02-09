@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "ice_spikes",
+    "palamod:frozenforest",
+    "frozen_peaks",
+    "palamod:forestender"
+  ],
+  "features": "palamod:igloodestr_feature",
+  "step": "surface_structures"
+}

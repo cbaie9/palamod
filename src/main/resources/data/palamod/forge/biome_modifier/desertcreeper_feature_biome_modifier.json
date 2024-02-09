@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "desert",
+    "plains",
+    "savanna",
+    "savanna_plateau",
+    "palamod:forestender"
+  ],
+  "features": "palamod:desertcreeper_feature",
+  "step": "surface_structures"
+}

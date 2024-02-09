@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:ostrya_wood_planks"
+    }
+  },
+  "result": {
+    "item": "palamod:ostrya_wood_slab",
+    "count": 6
+  }
+}

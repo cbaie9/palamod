@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "b b",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:green_paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:titaneexcavator"
+    }
+  },
+  "result": {
+    "item": "palamod:greenpaladumexcator",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    " c ",
+    "ada"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:ender_pearl"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    },
+    "c": {
+      "item": "palamod:voidstone"
+    },
+    "d": {
+      "item": "palamod:amethyst"
+    }
+  },
+  "result": {
+    "item": "palamod:dollars_stone",
+    "count": 1
+  }
+}

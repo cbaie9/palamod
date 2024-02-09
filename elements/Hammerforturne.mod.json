@@ -1,0 +1,34 @@
+{
+  "_fv": 57,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Fortune",
+    "type": "BREAKABLE",
+    "rarity": "COMMON",
+    "minLevel": 1,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "excludeEnchantments": false,
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:Paladiumhammer"
+      },
+      {
+        "value": "CUSTOM:Endiumhammer"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumhammer"
+      },
+      {
+        "value": "CUSTOM:Creativehammer"
+      }
+    ],
+    "excludeItems": false,
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

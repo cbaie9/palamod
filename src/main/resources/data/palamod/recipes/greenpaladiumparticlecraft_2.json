@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:green_paladium_particle"
+    }
+  },
+  "result": {
+    "item": "palamod:green_paladium_ingot",
+    "count": 1
+  }
+}

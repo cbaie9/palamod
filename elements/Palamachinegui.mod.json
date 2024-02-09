@@ -1,0 +1,317 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachinegui.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palamachine",
+          "text": {
+            "fixedValue": "PalaMachine"
+          },
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "x": 183,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_inventory",
+          "text": {
+            "fixedValue": "Inventory",
+            "name": "Grindertrans0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 109
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Palamachineprocessv2"
+          },
+          "x": 146,
+          "y": 58
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Palamachineprocessv2"
+          },
+          "x": 254,
+          "y": 58
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Palamachineprocessv2"
+          },
+          "x": 201,
+          "y": 51
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Palamachineprocessv2"
+          },
+          "x": 174,
+          "y": 76
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Palamachineprocessv2"
+          },
+          "x": 228,
+          "y": 76
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Palamachineprocessv2"
+          },
+          "x": 200,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamchine_load1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess1"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palafurnacesubprocess2"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess3"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess4"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess5"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess6"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess7"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess8"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess9"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess10"
+          },
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palamachine_load11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Palamachinesubprocess11"
+          },
+          "x": 205,
+          "y": 79
+        }
+      }
+    ],
+    "onTick": {
+      "name": "Palamachineprocessv2"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

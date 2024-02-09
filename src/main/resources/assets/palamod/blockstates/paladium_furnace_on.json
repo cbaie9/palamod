@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/paladium_furnace_on"
+    },
+    "facing=east": {
+      "model": "palamod:block/paladium_furnace_on",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/paladium_furnace_on",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/paladium_furnace_on",
+      "y": 270
+    }
+  }
+}

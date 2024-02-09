@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " a ",
+    "aba",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_sword"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_spike",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/crystal",
+    "up": "palamod:block/crusher_top",
+    "north": "palamod:block/crusher_front",
+    "east": "palamod:block/crusher_side",
+    "south": "palamod:block/crusher_side",
+    "west": "palamod:block/crusher_side",
+    "particle": "palamod:block/crystal"
+  },
+  "render_type": "solid"
+}

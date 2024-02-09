@@ -1,0 +1,301 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 220,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 18,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "palahelpore.png",
+          "use1Xscale": false,
+          "x": 63,
+          "y": 10
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium_le_minerais_le_plus_pu",
+          "text": {
+            "fixedValue": "Paladium : The more powerful mineable ore"
+          },
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "x": 92,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tres_rare_sert_a_quelque_craft",
+          "text": {
+            "fixedValue": "Findium : Ore that serves some crafts"
+          },
+          "color": {
+            "value": -205,
+            "falpha": 0.0
+          },
+          "x": 91,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_ingot.png",
+          "use1Xscale": false,
+          "x": 73,
+          "y": 165
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ingot.png",
+          "use1Xscale": false,
+          "x": 74,
+          "y": 87
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "findium.png",
+          "use1Xscale": true,
+          "x": 74,
+          "y": 109
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_ingot.png",
+          "use1Xscale": false,
+          "x": 74,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_resitanttres_bon_pour_ses_premi",
+          "text": {
+            "fixedValue": "Titane: Durable, a very good start for his first"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 92,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_amthyste",
+          "text": {
+            "fixedValue": "Amethyst : Low level ore, easily findable in cave  "
+          },
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "x": 91,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_ingot.png",
+          "use1Xscale": false,
+          "x": 74,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium_vert_equivalent_en_pl",
+          "text": {
+            "fixedValue": "Green Paladium : equivalent but it more rare"
+          },
+          "color": {
+            "value": -10027213,
+            "falpha": 0.0
+          },
+          "x": 92,
+          "y": 69
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_ingot.png",
+          "use1Xscale": true,
+          "x": 74,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_endium_le_materiau_ultime_obte",
+          "text": {
+            "fixedValue": "Endium : The ultimate obtenable ore"
+          },
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "x": 92,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_via_le_paladium_crusher_voir_m",
+          "text": {
+            "fixedValue": "-> through the crusher ( see the machine wiki )"
+          },
+          "color": {
+            "value": -13434727,
+            "falpha": 0.0
+          },
+          "x": 92,
+          "y": 48
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tools",
+          "text": {
+            "fixedValue": "tools"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 93,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_assez_facilement",
+          "text": {
+            "fixedValue": "assez facilement"
+          },
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "x": 91,
+          "y": 187
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 63,
+          "y": 9
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 163,
+          "y": 9
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 263,
+          "y": 9
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 300,
+          "y": 13
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Blockback"
+          },
+          "x": 319,
+          "y": 13
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 342,
+          "y": 14
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_ore",
+          "text": {
+            "fixedValue": "Palahelp : Ore"
+          },
+          "color": {
+            "value": -131587,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 14
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 31,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

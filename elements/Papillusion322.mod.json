@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "painting",
+  "definition": {
+    "texture": "papillon64.png",
+    "width": 64,
+    "height": 32,
+    "title": "Papillusion 64x",
+    "author": "Unknown"
+  }
+}

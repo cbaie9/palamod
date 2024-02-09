@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/pala_face1",
+    "up": "palamod:block/pala_face3",
+    "north": "palamod:block/paladium_face4",
+    "east": "palamod:block/pala_face2",
+    "south": "palamod:block/pala_face2",
+    "west": "palamod:block/pala_face2",
+    "particle": "palamod:block/pala_face1"
+  },
+  "render_type": "solid"
+}

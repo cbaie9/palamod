@@ -1,0 +1,623 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "armorpalahelpgui.png",
+          "use1Xscale": false,
+          "x": 63,
+          "y": 21
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_helmet.png",
+          "use1Xscale": false,
+          "x": 76,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_chestplate.png",
+          "use1Xscale": false,
+          "x": 76,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_leggings.png",
+          "use1Xscale": false,
+          "x": 75,
+          "y": 118
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_boots.png",
+          "use1Xscale": false,
+          "x": 75,
+          "y": 144
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_helmet.png",
+          "use1Xscale": false,
+          "x": 285,
+          "y": 65
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_chestplate.png",
+          "use1Xscale": false,
+          "x": 286,
+          "y": 90
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_leggings.png",
+          "use1Xscale": false,
+          "x": 285,
+          "y": 120
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_boots.png",
+          "use1Xscale": false,
+          "x": 285,
+          "y": 145
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_chestplate.png",
+          "use1Xscale": false,
+          "x": 209,
+          "y": 90
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_chestplate.png",
+          "use1Xscale": false,
+          "x": 190,
+          "y": 90
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_boots.png",
+          "use1Xscale": false,
+          "x": 190,
+          "y": 144
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_helmet.png",
+          "use1Xscale": false,
+          "x": 190,
+          "y": 65
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_leggings.png",
+          "use1Xscale": false,
+          "x": 190,
+          "y": 119
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_helmet.png",
+          "use1Xscale": false,
+          "x": 209,
+          "y": 65
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_leggings.png",
+          "use1Xscale": false,
+          "x": 207,
+          "y": 119
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_boots.png",
+          "use1Xscale": false,
+          "x": 207,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_45",
+          "text": {
+            "fixedValue": "+ 4.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 93,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_5",
+          "text": {
+            "fixedValue": "+ 5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 98,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_4",
+          "text": {
+            "fixedValue": "+ 4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_451",
+          "text": {
+            "fixedValue": "+ 4.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 93,
+          "y": 146
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_helmet.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_chestplate.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_leggings.png",
+          "use1Xscale": false,
+          "x": 123,
+          "y": 118
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_boots.png",
+          "use1Xscale": false,
+          "x": 124,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_452",
+          "text": {
+            "fixedValue": "+ 4.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 145,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_453",
+          "text": {
+            "fixedValue": "+ 4.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 143,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_51",
+          "text": {
+            "fixedValue": "+ 5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 143,
+          "y": 122
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_52",
+          "text": {
+            "fixedValue": "+ 5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 94
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_454",
+          "text": {
+            "fixedValue": "+ 4.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_night_vision_ii",
+          "text": {
+            "fixedValue": "Night Vision II"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 215,
+          "y": 51
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_65",
+          "text": {
+            "fixedValue": "+ 6.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 240,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_force",
+          "text": {
+            "fixedValue": "Force"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 240,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_55",
+          "text": {
+            "fixedValue": "+ 5.5 "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 239,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_haste",
+          "text": {
+            "fixedValue": "Haste"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 242,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_5_speed",
+          "text": {
+            "fixedValue": "+ 5 Speed"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 227,
+          "y": 147
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_53",
+          "text": {
+            "fixedValue": "+ 5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 304,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_7",
+          "text": {
+            "fixedValue": "+ 7"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 310,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_551",
+          "text": {
+            "fixedValue": "+ 5.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 302,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_552",
+          "text": {
+            "fixedValue": "+ 5.5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 305,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_force1",
+          "text": {
+            "fixedValue": "Force"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 306,
+          "y": 100
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_haste1",
+          "text": {
+            "fixedValue": "Haste"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 304,
+          "y": 126
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_speed",
+          "text": {
+            "fixedValue": "Speed"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 305,
+          "y": 148
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_left_gray_line",
+          "image": "left_gray_line.png",
+          "hoveredImage": "",
+          "x": 63,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 163,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 263,
+          "y": 20
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_armor",
+          "text": {
+            "fixedValue": "Palahelp : Armor"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 163,
+          "y": 25
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Connectitemmenu"
+          },
+          "x": 318,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 339,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 299,
+          "y": 24
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

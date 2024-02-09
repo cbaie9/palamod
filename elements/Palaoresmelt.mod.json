@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.7,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:PaladiumGreenore"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:PaladiumGreeningot"
+    },
+    "name": "palaoresmelt",
+    "namespace": "mod"
+  }
+}

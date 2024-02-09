@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcd",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:tnt"
+    },
+    "b": {
+      "item": "minecraft:spider_eye"
+    },
+    "c": {
+      "item": "palamod:paladium_core"
+    },
+    "d": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result": {
+    "item": "palamod:magic_tnt",
+    "count": 2
+  }
+}

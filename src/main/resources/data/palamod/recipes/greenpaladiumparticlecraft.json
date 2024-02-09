@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "palamod:green_paladium_ingot"
+    }
+  ],
+  "result": {
+    "item": "palamod:green_paladium_particle",
+    "count": 9
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:obsidian"
+    },
+    "b": {
+      "item": "palamod:paladium_core"
+    }
+  },
+  "result": {
+    "item": "palamod:compacted_obsidian",
+    "count": 4
+  }
+}

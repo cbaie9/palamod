@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst"
+    },
+    "b": {
+      "item": "palamod:compressed_amethyst"
+    },
+    "c": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyst_chest",
+    "count": 1
+  }
+}

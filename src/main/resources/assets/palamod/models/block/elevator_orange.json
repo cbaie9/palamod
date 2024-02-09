@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/elevator_orange",
+    "particle": "palamod:block/elevator_orange"
+  },
+  "render_type": "solid"
+}

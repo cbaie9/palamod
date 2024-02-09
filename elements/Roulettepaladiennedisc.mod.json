@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Roulette paladienne disc",
+    "rarity": "RARE",
+    "texture": "roulette_paladiennerecord",
+    "description": "Fuze III - Roulette paladienne",
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:roulette_paladienne"
+    },
+    "lengthInTicks": 2080,
+    "analogOutput": 4
+  }
+}

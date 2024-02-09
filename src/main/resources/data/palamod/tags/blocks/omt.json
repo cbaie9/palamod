@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:obsidian_trapdoor",
+    "palamod:renforced_obsidian",
+    "palamod:obsidian_door",
+    "palamod:compacted_obsidian",
+    "palamod:fake_water_obsidian",
+    "palamod:lava_obsidian",
+    "palamod:renforcedobsidianstairs",
+    "palamod:wooden_obsidian_spike",
+    "palamod:iron_obsidian_spike",
+    "palamod:golden_obsidian_spike",
+    "palamod:diamond_obsidian_spike",
+    "palamod:amethys_tobsidian_spike",
+    "palamod:titane_obsidian_spike",
+    "palamod:paladium_obsidian_spike",
+    "palamod:hardenedobsidianslab"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_select_your_language",
+          "text": {
+            "fixedValue": "Select your language"
+          },
+          "color": {
+            "value": -16724788,
+            "falpha": 0.0
+          },
+          "x": 157,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "english_lang.png",
+          "use1Xscale": false,
+          "x": 133,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_franais",
+          "text": "français",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Frenchredirect"
+          },
+          "width": 67,
+          "height": 20,
+          "x": 154,
+          "y": 101
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_english",
+          "text": "english",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Englishredirect"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 152,
+          "y": 66
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "french_lang.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 103
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "palamod:custom/spike_wooden",
+  "textures": {
+    "all": "palamod:block/spikewood_2",
+    "particle": "palamod:block/spikewood_2",
+    "0": "palamod:block/oak_planks",
+    "1": "palamod:block/spikewood_2"
+  },
+  "render_type": "solid"
+}

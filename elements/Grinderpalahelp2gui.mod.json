@@ -1,0 +1,370 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 330,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "grinderpalahelp_2gui.png",
+          "use1Xscale": false,
+          "x": 48,
+          "y": 20
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_22",
+          "text": {
+            "fixedValue": "2/2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_block_front.png",
+          "use1Xscale": false,
+          "x": 117,
+          "y": 23
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_grinder_wiki",
+          "text": {
+            "fixedValue": "Palahelp : Grinder "
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_knockback_augmente_le_knockbac",
+          "text": {
+            "fixedValue": "Knockback : augmente le knockback -)",
+            "name": "Palahelpgrinder20"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_comment_crafter_le_grinder",
+          "text": {
+            "fixedValue": "Comment crafter le grinder",
+            "name": "Palahelpgrinder21"
+          },
+          "color": {
+            "value": -4385001,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_il_sufit_de_crafter",
+          "text": {
+            "fixedValue": "Il sufit de crafter :",
+            "name": "Palahelpgrinder22"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_grinder_block_5_grinder_casin",
+          "text": {
+            "fixedValue": "1 grinder block, 5 grinder casing, 20",
+            "name": "Palahelpgrinder23"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 100
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1.png",
+          "use1Xscale": true,
+          "x": 65,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "2.png",
+          "use1Xscale": true,
+          "x": 144,
+          "y": 165
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_layer_1",
+          "text": {
+            "fixedValue": "Layer 1",
+            "name": "Palahelpgrinder25"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 66,
+          "y": 153
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "1.png",
+          "use1Xscale": true,
+          "x": 240,
+          "y": 165
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpgrinder_24",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpgrinder24"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 127
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpgrinder_26",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpgrinder26"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 144,
+          "y": 153
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpgrinder_27",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpgrinder27"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 241,
+          "y": 153
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpgrinder_28",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpgrinder28"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 52,
+          "y": 140
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpgrinder_32",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpgrinder32"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 53,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpgrinder_202",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpgrinder202"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 66
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 48,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 148,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 248,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 278,
+          "y": 20
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_block_front16.png",
+          "use1Xscale": false,
+          "x": 56,
+          "y": 25
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 356,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Machineconnectpalahelp"
+          },
+          "x": 313,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 293,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_example_gui_button",
+          "image": "example_gui_button.png",
+          "hoveredImage": "example_gui_button_poi.png",
+          "onClick": {
+            "name": "Openexamplegrinder"
+          },
+          "x": 333,
+          "y": 24
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

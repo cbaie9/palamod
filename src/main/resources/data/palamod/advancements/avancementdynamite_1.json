@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:dynamite"
+    },
+    "title": {
+      "translate": "advancements.avancementdynamite_1.title"
+    },
+    "description": {
+      "translate": "advancements.avancementdynamite_1.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementdynamite_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "palamod:dynamite"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

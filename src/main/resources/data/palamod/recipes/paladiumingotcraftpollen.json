@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_pollen"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "pay",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">money</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Payprocess</field></block></statement></block></statement></block></next></block></xml>"
+  }
+}

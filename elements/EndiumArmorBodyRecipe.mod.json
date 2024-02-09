@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:EndiumArmor.body"
+    },
+    "name": "endium_armor_body_recipe",
+    "namespace": "mod"
+  }
+}

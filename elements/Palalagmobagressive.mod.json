@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "# Enter the function code here\nkill @e[type=creeper]\nkill @e[type=spider]\nkill @e[type=zombie]\nkill @e[type=zoglin]\nkill @e[type=zombified_piglin]\nkill @e[type=piglin]\nkill @e[type=piglin_brute]\nkill @e[type=wither_skull]\nkill @e[type=tnt]\nkill @e[type=husk]\nkill @e[type=vex]\nkill @e[type=evoker_fangs]\nkill @e[type=pillager]\nkill @e[type=evoker]\nkill @e[type=vindicator]\nkill @e[type=illusioner]\nkill @e[type=skeleton]\nkill @e[type=wither_skeleton]\nkill @e[type=giant]\nkill @e[type=slime]\nkill @e[type=ghast]\nkill @e[type=cave_spider]\nkill @e[type=enderman]\nkill @e[type=silverfish]\nkill @e[type=blaze]\nkill @e[type=magma_cube]\nkill @e[type=witch]\nkill @e[type=stray]\nkill @e[type=elder_guardian]\nkill @e[type=guardian]\nkill @e[type=endermite]\nkill @e[type=shulker]\nkill @e[type=fireball]\nkill @e[type=small_fireball]\nkill @e[type=arrow]\nkill @e[type=spectral_arrow]\nkill @e[type=shulker_bullet]\nkill @e[type=snowball]\nkill @e[type=dragon_fireball]\nkill @e[type=drowned]\nkill @e[type=phantom]\nkill @e[type=ravager]",
+    "name": "palalagmobagressive",
+    "namespace": "mod"
+  }
+}

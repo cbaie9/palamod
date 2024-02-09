@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bcb",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:piston"
+    },
+    "b": {
+      "item": "minecraft:slime_block"
+    },
+    "c": {
+      "item": "minecraft:dropper"
+    },
+    "d": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "palamod:drawbridge",
+    "count": 1
+  }
+}

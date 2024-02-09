@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_overworld",
+  "features": "palamod:deepslate_trixium_ore",
+  "step": "underground_ores"
+}

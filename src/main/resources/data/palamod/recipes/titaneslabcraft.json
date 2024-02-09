@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    }
+  ],
+  "result": {
+    "item": "palamod:titane_slab",
+    "count": 6
+  }
+}

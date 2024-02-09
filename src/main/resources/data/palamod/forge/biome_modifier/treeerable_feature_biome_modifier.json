@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "plains",
+    "jungle",
+    "birch_forest",
+    "forest",
+    "taiga",
+    "savanna_plateau",
+    "old_growth_spruce_taiga",
+    "snowy_plains"
+  ],
+  "features": "palamod:treeerable_feature",
+  "step": "surface_structures"
+}

@@ -1,0 +1,36 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Pickaxe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "endium_hammer16",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Endium hammer",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Grindercreativetab"
+    },
+    "harvestLevel": 8,
+    "efficiency": 12.0,
+    "attackSpeed": 1.0,
+    "enchantability": 0,
+    "damageVsEntity": 1.0,
+    "usageCount": 9999,
+    "blocksAffected": [],
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "PaladiumhammerToolInInventoryTick"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "Hammer1"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Base claim",
+    "icon": {
+      "value": "CUSTOM:Renforcedobsidian"
+    },
+    "showSearch": false
+  }
+}

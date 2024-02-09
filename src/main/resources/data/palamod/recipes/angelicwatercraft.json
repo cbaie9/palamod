@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:water_bucket"
+    },
+    "b": {
+      "item": "minecraft:golden_carrot"
+    }
+  },
+  "result": {
+    "item": "palamod:angelicwter_bucket",
+    "count": 1
+  }
+}

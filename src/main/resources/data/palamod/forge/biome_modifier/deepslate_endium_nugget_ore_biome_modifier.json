@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "palamod:frozenforest",
+    "palamod:roofedforest",
+    "palamod:forestender",
+    "plains",
+    "forest",
+    "ocean",
+    "lush_caves",
+    "dripstone_caves",
+    "meadow",
+    "savanna_plateau",
+    "sunflower_plains"
+  ],
+  "features": "palamod:deepslate_endium_nugget_ore",
+  "step": "underground_ores"
+}

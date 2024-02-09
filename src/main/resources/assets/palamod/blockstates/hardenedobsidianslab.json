@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/hardenedobsidianslab"
+    },
+    "type=top": {
+      "model": "palamod:block/hardenedobsidianslab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/hardenedobsidianslab_full"
+    }
+  }
+}

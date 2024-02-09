@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/obsidianslab"
+    },
+    "type=top": {
+      "model": "palamod:block/obsidianslab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/obsidianslab_full"
+    }
+  }
+}

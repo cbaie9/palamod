@@ -1,0 +1,76 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 210,
+    "height": 50,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_this_feature_hasnt_been_develop",
+          "text": {
+            "fixedValue": "This feature hasn't been developed yet"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 112,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_please_wait_or_check_on_the_disc",
+          "text": {
+            "fixedValue": "Please wait or check on the discord"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 112,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_if_there_is_updated_version_of_t",
+          "text": {
+            "fixedValue": "if there is updated version of the mod"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 111,
+          "y": 117
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "notyetgui.png",
+          "use1Xscale": false,
+          "x": 108,
+          "y": 95
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

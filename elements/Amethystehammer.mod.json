@@ -1,0 +1,33 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Pickaxe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "hammer_amethyst",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Amethyste hammer",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Grindercreativetab"
+    },
+    "harvestLevel": 4,
+    "efficiency": 1.0,
+    "attackSpeed": 0.01,
+    "enchantability": 0,
+    "damageVsEntity": 4.0,
+    "usageCount": 2999,
+    "blocksAffected": [],
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "Hammernormal"
+    }
+  }
+}

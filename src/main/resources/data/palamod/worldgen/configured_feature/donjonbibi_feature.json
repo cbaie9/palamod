@@ -1,0 +1,14 @@
+{
+  "type": "palamod:structure_feature",
+  "config": {
+    "structure": "palamod:bibi2",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:structure_block",
+    "offset": [
+      0,
+      -20,
+      0
+    ]
+  }
+}

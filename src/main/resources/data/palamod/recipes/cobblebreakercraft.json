@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "tag": "minecraft:stone"
+    },
+    "b": {
+      "item": "palamod:voidstone"
+    },
+    "c": {
+      "item": "palamod:fortune_modifier"
+    }
+  },
+  "result": {
+    "item": "palamod:cobblebreaker",
+    "count": 1
+  }
+}

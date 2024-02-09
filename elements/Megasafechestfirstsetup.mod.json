@@ -1,0 +1,156 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "megasafechestfirstsetup.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "insert code ( chose something wou will not forget )",
+          "name": "safe_code",
+          "width": 120,
+          "height": 20,
+          "x": 134,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_safe_setup",
+          "text": {
+            "fixedValue": "Safe setup"
+          },
+          "color": {
+            "value": -13434625,
+            "falpha": 0.0
+          },
+          "x": 181,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_enter_future_code_of_the_safe",
+          "text": {
+            "fixedValue": "1. enter future code of the safe"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_2do_you_want_link_safe_with",
+          "text": {
+            "fixedValue": "2.Do you want link safe with"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 129,
+          "y": 101
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_this_account_bypass_the_code",
+          "text": {
+            "fixedValue": "this account ( bypass the code "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 128,
+          "y": 112
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_it_you",
+          "text": {
+            "fixedValue": "if it you )"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 129,
+          "y": 122
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "safe_link",
+          "text": "link account",
+          "x": 131,
+          "y": 137
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_3_save",
+          "text": {
+            "fixedValue": "3. Save "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 159
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_save",
+          "text": "save",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Safekeepcodeprocess"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 152,
+          "y": 172
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

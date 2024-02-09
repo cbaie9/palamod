@@ -1,0 +1,40 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Paladiumgreenpickaxe"
+      },
+      {
+        "value": "CUSTOM:Paladiumgreenaxe"
+      },
+      {
+        "value": "CUSTOM:Paladiumgreensword"
+      },
+      {
+        "value": "CUSTOM:Paladiumgreenshovel"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumarmor.helmet"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumarmor.body"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumarmor.legs"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumarmor.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "repairable_green",
+    "namespace": "mod"
+  }
+}

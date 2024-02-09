@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/chest_v1endium",
+  "textures": {
+    "all": "palamod:block/endium_down",
+    "particle": "palamod:block/endium_down",
+    "texture": "palamod:block/endiumchest"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/guardian_block",
+    "particle": "palamod:block/guardian_block"
+  },
+  "render_type": "solid"
+}

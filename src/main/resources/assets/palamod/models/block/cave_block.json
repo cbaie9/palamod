@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/cave_block_vfufu",
+    "particle": "palamod:block/cave_block_vfufu"
+  },
+  "render_type": "cutout_mipped"
+}

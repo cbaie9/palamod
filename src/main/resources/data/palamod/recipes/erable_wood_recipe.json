@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:erable_log"
+    }
+  },
+  "result": {
+    "item": "palamod:erable_wood",
+    "count": 3
+  }
+}

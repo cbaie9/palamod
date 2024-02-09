@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:TitaneSword"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:TitaneSword"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:TitaneSword"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Paladiumspike"
+    },
+    "name": "paladiumspikecraft",
+    "namespace": "mod"
+  }
+}

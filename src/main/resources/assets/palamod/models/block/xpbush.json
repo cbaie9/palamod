@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/berry_xp_bush_fancy",
+    "particle": "palamod:block/berry_xp_bush_fancy"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "palamod:dynamite"
+    },
+    {
+      "item": "palamod:endium_nugget"
+    }
+  ],
+  "result": {
+    "item": "palamod:endium_dynamite",
+    "count": 3
+  }
+}

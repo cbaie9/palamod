@@ -1,0 +1,56 @@
+{
+  "lucky_alarm": {
+    "subtitle": "subtitles.lucky_alarm",
+    "sounds": [
+      {
+        "name": "palamod:goofyalarm",
+        "stream": false
+      }
+    ]
+  },
+  "miichallengemusic": {
+    "subtitle": "subtitles.miichallengemusic",
+    "sounds": [
+      {
+        "name": "palamod:miichalenge",
+        "stream": true
+      }
+    ]
+  },
+  "fuzedisc": {
+    "subtitle": "subtitles.fuzedisc",
+    "sounds": [
+      {
+        "name": "palamod:fuzeiii",
+        "stream": true
+      }
+    ]
+  },
+  "clash_kumiz": {
+    "subtitle": "subtitles.clash_kumiz",
+    "sounds": [
+      {
+        "name": "palamod:clash_kumiz",
+        "stream": true
+      }
+    ]
+  },
+  "anti_fuze_clash": {
+    "subtitle": "subtitles.anti_fuze_clash",
+    "sounds": [
+      {
+        "name": "palamod:anti_fuze",
+        "stream": true
+      }
+    ]
+  },
+  "roulette_paladienne": {
+    "subtitle": "subtitles.roulette_paladienne",
+    "sounds": [
+      {
+        "name": "palamod:roulette_paladienne",
+        "stream": true
+      }
+    ]
+  }
+}

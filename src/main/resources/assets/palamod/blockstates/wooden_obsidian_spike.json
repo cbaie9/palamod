@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/wooden_obsidian_spike"
+    },
+    "facing=east": {
+      "model": "palamod:block/wooden_obsidian_spike",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/wooden_obsidian_spike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/wooden_obsidian_spike",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "palamod:block/wooden_obsidian_spike",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "palamod:block/wooden_obsidian_spike",
+      "x": 90
+    }
+  }
+}

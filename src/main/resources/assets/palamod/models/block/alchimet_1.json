@@ -1,0 +1,12 @@
+{
+  "parent": "palamod:custom/alchi2.0_",
+  "textures": {
+    "all": "palamod:block/alchimie_texture",
+    "particle": "palamod:block/alchimie_texture",
+    "0": "palamod:block/pillartex",
+    "2": "palamod:block/tex3",
+    "3": "palamod:block/pillartex",
+    "missing": "palamod:block/alchimie_texture"
+  },
+  "render_type": "solid"
+}

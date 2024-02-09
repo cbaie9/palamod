@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_ingot"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    },
+    "c": {
+      "item": "palamod:paladium_core"
+    }
+  },
+  "result": {
+    "item": "palamod:lucky_block",
+    "count": 4
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/trxium_ore",
+    "particle": "palamod:block/trxium_ore"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " ab",
+    "abb"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_stick"
+    },
+    "b": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "palamod:wing",
+    "count": 2
+  }
+}

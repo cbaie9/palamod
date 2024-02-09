@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    " b ",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_shovel"
+    },
+    "b": {
+      "item": "palamod:amethyst_stick"
+    }
+  },
+  "result": {
+    "item": "palamod:amethyst_excacvator",
+    "count": 1
+  }
+}

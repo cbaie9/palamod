@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:medium_ring",
+    "palamod:small_ring",
+    "palamod:big_ring",
+    "palamod:endium_small_ring",
+    "palamod:endium_medium_ring",
+    "palamod:endium_big_ring",
+    "palamod:green_paladium_small_ring",
+    "palamod:green_paladium_medium_ring",
+    "palamod:green_paladium_big_ring"
+  ]
+}

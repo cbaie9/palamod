@@ -1,0 +1,14 @@
+{
+  "type": "palamod:structure_feature",
+  "config": {
+    "structure": "palamod:piramide",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:structure_block",
+    "offset": [
+      0,
+      -3,
+      0
+    ]
+  }
+}

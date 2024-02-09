@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/slimepad",
+  "textures": {
+    "all": "palamod:block/slime_green",
+    "particle": "palamod:block/slime_green",
+    "0": "palamod:block/slime_green"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,149 @@
+{
+  "_fv": 57,
+  "_type": "overlay",
+  "definition": {
+    "priority": "LOW",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "----------------------------"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 2,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium_64_15",
+          "text": {
+            "fixedValue": "Paladium :  -64 --) 15"
+          },
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 3,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_endium_64_128_customs_p",
+          "text": {
+            "fixedValue": "Endium : -64 --) 128 ; customs palamod biomes"
+          },
+          "color": {
+            "value": -16777114,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 2,
+          "y": 54
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_green_paladium_64_128",
+          "text": {
+            "fixedValue": "Green Paladium : -64 --) 128"
+          },
+          "color": {
+            "value": -13395712,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 3,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_titane_64_32",
+          "text": {
+            "fixedValue": "Titane : -64 --) 32"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 3,
+          "y": 100
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_amethyst_64_80",
+          "text": {
+            "fixedValue": "Amethyst : -64 --) 80"
+          },
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 3,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_findium_64_150",
+          "text": {
+            "fixedValue": "Findium : -64 --) 150"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 3,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty1",
+          "text": {
+            "fixedValue": "----------------------------"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 2,
+          "y": 122
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Orelayershow"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 319,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_page_en_cours_de_redaction",
+          "text": {
+            "fixedValue": "Page en cours de rédaction"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 75,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_this_page_is_working_in_progress",
+          "text": {
+            "fixedValue": "This page is working in progress"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 74,
+          "y": 31
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_uploader",
+          "text": {
+            "fixedValue": "Uploader"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 179,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpuploader_0",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpuploader0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 58,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpuploader_1",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpuploader1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 58,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_palahelpuploader_2",
+          "text": {
+            "fixedValue": "",
+            "name": "Palahelpuploader2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 58,
+          "y": 102
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_gui_example_wip",
+          "text": "gui example ( wip )",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectexampleuploadergui"
+          },
+          "width": 123,
+          "height": 20,
+          "x": 60,
+          "y": 190
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "uploaderguipalahelp.png",
+          "use1Xscale": false,
+          "x": 54,
+          "y": 20
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

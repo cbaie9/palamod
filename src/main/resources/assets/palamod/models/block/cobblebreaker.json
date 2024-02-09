@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/cobblebreaker_side",
+    "up": "palamod:block/cobblebreaker_top",
+    "north": "palamod:block/cobblebreaker_front",
+    "east": "palamod:block/cobblebreaker_front",
+    "south": "palamod:block/cobblebreaker_front",
+    "west": "palamod:block/cobblebreaker_front",
+    "particle": "palamod:block/cobblebreaker_side"
+  },
+  "render_type": "solid"
+}

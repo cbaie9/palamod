@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bricks"
+    },
+    "b": {
+      "item": "palamod:paladium_furnace"
+    },
+    "c": {
+      "item": "palamod:findium"
+    }
+  },
+  "result": {
+    "item": "palamod:paladium_forge",
+    "count": 1
+  }
+}

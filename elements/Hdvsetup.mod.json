@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "$setup",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">classic</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Setupclassic</field></block></statement><next><block type=\"literal\"><field name=\"name\">adminshop</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Adminshoppricesetup</field></block></statement><next><block type=\"literal\"><field name=\"name\">faction</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Factionsetup</field></block></statement><next><block type=\"literal\"><field name=\"name\">trixium</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Trixiumsetup</field></block></statement><next><block type=\"literal\"><field name=\"name\">all</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Lunchallsetup</field></block></statement></block></next></block></next></block></next></block></next></block></next></block><block type=\"old_command\" x=\"363\" y=\"75\"><field name=\"procedure\">Hdvsetup_process</field></block></xml>"
+  }
+}

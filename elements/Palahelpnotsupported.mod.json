@@ -1,0 +1,184 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "x": 263,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "x": 133,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sad_ntsuport.png",
+          "use1Xscale": false,
+          "x": 262,
+          "y": 166
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_an_error_has_been_encountred",
+          "text": {
+            "fixedValue": "An error has been encountred"
+          },
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 99
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 201,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_error",
+          "text": {
+            "fixedValue": "Palahelp - error"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 43
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_your_language_is_not_supported",
+          "text": {
+            "fixedValue": "Your language is not supported "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 112
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 280,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 259,
+          "y": 40
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_language_btte",
+          "image": "language_btte.png",
+          "hoveredImage": "language_btte_poi.png",
+          "onClick": {
+            "name": "Forcechlanguage"
+          },
+          "x": 202,
+          "y": 178
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_change_language",
+          "text": {
+            "fixedValue": "Change language"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 173,
+          "y": 165
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

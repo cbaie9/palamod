@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "painting",
+  "definition": {
+    "texture": "plain32x16.png",
+    "width": 32,
+    "height": 16,
+    "title": "Plains 32x",
+    "author": "Unknown"
+  }
+}

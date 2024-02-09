@@ -1,0 +1,15 @@
+# Enter the function code here
+kill @e[type=experience_orb]
+kill @e[type=egg]
+kill @e[type=leash_knot]
+kill @e[type=boat]
+kill @e[type=minecart]
+kill @e[type=chest_minecart]
+kill @e[type=furnace_minecart]
+kill @e[type=tnt_minecart]
+kill @e[type=command_block_minecart]
+kill @e[type=spawner_minecart]
+kill @e[type=hopper_minecart]
+kill @e[type=ender_pearl]
+kill @e[type=eye_of_ender]
+
