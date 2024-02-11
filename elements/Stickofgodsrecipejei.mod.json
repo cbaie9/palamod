@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "paladiummachinerecipetypejei",
+    "result": {
+      "value": "CUSTOM:Stickofgods"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Healstick"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Strenghtstick"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Speedstick"
+      }
+    ]
+  }
+}

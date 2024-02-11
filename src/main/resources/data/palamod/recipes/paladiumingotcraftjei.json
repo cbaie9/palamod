@@ -1,0 +1,15 @@
+{
+  "type": "palamod:crusherrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:titane_mixed_coal"
+    },
+    {
+      "item": "palamod:kiwano"
+    }
+  ],
+  "output": {
+    "item": "palamod:paladium_ingot",
+    "count": 15
+  }
+}

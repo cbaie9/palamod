@@ -1,0 +1,24 @@
+{
+  "type": "palamod:paladiummachinerecipetypejei",
+  "ingredients": [
+    {
+      "item": "palamod:healstick"
+    },
+    {
+      "item": "palamod:paladium_block"
+    },
+    {
+      "item": "palamod:strenghtstick"
+    },
+    {
+      "item": "palamod:findium"
+    },
+    {
+      "item": "palamod:speedstick"
+    }
+  ],
+  "output": {
+    "item": "palamod:stickofgods",
+    "count": 1
+  }
+}

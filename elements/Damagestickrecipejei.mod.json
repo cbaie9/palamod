@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "paladiummachinerecipetypejei",
+    "result": {
+      "value": "CUSTOM:Damagestick"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Amethytestick"
+      },
+      {
+        "value": "CUSTOM:Paladiumspike"
+      },
+      {
+        "value": "CUSTOM:TitaneSword"
+      },
+      {
+        "value": "CUSTOM:Paladiumspike"
+      },
+      {
+        "value": "CUSTOM:Amethytestick"
+      }
+    ]
+  }
+}

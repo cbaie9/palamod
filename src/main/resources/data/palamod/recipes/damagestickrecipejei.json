@@ -1,0 +1,24 @@
+{
+  "type": "palamod:paladiummachinerecipetypejei",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst_stick"
+    },
+    {
+      "item": "palamod:paladium_spike"
+    },
+    {
+      "item": "palamod:titane_sword"
+    },
+    {
+      "item": "palamod:paladium_spike"
+    },
+    {
+      "item": "palamod:amethyst_stick"
+    }
+  ],
+  "output": {
+    "item": "palamod:damagestick",
+    "count": 1
+  }
+}

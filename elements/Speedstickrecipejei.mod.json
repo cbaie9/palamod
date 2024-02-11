@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "paladiummachinerecipetypejei",
+    "result": {
+      "value": "CUSTOM:Speedstick"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Amethytestick"
+      },
+      {
+        "value": "CUSTOM:Compressedamethyste"
+      },
+      {
+        "value": "CUSTOM:Speedorb"
+      },
+      {
+        "value": "CUSTOM:Compressedtitane"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      }
+    ]
+  }
+}

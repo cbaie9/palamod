@@ -69,11 +69,11 @@ public class AdminshopmobsScreen extends AbstractContainerScreen<AdminshopmobsMe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/adminshopmobs.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 190, 200, 190, 200);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/adminshopmobs.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 190, 200, 190, 200);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 89, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 90, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}

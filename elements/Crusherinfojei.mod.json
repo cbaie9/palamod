@@ -1,0 +1,17 @@
+{
+  "_fv": 57,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Paladiumcrusher"
+      }
+    ],
+    "information": [
+      "A block that crusher modded fruit with infused coal to make superior ingots",
+      " One of the only way to obtain endium",
+      "To make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine",
+      "When the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot "
+    ]
+  }
+}

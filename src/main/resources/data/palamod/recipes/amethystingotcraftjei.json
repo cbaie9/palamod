@@ -1,0 +1,15 @@
+{
+  "type": "palamod:crusherrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:gold_mixedcoal"
+    },
+    {
+      "item": "palamod:eggplant"
+    }
+  ],
+  "output": {
+    "item": "palamod:amethyst",
+    "count": 5
+  }
+}

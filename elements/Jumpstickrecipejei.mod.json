@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "paladiummachinerecipetypejei",
+    "result": {
+      "value": "CUSTOM:Jumpstick"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Titanestick"
+      },
+      {
+        "value": "CUSTOM:Slimepad"
+      },
+      {
+        "value": "CUSTOM:Jumporb"
+      },
+      {
+        "value": "CUSTOM:Slimepad"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      }
+    ]
+  }
+}

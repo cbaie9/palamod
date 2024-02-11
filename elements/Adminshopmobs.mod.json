@@ -15,7 +15,7 @@
         "data": {
           "image": "adminshopmobs.png",
           "use1Xscale": false,
-          "x": 118,
+          "x": 119,
           "y": 20
         }
       },
@@ -174,7 +174,7 @@
         "data": {
           "image": "left_gray_line.png",
           "use1Xscale": false,
-          "x": 118,
+          "x": 119,
           "y": 20
         }
       },
@@ -183,7 +183,7 @@
         "data": {
           "image": "right_gray_line.png",
           "use1Xscale": false,
-          "x": 208,
+          "x": 209,
           "y": 20
         }
       },
@@ -207,7 +207,7 @@
         "data": {
           "name": "label_page_1",
           "text": {
-            "fixedValue": "page 1"
+            "fixedValue": "Page 1"
           },
           "color": {
             "value": -1,

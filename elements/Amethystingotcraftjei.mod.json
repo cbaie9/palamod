@@ -1,0 +1,19 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "crusherrecipetype",
+    "result": {
+      "value": "CUSTOM:Amethyste"
+    },
+    "count": 5,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Goldmixedcoal"
+      },
+      {
+        "value": "CUSTOM:Eggplant"
+      }
+    ]
+  }
+}

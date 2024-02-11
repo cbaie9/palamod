@@ -57,7 +57,7 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachinegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachinegui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		if (Palamachinesubprocess1Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamchine_load1.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);

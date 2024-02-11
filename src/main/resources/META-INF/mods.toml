@@ -22,4 +22,10 @@ description="Un univers alternatif où la v5 à bien changé de version"
 
 
 
+[[dependencies.palamod]]
+    modId="jei"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

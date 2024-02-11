@@ -136,12 +136,18 @@
         }
       },
       {
-        "type": "image",
+        "type": "label",
         "data": {
-          "image": "palamachine_guiscreenshotnew.png",
-          "use1Xscale": true,
-          "x": 134,
-          "y": 113
+          "name": "label_now_in_jei",
+          "text": {
+            "fixedValue": "-> now in jei"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 168,
+          "y": 140
         }
       }
     ],

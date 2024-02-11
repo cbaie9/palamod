@@ -1,0 +1,15 @@
+{
+  "type": "palamod:crusherrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_mixed_charcoal"
+    },
+    {
+      "item": "palamod:orangeblue"
+    }
+  ],
+  "output": {
+    "item": "palamod:endium_nugget",
+    "count": 1
+  }
+}

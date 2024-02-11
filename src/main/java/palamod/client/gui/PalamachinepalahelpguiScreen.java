@@ -59,9 +59,6 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_guiscreenshotnew.png"), this.leftPos + 28, this.topPos + 93, 0, 0, 150, 70, 150, 70);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -97,6 +94,7 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		guiGraphics.drawString(this.font,
 
 				Palahelppalamachine4Procedure.execute(entity), 55, 184, -3394816, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palamachinepalahelpgui.label_now_in_jei"), 62, 120, -12829636, false);
 	}
 
 	@Override

@@ -1,0 +1,19 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "crusherrecipetype",
+    "result": {
+      "value": "CUSTOM:PaladiumIngot"
+    },
+    "count": 15,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Titanemixedcoal"
+      },
+      {
+        "value": "CUSTOM:Kiwano"
+      }
+    ]
+  }
+}

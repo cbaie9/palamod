@@ -1,0 +1,19 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "crusherrecipetype",
+    "result": {
+      "value": "CUSTOM:Endiumnugget"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Palamixedcharoal"
+      },
+      {
+        "value": "CUSTOM:Orangeblue"
+      }
+    ]
+  }
+}

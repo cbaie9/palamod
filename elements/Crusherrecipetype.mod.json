@@ -1,0 +1,37 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "crusher_jei.png",
+    "width": 176,
+    "height": 79,
+    "icon": {
+      "value": "CUSTOM:Paladiumcrusher"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:Paladiumcrusher"
+    },
+    "enableCraftingtable": true,
+    "title": "Crusher",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 22,
+        "y": 9,
+        "slotid": 1
+      },
+      {
+        "type": "INPUT",
+        "x": 22,
+        "y": 45,
+        "slotid": 0
+      },
+      {
+        "type": "OUTPUT",
+        "x": 91,
+        "y": 45,
+        "slotid": 0
+      }
+    ]
+  }
+}

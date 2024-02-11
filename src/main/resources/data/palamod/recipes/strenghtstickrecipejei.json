@@ -1,0 +1,24 @@
+{
+  "type": "palamod:paladiummachinerecipetypejei",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_block"
+    },
+    {
+      "item": "palamod:strengh_orb"
+    },
+    {
+      "item": "palamod:paladium_block"
+    },
+    {
+      "item": "palamod:titane_stick"
+    }
+  ],
+  "output": {
+    "item": "palamod:strenghtstick",
+    "count": 1
+  }
+}

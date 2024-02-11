@@ -1,0 +1,55 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "palamachine_jei.png",
+    "width": 175,
+    "height": 85,
+    "icon": {
+      "value": "CUSTOM:Paladiummachine"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:Paladiummachine"
+    },
+    "enableCraftingtable": true,
+    "title": "Paladiummachinerecipetypejei",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 21,
+        "y": 22,
+        "slotid": 0
+      },
+      {
+        "type": "INPUT",
+        "x": 49,
+        "y": 40,
+        "slotid": 1
+      },
+      {
+        "type": "INPUT",
+        "x": 76,
+        "y": 15,
+        "slotid": 2
+      },
+      {
+        "type": "INPUT",
+        "x": 103,
+        "y": 40,
+        "slotid": 3
+      },
+      {
+        "type": "INPUT",
+        "x": 129,
+        "y": 22,
+        "slotid": 4
+      },
+      {
+        "type": "OUTPUT",
+        "x": 75,
+        "y": 58,
+        "slotid": 0
+      }
+    ]
+  }
+}

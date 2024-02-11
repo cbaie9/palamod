@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "paladiummachinerecipetypejei",
+    "result": {
+      "value": "CUSTOM:Strenghtstick"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Strenghorb"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      }
+    ]
+  }
+}

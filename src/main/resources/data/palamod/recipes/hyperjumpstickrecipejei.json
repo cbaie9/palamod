@@ -1,0 +1,24 @@
+{
+  "type": "palamod:paladiummachinerecipetypejei",
+  "ingredients": [
+    {
+      "item": "palamod:jumpstick"
+    },
+    {
+      "item": "palamod:paladium_block"
+    },
+    {
+      "item": "palamod:jump_orb"
+    },
+    {
+      "item": "palamod:paladium_block"
+    },
+    {
+      "item": "palamod:jumpstick"
+    }
+  ],
+  "output": {
+    "item": "palamod:hyperjumpstick",
+    "count": 1
+  }
+}

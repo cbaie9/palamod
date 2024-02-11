@@ -47642,6 +47642,188 @@
           }
         ]
       }
+    },
+    {
+      "name": "Crusherrecipetype",
+      "type": "jeirecipetype",
+      "sortid": 2259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crusherrecipetype",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipeCategory.java",
+          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipe.java"
+        ]
+      }
+    },
+    {
+      "name": "Endiumnuggetjeicraft",
+      "type": "jeirecipe",
+      "sortid": 2260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumnuggetjeicraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/endiumnuggetjeicraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumingotcraftjei",
+      "type": "jeirecipe",
+      "sortid": 2261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumingotcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/paladiumingotcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Titaneingotcraftjei",
+      "type": "jeirecipe",
+      "sortid": 2262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaneingotcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/titaneingotcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystingotcraftjei",
+      "type": "jeirecipe",
+      "sortid": 2263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystingotcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/amethystingotcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Crusherinfojei",
+      "type": "jeiinformation",
+      "sortid": 2264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crusherinfojei",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Paladiummachinerecipetypejei",
+      "type": "jeirecipetype",
+      "sortid": 2265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiummachinerecipetypejei",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/jei_recipes/PaladiummachinerecipetypejeiRecipeCategory.java",
+          "src/main/java/palamod/jei_recipes/PaladiummachinerecipetypejeiRecipe.java"
+        ]
+      }
+    },
+    {
+      "name": "Speedstickrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speedstickrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/speedstickrecipejei.json"
+        ]
+      }
+    },
+    {
+      "name": "Healstickrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healstickrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/healstickrecipejei.json"
+        ]
+      }
+    },
+    {
+      "name": "Strenghtstickrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strenghtstickrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/strenghtstickrecipejei.json"
+        ]
+      }
+    },
+    {
+      "name": "Jumpstickrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jumpstickrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/jumpstickrecipejei.json"
+        ]
+      }
+    },
+    {
+      "name": "Stickofgodsrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stickofgodsrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/stickofgodsrecipejei.json"
+        ]
+      }
+    },
+    {
+      "name": "Damagestickrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damagestickrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/damagestickrecipejei.json"
+        ]
+      }
+    },
+    {
+      "name": "Hyperjumpstickrecipejei",
+      "type": "jeirecipe",
+      "sortid": 2272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hyperjumpstickrecipejei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/hyperjumpstickrecipejei.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48089,6 +48271,7 @@
       "subtitles.miichallengemusic": "Mii chalenge music",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": " probabilities of the nugget appear [",
       "gui.palamod.moneypanel.button_change": "Change",
+      "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
       "item.palamod.sword_head": "Sword head",
       "gui.palamod.adminshoporefindium.button_sell": "sell",
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
@@ -48779,7 +48962,7 @@
       "block.palamod.jacaranda_log": "Jacaranda Log",
       "item.palamod.paladium_armor_helmet": "Paladium Helmet",
       "gui.palamod.jobsminercraftgui.tooltip_poison_obsidian": "Poison Obsidian",
-      "gui.palamod.adminshopmobs.label_page_1": "page 1",
+      "gui.palamod.adminshopmobs.label_page_1": "Page 1",
       "gui.palamod.palahelpblock.button_machine": "Machine",
       "gui.palamod.adminshopmobsenderpearl.tooltip_close_the_gui": "Close the Gui",
       "gui.palamod.adminshoputilitiesemerald.tooltip_return_to_the_adminshop_utilitie": "Return to the adminshop utilities menu",
@@ -49616,6 +49799,7 @@
       "block.palamod.judeecercis_fence": "Judeecercis Fence",
       "gui.palamod.paladumfurnace.label_paladium_furnace": "Paladium Furnace",
       "palamod.procedure.obsidian_pickaxe": "Rotation changed to : ",
+      "gui.palamod.palamachinepalahelpgui.label_now_in_jei": "-\u003e now in jei",
       "item.palamod.space_food": "Spacefood",
       "block.palamod.nbt_block": "Nbt block",
       "block.palamod.titane_slab": "Titane slab",
@@ -49971,6 +50155,7 @@
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "que le nugget n\u0027apparaise [ probabilité étant la chance que le nugget appairaise",
       "gui.palamod.moneypanel.button_change": "Change",
       "subtitles.miichallengemusic": "Mii chalenge music",
+      "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
       "gui.palamod.adminshoporefindium.button_sell": "Vendre",
       "item.palamod.sword_head": "Tête d\u0027épée",
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
@@ -51505,6 +51690,7 @@
       "block.palamod.judeecercis_fence": "Barrière en judeecercis",
       "gui.palamod.paladumfurnace.label_paladium_furnace": "Paladium Furnace",
       "palamod.procedure.obsidian_pickaxe": "La rotation à changé : ",
+      "gui.palamod.palamachinepalahelpgui.label_now_in_jei": "-\u003e now in jei",
       "item.palamod.space_food": "Spacefood",
       "block.palamod.nbt_block": "Nbt block",
       "block.palamod.titane_slab": "Dalle en titane",
@@ -51791,7 +51977,9 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "jei"
+    ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Developed by guys who want exit warzone being killed ---  NOT affiliated with mojang, microsoft or Paladium games   - ",
     "modElementsPackage": "palamod",

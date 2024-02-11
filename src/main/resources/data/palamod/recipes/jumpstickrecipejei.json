@@ -1,0 +1,24 @@
+{
+  "type": "palamod:paladiummachinerecipetypejei",
+  "ingredients": [
+    {
+      "item": "palamod:titane_stick"
+    },
+    {
+      "item": "palamod:slimepad"
+    },
+    {
+      "item": "palamod:jump_orb"
+    },
+    {
+      "item": "palamod:slimepad"
+    },
+    {
+      "item": "palamod:titane_stick"
+    }
+  ],
+  "output": {
+    "item": "palamod:jumpstick",
+    "count": 1
+  }
+}

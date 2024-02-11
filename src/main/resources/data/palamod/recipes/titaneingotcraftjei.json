@@ -1,0 +1,15 @@
+{
+  "type": "palamod:crusherrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst_mixedcoal"
+    },
+    {
+      "item": "palamod:chervil"
+    }
+  ],
+  "output": {
+    "item": "palamod:titane_ingot",
+    "count": 15
+  }
+}

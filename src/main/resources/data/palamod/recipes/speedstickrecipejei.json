@@ -1,0 +1,24 @@
+{
+  "type": "palamod:paladiummachinerecipetypejei",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst_stick"
+    },
+    {
+      "item": "palamod:compressed_amethyst"
+    },
+    {
+      "item": "palamod:speed_orb"
+    },
+    {
+      "item": "palamod:compressed_titane"
+    },
+    {
+      "item": "palamod:titane_stick"
+    }
+  ],
+  "output": {
+    "item": "palamod:speedstick",
+    "count": 1
+  }
+}
