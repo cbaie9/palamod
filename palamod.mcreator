@@ -47824,6 +47824,47 @@
           "src/main/resources/data/palamod/recipes/hyperjumpstickrecipejei.json"
         ]
       }
+    },
+    {
+      "name": "Grinderhighrecipetypejei",
+      "type": "jeirecipetype",
+      "sortid": 2273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grinderhighrecipetypejei",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipe.java",
+          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipeCategory.java"
+        ]
+      }
+    },
+    {
+      "name": "Grinderlowerpartjei",
+      "type": "jeirecipetype",
+      "sortid": 2274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grinderlowerpartjei",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/jei_recipes/GrinderlowerpartjeiRecipe.java",
+          "src/main/java/palamod/jei_recipes/GrinderlowerpartjeiRecipeCategory.java"
+        ]
+      }
+    },
+    {
+      "name": "Hammersmeltrjei",
+      "type": "jeirecipe",
+      "sortid": 2275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammersmeltrjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/hammersmeltrjei.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -51965,7 +52006,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.013",
+    "version": "1.20.014",
     "description": "Un univers alternatif où la v5 à bien changé de version",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
