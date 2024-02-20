@@ -1,0 +1,15 @@
+{
+  "type": "palamod:grinderlowerpartjei",
+  "ingredients": [
+    {
+      "item": "palamod:smelt_modifier"
+    },
+    {
+      "item": "palamod:paladium_hammer"
+    }
+  ],
+  "output": {
+    "item": "palamod:paladium_hammer",
+    "count": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "grinder_higher_part_jei.png",
+    "width": 114,
+    "height": 57,
+    "icon": {
+      "value": "CUSTOM:Grinderblock"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:Grinderblock"
+    },
+    "enableCraftingtable": true,
+    "title": "Grinder ( structure )",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 27,
+        "y": 6,
+        "slotid": 0
+      },
+      {
+        "type": "INPUT",
+        "x": 27,
+        "y": 24,
+        "slotid": 1
+      },
+      {
+        "type": "OUTPUT",
+        "x": 77,
+        "y": 12,
+        "slotid": 2
+      }
+    ]
+  }
+}

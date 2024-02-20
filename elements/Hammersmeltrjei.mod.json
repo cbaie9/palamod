@@ -1,0 +1,19 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "grinderlowerpartjei",
+    "result": {
+      "value": "CUSTOM:Paladiumhammer"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Smeltmodifier"
+      },
+      {
+        "value": "CUSTOM:Paladiumhammer"
+      }
+    ]
+  }
+}
