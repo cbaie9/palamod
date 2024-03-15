@@ -33,7 +33,6 @@ import palamod.world.inventory.OrelayerfatMenu;
 import palamod.world.inventory.OnlinedetectorguiMenu;
 import palamod.world.inventory.NotyetguiMenu;
 import palamod.world.inventory.NextPalahelpguiMenu;
-import palamod.world.inventory.MoneypanelMenu;
 import palamod.world.inventory.MegasafechestfirstsetupMenu;
 import palamod.world.inventory.LuckyguiMenu;
 import palamod.world.inventory.LegendarystonepalahelpMenu;
@@ -171,7 +170,6 @@ public class PalamodModMenus {
 	public static final RegistryObject<MenuType<PalahelpnotsupportedMenu>> PALAHELPNOTSUPPORTED = REGISTRY.register("palahelpnotsupported", () -> IForgeMenuType.create(PalahelpnotsupportedMenu::new));
 	public static final RegistryObject<MenuType<StockhdvMenu>> STOCKHDV = REGISTRY.register("stockhdv", () -> IForgeMenuType.create(StockhdvMenu::new));
 	public static final RegistryObject<MenuType<AdminpanelmenuMenu>> ADMINPANELMENU = REGISTRY.register("adminpanelmenu", () -> IForgeMenuType.create(AdminpanelmenuMenu::new));
-	public static final RegistryObject<MenuType<MoneypanelMenu>> MONEYPANEL = REGISTRY.register("moneypanel", () -> IForgeMenuType.create(MoneypanelMenu::new));
 	public static final RegistryObject<MenuType<Palaerror0005Menu>> PALAERROR_0005 = REGISTRY.register("palaerror_0005", () -> IForgeMenuType.create(Palaerror0005Menu::new));
 	public static final RegistryObject<MenuType<SpawnpanelMenu>> SPAWNPANEL = REGISTRY.register("spawnpanel", () -> IForgeMenuType.create(SpawnpanelMenu::new));
 	public static final RegistryObject<MenuType<Palaerror0006Menu>> PALAERROR_0006 = REGISTRY.register("palaerror_0006", () -> IForgeMenuType.create(Palaerror0006Menu::new));

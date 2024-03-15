@@ -25,7 +25,6 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 	private final int x, y, z;
 	private final Player entity;
 	Button button_hdv_stocks_panel;
-	Button button_money_panel;
 	Button button_spawn_panel;
 	Button button_trixium_panel;
 	Button button_jobs_panel;
@@ -76,6 +75,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminpanelmenu.label_admin_panel"), 52, 5, -65536, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminpanelmenu.label_now_money_change"), 17, 57, -1, false);
 	}
 
 	@Override
@@ -94,34 +94,26 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		}).bounds(this.leftPos + 30, this.topPos + 24, 108, 20).build();
 		guistate.put("button:button_hdv_stocks_panel", button_hdv_stocks_panel);
 		this.addRenderableWidget(button_hdv_stocks_panel);
-		button_money_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_money_panel"), e -> {
+		button_spawn_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_spawn_panel"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(1, x, y, z));
 				AdminpanelmenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}).bounds(this.leftPos + 43, this.topPos + 51, 82, 20).build();
-		guistate.put("button:button_money_panel", button_money_panel);
-		this.addRenderableWidget(button_money_panel);
-		button_spawn_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_spawn_panel"), e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(2, x, y, z));
-				AdminpanelmenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 43, this.topPos + 78, 82, 20).build();
 		guistate.put("button:button_spawn_panel", button_spawn_panel);
 		this.addRenderableWidget(button_spawn_panel);
 		button_trixium_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_trixium_panel"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(3, x, y, z));
-				AdminpanelmenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(2, x, y, z));
+				AdminpanelmenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 38, this.topPos + 108, 93, 20).build();
 		guistate.put("button:button_trixium_panel", button_trixium_panel);
 		this.addRenderableWidget(button_trixium_panel);
 		button_jobs_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_jobs_panel"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(4, x, y, z));
-				AdminpanelmenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(3, x, y, z));
+				AdminpanelmenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 48, this.topPos + 135, 77, 20).build();
 		guistate.put("button:button_jobs_panel", button_jobs_panel);

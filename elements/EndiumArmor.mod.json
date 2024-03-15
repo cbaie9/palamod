@@ -70,16 +70,28 @@
     "bodyImmuneToFire": true,
     "leggingsImmuneToFire": true,
     "bootsImmuneToFire": true,
-    "maxDamage": 70,
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 400,
     "damageValueHelmet": 10,
     "damageValueBody": 12,
-    "damageValueLeggings": 0,
+    "damageValueLeggings": 6,
     "damageValueBoots": 10,
-    "enchantability": 64,
-    "toughness": 0.0,
-    "knockbackResistance": 0.0,
+    "enchantability": 70,
+    "toughness": 5.0,
+    "knockbackResistance": 0.3,
     "equipSound": {
-      "value": ""
+      "value": "item.armor.equip_netherite"
     },
     "repairItems": [
       {

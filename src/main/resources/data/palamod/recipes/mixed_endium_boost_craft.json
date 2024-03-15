@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mixed_endium",
+  "category": "equipment",
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:mixedendiumingot"
+    }
+  },
+  "result": {
+    "item": "palamod:mixedendiumarmor_boots",
+    "count": 1
+  }
+}

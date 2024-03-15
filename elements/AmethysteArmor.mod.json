@@ -58,14 +58,26 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
-    "maxDamage": 45,
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 170,
     "damageValueHelmet": 5,
     "damageValueBody": 6,
     "damageValueLeggings": 4,
     "damageValueBoots": 5,
-    "enchantability": 20,
-    "toughness": 0.0,
-    "knockbackResistance": 0.0,
+    "enchantability": 30,
+    "toughness": 3.0,
+    "knockbackResistance": 0.1,
     "equipSound": {
       "value": ""
     },

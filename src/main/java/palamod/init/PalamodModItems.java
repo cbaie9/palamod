@@ -115,6 +115,8 @@ import palamod.item.MoulastoneItem;
 import palamod.item.MoneyotherItem;
 import palamod.item.MoneyitemItem;
 import palamod.item.Moneye1k1Item;
+import palamod.item.MixedendiumingotItem;
+import palamod.item.MixedendiumarmorItem;
 import palamod.item.MinagevoidstoneItem;
 import palamod.item.MiichalengeItem;
 import palamod.item.MediumringgreenpaladiumItem;
@@ -759,6 +761,11 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> SLIMEOBSIDIAN = block(PalamodModBlocks.SLIMEOBSIDIAN);
 	public static final RegistryObject<Item> POISONOBSIDIAN = block(PalamodModBlocks.POISONOBSIDIAN);
 	public static final RegistryObject<Item> SEALEDXPBOTTLE = REGISTRY.register("sealedxpbottle", () -> new SealedxpbottleItem());
+	public static final RegistryObject<Item> MIXEDENDIUMINGOT = REGISTRY.register("mixedendiumingot", () -> new MixedendiumingotItem());
+	public static final RegistryObject<Item> MIXEDENDIUMARMOR_HELMET = REGISTRY.register("mixedendiumarmor_helmet", () -> new MixedendiumarmorItem.Helmet());
+	public static final RegistryObject<Item> MIXEDENDIUMARMOR_CHESTPLATE = REGISTRY.register("mixedendiumarmor_chestplate", () -> new MixedendiumarmorItem.Chestplate());
+	public static final RegistryObject<Item> MIXEDENDIUMARMOR_LEGGINGS = REGISTRY.register("mixedendiumarmor_leggings", () -> new MixedendiumarmorItem.Leggings());
+	public static final RegistryObject<Item> MIXEDENDIUMARMOR_BOOTS = REGISTRY.register("mixedendiumarmor_boots", () -> new MixedendiumarmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

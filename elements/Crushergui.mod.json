@@ -415,14 +415,14 @@
         "data": {
           "name": "label_v2004",
           "text": {
-            "fixedValue": "v2.4 force.release"
+            "fixedValue": "v2.4.1"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 265,
-          "y": 208
+          "x": 345,
+          "y": 210
         }
       },
       {

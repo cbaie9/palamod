@@ -33,7 +33,6 @@ import palamod.client.gui.OrelayerfatScreen;
 import palamod.client.gui.OnlinedetectorguiScreen;
 import palamod.client.gui.NotyetguiScreen;
 import palamod.client.gui.NextPalahelpguiScreen;
-import palamod.client.gui.MoneypanelScreen;
 import palamod.client.gui.MegasafechestfirstsetupScreen;
 import palamod.client.gui.LuckyguiScreen;
 import palamod.client.gui.LegendarystonepalahelpScreen;
@@ -172,7 +171,6 @@ public class PalamodModScreens {
 			MenuScreens.register(PalamodModMenus.PALAHELPNOTSUPPORTED.get(), PalahelpnotsupportedScreen::new);
 			MenuScreens.register(PalamodModMenus.STOCKHDV.get(), StockhdvScreen::new);
 			MenuScreens.register(PalamodModMenus.ADMINPANELMENU.get(), AdminpanelmenuScreen::new);
-			MenuScreens.register(PalamodModMenus.MONEYPANEL.get(), MoneypanelScreen::new);
 			MenuScreens.register(PalamodModMenus.PALAERROR_0005.get(), Palaerror0005Screen::new);
 			MenuScreens.register(PalamodModMenus.SPAWNPANEL.get(), SpawnpanelScreen::new);
 			MenuScreens.register(PalamodModMenus.PALAERROR_0006.get(), Palaerror0006Screen::new);

@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,7 +24,12 @@ import net.minecraft.commands.CommandSource;
 
 import javax.annotation.Nullable;
 
+import java.io.IOException;
+import java.io.FileWriter;
 import java.io.File;
+
+import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
 
 @Mod.EventBusSubscriber
 public class OpenpalamodgameProcedure {
@@ -39,15 +45,8 @@ public class OpenpalamodgameProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		File file = new File("");
-		File client_file = new File("");
-		com.google.gson.JsonObject CrusherCat = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject Main_json = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject Grinder_cat = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject Crusher_cat2input = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject crusher_cat2output = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject Grinder_subcat = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject client_main_obj = new com.google.gson.JsonObject();
+		File money = new File("");
+		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		if (!((world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == PalamodModBlocks.NBT_BLOCK.get())) {
 			LunchallsetupProcedure.execute(world);
 			if (world instanceof ServerLevel _level)
@@ -85,5 +84,19 @@ public class OpenpalamodgameProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"tellraw @p [\"\",{\"text\":\"--------------------------\\nPowered by\",\"color\":\"yellow\"},{\"text\":\" Palamod Renew\",\"color\":\"#2ED0FF\"},{\"text\":\"\\n\"},{\"text\":\"Based on\",\"color\":\"dark_red\"},{\"text\":\" Paladium\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------\",\"color\":\"yellow\"}]");
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		if (!money.exists()) {
+			money_main.addProperty("money", 0);
+			{
+				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(money);
+					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
+		}
 	}
 }

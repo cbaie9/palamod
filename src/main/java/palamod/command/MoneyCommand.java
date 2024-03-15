@@ -14,9 +14,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
+import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
@@ -39,7 +39,7 @@ public class MoneyCommand {
 
 					MoneyprocessProcedure.execute(world, x, y, z, entity);
 					return 0;
-				}).then(Commands.literal("set").then(Commands.argument("player", StringArgumentType.word()).then(Commands.argument("money", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+				}).then(Commands.literal("set").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("money", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -53,7 +53,7 @@ public class MoneyCommand {
 
 					MoneychangecommandProcedure.execute(world, x, y, z, arguments, entity);
 					return 0;
-				})))).then(Commands.literal("add").then(Commands.argument("player", StringArgumentType.word()).then(Commands.argument("money", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+				})))).then(Commands.literal("add").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("money", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

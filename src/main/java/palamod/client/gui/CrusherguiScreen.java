@@ -999,20 +999,20 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_inventaire"), 13, 111, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_fuel"), 27, 58, -3394816, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_fruits"), 26, 24, -3407668, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_v2004"), 219, 190, -12829636, false);
-		if (Crushertextad4Procedure.execute(world))
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_v2004"), 299, 192, -12829636, false);
+		if (Crushertextad4Procedure.execute())
 			guiGraphics.drawString(this.font,
 
 					CrushercustominfoameProcedure.execute(world, x, y, z), 123, 38, -12829636, false);
-		if (Crushertextad3Procedure.execute(world))
+		if (Crushertextad3Procedure.execute())
 			guiGraphics.drawString(this.font,
 
 					CrushercustominfotitaneProcedure.execute(world, x, y, z), 124, 70, -12829636, false);
-		if (Crushertextad2Procedure.execute(world))
+		if (Crushertextad2Procedure.execute())
 			guiGraphics.drawString(this.font,
 
 					CrushercustominfopaladiumProcedure.execute(world, x, y, z), 244, 39, -12829636, false);
-		if (CrushertextadProcedure.execute(world))
+		if (CrushertextadProcedure.execute())
 			guiGraphics.drawString(this.font,
 
 					CrushercustominfoendiumProcedure.execute(world, x, y, z), 245, 70, -12829636, false);

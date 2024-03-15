@@ -1,6 +1,8 @@
 
 package palamod.item;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
@@ -8,10 +10,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
@@ -36,7 +39,7 @@ public abstract class RanbowarmorItem extends ArmorItem {
 
 			@Override
 			public SoundEvent getEquipSound() {
-				return SoundEvents.EMPTY;
+				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_leather"));
 			}
 
 			@Override
@@ -75,6 +78,11 @@ public abstract class RanbowarmorItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "palamod:textures/models/armor/ranbow_armor__layer_1.png";
 		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
+		}
 	}
 
 	public static class Chestplate extends RanbowarmorItem {
@@ -90,6 +98,11 @@ public abstract class RanbowarmorItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "palamod:textures/models/armor/ranbow_armor__layer_1.png";
+		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
 		}
 	}
 
@@ -107,6 +120,11 @@ public abstract class RanbowarmorItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "palamod:textures/models/armor/ranbow_armor__layer_2.png";
 		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
+		}
 	}
 
 	public static class Boots extends RanbowarmorItem {
@@ -122,6 +140,11 @@ public abstract class RanbowarmorItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "palamod:textures/models/armor/ranbow_armor__layer_1.png";
+		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
 		}
 	}
 }

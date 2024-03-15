@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mixed_endium",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:green_paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:endium_fragment"
+    }
+  },
+  "result": {
+    "item": "palamod:mixedendiumingot",
+    "count": 8
+  }
+}

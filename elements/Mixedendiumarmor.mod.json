@@ -1,0 +1,102 @@
+{
+  "_fv": 57,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "mixed_endium_helmet",
+    "enableBody": true,
+    "textureBody": "mixed_endium_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "mixed_endium_leggings",
+    "enableBoots": true,
+    "textureBoots": "mixed_endium_boots",
+    "onHelmetTick": {
+      "name": "MixedendiumarmorHelmetTickEvent"
+    },
+    "onBodyTick": {
+      "name": "MixedendiumarmorChestplateTickEvent"
+    },
+    "onLeggingsTick": {
+      "name": "MixedendiumarmorLeggingsTickEvent"
+    },
+    "onBootsTick": {
+      "name": "MixedendiumarmorBootsTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Palamod"
+    },
+    "armorTextureFile": "mixed_endium_armor_",
+    "helmetName": "Mixed Endium Helmet",
+    "bodyName": "Mixed Endium Chestplate",
+    "leggingsName": "Mixed Endium Leggings",
+    "bootsName": "Mixed Endium Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 350,
+    "damageValueHelmet": 5,
+    "damageValueBody": 7,
+    "damageValueLeggings": 6,
+    "damageValueBoots": 4,
+    "enchantability": 65,
+    "toughness": 4.5,
+    "knockbackResistance": 0.25,
+    "equipSound": {
+      "value": "item.armor.equip_diamond"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Mixedendiumingot"
+      }
+    ]
+  }
+}

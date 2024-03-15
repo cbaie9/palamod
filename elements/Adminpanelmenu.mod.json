@@ -52,21 +52,6 @@
       {
         "type": "button",
         "data": {
-          "name": "button_money_panel",
-          "text": "Money Panel",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Moneypanelconnect"
-          },
-          "width": 82,
-          "height": 20,
-          "x": 169,
-          "y": 88
-        }
-      },
-      {
-        "type": "button",
-        "data": {
           "name": "button_spawn_panel",
           "text": "Spawn Panel",
           "isUndecorated": false,
@@ -107,6 +92,21 @@
           "height": 20,
           "x": 174,
           "y": 172
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_now_money_change",
+          "text": {
+            "fixedValue": "Now -> /money set/add [num]"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 143,
+          "y": 94
         }
       }
     ],
