@@ -5,6 +5,8 @@ import palamod.world.inventory.Palaerror0005Menu;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.loading.FMLPaths;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -12,11 +14,13 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -60,9 +64,7 @@ public class MoneyaddprocessProcedure {
 					}
 					bufferedReader.close();
 					money_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (entity instanceof Player _player)
-						_player.closeContainer();
-					money_main.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money") + money_main.get("money").getAsDouble()));
+					money_main.addProperty("money", (money_main.get("money").getAsDouble() + DoubleArgumentType.getDouble(arguments, "money")));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -75,6 +77,24 @@ public class MoneyaddprocessProcedure {
 					fileWriter.close();
 				} catch (IOException exception) {
 					exception.printStackTrace();
+				}
+			}
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					money_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"" + Component.translatable("palamod.procedure.money_current").getString()
+										+ money_main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
 			}
 		} else {

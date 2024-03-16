@@ -15,14 +15,6 @@ public class Crushertextad2Procedure {
 		com.google.gson.JsonObject main_obj = new com.google.gson.JsonObject();
 		double output = 0;
 		file = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/defaultconfig/"), File.separator + "palamod-configuration-custom.json");
-		if (!file.exists()) {
-			try {
-				file.getParentFile().mkdirs();
-				file.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-		}
 		if (file.exists()) {
 			{
 				try {
