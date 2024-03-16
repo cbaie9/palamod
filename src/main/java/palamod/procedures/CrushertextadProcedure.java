@@ -1,10 +1,6 @@
 package palamod.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.loading.FMLPaths;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -14,12 +10,11 @@ import java.io.BufferedReader;
 import com.google.gson.Gson;
 
 public class CrushertextadProcedure {
-	public static boolean execute(LevelAccessor world) {
+	public static boolean execute() {
 		File file = new File("");
 		com.google.gson.JsonObject main_obj = new com.google.gson.JsonObject();
 		double output = 0;
-		file = new File((FMLPaths.GAMEDIR.get().toString() + "/saves/" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "/serverconfig/"), File.separator + "palamod-configuration-custom.json");
+		file = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/defaultconfig/"), File.separator + "palamod-configuration-custom.json");
 		if (!file.exists()) {
 			try {
 				file.getParentFile().mkdirs();

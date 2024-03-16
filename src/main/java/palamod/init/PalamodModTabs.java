@@ -252,6 +252,11 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.SLIMEOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.POISONOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModItems.SEALEDXPBOTTLE.get());
+				tabData.accept(PalamodModItems.MIXEDENDIUMINGOT.get());
+				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_HELMET.get());
+				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_CHESTPLATE.get());
+				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_LEGGINGS.get());
+				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_BOOTS.get());
 			})
 
 					.build());

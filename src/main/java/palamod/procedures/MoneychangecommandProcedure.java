@@ -41,6 +41,8 @@ public class MoneychangecommandProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
+			if (world instanceof Level _level)
+				_level.updateNeighborsAt(new BlockPos(0, 10, 0), _level.getBlockState(new BlockPos(0, 10, 0)).getBlock());
 		} else {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);

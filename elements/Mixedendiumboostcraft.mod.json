@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "mixed_endium",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Mixedendiumingot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Mixedendiumingot"
+      },
+      {
+        "value": "CUSTOM:Mixedendiumingot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Mixedendiumingot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Mixedendiumarmor.boots"
+    },
+    "name": "mixed_endium_boost_craft",
+    "namespace": "mod"
+  }
+}

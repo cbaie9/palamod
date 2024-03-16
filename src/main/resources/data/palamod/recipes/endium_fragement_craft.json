@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "mixed_endium",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "palamod:endium_nugget"
+    }
+  ],
+  "result": {
+    "item": "palamod:endium_fragment",
+    "count": 9
+  }
+}

@@ -12,31 +12,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.COBBLESTONE"
       },
       {
         "value": ""
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.COBBLESTONE"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.COBBLESTONE"
       },
       {
         "value": "CUSTOM:Voidstone"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.COBBLESTONE"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.COBBLESTONE"
       },
       {
         "value": "CUSTOM:Forturnemodifier"
       },
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.COBBLESTONE"
       }
     ],
     "recipeReturnStack": {

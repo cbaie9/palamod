@@ -27,7 +27,7 @@
     },
     "armorTextureFile": "travel2_",
     "helmetName": "Slimy Helmet",
-    "bodyName": "Travel Body",
+    "bodyName": "Jump chestplate",
     "leggingsName": "Travel Leggings",
     "bootsName": "Travel Boots",
     "helmetSpecialInformation": {
@@ -70,16 +70,28 @@
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
     "bootsImmuneToFire": false,
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
     "maxDamage": 15,
     "damageValueHelmet": 1,
     "damageValueBody": 1,
     "damageValueLeggings": 3,
     "damageValueBoots": 1,
-    "enchantability": 9,
+    "enchantability": 20,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
     "equipSound": {
-      "value": ""
+      "value": "item.armor.equip_diamond"
     },
     "repairItems": []
   }

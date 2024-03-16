@@ -5,7 +5,6 @@ import palamod.world.inventory.AdminpanelmenuMenu;
 
 import palamod.procedures.SpawnpanelconnectProcedure;
 import palamod.procedures.Palaerror6connectProcedure;
-import palamod.procedures.MoneypanelconnectProcedure;
 import palamod.procedures.HdvstocksopenProcedure;
 
 import palamod.PalamodMod;
@@ -73,17 +72,13 @@ public class AdminpanelmenuButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			MoneypanelconnectProcedure.execute(world, x, y, z, entity);
+			SpawnpanelconnectProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			SpawnpanelconnectProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
 			Palaerror6connectProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 4) {
+		if (buttonID == 3) {
 
 			Palaerror6connectProcedure.execute(world, x, y, z, entity);
 		}

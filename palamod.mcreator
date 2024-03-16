@@ -10704,21 +10704,6 @@
       }
     },
     {
-      "name": "Moneypanel",
-      "type": "gui",
-      "sortid": 814,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moneypanel",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/network/MoneypanelButtonMessage.java",
-          "src/main/java/palamod/client/gui/MoneypanelScreen.java",
-          "src/main/java/palamod/world/inventory/MoneypanelMenu.java"
-        ]
-      }
-    },
-    {
       "name": "Palaerror0005",
       "type": "gui",
       "sortid": 815,
@@ -10817,41 +10802,6 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/procedures/SpawnpanelconnectProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Moneypanelconnect",
-      "type": "procedure",
-      "sortid": 820,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moneypanelconnect",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/MoneypanelconnectProcedure.java"
         ],
         "dependencies": [
           {
@@ -25199,19 +25149,6 @@
         "files": [
           "src/main/resources/assets/palamod/models/item/endium_pollen.json",
           "src/main/java/palamod/item/EndiumpollenItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Endiumnuggetcraft",
-      "type": "recipe",
-      "sortid": 1401,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumnuggetcraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipes/endiumnuggetcraft.json"
         ]
       }
     },
@@ -47865,6 +47802,191 @@
           "src/main/resources/data/palamod/recipes/hammersmeltrjei.json"
         ]
       }
+    },
+    {
+      "name": "MixedendiumarmorLeggingsTickEvent",
+      "type": "procedure",
+      "sortid": 2281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumarmor_leggings_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/MixedendiumarmorLeggingsTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MixedendiumarmorChestplateTickEvent",
+      "type": "procedure",
+      "sortid": 2280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumarmor_chestplate_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/MixedendiumarmorChestplateTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumingotcraft",
+      "type": "recipe",
+      "sortid": 2277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumingotcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/mixed_endium_ingot_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumlegginscraft",
+      "type": "recipe",
+      "sortid": 2286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumlegginscraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/mixed_endium_leggins_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumingot",
+      "type": "item",
+      "sortid": 2276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumingot",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/MixedendiumingotItem.java",
+          "src/main/resources/assets/palamod/models/item/mixedendiumingot.json"
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumchestplatecraft",
+      "type": "recipe",
+      "sortid": 2285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumchestplatecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/mixed_endium_chestplate_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "MixedendiumarmorBootsTickEvent",
+      "type": "procedure",
+      "sortid": 2282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumarmor_boots_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/MixedendiumarmorBootsTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumarmor",
+      "type": "armor",
+      "sortid": 2278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumarmor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/mixedendiumarmor_leggings.json",
+          "src/main/resources/assets/palamod/models/item/mixedendiumarmor_boots.json",
+          "src/main/resources/assets/palamod/models/item/mixedendiumarmor_helmet.json",
+          "src/main/resources/assets/palamod/models/item/mixedendiumarmor_chestplate.json",
+          "src/main/java/palamod/item/MixedendiumarmorItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumhelmetcraft",
+      "type": "recipe",
+      "sortid": 2284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumhelmetcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/mixed_endium_helmet_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "MixedendiumarmorHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 2279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumarmor_helmet_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/MixedendiumarmorHelmetTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Endiumfragementcraft",
+      "type": "recipe",
+      "sortid": 2283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumfragementcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/endium_fragement_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "Mixedendiumboostcraft",
+      "type": "recipe",
+      "sortid": 2287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mixedendiumboostcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipes/mixed_endium_boost_craft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48309,7 +48431,6 @@
       "gui.palamod.potgtranfert.button_transfert": "transfert",
       "gui.palamod.adminshopblock_dirt.button_sell": "sell",
       "advancements.avancementgrindre.title": "Need a smeltery ?",
-      "gui.palamod.moneypanel.button_change": "Change",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": " probabilities of the nugget appear [",
       "subtitles.miichallengemusic": "Mii chalenge music",
       "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
@@ -48595,7 +48716,6 @@
       "gui.palamod.adminshopplantpotato.number_buy": "number here",
       "item.palamod.legendary_stone_power": "Legendary stone power",
       "gui.palamod.adminshopplantcactus.number_buy": "number here",
-      "gui.palamod.moneypanel.label_money_to_change_for_remove_m": "Money to change ( - for remove money )",
       "gui.palamod.sticknewhelp.label_palamachine": "Palamachine",
       "gui.palamod.crusherpalahelpgui.label_rsultat_ici": "Résultat ici",
       "gui.palamod.adminshopmobs_2steak.tooltip_return_to_the_adminshops_main_m": "Return to the adminshop\u0027s main menu",
@@ -48761,7 +48881,6 @@
       "gui.palamod.adminshopmobs_2inksac.button_back": "back",
       "gui.palamod.dynamicorelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
       "block.palamod.slimeobsidian": "Slime obsidian",
-      "gui.palamod.moneypanel.button_avanced": "Avanced",
       "gui.palamod.authsafegui.label_enter_code": "Enter code",
       "advancements.achmringgreenpaladium.descr": "Repair something with green paladium ring",
       "gui.palamod.adminshopore.button_emerald": "Emerald",
@@ -49237,7 +49356,6 @@
       "gui.palamod.assembleurend.label_bouton": "-) bouton ( lucky block )",
       "gui.palamod.palahelpmachine.button_menu": "Menu",
       "advancements.achmchestpaladium.descr": "Obtain or craft a paladium chest",
-      "gui.palamod.moneypanel.label_money_panel": "Money Panel",
       "gui.palamod.adminshopblock.tooltip_close_the_gui": "Close the gui",
       "advancements.achmchestendium.descr": "Obtain or craft a endium chest",
       "death.attack.spikedamage.player": "%1$s was crushed by a spike whilst trying to escape %2$s",
@@ -49286,7 +49404,6 @@
       "item.palamod.fuzedisc.desc": "They called me fuze III - Fuze III",
       "item.palamod.wither_shard": "Wither shard",
       "itemGroup.tabdecorationcreativetab": "Palamod : Decoration tab",
-      "gui.palamod.moneypanel.Admin_player_money": "Enter player for change his money",
       "gui.palamod.grindergui.button_upgrade": "Upgrades",
       "gui.palamod.orelayerfat.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
       "item.palamod.endium_pollen": "Endium pollen",
@@ -49707,7 +49824,6 @@
       "gui.palamod.languageselection.button_franais": "français",
       "gui.palamod.grinderpalahelpgui.button_next": "next",
       "block.palamod.findium_ore": "Findium Ore",
-      "gui.palamod.moneypanel.label_player_to_change_money": "Player to change money",
       "item.palamod.green_paladium_big_ring": "Big ring green paladium",
       "gui.palamod.adminshopmobsfrspidereyes.tooltip_return_to_the_adminshops_mobs_m": "Return to the adminshop\u0027s mobs menu",
       "gui.palamod.armorpalahelpgui.label_5_speed": "+ 5 Speed",
@@ -49821,6 +49937,7 @@
       "gui.palamod.adminshoporeiron.label_mode_set": "Amount :",
       "gui.palamod.spawnpanel.label_spawn_panel": "Spawn Panel",
       "block.palamod.trixium_nbt_block": "Trixiumnbtblock",
+      "gui.palamod.adminpanelmenu.label_now_money_change": "Now -\u003e /money set/add [num]",
       "item.palamod.paladiumarmorcustom_5_helmet": "Paladium Helmet",
       "gui.palamod.palahelpmachine.button_drawbridge": "Drawbridge",
       "item.palamod.paladiumgreensword": "Green Paladium Sword",
@@ -49870,7 +49987,6 @@
       "gui.palamod.palahelptree.label_portail_en_endium": "portail en endium",
       "gui.palamod.adminshoputilities.button_stone": "Cobblestone",
       "gui.palamod.adminshopmobsbone.label_mode_set": "Amount :",
-      "gui.palamod.moneypanel.Admin_money_change": "Money to add/remove",
       "item.palamod.hyperjumpstick": "Hyper jump stick",
       "block.palamod.erable_slab": "Erable Slab",
       "gui.palamod.adminshopblockgrass.label_sell_price_03": "Sell price : 0.3",
@@ -50194,8 +50310,8 @@
       "gui.palamod.adminshopblock_dirt.button_sell": "Vendre",
       "advancements.avancementgrindre.title": "Besoin d\u0027une fonte ?",
       "subtitles.miichallengemusic": "Mii chalenge music",
-      "gui.palamod.moneypanel.button_change": "Change",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "que le nugget n\u0027apparaise [ probabilité étant la chance que le nugget appairaise",
+      "gui.palamod.moneypanel.button_change": "Change",
       "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
       "item.palamod.sword_head": "Tête d\u0027épée",
       "gui.palamod.adminshoporefindium.button_sell": "Vendre",
@@ -50207,6 +50323,7 @@
       "advancements.avancementkaboom.title": "Ka-boom",
       "block.palamod.black_lucky_block": "Lucky bloc noir",
       "item.palamod.creative_trixium_sword": "Épée creative en trixium",
+      "item.palamod.mixedendiumarmor_boots": "Mixed Endium Boots",
       "item_group.palamod.palamod": "Palamod Projet Renew",
       "gui.palamod.orelayerfat.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "gui.palamod.adminshoputilitiesemerald.label_paladium": "Redstone",
@@ -51289,6 +51406,7 @@
       "block.palamod.golden_obsidian_spike": "Obsidienne de pic en or",
       "gui.palamod.adminpanelmenu.button_money_panel": "Panel de l\u0027argent",
       "block.palamod.xpbush": "Buisson d\u0027xp",
+      "item.palamod.mixedendiumarmor_chestplate": "Mixed Endium Chestplate",
       "gui.palamod.adminshopplantcrimsonfungus.button_buy": "Acheter",
       "gui.palamod.adminshopmobs_2honeycomb.button_buy": "Acheter",
       "gui.palamod.palamachinepalahelpgui.label_voir_bton_pour_les_craft": "Voir Bâton pour les craft",
@@ -51352,6 +51470,7 @@
       "gui.palamod.palamachinepalahelpgui.label_la_palamachine_se_presente_comme": "La palamachine se presente comme ceci",
       "block.palamod.jacaranda_stairs": "Escalier en Jacaranda",
       "gui.palamod.legendarystonepalahelp.label_jobs_vous_donne_de_lxp": "Jobs :vous donne de l\u0027xp ",
+      "item.palamod.mixedendiumingot": "Mixed endium ingot",
       "gui.palamod.adminshoporeiron.label_sell_price_15": "Prix de vente : 15",
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "Montrer les variable debug",
       "gui.palamod.adminshopore.button_gold": "Or",
@@ -51559,6 +51678,7 @@
       "gui.palamod.adminshopplantcrimsonfungus.number_buy": "Un nombre ici",
       "advancements.palamodavancement.descr": "A nouvelle dimention pour l\u0027advanture",
       "gui.palamod.uploadergui.button_yo": "yo",
+      "item.palamod.mixedendiumarmor_helmet": "Mixed Endium Helmet",
       "gui.palamod.palahelpnotsupported.button_back": "Revenir en arrière",
       "gui.palamod.adminshopmobs_2glowinksac.tooltip_return_to_the_adminshops_main_m": "Return to the adminshop\u0027s main menu",
       "block.palamod.elevator_blue": "Ascenseur bleu",
@@ -51651,6 +51771,7 @@
       "item.minecraft.tipped_arrow.effect.antifakepotion": "Flèche d\u0027anti fausse eau",
       "gui.palamod.jobsminercraftgui.tooltip_cobblebreaker_amethyst_upgrade": "Cobblebreaker amethyst upgrade",
       "item.palamod.enfyupotion": "Potion de enfyu",
+      "item.palamod.mixedendiumarmor_leggings": "Mixed Endium Leggings",
       "config.palamod.palamodserverconfirguration": "palamod_server_conf",
       "advancements.avancementcompressedavantur.title": "Aventure compréssée",
       "gui.palamod.adminshoputilitiesdiampic.button_sell": "Vendre",
@@ -51712,6 +51833,7 @@
       "gui.palamod.adminshoporeiron.label_mode_set": "Quantité :",
       "gui.palamod.spawnpanel.label_spawn_panel": "Panel du point d\u0027apparition",
       "block.palamod.trixium_nbt_block": "Trixium nbt block",
+      "gui.palamod.adminpanelmenu.label_now_money_change": "Now -\u003e /money set/add [num]",
       "item.palamod.paladiumarmorcustom_5_helmet": "Paladium Helmet",
       "gui.palamod.palahelpmachine.button_drawbridge": "Drawbridge",
       "item.palamod.paladiumgreensword": "Épée en paladium vert",
