@@ -2,6 +2,11 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsguiMenu;
 
+import palamod.procedures.GetlevelminerProcedure;
+import palamod.procedures.GetlevelhunterProcedure;
+import palamod.procedures.GetlevelfarmerProcedure;
+import palamod.procedures.GetlevelalchiProcedure;
+
 import palamod.network.JobsguiButtonMessage;
 
 import palamod.PalamodMod;
@@ -93,10 +98,25 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_jobs"), 134, 7, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items"), 5, 121, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_miner"), 127, 43, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 46, 42, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_miner"), 48, 45, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 123, 45, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_le_hunter"), 207, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 44, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 45, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetlevelminerProcedure.execute(entity), 44, 99, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetlevelfarmerProcedure.execute(entity), -120, 45, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetlevelfarmerProcedure.execute(entity), 119, 99, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetlevelhunterProcedure.execute(entity), 201, 99, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetlevelalchiProcedure.execute(entity), 272, 99, -12829636, false);
 	}
 
 	@Override
@@ -107,11 +127,11 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 45, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta_template_jobs.png"), 40, 80, e -> {
+		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 119, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta_template_jobs.png"), 40, 80, e -> {
 		});
 		guistate.put("button:imagebutton_screen_beta_template_jobs", imagebutton_screen_beta_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta_template_jobs);
-		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 122, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta2_template_jobs.png"), 40, 80, e -> {
+		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 41, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta2_template_jobs.png"), 40, 80, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new JobsguiButtonMessage(1, x, y, z));
 				JobsguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
