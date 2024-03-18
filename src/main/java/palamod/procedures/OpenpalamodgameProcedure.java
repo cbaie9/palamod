@@ -46,7 +46,9 @@ public class OpenpalamodgameProcedure {
 		if (entity == null)
 			return;
 		File money = new File("");
+		File jobs = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		if (!((world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == PalamodModBlocks.NBT_BLOCK.get())) {
 			LunchallsetupProcedure.execute(world);
 			if (world instanceof ServerLevel _level)
@@ -85,13 +87,54 @@ public class OpenpalamodgameProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"tellraw @p [\"\",{\"text\":\"--------------------------\\nPowered by\",\"color\":\"yellow\"},{\"text\":\" Palamod Renew\",\"color\":\"#2ED0FF\"},{\"text\":\"\\n\"},{\"text\":\"Based on\",\"color\":\"dark_red\"},{\"text\":\" Paladium\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------\",\"color\":\"yellow\"}]");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (!money.exists()) {
+			try {
+				money.getParentFile().mkdirs();
+				money.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
 			money_main.addProperty("money", 0);
 			{
 				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
+		}
+		if (!jobs.exists()) {
+			try {
+				jobs.getParentFile().mkdirs();
+				jobs.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+			jobs_main.addProperty("lvl_miner", 0);
+			jobs_main.addProperty("lvl_farmer", 0);
+			jobs_main.addProperty("lvl_hunter", 0);
+			jobs_main.addProperty("lvl_alchi", 0);
+			jobs_main.addProperty("xp_miner", 0);
+			jobs_main.addProperty("xp_farmer", 0);
+			jobs_main.addProperty("xp_hunter", 0);
+			jobs_main.addProperty("xp_alchi", 0);
+			jobs_main.addProperty("xpstreak_miner", 0);
+			jobs_main.addProperty("xpstreak_time_miner", 0);
+			jobs_main.addProperty("xpstreak_time_farmer", 0);
+			jobs_main.addProperty("xpstreak_farmer", 0);
+			jobs_main.addProperty("xpstreak_time_hunter", 0);
+			jobs_main.addProperty("xpstreak_hunter", 0);
+			jobs_main.addProperty("xpstreak_time_alchi", 0);
+			jobs_main.addProperty("xpstreak_alchi", 0);
+			{
+				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(jobs);
+					fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
 					fileWriter.close();
 				} catch (IOException exception) {
 					exception.printStackTrace();

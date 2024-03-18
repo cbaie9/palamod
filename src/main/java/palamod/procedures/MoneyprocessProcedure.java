@@ -37,7 +37,7 @@ public class MoneyprocessProcedure {
 				money_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							("tellraw @p [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"Current Money : " + "" + money_main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
+							("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"Current Money :" + money_main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

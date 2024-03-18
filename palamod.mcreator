@@ -47967,6 +47967,140 @@
           "src/main/resources/data/palamod/recipes/mixed_endium_boost_craft.json"
         ]
       }
+    },
+    {
+      "name": "Jobsminerbreakblock",
+      "type": "procedure",
+      "sortid": 2292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerbreakblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerbreakblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Worldtickcooldown",
+      "type": "procedure",
+      "sortid": 2293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "worldtickcooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/WorldtickcooldownProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getlevelalchi",
+      "type": "procedure",
+      "sortid": 2291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getlevelalchi",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetlevelalchiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getlevelminer",
+      "type": "procedure",
+      "sortid": 2288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getlevelminer",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetlevelminerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getlevelfarmer",
+      "type": "procedure",
+      "sortid": 2289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getlevelfarmer",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetlevelfarmerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getlevelhunter",
+      "type": "procedure",
+      "sortid": 2290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getlevelhunter",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetlevelhunterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [

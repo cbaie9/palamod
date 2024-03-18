@@ -16,7 +16,7 @@
           "name": "imagebutton_screen_beta_template_jobs",
           "image": "screen_beta3_famer_jobs.png",
           "hoveredImage": "screen_beta3_farm2.png",
-          "x": 84,
+          "x": 158,
           "y": 77
         }
       },
@@ -38,7 +38,7 @@
           "onClick": {
             "name": "Connectjobsminergui"
           },
-          "x": 161,
+          "x": 80,
           "y": 77
         }
       },
@@ -130,8 +130,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 166,
-          "y": 63
+          "x": 87,
+          "y": 65
         }
       },
       {
@@ -145,8 +145,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 85,
-          "y": 62
+          "x": 162,
+          "y": 65
         }
       },
       {
@@ -176,7 +176,7 @@
             "falpha": 0.0
           },
           "x": 308,
-          "y": 64
+          "y": 65
         }
       },
       {
@@ -235,6 +235,86 @@
           },
           "x": 367,
           "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelminer",
+          "text": {
+            "fixedValue": "",
+            "name": "Getlevelminer"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 83,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelfarmer",
+          "text": {
+            "fixedValue": "",
+            "name": "Getlevelfarmer"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": -81,
+          "y": 65
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelfarmer1",
+          "text": {
+            "fixedValue": "get",
+            "name": "Getlevelfarmer"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 158,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelhunter",
+          "text": {
+            "fixedValue": "",
+            "name": "Getlevelhunter"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 240,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelalchi",
+          "text": {
+            "fixedValue": "GET",
+            "name": "Getlevelalchi"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 311,
+          "y": 119
         }
       }
     ],
