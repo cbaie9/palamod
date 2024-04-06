@@ -40,6 +40,11 @@ public class JobsminerbreakblockProcedure {
 			return;
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject jobs_main2 = new com.google.gson.JsonObject();
+		boolean logic1 = false;
+		boolean logic2 = false;
+		double xp = 0;
+		double time = 0;
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		{
 			try {
@@ -51,24 +56,33 @@ public class JobsminerbreakblockProcedure {
 				}
 				bufferedReader.close();
 				jobs_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				if (world.dayTime() > jobs_main.get("xpstreak_time_miner").getAsDouble()) {
+					logic1 = true;
+				}
 				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.STONE) {
-					jobs_main.addProperty("xp_miner", (0.5 + jobs_main.get("xp_miner").getAsDouble()));
-					jobs_main.addProperty("xpstreak_miner", (0.5 + jobs_main.get("xpstreak_miner").getAsDouble()));
-					jobs_main.addProperty("xpstreak_time_miner", 80);
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(
-								(Component.translatable("palamod.procedure.jobswin1").getString() + "" + (0.5 + jobs_main.get("xpstreak_miner").getAsDouble()) + Component.translatable("palamod.procedure.jobswin2").getString() + " " + Blocks.STONE)),
-								true);
+					logic2 = true;
+					xp = jobs_main2.get("xpstreak_miner").getAsDouble();
+					time = jobs_main2.get("xp_miner").getAsDouble();
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
+		if (logic1) {
+			jobs_main2.addProperty("xpstreak_miner", 0);
+		}
+		if (logic2) {
+			jobs_main2.addProperty("xp_miner", (0.5 + time));
+			jobs_main2.addProperty("xpstreak_miner", (0.5 + xp));
+			jobs_main2.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (0.5 + xp) + Component.translatable("palamod.procedure.jobswin2").getString() + " " + Blocks.STONE)), true);
+		}
 		{
 			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
 			try {
 				FileWriter fileWriter = new FileWriter(jobs);
-				fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
+				fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main2));
 				fileWriter.close();
 			} catch (IOException exception) {
 				exception.printStackTrace();
