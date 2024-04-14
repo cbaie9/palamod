@@ -1,0 +1,23 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Double experience boost",
+    "icon": "potion_job_x2.png",
+    "color": {
+      "value": -10027264,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "Addmultixp2file"
+    },
+    "onExpired": {
+      "name": "Removemultixp2file"
+    }
+  }
+}

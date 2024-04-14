@@ -2,6 +2,9 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsminerguiMenu;
 
+import palamod.procedures.GetxpminertextProcedure;
+import palamod.procedures.GetxpminerProcedure;
+
 import palamod.network.JobsminerguiButtonMessage;
 
 import palamod.PalamodMod;
@@ -45,7 +48,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminergui.tooltip_98100_0"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(GetxpminertextProcedure.execute(entity)), mouseX, mouseY);
 	}
 
 	@Override
@@ -82,7 +85,9 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_jobs_miner"), 9, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_0_100"), 114, 36, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				GetxpminerProcedure.execute(entity), 114, 36, -12829636, false);
 	}
 
 	@Override

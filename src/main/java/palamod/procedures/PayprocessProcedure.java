@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 import com.google.gson.GsonBuilder;
@@ -102,7 +103,7 @@ public class PayprocessProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw " + entity + " {\"text\":\"" + Component.translatable("palamod.procedure.pay1").getString() + DoubleArgumentType.getDouble(arguments, "money") + "$ " + Component.translatable("palamod.procedure.pay2").getString()
-								+ " " + new Object() {
+								+ " " + (new Object() {
 									public Entity getEntity() {
 										try {
 											return EntityArgument.getEntity(arguments, "player");
@@ -111,7 +112,20 @@ public class PayprocessProcedure {
 											return null;
 										}
 									}
-								}.getEntity() + "\",\"color\":\"green\"}"));
+								}.getEntity()).getDisplayName().getString() + "\",\"color\":\"green\"}"));
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("tellraw " + new Object() {
+							public Entity getEntity() {
+								try {
+									return EntityArgument.getEntity(arguments, "player");
+								} catch (CommandSyntaxException e) {
+									e.printStackTrace();
+									return null;
+								}
+							}
+						}.getEntity() + " {\"text\":\"" + Component.translatable("palamod.procedure.pay3").getString() + " " + DoubleArgumentType.getDouble(arguments, "money") + "$ " + Component.translatable("palamod.procedure.pay4").getString()
+								+ entity + ", " + Component.translatable("palamod.procedure.pay5").getString() + " " + StringArgumentType.getString(arguments, "reason") + "\",\"color\":\"green\"}"));
 		}
 	}
 }

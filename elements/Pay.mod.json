@@ -5,6 +5,6 @@
     "commandName": "pay",
     "type": "MULTIPLAYER_ONLY",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">money</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Payprocess</field></block></statement></block></statement></block></next></block><block type=\"string\" x=\"496\" y=\"84\"><field name=\"type\">word</field><field name=\"name\">player</field></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">money</field><statement name=\"args\"><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">reason</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Payprocess</field></block></statement></block></statement></block></statement></block></next></block><block type=\"string\" x=\"496\" y=\"84\"><field name=\"type\">word</field><field name=\"name\">player</field></block></xml>"
   }
 }

@@ -9,7 +9,6 @@ import net.minecraftforge.event.level.BlockEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
@@ -19,14 +18,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import javax.annotation.Nullable;
-
-import java.util.Map;
 
 @Mod.EventBusSubscriber
 public class BreakcheckclaimProcedure {
@@ -85,37 +81,11 @@ public class BreakcheckclaimProcedure {
 					PalamodMod.queueServerWork(2, () -> {
 						PalamodMod.LOGGER.debug(("try breaking claim at : " + ("x: " + x + " y ::" + y + " z :" + z)));
 					});
-					{
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockState _bs = blocktest;
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
-								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
-						}
-						BlockEntity _be = world.getBlockEntity(_bp);
-						CompoundTag _bnbt = null;
-						if (_be != null) {
-							_bnbt = _be.saveWithFullMetadata();
-							_be.setRemoved();
-						}
-						world.setBlock(_bp, _bs, 3);
-						if (_bnbt != null) {
-							_be = world.getBlockEntity(_bp);
-							if (_be != null) {
-								try {
-									_be.load(_bnbt);
-								} catch (Exception ignored) {
-								}
-							}
-						}
-					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("claim : denied "), false);
+					if (event != null && event.isCancelable()) {
+						event.setCanceled(true);
+					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("claim by id:" + (new Object() {
 							public double getValue(LevelAccessor world, BlockPos pos, String tag) {

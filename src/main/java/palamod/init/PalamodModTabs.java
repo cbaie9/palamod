@@ -257,6 +257,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_BOOTS.get());
+				tabData.accept(PalamodModItems.DOUBLEEXPPOTION.get());
+				tabData.accept(PalamodModItems.X_10XPPOTION.get());
 			})
 
 					.build());

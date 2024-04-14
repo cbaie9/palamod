@@ -198,7 +198,7 @@ public class PhonecodeProcedure {
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("fac")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("punkastik")) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Rejoins le serveur de la PunkAstik https://discord.gg/E7xDnVh53r"), false);
+				_player.displayClientMessage(Component.literal("Rejoins le serveur de la PunkAstik https://discord.gg[censored bc fdp]"), false);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("( c'est ma fac )"), false);
 		}

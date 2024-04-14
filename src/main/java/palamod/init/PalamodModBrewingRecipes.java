@@ -28,6 +28,8 @@ public class PalamodModBrewingRecipes implements IModPlugin {
 		List<IJeiBrewingRecipe> brewingRecipes = new ArrayList<>();
 		ItemStack potion = new ItemStack(Items.POTION);
 		ItemStack potion2 = new ItemStack(Items.POTION);
+		List<ItemStack> ingredientStack = new ArrayList<>();
+		List<ItemStack> inputStack = new ArrayList<>();
 		registration.addRecipes(RecipeTypes.BREWING, brewingRecipes);
 	}
 }

@@ -107,9 +107,6 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 				GetlevelminerProcedure.execute(entity), 44, 99, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelfarmerProcedure.execute(entity), -120, 45, -12829636, false);
-		guiGraphics.drawString(this.font,
-
 				GetlevelfarmerProcedure.execute(entity), 119, 99, -12829636, false);
 		guiGraphics.drawString(this.font,
 

@@ -15,6 +15,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
@@ -24,7 +25,7 @@ public class PayCommand {
 		if (event.getCommandSelection() == Commands.CommandSelection.DEDICATED)
 			event.getDispatcher().register(Commands.literal("pay")
 
-					.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("money", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("money", DoubleArgumentType.doubleArg()).then(Commands.argument("reason", StringArgumentType.word()).executes(arguments -> {
 						Level world = arguments.getSource().getUnsidedLevel();
 						double x = arguments.getSource().getPosition().x();
 						double y = arguments.getSource().getPosition().y();
@@ -38,6 +39,6 @@ public class PayCommand {
 
 						PayprocessProcedure.execute(world, x, y, z, arguments, entity);
 						return 0;
-					}))));
+					})))));
 	}
 }

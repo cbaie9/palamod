@@ -1,17 +1,30 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModItems;
+
+import palamod.PalamodMod;
+
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.level.BlockEvent;
 
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import javax.annotation.Nullable;
 
@@ -38,54 +51,105 @@ public class JobsminerbreakblockProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		File jobs = new File("");
-		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject jobs_main2 = new com.google.gson.JsonObject();
-		boolean logic1 = false;
-		boolean logic2 = false;
-		double xp = 0;
-		double time = 0;
+		File money = new File("");
+		double money_add = 0;
+		boolean money_getadd = false;
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
-		{
-			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		if (jobs.exists() && money.exists()) {
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
+						main.addProperty("xpstreak_miner", 0);
+					}
+					if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z)) {
+						main.addProperty("xp_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
+						main.addProperty("xpstreak_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
+						main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(
+									Component.literal((Component.translatable("palamod.procedure.jobswin1").getString()
+											+ "" + (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
+											+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
+													.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
+									true);
+					}
+					PalamodMod.LOGGER.debug("Debug : checking miner lvl");
+					if (main.get("next_level_miner").getAsDouble() <= main.get("xp_miner").getAsDouble()) {
+						main.addProperty("lvl_miner", (1 + main.get("lvl_miner").getAsDouble()));
+						main.addProperty("xp_miner", (main.get("xp_miner").getAsDouble() - main.get("next_level_miner").getAsDouble()));
+						main.addProperty("next_level_miner", GetnextlevelxpProcedure.execute(entity));
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+							_setstack.setCount((int) (1 + Math.floor(main.get("lvl_miner").getAsDouble() / 2)));
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PalamodModItems.TRIXIUM.get());
+							_setstack.setCount((int) main.get("lvl_miner").getAsDouble());
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" " + "" + Component.translatable("palamod.procedure.jobswinlvl_miner1").getString() + " \\n "
+											+ Component.translatable("palamod.procedure.jobswinlvl_miner2").getString() + " " + Math.round(main.get("lvl_miner").getAsDouble()) + ","
+											+ Component.translatable("palamod.procedure.jobswinlvl_miner3").getString() + " " + Math.round(1000) + "$\",\"color\":\"gold\"}]"));
+						money_getadd = true;
+						money_add = 2 * (main.get("lvl_miner").getAsDouble() + 1);
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
-				bufferedReader.close();
-				jobs_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (world.dayTime() > jobs_main.get("xpstreak_time_miner").getAsDouble()) {
-					logic1 = true;
+			}
+			{
+				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(jobs);
+					fileWriter.write(mainGSONBuilderVariable.toJson(main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
 				}
-				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.STONE) {
-					logic2 = true;
-					xp = jobs_main2.get("xpstreak_miner").getAsDouble();
-					time = jobs_main2.get("xp_miner").getAsDouble();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
 			}
 		}
-		if (logic1) {
-			jobs_main2.addProperty("xpstreak_miner", 0);
-		}
-		if (logic2) {
-			jobs_main2.addProperty("xp_miner", (0.5 + time));
-			jobs_main2.addProperty("xpstreak_miner", (0.5 + xp));
-			jobs_main2.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (0.5 + xp) + Component.translatable("palamod.procedure.jobswin2").getString() + " " + Blocks.STONE)), true);
-		}
-		{
-			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
-			try {
-				FileWriter fileWriter = new FileWriter(jobs);
-				fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main2));
-				fileWriter.close();
-			} catch (IOException exception) {
-				exception.printStackTrace();
+		if (money.exists()) {
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					money_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (money_getadd) {
+						money_main.addProperty("money", (main.get("money").getAsDouble() + money_add));
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			{
+				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(money);
+					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
 			}
 		}
 	}

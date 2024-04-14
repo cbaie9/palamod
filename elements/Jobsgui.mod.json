@@ -256,22 +256,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_proc_getlevelfarmer",
-          "text": {
-            "fixedValue": "",
-            "name": "Getlevelfarmer"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": -81,
-          "y": 65
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_proc_getlevelfarmer1",
           "text": {
             "fixedValue": "get",

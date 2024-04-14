@@ -61,7 +61,8 @@
         "data": {
           "name": "label_0_100",
           "text": {
-            "fixedValue": "98 / 100"
+            "fixedValue": "98 / 100",
+            "name": "Getxpminer"
           },
           "color": {
             "value": -12829636,
@@ -86,7 +87,8 @@
         "data": {
           "name": "tooltip_98100_0",
           "text": {
-            "fixedValue": "98/100 | 98%  of the level1"
+            "fixedValue": "98/100 | 98%  of the level1",
+            "name": "Getxpminertext"
           },
           "width": 145,
           "height": 10,

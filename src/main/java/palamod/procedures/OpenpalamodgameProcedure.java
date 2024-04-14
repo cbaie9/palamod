@@ -114,6 +114,11 @@ public class OpenpalamodgameProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
+			jobs_main.addProperty("multi_exp", 1);
+			jobs_main.addProperty("next_level_miner", 50);
+			jobs_main.addProperty("next_level_farmer", 480);
+			jobs_main.addProperty("next_level_hunter", 480);
+			jobs_main.addProperty("next_level_alchi", 480);
 			jobs_main.addProperty("lvl_miner", 0);
 			jobs_main.addProperty("lvl_farmer", 0);
 			jobs_main.addProperty("lvl_hunter", 0);

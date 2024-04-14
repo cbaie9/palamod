@@ -1,0 +1,23 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "x10 experience boost",
+    "icon": "potion_job_x10.png",
+    "color": {
+      "value": -10027264,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "Addmultixp10file"
+    },
+    "onExpired": {
+      "name": "Removemultixp10file"
+    }
+  }
+}

@@ -5,6 +5,7 @@
 package palamod.init;
 
 import palamod.item.XpberryItem;
+import palamod.item.X10xppotionItem;
 import palamod.item.WithershardItem;
 import palamod.item.WitherimbuepotionItem;
 import palamod.item.WingItem;
@@ -204,6 +205,7 @@ import palamod.item.EndiumArmorItem;
 import palamod.item.EggplantseedItem;
 import palamod.item.EggplantItem;
 import palamod.item.DynamiteItem;
+import palamod.item.DoubleexppotionItem;
 import palamod.item.DiamondstringItem;
 import palamod.item.DiamondparticleItem;
 import palamod.item.DamagestickItem;
@@ -766,6 +768,8 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> MIXEDENDIUMARMOR_CHESTPLATE = REGISTRY.register("mixedendiumarmor_chestplate", () -> new MixedendiumarmorItem.Chestplate());
 	public static final RegistryObject<Item> MIXEDENDIUMARMOR_LEGGINGS = REGISTRY.register("mixedendiumarmor_leggings", () -> new MixedendiumarmorItem.Leggings());
 	public static final RegistryObject<Item> MIXEDENDIUMARMOR_BOOTS = REGISTRY.register("mixedendiumarmor_boots", () -> new MixedendiumarmorItem.Boots());
+	public static final RegistryObject<Item> DOUBLEEXPPOTION = REGISTRY.register("doubleexppotion", () -> new DoubleexppotionItem());
+	public static final RegistryObject<Item> X_10XPPOTION = REGISTRY.register("x_10xppotion", () -> new X10xppotionItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
