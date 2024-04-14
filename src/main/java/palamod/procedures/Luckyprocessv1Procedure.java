@@ -63,7 +63,10 @@ public class Luckyprocessv1Procedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			Random = new Random().nextInt(198300 + 1);
+			Random = new Random().nextGaussian();
+			while (!(Random >= 1 && Random <= 198300)) {
+				Random = new Random().nextGaussian();
+			}
 			if (Random >= 1 && Random <= 11600) {
 				PalamodModVariables.lucky_name = "0 + 0 = La tete a Toto";
 				PalamodMod.queueServerWork(100, () -> {
@@ -269,7 +272,7 @@ public class Luckyprocessv1Procedure {
 			}
 			if (Random >= 26300 && Random <= 35600) {
 				PalamodModVariables.lucky_name = "Batman nerveux";
-				for (int index0 = 0; index0 < 3; index0++) {
+				for (int index1 = 0; index1 < 3; index1++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.BAT.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
@@ -322,7 +325,7 @@ public class Luckyprocessv1Procedure {
 					((Slot) _slots.get(5)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				for (int index1 = 0; index1 < 3; index1++) {
+				for (int index2 = 0; index2 < 3; index2++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.IRON_GOLEM.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
@@ -357,7 +360,7 @@ public class Luckyprocessv1Procedure {
 					((Slot) _slots.get(5)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				for (int index2 = 0; index2 < 3; index2++) {
+				for (int index3 = 0; index3 < 3; index3++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = PalamodModEntities.PALADIUMDYNAMITE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
@@ -392,7 +395,7 @@ public class Luckyprocessv1Procedure {
 					((Slot) _slots.get(5)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				for (int index3 = 0; index3 < 1; index3++) {
+				for (int index4 = 0; index4 < 1; index4++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = PalamodModEntities.BIGDYNAMITEENTITY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
@@ -428,7 +431,7 @@ public class Luckyprocessv1Procedure {
 					_player.containerMenu.broadcastChanges();
 				}
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.BAMBOO_SAPLING.defaultBlockState(), 3);
-				for (int index4 = 0; index4 < 5; index4++) {
+				for (int index5 = 0; index5 < 5; index5++) {
 					if (world instanceof Level _level) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, _bp) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, _bp, null)) {
@@ -464,7 +467,7 @@ public class Luckyprocessv1Procedure {
 					((Slot) _slots.get(5)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				for (int index5 = 0; index5 < 100; index5++) {
+				for (int index6 = 0; index6 < 100; index6++) {
 					PalamodMod.queueServerWork(20, () -> {
 						{
 							Entity _ent = entity;
@@ -563,7 +566,7 @@ public class Luckyprocessv1Procedure {
 					((Slot) _slots.get(5)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				for (int index6 = 0; index6 < 5; index6++) {
+				for (int index7 = 0; index7 < 5; index7++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.SKELETON_HORSE.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {

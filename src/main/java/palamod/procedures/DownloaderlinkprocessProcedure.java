@@ -36,7 +36,7 @@ public class DownloaderlinkprocessProcedure {
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putString("downloader_linked_account_uuid", (entity.getUUID().toString()));
+				_blockEntity.getPersistentData().putString("downloader_linked_account_uuid", (entity.getStringUUID()));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

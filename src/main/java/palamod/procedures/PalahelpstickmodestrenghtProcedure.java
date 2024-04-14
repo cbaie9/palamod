@@ -99,7 +99,7 @@ public class PalahelpstickmodestrenghtProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("mode_stick_" + entity.getUUID().toString()), 6);
+					_blockEntity.getPersistentData().putDouble(("mode_stick_" + entity.getStringUUID()), 6);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

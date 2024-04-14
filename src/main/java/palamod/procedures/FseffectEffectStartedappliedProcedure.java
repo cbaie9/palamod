@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.init.PalamodModParticleTypes;
 
+import net.minecraftforge.fml.ModList;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -30,7 +32,7 @@ public class FseffectEffectStartedappliedProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (PalamodModParticleTypes.FLYPARTICLE.get()), x, y, z, 5, 3, 3, 3, 1);
-		if (!net.minecraftforge.fml.ModList.get().isLoaded("oxygene")) {
+		if (!ModList.get().isLoaded("oxygene")) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" The fly is activated\",\"color\":\"gold\"}]");

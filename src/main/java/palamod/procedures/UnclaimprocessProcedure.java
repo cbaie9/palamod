@@ -30,7 +30,7 @@ public class UnclaimprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString()));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		get_power = new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -54,7 +54,7 @@ public class UnclaimprocessProcedure {
 					return blockEntity.getPersistentData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getUUID().toString()))) {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
 			if (new Object() {
 				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -62,7 +62,7 @@ public class UnclaimprocessProcedure {
 						return blockEntity.getPersistentData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_officer_" + entity.getUUID().toString() + "_" + get_id))) {
+			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_officer_" + entity.getStringUUID() + "_" + get_id))) {
 				if (new Object() {
 					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);

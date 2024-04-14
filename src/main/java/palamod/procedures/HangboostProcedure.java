@@ -7,7 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.client.gui.screens.Screen;
 
 public class HangboostProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
@@ -20,7 +19,7 @@ public class HangboostProcedure {
 				itemstack.getOrCreateTag().putBoolean("hang_state", false);
 			}
 			if (itemstack.getOrCreateTag().getBoolean("hang_state")) {
-				if (Screen.hasShiftDown()) {
+				if (entity.isShiftKeyDown()) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1, 4, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -30,8 +29,8 @@ public class HangboostProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 99999, 1, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 99999, 2, false, false));
+					itemstack.getOrCreateTag().putBoolean("hang_state", false);
 				}
-				itemstack.getOrCreateTag().putBoolean("hang_state", false);
 			} else {
 				itemstack.getOrCreateTag().putBoolean("hang_state", true);
 				if (entity instanceof LivingEntity _entity)

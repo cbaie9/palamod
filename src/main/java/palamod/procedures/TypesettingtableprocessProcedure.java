@@ -22,7 +22,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.screens.Screen;
 
 import java.util.Map;
 
@@ -741,7 +740,7 @@ public class TypesettingtableprocessProcedure {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("You haven't put a enchanted book in the stable"), true);
 			}
-		} else if (Screen.hasControlDown()) {
+		} else if (world instanceof Level _level120 && _level120.hasNeighborSignal(BlockPos.containing(x, y, z))) {
 			if (new Object() {
 				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);

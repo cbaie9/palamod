@@ -31,7 +31,7 @@ public class FactionleaveProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))).equals(entity.getUUID().toString())) {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))).equals(entity.getStringUUID())) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(0, 9, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -44,7 +44,7 @@ public class FactionleaveProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))), ((new Object() {
+					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))), ((new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -58,7 +58,7 @@ public class FactionleaveProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))) - 1));
+					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))) - 1));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -67,7 +67,7 @@ public class FactionleaveProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getUUID().toString()), false);
+					_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getStringUUID()), false);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -87,7 +87,7 @@ public class FactionleaveProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))) + "\",\"color\":\"gold\"}]"));
+						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))) + "\",\"color\":\"gold\"}]"));
 		} else {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

@@ -27,7 +27,7 @@ public class FactionhomeprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString()));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		if ((new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);

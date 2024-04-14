@@ -40,7 +40,7 @@ public class Megasafechest_openProcedure {
 					return false;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "safe_link")) {
-				if ((entity.getUUID().toString()).equals(new Object() {
+				if ((entity.getStringUUID()).equals(new Object() {
 					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)

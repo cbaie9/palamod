@@ -34,7 +34,7 @@ public class OpenfhguiProcedure {
 					return blockEntity.getPersistentData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getUUID().toString()))) {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {

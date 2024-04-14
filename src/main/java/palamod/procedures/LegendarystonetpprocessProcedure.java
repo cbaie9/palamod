@@ -30,8 +30,8 @@ public class LegendarystonetpprocessProcedure {
 				return false;
 			}
 		}.checkGamemode(entity)) {
-			x = new Random().nextInt(240000 + 1);
-			z = new Random().nextInt(240000 + 1);
+			x = new Random().nextGaussian();
+			z = new Random().nextGaussian();
 			{
 				Entity _ent = entity;
 				_ent.teleportTo(x, 255, z);

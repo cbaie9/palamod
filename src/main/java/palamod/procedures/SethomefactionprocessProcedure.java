@@ -28,7 +28,7 @@ public class SethomefactionprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString()));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		if (!world.isClientSide()) {
 			BlockPos _bp = new BlockPos(0, 9, 0);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);

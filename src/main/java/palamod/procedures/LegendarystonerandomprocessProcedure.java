@@ -8,39 +8,37 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
-import java.util.Random;
-
 public class LegendarystonerandomprocessProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		double random = 0;
-		random = new Random().nextInt(5 + 1);
-		if (random == 1) {
+		random = Math.random();
+		if (random <= 0.2 && random > 0) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-		} else if (random == 2) {
+		} else if (random <= 0.4 && random > 0.2) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_INVISIBLE.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-		} else if (random == 3) {
+		} else if (random <= 0.6 && random > 0.4) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-		} else if (random == 4) {
+		} else if (random <= 0.8 && random > 0.6) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_JOBS.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-		} else if (random == 5) {
+		} else if (random <= 1 && random > 0.8) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get());
 				_setstack.setCount(1);

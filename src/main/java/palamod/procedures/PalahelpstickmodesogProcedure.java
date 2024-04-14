@@ -86,7 +86,7 @@ public class PalahelpstickmodesogProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("mode_stick_" + entity.getUUID().toString()), 7);
+					_blockEntity.getPersistentData().putDouble(("mode_stick_" + entity.getStringUUID()), 7);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

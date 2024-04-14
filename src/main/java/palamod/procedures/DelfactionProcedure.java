@@ -32,7 +32,7 @@ public class DelfactionProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))).equals(entity.getUUID().toString())) {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))).equals(entity.getStringUUID())) {
 			entity.getPersistentData().putBoolean(("faction-warning_" + (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -40,7 +40,7 @@ public class DelfactionProcedure {
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))), true);
+			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))), true);
 			random = Mth.nextInt(RandomSource.create(), 1, 10000);
 			entity.getPersistentData().putDouble("faction-code", random);
 			if (world instanceof ServerLevel _level)

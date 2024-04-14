@@ -17,6 +17,14 @@ public class FactionhomelistProcedure {
 			return;
 		double cycle_loop = 0;
 		double get_id = 0;
+		get_id = new Object() {
+			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		cycle_loop = cycle_loop + 1;
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

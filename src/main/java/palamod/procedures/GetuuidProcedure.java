@@ -9,6 +9,6 @@ public class GetuuidProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal((entity.getUUID().toString())), false);
+			_player.displayClientMessage(Component.literal((entity.getStringUUID())), false);
 	}
 }

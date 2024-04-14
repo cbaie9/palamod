@@ -30,7 +30,7 @@ public class FactioninviteprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString()));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		fac_name = new Object() {
 			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -45,7 +45,7 @@ public class FactioninviteprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))));
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
 				if (world instanceof ServerLevel _level)
@@ -56,7 +56,7 @@ public class FactioninviteprocessProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putBoolean(("Faction_invite_" + fac_id + "_" + fac_name + "_" + entityiterator.getUUID().toString()), true);
+						_blockEntity.getPersistentData().putBoolean(("Faction_invite_" + fac_id + "_" + fac_name + "_" + entity.getStringUUID()), true);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -88,7 +88,7 @@ public class FactioninviteprocessProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)))), (entityiterator.getUUID().toString()));
+						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)))), (entity.getStringUUID()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}

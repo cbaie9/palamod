@@ -27,7 +27,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.Minecraft;
 
 import java.util.Map;
@@ -45,7 +44,7 @@ public class SeedplanterprocessProcedure {
 			itemstack.getOrCreateTag().putBoolean("seedplanter_setup", true);
 			itemstack.getOrCreateTag().putDouble("mode", 1);
 		}
-		if (Screen.hasShiftDown()) {
+		if (entity.isShiftKeyDown()) {
 			if (itemstack.getOrCreateTag().getDouble("mode") == 1) {
 				itemstack.getOrCreateTag().putDouble("mode", 2);
 				if (world instanceof ServerLevel _level)

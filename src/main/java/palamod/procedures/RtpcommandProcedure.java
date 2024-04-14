@@ -10,8 +10,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -21,6 +19,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+
+import java.util.Random;
 
 public class RtpcommandProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -38,26 +38,28 @@ public class RtpcommandProcedure {
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getUUID().toString())))) {
-					xrandom = Mth.nextInt(RandomSource.create(), 1, 1000000);
-					zrandom = Mth.nextInt(RandomSource.create(), 1, 1000000);
+				}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())))) {
+					while (!(1 < xrandom && 1000000 >= xrandom && 1 < zrandom && 1000000 >= xrandom)) {
+						xrandom = Math.abs(new Random().nextGaussian());
+						zrandom = Math.abs(new Random().nextGaussian());
+					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putDouble(("use_trp_overworld_" + entity.getUUID().toString()), (new Object() {
+							_blockEntity.getPersistentData().putDouble(("use_trp_overworld_" + entity.getStringUUID()), (new Object() {
 								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 									BlockEntity blockEntity = world.getBlockEntity(pos);
 									if (blockEntity != null)
 										return blockEntity.getPersistentData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getUUID().toString())) + 1));
+							}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())) + 1));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world.getBiome(BlockPos.containing(x, y, z)).is(TagKey.create(Registries.BIOME, new ResourceLocation("minecraft:ocean")))) {
+					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, new ResourceLocation("minecraft:ocean")))) {
 						yrandom = world.getHeight(Heightmap.Types.OCEAN_FLOOR, (int) xrandom, (int) zrandom);
 					} else {
 						yrandom = world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) xrandom, (int) zrandom);

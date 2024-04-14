@@ -14,7 +14,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
@@ -24,7 +23,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (Screen.hasShiftDown()) {
+		if (entity.isShiftKeyDown()) {
 			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYST_CHEST.get()) {
 				{
 					ItemStack _ist = itemstack;

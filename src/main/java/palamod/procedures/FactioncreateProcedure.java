@@ -49,7 +49,7 @@ public class FactioncreateProcedure {
 						return blockEntity.getPersistentData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getUUID().toString()))) == false) {
+			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) == false) {
 				while (fget_id == false) {
 					if (!(new Object() {
 						public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -91,7 +91,7 @@ public class FactioncreateProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getUUID().toString()), true);
+						_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getStringUUID()), true);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -154,7 +154,7 @@ public class FactioncreateProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putString(("Faction_leader_" + get_id), (entity.getUUID().toString()));
+						_blockEntity.getPersistentData().putString(("Faction_leader_" + get_id), (entity.getStringUUID()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -190,7 +190,7 @@ public class FactioncreateProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putBoolean(("Faction_officer_" + entity.getUUID().toString() + "_" + get_id), true);
+						_blockEntity.getPersistentData().putBoolean(("Faction_officer_" + entity.getStringUUID() + "_" + get_id), true);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -208,7 +208,7 @@ public class FactioncreateProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble(("Faction_" + entity.getUUID().toString()), get_id);
+						_blockEntity.getPersistentData().putDouble(("Faction_" + entity.getStringUUID()), get_id);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}

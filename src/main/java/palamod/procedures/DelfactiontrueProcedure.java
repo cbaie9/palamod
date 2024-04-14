@@ -31,7 +31,7 @@ public class DelfactiontrueProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))) {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))) {
 			if (entity.getPersistentData().getDouble("faction-code") == DoubleArgumentType.getDouble(arguments, "code")) {
 				if ((new Object() {
 					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -47,7 +47,7 @@ public class DelfactiontrueProcedure {
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))).equals(entity.getUUID().toString())) {
+				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))).equals(entity.getStringUUID())) {
 					get_id = new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -55,7 +55,7 @@ public class DelfactiontrueProcedure {
 								return blockEntity.getPersistentData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString()));
+					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 					get_name = new Object() {
 						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -159,7 +159,7 @@ public class DelfactiontrueProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getUUID().toString()), false);
+							_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getStringUUID()), false);
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -177,7 +177,7 @@ public class DelfactiontrueProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putDouble(("Faction_" + entity.getUUID().toString()), ((-1) * get_id));
+							_blockEntity.getPersistentData().putDouble(("Faction_" + entity.getStringUUID()), ((-1) * get_id));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}

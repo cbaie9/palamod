@@ -23,13 +23,13 @@ public class Factionhomeguisubprocess1Procedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())))))) + " - " + (new Object() {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))) + " - " + (new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString())));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())));
 	}
 }

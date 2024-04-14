@@ -32,7 +32,7 @@ public class FactiondemoteprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getUUID().toString()));
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		if ((new Object() {
 			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -40,7 +40,7 @@ public class FactiondemoteprocessProcedure {
 					return blockEntity.getPersistentData().getString(tag);
 				return "";
 			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_leader_" + get_id))).equals(entity.getUUID().toString())) {
+		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_leader_" + get_id))).equals(entity.getStringUUID())) {
 			try {
 				for (Entity entityiterator : EntityArgument.getEntities(arguments, "player_demote")) {
 					if (!world.isClientSide()) {
@@ -48,7 +48,7 @@ public class FactiondemoteprocessProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putBoolean(("Faction_officer_" + entityiterator.getUUID().toString() + "_" + get_id), false);
+							_blockEntity.getPersistentData().putBoolean(("Faction_officer_" + entityiterator.getStringUUID() + "_" + get_id), false);
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
