@@ -11,8 +11,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class ChecksumgrinderProcedure {
 	public static boolean execute(LevelAccessor world) {
 		double output = 0;
@@ -41,7 +39,7 @@ public class ChecksumgrinderProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (main_obj.get("Grinder-Custom").getAsBoolean()) {
 						if (0 < main_obj.get("Grinder-Capacity").getAsDouble() && 0 < main_obj.get("Grinder-loading_time1").getAsDouble() && 0 < main_obj.get("Grinder-loading_time2").getAsDouble()
 								&& 0 < main_obj.get("Grinder-loading_time3").getAsDouble()) {

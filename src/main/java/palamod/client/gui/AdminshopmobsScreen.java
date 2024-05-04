@@ -99,11 +99,6 @@ public class AdminshopmobsScreen extends AbstractContainerScreen<AdminshopmobsMe
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_cactus = Button.builder(Component.translatable("gui.palamod.adminshopmobs.button_cactus"), e -> {

@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "achmchesttitane": {
+    "achmchesttitane_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

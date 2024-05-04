@@ -74,11 +74,6 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

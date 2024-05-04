@@ -9,8 +9,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class GetnextlevelxpProcedure {
 	public static double execute(Entity entity) {
 		if (entity == null)
@@ -30,7 +28,7 @@ public class GetnextlevelxpProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (0 <= main.get("lvl_miner").getAsDouble() && 9 >= main.get("lvl_miner").getAsDouble()) {
 						output = Math.pow(435.6292733199 * main.get("lvl_miner").getAsDouble(), 1.30951646);
 					} else if (10 <= main.get("lvl_miner").getAsDouble() && 14 >= main.get("lvl_miner").getAsDouble()) {

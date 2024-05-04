@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementluckytoday": {
+    "avancementluckytoday_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

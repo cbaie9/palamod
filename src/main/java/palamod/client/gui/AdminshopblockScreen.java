@@ -97,11 +97,6 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_dirt = Button.builder(Component.translatable("gui.palamod.adminshopblock.button_dirt"), e -> {

@@ -79,11 +79,6 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_hdv_stocks_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_hdv_stocks_panel"), e -> {

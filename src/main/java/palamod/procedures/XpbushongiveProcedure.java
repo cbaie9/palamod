@@ -52,7 +52,7 @@ public class XpbushongiveProcedure {
 			}
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.XPBERRY.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.XPBERRY.get()).copy();
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}

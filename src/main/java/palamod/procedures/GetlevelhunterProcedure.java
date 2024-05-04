@@ -10,8 +10,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class GetlevelhunterProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
@@ -29,7 +27,7 @@ public class GetlevelhunterProcedure {
 					jsonstringbuilder.append(line);
 				}
 				bufferedReader.close();
-				jobs_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				lvl = jobs_main.get("lvl_hunter").getAsDouble();
 			} catch (IOException e) {
 				e.printStackTrace();

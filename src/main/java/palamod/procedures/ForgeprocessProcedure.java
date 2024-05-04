@@ -1329,7 +1329,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1371,7 +1371,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1413,7 +1413,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1455,7 +1455,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1497,7 +1497,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.FINDIUM.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1540,7 +1540,7 @@ public class ForgeprocessProcedure {
 							BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 							if (_ent != null) {
 								final int _slotid = 2;
-								final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get());
+								final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
 								_setstack.setCount((int) (new Object() {
 									public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 										AtomicInteger _retval = new AtomicInteger(0);
@@ -1563,7 +1563,7 @@ public class ForgeprocessProcedure {
 							BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 							if (_ent != null) {
 								final int _slotid = 2;
-								final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get());
+								final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
 								_setstack.setCount((int) (new Object() {
 									public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 										AtomicInteger _retval = new AtomicInteger(0);
@@ -1607,7 +1607,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.FINDIUM.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1649,7 +1649,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1691,7 +1691,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1733,7 +1733,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1775,7 +1775,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1817,7 +1817,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1859,7 +1859,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1901,7 +1901,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1943,7 +1943,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1985,7 +1985,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2027,7 +2027,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2069,7 +2069,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_STICK.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_STICK.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2111,7 +2111,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2153,7 +2153,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2195,7 +2195,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2237,7 +2237,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2279,7 +2279,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2321,7 +2321,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2363,7 +2363,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2405,7 +2405,7 @@ public class ForgeprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);

@@ -8,16 +8,12 @@ import palamod.init.PalamodModItems;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
-
-import java.util.List;
 
 public class GreenpaladumexcatorItem extends ShovelItem {
 	public GreenpaladumexcatorItem() {
@@ -53,10 +49,5 @@ public class GreenpaladumexcatorItem extends ShovelItem {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
 		ExcavatorprocessamethystProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
 	}
 }

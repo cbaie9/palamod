@@ -80,7 +80,7 @@ public class JobsminercraftlavaobsidianProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Items.LAVA_BUCKET);
+				ItemStack _setstack = new ItemStack(Items.LAVA_BUCKET).copy();
 				_setstack.setCount(1);
 				((Slot) _slots.get(0)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
@@ -111,7 +111,7 @@ public class JobsminercraftlavaobsidianProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN);
+				ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN).copy();
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

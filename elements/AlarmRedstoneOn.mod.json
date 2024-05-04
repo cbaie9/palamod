@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"0\" y=\"0\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"play_sound\"><field name=\"sound\">CUSTOM:lucky_alarm</field><field name=\"soundcategory\">master</field><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value><value name=\"level\"><block type=\"math_number\"><field name=\"NUM\">100</field></block></value><value name=\"pitch\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><next><block type=\"block_replace\"><field name=\"state\">TRUE</field><field name=\"nbt\">TRUE</field><value name=\"x\"><block type=\"coord_x\"/></value><value name=\"y\"><block type=\"coord_y\"/></value><value name=\"z\"><block type=\"coord_z\"/></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:Alarmon</field></block></value></block></next></block></next></block></xml>"

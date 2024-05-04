@@ -11,8 +11,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class ChecksumreturnProcedure {
 	public static boolean execute(LevelAccessor world) {
 		boolean valid = false;
@@ -40,7 +38,7 @@ public class ChecksumreturnProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (main_obj.get("Crusher-Custom").getAsBoolean()) {
 						if (0 < main_obj.get("Crusher-amethyst-input").getAsDouble() && 0 < main_obj.get("Crusher-titane-input").getAsDouble() && 0 < main_obj.get("Crusher-paladium-input").getAsDouble()
 								&& 0 < main_obj.get("Crusher-endium-input").getAsDouble() && 0 <= main_obj.get("Crusher-amethyst-output").getAsDouble() && 64 >= main_obj.get("Crusher-amethyst-output").getAsDouble()

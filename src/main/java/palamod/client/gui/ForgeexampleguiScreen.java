@@ -186,11 +186,6 @@ public class ForgeexampleguiScreen extends AbstractContainerScreen<Forgeexampleg
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

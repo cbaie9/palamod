@@ -79,11 +79,6 @@ public class AdminshopadbanScreen extends AbstractContainerScreen<Adminshopadban
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_beta_adminshop = Button.builder(Component.translatable("gui.palamod.adminshopadban.button_beta_adminshop"), e -> {

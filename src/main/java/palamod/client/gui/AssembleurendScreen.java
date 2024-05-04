@@ -84,11 +84,6 @@ public class AssembleurendScreen extends AbstractContainerScreen<AssembleurendMe
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_trade = Button.builder(Component.translatable("gui.palamod.assembleurend.button_trade"), e -> {

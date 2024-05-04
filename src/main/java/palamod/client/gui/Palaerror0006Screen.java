@@ -72,11 +72,6 @@ public class Palaerror0006Screen extends AbstractContainerScreen<Palaerror0006Me
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

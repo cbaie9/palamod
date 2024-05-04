@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text_replace\"><value name=\"what\"><block type=\"text\"><field name=\"TEXT\">Renew \"Cat\"</field></block></value><value name=\"with\"><block type=\"text\"><field name=\"TEXT\"/></block></value><value name=\"text\"><block type=\"procedure_retval_string\"><field name=\"procedure\">Palamodgamever</field></block></value></block></value></block></next></block><block type=\"text_join\" x=\"224\" y=\"208\"><mutation items=\"3\"/></block></xml>"

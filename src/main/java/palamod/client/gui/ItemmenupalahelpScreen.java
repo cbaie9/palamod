@@ -98,11 +98,6 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_legendary_stone = Button.builder(Component.translatable("gui.palamod.itemmenupalahelp.button_legendary_stone"), e -> {

@@ -22,73 +22,73 @@ public class PalahelpstickmodehyperjumpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(0)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.JUMP_ORB.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.JUMP_ORB.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(1)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(2)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get());
+			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(3)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get());
+			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(4)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(5)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(9)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(7)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(11)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(13)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(Items.NETHER_WART);
+			ItemStack _setstack = new ItemStack(Items.NETHER_WART).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(10)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.JUMP_ORB.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.JUMP_ORB.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(15)).set(_setstack);
 			_player.containerMenu.broadcastChanges();

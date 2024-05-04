@@ -80,11 +80,6 @@ public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_change_spawn = Button.builder(Component.translatable("gui.palamod.spawnpanel.button_change_spawn"), e -> {

@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "block",
   "definition": {
     "texture": "typesettingtable",
@@ -125,9 +125,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "Typesettingtableprocess"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

@@ -80,11 +80,6 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_franais = Button.builder(Component.translatable("gui.palamod.languageselection.button_franais"), e -> {

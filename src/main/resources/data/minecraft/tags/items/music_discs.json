@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "palamod:miichalenge",
-    "palamod:fuzedisc",
-    "palamod:antifuzedisc",
+    "palamod:clashkumiz",
     "palamod:roulettepaladiennedisc",
-    "palamod:clashkumiz"
+    "palamod:antifuzedisc",
+    "palamod:fuzedisc",
+    "palamod:miichalenge"
   ]
 }

@@ -9,9 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.gui.components.EditBox;
 
-import java.util.List;
 import java.util.HashMap;
-import java.util.ArrayList;
 
 public class AdshoppreviewamountbaseProcedure {
 	public static String execute(LevelAccessor world, Entity entity, HashMap guistate) {
@@ -21,7 +19,6 @@ public class AdshoppreviewamountbaseProcedure {
 		double fac_v = 0;
 		double n = 0;
 		double n2 = 0;
-		List<Object> fac_v2 = new ArrayList<>();
 		fac_v = 1;
 		n2 = 1;
 		n = Math.round(Math.abs(new Object() {

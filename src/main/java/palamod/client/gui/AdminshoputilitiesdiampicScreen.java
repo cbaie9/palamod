@@ -101,11 +101,6 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy")) {

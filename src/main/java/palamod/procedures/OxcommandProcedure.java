@@ -75,7 +75,7 @@ public class OxcommandProcedure {
 				_player.onUpdateAbilities();
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PHONE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PHONE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

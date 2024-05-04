@@ -21,37 +21,37 @@ public class PalahelpstickmodedamageProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(0)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_SWORD.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_SWORD.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(1)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(2)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_SPIKE.get());
+			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_SPIKE.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(3)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_SPIKE.get());
+			ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_SPIKE.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(4)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get());
+			ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(5)).set(_setstack);
 			_player.containerMenu.broadcastChanges();

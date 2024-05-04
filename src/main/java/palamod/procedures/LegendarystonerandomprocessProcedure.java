@@ -16,31 +16,31 @@ public class LegendarystonerandomprocessProcedure {
 		random = Math.random();
 		if (random <= 0.2 && random > 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if (random <= 0.4 && random > 0.2) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_INVISIBLE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_INVISIBLE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if (random <= 0.6 && random > 0.4) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if (random <= 0.8 && random > 0.6) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_JOBS.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_JOBS.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if (random <= 1 && random > 0.8) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

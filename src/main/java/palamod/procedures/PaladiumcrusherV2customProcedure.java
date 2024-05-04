@@ -21,8 +21,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class PaladiumcrusherV2customProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		File file = new File("");
@@ -46,7 +44,7 @@ public class PaladiumcrusherV2customProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (main_obj.get("Crusher-Custom").getAsBoolean()) {
 						if (!(new Object() {
 							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {

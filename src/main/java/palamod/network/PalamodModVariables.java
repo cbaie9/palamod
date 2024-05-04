@@ -331,8 +331,8 @@ public class PalamodModVariables {
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		public void readNBT(Tag tag) {
+			CompoundTag nbt = (CompoundTag) tag;
 			Faction_name = nbt.getString("Faction_name");
 			Faction_xp = nbt.getDouble("Faction_xp");
 			Faction_max_xp = nbt.getDouble("Faction_max_xp");

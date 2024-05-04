@@ -90,11 +90,6 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_empty = Button.builder(Component.translatable("gui.palamod.trixiumdeposit.button_empty"), e -> {

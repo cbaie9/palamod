@@ -9,8 +9,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class GetxpminerProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
@@ -31,7 +29,7 @@ public class GetxpminerProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					xp_miner = main.get("xp_miner").getAsDouble();
 					nextlvl_xp = main.get("next_level_miner").getAsDouble();
 					output = Math.round(main.get("xp_miner").getAsDouble()) + " / " + Math.round(main.get("next_level_miner").getAsDouble());

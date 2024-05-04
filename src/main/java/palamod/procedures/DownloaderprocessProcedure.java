@@ -20,9 +20,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class DownloaderprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		File money = new File("");
@@ -44,7 +41,7 @@ public class DownloaderprocessProcedure {
 					jsonstringbuilder.append(line);
 				}
 				bufferedReader.close();
-				main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (new Object() {
 					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -112,7 +109,7 @@ public class DownloaderprocessProcedure {
 											_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 										return _retval.get();
 									}
-								}.getItemStack(world, BlockPos.containing(x, y, z), 3));
+								}.getItemStack(world, BlockPos.containing(x, y, z), 3)).copy();
 								_setstack.setCount((int) (1 + new Object() {
 									public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 										AtomicInteger _retval = new AtomicInteger(0);
@@ -155,7 +152,7 @@ public class DownloaderprocessProcedure {
 			}
 		}
 		{
-			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+			com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 			try {
 				FileWriter fileWriter = new FileWriter(money);
 				fileWriter.write(mainGSONBuilderVariable.toJson(main));

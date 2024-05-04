@@ -15,11 +15,6 @@ public class Multiexp2MobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.palamod.multiexp_2";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		Addmultixp2fileProcedure.execute(entity);
 	}

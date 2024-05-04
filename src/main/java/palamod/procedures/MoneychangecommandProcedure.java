@@ -34,9 +34,6 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class MoneychangecommandProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
@@ -65,7 +62,7 @@ public class MoneychangecommandProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					main.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
@@ -74,7 +71,7 @@ public class MoneychangecommandProcedure {
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main));
@@ -92,7 +89,7 @@ public class MoneychangecommandProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"" + Component.translatable("palamod.procedure.money_current").getString()

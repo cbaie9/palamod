@@ -109,11 +109,6 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_arrow_down0001 = new ImageButton(this.leftPos + 212, this.topPos + 125, 28, 32, 0, 0, 32, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_down0001.png"), 28, 64, e -> {

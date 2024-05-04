@@ -81,7 +81,7 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get()).copy();
 				_setstack.setCount(1);
 				((Slot) _slots.get(0)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
@@ -102,7 +102,7 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
 				_setstack.setCount(1);
 				((Slot) _slots.get(1)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
@@ -123,7 +123,7 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
 				_setstack.setCount(1);
 				((Slot) _slots.get(2)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
@@ -144,7 +144,7 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Items.STICK);
+				ItemStack _setstack = new ItemStack(Items.STICK).copy();
 				_setstack.setCount(1);
 				((Slot) _slots.get(4)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
@@ -164,7 +164,7 @@ public class JobsminercraftpotgProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(Items.STICK);
+					ItemStack _setstack = new ItemStack(Items.STICK).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(7)).set(_setstack);
 					_player.containerMenu.broadcastChanges();

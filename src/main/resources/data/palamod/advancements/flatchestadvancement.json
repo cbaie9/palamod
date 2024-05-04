@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "flatchestadvancement": {
+    "flatchestadvancement_0": {
       "trigger": "minecraft:impossible"
     }
   },

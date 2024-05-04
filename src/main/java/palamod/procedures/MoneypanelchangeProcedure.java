@@ -28,9 +28,6 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class MoneypanelchangeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
@@ -52,7 +49,7 @@ public class MoneypanelchangeProcedure {
 		if (entity.hasPermissions(4)) {
 			main_money.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main_money));

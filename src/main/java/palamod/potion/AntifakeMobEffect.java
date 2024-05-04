@@ -15,11 +15,6 @@ public class AntifakeMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.palamod.antifake";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		AntifakeEffect_add_nbtProcedure.execute(entity);
 	}

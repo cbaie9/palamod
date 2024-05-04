@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "palamod:blocks/flatten_amethyst_chest",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "palamod:flatten_amethyst_chest"
+        }
+      ]
+    }
+  ]
+}

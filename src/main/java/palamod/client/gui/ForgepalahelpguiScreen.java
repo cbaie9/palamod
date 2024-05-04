@@ -104,11 +104,6 @@ public class ForgepalahelpguiScreen extends AbstractContainerScreen<Forgepalahel
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 215, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {

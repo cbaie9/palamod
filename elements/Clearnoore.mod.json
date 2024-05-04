@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "function",
   "definition": {
     "code": "# Enter the function code here\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:dirt\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:tuff\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:stone\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:andesite\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:diorite\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:water\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:lava\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:deepslate\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:granite\nfill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:grass_block\nmsg @s \"Done!!! ( work only with worldedit)\"",

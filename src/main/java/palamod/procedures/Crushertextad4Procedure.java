@@ -7,8 +7,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class Crushertextad4Procedure {
 	public static boolean execute() {
 		File file = new File("");
@@ -33,7 +31,7 @@ public class Crushertextad4Procedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					output = main_obj.get("Crusher-amethyst-input").getAsDouble();
 				} catch (IOException e) {
 					e.printStackTrace();

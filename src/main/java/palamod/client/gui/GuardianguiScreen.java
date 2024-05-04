@@ -94,11 +94,6 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_arbre_de_competance = Button.builder(Component.translatable("gui.palamod.guardiangui.button_arbre_de_competance"), e -> {

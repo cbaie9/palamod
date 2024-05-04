@@ -1011,11 +1011,6 @@ public class Examplecrusherv2Screen extends AbstractContainerScreen<Examplecrush
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_return_to_wiki = Button.builder(Component.translatable("gui.palamod.examplecrusherv_2.button_return_to_wiki"), e -> {

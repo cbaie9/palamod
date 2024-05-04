@@ -32,7 +32,7 @@ public class Crusherv2titaneProcedure {
 				BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 				if (_ent != null) {
 					final int _slotid = 2;
-					final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+					final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicInteger _retval = new AtomicInteger(0);
@@ -73,7 +73,7 @@ public class Crusherv2titaneProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -106,7 +106,7 @@ public class Crusherv2titaneProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(Blocks.DIRT);
+						final ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);

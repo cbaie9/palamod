@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "achmpotg_20new": {
+    "achmpotg_20new_0": {
       "trigger": "minecraft:impossible"
     }
   },

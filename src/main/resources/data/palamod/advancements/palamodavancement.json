@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "palamodavancement": {
+    "palamodavancement_0": {
       "trigger": "minecraft:tick"
     }
   }

@@ -47,7 +47,7 @@ public class PhonecodeProcedure {
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("cb9")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("4009")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModBlocks.FAKE_PALADIUM_ORE.get());
+				ItemStack _setstack = new ItemStack(PalamodModBlocks.FAKE_PALADIUM_ORE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -75,7 +75,7 @@ public class PhonecodeProcedure {
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("wolfen")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("cloclo")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(Blocks.LIGHTNING_ROD);
+				ItemStack _setstack = new ItemStack(Blocks.LIGHTNING_ROD).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -87,7 +87,7 @@ public class PhonecodeProcedure {
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("wlf")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("jojo_xd30")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SWORD.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SWORD.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -102,7 +102,7 @@ public class PhonecodeProcedure {
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("hat")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("HAT")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMARMORCUSTOM_2_HELMET.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMARMORCUSTOM_2_HELMET.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -112,7 +112,7 @@ public class PhonecodeProcedure {
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("arthurninja69800")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("Arthurninja")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -144,7 +144,7 @@ public class PhonecodeProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Cheats Activated"), false);
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -162,7 +162,7 @@ public class PhonecodeProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("1.0 vibes"), false);
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+				ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
 				_setstack.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getCount() * 2));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -176,7 +176,7 @@ public class PhonecodeProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Merci de soutenir le mod"), false);
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+				ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
 				_setstack.setCount(10);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

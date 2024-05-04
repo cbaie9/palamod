@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "palamod:blocks/erable_door",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "palamod:erable_door",
+          "conditions": [
+            {
+              "block": "palamod:erable_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

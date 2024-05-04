@@ -106,11 +106,6 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 198, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {

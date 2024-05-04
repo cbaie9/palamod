@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementforgeafa": {
+    "avancementforgeafa_0": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "location": [

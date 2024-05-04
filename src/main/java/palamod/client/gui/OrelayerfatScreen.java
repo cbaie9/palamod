@@ -74,11 +74,6 @@ public class OrelayerfatScreen extends AbstractContainerScreen<OrelayerfatMenu> 
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

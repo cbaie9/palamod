@@ -187,11 +187,6 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_help_button = new ImageButton(this.leftPos + 195, this.topPos + 140, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_help_button.png"), 16, 32, e -> {

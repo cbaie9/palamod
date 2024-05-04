@@ -1,6 +1,7 @@
 package palamod.procedures;
 
 import palamod.init.PalamodModItems;
+import palamod.init.PalamodModEnchantments;
 
 import palamod.PalamodMod;
 
@@ -15,8 +16,10 @@ import net.minecraftforge.event.level.BlockEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerLevel;
@@ -33,9 +36,6 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
-
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
 
 @Mod.EventBusSubscriber
 public class JobsminerbreakblockProcedure {
@@ -69,12 +69,21 @@ public class JobsminerbreakblockProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 						main.addProperty("xpstreak_miner", 0);
 					}
 					if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z)) {
-						main.addProperty("xp_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
+						if (EnchantmentHelper.getItemEnchantmentLevel(PalamodModEnchantments.BOTTELED.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
+								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type")
+										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type"))
+								&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
+							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("xp_jobs", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble()
+									+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("xp_jobs")));
+							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("jobs_type", 1);
+						} else {
+							main.addProperty("xp_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
+						}
 						main.addProperty("xpstreak_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
 						main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
 						if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -91,12 +100,12 @@ public class JobsminerbreakblockProcedure {
 						main.addProperty("xp_miner", (main.get("xp_miner").getAsDouble() - main.get("next_level_miner").getAsDouble()));
 						main.addProperty("next_level_miner", GetnextlevelxpProcedure.execute(entity));
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main.get("lvl_miner").getAsDouble() / 2)));
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.TRIXIUM.get());
+							ItemStack _setstack = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
 							_setstack.setCount((int) main.get("lvl_miner").getAsDouble());
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
@@ -113,7 +122,7 @@ public class JobsminerbreakblockProcedure {
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(jobs);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main));
@@ -133,7 +142,7 @@ public class JobsminerbreakblockProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					money_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (money_getadd) {
 						money_main.addProperty("money", (main.get("money").getAsDouble() + money_add));
 					}
@@ -142,7 +151,7 @@ public class JobsminerbreakblockProcedure {
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));

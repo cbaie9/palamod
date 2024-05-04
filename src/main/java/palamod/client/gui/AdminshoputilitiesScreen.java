@@ -97,11 +97,6 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_honey_comb = Button.builder(Component.translatable("gui.palamod.adminshoputilities.button_honey_comb"), e -> {

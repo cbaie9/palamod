@@ -45,7 +45,7 @@ public class DrawbridgereplaceprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock()));
+							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock())).copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -89,7 +89,7 @@ public class DrawbridgereplaceprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock()));
+							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock())).copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -133,7 +133,7 @@ public class DrawbridgereplaceprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock()));
+							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock())).copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -177,7 +177,7 @@ public class DrawbridgereplaceprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock()));
+							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock())).copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)

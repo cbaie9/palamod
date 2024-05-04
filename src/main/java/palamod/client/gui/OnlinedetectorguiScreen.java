@@ -87,11 +87,6 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		player_name = new EditBox(this.font, this.leftPos + 5, this.topPos + 17, 135, 18, Component.translatable("gui.palamod.onlinedetectorgui.player_name")) {

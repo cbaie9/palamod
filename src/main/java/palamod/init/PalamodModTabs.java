@@ -21,6 +21,120 @@ import net.minecraft.core.registries.Registries;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PalamodModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PalamodMod.MODID);
+	public static final RegistryObject<CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PalamodModBlocks.TRESAURE_FALSE.get().asItem());
+				tabData.accept(PalamodModBlocks.TRESAURE_TRUE.get().asItem());
+				tabData.accept(PalamodModBlocks.FAKE_PALADIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.ALARM.get().asItem());
+				tabData.accept(PalamodModBlocks.ALARM_ON.get().asItem());
+				tabData.accept(PalamodModItems.SPACE_FOOD.get());
+				tabData.accept(PalamodModItems.LEGENDARY_STONE_FORTUNE.get());
+				tabData.accept(PalamodModItems.LEGENDARY_STONE_INVISIBLE.get());
+				tabData.accept(PalamodModItems.LEGENDARY_STONE_POWER.get());
+				tabData.accept(PalamodModItems.LEGENDARY_STONE_JOBS.get());
+				tabData.accept(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get());
+				tabData.accept(PalamodModItems.LEGENDARY_STONE_RANDOM.get());
+				tabData.accept(PalamodModBlocks.LUCKY_BLOCK.get().asItem());
+				tabData.accept(PalamodModItems.WEIGHTED_BOOTS.get());
+				tabData.accept(PalamodModItems.PALADIUM_PHONE.get());
+				tabData.accept(PalamodModItems.CHUNKANASLYSER.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> DECORATIONCREATIVETAB = REGISTRY.register("decorationcreativetab",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.decorationcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PalamodModBlocks.OSTRYA_SAPPLING.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_LOG.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_LEAVES.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_STAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_SLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_FENCE.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_FENCE_GATE.get().asItem());
+				tabData.accept(PalamodModBlocks.OSTRYA_DOOR.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_SAPPLING.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_LOG.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_PLANKS.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_LEAVES.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_STAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_SLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_FENCE.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_FENCE_GATE.get().asItem());
+				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_SAPPLING.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_LOG.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_PLANKS.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_LEAVES.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_STAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_SLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_FENCE.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_FENCE_GATE.get().asItem());
+				tabData.accept(PalamodModBlocks.JUDEECERCIS_DOOR.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_SAPPLING.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_LOG.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_PLANKS.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_LEAVES.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_STAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_SLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_FENCE.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_FENCE_GATE.get().asItem());
+				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_1.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_1.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_2.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_3.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_4.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_5.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_6.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_7.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_8.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_9.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_10.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_11.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_12.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_13.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_14.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_15.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_16.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_17.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_18.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_19.get());
+				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_20.get());
+				tabData.accept(PalamodModItems.CREATIVEPOTG.get());
+				tabData.accept(PalamodModItems.BIG_HOLE_UPGRADE.get());
+				tabData.accept(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PalamodModBlocks.SLIMEPAD.get().asItem());
+				tabData.accept(PalamodModItems.HEAL_ORB.get());
+				tabData.accept(PalamodModItems.SPEED_ORB.get());
+				tabData.accept(PalamodModItems.STRENGH_ORB.get());
+				tabData.accept(PalamodModItems.JUMP_ORB.get());
+				tabData.accept(PalamodModItems.KNOCKBACK_ORB.get());
+				tabData.accept(PalamodModBlocks.PALADIUM_MACHINE.get().asItem());
+				tabData.accept(PalamodModItems.SPEEDSTICK.get());
+				tabData.accept(PalamodModItems.JUMPSTICK.get());
+				tabData.accept(PalamodModItems.HYPERJUMPSTICK.get());
+				tabData.accept(PalamodModItems.HEALSTICK.get());
+				tabData.accept(PalamodModItems.STRENGHTSTICK.get());
+				tabData.accept(PalamodModItems.DAMAGESTICK.get());
+				tabData.accept(PalamodModItems.STICKOFGODS.get());
+				tabData.accept(PalamodModItems.PALADIUM_APPLE.get());
+			})
+
+					.build());
 	public static final RegistryObject<CreativeModeTab> PALAMOD = REGISTRY.register("palamod",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.palamod")).icon(() -> new ItemStack(PalamodModItems.PALADIUM_INGOT.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.PALADIUM_INGOT.get());
@@ -257,36 +371,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_BOOTS.get());
-				tabData.accept(PalamodModItems.DOUBLEEXPPOTION.get());
-				tabData.accept(PalamodModItems.X_10XPPOTION.get());
-			})
-
-					.build());
-	public static final RegistryObject<CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_1.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_1.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_2.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_3.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_4.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_5.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_6.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_7.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_8.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_9.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_10.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_11.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_12.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_13.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_14.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_15.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_16.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_17.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_18.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_19.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_20.get());
-				tabData.accept(PalamodModItems.CREATIVEPOTG.get());
-				tabData.accept(PalamodModItems.BIG_HOLE_UPGRADE.get());
-				tabData.accept(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get());
 			})
 
 					.build());
@@ -351,89 +435,27 @@ public class PalamodModTabs {
 			})
 
 					.build());
-	public static final RegistryObject<CreativeModeTab> DECORATIONCREATIVETAB = REGISTRY.register("decorationcreativetab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.decorationcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PalamodModBlocks.OSTRYA_SAPPLING.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_WOOD.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_LOG.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_LEAVES.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_STAIRS.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_SLAB.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_FENCE.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_FENCE_GATE.get().asItem());
-				tabData.accept(PalamodModBlocks.OSTRYA_DOOR.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_SAPPLING.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_WOOD.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_LOG.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_PLANKS.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_LEAVES.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_STAIRS.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_SLAB.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_FENCE.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_FENCE_GATE.get().asItem());
-				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_SAPPLING.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_WOOD.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_LOG.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_PLANKS.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_LEAVES.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_STAIRS.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_SLAB.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_FENCE.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_FENCE_GATE.get().asItem());
-				tabData.accept(PalamodModBlocks.JUDEECERCIS_DOOR.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_SAPPLING.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_WOOD.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_LOG.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_PLANKS.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_LEAVES.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_STAIRS.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_SLAB.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_FENCE.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_FENCE_GATE.get().asItem());
-				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
-			})
-
-					.build());
-	public static final RegistryObject<CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PalamodModBlocks.SLIMEPAD.get().asItem());
-				tabData.accept(PalamodModItems.HEAL_ORB.get());
-				tabData.accept(PalamodModItems.SPEED_ORB.get());
-				tabData.accept(PalamodModItems.STRENGH_ORB.get());
-				tabData.accept(PalamodModItems.JUMP_ORB.get());
-				tabData.accept(PalamodModItems.KNOCKBACK_ORB.get());
-				tabData.accept(PalamodModBlocks.PALADIUM_MACHINE.get().asItem());
-				tabData.accept(PalamodModItems.SPEEDSTICK.get());
-				tabData.accept(PalamodModItems.JUMPSTICK.get());
-				tabData.accept(PalamodModItems.HYPERJUMPSTICK.get());
-				tabData.accept(PalamodModItems.HEALSTICK.get());
-				tabData.accept(PalamodModItems.STRENGHTSTICK.get());
-				tabData.accept(PalamodModItems.DAMAGESTICK.get());
-				tabData.accept(PalamodModItems.STICKOFGODS.get());
-				tabData.accept(PalamodModItems.PALADIUM_APPLE.get());
-			})
-
-					.build());
-	public static final RegistryObject<CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PalamodModBlocks.TRESAURE_FALSE.get().asItem());
-				tabData.accept(PalamodModBlocks.TRESAURE_TRUE.get().asItem());
-				tabData.accept(PalamodModBlocks.FAKE_PALADIUM_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.ALARM.get().asItem());
-				tabData.accept(PalamodModBlocks.ALARM_ON.get().asItem());
-				tabData.accept(PalamodModItems.SPACE_FOOD.get());
-				tabData.accept(PalamodModItems.LEGENDARY_STONE_FORTUNE.get());
-				tabData.accept(PalamodModItems.LEGENDARY_STONE_INVISIBLE.get());
-				tabData.accept(PalamodModItems.LEGENDARY_STONE_POWER.get());
-				tabData.accept(PalamodModItems.LEGENDARY_STONE_JOBS.get());
-				tabData.accept(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get());
-				tabData.accept(PalamodModItems.LEGENDARY_STONE_RANDOM.get());
-				tabData.accept(PalamodModBlocks.LUCKY_BLOCK.get().asItem());
-				tabData.accept(PalamodModItems.WEIGHTED_BOOTS.get());
-				tabData.accept(PalamodModItems.PALADIUM_PHONE.get());
-				tabData.accept(PalamodModItems.CHUNKANASLYSER.get());
+	public static final RegistryObject<CreativeModeTab> JOBSCREATIVETABS = REGISTRY.register("jobscreativetabs",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.jobscreativetabs")).icon(() -> new ItemStack(PalamodModItems.PALADIUM_HOE.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PalamodModBlocks.COBBLEBREAKER.get().asItem());
+				tabData.accept(PalamodModItems.DOLLARS_STONE.get());
+				tabData.accept(PalamodModItems.COBBLEBREAKER_AMETHYST_UPGRADE.get());
+				tabData.accept(PalamodModItems.COBBLEBREAKER_TITANE_UPGRADE.get());
+				tabData.accept(PalamodModItems.COBBLEBREAKER_PALADIUM_UPGRADE.get());
+				tabData.accept(PalamodModBlocks.FERTILZED_DIRT.get().asItem());
+				tabData.accept(PalamodModItems.AMETHYST_HOE.get());
+				tabData.accept(PalamodModItems.TITANEHOE.get());
+				tabData.accept(PalamodModItems.PALADIUM_HOE.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_HOE.get());
+				tabData.accept(PalamodModItems.ENDIUM_HOE.get());
+				tabData.accept(PalamodModItems.AMETHYST_SEEDPLANTER.get());
+				tabData.accept(PalamodModItems.TITANE_SEEDPLANTER.get());
+				tabData.accept(PalamodModItems.PALADIUM_SEEDPLANTER.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get());
+				tabData.accept(PalamodModItems.ENDIUM_SEEDPLANTER.get());
+				tabData.accept(PalamodModItems.DOUBLEEXPPOTION.get());
+				tabData.accept(PalamodModItems.X_10XPPOTION.get());
+				tabData.accept(PalamodModItems.XPBOTTLE.get());
 			})
 
 					.build());
@@ -467,31 +489,9 @@ public class PalamodModTabs {
 			})
 
 					.build());
-	public static final RegistryObject<CreativeModeTab> JOBSCREATIVETABS = REGISTRY.register("jobscreativetabs",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.jobscreativetabs")).icon(() -> new ItemStack(PalamodModItems.PALADIUM_HOE.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PalamodModBlocks.COBBLEBREAKER.get().asItem());
-				tabData.accept(PalamodModItems.DOLLARS_STONE.get());
-				tabData.accept(PalamodModItems.COBBLEBREAKER_AMETHYST_UPGRADE.get());
-				tabData.accept(PalamodModItems.COBBLEBREAKER_TITANE_UPGRADE.get());
-				tabData.accept(PalamodModItems.COBBLEBREAKER_PALADIUM_UPGRADE.get());
-				tabData.accept(PalamodModBlocks.FERTILZED_DIRT.get().asItem());
-				tabData.accept(PalamodModItems.AMETHYST_HOE.get());
-				tabData.accept(PalamodModItems.TITANEHOE.get());
-				tabData.accept(PalamodModItems.PALADIUM_HOE.get());
-				tabData.accept(PalamodModItems.GREEN_PALADIUM_HOE.get());
-				tabData.accept(PalamodModItems.ENDIUM_HOE.get());
-				tabData.accept(PalamodModItems.AMETHYST_SEEDPLANTER.get());
-				tabData.accept(PalamodModItems.TITANE_SEEDPLANTER.get());
-				tabData.accept(PalamodModItems.PALADIUM_SEEDPLANTER.get());
-				tabData.accept(PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get());
-				tabData.accept(PalamodModItems.ENDIUM_SEEDPLANTER.get());
-			})
-
-					.build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(PalamodModItems.INTERNET_CARD.get());
 		}

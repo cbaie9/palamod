@@ -81,11 +81,6 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_commands = Button.builder(Component.translatable("gui.palamod.next_palahelpgui.button_commands"), e -> {

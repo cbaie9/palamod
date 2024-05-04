@@ -95,11 +95,6 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_reload = Button.builder(Component.translatable("gui.palamod.downloadergui.button_reload"), e -> {

@@ -78,7 +78,7 @@ public class PaladiumdynamiteEntity extends Creeper {
 			return false;
 		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
 			return false;
-		if (damagesource.is(DamageTypes.EXPLOSION))
+		if (damagesource.is(DamageTypes.EXPLOSION) || damagesource.is(DamageTypes.PLAYER_EXPLOSION))
 			return false;
 		if (damagesource.is(DamageTypes.TRIDENT))
 			return false;
@@ -86,11 +86,19 @@ public class PaladiumdynamiteEntity extends Creeper {
 			return false;
 		if (damagesource.is(DamageTypes.DRAGON_BREATH))
 			return false;
-		if (damagesource.is(DamageTypes.WITHER))
-			return false;
-		if (damagesource.is(DamageTypes.WITHER_SKULL))
+		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
 		return super.hurt(damagesource, amount);
+	}
+
+	@Override
+	public boolean ignoreExplosion() {
+		return true;
+	}
+
+	@Override
+	public boolean fireImmune() {
+		return true;
 	}
 
 	@Override

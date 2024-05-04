@@ -91,7 +91,7 @@ public class JobsminercraftwoddenspikeProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN);
+				ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN).copy();
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -131,7 +131,7 @@ public class JobsminercraftwoddenspikeProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(PalamodModBlocks.WOODEN_SPIKE.get());
+				ItemStack _setstack = new ItemStack(PalamodModBlocks.WOODEN_SPIKE.get()).copy();
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

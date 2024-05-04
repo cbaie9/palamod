@@ -17,8 +17,6 @@ import net.minecraft.core.NonNullList;
 
 import javax.annotation.Nullable;
 
-import java.lang.reflect.Type;
-
 import com.google.gson.JsonObject;
 import com.google.gson.JsonArray;
 

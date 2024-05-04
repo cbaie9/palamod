@@ -72,11 +72,6 @@ public class AnalyserloadingScreen extends AbstractContainerScreen<Analyserloadi
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

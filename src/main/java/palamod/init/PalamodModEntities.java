@@ -31,16 +31,16 @@ import net.minecraft.world.entity.Entity;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PalamodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, PalamodMod.MODID);
-	public static final RegistryObject<EntityType<PaladiumgolemEntity>> PALADIUMGOLEM = register("paladiumgolem",
-			EntityType.Builder.<PaladiumgolemEntity>of(PaladiumgolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PaladiumgolemEntity::new)
-
-					.sized(1.2f, 1.8f));
 	public static final RegistryObject<EntityType<PaladiumdynamiteEntity>> PALADIUMDYNAMITE = register("paladiumdynamite", EntityType.Builder.<PaladiumdynamiteEntity>of(PaladiumdynamiteEntity::new, MobCategory.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PaladiumdynamiteEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<EndiumdynamiteEntity>> ENDIUMDYNAMITE = register("endiumdynamite", EntityType.Builder.<EndiumdynamiteEntity>of(EndiumdynamiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EndiumdynamiteEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BigdynamiteentityEntity>> BIGDYNAMITEENTITY = register("bigdynamiteentity", EntityType.Builder.<BigdynamiteentityEntity>of(BigdynamiteentityEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BigdynamiteentityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PaladiumgolemEntity>> PALADIUMGOLEM = register("paladiumgolem",
+			EntityType.Builder.<PaladiumgolemEntity>of(PaladiumgolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PaladiumgolemEntity::new)
+
+					.sized(1.2f, 1.8f));
 	public static final RegistryObject<EntityType<PrimedspongetntEntity>> PRIMEDSPONGETNT = register("primedspongetnt", EntityType.Builder.<PrimedspongetntEntity>of(PrimedspongetntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedspongetntEntity::new).fireImmune().sized(1f, 1f));
 	public static final RegistryObject<EntityType<PrimedwithertntEntity>> PRIMEDWITHERTNT = register("primedwithertnt", EntityType.Builder.<PrimedwithertntEntity>of(PrimedwithertntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
@@ -59,10 +59,10 @@ public class PalamodModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			PaladiumgolemEntity.init();
 			PaladiumdynamiteEntity.init();
 			EndiumdynamiteEntity.init();
 			BigdynamiteentityEntity.init();
+			PaladiumgolemEntity.init();
 			PrimedspongetntEntity.init();
 			PrimedwithertntEntity.init();
 			PrimedmagictntEntity.init();
@@ -73,10 +73,10 @@ public class PalamodModEntities {
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(PALADIUMGOLEM.get(), PaladiumgolemEntity.createAttributes().build());
 		event.put(PALADIUMDYNAMITE.get(), PaladiumdynamiteEntity.createAttributes().build());
 		event.put(ENDIUMDYNAMITE.get(), EndiumdynamiteEntity.createAttributes().build());
 		event.put(BIGDYNAMITEENTITY.get(), BigdynamiteentityEntity.createAttributes().build());
+		event.put(PALADIUMGOLEM.get(), PaladiumgolemEntity.createAttributes().build());
 		event.put(PRIMEDSPONGETNT.get(), PrimedspongetntEntity.createAttributes().build());
 		event.put(PRIMEDWITHERTNT.get(), PrimedwithertntEntity.createAttributes().build());
 		event.put(PRIMEDMAGICTNT.get(), PrimedmagictntEntity.createAttributes().build());

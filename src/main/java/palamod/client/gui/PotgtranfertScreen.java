@@ -84,11 +84,6 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_transfert = Button.builder(Component.translatable("gui.palamod.potgtranfert.button_transfert"), e -> {

@@ -17,9 +17,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class Bighole2Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -38,7 +35,7 @@ public class Bighole2Procedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 						if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
 							{
@@ -622,7 +619,7 @@ public class Bighole2Procedure {
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(jobs);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main));

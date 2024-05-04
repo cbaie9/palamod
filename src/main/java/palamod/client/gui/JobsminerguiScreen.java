@@ -91,11 +91,6 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_gray.png"), 48, 32, e -> {

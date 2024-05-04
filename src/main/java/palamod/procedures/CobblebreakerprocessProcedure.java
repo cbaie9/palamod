@@ -112,7 +112,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 0;
-							final ItemStack _setstack = teststack;
+							final ItemStack _setstack = teststack.copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -149,7 +149,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 1;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.IRON_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.IRON_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -179,7 +179,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GOLD_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GOLD_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -209,7 +209,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 3;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.DIAMOND_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.DIAMOND_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -239,7 +239,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 4;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -269,7 +269,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 5;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -299,7 +299,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 6;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -329,7 +329,7 @@ public class CobblebreakerprocessProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 7;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PARTICLE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PARTICLE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);

@@ -63,7 +63,7 @@ public class PalamachineprocessProcedure {
 					_player.containerMenu.broadcastChanges();
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -110,7 +110,7 @@ public class PalamachineprocessProcedure {
 					_player.containerMenu.broadcastChanges();
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.STRENGHTSTICK.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.STRENGHTSTICK.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -137,7 +137,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -185,7 +185,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.DAMAGESTICK.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.DAMAGESTICK.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -232,7 +232,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -279,7 +279,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -325,7 +325,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.SMALL_RING.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.SMALL_RING.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -370,7 +370,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SMALL_RING.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SMALL_RING.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -417,7 +417,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.MEDIUM_RING.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.MEDIUM_RING.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -463,7 +463,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_MEDIUM_RING.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_MEDIUM_RING.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -510,7 +510,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BIG_RING.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BIG_RING.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -555,7 +555,7 @@ public class PalamachineprocessProcedure {
 				}
 				world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0, 1, 0);
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.BIG_RING.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.BIG_RING.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(6)).set(_setstack);
 					_player.containerMenu.broadcastChanges();

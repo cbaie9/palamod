@@ -69,11 +69,6 @@ public class SafeguiScreen extends AbstractContainerScreen<SafeguiMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

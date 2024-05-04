@@ -27,7 +27,7 @@ public class CloseguifaccreateProcedure {
 			}
 		}.convert(PalamodModVariables.faction_create_ing) > 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 				_setstack.setCount((int) new Object() {
 					double convert(String s) {
 						try {
@@ -41,7 +41,7 @@ public class CloseguifaccreateProcedure {
 			}
 		} else if ((PalamodModVariables.faction_create_ing).equals("You can now create the faction")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 				_setstack.setCount(100);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

@@ -77,11 +77,6 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_quit = Button.builder(Component.translatable("gui.palamod.palaerror_0005.button_quit"), e -> {

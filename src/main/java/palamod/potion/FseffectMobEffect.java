@@ -14,11 +14,6 @@ public class FseffectMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.palamod.fseffect";
-	}
-
-	@Override
 	public boolean isInstantenous() {
 		return true;
 	}

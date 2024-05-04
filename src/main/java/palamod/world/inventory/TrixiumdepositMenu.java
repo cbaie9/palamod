@@ -94,7 +94,7 @@ public class TrixiumdepositMenu extends AbstractContainerMenu implements Supplie
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return stack.is(ItemTags.create(new ResourceLocation("palamod:trixium_depo")));
+				return stack.is(ItemTags.create(new ResourceLocation("palapalamod:trixium_depo")));
 			}
 		}));
 		for (int si = 0; si < 3; ++si)

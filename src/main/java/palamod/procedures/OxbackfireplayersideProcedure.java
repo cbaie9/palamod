@@ -49,7 +49,7 @@ public class OxbackfireplayersideProcedure {
 							return blockEntity.getPersistentData().getString(tag);
 						return "";
 					}
-				}.getValue(world, new BlockPos(0, 10, 0), "backdown_fire"))).toLowerCase(java.util.Locale.ENGLISH))));
+				}.getValue(world, new BlockPos(0, 10, 0), "backdown_fire"))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 				_setstack.setCount((int) (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);

@@ -24,8 +24,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class Crusherv2titanecustomProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		File file = new File("");
@@ -51,7 +49,7 @@ public class Crusherv2titanecustomProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					Main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					Main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					input_titane = Main_obj.get("Crusher-titane-input").getAsDouble();
 					output_titane = Main_obj.get("Crusher-titane-output").getAsDouble();
 				} catch (IOException e) {
@@ -70,7 +68,7 @@ public class Crusherv2titanecustomProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 						_setstack.setCount((int) (new Object() {
 							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 								AtomicInteger _retval = new AtomicInteger(0);
@@ -111,7 +109,7 @@ public class Crusherv2titanecustomProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -144,7 +142,7 @@ public class Crusherv2titanecustomProcedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(Blocks.DIRT);
+							final ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);

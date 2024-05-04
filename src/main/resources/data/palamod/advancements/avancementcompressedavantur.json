@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementcompressedavantur": {
+    "avancementcompressedavantur_0": {
       "trigger": "minecraft:impossible"
     }
   },

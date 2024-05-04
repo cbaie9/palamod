@@ -17,9 +17,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
-import java.util.ArrayList;
-
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.File;
@@ -27,15 +24,12 @@ import java.io.BufferedReader;
 
 import io.netty.buffer.Unpooled;
 
-import com.google.gson.Gson;
-
 public class OpencheckssetuppalahelpProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		File file = new File("");
 		com.google.gson.JsonObject main_obj = new com.google.gson.JsonObject();
-		List<Object> devmod = new ArrayList<>();
 		file = new File((FMLPaths.GAMEDIR.get().toString() + "/config/palamod/"), File.separator + "palamod-configuration-client.json");
 		if (!file.exists()) {
 			if (entity instanceof ServerPlayer _ent) {
@@ -64,7 +58,7 @@ public class OpencheckssetuppalahelpProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if ((main_obj.get("language").getAsString()).equals("french") || (main_obj.get("language").getAsString()).equals("english")) {
 						if (entity instanceof ServerPlayer _ent) {
 							BlockPos _bpos = BlockPos.containing(x, y, z);

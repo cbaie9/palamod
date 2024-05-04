@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:poisonobsidian",
+    "palamod:slimeobsidian",
+    "palamod:paladium_obsidian_spike",
+    "palamod:titane_obsidian_spike",
+    "palamod:amethys_tobsidian_spike",
+    "palamod:paladium_slab",
+    "palamod:paladium_stairs",
+    "palamod:lava_obsidian",
+    "palamod:fake_water_obsidian",
+    "palamod:compacted_obsidian",
+    "palamod:obsidian_door",
+    "palamod:obsidian_trapdoor",
+    "palamod:findium_stairs"
+  ]
+}

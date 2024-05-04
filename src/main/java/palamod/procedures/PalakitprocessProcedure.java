@@ -44,37 +44,37 @@ public class PalakitprocessProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_BOOTS.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_BOOTS.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(Items.COOKED_BEEF);
+				ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
 				_setstack.setCount(64);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(Blocks.OAK_LOG);
+				ItemStack _setstack = new ItemStack(Blocks.OAK_LOG).copy();
 				_setstack.setCount(20);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

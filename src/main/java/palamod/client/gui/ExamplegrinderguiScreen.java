@@ -178,11 +178,6 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

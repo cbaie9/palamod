@@ -144,11 +144,6 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_left_gray_line = new ImageButton(this.leftPos + -1, this.topPos + 0, 100, 24, 0, 0, 24, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_left_gray_line.png"), 100, 48, e -> {

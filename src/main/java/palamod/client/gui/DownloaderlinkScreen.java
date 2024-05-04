@@ -80,11 +80,6 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_no = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_no"), e -> {

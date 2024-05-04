@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementendiumingot": {
+    "avancementendiumingot_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

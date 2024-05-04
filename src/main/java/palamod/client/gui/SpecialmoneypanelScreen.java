@@ -90,11 +90,6 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		player_name = new EditBox(this.font, this.leftPos + 8, this.topPos + 19, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.player_name")) {

@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "achmchestendium": {
+    "achmchestendium_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

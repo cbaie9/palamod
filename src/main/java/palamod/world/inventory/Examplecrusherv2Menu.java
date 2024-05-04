@@ -92,7 +92,7 @@ public class Examplecrusherv2Menu extends AbstractContainerMenu implements Suppl
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return stack.is(ItemTags.create(new ResourceLocation("palamod:palamodmoddedfuel")));
+				return stack.is(ItemTags.create(new ResourceLocation("palapalamod:palamodmoddedfuel")));
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 159, 100) {

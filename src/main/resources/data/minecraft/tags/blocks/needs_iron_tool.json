@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:diamond_obsidian_spike",
+    "palamod:golden_obsidian_spike",
+    "palamod:iron_obsidian_spike",
+    "palamod:wooden_obsidian_spike",
+    "palamod:deepslate_findium_ore",
+    "palamod:amethyst_slab",
+    "palamod:amethyst_stairs",
+    "palamod:titane_stairs",
+    "palamod:titane_slab",
+    "palamod:paladium_forge",
+    "palamod:paladium_spike",
+    "palamod:titane_spike",
+    "palamod:spike_gold",
+    "palamod:iron_spike",
+    "palamod:paladium_green_block",
+    "palamod:findium_block",
+    "palamod:amethyst_block",
+    "palamod:paladium_block"
+  ]
+}

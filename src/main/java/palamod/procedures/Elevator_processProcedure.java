@@ -21,9 +21,9 @@ public class Elevator_processProcedure {
 				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(new ResourceLocation("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo((x + 0.5), (y_pos - add_num), (z + 0.5));
+						_ent.teleportTo((x + 0.5), (y_pos - add_num + 1), (z + 0.5));
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((x + 0.5), (y_pos - add_num), (z + 0.5), _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport((x + 0.5), (y_pos - add_num + 1), (z + 0.5), _ent.getYRot(), _ent.getXRot());
 					}
 					break;
 				} else {
@@ -39,9 +39,9 @@ public class Elevator_processProcedure {
 				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(new ResourceLocation("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo((x + 0.5), (y_pos + add_num), (z + 0.5));
+						_ent.teleportTo((x + 0.5), (y_pos + add_num + 1), (z + 0.5));
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((x + 0.5), (y_pos + add_num), (z + 0.5), _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport((x + 0.5), (y_pos + add_num + 1), (z + 0.5), _ent.getYRot(), _ent.getXRot());
 					}
 					break;
 				} else {

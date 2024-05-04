@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "avancementsupremearmor": {
+    "avancementsupremearmor_0": {
       "trigger": "minecraft:impossible"
     }
   },

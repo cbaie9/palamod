@@ -1,0 +1,36 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "palamod:item/flask6"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "palamod:xpbottle_xp": 0.000000001,
+        "palamod:xpbottle_jobs_type": 1
+      },
+      "model": "palamod:item/xpbottle_0"
+    },
+    {
+      "predicate": {
+        "palamod:xpbottle_xp": 0.000000001,
+        "palamod:xpbottle_jobs_type": 2
+      },
+      "model": "palamod:item/xpbottle_1"
+    },
+    {
+      "predicate": {
+        "palamod:xpbottle_xp": 0.000000001,
+        "palamod:xpbottle_jobs_type": 3
+      },
+      "model": "palamod:item/xpbottle_2"
+    },
+    {
+      "predicate": {
+        "palamod:xpbottle_xp": 0.000000001,
+        "palamod:xpbottle_jobs_type": 4
+      },
+      "model": "palamod:item/xpbottle_3"
+    }
+  ]
+}

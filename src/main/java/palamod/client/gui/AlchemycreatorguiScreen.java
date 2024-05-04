@@ -74,11 +74,6 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

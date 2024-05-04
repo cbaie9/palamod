@@ -95,11 +95,6 @@ public class AdminshoporeScreen extends AbstractContainerScreen<AdminshoporeMenu
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_paladium = Button.builder(Component.translatable("gui.palamod.adminshopore.button_paladium"), e -> {

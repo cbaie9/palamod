@@ -82,11 +82,6 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_ore = Button.builder(Component.translatable("gui.palamod.palahelpblock.button_ore"), e -> {

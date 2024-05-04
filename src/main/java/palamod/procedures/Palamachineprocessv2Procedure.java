@@ -275,7 +275,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.SMALL_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.SMALL_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -521,7 +521,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.SMALL_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.SMALL_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -767,7 +767,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.MEDIUM_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.MEDIUM_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1013,7 +1013,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.MEDIUM_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.MEDIUM_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1259,7 +1259,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.BIG_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.BIG_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1505,7 +1505,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.BIG_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.BIG_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1751,7 +1751,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1997,7 +1997,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.HEALSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2243,7 +2243,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2489,7 +2489,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2735,7 +2735,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.SPEEDSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2981,7 +2981,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.STRENGHTSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.STRENGHTSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -3227,7 +3227,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.STRENGHTSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.STRENGHTSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -3473,7 +3473,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -3719,7 +3719,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -3965,7 +3965,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.STICKOFGODS.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.STICKOFGODS.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4211,7 +4211,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.STICKOFGODS.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.STICKOFGODS.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4457,7 +4457,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.DAMAGESTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.DAMAGESTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4703,7 +4703,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.DAMAGESTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.DAMAGESTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4949,7 +4949,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5195,7 +5195,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5441,7 +5441,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SMALL_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SMALL_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5687,7 +5687,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SMALL_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SMALL_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5933,7 +5933,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6179,7 +6179,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6425,7 +6425,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BIG_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BIG_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6671,7 +6671,7 @@ public class Palamachineprocessv2Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 5;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BIG_RING.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BIG_RING.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)

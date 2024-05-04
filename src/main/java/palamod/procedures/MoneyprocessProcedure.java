@@ -16,8 +16,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class MoneyprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -34,7 +32,7 @@ public class MoneyprocessProcedure {
 					jsonstringbuilder.append(line);
 				}
 				bufferedReader.close();
-				money_main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"Current Money :" + money_main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));

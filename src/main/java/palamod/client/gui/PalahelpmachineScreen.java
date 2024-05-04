@@ -91,11 +91,6 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_grinder = Button.builder(Component.translatable("gui.palamod.palahelpmachine.button_grinder"), e -> {

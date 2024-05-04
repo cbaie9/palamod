@@ -32,7 +32,7 @@ public class SpecialmoneyprocessProcedure {
 			}
 		}.getAmount(0) != 0) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).copy());
+				ItemStack _setstack = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).copy()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -40,7 +40,7 @@ public class SpecialmoneyprocessProcedure {
 			}
 		} else {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_ITEM.get());
+				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_ITEM.get()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)

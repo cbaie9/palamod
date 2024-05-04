@@ -9,8 +9,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class Grinderluncherv2Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		File file = new File("");
@@ -29,7 +27,7 @@ public class Grinderluncherv2Procedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (main_obj.get("Grinder-Custom").getAsBoolean()) {
 						Gcodev4customProcedure.execute(world, x, y, z);
 					} else {

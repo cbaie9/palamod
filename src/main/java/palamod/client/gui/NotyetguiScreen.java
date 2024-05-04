@@ -71,11 +71,6 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

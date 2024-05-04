@@ -77,11 +77,6 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_invite = Button.builder(Component.translatable("gui.palamod.factionhomegui.button_invite"), e -> {

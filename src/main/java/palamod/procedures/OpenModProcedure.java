@@ -11,9 +11,6 @@ import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 @Mod.EventBusSubscriber
 public class OpenModProcedure {
 	@SubscribeEvent
@@ -42,7 +39,7 @@ public class OpenModProcedure {
 			main2.addProperty("Devmod", false);
 			main2.addProperty("language", "english");
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(file2);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main2));
@@ -74,7 +71,7 @@ public class OpenModProcedure {
 			main.addProperty("Grinder-loading_time2", 10);
 			main.addProperty("Grinder-loading_time3", 10);
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(file);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main));

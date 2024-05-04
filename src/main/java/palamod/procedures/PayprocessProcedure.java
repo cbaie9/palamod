@@ -23,9 +23,6 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class PayprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
@@ -56,7 +53,7 @@ public class PayprocessProcedure {
 					jsonstringbuilder.append(line);
 				}
 				bufferedReader.close();
-				main_money = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				money_pl1 = main_money.get("money").getAsDouble();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -71,7 +68,7 @@ public class PayprocessProcedure {
 					jsonstringbuilder.append(line);
 				}
 				bufferedReader.close();
-				main_player2 = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				main_player2 = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				money_player2 = main_player2.get("money").getAsDouble();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -81,7 +78,7 @@ public class PayprocessProcedure {
 			main_money.addProperty("money", (money_pl1 + DoubleArgumentType.getDouble(arguments, "money")));
 			main_money.addProperty("money", (money_player2 - DoubleArgumentType.getDouble(arguments, "money")));
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main_money));
@@ -91,7 +88,7 @@ public class PayprocessProcedure {
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(file_player2);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main_player2));

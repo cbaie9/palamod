@@ -90,11 +90,6 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_gui_example_wip = Button.builder(Component.translatable("gui.palamod.uploaderguipalahelp.button_gui_example_wip"), e -> {

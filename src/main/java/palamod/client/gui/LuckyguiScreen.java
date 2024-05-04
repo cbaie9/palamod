@@ -86,11 +86,6 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_open = Button.builder(Component.translatable("gui.palamod.luckygui.button_open"), e -> {

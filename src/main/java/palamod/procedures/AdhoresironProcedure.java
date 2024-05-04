@@ -74,7 +74,7 @@ public class AdhoresironProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = item;
+				ItemStack _setstack = item.copy();
 				_setstack.setCount((int) n);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

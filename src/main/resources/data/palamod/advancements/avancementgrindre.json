@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementgrindre": {
+    "avancementgrindre_0": {
       "trigger": "minecraft:impossible"
     }
   },

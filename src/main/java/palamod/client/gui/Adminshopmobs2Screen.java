@@ -97,11 +97,6 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_honey_comb = Button.builder(Component.translatable("gui.palamod.adminshopmobs_2.button_honey_comb"), e -> {

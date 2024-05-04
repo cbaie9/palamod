@@ -41,7 +41,7 @@ public class AlchemycreatorcodeprocessProcedure {
 					_player.containerMenu.broadcastChanges();
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.FIRE_IMBUE_POTION.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.FIRE_IMBUE_POTION.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(3)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -70,7 +70,7 @@ public class AlchemycreatorcodeprocessProcedure {
 					_player.containerMenu.broadcastChanges();
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.WITHER_IMBUE_POTION.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.WITHER_IMBUE_POTION.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(3)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -99,7 +99,7 @@ public class AlchemycreatorcodeprocessProcedure {
 					_player.containerMenu.broadcastChanges();
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.POISON_IMBUE_POTION.get());
+					ItemStack _setstack = new ItemStack(PalamodModItems.POISON_IMBUE_POTION.get()).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(3)).set(_setstack);
 					_player.containerMenu.broadcastChanges();

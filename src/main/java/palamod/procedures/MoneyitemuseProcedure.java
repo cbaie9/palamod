@@ -25,9 +25,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 @Mod.EventBusSubscriber
 public class MoneyitemuseProcedure {
 	@SubscribeEvent
@@ -62,14 +59,14 @@ public class MoneyitemuseProcedure {
 							jsonstringbuilder.append(line);
 						}
 						bufferedReader.close();
-						main_money = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						main_money.addProperty("money", (itemstack.getOrCreateTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
 				}
 				{
-					Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 					try {
 						FileWriter fileWriter = new FileWriter(money);
 						fileWriter.write(mainGSONBuilderVariable.toJson(main_money));
@@ -97,14 +94,14 @@ public class MoneyitemuseProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_money = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					main_money.addProperty("money", (itemstack.getOrCreateTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main_money));

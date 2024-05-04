@@ -880,7 +880,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -986,7 +986,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1092,7 +1092,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1277,7 +1277,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get());
+							final ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1383,7 +1383,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get());
+							final ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1489,7 +1489,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_INGOT.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1674,7 +1674,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.AXE_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.AXE_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1780,7 +1780,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -1886,7 +1886,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_AXE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_AXE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2071,7 +2071,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXE_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXE_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2177,7 +2177,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2283,7 +2283,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_PICKAXE.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_PICKAXE.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2468,7 +2468,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.SHOVEL_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.SHOVEL_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2574,7 +2574,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2680,7 +2680,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2893,7 +2893,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.SWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.SWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -2999,7 +2999,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3105,7 +3105,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.HEADENDIUMSWORD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.HEADENDIUMSWORD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3318,7 +3318,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.HAMMER_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.HAMMER_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3424,7 +3424,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3530,7 +3530,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3743,7 +3743,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.BROADSWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.BROADSWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3849,7 +3849,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -3955,7 +3955,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -4168,7 +4168,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.FASTSWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.FASTSWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -4274,7 +4274,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -4380,7 +4380,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 2;
-							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get());
+							final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get()).copy();
 							_setstack.setCount((int) (new Object() {
 								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 									AtomicInteger _retval = new AtomicInteger(0);
@@ -4500,7 +4500,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_AXE.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_AXE.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4620,7 +4620,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENAXE.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENAXE.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4758,7 +4758,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_AXE.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_AXE.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -4947,7 +4947,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_HAMMER.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5127,7 +5127,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5307,7 +5307,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5495,7 +5495,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5683,7 +5683,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENPICKAXE.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENPICKAXE.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -5871,7 +5871,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_PICKAXE.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_PICKAXE.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6059,7 +6059,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6247,7 +6247,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6435,7 +6435,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6623,7 +6623,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMFASTSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMFASTSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6811,7 +6811,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMFASTSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMFASTSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -6999,7 +6999,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMFASTSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMFASTSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -7187,7 +7187,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMBROADSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMBROADSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -7375,7 +7375,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMBROADSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMBROADSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -7563,7 +7563,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMBROADSWORD.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMBROADSWORD.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -7751,7 +7751,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SHOVEL.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SHOVEL.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -7939,7 +7939,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSHOVEL.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSHOVEL.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -8127,7 +8127,7 @@ public class Gcodev4Procedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMSHOVEL.get());
+						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMSHOVEL.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -8415,7 +8415,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 5;
-							final ItemStack _setstack = tempo_Item_stack;
+							final ItemStack _setstack = tempo_Item_stack.copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -8653,7 +8653,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 5;
-							final ItemStack _setstack = tempo_Item_stack;
+							final ItemStack _setstack = tempo_Item_stack.copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -8874,7 +8874,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 5;
-							final ItemStack _setstack = tempo_Item_stack;
+							final ItemStack _setstack = tempo_Item_stack.copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -9062,7 +9062,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 5;
-							final ItemStack _setstack = tempo_Item_stack;
+							final ItemStack _setstack = tempo_Item_stack.copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)
@@ -9239,7 +9239,7 @@ public class Gcodev4Procedure {
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 						if (_ent != null) {
 							final int _slotid = 5;
-							final ItemStack _setstack = tempo_Item_stack;
+							final ItemStack _setstack = tempo_Item_stack.copy();
 							_setstack.setCount(1);
 							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable)

@@ -188,11 +188,6 @@ public class ForgeguiScreen extends AbstractContainerScreen<ForgeguiMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

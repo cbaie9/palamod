@@ -23,10 +23,10 @@ import net.minecraftforge.api.distmarker.Dist;
 public class PalamodModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(PalamodModEntities.PALADIUMGOLEM.get(), PaladiumgolemRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PALADIUMDYNAMITE.get(), PaladiumdynamiteRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.ENDIUMDYNAMITE.get(), EndiumdynamiteRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.BIGDYNAMITEENTITY.get(), BigdynamiteentityRenderer::new);
+		event.registerEntityRenderer(PalamodModEntities.PALADIUMGOLEM.get(), PaladiumgolemRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDSPONGETNT.get(), PrimedspongetntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDWITHERTNT.get(), PrimedwithertntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDMAGICTNT.get(), PrimedmagictntRenderer::new);

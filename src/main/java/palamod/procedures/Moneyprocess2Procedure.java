@@ -21,9 +21,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class Moneyprocess2Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -40,7 +37,7 @@ public class Moneyprocess2Procedure {
 					jsonstringbuilder.append(line);
 				}
 				bufferedReader.close();
-				main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (entity instanceof Player _player)
 					_player.closeContainer();
 				main.addProperty("money", (1000 + main.get("money").getAsDouble()));
@@ -56,7 +53,7 @@ public class Moneyprocess2Procedure {
 			}
 		}
 		{
-			Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+			com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 			try {
 				FileWriter fileWriter = new FileWriter(money);
 				fileWriter.write(mainGSONBuilderVariable.toJson(main));

@@ -159,7 +159,7 @@ public class Rustinechests1Procedure {
 				.is(ItemTags.create(new ResourceLocation("palamod:rings")))) {
 			if (is12 && !is12full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY);
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(12)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -170,7 +170,7 @@ public class Rustinechests1Procedure {
 				}
 			} else if (is13 && !is13full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY);
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(13)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -181,7 +181,7 @@ public class Rustinechests1Procedure {
 				}
 			} else if (is110 && !is110full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY);
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(110)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
@@ -192,7 +192,7 @@ public class Rustinechests1Procedure {
 				}
 			} else if (is111 && !is111full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY);
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
 					((Slot) _slots.get(111)).set(_setstack);
 					_player.containerMenu.broadcastChanges();

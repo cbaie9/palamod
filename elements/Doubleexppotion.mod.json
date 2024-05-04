@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -10,7 +10,7 @@
     "name": "Doublee xp potion",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Palamod"
+      "value": "CUSTOM:Jobscreativetabs"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -51,6 +51,6 @@
     },
     "isMeat": false,
     "isAlwaysEdible": true,
-    "animation": "eat"
+    "animation": "drink"
   }
 }

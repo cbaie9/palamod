@@ -42,7 +42,7 @@ public class Legendarystonefortune_processProcedure {
 				item = new ItemStack(Items.GOLD_INGOT);
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = item;
+				ItemStack _setstack = item.copy();
 				_setstack.setCount(Mth.nextInt(RandomSource.create(), 10, 64));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

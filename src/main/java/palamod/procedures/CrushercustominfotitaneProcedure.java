@@ -11,8 +11,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 public class CrushercustominfotitaneProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
 		double output = 0;
@@ -37,7 +35,7 @@ public class CrushercustominfotitaneProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main_obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					output = main_obj.get("Crusher-titane-input").getAsDouble();
 				} catch (IOException e) {
 					e.printStackTrace();

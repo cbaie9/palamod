@@ -10,9 +10,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class Addmultixp10fileProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
@@ -31,14 +28,14 @@ public class Addmultixp10fileProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					main = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					main.addProperty("multi_exp", (main.get("multi_exp").getAsDouble() * 10));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(jobs);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main));

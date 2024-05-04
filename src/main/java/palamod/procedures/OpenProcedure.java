@@ -8,9 +8,6 @@ import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
-
 public class OpenProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
@@ -47,7 +44,7 @@ public class OpenProcedure {
 			main.addProperty("xpstreak_time_alchi", 0);
 			main.addProperty("xpstreak_alchi", 0);
 			{
-				Gson mainGSONBuilderVariable = new GsonBuilder().setPrettyPrinting().create();
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(jobs);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main));

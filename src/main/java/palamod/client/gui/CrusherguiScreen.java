@@ -1019,11 +1019,6 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_button_blank = new ImageButton(this.leftPos + 214, this.topPos + 48, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_blank.png"), 92, 40, e -> {

@@ -8,6 +8,7 @@ import palamod.enchantment.SpeedEnchantment;
 import palamod.enchantment.SmeltEnchantment;
 import palamod.enchantment.HammerforturneEnchantment;
 import palamod.enchantment.ChargedenchantEnchantment;
+import palamod.enchantment.BotteledEnchantment;
 import palamod.enchantment.BigholeEnchantment;
 import palamod.enchantment.AutosmeltpotgEnchantment;
 
@@ -27,4 +28,5 @@ public class PalamodModEnchantments {
 	public static final RegistryObject<Enchantment> BIGHOLE = REGISTRY.register("bighole", () -> new BigholeEnchantment());
 	public static final RegistryObject<Enchantment> AUTOSMELTPOTG = REGISTRY.register("autosmeltpotg", () -> new AutosmeltpotgEnchantment());
 	public static final RegistryObject<Enchantment> CHARGEDENCHANT = REGISTRY.register("chargedenchant", () -> new ChargedenchantEnchantment());
+	public static final RegistryObject<Enchantment> BOTTELED = REGISTRY.register("botteled", () -> new BotteledEnchantment());
 }

@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementdynamite_1": {
+    "avancementdynamite_1_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

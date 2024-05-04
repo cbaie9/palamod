@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancement_hammeryourlife": {
+    "avancement_hammeryourlife_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
