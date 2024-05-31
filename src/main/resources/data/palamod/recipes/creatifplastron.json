@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:creatifingot"
+    }
+  },
+  "result": {
+    "item": "palamod:creatifarmor_chestplate",
+    "count": 1
+  }
+}
