@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:item/flask6"
+    "layer0": "palamod:item/glass_bottle"
   },
   "overrides": [
     {

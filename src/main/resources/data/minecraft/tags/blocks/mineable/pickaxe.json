@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:exctractor",
     "palamod:poisonobsidian",
     "palamod:slimeobsidian",
     "palamod:obsidianslab",

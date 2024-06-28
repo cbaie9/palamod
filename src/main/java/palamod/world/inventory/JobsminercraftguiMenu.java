@@ -108,6 +108,11 @@ public class JobsminercraftguiMenu extends AbstractContainerMenu implements Supp
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 262, 55) {
 			private final int slot = 9;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

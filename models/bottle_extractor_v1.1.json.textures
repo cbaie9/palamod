@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "beta_exc",
+        "1": "blank"
+      },
+      "name": "default"
+    }
+  }
+}

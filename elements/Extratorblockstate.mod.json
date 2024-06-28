@@ -1,0 +1,152 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Exctractor",
+    "blockstateList": [
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_v1.1:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p1:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p2:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p3:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p4:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p5:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p6:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p7:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p8:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p9:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "blank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "bottle_extractor_p010:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

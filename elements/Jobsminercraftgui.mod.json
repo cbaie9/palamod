@@ -383,24 +383,6 @@
         }
       },
       {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 9,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 325,
-          "y": 69
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_cross_no_button",
@@ -777,8 +759,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_beta_block1",
-          "image": "beta_block.png",
-          "hoveredImage": "block_white.png",
+          "image": "builder_wand_amethyst.png",
+          "hoveredImage": "builder_wand_white.png",
           "x": 112,
           "y": 101
         }
@@ -787,8 +769,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_beta_block2",
-          "image": "beta_block.png",
-          "hoveredImage": "block_white.png",
+          "image": "builder_wand_titane.png",
+          "hoveredImage": "builder_wand_white.png",
           "x": 131,
           "y": 101
         }
@@ -797,8 +779,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_beta_block3",
-          "image": "beta_block.png",
-          "hoveredImage": "block_white.png",
+          "image": "builder_wand_paladium.png",
+          "hoveredImage": "builder_wand_white.png",
           "x": 150,
           "y": 101
         }
@@ -807,8 +789,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_beta_block4",
-          "image": "beta_block.png",
-          "hoveredImage": "block_white.png",
+          "image": "builder_wand_endium.png",
+          "hoveredImage": "builder_wand_white.png",
           "x": 169,
           "y": 101
         }
@@ -1559,6 +1541,18 @@
           },
           "x": 239,
           "y": 182
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 325,
+          "y": 69
         }
       }
     ],

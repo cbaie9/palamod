@@ -782,6 +782,7 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> DOUBLEEXPPOTION = REGISTRY.register("doubleexppotion", () -> new DoubleexppotionItem());
 	public static final RegistryObject<Item> X_10XPPOTION = REGISTRY.register("x_10xppotion", () -> new X10xppotionItem());
 	public static final RegistryObject<Item> XPBOTTLE = REGISTRY.register("xpbottle", () -> new XpbottleItem());
+	public static final RegistryObject<Item> EXCTRACTOR = block(PalamodModBlocks.EXCTRACTOR);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -456,6 +456,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.DOUBLEEXPPOTION.get());
 				tabData.accept(PalamodModItems.X_10XPPOTION.get());
 				tabData.accept(PalamodModItems.XPBOTTLE.get());
+				tabData.accept(PalamodModBlocks.EXCTRACTOR.get().asItem());
 			})
 
 					.build());

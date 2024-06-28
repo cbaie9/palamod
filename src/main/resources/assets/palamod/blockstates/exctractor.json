@@ -1,0 +1,280 @@
+{
+  "variants": {
+    "facing=north,blockstate=0": {
+      "model": "palamod:block/exctractor"
+    },
+    "facing=east,blockstate=0": {
+      "model": "palamod:block/exctractor",
+      "y": 90
+    },
+    "facing=south,blockstate=0": {
+      "model": "palamod:block/exctractor",
+      "y": 180
+    },
+    "facing=west,blockstate=0": {
+      "model": "palamod:block/exctractor",
+      "y": 270
+    },
+    "facing=up,blockstate=0": {
+      "model": "palamod:block/exctractor",
+      "x": 270
+    },
+    "facing=down,blockstate=0": {
+      "model": "palamod:block/exctractor",
+      "x": 90
+    },
+    "facing=north,blockstate=1": {
+      "model": "palamod:block/extratorblockstate_blockstate_0"
+    },
+    "facing=east,blockstate=1": {
+      "model": "palamod:block/extratorblockstate_blockstate_0",
+      "y": 90
+    },
+    "facing=south,blockstate=1": {
+      "model": "palamod:block/extratorblockstate_blockstate_0",
+      "y": 180
+    },
+    "facing=west,blockstate=1": {
+      "model": "palamod:block/extratorblockstate_blockstate_0",
+      "y": 270
+    },
+    "facing=up,blockstate=1": {
+      "model": "palamod:block/extratorblockstate_blockstate_0",
+      "x": 270
+    },
+    "facing=down,blockstate=1": {
+      "model": "palamod:block/extratorblockstate_blockstate_0",
+      "x": 90
+    },
+    "facing=north,blockstate=2": {
+      "model": "palamod:block/extratorblockstate_blockstate_1"
+    },
+    "facing=east,blockstate=2": {
+      "model": "palamod:block/extratorblockstate_blockstate_1",
+      "y": 90
+    },
+    "facing=south,blockstate=2": {
+      "model": "palamod:block/extratorblockstate_blockstate_1",
+      "y": 180
+    },
+    "facing=west,blockstate=2": {
+      "model": "palamod:block/extratorblockstate_blockstate_1",
+      "y": 270
+    },
+    "facing=up,blockstate=2": {
+      "model": "palamod:block/extratorblockstate_blockstate_1",
+      "x": 270
+    },
+    "facing=down,blockstate=2": {
+      "model": "palamod:block/extratorblockstate_blockstate_1",
+      "x": 90
+    },
+    "facing=north,blockstate=3": {
+      "model": "palamod:block/extratorblockstate_blockstate_2"
+    },
+    "facing=east,blockstate=3": {
+      "model": "palamod:block/extratorblockstate_blockstate_2",
+      "y": 90
+    },
+    "facing=south,blockstate=3": {
+      "model": "palamod:block/extratorblockstate_blockstate_2",
+      "y": 180
+    },
+    "facing=west,blockstate=3": {
+      "model": "palamod:block/extratorblockstate_blockstate_2",
+      "y": 270
+    },
+    "facing=up,blockstate=3": {
+      "model": "palamod:block/extratorblockstate_blockstate_2",
+      "x": 270
+    },
+    "facing=down,blockstate=3": {
+      "model": "palamod:block/extratorblockstate_blockstate_2",
+      "x": 90
+    },
+    "facing=north,blockstate=4": {
+      "model": "palamod:block/extratorblockstate_blockstate_3"
+    },
+    "facing=east,blockstate=4": {
+      "model": "palamod:block/extratorblockstate_blockstate_3",
+      "y": 90
+    },
+    "facing=south,blockstate=4": {
+      "model": "palamod:block/extratorblockstate_blockstate_3",
+      "y": 180
+    },
+    "facing=west,blockstate=4": {
+      "model": "palamod:block/extratorblockstate_blockstate_3",
+      "y": 270
+    },
+    "facing=up,blockstate=4": {
+      "model": "palamod:block/extratorblockstate_blockstate_3",
+      "x": 270
+    },
+    "facing=down,blockstate=4": {
+      "model": "palamod:block/extratorblockstate_blockstate_3",
+      "x": 90
+    },
+    "facing=north,blockstate=5": {
+      "model": "palamod:block/extratorblockstate_blockstate_4"
+    },
+    "facing=east,blockstate=5": {
+      "model": "palamod:block/extratorblockstate_blockstate_4",
+      "y": 90
+    },
+    "facing=south,blockstate=5": {
+      "model": "palamod:block/extratorblockstate_blockstate_4",
+      "y": 180
+    },
+    "facing=west,blockstate=5": {
+      "model": "palamod:block/extratorblockstate_blockstate_4",
+      "y": 270
+    },
+    "facing=up,blockstate=5": {
+      "model": "palamod:block/extratorblockstate_blockstate_4",
+      "x": 270
+    },
+    "facing=down,blockstate=5": {
+      "model": "palamod:block/extratorblockstate_blockstate_4",
+      "x": 90
+    },
+    "facing=north,blockstate=6": {
+      "model": "palamod:block/extratorblockstate_blockstate_5"
+    },
+    "facing=east,blockstate=6": {
+      "model": "palamod:block/extratorblockstate_blockstate_5",
+      "y": 90
+    },
+    "facing=south,blockstate=6": {
+      "model": "palamod:block/extratorblockstate_blockstate_5",
+      "y": 180
+    },
+    "facing=west,blockstate=6": {
+      "model": "palamod:block/extratorblockstate_blockstate_5",
+      "y": 270
+    },
+    "facing=up,blockstate=6": {
+      "model": "palamod:block/extratorblockstate_blockstate_5",
+      "x": 270
+    },
+    "facing=down,blockstate=6": {
+      "model": "palamod:block/extratorblockstate_blockstate_5",
+      "x": 90
+    },
+    "facing=north,blockstate=7": {
+      "model": "palamod:block/extratorblockstate_blockstate_6"
+    },
+    "facing=east,blockstate=7": {
+      "model": "palamod:block/extratorblockstate_blockstate_6",
+      "y": 90
+    },
+    "facing=south,blockstate=7": {
+      "model": "palamod:block/extratorblockstate_blockstate_6",
+      "y": 180
+    },
+    "facing=west,blockstate=7": {
+      "model": "palamod:block/extratorblockstate_blockstate_6",
+      "y": 270
+    },
+    "facing=up,blockstate=7": {
+      "model": "palamod:block/extratorblockstate_blockstate_6",
+      "x": 270
+    },
+    "facing=down,blockstate=7": {
+      "model": "palamod:block/extratorblockstate_blockstate_6",
+      "x": 90
+    },
+    "facing=north,blockstate=8": {
+      "model": "palamod:block/extratorblockstate_blockstate_7"
+    },
+    "facing=east,blockstate=8": {
+      "model": "palamod:block/extratorblockstate_blockstate_7",
+      "y": 90
+    },
+    "facing=south,blockstate=8": {
+      "model": "palamod:block/extratorblockstate_blockstate_7",
+      "y": 180
+    },
+    "facing=west,blockstate=8": {
+      "model": "palamod:block/extratorblockstate_blockstate_7",
+      "y": 270
+    },
+    "facing=up,blockstate=8": {
+      "model": "palamod:block/extratorblockstate_blockstate_7",
+      "x": 270
+    },
+    "facing=down,blockstate=8": {
+      "model": "palamod:block/extratorblockstate_blockstate_7",
+      "x": 90
+    },
+    "facing=north,blockstate=9": {
+      "model": "palamod:block/extratorblockstate_blockstate_8"
+    },
+    "facing=east,blockstate=9": {
+      "model": "palamod:block/extratorblockstate_blockstate_8",
+      "y": 90
+    },
+    "facing=south,blockstate=9": {
+      "model": "palamod:block/extratorblockstate_blockstate_8",
+      "y": 180
+    },
+    "facing=west,blockstate=9": {
+      "model": "palamod:block/extratorblockstate_blockstate_8",
+      "y": 270
+    },
+    "facing=up,blockstate=9": {
+      "model": "palamod:block/extratorblockstate_blockstate_8",
+      "x": 270
+    },
+    "facing=down,blockstate=9": {
+      "model": "palamod:block/extratorblockstate_blockstate_8",
+      "x": 90
+    },
+    "facing=north,blockstate=10": {
+      "model": "palamod:block/extratorblockstate_blockstate_9"
+    },
+    "facing=east,blockstate=10": {
+      "model": "palamod:block/extratorblockstate_blockstate_9",
+      "y": 90
+    },
+    "facing=south,blockstate=10": {
+      "model": "palamod:block/extratorblockstate_blockstate_9",
+      "y": 180
+    },
+    "facing=west,blockstate=10": {
+      "model": "palamod:block/extratorblockstate_blockstate_9",
+      "y": 270
+    },
+    "facing=up,blockstate=10": {
+      "model": "palamod:block/extratorblockstate_blockstate_9",
+      "x": 270
+    },
+    "facing=down,blockstate=10": {
+      "model": "palamod:block/extratorblockstate_blockstate_9",
+      "x": 90
+    },
+    "facing=north,blockstate=11": {
+      "model": "palamod:block/extratorblockstate_blockstate_10"
+    },
+    "facing=east,blockstate=11": {
+      "model": "palamod:block/extratorblockstate_blockstate_10",
+      "y": 90
+    },
+    "facing=south,blockstate=11": {
+      "model": "palamod:block/extratorblockstate_blockstate_10",
+      "y": 180
+    },
+    "facing=west,blockstate=11": {
+      "model": "palamod:block/extratorblockstate_blockstate_10",
+      "y": 270
+    },
+    "facing=up,blockstate=11": {
+      "model": "palamod:block/extratorblockstate_blockstate_10",
+      "x": 270
+    },
+    "facing=down,blockstate=11": {
+      "model": "palamod:block/extratorblockstate_blockstate_10",
+      "x": 90
+    }
+  }
+}

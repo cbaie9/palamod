@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/extractor_v1.1",
+  "textures": {
+    "all": "palamod:block/beta_exc",
+    "particle": "palamod:block/beta_exc",
+    "0": "palamod:block/beta_exc"
+  },
+  "render_type": "cutout"
+}

@@ -134,6 +134,7 @@ import palamod.block.FakewterBlock;
 import palamod.block.FakewaterobsidianBlock;
 import palamod.block.FakepaladiumoreBlock;
 import palamod.block.FactionblckBlock;
+import palamod.block.ExctractorBlock;
 import palamod.block.ErabletrapdoorBlock;
 import palamod.block.ErablesapplingBlock;
 import palamod.block.ErabledoorBlock;
@@ -413,6 +414,7 @@ public class PalamodModBlocks {
 	public static final RegistryObject<Block> ANGELICWTER = REGISTRY.register("angelicwter", () -> new AngelicwterBlock());
 	public static final RegistryObject<Block> SLIMEOBSIDIAN = REGISTRY.register("slimeobsidian", () -> new SlimeobsidianBlock());
 	public static final RegistryObject<Block> POISONOBSIDIAN = REGISTRY.register("poisonobsidian", () -> new PoisonobsidianBlock());
+	public static final RegistryObject<Block> EXCTRACTOR = REGISTRY.register("exctractor", () -> new ExctractorBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
