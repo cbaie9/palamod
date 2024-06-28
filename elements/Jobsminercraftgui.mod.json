@@ -225,6 +225,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 247,
           "y": 51
         }
@@ -243,6 +249,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 265,
           "y": 51
         }
@@ -261,6 +273,9 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 283,
           "y": 51
         }
@@ -279,6 +294,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 247,
           "y": 69
         }
@@ -297,6 +318,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 265,
           "y": 69
         }
@@ -315,6 +342,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 283,
           "y": 69
         }
@@ -333,6 +366,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 247,
           "y": 87
         }
@@ -351,6 +390,9 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 265,
           "y": 87
         }
@@ -369,6 +411,12 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Guijobsminercheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsminercheckcraft"
+          },
           "x": 283,
           "y": 87
         }
@@ -1550,7 +1598,10 @@
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Craftdoneminer"
+          },
           "x": 325,
           "y": 69
         }

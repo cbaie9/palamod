@@ -80,6 +80,7 @@ import palamod.block.ObsidianslabBlock;
 import palamod.block.ObsidiandoorBlock;
 import palamod.block.NbtblockBlock;
 import palamod.block.MegasafechestBlock;
+import palamod.block.MegaboomobsidianBlock;
 import palamod.block.MagictntBlock;
 import palamod.block.LuckyblockBlock;
 import palamod.block.Loadblock1tBlock;
@@ -189,6 +190,7 @@ import palamod.block.Chervil2Block;
 import palamod.block.Chervil1Block;
 import palamod.block.Chervil0Block;
 import palamod.block.CaveblockBlock;
+import palamod.block.BoomobsidianBlock;
 import palamod.block.BlackluckyblockBlock;
 import palamod.block.AsemblingtableBlock;
 import palamod.block.AngelicwterBlock;
@@ -415,6 +417,8 @@ public class PalamodModBlocks {
 	public static final RegistryObject<Block> SLIMEOBSIDIAN = REGISTRY.register("slimeobsidian", () -> new SlimeobsidianBlock());
 	public static final RegistryObject<Block> POISONOBSIDIAN = REGISTRY.register("poisonobsidian", () -> new PoisonobsidianBlock());
 	public static final RegistryObject<Block> EXCTRACTOR = REGISTRY.register("exctractor", () -> new ExctractorBlock());
+	public static final RegistryObject<Block> BOOMOBSIDIAN = REGISTRY.register("boomobsidian", () -> new BoomobsidianBlock());
+	public static final RegistryObject<Block> MEGABOOMOBSIDIAN = REGISTRY.register("megaboomobsidian", () -> new MegaboomobsidianBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

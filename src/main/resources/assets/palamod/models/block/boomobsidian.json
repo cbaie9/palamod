@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/redstone_obsi_top",
+    "up": "palamod:block/redstone_obsi_top",
+    "north": "palamod:block/boom_obsi",
+    "east": "palamod:block/boom_obsi",
+    "south": "palamod:block/boom_obsi",
+    "west": "palamod:block/boom_obsi",
+    "particle": "palamod:block/redstone_obsi_top"
+  },
+  "render_type": "solid"
+}

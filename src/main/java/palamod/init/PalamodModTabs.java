@@ -371,6 +371,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_BOOTS.get());
+				tabData.accept(PalamodModBlocks.BOOMOBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
 			})
 
 					.build());
