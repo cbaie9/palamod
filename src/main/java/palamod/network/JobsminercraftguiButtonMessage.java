@@ -4,19 +4,36 @@ package palamod.network;
 import palamod.world.inventory.JobsminercraftguiMenu;
 
 import palamod.procedures.JobsminercraftwoddenspikeProcedure;
+import palamod.procedures.JobsminercraftwithertntProcedure;
+import palamod.procedures.JobsminercraftvoidstoneminageProcedure;
 import palamod.procedures.JobsminercraftvoidstoneProcedure;
 import palamod.procedures.JobsminercrafttitanespikeProcedure;
+import palamod.procedures.JobsminercraftspongetntProcedure;
 import palamod.procedures.JobsminercraftslimeobsidianProcedure;
+import palamod.procedures.JobsminercraftsealedxpbottleProcedure;
+import palamod.procedures.JobsminercraftpoisonobsidianProcedure;
+import palamod.procedures.JobsminercraftpalaforgeProcedure;
 import palamod.procedures.JobsminercraftpaladiumspikeProcedure;
 import palamod.procedures.JobsminercraftobsidianpickaxeProcedure;
+import palamod.procedures.JobsminercraftmoulastoneProcedure;
+import palamod.procedures.JobsminercraftmegaboomobsidianProcedure;
+import palamod.procedures.JobsminercraftmagictntProcedure;
 import palamod.procedures.JobsminercraftmagicialtoolProcedure;
 import palamod.procedures.JobsminercraftlavaobsidianProcedure;
 import palamod.procedures.JobsminercraftironspikeProcedure;
 import palamod.procedures.JobsminercraftgoldenspikeProcedure;
 import palamod.procedures.JobsminercraftfakewaterobsidianProcedure;
+import palamod.procedures.JobsminercraftendiumtntProcedure;
 import palamod.procedures.JobsminercraftendiumpickaxeProcedure;
 import palamod.procedures.JobsminercraftdiamondspikeProcedure;
+import palamod.procedures.JobsminercraftcompressedtntProcedure;
+import palamod.procedures.JobsminercraftcompacttntProcedure;
 import palamod.procedures.JobsminercraftcompactobsidianProcedure;
+import palamod.procedures.JobsminercraftcobblebreakertitaneupgradeProcedure;
+import palamod.procedures.JobsminercraftcobblebreakerpaladiumupgradeProcedure;
+import palamod.procedures.JobsminercraftcobblebreakeramethysteupgradeProcedure;
+import palamod.procedures.JobsminercraftcobblebreakerProcedure;
+import palamod.procedures.JobsminercraftcaveblockProcedure;
 import palamod.procedures.JobsminercraftboomtntProcedure;
 import palamod.procedures.JobsminercraftamethystspikeProcedure;
 import palamod.procedures.JobsminercraftamethystexcavatorProcedure;
@@ -160,6 +177,74 @@ public class JobsminercraftguiButtonMessage {
 		if (buttonID == 20) {
 
 			JobsminercraftslimeobsidianProcedure.execute(entity);
+		}
+		if (buttonID == 21) {
+
+			JobsminercraftpoisonobsidianProcedure.execute(entity);
+		}
+		if (buttonID == 22) {
+
+			JobsminercraftcaveblockProcedure.execute(entity);
+		}
+		if (buttonID == 23) {
+
+			JobsminercraftcompacttntProcedure.execute(entity);
+		}
+		if (buttonID == 24) {
+
+			JobsminercraftmagictntProcedure.execute(entity);
+		}
+		if (buttonID == 25) {
+
+			JobsminercraftwithertntProcedure.execute(entity);
+		}
+		if (buttonID == 26) {
+
+			JobsminercraftspongetntProcedure.execute(entity);
+		}
+		if (buttonID == 27) {
+
+			JobsminercraftcompressedtntProcedure.execute(entity);
+		}
+		if (buttonID == 28) {
+
+			JobsminercraftendiumtntProcedure.execute(entity);
+		}
+		if (buttonID == 29) {
+
+			JobsminercraftmegaboomobsidianProcedure.execute(entity);
+		}
+		if (buttonID == 34) {
+
+			JobsminercraftcobblebreakerProcedure.execute(entity);
+		}
+		if (buttonID == 35) {
+
+			JobsminercraftcobblebreakeramethysteupgradeProcedure.execute(entity);
+		}
+		if (buttonID == 36) {
+
+			JobsminercraftcobblebreakertitaneupgradeProcedure.execute(entity);
+		}
+		if (buttonID == 37) {
+
+			JobsminercraftcobblebreakerpaladiumupgradeProcedure.execute(entity);
+		}
+		if (buttonID == 38) {
+
+			JobsminercraftvoidstoneminageProcedure.execute(entity);
+		}
+		if (buttonID == 39) {
+
+			JobsminercraftmoulastoneProcedure.execute(entity);
+		}
+		if (buttonID == 40) {
+
+			JobsminercraftsealedxpbottleProcedure.execute(entity);
+		}
+		if (buttonID == 41) {
+
+			JobsminercraftpalaforgeProcedure.execute(entity);
 		}
 	}
 

@@ -63,6 +63,7 @@
   "block.palamod.slimepad": "Slime pad",
   "block.palamod.amethyst_chest": "Amethyst chest",
   "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
+  "palamod.procedure.jobs_miner_err_nel": "Your not enough experimented in the miner level to use this command",
   "item.palamod.green_paladium_ingot": "Green Paladium ingot",
   "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
   "block.palamod.elevator_orange": "Elevator orange",

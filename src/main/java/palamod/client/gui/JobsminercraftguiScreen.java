@@ -438,38 +438,74 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		guistate.put("button:imagebutton_slime_obsi", imagebutton_slime_obsi);
 		this.addRenderableWidget(imagebutton_slime_obsi);
 		imagebutton_poison_obsi = new ImageButton(this.leftPos + 67, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_poison_obsi.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(21, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 21, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_poison_obsi", imagebutton_poison_obsi);
 		this.addRenderableWidget(imagebutton_poison_obsi);
 		imagebutton_cave_block_vfufu = new ImageButton(this.leftPos + 86, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cave_block_vfufu.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(22, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 22, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_cave_block_vfufu", imagebutton_cave_block_vfufu);
 		this.addRenderableWidget(imagebutton_cave_block_vfufu);
 		imagebutton_big_tnt_side = new ImageButton(this.leftPos + 105, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_big_tnt_side.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(23, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 23, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_big_tnt_side", imagebutton_big_tnt_side);
 		this.addRenderableWidget(imagebutton_big_tnt_side);
 		imagebutton_effect_tnt_side = new ImageButton(this.leftPos + 124, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_effect_tnt_side.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(24, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 24, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_effect_tnt_side", imagebutton_effect_tnt_side);
 		this.addRenderableWidget(imagebutton_effect_tnt_side);
 		imagebutton_wither_tnt_side = new ImageButton(this.leftPos + 143, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_wither_tnt_side.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(25, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 25, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_wither_tnt_side", imagebutton_wither_tnt_side);
 		this.addRenderableWidget(imagebutton_wither_tnt_side);
 		imagebutton_sponge_tnt_side = new ImageButton(this.leftPos + 162, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_sponge_tnt_side.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(26, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 26, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_sponge_tnt_side", imagebutton_sponge_tnt_side);
 		this.addRenderableWidget(imagebutton_sponge_tnt_side);
 		imagebutton_sponge = new ImageButton(this.leftPos + 10, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_sponge.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(27, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 27, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_sponge", imagebutton_sponge);
 		this.addRenderableWidget(imagebutton_sponge);
 		imagebutton_endium_tnt_side = new ImageButton(this.leftPos + 29, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_endium_tnt_side.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(28, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 28, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_endium_tnt_side", imagebutton_endium_tnt_side);
 		this.addRenderableWidget(imagebutton_endium_tnt_side);
 		imagebutton_beta_block = new ImageButton(this.leftPos + 29, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(29, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 29, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_beta_block", imagebutton_beta_block);
 		this.addRenderableWidget(imagebutton_beta_block);
@@ -490,34 +526,66 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		guistate.put("button:imagebutton_beta_block4", imagebutton_beta_block4);
 		this.addRenderableWidget(imagebutton_beta_block4);
 		imagebutton_cobblebreaker_front = new ImageButton(this.leftPos + 124, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_front.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(34, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 34, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_cobblebreaker_front", imagebutton_cobblebreaker_front);
 		this.addRenderableWidget(imagebutton_cobblebreaker_front);
 		imagebutton_cobblebreaker_amethyst_upgrade = new ImageButton(this.leftPos + 143, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_amethyst_upgrade.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(35, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 35, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_cobblebreaker_amethyst_upgrade", imagebutton_cobblebreaker_amethyst_upgrade);
 		this.addRenderableWidget(imagebutton_cobblebreaker_amethyst_upgrade);
 		imagebutton_cobblebreaker_titane_upgrade = new ImageButton(this.leftPos + 162, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_titane_upgrade.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(36, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 36, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_cobblebreaker_titane_upgrade", imagebutton_cobblebreaker_titane_upgrade);
 		this.addRenderableWidget(imagebutton_cobblebreaker_titane_upgrade);
 		imagebutton_cobblebreaker_paladium_upgrade = new ImageButton(this.leftPos + 10, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_paladium_upgrade.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(37, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 37, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_cobblebreaker_paladium_upgrade", imagebutton_cobblebreaker_paladium_upgrade);
 		this.addRenderableWidget(imagebutton_cobblebreaker_paladium_upgrade);
 		imagebutton_voidstone_minage = new ImageButton(this.leftPos + 29, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_voidstone_minage.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(38, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 38, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_voidstone_minage", imagebutton_voidstone_minage);
 		this.addRenderableWidget(imagebutton_voidstone_minage);
 		imagebutton_moula_stone = new ImageButton(this.leftPos + 47, this.topPos + 105, 18, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_moula_stone.png"), 18, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(39, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 39, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_moula_stone", imagebutton_moula_stone);
 		this.addRenderableWidget(imagebutton_moula_stone);
 		imagebutton_sealed_xp_bottle = new ImageButton(this.leftPos + 70, this.topPos + 106, 11, 15, 0, 0, 15, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_sealed_xp_bottle.png"), 11, 30, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(40, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 40, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_sealed_xp_bottle", imagebutton_sealed_xp_bottle);
 		this.addRenderableWidget(imagebutton_sealed_xp_bottle);
 		imagebutton_forge_front_off = new ImageButton(this.leftPos + 86, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_forge_front_off.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(41, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 41, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_forge_front_off", imagebutton_forge_front_off);
 		this.addRenderableWidget(imagebutton_forge_front_off);

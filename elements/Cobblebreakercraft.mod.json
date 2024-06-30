@@ -12,31 +12,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.COBBLESTONE"
+        "value": "TAG:forge:stone"
       },
       {
         "value": ""
       },
       {
-        "value": "Blocks.COBBLESTONE"
+        "value": "TAG:forge:stone"
       },
       {
-        "value": "Blocks.COBBLESTONE"
+        "value": "TAG:forge:stone"
       },
       {
         "value": "CUSTOM:Voidstone"
       },
       {
-        "value": "Blocks.COBBLESTONE"
+        "value": "TAG:forge:stone"
       },
       {
-        "value": "Blocks.COBBLESTONE"
+        "value": "TAG:forge:stone"
       },
       {
         "value": "CUSTOM:Forturnemodifier"
       },
       {
-        "value": "Blocks.COBBLESTONE"
+        "value": "TAG:forge:stone"
       }
     ],
     "recipeReturnStack": {

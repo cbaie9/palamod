@@ -48532,6 +48532,417 @@
           }
         ]
       }
+    },
+    {
+      "name": "Rtpnether",
+      "type": "procedure",
+      "sortid": 2334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rtpnether",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/RtpnetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nethercommand",
+      "type": "command",
+      "sortid": 2335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nethercommand",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/NethercommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftpoisonobsidian",
+      "type": "procedure",
+      "sortid": 2336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftpoisonobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftpoisonobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcaveblock",
+      "type": "procedure",
+      "sortid": 2337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcaveblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcaveblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcompacttnt",
+      "type": "procedure",
+      "sortid": 2338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcompacttnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcompacttntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftmagictnt",
+      "type": "procedure",
+      "sortid": 2339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftmagictnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftmagictntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftwithertnt",
+      "type": "procedure",
+      "sortid": 2340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftwithertnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftwithertntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftmegaboomobsidian",
+      "type": "procedure",
+      "sortid": 2341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftmegaboomobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftmegaboomobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftspongetnt",
+      "type": "procedure",
+      "sortid": 2342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftspongetnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftspongetntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcompressedtnt",
+      "type": "procedure",
+      "sortid": 2343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcompressedtnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcompressedtntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftendiumtnt",
+      "type": "procedure",
+      "sortid": 2344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftendiumtnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftendiumtntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreaker",
+      "type": "procedure",
+      "sortid": 2345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreaker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreakeramethysteupgrade",
+      "type": "procedure",
+      "sortid": 2346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreakeramethysteupgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakeramethysteupgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreakertitaneupgrade",
+      "type": "procedure",
+      "sortid": 2347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreakertitaneupgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakertitaneupgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreakerpaladiumupgrade",
+      "type": "procedure",
+      "sortid": 2348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreakerpaladiumupgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakerpaladiumupgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftvoidstoneminage",
+      "type": "procedure",
+      "sortid": 2349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftvoidstoneminage",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftvoidstoneminageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftmoulastone",
+      "type": "procedure",
+      "sortid": 2350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftmoulastone",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftmoulastoneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftsealedxpbottle",
+      "type": "procedure",
+      "sortid": 2351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftsealedxpbottle",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftsealedxpbottleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftpalaforge",
+      "type": "procedure",
+      "sortid": 2352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftpalaforge",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftpalaforgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobscommandeprocess",
+      "type": "procedure",
+      "sortid": 2353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobscommandeprocess",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobscommandeprocessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobscommand",
+      "type": "command",
+      "sortid": 2354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobscommand",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/JobscommandCommand.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49913,6 +50324,7 @@
       "block.palamod.slimepad": "Slime pad",
       "block.palamod.amethyst_chest": "Amethyst chest",
       "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
+      "palamod.procedure.jobs_miner_err_nel": "Your not enough experimented in the miner level to use this command",
       "item.palamod.green_paladium_ingot": "Green Paladium ingot",
       "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
       "block.palamod.elevator_orange": "Elevator orange",
@@ -51830,6 +52242,7 @@
       "block.palamod.slimepad": "Slime padd",
       "block.palamod.amethyst_chest": "Coffre en améthyste",
       "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
+      "palamod.procedure.jobs_miner_err_nel": "Vous n\u0027êtes pas assez experimenté dans le métier de mineur pour utiliser cette commande",
       "item.palamod.green_paladium_ingot": "Lingot en paladium vert",
       "gui.palamod.jobsminercraftgui.tooltip_sponge_tnt": "Sponge tnt",
       "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
