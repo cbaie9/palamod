@@ -1,10 +1,7 @@
 
 package palamod.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class EndiumbroadswordItem extends SwordItem {
 	public EndiumbroadswordItem() {

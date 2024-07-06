@@ -280,8 +280,8 @@
       "registry_name": "titane_ingot",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/TitaneIngotItem.java",
-          "src/main/resources/assets/palamod/models/item/titane_ingot.json"
+          "src/main/resources/assets/palamod/models/item/titane_ingot.json",
+          "src/main/java/palamod/item/TitaneIngotItem.java"
         ]
       }
     },
@@ -412,8 +412,8 @@
       "registry_name": "titane_shovel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/titane_shovel.json",
-          "src/main/java/palamod/item/TitaneShovelItem.java"
+          "src/main/java/palamod/item/TitaneShovelItem.java",
+          "src/main/resources/assets/palamod/models/item/titane_shovel.json"
         ]
       }
     },
@@ -683,8 +683,8 @@
       "registry_name": "amethyst_shovel",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/AmethysteShovelItem.java",
-          "src/main/resources/assets/palamod/models/item/amethyst_shovel.json"
+          "src/main/resources/assets/palamod/models/item/amethyst_shovel.json",
+          "src/main/java/palamod/item/AmethysteShovelItem.java"
         ]
       }
     },
@@ -895,8 +895,8 @@
       "registry_name": "orangeblue",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/OrangeblueItem.java",
-          "src/main/resources/assets/palamod/models/item/orangeblue.json"
+          "src/main/resources/assets/palamod/models/item/orangeblue.json",
+          "src/main/java/palamod/item/OrangeblueItem.java"
         ]
       }
     },
@@ -1021,8 +1021,8 @@
       "registry_name": "endium_axe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_axe.json",
-          "src/main/java/palamod/item/EndiumAxeItem.java"
+          "src/main/java/palamod/item/EndiumAxeItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_axe.json"
         ]
       }
     },
@@ -1175,8 +1175,8 @@
       "registry_name": "paladium_stick",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PaladiumstickItem.java",
-          "src/main/resources/assets/palamod/models/item/paladium_stick.json"
+          "src/main/resources/assets/palamod/models/item/paladium_stick.json",
+          "src/main/java/palamod/item/PaladiumstickItem.java"
         ]
       }
     },
@@ -4184,8 +4184,8 @@
       "registry_name": "knockback_modifier",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/knockback_modifier.json",
-          "src/main/java/palamod/item/KnockbackmodifierItem.java"
+          "src/main/java/palamod/item/KnockbackmodifierItem.java",
+          "src/main/resources/assets/palamod/models/item/knockback_modifier.json"
         ]
       }
     },
@@ -4198,8 +4198,8 @@
       "registry_name": "flame_modifier",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/flame_modifier.json",
-          "src/main/java/palamod/item/FlamemodifierItem.java"
+          "src/main/java/palamod/item/FlamemodifierItem.java",
+          "src/main/resources/assets/palamod/models/item/flame_modifier.json"
         ]
       }
     },
@@ -4381,8 +4381,8 @@
       "registry_name": "jumpstick",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/jumpstick.json",
-          "src/main/java/palamod/item/JumpstickItem.java"
+          "src/main/java/palamod/item/JumpstickItem.java",
+          "src/main/resources/assets/palamod/models/item/jumpstick.json"
         ]
       }
     },
@@ -4526,8 +4526,8 @@
       "registry_name": "paladiumgreenpickaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/paladiumgreenpickaxe.json",
-          "src/main/java/palamod/item/PaladiumgreenpickaxeItem.java"
+          "src/main/java/palamod/item/PaladiumgreenpickaxeItem.java",
+          "src/main/resources/assets/palamod/models/item/paladiumgreenpickaxe.json"
         ]
       }
     },
@@ -4540,8 +4540,8 @@
       "registry_name": "paladiumgreenaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/paladiumgreenaxe.json",
-          "src/main/java/palamod/item/PaladiumgreenaxeItem.java"
+          "src/main/java/palamod/item/PaladiumgreenaxeItem.java",
+          "src/main/resources/assets/palamod/models/item/paladiumgreenaxe.json"
         ]
       }
     },
@@ -4582,8 +4582,8 @@
       "registry_name": "green_paladium_ingot",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PaladiumGreeningotItem.java",
-          "src/main/resources/assets/palamod/models/item/green_paladium_ingot.json"
+          "src/main/resources/assets/palamod/models/item/green_paladium_ingot.json",
+          "src/main/java/palamod/item/PaladiumGreeningotItem.java"
         ]
       }
     },
@@ -5160,8 +5160,8 @@
       "registry_name": "fastsword_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/fastsword_head.json",
-          "src/main/java/palamod/item/FastswordheadItem.java"
+          "src/main/java/palamod/item/FastswordheadItem.java",
+          "src/main/resources/assets/palamod/models/item/fastsword_head.json"
         ]
       }
     },
@@ -5174,8 +5174,8 @@
       "registry_name": "broadsword_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/BroadswordheadItem.java",
-          "src/main/resources/assets/palamod/models/item/broadsword_head.json"
+          "src/main/resources/assets/palamod/models/item/broadsword_head.json",
+          "src/main/java/palamod/item/BroadswordheadItem.java"
         ]
       }
     },
@@ -5216,8 +5216,8 @@
       "registry_name": "axe_partern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/axe_partern.json",
-          "src/main/java/palamod/item/AxeparternItem.java"
+          "src/main/java/palamod/item/AxeparternItem.java",
+          "src/main/resources/assets/palamod/models/item/axe_partern.json"
         ]
       }
     },
@@ -5258,8 +5258,8 @@
       "registry_name": "block_patern",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/BlockpaternItem.java",
-          "src/main/resources/assets/palamod/models/item/block_patern.json"
+          "src/main/resources/assets/palamod/models/item/block_patern.json",
+          "src/main/java/palamod/item/BlockpaternItem.java"
         ]
       }
     },
@@ -5328,8 +5328,8 @@
       "registry_name": "shovel_patern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/shovel_patern.json",
-          "src/main/java/palamod/item/ShovelpaternItem.java"
+          "src/main/java/palamod/item/ShovelpaternItem.java",
+          "src/main/resources/assets/palamod/models/item/shovel_patern.json"
         ]
       }
     },
@@ -5434,8 +5434,8 @@
       "registry_name": "titanebroadsword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/titanebroadsword.json",
-          "src/main/java/palamod/item/TitanebroadswordItem.java"
+          "src/main/java/palamod/item/TitanebroadswordItem.java",
+          "src/main/resources/assets/palamod/models/item/titanebroadsword.json"
         ]
       }
     },
@@ -5474,8 +5474,8 @@
       "registry_name": "amethyst_broadsword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethyst_broadsword.json",
-          "src/main/java/palamod/item/AmethystebroadswordItem.java"
+          "src/main/java/palamod/item/AmethystebroadswordItem.java",
+          "src/main/resources/assets/palamod/models/item/amethyst_broadsword.json"
         ]
       }
     },
@@ -5501,8 +5501,8 @@
       "registry_name": "amethyst_fastsword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethyst_fastsword.json",
-          "src/main/java/palamod/item/AmethystefastswordItem.java"
+          "src/main/java/palamod/item/AmethystefastswordItem.java",
+          "src/main/resources/assets/palamod/models/item/amethyst_fastsword.json"
         ]
       }
     },
@@ -6259,8 +6259,8 @@
       "registry_name": "titanefastsword",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/TitanefastswordItem.java",
-          "src/main/resources/assets/palamod/models/item/titanefastsword.json"
+          "src/main/resources/assets/palamod/models/item/titanefastsword.json",
+          "src/main/java/palamod/item/TitanefastswordItem.java"
         ]
       }
     },
@@ -6372,8 +6372,8 @@
       "registry_name": "socket_patern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/socket_patern.json",
-          "src/main/java/palamod/item/SocketpaternItem.java"
+          "src/main/java/palamod/item/SocketpaternItem.java",
+          "src/main/resources/assets/palamod/models/item/socket_patern.json"
         ]
       }
     },
@@ -6414,8 +6414,8 @@
       "registry_name": "endium_hammer",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/EndiumhammerItem.java",
-          "src/main/resources/assets/palamod/models/item/endium_hammer.json"
+          "src/main/resources/assets/palamod/models/item/endium_hammer.json",
+          "src/main/java/palamod/item/EndiumhammerItem.java"
         ]
       }
     },
@@ -6788,9 +6788,9 @@
       "registry_name": "next_palahelpgui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/world/inventory/NextPalahelpguiMenu.java",
           "src/main/java/palamod/client/gui/NextPalahelpguiScreen.java",
-          "src/main/java/palamod/network/NextPalahelpguiButtonMessage.java"
+          "src/main/java/palamod/network/NextPalahelpguiButtonMessage.java",
+          "src/main/java/palamod/world/inventory/NextPalahelpguiMenu.java"
         ]
       }
     },
@@ -7169,8 +7169,8 @@
       "registry_name": "legendary_stone_random",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/legendary_stone_random.json",
-          "src/main/java/palamod/item/LegendarystonerandomItem.java"
+          "src/main/java/palamod/item/LegendarystonerandomItem.java",
+          "src/main/resources/assets/palamod/models/item/legendary_stone_random.json"
         ]
       }
     },
@@ -7217,11 +7217,11 @@
       "registry_name": "eggplant_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/eggplant_2.json",
           "src/main/resources/data/palamod/loot_tables/blocks/eggplant_2.json",
+          "src/main/resources/assets/palamod/models/block/eggplant_2.json",
+          "src/main/resources/assets/palamod/models/item/eggplant_2.json",
           "src/main/resources/assets/palamod/blockstates/eggplant_2.json",
-          "src/main/java/palamod/block/Eggplant2Block.java",
-          "src/main/resources/assets/palamod/models/item/eggplant_2.json"
+          "src/main/java/palamod/block/Eggplant2Block.java"
         ]
       }
     },
@@ -7251,9 +7251,9 @@
       "registry_name": "palahelpblock",
       "metadata": {
         "files": [
-          "src/main/java/palamod/network/PalahelpblockButtonMessage.java",
+          "src/main/java/palamod/world/inventory/PalahelpblockMenu.java",
           "src/main/java/palamod/client/gui/PalahelpblockScreen.java",
-          "src/main/java/palamod/world/inventory/PalahelpblockMenu.java"
+          "src/main/java/palamod/network/PalahelpblockButtonMessage.java"
         ]
       }
     },
@@ -7418,9 +7418,9 @@
       "registry_name": "palahelpmachine",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/gui/PalahelpmachineScreen.java",
+          "src/main/java/palamod/network/PalahelpmachineButtonMessage.java",
           "src/main/java/palamod/world/inventory/PalahelpmachineMenu.java",
-          "src/main/java/palamod/network/PalahelpmachineButtonMessage.java"
+          "src/main/java/palamod/client/gui/PalahelpmachineScreen.java"
         ]
       }
     },
@@ -7483,8 +7483,8 @@
       "registry_name": "grinderpalahelp_2gui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/gui/Grinderpalahelp2guiScreen.java",
           "src/main/java/palamod/network/Grinderpalahelp2guiButtonMessage.java",
+          "src/main/java/palamod/client/gui/Grinderpalahelp2guiScreen.java",
           "src/main/java/palamod/world/inventory/Grinderpalahelp2guiMenu.java"
         ]
       }
@@ -7579,8 +7579,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/world/inventory/FluidpalahelpMenu.java",
-          "src/main/java/palamod/network/FluidpalahelpButtonMessage.java",
-          "src/main/java/palamod/client/gui/FluidpalahelpScreen.java"
+          "src/main/java/palamod/client/gui/FluidpalahelpScreen.java",
+          "src/main/java/palamod/network/FluidpalahelpButtonMessage.java"
         ]
       }
     },
@@ -8996,8 +8996,8 @@
       "registry_name": "endiumdynamite",
       "metadata": {
         "files": [
-          "src/main/java/palamod/entity/EndiumdynamiteEntity.java",
-          "src/main/java/palamod/client/renderer/EndiumdynamiteRenderer.java"
+          "src/main/java/palamod/client/renderer/EndiumdynamiteRenderer.java",
+          "src/main/java/palamod/entity/EndiumdynamiteEntity.java"
         ]
       }
     },
@@ -9131,8 +9131,8 @@
       "registry_name": "big_dynamite",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/BigdynamiteItem.java",
-          "src/main/resources/assets/palamod/models/item/big_dynamite.json"
+          "src/main/resources/assets/palamod/models/item/big_dynamite.json",
+          "src/main/java/palamod/item/BigdynamiteItem.java"
         ]
       }
     },
@@ -9323,9 +9323,9 @@
       "registry_name": "phonegui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/gui/PhoneguiScreen.java",
           "src/main/java/palamod/world/inventory/PhoneguiMenu.java",
-          "src/main/java/palamod/network/PhoneguiButtonMessage.java"
+          "src/main/java/palamod/network/PhoneguiButtonMessage.java",
+          "src/main/java/palamod/client/gui/PhoneguiScreen.java"
         ]
       }
     },
@@ -9355,8 +9355,8 @@
       "registry_name": "money_other",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/money_other.json",
-          "src/main/java/palamod/item/MoneyotherItem.java"
+          "src/main/java/palamod/item/MoneyotherItem.java",
+          "src/main/resources/assets/palamod/models/item/money_other.json"
         ]
       }
     },
@@ -10419,9 +10419,9 @@
       "registry_name": "palahelpnotsupported",
       "metadata": {
         "files": [
-          "src/main/java/palamod/network/PalahelpnotsupportedButtonMessage.java",
           "src/main/java/palamod/client/gui/PalahelpnotsupportedScreen.java",
-          "src/main/java/palamod/world/inventory/PalahelpnotsupportedMenu.java"
+          "src/main/java/palamod/world/inventory/PalahelpnotsupportedMenu.java",
+          "src/main/java/palamod/network/PalahelpnotsupportedButtonMessage.java"
         ]
       }
     },
@@ -10564,8 +10564,8 @@
       "registry_name": "paladium_apple",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PaladiumappleItem.java",
-          "src/main/resources/assets/palamod/models/item/paladium_apple.json"
+          "src/main/resources/assets/palamod/models/item/paladium_apple.json",
+          "src/main/java/palamod/item/PaladiumappleItem.java"
         ]
       }
     },
@@ -10615,8 +10615,8 @@
       "registry_name": "adminpanelmenu",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/gui/AdminpanelmenuScreen.java",
           "src/main/java/palamod/world/inventory/AdminpanelmenuMenu.java",
+          "src/main/java/palamod/client/gui/AdminpanelmenuScreen.java",
           "src/main/java/palamod/network/AdminpanelmenuButtonMessage.java"
         ]
       }
@@ -10752,9 +10752,9 @@
       "registry_name": "spawnpanel",
       "metadata": {
         "files": [
+          "src/main/java/palamod/client/gui/SpawnpanelScreen.java",
           "src/main/java/palamod/world/inventory/SpawnpanelMenu.java",
-          "src/main/java/palamod/network/SpawnpanelButtonMessage.java",
-          "src/main/java/palamod/client/gui/SpawnpanelScreen.java"
+          "src/main/java/palamod/network/SpawnpanelButtonMessage.java"
         ]
       }
     },
@@ -10841,8 +10841,8 @@
       "registry_name": "pickaxeofthegodslv_3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_3.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv3Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv3Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_3.json"
         ]
       }
     },
@@ -10869,8 +10869,8 @@
       "registry_name": "pickaxeofthegodslv_5",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_5.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv5Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv5Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_5.json"
         ]
       }
     },
@@ -10883,8 +10883,8 @@
       "registry_name": "pickaxeofthegodslv_6",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_6.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv6Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv6Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_6.json"
         ]
       }
     },
@@ -10897,8 +10897,8 @@
       "registry_name": "pickaxeofthegodslv_7",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_7.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv7Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv7Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_7.json"
         ]
       }
     },
@@ -10925,8 +10925,8 @@
       "registry_name": "pickaxeofthegodslv_9",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv9Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_9.json"
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_9.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv9Item.java"
         ]
       }
     },
@@ -10967,8 +10967,8 @@
       "registry_name": "pickaxeofthegodslv_12",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv12Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_12.json"
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_12.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv12Item.java"
         ]
       }
     },
@@ -10981,8 +10981,8 @@
       "registry_name": "pickaxeofthegodslv_14",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_14.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv14Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv14Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_14.json"
         ]
       }
     },
@@ -10995,8 +10995,8 @@
       "registry_name": "pickaxeofthegodslv_15",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv15Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_15.json"
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_15.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv15Item.java"
         ]
       }
     },
@@ -11009,8 +11009,8 @@
       "registry_name": "pickaxeofthegodslv_16",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_16.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv16Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv16Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_16.json"
         ]
       }
     },
@@ -11051,8 +11051,8 @@
       "registry_name": "pickaxeofthegodslv_19",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_19.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv19Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv19Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_19.json"
         ]
       }
     },
@@ -11316,8 +11316,8 @@
       "registry_name": "titaneexcavator",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/TitaneexcavatorItem.java",
-          "src/main/resources/assets/palamod/models/item/titaneexcavator.json"
+          "src/main/resources/assets/palamod/models/item/titaneexcavator.json",
+          "src/main/java/palamod/item/TitaneexcavatorItem.java"
         ]
       }
     },
@@ -11330,8 +11330,8 @@
       "registry_name": "paladiumexcavator",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PaladiumexcavatorItem.java",
-          "src/main/resources/assets/palamod/models/item/paladiumexcavator.json"
+          "src/main/resources/assets/palamod/models/item/paladiumexcavator.json",
+          "src/main/java/palamod/item/PaladiumexcavatorItem.java"
         ]
       }
     },
@@ -11669,8 +11669,8 @@
         "eb": false,
         "ec": false,
         "files": [
-          "src/main/java/palamod/item/ScubaItem.java",
-          "src/main/resources/assets/palamod/models/item/scuba_helmet.json"
+          "src/main/resources/assets/palamod/models/item/scuba_helmet.json",
+          "src/main/java/palamod/item/ScubaItem.java"
         ]
       }
     },
@@ -11683,8 +11683,8 @@
       "registry_name": "wing",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/WingItem.java",
-          "src/main/resources/assets/palamod/models/item/wing.json"
+          "src/main/resources/assets/palamod/models/item/wing.json",
+          "src/main/java/palamod/item/WingItem.java"
         ]
       }
     },
@@ -12823,8 +12823,8 @@
       "registry_name": "green_paladium_sword_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/green_paladium_sword_head.json",
-          "src/main/java/palamod/item/HeadgreenswordItem.java"
+          "src/main/java/palamod/item/HeadgreenswordItem.java",
+          "src/main/resources/assets/palamod/models/item/green_paladium_sword_head.json"
         ]
       }
     },
@@ -12837,8 +12837,8 @@
       "registry_name": "green_paladium_pickaxe_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/green_paladium_pickaxe_head.json",
-          "src/main/java/palamod/item/HeadgreenpickaxeItem.java"
+          "src/main/java/palamod/item/HeadgreenpickaxeItem.java",
+          "src/main/resources/assets/palamod/models/item/green_paladium_pickaxe_head.json"
         ]
       }
     },
@@ -12851,8 +12851,8 @@
       "registry_name": "green_paladium_axe_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/HeadgreenaxeItem.java",
-          "src/main/resources/assets/palamod/models/item/green_paladium_axe_head.json"
+          "src/main/resources/assets/palamod/models/item/green_paladium_axe_head.json",
+          "src/main/java/palamod/item/HeadgreenaxeItem.java"
         ]
       }
     },
@@ -12879,8 +12879,8 @@
       "registry_name": "headendiumsword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/headendiumsword.json",
-          "src/main/java/palamod/item/HeadendiumswordItem.java"
+          "src/main/java/palamod/item/HeadendiumswordItem.java",
+          "src/main/resources/assets/palamod/models/item/headendiumsword.json"
         ]
       }
     },
@@ -12921,8 +12921,8 @@
       "registry_name": "greenpaladiumbroadsword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/greenpaladiumbroadsword.json",
-          "src/main/java/palamod/item/GreenpaladiumbroadswordItem.java"
+          "src/main/java/palamod/item/GreenpaladiumbroadswordItem.java",
+          "src/main/resources/assets/palamod/models/item/greenpaladiumbroadsword.json"
         ]
       }
     },
@@ -12988,8 +12988,8 @@
       "registry_name": "endium_broadsword_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_broadsword_head.json",
-          "src/main/java/palamod/item/EndiumbroadswordheadItem.java"
+          "src/main/java/palamod/item/EndiumbroadswordheadItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_broadsword_head.json"
         ]
       }
     },
@@ -13089,8 +13089,8 @@
       "registry_name": "magical_tool",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/magical_tool.json",
-          "src/main/java/palamod/item/MagicaltoolItem.java"
+          "src/main/java/palamod/item/MagicaltoolItem.java",
+          "src/main/resources/assets/palamod/models/item/magical_tool.json"
         ]
       }
     },
@@ -13542,8 +13542,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/palamod/worldgen/biome/roofedforest.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/roofedforest_tree.json",
-          "src/main/resources/data/palamod/worldgen/configured_feature/roofedforest_tree.json"
+          "src/main/resources/data/palamod/worldgen/configured_feature/roofedforest_tree.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/roofedforest_tree.json"
         ]
       }
     },
@@ -14709,8 +14709,8 @@
       "registry_name": "flyparticle",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/particle/FlyparticleParticle.java",
-          "src/main/resources/assets/palamod/particles/flyparticle.json"
+          "src/main/resources/assets/palamod/particles/flyparticle.json",
+          "src/main/java/palamod/client/particle/FlyparticleParticle.java"
         ]
       }
     },
@@ -15155,8 +15155,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/world/inventory/AdminshoporeMenu.java",
-          "src/main/java/palamod/client/gui/AdminshoporeScreen.java",
-          "src/main/java/palamod/network/AdminshoporeButtonMessage.java"
+          "src/main/java/palamod/network/AdminshoporeButtonMessage.java",
+          "src/main/java/palamod/client/gui/AdminshoporeScreen.java"
         ]
       }
     },
@@ -16139,8 +16139,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/client/gui/AdminshopblockDirtScreen.java",
-          "src/main/java/palamod/network/AdminshopblockDirtButtonMessage.java",
-          "src/main/java/palamod/world/inventory/AdminshopblockDirtMenu.java"
+          "src/main/java/palamod/world/inventory/AdminshopblockDirtMenu.java",
+          "src/main/java/palamod/network/AdminshopblockDirtButtonMessage.java"
         ]
       }
     },
@@ -17297,8 +17297,8 @@
       "registry_name": "internet_card",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/InternetcardItem.java",
-          "src/main/resources/assets/palamod/models/item/internet_card.json"
+          "src/main/resources/assets/palamod/models/item/internet_card.json",
+          "src/main/java/palamod/item/InternetcardItem.java"
         ]
       }
     },
@@ -17448,8 +17448,8 @@
       "registry_name": "medium_ring",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/medium_ring.json",
-          "src/main/java/palamod/item/MediumringItem.java"
+          "src/main/java/palamod/item/MediumringItem.java",
+          "src/main/resources/assets/palamod/models/item/medium_ring.json"
         ]
       }
     },
@@ -17462,8 +17462,8 @@
       "registry_name": "big_ring",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/big_ring.json",
-          "src/main/java/palamod/item/BigringItem.java"
+          "src/main/java/palamod/item/BigringItem.java",
+          "src/main/resources/assets/palamod/models/item/big_ring.json"
         ]
       }
     },
@@ -20385,8 +20385,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/network/AmethystchestguiSlotMessage.java",
-          "src/main/java/palamod/world/inventory/AmethystchestguiMenu.java",
-          "src/main/java/palamod/client/gui/AmethystchestguiScreen.java"
+          "src/main/java/palamod/client/gui/AmethystchestguiScreen.java",
+          "src/main/java/palamod/world/inventory/AmethystchestguiMenu.java"
         ]
       }
     },
@@ -20400,8 +20400,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/client/gui/PaladiumchestguiScreen.java",
-          "src/main/java/palamod/network/PaladiumchestguiSlotMessage.java",
-          "src/main/java/palamod/world/inventory/PaladiumchestguiMenu.java"
+          "src/main/java/palamod/world/inventory/PaladiumchestguiMenu.java",
+          "src/main/java/palamod/network/PaladiumchestguiSlotMessage.java"
         ]
       }
     },
@@ -20521,8 +20521,8 @@
       "registry_name": "green_paladium_medium_ring",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/green_paladium_medium_ring.json",
-          "src/main/java/palamod/item/MediumringgreenpaladiumItem.java"
+          "src/main/java/palamod/item/MediumringgreenpaladiumItem.java",
+          "src/main/resources/assets/palamod/models/item/green_paladium_medium_ring.json"
         ]
       }
     },
@@ -20535,8 +20535,8 @@
       "registry_name": "green_paladium_big_ring",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/green_paladium_big_ring.json",
-          "src/main/java/palamod/item/BigringgreenpaladiumItem.java"
+          "src/main/java/palamod/item/BigringgreenpaladiumItem.java",
+          "src/main/resources/assets/palamod/models/item/green_paladium_big_ring.json"
         ]
       }
     },
@@ -20591,8 +20591,8 @@
       "registry_name": "hang_glider",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/HanggliderItem.java",
-          "src/main/resources/assets/palamod/models/item/hang_glider.json"
+          "src/main/resources/assets/palamod/models/item/hang_glider.json",
+          "src/main/java/palamod/item/HanggliderItem.java"
         ]
       }
     },
@@ -20712,8 +20712,8 @@
       "registry_name": "pesyblpotion",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PesyblpotionItem.java",
-          "src/main/resources/assets/palamod/models/item/pesyblpotion.json"
+          "src/main/resources/assets/palamod/models/item/pesyblpotion.json",
+          "src/main/java/palamod/item/PesyblpotionItem.java"
         ]
       }
     },
@@ -20766,8 +20766,8 @@
       "registry_name": "compressed_green_paladum",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/compressed_green_paladum.json",
-          "src/main/java/palamod/item/CompressedgreenpaladumItem.java"
+          "src/main/java/palamod/item/CompressedgreenpaladumItem.java",
+          "src/main/resources/assets/palamod/models/item/compressed_green_paladum.json"
         ]
       }
     },
@@ -20886,8 +20886,8 @@
       "registry_name": "greenpaladumexcator",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/greenpaladumexcator.json",
-          "src/main/java/palamod/item/GreenpaladumexcatorItem.java"
+          "src/main/java/palamod/item/GreenpaladumexcatorItem.java",
+          "src/main/resources/assets/palamod/models/item/greenpaladumexcator.json"
         ]
       }
     },
@@ -21018,8 +21018,8 @@
       "registry_name": "creative_hammer",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/creative_hammer.json",
-          "src/main/java/palamod/item/CreativehammerItem.java"
+          "src/main/java/palamod/item/CreativehammerItem.java",
+          "src/main/resources/assets/palamod/models/item/creative_hammer.json"
         ]
       }
     },
@@ -23712,8 +23712,8 @@
       "registry_name": "creative_trixium_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/creative_trixium_sword.json",
-          "src/main/java/palamod/item/CreativetrixiumswordItem.java"
+          "src/main/java/palamod/item/CreativetrixiumswordItem.java",
+          "src/main/resources/assets/palamod/models/item/creative_trixium_sword.json"
         ]
       }
     },
@@ -25018,8 +25018,8 @@
       "registry_name": "potato_backpack",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/potato_backpack.json",
-          "src/main/java/palamod/item/PotatobackpackItem.java"
+          "src/main/java/palamod/item/PotatobackpackItem.java",
+          "src/main/resources/assets/palamod/models/item/potato_backpack.json"
         ]
       }
     },
@@ -25073,8 +25073,8 @@
       "registry_name": "amethyst_pollen",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/AmethystpollenItem.java",
-          "src/main/resources/assets/palamod/models/item/amethyst_pollen.json"
+          "src/main/resources/assets/palamod/models/item/amethyst_pollen.json",
+          "src/main/java/palamod/item/AmethystpollenItem.java"
         ]
       }
     },
@@ -25113,8 +25113,8 @@
       "registry_name": "amethyst_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethyst_particle.json",
-          "src/main/java/palamod/item/AmethystparticleItem.java"
+          "src/main/java/palamod/item/AmethystparticleItem.java",
+          "src/main/resources/assets/palamod/models/item/amethyst_particle.json"
         ]
       }
     },
@@ -25127,8 +25127,8 @@
       "registry_name": "titane_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/titane_particle.json",
-          "src/main/java/palamod/item/TitaneparticleItem.java"
+          "src/main/java/palamod/item/TitaneparticleItem.java",
+          "src/main/resources/assets/palamod/models/item/titane_particle.json"
         ]
       }
     },
@@ -25169,8 +25169,8 @@
       "registry_name": "iron_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/iron_particle.json",
-          "src/main/java/palamod/item/IronparticleItem.java"
+          "src/main/java/palamod/item/IronparticleItem.java",
+          "src/main/resources/assets/palamod/models/item/iron_particle.json"
         ]
       }
     },
@@ -32643,8 +32643,8 @@
       "registry_name": "endium_shovel_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_shovel_head.json",
-          "src/main/java/palamod/item/EndiumshovelheadItem.java"
+          "src/main/java/palamod/item/EndiumshovelheadItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_shovel_head.json"
         ]
       }
     },
@@ -32657,8 +32657,8 @@
       "registry_name": "endiumshovel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endiumshovel.json",
-          "src/main/java/palamod/item/EndiumshovelItem.java"
+          "src/main/java/palamod/item/EndiumshovelItem.java",
+          "src/main/resources/assets/palamod/models/item/endiumshovel.json"
         ]
       }
     },
@@ -36593,9 +36593,9 @@
       "registry_name": "adminshopmobsbone",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/gui/AdminshopmobsboneScreen.java",
           "src/main/java/palamod/world/inventory/AdminshopmobsboneMenu.java",
-          "src/main/java/palamod/network/AdminshopmobsboneButtonMessage.java"
+          "src/main/java/palamod/network/AdminshopmobsboneButtonMessage.java",
+          "src/main/java/palamod/client/gui/AdminshopmobsboneScreen.java"
         ]
       }
     },
@@ -36703,9 +36703,9 @@
       "registry_name": "adminshopmobsendereyes",
       "metadata": {
         "files": [
+          "src/main/java/palamod/world/inventory/AdminshopmobsendereyesMenu.java",
           "src/main/java/palamod/client/gui/AdminshopmobsendereyesScreen.java",
-          "src/main/java/palamod/network/AdminshopmobsendereyesButtonMessage.java",
-          "src/main/java/palamod/world/inventory/AdminshopmobsendereyesMenu.java"
+          "src/main/java/palamod/network/AdminshopmobsendereyesButtonMessage.java"
         ]
       }
     },
@@ -39377,8 +39377,8 @@
       "registry_name": "miichalenge",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/MiichalengeItem.java",
-          "src/main/resources/assets/palamod/models/item/miichalenge.json"
+          "src/main/resources/assets/palamod/models/item/miichalenge.json",
+          "src/main/java/palamod/item/MiichalengeItem.java"
         ]
       }
     },
@@ -41084,8 +41084,8 @@
       "registry_name": "dollars_stone",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/MoulastoneItem.java",
-          "src/main/resources/assets/palamod/models/item/dollars_stone.json"
+          "src/main/resources/assets/palamod/models/item/dollars_stone.json",
+          "src/main/java/palamod/item/MoulastoneItem.java"
         ]
       }
     },
@@ -41308,8 +41308,8 @@
       "registry_name": "cobblebreaker_paladium_upgrade",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/cobblebreaker_paladium_upgrade.json",
-          "src/main/java/palamod/item/CobblebreakerpaladiumupgradeItem.java"
+          "src/main/java/palamod/item/CobblebreakerpaladiumupgradeItem.java",
+          "src/main/resources/assets/palamod/models/item/cobblebreaker_paladium_upgrade.json"
         ]
       }
     },
@@ -42357,8 +42357,8 @@
       "registry_name": "paladium_hoe",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PaladiumhoeItem.java",
-          "src/main/resources/assets/palamod/models/item/paladium_hoe.json"
+          "src/main/resources/assets/palamod/models/item/paladium_hoe.json",
+          "src/main/java/palamod/item/PaladiumhoeItem.java"
         ]
       }
     },
@@ -42371,8 +42371,8 @@
       "registry_name": "green_paladium_hoe",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/GreenpaladiumhoeItem.java",
-          "src/main/resources/assets/palamod/models/item/green_paladium_hoe.json"
+          "src/main/resources/assets/palamod/models/item/green_paladium_hoe.json",
+          "src/main/java/palamod/item/GreenpaladiumhoeItem.java"
         ]
       }
     },
@@ -42385,8 +42385,8 @@
       "registry_name": "endium_hoe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_hoe.json",
-          "src/main/java/palamod/item/EndiumhoeItem.java"
+          "src/main/java/palamod/item/EndiumhoeItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_hoe.json"
         ]
       }
     },
@@ -42488,8 +42488,8 @@
       "registry_name": "amethyst_seedplanter",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethyst_seedplanter.json",
-          "src/main/java/palamod/item/AmethystseedplanterItem.java"
+          "src/main/java/palamod/item/AmethystseedplanterItem.java",
+          "src/main/resources/assets/palamod/models/item/amethyst_seedplanter.json"
         ]
       }
     },
@@ -42530,8 +42530,8 @@
       "registry_name": "green_paladium_seedplanter",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/green_paladium_seedplanter.json",
-          "src/main/java/palamod/item/GreenpaladiumseedplanterItem.java"
+          "src/main/java/palamod/item/GreenpaladiumseedplanterItem.java",
+          "src/main/resources/assets/palamod/models/item/green_paladium_seedplanter.json"
         ]
       }
     },
@@ -42544,8 +42544,8 @@
       "registry_name": "endium_seedplanter",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_seedplanter.json",
-          "src/main/java/palamod/item/EndiumseedplanterItem.java"
+          "src/main/java/palamod/item/EndiumseedplanterItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_seedplanter.json"
         ]
       }
     },
@@ -42737,8 +42737,8 @@
       "registry_name": "plate",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PlateItem.java",
-          "src/main/resources/assets/palamod/models/item/plate.json"
+          "src/main/resources/assets/palamod/models/item/plate.json",
+          "src/main/java/palamod/item/PlateItem.java"
         ]
       }
     },
@@ -42854,8 +42854,8 @@
       "registry_name": "antifuzedisc",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/antifuzedisc.json",
-          "src/main/java/palamod/item/AntifuzediscItem.java"
+          "src/main/java/palamod/item/AntifuzediscItem.java",
+          "src/main/resources/assets/palamod/models/item/antifuzedisc.json"
         ]
       }
     },
@@ -43480,9 +43480,9 @@
       "registry_name": "sticknewhelp",
       "metadata": {
         "files": [
-          "src/main/java/palamod/network/SticknewhelpButtonMessage.java",
+          "src/main/java/palamod/client/gui/SticknewhelpScreen.java",
           "src/main/java/palamod/world/inventory/SticknewhelpMenu.java",
-          "src/main/java/palamod/client/gui/SticknewhelpScreen.java"
+          "src/main/java/palamod/network/SticknewhelpButtonMessage.java"
         ]
       }
     },
@@ -44091,8 +44091,8 @@
       "registry_name": "primedwithertnt",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/renderer/PrimedwithertntRenderer.java",
-          "src/main/java/palamod/entity/PrimedwithertntEntity.java"
+          "src/main/java/palamod/entity/PrimedwithertntEntity.java",
+          "src/main/java/palamod/client/renderer/PrimedwithertntRenderer.java"
         ]
       }
     },
@@ -44105,8 +44105,8 @@
       "registry_name": "primedmagictnt",
       "metadata": {
         "files": [
-          "src/main/java/palamod/client/renderer/PrimedmagictntRenderer.java",
-          "src/main/java/palamod/entity/PrimedmagictntEntity.java"
+          "src/main/java/palamod/entity/PrimedmagictntEntity.java",
+          "src/main/java/palamod/client/renderer/PrimedmagictntRenderer.java"
         ]
       }
     },
@@ -46025,9 +46025,9 @@
       "registry_name": "desertcreeper_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/forge/biome_modifier/desertcreeper_feature_biome_modifier.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/desertcreeper_feature.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/desertcreeper_feature.json",
-          "src/main/resources/data/palamod/worldgen/configured_feature/desertcreeper_feature.json"
+          "src/main/resources/data/palamod/forge/biome_modifier/desertcreeper_feature_biome_modifier.json"
         ],
         "has_nbt_structure": true
       }
@@ -46121,9 +46121,9 @@
       "registry_name": "customtemple_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/worldgen/configured_feature/customtemple_feature.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/customtemple_feature.json",
-          "src/main/resources/data/palamod/forge/biome_modifier/customtemple_feature_biome_modifier.json"
+          "src/main/resources/data/palamod/forge/biome_modifier/customtemple_feature_biome_modifier.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/customtemple_feature.json"
         ],
         "has_nbt_structure": true
       }
@@ -46169,9 +46169,9 @@
       "registry_name": "treeerable_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/worldgen/placed_feature/treeerable_feature.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/treeerable_feature.json",
-          "src/main/resources/data/palamod/forge/biome_modifier/treeerable_feature_biome_modifier.json"
+          "src/main/resources/data/palamod/forge/biome_modifier/treeerable_feature_biome_modifier.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/treeerable_feature.json"
         ],
         "has_nbt_structure": true
       }
@@ -47177,8 +47177,8 @@
       "registry_name": "crusherrecipetype",
       "metadata": {
         "files": [
-          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipeCategory.java",
-          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipe.java"
+          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipe.java",
+          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipeCategory.java"
         ]
       }
     },
@@ -47359,8 +47359,8 @@
       "registry_name": "grinderhighrecipetypejei",
       "metadata": {
         "files": [
-          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipeCategory.java",
-          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipe.java"
+          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipe.java",
+          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipeCategory.java"
         ]
       }
     },
@@ -48158,6 +48158,790 @@
           "src/main/java/palamod/enchantment/BotteledEnchantment.java"
         ]
       }
+    },
+    {
+      "name": "Lockedcraft",
+      "type": "gamerule",
+      "sortid": 2326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lockedcraft",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      }
+    },
+    {
+      "name": "Kaboomobsidian",
+      "type": "procedure",
+      "sortid": 2328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kaboomobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/KaboomobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftmegaboomobsidian",
+      "type": "procedure",
+      "sortid": 2341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftmegaboomobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftmegaboomobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Extratorblockstate",
+      "type": "blockstates",
+      "sortid": 2325,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extratorblockstate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_5.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_0.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_8.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_10.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_3.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_7.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_9.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_1.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_4.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_2.json",
+          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_6.json"
+        ]
+      }
+    },
+    {
+      "name": "Boomobsidian",
+      "type": "block",
+      "sortid": 2329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomobsidian",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/boomobsidian.json",
+          "src/main/resources/assets/palamod/blockstates/boomobsidian.json",
+          "src/main/resources/assets/palamod/models/item/boomobsidian.json",
+          "src/main/java/palamod/block/BoomobsidianBlock.java",
+          "src/main/resources/data/palamod/loot_tables/blocks/boomobsidian.json"
+        ]
+      }
+    },
+    {
+      "name": "Craftdoneminer",
+      "type": "procedure",
+      "sortid": 2333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craftdoneminer",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/CraftdoneminerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getxpalchibreakblock",
+      "type": "procedure",
+      "sortid": 2321,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxpalchibreakblock",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetxpalchibreakblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rtpnether",
+      "type": "procedure",
+      "sortid": 2334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rtpnether",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/RtpnetherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftwithertnt",
+      "type": "procedure",
+      "sortid": 2340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftwithertnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftwithertntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Exctractor",
+      "type": "block",
+      "sortid": 2324,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exctractor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/exctractor.json",
+          "src/main/java/palamod/block/ExctractorBlock.java",
+          "src/main/resources/assets/palamod/blockstates/exctractor.json",
+          "src/main/java/palamod/block/entity/ExctractorBlockEntity.java",
+          "src/main/resources/data/palamod/loot_tables/blocks/exctractor.json",
+          "src/main/resources/assets/palamod/models/item/exctractor.json"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftsealedxpbottle",
+      "type": "procedure",
+      "sortid": 2351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftsealedxpbottle",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftsealedxpbottleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftendiumtnt",
+      "type": "procedure",
+      "sortid": 2344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftendiumtnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftendiumtntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getxpfarmerlogic",
+      "type": "procedure",
+      "sortid": 2332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxpfarmerlogic",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/GetxpfarmerlogicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftvoidstoneminage",
+      "type": "procedure",
+      "sortid": 2349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftvoidstoneminage",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftvoidstoneminageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftmoulastone",
+      "type": "procedure",
+      "sortid": 2350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftmoulastone",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftmoulastoneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Megakaboomobsidian",
+      "type": "procedure",
+      "sortid": 2330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megakaboomobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/MegakaboomobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftpoisonobsidian",
+      "type": "procedure",
+      "sortid": 2336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftpoisonobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftpoisonobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmerbreakblock",
+      "type": "procedure",
+      "sortid": 2322,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmerbreakblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmerbreakblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftspongetnt",
+      "type": "procedure",
+      "sortid": 2342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftspongetnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftspongetntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreakeramethysteupgrade",
+      "type": "procedure",
+      "sortid": 2346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreakeramethysteupgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakeramethysteupgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreakerpaladiumupgrade",
+      "type": "procedure",
+      "sortid": 2348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreakerpaladiumupgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakerpaladiumupgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobscommand",
+      "type": "command",
+      "sortid": 2354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobscommand",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/JobscommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcaveblock",
+      "type": "procedure",
+      "sortid": 2337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcaveblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcaveblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Megaboomobsidian",
+      "type": "block",
+      "sortid": 2331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megaboomobsidian",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/blockstates/megaboomobsidian.json",
+          "src/main/java/palamod/block/MegaboomobsidianBlock.java",
+          "src/main/resources/assets/palamod/models/item/megaboomobsidian.json",
+          "src/main/resources/assets/palamod/models/block/megaboomobsidian.json",
+          "src/main/resources/data/palamod/loot_tables/blocks/megaboomobsidian.json"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftpalaforge",
+      "type": "procedure",
+      "sortid": 2352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftpalaforge",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftpalaforgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobscommandeprocess",
+      "type": "procedure",
+      "sortid": 2353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobscommandeprocess",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobscommandeprocessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Guijobsminercheckcraft",
+      "type": "procedure",
+      "sortid": 2327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guijobsminercheckcraft",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/GuijobsminercheckcraftProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftmagictnt",
+      "type": "procedure",
+      "sortid": 2339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftmagictnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftmagictntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsalchibreakblock",
+      "type": "procedure",
+      "sortid": 2320,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsalchibreakblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsalchibreakblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreaker",
+      "type": "procedure",
+      "sortid": 2345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreaker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcompressedtnt",
+      "type": "procedure",
+      "sortid": 2343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcompressedtnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcompressedtntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcompacttnt",
+      "type": "procedure",
+      "sortid": 2338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcompacttnt",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcompacttntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nethercommand",
+      "type": "command",
+      "sortid": 2335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nethercommand",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/NethercommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftcobblebreakertitaneupgrade",
+      "type": "procedure",
+      "sortid": 2347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftcobblebreakertitaneupgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftcobblebreakertitaneupgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Getxpfarmerbreakblock",
+      "type": "procedure",
+      "sortid": 2323,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxpfarmerbreakblock",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetxpfarmerbreakblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48758,6 +49542,16 @@
       "~CUSTOM:Angelicwter",
       "~CUSTOM:Fakewter"
     ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:Endiumtnt",
+      "~CUSTOM:Compacttnt",
+      "~CUSTOM:Magictnt",
+      "~CUSTOM:Withertnt",
+      "~CUSTOM:Wetlavasponge",
+      "~CUSTOM:Lavasponge",
+      "~CUSTOM:Spongetnt",
+      "~CUSTOM:Compressedsponge"
+    ],
     "ITEMS:mod:rings": [
       "CUSTOM:Mediumring",
       "CUSTOM:Smallring",
@@ -48768,16 +49562,6 @@
       "CUSTOM:Smallringgreenpaladium",
       "CUSTOM:Mediumringgreenpaladium",
       "CUSTOM:Bigringgreenpaladium"
-    ],
-    "BLOCKS:minecraft:mineable/hoe": [
-      "~CUSTOM:Endiumtnt",
-      "~CUSTOM:Compacttnt",
-      "~CUSTOM:Magictnt",
-      "~CUSTOM:Withertnt",
-      "~CUSTOM:Wetlavasponge",
-      "~CUSTOM:Lavasponge",
-      "~CUSTOM:Spongetnt",
-      "~CUSTOM:Compressedsponge"
     ],
     "ITEMS:mod:cobblebreakable": [
       "Blocks.COBBLED_DEEPSLATE",
@@ -49028,6 +49812,26 @@
       "CUSTOM:Amethystoredeepslate",
       "CUSTOM:Fakepaladiumore"
     ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Diamondobsidianspike",
+      "~CUSTOM:Goldenobsidianspike",
+      "~CUSTOM:Ironobsidianspike",
+      "~CUSTOM:Spikeobsidianwood",
+      "~CUSTOM:Findiumoredeepslate",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Paladiumforge",
+      "~CUSTOM:Paladiumspike",
+      "~CUSTOM:Titanespike",
+      "~CUSTOM:Spikegold",
+      "~CUSTOM:Ironspike",
+      "~CUSTOM:PaladiumGreenblock",
+      "~CUSTOM:FindiumBlock",
+      "~CUSTOM:AmethysteBlock",
+      "~CUSTOM:PaladiumBlock"
+    ],
     "BLOCKS:forge:placeable_sapling_on": [
       "Blocks.DIRT#0",
       "Blocks.DIRT#1",
@@ -49073,26 +49877,6 @@
       "Blocks.NETHER_GOLD_ORE",
       "Blocks.ANCIENT_DEBRIS",
       "CUSTOM:Endiumnuggetore"
-    ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:PaladiumBlock"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:Hardenedobsidianslab",
@@ -53339,5 +54123,5 @@
     "credits": "Developed by guys who want exit warzone being killed ---  NOT affiliated with mojang, microsoft or Paladium games   - ",
     "modElementsPackage": "palamod"
   },
-  "mcreatorVersion": 202400118518
+  "mcreatorVersion": 202400117319
 }

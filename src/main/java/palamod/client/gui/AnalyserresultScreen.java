@@ -1,35 +1,9 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.AnalyserresultMenu;
-
-import palamod.procedures.AnalyreturnwoolProcedure;
-import palamod.procedures.AnalyreturnstoneProcedure;
-import palamod.procedures.AnalyreturnshulkerProcedure;
-import palamod.procedures.AnalyreturnplanksProcedure;
-import palamod.procedures.AnalyreturnoresProcedure;
-import palamod.procedures.AnalyreturnlogsProcedure;
-import palamod.procedures.AnalyreturnendstoneProcedure;
-import palamod.procedures.AnalyreturndirtProcedure;
-import palamod.procedures.AnalyreturncobbleProcedure;
-import palamod.procedures.AnalyreturnclayProcedure;
-import palamod.procedures.AnalyreturnchestProcedure;
-import palamod.procedures.AnalyreturnbedrockProcedure;
-import palamod.procedures.AnalyreturnairProcedure;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class AnalyserresultScreen extends AbstractContainerScreen<AnalyserresultMenu> {
+
 	private final static HashMap<String, Object> guistate = AnalyserresultMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -48,8 +22,11 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -95,6 +72,7 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -162,5 +140,7 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 	@Override
 	public void init() {
 		super.init();
+
 	}
+
 }
