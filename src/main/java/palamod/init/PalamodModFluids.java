@@ -9,19 +9,6 @@ import palamod.fluid.AngelicwterFluid;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-
 public class PalamodModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, PalamodMod.MODID);
 	public static final RegistryObject<FlowingFluid> FAKEWTER = REGISTRY.register("fakewter", () -> new FakewterFluid.Source());

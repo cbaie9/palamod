@@ -28,7 +28,7 @@ public class GetlevelalchiProcedure {
 				}
 				bufferedReader.close();
 				jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				lvl = jobs_main.get("lvl_hunter").getAsDouble();
+				lvl = jobs_main.get("lvl_alchi").getAsDouble();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

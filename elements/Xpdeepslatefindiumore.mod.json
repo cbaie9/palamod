@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Findiumoredeepslate",
+    "blockstateList": [
+      {
+        "texture": "findium_ore_deepslate",
+        "textureTop": "findium_ore_deepslate",
+        "textureLeft": "findium_ore_deepslate",
+        "textureFront": "findium_ore_deepslate",
+        "textureRight": "findium_ore_deepslate",
+        "textureBack": "findium_ore_deepslate",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

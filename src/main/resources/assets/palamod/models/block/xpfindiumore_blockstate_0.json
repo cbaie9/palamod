@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/findium_ore",
+    "up": "palamod:block/findium_ore",
+    "north": "palamod:block/findium_ore",
+    "east": "palamod:block/findium_ore",
+    "south": "palamod:block/findium_ore",
+    "west": "palamod:block/findium_ore",
+    "particle": "palamod:block/findium_ore"
+  },
+  "render_type": "solid"
+}

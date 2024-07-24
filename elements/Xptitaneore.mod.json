@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "TitaneOre",
+    "blockstateList": [
+      {
+        "texture": "titane_ore",
+        "textureTop": "titane_ore",
+        "textureLeft": "titane_ore",
+        "textureFront": "titane_ore",
+        "textureRight": "titane_ore",
+        "textureBack": "titane_ore",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

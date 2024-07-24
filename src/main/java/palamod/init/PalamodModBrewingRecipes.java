@@ -1,17 +1,6 @@
 
 package palamod.init;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
-
-import mezz.jei.api.registration.IRecipeRegistration;
-import mezz.jei.api.recipe.vanilla.IVanillaRecipeFactory;
-import mezz.jei.api.recipe.vanilla.IJeiBrewingRecipe;
-import mezz.jei.api.constants.RecipeTypes;
-import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.IModPlugin;
-
 import java.util.List;
 import java.util.ArrayList;
 

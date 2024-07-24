@@ -10,17 +10,6 @@ import palamod.network.AdminshopkeyblindingMessage;
 
 import palamod.PalamodMod;
 
-import org.lwjgl.glfw.GLFW;
-
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.KeyMapping;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class PalamodModKeyMappings {
 	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, "key.categories.palamod") {

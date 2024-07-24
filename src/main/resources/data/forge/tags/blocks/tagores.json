@@ -33,6 +33,7 @@
     "minecraft:nether_quartz_ore",
     "minecraft:nether_gold_ore",
     "minecraft:ancient_debris",
-    "palamod:endium_nugget_ore"
+    "palamod:endium_nugget_ore",
+    "palamod:paladium_green_ore"
   ]
 }

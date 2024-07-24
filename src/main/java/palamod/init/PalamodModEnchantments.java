@@ -14,12 +14,6 @@ import palamod.enchantment.AutosmeltpotgEnchantment;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-
-import net.minecraft.world.item.enchantment.Enchantment;
-
 public class PalamodModEnchantments {
 	public static final DeferredRegister<Enchantment> REGISTRY = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, PalamodMod.MODID);
 	public static final RegistryObject<Enchantment> SMELT = REGISTRY.register("smelt", () -> new SmeltEnchantment());

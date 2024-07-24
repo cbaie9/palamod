@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/titane_ore_deepslate",
+    "up": "palamod:block/titane_ore_deepslate",
+    "north": "palamod:block/titane_ore_deepslate",
+    "east": "palamod:block/titane_ore_deepslate",
+    "south": "palamod:block/titane_ore_deepslate",
+    "west": "palamod:block/titane_ore_deepslate",
+    "particle": "palamod:block/titane_ore_deepslate"
+  },
+  "render_type": "solid"
+}

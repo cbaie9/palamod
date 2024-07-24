@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "AmethysteOre",
+    "blockstateList": [
+      {
+        "texture": "amethyst_ore",
+        "textureTop": "amethyst_ore",
+        "textureLeft": "amethyst_ore",
+        "textureFront": "amethyst_ore",
+        "textureRight": "amethyst_ore",
+        "textureBack": "amethyst_ore",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

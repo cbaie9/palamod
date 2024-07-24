@@ -300,6 +300,21 @@
           "x": 311,
           "y": 119
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_work_in_progress_will_be_updat",
+          "text": {
+            "fixedValue": "Work in progress - will be updated soon"
+          },
+          "color": {
+            "value": -13434676,
+            "falpha": 0.0
+          },
+          "x": 47,
+          "y": 171
+        }
       }
     ],
     "gridSettings": {

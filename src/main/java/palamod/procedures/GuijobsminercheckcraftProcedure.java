@@ -2485,7 +2485,7 @@ public class GuijobsminercheckcraftProcedure {
 									}
 									return 0;
 								}
-							}.getAmount(5) == 0 && (new Object() {
+							}.getAmount(6) == 0 && (new Object() {
 								public int getAmount(int sltid) {
 									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -2514,7 +2514,7 @@ public class GuijobsminercheckcraftProcedure {
 									}
 									return 0;
 								}
-							}.getAmount(7) == 0 && (30 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							}.getAmount(9) == 0 && (30 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.MINAGE_VOIDSTONE.get()).copy();
 							_setstack.setCount(1);
@@ -2580,7 +2580,7 @@ public class GuijobsminercheckcraftProcedure {
 									}
 									return 0;
 								}
-							}.getAmount(7) == 0 && (37 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							}.getAmount(9) == 0 && (37 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.DOLLARS_STONE.get()).copy();
 							_setstack.setCount(1);
@@ -2661,7 +2661,7 @@ public class GuijobsminercheckcraftProcedure {
 									}
 									return 0;
 								}
-							}.getAmount(7) == 0 && (50 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							}.getAmount(9) == 0 && (50 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.SEALEDXPBOTTLE.get()).copy();
 							_setstack.setCount(1);

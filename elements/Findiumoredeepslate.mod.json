@@ -119,6 +119,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "Findiumoregivexp"
+    },
+    "onBlockPlayedBy": {
+      "name": "Jobsminerplacetag"
+    },
     "generateFeature": true,
     "restrictionBiomes": [],
     "blocksToReplace": [

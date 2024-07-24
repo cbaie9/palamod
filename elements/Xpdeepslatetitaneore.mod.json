@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Titaneoredeepslate",
+    "blockstateList": [
+      {
+        "texture": "titane_ore_deepslate",
+        "textureTop": "titane_ore_deepslate",
+        "textureLeft": "titane_ore_deepslate",
+        "textureFront": "titane_ore_deepslate",
+        "textureRight": "titane_ore_deepslate",
+        "textureBack": "titane_ore_deepslate",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

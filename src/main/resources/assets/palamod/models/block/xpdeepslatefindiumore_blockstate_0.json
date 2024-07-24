@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/findium_ore_deepslate",
+    "up": "palamod:block/findium_ore_deepslate",
+    "north": "palamod:block/findium_ore_deepslate",
+    "east": "palamod:block/findium_ore_deepslate",
+    "south": "palamod:block/findium_ore_deepslate",
+    "west": "palamod:block/findium_ore_deepslate",
+    "particle": "palamod:block/findium_ore_deepslate"
+  },
+  "render_type": "solid"
+}

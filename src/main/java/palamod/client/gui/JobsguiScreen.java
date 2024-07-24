@@ -114,6 +114,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		guiGraphics.drawString(this.font,
 
 				GetlevelalchiProcedure.execute(entity), 272, 99, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_work_in_progress_will_be_updat"), 8, 151, -13434676, false);
 	}
 
 	@Override
