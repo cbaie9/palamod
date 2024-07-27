@@ -6,6 +6,12 @@ package palamod.init;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+
+import net.minecraft.world.entity.decoration.PaintingVariant;
+
 public class PalamodModPaintings {
 	public static final DeferredRegister<PaintingVariant> REGISTRY = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, PalamodMod.MODID);
 	public static final RegistryObject<PaintingVariant> LUCKYPAINTING = REGISTRY.register("luckypainting", () -> new PaintingVariant(16, 16));

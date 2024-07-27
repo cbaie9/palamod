@@ -6,6 +6,13 @@ package palamod.init;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+
 public class PalamodModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, PalamodMod.MODID);
 	public static final RegistryObject<SoundEvent> LUCKY_ALARM = REGISTRY.register("lucky_alarm", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("palamod", "lucky_alarm")));

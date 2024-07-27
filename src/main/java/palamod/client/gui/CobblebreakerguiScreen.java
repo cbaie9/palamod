@@ -64,7 +64,7 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/cobblebreakergui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 180, 176, 180);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/cobblebreakergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/particle_iron.png"), this.leftPos + 18, this.topPos + 42, 0, 0, 16, 16, 16, 16);
 

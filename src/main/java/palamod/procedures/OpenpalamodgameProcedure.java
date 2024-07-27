@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.ModList;
@@ -13,6 +14,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
@@ -48,8 +50,10 @@ public class OpenpalamodgameProcedure {
 			return;
 		File money = new File("");
 		File jobs = new File("");
+		File cache = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
 		if (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -103,6 +107,7 @@ public class OpenpalamodgameProcedure {
 					"tellraw @p [\"\",{\"text\":\"--------------------------\\nPowered by\",\"color\":\"yellow\"},{\"text\":\" Palamod Renew\",\"color\":\"#2ED0FF\"},{\"text\":\"\\n\"},{\"text\":\"Based on\",\"color\":\"dark_red\"},{\"text\":\" Paladium\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------\",\"color\":\"yellow\"}]");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
 		if (!money.exists()) {
 			try {
 				money.getParentFile().mkdirs();
@@ -116,6 +121,26 @@ public class OpenpalamodgameProcedure {
 				try {
 					FileWriter fileWriter = new FileWriter(money);
 					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
+		}
+		if (!cache.exists()) {
+			try {
+				cache.getParentFile().mkdirs();
+				cache.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+			cache_main.addProperty("last_block_state", (-1));
+			cache_main.addProperty("block", (ForgeRegistries.BLOCKS.getKey(Blocks.AIR).toString()));
+			{
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(cache);
+					fileWriter.write(mainGSONBuilderVariable.toJson(cache_main));
 					fileWriter.close();
 				} catch (IOException exception) {
 					exception.printStackTrace();

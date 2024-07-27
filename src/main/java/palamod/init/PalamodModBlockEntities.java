@@ -44,6 +44,13 @@ import palamod.block.entity.Alchimet1BlockEntity;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.Block;
+
 public class PalamodModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, PalamodMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> PALADIUM_CRUSHER = register("paladium_crusher", PalamodModBlocks.PALADIUM_CRUSHER, PaladiumcrusherBlockEntity::new);

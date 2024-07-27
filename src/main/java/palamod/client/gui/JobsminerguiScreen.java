@@ -145,7 +145,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 9 && mouseX < leftPos + 154 && mouseY > topPos + -19 && mouseY < topPos + -9)
+		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36)
 			guiGraphics.renderTooltip(font, Component.literal(GetxpminertextProcedure.execute(entity)), mouseX, mouseY);
 	}
 
@@ -481,7 +481,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_jobs_miner"), 9, 7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetxpminerProcedure.execute(entity), 114, 36, -12829636, false);
+				GetxpminerProcedure.execute(entity), 13, 38, -12829636, false);
 	}
 
 	@Override

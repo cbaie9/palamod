@@ -3,13 +3,13 @@ package palamod.network;
 
 import palamod.world.inventory.CobblebreakerguiMenu;
 
-import palamod.procedures.CobblebrekergreenpaladiumxpProcedure;
-import palamod.procedures.CobblebreakgoldxpProcedure;
-import palamod.procedures.CobblebreakertitanexpProcedure;
-import palamod.procedures.CobblebreakerpaladiumxpProcedure;
-import palamod.procedures.CobblebreakerironxpProcedure;
-import palamod.procedures.CobblebreakerdiamondxpProcedure;
-import palamod.procedures.CobblebreakeramethystxpProcedure;
+import palamod.procedures.CobblebreakergivexptitaneProcedure;
+import palamod.procedures.CobblebreakergivexppaladiumProcedure;
+import palamod.procedures.CobblebreakergivexpironProcedure;
+import palamod.procedures.CobblebreakergivexpgreenpaladiumProcedure;
+import palamod.procedures.CobblebreakergivexpgoldProcedure;
+import palamod.procedures.CobblebreakergivexpdiamondProcedure;
+import palamod.procedures.CobblebreakergivexpamethystProcedure;
 
 import palamod.PalamodMod;
 
@@ -80,66 +80,62 @@ public class CobblebreakerguiSlotMessage {
 			return;
 		if (slot == 1 && changeType == 1) {
 
-			CobblebreakerironxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpironProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 1 && changeType == 2) {
 			int amount = meta;
 
-			CobblebreakerironxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpironProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 2 && changeType == 1) {
 
-			CobblebreakgoldxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpgoldProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 2 && changeType == 2) {
 			int amount = meta;
 
-			CobblebreakgoldxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpgoldProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 3 && changeType == 1) {
 
-			CobblebreakerdiamondxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpdiamondProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 3 && changeType == 2) {
 			int amount = meta;
 
-			CobblebreakerdiamondxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpdiamondProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 4 && changeType == 1) {
 
-			CobblebreakeramethystxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpamethystProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 4 && changeType == 2) {
 			int amount = meta;
 
-			CobblebreakeramethystxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpamethystProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 5 && changeType == 1) {
 
-			CobblebreakertitanexpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexptitaneProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 5 && changeType == 2) {
 			int amount = meta;
 
-			CobblebreakertitanexpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexptitaneProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 6 && changeType == 1) {
 
-			CobblebreakerpaladiumxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexppaladiumProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 6 && changeType == 2) {
 			int amount = meta;
 
-			CobblebreakerpaladiumxpProcedure.execute(world, x, y, z, entity);
-		}
-		if (slot == 7 && changeType == 1) {
-
-			CobblebrekergreenpaladiumxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexppaladiumProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 7 && changeType == 2) {
 			int amount = meta;
 
-			CobblebrekergreenpaladiumxpProcedure.execute(world, x, y, z, entity);
+			CobblebreakergivexpgreenpaladiumProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

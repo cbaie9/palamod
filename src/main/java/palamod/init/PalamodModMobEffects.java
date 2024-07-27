@@ -14,6 +14,12 @@ import palamod.potion.AntifakeMobEffect;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+
+import net.minecraft.world.effect.MobEffect;
+
 public class PalamodModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, PalamodMod.MODID);
 	public static final RegistryObject<MobEffect> ANTIFAKE = REGISTRY.register("antifake", () -> new AntifakeMobEffect());

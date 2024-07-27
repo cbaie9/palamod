@@ -209,6 +209,12 @@ import palamod.block.AlarmBlock;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+
+import net.minecraft.world.level.block.Block;
+
 public class PalamodModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PalamodMod.MODID);
 	public static final RegistryObject<Block> PALADIUM_ORE = REGISTRY.register("paladium_ore", () -> new PaladiumOreBlock());

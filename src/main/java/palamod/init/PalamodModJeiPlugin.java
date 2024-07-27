@@ -10,6 +10,17 @@ import palamod.jei_recipes.GrinderhighrecipetypejeiRecipe;
 import palamod.jei_recipes.CrusherrecipetypeRecipeCategory;
 import palamod.jei_recipes.CrusherrecipetypeRecipe;
 
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.Minecraft;
+
+import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.registration.IRecipeCategoryRegistration;
+import mezz.jei.api.registration.IRecipeCatalystRegistration;
+import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.IModPlugin;
+
 import java.util.Objects;
 import java.util.List;
 

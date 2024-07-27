@@ -130,6 +130,13 @@ import palamod.world.inventory.AdhutilitiesredstoneMenu;
 
 import palamod.PalamodMod;
 
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.extensions.IForgeMenuType;
+
+import net.minecraft.world.inventory.MenuType;
+
 public class PalamodModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, PalamodMod.MODID);
 	public static final RegistryObject<MenuType<CrusherguiMenu>> CRUSHERGUI = REGISTRY.register("crushergui", () -> IForgeMenuType.create(CrusherguiMenu::new));

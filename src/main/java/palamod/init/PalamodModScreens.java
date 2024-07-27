@@ -128,6 +128,13 @@ import palamod.client.gui.AdminshopadbanScreen;
 import palamod.client.gui.AdminpanelmenuScreen;
 import palamod.client.gui.AdhutilitiesredstoneScreen;
 
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.client.gui.screens.MenuScreens;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PalamodModScreens {
 	@SubscribeEvent

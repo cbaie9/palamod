@@ -120,7 +120,10 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onDestroyedByPlayer": {
-      "name": "Findiumoregivexp"
+      "name": "Moddedorejobsminergivexp"
+    },
+    "onStartToDestroy": {
+      "name": "Setblockstateincache"
     },
     "onBlockPlayedBy": {
       "name": "Jobsminerplacetag"

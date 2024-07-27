@@ -1,8 +1,9 @@
 
 package palamod.block;
 
+import palamod.procedures.SetblockstateincacheProcedure;
+import palamod.procedures.ModdedorejobsminergivexpProcedure;
 import palamod.procedures.JobsminerplacetagProcedure;
-import palamod.procedures.GreenpaladiumgivexpProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -54,8 +55,14 @@ public class PaladiumGreenoreBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		GreenpaladiumgivexpProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+		ModdedorejobsminergivexpProcedure.execute(world, entity);
 		return retval;
+	}
+
+	@Override
+	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
+		super.attack(blockstate, world, pos, entity);
+		SetblockstateincacheProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override
