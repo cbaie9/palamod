@@ -153,6 +153,9 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Cobblebreakergivexpgreenpaladium"
+          },
           "onStackTransfer": {
             "name": "Cobblebreakergivexpgreenpaladium"
           },

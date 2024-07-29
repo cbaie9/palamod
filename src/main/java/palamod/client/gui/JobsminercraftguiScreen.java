@@ -510,18 +510,34 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		guistate.put("button:imagebutton_beta_block", imagebutton_beta_block);
 		this.addRenderableWidget(imagebutton_beta_block);
 		imagebutton_beta_block1 = new ImageButton(this.leftPos + 48, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block1.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(30, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 30, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_beta_block1", imagebutton_beta_block1);
 		this.addRenderableWidget(imagebutton_beta_block1);
 		imagebutton_beta_block2 = new ImageButton(this.leftPos + 67, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block2.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(31, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 31, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_beta_block2", imagebutton_beta_block2);
 		this.addRenderableWidget(imagebutton_beta_block2);
 		imagebutton_beta_block3 = new ImageButton(this.leftPos + 86, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block3.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(32, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 32, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_beta_block3", imagebutton_beta_block3);
 		this.addRenderableWidget(imagebutton_beta_block3);
 		imagebutton_beta_block4 = new ImageButton(this.leftPos + 105, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block4.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(33, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 33, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_beta_block4", imagebutton_beta_block4);
 		this.addRenderableWidget(imagebutton_beta_block4);
@@ -590,6 +606,10 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		guistate.put("button:imagebutton_forge_front_off", imagebutton_forge_front_off);
 		this.addRenderableWidget(imagebutton_forge_front_off);
 		imagebutton_beta_block5 = new ImageButton(this.leftPos + 105, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block5.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminercraftguiButtonMessage(42, x, y, z));
+				JobsminercraftguiButtonMessage.handleButtonAction(entity, 42, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_beta_block5", imagebutton_beta_block5);
 		this.addRenderableWidget(imagebutton_beta_block5);

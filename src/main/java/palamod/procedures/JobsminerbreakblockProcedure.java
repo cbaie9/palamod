@@ -144,7 +144,7 @@ public class JobsminerbreakblockProcedure {
 				}
 			}
 		}
-		if (money.exists()) {
+		if (money.exists() && money_getadd) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
@@ -155,9 +155,7 @@ public class JobsminerbreakblockProcedure {
 					}
 					bufferedReader.close();
 					money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (money_getadd) {
-						money_main.addProperty("money", (main.get("money").getAsDouble() + money_add));
-					}
+					money_main.addProperty("money", (main.get("money").getAsDouble() + money_add));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

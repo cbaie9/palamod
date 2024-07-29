@@ -129,31 +129,31 @@ public class CobblebreakergivexppaladiumProcedure {
 					exception.printStackTrace();
 				}
 			}
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
-					}
-					bufferedReader.close();
-					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (money_getadd) {
+			if (money_getadd) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						main.addProperty("money", (main.get("money").getAsDouble() + money_add));
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
-				} catch (IOException e) {
-					e.printStackTrace();
 				}
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(money);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(money);
+						fileWriter.write(mainGSONBuilderVariable.toJson(main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
 				}
 			}
 		}

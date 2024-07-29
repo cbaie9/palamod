@@ -15,6 +15,7 @@ import palamod.procedures.JobsminercraftpoisonobsidianProcedure;
 import palamod.procedures.JobsminercraftpalaforgeProcedure;
 import palamod.procedures.JobsminercraftpaladiumspikeProcedure;
 import palamod.procedures.JobsminercraftobsidianpickaxeProcedure;
+import palamod.procedures.JobsminercraftnotingamesoonProcedure;
 import palamod.procedures.JobsminercraftmoulastoneProcedure;
 import palamod.procedures.JobsminercraftmegaboomobsidianProcedure;
 import palamod.procedures.JobsminercraftmagictntProcedure;
@@ -214,6 +215,22 @@ public class JobsminercraftguiButtonMessage {
 
 			JobsminercraftmegaboomobsidianProcedure.execute(entity);
 		}
+		if (buttonID == 30) {
+
+			JobsminercraftnotingamesoonProcedure.execute(entity);
+		}
+		if (buttonID == 31) {
+
+			JobsminercraftnotingamesoonProcedure.execute(entity);
+		}
+		if (buttonID == 32) {
+
+			JobsminercraftnotingamesoonProcedure.execute(entity);
+		}
+		if (buttonID == 33) {
+
+			JobsminercraftnotingamesoonProcedure.execute(entity);
+		}
 		if (buttonID == 34) {
 
 			JobsminercraftcobblebreakerProcedure.execute(entity);
@@ -245,6 +262,10 @@ public class JobsminercraftguiButtonMessage {
 		if (buttonID == 41) {
 
 			JobsminercraftpalaforgeProcedure.execute(entity);
+		}
+		if (buttonID == 42) {
+
+			JobsminercraftnotingamesoonProcedure.execute(entity);
 		}
 	}
 

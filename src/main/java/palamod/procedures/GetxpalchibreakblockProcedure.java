@@ -32,9 +32,10 @@ public class GetxpalchibreakblockProcedure {
 				}
 				bufferedReader.close();
 				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				lvl = main.get("lvl_miner").getAsDouble();
-				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.OSTRYA_WOOD_WOOD.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.OSTRYA_WOOD_LOG.get()) {
-					output = 2;
+				lvl = main.get("lvl_alchi").getAsDouble();
+				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.OSTRYA_WOOD_WOOD.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.OSTRYA_WOOD_LOG.get())
+						&& lvl >= 50) {
+					output = 50;
 				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JACARANDA_LOG.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JACARANDA_WOOD.get()) {
 					output = 10;
 				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JUDEECERCIS_WOOD.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JUDEECERCIS_LOG.get()) {

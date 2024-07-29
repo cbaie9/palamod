@@ -132,6 +132,10 @@ public class CobblebreakerguiSlotMessage {
 
 			CobblebreakergivexppaladiumProcedure.execute(world, x, y, z, entity);
 		}
+		if (slot == 7 && changeType == 1) {
+
+			CobblebreakergivexpgreenpaladiumProcedure.execute(world, x, y, z, entity);
+		}
 		if (slot == 7 && changeType == 2) {
 			int amount = meta;
 

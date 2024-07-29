@@ -836,6 +836,9 @@
           "name": "imagebutton_beta_block1",
           "image": "builder_wand_amethyst.png",
           "hoveredImage": "builder_wand_white.png",
+          "onClick": {
+            "name": "Jobsminercraftnotingamesoon"
+          },
           "x": 112,
           "y": 101
         }
@@ -846,6 +849,9 @@
           "name": "imagebutton_beta_block2",
           "image": "builder_wand_titane.png",
           "hoveredImage": "builder_wand_white.png",
+          "onClick": {
+            "name": "Jobsminercraftnotingamesoon"
+          },
           "x": 131,
           "y": 101
         }
@@ -856,6 +862,9 @@
           "name": "imagebutton_beta_block3",
           "image": "builder_wand_paladium.png",
           "hoveredImage": "builder_wand_white.png",
+          "onClick": {
+            "name": "Jobsminercraftnotingamesoon"
+          },
           "x": 150,
           "y": 101
         }
@@ -866,6 +875,9 @@
           "name": "imagebutton_beta_block4",
           "image": "builder_wand_endium.png",
           "hoveredImage": "builder_wand_white.png",
+          "onClick": {
+            "name": "Jobsminercraftnotingamesoon"
+          },
           "x": 169,
           "y": 101
         }
@@ -980,6 +992,9 @@
           "name": "imagebutton_beta_block5",
           "image": "beta_block.png",
           "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftnotingamesoon"
+          },
           "x": 169,
           "y": 120
         }
