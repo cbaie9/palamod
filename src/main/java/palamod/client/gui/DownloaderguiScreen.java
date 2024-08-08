@@ -1,34 +1,15 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.DownloaderguiMenu;
-
-import palamod.procedures.Grindertrans0Procedure;
-import palamod.procedures.DownloadercheckedProcedure;
-
-import palamod.network.DownloaderguiButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Checkbox;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMenu> {
+
 	private final static HashMap<String, Object> guistate = DownloaderguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Checkbox download_state;
+
 	Button button_reload;
 	Button button_link;
 
@@ -46,8 +27,11 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 		if (mouseX > leftPos + 113 && mouseX < leftPos + 169 && mouseY > topPos + 60 && mouseY < topPos + 80)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.downloadergui.tooltip_reboot_the_downloader_change_t"), mouseX, mouseY);
 		if (mouseX > leftPos + 3 && mouseX < leftPos + 49 && mouseY > topPos + 48 && mouseY < topPos + 67)
@@ -77,6 +61,7 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -97,26 +82,35 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 	@Override
 	public void init() {
 		super.init();
+
 		button_reload = Button.builder(Component.translatable("gui.palamod.downloadergui.button_reload"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new DownloaderguiButtonMessage(0, x, y, z));
 				DownloaderguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 113, this.topPos + 60, 56, 20).build();
+
 		guistate.put("button:button_reload", button_reload);
 		this.addRenderableWidget(button_reload);
+
 		button_link = Button.builder(Component.translatable("gui.palamod.downloadergui.button_link"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new DownloaderguiButtonMessage(1, x, y, z));
 				DownloaderguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 3, this.topPos + 48, 46, 20).build();
+
 		guistate.put("button:button_link", button_link);
 		this.addRenderableWidget(button_link);
+
 		download_state = new Checkbox(this.leftPos + 4, this.topPos + 4, 20, 20, Component.translatable("gui.palamod.downloadergui.download_state"),
 
-				DownloadercheckedProcedure.execute(world, x, y, z));
+				DownloadercheckedProcedure.execute(world, x, y, z)
+
+		);
+
 		guistate.put("checkbox:download_state", download_state);
 		this.addRenderableWidget(download_state);
 	}
+
 }

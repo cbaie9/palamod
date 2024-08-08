@@ -1,29 +1,13 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.LegendarystonepalahelpMenu;
-
-import palamod.network.LegendarystonepalahelpButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class LegendarystonepalahelpScreen extends AbstractContainerScreen<LegendarystonepalahelpMenu> {
+
 	private final static HashMap<String, Object> guistate = LegendarystonepalahelpMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_home_pixel_adminshop;
 	ImageButton imagebutton_arrow_adminshop;
@@ -42,8 +26,11 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -81,6 +68,7 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -108,29 +96,37 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 	@Override
 	public void init() {
 		super.init();
+
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 198, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LegendarystonepalahelpButtonMessage(0, x, y, z));
 				LegendarystonepalahelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
+
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 164, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LegendarystonepalahelpButtonMessage(1, x, y, z));
 				LegendarystonepalahelpButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
+
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 180, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LegendarystonepalahelpButtonMessage(2, x, y, z));
 				LegendarystonepalahelpButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
+
 	}
+
 }

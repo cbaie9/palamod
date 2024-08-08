@@ -1,21 +1,9 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.EndiumchestguiMenu;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class EndiumchestguiScreen extends AbstractContainerScreen<EndiumchestguiMenu> {
+
 	private final static HashMap<String, Object> guistate = EndiumchestguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -34,8 +22,11 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -59,6 +50,7 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -76,5 +68,7 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 	@Override
 	public void init() {
 		super.init();
+
 	}
+
 }

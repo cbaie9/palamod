@@ -1,15 +1,7 @@
 
 package palamod.block;
 
-import palamod.procedures.LavaspongeprocessProcedure;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 public class LavaspongeBlock extends Block {
 	public LavaspongeBlock() {

@@ -1,33 +1,15 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.OnlinedetectorguiMenu;
-
-import palamod.procedures.OnlinedetectorgetplayerProcedure;
-
-import palamod.network.OnlinedetectorguiButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class OnlinedetectorguiScreen extends AbstractContainerScreen<OnlinedetectorguiMenu> {
+
 	private final static HashMap<String, Object> guistate = OnlinedetectorguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	EditBox player_name;
+
 	Button button_detect;
 
 	public OnlinedetectorguiScreen(OnlinedetectorguiMenu container, Inventory inventory, Component text) {
@@ -44,9 +26,13 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		player_name.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -66,8 +52,10 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		if (player_name.isFocused())
 			return player_name.keyPressed(key, b, c);
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -89,6 +77,7 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	@Override
 	public void init() {
 		super.init();
+
 		player_name = new EditBox(this.font, this.leftPos + 5, this.topPos + 17, 135, 18, Component.translatable("gui.palamod.onlinedetectorgui.player_name")) {
 			@Override
 			public void insertText(String text) {
@@ -110,15 +99,20 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 		};
 		player_name.setSuggestion(Component.translatable("gui.palamod.onlinedetectorgui.player_name").getString());
 		player_name.setMaxLength(32767);
+
 		guistate.put("text:player_name", player_name);
 		this.addWidget(this.player_name);
+
 		button_detect = Button.builder(Component.translatable("gui.palamod.onlinedetectorgui.button_detect"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new OnlinedetectorguiButtonMessage(0, x, y, z));
 				OnlinedetectorguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 4, this.topPos + 37, 56, 20).build();
+
 		guistate.put("button:button_detect", button_detect);
 		this.addRenderableWidget(button_detect);
+
 	}
+
 }

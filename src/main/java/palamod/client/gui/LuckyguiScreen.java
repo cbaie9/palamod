@@ -1,33 +1,15 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.LuckyguiMenu;
-
-import palamod.procedures.LuckyblockgetnameProcedure;
-
-import palamod.network.LuckyguiButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
+
 	private final static HashMap<String, Object> guistate = LuckyguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_open;
+
 	ImageButton imagebutton_cross_no_button;
 
 	public LuckyguiScreen(LuckyguiMenu container, Inventory inventory, Component text) {
@@ -44,8 +26,11 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -69,6 +54,7 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -88,21 +74,27 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 	@Override
 	public void init() {
 		super.init();
+
 		button_open = Button.builder(Component.translatable("gui.palamod.luckygui.button_open"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LuckyguiButtonMessage(0, x, y, z));
 				LuckyguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 117, this.topPos + 44, 45, 20).build();
+
 		guistate.put("button:button_open", button_open);
 		this.addRenderableWidget(button_open);
+
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 155, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LuckyguiButtonMessage(1, x, y, z));
 				LuckyguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
+
 	}
+
 }
