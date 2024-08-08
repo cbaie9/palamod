@@ -1,7 +1,13 @@
 
 package palamod.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import palamod.init.PalamodModItems;
+
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
 public class AmethysteSwordItem extends SwordItem {
 	public AmethysteSwordItem() {

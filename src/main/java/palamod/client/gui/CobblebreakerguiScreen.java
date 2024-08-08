@@ -1,9 +1,41 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.CobblebreakerguiMenu;
+
+import palamod.procedures.Cobblebreakergetcobbletick9Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick8Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick7Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick6Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick5Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick4Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick3Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick2Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick20Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick19Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick18Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick17Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick16Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick15Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick14Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick13Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick12Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick11Procedure;
+import palamod.procedures.Cobblebreakergetcobbletick10Procedure;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class CobblebreakerguiScreen extends AbstractContainerScreen<CobblebreakerguiMenu> {
-
 	private final static HashMap<String, Object> guistate = CobblebreakerguiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -22,11 +54,8 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -53,137 +82,61 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0001.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 
-		if (
-
-		Cobblebreakergetcobbletick2Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick2Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0002.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick3Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick3Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0003.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick4Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick4Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0004.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick5Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick5Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0005.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick6Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick6Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0006.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick7Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick7Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0007.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick8Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick8Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0008.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick9Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick9Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0009.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick10Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick10Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0010.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick11Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick11Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0011.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick12Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick12Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0012.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick13Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick13Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0013.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick14Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick14Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0014.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick15Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick15Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0015.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick16Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick16Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0016.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick17Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick17Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0017.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick18Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick18Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0018.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick19Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick19Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0019.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
-		if (
-
-		Cobblebreakergetcobbletick20Procedure.execute(world, x, y, z)
-
-		) {
+		if (Cobblebreakergetcobbletick20Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_down0020.png"), this.leftPos + 82, this.topPos + 27, 0, 0, 14, 16, 14, 16);
 		}
 
@@ -198,7 +151,6 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -214,7 +166,5 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 	@Override
 	public void init() {
 		super.init();
-
 	}
-
 }

@@ -1,13 +1,33 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.UploaderguipalahelpMenu;
+
+import palamod.procedures.Palahelpuploader2Procedure;
+import palamod.procedures.Palahelpuploader1Procedure;
+import palamod.procedures.Palahelpuploader0Procedure;
+
+import palamod.network.UploaderguipalahelpButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class UploaderguipalahelpScreen extends AbstractContainerScreen<UploaderguipalahelpMenu> {
-
 	private final static HashMap<String, Object> guistate = UploaderguipalahelpMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_gui_example_wip;
 
 	public UploaderguipalahelpScreen(UploaderguipalahelpMenu container, Inventory inventory, Component text) {
@@ -24,11 +44,8 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -48,7 +65,6 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -76,17 +92,13 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 	@Override
 	public void init() {
 		super.init();
-
 		button_gui_example_wip = Button.builder(Component.translatable("gui.palamod.uploaderguipalahelp.button_gui_example_wip"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new UploaderguipalahelpButtonMessage(0, x, y, z));
 				UploaderguipalahelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 6, this.topPos + 170, 123, 20).build();
-
 		guistate.put("button:button_gui_example_wip", button_gui_example_wip);
 		this.addRenderableWidget(button_gui_example_wip);
-
 	}
-
 }

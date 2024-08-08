@@ -1,13 +1,29 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.TrashguiMenu;
+
+import palamod.network.TrashguiButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> {
-
 	private final static HashMap<String, Object> guistate = TrashguiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	ImageButton imagebutton_cross_no_button;
 
 	public TrashguiScreen(TrashguiMenu container, Inventory inventory, Component text) {
@@ -24,11 +40,8 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> {
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 3 && mouseY < topPos + 19)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.trashgui.tooltip_close_the_gui"), mouseX, mouseY);
 	}
@@ -54,7 +67,6 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -72,17 +84,13 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 155, this.topPos + 3, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new TrashguiButtonMessage(0, x, y, z));
 				TrashguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-
 	}
-
 }

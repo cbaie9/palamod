@@ -1,9 +1,30 @@
 
 package palamod.network;
 
+import palamod.world.inventory.AdminshoputilitiesdiampicMenu;
+
+import palamod.procedures.ConnectadminshoputilitiesProcedure;
+import palamod.procedures.CloseguiProcedure;
+import palamod.procedures.AdminshoputilitiesbuydiampicProcedure;
+import palamod.procedures.Adminshop_openProcedure;
+
+import palamod.PalamodMod;
+
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
+
+import java.util.function.Supplier;
+import java.util.HashMap;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AdminshoputilitiesdiampicButtonMessage {
-
 	private final int buttonID, x, y, z;
 
 	public AdminshoputilitiesdiampicButtonMessage(FriendlyByteBuf buffer) {
@@ -35,7 +56,6 @@ public class AdminshoputilitiesdiampicButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
-
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -44,11 +64,9 @@ public class AdminshoputilitiesdiampicButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = AdminshoputilitiesdiampicMenu.guistate;
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-
 		if (buttonID == 0) {
 
 			AdminshoputilitiesbuydiampicProcedure.execute(world, entity, guistate);
@@ -71,5 +89,4 @@ public class AdminshoputilitiesdiampicButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(AdminshoputilitiesdiampicButtonMessage.class, AdminshoputilitiesdiampicButtonMessage::buffer, AdminshoputilitiesdiampicButtonMessage::new, AdminshoputilitiesdiampicButtonMessage::handler);
 	}
-
 }

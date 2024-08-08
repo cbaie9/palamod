@@ -1,13 +1,29 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.AssembleurendMenu;
+
+import palamod.network.AssembleurendButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class AssembleurendScreen extends AbstractContainerScreen<AssembleurendMenu> {
-
 	private final static HashMap<String, Object> guistate = AssembleurendMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_trade;
 	Button button_ouvrir;
 
@@ -25,11 +41,8 @@ public class AssembleurendScreen extends AbstractContainerScreen<AssembleurendMe
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -49,7 +62,6 @@ public class AssembleurendScreen extends AbstractContainerScreen<AssembleurendMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -74,27 +86,21 @@ public class AssembleurendScreen extends AbstractContainerScreen<AssembleurendMe
 	@Override
 	public void init() {
 		super.init();
-
 		button_trade = Button.builder(Component.translatable("gui.palamod.assembleurend.button_trade"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AssembleurendButtonMessage(0, x, y, z));
 				AssembleurendButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 55, this.topPos + 72, 51, 20).build();
-
 		guistate.put("button:button_trade", button_trade);
 		this.addRenderableWidget(button_trade);
-
 		button_ouvrir = Button.builder(Component.translatable("gui.palamod.assembleurend.button_ouvrir"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AssembleurendButtonMessage(1, x, y, z));
 				AssembleurendButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 138, this.topPos + 206, 56, 20).build();
-
 		guistate.put("button:button_ouvrir", button_ouvrir);
 		this.addRenderableWidget(button_ouvrir);
-
 	}
-
 }
