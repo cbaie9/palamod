@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/paladium_ore_deepslate",
+    "up": "palamod:block/paladium_ore_deepslate",
+    "north": "palamod:block/paladium_ore_deepslate",
+    "east": "palamod:block/paladium_ore_deepslate",
+    "south": "palamod:block/paladium_ore_deepslate",
+    "west": "palamod:block/paladium_ore_deepslate",
+    "particle": "palamod:block/paladium_ore_deepslate"
+  },
+  "render_type": "solid"
+}

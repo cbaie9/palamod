@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "FindiumOre",
+    "blockstateList": [
+      {
+        "texture": "findium_ore",
+        "textureTop": "findium_ore",
+        "textureLeft": "findium_ore",
+        "textureFront": "findium_ore",
+        "textureRight": "findium_ore",
+        "textureBack": "findium_ore",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

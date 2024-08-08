@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/titane_ore",
+    "up": "palamod:block/titane_ore",
+    "north": "palamod:block/titane_ore",
+    "east": "palamod:block/titane_ore",
+    "south": "palamod:block/titane_ore",
+    "west": "palamod:block/titane_ore",
+    "particle": "palamod:block/titane_ore"
+  },
+  "render_type": "solid"
+}

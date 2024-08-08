@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:cobblestone"
+      "tag": "forge:stone"
     },
     "b": {
       "item": "palamod:voidstone"

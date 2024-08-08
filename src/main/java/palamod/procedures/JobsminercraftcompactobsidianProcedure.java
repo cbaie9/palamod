@@ -25,21 +25,21 @@ public class JobsminercraftcompactobsidianProcedure {
 			});
 		}
 		{
-			String _setval = "make a explosion ";
+			String _setval = "replace itself";
 			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.jobs_get_text2 = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			String _setval = "who hurt only the enties";
+			String _setval = "when broke";
 			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.jobs_get_text3 = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			String _setval = "in the area";
+			String _setval = "";
 			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.jobs_get_text4 = _setval;
 				capability.syncPlayerVariables(entity);
@@ -60,7 +60,7 @@ public class JobsminercraftcompactobsidianProcedure {
 			});
 		}
 		{
-			String _setval = "Lvl required : 15";
+			String _setval = "Lvl required : 22";
 			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.lvl_required = _setval;
 				capability.syncPlayerVariables(entity);

@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Paladiumoredeepslate",
+    "blockstateList": [
+      {
+        "texture": "paladium_ore_deepslate",
+        "textureTop": "paladium_ore_deepslate",
+        "textureLeft": "paladium_ore_deepslate",
+        "textureFront": "paladium_ore_deepslate",
+        "textureRight": "paladium_ore_deepslate",
+        "textureBack": "paladium_ore_deepslate",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

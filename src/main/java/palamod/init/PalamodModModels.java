@@ -27,10 +27,10 @@ public class PalamodModModels {
 		event.registerLayerDefinition(ModelBIG_dynamite2.LAYER_LOCATION, ModelBIG_dynamite2::createBodyLayer);
 		event.registerLayerDefinition(Modelprimed_tnt_sponge_v2.LAYER_LOCATION, Modelprimed_tnt_sponge_v2::createBodyLayer);
 		event.registerLayerDefinition(Modeldynamite_model.LAYER_LOCATION, Modeldynamite_model::createBodyLayer);
-		event.registerLayerDefinition(Modelprimed_tnt_sponge_v3.LAYER_LOCATION, Modelprimed_tnt_sponge_v3::createBodyLayer);
 		event.registerLayerDefinition(ModelBIG_dynamitev2.LAYER_LOCATION, ModelBIG_dynamitev2::createBodyLayer);
-		event.registerLayerDefinition(ModelGolem_gplacement2.LAYER_LOCATION, ModelGolem_gplacement2::createBodyLayer);
 		event.registerLayerDefinition(ModelGolem_gplacement_vlegtest.LAYER_LOCATION, ModelGolem_gplacement_vlegtest::createBodyLayer);
+		event.registerLayerDefinition(Modelprimed_tnt_sponge_v3.LAYER_LOCATION, Modelprimed_tnt_sponge_v3::createBodyLayer);
+		event.registerLayerDefinition(ModelGolem_gplacement2.LAYER_LOCATION, ModelGolem_gplacement2::createBodyLayer);
 		event.registerLayerDefinition(Modelprimed_tnt_sponge_v4.LAYER_LOCATION, Modelprimed_tnt_sponge_v4::createBodyLayer);
 	}
 }

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/paladium_ore",
+    "up": "palamod:block/paladium_ore",
+    "north": "palamod:block/paladium_ore",
+    "east": "palamod:block/paladium_ore",
+    "south": "palamod:block/paladium_ore",
+    "west": "palamod:block/paladium_ore",
+    "particle": "palamod:block/stone_mc"
+  },
+  "render_type": "solid"
+}

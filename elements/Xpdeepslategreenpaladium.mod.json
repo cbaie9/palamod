@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Paladiumgreenoredeepslate",
+    "blockstateList": [
+      {
+        "texture": "paladium_green_ore_deepslate",
+        "textureTop": "paladium_green_ore_deepslate",
+        "textureLeft": "paladium_green_ore_deepslate",
+        "textureFront": "paladium_green_ore_deepslate",
+        "textureRight": "paladium_green_ore_deepslate",
+        "textureBack": "paladium_green_ore_deepslate",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

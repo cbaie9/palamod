@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "PaladiumOre",
+    "blockstateList": [
+      {
+        "texture": "paladium_ore",
+        "textureTop": "paladium_ore",
+        "textureLeft": "paladium_ore",
+        "textureFront": "paladium_ore",
+        "textureRight": "paladium_ore",
+        "textureBack": "paladium_ore",
+        "particleTexture": "stone_mc",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

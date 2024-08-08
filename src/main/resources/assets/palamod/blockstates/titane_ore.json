@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "blockstate=0": {
       "model": "palamod:block/titane_ore"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/xptitaneore_blockstate_0"
     }
   }
 }

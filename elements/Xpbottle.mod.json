@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "flask6",
+    "texture": "glass_bottle",
     "customModelName": "Normal",
     "customProperties": {
       "xp": {
@@ -16,7 +16,7 @@
     "states": [
       {
         "renderType": 0,
-        "texture": "potg_of_20",
+        "texture": "miner_xp-bottle_vfufu",
         "customModelName": "Normal",
         "stateMap": [
           {
@@ -41,7 +41,7 @@
       },
       {
         "renderType": 0,
-        "texture": "big_hoe_placeholder",
+        "texture": "farmer_xp-bottle_vfufu",
         "customModelName": "Normal",
         "stateMap": [
           {
@@ -66,7 +66,7 @@
       },
       {
         "renderType": 0,
-        "texture": "creatif_sword",
+        "texture": "hunter_xp-bottle_vfufu",
         "customModelName": "Normal",
         "stateMap": [
           {
@@ -91,7 +91,7 @@
       },
       {
         "renderType": 0,
-        "texture": "biome_painter",
+        "texture": "alchimyst_xp-bottle_vfufu",
         "customModelName": "Normal",
         "stateMap": [
           {

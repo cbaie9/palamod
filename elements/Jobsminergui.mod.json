@@ -24,6 +24,9 @@
         "data": {
           "image": "progressbar_jobs_v1empty.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer1"
+          },
           "x": 140,
           "y": 106
         }
@@ -68,8 +71,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 240,
-          "y": 116
+          "x": 139,
+          "y": 118
         }
       },
       {
@@ -125,6 +128,1182 @@
           },
           "x": 280,
           "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer2"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer3"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer4"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer5"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer6"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer7"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer8"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer9"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer10"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer11"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer12"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs12.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer13"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs13.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer14"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer15"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs15.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer16"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs16.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer17"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs17.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer18"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs18.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer19"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs19.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer20"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs20.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer21"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs21.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer22"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs22.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer23"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs23.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer24"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs24.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer25"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs25.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer26"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs26.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer27"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs27.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer28"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs28.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer29"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs29.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer30"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs30.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer31"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs31.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer32"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs32.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer33"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs33.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer34"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs34.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer55"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs35.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer36"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs36.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer37"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs37.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer38"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs38.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer39"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs39.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer40"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs40.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer41"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs41.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer42"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs42.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer43"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs43.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer44"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs44.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer45"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs45.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer46"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs46.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer47"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs47.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer48"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs48.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer49"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs49.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer50"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs50.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer51"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs51.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer52"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs52.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer53"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs53.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer54"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs54.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer55"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs55.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer56"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs56.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer57"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs57.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer58"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs58.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer59"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs59.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer60"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs60.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer61"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs61.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer62"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs62.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer63"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs63.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer64"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs64.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer65"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs65.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer66"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs66.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer67"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs67.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer68"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs68.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer69"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs69.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer70"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs70.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer71"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs71.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer72"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs72.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer73"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs73.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer74"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs74.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer75"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs75.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer76"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs76.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer77"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs77.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer78"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs78.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer79"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs79.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer80"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs80.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer81"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs81.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer82"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs83.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer84"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs84.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer85"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs85.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer86"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs86.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer87"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs87.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer88"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs88.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer89"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs89.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer90"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs90.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer91"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs91.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer92"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs92.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer93"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs93.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer94"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs94.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer95"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs95.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer96"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs96.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer97"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs97.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer98"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs98.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer99"
+          },
+          "x": 140,
+          "y": 106
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progressbar_jobs99.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbarjobsminer100"
+          },
+          "x": 140,
+          "y": 106
         }
       }
     ],

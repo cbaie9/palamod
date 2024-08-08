@@ -18,7 +18,7 @@ public class JobsminercraftslimeobsidianProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "A obsidian that pose";
+			String _setval = "A obsidian that place";
 			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.jobs_get_text = _setval;
 				capability.syncPlayerVariables(entity);
@@ -39,7 +39,7 @@ public class JobsminercraftslimeobsidianProcedure {
 			});
 		}
 		{
-			String _setval = "";
+			String _setval = "when broke";
 			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.jobs_get_text4 = _setval;
 				capability.syncPlayerVariables(entity);
@@ -156,7 +156,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(2) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.OBSIDIAN.asItem()
-				|| new Object() {
+				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -196,7 +196,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(6) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(6)).getItem() : ItemStack.EMPTY).getItem() == Blocks.OBSIDIAN.asItem()
-				|| new Object() {
+				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -236,7 +236,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(7) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == Blocks.OBSIDIAN.asItem()
-				|| new Object() {
+				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -261,7 +261,7 @@ public class JobsminercraftslimeobsidianProcedure {
 						}
 						return 0;
 					}
-				}.getAmount(6) + 1));
+				}.getAmount(7) + 1));
 				((Slot) _slots.get(7)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
@@ -276,7 +276,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(8) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Blocks.OBSIDIAN.asItem()
-				|| new Object() {
+				&& new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -301,7 +301,7 @@ public class JobsminercraftslimeobsidianProcedure {
 						}
 						return 0;
 					}
-				}.getAmount(6) + 1));
+				}.getAmount(8) + 1));
 				((Slot) _slots.get(8)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
@@ -316,7 +316,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(3) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY)
-				.getItem() == PalamodModBlocks.SLIMEPAD.get().asItem() || new Object() {
+				.getItem() == PalamodModBlocks.SLIMEPAD.get().asItem() && new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -356,7 +356,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(4) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY)
-				.getItem() == PalamodModBlocks.SLIMEPAD.get().asItem() || new Object() {
+				.getItem() == PalamodModBlocks.SLIMEPAD.get().asItem() && new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -396,7 +396,7 @@ public class JobsminercraftslimeobsidianProcedure {
 				return 0;
 			}
 		}.getAmount(5) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(5)).getItem() : ItemStack.EMPTY)
-				.getItem() == PalamodModBlocks.SLIMEPAD.get().asItem() || new Object() {
+				.getItem() == PalamodModBlocks.SLIMEPAD.get().asItem() && new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();

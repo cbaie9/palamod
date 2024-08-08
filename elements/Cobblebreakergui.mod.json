@@ -15,7 +15,7 @@
         "data": {
           "image": "cobblebreakergui.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 30
         }
       },
@@ -46,10 +46,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebreakerironxp"
+            "name": "Cobblebreakergivexpiron"
           },
           "onStackTransfer": {
-            "name": "Cobblebreakerironxp"
+            "name": "Cobblebreakergivexpiron"
           },
           "x": 143,
           "y": 89
@@ -64,10 +64,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebreakgoldxp"
+            "name": "Cobblebreakergivexpgold"
           },
           "onStackTransfer": {
-            "name": "Cobblebreakgoldxp"
+            "name": "Cobblebreakergivexpgold"
           },
           "x": 164,
           "y": 89
@@ -82,10 +82,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebreakerdiamondxp"
+            "name": "Cobblebreakergivexpdiamond"
           },
           "onStackTransfer": {
-            "name": "Cobblebreakerdiamondxp"
+            "name": "Cobblebreakergivexpdiamond"
           },
           "x": 185,
           "y": 89
@@ -100,10 +100,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebreakeramethystxp"
+            "name": "Cobblebreakergivexpamethyst"
           },
           "onStackTransfer": {
-            "name": "Cobblebreakeramethystxp"
+            "name": "Cobblebreakergivexpamethyst"
           },
           "x": 206,
           "y": 89
@@ -118,10 +118,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebreakertitanexp"
+            "name": "Cobblebreakergivexptitane"
           },
           "onStackTransfer": {
-            "name": "Cobblebreakertitanexp"
+            "name": "Cobblebreakergivexptitane"
           },
           "x": 227,
           "y": 89
@@ -136,34 +136,28 @@
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebreakerpaladiumxp"
+            "name": "Cobblebreakergivexppaladium"
           },
           "onStackTransfer": {
-            "name": "Cobblebreakerpaladiumxp"
+            "name": "Cobblebreakergivexppaladium"
           },
           "x": 248,
           "y": 89
         }
       },
       {
-        "type": "inputslot",
+        "type": "outputslot",
         "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
           "id": 7,
           "disablePickup": {
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
           "onTakenFromSlot": {
-            "name": "Cobblebrekergreenpaladiumxp"
+            "name": "Cobblebreakergivexpgreenpaladium"
           },
           "onStackTransfer": {
-            "name": "Cobblebrekergreenpaladiumxp"
+            "name": "Cobblebreakergivexpgreenpaladium"
           },
           "x": 269,
           "y": 89

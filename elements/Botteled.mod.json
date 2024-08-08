@@ -3,14 +3,18 @@
   "_type": "enchantment",
   "definition": {
     "name": "Botteled",
-    "type": "BREAKABLE",
+    "type": "DIGGER",
     "rarity": "UNCOMMON",
     "minLevel": 1,
     "maxLevel": 1,
     "damageModifier": 0,
     "compatibleEnchantments": [],
     "excludeEnchantments": false,
-    "compatibleItems": [],
+    "compatibleItems": [
+      {
+        "value": "TAG:forge:pickaxe"
+      }
+    ],
     "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,

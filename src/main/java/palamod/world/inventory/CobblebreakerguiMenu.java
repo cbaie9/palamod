@@ -192,6 +192,11 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 				super.onQuickCraft(a, b);
 				slotChanged(7, 2, b.getCount() - a.getCount());
 			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return false;
+			}
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 148, 14) {
 			private final int slot = 8;

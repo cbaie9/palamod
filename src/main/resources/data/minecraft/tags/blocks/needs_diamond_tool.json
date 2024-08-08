@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "palamod:megaboomobsidian",
+    "palamod:boomobsidian",
     "palamod:poisonobsidian",
     "palamod:slimeobsidian",
     "palamod:paladium_obsidian_spike",

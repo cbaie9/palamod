@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "blockstate=0": {
       "model": "palamod:block/deepslate_paladium_ore"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/xpdeepslatepaladiumore_blockstate_0"
     }
   }
 }

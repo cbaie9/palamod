@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/amethyst_ore_deepslate",
+    "up": "palamod:block/amethyst_ore_deepslate",
+    "north": "palamod:block/amethyst_ore_deepslate",
+    "east": "palamod:block/amethyst_ore_deepslate",
+    "south": "palamod:block/amethyst_ore_deepslate",
+    "west": "palamod:block/amethyst_ore_deepslate",
+    "particle": "palamod:block/amethyst_ore_deepslate"
+  },
+  "render_type": "solid"
+}

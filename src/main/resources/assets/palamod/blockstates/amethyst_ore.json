@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "blockstate=0": {
       "model": "palamod:block/amethyst_ore"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/xpamesthystore_blockstate_0"
     }
   }
 }

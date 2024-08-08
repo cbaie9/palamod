@@ -31,6 +31,7 @@ import palamod.block.entity.GrinderblockBlockEntity;
 import palamod.block.entity.Greenpaladiumchestv2BlockEntity;
 import palamod.block.entity.GreenpaladiumchestBlockEntity;
 import palamod.block.entity.FactionblckBlockEntity;
+import palamod.block.entity.ExctractorBlockEntity;
 import palamod.block.entity.Endiumchestv2BlockEntity;
 import palamod.block.entity.EndiumchestBlockEntity;
 import palamod.block.entity.DrawbridgeBlockEntity;
@@ -88,6 +89,7 @@ public class PalamodModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> TYPESETTINGPLATE = register("typesettingplate", PalamodModBlocks.TYPESETTINGPLATE, TypesettingplateBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> TYPESETTINGMAX = register("typesettingmax", PalamodModBlocks.TYPESETTINGMAX, TypesettingmaxBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> DRAWBRIDGE = register("drawbridge", PalamodModBlocks.DRAWBRIDGE, DrawbridgeBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> EXCTRACTOR = register("exctractor", PalamodModBlocks.EXCTRACTOR, ExctractorBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

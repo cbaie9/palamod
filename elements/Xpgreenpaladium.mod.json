@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "PaladiumGreenore",
+    "blockstateList": [
+      {
+        "texture": "paladium_green_ore",
+        "textureTop": "paladium_green_ore",
+        "textureLeft": "paladium_green_ore",
+        "textureFront": "paladium_green_ore",
+        "textureRight": "paladium_green_ore",
+        "textureBack": "paladium_green_ore",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Amethystoredeepslate",
+    "blockstateList": [
+      {
+        "texture": "amethyst_ore_deepslate",
+        "textureTop": "amethyst_ore_deepslate",
+        "textureLeft": "amethyst_ore_deepslate",
+        "textureFront": "amethyst_ore_deepslate",
+        "textureRight": "amethyst_ore_deepslate",
+        "textureBack": "amethyst_ore_deepslate",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

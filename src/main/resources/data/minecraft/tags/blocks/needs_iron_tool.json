@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:exctractor",
     "palamod:diamond_obsidian_spike",
     "palamod:golden_obsidian_spike",
     "palamod:iron_obsidian_spike",

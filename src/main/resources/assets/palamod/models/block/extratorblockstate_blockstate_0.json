@@ -1,0 +1,10 @@
+{
+  "parent": "palamod:custom/bottle_extractor_v1.1",
+  "textures": {
+    "all": "palamod:block/blank",
+    "particle": "palamod:block/beta_exc",
+    "0": "palamod:block/beta_exc",
+    "1": "palamod:block/blank"
+  },
+  "render_type": "cutout"
+}

@@ -119,6 +119,15 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "Moddedorejobsminergivexp"
+    },
+    "onStartToDestroy": {
+      "name": "Setblockstateincache"
+    },
+    "onBlockPlayedBy": {
+      "name": "Jobsminerplacetag"
+    },
     "generateFeature": true,
     "restrictionBiomes": [],
     "blocksToReplace": [
