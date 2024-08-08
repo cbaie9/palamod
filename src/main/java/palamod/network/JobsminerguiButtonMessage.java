@@ -1,28 +1,9 @@
 
 package palamod.network;
 
-import palamod.world.inventory.JobsminerguiMenu;
-
-import palamod.procedures.ConnectminercraftProcedure;
-import palamod.procedures.CloseguiProcedure;
-
-import palamod.PalamodMod;
-
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class JobsminerguiButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public JobsminerguiButtonMessage(FriendlyByteBuf buffer) {
@@ -54,6 +35,7 @@ public class JobsminerguiButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -62,9 +44,11 @@ public class JobsminerguiButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = JobsminerguiMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
 			ConnectminercraftProcedure.execute(world, x, y, z, entity);
@@ -79,4 +63,5 @@ public class JobsminerguiButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(JobsminerguiButtonMessage.class, JobsminerguiButtonMessage::buffer, JobsminerguiButtonMessage::new, JobsminerguiButtonMessage::handler);
 	}
+
 }

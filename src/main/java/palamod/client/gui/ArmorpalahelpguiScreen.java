@@ -1,29 +1,13 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.ArmorpalahelpguiMenu;
-
-import palamod.network.ArmorpalahelpguiButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class ArmorpalahelpguiScreen extends AbstractContainerScreen<ArmorpalahelpguiMenu> {
+
 	private final static HashMap<String, Object> guistate = ArmorpalahelpguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	ImageButton imagebutton_left_gray_line;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_cross_no_button;
@@ -43,8 +27,11 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -108,6 +95,7 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -146,33 +134,43 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	@Override
 	public void init() {
 		super.init();
+
 		imagebutton_left_gray_line = new ImageButton(this.leftPos + -1, this.topPos + 0, 100, 24, 0, 0, 24, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_left_gray_line.png"), 100, 48, e -> {
 		});
+
 		guistate.put("button:imagebutton_left_gray_line", imagebutton_left_gray_line);
 		this.addRenderableWidget(imagebutton_left_gray_line);
+
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
 				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
+
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 275, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
 				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
+
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 235, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new ArmorpalahelpguiButtonMessage(3, x, y, z));
 				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
+
 	}
+
 }

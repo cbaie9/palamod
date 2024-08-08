@@ -1,29 +1,13 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.LanguageselectionMenu;
-
-import palamod.network.LanguageselectionButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class LanguageselectionScreen extends AbstractContainerScreen<LanguageselectionMenu> {
+
 	private final static HashMap<String, Object> guistate = LanguageselectionMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_franais;
 	Button button_english;
 
@@ -41,8 +25,11 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -66,6 +53,7 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -82,21 +70,27 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 	@Override
 	public void init() {
 		super.init();
+
 		button_franais = Button.builder(Component.translatable("gui.palamod.languageselection.button_franais"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LanguageselectionButtonMessage(0, x, y, z));
 				LanguageselectionButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 28, this.topPos + 64, 67, 20).build();
+
 		guistate.put("button:button_franais", button_franais);
 		this.addRenderableWidget(button_franais);
+
 		button_english = Button.builder(Component.translatable("gui.palamod.languageselection.button_english"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new LanguageselectionButtonMessage(1, x, y, z));
 				LanguageselectionButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 29, 61, 20).build();
+
 		guistate.put("button:button_english", button_english);
 		this.addRenderableWidget(button_english);
+
 	}
+
 }

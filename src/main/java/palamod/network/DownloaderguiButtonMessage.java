@@ -1,28 +1,9 @@
 
 package palamod.network;
 
-import palamod.world.inventory.DownloaderguiMenu;
-
-import palamod.procedures.DownloaderreloadProcedure;
-import palamod.procedures.ConnectdownloaderlinkProcedure;
-
-import palamod.PalamodMod;
-
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DownloaderguiButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public DownloaderguiButtonMessage(FriendlyByteBuf buffer) {
@@ -54,6 +35,7 @@ public class DownloaderguiButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -62,9 +44,11 @@ public class DownloaderguiButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = DownloaderguiMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
 			DownloaderreloadProcedure.execute(world, x, y, z, entity, guistate);
@@ -79,4 +63,5 @@ public class DownloaderguiButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(DownloaderguiButtonMessage.class, DownloaderguiButtonMessage::buffer, DownloaderguiButtonMessage::new, DownloaderguiButtonMessage::handler);
 	}
+
 }

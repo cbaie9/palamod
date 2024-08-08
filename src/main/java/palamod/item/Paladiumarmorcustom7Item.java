@@ -1,30 +1,11 @@
 
 package palamod.item;
 
-import palamod.procedures.PaladiumArmorLeggingsTickEventProcedure;
-import palamod.procedures.PaladiumArmorHelmetTickEventProcedure;
-import palamod.procedures.PaladiumArmorBootsTickEventProcedure;
-import palamod.procedures.PaladiumArmorBodyTickEventProcedure;
-
-import palamod.init.PalamodModItems;
-
-import net.minecraftforge.registries.ForgeRegistries;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-
-import com.google.common.collect.Iterables;
+import java.util.function.Consumer;
+import net.minecraft.client.model.Model;
 
 public abstract class Paladiumarmorcustom7Item extends ArmorItem {
+
 	public Paladiumarmorcustom7Item(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
@@ -70,6 +51,7 @@ public abstract class Paladiumarmorcustom7Item extends ArmorItem {
 	}
 
 	public static class Helmet extends Paladiumarmorcustom7Item {
+
 		public Helmet() {
 			super(ArmorItem.Type.HELMET, new Item.Properties());
 		}
@@ -89,6 +71,7 @@ public abstract class Paladiumarmorcustom7Item extends ArmorItem {
 	}
 
 	public static class Chestplate extends Paladiumarmorcustom7Item {
+
 		public Chestplate() {
 			super(ArmorItem.Type.CHESTPLATE, new Item.Properties());
 		}
@@ -108,6 +91,7 @@ public abstract class Paladiumarmorcustom7Item extends ArmorItem {
 	}
 
 	public static class Leggings extends Paladiumarmorcustom7Item {
+
 		public Leggings() {
 			super(ArmorItem.Type.LEGGINGS, new Item.Properties());
 		}
@@ -127,6 +111,7 @@ public abstract class Paladiumarmorcustom7Item extends ArmorItem {
 	}
 
 	public static class Boots extends Paladiumarmorcustom7Item {
+
 		public Boots() {
 			super(ArmorItem.Type.BOOTS, new Item.Properties());
 		}
@@ -144,4 +129,5 @@ public abstract class Paladiumarmorcustom7Item extends ArmorItem {
 			}
 		}
 	}
+
 }

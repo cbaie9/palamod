@@ -1,27 +1,9 @@
 
 package palamod.network;
 
-import palamod.world.inventory.GrinderguiMenu;
-
-import palamod.procedures.Connectgrinderpag1Procedure;
-
-import palamod.PalamodMod;
-
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GrinderguiButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public GrinderguiButtonMessage(FriendlyByteBuf buffer) {
@@ -53,6 +35,7 @@ public class GrinderguiButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -61,9 +44,11 @@ public class GrinderguiButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = GrinderguiMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
 			Connectgrinderpag1Procedure.execute(world, x, y, z, entity);
@@ -74,4 +59,5 @@ public class GrinderguiButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(GrinderguiButtonMessage.class, GrinderguiButtonMessage::buffer, GrinderguiButtonMessage::new, GrinderguiButtonMessage::handler);
 	}
+
 }
