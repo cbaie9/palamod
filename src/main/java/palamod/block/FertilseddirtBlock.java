@@ -1,7 +1,26 @@
 
 package palamod.block;
 
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import palamod.procedures.ForgesetupProcedure;
+import palamod.procedures.FertilizedbmplantProcedure;
+
+import org.checkerframework.checker.units.qual.s;
+
+import net.minecraftforge.common.IPlantable;
+
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 public class FertilseddirtBlock extends Block {
 	public FertilseddirtBlock() {

@@ -1,7 +1,13 @@
 
 package palamod.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import palamod.init.PalamodModItems;
+
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.AxeItem;
 
 public class TitaneAxeItem extends AxeItem {
 	public TitaneAxeItem() {

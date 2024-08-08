@@ -1,17 +1,33 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.MegasafechestfirstsetupMenu;
+
+import palamod.network.MegasafechestfirstsetupButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.gui.components.Checkbox;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<MegasafechestfirstsetupMenu> {
-
 	private final static HashMap<String, Object> guistate = MegasafechestfirstsetupMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	EditBox safe_code;
-
 	Checkbox safe_link;
-
 	Button button_save;
 
 	public MegasafechestfirstsetupScreen(MegasafechestfirstsetupMenu container, Inventory inventory, Component text) {
@@ -28,13 +44,9 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		safe_code.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -54,10 +66,8 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		if (safe_code.isFocused())
 			return safe_code.keyPressed(key, b, c);
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -80,7 +90,6 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	@Override
 	public void init() {
 		super.init();
-
 		safe_code = new EditBox(this.font, this.leftPos + 9, this.topPos + 43, 118, 18, Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code")) {
 			@Override
 			public void insertText(String text) {
@@ -102,24 +111,18 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 		};
 		safe_code.setSuggestion(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code").getString());
 		safe_code.setMaxLength(32767);
-
 		guistate.put("text:safe_code", safe_code);
 		this.addWidget(this.safe_code);
-
 		button_save = Button.builder(Component.translatable("gui.palamod.megasafechestfirstsetup.button_save"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new MegasafechestfirstsetupButtonMessage(0, x, y, z));
 				MegasafechestfirstsetupButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 135, 46, 20).build();
-
 		guistate.put("button:button_save", button_save);
 		this.addRenderableWidget(button_save);
-
 		safe_link = new Checkbox(this.leftPos + 5, this.topPos + 100, 20, 20, Component.translatable("gui.palamod.megasafechestfirstsetup.safe_link"), false);
-
 		guistate.put("checkbox:safe_link", safe_link);
 		this.addRenderableWidget(safe_link);
 	}
-
 }

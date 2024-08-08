@@ -1,13 +1,29 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.Palaerror0005Menu;
+
+import palamod.network.Palaerror0005ButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Menu> {
-
 	private final static HashMap<String, Object> guistate = Palaerror0005Menu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_quit;
 
 	public Palaerror0005Screen(Palaerror0005Menu container, Inventory inventory, Component text) {
@@ -24,11 +40,8 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -48,7 +61,6 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -67,17 +79,13 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 	@Override
 	public void init() {
 		super.init();
-
 		button_quit = Button.builder(Component.translatable("gui.palamod.palaerror_0005.button_quit"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new Palaerror0005ButtonMessage(0, x, y, z));
 				Palaerror0005ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 68, this.topPos + 53, 46, 20).build();
-
 		guistate.put("button:button_quit", button_quit);
 		this.addRenderableWidget(button_quit);
-
 	}
-
 }

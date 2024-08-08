@@ -1,9 +1,31 @@
 
 package palamod.network;
 
+import palamod.world.inventory.AdminshopplantsugarcaneMenu;
+
+import palamod.procedures.ConnectadminshopplantProcedure;
+import palamod.procedures.CloseguiProcedure;
+import palamod.procedures.Adminshop_openProcedure;
+import palamod.procedures.AdhplantsellsugarcaneProcedure;
+import palamod.procedures.AdhplantbuysugarcaneProcedure;
+
+import palamod.PalamodMod;
+
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
+
+import java.util.function.Supplier;
+import java.util.HashMap;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AdminshopplantsugarcaneButtonMessage {
-
 	private final int buttonID, x, y, z;
 
 	public AdminshopplantsugarcaneButtonMessage(FriendlyByteBuf buffer) {
@@ -35,7 +57,6 @@ public class AdminshopplantsugarcaneButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
-
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -44,11 +65,9 @@ public class AdminshopplantsugarcaneButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = AdminshopplantsugarcaneMenu.guistate;
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-
 		if (buttonID == 0) {
 
 			AdhplantbuysugarcaneProcedure.execute(world, entity, guistate);
@@ -75,5 +94,4 @@ public class AdminshopplantsugarcaneButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(AdminshopplantsugarcaneButtonMessage.class, AdminshopplantsugarcaneButtonMessage::buffer, AdminshopplantsugarcaneButtonMessage::new, AdminshopplantsugarcaneButtonMessage::handler);
 	}
-
 }
