@@ -3,20 +3,20 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 215,
-    "height": 163,
+    "width": 201,
+    "height": 165,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": 3,
     "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
         "type": "image",
         "data": {
-          "image": "grindergui.png",
+          "image": "grinder.png",
           "use1Xscale": false,
-          "x": 106,
-          "y": 39
+          "x": 113,
+          "y": 38
         }
       },
       {
@@ -482,9 +482,9 @@
       "name": "Grinderadvancementreq"
     },
     "gridSettings": {
-      "sx": 18,
+      "sx": 40,
       "sy": 18,
-      "ox": 11,
+      "ox": 12,
       "oy": 15,
       "snapOnGrid": false
     }

@@ -41,13 +41,19 @@ public class PaladiumdynamiteEntity extends Creeper {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
 		setPersistenceRequired();
 	}
 
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+
 	}
 
 	@Override

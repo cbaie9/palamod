@@ -1,26 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "ingredients": [
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
+  "pattern": [
+    "  a",
+    " aa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
       "item": "minecraft:obsidian"
     }
-  ],
+  },
   "result": {
     "item": "palamod:obsidianstairs",
     "count": 3

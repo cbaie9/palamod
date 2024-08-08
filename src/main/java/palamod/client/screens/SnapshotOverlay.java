@@ -1,8 +1,6 @@
 
 package palamod.client.screens;
 
-import palamod.procedures.ReturnsnapshotoverlayProcedure;
-import palamod.procedures.PalamodgameserververProcedure;
 import palamod.procedures.DevchecksnapProcedure;
 
 import org.checkerframework.checker.units.qual.h;
@@ -37,13 +35,7 @@ public class SnapshotOverlay {
 		}
 		if (true) {
 			if (DevchecksnapProcedure.execute(entity))
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.palamod.snapshot.label_paladium_creator_footage_devlopp"), w / 2 + -212, h / 2 + -110, -26368, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-					ReturnsnapshotoverlayProcedure.execute(), w / 2 + -214, h / 2 + -122, -3407872, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-					PalamodgameserververProcedure.execute(world), w / 2 + 109, h / 2 + 110, -39424, false);
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.palamod.snapshot.label_paladium_creator_footage_devlopp"), 1, 10, -26368, false);
 		}
 	}
 }

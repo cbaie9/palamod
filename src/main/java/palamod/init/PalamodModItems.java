@@ -421,7 +421,7 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> BROADSWORD_HEAD = REGISTRY.register("broadsword_head", () -> new BroadswordheadItem());
 	public static final RegistryObject<Item> SHOVEL_HEAD = REGISTRY.register("shovel_head", () -> new ShovelheadItem());
 	public static final RegistryObject<Item> SWORD_HEAD = REGISTRY.register("sword_head", () -> new SwordheadItem());
-	public static final RegistryObject<Item> AXE_PARTERN = REGISTRY.register("axe_partern", () -> new AxeparternItem());
+	public static final RegistryObject<Item> AXE_PATERN = REGISTRY.register("axe_patern", () -> new AxeparternItem());
 	public static final RegistryObject<Item> PICKAXE_PATERN = REGISTRY.register("pickaxe_patern", () -> new PickaxepaternItem());
 	public static final RegistryObject<Item> BROADSWORD_PATERN = REGISTRY.register("broadsword_patern", () -> new BroadswordpaternItem());
 	public static final RegistryObject<Item> BLOCK_PATERN = REGISTRY.register("block_patern", () -> new BlockpaternItem());

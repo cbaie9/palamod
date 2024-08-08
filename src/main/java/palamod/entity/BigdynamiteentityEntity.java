@@ -48,7 +48,7 @@ public class BigdynamiteentityEntity extends Creeper {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
 		setPersistenceRequired();
 		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
@@ -93,6 +93,12 @@ public class BigdynamiteentityEntity extends Creeper {
 	@Override
 	protected PathNavigation createNavigation(Level world) {
 		return new WaterBoundPathNavigation(this, world);
+	}
+
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+
 	}
 
 	@Override

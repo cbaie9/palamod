@@ -1,26 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
-  "ingredients": [
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
+  "pattern": [
+    "  a",
+    " aa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
       "item": "palamod:titane_ingot"
     }
-  ],
+  },
   "result": {
     "item": "palamod:titane_stairs",
     "count": 4

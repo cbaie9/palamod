@@ -6,8 +6,20 @@
     "mobLabel": "",
     "mobModelName": "Modeldynamite_model",
     "mobModelTexture": "pala_dyna.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
     "solidBoundingBox": {
       "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
     },
     "modelLayers": [],
     "modelWidth": 0.6,
@@ -60,6 +72,9 @@
     "health": 10,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
     "pushedByFluids": {
       "fixedValue": true
     },
@@ -103,7 +118,7 @@
     "onInitialSpawn": {
       "name": "Paladiumdynamite_boom"
     },
-    "hasAI": false,
+    "hasAI": true,
     "aiBase": "Creeper",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block><block type=\"attack_on_collide\" x=\"42\" y=\"159\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field></block><block type=\"wander\" x=\"349\" y=\"210\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></xml>",
     "breedable": false,

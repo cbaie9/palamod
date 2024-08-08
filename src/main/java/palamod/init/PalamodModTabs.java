@@ -421,7 +421,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.SWORD_HEAD.get());
 				tabData.accept(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get());
 				tabData.accept(PalamodModItems.HEADENDIUMSWORD.get());
-				tabData.accept(PalamodModItems.AXE_PARTERN.get());
+				tabData.accept(PalamodModItems.AXE_PATERN.get());
 				tabData.accept(PalamodModItems.PICKAXE_PATERN.get());
 				tabData.accept(PalamodModItems.BROADSWORD_PATERN.get());
 				tabData.accept(PalamodModItems.BLOCK_PATERN.get());

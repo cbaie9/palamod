@@ -1,26 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "ingredients": [
-    {
-      "item": "palamod:renforced_obsidian"
-    },
-    {
-      "item": "palamod:renforced_obsidian"
-    },
-    {
-      "item": "palamod:renforced_obsidian"
-    },
-    {
-      "item": "palamod:renforced_obsidian"
-    },
-    {
-      "item": "palamod:renforced_obsidian"
-    },
-    {
+  "pattern": [
+    "  a",
+    " aa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
       "item": "palamod:renforced_obsidian"
     }
-  ],
+  },
   "result": {
     "item": "palamod:renforcedobsidianstairs",
     "count": 4
