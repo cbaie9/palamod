@@ -1,27 +1,9 @@
 
 package palamod.network;
 
-import palamod.world.inventory.TrashguiMenu;
-
-import palamod.procedures.DeleteallProcedure;
-
-import palamod.PalamodMod;
-
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TrashguiSlotMessage {
+
 	private final int slotID, x, y, z, changeType, meta;
 
 	public TrashguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) {
@@ -61,6 +43,7 @@ public class TrashguiSlotMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleSlotAction(entity, slotID, changeType, meta, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -69,9 +52,11 @@ public class TrashguiSlotMessage {
 	public static void handleSlotAction(Player entity, int slot, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = TrashguiMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (slot == 0 && changeType == 0) {
 
 			DeleteallProcedure.execute(world, entity);
@@ -91,4 +76,5 @@ public class TrashguiSlotMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(TrashguiSlotMessage.class, TrashguiSlotMessage::buffer, TrashguiSlotMessage::new, TrashguiSlotMessage::handler);
 	}
+
 }

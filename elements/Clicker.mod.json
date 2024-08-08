@@ -1,0 +1,124 @@
+{
+  "_fv": 60,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 360,
+    "height": 210,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_potato_btn_v11",
+          "image": "clicker_potato_btn_v1.1.png",
+          "hoveredImage": "",
+          "x": 45,
+          "y": 75
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_upgradenone",
+          "image": "clicker_upgrade-none.png",
+          "hoveredImage": "",
+          "x": 150,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_upgradenone1",
+          "image": "clicker_upgrade-none.png",
+          "hoveredImage": "",
+          "x": 168,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_upgradenone2",
+          "image": "clicker_upgrade-none.png",
+          "hoveredImage": "",
+          "x": 186,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_upgradenone3",
+          "image": "clicker_upgrade-none.png",
+          "hoveredImage": "",
+          "x": 222,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_upgradenone4",
+          "image": "clicker_upgrade-none.png",
+          "hoveredImage": "",
+          "x": 204,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_upgradenone5",
+          "image": "clicker_upgrade-none.png",
+          "hoveredImage": "",
+          "x": 240,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_close_btn",
+          "image": "clicker_close_btn.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Closeclicker"
+          },
+          "x": 375,
+          "y": 21
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_v1.9.png",
+          "use1Xscale": false,
+          "x": 34,
+          "y": 15
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_skip",
+          "image": "clicker_skip.png",
+          "hoveredImage": "",
+          "x": 263,
+          "y": 199
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

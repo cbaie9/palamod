@@ -1,36 +1,18 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.AdminshopplantsugarcaneMenu;
-
-import palamod.procedures.AdshoppreviewamountsugarcaneProcedure;
-
-import palamod.network.AdminshopplantsugarcaneButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<AdminshopplantsugarcaneMenu> {
+
 	private final static HashMap<String, Object> guistate = AdminshopplantsugarcaneMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	EditBox number_buy;
+
 	Button button_buy;
 	Button button_sell;
+
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_home_pixel_adminshop;
@@ -49,9 +31,13 @@ public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<Admin
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 5 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantsugarcane.tooltip_close_the_gui"), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 7 && mouseY < topPos + 21)
@@ -81,8 +67,10 @@ public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<Admin
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		if (number_buy.isFocused())
 			return number_buy.keyPressed(key, b, c);
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -105,6 +93,7 @@ public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<Admin
 	@Override
 	public void init() {
 		super.init();
+
 		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshopplantsugarcane.number_buy")) {
 			@Override
 			public void insertText(String text) {
@@ -126,47 +115,60 @@ public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<Admin
 		};
 		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshopplantsugarcane.number_buy").getString());
 		number_buy.setMaxLength(32767);
+
 		guistate.put("text:number_buy", number_buy);
 		this.addWidget(this.number_buy);
+
 		button_buy = Button.builder(Component.translatable("gui.palamod.adminshopplantsugarcane.button_buy"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantsugarcaneButtonMessage(0, x, y, z));
 				AdminshopplantsugarcaneButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 109, 40, 20).build();
+
 		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
+
 		button_sell = Button.builder(Component.translatable("gui.palamod.adminshopplantsugarcane.button_sell"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantsugarcaneButtonMessage(1, x, y, z));
 				AdminshopplantsugarcaneButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 99, this.topPos + 109, 46, 20).build();
+
 		guistate.put("button:button_sell", button_sell);
 		this.addRenderableWidget(button_sell);
+
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 152, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantsugarcaneButtonMessage(2, x, y, z));
 				AdminshopplantsugarcaneButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
+
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 133, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantsugarcaneButtonMessage(3, x, y, z));
 				AdminshopplantsugarcaneButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
+
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 115, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantsugarcaneButtonMessage(4, x, y, z));
 				AdminshopplantsugarcaneButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
+
 	}
+
 }

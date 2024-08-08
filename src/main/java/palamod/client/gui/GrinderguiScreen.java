@@ -77,7 +77,7 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/grinder.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 201, 165, 201, 165);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/grinder.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 1677, 1374, 1677, 1374);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gnew_indicator.png"), this.leftPos + 139, this.topPos + 4, 0, 0, 64, 64, 64, 64);
 

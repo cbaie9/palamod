@@ -1,19 +1,7 @@
 
 package palamod.item;
 
-import palamod.procedures.PaladiumhammerToolInInventoryTickProcedure;
-import palamod.procedures.Hammer1Procedure;
-
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class PaladiumhammerItem extends PickaxeItem {
 	public PaladiumhammerItem() {

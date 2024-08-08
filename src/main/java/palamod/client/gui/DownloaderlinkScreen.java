@@ -1,29 +1,13 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.DownloaderlinkMenu;
-
-import palamod.network.DownloaderlinkButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class DownloaderlinkScreen extends AbstractContainerScreen<DownloaderlinkMenu> {
+
 	private final static HashMap<String, Object> guistate = DownloaderlinkMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_no;
 	Button button_process;
 
@@ -41,8 +25,11 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -62,6 +49,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -82,21 +70,27 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	@Override
 	public void init() {
 		super.init();
+
 		button_no = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_no"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new DownloaderlinkButtonMessage(0, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 71, 35, 20).build();
+
 		guistate.put("button:button_no", button_no);
 		this.addRenderableWidget(button_no);
+
 		button_process = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_process"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new DownloaderlinkButtonMessage(1, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 84, this.topPos + 71, 61, 20).build();
+
 		guistate.put("button:button_process", button_process);
 		this.addRenderableWidget(button_process);
+
 	}
+
 }
