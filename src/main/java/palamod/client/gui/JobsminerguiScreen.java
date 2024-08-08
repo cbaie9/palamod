@@ -1,32 +1,13 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.JobsminerguiMenu;
-
-import palamod.procedures.GetxpminertextProcedure;
-import palamod.procedures.GetxpminerProcedure;
-
-import palamod.network.JobsminerguiButtonMessage;
-
-import palamod.PalamodMod;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu> {
+
 	private final static HashMap<String, Object> guistate = JobsminerguiMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	ImageButton imagebutton_button_gray;
 	ImageButton imagebutton_help_button;
 	ImageButton imagebutton_cross_no_button;
@@ -45,10 +26,15 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36)
-			guiGraphics.renderTooltip(font, Component.literal(GetxpminertextProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					GetxpminertextProcedure.execute(entity)), mouseX, mouseY);
 	}
 
 	@Override
@@ -74,6 +60,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -93,25 +80,33 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	@Override
 	public void init() {
 		super.init();
+
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_gray.png"), 48, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminerguiButtonMessage(0, x, y, z));
 				JobsminerguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_button_gray", imagebutton_button_gray);
 		this.addRenderableWidget(imagebutton_button_gray);
+
 		imagebutton_help_button = new ImageButton(this.leftPos + 14, this.topPos + 53, 48, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_help_button.png"), 48, 32, e -> {
 		});
+
 		guistate.put("button:imagebutton_help_button", imagebutton_help_button);
 		this.addRenderableWidget(imagebutton_help_button);
+
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new JobsminerguiButtonMessage(2, x, y, z));
 				JobsminerguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
+
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
+
 	}
+
 }
