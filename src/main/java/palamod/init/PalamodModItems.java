@@ -785,6 +785,7 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> EXCTRACTOR = block(PalamodModBlocks.EXCTRACTOR);
 	public static final RegistryObject<Item> BOOMOBSIDIAN = block(PalamodModBlocks.BOOMOBSIDIAN);
 	public static final RegistryObject<Item> MEGABOOMOBSIDIAN = block(PalamodModBlocks.MEGABOOMOBSIDIAN);
+	public static final RegistryObject<Item> HARPAGOPHYTUM = block(PalamodModBlocks.HARPAGOPHYTUM);
 
 	// Start of user code block custom items
 	// End of user code block custom items

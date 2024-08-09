@@ -1,9 +1,30 @@
 
 package palamod.network;
 
+import palamod.world.inventory.DrawbrigeguiMenu;
+
+import palamod.procedures.SetblockwestProcedure;
+import palamod.procedures.SetblocksouthProcedure;
+import palamod.procedures.SetblocknorthProcedure;
+import palamod.procedures.SetblockeastProcedure;
+
+import palamod.PalamodMod;
+
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
+
+import java.util.function.Supplier;
+import java.util.HashMap;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DrawbrigeguiButtonMessage {
-
 	private final int buttonID, x, y, z;
 
 	public DrawbrigeguiButtonMessage(FriendlyByteBuf buffer) {
@@ -35,7 +56,6 @@ public class DrawbrigeguiButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
-
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -44,11 +64,9 @@ public class DrawbrigeguiButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = DrawbrigeguiMenu.guistate;
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-
 		if (buttonID == 0) {
 
 			SetblocksouthProcedure.execute(world, x, y, z);
@@ -71,5 +89,4 @@ public class DrawbrigeguiButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		PalamodMod.addNetworkMessage(DrawbrigeguiButtonMessage.class, DrawbrigeguiButtonMessage::buffer, DrawbrigeguiButtonMessage::new, DrawbrigeguiButtonMessage::handler);
 	}
-
 }

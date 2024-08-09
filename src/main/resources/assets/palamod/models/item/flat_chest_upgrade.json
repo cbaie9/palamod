@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:item/flat_chest_upgrade"
+    "layer0": "palamod:item/flat-chest_upgrade"
   }
 }

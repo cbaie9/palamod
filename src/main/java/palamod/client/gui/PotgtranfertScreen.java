@@ -1,13 +1,32 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.PotgtranfertMenu;
+
+import palamod.procedures.PotgtransfertvalueentityProcedure;
+import palamod.procedures.PotgtranfertValueProcedure;
+
+import palamod.network.PotgtranfertButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu> {
-
 	private final static HashMap<String, Object> guistate = PotgtranfertMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_transfert;
 
 	public PotgtranfertScreen(PotgtranfertMenu container, Inventory inventory, Component text) {
@@ -24,11 +43,8 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -48,7 +64,6 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -71,17 +86,13 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	@Override
 	public void init() {
 		super.init();
-
 		button_transfert = Button.builder(Component.translatable("gui.palamod.potgtranfert.button_transfert"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new PotgtranfertButtonMessage(0, x, y, z));
 				PotgtranfertButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 93, this.topPos + 25, 72, 20).build();
-
 		guistate.put("button:button_transfert", button_transfert);
 		this.addRenderableWidget(button_transfert);
-
 	}
-
 }

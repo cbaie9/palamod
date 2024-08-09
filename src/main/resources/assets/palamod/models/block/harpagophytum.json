@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:block/flower_harpagophytum",
+    "particle": "palamod:block/flower_harpagophytum"
+  },
+  "render_type": "cutout"
+}

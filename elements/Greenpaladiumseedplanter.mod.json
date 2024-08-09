@@ -5,7 +5,7 @@
     "toolType": "Special",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "seedplanter_lvl5",
+    "texture": "seedplanter_green_paladium",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Green paladium seedplanter",
@@ -22,6 +22,9 @@
     "damageVsEntity": 4.0,
     "usageCount": 0,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

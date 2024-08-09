@@ -4,5 +4,5 @@
     "bottom": "palamod:block/door_9",
     "top": "palamod:block/door_1"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

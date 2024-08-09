@@ -4,7 +4,7 @@
   "pattern": [
     " a ",
     "aba",
-    " a "
+    " c "
   ],
   "key": {
     "a": {
@@ -12,6 +12,9 @@
     },
     "b": {
       "item": "minecraft:chest"
+    },
+    "c": {
+      "item": "palamod:harpagophytum"
     }
   },
   "result": {
