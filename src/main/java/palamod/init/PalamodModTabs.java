@@ -497,8 +497,6 @@ public class PalamodModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(PalamodModItems.INTERNET_CARD.get());
-		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-			tabData.accept(PalamodModBlocks.HARPAGOPHYTUM.get().asItem());
 		}
 	}
 }
