@@ -13,10 +13,10 @@
       {
         "type": "image",
         "data": {
-          "image": "crushergui.png",
+          "image": "crusher_gui_v2.png",
           "use1Xscale": false,
           "x": 46,
-          "y": 18
+          "y": 19
         }
       },
       {
@@ -52,7 +52,7 @@
             "name": "Crusherluncherv2"
           },
           "x": 52,
-          "y": 37
+          "y": 38
         }
       },
       {
@@ -63,7 +63,7 @@
             "fixedValue": "Inventory"
           },
           "color": {
-            "value": -12829636,
+            "value": -1315861,
             "falpha": 0.0
           },
           "x": 59,
@@ -88,7 +88,7 @@
             "name": "Crusherluncherv2"
           },
           "x": 52,
-          "y": 73
+          "y": 74
         }
       },
       {
@@ -102,7 +102,7 @@
           "onSlotChanged": {
             "name": "Crusherluncherv2"
           },
-          "x": 204,
+          "x": 205,
           "y": 117
         }
       },
@@ -168,15 +168,15 @@
         "data": {
           "image": "palamixedcoal.png",
           "use1Xscale": false,
-          "x": 221,
-          "y": 197
+          "x": 223,
+          "y": 194
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "orangeblue_1.png",
-          "use1Xscale": true,
+          "image": "eggplante_crusher_v2.png",
+          "use1Xscale": false,
           "x": 53,
           "y": 39
         }
@@ -187,7 +187,7 @@
           "image": "amethyst_ingot.png",
           "use1Xscale": false,
           "x": 240,
-          "y": 40
+          "y": 37
         }
       },
       {
@@ -353,8 +353,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_button_blank",
-          "image": "button_white.png",
-          "hoveredImage": "button_blue.png",
+          "image": "crusher_button_white.png",
+          "hoveredImage": "crusher_button_endium.png",
           "onClick": {
             "name": "Crusherluncherv2endium"
           },
@@ -366,21 +366,21 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_button_white",
-          "image": "button_white.png",
-          "hoveredImage": "button_red.png",
+          "image": "crusher_button_white.png",
+          "hoveredImage": "crusher_button_paladium.png",
           "onClick": {
             "name": "Crusherluncherv2paladium"
           },
-          "x": 261,
-          "y": 40
+          "x": 260,
+          "y": 36
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_button_white1",
-          "image": "button_white.png",
-          "hoveredImage": "button_gray.png",
+          "image": "crusher_button_white.png",
+          "hoveredImage": "crusher_button_titane.png",
           "onClick": {
             "name": "Crusherluncherv2titane"
           },
@@ -392,8 +392,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_button_white2",
-          "image": "button_white.png",
-          "hoveredImage": "button_purple.png",
+          "image": "crusher_button_white.png",
+          "hoveredImage": "crusher_button_amethyst.png",
           "onClick": {
             "name": "Crusherluncherv2amethyst"
           },
@@ -404,10 +404,10 @@
       {
         "type": "image",
         "data": {
-          "image": "paladium_mixed_coaltrans.png",
+          "image": "fuel_crusher.png",
           "use1Xscale": false,
-          "x": 52,
-          "y": 74
+          "x": 53,
+          "y": 75
         }
       },
       {
@@ -415,7 +415,7 @@
         "data": {
           "name": "label_v2004",
           "text": {
-            "fixedValue": "v2.4.1"
+            "fixedValue": "v2.5.3"
           },
           "color": {
             "value": -12829636,
