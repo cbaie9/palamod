@@ -102,37 +102,46 @@ public class Crusherv2endiumProcedure {
 					PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( endium )"));
 				}
 			} else {
-				{
-					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-					if (_ent != null) {
-						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-						_setstack.setCount((int) (new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								AtomicInteger _retval = new AtomicInteger(0);
-								BlockEntity _ent = world.getBlockEntity(pos);
-								if (_ent != null)
-									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-								return _retval.get();
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
-						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable)
-								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-						});
+				if (1 <= new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
 					}
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("crusher_num_endium", 0);
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
-					PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( failed ) ( endium ) "));
+				}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_endium")) {
+					{
+						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_ent != null) {
+							final int _slotid = 2;
+							final ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
+							_setstack.setCount((int) (new Object() {
+								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									BlockEntity _ent = world.getBlockEntity(pos);
+									if (_ent != null)
+										_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
+									return _retval.get();
+								}
+							}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable)
+									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
+							});
+						}
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putDouble("crusher_num_endium", 0);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( failed ) ( endium ) "));
+					}
 				}
 			}
 		}
