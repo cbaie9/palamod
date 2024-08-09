@@ -1,13 +1,29 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.AdminshopadbanMenu;
+
+import palamod.network.AdminshopadbanButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class AdminshopadbanScreen extends AbstractContainerScreen<AdminshopadbanMenu> {
-
 	private final static HashMap<String, Object> guistate = AdminshopadbanMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_beta_adminshop;
 
 	public AdminshopadbanScreen(AdminshopadbanMenu container, Inventory inventory, Component text) {
@@ -24,11 +40,8 @@ public class AdminshopadbanScreen extends AbstractContainerScreen<Adminshopadban
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -48,7 +61,6 @@ public class AdminshopadbanScreen extends AbstractContainerScreen<Adminshopadban
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -69,17 +81,13 @@ public class AdminshopadbanScreen extends AbstractContainerScreen<Adminshopadban
 	@Override
 	public void init() {
 		super.init();
-
 		button_beta_adminshop = Button.builder(Component.translatable("gui.palamod.adminshopadban.button_beta_adminshop"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopadbanButtonMessage(0, x, y, z));
 				AdminshopadbanButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 16, this.topPos + 139, 98, 20).build();
-
 		guistate.put("button:button_beta_adminshop", button_beta_adminshop);
 		this.addRenderableWidget(button_beta_adminshop);
-
 	}
-
 }

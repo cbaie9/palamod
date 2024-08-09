@@ -114,6 +114,7 @@ import palamod.block.Jacaranda_FenceBlock;
 import palamod.block.IronspikeBlock;
 import palamod.block.IronobsidianspikeBlock;
 import palamod.block.HdvblockBlock;
+import palamod.block.HarpagophytumBlock;
 import palamod.block.HardenedobsidianslabBlock;
 import palamod.block.GuardianblockBlock;
 import palamod.block.GrinderframeBlock;
@@ -419,6 +420,7 @@ public class PalamodModBlocks {
 	public static final RegistryObject<Block> EXCTRACTOR = REGISTRY.register("exctractor", () -> new ExctractorBlock());
 	public static final RegistryObject<Block> BOOMOBSIDIAN = REGISTRY.register("boomobsidian", () -> new BoomobsidianBlock());
 	public static final RegistryObject<Block> MEGABOOMOBSIDIAN = REGISTRY.register("megaboomobsidian", () -> new MegaboomobsidianBlock());
+	public static final RegistryObject<Block> HARPAGOPHYTUM = REGISTRY.register("harpagophytum", () -> new HarpagophytumBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

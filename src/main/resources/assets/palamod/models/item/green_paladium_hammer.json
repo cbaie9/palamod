@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "palamod:item/green_paladium_hammer16"
+    "layer0": "palamod:item/green_paladium_hammer_v2"
   }
 }

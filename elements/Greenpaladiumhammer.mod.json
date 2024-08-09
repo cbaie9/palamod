@@ -5,7 +5,7 @@
     "toolType": "Pickaxe",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "green_paladium_hammer16",
+    "texture": "green_paladium_hammer_v2",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Green paladium hammer",
@@ -22,6 +22,9 @@
     "damageVsEntity": 1.0,
     "usageCount": 3999,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

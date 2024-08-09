@@ -1,7 +1,27 @@
 
 package palamod.block;
 
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import palamod.procedures.Orangeblue2upProcedure;
+
+import palamod.init.PalamodModBlocks;
+
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.util.RandomSource;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 public class Orangeblue3Block extends FlowerBlock {
 	public Orangeblue3Block() {

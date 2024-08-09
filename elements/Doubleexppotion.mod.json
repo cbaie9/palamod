@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "potion_job_x2",
+    "texture": "potiondoublexp",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

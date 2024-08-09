@@ -1,13 +1,32 @@
 package palamod.client.gui;
 
+import palamod.world.inventory.UploaderguiMenu;
+
+import palamod.procedures.UploaderdebugProcedure;
+import palamod.procedures.Grindertrans0Procedure;
+
+import palamod.network.UploaderguiButtonMessage;
+
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> {
-
 	private final static HashMap<String, Object> guistate = UploaderguiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	ImageButton imagebutton_cross_no_button;
 
 	public UploaderguiScreen(UploaderguiMenu container, Inventory inventory, Component text) {
@@ -24,11 +43,8 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
-
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-
 		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 61 && mouseY < topPos + 79)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
 		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 27 && mouseY < topPos + 45)
@@ -62,7 +78,6 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -85,17 +100,13 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	@Override
 	public void init() {
 		super.init();
-
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 152, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new UploaderguiButtonMessage(0, x, y, z));
 				UploaderguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-
 	}
-
 }
