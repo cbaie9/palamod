@@ -83,7 +83,7 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 20) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 21) {
 			private final int slot = 0;
 
 			@Override
@@ -97,7 +97,7 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 				return stack.is(ItemTags.create(new ResourceLocation("forge:palamd_fruits")));
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 56) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 57) {
 			private final int slot = 1;
 
 			@Override
@@ -111,7 +111,7 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 				return stack.is(ItemTags.create(new ResourceLocation("palapalamod:palamodmoddedfuel")));
 			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 159, 100) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 160, 100) {
 			private final int slot = 2;
 
 			@Override
