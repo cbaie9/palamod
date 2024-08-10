@@ -44,17 +44,17 @@ public class PaladiumchestguiScreen extends AbstractContainerScreen<Paladiumches
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladiumchestgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 306, 225, 306, 225);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladiumchestgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 306, 225, 306, 225);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_to_set.png"), this.leftPos + 283, this.topPos + 112, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_to_set.png"), this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 251, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 252, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 251, this.topPos + 163, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 252, this.topPos + 163, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 269, this.topPos + 163, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 270, this.topPos + 163, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 269, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 270, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

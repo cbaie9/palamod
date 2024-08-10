@@ -15,7 +15,7 @@
         "data": {
           "image": "titanechestgui.png",
           "use1Xscale": false,
-          "x": 60,
+          "x": 61,
           "y": 8
         }
       },
@@ -2118,7 +2118,7 @@
         "data": {
           "image": "ring_to_set.png",
           "use1Xscale": false,
-          "x": 344,
+          "x": 345,
           "y": 120
         }
       },
@@ -2127,7 +2127,7 @@
         "data": {
           "image": "ring_gui.png",
           "use1Xscale": false,
-          "x": 320,
+          "x": 321,
           "y": 171
         }
       },
@@ -2136,7 +2136,7 @@
         "data": {
           "image": "ring_gui.png",
           "use1Xscale": false,
-          "x": 320,
+          "x": 321,
           "y": 189
         }
       }
