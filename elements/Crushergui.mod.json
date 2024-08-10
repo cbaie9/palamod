@@ -16,7 +16,7 @@
           "image": "crusher_gui_v2.png",
           "use1Xscale": false,
           "x": 46,
-          "y": 19
+          "y": 18
         }
       },
       {
@@ -38,7 +38,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "TAG:forge:palamd_fruits"
+            "value": "TAG:mod:palamodmoddedfuel"
           },
           "disablePlacement": {
             "fixedValue": false
@@ -52,7 +52,7 @@
             "name": "Crusherluncherv2"
           },
           "x": 52,
-          "y": 38
+          "y": 37
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -1315861,
             "falpha": 0.0
           },
-          "x": 59,
-          "y": 129
+          "x": 60,
+          "y": 127
         }
       },
       {
@@ -88,7 +88,7 @@
             "name": "Crusherluncherv2"
           },
           "x": 52,
-          "y": 74
+          "y": 73
         }
       },
       {
@@ -178,7 +178,7 @@
           "image": "eggplante_crusher_v2.png",
           "use1Xscale": false,
           "x": 53,
-          "y": 39
+          "y": 38
         }
       },
       {
@@ -202,7 +202,7 @@
       {
         "type": "image",
         "data": {
-          "image": "endium_ingot_vfufu.png",
+          "image": "endium_nugets_vfufu.png",
           "use1Xscale": false,
           "x": 358,
           "y": 69
@@ -407,7 +407,7 @@
           "image": "fuel_crusher.png",
           "use1Xscale": false,
           "x": 53,
-          "y": 75
+          "y": 74
         }
       },
       {

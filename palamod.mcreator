@@ -852,8 +852,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/network/CrusherguiButtonMessage.java",
-          "src/main/java/palamod/world/inventory/CrusherguiMenu.java",
           "src/main/java/palamod/network/CrusherguiSlotMessage.java",
+          "src/main/java/palamod/world/inventory/CrusherguiMenu.java",
           "src/main/java/palamod/client/gui/CrusherguiScreen.java"
         ]
       }
@@ -54944,7 +54944,7 @@
       "block.palamod.ostrya_wood_fence": "Ostrya Fence",
       "gui.palamod.adminshopblock_sand.button_back": "back",
       "gui.palamod.adminshopblockstone.label_stone": "Cobblestone",
-      "gui.palamod.crushergui.label_v2004": "v2.4.1",
+      "gui.palamod.crushergui.label_v2004": "v2.5.3",
       "item.palamod.amethyst_sword": "Amethyst Sword",
       "gui.palamod.adminshoporetitane.button_back": "back",
       "entity.palamod.gt_2": "Paladium golem",

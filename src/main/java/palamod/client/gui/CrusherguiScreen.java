@@ -284,7 +284,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/crusher_gui_v2.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 335, 205, 335, 205);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/crusher_gui_v2.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 335, 205, 335, 205);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/amethystmixedcoal.png"), this.leftPos + 177, this.topPos + 140, 0, 0, 16, 16, 16, 16);
 
@@ -294,13 +294,13 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamixedcoal.png"), this.leftPos + 177, this.topPos + 176, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/eggplante_crusher_v2.png"), this.leftPos + 7, this.topPos + 21, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/eggplante_crusher_v2.png"), this.leftPos + 7, this.topPos + 20, 0, 0, 16, 16, 16, 16);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/amethyst_ingot.png"), this.leftPos + 194, this.topPos + 19, 0, 0, 16, 16, 16, 16);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/titane_ingot.png"), this.leftPos + 194, this.topPos + 51, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endium_ingot_vfufu.png"), this.leftPos + 312, this.topPos + 51, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endium_nugets_vfufu.png"), this.leftPos + 312, this.topPos + 51, 0, 0, 16, 16, 16, 16);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_ingot.png"), this.leftPos + 312, this.topPos + 20, 0, 0, 16, 16, 16, 16);
 
@@ -338,7 +338,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/flame_crusher10.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
 		}
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/fuel_crusher.png"), this.leftPos + 7, this.topPos + 57, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/fuel_crusher.png"), this.leftPos + 7, this.topPos + 56, 0, 0, 16, 16, 16, 16);
 
 		if (Crushersubprocessv2progressbar1Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/progressbar_amethyst1.png"), this.leftPos + 208, this.topPos + 123, 0, 0, 100, 10, 100, 10);
@@ -996,7 +996,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_paladium_crusher"), 121, 3, -3407821, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_inventaire"), 13, 111, -1315861, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_inventaire"), 14, 109, -1315861, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_fuel"), 27, 58, -3394816, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_fruits"), 26, 24, -3407668, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_v2004"), 299, 192, -12829636, false);
