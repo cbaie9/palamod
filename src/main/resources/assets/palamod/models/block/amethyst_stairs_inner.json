@@ -1,6 +1,7 @@
 {
   "parent": "block/inner_stairs",
   "textures": {
+    "particle": "palamod:block/amethyst_block",
     "bottom": "palamod:block/amethyst_block",
     "top": "palamod:block/amethyst_block",
     "side": "palamod:block/amethyst_block"

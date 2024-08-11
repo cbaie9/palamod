@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -13,9 +13,11 @@
     "onHelmetTick": {
       "name": "ScubaHelmetTickEvent"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "armorTextureFile": "scubaarmor_",
     "helmetName": "Scuba Helmet",
     "bodyName": "Scuba Body",

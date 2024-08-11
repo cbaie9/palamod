@@ -1,6 +1,7 @@
 {
   "parent": "block/inner_stairs",
   "textures": {
+    "particle": "palamod:block/redstone_obsi_top",
     "bottom": "palamod:block/redstone_obsi_top",
     "top": "palamod:block/redstone_obsi_top",
     "side": "palamod:block/redstone_obsi_top"

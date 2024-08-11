@@ -1,6 +1,7 @@
 {
   "parent": "block/template_fence_gate_wall_open",
   "textures": {
+    "particle": "palamod:block/jacaranda_planks",
     "texture": "palamod:block/jacaranda_planks"
   },
   "render_type": "solid"

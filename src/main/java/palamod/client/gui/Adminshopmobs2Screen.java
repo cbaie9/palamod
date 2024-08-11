@@ -86,11 +86,6 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2.label_adminshop_mobs"), 54, 2, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2.label_page_2"), 79, 12, -1, false);

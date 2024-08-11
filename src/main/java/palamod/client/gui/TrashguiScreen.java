@@ -71,11 +71,6 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.trashgui.label_voidstone_gui_trash_bin"), 17, 4, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.trashgui.label_inventory"), 6, 70, -12829636, false);

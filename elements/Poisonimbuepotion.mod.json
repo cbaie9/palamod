@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -9,9 +9,11 @@
     "states": [],
     "name": "Poison imbue potion",
     "rarity": "COMMON",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 32,
@@ -33,6 +35,7 @@
     },
     "enableRanged": false,
     "shootConstantly": false,
+    "rangedItemChargesPower": false,
     "isFood": true,
     "nutritionalValue": 0,
     "saturation": 0.3,

@@ -59,11 +59,6 @@ public class SafeguiScreen extends AbstractContainerScreen<SafeguiMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.safegui.label_safe"), 72, 4, -12829636, false);
 	}

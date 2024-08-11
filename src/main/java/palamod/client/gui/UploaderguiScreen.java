@@ -82,11 +82,6 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploadergui.label_uploader"), 64, 7, -1, false);
 		guiGraphics.drawString(this.font,

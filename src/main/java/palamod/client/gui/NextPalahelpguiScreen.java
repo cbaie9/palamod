@@ -69,11 +69,6 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.next_palahelpgui.label_palahelp"), 5, 4, -52429, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.next_palahelpgui.label_22"), 4, 102, -16750951, false);

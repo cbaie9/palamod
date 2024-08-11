@@ -88,11 +88,6 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.itemmenupalahelp.label_item_menu"), 3, 7, -1, false);
 	}

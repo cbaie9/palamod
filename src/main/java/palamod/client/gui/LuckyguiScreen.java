@@ -73,11 +73,6 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.luckygui.label_lucky_block"), 55, 6, -1, false);
 		guiGraphics.drawString(this.font,

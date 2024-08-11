@@ -112,11 +112,6 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_45"), 29, 45, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_5"), 34, 74, -12829636, false);

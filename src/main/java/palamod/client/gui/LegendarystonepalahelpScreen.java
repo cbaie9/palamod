@@ -85,11 +85,6 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_legendary_stone_wiki"), 3, 7, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_forturne_permet_de_vous_give"), 26, 54, -12829636, false);

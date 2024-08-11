@@ -987,11 +987,6 @@ public class Examplecrusherv2Screen extends AbstractContainerScreen<Examplecrush
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.examplecrusherv_2.label_paladium_crusher"), 121, 3, -3407821, false);
 		guiGraphics.drawString(this.font,

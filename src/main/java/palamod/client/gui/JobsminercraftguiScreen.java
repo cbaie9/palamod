@@ -239,11 +239,6 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminercraftgui.label_jobs_miner_crafts"), 106, 7, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminercraftgui.label_information"), 174, 115, -1, false);

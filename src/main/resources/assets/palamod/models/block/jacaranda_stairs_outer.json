@@ -1,6 +1,7 @@
 {
   "parent": "block/outer_stairs",
   "textures": {
+    "particle": "palamod:block/jacaranda_planks",
     "bottom": "palamod:block/jacaranda_planks",
     "top": "palamod:block/jacaranda_planks",
     "side": "palamod:block/jacaranda_planks"

@@ -16,6 +16,7 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
@@ -80,6 +81,15 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 		super.containerTick();
 		player_name.tick();
 		money.tick();
+	}
+
+	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String player_nameValue = player_name.getValue();
+		String moneyValue = money.getValue();
+		super.resize(minecraft, width, height);
+		player_name.setValue(player_nameValue);
+		money.setValue(moneyValue);
 	}
 
 	@Override

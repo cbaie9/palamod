@@ -69,11 +69,6 @@ public class PaladiumchestguiScreen extends AbstractContainerScreen<Paladiumches
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladiumchestgui.label_inventory"), 70, 131, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladiumchestgui.label_rings"), 250, 150, -12829636, false);

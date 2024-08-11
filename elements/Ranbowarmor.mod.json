@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,9 +10,11 @@
     "textureLeggings": "ranbow_armor_legging_ani",
     "enableBoots": true,
     "textureBoots": "ranbow_armor_boots_ani",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "armorTextureFile": "ranbow_armor_",
     "helmetName": "Rainbow Helmet",
     "bodyName": "Rainbow Body",

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,9 +22,7 @@
     "onBootsTick": {
       "name": "PaladiumArmorBootsTickEvent"
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "armorTextureFile": "paladium_custom_6",
     "helmetName": "Paladium Helmet",
     "bodyName": "Paladium Chestplate",

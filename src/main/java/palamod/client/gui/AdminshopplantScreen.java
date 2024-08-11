@@ -87,11 +87,6 @@ public class AdminshopplantScreen extends AbstractContainerScreen<Adminshopplant
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplant.label_adminshop_seed_menu"), 46, 4, -1, false);
 	}

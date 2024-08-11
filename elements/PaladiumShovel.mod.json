@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "Spade",
@@ -12,22 +12,24 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
-    "harvestLevel": 6,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "efficiency": 36.0,
     "attackSpeed": 0.5,
     "enchantability": 14,
     "damageVsEntity": 5.0,
     "usageCount": 4999,
-    "blocksAffected": [],
     "repairItems": [
       {
         "value": "CUSTOM:PaladiumIngot"
       }
     ],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

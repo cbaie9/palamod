@@ -68,11 +68,6 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.potgtranfert.label_potg_transfert_gui"), 4, 3, -12829636, false);
 		guiGraphics.drawString(this.font,

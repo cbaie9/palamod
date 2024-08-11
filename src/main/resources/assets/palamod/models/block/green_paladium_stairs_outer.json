@@ -1,6 +1,7 @@
 {
   "parent": "block/outer_stairs",
   "textures": {
+    "particle": "palamod:block/gpaladium_block",
     "bottom": "palamod:block/gpaladium_block",
     "top": "palamod:block/gpaladium_block",
     "side": "palamod:block/gpaladium_block"

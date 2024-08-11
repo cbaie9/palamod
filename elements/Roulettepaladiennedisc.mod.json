@@ -1,14 +1,16 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "musicdisc",
   "definition": {
     "name": "Roulette paladienne disc",
     "rarity": "RARE",
     "texture": "roulette_paladiennerecord",
     "description": "Fuze III - Roulette paladienne",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "specialInformation": {
       "fixedValue": []
     },

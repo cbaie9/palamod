@@ -75,11 +75,6 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush"), 4, 7, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush_est_une_plant_qui_fait_p"), 2, 25, -12829636, false);

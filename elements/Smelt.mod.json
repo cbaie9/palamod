@@ -1,11 +1,10 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "enchantment",
   "definition": {
     "name": "Smelt",
     "type": "DIGGER",
     "rarity": "COMMON",
-    "minLevel": 1,
     "maxLevel": 1,
     "damageModifier": 0,
     "compatibleEnchantments": [],

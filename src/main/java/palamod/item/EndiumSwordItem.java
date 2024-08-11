@@ -25,7 +25,7 @@ public class EndiumSwordItem extends SwordItem {
 			}
 
 			public int getLevel() {
-				return 8;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {

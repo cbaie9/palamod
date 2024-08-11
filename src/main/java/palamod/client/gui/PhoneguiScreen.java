@@ -15,6 +15,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
@@ -73,6 +74,13 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 	public void containerTick() {
 		super.containerTick();
 		cheat_code_secret.tick();
+	}
+
+	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String cheat_code_secretValue = cheat_code_secret.getValue();
+		super.resize(minecraft, width, height);
+		cheat_code_secret.setValue(cheat_code_secretValue);
 	}
 
 	@Override

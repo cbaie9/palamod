@@ -168,11 +168,6 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.examplegrindergui.label_varg_num_100"), 149, 67, -12829636, false);
 	}

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -12,21 +12,23 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "CUSTOM:Grindercreativetab"
-    },
-    "harvestLevel": 8,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Grindercreativetab"
+      }
+    ],
     "efficiency": 12.0,
     "attackSpeed": 1.0,
     "enchantability": 0,
     "damageVsEntity": 1.0,
     "usageCount": 9999,
-    "blocksAffected": [],
     "glowCondition": {
       "fixedValue": false
     },
     "repairItems": [],
     "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInInventoryTick": {

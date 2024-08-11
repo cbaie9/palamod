@@ -22,7 +22,7 @@ public class TitanebroadswordItem extends SwordItem {
 			}
 
 			public int getLevel() {
-				return 5;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {

@@ -17,6 +17,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
@@ -75,6 +76,13 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	public void containerTick() {
 		super.containerTick();
 		player_name.tick();
+	}
+
+	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String player_nameValue = player_name.getValue();
+		super.resize(minecraft, width, height);
+		player_name.setValue(player_nameValue);
 	}
 
 	@Override

@@ -65,11 +65,6 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0005.label_pala_err0r_0005"), 47, 4, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0005.label_you_dont_have_the_permission_to"), 5, 26, -12829636, false);

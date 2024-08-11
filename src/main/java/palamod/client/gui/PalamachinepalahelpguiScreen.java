@@ -72,11 +72,6 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palamachinepalahelpgui.label_palamachine"), 77, 17, -12829636, false);
 		guiGraphics.drawString(this.font,

@@ -59,11 +59,6 @@ public class Palaerror0006Screen extends AbstractContainerScreen<Palaerror0006Me
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0006.label_paladium_error_0006"), 39, 5, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0006.label_this_part_is_work_in_progress"), 10, 25, -12829636, false);

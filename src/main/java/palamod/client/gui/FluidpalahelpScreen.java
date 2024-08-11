@@ -75,11 +75,6 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_fluid"), 49, 7, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi"), 2, 63, -12829636, false);

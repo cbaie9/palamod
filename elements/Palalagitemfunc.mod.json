@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "function",
   "definition": {
     "code": "# Enter the function code here\nkill @e[type=item]\nkill @e[type=experience_bottle]\nkill @e[type=experience_orb]\nkill @e[type=potion]",

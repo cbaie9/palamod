@@ -1,6 +1,7 @@
 {
   "parent": "block/slab",
   "textures": {
+    "particle": "palamod:block/judeecercis_planks",
     "bottom": "palamod:block/judeecercis_planks",
     "top": "palamod:block/judeecercis_planks",
     "side": "palamod:block/judeecercis_planks"

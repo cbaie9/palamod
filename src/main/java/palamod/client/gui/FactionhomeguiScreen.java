@@ -63,11 +63,6 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.factionhomegui.label_faction_home"), 116, 3, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.factionhomegui.label_empty"), 19, 71, -12829636, false);

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": false,
@@ -10,9 +10,11 @@
     "textureLeggings": "",
     "enableBoots": true,
     "textureBoots": "weighted_boots",
-    "creativeTab": {
-      "value": "CUSTOM:Luckyblockcreativetab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Luckyblockcreativetab"
+      }
+    ],
     "armorTextureFile": "weighted_",
     "helmetName": "Weighted Helmet",
     "bodyName": "Weighted Body",

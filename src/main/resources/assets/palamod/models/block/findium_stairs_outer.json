@@ -1,6 +1,7 @@
 {
   "parent": "block/outer_stairs",
   "textures": {
+    "particle": "palamod:block/findium_block",
     "bottom": "palamod:block/findium_block",
     "top": "palamod:block/findium_block",
     "side": "palamod:block/findium_block"

@@ -1,6 +1,7 @@
 {
   "parent": "block/slab",
   "textures": {
+    "particle": "palamod:block/endium_block",
     "bottom": "palamod:block/endium_block",
     "top": "palamod:block/endium_block",
     "side": "palamod:block/endium_block"

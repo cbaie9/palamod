@@ -81,11 +81,6 @@ public class ForgepalahelpguiScreen extends AbstractContainerScreen<Forgepalahel
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.forgepalahelpgui.label_paladium_forge"), 76, 7, -1, false);
 		guiGraphics.drawString(this.font,

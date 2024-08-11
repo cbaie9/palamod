@@ -29,7 +29,7 @@ public class TitanehammerItem extends PickaxeItem {
 			}
 
 			public int getLevel() {
-				return 5;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {

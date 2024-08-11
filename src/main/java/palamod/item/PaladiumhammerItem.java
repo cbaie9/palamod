@@ -31,7 +31,7 @@ public class PaladiumhammerItem extends PickaxeItem {
 			}
 
 			public int getLevel() {
-				return 6;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {

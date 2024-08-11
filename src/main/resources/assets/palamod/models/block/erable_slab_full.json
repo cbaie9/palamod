@@ -1,6 +1,7 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
+    "particle": "palamod:block/erable_planks",
     "bottom": "palamod:block/erable_planks",
     "top": "palamod:block/erable_planks",
     "side": "palamod:block/erable_planks"

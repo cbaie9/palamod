@@ -68,11 +68,6 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminpanelmenu.label_admin_panel"), 52, 5, -65536, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminpanelmenu.label_now_money_change"), 17, 57, -1, false);

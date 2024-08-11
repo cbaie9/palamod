@@ -73,11 +73,6 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_degats"), 215, 67, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_pv"), 273, 67, -12829636, false);

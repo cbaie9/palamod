@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "function",
   "definition": {
     "code": "# Enter the function code here\nkill @e[type=painting]\nkill @e[type=item_frame]\nkill @e[type=glow_item_frame]\nkill @e[type=falling_block]",

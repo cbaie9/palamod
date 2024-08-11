@@ -25,7 +25,7 @@ public class EndiumAxeItem extends AxeItem {
 			}
 
 			public int getLevel() {
-				return 8;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {

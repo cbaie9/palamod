@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "MultiTool",
@@ -14,18 +14,20 @@
         "Level 7"
       ]
     },
-    "creativeTab": {
-      "value": "CUSTOM:Pickaxeofgodstab"
-    },
-    "harvestLevel": 6,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Pickaxeofgodstab"
+      }
+    ],
     "efficiency": 30.0,
     "attackSpeed": 1.0,
     "enchantability": 16,
     "damageVsEntity": 6.5,
     "usageCount": 0,
-    "blocksAffected": [],
     "repairItems": [],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInUseTick": {

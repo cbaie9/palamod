@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "fluid",
   "definition": {
     "name": "Angelic water",
@@ -23,9 +23,11 @@
     "type": "WATER",
     "generateBucket": true,
     "textureBucket": "bucket_angelic",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "emptySound": {
       "value": ""
     },

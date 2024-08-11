@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -9,9 +9,11 @@
     "states": [],
     "name": "Legendary stone teleportation",
     "rarity": "EPIC",
-    "creativeTab": {
-      "value": "CUSTOM:Luckyblockcreativetab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Luckyblockcreativetab"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -44,6 +46,7 @@
     },
     "enableRanged": false,
     "shootConstantly": false,
+    "rangedItemChargesPower": false,
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,

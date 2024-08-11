@@ -1,6 +1,7 @@
 {
   "parent": "block/template_fence_gate_open",
   "textures": {
+    "particle": "palamod:block/erable_planks",
     "texture": "palamod:block/erable_planks"
   },
   "render_type": "solid"

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text_join\"><mutation items=\"2\"/><value name=\"ADD0\"><block type=\"text\"><field name=\"TEXT\">The actual installed version is :</field></block></value><value name=\"ADD1\"><block type=\"procedure_retval_string\"><field name=\"procedure\">Palamodgamever</field></block></value></block></value></block></next></block></xml>"

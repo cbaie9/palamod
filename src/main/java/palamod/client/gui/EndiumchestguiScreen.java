@@ -63,11 +63,6 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.endiumchestgui.label_inventory"), 39, 43, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.endiumchestgui.label_ring"), 208, 64, -12829636, false);

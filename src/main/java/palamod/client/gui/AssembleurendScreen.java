@@ -66,11 +66,6 @@ public class AssembleurendScreen extends AbstractContainerScreen<AssembleurendMe
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.assembleurend.label_the_assembleur_will_deleted_in_t"), 8, 26, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.assembleurend.label_update_you_can_trade_it_for_a"), 9, 38, -12829636, false);

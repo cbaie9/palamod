@@ -59,11 +59,6 @@ public class OrelayerfatScreen extends AbstractContainerScreen<OrelayerfatMenu> 
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_paladium_64_15"), 4, 57, -3407872, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_titane_64_32"), 5, 69, -10066330, false);

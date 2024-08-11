@@ -1,6 +1,7 @@
 {
   "parent": "block/door_bottom_left_open",
   "textures": {
+    "particle": "palamod:block/door_cerise",
     "bottom": "palamod:block/door_cerise",
     "top": "palamod:block/door_cerise_2"
   },

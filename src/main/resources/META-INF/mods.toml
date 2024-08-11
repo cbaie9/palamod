@@ -20,7 +20,7 @@ description="Un univers alternatif où la v5 à bien changé de version  -- A mo
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 
 
@@ -31,3 +31,6 @@ description="Un univers alternatif où la v5 à bien changé de version  -- A mo
     ordering="NONE"
     side="BOTH"
 
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

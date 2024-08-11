@@ -98,11 +98,6 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelp_2gui.label_22"), 29, 12, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelp_2gui.label_grinder_wiki"), 118, 7, -1, false);

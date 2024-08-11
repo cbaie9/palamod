@@ -59,11 +59,6 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.notyetgui.label_this_feature_hasnt_been_develop"), 3, 4, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.notyetgui.label_please_wait_or_check_on_the_disc"), 3, 13, -12829636, false);

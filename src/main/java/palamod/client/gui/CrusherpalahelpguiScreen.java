@@ -92,11 +92,6 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crusherpalahelpgui.label_beta_nochange_0004"), 6, 186, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki"), 134, 4, -1, false);

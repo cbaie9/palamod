@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "Axe",
@@ -12,22 +12,24 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
-    "harvestLevel": 8,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "efficiency": 50.0,
     "attackSpeed": 1.0,
     "enchantability": 50,
     "damageVsEntity": 9.0,
     "usageCount": 10000,
-    "blocksAffected": [],
     "repairItems": [
       {
         "value": "CUSTOM:EndiumIngot"
       }
     ],
     "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

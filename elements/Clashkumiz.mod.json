@@ -1,14 +1,16 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "musicdisc",
   "definition": {
     "name": "Clash kumiz disc",
     "rarity": "RARE",
     "texture": "clash_kumizrecord",
     "description": "Kumiz - Clash fuze III",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "specialInformation": {
       "fixedValue": []
     },

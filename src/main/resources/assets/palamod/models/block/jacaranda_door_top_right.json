@@ -1,6 +1,7 @@
 {
   "parent": "block/door_top_right",
   "textures": {
+    "particle": "palamod:block/door_5",
     "bottom": "palamod:block/door_5",
     "top": "palamod:block/door_6"
   },

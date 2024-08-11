@@ -59,11 +59,6 @@ public class AnalyserloadingScreen extends AbstractContainerScreen<Analyserloadi
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserloading.label_the_analyser_is_loader"), 13, 6, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserloading.label_lanalyseur_charge"), 13, 17, -12829636, false);

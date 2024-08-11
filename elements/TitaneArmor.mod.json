@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,9 +10,11 @@
     "textureLeggings": "titane_leggings",
     "enableBoots": true,
     "textureBoots": "titane_boots",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "armorTextureFile": "titane_.png",
     "helmetName": "Titane Helmet",
     "bodyName": "Titane Chestplate",

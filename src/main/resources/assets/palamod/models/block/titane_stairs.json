@@ -1,6 +1,7 @@
 {
   "parent": "block/stairs",
   "textures": {
+    "particle": "palamod:block/titane_block",
     "bottom": "palamod:block/titane_block",
     "top": "palamod:block/titane_block",
     "side": "palamod:block/titane_block"

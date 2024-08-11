@@ -65,11 +65,6 @@ public class TitanechestguiScreen extends AbstractContainerScreen<Titanechestgui
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.titanechestgui.label_inventory"), 70, 132, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.titanechestgui.label_rings"), 254, 147, -12829636, false);

@@ -79,11 +79,6 @@ public class PalahelpnotsupportedScreen extends AbstractContainerScreen<Palahelp
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred"), 10, 62, -6750055, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpnotsupported.label_palahelp_error"), 46, 6, -1, false);

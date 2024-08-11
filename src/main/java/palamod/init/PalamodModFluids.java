@@ -30,7 +30,7 @@ public class PalamodModFluids {
 	public static final RegistryObject<FlowingFluid> FLOWING_ANGELICWTER = REGISTRY.register("flowing_angelicwter", () -> new AngelicwterFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
+	public static class FluidsClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ItemBlockRenderTypes.setRenderLayer(FAKEWTER.get(), RenderType.translucent());

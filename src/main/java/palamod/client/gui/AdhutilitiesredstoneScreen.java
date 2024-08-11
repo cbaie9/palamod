@@ -16,6 +16,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
@@ -88,6 +89,13 @@ public class AdhutilitiesredstoneScreen extends AbstractContainerScreen<Adhutili
 	public void containerTick() {
 		super.containerTick();
 		number_buy.tick();
+	}
+
+	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String number_buyValue = number_buy.getValue();
+		super.resize(minecraft, width, height);
+		number_buy.setValue(number_buyValue);
 	}
 
 	@Override

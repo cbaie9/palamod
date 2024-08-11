@@ -62,11 +62,6 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.alchemycreatorgui.label_inventory"), 5, 66, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.alchemycreatorgui.label_dont_work"), 3, 5, -12829636, false);

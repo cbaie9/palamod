@@ -80,19 +80,6 @@ public class OpenpalamodgameProcedure {
 						("tellraw @p [\"\",{\"text\":\"[ Warning ]\",\"color\":\"dark_red\"},{\"text\":\" :\",\"color\":\"gold\"},{\"text\":\"" + "" + Component.translatable("palamod.procedure.joinwarning_journeymap").getString()
 								+ "\",\"color\":\"aqua\"}]"));
 		}
-		if (!(entity.getPersistentData().getBoolean("Paladium_setupnbt") == true)) {
-			entity.getPersistentData().putBoolean("Paladium_setupnbt", true);
-			entity.getPersistentData().putBoolean("Palamod.alive", true);
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean(("Minage_setlayer_dynamic_enda_" + entity.getDisplayName().getString()), true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
 		if (!world.isClientSide()) {
 			BlockPos _bp = new BlockPos(0, 10, 0);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);

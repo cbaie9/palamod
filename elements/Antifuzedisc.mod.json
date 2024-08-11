@@ -1,14 +1,16 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "musicdisc",
   "definition": {
     "name": "Antifuzedisc",
     "rarity": "RARE",
     "texture": "anti_fuzerecord",
     "description": "Fuze III - Anti Anti fuze ",
-    "creativeTab": {
-      "value": "CUSTOM:Palamod"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "specialInformation": {
       "fixedValue": [
         "♪"

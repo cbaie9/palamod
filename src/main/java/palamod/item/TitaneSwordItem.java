@@ -25,7 +25,7 @@ public class TitaneSwordItem extends SwordItem {
 			}
 
 			public int getLevel() {
-				return 5;
+				return 4;
 			}
 
 			public int getEnchantmentValue() {

@@ -65,11 +65,6 @@ public class AdminshopadbanScreen extends AbstractContainerScreen<Adminshopadban
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopadban.label_work_in_progress"), 25, 6, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopadban.label_v_u1"), 78, 128, -12829636, false);

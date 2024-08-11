@@ -177,11 +177,6 @@ public class ForgeguiScreen extends AbstractContainerScreen<ForgeguiMenu> {
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.forgegui.label_forge"), 71, 3, -13421773, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.forgegui.label_inventory"), 6, 72, -12829636, false);

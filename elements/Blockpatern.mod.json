@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -9,9 +9,11 @@
     "states": [],
     "name": "Block patern",
     "rarity": "COMMON",
-    "creativeTab": {
-      "value": "CUSTOM:Grindercreativetab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Grindercreativetab"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
@@ -34,6 +36,7 @@
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
+    "rangedItemChargesPower": false,
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,

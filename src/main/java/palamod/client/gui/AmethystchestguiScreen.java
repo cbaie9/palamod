@@ -63,11 +63,6 @@ public class AmethystchestguiScreen extends AbstractContainerScreen<Amethystches
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.amethystchestgui.label_inventory"), 70, 130, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.amethystchestgui.label_rings"), 255, 149, -12829636, false);

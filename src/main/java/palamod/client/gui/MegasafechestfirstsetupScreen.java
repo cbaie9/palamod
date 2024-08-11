@@ -16,6 +16,7 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
@@ -75,6 +76,13 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	public void containerTick() {
 		super.containerTick();
 		safe_code.tick();
+	}
+
+	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String safe_codeValue = safe_code.getValue();
+		super.resize(minecraft, width, height);
+		safe_code.setValue(safe_codeValue);
 	}
 
 	@Override
