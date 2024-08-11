@@ -4,7 +4,7 @@ license=" CC-BY-NC-4.0 + https://pastebin.com/47smwufD"
 
 [[mods]]
 modId="palamod"
-version="1.20.026.1"
+version="1.20.026.2"
 displayName="Palamod renew"
 updateJSONURL="https://github.com/cbaie9/ng_wpckiller/raw/main/update.json"
 displayURL="Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA"
