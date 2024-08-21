@@ -37,7 +37,7 @@ public class Adhmobs2sellblazeProcedure {
 				return 0;
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
-		fac_v = 8.5;
+		fac_v = 6.5;
 		item = new ItemStack(Items.BLAZE_ROD);
 		if (n == 0) {
 			if (entity instanceof Player _player)

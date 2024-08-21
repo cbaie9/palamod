@@ -79,16 +79,16 @@ public class GrinderguiMenu extends AbstractContainerMenu implements Supplier<Ma
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 20, 7) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 27, 6) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 20, 25) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 27, 24) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 119, 7) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 126, 6) {
 			private final int slot = 3;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 70, 13) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 77, 12) {
 			private final int slot = 2;
 
 			@Override
@@ -96,17 +96,17 @@ public class GrinderguiMenu extends AbstractContainerMenu implements Supplier<Ma
 				return false;
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 20, 60) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 27, 59) {
 			private final int slot = 4;
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 81, 60) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 88, 59) {
 			private final int slot = 5;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 13 + 8 + sj * 18, 2 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 19 + 8 + sj * 18, -1 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 13 + 8 + si * 18, 2 + 142));
+			this.addSlot(new Slot(inv, si, 19 + 8 + si * 18, -1 + 142));
 		GrinderadvancementreqProcedure.execute(world, x, y, z, entity);
 	}
 

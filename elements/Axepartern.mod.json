@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Axe partern",
+    "name": "Axe patern",
     "rarity": "COMMON",
     "creativeTabs": [
       {
@@ -31,12 +31,18 @@
     "specialInformation": {
       "fixedValue": []
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,

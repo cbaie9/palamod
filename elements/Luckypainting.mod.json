@@ -2,10 +2,10 @@
   "_fv": 66,
   "_type": "painting",
   "definition": {
-    "texture": "icon.png",
+    "texture": "icon",
     "width": 16,
     "height": 16,
-    "title": "Luckypainting",
+    "title": "Logo",
     "author": "Paladium"
   }
 }

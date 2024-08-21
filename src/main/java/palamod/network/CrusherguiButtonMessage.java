@@ -83,6 +83,22 @@ public class CrusherguiButtonMessage {
 
 			Crusherluncherv2amethystProcedure.execute(world, x, y, z);
 		}
+		if (buttonID == 4) {
+
+			Crusherluncherv2titaneProcedure.execute(world, x, y, z);
+		}
+		if (buttonID == 5) {
+
+			Crusherluncherv2endiumProcedure.execute(world, x, y, z);
+		}
+		if (buttonID == 6) {
+
+			Crusherluncherv2amethystProcedure.execute(world, x, y, z);
+		}
+		if (buttonID == 7) {
+
+			Crusherluncherv2paladiumProcedure.execute(world, x, y, z);
+		}
 	}
 
 	@SubscribeEvent

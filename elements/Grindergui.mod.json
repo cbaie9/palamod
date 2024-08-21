@@ -3,20 +3,20 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 201,
-    "height": 165,
-    "inventoryOffsetX": 0,
-    "inventoryOffsetY": 3,
+    "width": 215,
+    "height": 163,
+    "inventoryOffsetX": -1,
+    "inventoryOffsetY": 1,
     "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
         "type": "image",
         "data": {
-          "image": "grinder.png",
+          "image": "grindergui_v4.png",
           "use1Xscale": false,
-          "x": 113,
-          "y": 38
+          "x": 106,
+          "y": 39
         }
       },
       {
@@ -82,20 +82,11 @@
             "name": "Grindertrans1"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
-          "x": 249,
-          "y": 106
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "gnew_indicator.png",
-          "use1Xscale": false,
-          "x": 252,
-          "y": 42
+          "x": 250,
+          "y": 109
         }
       },
       {
@@ -475,6 +466,663 @@
           "dropItemsWhenNotBound": true,
           "x": 193,
           "y": 97
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "btn-all_off.png",
+          "use1Xscale": false,
+          "x": 266,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "btn-blue_on.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Lightbluegrinderon"
+          },
+          "x": 296,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "btn-red_on.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Lightredgrinderon"
+          },
+          "x": 266,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "btn-green_on.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Lightgreengrinderon"
+          },
+          "x": 281,
+          "y": 102
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00000.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum0"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00001.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum1"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00002.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum2"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00003.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum3"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00004.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum4"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00005.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum5"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00006.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum6"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00007.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum7"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00008.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum8"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00009.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum9"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00010.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum10"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00011.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum11"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00012.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum12"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00013.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum13"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00014.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum14"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00015.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum15"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00016.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum16"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00017.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum17"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00018.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum18"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00019.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum19"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00020.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum20"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00021.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum21"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00022.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum22"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00023.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum23"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00024.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum24"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00025.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum25"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00026.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum26"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00027.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum27"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00028.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum28"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00029.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum29"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00030.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum30"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00031.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum31"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00032.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum32"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00033.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum33"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00034.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum34"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00035.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum35"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00036.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum36"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00037.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum37"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00038.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum38"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00039.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum39"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00040.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum40"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00041.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum41"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00042.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum42"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00043.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum43"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00044.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum44"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00045.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum45"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00046.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum46"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00047.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum47"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00048.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum48"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00049.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum49"
+          },
+          "x": 258,
+          "y": 48
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder--00050.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Progressbargrindergnum50"
+          },
+          "x": 258,
+          "y": 48
         }
       }
     ],
