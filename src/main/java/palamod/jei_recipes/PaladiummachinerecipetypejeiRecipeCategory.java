@@ -34,7 +34,7 @@ public class PaladiummachinerecipetypejeiRecipeCategory implements IRecipeCatego
 
 	@Override
 	public Component getTitle() {
-		return Component.literal("Paladiummachinerecipetypejei");
+		return Component.literal("Paladium Machine");
 	}
 
 	@Override

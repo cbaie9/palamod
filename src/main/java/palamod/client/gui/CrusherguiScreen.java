@@ -259,6 +259,10 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 	ImageButton imagebutton_button_white;
 	ImageButton imagebutton_button_white1;
 	ImageButton imagebutton_button_white2;
+	ImageButton imagebutton_button_white3;
+	ImageButton imagebutton_button_white4;
+	ImageButton imagebutton_button_white5;
+	ImageButton imagebutton_button_white6;
 
 	public CrusherguiScreen(CrusherguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -1006,7 +1010,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		if (Crushertextad2Procedure.execute())
 			guiGraphics.drawString(this.font,
 
-					CrushercustominfopaladiumProcedure.execute(world, x, y, z), 244, 39, -12829636, false);
+					CrushercustominfopaladiumProcedure.execute(world, x, y, z), 229, 38, -12829636, false);
 		if (CrushertextadProcedure.execute())
 			guiGraphics.drawString(this.font,
 
@@ -1016,7 +1020,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_button_blank = new ImageButton(this.leftPos + 214, this.topPos + 48, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_blank.png"), 92, 40, e -> {
+		imagebutton_button_blank = new ImageButton(this.leftPos + 214, this.topPos + 48, -1, -1, 0, 0, -1, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_blank.png"), -1, -2, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(0, x, y, z));
 				CrusherguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -1024,7 +1028,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		});
 		guistate.put("button:imagebutton_button_blank", imagebutton_button_blank);
 		this.addRenderableWidget(imagebutton_button_blank);
-		imagebutton_button_white = new ImageButton(this.leftPos + 214, this.topPos + 18, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white.png"), 92, 40, e -> {
+		imagebutton_button_white = new ImageButton(this.leftPos + 214, this.topPos + 18, -1, -1, 0, 0, -1, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white.png"), -1, -2, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(1, x, y, z));
 				CrusherguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -1032,7 +1036,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		});
 		guistate.put("button:imagebutton_button_white", imagebutton_button_white);
 		this.addRenderableWidget(imagebutton_button_white);
-		imagebutton_button_white1 = new ImageButton(this.leftPos + 99, this.topPos + 48, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white1.png"), 92, 40, e -> {
+		imagebutton_button_white1 = new ImageButton(this.leftPos + 99, this.topPos + 48, -1, -1, 0, 0, -1, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white1.png"), -1, -2, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(2, x, y, z));
 				CrusherguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -1040,7 +1044,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		});
 		guistate.put("button:imagebutton_button_white1", imagebutton_button_white1);
 		this.addRenderableWidget(imagebutton_button_white1);
-		imagebutton_button_white2 = new ImageButton(this.leftPos + 99, this.topPos + 18, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white2.png"), 92, 40, e -> {
+		imagebutton_button_white2 = new ImageButton(this.leftPos + 99, this.topPos + 18, -1, -1, 0, 0, -1, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white2.png"), -1, -2, e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(3, x, y, z));
 				CrusherguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -1048,5 +1052,37 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 		});
 		guistate.put("button:imagebutton_button_white2", imagebutton_button_white2);
 		this.addRenderableWidget(imagebutton_button_white2);
+		imagebutton_button_white3 = new ImageButton(this.leftPos + 100, this.topPos + 51, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white3.png"), 92, 40, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(4, x, y, z));
+				CrusherguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_white3", imagebutton_button_white3);
+		this.addRenderableWidget(imagebutton_button_white3);
+		imagebutton_button_white4 = new ImageButton(this.leftPos + 219, this.topPos + 51, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white4.png"), 92, 40, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(5, x, y, z));
+				CrusherguiButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_white4", imagebutton_button_white4);
+		this.addRenderableWidget(imagebutton_button_white4);
+		imagebutton_button_white5 = new ImageButton(this.leftPos + 100, this.topPos + 19, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white5.png"), 92, 40, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(6, x, y, z));
+				CrusherguiButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_white5", imagebutton_button_white5);
+		this.addRenderableWidget(imagebutton_button_white5);
+		imagebutton_button_white6 = new ImageButton(this.leftPos + 219, this.topPos + 19, 92, 20, 0, 0, 20, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_button_white6.png"), 92, 40, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new CrusherguiButtonMessage(7, x, y, z));
+				CrusherguiButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_button_white6", imagebutton_button_white6);
+		this.addRenderableWidget(imagebutton_button_white6);
 	}
 }

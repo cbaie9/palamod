@@ -2,12 +2,12 @@
   "_fv": 66,
   "_type": "block",
   "definition": {
-    "texture": "false_tresure_top",
-    "textureTop": "false_tresure_top",
-    "textureLeft": "tresure_side",
-    "textureFront": "tresure_side",
-    "textureRight": "tresure_side",
-    "textureBack": "tresure_side",
+    "texture": "lootbox_down",
+    "textureTop": "lootbox_up",
+    "textureLeft": "lootbox",
+    "textureFront": "lootbox",
+    "textureRight": "lootbox",
+    "textureBack": "lootbox",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -122,6 +122,9 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
+      "name": "FalsetresureOnBlockRightClicked"
+    },
+    "onStartToDestroy": {
       "name": "FalsetresureOnBlockRightClicked"
     },
     "generateFeature": false,

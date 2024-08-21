@@ -49651,6 +49651,1711 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "Debuggrinder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debuggrinder",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/DebuggrinderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_0",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum11",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_11",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum12",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_12",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum13",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_13",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum13Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum14",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_14",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum14Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum15",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_15",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum15Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum16",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_16",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum16Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum17",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_17",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum17Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum18",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_18",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum18Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum19",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_19",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum19Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum20",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_20",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum20Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum21",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_21",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum21Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum22",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_22",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum22Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum23",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_23",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum23Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum24",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_24",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum24Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum25",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_25",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum25Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum26",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_26",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum26Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum27",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_27",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum27Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum28",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_28",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum28Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum29",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_29",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum29Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum30",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_30",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum30Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum31",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_31",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum31Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum32",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_32",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum32Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum33",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_33",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum33Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum34",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_34",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum34Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum35",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_35",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum35Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum36",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_36",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum36Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum37",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_37",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum37Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum38",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_38",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum38Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum39",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_39",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum39Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum40",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_40",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum40Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum41",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_41",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum41Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum42",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_42",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum42Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum43",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_43",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum43Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum44",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_44",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum44Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum45",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_45",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum45Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum46",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_46",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum46Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum47",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_47",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum47Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum48",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_48",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum48Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum49",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_49",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum49Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Progressbargrindergnum50",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "progressbargrindergnum_50",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Progressbargrindergnum50Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lightredgrinderon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightredgrinderon",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/LightredgrinderonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lightgreengrinderon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightgreengrinderon",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/LightgreengrinderonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lightbluegrinderon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightbluegrinderon",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/LightbluegrinderonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -50000,28 +51705,23 @@
     }
   ],
   "tag_elements": {
-    "ITEMS:mod:potgtag": [
-      "CUSTOM:Pickaxeofthegodslv1",
-      "CUSTOM:Pickaxeofthegodslv2",
-      "CUSTOM:Pickaxeofthegodslv3",
-      "CUSTOM:Pickaxeofthegodslv4",
-      "CUSTOM:Pickaxeofthegodslv5",
-      "CUSTOM:Pickaxeofthegodslv6",
-      "CUSTOM:Pickaxeofthegodslv7",
-      "CUSTOM:Pickaxeofthegodslv8",
-      "CUSTOM:Pickaxeofthegodslv9",
-      "CUSTOM:Pickaxeofthegodslv10",
-      "CUSTOM:Pickaxeofthegodslv11",
-      "CUSTOM:Pickaxeofthegodslv12",
-      "CUSTOM:Pickaxeofthegodslv14",
-      "CUSTOM:Pickaxeofthegodslv15",
-      "CUSTOM:Pickaxeofthegodslv16",
-      "CUSTOM:Pickaxeofthegodslv17",
-      "CUSTOM:Pickaxeofthegodslv18",
-      "CUSTOM:Pickaxeofthegodslv19",
-      "CUSTOM:Pickaxeofthegodslv13",
-      "CUSTOM:Pickaxeofthegodslv20",
-      "CUSTOM:Creativepotg"
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Angelicwter",
+      "~CUSTOM:Fakewter"
+    ],
+    "BLOCKS:forge:unbreakable": [
+      "Blocks.BEDROCK",
+      "CUSTOM:Stony"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:Endiumtnt",
+      "~CUSTOM:Compacttnt",
+      "~CUSTOM:Magictnt",
+      "~CUSTOM:Withertnt",
+      "~CUSTOM:Wetlavasponge",
+      "~CUSTOM:Lavasponge",
+      "~CUSTOM:Spongetnt",
+      "~CUSTOM:Compressedsponge"
     ],
     "ITEMS:forge:uploadersellable": [
       "CUSTOM:PaladiumIngot",
@@ -50094,6 +51794,29 @@
       "Blocks.REEDS",
       "Items.EMERALD"
     ],
+    "ITEMS:mod:potgtag": [
+      "CUSTOM:Pickaxeofthegodslv1",
+      "CUSTOM:Pickaxeofthegodslv2",
+      "CUSTOM:Pickaxeofthegodslv3",
+      "CUSTOM:Pickaxeofthegodslv4",
+      "CUSTOM:Pickaxeofthegodslv5",
+      "CUSTOM:Pickaxeofthegodslv6",
+      "CUSTOM:Pickaxeofthegodslv7",
+      "CUSTOM:Pickaxeofthegodslv8",
+      "CUSTOM:Pickaxeofthegodslv9",
+      "CUSTOM:Pickaxeofthegodslv10",
+      "CUSTOM:Pickaxeofthegodslv11",
+      "CUSTOM:Pickaxeofthegodslv12",
+      "CUSTOM:Pickaxeofthegodslv14",
+      "CUSTOM:Pickaxeofthegodslv15",
+      "CUSTOM:Pickaxeofthegodslv16",
+      "CUSTOM:Pickaxeofthegodslv17",
+      "CUSTOM:Pickaxeofthegodslv18",
+      "CUSTOM:Pickaxeofthegodslv19",
+      "CUSTOM:Pickaxeofthegodslv13",
+      "CUSTOM:Pickaxeofthegodslv20",
+      "CUSTOM:Creativepotg"
+    ],
     "BIOMES:minecraft:has_structure/igloo": [
       "~CUSTOM:Frozenforest"
     ],
@@ -50101,27 +51824,49 @@
       "CUSTOM:Erable_Wood",
       "CUSTOM:Erable_Log"
     ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:Megaboomobsidian",
-      "~CUSTOM:Boomobsidian",
-      "~CUSTOM:Exctractor",
-      "~CUSTOM:Poisonobsidian",
-      "~CUSTOM:Slimeobsidian",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Obsidianstairs",
+    "BIOMES:minecraft:has_structure/woodland_mansion": [
+      "~CUSTOM:Forestender"
+    ],
+    "BLOCKS:minecraft:logs": [
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Ostrya_woodWood",
+      "CUSTOM:Jacaranda_Wood",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Erable_Wood",
+      "CUSTOM:Erable_Log",
+      "Blocks.LOG"
+    ],
+    "BLOCKS:minecraft:leaves": [
+      "CUSTOM:Ostrya_woodLeaves",
+      "CUSTOM:Erable_Leaves",
+      "CUSTOM:Jacaranda_Leaves",
+      "CUSTOM:Judeecercis_Leaves"
+    ],
+    "ITEMS:forge:fuel_coalblock": [
+      "Blocks.COAL_BLOCK"
+    ],
+    "BLOCKS:forge:destructable": [
+      "CUSTOM:Ostrya_woodWood",
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Jacaranda_Wood",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Erable_Wood",
+      "CUSTOM:Erable_Log",
+      "Blocks.DIRT#0",
+      "Blocks.LOG",
+      "Blocks.GRASS",
+      "Blocks.STONE#0",
+      "Blocks.COBBLESTONE"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
       "~CUSTOM:Unknownblock",
-      "~CUSTOM:Drawbridge",
       "~CUSTOM:Printingpress",
-      "~CUSTOM:Cobblebreaker",
       "~CUSTOM:Onlinedetectoron",
       "~CUSTOM:Onlinedetector",
-      "~CUSTOM:Paladiumobsidianspike",
-      "~CUSTOM:Titaneobsidianspike",
-      "~CUSTOM:Amethystobsidianspike",
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
       "~CUSTOM:Woddenspike",
       "~CUSTOM:Titanechestv2",
       "~CUSTOM:Endiumchestv2",
@@ -50130,29 +51875,16 @@
       "~CUSTOM:Paladiumchestv2",
       "~CUSTOM:Caveblock",
       "~CUSTOM:Trixiumblock",
-      "~CUSTOM:Trixiumore",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Endiumnuggetoredeepslate",
-      "~CUSTOM:Paladiumgreenoredeepslate",
-      "~CUSTOM:Trixiumoredeepslate",
-      "~CUSTOM:Paladiumoredeepslate",
-      "~CUSTOM:Titaneoredeepslate",
-      "~CUSTOM:Amethystoredeepslate",
-      "~CUSTOM:Alarmon",
       "~CUSTOM:Downloader",
       "~CUSTOM:Endiumchest",
       "~CUSTOM:Greenpaladiumchest",
       "~CUSTOM:Amethystchest",
       "~CUSTOM:Paladiumchest",
       "~CUSTOM:Titanechest",
-      "~CUSTOM:Hdvblock",
       "~CUSTOM:Uploader",
       "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Greenpaladiumstairs",
       "~CUSTOM:Endiumstairs",
       "~CUSTOM:Endiumslab",
-      "~CUSTOM:Endiumnuggetore",
-      "~CUSTOM:Blackluckyblock",
       "~CUSTOM:Elevatorcyan",
       "~CUSTOM:Elevatorlightgray",
       "~CUSTOM:Elevatorgray",
@@ -50166,98 +51898,21 @@
       "~CUSTOM:Elevatorblue",
       "~CUSTOM:Elevatorred",
       "~CUSTOM:Elevatorwhite",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Trixiumnbtblock",
       "~CUSTOM:Fakepaladiumore",
-      "~CUSTOM:Alarm",
-      "~CUSTOM:Truetresure",
-      "~CUSTOM:Falsetresure",
       "~CUSTOM:Luckyblock",
       "~CUSTOM:Paladiummachine",
-      "~CUSTOM:Asemblingtable",
       "~CUSTOM:Tcv2",
       "~CUSTOM:Loadblock1t",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
       "~CUSTOM:Ametystespike",
       "~CUSTOM:Diamondspike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:Lavaobsidian",
-      "~CUSTOM:Fakewaterobsidian",
-      "~CUSTOM:Compactedobsidian",
-      "~CUSTOM:Obsidiandoor",
-      "~CUSTOM:Obsidiantrapdoor",
       "~CUSTOM:Paladiumfurnaceon",
       "~CUSTOM:Paladiumfurnace",
       "~CUSTOM:Grinderblock",
       "~CUSTOM:Grinderframe",
       "~CUSTOM:Grindercasing",
       "~CUSTOM:Alchimet1",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:PaladiumGreenore",
-      "~CUSTOM:Slimepad",
       "~CUSTOM:Findiumslab",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:FindiumOre",
-      "~CUSTOM:EndiumBlock",
-      "~CUSTOM:Paladiumcrusher",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:AmethysteOre",
-      "~CUSTOM:TitaneBlock",
-      "~CUSTOM:TitaneOre",
-      "~CUSTOM:PaladiumBlock",
-      "~CUSTOM:PaladiumOre"
-    ],
-    "BLOCKS:mod:cbtill": [
-      "Blocks.DIRT#2",
-      "Blocks.DIRT#0",
-      "Blocks.GRASS",
-      "Blocks.GRASS_PATH",
-      "Blocks.MYCELIUM",
-      "Blocks.FARMLAND"
-    ],
-    "BIOMES:minecraft:has_structure/woodland_mansion": [
-      "~CUSTOM:Forestender"
-    ],
-    "ITEMS:forge:fuel_coalblock": [
-      "Blocks.COAL_BLOCK"
-    ],
-    "BLOCKS:forge:air": [
-      "Blocks.AIR",
-      "Blocks.VOID_AIR",
-      "Blocks.CAVE_AIR"
-    ],
-    "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:Megaboomobsidian",
-      "~CUSTOM:Boomobsidian",
-      "~CUSTOM:Poisonobsidian",
-      "~CUSTOM:Slimeobsidian",
-      "~CUSTOM:Paladiumobsidianspike",
-      "~CUSTOM:Titaneobsidianspike",
-      "~CUSTOM:Amethystobsidianspike",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Trixiumnbtblock",
-      "~CUSTOM:Lavaobsidian",
-      "~CUSTOM:Fakewaterobsidian",
-      "~CUSTOM:Compactedobsidian",
-      "~CUSTOM:Obsidiandoor",
-      "~CUSTOM:Obsidiantrapdoor",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:EndiumBlock",
-      "~CUSTOM:TitaneBlock"
-    ],
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Angelicwter",
-      "~CUSTOM:Fakewter"
+      "~CUSTOM:Paladiumcrusher"
     ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:Creativehammer",
@@ -50287,69 +51942,6 @@
       "~CUSTOM:AmethysteAxe",
       "~CUSTOM:TitaneAxe",
       "~CUSTOM:PaladiumAxe"
-    ],
-    "ITEMS:mod:rings": [
-      "CUSTOM:Mediumring",
-      "CUSTOM:Smallring",
-      "CUSTOM:Bigring",
-      "CUSTOM:Endiumsmallring",
-      "CUSTOM:Endiummediumring",
-      "CUSTOM:Endiumbigring",
-      "CUSTOM:Smallringgreenpaladium",
-      "CUSTOM:Mediumringgreenpaladium",
-      "CUSTOM:Bigringgreenpaladium"
-    ],
-    "BLOCKS:minecraft:mineable/hoe": [
-      "~CUSTOM:Endiumtnt",
-      "~CUSTOM:Compacttnt",
-      "~CUSTOM:Magictnt",
-      "~CUSTOM:Withertnt",
-      "~CUSTOM:Wetlavasponge",
-      "~CUSTOM:Lavasponge",
-      "~CUSTOM:Spongetnt",
-      "~CUSTOM:Compressedsponge"
-    ],
-    "ITEMS:mod:cobblebreakable": [
-      "Blocks.COBBLED_DEEPSLATE",
-      "Blocks.COBBLESTONE",
-      "Blocks.MOSSY_COBBLESTONE",
-      "Blocks.STONE#1",
-      "Blocks.STONE#3",
-      "Blocks.BLACKSTONE",
-      "Blocks.STONE#0",
-      "Blocks.STONE#5",
-      "Blocks.SANDSTONE#0",
-      "Blocks.RED_SANDSTONE#0",
-      "Blocks.END_STONE",
-      "Blocks.DEEPSLATE"
-    ],
-    "BLOCKS:forge:plant": [
-      "CUSTOM:Eggplant0",
-      "CUSTOM:Eggplant1",
-      "CUSTOM:Eggplant2",
-      "CUSTOM:Eggplant3",
-      "CUSTOM:Chervil1",
-      "CUSTOM:Chervil0",
-      "CUSTOM:Chervil2",
-      "CUSTOM:Chervil3",
-      "CUSTOM:Kiwano4",
-      "CUSTOM:Kiwano3",
-      "CUSTOM:Kiwano2",
-      "CUSTOM:Kiwano1",
-      "CUSTOM:Kiwano0",
-      "CUSTOM:Orangeblue0",
-      "CUSTOM:Orangeblue1",
-      "CUSTOM:Orangeblue2",
-      "CUSTOM:Orangeblue3",
-      "CUSTOM:Orangeblue4",
-      "Blocks.WHEAT",
-      "Blocks.MELON_STEM",
-      "Blocks.ATTACHED_MELON_STEM",
-      "Blocks.PUMPKIN_STEM",
-      "Blocks.ATTACHED_PUMPKIN_STEM",
-      "Blocks.POTATOES",
-      "Blocks.BEETROOTS",
-      "Blocks.CARROTS"
     ],
     "BLOCKS:forge:multitool_mb": [
       "CUSTOM:PaladiumOre",
@@ -50541,6 +52133,98 @@
       "Blocks.BEEHIVE",
       "Blocks.GLOWSTONE"
     ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:Obsidianstairs",
+      "~CUSTOM:Renforcedobsidianstairs",
+      "~CUSTOM:Greenpaladiumstairs",
+      "~CUSTOM:Endiumstairs",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:Erable_Stairs",
+      "~CUSTOM:Judeecercis_Stairs",
+      "~CUSTOM:Jacaranda_Stairs",
+      "~CUSTOM:Ostrya_woodStairs"
+    ],
+    "ITEMS:mod:rings": [
+      "CUSTOM:Mediumring",
+      "CUSTOM:Smallring",
+      "CUSTOM:Bigring",
+      "CUSTOM:Endiumsmallring",
+      "CUSTOM:Endiummediumring",
+      "CUSTOM:Endiumbigring",
+      "CUSTOM:Smallringgreenpaladium",
+      "CUSTOM:Mediumringgreenpaladium",
+      "CUSTOM:Bigringgreenpaladium"
+    ],
+    "ITEMS:mod:cobblebreakable": [
+      "Blocks.COBBLED_DEEPSLATE",
+      "Blocks.COBBLESTONE",
+      "Blocks.MOSSY_COBBLESTONE",
+      "Blocks.STONE#1",
+      "Blocks.STONE#3",
+      "Blocks.BLACKSTONE",
+      "Blocks.STONE#0",
+      "Blocks.STONE#5",
+      "Blocks.SANDSTONE#0",
+      "Blocks.RED_SANDSTONE#0",
+      "Blocks.END_STONE",
+      "Blocks.DEEPSLATE"
+    ],
+    "BLOCKS:forge:farmland": [
+      "Blocks.FARMLAND",
+      "CUSTOM:Fertilseddirt"
+    ],
+    "BLOCKS:forge:air": [
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR"
+    ],
+    "BLOCKS:forge:dirt": [
+      "CUSTOM:Fertilseddirt"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:Megaboomobsidian",
+      "~CUSTOM:Boomobsidian",
+      "~CUSTOM:Poisonobsidian",
+      "~CUSTOM:Slimeobsidian",
+      "~CUSTOM:Paladiumobsidianspike",
+      "~CUSTOM:Titaneobsidianspike",
+      "~CUSTOM:Amethystobsidianspike",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Trixiumnbtblock",
+      "~CUSTOM:Lavaobsidian",
+      "~CUSTOM:Fakewaterobsidian",
+      "~CUSTOM:Compactedobsidian",
+      "~CUSTOM:Obsidiandoor",
+      "~CUSTOM:Obsidiantrapdoor",
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:EndiumBlock",
+      "~CUSTOM:TitaneBlock"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Exctractor",
+      "~CUSTOM:Diamondobsidianspike",
+      "~CUSTOM:Goldenobsidianspike",
+      "~CUSTOM:Ironobsidianspike",
+      "~CUSTOM:Spikeobsidianwood",
+      "~CUSTOM:Findiumoredeepslate",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Paladiumforge",
+      "~CUSTOM:Paladiumspike",
+      "~CUSTOM:Titanespike",
+      "~CUSTOM:Spikegold",
+      "~CUSTOM:Ironspike",
+      "~CUSTOM:PaladiumGreenblock",
+      "~CUSTOM:FindiumBlock",
+      "~CUSTOM:AmethysteBlock",
+      "~CUSTOM:PaladiumBlock"
+    ],
     "BLOCKS:mod:palablocks": [
       "CUSTOM:PaladiumOre",
       "CUSTOM:TitaneOre",
@@ -50558,6 +52242,41 @@
       "CUSTOM:Amethystoredeepslate",
       "CUSTOM:Fakepaladiumore"
     ],
+    "BLOCKS:forge:plant": [
+      "CUSTOM:Eggplant0",
+      "CUSTOM:Eggplant1",
+      "CUSTOM:Eggplant2",
+      "CUSTOM:Eggplant3",
+      "CUSTOM:Chervil1",
+      "CUSTOM:Chervil0",
+      "CUSTOM:Chervil2",
+      "CUSTOM:Chervil3",
+      "CUSTOM:Kiwano4",
+      "CUSTOM:Kiwano3",
+      "CUSTOM:Kiwano2",
+      "CUSTOM:Kiwano1",
+      "CUSTOM:Kiwano0",
+      "CUSTOM:Orangeblue0",
+      "CUSTOM:Orangeblue1",
+      "CUSTOM:Orangeblue2",
+      "CUSTOM:Orangeblue3",
+      "CUSTOM:Orangeblue4",
+      "Blocks.WHEAT",
+      "Blocks.MELON_STEM",
+      "Blocks.ATTACHED_MELON_STEM",
+      "Blocks.PUMPKIN_STEM",
+      "Blocks.ATTACHED_PUMPKIN_STEM",
+      "Blocks.POTATOES",
+      "Blocks.BEETROOTS",
+      "Blocks.CARROTS"
+    ],
+    "ITEMS:forge:judeecercis__log": [
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log"
+    ],
+    "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:Forestender"
+    ],
     "BLOCKS:forge:placeable_sapling_on": [
       "Blocks.DIRT#0",
       "Blocks.DIRT#1",
@@ -50567,6 +52286,150 @@
       "Blocks.GRASS",
       "Blocks.GRASS_PATH",
       "Blocks.MOSS_BLOCK"
+    ],
+    "ITEMS:forge:pickaxe": [
+      "CUSTOM:PaladiumPickaxe",
+      "CUSTOM:TitanePickaxe",
+      "CUSTOM:AmethystePickaxe",
+      "CUSTOM:EndiumPickaxe",
+      "CUSTOM:Paladiumgreenpickaxe",
+      "TAG:mod:potgtag",
+      "Items.WOODEN_PICKAXE",
+      "Items.STONE_PICKAXE",
+      "Items.IRON_PICKAXE",
+      "Items.GOLDEN_PICKAXE",
+      "Items.DIAMOND_PICKAXE",
+      "Items.NETHERITE_PICKAXE"
+    ],
+    "BLOCKS:mod:elevator": [
+      "CUSTOM:Elevatorwhite",
+      "CUSTOM:Elevatorred",
+      "CUSTOM:Elevatorblue",
+      "CUSTOM:Elevatorgreen",
+      "CUSTOM:Elevatorpink",
+      "CUSTOM:Elevatorlightblue",
+      "CUSTOM:Elevatorlightgreen",
+      "CUSTOM:Elevatorbrown",
+      "CUSTOM:Elevatororange",
+      "CUSTOM:Elevatorpurple",
+      "CUSTOM:Elevatorgray",
+      "CUSTOM:Elevatorlightgray",
+      "CUSTOM:Elevatorcyan"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Megaboomobsidian",
+      "~CUSTOM:Boomobsidian",
+      "~CUSTOM:Exctractor",
+      "~CUSTOM:Poisonobsidian",
+      "~CUSTOM:Slimeobsidian",
+      "~CUSTOM:Obsidianslab",
+      "~CUSTOM:Obsidianstairs",
+      "~CUSTOM:Unknownblock",
+      "~CUSTOM:Drawbridge",
+      "~CUSTOM:Printingpress",
+      "~CUSTOM:Cobblebreaker",
+      "~CUSTOM:Onlinedetectoron",
+      "~CUSTOM:Onlinedetector",
+      "~CUSTOM:Paladiumobsidianspike",
+      "~CUSTOM:Titaneobsidianspike",
+      "~CUSTOM:Amethystobsidianspike",
+      "~CUSTOM:Diamondobsidianspike",
+      "~CUSTOM:Goldenobsidianspike",
+      "~CUSTOM:Ironobsidianspike",
+      "~CUSTOM:Spikeobsidianwood",
+      "~CUSTOM:Woddenspike",
+      "~CUSTOM:Titanechestv2",
+      "~CUSTOM:Endiumchestv2",
+      "~CUSTOM:Amethystchestv2",
+      "~CUSTOM:Greenpaladiumchestv2",
+      "~CUSTOM:Paladiumchestv2",
+      "~CUSTOM:Caveblock",
+      "~CUSTOM:Trixiumblock",
+      "~CUSTOM:Trixiumore",
+      "~CUSTOM:Findiumoredeepslate",
+      "~CUSTOM:Endiumnuggetoredeepslate",
+      "~CUSTOM:Paladiumgreenoredeepslate",
+      "~CUSTOM:Trixiumoredeepslate",
+      "~CUSTOM:Paladiumoredeepslate",
+      "~CUSTOM:Titaneoredeepslate",
+      "~CUSTOM:Amethystoredeepslate",
+      "~CUSTOM:Alarmon",
+      "~CUSTOM:Downloader",
+      "~CUSTOM:Endiumchest",
+      "~CUSTOM:Greenpaladiumchest",
+      "~CUSTOM:Amethystchest",
+      "~CUSTOM:Paladiumchest",
+      "~CUSTOM:Titanechest",
+      "~CUSTOM:Hdvblock",
+      "~CUSTOM:Uploader",
+      "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Greenpaladiumstairs",
+      "~CUSTOM:Endiumstairs",
+      "~CUSTOM:Endiumslab",
+      "~CUSTOM:Endiumnuggetore",
+      "~CUSTOM:Blackluckyblock",
+      "~CUSTOM:Elevatorcyan",
+      "~CUSTOM:Elevatorlightgray",
+      "~CUSTOM:Elevatorgray",
+      "~CUSTOM:Elevatorpurple",
+      "~CUSTOM:Elevatororange",
+      "~CUSTOM:Elevatorbrown",
+      "~CUSTOM:Elevatorlightgreen",
+      "~CUSTOM:Elevatorlightblue",
+      "~CUSTOM:Elevatorpink",
+      "~CUSTOM:Elevatorgreen",
+      "~CUSTOM:Elevatorblue",
+      "~CUSTOM:Elevatorred",
+      "~CUSTOM:Elevatorwhite",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Trixiumnbtblock",
+      "~CUSTOM:Fakepaladiumore",
+      "~CUSTOM:Alarm",
+      "~CUSTOM:Truetresure",
+      "~CUSTOM:Falsetresure",
+      "~CUSTOM:Luckyblock",
+      "~CUSTOM:Paladiummachine",
+      "~CUSTOM:Asemblingtable",
+      "~CUSTOM:Tcv2",
+      "~CUSTOM:Loadblock1t",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Paladiumforge",
+      "~CUSTOM:Paladiumspike",
+      "~CUSTOM:Titanespike",
+      "~CUSTOM:Ametystespike",
+      "~CUSTOM:Diamondspike",
+      "~CUSTOM:Spikegold",
+      "~CUSTOM:Ironspike",
+      "~CUSTOM:Lavaobsidian",
+      "~CUSTOM:Fakewaterobsidian",
+      "~CUSTOM:Compactedobsidian",
+      "~CUSTOM:Obsidiandoor",
+      "~CUSTOM:Obsidiantrapdoor",
+      "~CUSTOM:Paladiumfurnaceon",
+      "~CUSTOM:Paladiumfurnace",
+      "~CUSTOM:Grinderblock",
+      "~CUSTOM:Grinderframe",
+      "~CUSTOM:Grindercasing",
+      "~CUSTOM:Alchimet1",
+      "~CUSTOM:PaladiumGreenblock",
+      "~CUSTOM:PaladiumGreenore",
+      "~CUSTOM:Slimepad",
+      "~CUSTOM:Findiumslab",
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:FindiumBlock",
+      "~CUSTOM:FindiumOre",
+      "~CUSTOM:EndiumBlock",
+      "~CUSTOM:Paladiumcrusher",
+      "~CUSTOM:AmethysteBlock",
+      "~CUSTOM:AmethysteOre",
+      "~CUSTOM:TitaneBlock",
+      "~CUSTOM:TitaneOre",
+      "~CUSTOM:PaladiumBlock",
+      "~CUSTOM:PaladiumOre"
     ],
     "BLOCKS:forge:tagores": [
       "CUSTOM:Fakepaladiumore",
@@ -50605,130 +52468,19 @@
       "CUSTOM:Endiumnuggetore",
       "CUSTOM:PaladiumGreenore"
     ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:Exctractor",
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:PaladiumBlock"
-    ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:Hardenedobsidianslab",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Ostrya_woodSlab"
-    ],
-    "ITEMS:forge:judeecercis__log": [
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log"
-    ],
-    "BIOMES:minecraft:has_structure/mineshaft": [
-      "~CUSTOM:Forestender"
-    ],
-    "ITEMS:forge:pickaxe": [
-      "CUSTOM:PaladiumPickaxe",
-      "CUSTOM:TitanePickaxe",
-      "CUSTOM:AmethystePickaxe",
-      "CUSTOM:EndiumPickaxe",
-      "CUSTOM:Paladiumgreenpickaxe",
-      "TAG:mod:potgtag",
-      "Items.WOODEN_PICKAXE",
-      "Items.STONE_PICKAXE",
-      "Items.IRON_PICKAXE",
-      "Items.GOLDEN_PICKAXE",
-      "Items.DIAMOND_PICKAXE",
-      "Items.NETHERITE_PICKAXE"
-    ],
-    "BLOCKS:mod:opic": [
-      "CUSTOM:Spikeobsidianwood",
-      "CUSTOM:Ironobsidianspike",
-      "CUSTOM:Goldenobsidianspike",
-      "CUSTOM:Diamondobsidianspike",
-      "CUSTOM:Amethystobsidianspike",
-      "CUSTOM:Titaneobsidianspike",
-      "CUSTOM:Paladiumobsidianspike"
-    ],
-    "BLOCKS:minecraft:needs_stone_tool": [
-      "~CUSTOM:Unknownblock",
-      "~CUSTOM:Printingpress",
-      "~CUSTOM:Onlinedetectoron",
-      "~CUSTOM:Onlinedetector",
-      "~CUSTOM:Woddenspike",
-      "~CUSTOM:Titanechestv2",
-      "~CUSTOM:Endiumchestv2",
-      "~CUSTOM:Amethystchestv2",
-      "~CUSTOM:Greenpaladiumchestv2",
-      "~CUSTOM:Paladiumchestv2",
-      "~CUSTOM:Caveblock",
-      "~CUSTOM:Trixiumblock",
-      "~CUSTOM:Downloader",
-      "~CUSTOM:Endiumchest",
-      "~CUSTOM:Greenpaladiumchest",
-      "~CUSTOM:Amethystchest",
-      "~CUSTOM:Paladiumchest",
-      "~CUSTOM:Titanechest",
-      "~CUSTOM:Uploader",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Elevatorcyan",
-      "~CUSTOM:Elevatorlightgray",
-      "~CUSTOM:Elevatorgray",
-      "~CUSTOM:Elevatorpurple",
-      "~CUSTOM:Elevatororange",
-      "~CUSTOM:Elevatorbrown",
-      "~CUSTOM:Elevatorlightgreen",
-      "~CUSTOM:Elevatorlightblue",
-      "~CUSTOM:Elevatorpink",
-      "~CUSTOM:Elevatorgreen",
-      "~CUSTOM:Elevatorblue",
-      "~CUSTOM:Elevatorred",
-      "~CUSTOM:Elevatorwhite",
-      "~CUSTOM:Fakepaladiumore",
-      "~CUSTOM:Luckyblock",
-      "~CUSTOM:Paladiummachine",
-      "~CUSTOM:Tcv2",
-      "~CUSTOM:Loadblock1t",
-      "~CUSTOM:Ametystespike",
-      "~CUSTOM:Diamondspike",
-      "~CUSTOM:Paladiumfurnaceon",
-      "~CUSTOM:Paladiumfurnace",
-      "~CUSTOM:Grinderblock",
-      "~CUSTOM:Grinderframe",
-      "~CUSTOM:Grindercasing",
-      "~CUSTOM:Alchimet1",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Paladiumcrusher"
+    "BLOCKS:minecraft:fences": [
+      "CUSTOM:Jacaranda_Fence",
+      "CUSTOM:Jacaranda_FenceGate",
+      "CUSTOM:Erable_Fence",
+      "CUSTOM:Erable_FenceGate",
+      "CUSTOM:Judeecercis_Fence",
+      "CUSTOM:Judeecercis_FenceGate",
+      "CUSTOM:Ostrya_woodFence",
+      "CUSTOM:Ostrya_woodFenceGate"
     ],
     "ITEMS:forge:ostrya_wood_log": [
       "CUSTOM:Ostrya_woodWood",
       "CUSTOM:Ostrya_woodLog"
-    ],
-    "BLOCKS:forge:farmland": [
-      "Blocks.FARMLAND",
-      "CUSTOM:Fertilseddirt"
     ],
     "ITEMS:forge:seed": [
       "CUSTOM:Kiwanoseed",
@@ -50762,76 +52514,9 @@
       "CUSTOM:Titanemixedcoal",
       "CUSTOM:Palamixedcharoal"
     ],
-    "BLOCKS:mod:omt": [
-      "CUSTOM:Obsidiantrapdoor",
-      "CUSTOM:Renforcedobsidian",
-      "CUSTOM:Obsidiandoor",
-      "CUSTOM:Compactedobsidian",
-      "CUSTOM:Fakewaterobsidian",
-      "CUSTOM:Lavaobsidian",
-      "CUSTOM:Renforcedobsidianstairs",
-      "CUSTOM:Spikeobsidianwood",
-      "CUSTOM:Ironobsidianspike",
-      "CUSTOM:Goldenobsidianspike",
-      "CUSTOM:Diamondobsidianspike",
-      "CUSTOM:Amethystobsidianspike",
-      "CUSTOM:Titaneobsidianspike",
-      "CUSTOM:Paladiumobsidianspike",
-      "CUSTOM:Hardenedobsidianslab"
-    ],
-    "BLOCKS:minecraft:logs": [
-      "CUSTOM:Ostrya_woodLog",
-      "CUSTOM:Ostrya_woodWood",
-      "CUSTOM:Jacaranda_Wood",
-      "CUSTOM:Jacaranda_Log",
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log",
-      "CUSTOM:Erable_Wood",
-      "CUSTOM:Erable_Log",
-      "Blocks.LOG"
-    ],
     "ITEMS:mod:trixium_depo": [
       "CUSTOM:Trixium",
       "CUSTOM:Trixiumblock"
-    ],
-    "BLOCKS:minecraft:mineable/axe": [
-      "~CUSTOM:Typesettingmax",
-      "~CUSTOM:Typesettingplate",
-      "~CUSTOM:Typesettingbook",
-      "~CUSTOM:Typesettingtable",
-      "~CUSTOM:Erabletrapdoor",
-      "~CUSTOM:Jacarandadoor",
-      "~CUSTOM:Erabledoor",
-      "~CUSTOM:Ostryadoor",
-      "~CUSTOM:Judeecercisdoor",
-      "~CUSTOM:Erable_FenceGate",
-      "~CUSTOM:Erable_Fence",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Erable_Planks",
-      "~CUSTOM:Erable_Log",
-      "~CUSTOM:Erable_Wood",
-      "~CUSTOM:Judeecercis_FenceGate",
-      "~CUSTOM:Judeecercis_Fence",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Judeecercis_Planks",
-      "~CUSTOM:Judeecercis_Log",
-      "~CUSTOM:Judeecercis_Wood",
-      "~CUSTOM:Jacaranda_FenceGate",
-      "~CUSTOM:Jacaranda_Fence",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Jacaranda_Planks",
-      "~CUSTOM:Jacaranda_Log",
-      "~CUSTOM:Jacaranda_Wood",
-      "~CUSTOM:Ostrya_woodFenceGate",
-      "~CUSTOM:Ostrya_woodFence",
-      "~CUSTOM:Ostrya_woodSlab",
-      "~CUSTOM:Ostrya_woodStairs",
-      "~CUSTOM:Ostrya_woodPlanks",
-      "~CUSTOM:Ostrya_woodLog",
-      "~CUSTOM:Ostrya_woodWood"
     ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:Endiumhoe",
@@ -50840,26 +52525,9 @@
       "~CUSTOM:Titanehoe",
       "~CUSTOM:Amethtysthoe"
     ],
-    "BLOCKS:minecraft:stairs": [
-      "~CUSTOM:Obsidianstairs",
-      "~CUSTOM:Renforcedobsidianstairs",
-      "~CUSTOM:Greenpaladiumstairs",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Ostrya_woodStairs"
-    ],
     "ITEMS:forge:fuelblaze": [
       "Items.BLAZE_ROD",
       "Items.BLAZE_POWDER"
-    ],
-    "BLOCKS:minecraft:mineable/shovel": [
-      "~CUSTOM:Fertilseddirt"
     ],
     "ITEMS:forge:repairable_endium": [
       "CUSTOM:EndiumPickaxe",
@@ -50869,6 +52537,28 @@
       "CUSTOM:EndiumArmor.body",
       "CUSTOM:EndiumArmor.legs",
       "CUSTOM:EndiumArmor.boots"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:Hardenedobsidianslab",
+      "~CUSTOM:Obsidianslab",
+      "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Endiumslab",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Findiumslab",
+      "~CUSTOM:Erable_Slab",
+      "~CUSTOM:Judeecercis_Slab",
+      "~CUSTOM:Jacaranda_Slab",
+      "~CUSTOM:Ostrya_woodSlab"
+    ],
+    "BLOCKS:mod:cbtill": [
+      "Blocks.DIRT#2",
+      "Blocks.DIRT#0",
+      "Blocks.GRASS",
+      "Blocks.GRASS_PATH",
+      "Blocks.MYCELIUM",
+      "Blocks.FARMLAND"
     ],
     "ITEMS:forge:palamd_fruits": [
       "CUSTOM:Kiwano",
@@ -50919,42 +52609,28 @@
       "~CUSTOM:TitaneSword",
       "~CUSTOM:PaladiumSword"
     ],
-    "BLOCKS:forge:destructable": [
-      "CUSTOM:Ostrya_woodWood",
-      "CUSTOM:Ostrya_woodLog",
-      "CUSTOM:Jacaranda_Wood",
-      "CUSTOM:Jacaranda_Log",
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log",
-      "CUSTOM:Erable_Wood",
-      "CUSTOM:Erable_Log",
-      "Blocks.DIRT#0",
-      "Blocks.LOG",
-      "Blocks.GRASS",
-      "Blocks.STONE#0",
-      "Blocks.COBBLESTONE"
-    ],
     "ITEMS:minecraft:planks": [
       "CUSTOM:Erable_Planks",
       "CUSTOM:Judeecercis_Planks",
       "CUSTOM:Ostrya_woodPlanks",
       "CUSTOM:Jacaranda_Planks"
     ],
-    "BLOCKS:minecraft:fences": [
-      "CUSTOM:Jacaranda_Fence",
-      "CUSTOM:Jacaranda_FenceGate",
-      "CUSTOM:Erable_Fence",
-      "CUSTOM:Erable_FenceGate",
-      "CUSTOM:Judeecercis_Fence",
-      "CUSTOM:Judeecercis_FenceGate",
-      "CUSTOM:Ostrya_woodFence",
-      "CUSTOM:Ostrya_woodFenceGate"
-    ],
-    "BLOCKS:minecraft:leaves": [
-      "CUSTOM:Ostrya_woodLeaves",
-      "CUSTOM:Erable_Leaves",
-      "CUSTOM:Jacaranda_Leaves",
-      "CUSTOM:Judeecercis_Leaves"
+    "BLOCKS:mod:omt": [
+      "CUSTOM:Obsidiantrapdoor",
+      "CUSTOM:Renforcedobsidian",
+      "CUSTOM:Obsidiandoor",
+      "CUSTOM:Compactedobsidian",
+      "CUSTOM:Fakewaterobsidian",
+      "CUSTOM:Lavaobsidian",
+      "CUSTOM:Renforcedobsidianstairs",
+      "CUSTOM:Spikeobsidianwood",
+      "CUSTOM:Ironobsidianspike",
+      "CUSTOM:Goldenobsidianspike",
+      "CUSTOM:Diamondobsidianspike",
+      "CUSTOM:Amethystobsidianspike",
+      "CUSTOM:Titaneobsidianspike",
+      "CUSTOM:Paladiumobsidianspike",
+      "CUSTOM:Hardenedobsidianslab"
     ],
     "ITEMS:mod:paladiumarmorstag": [
       "CUSTOM:PaladiumArmor.helmet",
@@ -51049,30 +52725,12 @@
       "~CUSTOM:TitanePickaxe",
       "~CUSTOM:PaladiumPickaxe"
     ],
-    "BLOCKS:mod:elevator": [
-      "CUSTOM:Elevatorwhite",
-      "CUSTOM:Elevatorred",
-      "CUSTOM:Elevatorblue",
-      "CUSTOM:Elevatorgreen",
-      "CUSTOM:Elevatorpink",
-      "CUSTOM:Elevatorlightblue",
-      "CUSTOM:Elevatorlightgreen",
-      "CUSTOM:Elevatorbrown",
-      "CUSTOM:Elevatororange",
-      "CUSTOM:Elevatorpurple",
-      "CUSTOM:Elevatorgray",
-      "CUSTOM:Elevatorlightgray",
-      "CUSTOM:Elevatorcyan"
-    ],
     "ITEMS:minecraft:music_discs": [
       "~CUSTOM:Clashkumiz",
       "~CUSTOM:Roulettepaladiennedisc",
       "~CUSTOM:Antifuzedisc",
       "~CUSTOM:Fuzedisc",
       "~CUSTOM:Miichalenge"
-    ],
-    "BLOCKS:forge:dirt": [
-      "CUSTOM:Fertilseddirt"
     ],
     "ITEMS:mod:repairable_green": [
       "CUSTOM:Paladiumgreenpickaxe",
@@ -51088,9 +52746,47 @@
       "Items.COAL#0",
       "Items.COAL#1"
     ],
-    "BLOCKS:forge:unbreakable": [
-      "Blocks.BEDROCK",
-      "CUSTOM:Stony"
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:Typesettingmax",
+      "~CUSTOM:Typesettingplate",
+      "~CUSTOM:Typesettingbook",
+      "~CUSTOM:Typesettingtable",
+      "~CUSTOM:Erabletrapdoor",
+      "~CUSTOM:Jacarandadoor",
+      "~CUSTOM:Erabledoor",
+      "~CUSTOM:Ostryadoor",
+      "~CUSTOM:Judeecercisdoor",
+      "~CUSTOM:Erable_FenceGate",
+      "~CUSTOM:Erable_Fence",
+      "~CUSTOM:Erable_Slab",
+      "~CUSTOM:Erable_Stairs",
+      "~CUSTOM:Erable_Planks",
+      "~CUSTOM:Erable_Log",
+      "~CUSTOM:Erable_Wood",
+      "~CUSTOM:Judeecercis_FenceGate",
+      "~CUSTOM:Judeecercis_Fence",
+      "~CUSTOM:Judeecercis_Slab",
+      "~CUSTOM:Judeecercis_Stairs",
+      "~CUSTOM:Judeecercis_Planks",
+      "~CUSTOM:Judeecercis_Log",
+      "~CUSTOM:Judeecercis_Wood",
+      "~CUSTOM:Jacaranda_FenceGate",
+      "~CUSTOM:Jacaranda_Fence",
+      "~CUSTOM:Jacaranda_Slab",
+      "~CUSTOM:Jacaranda_Stairs",
+      "~CUSTOM:Jacaranda_Planks",
+      "~CUSTOM:Jacaranda_Log",
+      "~CUSTOM:Jacaranda_Wood",
+      "~CUSTOM:Ostrya_woodFenceGate",
+      "~CUSTOM:Ostrya_woodFence",
+      "~CUSTOM:Ostrya_woodSlab",
+      "~CUSTOM:Ostrya_woodStairs",
+      "~CUSTOM:Ostrya_woodPlanks",
+      "~CUSTOM:Ostrya_woodLog",
+      "~CUSTOM:Ostrya_woodWood"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:Fertilseddirt"
     ],
     "ITEMS:mod:repairable": [
       "CUSTOM:PaladiumPickaxe",
@@ -51125,6 +52821,15 @@
       "~CUSTOM:TitaneShovel",
       "~CUSTOM:PaladiumShovel"
     ],
+    "BLOCKS:mod:opic": [
+      "CUSTOM:Spikeobsidianwood",
+      "CUSTOM:Ironobsidianspike",
+      "CUSTOM:Goldenobsidianspike",
+      "CUSTOM:Diamondobsidianspike",
+      "CUSTOM:Amethystobsidianspike",
+      "CUSTOM:Titaneobsidianspike",
+      "CUSTOM:Paladiumobsidianspike"
+    ],
     "ITEMS:forge:jacaranda__log": [
       "CUSTOM:Jacaranda_Wood",
       "CUSTOM:Jacaranda_Log"
@@ -51133,9 +52838,9 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "this account ( bypass the code ",
-      "": "Open or create the faction menu ( wip )",
       "gui.palamod.adminshopblock_sand.tooltip_return_to_the_menu": "Return to the adminshop menu",
+      "": "Open or create the faction menu ( wip )",
+      "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "this account ( bypass the code ",
       "block.palamod.fertilzed_dirt": "Fertilzed dirt",
       "gui.palamod.grinderpalahelp_2gui.label_layer_2": "Layer 2",
       "gui.palamod.grinderpalahelpgui.label_empty": "",
@@ -51146,17 +52851,17 @@
       "gui.palamod.adminshopblockstone.button_back": "back",
       "gui.palamod.armorpalahelpgui.label_speed": "Speed",
       "block.palamod.compacttnt": "Compact tnt",
-      "gui.palamod.adminshopmobsendereyes.label_sell_price_120": "Sell price :  0.5",
-      "gamerule.logsall.description": "logs all action executed by the player ",
       "gui.palamod.grinderpalahelpgui.label_damage_augmante_les_dgats": "Damage : boost damage",
+      "gamerule.logsall.description": "logs all action executed by the player ",
+      "gui.palamod.adminshopmobsendereyes.label_sell_price_120": "Sell price :  0.5",
       "gui.palamod.grinderpalahelp_2gui.label_layer_1": "Layer 1",
       "enchantment.palamod.hammer_fortune": "Fortune",
       "effect.palamod.mineur_fou": "Mineur Fou",
       "painting.palamod.papillusion_32.author": "Unknown",
       "advancements.avancementluckytoday.descr": "Craft a lucky block",
       "gui.palamod.exampleuploadergui.tooltip_money_output": "Money ( output )",
-      "gui.palamod.adminshopblockblackstone.label_mode_set": "Amount :",
       "gui.palamod.forgepalahelpgui.label_dans_le_slot_2_attendre_un_peu": "in the slot 2, wait a little and the ingot is ready",
+      "gui.palamod.adminshopblockblackstone.label_mode_set": "Amount :",
       "gui.palamod.palahelpnotsupported.label_on_crowdin": "On Crowdin",
       "gui.palamod.crusherpalahelpgui.label_et_128_tant_100_de_chance_p": "and 128 is 100% chance  ] not",
       "gui.palamod.megasafechestfirstsetup.safe_code": "insert code ( chose something wou will not forget )",
@@ -51173,10 +52878,10 @@
       "item.palamod.scuba_helmet": "Scuba Helmet",
       "gui.palamod.adminshopmobs.tooltip_go_to_the_page_2": "Go to the page 2",
       "gui.palamod.factionhomegui.label_empty": "",
-      "block.palamod.titane_spike": "Titane spike",
-      "item.palamod.chervilseed": "Chervil seed",
-      "block.palamod.alarm": "Alarm",
       "advancements.achmpotg_20new.title": "Ultimate pickaxe",
+      "block.palamod.alarm": "Alarm",
+      "item.palamod.chervilseed": "Chervil seed",
+      "block.palamod.titane_spike": "Titane spike",
       "item.palamod.endium_hammer": "Endium hammer",
       "gui.palamod.adminshopplantpotato.tooltip_return_to_the_adminshop_menu": "Return to the adminshop menu ",
       "painting.palamod.tsuamie_16.title": "Tsuamie 16",
@@ -51196,22 +52901,22 @@
       "entity.palamod.primedbigtnt": "Compact tnt",
       "gui.palamod.adminshopmobs_2feather.tooltip_return_to_the_adminshops_mobs_m": "Return to the adminshop\u0027s mobs menu ( page 2 )",
       "gui.palamod.adminshopmobs_2leather.button_buy": "buy",
-      "block.palamod.slimepad": "Slime pad",
       "block.palamod.amethyst_chest": "Amethyst chest",
-      "palamod.procedure.jobs_miner_err_nel": "Your not enough experimented in the miner level to use this command",
+      "block.palamod.slimepad": "Slime pad",
       "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
+      "palamod.procedure.jobs_miner_err_nel": "Your not enough experimented in the miner level to use this command",
       "item.palamod.green_paladium_ingot": "Green Paladium ingot",
-      "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
-      "block.palamod.elevator_orange": "Elevator orange",
       "gui.palamod.jobsminercraftgui.tooltip_sponge_tnt": "Sponge tnt",
+      "block.palamod.elevator_orange": "Elevator orange",
+      "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
       "item.palamod.titane_armor_leggings": "Titane Leggings",
       "gui.palamod.assembleurend.label_une_maj_sera_bientot_faite": "Une maj sera bientot faite",
       "block.palamod.angelicwter": "Angelic water",
-      "gui.palamod.adminshopblock.button_blackstone": "blackstone",
       "gui.palamod.palahelpore.label_unsed1": "include the cave block",
+      "gui.palamod.adminshopblock.button_blackstone": "blackstone",
       "gui.palamod.adminshopmobs.button_back": "Back",
-      "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "gui.palamod.adminshopmenu.button_mobss_items": "Mobs\u0027s items ",
+      "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.green_paladium_small_ring": "Small ring green paladium",
       "gui.palamod.xpbushpalahelpgui.label_xp_berry": "xp berry",
       "gui.palamod.legendarystonepalahelp.label_forturne_permet_de_vous_give": "Forturne : can give you ingots",
@@ -51220,8 +52925,8 @@
       "item.palamod.paladiumarmorcustom_10_chestplate": "Paladium Chestplate",
       "gui.palamod.adminshopmobsghasttears.button_back": "back",
       "gui.palamod.grindergui.label_grinder_v41_noautotick": "Grinder - v5",
-      "gui.palamod.armorpalahelpgui.label_551": "+ 5.5",
       "gui.palamod.adminshopplantcarrot.tooltip_return_to_the_adminshop_menu1": "Return to the adminshop menu",
+      "gui.palamod.armorpalahelpgui.label_551": "+ 5.5",
       "gui.palamod.armorpalahelpgui.label_552": "+ 5.5",
       "gui.palamod.adminshopmobsstring.label_paladium": "String",
       "gui.palamod.adminshopplantbrownmushroom.tooltip_return_to_the_adminshop_plant_me": "Return to the adminshop plant menu",
@@ -51230,20 +52935,20 @@
       "gui.palamod.potgtranfert.button_transfert": "transfert",
       "gui.palamod.adminshopblock_dirt.button_sell": "sell",
       "advancements.avancementgrindre.title": "Need a smeltery ?",
-      "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": " probabilities of the nugget appear [",
       "subtitles.miichallengemusic": "Mii chalenge music",
+      "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": " probabilities of the nugget appear [",
       "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
-      "gui.palamod.adminshoporefindium.button_sell": "sell",
       "item.palamod.sword_head": "Sword head",
+      "gui.palamod.adminshoporefindium.button_sell": "sell",
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
       "item.palamod.paladiumarmorcustom_4_chestplate": "Paladium Chestplate",
-      "block.palamod.renforcedobsidianstairs": "hardened obsidian stairs",
       "gui.palamod.adminpanelmenu.label_admin_panel": "Admin Panel",
+      "block.palamod.renforcedobsidianstairs": "hardened obsidian stairs",
       "item.palamod.titanefastsword": "Forge fastsword",
       "advancements.avancementkaboom.title": "Ka-boom",
-      "item.palamod.mixedendiumarmor_boots": "Mixed Endium Boots",
-      "item.palamod.creative_trixium_sword": "Creative trixium sword",
       "block.palamod.black_lucky_block": "Black luckyblock",
+      "item.palamod.creative_trixium_sword": "Creative trixium sword",
+      "item.palamod.mixedendiumarmor_boots": "Mixed Endium Boots",
       "item_group.palamod.palamod": "Palamod Projet Renew",
       "gui.palamod.adminshoputilitiesemerald.label_paladium": "Emerald",
       "gui.palamod.orelayerfat.label_amethyst_64_80": "Amethyst : -64 --) 80",
@@ -51268,17 +52973,17 @@
       "gui.palamod.palahelpblock.label_palahelp_block_menu": "Palahelp : block menu",
       "gui.palamod.adminshoporecoal.label_coal": "Coal",
       "gui.palamod.dynamicorelayer.label_titane_64_32": "Titane : -64 --) 32",
-      "death.attack.fakewaterdamage.player": "%1$s sufforcated in the fake water whilst trying to escape %2$s",
       "gui.palamod.palahelpore.label_palahelp_ore": "Palahelp : Ore",
-      "gui.palamod.adminshopmobs_2honeycomb.label_sell_price_120": "Sell price :  7.5",
-      "gui.palamod.forgepalahelpgui.button_menu": "menu",
+      "death.attack.fakewaterdamage.player": "%1$s sufforcated in the fake water whilst trying to escape %2$s",
       "block.palamod.grinder_block": "Grinder block",
+      "gui.palamod.forgepalahelpgui.button_menu": "menu",
+      "gui.palamod.adminshopmobs_2honeycomb.label_sell_price_120": "Sell price :  7.5",
       "itemGroup.tabpickaxeofgodstab": "Pickaxe of gods",
       "item.palamod.kiwano": "Kiwano",
-      "gui.palamod.armorpalahelpgui.label_65": "+ 6.5",
       "advancements.avanacementultimatehammer.title": "The Ultimate Hammer",
-      "gui.palamod.voidstoneminerconfig.label_de_la_pierre_dans_la_voidstone": "the stone into the voidstone",
+      "gui.palamod.armorpalahelpgui.label_65": "+ 6.5",
       "gui.palamod.adminshopmobs.label_adminshop_mobs_menu": "Adminshop mobs menu",
+      "gui.palamod.voidstoneminerconfig.label_de_la_pierre_dans_la_voidstone": "the stone into the voidstone",
       "gui.palamod.adminshopplantwheat.number_buy": "number here",
       "gui.palamod.adminshopmobs_2gunpowder.tooltip_close_the_gui": "Close the Gui",
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
@@ -51342,17 +53047,17 @@
       "item.palamod.endium_armor_leggings": "Endium Leggings",
       "block.palamod.paladium_forge": "Paladium forge",
       "item.palamod.head_endium_axe": "Endium axe head",
-      "gui.palamod.palahelpnotsupported.label_change_language": "Change language",
       "gui.palamod.adminshopore.button_paladium": "Paladium",
+      "gui.palamod.palahelpnotsupported.label_change_language": "Change language",
       "advancements.avancementcompressedavantur.descr": "Craft or Obtain a compressed amethyst, titane or paladium",
       "gui.palamod.adminshopmobsslimeball.button_buy": "buy",
       "gui.palamod.palahelpore.label_tres_rare_sert_a_quelque_craft": "Findium : Ore that serves some crafts",
       "gui.palamod.crusherpalahelpgui.label_titane_soit_le_titane_mixed": "( titane ) soit le titane mixed coal ( paladium) ou le palamixed coal pour",
       "gui.palamod.adminshopmobs_2.tooltip_close_the_gui": "Close the Gui",
-      "item.palamod.axe_patern": "Axe partern",
+      "item.palamod.axe_patern": "Axe patern",
       "advancements.avancementbigkaboom.title": "Big ka-boom",
-      "gui.palamod.specialmoneypanel.button_give": "Give",
       "gui.palamod.palahelpgui_1.button_blocks": "Blocks",
+      "gui.palamod.specialmoneypanel.button_give": "Give",
       "item.palamod.amethyst_armor_leggings": "Amethyst Leggings",
       "item.palamod.titane_stick": "Titane stick",
       "block.palamod.amethyst_ore": "Amethyst Ore",
@@ -51362,10 +53067,10 @@
       "block.palamod.kiwano_2": "Kiwano state 2",
       "gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi": "fake water: un type d\u0027eau invisible qui",
       "block.palamod.kiwano_1": "Kiwano state",
-      "block.palamod.kiwano_0": "Kiwano state 0",
       "gui.palamod.adminshopmobs_rottenflesh.button_sell": "sell",
-      "gui.palamod.palahelptree.label_le_portail_en_amthyste": "le portail en am�thyste",
+      "block.palamod.kiwano_0": "Kiwano state 0",
       "block.palamod.kiwano_4": "Kiwano state 4",
+      "gui.palamod.palahelptree.label_le_portail_en_amthyste": "le portail en am�thyste",
       "block.palamod.kiwano_3": "Kiwano state 3",
       "gui.palamod.uploadergui.tooltip_money_output": "Money ( output )",
       "gui.palamod.adminshopplantredmushroom.tooltip_return_to_the_adminshop_menu": "Return to the adminshop menu",
@@ -51396,8 +53101,8 @@
       "gui.palamod.armorpalahelpgui.label_55": "+ 5.5 ",
       "gui.palamod.adminshopblocksoulsand.label_sell_price_05": "Sell price : 0.5",
       "item.palamod.paladium_armor_chestplate": "Paladium Chestplate",
-      "gui.palamod.armorpalahelpgui.label_51": "+ 5",
       "gui.palamod.adminshopmobs_2inksac.tooltip_return_to_the_adminshops_mobs_m": "Return to the adminshop\u0027s mobs menu ( page 2 )",
+      "gui.palamod.armorpalahelpgui.label_51": "+ 5",
       "block.palamod.judeecercis_stairs": "Judeecercis Stairs",
       "gui.palamod.forgepalahelpgui.label_dane_le_slot_1_et_mettre_les_out": "dane le slot 1 et mettre les outil que vous voulez recycler",
       "gui.palamod.adminshopmobs_2.button_feather": "Feather",
@@ -51424,25 +53129,26 @@
       "gui.palamod.grinderpalahelpgui.label_mins_hammer": "mined -) hammer",
       "block.palamod.erabletrapdoor": "Erabletrapdoor",
       "painting.palamod.papillusion_322.title": "Papillusion 64x",
-      "block.palamod.exctractor": "Extractor",
       "gui.palamod.trashgui.label_voidstone_gui_trash_bin": "Voidstone Gui - Trash Bin",
+      "block.palamod.exctractor": "Extractor",
       "advancements.achmpotg_20new.descr": "Fully upgrade your pickaxe of the gods at the level 20",
       "advancements.achmpotg_17new.descr": "Obtain a pickaxe of the gods ( lv17)",
-      "gui.palamod.adminshopblockblackstone.button_sell": "sell",
       "gui.palamod.adminshopmobswitherskull.number_buy": "number here",
+      "gui.palamod.adminshopblockblackstone.button_sell": "sell",
       "gui.palamod.adminshopplantsugarcane.tooltip_close_the_gui": "Close the Gui",
       "gui.palamod.analyserresult.label_air": "Air :",
       "gui.palamod.palahelpblock.button_fluid": "fluid",
       "gui.palamod.alchemycreatorgui.label_nether_wart": "Verrue du nether :",
       "gui.palamod.adminshopmobs_2leather.button_sell": "sell",
+      "gui.palamod.grindergui.label_mode_paladium": "Mode : paladium",
       "item.palamod.travelarmor_chestplate": "Jump chestplate",
       "gui.palamod.adminshopblocksoulsand.tooltip_return_to_the_adminshop_block_me": "Return to the adminshop block menu",
       "gui.palamod.adminshopmobsstring.label_mode_set": "Amount :",
       "block.palamod.judeecercis_planks": "Judeecercis Planks",
       "item.palamod.lucky_beta": "Lucky beta",
-      "gui.palamod.adminshopmobs_2.button_glow_in_sac": "Glow ink sac",
-      "gui.palamod.specialmoneypanel.money": "amount",
       "gui.palamod.adminshoporegold.label_sell_price_30": "Sell price : 30",
+      "gui.palamod.specialmoneypanel.money": "amount",
+      "gui.palamod.adminshopmobs_2.button_glow_in_sac": "Glow ink sac",
       "gui.palamod.palahelpgui_1.button_gui": "Gui",
       "gui.palamod.analyserresult.label_logs": "Logs",
       "block.palamod.erable_door": "Erable door",
@@ -51452,8 +53158,8 @@
       "item.palamod.pickaxeofthegodslv_13": "Pickaxe of the gods",
       "item.palamod.pickaxeofthegodslv_14": "Pickaxe of the gods",
       "item.palamod.pickaxeofthegodslv_11": "Pickaxe of the gods",
-      "gui.palamod.adminshoporetitane.label_sell_price_100": "Sell price : 100",
       "item.palamod.pickaxeofthegodslv_12": "Pickaxe of the gods",
+      "gui.palamod.adminshoporetitane.label_sell_price_100": "Sell price : 100",
       "gui.palamod.itemmenupalahelp.button_btons": "Sticks",
       "item.palamod.pickaxeofthegodslv_10": "Pickaxe of the gods",
       "item.palamod.green_paladium_broadsword_head": "Green broadsword head",
@@ -51471,8 +53177,8 @@
       "gui.palamod.palamachinepalahelpgui.label_palamachine": "Palamachine",
       "gui.palamod.jobsminercraftgui.tooltip_voidstone": "Voidstone",
       "item.palamod.pickaxe_head": "Pickaxe head",
-      "item.palamod.pickaxeofthegodslv_20": "Pickaxe of the gods",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Paladium spike obsidian",
+      "item.palamod.pickaxeofthegodslv_20": "Pickaxe of the gods",
       "advancements.achmringendium.descr": "Repair something with endium ring",
       "block.palamod.green_paladium_slab": "Green paladium slab",
       "gui.palamod.snapshot.label_build_v1900036": "DEVLOPPER VERSION - DEV - 19e0029",
@@ -51484,8 +53190,8 @@
       "gui.palamod.dynamicorelayer.label_empty3": "----------------------------",
       "gui.palamod.legendarystonepalahelp.label_au_dessus": "legendary stones",
       "gui.palamod.dynamicorelayer.label_empty2": "----------------------------",
-      "gui.palamod.dynamicorelayer.label_empty1": "----------------------------",
       "gui.palamod.dynamicorelayer.label_endium_64_128_customs_p": "Endium : -64 --) 128 ; customs palamod biomes",
+      "gui.palamod.dynamicorelayer.label_empty1": "----------------------------",
       "gui.palamod.adminshopplantcarrot.button_sell": "sell",
       "gui.palamod.adminshopmobs_rottenflesh.label_sell_price_120": "Sell price :  0.25",
       "gui.palamod.palahelpblock.button_ore": "ore",
@@ -51513,11 +53219,11 @@
       "block.palamod.green_paladium_stairs": "Green paladium stairs",
       "item.palamod.obsidianpickaxe": "Obsidian pickaxe",
       "block.palamod.xpbushon": "Xpbush",
-      "gui.palamod.adminshopplantwheat.button_buy": "buy",
       "gui.palamod.adminshopplantbrownmushroom.button_buy": "buy",
+      "gui.palamod.adminshopplantwheat.button_buy": "buy",
       "gui.palamod.adminshopmobs.button_cactus": "Bone",
       "enchantment.palamod.smelt": "Smelt",
-      "block.palamod.hardenedobsidianslab": "hardened obsidian slab",
+      "block.palamod.hardenedobsidianslab": "Hardened obsidian slab",
       "block.palamod.tcv_2": "Contructed grinder",
       "item.palamod.titane_pollen": "Titane pollen",
       "item.palamod.damagestick": "Damage stick",
@@ -51564,11 +53270,11 @@
       "gui.palamod.adhutilitiesredstone.label_sell_price_120": "Sell price :  1.5",
       "gui.palamod.adminshopmobs_2.button_carrot": "Egg",
       "gui.palamod.adminshopmobs_2inksac.number_buy": "number here",
-      "item.palamod.guardian_stone": "Guardian stone",
       "item.palamod.green_paladium_medium_ring": "Medium ring green paladium",
+      "item.palamod.guardian_stone": "Guardian stone",
       "gui.palamod.adminshopmobs.button_wheat_seed": "Ghast\u0027s tears",
-      "gui.palamod.grinderpalahelpgui.label_et_la_broadsword_vous_pouvez_y_a": "and the broadsword You can add it",
       "item.palamod.pesyblpotion": "Pesybl potion",
+      "gui.palamod.grinderpalahelpgui.label_et_la_broadsword_vous_pouvez_y_a": "and the broadsword You can add it",
       "advancements.achmchesttitane.descr": "Obtain or craft a titane chest",
       "advancements.avancementforgeafa.descr": "Craft a Forge",
       "item.palamod.paladiumexcavator": "Paladium Exavator",
@@ -51584,11 +53290,11 @@
       "gui.palamod.adminshoputilities.button_back": "Menu",
       "gui.palamod.adminshopmobs_rottenflesh.label_paladium": "Rotten flesh",
       "gui.palamod.next_palahelpgui.label_22": "2/2",
-      "gui.palamod.adminshopplantredmushroom.label_paladium": "Red Mushroom",
       "item.palamod.hammer_patern": "Hammer patern",
+      "gui.palamod.adminshopplantredmushroom.label_paladium": "Red Mushroom",
       "enchantment.palamod.autosmeltpotg": "Auto Smelt",
-      "block.palamod.judeecercis_leaves": "Judeecercis Leaves",
       "item.palamod.paladium_particle": "Paladium particle",
+      "block.palamod.judeecercis_leaves": "Judeecercis Leaves",
       "gui.palamod.palahelpnotsupported.button_crowdin_link": "Crowdin link",
       "advancements.avancementforgeafa.title": "Forge it today and tomorow",
       "gui.palamod.adminshopmobs_2.button_blaze": "Blaze",
@@ -51616,11 +53322,11 @@
       "painting.palamod.sunrise_216.title": "Sunset  16x",
       "gui.palamod.jobsgui.label_jobs": "Jobs",
       "item.palamod.big_ring": "Big ring",
-      "gui.palamod.orelayer.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "painting.palamod.cherrytree.title": "Cherrytree",
+      "gui.palamod.orelayer.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "gui.palamod.adminshopmobsegg.tooltip_close_the_gui": "Close the Gui",
-      "gui.palamod.adminshoporeamethyst.label_mode_set": "Amount :",
       "gui.palamod.forgepalahelpgui.label_an_example_gui_is_available_next": "An example gui is available next to the close button",
+      "gui.palamod.adminshoporeamethyst.label_mode_set": "Amount :",
       "gui.palamod.downloadergui.tooltip_turn_onoff_the_machine": "Turn on/off the machine",
       "gui.palamod.adhutilitiesredstone.tooltip_close_the_gui": "Close the Gui",
       "item.palamod.miichalenge.desc": "Koro - Mii chalenge - 2020",
@@ -51636,8 +53342,8 @@
       "gui.palamod.adminshopblock_dirt.tooltip_return_to_the_adminshop_block_me": "Return to the adminshop block menu",
       "gui.palamod.adminshopblock_dirt.number_buy": "number here",
       "item.palamod.amethyst_hoe": "Amethyst hoe",
-      "gui.palamod.adminshopmobs_2.label_adminshop_plant_section": "Adminshop - mobs\u0027s item section",
       "gui.palamod.adminshopblocksoulsand.label_buy_price_20": "Buy price :  20",
+      "gui.palamod.adminshopmobs_2.label_adminshop_plant_section": "Adminshop - mobs\u0027s item section",
       "gui.palamod.palamachinegui.label_inventory": "Inventory",
       "death.attack.spike.paladium": "%1$s was crushed by a Paladium spike",
       "painting.palamod.plains_16.author": "Unknown",
@@ -51648,9 +53354,9 @@
       "item.palamod.paladiumarmorcustom_5_chestplate": "Paladium Chestplate",
       "advancements.avancementgrindre.descr": "Craft a Constructed Grinder",
       "item.palamod.big_dynamite": "Big Dynamite",
-      "block.palamod.paladium_ore": "Paladium Ore",
-      "gui.palamod.adminshopore.button_exit": "Exit",
       "gui.palamod.greenpaladiumchestgui.label_inventory": "Inventory",
+      "gui.palamod.adminshopore.button_exit": "Exit",
+      "block.palamod.paladium_ore": "Paladium Ore",
       "gui.palamod.adminshoporegold.button_buy": "buy",
       "gui.palamod.adminshopplantcactus.label_mode_set": "Amount :",
       "painting.palamod.tsuamie_16.author": "Unknown",
@@ -51689,8 +53395,8 @@
       "gui.palamod.adminshopplantcactus.tooltip_return_to_the_adminshop_plant_me": "Return to the adminshop plant menu",
       "gui.palamod.adminshoporecoal.button_back": "back",
       "item.palamod.titane_particle": "Titane particle",
-      "gui.palamod.analyserloading.label_the_analyser_is_loader": "The analyser is loader",
       "advancements.achmringpaladium.title": "Extended warranty ",
+      "gui.palamod.analyserloading.label_the_analyser_is_loader": "The analyser is loader",
       "item.palamod.titane_sword": "Titane Sword",
       "gui.palamod.adminshopmobs_2inksac.button_back": "back",
       "gui.palamod.dynamicorelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
@@ -51706,10 +53412,10 @@
       "gui.palamod.legendarystonepalahelp.label_teleportation_vous_tp_aletorem": "Teleportation : teleport you at a ",
       "gui.palamod.jobsgui.label_last_unlocked_items": "Last unlocked items",
       "gui.palamod.assembleurend.label_the_assembleur_will_deleted_in_t": "The assembleur will deleted in the",
-      "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Buy Price : 2.5",
-      "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Rotten flesh",
-      "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop seed menu",
       "item.palamod.block_patern": "Block patern",
+      "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop seed menu",
+      "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Rotten flesh",
+      "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Buy Price : 2.5",
       "item.palamod.knockback_modifier": "Knockback modifier",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Broadsword",
       "item.palamod.amethyst_pickaxe": "Amethyst Pickaxe",
@@ -51717,9 +53423,9 @@
       "block.palamod.flatten_titane_chest": "Flat titane chest",
       "gui.palamod.crusherpalahelpgui.label_il_faut_mettre_du_fuel_et_des_f": "You put fuel* and fruits into the ",
       "itemGroup.tabgrindercreativetab": "Palamod : Grinder tab",
-      "gui.palamod.adminshopblock_gravel.tooltip_return_to_the_adminshop_block_me": "Return to the adminshop block menu",
-      "gui.palamod.authsafegui.code_check": "",
       "gui.palamod.palahelptree.label_crafter_le_portail_en_titane": "Craft the titane portal",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopblock_gravel.tooltip_return_to_the_adminshop_block_me": "Return to the adminshop block menu",
       "gui.palamod.legendarystonepalahelp.label_deux_jour_dans_le_jeu": "deux jour ( dans le jeu )",
       "gui.palamod.grindergui.label_176": "176",
       "gui.palamod.palahelpmachine.button_downloader": "Downloader",
@@ -51733,7 +53439,7 @@
       "gui.palamod.adminshopmobsstring.tooltip_return_to_the_adminshops_main_m": "Return to the adminshop\u0027s main menu",
       "advancements.avancementcoreloading.descr": "Craft or Obtain a paladium core",
       "gui.palamod.paladumfurnace.label_upgrades": "Upgrades",
-      "painting.palamod.luckypainting.title": "Luckypainting",
+      "painting.palamod.luckypainting.title": "Logo",
       "gui.palamod.adminshopmobs_2steak.button_buy": "buy",
       "item.palamod.green_paladium_pickaxe_head": "Green pickaxe head",
       "item.palamod.invisiblearmor_leggings": "Insivible Leggings",
@@ -53058,8 +54764,8 @@
       "block.palamod.erable_fence": "Erable Fence"
     },
     "fr_fr": {
-      "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte ( pour passer le code ",
       "gui.palamod.adminshopblock_sand.tooltip_return_to_the_menu": "Retour au menu principale de l\u0027adminshop",
+      "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte ( pour passer le code ",
       "block.palamod.fertilzed_dirt": "Terre fertilsée",
       "gui.palamod.grinderpalahelp_2gui.label_layer_2": "Layer 2",
       "gui.palamod.grinderpalahelpgui.label_empty": "",
@@ -53070,17 +54776,17 @@
       "gui.palamod.adminshopblockstone.button_back": "Revenir en arrière",
       "gui.palamod.armorpalahelpgui.label_speed": "Speed",
       "block.palamod.compacttnt": "Compact tnt",
-      "gui.palamod.grinderpalahelpgui.label_damage_augmante_les_dgats": "Damage : augmante les dégats -) fastsword",
-      "gamerule.logsall.description": "Logs tout les action que font les joueur ",
       "gui.palamod.adminshopmobsendereyes.label_sell_price_120": "Prix de vente :  1",
+      "gamerule.logsall.description": "Logs tout les action que font les joueur ",
+      "gui.palamod.grinderpalahelpgui.label_damage_augmante_les_dgats": "Damage : augmante les dégats -) fastsword",
       "gui.palamod.grinderpalahelp_2gui.label_layer_1": "Couche 1",
       "enchantment.palamod.hammer_fortune": "Fortune",
       "effect.palamod.mineur_fou": "Mineur Fou",
       "painting.palamod.papillusion_32.author": "Inconnu",
       "advancements.avancementluckytoday.descr": "Fabrique un lucky block",
       "gui.palamod.exampleuploadergui.tooltip_money_output": "Argent (sortie)",
-      "gui.palamod.adminshopblockblackstone.label_mode_set": "Quantité :",
       "gui.palamod.forgepalahelpgui.label_dans_le_slot_2_attendre_un_peu": "dans le slot 2, attendre un peu et c\u0027est le minerais est",
+      "gui.palamod.adminshopblockblackstone.label_mode_set": "Quantité :",
       "gui.palamod.palahelpnotsupported.label_on_crowdin": "On Crowdin",
       "gui.palamod.crusherpalahelpgui.label_et_128_tant_100_de_chance_p": "et 128 étant 100% de chance  ] pas",
       "gui.palamod.megasafechestfirstsetup.safe_code": "Insérer un code ( quelque chose vous n\u0027oublirer pas )",
@@ -53121,21 +54827,21 @@
       "entity.palamod.primedbigtnt": "Magic tnt",
       "gui.palamod.adminshopmobs_2feather.tooltip_return_to_the_adminshops_mobs_m": "Return to the adminshop\u0027s mobs menu ( page 2 )",
       "gui.palamod.adminshopmobs_2leather.button_buy": "Acheter",
-      "block.palamod.amethyst_chest": "Coffre en améthyste",
       "block.palamod.slimepad": "Slime padd",
-      "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
+      "block.palamod.amethyst_chest": "Coffre en améthyste",
       "palamod.procedure.jobs_miner_err_nel": "Vous n\u0027êtes pas assez experimenté dans le métier de mineur pour utiliser cette commande",
+      "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
       "item.palamod.green_paladium_ingot": "Lingot en paladium vert",
-      "block.palamod.elevator_orange": "Ascenseur Orange",
-      "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
       "gui.palamod.jobsminercraftgui.tooltip_sponge_tnt": "Sponge tnt",
+      "gui.palamod.next_palahelpgui.label_palahelp": "Palahelp",
+      "block.palamod.elevator_orange": "Ascenseur Orange",
       "item.palamod.titane_armor_leggings": "Jambière en titane",
       "gui.palamod.assembleurend.label_une_maj_sera_bientot_faite": "Une maj sera bientot faite",
       "block.palamod.angelicwter": "Angelic water",
       "gui.palamod.adminshopblock.button_blackstone": "blackstone",
       "gui.palamod.adminshopmobs.button_back": "Revenir en arrière",
-      "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "gui.palamod.adminshopmenu.button_mobss_items": "Item de créatures ",
+      "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.green_paladium_small_ring": "Petit anneau en paladium vert",
       "gui.palamod.xpbushpalahelpgui.label_xp_berry": "xp berr",
       "gui.palamod.legendarystonepalahelp.label_forturne_permet_de_vous_give": "Forturne : permet  de vous give",
@@ -53144,8 +54850,8 @@
       "item.palamod.paladiumarmorcustom_10_chestplate": "Paladium Chestplate",
       "gui.palamod.adminshopmobsghasttears.button_back": "Revenir en arrière",
       "gui.palamod.grindergui.label_grinder_v41_noautotick": "Grinder - v4.1 noautotick",
-      "gui.palamod.adminshopplantcarrot.tooltip_return_to_the_adminshop_menu1": "Retour au menu principale de l\u0027adminshop",
       "gui.palamod.armorpalahelpgui.label_551": "+ 5.5",
+      "gui.palamod.adminshopplantcarrot.tooltip_return_to_the_adminshop_menu1": "Retour au menu principale de l\u0027adminshop",
       "gui.palamod.armorpalahelpgui.label_552": "+ 5.5",
       "gui.palamod.adminshopmobsstring.label_paladium": "Ender pearl",
       "gui.palamod.adminshopplantbrownmushroom.tooltip_return_to_the_adminshop_plant_me": "Retour au menu des plantes",
@@ -53154,21 +54860,21 @@
       "gui.palamod.potgtranfert.button_transfert": "Transferer",
       "gui.palamod.adminshopblock_dirt.button_sell": "Vendre",
       "advancements.avancementgrindre.title": "Besoin d\u0027une fonte ?",
-      "subtitles.miichallengemusic": "Mii chalenge music",
-      "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "que le nugget n\u0027apparaise [ probabilité étant la chance que le nugget appairaise",
       "gui.palamod.moneypanel.button_change": "Change",
+      "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "que le nugget n\u0027apparaise [ probabilité étant la chance que le nugget appairaise",
+      "subtitles.miichallengemusic": "Mii chalenge music",
       "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
-      "item.palamod.sword_head": "Tête d\u0027épée",
       "gui.palamod.adminshoporefindium.button_sell": "Vendre",
+      "item.palamod.sword_head": "Tête d\u0027épée",
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
       "item.palamod.paladiumarmorcustom_4_chestplate": "Paladium Chestplate",
-      "block.palamod.renforcedobsidianstairs": "hardened obsidian",
       "gui.palamod.adminpanelmenu.label_admin_panel": "Panel des admins",
+      "block.palamod.renforcedobsidianstairs": "hardened obsidian",
       "item.palamod.titanefastsword": "Épée rapide en titane",
       "advancements.avancementkaboom.title": "Ka-boom",
-      "block.palamod.black_lucky_block": "Lucky bloc noir",
-      "item.palamod.creative_trixium_sword": "Épée creative en trixium",
       "item.palamod.mixedendiumarmor_boots": "Mixed Endium Boots",
+      "item.palamod.creative_trixium_sword": "Épée creative en trixium",
+      "block.palamod.black_lucky_block": "Lucky bloc noir",
       "item_group.palamod.palamod": "Palamod Projet Renew",
       "gui.palamod.orelayerfat.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "gui.palamod.adminshoputilitiesemerald.label_paladium": "Redstone",
@@ -53193,17 +54899,17 @@
       "gui.palamod.palahelpblock.label_palahelp_block_menu": "Palahelp : Menu des blocs",
       "gui.palamod.adminshoporecoal.label_coal": "Charbon",
       "gui.palamod.dynamicorelayer.label_titane_64_32": "Titane : -64 --) 32",
-      "death.attack.fakewaterdamage.player": "%1$s sufforcated in the fake water whilst trying to escape %2$s",
       "gui.palamod.palahelpore.label_palahelp_ore": "Palahelp : Ore",
-      "block.palamod.grinder_block": "Grinder bloc",
-      "gui.palamod.adminshopmobs_2honeycomb.label_sell_price_120": "Prix de vente :  6.53",
+      "death.attack.fakewaterdamage.player": "%1$s sufforcated in the fake water whilst trying to escape %2$s",
       "gui.palamod.forgepalahelpgui.button_menu": "menu",
+      "gui.palamod.adminshopmobs_2honeycomb.label_sell_price_120": "Prix de vente :  6.53",
+      "block.palamod.grinder_block": "Grinder bloc",
       "itemGroup.tabpickaxeofgodstab": "Palamod - Pioche des Dieux ",
       "item.palamod.kiwano": "Kiwano",
-      "gui.palamod.armorpalahelpgui.label_65": "+ 6.5",
       "advancements.avanacementultimatehammer.title": "The Ultimate Hammer",
-      "gui.palamod.voidstoneminerconfig.label_de_la_pierre_dans_la_voidstone": "De la pierre dans la voidstone",
+      "gui.palamod.armorpalahelpgui.label_65": "+ 6.5",
       "gui.palamod.adminshopmobs.label_adminshop_mobs_menu": "Adminshop mobs menu",
+      "gui.palamod.voidstoneminerconfig.label_de_la_pierre_dans_la_voidstone": "De la pierre dans la voidstone",
       "gui.palamod.adminshopplantwheat.number_buy": "Un nombre ici",
       "gui.palamod.adminshopmobs_2gunpowder.tooltip_close_the_gui": "Close the Gui",
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
@@ -53267,8 +54973,8 @@
       "item.palamod.endium_armor_leggings": "Jambière en endium",
       "block.palamod.paladium_forge": "Paladium forge",
       "item.palamod.head_endium_axe": "Tête de hâche en endium",
-      "gui.palamod.adminshopore.button_paladium": "Paladium",
       "gui.palamod.palahelpnotsupported.label_change_language": "Change language",
+      "gui.palamod.adminshopore.button_paladium": "Paladium",
       "advancements.avancementcompressedavantur.descr": "Fabrique ou obtient un amathyste, titane ou paladium compressée",
       "gui.palamod.adminshopmobsslimeball.button_buy": "Acheter",
       "gui.palamod.palahelpore.label_tres_rare_sert_a_quelque_craft": "Findium : Minerais qui sert a certains crafts",
@@ -53276,8 +54982,8 @@
       "gui.palamod.adminshopmobs_2.tooltip_close_the_gui": "Fermer l\u0027interface",
       "item.palamod.axe_patern": "Axe partern",
       "advancements.avancementbigkaboom.title": "Big ka-boom",
-      "gui.palamod.specialmoneypanel.button_give": "Donner",
       "gui.palamod.palahelpgui_1.button_blocks": "Blocs",
+      "gui.palamod.specialmoneypanel.button_give": "Donner",
       "item.palamod.amethyst_armor_leggings": "Jambière en améthyste",
       "item.palamod.titane_stick": "Bâton en titane",
       "block.palamod.amethyst_ore": "Minerais d\u0027améthyte",
@@ -53287,10 +54993,10 @@
       "block.palamod.kiwano_2": "Kiwano état 2",
       "gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi": "fake water: un type d\u0027eau invisible qui",
       "block.palamod.kiwano_1": "Kiwano état 1",
-      "gui.palamod.adminshopmobs_rottenflesh.button_sell": "Vendre",
       "block.palamod.kiwano_0": "Kiwano état 0",
-      "gui.palamod.palahelptree.label_le_portail_en_amthyste": "le portail en améthyste",
+      "gui.palamod.adminshopmobs_rottenflesh.button_sell": "Vendre",
       "block.palamod.kiwano_4": "Kiwano état 4",
+      "gui.palamod.palahelptree.label_le_portail_en_amthyste": "le portail en améthyste",
       "block.palamod.kiwano_3": "Kiwano état 3",
       "gui.palamod.uploadergui.tooltip_money_output": "Money ( output )",
       "gui.palamod.adminshopplantredmushroom.tooltip_return_to_the_adminshop_menu": "Retour au menu principale de l\u0027adminshop",
@@ -53321,8 +55027,8 @@
       "gui.palamod.armorpalahelpgui.label_55": "+ 5.5 ",
       "gui.palamod.adminshopblocksoulsand.label_sell_price_05": "Prix de vente : 0.5",
       "item.palamod.paladium_armor_chestplate": "Plastron en paladium",
-      "gui.palamod.adminshopmobs_2inksac.tooltip_return_to_the_adminshops_mobs_m": "Return to the adminshop\u0027s mobs menu ( page 2 )",
       "gui.palamod.armorpalahelpgui.label_51": "+ 5",
+      "gui.palamod.adminshopmobs_2inksac.tooltip_return_to_the_adminshops_mobs_m": "Return to the adminshop\u0027s mobs menu ( page 2 )",
       "block.palamod.judeecercis_stairs": "Escalier en judeecercis",
       "gui.palamod.forgepalahelpgui.label_dane_le_slot_1_et_mettre_les_out": "dane le slot 1 et mettre les outil que vous voulez recycler",
       "gui.palamod.adminshopmobs_2.button_feather": "Feather",
@@ -53334,8 +55040,8 @@
       "item.palamod.speed_orb": "Orbe de rapidité",
       "item.palamod.paladiumarmorcustom_9_boots": "Paladium Boots",
       "gui.palamod.jobsminercraftgui.label_information": "Information",
-      "gui.palamod.adminshopplantwarpedfungus.label_buy_price_125": "Prix d\u0027achat : 5",
       "gui.palamod.adminshopmobsbone.label_sell_price_120": "Prix de vente :  1",
+      "gui.palamod.adminshopplantwarpedfungus.label_buy_price_125": "Prix d\u0027achat : 5",
       "gui.palamod.adminshopplantpotato.label_sell_price_120": "Prix de vente :  0.1",
       "palamod.procedure.jobs_hunter": "Chasseur",
       "gui.palamod.adminshoporeamethyst.number_buy": "Un nombre ici",
@@ -53349,25 +55055,26 @@
       "gui.palamod.grinderpalahelpgui.label_mins_hammer": "minés -) Marteaux",
       "block.palamod.erabletrapdoor": "Trappe en bois d\u0027érable",
       "painting.palamod.papillusion_322.title": "Papillusion 3 2 2",
-      "gui.palamod.trashgui.label_voidstone_gui_trash_bin": "Interface de la voidstone - Poubelle",
       "block.palamod.exctractor": "Extractor",
+      "gui.palamod.trashgui.label_voidstone_gui_trash_bin": "Interface de la voidstone - Poubelle",
       "advancements.achmpotg_20new.descr": "Améliorer ou obtener votre pioche des dieu au niveau 20",
       "advancements.achmpotg_17new.descr": "Obtener une pioche des dieu niveau 17",
-      "gui.palamod.adminshopmobswitherskull.number_buy": "Un nombre ici",
       "gui.palamod.adminshopblockblackstone.button_sell": "Vendre",
+      "gui.palamod.adminshopmobswitherskull.number_buy": "Un nombre ici",
       "gui.palamod.adminshopplantsugarcane.tooltip_close_the_gui": "Fermer l\u0027interface",
       "gui.palamod.analyserresult.label_air": "Air :",
       "gui.palamod.palahelpblock.button_fluid": "fluide",
       "gui.palamod.alchemycreatorgui.label_nether_wart": "nether wart :",
       "gui.palamod.adminshopmobs_2leather.button_sell": "Vendre",
+      "gui.palamod.grindergui.label_mode_paladium": "Mode : paladium",
       "item.palamod.travelarmor_chestplate": "Plastron de voyage",
       "gui.palamod.adminshopblocksoulsand.tooltip_return_to_the_adminshop_block_me": "Retour au menu des blocs",
       "gui.palamod.adminshopmobsstring.label_mode_set": "Quantité :",
       "block.palamod.judeecercis_planks": "Planches de judeecercis",
       "item.palamod.lucky_beta": "Lucky beta",
-      "gui.palamod.adminshopmobs_2.button_glow_in_sac": "Glow ink sac",
-      "gui.palamod.specialmoneypanel.money": "Quantité",
       "gui.palamod.adminshoporegold.label_sell_price_30": "Prix de vente : 30",
+      "gui.palamod.specialmoneypanel.money": "Quantité",
+      "gui.palamod.adminshopmobs_2.button_glow_in_sac": "Glow ink sac",
       "gui.palamod.palahelpgui_1.button_gui": "Interface",
       "gui.palamod.analyserresult.label_logs": "Logs",
       "block.palamod.erable_door": "Porte en érable",
@@ -53377,8 +55084,8 @@
       "item.palamod.pickaxeofthegodslv_13": "Pioche des dieux",
       "item.palamod.pickaxeofthegodslv_14": "Pioche des dieux ",
       "item.palamod.pickaxeofthegodslv_11": "Pioche des dieux",
-      "gui.palamod.adminshoporetitane.label_sell_price_100": "Prix de vente : 100",
       "item.palamod.pickaxeofthegodslv_12": "Pioche des dieux ",
+      "gui.palamod.adminshoporetitane.label_sell_price_100": "Prix de vente : 100",
       "gui.palamod.itemmenupalahelp.button_btons": "Boutons",
       "item.palamod.pickaxeofthegodslv_10": "Pioche des dieux ",
       "item.palamod.green_paladium_broadsword_head": "Green broadsword head",
@@ -53397,13 +55104,13 @@
       "item.palamod.plateGlia": "Plate",
       "gui.palamod.jobsminercraftgui.tooltip_voidstone": "Voidstone",
       "item.palamod.pickaxe_head": "Tête de pioche en paladium",
-      "item.palamod.pickaxeofthegodslv_20": "Pioche des dieux",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Paladium spike obsidian",
+      "item.palamod.pickaxeofthegodslv_20": "Pioche des dieux",
       "advancements.achmringendium.descr": "Répare quelque\u0027 chose avec un anneau de réparation en endium",
       "block.palamod.green_paladium_slab": "Dalle en paladium vert",
       "item.palamod.amethyste_ingot": "Lingot d\u0027améthyste",
-      "gui.palamod.adminshopmobs_2.button_potato": "String",
       "gui.palamod.snapshot.label_build_v1900036": "build v19.00036",
+      "gui.palamod.adminshopmobs_2.button_potato": "String",
       "gui.palamod.adminshopmobsbone.button_buy": "Acheter",
       "item.palamod.x_10xppotion": "Doublee xp potion",
       "gui.palamod.dynamicorelayer.label_empty4": "----------------------------",
@@ -53412,8 +55119,8 @@
       "gui.palamod.dynamicorelayer.label_empty3": "----------------------------",
       "gui.palamod.legendarystonepalahelp.label_au_dessus": "au dessus",
       "gui.palamod.dynamicorelayer.label_empty2": "----------------------------",
-      "gui.palamod.dynamicorelayer.label_empty1": "----------------------------",
       "gui.palamod.dynamicorelayer.label_endium_64_128_customs_p": "Endium : -64 --) 128 ; Biome du palamod seulement",
+      "gui.palamod.dynamicorelayer.label_empty1": "----------------------------",
       "gui.palamod.adminshopplantcarrot.button_sell": "Vendre",
       "gui.palamod.adminshopmobs_rottenflesh.label_sell_price_120": "Prix de vente:  1",
       "gui.palamod.palahelpblock.button_ore": "Minerais",
@@ -53441,8 +55148,8 @@
       "block.palamod.green_paladium_stairs": "Green paladium stairs",
       "item.palamod.obsidianpickaxe": "Pioche en obsidienne",
       "block.palamod.xpbushon": "Xpbush on",
-      "gui.palamod.adminshopplantwheat.button_buy": "Acheter",
       "gui.palamod.adminshopplantbrownmushroom.button_buy": "Acheter",
+      "gui.palamod.adminshopplantwheat.button_buy": "Acheter",
       "enchantment.palamod.smelt": "Cuire",
       "gui.palamod.adminshopmobs.button_cactus": "Cactus",
       "block.palamod.hardenedobsidianslab": "hardened obsidian stairs",
@@ -53493,11 +55200,11 @@
       "gui.palamod.adhutilitiesredstone.label_sell_price_120": "Prix de vente :  1.75",
       "gui.palamod.adminshopmobs_2.button_carrot": "Oeuf",
       "gui.palamod.adminshopmobs_2inksac.number_buy": "Un nombre ici",
-      "item.palamod.green_paladium_medium_ring": "Anneau moyen en paladium vert",
       "item.palamod.guardian_stone": "Pierre de guardian",
+      "item.palamod.green_paladium_medium_ring": "Anneau moyen en paladium vert",
       "gui.palamod.adminshopmobs.button_wheat_seed": "Blé",
-      "gui.palamod.grinderpalahelpgui.label_et_la_broadsword_vous_pouvez_y_a": "et le glaive Vous pouvez y ajouter",
       "item.palamod.pesyblpotion": "Potion de pesybl",
+      "gui.palamod.grinderpalahelpgui.label_et_la_broadsword_vous_pouvez_y_a": "et le glaive Vous pouvez y ajouter",
       "advancements.achmchesttitane.descr": "Obtient ou farbrique un coffre en améthyste",
       "advancements.avancementforgeafa.descr": "Fabrique une forge",
       "item.palamod.paladiumexcavator": "Excavateur en paladium",
@@ -53513,11 +55220,11 @@
       "gui.palamod.adminshoputilities.button_back": "Menu",
       "gui.palamod.adminshopmobs_rottenflesh.label_paladium": "Yeux d\u0027araignée",
       "gui.palamod.next_palahelpgui.label_22": "2/2",
-      "item.palamod.hammer_patern": "Hammer patern",
       "gui.palamod.adminshopplantredmushroom.label_paladium": "Cactus",
+      "item.palamod.hammer_patern": "Hammer patern",
       "enchantment.palamod.autosmeltpotg": "Améloiration d\u0027auto cuiseur",
-      "block.palamod.judeecercis_leaves": "Feuilles de judeecercis",
       "item.palamod.paladium_particle": "Particule en paladium",
+      "block.palamod.judeecercis_leaves": "Feuilles de judeecercis",
       "gui.palamod.palahelpnotsupported.button_crowdin_link": "Link du crowlink",
       "advancements.avancementforgeafa.title": "Forge-le aujourd\u0027hui puis demain",
       "gui.palamod.adminshopmobs_2.button_blaze": "Blaze",
@@ -53545,11 +55252,11 @@
       "painting.palamod.sunrise_216.title": "Sunrise 2 1 6",
       "gui.palamod.jobsgui.label_jobs": "Jobs",
       "item.palamod.big_ring": "Gros anneaux en paladium",
-      "gui.palamod.orelayer.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "painting.palamod.cherrytree.title": "Cherrytree",
+      "gui.palamod.orelayer.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "gui.palamod.adminshopmobsegg.tooltip_close_the_gui": "Close the Gui",
-      "gui.palamod.adminshoporeamethyst.label_mode_set": "Quantité :",
       "gui.palamod.forgepalahelpgui.label_an_example_gui_is_available_next": "An example gui is available next to the close button",
+      "gui.palamod.adminshoporeamethyst.label_mode_set": "Quantité :",
       "gui.palamod.downloadergui.tooltip_turn_onoff_the_machine": "Turn on/off the machine",
       "gui.palamod.adhutilitiesredstone.tooltip_close_the_gui": "Fermer l\u0027interface",
       "item.palamod.miichalenge.desc": "Koro - Mii chalenge - 2020",
@@ -53566,8 +55273,8 @@
       "gui.palamod.adminshopblock_dirt.tooltip_return_to_the_adminshop_block_me": "Retour au menu des blocs",
       "gui.palamod.adminshopblock_dirt.number_buy": "Un nombre ici",
       "item.palamod.amethyst_hoe": "Houe en améthyste",
-      "gui.palamod.adminshopblocksoulsand.label_buy_price_20": "Prix d\u0027achat :  20",
       "gui.palamod.adminshopmobs_2.label_adminshop_plant_section": "Adminshop - mobs\u0027s item section",
+      "gui.palamod.adminshopblocksoulsand.label_buy_price_20": "Prix d\u0027achat :  20",
       "gui.palamod.palamachinegui.label_inventory": "Inventaire",
       "death.attack.spike.paladium": "",
       "painting.palamod.plains_16.author": "Inconnu",
@@ -53578,9 +55285,9 @@
       "item.palamod.paladiumarmorcustom_5_chestplate": "Paladium Chestplate",
       "advancements.avancementgrindre.descr": "Fabrique un grinder",
       "item.palamod.big_dynamite": "Grosse dynamite",
-      "block.palamod.paladium_ore": "Minerais de paladium",
-      "gui.palamod.adminshopore.button_exit": "Sortie",
       "gui.palamod.greenpaladiumchestgui.label_inventory": "Inventaire",
+      "gui.palamod.adminshopore.button_exit": "Sortie",
+      "block.palamod.paladium_ore": "Minerais de paladium",
       "gui.palamod.adminshoporegold.button_buy": "Acheter",
       "gui.palamod.adminshopplantcactus.label_mode_set": "Quantité :",
       "painting.palamod.tsuamie_16.author": "Inconnu",
@@ -53619,8 +55326,8 @@
       "gui.palamod.adminshopplantcactus.tooltip_return_to_the_adminshop_plant_me": "Retour au menu des plantes",
       "gui.palamod.adminshoporecoal.button_back": "Retour en arrière",
       "item.palamod.titane_particle": "Particule de titane",
-      "gui.palamod.analyserloading.label_the_analyser_is_loader": "L\u0027analyseur charge",
       "advancements.achmringpaladium.title": "Garantie étendue",
+      "gui.palamod.analyserloading.label_the_analyser_is_loader": "L\u0027analyseur charge",
       "item.palamod.titane_sword": "Épée en titane",
       "gui.palamod.adminshopmobs_2inksac.button_back": "Retour en arrière",
       "gui.palamod.dynamicorelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
@@ -53638,10 +55345,10 @@
       "gui.palamod.legendarystonepalahelp.label_teleportation_vous_tp_aletorem": "Teleportation : vous tp aletorement",
       "gui.palamod.jobsgui.label_last_unlocked_items": "Last unlocked items",
       "gui.palamod.assembleurend.label_the_assembleur_will_deleted_in_t": "L\u0027assembleur va être supprimé",
-      "item.palamod.block_patern": "Block patern",
-      "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Prix d\u0027achat : 6.75",
-      "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Viande putréfié",
       "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop - Menu des graines",
+      "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Viande putréfié",
+      "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Prix d\u0027achat : 6.75",
+      "item.palamod.block_patern": "Block patern",
       "item.palamod.knockback_modifier": "Modificateur de poussée",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Glaive",
       "item.palamod.amethyst_pickaxe": "Pioche en améthyste",

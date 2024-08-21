@@ -9,10 +9,10 @@ import palamod.procedures.Palamachinesubprocess6Procedure;
 import palamod.procedures.Palamachinesubprocess5Procedure;
 import palamod.procedures.Palamachinesubprocess4Procedure;
 import palamod.procedures.Palamachinesubprocess3Procedure;
+import palamod.procedures.Palamachinesubprocess2Procedure;
 import palamod.procedures.Palamachinesubprocess1Procedure;
 import palamod.procedures.Palamachinesubprocess11Procedure;
 import palamod.procedures.Palamachinesubprocess10Procedure;
-import palamod.procedures.Palafurnacesubprocess2Procedure;
 import palamod.procedures.Grindertrans0Procedure;
 
 import net.minecraft.world.level.Level;
@@ -59,10 +59,12 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachinegui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load0.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+
 		if (Palamachinesubprocess1Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamchine_load1.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
-		if (Palafurnacesubprocess2Procedure.execute(world, x, y, z)) {
+		if (Palamachinesubprocess2Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load2.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess3Procedure.execute(world, x, y, z)) {
@@ -109,7 +111,7 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palamachinegui.label_palamachine"), 57, 4, -3407872, false);
 		guiGraphics.drawString(this.font,
 
-				Grindertrans0Procedure.execute(entity), 4, 72, -12829636, false);
+				Grindertrans0Procedure.execute(entity), 4, 72, -4671036, false);
 	}
 
 	@Override

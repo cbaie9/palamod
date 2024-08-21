@@ -43,7 +43,7 @@
             "name": "Grindertrans0"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 130,
@@ -173,6 +173,15 @@
       {
         "type": "image",
         "data": {
+          "image": "palamachine_load0.png",
+          "use1Xscale": false,
+          "x": 205,
+          "y": 79
+        }
+      },
+      {
+        "type": "image",
+        "data": {
           "image": "palamchine_load1.png",
           "use1Xscale": false,
           "displayCondition": {
@@ -188,7 +197,7 @@
           "image": "palamachine_load2.png",
           "use1Xscale": false,
           "displayCondition": {
-            "name": "Palafurnacesubprocess2"
+            "name": "Palamachinesubprocess2"
           },
           "x": 205,
           "y": 79

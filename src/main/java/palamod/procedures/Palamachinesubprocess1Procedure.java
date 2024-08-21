@@ -13,7 +13,7 @@ public class Palamachinesubprocess1Procedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "pmachine_state") >= 0 && new Object() {
+		}.getValue(world, BlockPos.containing(x, y, z), "pmachine_state") > 0 && new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
