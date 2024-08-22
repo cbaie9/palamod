@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2gunpowderMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountgunpowderProcedure;
 
 import palamod.network.Adminshopmobs2gunpowderButtonMessage;
@@ -54,7 +55,7 @@ public class Adminshopmobs2gunpowderScreen extends AbstractContainerScreen<Admin
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 3 && mouseY < topPos + 19)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 5 && mouseY < topPos + 19)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 4 && mouseY < topPos + 19)
@@ -105,9 +106,9 @@ public class Adminshopmobs2gunpowderScreen extends AbstractContainerScreen<Admin
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.label_paladium"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountgunpowderProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountgunpowderProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

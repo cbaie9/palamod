@@ -46,7 +46,7 @@
           "width": 81,
           "height": 20,
           "x": 217,
-          "y": 94
+          "y": 95
         }
       },
       {
@@ -210,7 +210,7 @@
           },
           "width": 67,
           "height": 20,
-          "x": 129,
+          "x": 130,
           "y": 117
         }
       },
@@ -263,7 +263,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the Gui"
+            "fixedValue": "Close the Gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

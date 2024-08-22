@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "slimepad:default",
+    "customModelName": "v2_slimepad:default",
     "rotationMode": 4,
     "enablePitch": false,
     "emissiveRendering": false,

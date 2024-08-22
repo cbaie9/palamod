@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2Menu;
 
+import palamod.procedures.ClosetheguitransProcedure;
+
 import palamod.network.Adminshopmobs2ButtonMessage;
 
 import palamod.PalamodMod;
@@ -58,7 +60,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 		if (mouseX > leftPos + 27 && mouseX < leftPos + 42 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2.tooltip_go_the_page_1"), mouseX, mouseY);
 		if (mouseX > leftPos + 165 && mouseX < leftPos + 181 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

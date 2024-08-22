@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporediamondMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountdiamondProcedure;
 
 import palamod.network.AdminshoporediamondButtonMessage;
@@ -58,7 +59,7 @@ public class AdminshoporediamondScreen extends AbstractContainerScreen<Adminshop
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporediamond.tooltip_return_to_the_re_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporediamond.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -105,9 +106,9 @@ public class AdminshoporediamondScreen extends AbstractContainerScreen<Adminshop
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporediamond.label_diamond"), 59, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountdiamondProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporediamond.label_buy_price_40"), 36, 25, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporediamond.label_sell_price_45"), 34, 39, -12829636, false);
+				AdshoppreviewamountdiamondProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporediamond.label_buy_price_40"), 36, 25, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporediamond.label_sell_price_45"), 34, 39, -4671036, false);
 	}
 
 	@Override

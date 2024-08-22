@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporefindiumMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountfindiumProcedure;
 
 import palamod.network.AdminshoporefindiumButtonMessage;
@@ -56,7 +57,7 @@ public class AdminshoporefindiumScreen extends AbstractContainerScreen<Adminshop
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporefindium.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporefindium.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 121 && mouseX < leftPos + 133 && mouseY > topPos + 5 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporefindium.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 	}
@@ -103,11 +104,11 @@ public class AdminshoporefindiumScreen extends AbstractContainerScreen<Adminshop
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporefindium.label_findium"), 58, 6, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporefindium.label_sell_price_85"), 37, 27, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporefindium.label_buy_price_90"), 44, 41, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporefindium.label_sell_price_85"), 37, 27, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporefindium.label_buy_price_90"), 44, 41, -4671036, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountfindiumProcedure.execute(world, entity, guistate), 29, 75, -12829636, false);
+				AdshoppreviewamountfindiumProcedure.execute(world, entity, guistate), 29, 75, -4671036, false);
 	}
 
 	@Override

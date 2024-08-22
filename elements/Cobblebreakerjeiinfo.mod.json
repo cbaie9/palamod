@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Cobblebreaker"
+      }
+    ],
+    "information": [
+      "The cobblebreaker is a machine who take cobblestone and compress them to obtain type of ore like paladium, titane, amethyst or nearly all vanilla ore",
+      "You can also use voidstone minage to replace cobblestone to make a afk farm"
+    ]
+  }
+}

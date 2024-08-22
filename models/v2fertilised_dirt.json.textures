@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "connect2dirt"
+        "1": "ferti_dirt"
       },
       "name": "default"
     }

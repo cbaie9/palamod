@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "dirt3:default",
+    "customModelName": "v2fertilised_dirt:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -58,7 +58,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "EARTH"
+      "value": "ROCK"
     },
     "tickRate": 1,
     "tickRandomly": false,

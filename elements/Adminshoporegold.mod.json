@@ -54,7 +54,7 @@
             "name": "Adshoppreviewamountgold"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 155,
@@ -99,7 +99,7 @@
             "fixedValue": "Sell price : 30"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 167,
@@ -114,7 +114,7 @@
             "fixedValue": "Buy Price : 35"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 173,
@@ -210,7 +210,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the gui"
+            "fixedValue": "Close the gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

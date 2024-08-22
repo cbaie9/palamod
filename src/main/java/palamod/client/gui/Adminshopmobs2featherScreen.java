@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2featherMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountfeatherProcedure;
 
 import palamod.network.Adminshopmobs2featherButtonMessage;
@@ -56,7 +57,7 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2feather.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2feather.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -108,9 +109,9 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2feather.label_paladium"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountfeatherProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2feather.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2feather.label_buy_price_125"), 24, 44, -12829636, false);
+				AdshoppreviewamountfeatherProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2feather.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2feather.label_buy_price_125"), 24, 44, -4671036, false);
 	}
 
 	@Override

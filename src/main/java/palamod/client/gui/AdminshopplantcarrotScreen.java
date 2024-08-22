@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantcarrotMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountcarrotProcedure;
 
 import palamod.network.AdminshopplantcarrotButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopplantcarrotScreen extends AbstractContainerScreen<Adminsho
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantcarrot.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantcarrot.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 118 && mouseX < leftPos + 130 && mouseY > topPos + 6 && mouseY < topPos + 21)
@@ -103,11 +104,11 @@ public class AdminshopplantcarrotScreen extends AbstractContainerScreen<Adminsho
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcarrot.label_paladium"), 58, 6, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcarrot.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcarrot.label_buy_price_125"), 25, 44, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcarrot.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcarrot.label_buy_price_125"), 25, 44, -4671036, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountcarrotProcedure.execute(world, entity, guistate), 29, 77, -12829636, false);
+				AdshoppreviewamountcarrotProcedure.execute(world, entity, guistate), 29, 77, -4671036, false);
 	}
 
 	@Override

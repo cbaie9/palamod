@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporegoldMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountgoldProcedure;
 
 import palamod.network.AdminshoporegoldButtonMessage;
@@ -59,7 +60,7 @@ public class AdminshoporegoldScreen extends AbstractContainerScreen<Adminshopore
 		if (mouseX > leftPos + 138 && mouseX < leftPos + 153 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporegold.tooltip_return_to_the_ore_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporegold.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -104,9 +105,9 @@ public class AdminshoporegoldScreen extends AbstractContainerScreen<Adminshopore
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporegold.label_gold"), 72, 7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountgoldProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporegold.label_sell_price_30"), 41, 27, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporegold.label_buy_price_35"), 47, 42, -12829636, false);
+				AdshoppreviewamountgoldProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporegold.label_sell_price_30"), 41, 27, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporegold.label_buy_price_35"), 47, 42, -4671036, false);
 	}
 
 	@Override

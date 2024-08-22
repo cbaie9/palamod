@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockGravelMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountgravelProcedure;
 
 import palamod.network.AdminshopblockGravelButtonMessage;
@@ -43,7 +44,7 @@ public class AdminshopblockGravelScreen extends AbstractContainerScreen<Adminsho
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
+		this.imageWidth = 175;
 		this.imageHeight = 166;
 	}
 
@@ -54,7 +55,7 @@ public class AdminshopblockGravelScreen extends AbstractContainerScreen<Adminsho
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_gravel.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 6 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_gravel.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 7 && mouseY < topPos + 21)
@@ -105,9 +106,9 @@ public class AdminshopblockGravelScreen extends AbstractContainerScreen<Adminsho
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_gravel.label_gravel"), 68, 7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountgravelProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_gravel.label_sell_price_02"), 37, 24, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_gravel.label_buy_price_15"), 44, 35, -12829636, false);
+				AdshoppreviewamountgravelProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_gravel.label_sell_price_02"), 37, 24, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_gravel.label_buy_price_15"), 44, 35, -4671036, false);
 	}
 
 	@Override

@@ -1,0 +1,73 @@
+{
+  "_fv": 66,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv1"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv2"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv3"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv4"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv5"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv6"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv7"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv8"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv9"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv10"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv11"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv12"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv14"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv15"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv16"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv17"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv18"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv19"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv20"
+      },
+      {
+        "value": "CUSTOM:Pickaxeofthegodslv13"
+      }
+    ],
+    "information": [
+      "The pickaxe of the gods is an unbreakable pickaxe who can be upgraded by breaking a certain amount of block The maximun level is the miner level /5 ",
+      "It has some upgrade like auto-smelt or big-hole who made the pickaxe smelt block or make it like act like a hammer It can be applied in the grinder",
+      "Push sneak when the item is in your hand to see how many block you need to break to reach the next"
+    ]
+  }
+}

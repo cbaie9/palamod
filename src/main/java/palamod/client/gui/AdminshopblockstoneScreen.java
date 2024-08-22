@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockstoneMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountdirtProcedure;
 
 import palamod.network.AdminshopblockstoneButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopblockstoneScreen extends AbstractContainerScreen<Adminshop
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockstone.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockstone.tooltip_return_the_block_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 4 && mouseY < topPos + 19)
@@ -105,9 +106,9 @@ public class AdminshopblockstoneScreen extends AbstractContainerScreen<Adminshop
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockstone.label_stone"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountdirtProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockstone.label_sell_price_01"), 38, 25, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockstone.label_buy_price_10"), 44, 37, -12829636, false);
+				AdshoppreviewamountdirtProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockstone.label_sell_price_01"), 38, 25, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockstone.label_buy_price_10"), 44, 37, -4671036, false);
 	}
 
 	@Override

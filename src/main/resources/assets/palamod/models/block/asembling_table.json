@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "palamod:block/beta_texture",
-    "particle": "palamod:block/beta_texture"
-  },
-  "render_type": "solid"
-}

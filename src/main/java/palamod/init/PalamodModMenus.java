@@ -47,6 +47,7 @@ import palamod.world.inventory.Grinderpalahelp2guiMenu;
 import palamod.world.inventory.GrinderguiMenu;
 import palamod.world.inventory.GreenpaladiumchestguiMenu;
 import palamod.world.inventory.GolemtreecMenu;
+import palamod.world.inventory.GamblelingjobsjetonMenu;
 import palamod.world.inventory.ForgepalahelpguiMenu;
 import palamod.world.inventory.ForgeguiMenu;
 import palamod.world.inventory.ForgeexampleguiMenu;
@@ -63,7 +64,6 @@ import palamod.world.inventory.CrusherpalahelpguiMenu;
 import palamod.world.inventory.CrusherguiMenu;
 import palamod.world.inventory.CobblebreakerguiMenu;
 import palamod.world.inventory.AuthsafeguiMenu;
-import palamod.world.inventory.AssembleurendMenu;
 import palamod.world.inventory.ArmorpalahelpguiMenu;
 import palamod.world.inventory.AnalyserresultMenu;
 import palamod.world.inventory.AnalyserloadingMenu;
@@ -124,7 +124,6 @@ import palamod.world.inventory.AdminshopblockMenu;
 import palamod.world.inventory.AdminshopblockGravelMenu;
 import palamod.world.inventory.AdminshopblockGlowstoneMenu;
 import palamod.world.inventory.AdminshopblockDirtMenu;
-import palamod.world.inventory.AdminshopadbanMenu;
 import palamod.world.inventory.AdminpanelmenuMenu;
 import palamod.world.inventory.AdhutilitiesredstoneMenu;
 
@@ -179,8 +178,6 @@ public class PalamodModMenus {
 	public static final RegistryObject<MenuType<GuardianguiMenu>> GUARDIANGUI = REGISTRY.register("guardiangui", () -> IForgeMenuType.create(GuardianguiMenu::new));
 	public static final RegistryObject<MenuType<GolemtreecMenu>> GOLEMTREEC = REGISTRY.register("golemtreec", () -> IForgeMenuType.create(GolemtreecMenu::new));
 	public static final RegistryObject<MenuType<FactionhomeguiMenu>> FACTIONHOMEGUI = REGISTRY.register("factionhomegui", () -> IForgeMenuType.create(FactionhomeguiMenu::new));
-	public static final RegistryObject<MenuType<AdminshopadbanMenu>> ADMINSHOPADBAN = REGISTRY.register("adminshopadban", () -> IForgeMenuType.create(AdminshopadbanMenu::new));
-	public static final RegistryObject<MenuType<AssembleurendMenu>> ASSEMBLEUREND = REGISTRY.register("assembleurend", () -> IForgeMenuType.create(AssembleurendMenu::new));
 	public static final RegistryObject<MenuType<AnalyserloadingMenu>> ANALYSERLOADING = REGISTRY.register("analyserloading", () -> IForgeMenuType.create(AnalyserloadingMenu::new));
 	public static final RegistryObject<MenuType<AnalyserresultMenu>> ANALYSERRESULT = REGISTRY.register("analyserresult", () -> IForgeMenuType.create(AnalyserresultMenu::new));
 	public static final RegistryObject<MenuType<AdminshoporeMenu>> ADMINSHOPORE = REGISTRY.register("adminshopore", () -> IForgeMenuType.create(AdminshoporeMenu::new));
@@ -262,4 +259,5 @@ public class PalamodModMenus {
 	public static final RegistryObject<MenuType<SticknewhelpMenu>> STICKNEWHELP = REGISTRY.register("sticknewhelp", () -> IForgeMenuType.create(SticknewhelpMenu::new));
 	public static final RegistryObject<MenuType<JobsminerguiMenu>> JOBSMINERGUI = REGISTRY.register("jobsminergui", () -> IForgeMenuType.create(JobsminerguiMenu::new));
 	public static final RegistryObject<MenuType<JobsminercraftguiMenu>> JOBSMINERCRAFTGUI = REGISTRY.register("jobsminercraftgui", () -> IForgeMenuType.create(JobsminercraftguiMenu::new));
+	public static final RegistryObject<MenuType<GamblelingjobsjetonMenu>> GAMBLELINGJOBSJETON = REGISTRY.register("gamblelingjobsjeton", () -> IForgeMenuType.create(GamblelingjobsjetonMenu::new));
 }

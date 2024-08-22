@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporepaladiumMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountpalaProcedure;
 
 import palamod.network.AdminshoporepaladiumButtonMessage;
@@ -58,7 +59,7 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 5 && mouseY < topPos + 19)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporepaladium.tooltip_return_to_the_ore_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 3 && mouseY < topPos + 19)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporepaladium.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -67,11 +68,11 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -105,9 +106,9 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_paladium"), 62, 5, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountpalaProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountpalaProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

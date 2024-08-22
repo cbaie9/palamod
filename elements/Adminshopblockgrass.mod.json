@@ -54,7 +54,7 @@
             "name": "Adshoppreviewamountgrass"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 155,
@@ -99,7 +99,7 @@
             "fixedValue": "Sell price : 0.3"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 162,
@@ -114,7 +114,7 @@
             "fixedValue": "Buy price : 15"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 168,
@@ -183,7 +183,8 @@
         "data": {
           "name": "tooltip_close",
           "text": {
-            "fixedValue": "close the gui"
+            "fixedValue": "close the gui",
+            "name": "Closetheguitrans"
           },
           "width": 19,
           "height": 19,

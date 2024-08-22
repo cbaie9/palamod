@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopmobsstringMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountstringProcedure;
 
 import palamod.network.AdminshopmobsstringButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsstring.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsstring.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
 		if (mouseX > leftPos + 119 && mouseX < leftPos + 131 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_paladium"), 68, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountstringProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountstringProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

@@ -6,7 +6,7 @@ import palamod.world.inventory.PalahelpblockMenu;
 import palamod.procedures.MachineconnectpalahelpProcedure;
 import palamod.procedures.ConnectpalahelporeProcedure;
 import palamod.procedures.ConnectfluidpalahelpProcedure;
-import palamod.procedures.ClosepalahelpProcedure;
+import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.BackpalahelpProcedure;
 
 import palamod.PalamodMod;
@@ -74,19 +74,19 @@ public class PalahelpblockButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			BackpalahelpProcedure.execute(world, x, y, z, entity);
+			MachineconnectpalahelpProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			MachineconnectpalahelpProcedure.execute(world, x, y, z, entity);
+			ConnectfluidpalahelpProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			ConnectfluidpalahelpProcedure.execute(world, x, y, z, entity);
+			CloseguiProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			ClosepalahelpProcedure.execute(entity);
+			BackpalahelpProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

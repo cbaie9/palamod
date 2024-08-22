@@ -1,0 +1,99 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 400,
+    "height": 215,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jobs",
+          "text": {
+            "fixedValue": "Jobs"
+          },
+          "color": {
+            "value": -3394816,
+            "falpha": 0.0
+          },
+          "x": 29,
+          "y": 27
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jetons_de_recompenses",
+          "text": {
+            "fixedValue": "Jetons de récompenses"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "x": 29,
+          "y": 45
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_back_true_1",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
+          "x": 373,
+          "y": 17
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_close_gui_nohover",
+          "image": "close_gui_nohover.png",
+          "hoveredImage": "close_gui_nohover.png",
+          "x": 393,
+          "y": 17
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_closetheguitrans",
+          "text": {
+            "fixedValue": "",
+            "name": "Closetheguitrans"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 393,
+          "y": 17
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_hgyhugyuigyuigyi",
+          "text": {
+            "fixedValue": "hgyhugyuigyuigyi"
+          },
+          "width": 83,
+          "height": 83,
+          "x": 92,
+          "y": 109
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

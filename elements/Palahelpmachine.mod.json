@@ -13,9 +13,9 @@
       {
         "type": "image",
         "data": {
-          "image": "palahelpmachine.png",
+          "image": "gui176_166.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 37
         }
       },
@@ -129,7 +129,7 @@
         "data": {
           "image": "left_gray_line.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 37
         }
       },
@@ -138,7 +138,7 @@
         "data": {
           "image": "right_gray_line.png",
           "use1Xscale": false,
-          "x": 201,
+          "x": 202,
           "y": 37
         }
       },
@@ -203,6 +203,20 @@
           "height": 20,
           "x": 130,
           "y": 134
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_closetheguitrans",
+          "text": {
+            "fixedValue": "",
+            "name": "Closetheguitrans"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 281,
+          "y": 41
         }
       }
     ],

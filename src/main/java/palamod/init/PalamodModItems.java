@@ -464,7 +464,6 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> TCV_2 = block(PalamodModBlocks.TCV_2);
 	public static final RegistryObject<Item> LEGENDARY_STONE_FORTUNE = REGISTRY.register("legendary_stone_fortune", () -> new LegendarystonefortuneItem());
 	public static final RegistryObject<Item> LEGENDARY_STONE_INVISIBLE = REGISTRY.register("legendary_stone_invisible", () -> new LegendarystoneinvisibleItem());
-	public static final RegistryObject<Item> ASEMBLING_TABLE = block(PalamodModBlocks.ASEMBLING_TABLE);
 	public static final RegistryObject<Item> LEGENDARY_STONE_POWER = REGISTRY.register("legendary_stone_power", () -> new LegendarystonepowerItem());
 	public static final RegistryObject<Item> LEGENDARY_STONE_JOBS = REGISTRY.register("legendary_stone_jobs", () -> new LegendarystonejobsItem());
 	public static final RegistryObject<Item> LEGENDARY_STONE_TELEPORTATION = REGISTRY.register("legendary_stone_teleportation", () -> new LegendarystoneteleportationItem());

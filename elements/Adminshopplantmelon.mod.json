@@ -74,7 +74,7 @@
             "fixedValue": "Sell price :  0.8"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 151,
@@ -89,7 +89,7 @@
             "fixedValue": "Buy Price : 5.8"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 151,
@@ -105,7 +105,7 @@
             "name": "Adshoppreviewamountmelon"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 155,
@@ -209,7 +209,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the Gui"
+            "fixedValue": "Close the Gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

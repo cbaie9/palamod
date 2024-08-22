@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockblackstoneMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountblackstoneProcedure;
 
 import palamod.network.AdminshopblockblackstoneButtonMessage;
@@ -56,7 +57,7 @@ public class AdminshopblockblackstoneScreen extends AbstractContainerScreen<Admi
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockblackstone.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockblackstone.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockblackstone.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
 	}
@@ -105,9 +106,9 @@ public class AdminshopblockblackstoneScreen extends AbstractContainerScreen<Admi
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockblackstone.label_blackstone"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountblackstoneProcedure.execute(world, entity, guistate), 26, 76, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockblackstone.label_sell_price_1"), 46, 26, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockblackstone.label_buy_price_20"), 46, 39, -12829636, false);
+				AdshoppreviewamountblackstoneProcedure.execute(world, entity, guistate), 26, 76, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockblackstone.label_sell_price_1"), 46, 26, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblockblackstone.label_buy_price_20"), 46, 39, -4671036, false);
 	}
 
 	@Override

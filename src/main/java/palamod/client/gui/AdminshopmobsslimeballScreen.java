@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopmobsslimeballMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountslimeballProcedure;
 
 import palamod.network.AdminshopmobsslimeballButtonMessage;
@@ -58,7 +59,7 @@ public class AdminshopmobsslimeballScreen extends AbstractContainerScreen<Admins
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsslimeball.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsslimeball.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -105,9 +106,9 @@ public class AdminshopmobsslimeballScreen extends AbstractContainerScreen<Admins
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsslimeball.label_paladium"), 56, 7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountslimeballProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsslimeball.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsslimeball.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountslimeballProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsslimeball.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsslimeball.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

@@ -3,6 +3,7 @@ package palamod.client.gui;
 import palamod.world.inventory.SticknewhelpMenu;
 
 import palamod.procedures.Getlabelnewstick1Procedure;
+import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.SticknewhelpButtonMessage;
 
@@ -53,6 +54,8 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 379 && mouseX < leftPos + 395 && mouseY > topPos + 4 && mouseY < topPos + 20)
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -61,17 +64,19 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/sticknewhelp.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 400, 225, 400, 225);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/sticknewhelp.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 400, 225, 400, 225);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 299, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 300, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_new.png"), this.leftPos + 331, this.topPos + 144, 0, 0, 24, 10, 24, 10);
+
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -87,13 +92,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_palahelp_stick"), 157, 8, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_palahelp_stick"), 158, 8, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_effect_of_the_stick"), 4, 26, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_palamachine"), 61, 106, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_craft"), 3, 83, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				Getlabelnewstick1Procedure.execute(world, entity), 4, 39, -12829636, false);
+				Getlabelnewstick1Procedure.execute(world, entity), 5, 39, -12829636, false);
 	}
 
 	@Override

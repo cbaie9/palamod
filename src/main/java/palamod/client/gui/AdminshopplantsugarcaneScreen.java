@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantsugarcaneMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountsugarcaneProcedure;
 
 import palamod.network.AdminshopplantsugarcaneButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<Admin
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantsugarcane.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantsugarcane.tooltip_return_to_the_adminshop_plant_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 117 && mouseX < leftPos + 129 && mouseY > topPos + 6 && mouseY < topPos + 21)
@@ -103,11 +104,11 @@ public class AdminshopplantsugarcaneScreen extends AbstractContainerScreen<Admin
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantsugarcane.label_paladium"), 58, 6, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantsugarcane.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantsugarcane.label_buy_price_125"), 25, 44, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantsugarcane.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantsugarcane.label_buy_price_125"), 25, 44, -4671036, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountsugarcaneProcedure.execute(world, entity, guistate), 29, 77, -12829636, false);
+				AdshoppreviewamountsugarcaneProcedure.execute(world, entity, guistate), 29, 77, -4671036, false);
 	}
 
 	@Override

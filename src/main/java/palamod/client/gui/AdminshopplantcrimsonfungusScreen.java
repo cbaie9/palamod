@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantcrimsonfungusMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountnethermushProcedure;
 
 import palamod.network.AdminshopplantcrimsonfungusButtonMessage;
@@ -58,7 +59,7 @@ public class AdminshopplantcrimsonfungusScreen extends AbstractContainerScreen<A
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.tooltip_return_to_the_adminshop_plant_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -103,11 +104,11 @@ public class AdminshopplantcrimsonfungusScreen extends AbstractContainerScreen<A
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.label_paladium"), 37, 8, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.label_buy_price_125"), 25, 44, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantcrimsonfungus.label_buy_price_125"), 25, 44, -4671036, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountnethermushProcedure.execute(world, entity, guistate), 29, 77, -12829636, false);
+				AdshoppreviewamountnethermushProcedure.execute(world, entity, guistate), 29, 77, -4671036, false);
 	}
 
 	@Override

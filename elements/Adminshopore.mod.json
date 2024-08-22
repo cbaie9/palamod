@@ -15,7 +15,7 @@
         "data": {
           "image": "gui176_166.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 46
         }
       },
@@ -171,7 +171,7 @@
         "data": {
           "image": "left_gray_line.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 29
         }
       },
@@ -180,7 +180,7 @@
         "data": {
           "image": "right_gray_line.png",
           "use1Xscale": false,
-          "x": 201,
+          "x": 202,
           "y": 29
         }
       },
@@ -230,7 +230,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the Gui"
+            "fixedValue": "Close the Gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

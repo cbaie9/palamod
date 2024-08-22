@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporeMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
+
 import palamod.network.AdminshoporeButtonMessage;
 
 import palamod.PalamodMod;
@@ -55,7 +57,7 @@ public class AdminshoporeScreen extends AbstractContainerScreen<AdminshoporeMenu
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 149 && mouseX < leftPos + 165 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopore.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 6 && mouseX < leftPos + 21 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopore.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 	}
@@ -66,11 +68,11 @@ public class AdminshoporeScreen extends AbstractContainerScreen<AdminshoporeMenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 17, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 17, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}

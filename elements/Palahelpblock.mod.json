@@ -13,6 +13,15 @@
       {
         "type": "image",
         "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
           "image": "adminshopblockoakwood.png",
           "use1Xscale": false,
           "x": 125,
@@ -27,11 +36,11 @@
             "fixedValue": "Palahelp : block menu"
           },
           "color": {
-            "value": -65536,
+            "value": -1250068,
             "falpha": 0.0
           },
-          "x": 137,
-          "y": 48
+          "x": 132,
+          "y": 44
         }
       },
       {
@@ -59,21 +68,6 @@
           "height": 20,
           "x": 222,
           "y": 93
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_back",
-          "text": "Back",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Backpalahelp"
-          },
-          "width": 50,
-          "height": 20,
-          "x": 132,
-          "y": 132
         }
       },
       {
@@ -109,25 +103,81 @@
       {
         "type": "image",
         "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 37
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_close_gui_nohover",
+          "image": "close_gui_nohover.png",
+          "hoveredImage": "close_gui_hover.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 279,
+          "y": 41
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_closetheguitrans",
+          "text": {
+            "fixedValue": "",
+            "name": "Closetheguitrans"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 279,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_back_true_1",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
+          "onClick": {
+            "name": "Backpalahelp"
+          },
+          "x": 259,
+          "y": 41
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_back_to_palahelp_menu",
+          "text": {
+            "fixedValue": "Back to palahelp menu"
+          },
+          "width": 15,
+          "height": 15,
+          "x": 260,
+          "y": 42
+        }
+      },
+      {
+        "type": "image",
+        "data": {
           "image": "pack.png",
           "use1Xscale": true,
           "x": 132,
           "y": 61
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_close",
-          "text": "Close",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Closepalahelp"
-          },
-          "width": 50,
-          "height": 20,
-          "x": 132,
-          "y": 159
         }
       }
     ],

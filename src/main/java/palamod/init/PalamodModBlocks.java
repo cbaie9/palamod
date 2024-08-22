@@ -193,7 +193,6 @@ import palamod.block.Chervil0Block;
 import palamod.block.CaveblockBlock;
 import palamod.block.BoomobsidianBlock;
 import palamod.block.BlackluckyblockBlock;
-import palamod.block.AsemblingtableBlock;
 import palamod.block.AngelicwterBlock;
 import palamod.block.AmetystespikeBlock;
 import palamod.block.AmethyststairsBlock;
@@ -295,7 +294,6 @@ public class PalamodModBlocks {
 	public static final RegistryObject<Block> TITANE_STAIRS = REGISTRY.register("titane_stairs", () -> new TitanestairsBlock());
 	public static final RegistryObject<Block> LOADBLOCK_1T = REGISTRY.register("loadblock_1t", () -> new Loadblock1tBlock());
 	public static final RegistryObject<Block> TCV_2 = REGISTRY.register("tcv_2", () -> new Tcv2Block());
-	public static final RegistryObject<Block> ASEMBLING_TABLE = REGISTRY.register("asembling_table", () -> new AsemblingtableBlock());
 	public static final RegistryObject<Block> EGGPLANT_0 = REGISTRY.register("eggplant_0", () -> new Eggplant0Block());
 	public static final RegistryObject<Block> EGGPLANT_1 = REGISTRY.register("eggplant_1", () -> new Eggplant1Block());
 	public static final RegistryObject<Block> EGGPLANT_2 = REGISTRY.register("eggplant_2", () -> new Eggplant2Block());

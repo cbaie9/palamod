@@ -1,9 +1,9 @@
 {
-  "parent": "palamod:custom/dirt3",
+  "parent": "palamod:custom/v2fertilised_dirt",
   "textures": {
     "all": "palamod:block/connect2dirt",
     "particle": "palamod:block/connect2dirt",
-    "1": "palamod:block/connect2dirt"
+    "1": "palamod:block/ferti_dirt"
   },
   "render_type": "solid"
 }

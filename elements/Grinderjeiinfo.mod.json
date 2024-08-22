@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Grindercasing"
+      },
+      {
+        "value": "CUSTOM:Grinderframe"
+      },
+      {
+        "value": "CUSTOM:Grinderblock"
+      },
+      {
+        "value": "CUSTOM:Tcv2"
+      }
+    ],
+    "information": [
+      "The grinder is structure who transform into a machine when built ( more info /palahelp -> gui > grinder ) it can create various item like hammer, fastsword or broadsword for example ",
+      "It can be use to apply upgrade for those item or the pickaxe of the gods ",
+      "It need fuel to work, it can work in 3 modes : paladium, green paladium and endium to make different tier of items To change modes make sure to empty the grinder via patern and break and replace the central block ( grinder block )"
+    ]
+  }
+}

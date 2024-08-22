@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantpotatoMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountpotatoProcedure;
 
 import palamod.network.AdminshopplantpotatoButtonMessage;
@@ -58,7 +59,7 @@ public class AdminshopplantpotatoScreen extends AbstractContainerScreen<Adminsho
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantpotato.tooltip_return_to_the_adminshop_plant_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantpotato.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -103,11 +104,11 @@ public class AdminshopplantpotatoScreen extends AbstractContainerScreen<Adminsho
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantpotato.label_paladium"), 58, 6, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantpotato.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantpotato.label_buy_price_125"), 25, 44, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantpotato.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantpotato.label_buy_price_125"), 25, 44, -4671036, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountpotatoProcedure.execute(world, entity, guistate), 29, 77, -12829636, false);
+				AdshoppreviewamountpotatoProcedure.execute(world, entity, guistate), 29, 77, -4671036, false);
 	}
 
 	@Override

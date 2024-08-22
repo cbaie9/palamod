@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblocksoulsandMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountsoulsandProcedure;
 
 import palamod.network.AdminshopblocksoulsandButtonMessage;
@@ -56,7 +57,7 @@ public class AdminshopblocksoulsandScreen extends AbstractContainerScreen<Admins
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblocksoulsand.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblocksoulsand.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblocksoulsand.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
 	}
@@ -105,9 +106,9 @@ public class AdminshopblocksoulsandScreen extends AbstractContainerScreen<Admins
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblocksoulsand.label_soulsand"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountsoulsandProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblocksoulsand.label_sell_price_05"), 38, 24, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblocksoulsand.label_buy_price_20"), 44, 42, -12829636, false);
+				AdshoppreviewamountsoulsandProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblocksoulsand.label_sell_price_05"), 38, 24, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblocksoulsand.label_buy_price_20"), 44, 42, -4671036, false);
 	}
 
 	@Override

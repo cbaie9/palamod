@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporeamethystMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountamethystProcedure;
 
 import palamod.network.AdminshoporeamethystButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporeamethyst.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporeamethyst.tooltip_return_to_the_ore_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 119 && mouseX < leftPos + 131 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_amethyst"), 60, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountamethystProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_sell_price_70"), 39, 28, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_buy_price_75"), 45, 40, -12829636, false);
+				AdshoppreviewamountamethystProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_sell_price_70"), 39, 28, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_buy_price_75"), 45, 40, -4671036, false);
 	}
 
 	@Override

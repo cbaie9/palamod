@@ -45,7 +45,7 @@
             "name": "Adshoppreviewamountpala"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 155,
@@ -90,7 +90,7 @@
             "fixedValue": "Sell price :  120"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 151,
@@ -105,7 +105,7 @@
             "fixedValue": "Buy Price : 125"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 151,
@@ -117,7 +117,7 @@
         "data": {
           "image": "gui176_166.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 37
         }
       },
@@ -126,7 +126,7 @@
         "data": {
           "image": "left_gray_line.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 37
         }
       },
@@ -135,7 +135,7 @@
         "data": {
           "image": "right_gray_line.png",
           "use1Xscale": false,
-          "x": 201,
+          "x": 202,
           "y": 37
         }
       },
@@ -209,7 +209,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the gui"
+            "fixedValue": "Close the gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

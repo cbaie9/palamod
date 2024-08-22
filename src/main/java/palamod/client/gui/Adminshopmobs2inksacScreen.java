@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2inksacMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountinksacProcedure;
 
 import palamod.network.Adminshopmobs2inksacButtonMessage;
@@ -54,7 +55,7 @@ public class Adminshopmobs2inksacScreen extends AbstractContainerScreen<Adminsho
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2inksac.tooltip_close_the_gu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2inksac.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
 		if (mouseX > leftPos + 118 && mouseX < leftPos + 130 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class Adminshopmobs2inksacScreen extends AbstractContainerScreen<Adminsho
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2inksac.label_paladium"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountinksacProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2inksac.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2inksac.label_buy_price_125"), 24, 44, -12829636, false);
+				AdshoppreviewamountinksacProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2inksac.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_2inksac.label_buy_price_125"), 24, 44, -4671036, false);
 	}
 
 	@Override

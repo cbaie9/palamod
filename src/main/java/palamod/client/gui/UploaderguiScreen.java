@@ -4,6 +4,7 @@ import palamod.world.inventory.UploaderguiMenu;
 
 import palamod.procedures.UploaderdebugProcedure;
 import palamod.procedures.Grindertrans0Procedure;
+import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.UploaderguiButtonMessage;
 
@@ -50,7 +51,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 27 && mouseY < topPos + 45)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be"), mouseX, mouseY);
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 61 && mouseX < leftPos + 107 && mouseY > topPos + 5 && mouseY < topPos + 18)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_gui_interface_need_an_upgra"), mouseX, mouseY);
 	}

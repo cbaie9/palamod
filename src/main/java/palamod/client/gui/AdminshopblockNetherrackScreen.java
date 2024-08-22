@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockNetherrackMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountnetherrackProcedure;
 
 import palamod.network.AdminshopblockNetherrackButtonMessage;
@@ -59,7 +60,7 @@ public class AdminshopblockNetherrackScreen extends AbstractContainerScreen<Admi
 		if (mouseX > leftPos + 133 && mouseX < leftPos + 148 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_netherrack.tooltip_return_to_the_block_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 151 && mouseX < leftPos + 167 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_netherrack.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -104,9 +105,9 @@ public class AdminshopblockNetherrackScreen extends AbstractContainerScreen<Admi
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_netherrack.label_netherrack"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountnetherrackProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_netherrack.label_sell_price_01"), 38, 23, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_netherrack.label_buy_price_1"), 44, 36, -12829636, false);
+				AdshoppreviewamountnetherrackProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_netherrack.label_sell_price_01"), 38, 23, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_netherrack.label_buy_price_1"), 44, 36, -4671036, false);
 	}
 
 	@Override

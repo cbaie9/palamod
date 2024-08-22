@@ -242,7 +242,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the gui"
+            "fixedValue": "Close the gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

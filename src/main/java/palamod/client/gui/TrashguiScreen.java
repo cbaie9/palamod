@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.TrashguiMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
+
 import palamod.network.TrashguiButtonMessage;
 
 import palamod.PalamodMod;
@@ -43,7 +45,7 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 3 && mouseY < topPos + 19)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.trashgui.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

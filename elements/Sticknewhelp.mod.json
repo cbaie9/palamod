@@ -15,7 +15,7 @@
         "data": {
           "image": "sticknewhelp.png",
           "use1Xscale": false,
-          "x": 13,
+          "x": 14,
           "y": 8
         }
       },
@@ -24,7 +24,7 @@
         "data": {
           "image": "left_gray_line.png",
           "use1Xscale": false,
-          "x": 13,
+          "x": 14,
           "y": 8
         }
       },
@@ -51,7 +51,7 @@
         "data": {
           "image": "right_gray_line.png",
           "use1Xscale": false,
-          "x": 313,
+          "x": 314,
           "y": 8
         }
       },
@@ -66,7 +66,7 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 171,
+          "x": 172,
           "y": 16
         }
       },
@@ -554,8 +554,31 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 18,
+          "x": 19,
           "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 274,
+          "y": 8
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_closetheguitrans",
+          "text": {
+            "fixedValue": "",
+            "name": "Closetheguitrans"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 393,
+          "y": 12
         }
       }
     ],

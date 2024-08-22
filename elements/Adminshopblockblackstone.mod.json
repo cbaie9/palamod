@@ -54,7 +54,7 @@
             "name": "Adshoppreviewamountblackstone"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 152,
@@ -99,7 +99,7 @@
             "fixedValue": "Sell price : 1"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 172,
@@ -114,7 +114,7 @@
             "fixedValue": "Buy price : 20"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 172,
@@ -196,7 +196,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the Gui"
+            "fixedValue": "Close the Gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

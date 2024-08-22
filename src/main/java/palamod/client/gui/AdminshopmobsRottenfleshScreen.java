@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopmobsRottenfleshMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountrottenfleshProcedure;
 
 import palamod.network.AdminshopmobsRottenfleshButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopmobsRottenfleshScreen extends AbstractContainerScreen<Admi
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
 		if (mouseX > leftPos + 118 && mouseX < leftPos + 130 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class AdminshopmobsRottenfleshScreen extends AbstractContainerScreen<Admi
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.label_paladium"), 46, 8, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountrottenfleshProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountrottenfleshProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobs_rottenflesh.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

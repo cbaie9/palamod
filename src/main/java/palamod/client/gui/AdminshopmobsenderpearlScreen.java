@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopmobsenderpearlMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountenderpearlProcedure;
 
 import palamod.network.AdminshopmobsenderpearlButtonMessage;
@@ -58,7 +59,7 @@ public class AdminshopmobsenderpearlScreen extends AbstractContainerScreen<Admin
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsenderpearl.tooltip_return_to_the_adminshop_main_men"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsenderpearl.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -105,9 +106,9 @@ public class AdminshopmobsenderpearlScreen extends AbstractContainerScreen<Admin
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsenderpearl.label_paladium"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountenderpearlProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsenderpearl.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsenderpearl.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountenderpearlProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsenderpearl.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsenderpearl.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

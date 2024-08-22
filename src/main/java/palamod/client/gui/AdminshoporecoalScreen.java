@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporecoalMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountcoalProcedure;
 
 import palamod.network.AdminshoporecoalButtonMessage;
@@ -55,7 +56,7 @@ public class AdminshoporecoalScreen extends AbstractContainerScreen<Adminshopore
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporecoal.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporecoal.tooltip_return_to_the_ore_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 121 && mouseX < leftPos + 133 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -104,9 +105,9 @@ public class AdminshoporecoalScreen extends AbstractContainerScreen<Adminshopore
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporecoal.label_coal"), 68, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountcoalProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporecoal.label_sell_price_3"), 39, 27, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporecoal.label_buy_price_5"), 44, 41, -12829636, false);
+				AdshoppreviewamountcoalProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporecoal.label_sell_price_3"), 39, 27, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporecoal.label_buy_price_5"), 44, 41, -4671036, false);
 	}
 
 	@Override

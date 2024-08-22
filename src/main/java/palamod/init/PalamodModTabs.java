@@ -219,7 +219,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.TITANE_STAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.LOADBLOCK_1T.get().asItem());
 				tabData.accept(PalamodModItems.PALADIUMFASTSWORD.get());
-				tabData.accept(PalamodModBlocks.ASEMBLING_TABLE.get().asItem());
 				tabData.accept(PalamodModItems.WITHER_SHARD.get());
 				tabData.accept(PalamodModItems.GREENPALADIUMARMOR_HELMET.get());
 				tabData.accept(PalamodModItems.GREENPALADIUMARMOR_CHESTPLATE.get());

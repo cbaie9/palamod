@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/slimepad",
+  "parent": "palamod:custom/v2_slimepad",
   "textures": {
     "all": "palamod:block/slime_green",
     "particle": "palamod:block/slime_green",

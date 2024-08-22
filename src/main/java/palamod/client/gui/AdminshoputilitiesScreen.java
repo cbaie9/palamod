@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoputilitiesMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
+
 import palamod.network.AdminshoputilitiesButtonMessage;
 
 import palamod.PalamodMod;
@@ -55,7 +57,7 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoputilities.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 5 && mouseX < leftPos + 20 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoputilities.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
 	}
@@ -99,7 +101,7 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshoputilitiesButtonMessage(0, x, y, z));
 				AdminshoputilitiesButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 98, this.topPos + 74, 81, 20).build();
+		}).bounds(this.leftPos + 98, this.topPos + 75, 81, 20).build();
 		guistate.put("button:button_honey_comb", button_honey_comb);
 		this.addRenderableWidget(button_honey_comb);
 		button_leather = Button.builder(Component.translatable("gui.palamod.adminshoputilities.button_leather"), e -> {
@@ -171,7 +173,7 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshoputilitiesButtonMessage(9, x, y, z));
 				AdminshoputilitiesButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
-		}).bounds(this.leftPos + 10, this.topPos + 97, 67, 20).build();
+		}).bounds(this.leftPos + 11, this.topPos + 97, 67, 20).build();
 		guistate.put("button:button_emeraude", button_emeraude);
 		this.addRenderableWidget(button_emeraude);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 4, this.topPos + 5, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {

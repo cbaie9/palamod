@@ -54,7 +54,7 @@
             "name": "Adshoppreviewamountdiamond"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 155,
@@ -99,7 +99,7 @@
             "fixedValue": "Buy price : 40"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 162,
@@ -114,7 +114,7 @@
             "fixedValue": "Sell price : 45"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 160,
@@ -209,7 +209,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the gui"
+            "fixedValue": "Close the gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

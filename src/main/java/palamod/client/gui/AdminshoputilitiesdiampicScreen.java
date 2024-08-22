@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoputilitiesdiampicMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountdiamondpickaxeProcedure;
 
 import palamod.network.AdminshoputilitiesdiampicButtonMessage;
@@ -57,7 +58,7 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.tooltip_return_to_the_adminshop_utilitie"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -104,8 +105,8 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.label_paladium"), 37, 8, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountdiamondpickaxeProcedure.execute(world, entity, guistate), 25, 75, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.label_buy_price_125"), 25, 39, -12829636, false);
+				AdshoppreviewamountdiamondpickaxeProcedure.execute(world, entity, guistate), 25, 75, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.label_buy_price_125"), 25, 39, -4671036, false);
 	}
 
 	@Override

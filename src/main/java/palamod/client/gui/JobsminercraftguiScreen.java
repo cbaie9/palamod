@@ -9,6 +9,7 @@ import palamod.procedures.Jobsgetinfotext4Procedure;
 import palamod.procedures.Jobsgetinfotext3Procedure;
 import palamod.procedures.Jobsgetinfotext2Procedure;
 import palamod.procedures.JobsgetdurabilityProcedure;
+import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.JobsminercraftguiButtonMessage;
 
@@ -93,7 +94,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 277 && mouseX < leftPos + 293 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 29 && mouseY < topPos + 45)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe"), mouseX, mouseY);
 		if (mouseX > leftPos + 30 && mouseX < leftPos + 45 && mouseY > topPos + 29 && mouseY < topPos + 45)

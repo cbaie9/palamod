@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantbrownmushroomMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountredmushProcedure;
 
 import palamod.network.AdminshopplantbrownmushroomButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopplantbrownmushroomScreen extends AbstractContainerScreen<A
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.tooltip_return_to_the_adminshop_plant_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class AdminshopplantbrownmushroomScreen extends AbstractContainerScreen<A
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.label_paladium"), 39, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountredmushProcedure.execute(world, entity, guistate), 29, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.label_sell_price_120"), 25, 30, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.label_buy_price_125"), 25, 44, -12829636, false);
+				AdshoppreviewamountredmushProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.label_sell_price_120"), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopplantbrownmushroom.label_buy_price_125"), 25, 44, -4671036, false);
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockGlowstoneMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountglowstoneProcedure;
 
 import palamod.network.AdminshopblockGlowstoneButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshopblockGlowstoneScreen extends AbstractContainerScreen<Admin
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_glowstone.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_glowstone.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class AdminshopblockGlowstoneScreen extends AbstractContainerScreen<Admin
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_glowstone.label_glowstone"), 58, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamountglowstoneProcedure.execute(world, entity, guistate), 26, 76, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_glowstone.label_sell_price_5"), 37, 26, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_glowstone.label_buy_price_25"), 37, 40, -12829636, false);
+				AdshoppreviewamountglowstoneProcedure.execute(world, entity, guistate), 26, 76, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_glowstone.label_sell_price_5"), 37, 26, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopblock_glowstone.label_buy_price_25"), 37, 40, -4671036, false);
 	}
 
 	@Override

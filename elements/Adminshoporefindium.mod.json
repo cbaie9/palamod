@@ -83,7 +83,7 @@
             "fixedValue": "Sell price : 85"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 163,
@@ -98,7 +98,7 @@
             "fixedValue": "Buy price : 90"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 170,
@@ -114,7 +114,7 @@
             "name": "Adshoppreviewamountfindium"
           },
           "color": {
-            "value": -12829636,
+            "value": -4671036,
             "falpha": 0.0
           },
           "x": 155,
@@ -196,7 +196,8 @@
         "data": {
           "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Close the gui"
+            "fixedValue": "Close the gui",
+            "name": "Closetheguitrans"
           },
           "width": 16,
           "height": 16,

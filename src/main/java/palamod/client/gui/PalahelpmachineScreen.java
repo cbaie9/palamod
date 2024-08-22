@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelpmachineMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
+
 import palamod.network.PalahelpmachineButtonMessage;
 
 import palamod.PalamodMod;
@@ -52,6 +54,8 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20)
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -60,11 +64,11 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palahelpmachine.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/golem64.png"), this.leftPos + 13, this.topPos + 28, 0, 0, 64, 64, 64, 64);
 

@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporetitaneMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamounttitaneProcedure;
 
 import palamod.network.AdminshoporetitaneButtonMessage;
@@ -54,7 +55,7 @@ public class AdminshoporetitaneScreen extends AbstractContainerScreen<Adminshopo
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporetitane.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporetitane.tooltip_return_to_the_ore_menu"), mouseX, mouseY);
 		if (mouseX > leftPos + 118 && mouseX < leftPos + 130 && mouseY > topPos + 5 && mouseY < topPos + 20)
@@ -105,9 +106,9 @@ public class AdminshoporetitaneScreen extends AbstractContainerScreen<Adminshopo
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporetitane.label_titane"), 63, 6, -1, false);
 		guiGraphics.drawString(this.font,
 
-				AdshoppreviewamounttitaneProcedure.execute(world, entity, guistate), 28, 71, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporetitane.label_sell_price_100"), 26, 24, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporetitane.label_buy_price_110"), 32, 38, -12829636, false);
+				AdshoppreviewamounttitaneProcedure.execute(world, entity, guistate), 28, 71, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporetitane.label_sell_price_100"), 26, 24, -4671036, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporetitane.label_buy_price_110"), 32, 38, -4671036, false);
 	}
 
 	@Override

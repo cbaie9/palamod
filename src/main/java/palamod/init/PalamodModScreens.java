@@ -47,6 +47,7 @@ import palamod.client.gui.Grinderpalahelp2guiScreen;
 import palamod.client.gui.GrinderguiScreen;
 import palamod.client.gui.GreenpaladiumchestguiScreen;
 import palamod.client.gui.GolemtreecScreen;
+import palamod.client.gui.GamblelingjobsjetonScreen;
 import palamod.client.gui.ForgepalahelpguiScreen;
 import palamod.client.gui.ForgeguiScreen;
 import palamod.client.gui.ForgeexampleguiScreen;
@@ -63,7 +64,6 @@ import palamod.client.gui.CrusherpalahelpguiScreen;
 import palamod.client.gui.CrusherguiScreen;
 import palamod.client.gui.CobblebreakerguiScreen;
 import palamod.client.gui.AuthsafeguiScreen;
-import palamod.client.gui.AssembleurendScreen;
 import palamod.client.gui.ArmorpalahelpguiScreen;
 import palamod.client.gui.AnalyserresultScreen;
 import palamod.client.gui.AnalyserloadingScreen;
@@ -124,7 +124,6 @@ import palamod.client.gui.AdminshopblockNetherrackScreen;
 import palamod.client.gui.AdminshopblockGravelScreen;
 import palamod.client.gui.AdminshopblockGlowstoneScreen;
 import palamod.client.gui.AdminshopblockDirtScreen;
-import palamod.client.gui.AdminshopadbanScreen;
 import palamod.client.gui.AdminpanelmenuScreen;
 import palamod.client.gui.AdhutilitiesredstoneScreen;
 
@@ -180,8 +179,6 @@ public class PalamodModScreens {
 			MenuScreens.register(PalamodModMenus.GUARDIANGUI.get(), GuardianguiScreen::new);
 			MenuScreens.register(PalamodModMenus.GOLEMTREEC.get(), GolemtreecScreen::new);
 			MenuScreens.register(PalamodModMenus.FACTIONHOMEGUI.get(), FactionhomeguiScreen::new);
-			MenuScreens.register(PalamodModMenus.ADMINSHOPADBAN.get(), AdminshopadbanScreen::new);
-			MenuScreens.register(PalamodModMenus.ASSEMBLEUREND.get(), AssembleurendScreen::new);
 			MenuScreens.register(PalamodModMenus.ANALYSERLOADING.get(), AnalyserloadingScreen::new);
 			MenuScreens.register(PalamodModMenus.ANALYSERRESULT.get(), AnalyserresultScreen::new);
 			MenuScreens.register(PalamodModMenus.ADMINSHOPORE.get(), AdminshoporeScreen::new);
@@ -263,6 +260,7 @@ public class PalamodModScreens {
 			MenuScreens.register(PalamodModMenus.STICKNEWHELP.get(), SticknewhelpScreen::new);
 			MenuScreens.register(PalamodModMenus.JOBSMINERGUI.get(), JobsminerguiScreen::new);
 			MenuScreens.register(PalamodModMenus.JOBSMINERCRAFTGUI.get(), JobsminercraftguiScreen::new);
+			MenuScreens.register(PalamodModMenus.GAMBLELINGJOBSJETON.get(), GamblelingjobsjetonScreen::new);
 		});
 	}
 }

@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopmenuMenu;
 
+import palamod.procedures.ClosetheguitransProcedure;
+
 import palamod.network.AdminshopmenuButtonMessage;
 
 import palamod.PalamodMod;
@@ -48,7 +50,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 156 && mouseX < leftPos + 172 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmenu.tooltip_close_the_gui"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
