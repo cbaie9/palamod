@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "K",
+    "keyBindingName": "Open Clicker",
+    "keyBindingCategoryKey": "ui",
+    "onKeyReleased": {
+      "name": "ClickerkToucheRelachee"
+    }
+  }
+}

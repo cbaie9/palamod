@@ -62,6 +62,7 @@ import palamod.client.gui.DownloaderguiScreen;
 import palamod.client.gui.CrusherpalahelpguiScreen;
 import palamod.client.gui.CrusherguiScreen;
 import palamod.client.gui.CobblebreakerguiScreen;
+import palamod.client.gui.ClickerScreen;
 import palamod.client.gui.AuthsafeguiScreen;
 import palamod.client.gui.AssembleurendScreen;
 import palamod.client.gui.ArmorpalahelpguiScreen;
@@ -263,6 +264,7 @@ public class PalamodModScreens {
 			MenuScreens.register(PalamodModMenus.STICKNEWHELP.get(), SticknewhelpScreen::new);
 			MenuScreens.register(PalamodModMenus.JOBSMINERGUI.get(), JobsminerguiScreen::new);
 			MenuScreens.register(PalamodModMenus.JOBSMINERCRAFTGUI.get(), JobsminercraftguiScreen::new);
+			MenuScreens.register(PalamodModMenus.CLICKER.get(), ClickerScreen::new);
 		});
 	}
 }
