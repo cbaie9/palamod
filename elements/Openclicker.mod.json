@@ -1,12 +1,10 @@
 {
-  "_fv": 60,
-  "_type": "keybind",
+  "_fv": 66,
+  "_type": "command",
   "definition": {
-    "triggerKey": "C",
-    "keyBindingName": "Ouvrir le cliqueur",
-    "keyBindingCategoryKey": "misc",
-    "onKeyPressed": {
-      "name": "OpenclickerToucheEnfoncee"
-    }
+    "commandName": "clicker",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">Openclicker</field></block></next></block></xml>"
   }
 }
