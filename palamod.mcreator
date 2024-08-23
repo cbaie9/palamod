@@ -51250,6 +51250,130 @@
       }
     },
     {
+      "name": "Clicker",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clicker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/gui/ClickerScreen.java",
+          "src/main/java/palamod/world/inventory/ClickerMenu.java",
+          "src/main/java/palamod/network/ClickerButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "ClickerkToucheRelachee",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clickerk_touche_relachee",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/ClickerkToucheRelacheeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Clickerk",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clickerk",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/network/ClickerkMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Closeclicker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "closeclicker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/CloseclickerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Openclicker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "openclicker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/OpenclickerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenClicker",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_clicker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/OpenClickerCommand.java"
+        ]
+      }
+    },
+    {
       "name": "Gamblelingjobsjeton",
       "type": "gui",
       "compiles": true,
@@ -51813,49 +51937,27 @@
       "CUSTOM:Erable_Wood",
       "CUSTOM:Erable_Log"
     ],
-    "BIOMES:minecraft:has_structure/woodland_mansion": [
-      "~CUSTOM:Forestender"
-    ],
-    "BLOCKS:minecraft:logs": [
-      "CUSTOM:Ostrya_woodLog",
-      "CUSTOM:Ostrya_woodWood",
-      "CUSTOM:Jacaranda_Wood",
-      "CUSTOM:Jacaranda_Log",
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log",
-      "CUSTOM:Erable_Wood",
-      "CUSTOM:Erable_Log",
-      "Blocks.LOG"
-    ],
-    "BLOCKS:minecraft:leaves": [
-      "CUSTOM:Ostrya_woodLeaves",
-      "CUSTOM:Erable_Leaves",
-      "CUSTOM:Jacaranda_Leaves",
-      "CUSTOM:Judeecercis_Leaves"
-    ],
-    "ITEMS:forge:fuel_coalblock": [
-      "Blocks.COAL_BLOCK"
-    ],
-    "BLOCKS:forge:destructable": [
-      "CUSTOM:Ostrya_woodWood",
-      "CUSTOM:Ostrya_woodLog",
-      "CUSTOM:Jacaranda_Wood",
-      "CUSTOM:Jacaranda_Log",
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log",
-      "CUSTOM:Erable_Wood",
-      "CUSTOM:Erable_Log",
-      "Blocks.DIRT#0",
-      "Blocks.LOG",
-      "Blocks.GRASS",
-      "Blocks.STONE#0",
-      "Blocks.COBBLESTONE"
-    ],
-    "BLOCKS:minecraft:needs_stone_tool": [
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Megaboomobsidian",
+      "~CUSTOM:Boomobsidian",
+      "~CUSTOM:Exctractor",
+      "~CUSTOM:Poisonobsidian",
+      "~CUSTOM:Slimeobsidian",
+      "~CUSTOM:Obsidianslab",
+      "~CUSTOM:Obsidianstairs",
       "~CUSTOM:Unknownblock",
+      "~CUSTOM:Drawbridge",
       "~CUSTOM:Printingpress",
+      "~CUSTOM:Cobblebreaker",
       "~CUSTOM:Onlinedetectoron",
       "~CUSTOM:Onlinedetector",
+      "~CUSTOM:Paladiumobsidianspike",
+      "~CUSTOM:Titaneobsidianspike",
+      "~CUSTOM:Amethystobsidianspike",
+      "~CUSTOM:Diamondobsidianspike",
+      "~CUSTOM:Goldenobsidianspike",
+      "~CUSTOM:Ironobsidianspike",
+      "~CUSTOM:Spikeobsidianwood",
       "~CUSTOM:Woddenspike",
       "~CUSTOM:Titanechestv2",
       "~CUSTOM:Endiumchestv2",
@@ -51864,16 +51966,29 @@
       "~CUSTOM:Paladiumchestv2",
       "~CUSTOM:Caveblock",
       "~CUSTOM:Trixiumblock",
+      "~CUSTOM:Trixiumore",
+      "~CUSTOM:Findiumoredeepslate",
+      "~CUSTOM:Endiumnuggetoredeepslate",
+      "~CUSTOM:Paladiumgreenoredeepslate",
+      "~CUSTOM:Trixiumoredeepslate",
+      "~CUSTOM:Paladiumoredeepslate",
+      "~CUSTOM:Titaneoredeepslate",
+      "~CUSTOM:Amethystoredeepslate",
+      "~CUSTOM:Alarmon",
       "~CUSTOM:Downloader",
       "~CUSTOM:Endiumchest",
       "~CUSTOM:Greenpaladiumchest",
       "~CUSTOM:Amethystchest",
       "~CUSTOM:Paladiumchest",
       "~CUSTOM:Titanechest",
+      "~CUSTOM:Hdvblock",
       "~CUSTOM:Uploader",
       "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Greenpaladiumstairs",
       "~CUSTOM:Endiumstairs",
       "~CUSTOM:Endiumslab",
+      "~CUSTOM:Endiumnuggetore",
+      "~CUSTOM:Blackluckyblock",
       "~CUSTOM:Elevatorcyan",
       "~CUSTOM:Elevatorlightgray",
       "~CUSTOM:Elevatorgray",
@@ -51887,21 +52002,162 @@
       "~CUSTOM:Elevatorblue",
       "~CUSTOM:Elevatorred",
       "~CUSTOM:Elevatorwhite",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Trixiumnbtblock",
       "~CUSTOM:Fakepaladiumore",
+      "~CUSTOM:Alarm",
+      "~CUSTOM:Truetresure",
+      "~CUSTOM:Falsetresure",
       "~CUSTOM:Luckyblock",
       "~CUSTOM:Paladiummachine",
+      "~CUSTOM:Asemblingtable",
       "~CUSTOM:Tcv2",
       "~CUSTOM:Loadblock1t",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Paladiumforge",
+      "~CUSTOM:Paladiumspike",
+      "~CUSTOM:Titanespike",
       "~CUSTOM:Ametystespike",
       "~CUSTOM:Diamondspike",
+      "~CUSTOM:Spikegold",
+      "~CUSTOM:Ironspike",
+      "~CUSTOM:Lavaobsidian",
+      "~CUSTOM:Fakewaterobsidian",
+      "~CUSTOM:Compactedobsidian",
+      "~CUSTOM:Obsidiandoor",
+      "~CUSTOM:Obsidiantrapdoor",
       "~CUSTOM:Paladiumfurnaceon",
       "~CUSTOM:Paladiumfurnace",
       "~CUSTOM:Grinderblock",
       "~CUSTOM:Grinderframe",
       "~CUSTOM:Grindercasing",
       "~CUSTOM:Alchimet1",
+      "~CUSTOM:PaladiumGreenblock",
+      "~CUSTOM:PaladiumGreenore",
+      "~CUSTOM:Slimepad",
       "~CUSTOM:Findiumslab",
-      "~CUSTOM:Paladiumcrusher"
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:FindiumBlock",
+      "~CUSTOM:FindiumOre",
+      "~CUSTOM:EndiumBlock",
+      "~CUSTOM:Paladiumcrusher",
+      "~CUSTOM:AmethysteBlock",
+      "~CUSTOM:AmethysteOre",
+      "~CUSTOM:TitaneBlock",
+      "~CUSTOM:TitaneOre",
+      "~CUSTOM:PaladiumBlock",
+      "~CUSTOM:PaladiumOre"
+    ],
+    "BLOCKS:mod:cbtill": [
+      "Blocks.DIRT#2",
+      "Blocks.DIRT#0",
+      "Blocks.GRASS",
+      "Blocks.GRASS_PATH",
+      "Blocks.MYCELIUM",
+      "Blocks.FARMLAND"
+    ],
+    "BIOMES:minecraft:has_structure/woodland_mansion": [
+      "~CUSTOM:Forestender"
+    ],
+    "ITEMS:forge:fuel_coalblock": [
+      "Blocks.COAL_BLOCK"
+    ],
+    "BLOCKS:forge:air": [
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:Megaboomobsidian",
+      "~CUSTOM:Boomobsidian",
+      "~CUSTOM:Poisonobsidian",
+      "~CUSTOM:Slimeobsidian",
+      "~CUSTOM:Paladiumobsidianspike",
+      "~CUSTOM:Titaneobsidianspike",
+      "~CUSTOM:Amethystobsidianspike",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Trixiumnbtblock",
+      "~CUSTOM:Lavaobsidian",
+      "~CUSTOM:Fakewaterobsidian",
+      "~CUSTOM:Compactedobsidian",
+      "~CUSTOM:Obsidiandoor",
+      "~CUSTOM:Obsidiantrapdoor",
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:EndiumBlock",
+      "~CUSTOM:TitaneBlock"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Angelicwter",
+      "~CUSTOM:Fakewter"
+    ],
+    "ITEMS:minecraft:axes": [
+      "~CUSTOM:Creativehammer",
+      "~CUSTOM:Creativepotg",
+      "~CUSTOM:Pickaxeofthegodslv13",
+      "~CUSTOM:Pickaxeofthegodslv20",
+      "~CUSTOM:Pickaxeofthegodslv19",
+      "~CUSTOM:Pickaxeofthegodslv18",
+      "~CUSTOM:Pickaxeofthegodslv17",
+      "~CUSTOM:Pickaxeofthegodslv16",
+      "~CUSTOM:Pickaxeofthegodslv15",
+      "~CUSTOM:Pickaxeofthegodslv14",
+      "~CUSTOM:Pickaxeofthegodslv12",
+      "~CUSTOM:Pickaxeofthegodslv11",
+      "~CUSTOM:Pickaxeofthegodslv10",
+      "~CUSTOM:Pickaxeofthegodslv9",
+      "~CUSTOM:Pickaxeofthegodslv8",
+      "~CUSTOM:Pickaxeofthegodslv7",
+      "~CUSTOM:Pickaxeofthegodslv6",
+      "~CUSTOM:Pickaxeofthegodslv5",
+      "~CUSTOM:Pickaxeofthegodslv4",
+      "~CUSTOM:Pickaxeofthegodslv3",
+      "~CUSTOM:Pickaxeofthegodslv2",
+      "~CUSTOM:Pickaxeofthegodslv1",
+      "~CUSTOM:Paladiumgreenaxe",
+      "~CUSTOM:EndiumAxe",
+      "~CUSTOM:AmethysteAxe",
+      "~CUSTOM:TitaneAxe",
+      "~CUSTOM:PaladiumAxe"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:Endiumtnt",
+      "~CUSTOM:Compacttnt",
+      "~CUSTOM:Magictnt",
+      "~CUSTOM:Withertnt",
+      "~CUSTOM:Wetlavasponge",
+      "~CUSTOM:Lavasponge",
+      "~CUSTOM:Spongetnt",
+      "~CUSTOM:Compressedsponge"
+    ],
+    "ITEMS:mod:rings": [
+      "CUSTOM:Mediumring",
+      "CUSTOM:Smallring",
+      "CUSTOM:Bigring",
+      "CUSTOM:Endiumsmallring",
+      "CUSTOM:Endiummediumring",
+      "CUSTOM:Endiumbigring",
+      "CUSTOM:Smallringgreenpaladium",
+      "CUSTOM:Mediumringgreenpaladium",
+      "CUSTOM:Bigringgreenpaladium"
+    ],
+    "ITEMS:mod:cobblebreakable": [
+      "Blocks.COBBLED_DEEPSLATE",
+      "Blocks.COBBLESTONE",
+      "Blocks.MOSSY_COBBLESTONE",
+      "Blocks.STONE#1",
+      "Blocks.STONE#3",
+      "Blocks.BLACKSTONE",
+      "Blocks.STONE#0",
+      "Blocks.STONE#5",
+      "Blocks.SANDSTONE#0",
+      "Blocks.RED_SANDSTONE#0",
+      "Blocks.END_STONE",
+      "Blocks.DEEPSLATE"
     ],
     "BLOCKS:forge:multitool_mb": [
       "CUSTOM:PaladiumOre",
@@ -52122,56 +52378,50 @@
       "~CUSTOM:TitaneAxe",
       "~CUSTOM:PaladiumAxe"
     ],
-    "BLOCKS:minecraft:stairs": [
-      "~CUSTOM:Obsidianstairs",
-      "~CUSTOM:Renforcedobsidianstairs",
-      "~CUSTOM:Greenpaladiumstairs",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Ostrya_woodStairs"
+    "BLOCKS:forge:plant": [
+      "CUSTOM:Eggplant0",
+      "CUSTOM:Eggplant1",
+      "CUSTOM:Eggplant2",
+      "CUSTOM:Eggplant3",
+      "CUSTOM:Chervil1",
+      "CUSTOM:Chervil0",
+      "CUSTOM:Chervil2",
+      "CUSTOM:Chervil3",
+      "CUSTOM:Kiwano4",
+      "CUSTOM:Kiwano3",
+      "CUSTOM:Kiwano2",
+      "CUSTOM:Kiwano1",
+      "CUSTOM:Kiwano0",
+      "CUSTOM:Orangeblue0",
+      "CUSTOM:Orangeblue1",
+      "CUSTOM:Orangeblue2",
+      "CUSTOM:Orangeblue3",
+      "CUSTOM:Orangeblue4",
+      "Blocks.WHEAT",
+      "Blocks.MELON_STEM",
+      "Blocks.ATTACHED_MELON_STEM",
+      "Blocks.PUMPKIN_STEM",
+      "Blocks.ATTACHED_PUMPKIN_STEM",
+      "Blocks.POTATOES",
+      "Blocks.BEETROOTS",
+      "Blocks.CARROTS"
     ],
-    "ITEMS:mod:rings": [
-      "CUSTOM:Mediumring",
-      "CUSTOM:Smallring",
-      "CUSTOM:Bigring",
-      "CUSTOM:Endiumsmallring",
-      "CUSTOM:Endiummediumring",
-      "CUSTOM:Endiumbigring",
-      "CUSTOM:Smallringgreenpaladium",
-      "CUSTOM:Mediumringgreenpaladium",
-      "CUSTOM:Bigringgreenpaladium"
-    ],
-    "ITEMS:mod:cobblebreakable": [
-      "Blocks.COBBLED_DEEPSLATE",
-      "Blocks.COBBLESTONE",
-      "Blocks.MOSSY_COBBLESTONE",
-      "Blocks.STONE#1",
-      "Blocks.STONE#3",
-      "Blocks.BLACKSTONE",
-      "Blocks.STONE#0",
-      "Blocks.STONE#5",
-      "Blocks.SANDSTONE#0",
-      "Blocks.RED_SANDSTONE#0",
-      "Blocks.END_STONE",
-      "Blocks.DEEPSLATE"
-    ],
-    "BLOCKS:forge:farmland": [
-      "Blocks.FARMLAND",
-      "CUSTOM:Fertilseddirt"
-    ],
-    "BLOCKS:forge:air": [
-      "Blocks.AIR",
-      "Blocks.VOID_AIR",
-      "Blocks.CAVE_AIR"
-    ],
-    "BLOCKS:forge:dirt": [
-      "CUSTOM:Fertilseddirt"
+    "BLOCKS:mod:palablocks": [
+      "CUSTOM:PaladiumOre",
+      "CUSTOM:TitaneOre",
+      "CUSTOM:AmethysteOre",
+      "CUSTOM:FindiumOre",
+      "CUSTOM:PaladiumGreenore",
+      "CUSTOM:Endiumnuggetore",
+      "CUSTOM:Titaneoredeepslate",
+      "CUSTOM:Paladiumoredeepslate",
+      "CUSTOM:Trixiumoredeepslate",
+      "CUSTOM:Paladiumgreenoredeepslate",
+      "CUSTOM:Endiumnuggetoredeepslate",
+      "CUSTOM:Findiumoredeepslate",
+      "CUSTOM:Trixiumore",
+      "CUSTOM:Amethystoredeepslate",
+      "CUSTOM:Fakepaladiumore"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:Exctractor",
@@ -52214,58 +52464,6 @@
       "~CUSTOM:EndiumBlock",
       "~CUSTOM:TitaneBlock"
     ],
-    "BLOCKS:mod:palablocks": [
-      "CUSTOM:PaladiumOre",
-      "CUSTOM:TitaneOre",
-      "CUSTOM:AmethysteOre",
-      "CUSTOM:FindiumOre",
-      "CUSTOM:PaladiumGreenore",
-      "CUSTOM:Endiumnuggetore",
-      "CUSTOM:Titaneoredeepslate",
-      "CUSTOM:Paladiumoredeepslate",
-      "CUSTOM:Trixiumoredeepslate",
-      "CUSTOM:Paladiumgreenoredeepslate",
-      "CUSTOM:Endiumnuggetoredeepslate",
-      "CUSTOM:Findiumoredeepslate",
-      "CUSTOM:Trixiumore",
-      "CUSTOM:Amethystoredeepslate",
-      "CUSTOM:Fakepaladiumore"
-    ],
-    "BLOCKS:forge:plant": [
-      "CUSTOM:Eggplant0",
-      "CUSTOM:Eggplant1",
-      "CUSTOM:Eggplant2",
-      "CUSTOM:Eggplant3",
-      "CUSTOM:Chervil1",
-      "CUSTOM:Chervil0",
-      "CUSTOM:Chervil2",
-      "CUSTOM:Chervil3",
-      "CUSTOM:Kiwano4",
-      "CUSTOM:Kiwano3",
-      "CUSTOM:Kiwano2",
-      "CUSTOM:Kiwano1",
-      "CUSTOM:Kiwano0",
-      "CUSTOM:Orangeblue0",
-      "CUSTOM:Orangeblue1",
-      "CUSTOM:Orangeblue2",
-      "CUSTOM:Orangeblue3",
-      "CUSTOM:Orangeblue4",
-      "Blocks.WHEAT",
-      "Blocks.MELON_STEM",
-      "Blocks.ATTACHED_MELON_STEM",
-      "Blocks.PUMPKIN_STEM",
-      "Blocks.ATTACHED_PUMPKIN_STEM",
-      "Blocks.POTATOES",
-      "Blocks.BEETROOTS",
-      "Blocks.CARROTS"
-    ],
-    "ITEMS:forge:judeecercis__log": [
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log"
-    ],
-    "BIOMES:minecraft:has_structure/mineshaft": [
-      "~CUSTOM:Forestender"
-    ],
     "BLOCKS:forge:placeable_sapling_on": [
       "Blocks.DIRT#0",
       "Blocks.DIRT#1",
@@ -52275,149 +52473,6 @@
       "Blocks.GRASS",
       "Blocks.GRASS_PATH",
       "Blocks.MOSS_BLOCK"
-    ],
-    "ITEMS:forge:pickaxe": [
-      "CUSTOM:PaladiumPickaxe",
-      "CUSTOM:TitanePickaxe",
-      "CUSTOM:AmethystePickaxe",
-      "CUSTOM:EndiumPickaxe",
-      "CUSTOM:Paladiumgreenpickaxe",
-      "TAG:mod:potgtag",
-      "Items.WOODEN_PICKAXE",
-      "Items.STONE_PICKAXE",
-      "Items.IRON_PICKAXE",
-      "Items.GOLDEN_PICKAXE",
-      "Items.DIAMOND_PICKAXE",
-      "Items.NETHERITE_PICKAXE"
-    ],
-    "BLOCKS:mod:elevator": [
-      "CUSTOM:Elevatorwhite",
-      "CUSTOM:Elevatorred",
-      "CUSTOM:Elevatorblue",
-      "CUSTOM:Elevatorgreen",
-      "CUSTOM:Elevatorpink",
-      "CUSTOM:Elevatorlightblue",
-      "CUSTOM:Elevatorlightgreen",
-      "CUSTOM:Elevatorbrown",
-      "CUSTOM:Elevatororange",
-      "CUSTOM:Elevatorpurple",
-      "CUSTOM:Elevatorgray",
-      "CUSTOM:Elevatorlightgray",
-      "CUSTOM:Elevatorcyan"
-    ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:Megaboomobsidian",
-      "~CUSTOM:Boomobsidian",
-      "~CUSTOM:Exctractor",
-      "~CUSTOM:Poisonobsidian",
-      "~CUSTOM:Slimeobsidian",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Obsidianstairs",
-      "~CUSTOM:Unknownblock",
-      "~CUSTOM:Drawbridge",
-      "~CUSTOM:Printingpress",
-      "~CUSTOM:Cobblebreaker",
-      "~CUSTOM:Onlinedetectoron",
-      "~CUSTOM:Onlinedetector",
-      "~CUSTOM:Paladiumobsidianspike",
-      "~CUSTOM:Titaneobsidianspike",
-      "~CUSTOM:Amethystobsidianspike",
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
-      "~CUSTOM:Woddenspike",
-      "~CUSTOM:Titanechestv2",
-      "~CUSTOM:Endiumchestv2",
-      "~CUSTOM:Amethystchestv2",
-      "~CUSTOM:Greenpaladiumchestv2",
-      "~CUSTOM:Paladiumchestv2",
-      "~CUSTOM:Caveblock",
-      "~CUSTOM:Trixiumblock",
-      "~CUSTOM:Trixiumore",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Endiumnuggetoredeepslate",
-      "~CUSTOM:Paladiumgreenoredeepslate",
-      "~CUSTOM:Trixiumoredeepslate",
-      "~CUSTOM:Paladiumoredeepslate",
-      "~CUSTOM:Titaneoredeepslate",
-      "~CUSTOM:Amethystoredeepslate",
-      "~CUSTOM:Alarmon",
-      "~CUSTOM:Downloader",
-      "~CUSTOM:Endiumchest",
-      "~CUSTOM:Greenpaladiumchest",
-      "~CUSTOM:Amethystchest",
-      "~CUSTOM:Paladiumchest",
-      "~CUSTOM:Titanechest",
-      "~CUSTOM:Hdvblock",
-      "~CUSTOM:Uploader",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Greenpaladiumstairs",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Endiumnuggetore",
-      "~CUSTOM:Blackluckyblock",
-      "~CUSTOM:Elevatorcyan",
-      "~CUSTOM:Elevatorlightgray",
-      "~CUSTOM:Elevatorgray",
-      "~CUSTOM:Elevatorpurple",
-      "~CUSTOM:Elevatororange",
-      "~CUSTOM:Elevatorbrown",
-      "~CUSTOM:Elevatorlightgreen",
-      "~CUSTOM:Elevatorlightblue",
-      "~CUSTOM:Elevatorpink",
-      "~CUSTOM:Elevatorgreen",
-      "~CUSTOM:Elevatorblue",
-      "~CUSTOM:Elevatorred",
-      "~CUSTOM:Elevatorwhite",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Trixiumnbtblock",
-      "~CUSTOM:Fakepaladiumore",
-      "~CUSTOM:Alarm",
-      "~CUSTOM:Truetresure",
-      "~CUSTOM:Falsetresure",
-      "~CUSTOM:Luckyblock",
-      "~CUSTOM:Paladiummachine",
-      "~CUSTOM:Tcv2",
-      "~CUSTOM:Loadblock1t",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
-      "~CUSTOM:Ametystespike",
-      "~CUSTOM:Diamondspike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:Lavaobsidian",
-      "~CUSTOM:Fakewaterobsidian",
-      "~CUSTOM:Compactedobsidian",
-      "~CUSTOM:Obsidiandoor",
-      "~CUSTOM:Obsidiantrapdoor",
-      "~CUSTOM:Paladiumfurnaceon",
-      "~CUSTOM:Paladiumfurnace",
-      "~CUSTOM:Grinderblock",
-      "~CUSTOM:Grinderframe",
-      "~CUSTOM:Grindercasing",
-      "~CUSTOM:Alchimet1",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:PaladiumGreenore",
-      "~CUSTOM:Slimepad",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:FindiumOre",
-      "~CUSTOM:EndiumBlock",
-      "~CUSTOM:Paladiumcrusher",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:AmethysteOre",
-      "~CUSTOM:TitaneBlock",
-      "~CUSTOM:TitaneOre",
-      "~CUSTOM:PaladiumBlock",
-      "~CUSTOM:PaladiumOre"
     ],
     "BLOCKS:forge:tagores": [
       "CUSTOM:Fakepaladiumore",
@@ -52456,19 +52511,109 @@
       "CUSTOM:Endiumnuggetore",
       "CUSTOM:PaladiumGreenore"
     ],
-    "BLOCKS:minecraft:fences": [
-      "CUSTOM:Jacaranda_Fence",
-      "CUSTOM:Jacaranda_FenceGate",
-      "CUSTOM:Erable_Fence",
-      "CUSTOM:Erable_FenceGate",
-      "CUSTOM:Judeecercis_Fence",
-      "CUSTOM:Judeecercis_FenceGate",
-      "CUSTOM:Ostrya_woodFence",
-      "CUSTOM:Ostrya_woodFenceGate"
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:Hardenedobsidianslab",
+      "~CUSTOM:Obsidianslab",
+      "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Endiumslab",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Findiumslab",
+      "~CUSTOM:Erable_Slab",
+      "~CUSTOM:Judeecercis_Slab",
+      "~CUSTOM:Jacaranda_Slab",
+      "~CUSTOM:Ostrya_woodSlab"
+    ],
+    "ITEMS:forge:judeecercis__log": [
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log"
+    ],
+    "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:Forestender"
+    ],
+    "ITEMS:forge:pickaxe": [
+      "CUSTOM:PaladiumPickaxe",
+      "CUSTOM:TitanePickaxe",
+      "CUSTOM:AmethystePickaxe",
+      "CUSTOM:EndiumPickaxe",
+      "CUSTOM:Paladiumgreenpickaxe",
+      "TAG:mod:potgtag",
+      "Items.WOODEN_PICKAXE",
+      "Items.STONE_PICKAXE",
+      "Items.IRON_PICKAXE",
+      "Items.GOLDEN_PICKAXE",
+      "Items.DIAMOND_PICKAXE",
+      "Items.NETHERITE_PICKAXE"
+    ],
+    "BLOCKS:mod:opic": [
+      "CUSTOM:Spikeobsidianwood",
+      "CUSTOM:Ironobsidianspike",
+      "CUSTOM:Goldenobsidianspike",
+      "CUSTOM:Diamondobsidianspike",
+      "CUSTOM:Amethystobsidianspike",
+      "CUSTOM:Titaneobsidianspike",
+      "CUSTOM:Paladiumobsidianspike"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Unknownblock",
+      "~CUSTOM:Printingpress",
+      "~CUSTOM:Onlinedetectoron",
+      "~CUSTOM:Onlinedetector",
+      "~CUSTOM:Woddenspike",
+      "~CUSTOM:Titanechestv2",
+      "~CUSTOM:Endiumchestv2",
+      "~CUSTOM:Amethystchestv2",
+      "~CUSTOM:Greenpaladiumchestv2",
+      "~CUSTOM:Paladiumchestv2",
+      "~CUSTOM:Caveblock",
+      "~CUSTOM:Trixiumblock",
+      "~CUSTOM:Downloader",
+      "~CUSTOM:Endiumchest",
+      "~CUSTOM:Greenpaladiumchest",
+      "~CUSTOM:Amethystchest",
+      "~CUSTOM:Paladiumchest",
+      "~CUSTOM:Titanechest",
+      "~CUSTOM:Uploader",
+      "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Endiumstairs",
+      "~CUSTOM:Endiumslab",
+      "~CUSTOM:Elevatorcyan",
+      "~CUSTOM:Elevatorlightgray",
+      "~CUSTOM:Elevatorgray",
+      "~CUSTOM:Elevatorpurple",
+      "~CUSTOM:Elevatororange",
+      "~CUSTOM:Elevatorbrown",
+      "~CUSTOM:Elevatorlightgreen",
+      "~CUSTOM:Elevatorlightblue",
+      "~CUSTOM:Elevatorpink",
+      "~CUSTOM:Elevatorgreen",
+      "~CUSTOM:Elevatorblue",
+      "~CUSTOM:Elevatorred",
+      "~CUSTOM:Elevatorwhite",
+      "~CUSTOM:Fakepaladiumore",
+      "~CUSTOM:Luckyblock",
+      "~CUSTOM:Paladiummachine",
+      "~CUSTOM:Tcv2",
+      "~CUSTOM:Loadblock1t",
+      "~CUSTOM:Ametystespike",
+      "~CUSTOM:Diamondspike",
+      "~CUSTOM:Paladiumfurnaceon",
+      "~CUSTOM:Paladiumfurnace",
+      "~CUSTOM:Grinderblock",
+      "~CUSTOM:Grinderframe",
+      "~CUSTOM:Grindercasing",
+      "~CUSTOM:Alchimet1",
+      "~CUSTOM:Findiumslab",
+      "~CUSTOM:Paladiumcrusher"
     ],
     "ITEMS:forge:ostrya_wood_log": [
       "CUSTOM:Ostrya_woodWood",
       "CUSTOM:Ostrya_woodLog"
+    ],
+    "BLOCKS:forge:farmland": [
+      "Blocks.FARMLAND",
+      "CUSTOM:Fertilseddirt"
     ],
     "ITEMS:forge:seed": [
       "CUSTOM:Kiwanoseed",
@@ -52502,9 +52647,76 @@
       "CUSTOM:Titanemixedcoal",
       "CUSTOM:Palamixedcharoal"
     ],
+    "BLOCKS:mod:omt": [
+      "CUSTOM:Obsidiantrapdoor",
+      "CUSTOM:Renforcedobsidian",
+      "CUSTOM:Obsidiandoor",
+      "CUSTOM:Compactedobsidian",
+      "CUSTOM:Fakewaterobsidian",
+      "CUSTOM:Lavaobsidian",
+      "CUSTOM:Renforcedobsidianstairs",
+      "CUSTOM:Spikeobsidianwood",
+      "CUSTOM:Ironobsidianspike",
+      "CUSTOM:Goldenobsidianspike",
+      "CUSTOM:Diamondobsidianspike",
+      "CUSTOM:Amethystobsidianspike",
+      "CUSTOM:Titaneobsidianspike",
+      "CUSTOM:Paladiumobsidianspike",
+      "CUSTOM:Hardenedobsidianslab"
+    ],
+    "BLOCKS:minecraft:logs": [
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Ostrya_woodWood",
+      "CUSTOM:Jacaranda_Wood",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Erable_Wood",
+      "CUSTOM:Erable_Log",
+      "Blocks.LOG"
+    ],
     "ITEMS:mod:trixium_depo": [
       "CUSTOM:Trixium",
       "CUSTOM:Trixiumblock"
+    ],
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:Typesettingmax",
+      "~CUSTOM:Typesettingplate",
+      "~CUSTOM:Typesettingbook",
+      "~CUSTOM:Typesettingtable",
+      "~CUSTOM:Erabletrapdoor",
+      "~CUSTOM:Jacarandadoor",
+      "~CUSTOM:Erabledoor",
+      "~CUSTOM:Ostryadoor",
+      "~CUSTOM:Judeecercisdoor",
+      "~CUSTOM:Erable_FenceGate",
+      "~CUSTOM:Erable_Fence",
+      "~CUSTOM:Erable_Slab",
+      "~CUSTOM:Erable_Stairs",
+      "~CUSTOM:Erable_Planks",
+      "~CUSTOM:Erable_Log",
+      "~CUSTOM:Erable_Wood",
+      "~CUSTOM:Judeecercis_FenceGate",
+      "~CUSTOM:Judeecercis_Fence",
+      "~CUSTOM:Judeecercis_Slab",
+      "~CUSTOM:Judeecercis_Stairs",
+      "~CUSTOM:Judeecercis_Planks",
+      "~CUSTOM:Judeecercis_Log",
+      "~CUSTOM:Judeecercis_Wood",
+      "~CUSTOM:Jacaranda_FenceGate",
+      "~CUSTOM:Jacaranda_Fence",
+      "~CUSTOM:Jacaranda_Slab",
+      "~CUSTOM:Jacaranda_Stairs",
+      "~CUSTOM:Jacaranda_Planks",
+      "~CUSTOM:Jacaranda_Log",
+      "~CUSTOM:Jacaranda_Wood",
+      "~CUSTOM:Ostrya_woodFenceGate",
+      "~CUSTOM:Ostrya_woodFence",
+      "~CUSTOM:Ostrya_woodSlab",
+      "~CUSTOM:Ostrya_woodStairs",
+      "~CUSTOM:Ostrya_woodPlanks",
+      "~CUSTOM:Ostrya_woodLog",
+      "~CUSTOM:Ostrya_woodWood"
     ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:Endiumhoe",
@@ -52513,9 +52725,26 @@
       "~CUSTOM:Titanehoe",
       "~CUSTOM:Amethtysthoe"
     ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:Obsidianstairs",
+      "~CUSTOM:Renforcedobsidianstairs",
+      "~CUSTOM:Greenpaladiumstairs",
+      "~CUSTOM:Endiumstairs",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:Erable_Stairs",
+      "~CUSTOM:Judeecercis_Stairs",
+      "~CUSTOM:Jacaranda_Stairs",
+      "~CUSTOM:Ostrya_woodStairs"
+    ],
     "ITEMS:forge:fuelblaze": [
       "Items.BLAZE_ROD",
       "Items.BLAZE_POWDER"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:Fertilseddirt"
     ],
     "ITEMS:forge:repairable_endium": [
       "CUSTOM:EndiumPickaxe",
@@ -52525,28 +52754,6 @@
       "CUSTOM:EndiumArmor.body",
       "CUSTOM:EndiumArmor.legs",
       "CUSTOM:EndiumArmor.boots"
-    ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:Hardenedobsidianslab",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Ostrya_woodSlab"
-    ],
-    "BLOCKS:mod:cbtill": [
-      "Blocks.DIRT#2",
-      "Blocks.DIRT#0",
-      "Blocks.GRASS",
-      "Blocks.GRASS_PATH",
-      "Blocks.MYCELIUM",
-      "Blocks.FARMLAND"
     ],
     "ITEMS:forge:palamd_fruits": [
       "CUSTOM:Kiwano",
@@ -52597,28 +52804,42 @@
       "~CUSTOM:TitaneSword",
       "~CUSTOM:PaladiumSword"
     ],
+    "BLOCKS:forge:destructable": [
+      "CUSTOM:Ostrya_woodWood",
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Jacaranda_Wood",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Erable_Wood",
+      "CUSTOM:Erable_Log",
+      "Blocks.DIRT#0",
+      "Blocks.LOG",
+      "Blocks.GRASS",
+      "Blocks.STONE#0",
+      "Blocks.COBBLESTONE"
+    ],
     "ITEMS:minecraft:planks": [
       "CUSTOM:Erable_Planks",
       "CUSTOM:Judeecercis_Planks",
       "CUSTOM:Ostrya_woodPlanks",
       "CUSTOM:Jacaranda_Planks"
     ],
-    "BLOCKS:mod:omt": [
-      "CUSTOM:Obsidiantrapdoor",
-      "CUSTOM:Renforcedobsidian",
-      "CUSTOM:Obsidiandoor",
-      "CUSTOM:Compactedobsidian",
-      "CUSTOM:Fakewaterobsidian",
-      "CUSTOM:Lavaobsidian",
-      "CUSTOM:Renforcedobsidianstairs",
-      "CUSTOM:Spikeobsidianwood",
-      "CUSTOM:Ironobsidianspike",
-      "CUSTOM:Goldenobsidianspike",
-      "CUSTOM:Diamondobsidianspike",
-      "CUSTOM:Amethystobsidianspike",
-      "CUSTOM:Titaneobsidianspike",
-      "CUSTOM:Paladiumobsidianspike",
-      "CUSTOM:Hardenedobsidianslab"
+    "BLOCKS:minecraft:fences": [
+      "CUSTOM:Jacaranda_Fence",
+      "CUSTOM:Jacaranda_FenceGate",
+      "CUSTOM:Erable_Fence",
+      "CUSTOM:Erable_FenceGate",
+      "CUSTOM:Judeecercis_Fence",
+      "CUSTOM:Judeecercis_FenceGate",
+      "CUSTOM:Ostrya_woodFence",
+      "CUSTOM:Ostrya_woodFenceGate"
+    ],
+    "BLOCKS:minecraft:leaves": [
+      "CUSTOM:Ostrya_woodLeaves",
+      "CUSTOM:Erable_Leaves",
+      "CUSTOM:Jacaranda_Leaves",
+      "CUSTOM:Judeecercis_Leaves"
     ],
     "ITEMS:mod:paladiumarmorstag": [
       "CUSTOM:PaladiumArmor.helmet",
@@ -52713,12 +52934,30 @@
       "~CUSTOM:TitanePickaxe",
       "~CUSTOM:PaladiumPickaxe"
     ],
+    "BLOCKS:mod:elevator": [
+      "CUSTOM:Elevatorwhite",
+      "CUSTOM:Elevatorred",
+      "CUSTOM:Elevatorblue",
+      "CUSTOM:Elevatorgreen",
+      "CUSTOM:Elevatorpink",
+      "CUSTOM:Elevatorlightblue",
+      "CUSTOM:Elevatorlightgreen",
+      "CUSTOM:Elevatorbrown",
+      "CUSTOM:Elevatororange",
+      "CUSTOM:Elevatorpurple",
+      "CUSTOM:Elevatorgray",
+      "CUSTOM:Elevatorlightgray",
+      "CUSTOM:Elevatorcyan"
+    ],
     "ITEMS:minecraft:music_discs": [
       "~CUSTOM:Clashkumiz",
       "~CUSTOM:Roulettepaladiennedisc",
       "~CUSTOM:Antifuzedisc",
       "~CUSTOM:Fuzedisc",
       "~CUSTOM:Miichalenge"
+    ],
+    "BLOCKS:forge:dirt": [
+      "CUSTOM:Fertilseddirt"
     ],
     "ITEMS:mod:repairable_green": [
       "CUSTOM:Paladiumgreenpickaxe",
@@ -52734,47 +52973,9 @@
       "Items.COAL#0",
       "Items.COAL#1"
     ],
-    "BLOCKS:minecraft:mineable/axe": [
-      "~CUSTOM:Typesettingmax",
-      "~CUSTOM:Typesettingplate",
-      "~CUSTOM:Typesettingbook",
-      "~CUSTOM:Typesettingtable",
-      "~CUSTOM:Erabletrapdoor",
-      "~CUSTOM:Jacarandadoor",
-      "~CUSTOM:Erabledoor",
-      "~CUSTOM:Ostryadoor",
-      "~CUSTOM:Judeecercisdoor",
-      "~CUSTOM:Erable_FenceGate",
-      "~CUSTOM:Erable_Fence",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Erable_Planks",
-      "~CUSTOM:Erable_Log",
-      "~CUSTOM:Erable_Wood",
-      "~CUSTOM:Judeecercis_FenceGate",
-      "~CUSTOM:Judeecercis_Fence",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Judeecercis_Planks",
-      "~CUSTOM:Judeecercis_Log",
-      "~CUSTOM:Judeecercis_Wood",
-      "~CUSTOM:Jacaranda_FenceGate",
-      "~CUSTOM:Jacaranda_Fence",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Jacaranda_Planks",
-      "~CUSTOM:Jacaranda_Log",
-      "~CUSTOM:Jacaranda_Wood",
-      "~CUSTOM:Ostrya_woodFenceGate",
-      "~CUSTOM:Ostrya_woodFence",
-      "~CUSTOM:Ostrya_woodSlab",
-      "~CUSTOM:Ostrya_woodStairs",
-      "~CUSTOM:Ostrya_woodPlanks",
-      "~CUSTOM:Ostrya_woodLog",
-      "~CUSTOM:Ostrya_woodWood"
-    ],
-    "BLOCKS:minecraft:mineable/shovel": [
-      "~CUSTOM:Fertilseddirt"
+    "BLOCKS:forge:unbreakable": [
+      "Blocks.BEDROCK",
+      "CUSTOM:Stony"
     ],
     "ITEMS:mod:repairable": [
       "CUSTOM:PaladiumPickaxe",
@@ -52808,15 +53009,6 @@
       "~CUSTOM:AmethysteShovel",
       "~CUSTOM:TitaneShovel",
       "~CUSTOM:PaladiumShovel"
-    ],
-    "BLOCKS:mod:opic": [
-      "CUSTOM:Spikeobsidianwood",
-      "CUSTOM:Ironobsidianspike",
-      "CUSTOM:Goldenobsidianspike",
-      "CUSTOM:Diamondobsidianspike",
-      "CUSTOM:Amethystobsidianspike",
-      "CUSTOM:Titaneobsidianspike",
-      "CUSTOM:Paladiumobsidianspike"
     ],
     "ITEMS:forge:jacaranda__log": [
       "CUSTOM:Jacaranda_Wood",
@@ -52863,6 +53055,7 @@
       "gui.palamod.grinderpalahelpgui.label_2_min_12": "2 min 1/2",
       "advancements.avancementendiumingot.title": "Very rare blue nugget",
       "item.palamod.scuba_helmet": "Scuba Helmet",
+      "key.palamod.clickerk": "Open Clicker",
       "gui.palamod.adminshopmobs.tooltip_go_to_the_page_2": "Go to the page 2",
       "gui.palamod.factionhomegui.label_empty": "",
       "advancements.achmpotg_20new.title": "Ultimate pickaxe",
@@ -54661,6 +54854,7 @@
       "gui.palamod.grinderpalahelpgui.label_2_min_12": "2 min 1/2",
       "advancements.avancementendiumingot.title": "Nugget très rare",
       "item.palamod.scuba_helmet": "Casque de plongée",
+      "key.palamod.clickerk": "Open Clicker",
       "gui.palamod.adminshopmobs.tooltip_go_to_the_page_2": "Aller à la page 2",
       "gui.palamod.factionhomegui.label_empty": "",
       "advancements.achmpotg_20new.title": "Ultimate pickaxe",
