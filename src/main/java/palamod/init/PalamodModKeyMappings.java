@@ -6,7 +6,6 @@ package palamod.init;
 
 import palamod.network.JobskeybindingMessage;
 import palamod.network.FactionblindingMessage;
-import palamod.network.ClickerkMessage;
 import palamod.network.AdminshopkeyblindingMessage;
 
 import palamod.PalamodMod;
@@ -63,30 +62,12 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping CLICKERK = new KeyMapping("key.palamod.clickerk", GLFW.GLFW_KEY_K, "key.categories.ui") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CLICKERK_LASTPRESS = System.currentTimeMillis();
-			} else if (isDownOld != isDown && !isDown) {
-				int dt = (int) (System.currentTimeMillis() - CLICKERK_LASTPRESS);
-				PalamodMod.PACKET_HANDLER.sendToServer(new ClickerkMessage(1, dt));
-				ClickerkMessage.pressAction(Minecraft.getInstance().player, 1, dt);
-			}
-			isDownOld = isDown;
-		}
-	};
-	private static long CLICKERK_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(ADMINSHOPKEYBLINDING);
 		event.register(FACTIONBLINDING);
 		event.register(JOBSKEYBINDING);
-		event.register(CLICKERK);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -97,7 +78,6 @@ public class PalamodModKeyMappings {
 				ADMINSHOPKEYBLINDING.consumeClick();
 				FACTIONBLINDING.consumeClick();
 				JOBSKEYBINDING.consumeClick();
-				CLICKERK.consumeClick();
 			}
 		}
 	}
