@@ -160,6 +160,9 @@
           "name": "button_emerald",
           "text": "Emerald",
           "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshoputilitiesemerald"
+          },
           "width": 61,
           "height": 20,
           "x": 230,

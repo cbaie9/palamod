@@ -4,6 +4,7 @@ package palamod.network;
 import palamod.world.inventory.AdminshoporeMenu;
 
 import palamod.procedures.ConnectadminshoputilitiesredstoneProcedure;
+import palamod.procedures.ConnectadminshoputilitiesemeraldProcedure;
 import palamod.procedures.ConnectadhoretitaneProcedure;
 import palamod.procedures.ConnectadhorepalaProcedure;
 import palamod.procedures.ConnectadhoreironProcedure;
@@ -109,6 +110,10 @@ public class AdminshoporeButtonMessage {
 		if (buttonID == 8) {
 
 			ConnectadminshoputilitiesredstoneProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 9) {
+
+			ConnectadminshoputilitiesemeraldProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 10) {
 

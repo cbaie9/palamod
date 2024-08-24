@@ -168,6 +168,10 @@ public class AdminshoporeScreen extends AbstractContainerScreen<AdminshoporeMenu
 		guistate.put("button:button_redstone", button_redstone);
 		this.addRenderableWidget(button_redstone);
 		button_emerald = Button.builder(Component.translatable("gui.palamod.adminshopore.button_emerald"), e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshoporeButtonMessage(9, x, y, z));
+				AdminshoporeButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
 		}).bounds(this.leftPos + 104, this.topPos + 112, 61, 20).build();
 		guistate.put("button:button_emerald", button_emerald);
 		this.addRenderableWidget(button_emerald);
