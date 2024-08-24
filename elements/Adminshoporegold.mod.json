@@ -198,7 +198,8 @@
         "data": {
           "name": "tooltip_return_to_the_ore_menu",
           "text": {
-            "fixedValue": "Return to the ore menu"
+            "fixedValue": "Return to the ore menu",
+            "name": "Returnadminshoporemenu"
           },
           "width": 15,
           "height": 14,

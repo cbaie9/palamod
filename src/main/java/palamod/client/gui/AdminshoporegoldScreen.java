@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshoporegoldMenu;
 
+import palamod.procedures.ReturnadminshoporemenuProcedure;
 import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountgoldProcedure;
@@ -59,7 +60,7 @@ public class AdminshoporegoldScreen extends AbstractContainerScreen<Adminshopore
 		if (mouseX > leftPos + 123 && mouseX < leftPos + 135 && mouseY > topPos + 5 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 138 && mouseX < leftPos + 153 && mouseY > topPos + 6 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshoporegold.tooltip_return_to_the_ore_menu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshoporemenuProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}

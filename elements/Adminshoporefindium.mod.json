@@ -183,7 +183,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_block_me",
           "text": {
-            "fixedValue": "Return to the adminshop ore menu"
+            "fixedValue": "Return to the adminshop ore menu",
+            "name": "Returnadminshoporemenu"
           },
           "width": 15,
           "height": 14,

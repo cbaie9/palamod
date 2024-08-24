@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockDirtMenu;
 
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
+import palamod.procedures.ReturnadminshopblockmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountdirtProcedure;
 
@@ -57,9 +59,9 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 137 && mouseX < leftPos + 152 && mouseY > topPos + 6 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_dirt.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopblockmenuProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 122 && mouseX < leftPos + 134 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblock_dirt.tooltip_return_to_the_menu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

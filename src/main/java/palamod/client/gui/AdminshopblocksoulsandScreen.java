@@ -3,6 +3,7 @@ package palamod.client.gui;
 import palamod.world.inventory.AdminshopblocksoulsandMenu;
 
 import palamod.procedures.ReturnadminshopmainmenuProcedure;
+import palamod.procedures.ReturnadminshopblockmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountsoulsandProcedure;
 
@@ -60,7 +61,7 @@ public class AdminshopblocksoulsandScreen extends AbstractContainerScreen<Admins
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 6 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblocksoulsand.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopblockmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

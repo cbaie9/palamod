@@ -196,7 +196,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_utilitie",
           "text": {
-            "fixedValue": "Return to the adminshop utilities menu"
+            "fixedValue": "Return to the adminshop utilities menu",
+            "name": "Returnadminshoputilitiesmenu"
           },
           "width": 15,
           "height": 14,

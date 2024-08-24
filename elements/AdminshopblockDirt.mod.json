@@ -194,7 +194,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_block_me",
           "text": {
-            "fixedValue": "Return to the adminshop block menu"
+            "fixedValue": "Return to the adminshop block menu",
+            "name": "Returnadminshopblockmenu"
           },
           "width": 15,
           "height": 14,
@@ -207,7 +208,8 @@
         "data": {
           "name": "tooltip_return_to_the_menu",
           "text": {
-            "fixedValue": "Return to the menu"
+            "fixedValue": "Return to the menu",
+            "name": "Returnadminshopmainmenu"
           },
           "width": 12,
           "height": 15,
