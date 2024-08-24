@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2gunpowderMenu;
 
+import palamod.procedures.Returnadminshopmobsp2Procedure;
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountgunpowderProcedure;
 
@@ -57,9 +59,9 @@ public class Adminshopmobs2gunpowderScreen extends AbstractContainerScreen<Admin
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 3 && mouseY < topPos + 19)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 5 && mouseY < topPos + 19)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(Returnadminshopmobsp2Procedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 4 && mouseY < topPos + 19)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2gunpowder.tooltip_return_to_the_adminshops_main_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

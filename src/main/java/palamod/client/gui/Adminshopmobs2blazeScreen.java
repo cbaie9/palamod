@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2blazeMenu;
 
+import palamod.procedures.Returnadminshopmobsp2Procedure;
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountblazeProcedure;
 
@@ -57,9 +59,9 @@ public class Adminshopmobs2blazeScreen extends AbstractContainerScreen<Adminshop
 		if (mouseX > leftPos + 151 && mouseX < leftPos + 167 && mouseY > topPos + 5 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 132 && mouseX < leftPos + 147 && mouseY > topPos + 7 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2blaze.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(Returnadminshopmobsp2Procedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 116 && mouseX < leftPos + 128 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2blaze.tooltip_return_to_the_adminshops_main_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantwarpedfungusMenu;
 
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountnethermushProcedure;
 
@@ -55,7 +56,7 @@ public class AdminshopplantwarpedfungusScreen extends AbstractContainerScreen<Ad
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 121 && mouseX < leftPos + 133 && mouseY > topPos + 6 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantwarpedfungus.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantwarpedfungus.tooltip_return_to_the_adminshop_plant_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 5 && mouseY < topPos + 21)

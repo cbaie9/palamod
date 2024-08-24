@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdhutilitiesredstoneMenu;
 
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.AdhutilitiesredstoneButtonMessage;
@@ -54,7 +55,7 @@ public class AdhutilitiesredstoneScreen extends AbstractContainerScreen<Adhutili
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 118 && mouseX < leftPos + 130 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adhutilitiesredstone.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adhutilitiesredstone.tooltip_return_to_the_adminshop_utilitie"), mouseX, mouseY);
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)

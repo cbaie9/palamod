@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopplantmelonMenu;
 
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountmelonProcedure;
 
@@ -55,7 +56,7 @@ public class AdminshopplantmelonScreen extends AbstractContainerScreen<Adminshop
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 116 && mouseX < leftPos + 128 && mouseY > topPos + 6 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantmelon.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 7 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopplantmelon.tooltip_return_to_the_adminshop_plant_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 5 && mouseY < topPos + 21)

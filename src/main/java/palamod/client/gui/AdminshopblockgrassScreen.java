@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopblockgrassMenu;
 
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountgrassProcedure;
 
@@ -59,7 +60,7 @@ public class AdminshopblockgrassScreen extends AbstractContainerScreen<Adminshop
 		if (mouseX > leftPos + 133 && mouseX < leftPos + 148 && mouseY > topPos + 6 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockgrass.tooltip_return_to_the_adminshop_block_me"), mouseX, mouseY);
 		if (mouseX > leftPos + 115 && mouseX < leftPos + 127 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopblockgrass.tooltip_return_to_the_adminshop_menu"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

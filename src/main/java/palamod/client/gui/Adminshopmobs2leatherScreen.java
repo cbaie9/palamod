@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2leatherMenu;
 
+import palamod.procedures.Returnadminshopmobsp2Procedure;
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountleatherProcedure;
 
@@ -57,9 +59,9 @@ public class Adminshopmobs2leatherScreen extends AbstractContainerScreen<Adminsh
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2leather.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(Returnadminshopmobsp2Procedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 119 && mouseX < leftPos + 131 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2leather.tooltip_return_to_the_adminshops_main_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

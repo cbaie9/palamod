@@ -194,7 +194,7 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_menu",
           "text": {
-            "fixedValue": "Return to the adminshop menu"
+            "fixedValue": "Return to the adminshop plant menu"
           },
           "width": 15,
           "height": 14,
@@ -207,7 +207,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_menu1",
           "text": {
-            "fixedValue": "Return to the adminshop menu"
+            "fixedValue": "Return to the adminshop menu",
+            "name": "Returnadminshopmainmenu"
           },
           "width": 12,
           "height": 15,

@@ -183,7 +183,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_menu",
           "text": {
-            "fixedValue": "Return to the adminshop menu"
+            "fixedValue": "Return to the adminshop menu",
+            "name": "Returnadminshopmainmenu"
           },
           "width": 12,
           "height": 15,
@@ -196,7 +197,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshops_mobs_m",
           "text": {
-            "fixedValue": "Return to the adminshop's mobs menu"
+            "fixedValue": "Return to the adminshop's mobs menu",
+            "name": "Returnadminshopmobsmenup1"
           },
           "width": 15,
           "height": 14,

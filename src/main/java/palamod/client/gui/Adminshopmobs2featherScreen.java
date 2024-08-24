@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Adminshopmobs2featherMenu;
 
+import palamod.procedures.Returnadminshopmobsp2Procedure;
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountfeatherProcedure;
 
@@ -59,9 +61,9 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2feather.tooltip_return_to_the_adminshops_mobs_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(Returnadminshopmobsp2Procedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 120 && mouseX < leftPos + 132 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobs_2feather.tooltip_return_to_the_adminshops_main_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

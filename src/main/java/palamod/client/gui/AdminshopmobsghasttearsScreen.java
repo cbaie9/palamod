@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AdminshopmobsghasttearsMenu;
 
+import palamod.procedures.Returnadminshopmobsmenup1Procedure;
+import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountghasttearsProcedure;
 
@@ -57,9 +59,9 @@ public class AdminshopmobsghasttearsScreen extends AbstractContainerScreen<Admin
 		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 5 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 7 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsghasttears.tooltip_return_to_the_adminshops_main_m"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(Returnadminshopmobsmenup1Procedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 118 && mouseX < leftPos + 130 && mouseY > topPos + 6 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.adminshopmobsghasttears.tooltip_return_to_the_adminshops_main_m1"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override

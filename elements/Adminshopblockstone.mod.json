@@ -210,7 +210,8 @@
         "data": {
           "name": "tooltip_return_the_adminshop_menu",
           "text": {
-            "fixedValue": "Return the adminshop menu"
+            "fixedValue": "Return the adminshop menu",
+            "name": "Returnadminshopmainmenu"
           },
           "width": 12,
           "height": 15,

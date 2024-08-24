@@ -228,7 +228,8 @@
         "data": {
           "name": "tooltip_return_to_the_adminshop_menu",
           "text": {
-            "fixedValue": "Return to the adminshop menu"
+            "fixedValue": "Return to the adminshop menu",
+            "name": "Returnadminshopmainmenu"
           },
           "width": 12,
           "height": 15,
@@ -241,7 +242,8 @@
         "data": {
           "name": "tooltip_go_the_page_1",
           "text": {
-            "fixedValue": "Go the page 1"
+            "fixedValue": "Go the page 1",
+            "name": "Returnadminshopmobsmenup1"
           },
           "width": 15,
           "height": 14,
