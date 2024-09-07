@@ -54,14 +54,19 @@ public class JobsminerbreakblockProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
+		boolean money_getadd = false;
+		boolean breakblock_logic = false;
+		double money_add = 0;
+		double nloop = 0;
 		File jobs = new File("");
 		File money = new File("");
-		double money_add = 0;
-		boolean money_getadd = false;
+		File cache = new File("");
+		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
 		if (jobs.exists() && !(new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -85,7 +90,7 @@ public class JobsminerbreakblockProcedure {
 					if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 						main.addProperty("xpstreak_miner", 0);
 					}
-					if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z)) {
+					if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z, entity)) {
 						if (EnchantmentHelper.getItemEnchantmentLevel(PalamodModEnchantments.BOTTELED.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
 								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type")
 										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type"))

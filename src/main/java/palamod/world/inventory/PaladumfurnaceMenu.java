@@ -78,13 +78,13 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 61, 22) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 60, 23) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 60, 60) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 60, 59) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 122, 39) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 121, 41) {
 			private final int slot = 2;
 
 			@Override
@@ -92,7 +92,7 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 				return false;
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 14, 34) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 14, 41) {
 			private final int slot = 4;
 
 			@Override

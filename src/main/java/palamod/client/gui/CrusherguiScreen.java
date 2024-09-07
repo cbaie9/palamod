@@ -276,6 +276,11 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 	}
 
 	@Override
+	public boolean isPauseScreen() {
+		return true;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);

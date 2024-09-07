@@ -21,8 +21,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 162,
-          "y": 40
+          "x": 167,
+          "y": 41
         }
       },
       {
@@ -39,8 +39,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 184,
-          "y": 58
+          "x": 183,
+          "y": 59
         }
       },
       {
@@ -74,30 +74,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "big_slot.png",
-          "use1Xscale": true,
-          "x": 241,
-          "y": 70
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_varintegerg_num",
-          "text": {
-            "fixedValue": "<VAR:integer:g_num>"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 213,
-          "y": 103
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -112,7 +88,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 183,
-          "y": 96
+          "y": 95
         }
       },
       {
@@ -123,8 +99,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 245,
-          "y": 75
+          "x": 244,
+          "y": 77
         }
       },
       {
@@ -370,7 +346,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 137,
-          "y": 70
+          "y": 77
         }
       },
       {

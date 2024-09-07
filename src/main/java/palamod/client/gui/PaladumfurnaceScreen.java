@@ -75,9 +75,6 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 117, this.topPos + 33, 0, 0, 26, 26, 26, 26);
-
 		if (Palafurnacesubprocess0Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_1red_new.png"), this.leftPos + 85, this.topPos + 43, 0, 0, 24, 10, 24, 10);
 		}
@@ -176,10 +173,9 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace"), 38, 3, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace"), 43, 4, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_inventory"), 7, 73, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_upgrades"), 8, 20, -65536, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_varintegerg_num"), 89, 66, -12829636, false);
 	}
 
 	@Override
