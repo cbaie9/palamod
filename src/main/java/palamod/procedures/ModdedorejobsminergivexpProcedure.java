@@ -62,8 +62,7 @@ public class ModdedorejobsminergivexpProcedure {
 					e.printStackTrace();
 				}
 			}
-			get_lvl_needed = JobsminermoddedoresheetlvlProcedure.execute(entity);
-			xp_reward = JobsminermoddedoresheetProcedure.execute(entity);
+			xp_reward = JobsminermoddedoresheetlvlProcedure.execute(entity);
 			if (0 == blockstate) {
 				if (jobs.exists() && !(new Object() {
 					public boolean checkGamemode(Entity _ent) {
@@ -89,7 +88,7 @@ public class ModdedorejobsminergivexpProcedure {
 							if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 								main.addProperty("xpstreak_miner", 0);
 							}
-							if (main.get("lvl_miner").getAsDouble() >= get_lvl_needed) {
+							if (0 < xp_reward) {
 								if (EnchantmentHelper.getItemEnchantmentLevel(PalamodModEnchantments.BOTTELED.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
 										&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type")
 												|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type"))
@@ -103,14 +102,6 @@ public class ModdedorejobsminergivexpProcedure {
 								}
 								main.addProperty("xpstreak_miner", ((xp_reward / 2) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
 								main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal(("Xp_jobs bottle :" + ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("xp_jobs")))), false);
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal(("Xp de jobs:" + main.get("xp_miner").getAsDouble())), false);
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal(("xpstreak :" + main.get("xpstreak_miner").getAsDouble())), false);
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal(("block registry :" + ForgeRegistries.BLOCKS.getKey(block.getBlock()).toString())), false);
 								if (entity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(
 											Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + main.get("xpstreak_miner").getAsDouble() + Component.translatable("palamod.procedure.jobswin2").getString() + " "

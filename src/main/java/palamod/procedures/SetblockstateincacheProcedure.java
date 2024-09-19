@@ -51,6 +51,7 @@ public class SetblockstateincacheProcedure {
 						((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip7 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip7) : -1));
 			}
 			main_chs.addProperty("block", (ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
+			i = -1;
 			for (int index0 = 0; index0 < 3; index0++) {
 				j = -1;
 				for (int index1 = 0; index1 < 3; index1++) {

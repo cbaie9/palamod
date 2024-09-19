@@ -95,18 +95,17 @@ public class JobsminerbreakblockProcedure {
 								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type")
 										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type"))
 								&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
-							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("xp_jobs", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble()
-									+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("xp_jobs")));
+							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("xp_jobs",
+									(GetxpminerbreakblockProcedure.execute(entity) * main.get("multi_exp").getAsDouble() + (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("xp_jobs")));
 							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("jobs_type", 1);
 						} else {
-							main.addProperty("xp_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
+							main.addProperty("xp_miner", (GetxpminerbreakblockProcedure.execute(entity) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
 						}
-						main.addProperty("xpstreak_miner", (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
+						main.addProperty("xpstreak_miner", (GetxpminerbreakblockProcedure.execute(entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
 						main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(
-									Component.literal((Component.translatable("palamod.procedure.jobswin1").getString()
-											+ "" + (GetxpminerbreakblockProcedure.execute(world, x, y, z) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
+							_player.displayClientMessage(Component
+									.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (GetxpminerbreakblockProcedure.execute(entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
 											+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
 													.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
 									true);

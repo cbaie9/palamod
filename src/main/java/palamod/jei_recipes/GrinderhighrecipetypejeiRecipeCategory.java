@@ -23,7 +23,7 @@ public class GrinderhighrecipetypejeiRecipeCategory implements IRecipeCategory<G
 	private final IDrawable icon;
 
 	public GrinderhighrecipetypejeiRecipeCategory(IGuiHelper helper) {
-		this.background = helper.createDrawable(TEXTURE, 0, 0, 114, 57);
+		this.background = helper.createDrawable(TEXTURE, 0, 0, 164, 150);
 		this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(PalamodModBlocks.GRINDER_BLOCK.get().asItem()));
 	}
 
@@ -49,8 +49,10 @@ public class GrinderhighrecipetypejeiRecipeCategory implements IRecipeCategory<G
 
 	@Override
 	public void setRecipe(IRecipeLayoutBuilder builder, GrinderhighrecipetypejeiRecipe recipe, IFocusGroup focuses) {
-		builder.addSlot(RecipeIngredientRole.INPUT, 27, 6).addIngredients(recipe.getIngredients().get(0));
-		builder.addSlot(RecipeIngredientRole.INPUT, 27, 24).addIngredients(recipe.getIngredients().get(1));
-		builder.addSlot(RecipeIngredientRole.OUTPUT, 77, 12).addItemStack(recipe.getResultItem(null));
+		builder.addSlot(RecipeIngredientRole.INPUT, 10, 13).addIngredients(recipe.getIngredients().get(0));
+		builder.addSlot(RecipeIngredientRole.INPUT, 10, 30).addIngredients(recipe.getIngredients().get(1));
+		builder.addSlot(RecipeIngredientRole.OUTPUT, 60, 21).addItemStack(recipe.getResultItem(null));
+		builder.addSlot(RecipeIngredientRole.INPUT, 10, 69).addIngredients(recipe.getIngredients().get(2));
+		builder.addSlot(RecipeIngredientRole.OUTPUT, 60, 69).addItemStack(recipe.getResultItem(null));
 	}
 }

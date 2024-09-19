@@ -22,6 +22,9 @@
     "enchantability": 14,
     "damageVsEntity": 5.0,
     "usageCount": 4999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Endiumnugget"
@@ -31,6 +34,9 @@
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "Excavatorprocessamethyst"
+    }
   }
 }

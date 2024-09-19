@@ -22,6 +22,9 @@
     "enchantability": 50,
     "damageVsEntity": 6.5,
     "usageCount": 4999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:EndiumIngot"
@@ -31,6 +34,9 @@
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "Hammernormal"
+    }
   }
 }
