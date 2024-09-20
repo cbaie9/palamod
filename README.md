@@ -2,6 +2,8 @@
 ## Palamod Renew 
  **An extended Minecraft adventure**
 
+# Corrupted branch Use [This branch](https://github.com/cbaie9/palamod) Intesd
+
 
 **Palamod Renew** is a mod who recreates a very known French mod who still exist in 1.7.10 for nearly 10 years! (2014-2024)
 
