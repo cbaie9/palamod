@@ -38,6 +38,7 @@ public class AdminshopplantScreen extends AbstractContainerScreen<Adminshopplant
 	Button button_carrot;
 	Button button_melon;
 	Button button_sugar_cane;
+	Button button_cocoa;
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_arrow_adminshop;
 
@@ -177,18 +178,26 @@ public class AdminshopplantScreen extends AbstractContainerScreen<Adminshopplant
 		}).bounds(this.leftPos + 93, this.topPos + 134, 85, 20).build();
 		guistate.put("button:button_sugar_cane", button_sugar_cane);
 		this.addRenderableWidget(button_sugar_cane);
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 166, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
+		button_cocoa = Button.builder(Component.translatable("gui.palamod.adminshopplant.button_cocoa"), e -> {
 			if (true) {
 				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantButtonMessage(10, x, y, z));
 				AdminshopplantButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		}).bounds(this.leftPos + 11, this.topPos + 161, 51, 20).build();
+		guistate.put("button:button_cocoa", button_cocoa);
+		this.addRenderableWidget(button_cocoa);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 166, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantButtonMessage(11, x, y, z));
+				AdminshopplantButtonMessage.handleButtonAction(entity, 11, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 6, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantButtonMessage(11, x, y, z));
-				AdminshopplantButtonMessage.handleButtonAction(entity, 11, x, y, z);
+				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopplantButtonMessage(12, x, y, z));
+				AdminshopplantButtonMessage.handleButtonAction(entity, 12, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);

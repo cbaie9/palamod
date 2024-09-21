@@ -83,7 +83,7 @@
           "text": "sell",
           "isUndecorated": false,
           "onClick": {
-            "name": "Adhplantsellcactus"
+            "name": "Adhbuycocao"
           },
           "width": 46,
           "height": 20,
@@ -96,7 +96,7 @@
         "data": {
           "name": "label_sell_price_120",
           "text": {
-            "fixedValue": "Sell price :  1"
+            "fixedValue": "Sell price :  50"
           },
           "color": {
             "value": -4671036,
@@ -111,7 +111,7 @@
         "data": {
           "name": "label_buy_price_125",
           "text": {
-            "fixedValue": "Buy Price : 6"
+            "fixedValue": "Buy Price : 75"
           },
           "color": {
             "value": -4671036,

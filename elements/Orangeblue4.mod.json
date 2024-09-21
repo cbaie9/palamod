@@ -94,9 +94,6 @@
     "onDestroyedByPlayer": {
       "name": "Orangeblue4drop"
     },
-    "onDestroyedByExplosion": {
-      "name": "Orangeblue4drop"
-    },
     "onRightClicked": {
       "name": "Orangeblue4shear"
     }

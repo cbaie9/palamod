@@ -81,6 +81,7 @@ import palamod.world.inventory.AdminshopplantmelonMenu;
 import palamod.world.inventory.AdminshopplantcrimsonfungusMenu;
 import palamod.world.inventory.AdminshopplantcarrotMenu;
 import palamod.world.inventory.AdminshopplantcactusMenu;
+import palamod.world.inventory.AdminshopplantcacaoMenu;
 import palamod.world.inventory.AdminshopplantbrownmushroomMenu;
 import palamod.world.inventory.AdminshopplantMenu;
 import palamod.world.inventory.AdminshoporetitaneMenu;
@@ -260,4 +261,5 @@ public class PalamodModMenus {
 	public static final RegistryObject<MenuType<JobsminerguiMenu>> JOBSMINERGUI = REGISTRY.register("jobsminergui", () -> IForgeMenuType.create(JobsminerguiMenu::new));
 	public static final RegistryObject<MenuType<JobsminercraftguiMenu>> JOBSMINERCRAFTGUI = REGISTRY.register("jobsminercraftgui", () -> IForgeMenuType.create(JobsminercraftguiMenu::new));
 	public static final RegistryObject<MenuType<GamblelingjobsjetonMenu>> GAMBLELINGJOBSJETON = REGISTRY.register("gamblelingjobsjeton", () -> IForgeMenuType.create(GamblelingjobsjetonMenu::new));
+	public static final RegistryObject<MenuType<AdminshopplantcacaoMenu>> ADMINSHOPPLANTCACAO = REGISTRY.register("adminshopplantcacao", () -> IForgeMenuType.create(AdminshopplantcacaoMenu::new));
 }

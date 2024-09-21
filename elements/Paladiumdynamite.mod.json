@@ -112,6 +112,9 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
     "entityDataEntries": [],
     "onInitialSpawn": {
       "name": "Paladiumdynamite_boom"

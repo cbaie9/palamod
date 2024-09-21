@@ -10,12 +10,12 @@ import net.minecraft.world.level.block.Blocks;
 
 public class ObsidianstairsBlock extends StairBlock {
 	public ObsidianstairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f).dynamicShape());
+		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f, 100f).dynamicShape());
 	}
 
 	@Override
 	public float getExplosionResistance() {
-		return 10f;
+		return 100f;
 	}
 
 	@Override

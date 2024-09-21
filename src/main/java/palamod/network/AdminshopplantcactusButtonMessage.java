@@ -6,8 +6,8 @@ import palamod.world.inventory.AdminshopplantcactusMenu;
 import palamod.procedures.ConnectadminshopplantProcedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.Adminshop_openProcedure;
-import palamod.procedures.AdhplantsellcactusProcedure;
 import palamod.procedures.AdhplantbuycactusProcedure;
+import palamod.procedures.AdhbuycocaoProcedure;
 
 import palamod.PalamodMod;
 
@@ -74,7 +74,7 @@ public class AdminshopplantcactusButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			AdhplantsellcactusProcedure.execute(world, entity, guistate);
+			AdhbuycocaoProcedure.execute(world, entity, guistate);
 		}
 		if (buttonID == 2) {
 

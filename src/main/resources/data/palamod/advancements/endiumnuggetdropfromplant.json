@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "palamod:orangeblue_4"
+    },
+    "title": {
+      "translate": "advancements.endiumnuggetdropfromplant.title"
+    },
+    "description": {
+      "translate": "advancements.endiumnuggetdropfromplant.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "endiumnuggetdropfromplant_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:avancementendiumingot"
+}

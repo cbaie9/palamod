@@ -18,7 +18,7 @@ public class EndiumspawndynaProcedure {
 		if (world instanceof ServerLevel _level) {
 			Entity entityToSpawn = PalamodModEntities.ENDIUMDYNAMITE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
-				entityToSpawn.setDeltaMovement((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y()), (entity.getDeltaMovement().z()));
+				entityToSpawn.setDeltaMovement((entity.getDeltaMovement().x()), 0.1, 1);
 			}
 		}
 		if (entity instanceof Player _player) {

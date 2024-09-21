@@ -1,7 +1,7 @@
 
 package palamod.block;
 
-import palamod.procedures.ObsidianspikeprocessProcedure;
+import palamod.procedures.PaladiumspikeobsidianprocessProcedure;
 
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -26,7 +26,7 @@ public class PaladiumobsidianspikeBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public PaladiumobsidianspikeBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f, 100f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -56,13 +56,13 @@ public class PaladiumobsidianspikeBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		ObsidianspikeprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		PaladiumspikeobsidianprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		return retval;
 	}
 
 	@Override
 	public void wasExploded(Level world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
-		ObsidianspikeprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		PaladiumspikeobsidianprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 }

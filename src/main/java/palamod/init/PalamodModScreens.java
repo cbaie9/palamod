@@ -81,6 +81,7 @@ import palamod.client.gui.AdminshopplantmelonScreen;
 import palamod.client.gui.AdminshopplantcrimsonfungusScreen;
 import palamod.client.gui.AdminshopplantcarrotScreen;
 import palamod.client.gui.AdminshopplantcactusScreen;
+import palamod.client.gui.AdminshopplantcacaoScreen;
 import palamod.client.gui.AdminshopplantbrownmushroomScreen;
 import palamod.client.gui.AdminshopplantScreen;
 import palamod.client.gui.AdminshoporetitaneScreen;
@@ -261,6 +262,7 @@ public class PalamodModScreens {
 			MenuScreens.register(PalamodModMenus.JOBSMINERGUI.get(), JobsminerguiScreen::new);
 			MenuScreens.register(PalamodModMenus.JOBSMINERCRAFTGUI.get(), JobsminercraftguiScreen::new);
 			MenuScreens.register(PalamodModMenus.GAMBLELINGJOBSJETON.get(), GamblelingjobsjetonScreen::new);
+			MenuScreens.register(PalamodModMenus.ADMINSHOPPLANTCACAO.get(), AdminshopplantcacaoScreen::new);
 		});
 	}
 }

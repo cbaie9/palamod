@@ -264,6 +264,21 @@
           "x": 126,
           "y": 26
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cocoa",
+          "text": "cocoa",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Connectadminshopcocoabean"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 130,
+          "y": 181
+        }
       }
     ],
     "gridSettings": {

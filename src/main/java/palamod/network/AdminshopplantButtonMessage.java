@@ -13,6 +13,7 @@ import palamod.procedures.ConnectadminshopplantcrimsonfungusProcedure;
 import palamod.procedures.ConnectadminshopplantcarrotProcedure;
 import palamod.procedures.ConnectadminshopplantcactusProcedure;
 import palamod.procedures.ConnectadminshopplantbrownmushroomProcedure;
+import palamod.procedures.ConnectadminshopcocoabeanProcedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.Adminshop_openProcedure;
 
@@ -117,9 +118,13 @@ public class AdminshopplantButtonMessage {
 		}
 		if (buttonID == 10) {
 
-			CloseguiProcedure.execute(entity);
+			ConnectadminshopcocoabeanProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 11) {
+
+			CloseguiProcedure.execute(entity);
+		}
+		if (buttonID == 12) {
 
 			Adminshop_openProcedure.execute(world, x, y, z, entity);
 		}

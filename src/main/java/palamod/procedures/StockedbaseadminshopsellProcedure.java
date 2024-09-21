@@ -723,6 +723,16 @@ public class StockedbaseadminshopsellProcedure {
 			}
 		}.getItemStack(world, BlockPos.containing(x, y, z), (int) slotnum)).getItem() == Items.REDSTONE) {
 			num = 1.5;
+		} else if ((new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				BlockEntity _ent = world.getBlockEntity(pos);
+				if (_ent != null)
+					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+				return _retval.get();
+			}
+		}.getItemStack(world, BlockPos.containing(x, y, z), (int) slotnum)).getItem() == Items.COCOA_BEANS) {
+			num = 50;
 		} else {
 			num = 0;
 		}
