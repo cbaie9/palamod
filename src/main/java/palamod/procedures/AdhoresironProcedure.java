@@ -20,6 +20,7 @@ import net.minecraft.client.gui.components.EditBox;
 import java.util.HashMap;
 
 import java.io.IOException;
+import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
@@ -101,6 +102,16 @@ public class AdhoresironProcedure {
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
+			}
+		}
+		{
+			com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+			try {
+				FileWriter fileWriter = new FileWriter(money);
+				fileWriter.write(mainGSONBuilderVariable.toJson(main));
+				fileWriter.close();
+			} catch (IOException exception) {
+				exception.printStackTrace();
 			}
 		}
 	}
