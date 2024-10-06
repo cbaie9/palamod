@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.client.Minecraft;
 
 public class Legendarystonejobs_processProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if (itemstack.getOrCreateTag().getDouble("cooldown") == 0 || new Object() {
@@ -27,6 +28,8 @@ public class Legendarystonejobs_processProcedure {
 		}.checkGamemode(entity)) {
 			if (entity instanceof Player _player)
 				_player.giveExperiencePoints((int) Math.pow(Mth.nextInt(RandomSource.create(), 1, 10), 10));
+			if (world.isClientSide())
+				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(PalamodModItems.LEGENDARY_STONE_JOBS.get()));
 			itemstack.getOrCreateTag().putString("name", (new ItemStack(PalamodModItems.LEGENDARY_STONE_JOBS.get()).getDisplayName().getString()));
 			itemstack.getOrCreateTag().putDouble("cooldown", 48000);
 		}

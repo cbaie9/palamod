@@ -6483,6 +6483,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -6518,6 +6522,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -6637,6 +6645,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -6659,6 +6671,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -6681,6 +6697,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -52106,6 +52126,29 @@
       "~CUSTOM:Spongetnt",
       "~CUSTOM:Compressedsponge"
     ],
+    "ITEMS:mod:potgtag": [
+      "CUSTOM:Pickaxeofthegodslv1",
+      "CUSTOM:Pickaxeofthegodslv2",
+      "CUSTOM:Pickaxeofthegodslv3",
+      "CUSTOM:Pickaxeofthegodslv4",
+      "CUSTOM:Pickaxeofthegodslv5",
+      "CUSTOM:Pickaxeofthegodslv6",
+      "CUSTOM:Pickaxeofthegodslv7",
+      "CUSTOM:Pickaxeofthegodslv8",
+      "CUSTOM:Pickaxeofthegodslv9",
+      "CUSTOM:Pickaxeofthegodslv10",
+      "CUSTOM:Pickaxeofthegodslv11",
+      "CUSTOM:Pickaxeofthegodslv12",
+      "CUSTOM:Pickaxeofthegodslv14",
+      "CUSTOM:Pickaxeofthegodslv15",
+      "CUSTOM:Pickaxeofthegodslv16",
+      "CUSTOM:Pickaxeofthegodslv17",
+      "CUSTOM:Pickaxeofthegodslv18",
+      "CUSTOM:Pickaxeofthegodslv19",
+      "CUSTOM:Pickaxeofthegodslv13",
+      "CUSTOM:Pickaxeofthegodslv20",
+      "CUSTOM:Creativepotg"
+    ],
     "ITEMS:forge:uploadersellable": [
       "CUSTOM:PaladiumIngot",
       "CUSTOM:TitaneIngot",
@@ -52176,29 +52219,6 @@
       "Items.COOKED_BEEF",
       "Blocks.REEDS",
       "Items.EMERALD"
-    ],
-    "ITEMS:mod:potgtag": [
-      "CUSTOM:Pickaxeofthegodslv1",
-      "CUSTOM:Pickaxeofthegodslv2",
-      "CUSTOM:Pickaxeofthegodslv3",
-      "CUSTOM:Pickaxeofthegodslv4",
-      "CUSTOM:Pickaxeofthegodslv5",
-      "CUSTOM:Pickaxeofthegodslv6",
-      "CUSTOM:Pickaxeofthegodslv7",
-      "CUSTOM:Pickaxeofthegodslv8",
-      "CUSTOM:Pickaxeofthegodslv9",
-      "CUSTOM:Pickaxeofthegodslv10",
-      "CUSTOM:Pickaxeofthegodslv11",
-      "CUSTOM:Pickaxeofthegodslv12",
-      "CUSTOM:Pickaxeofthegodslv14",
-      "CUSTOM:Pickaxeofthegodslv15",
-      "CUSTOM:Pickaxeofthegodslv16",
-      "CUSTOM:Pickaxeofthegodslv17",
-      "CUSTOM:Pickaxeofthegodslv18",
-      "CUSTOM:Pickaxeofthegodslv19",
-      "CUSTOM:Pickaxeofthegodslv13",
-      "CUSTOM:Pickaxeofthegodslv20",
-      "CUSTOM:Creativepotg"
     ],
     "BIOMES:minecraft:has_structure/igloo": [
       "~CUSTOM:Frozenforest"
@@ -53510,7 +53530,7 @@
       "gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_titane_upgrade": "Cobblebreaker\u0027s titane upgrade",
       "item.palamod.potato_backpack": "Potato backpack",
       "gui.palamod.grinderpalahelpgui.label_mins_hammer": "mined -) hammer",
-      "block.palamod.erabletrapdoor": "Erabletrapdoor",
+      "block.palamod.erabletrapdoor": "Erable trapdoor",
       "painting.palamod.papillusion_322.title": "Papillusion 64x",
       "gui.palamod.trashgui.label_voidstone_gui_trash_bin": "Voidstone Gui - Trash Bin",
       "block.palamod.exctractor": "Extractor",
@@ -55053,7 +55073,7 @@
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
       "item.palamod.paladiumarmorcustom_4_chestplate": "Paladium Chestplate",
       "gui.palamod.adminpanelmenu.label_admin_panel": "Panel des admins",
-      "block.palamod.renforcedobsidianstairs": "hardened obsidian",
+      "block.palamod.renforcedobsidianstairs": "Escalier en obsidienne renforcée",
       "item.palamod.titanefastsword": "Épée rapide en titane",
       "advancements.avancementkaboom.title": "Ka-boom",
       "item.palamod.mixedendiumarmor_boots": "Mixed Endium Boots",
@@ -55308,7 +55328,7 @@
       "painting.palamod.desertpaining_16.author": "Unknown",
       "gui.palamod.adminshopmobsfrspidereyes.button_sell": "Vendre",
       "gui.palamod.uploaderguipalahelp.label_uploader": "Uploader",
-      "block.palamod.green_paladium_stairs": "Green paladium stairs",
+      "block.palamod.green_paladium_stairs": "Escalier en paladium vert",
       "item.palamod.obsidianpickaxe": "Pioche en obsidienne",
       "gui.palamod.adminshopplantcacao.number_buy": "number here",
       "block.palamod.xpbushon": "Xpbush on",
@@ -55316,7 +55336,7 @@
       "gui.palamod.adminshopplantwheat.button_buy": "Acheter",
       "enchantment.palamod.smelt": "Cuire",
       "gui.palamod.adminshopmobs.button_cactus": "Cactus",
-      "block.palamod.hardenedobsidianslab": "hardened obsidian stairs",
+      "block.palamod.hardenedobsidianslab": "Dalle en obsidienne renforcée",
       "block.palamod.tcv_2": "Grinder block temporaire",
       "item.palamod.titane_pollen": "Pollen en titane",
       "item.palamod.damagestick": "Bàton de dégats",
@@ -56073,7 +56093,7 @@
       "block.palamod.jacaranda_wood": "Bois de Jacaranda",
       "gui.palamod.adminshopplantbrownmushroom.label_buy_price_125": "Prix d\u0027achat : 5",
       "gamerule.lockedcraft": "Palamod : Locked crafts",
-      "block.palamod.obsidianstairs": "hardened obsidian stairs",
+      "block.palamod.obsidianstairs": "Escalier en obsidienne",
       "block.palamod.jacaranda_fence_gate": "Portail en Jacaranda",
       "gui.palamod.crushergui.button_placeholder_ame": "placeholder_ame",
       "advancements.avancementcrafttoegether.title": "Allons le fabriquer ensemble",
@@ -56389,7 +56409,7 @@
       "block.palamod.elevator_pink": "Ascenseur rose",
       "item.palamod.dollars_stone": "Dollars stone",
       "gui.palamod.paladiumchestgui.label_inventory": "Inventaire",
-      "block.palamod.obsidianslab": "Obsidian stairs",
+      "block.palamod.obsidianslab": "Dalle en obsidienne",
       "gui.palamod.adminshoputilities.label_wip": "wip -- Sera fini bientôt",
       "gui.palamod.adminshopmobs_2.button_wheat_seed": "Larme de ghast",
       "gui.palamod.phonegui.cheat_code_secret": "Entrer le code",

@@ -37,7 +37,7 @@ public class LegendarystonefortuneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Legendarystonefortune_processProcedure.execute(entity, ar.getObject());
+		Legendarystonefortune_processProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 

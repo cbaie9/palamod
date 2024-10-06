@@ -67,20 +67,20 @@ public class GrinderopenProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
+		} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x - 1, y - 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x, y - 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_CASING.get() && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock() == PalamodModBlocks.GRINDER_CASING.get()
 				&& (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock() == PalamodModBlocks.GRINDER_CASING.get() && (world.getBlockState(BlockPos.containing(x - 1, y + 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
-				&& (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_CASING.get()
-				&& (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.LAVA && (world.getBlockState(BlockPos.containing(x, y - 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
-				&& (world.getBlockState(BlockPos.containing(x + 1, y - 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
+				&& (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z - 1))).getBlock() == PalamodModBlocks.GRINDER_CASING.get()
+				&& (world.getBlockState(BlockPos.containing(x, y - 1, z - 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x - 1, y, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x, y, z + 2))).getBlock() == PalamodModBlocks.GRINDER_CASING.get() && (world.getBlockState(BlockPos.containing(x + 1, y, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x - 1, y + 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
-				&& (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()) {
+				&& (world.getBlockState(BlockPos.containing(x + 1, y + 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z + 2))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
+				&& (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.LAVA) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			if (entity instanceof ServerPlayer _ent) {

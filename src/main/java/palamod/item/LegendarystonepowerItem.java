@@ -37,7 +37,7 @@ public class LegendarystonepowerItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Legendarystonepower_add_potionProcedure.execute(entity, ar.getObject());
+		Legendarystonepower_add_potionProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 

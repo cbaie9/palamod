@@ -37,7 +37,7 @@ public class LegendarystoneteleportationItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LegendarystonetpprocessProcedure.execute(entity, ar.getObject());
+		LegendarystonetpprocessProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
