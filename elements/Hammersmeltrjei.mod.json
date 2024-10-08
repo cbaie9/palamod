@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "jeirecipe",
   "definition": {
-    "category": "grinderlowerpartjei",
+    "category": "grinderhighrecipetypejei",
     "result": {
       "value": "CUSTOM:Paladiumhammer"
     },
