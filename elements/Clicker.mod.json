@@ -1,0 +1,159 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 360,
+    "height": 210,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_paterne.png",
+          "use1Xscale": false,
+          "x": 34,
+          "y": 15
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_v1.11.png",
+          "use1Xscale": false,
+          "x": 34,
+          "y": 15
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_build_hive",
+          "image": "clicker_build_hive.png",
+          "hoveredImage": "",
+          "x": 294,
+          "y": 171
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_skip",
+          "image": "clicker_skip.png",
+          "hoveredImage": "",
+          "x": 263,
+          "y": 199
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_build_cave",
+          "image": "clicker_build_cave.png",
+          "hoveredImage": "",
+          "x": 294,
+          "y": 75
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_build_mine",
+          "image": "clicker_build_mine.png",
+          "hoveredImage": "",
+          "x": 294,
+          "y": 51
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_build_dwarf",
+          "image": "clicker_build_dwarf.png",
+          "hoveredImage": "",
+          "x": 294,
+          "y": 99
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_close_btn",
+          "image": "clicker_close_btn.png",
+          "hoveredImage": "",
+          "x": 375,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_build_garden",
+          "image": "clicker_build_garden.png",
+          "hoveredImage": "",
+          "x": 294,
+          "y": 123
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_build_witch",
+          "image": "clicker_build_witch.png",
+          "hoveredImage": "",
+          "x": 294,
+          "y": 147
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_potato_btn_v11",
+          "image": "clicker_potato_btn_v1.1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Addclickcoin"
+          },
+          "x": 45,
+          "y": 75
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicker_morebuild",
+          "image": "clicker_more-build.png",
+          "hoveredImage": "",
+          "x": 295,
+          "y": 195
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_clickerprintcoins",
+          "text": {
+            "fixedValue": "",
+            "name": "Clickerprintcoins"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 46,
+          "y": 59
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

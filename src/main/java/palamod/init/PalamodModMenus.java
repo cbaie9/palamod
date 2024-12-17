@@ -63,6 +63,7 @@ import palamod.world.inventory.DownloaderguiMenu;
 import palamod.world.inventory.CrusherpalahelpguiMenu;
 import palamod.world.inventory.CrusherguiMenu;
 import palamod.world.inventory.CobblebreakerguiMenu;
+import palamod.world.inventory.ClickerMenu;
 import palamod.world.inventory.AuthsafeguiMenu;
 import palamod.world.inventory.ArmorpalahelpguiMenu;
 import palamod.world.inventory.AnalyserresultMenu;
@@ -262,4 +263,5 @@ public class PalamodModMenus {
 	public static final RegistryObject<MenuType<JobsminercraftguiMenu>> JOBSMINERCRAFTGUI = REGISTRY.register("jobsminercraftgui", () -> IForgeMenuType.create(JobsminercraftguiMenu::new));
 	public static final RegistryObject<MenuType<GamblelingjobsjetonMenu>> GAMBLELINGJOBSJETON = REGISTRY.register("gamblelingjobsjeton", () -> IForgeMenuType.create(GamblelingjobsjetonMenu::new));
 	public static final RegistryObject<MenuType<AdminshopplantcacaoMenu>> ADMINSHOPPLANTCACAO = REGISTRY.register("adminshopplantcacao", () -> IForgeMenuType.create(AdminshopplantcacaoMenu::new));
+	public static final RegistryObject<MenuType<ClickerMenu>> CLICKER = REGISTRY.register("clicker", () -> IForgeMenuType.create(ClickerMenu::new));
 }

@@ -48,12 +48,14 @@ public class OpenpalamodgameProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		File money = new File("");
-		File jobs = new File("");
-		File cache = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
+		double i = 0;
+		File money = new File("");
+		File jobs = new File("");
+		File cache = new File("");
+		File clicker = new File("");
 		if (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -95,6 +97,7 @@ public class OpenpalamodgameProcedure {
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
+		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/clicker/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (!money.exists()) {
 			try {
 				money.getParentFile().mkdirs();
@@ -167,6 +170,30 @@ public class OpenpalamodgameProcedure {
 				try {
 					FileWriter fileWriter = new FileWriter(jobs);
 					fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
+		}
+		if (!clicker.exists()) {
+			try {
+				clicker.getParentFile().mkdirs();
+				clicker.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+			money_main.addProperty("coin", 0);
+			money_main.addProperty("click_tier", 0);
+			for (int index0 = 0; index0 < 100; index0++) {
+				money_main.addProperty(("im_" + i), 0);
+				i = i + 1;
+			}
+			{
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(clicker);
+					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
 					fileWriter.close();
 				} catch (IOException exception) {
 					exception.printStackTrace();
