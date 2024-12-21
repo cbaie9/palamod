@@ -4,6 +4,7 @@
  */
 package palamod.init;
 
+import palamod.network.OpenclickerMessage;
 import palamod.network.JobskeybindingMessage;
 import palamod.network.FactionblindingMessage;
 import palamod.network.AdminshopkeyblindingMessage;
@@ -62,12 +63,26 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping OPENCLICKER = new KeyMapping("key.palamod.openclicker", GLFW.GLFW_KEY_K, "key.categories.ui") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new OpenclickerMessage(0, 0));
+				OpenclickerMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(ADMINSHOPKEYBLINDING);
 		event.register(FACTIONBLINDING);
 		event.register(JOBSKEYBINDING);
+		event.register(OPENCLICKER);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -78,6 +93,7 @@ public class PalamodModKeyMappings {
 				ADMINSHOPKEYBLINDING.consumeClick();
 				FACTIONBLINDING.consumeClick();
 				JOBSKEYBINDING.consumeClick();
+				OPENCLICKER.consumeClick();
 			}
 		}
 	}

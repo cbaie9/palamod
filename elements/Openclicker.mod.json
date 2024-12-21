@@ -1,12 +1,12 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "C",
-    "keyBindingName": "Ouvrir le cliqueur",
-    "keyBindingCategoryKey": "misc",
+    "triggerKey": "K",
+    "keyBindingName": "Open Clicker",
+    "keyBindingCategoryKey": "ui",
     "onKeyPressed": {
-      "name": "OpenclickerToucheEnfoncee"
+      "name": "Clickeropenproc"
     }
   }
 }
