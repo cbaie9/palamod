@@ -4,6 +4,7 @@ import palamod.init.PalamodModItems;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +16,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.client.Minecraft;
 
 public class Legendarystonefortune_processProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		ItemStack item = ItemStack.EMPTY;
@@ -41,6 +42,8 @@ public class Legendarystonefortune_processProcedure {
 			} else {
 				item = new ItemStack(Items.GOLD_INGOT);
 			}
+			if (world.isClientSide())
+				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get()));
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = item.copy();
 				_setstack.setCount(Mth.nextInt(RandomSource.create(), 10, 64));

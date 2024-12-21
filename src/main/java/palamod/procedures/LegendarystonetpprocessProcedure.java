@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +16,7 @@ import net.minecraft.client.Minecraft;
 import java.util.Random;
 
 public class LegendarystonetpprocessProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		double x = 0;
@@ -32,6 +33,8 @@ public class LegendarystonetpprocessProcedure {
 		}.checkGamemode(entity)) {
 			x = new Random().nextGaussian();
 			z = new Random().nextGaussian();
+			if (world.isClientSide())
+				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get()));
 			{
 				Entity _ent = entity;
 				_ent.teleportTo(x, 255, z);

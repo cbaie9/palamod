@@ -6,6 +6,9 @@
 **Palamod Renew** is a mod who recreates a very known French mod who still exist in 1.7.10 for nearly 10 years! (2014-2024)
 
 So for fun, I recreate it with his most fun features
+### **Useful link** ( Very useful imo )
+- [Site du mod](https://fufubs1.github.io/palamod) 💻
+- [Discord](https://discord.gg/dVvNDrQENA) ⏫
 
 ![1805b2171559094bee21acd2b6914875274e1c4f](https://github.com/cbaie9/palamod/assets/75169332/9b3ddeca-8f5c-4b86-b7a4-8d7c17474830)
 

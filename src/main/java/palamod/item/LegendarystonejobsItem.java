@@ -37,7 +37,7 @@ public class LegendarystonejobsItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Legendarystonejobs_processProcedure.execute(entity, ar.getObject());
+		Legendarystonejobs_processProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
