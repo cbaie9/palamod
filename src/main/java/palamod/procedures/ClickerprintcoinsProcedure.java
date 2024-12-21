@@ -16,7 +16,7 @@ public class ClickerprintcoinsProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		File jobs = new File("");
 		double lvl = 0;
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/clicker/"), File.separator + (entity.getUUID().toString() + ".json"));
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

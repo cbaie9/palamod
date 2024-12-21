@@ -33,7 +33,7 @@
         "data": {
           "name": "imagebutton_clicker_build_hive",
           "image": "clicker_build_hive.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_build_hive_hover.png",
           "x": 294,
           "y": 171
         }
@@ -53,7 +53,7 @@
         "data": {
           "name": "imagebutton_clicker_build_cave",
           "image": "clicker_build_cave.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_build_cave_hover.png",
           "x": 294,
           "y": 75
         }
@@ -63,7 +63,7 @@
         "data": {
           "name": "imagebutton_clicker_build_mine",
           "image": "clicker_build_mine.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_build_mine_hover.png",
           "x": 294,
           "y": 51
         }
@@ -73,7 +73,7 @@
         "data": {
           "name": "imagebutton_clicker_build_dwarf",
           "image": "clicker_build_dwarf.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_build_dwarf_hover.png",
           "x": 294,
           "y": 99
         }
@@ -82,9 +82,9 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_clicker_close_btn",
-          "image": "clicker_close_btn.png",
-          "hoveredImage": "",
-          "x": 375,
+          "image": "close_gui_nohover.png",
+          "hoveredImage": "close_gui_hover.png",
+          "x": 370,
           "y": 21
         }
       },
@@ -93,7 +93,7 @@
         "data": {
           "name": "imagebutton_clicker_build_garden",
           "image": "clicker_build_garden.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_build_garden_hover.png",
           "x": 294,
           "y": 123
         }
@@ -103,7 +103,7 @@
         "data": {
           "name": "imagebutton_clicker_build_witch",
           "image": "clicker_build_witch.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_build_witch_hover.png",
           "x": 294,
           "y": 147
         }
@@ -126,7 +126,7 @@
         "data": {
           "name": "imagebutton_clicker_morebuild",
           "image": "clicker_more-build.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_more_build_hover.png",
           "x": 295,
           "y": 195
         }
