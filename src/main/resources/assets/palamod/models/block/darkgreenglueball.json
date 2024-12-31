@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/glueball2",
+  "textures": {
+    "all": "palamod:block/green_dark_glueball_block",
+    "particle": "palamod:block/green_dark_glueball_block",
+    "0": "palamod:block/green_dark_glueball_block"
+  },
+  "render_type": "cutout_mipped"
+}

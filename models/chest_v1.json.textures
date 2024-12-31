@@ -5,6 +5,36 @@
         "texture": "paladiumchest"
       },
       "name": "default"
+    },
+    "pala": {
+      "map": {
+        "texture": "paladiumchest"
+      },
+      "name": "pala"
+    },
+    "titane": {
+      "map": {
+        "texture": "titanechest"
+      },
+      "name": "titane"
+    },
+    "endium": {
+      "map": {
+        "texture": "endiumchest"
+      },
+      "name": "endium"
+    },
+    "paladium_vert": {
+      "map": {
+        "texture": "gpaladium_chest"
+      },
+      "name": "paladium_vert"
+    },
+    "amethyst": {
+      "map": {
+        "texture": "amethystchest"
+      },
+      "name": "amethyst"
     }
   }
 }

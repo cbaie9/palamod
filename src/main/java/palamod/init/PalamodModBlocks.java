@@ -4,6 +4,7 @@
  */
 package palamod.init;
 
+import palamod.block.YellowglueballBlock;
 import palamod.block.XpbushonBlock;
 import palamod.block.XpbushBlock;
 import palamod.block.WoddenspikeBlock;
@@ -38,6 +39,8 @@ import palamod.block.SlimepadBlock;
 import palamod.block.SlimeobsidianBlock;
 import palamod.block.RenforcedobsidianstairsBlock;
 import palamod.block.RenforcedobsidianBlock;
+import palamod.block.RedglueballBlock;
+import palamod.block.PurpleglueballBlock;
 import palamod.block.PrintingpressBlock;
 import palamod.block.PoisonobsidianBlock;
 import palamod.block.PaladiumstairsBlock;
@@ -67,6 +70,7 @@ import palamod.block.Ostrya_woodLogBlock;
 import palamod.block.Ostrya_woodLeavesBlock;
 import palamod.block.Ostrya_woodFenceGateBlock;
 import palamod.block.Ostrya_woodFenceBlock;
+import palamod.block.OrangeglueballBlock;
 import palamod.block.Orangeblue4Block;
 import palamod.block.Orangeblue3Block;
 import palamod.block.Orangeblue2Block;
@@ -84,6 +88,7 @@ import palamod.block.MegaboomobsidianBlock;
 import palamod.block.MagictntBlock;
 import palamod.block.LuckyblockBlock;
 import palamod.block.Loadblock1tBlock;
+import palamod.block.LightgreenglueballBlock;
 import palamod.block.LavaspongeBlock;
 import palamod.block.LavaobsidianBlock;
 import palamod.block.Kiwano4Block;
@@ -124,6 +129,8 @@ import palamod.block.GreenpaladiumstairsBlock;
 import palamod.block.GreenpaladiumslabBlock;
 import palamod.block.Greenpaladiumchestv2Block;
 import palamod.block.GreenpaladiumchestBlock;
+import palamod.block.GreenglueballBlock;
+import palamod.block.GrayglueballBlock;
 import palamod.block.GoldenobsidianspikeBlock;
 import palamod.block.FindiumstairsBlock;
 import palamod.block.FindiumslabBlock;
@@ -178,6 +185,8 @@ import palamod.block.DrawbridgeBlock;
 import palamod.block.DownloaderBlock;
 import palamod.block.DiamondspikeBlock;
 import palamod.block.DiamondobsidianspikeBlock;
+import palamod.block.DarkgreenglueballBlock;
+import palamod.block.CyanglueballBlock;
 import palamod.block.CrownBlock;
 import palamod.block.CompressedspongeBlock;
 import palamod.block.CompacttntBlock;
@@ -192,6 +201,7 @@ import palamod.block.Chervil1Block;
 import palamod.block.Chervil0Block;
 import palamod.block.CaveblockBlock;
 import palamod.block.BoomobsidianBlock;
+import palamod.block.BlueglueballBlock;
 import palamod.block.BlackluckyblockBlock;
 import palamod.block.AngelicwterBlock;
 import palamod.block.AmetystespikeBlock;
@@ -419,6 +429,16 @@ public class PalamodModBlocks {
 	public static final RegistryObject<Block> BOOMOBSIDIAN = REGISTRY.register("boomobsidian", () -> new BoomobsidianBlock());
 	public static final RegistryObject<Block> MEGABOOMOBSIDIAN = REGISTRY.register("megaboomobsidian", () -> new MegaboomobsidianBlock());
 	public static final RegistryObject<Block> HARPAGOPHYTUM = REGISTRY.register("harpagophytum", () -> new HarpagophytumBlock());
+	public static final RegistryObject<Block> REDGLUEBALL = REGISTRY.register("redglueball", () -> new RedglueballBlock());
+	public static final RegistryObject<Block> GREENGLUEBALL = REGISTRY.register("greenglueball", () -> new GreenglueballBlock());
+	public static final RegistryObject<Block> LIGHTGREENGLUEBALL = REGISTRY.register("lightgreenglueball", () -> new LightgreenglueballBlock());
+	public static final RegistryObject<Block> DARKGREENGLUEBALL = REGISTRY.register("darkgreenglueball", () -> new DarkgreenglueballBlock());
+	public static final RegistryObject<Block> BLUEGLUEBALL = REGISTRY.register("blueglueball", () -> new BlueglueballBlock());
+	public static final RegistryObject<Block> PURPLEGLUEBALL = REGISTRY.register("purpleglueball", () -> new PurpleglueballBlock());
+	public static final RegistryObject<Block> YELLOWGLUEBALL = REGISTRY.register("yellowglueball", () -> new YellowglueballBlock());
+	public static final RegistryObject<Block> CYANGLUEBALL = REGISTRY.register("cyanglueball", () -> new CyanglueballBlock());
+	public static final RegistryObject<Block> ORANGEGLUEBALL = REGISTRY.register("orangeglueball", () -> new OrangeglueballBlock());
+	public static final RegistryObject<Block> GRAYGLUEBALL = REGISTRY.register("grayglueball", () -> new GrayglueballBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

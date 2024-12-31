@@ -29,6 +29,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	private final int x, y, z;
 	private final Player entity;
 	ImageButton imagebutton_cross_no_button;
+	ImageButton imagebutton_help_img;
 
 	public UploaderguiScreen(UploaderguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,6 +55,8 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 61 && mouseX < leftPos + 107 && mouseY > topPos + 5 && mouseY < topPos + 18)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_gui_interface_need_an_upgra"), mouseX, mouseY);
+		if (mouseX > leftPos + 132 && mouseX < leftPos + 148 && mouseY > topPos + 4 && mouseY < topPos + 20)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to"), mouseX, mouseY);
 	}
 
 	@Override
@@ -90,7 +93,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 				Grindertrans0Procedure.execute(entity), 3, 71, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				UploaderdebugProcedure.execute(world, x, y, z), 96, 64, -12829636, false);
+				UploaderdebugProcedure.execute(world, x, y, z), 95, 70, -12829636, false);
 	}
 
 	@Override
@@ -104,5 +107,9 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		});
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
+		imagebutton_help_img = new ImageButton(this.leftPos + 132, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_help_img.png"), 16, 32, e -> {
+		});
+		guistate.put("button:imagebutton_help_img", imagebutton_help_img);
+		this.addRenderableWidget(imagebutton_help_img);
 	}
 }

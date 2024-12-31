@@ -40,6 +40,7 @@ import palamod.client.gui.LanguageselectionScreen;
 import palamod.client.gui.JobsminerguiScreen;
 import palamod.client.gui.JobsminercraftguiScreen;
 import palamod.client.gui.JobsguiScreen;
+import palamod.client.gui.JobsfarmercraftguiScreen;
 import palamod.client.gui.ItemmenupalahelpScreen;
 import palamod.client.gui.GuardianguiScreen;
 import palamod.client.gui.GrinderpalahelpguiScreen;
@@ -265,6 +266,7 @@ public class PalamodModScreens {
 			MenuScreens.register(PalamodModMenus.GAMBLELINGJOBSJETON.get(), GamblelingjobsjetonScreen::new);
 			MenuScreens.register(PalamodModMenus.ADMINSHOPPLANTCACAO.get(), AdminshopplantcacaoScreen::new);
 			MenuScreens.register(PalamodModMenus.CLICKER.get(), ClickerScreen::new);
+			MenuScreens.register(PalamodModMenus.JOBSFARMERCRAFTGUI.get(), JobsfarmercraftguiScreen::new);
 		});
 	}
 }

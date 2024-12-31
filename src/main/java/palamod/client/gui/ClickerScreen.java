@@ -111,6 +111,10 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		guistate.put("button:imagebutton_clicker_build_dwarf", imagebutton_clicker_build_dwarf);
 		this.addRenderableWidget(imagebutton_clicker_build_dwarf);
 		imagebutton_clicker_close_btn = new ImageButton(this.leftPos + 336, this.topPos + 6, 17, 17, 0, 0, 17, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_clicker_close_btn.png"), 17, 34, e -> {
+			if (true) {
+				PalamodMod.PACKET_HANDLER.sendToServer(new ClickerButtonMessage(5, x, y, z));
+				ClickerButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_clicker_close_btn", imagebutton_clicker_close_btn);
 		this.addRenderableWidget(imagebutton_clicker_close_btn);

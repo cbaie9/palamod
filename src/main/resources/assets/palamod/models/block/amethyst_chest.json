@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/chest_v1ame",
+  "parent": "palamod:custom/chest_v1",
   "textures": {
     "all": "palamod:block/amethyst_down",
     "particle": "palamod:block/amethyst_down",

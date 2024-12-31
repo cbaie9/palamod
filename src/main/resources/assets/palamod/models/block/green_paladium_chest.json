@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/chest_v1greenpala",
+  "parent": "palamod:custom/chest_v1",
   "textures": {
     "all": "palamod:block/palavert_down",
     "particle": "palamod:block/palavert_down",

@@ -5,6 +5,7 @@
 package palamod.init;
 
 import palamod.potion.WitherimbuMobEffect;
+import palamod.potion.TunnelvisionMobEffect;
 import palamod.potion.PoisonimbueMobEffect;
 import palamod.potion.Multiexp2MobEffect;
 import palamod.potion.Multiexp10MobEffect;
@@ -31,4 +32,5 @@ public class PalamodModMobEffects {
 	public static final RegistryObject<MobEffect> MULTIEXP_2 = REGISTRY.register("multiexp_2", () -> new Multiexp2MobEffect());
 	public static final RegistryObject<MobEffect> MULTIEXP_10 = REGISTRY.register("multiexp_10", () -> new Multiexp10MobEffect());
 	public static final RegistryObject<MobEffect> MINEUR_FOU = REGISTRY.register("mineur_fou", () -> new MineurFouMobEffect());
+	public static final RegistryObject<MobEffect> TUNNELVISION = REGISTRY.register("tunnelvision", () -> new TunnelvisionMobEffect());
 }

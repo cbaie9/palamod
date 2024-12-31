@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/spike_gold",
+  "parent": "palamod:custom/spike_paladium",
   "textures": {
     "all": "palamod:block/spike_gold_1",
     "particle": "palamod:block/spike_gold_1",

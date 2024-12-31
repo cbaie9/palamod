@@ -40,6 +40,7 @@ import palamod.world.inventory.LanguageselectionMenu;
 import palamod.world.inventory.JobsminerguiMenu;
 import palamod.world.inventory.JobsminercraftguiMenu;
 import palamod.world.inventory.JobsguiMenu;
+import palamod.world.inventory.JobsfarmercraftguiMenu;
 import palamod.world.inventory.ItemmenupalahelpMenu;
 import palamod.world.inventory.GuardianguiMenu;
 import palamod.world.inventory.GrinderpalahelpguiMenu;
@@ -264,4 +265,5 @@ public class PalamodModMenus {
 	public static final RegistryObject<MenuType<GamblelingjobsjetonMenu>> GAMBLELINGJOBSJETON = REGISTRY.register("gamblelingjobsjeton", () -> IForgeMenuType.create(GamblelingjobsjetonMenu::new));
 	public static final RegistryObject<MenuType<AdminshopplantcacaoMenu>> ADMINSHOPPLANTCACAO = REGISTRY.register("adminshopplantcacao", () -> IForgeMenuType.create(AdminshopplantcacaoMenu::new));
 	public static final RegistryObject<MenuType<ClickerMenu>> CLICKER = REGISTRY.register("clicker", () -> IForgeMenuType.create(ClickerMenu::new));
+	public static final RegistryObject<MenuType<JobsfarmercraftguiMenu>> JOBSFARMERCRAFTGUI = REGISTRY.register("jobsfarmercraftgui", () -> IForgeMenuType.create(JobsfarmercraftguiMenu::new));
 }

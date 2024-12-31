@@ -6,6 +6,55 @@
         "1": "spike_paladium_2"
       },
       "name": "default"
+    },
+    "paladium": {
+      "map": {
+        "0": "spike_paladium_1",
+        "1": "spike_paladium_2"
+      },
+      "name": "paladium"
+    },
+    "titane": {
+      "map": {
+        "0": "spike_titane_1",
+        "1": "spike_titane_2"
+      },
+      "name": "titane"
+    },
+    "amethyst": {
+      "map": {
+        "0": "spikeametyste_1",
+        "1": "spikeametyste_2"
+      },
+      "name": "amethyst"
+    },
+    "diamond": {
+      "map": {
+        "0": "spike_diam_2",
+        "1": "spike_diam_1"
+      },
+      "name": "diamond"
+    },
+    "gold": {
+      "map": {
+        "0": "spike_gold_2",
+        "1": "spike_gold_1"
+      },
+      "name": "gold"
+    },
+    "iron": {
+      "map": {
+        "0": "spike_iron_1",
+        "1": "spike_iron_2"
+      },
+      "name": "iron"
+    },
+    "wood": {
+      "map": {
+        "0": "minecraft:stripped_oak_log_top",
+        "1": "minecraft:oak_planks"
+      },
+      "name": "wood"
     }
   }
 }

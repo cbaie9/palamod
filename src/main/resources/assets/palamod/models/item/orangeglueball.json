@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "palamod:item/orange_glueball"
+  },
+  "render_type": "translucent"
+}

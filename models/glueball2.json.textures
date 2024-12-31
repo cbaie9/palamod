@@ -1,0 +1,70 @@
+{
+  "mappings": {
+    "red": {
+      "map": {
+        "0": "red_glueball_block"
+      },
+      "name": "red"
+    },
+    "orange": {
+      "map": {
+        "0": "orange_glueball_block"
+      },
+      "name": "orange"
+    },
+    "default": {
+      "map": {
+        "0": "gray_glueball_block"
+      },
+      "name": "default"
+    },
+    "gray": {
+      "map": {
+        "0": "gray_glueball_block"
+      },
+      "name": "gray"
+    },
+    "green": {
+      "map": {
+        "0": "green_glueball_block"
+      },
+      "name": "green"
+    },
+    "blue": {
+      "map": {
+        "0": "blue_glueball_block"
+      },
+      "name": "blue"
+    },
+    "dark_green": {
+      "map": {
+        "0": "green_dark_glueball_block"
+      },
+      "name": "dark_green"
+    },
+    "light_green": {
+      "map": {
+        "0": "green_flash_glueball_block"
+      },
+      "name": "light_green"
+    },
+    "yellow": {
+      "map": {
+        "0": "yellow_glueball_block"
+      },
+      "name": "yellow"
+    },
+    "purple": {
+      "map": {
+        "0": "purple_glueball_block"
+      },
+      "name": "purple"
+    },
+    "cyan": {
+      "map": {
+        "0": "cyan_glueball_block"
+      },
+      "name": "cyan"
+    }
+  }
+}

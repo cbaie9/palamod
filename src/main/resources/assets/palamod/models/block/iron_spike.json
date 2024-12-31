@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/spike_iron",
+  "parent": "palamod:custom/spike_paladium",
   "textures": {
     "all": "palamod:block/spike_iron_2",
     "particle": "palamod:block/spike_iron_2",

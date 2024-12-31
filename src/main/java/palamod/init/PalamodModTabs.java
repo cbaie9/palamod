@@ -132,6 +132,16 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.STICKOFGODS.get());
 				tabData.accept(PalamodModBlocks.PALADIUM_MACHINE.get().asItem());
 				tabData.accept(PalamodModItems.PALADIUM_APPLE.get());
+				tabData.accept(PalamodModBlocks.REDGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.GREENGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.LIGHTGREENGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.DARKGREENGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.BLUEGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.PURPLEGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.YELLOWGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.CYANGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.ORANGEGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.GRAYGLUEBALL.get().asItem());
 			})
 
 					.build());
@@ -372,6 +382,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.MIXEDENDIUMARMOR_BOOTS.get());
 				tabData.accept(PalamodModBlocks.BOOMOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
+				tabData.accept(PalamodModItems.GLUEBALLPATERN.get());
 			})
 
 					.build());
@@ -458,6 +469,17 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.X_10XPPOTION.get());
 				tabData.accept(PalamodModItems.XPBOTTLE.get());
 				tabData.accept(PalamodModBlocks.EXCTRACTOR.get().asItem());
+				tabData.accept(PalamodModBlocks.REDGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.GREENGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.LIGHTGREENGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.DARKGREENGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.BLUEGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.PURPLEGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.YELLOWGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.CYANGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.ORANGEGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.GRAYGLUEBALL.get().asItem());
+				tabData.accept(PalamodModItems.GLUEBALLPATERN.get());
 			})
 
 					.build());

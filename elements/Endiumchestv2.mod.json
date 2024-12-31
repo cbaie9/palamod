@@ -9,7 +9,7 @@
     "textureRight": "endium_side",
     "textureBack": "endium_side",
     "renderType": 2,
-    "customModelName": "chest_v1endium:default",
+    "customModelName": "chest_v1:endium",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,

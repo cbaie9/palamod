@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/chest_v1endium",
+  "parent": "palamod:custom/chest_v1",
   "textures": {
     "all": "palamod:block/endium_down",
     "particle": "palamod:block/endium_down",

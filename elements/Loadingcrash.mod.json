@@ -1,0 +1,34 @@
+{
+  "_fv": 66,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_if_the_loading_is_stuck_to_100",
+          "text": {
+            "fixedValue": "If the loading is stuck to 100% relunch the game in superflat"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 3,
+          "y": 2
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "WorldLoadProgress",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

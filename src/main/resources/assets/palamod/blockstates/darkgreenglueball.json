@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/darkgreenglueball"
+    },
+    "facing=east": {
+      "model": "palamod:block/darkgreenglueball",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/darkgreenglueball",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/darkgreenglueball",
+      "y": 270
+    }
+  }
+}

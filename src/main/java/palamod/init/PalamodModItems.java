@@ -172,6 +172,7 @@ import palamod.item.GreenpaladiumbroadswordItem;
 import palamod.item.GreenpaladiumarmorItem;
 import palamod.item.GoldparticleItem;
 import palamod.item.GoldmixedcoalItem;
+import palamod.item.GlueballpaternItem;
 import palamod.item.FuzediscItem;
 import palamod.item.FurnaceupgradeItem;
 import palamod.item.ForturnemodifierItem;
@@ -785,6 +786,17 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> BOOMOBSIDIAN = block(PalamodModBlocks.BOOMOBSIDIAN);
 	public static final RegistryObject<Item> MEGABOOMOBSIDIAN = block(PalamodModBlocks.MEGABOOMOBSIDIAN);
 	public static final RegistryObject<Item> HARPAGOPHYTUM = block(PalamodModBlocks.HARPAGOPHYTUM);
+	public static final RegistryObject<Item> REDGLUEBALL = block(PalamodModBlocks.REDGLUEBALL);
+	public static final RegistryObject<Item> GREENGLUEBALL = block(PalamodModBlocks.GREENGLUEBALL);
+	public static final RegistryObject<Item> LIGHTGREENGLUEBALL = block(PalamodModBlocks.LIGHTGREENGLUEBALL);
+	public static final RegistryObject<Item> DARKGREENGLUEBALL = block(PalamodModBlocks.DARKGREENGLUEBALL);
+	public static final RegistryObject<Item> BLUEGLUEBALL = block(PalamodModBlocks.BLUEGLUEBALL);
+	public static final RegistryObject<Item> PURPLEGLUEBALL = block(PalamodModBlocks.PURPLEGLUEBALL);
+	public static final RegistryObject<Item> YELLOWGLUEBALL = block(PalamodModBlocks.YELLOWGLUEBALL);
+	public static final RegistryObject<Item> CYANGLUEBALL = block(PalamodModBlocks.CYANGLUEBALL);
+	public static final RegistryObject<Item> ORANGEGLUEBALL = block(PalamodModBlocks.ORANGEGLUEBALL);
+	public static final RegistryObject<Item> GRAYGLUEBALL = block(PalamodModBlocks.GRAYGLUEBALL);
+	public static final RegistryObject<Item> GLUEBALLPATERN = REGISTRY.register("glueballpatern", () -> new GlueballpaternItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

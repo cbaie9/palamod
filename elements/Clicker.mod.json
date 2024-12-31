@@ -84,6 +84,9 @@
           "name": "imagebutton_clicker_close_btn",
           "image": "close_gui_nohover.png",
           "hoveredImage": "close_gui_hover.png",
+          "onClick": {
+            "name": "Closegui"
+          },
           "x": 370,
           "y": 21
         }

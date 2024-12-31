@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:custom/chest_v1titane",
+  "parent": "palamod:custom/chest_v1",
   "textures": {
     "all": "palamod:block/titane_face2",
     "particle": "palamod:block/titane_face2",

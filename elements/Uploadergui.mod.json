@@ -107,8 +107,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 101
+          "x": 221,
+          "y": 107
         }
       },
       {
@@ -193,6 +193,29 @@
           "height": 13,
           "x": 187,
           "y": 42
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_help_img",
+          "image": "help_img.png",
+          "hoveredImage": "help_hover.png",
+          "x": 258,
+          "y": 41
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_machine_is_to_sell_thing_to",
+          "text": {
+            "fixedValue": "This machine is to sell thing to the adminshop, Every 1000$ generated ; it will produce 1 wad of cash, click right on it to win 1000$"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 258,
+          "y": 41
         }
       }
     ],

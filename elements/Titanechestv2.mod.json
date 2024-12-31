@@ -9,7 +9,7 @@
     "textureRight": "titane_face4",
     "textureBack": "titane_face4",
     "renderType": 2,
-    "customModelName": "chest_v1titane:default",
+    "customModelName": "chest_v1:titane",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,

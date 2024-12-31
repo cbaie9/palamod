@@ -9,7 +9,7 @@
     "textureRight": "palavert_side",
     "textureBack": "palavert_side",
     "renderType": 2,
-    "customModelName": "chest_v1greenpala:default",
+    "customModelName": "chest_v1:paladium_vert",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,

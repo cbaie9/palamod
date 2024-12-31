@@ -3,6 +3,7 @@ package palamod.network;
 
 import palamod.world.inventory.ClickerMenu;
 
+import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.AddclickcoinProcedure;
 
 import palamod.PalamodMod;
@@ -64,6 +65,10 @@ public class ClickerButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 5) {
+
+			CloseguiProcedure.execute(entity);
+		}
 		if (buttonID == 8) {
 
 			AddclickcoinProcedure.execute(entity);

@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "spike_amethyst:default",
+    "customModelName": "spike_paladium:amethyst",
     "rotationMode": 2,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -121,7 +121,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,

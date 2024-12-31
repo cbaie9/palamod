@@ -9,7 +9,7 @@
     "textureRight": "amethyst_side",
     "textureBack": "amethyst_side",
     "renderType": 2,
-    "customModelName": "chest_v1ame:default",
+    "customModelName": "chest_v1:amethyst",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,

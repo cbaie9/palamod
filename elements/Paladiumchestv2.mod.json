@@ -9,7 +9,7 @@
     "textureRight": "pala_face2",
     "textureBack": "pala_face2",
     "renderType": 2,
-    "customModelName": "chest_v1:default",
+    "customModelName": "chest_v1:pala",
     "rotationMode": 1,
     "enablePitch": false,
     "emissiveRendering": false,
