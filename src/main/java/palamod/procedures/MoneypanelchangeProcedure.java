@@ -2,8 +2,7 @@ package palamod.procedures;
 
 import palamod.world.inventory.Palaerror0005Menu;
 
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -61,10 +60,15 @@ public class MoneypanelchangeProcedure {
 		} else {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Palaerror0005");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override

@@ -16,61 +16,67 @@ import palamod.entity.BigdynamiteentityEntity;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.EventPriority;
 
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.core.registries.Registries;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PalamodModEntities {
-	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, PalamodMod.MODID);
-	public static final RegistryObject<EntityType<PaladiumdynamiteEntity>> PALADIUMDYNAMITE = register("paladiumdynamite", EntityType.Builder.<PaladiumdynamiteEntity>of(PaladiumdynamiteEntity::new, MobCategory.MISC)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PaladiumdynamiteEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<EndiumdynamiteEntity>> ENDIUMDYNAMITE = register("endiumdynamite", EntityType.Builder.<EndiumdynamiteEntity>of(EndiumdynamiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EndiumdynamiteEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<BigdynamiteentityEntity>> BIGDYNAMITEENTITY = register("bigdynamiteentity", EntityType.Builder.<BigdynamiteentityEntity>of(BigdynamiteentityEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BigdynamiteentityEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<PaladiumgolemEntity>> PALADIUMGOLEM = register("paladiumgolem",
-			EntityType.Builder.<PaladiumgolemEntity>of(PaladiumgolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PaladiumgolemEntity::new)
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PalamodMod.MODID);
+	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumdynamiteEntity>> PALADIUMDYNAMITE = register("paladiumdynamite",
+			EntityType.Builder.<PaladiumdynamiteEntity>of(PaladiumdynamiteEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<EndiumdynamiteEntity>> ENDIUMDYNAMITE = register("endiumdynamite",
+			EntityType.Builder.<EndiumdynamiteEntity>of(EndiumdynamiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BigdynamiteentityEntity>> BIGDYNAMITEENTITY = register("bigdynamiteentity",
+			EntityType.Builder.<BigdynamiteentityEntity>of(BigdynamiteentityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumgolemEntity>> PALADIUMGOLEM = register("paladiumgolem",
+			EntityType.Builder.<PaladiumgolemEntity>of(PaladiumgolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1.2f, 1.8f));
-	public static final RegistryObject<EntityType<PrimedspongetntEntity>> PRIMEDSPONGETNT = register("primedspongetnt", EntityType.Builder.<PrimedspongetntEntity>of(PrimedspongetntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedspongetntEntity::new).fireImmune().sized(1f, 1f));
-	public static final RegistryObject<EntityType<PrimedwithertntEntity>> PRIMEDWITHERTNT = register("primedwithertnt", EntityType.Builder.<PrimedwithertntEntity>of(PrimedwithertntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedwithertntEntity::new).fireImmune().sized(1f, 1f));
-	public static final RegistryObject<EntityType<PrimedmagictntEntity>> PRIMEDMAGICTNT = register("primedmagictnt", EntityType.Builder.<PrimedmagictntEntity>of(PrimedmagictntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedmagictntEntity::new).fireImmune().sized(1f, 1f));
-	public static final RegistryObject<EntityType<PrimedbigtntEntity>> PRIMEDBIGTNT = register("primedbigtnt", EntityType.Builder.<PrimedbigtntEntity>of(PrimedbigtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedbigtntEntity::new).fireImmune().sized(1f, 1f));
-	public static final RegistryObject<EntityType<PrimedendiumtntEntity>> PRIMEDENDIUMTNT = register("primedendiumtnt", EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedendiumtntEntity::new).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PrimedspongetntEntity>> PRIMEDSPONGETNT = register("primedspongetnt",
+			EntityType.Builder.<PrimedspongetntEntity>of(PrimedspongetntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PrimedwithertntEntity>> PRIMEDWITHERTNT = register("primedwithertnt",
+			EntityType.Builder.<PrimedwithertntEntity>of(PrimedwithertntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PrimedmagictntEntity>> PRIMEDMAGICTNT = register("primedmagictnt",
+			EntityType.Builder.<PrimedmagictntEntity>of(PrimedmagictntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PrimedbigtntEntity>> PRIMEDBIGTNT = register("primedbigtnt",
+			EntityType.Builder.<PrimedbigtntEntity>of(PrimedbigtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PrimedendiumtntEntity>> PRIMEDENDIUMTNT = register("primedendiumtnt",
+			EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
-	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
+	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
 
+	@SubscribeEvent(priority = EventPriority.HIGHEST)
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerEntity(Capabilities.ItemHandler.ENTITY, PALADIUMGOLEM.get(), (living, context) -> living.getCombinedInventory());
+	}
+
 	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
-			PaladiumdynamiteEntity.init();
-			EndiumdynamiteEntity.init();
-			BigdynamiteentityEntity.init();
-			PaladiumgolemEntity.init();
-			PrimedspongetntEntity.init();
-			PrimedwithertntEntity.init();
-			PrimedmagictntEntity.init();
-			PrimedbigtntEntity.init();
-			PrimedendiumtntEntity.init();
-		});
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		PaladiumdynamiteEntity.init(event);
+		EndiumdynamiteEntity.init(event);
+		BigdynamiteentityEntity.init(event);
+		PaladiumgolemEntity.init(event);
+		PrimedspongetntEntity.init(event);
+		PrimedwithertntEntity.init(event);
+		PrimedmagictntEntity.init(event);
+		PrimedbigtntEntity.init(event);
+		PrimedendiumtntEntity.init(event);
 	}
 
 	@SubscribeEvent

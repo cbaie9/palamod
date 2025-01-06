@@ -3,8 +3,6 @@ package palamod.procedures;
 import palamod.world.inventory.StockhdvMenu;
 import palamod.world.inventory.Palaerror0005Menu;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -27,10 +25,15 @@ public class HdvstocksopenProcedure {
 		if (entity.hasPermissions(4)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = new BlockPos(0, 10, 0);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Stockhdv");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override
@@ -42,10 +45,15 @@ public class HdvstocksopenProcedure {
 		} else {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = new BlockPos(0, 10, 0);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Palaerror0005");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override

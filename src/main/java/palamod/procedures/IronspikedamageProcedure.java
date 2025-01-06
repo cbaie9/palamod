@@ -14,7 +14,7 @@ public class IronspikedamageProcedure {
 		if (entity == null)
 			return;
 		if (PalamodModVariables.cooltick_spike == 0) {
-			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("palamod:spikedamage")))), (float) 4.5);
+			entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("palamod:spikedamage")))), (float) 4.5);
 			PalamodModVariables.cooltick_spike = 60;
 		} else {
 			PalamodModVariables.cooltick_spike = PalamodModVariables.cooltick_spike - 1;

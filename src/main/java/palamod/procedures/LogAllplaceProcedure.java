@@ -4,10 +4,10 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -16,7 +16,7 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class LogAllplaceProcedure {
 	@SubscribeEvent
 	public static void onBlockPlace(BlockEvent.EntityPlaceEvent event) {

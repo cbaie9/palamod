@@ -10,7 +10,7 @@ import palamod.procedures.Palahelppalamachine0Procedure;
 
 import palamod.network.PalamachinepalahelpguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -44,11 +44,11 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		this.imageHeight = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/screens/palamachinepalahelpgui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/palamachinepalahelpgui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -97,7 +97,7 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		super.init();
 		button_back = Button.builder(Component.translatable("gui.palamod.palamachinepalahelpgui.button_back"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PalamachinepalahelpguiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new PalamachinepalahelpguiButtonMessage(0, x, y, z));
 				PalamachinepalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 17, this.topPos + 7, 45, 20).build();
@@ -105,7 +105,7 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		this.addRenderableWidget(button_back);
 		button_menu = Button.builder(Component.translatable("gui.palamod.palamachinepalahelpgui.button_menu"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PalamachinepalahelpguiButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new PalamachinepalahelpguiButtonMessage(1, x, y, z));
 				PalamachinepalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 145, this.topPos + 7, 45, 20).build();

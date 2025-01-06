@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:endiumtnt",
+    "palamod:compacttnt",
+    "palamod:magic_tnt",
+    "palamod:withertnt",
+    "palamod:wetlavasponge",
+    "palamod:lavasponge",
+    "palamod:spongetnt",
+    "palamod:compressedsponge"
+  ]
+}

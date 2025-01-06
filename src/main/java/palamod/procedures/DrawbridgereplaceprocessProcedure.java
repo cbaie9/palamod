@@ -1,7 +1,9 @@
 package palamod.procedures;
 
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -17,8 +19,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class DrawbridgereplaceprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double Numvar = 0;
@@ -32,26 +32,20 @@ public class DrawbridgereplaceprocessProcedure {
 			}
 		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 			for (int index0 = 0; index0 < 16; index0++) {
-				if (!(world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).is(BlockTags.create(new ResourceLocation("forge:unbreakable"))) && new Object() {
+				if (!(world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && new Object() {
 					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-						return _retval.get();
+						if (world instanceof ILevelExtension _ext) {
+							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(slotid).getCount();
+						}
+						return 0;
 					}
 				}.getAmount(world, BlockPos.containing(x, y, z), (int) Numvar) == 0 && !((world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock() == Blocks.AIR)) {
-					{
-						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-						if (_ent != null) {
-							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock())).copy();
-							_setstack.setCount(1);
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable)
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-							});
-						}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock())).copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot((int) Numvar, _setstack);
 					}
 					world.setBlock(BlockPos.containing(x, y, z - (Numvar + 1)), Blocks.AIR.defaultBlockState(), 3);
 					if (!world.isClientSide()) {
@@ -76,26 +70,20 @@ public class DrawbridgereplaceprocessProcedure {
 			}
 		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 			for (int index1 = 0; index1 < 16; index1++) {
-				if (!(world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).is(BlockTags.create(new ResourceLocation("forge:unbreakable"))) && new Object() {
+				if (!(world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && new Object() {
 					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-						return _retval.get();
+						if (world instanceof ILevelExtension _ext) {
+							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(slotid).getCount();
+						}
+						return 0;
 					}
 				}.getAmount(world, BlockPos.containing(x, y, z), (int) Numvar) == 0 && !((world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock() == Blocks.AIR)) {
-					{
-						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-						if (_ent != null) {
-							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock())).copy();
-							_setstack.setCount(1);
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable)
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-							});
-						}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock())).copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot((int) Numvar, _setstack);
 					}
 					world.setBlock(BlockPos.containing(x, y, z + Numvar + 1), Blocks.AIR.defaultBlockState(), 3);
 					if (!world.isClientSide()) {
@@ -120,26 +108,20 @@ public class DrawbridgereplaceprocessProcedure {
 			}
 		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 			for (int index2 = 0; index2 < 16; index2++) {
-				if (!(world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).is(BlockTags.create(new ResourceLocation("forge:unbreakable"))) && new Object() {
+				if (!(world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && new Object() {
 					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-						return _retval.get();
+						if (world instanceof ILevelExtension _ext) {
+							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(slotid).getCount();
+						}
+						return 0;
 					}
 				}.getAmount(world, BlockPos.containing(x, y, z), (int) Numvar) == 0 && !((world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock() == Blocks.AIR)) {
-					{
-						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-						if (_ent != null) {
-							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock())).copy();
-							_setstack.setCount(1);
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable)
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-							});
-						}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock())).copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot((int) Numvar, _setstack);
 					}
 					world.setBlock(BlockPos.containing(x - (Numvar + 1), y, z), Blocks.AIR.defaultBlockState(), 3);
 					if (!world.isClientSide()) {
@@ -164,26 +146,20 @@ public class DrawbridgereplaceprocessProcedure {
 			}
 		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 			for (int index3 = 0; index3 < 16; index3++) {
-				if (!(world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).is(BlockTags.create(new ResourceLocation("forge:unbreakable"))) && new Object() {
+				if (!(world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && new Object() {
 					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicInteger _retval = new AtomicInteger(0);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-						return _retval.get();
+						if (world instanceof ILevelExtension _ext) {
+							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(slotid).getCount();
+						}
+						return 0;
 					}
 				}.getAmount(world, BlockPos.containing(x, y, z), (int) Numvar) == 0 && !((world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock() == Blocks.AIR)) {
-					{
-						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-						if (_ent != null) {
-							final int _slotid = (int) Numvar;
-							final ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock())).copy();
-							_setstack.setCount(1);
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable)
-									((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-							});
-						}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = (new ItemStack((world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock())).copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot((int) Numvar, _setstack);
 					}
 					world.setBlock(BlockPos.containing(x + Numvar + 1, y, z), Blocks.AIR.defaultBlockState(), 3);
 					if (!world.isClientSide()) {

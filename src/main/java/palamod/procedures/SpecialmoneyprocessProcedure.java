@@ -4,12 +4,14 @@ import palamod.init.PalamodModItems;
 
 import org.checkerframework.checker.units.qual.s;
 
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Checkbox;
 
@@ -48,29 +50,61 @@ public class SpecialmoneyprocessProcedure {
 			}
 		}
 		if (("").equals(guistate.containsKey("text:name") ? ((EditBox) guistate.get("text:name")).getValue() : "")) {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putBoolean("Is_pname", false);
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("Money_spename", (entity.getDisplayName().getString()));
+			{
+				final String _tagName = "Is_pname";
+				final boolean _tagValue = false;
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putBoolean(_tagName, _tagValue));
+			}
+			{
+				final String _tagName = "Money_spename";
+				final String _tagValue = (entity.getDisplayName().getString());
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
+			}
 		} else {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putBoolean("Is_pname", true);
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putString("Money_spename", (guistate.containsKey("text:name") ? ((EditBox) guistate.get("text:name")).getValue() : ""));
+			{
+				final String _tagName = "Is_pname";
+				final boolean _tagValue = true;
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putBoolean(_tagName, _tagValue));
+			}
+			{
+				final String _tagName = "Money_spename";
+				final String _tagValue = (guistate.containsKey("text:name") ? ((EditBox) guistate.get("text:name")).getValue() : "");
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
+			}
 		}
 		if (("").equals(guistate.containsKey("text:amount") ? ((EditBox) guistate.get("text:amount")).getValue() : "")) {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("Money_amount", 1000);
+			{
+				final String _tagName = "Money_amount";
+				final double _tagValue = 1000;
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+			}
 		} else {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("Money_amount", new Object() {
-				double convert(String s) {
-					try {
-						return Double.parseDouble(s.trim());
-					} catch (Exception e) {
+			{
+				final String _tagName = "Money_amount";
+				final double _tagValue = new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
 					}
-					return 0;
-				}
-			}.convert(guistate.containsKey("text:amount") ? ((EditBox) guistate.get("text:amount")).getValue() : ""));
+				}.convert(guistate.containsKey("text:amount") ? ((EditBox) guistate.get("text:amount")).getValue() : "");
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+			}
 		}
 		if (guistate.containsKey("checkbox:custom_destructible") && ((Checkbox) guistate.get("checkbox:custom_destructible")).selected()) {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putBoolean("destri_money", true);
+			{
+				final String _tagName = "destri_money";
+				final boolean _tagValue = true;
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putBoolean(_tagName, _tagValue));
+			}
 		} else {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putBoolean("destri_money", false);
+			{
+				final String _tagName = "destri_money";
+				final boolean _tagValue = false;
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putBoolean(_tagName, _tagValue));
+			}
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

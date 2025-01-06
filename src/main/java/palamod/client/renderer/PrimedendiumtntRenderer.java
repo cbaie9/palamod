@@ -16,6 +16,6 @@ public class PrimedendiumtntRenderer extends MobRenderer<PrimedendiumtntEntity, 
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedendiumtntEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/endium_tntmodel.png");
+		return ResourceLocation.parse("palamod:textures/entities/endium_tntmodel.png");
 	}
 }

@@ -9,13 +9,13 @@ import palamod.fluid.types.AngelicwterFluidType;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fluids.FluidType;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.fluids.FluidType;
 
 public class PalamodModFluidTypes {
-	public static final DeferredRegister<FluidType> REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, PalamodMod.MODID);
-	public static final RegistryObject<FluidType> FAKEWTER_TYPE = REGISTRY.register("fakewter", () -> new FakewterFluidType());
-	public static final RegistryObject<FluidType> ANGELICWTER_TYPE = REGISTRY.register("angelicwter", () -> new AngelicwterFluidType());
+	public static final DeferredRegister<FluidType> REGISTRY = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, PalamodMod.MODID);
+	public static final DeferredHolder<FluidType, FluidType> FAKEWTER_TYPE = REGISTRY.register("fakewter", () -> new FakewterFluidType());
+	public static final DeferredHolder<FluidType, FluidType> ANGELICWTER_TYPE = REGISTRY.register("angelicwter", () -> new AngelicwterFluidType());
 }

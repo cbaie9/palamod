@@ -1,19 +1,21 @@
 
 package palamod.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import palamod.PalamodMod;
 
-import net.minecraft.world.item.RecordItem;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 
-public class FuzediscItem extends RecordItem {
+public class FuzediscItem extends Item {
 	public FuzediscItem() {
-		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("palamod:fuzedisc")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 2700);
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "fuzedisc"))));
 	}
 
 	@Override

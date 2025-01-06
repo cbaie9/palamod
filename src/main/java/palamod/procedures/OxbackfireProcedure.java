@@ -1,13 +1,12 @@
 package palamod.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.item.ItemArgument;
 import net.minecraft.commands.CommandSourceStack;
@@ -24,7 +23,7 @@ public class OxbackfireProcedure {
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putString("backdown_fire", (ForgeRegistries.BLOCKS
+				_blockEntity.getPersistentData().putString("backdown_fire", (BuiltInRegistries.BLOCK
 						.getKey(((ItemArgument.getItem(arguments, "item").getItem().getDefaultInstance()).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).getBlock()).toString()));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);

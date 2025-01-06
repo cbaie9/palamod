@@ -18,53 +18,39 @@ public class JobsminercraftamethystexcavatorProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "A powerful shovel";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text = "A powerful shovel";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "that can mine 3x3 blocks";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text2 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text2 = "that can mine 3x3 blocks";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "at once ( only work";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text3 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text3 = "at once ( only work";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "on blocks who can";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text4 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text4 = "on blocks who can";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "be broken by shovel )";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text5 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text5 = "be broken by shovel )";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "Durability : 1999";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_durability = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_durability = "Durability : 1999";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "Lvl required : 5";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.lvl_required = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.lvl_required = "Lvl required : 5";
+			_vars.syncPlayerVariables(entity);
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.AMETHYST_SHOVEL.get())) : false) && new Object() {
 			public int getAmount(int sltid) {

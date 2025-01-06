@@ -6,27 +6,33 @@ import palamod.jei_recipes.CrusherrecipetypeRecipe;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.fml.event.lifecycle.FMLConstructModEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.ModList;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.IEventBus;
 
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.core.registries.BuiltInRegistries;
 
-@Mod.EventBusSubscriber(modid = PalamodMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = PalamodMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class PalamodModRecipeTypes {
-	public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, "palamod");
+	public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, "palamod");
+	public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, "palamod");
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus bus = ModList.get().getModContainerById("palamod").get().getEventBus();
 		event.enqueueWork(() -> {
+			RECIPE_TYPES.register(bus);
 			SERIALIZERS.register(bus);
+			RECIPE_TYPES.register("crusherrecipetype", () -> CrusherrecipetypeRecipe.Type.INSTANCE);
 			SERIALIZERS.register("crusherrecipetype", () -> CrusherrecipetypeRecipe.Serializer.INSTANCE);
+			RECIPE_TYPES.register("paladiummachinerecipetypejei", () -> PaladiummachinerecipetypejeiRecipe.Type.INSTANCE);
 			SERIALIZERS.register("paladiummachinerecipetypejei", () -> PaladiummachinerecipetypejeiRecipe.Serializer.INSTANCE);
+			RECIPE_TYPES.register("grinderhighrecipetypejei", () -> GrinderhighrecipetypejeiRecipe.Type.INSTANCE);
 			SERIALIZERS.register("grinderhighrecipetypejei", () -> GrinderhighrecipetypejeiRecipe.Serializer.INSTANCE);
 		});
 	}

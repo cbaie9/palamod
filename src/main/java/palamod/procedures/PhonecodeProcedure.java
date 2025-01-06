@@ -3,7 +3,7 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -20,12 +20,12 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
 
 import java.util.HashMap;
 
@@ -33,13 +33,15 @@ public class PhonecodeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
 		if (entity == null || guistate == null)
 			return;
-		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().getAdvancement(new ResourceLocation("palamod:achmluckyphone"))).isDone())) {
+		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().get(ResourceLocation.parse("palamod:achmluckyphone"))).isDone())) {
 			if (entity instanceof ServerPlayer _player) {
-				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("palamod:achmluckyphone"));
-				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-				if (!_ap.isDone()) {
-					for (String criteria : _ap.getRemainingCriteria())
-						_player.getAdvancements().award(_adv, criteria);
+				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmluckyphone"));
+				if (_adv != null) {
+					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+					if (!_ap.isDone()) {
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
+					}
 				}
 			}
 		}
@@ -51,7 +53,7 @@ public class PhonecodeProcedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 1);
+			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 1);
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		} else if ((guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("Combocircle")
@@ -148,7 +150,7 @@ public class PhonecodeProcedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).setHoverName(Component.literal("Legudary diorite of unPower"));
+			new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).set(DataComponents.CUSTOM_NAME, Component.literal("Legudary diorite of unPower"));
 		} else if ((guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("alo")
 				|| (guistate.containsKey("text:cheat_code_secret") ? ((EditBox) guistate.get("text:cheat_code_secret")).getValue() : "").contains("allo")) {
 			if (Math.random() < 0.5) {

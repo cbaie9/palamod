@@ -4,8 +4,6 @@ import palamod.world.inventory.SafeguiMenu;
 import palamod.world.inventory.MegasafechestfirstsetupMenu;
 import palamod.world.inventory.AuthsafeguiMenu;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -50,10 +48,15 @@ public class Megasafechest_openProcedure {
 				}.getValue(world, BlockPos.containing(x, y, z), "name_auth"))) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
-						NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						_ent.openMenu(new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
 								return Component.literal("Safegui");
+							}
+
+							@Override
+							public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+								return false;
 							}
 
 							@Override
@@ -65,10 +68,15 @@ public class Megasafechest_openProcedure {
 				} else {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
-						NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						_ent.openMenu(new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
 								return Component.literal("Authsafegui");
+							}
+
+							@Override
+							public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+								return false;
 							}
 
 							@Override
@@ -81,10 +89,15 @@ public class Megasafechest_openProcedure {
 			} else {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("Authsafegui");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -97,10 +110,15 @@ public class Megasafechest_openProcedure {
 		} else {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Megasafechestfirstsetup");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override

@@ -4,7 +4,7 @@ import palamod.world.inventory.SpecialmoneypanelMenu;
 
 import palamod.network.SpecialmoneypanelButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -45,7 +45,7 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		player_name.render(guiGraphics, mouseX, mouseY, partialTicks);
 		money.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -58,7 +58,7 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/specialmoneypanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 224, 176, 224);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/specialmoneypanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 224, 176, 224);
 
 		RenderSystem.disableBlend();
 	}
@@ -74,13 +74,6 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 		if (money.isFocused())
 			return money.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
-		player_name.tick();
-		money.tick();
 	}
 
 	@Override
@@ -113,16 +106,16 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.player_name").getString());
 				else
 					setSuggestion(null);
 			}
 		};
-		player_name.setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.player_name").getString());
 		player_name.setMaxLength(32767);
+		player_name.setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.player_name").getString());
 		guistate.put("text:player_name", player_name);
 		this.addWidget(this.player_name);
 		money = new EditBox(this.font, this.leftPos + 8, this.topPos + 51, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.money")) {
@@ -136,27 +129,29 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.money").getString());
 				else
 					setSuggestion(null);
 			}
 		};
-		money.setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.money").getString());
 		money.setMaxLength(32767);
+		money.setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.money").getString());
 		guistate.put("text:money", money);
 		this.addWidget(this.money);
 		button_give = Button.builder(Component.translatable("gui.palamod.specialmoneypanel.button_give"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new SpecialmoneypanelButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new SpecialmoneypanelButtonMessage(0, x, y, z));
 				SpecialmoneypanelButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 119, this.topPos + 90, 46, 20).build();
 		guistate.put("button:button_give", button_give);
 		this.addRenderableWidget(button_give);
-		custom_destructible = new Checkbox(this.leftPos + 6, this.topPos + 114, 20, 20, Component.translatable("gui.palamod.specialmoneypanel.custom_destructible"), false);
+		custom_destructible = Checkbox.builder(Component.translatable("gui.palamod.specialmoneypanel.custom_destructible"), this.font).pos(this.leftPos + 6, this.topPos + 114)
+
+				.build();
 		guistate.put("checkbox:custom_destructible", custom_destructible);
 		this.addRenderableWidget(custom_destructible);
 	}

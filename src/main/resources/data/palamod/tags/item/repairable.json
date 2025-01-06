@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:paladium_pickaxe",
+    "palamod:paladium_axe",
+    "palamod:paladium_sword",
+    "palamod:paladium_shovel",
+    "palamod:paladium_armor_helmet",
+    "palamod:paladium_armor_chestplate",
+    "palamod:paladium_armor_leggings",
+    "palamod:paladium_armor_boots",
+    "palamod:paladiumarmorcustom_1_helmet",
+    "palamod:paladiumarmorcustom_1_chestplate",
+    "palamod:paladiumarmorcustom_1_leggings",
+    "palamod:paladiumarmorcustom_1_boots",
+    "palamod:paladiumarmorcustom_2_helmet",
+    "palamod:paladiumarmorcustom_2_chestplate",
+    "palamod:paladiumarmorcustom_2_leggings",
+    "palamod:paladiumarmorcustom_2_boots",
+    "palamod:paladiumarmorcustom_3_helmet",
+    "palamod:paladiumarmorcustom_3_chestplate",
+    "palamod:paladiumarmorcustom_3_leggings",
+    "palamod:paladiumarmorcustom_3_boots"
+  ]
+}

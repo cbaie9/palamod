@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.world.inventory.SticknewhelpMenu;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
@@ -37,10 +35,15 @@ public class OpennewstickguiProcedure {
 		}
 		if (entity instanceof ServerPlayer _ent) {
 			BlockPos _bpos = BlockPos.containing(x, y, z);
-			NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
 					return Component.literal("Sticknewhelp");
+				}
+
+				@Override
+				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+					return false;
 				}
 
 				@Override

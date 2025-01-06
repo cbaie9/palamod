@@ -2,13 +2,13 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -58,7 +58,7 @@ public class JobsminermoddedoresheetlvlProcedure {
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					blockstate_value = cache_main.get("last_block_state").getAsDouble();
 					for (int index0 = 0; index0 < 9; index0++) {
-						block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+						block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 						if (block.getBlock() == PalamodModBlocks.PALADIUM_ORE.get() || block.getBlock() == PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get()) {
 							if (40 < lvl) {
 								output = output + 150;

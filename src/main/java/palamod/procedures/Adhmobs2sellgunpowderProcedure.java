@@ -4,9 +4,9 @@ import palamod.PalamodMod;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
@@ -16,7 +16,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.components.EditBox;
 
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.HashMap;
 
 import java.io.IOException;
@@ -73,15 +72,11 @@ public class Adhmobs2sellgunpowderProcedure {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("You can't sell 0 item"), false);
 				}
-				{
-					AtomicReference<IItemHandler> _iitemhandlerref = new AtomicReference<>();
-					entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(_iitemhandlerref::set);
-					if (_iitemhandlerref.get() != null) {
-						for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
-							ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
-							if (itemstackiterator.getItem() == item.getItem()) {
-								n2 = n2 + itemstackiterator.getCount();
-							}
+				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
+					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
+						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
+						if (itemstackiterator.getItem() == item.getItem()) {
+							n2 = n2 + itemstackiterator.getCount();
 						}
 					}
 				}

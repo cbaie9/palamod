@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:paladium_ore",
+    "palamod:titane_ore",
+    "palamod:amethyst_ore",
+    "palamod:findium_ore",
+    "palamod:paladium_green_ore",
+    "palamod:endium_nugget_ore",
+    "palamod:deepslate_titane_ore",
+    "palamod:deepslate_paladium_ore",
+    "palamod:deepslate_trixium_ore",
+    "palamod:deepslate_green_paladium_ore",
+    "palamod:deepslate_endium_nugget_ore",
+    "palamod:deepslate_findium_ore",
+    "palamod:trixium_ore",
+    "palamod:deepslate_amethyst_ore",
+    "palamod:fake_paladium_ore"
+  ]
+}

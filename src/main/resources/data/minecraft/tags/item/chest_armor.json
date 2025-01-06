@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:mixedendiumarmor_chestplate",
+    "palamod:paladiumarmorcustom_10_chestplate",
+    "palamod:paladiumarmorcustom_9_chestplate",
+    "palamod:paladiumarmorcustom_8_chestplate",
+    "palamod:paladiumarmorcustom_7_chestplate",
+    "palamod:paladiumarmorcustom_6_chestplate",
+    "palamod:paladiumarmorcustom_5_chestplate",
+    "palamod:paladiumarmorcustom_4_chestplate",
+    "palamod:paladiumarmorcustom_3_chestplate",
+    "palamod:paladiumarmorcustom_2_chestplate",
+    "palamod:paladiumarmorcustom_1_chestplate",
+    "palamod:rainbowarmor_chestplate",
+    "palamod:invisiblearmor_chestplate",
+    "palamod:travelarmor_chestplate",
+    "palamod:greenpaladiumarmor_chestplate",
+    "palamod:endium_armor_chestplate",
+    "palamod:amethyst_armor_chestplate",
+    "palamod:titane_armor_chestplate",
+    "palamod:paladium_armor_chestplate"
+  ]
+}

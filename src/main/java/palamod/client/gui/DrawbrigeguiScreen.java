@@ -4,7 +4,7 @@ import palamod.world.inventory.DrawbrigeguiMenu;
 
 import palamod.network.DrawbrigeguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -42,7 +43,7 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -53,39 +54,39 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/drawbrigegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 280, 160, 280, 160);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/drawbrigegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 280, 160, 280, 160);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 41, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 41, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 15, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 15, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 15, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 15, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 93, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 93, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 67, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 67, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 41, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 41, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 67, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 67, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 93, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 93, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 119, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 119, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 119, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 119, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 145, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 145, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 145, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 145, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 171, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 171, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 171, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 171, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 197, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 197, this.topPos + 8, 0, 0, 26, 26, 26, 26);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/big_slot.png"), this.leftPos + 197, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 197, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 
 		RenderSystem.disableBlend();
 	}
@@ -106,36 +107,60 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_arrow_down0001 = new ImageButton(this.leftPos + 212, this.topPos + 125, 28, 32, 0, 0, 32, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_down0001.png"), 28, 64, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new DrawbrigeguiButtonMessage(0, x, y, z));
-				DrawbrigeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+		imagebutton_arrow_down0001 = new ImageButton(this.leftPos + 212, this.topPos + 125, 28, 32,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_down0001.png"), ResourceLocation.parse("palamod:textures/screens/arrow_down0001.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(0, x, y, z));
+						DrawbrigeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_down0001", imagebutton_arrow_down0001);
 		this.addRenderableWidget(imagebutton_arrow_down0001);
-		imagebutton_arrow_right01 = new ImageButton(this.leftPos + 240, this.topPos + 95, 32, 28, 0, 0, 28, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_right01.png"), 32, 56, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new DrawbrigeguiButtonMessage(1, x, y, z));
-				DrawbrigeguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+		imagebutton_arrow_right01 = new ImageButton(this.leftPos + 240, this.topPos + 95, 32, 28,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_right01.png"), ResourceLocation.parse("palamod:textures/screens/arrow_right01.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(1, x, y, z));
+						DrawbrigeguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_right01", imagebutton_arrow_right01);
 		this.addRenderableWidget(imagebutton_arrow_right01);
-		imagebutton_arrow_up01 = new ImageButton(this.leftPos + 212, this.topPos + 66, 28, 32, 0, 0, 32, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_up01.png"), 28, 64, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new DrawbrigeguiButtonMessage(2, x, y, z));
-				DrawbrigeguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+		imagebutton_arrow_up01 = new ImageButton(this.leftPos + 212, this.topPos + 66, 28, 32, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_up01.png"), ResourceLocation.parse("palamod:textures/screens/arrow_up01.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(2, x, y, z));
+						DrawbrigeguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_up01", imagebutton_arrow_up01);
 		this.addRenderableWidget(imagebutton_arrow_up01);
-		imagebutton_arrow_left01 = new ImageButton(this.leftPos + 179, this.topPos + 95, 32, 28, 0, 0, 28, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_left01.png"), 32, 56, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new DrawbrigeguiButtonMessage(3, x, y, z));
-				DrawbrigeguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_arrow_left01 = new ImageButton(this.leftPos + 179, this.topPos + 95, 32, 28,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_left01.png"), ResourceLocation.parse("palamod:textures/screens/arrow_left01.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(3, x, y, z));
+						DrawbrigeguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_left01", imagebutton_arrow_left01);
 		this.addRenderableWidget(imagebutton_arrow_left01);
 	}

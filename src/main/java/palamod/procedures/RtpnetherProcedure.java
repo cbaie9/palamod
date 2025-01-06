@@ -1,6 +1,6 @@
 package palamod.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -25,8 +25,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-
-import java.util.Map;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -73,7 +71,7 @@ public class RtpnetherProcedure {
 									_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 									_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 									for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-										_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+										_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 									_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 								}
 							}
@@ -91,11 +89,11 @@ public class RtpnetherProcedure {
 											BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
 											BlockState _bs = Blocks.AIR.defaultBlockState();
 											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
+											for (Property<?> _propertyOld : _bso.getProperties()) {
+												Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+												if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 													} catch (Exception e) {
 													}
 											}
@@ -109,11 +107,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom, 69, zrandom);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -123,11 +121,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom + 1, 69, zrandom);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -137,11 +135,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom - 1, 69, zrandom);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -151,11 +149,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom - 1, 69, xrandom - 1);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -165,11 +163,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom - 1, 69, xrandom + 1);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -179,11 +177,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom + 1, 69, xrandom + 1);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -193,11 +191,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom + 1, 69, xrandom - 1);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -207,11 +205,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom, 69, xrandom - 1);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}
@@ -221,11 +219,11 @@ public class RtpnetherProcedure {
 							BlockPos _bp = BlockPos.containing(xrandom, 69, xrandom + 1);
 							BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
-							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-								Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-								if (_property != null && _bs.getValue(_property) != null)
+							for (Property<?> _propertyOld : _bso.getProperties()) {
+								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+								if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 									try {
-										_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+										_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 									} catch (Exception e) {
 									}
 							}

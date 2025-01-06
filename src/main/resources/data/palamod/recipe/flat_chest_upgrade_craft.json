@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_block"
+    },
+    "b": {
+      "item": "minecraft:chest"
+    },
+    "c": {
+      "item": "palamod:harpagophytum"
+    }
+  },
+  "result": {
+    "id": "palamod:flat_chest_upgrade",
+    "count": 1
+  }
+}

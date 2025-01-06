@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.world.inventory.FactionhomeguiMenu;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -37,10 +35,15 @@ public class OpenfhguiProcedure {
 		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Factionhomegui");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override

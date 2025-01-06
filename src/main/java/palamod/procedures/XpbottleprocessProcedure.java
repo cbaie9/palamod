@@ -4,18 +4,19 @@ import palamod.init.PalamodModItems;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
@@ -36,14 +37,14 @@ public class XpbottleprocessProcedure {
 		String jobs_text = "";
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		if (itemstack.getOrCreateTag().getDouble("xp_jobs") > 0) {
-			if (itemstack.getOrCreateTag().getDouble("jobs_type") == 1) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") > 0) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type") == 1) {
 				jobs_text = "miner";
-			} else if (itemstack.getOrCreateTag().getDouble("jobs_type") == 2) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type") == 2) {
 				jobs_text = "farmer";
-			} else if (itemstack.getOrCreateTag().getDouble("jobs_type") == 3) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type") == 3) {
 				jobs_text = "hunter";
-			} else if (itemstack.getOrCreateTag().getDouble("jobs_type") == 4) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type") == 4) {
 				jobs_text = "alchi";
 			}
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
@@ -62,22 +63,20 @@ public class XpbottleprocessProcedure {
 						if (world.dayTime() > main.get(("xpstreak_time_" + jobs_text)).getAsDouble()) {
 							main.addProperty(("xpstreak_" + jobs_text), 0);
 						}
-						main.addProperty(("xp_" + jobs_text), (itemstack.getOrCreateTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xp_" + jobs_text)).getAsDouble()));
-						main.addProperty(("xpstreak_" + jobs_text), (itemstack.getOrCreateTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble()));
+						main.addProperty(("xp_" + jobs_text), (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xp_" + jobs_text)).getAsDouble()));
+						main.addProperty(("xpstreak_" + jobs_text),
+								(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble()));
 						main.addProperty(("xpstreak_time_" + jobs_text), (world.dayTime() + 80));
-						{
-							ItemStack _ist = itemstack;
-							if (_ist.hurt(1, RandomSource.create(), null)) {
-								_ist.shrink(1);
-								_ist.setDamageValue(0);
-							}
+						if (world instanceof ServerLevel _level) {
+							itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+							});
 						}
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(
-									(Component.translatable("palamod.procedure.jobswin1").getString() + "" + (itemstack.getOrCreateTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())
-											+ Component.translatable("palamod.procedure.jobswin3").getString() + " " + new ItemStack(PalamodModItems.XPBOTTLE.get()).getDisplayName().getString())),
-									true);
-						PalamodMod.LOGGER.debug(("Debug : " + (itemstack.getOrCreateTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())));
+							_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
+									+ (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())
+									+ Component.translatable("palamod.procedure.jobswin3").getString() + " " + new ItemStack(PalamodModItems.XPBOTTLE.get()).getDisplayName().getString())), true);
+						PalamodMod.LOGGER
+								.debug(("Debug : " + (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())));
 						assert Boolean.TRUE; //#dbg:Xpbottleprocess:check_lvl_miner
 						if (main.get(("next_level_" + jobs_text)).getAsDouble() <= main.get(("xp_" + jobs_text)).getAsDouble()) {
 							main.addProperty(("lvl_" + jobs_text), (1 + main.get(("lvl_" + jobs_text)).getAsDouble()));

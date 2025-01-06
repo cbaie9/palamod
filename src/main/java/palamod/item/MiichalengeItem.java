@@ -1,19 +1,21 @@
 
 package palamod.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import palamod.PalamodMod;
 
-import net.minecraft.world.item.RecordItem;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 
-public class MiichalengeItem extends RecordItem {
+public class MiichalengeItem extends Item {
 	public MiichalengeItem() {
-		super(7, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("palamod:miichallengemusic")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 1100);
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "miichalenge"))));
 	}
 
 	@Override

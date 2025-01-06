@@ -5,8 +5,8 @@ import palamod.procedures.LegendarystonestickProcedure;
 import palamod.procedures.Legendarystonejobs_processProcedure;
 import palamod.procedures.LegendarystoneglintconditionProcedure;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;

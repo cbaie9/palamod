@@ -12,25 +12,23 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import java.util.Map;
-
 public class AmethystespikeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockState _bs = PalamodModBlocks.AMETHYST_SPIKE.get().defaultBlockState();
 			BlockState _bso = world.getBlockState(_bp);
-			for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-				Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-				if (_property != null && _bs.getValue(_property) != null)
+			for (Property<?> _propertyOld : _bso.getProperties()) {
+				Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+				if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 					try {
-						_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+						_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 					} catch (Exception e) {
 					}
 			}
 			world.setBlock(_bp, _bs, 3);
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.NORTH;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -44,7 +42,7 @@ public class AmethystespikeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.SOUTH;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -58,7 +56,7 @@ public class AmethystespikeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.EAST;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -72,7 +70,7 @@ public class AmethystespikeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.WEST;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -86,7 +84,7 @@ public class AmethystespikeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.UP;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -100,7 +98,7 @@ public class AmethystespikeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.DOWN;
 				BlockPos _pos = BlockPos.containing(x, y, z);

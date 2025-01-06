@@ -16,7 +16,7 @@ import palamod.procedures.Palahelpgrinder202Procedure;
 
 import palamod.network.Grinderpalahelp2guiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -24,6 +24,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -54,7 +55,7 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -65,25 +66,25 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/grinderpalahelp_2gui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 330, 200, 330, 200);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinderpalahelp_2gui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 330, 200, 330, 200);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/grinder_block_front.png"), this.leftPos + 68, this.topPos + 3, 0, 0, -1, -1, -1, -1);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_block_front.png"), this.leftPos + 68, this.topPos + 3, 0, 0, -1, -1, -1, -1);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/1.png"), this.leftPos + 16, this.topPos + 144, 0, 0, 45, 46, 45, 46);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/1.png"), this.leftPos + 16, this.topPos + 144, 0, 0, 45, 46, 45, 46);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/2.png"), this.leftPos + 95, this.topPos + 145, 0, 0, 46, 46, 46, 46);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/2.png"), this.leftPos + 95, this.topPos + 145, 0, 0, 46, 46, 46, 46);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/1.png"), this.leftPos + 191, this.topPos + 145, 0, 0, 45, 46, 45, 46);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/1.png"), this.leftPos + 191, this.topPos + 145, 0, 0, 45, 46, 45, 46);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/grinder_block_front16.png"), this.leftPos + 7, this.topPos + 5, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png"), this.leftPos + 7, this.topPos + 5, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -139,36 +140,60 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 307, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Grinderpalahelp2guiButtonMessage(0, x, y, z));
-				Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 307, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Grinderpalahelp2guiButtonMessage(0, x, y, z));
+						Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 264, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Grinderpalahelp2guiButtonMessage(1, x, y, z));
-				Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 264, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Grinderpalahelp2guiButtonMessage(1, x, y, z));
+						Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
-		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 244, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Grinderpalahelp2guiButtonMessage(2, x, y, z));
-				Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 244, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Grinderpalahelp2guiButtonMessage(2, x, y, z));
+						Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
-		imagebutton_example_gui_button = new ImageButton(this.leftPos + 284, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_example_gui_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Grinderpalahelp2guiButtonMessage(3, x, y, z));
-				Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_example_gui_button = new ImageButton(this.leftPos + 284, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/example_gui_button.png"), ResourceLocation.parse("palamod:textures/screens/example_gui_button_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Grinderpalahelp2guiButtonMessage(3, x, y, z));
+						Grinderpalahelp2guiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_example_gui_button", imagebutton_example_gui_button);
 		this.addRenderableWidget(imagebutton_example_gui_button);
 	}

@@ -13,7 +13,7 @@ import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.JobsfarmercraftguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -21,6 +21,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -90,7 +91,7 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 277 && mouseX < leftPos + 293 && mouseY > topPos + 4 && mouseY < topPos + 20)
@@ -187,45 +188,45 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/jobsminercraftgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 210, 300, 210);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsminercraftgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 210, 300, 210);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 190, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 190, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 281, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 281, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 265, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 265, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 249, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 249, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 233, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 233, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 217, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 217, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 201, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 201, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 191, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 191, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 175, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 175, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 185, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 185, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 159, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 159, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 143, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 143, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 127, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 127, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_hor.png"), this.leftPos + 171, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 171, this.topPos + 112, 0, 0, 16, 3, 16, 3);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 113, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 113, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/arrow_right20.png"), this.leftPos + 241, this.topPos + 56, 0, 0, 16, 14, 16, 14);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right20.png"), this.leftPos + 241, this.topPos + 56, 0, 0, 16, 14, 16, 14);
 
 		RenderSystem.disableBlend();
 	}
@@ -269,344 +270,600 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 277, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(0, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 277, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(0, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_endium_pickaxe = new ImageButton(this.leftPos + 10, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_endium_pickaxe.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(1, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+		imagebutton_endium_pickaxe = new ImageButton(this.leftPos + 10, this.topPos + 29, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/amethyst_hoe.png"), ResourceLocation.parse("palamod:textures/screens/amethyst_hoe_hover.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(1, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_endium_pickaxe", imagebutton_endium_pickaxe);
 		this.addRenderableWidget(imagebutton_endium_pickaxe);
-		imagebutton_potg_of_1 = new ImageButton(this.leftPos + 30, this.topPos + 28, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_potg_of_1.png"), 16, 32, e -> {
-		});
+		imagebutton_potg_of_1 = new ImageButton(this.leftPos + 30, this.topPos + 28, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/titane_radius_hoe.png"), ResourceLocation.parse("palamod:textures/screens/titane_hoe_hover.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_potg_of_1", imagebutton_potg_of_1);
 		this.addRenderableWidget(imagebutton_potg_of_1);
-		imagebutton_amethyste_exca = new ImageButton(this.leftPos + 48, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_amethyste_exca.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(3, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_amethyste_exca = new ImageButton(this.leftPos + 48, this.topPos + 29, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_radius_hoe.png"), ResourceLocation.parse("palamod:textures/screens/paladium_hoe_hover.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(3, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_amethyste_exca", imagebutton_amethyste_exca);
 		this.addRenderableWidget(imagebutton_amethyste_exca);
-		imagebutton_titane_excavator = new ImageButton(this.leftPos + 67, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_titane_excavator.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(4, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+		imagebutton_titane_excavator = new ImageButton(this.leftPos + 67, this.topPos + 29, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_radius_hoe.png"), ResourceLocation.parse("palamod:textures/screens/endium_radius_hoe_hover.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(4, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_titane_excavator", imagebutton_titane_excavator);
 		this.addRenderableWidget(imagebutton_titane_excavator);
-		imagebutton_paladium_excavator = new ImageButton(this.leftPos + 86, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_paladium_excavator.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(5, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 5, x, y, z);
+		imagebutton_paladium_excavator = new ImageButton(this.leftPos + 86, this.topPos + 29, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_excavator.png"), ResourceLocation.parse("palamod:textures/screens/paladium_excavator.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(5, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_paladium_excavator", imagebutton_paladium_excavator);
 		this.addRenderableWidget(imagebutton_paladium_excavator);
-		imagebutton_magical_tool16 = new ImageButton(this.leftPos + 105, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_magical_tool16.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(6, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 6, x, y, z);
+		imagebutton_magical_tool16 = new ImageButton(this.leftPos + 105, this.topPos + 29, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/magical_tool16.png"), ResourceLocation.parse("palamod:textures/screens/magical_tool16_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(6, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 6, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_magical_tool16", imagebutton_magical_tool16);
 		this.addRenderableWidget(imagebutton_magical_tool16);
-		imagebutton_voidstone = new ImageButton(this.leftPos + 124, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_voidstone.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(7, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 7, x, y, z);
+		imagebutton_voidstone = new ImageButton(this.leftPos + 124, this.topPos + 29, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/voidstone.png"), ResourceLocation.parse("palamod:textures/screens/voidstone_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(7, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 7, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_voidstone", imagebutton_voidstone);
 		this.addRenderableWidget(imagebutton_voidstone);
-		imagebutton_obsidian_pickaxe = new ImageButton(this.leftPos + 143, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_obsidian_pickaxe.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(8, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 8, x, y, z);
+		imagebutton_obsidian_pickaxe = new ImageButton(this.leftPos + 143, this.topPos + 29, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/obsidian_pickaxe.png"), ResourceLocation.parse("palamod:textures/screens/obsidian_pickaxe_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(8, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 8, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_obsidian_pickaxe", imagebutton_obsidian_pickaxe);
 		this.addRenderableWidget(imagebutton_obsidian_pickaxe);
-		imagebutton_boom_obsi = new ImageButton(this.leftPos + 162, this.topPos + 29, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_boom_obsi.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(9, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 9, x, y, z);
+		imagebutton_boom_obsi = new ImageButton(this.leftPos + 162, this.topPos + 29, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/boom_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(9, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 9, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_boom_obsi", imagebutton_boom_obsi);
 		this.addRenderableWidget(imagebutton_boom_obsi);
-		imagebutton_big_obsi = new ImageButton(this.leftPos + 10, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_big_obsi.png"), 16, 32, e -> {
+		imagebutton_big_obsi = new ImageButton(this.leftPos + 10, this.topPos + 48, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/big_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(10, x, y, z));
+				PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(10, x, y, z));
 				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_big_obsi", imagebutton_big_obsi);
 		this.addRenderableWidget(imagebutton_big_obsi);
-		imagebutton_spike_obsi = new ImageButton(this.leftPos + 48, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(11, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 11, x, y, z);
+		imagebutton_spike_obsi = new ImageButton(this.leftPos + 48, this.topPos + 48, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(11, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 11, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi", imagebutton_spike_obsi);
 		this.addRenderableWidget(imagebutton_spike_obsi);
-		imagebutton_spike_obsi_1 = new ImageButton(this.leftPos + 67, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi_1.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(12, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 12, x, y, z);
+		imagebutton_spike_obsi_1 = new ImageButton(this.leftPos + 67, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_1.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(12, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 12, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi_1", imagebutton_spike_obsi_1);
 		this.addRenderableWidget(imagebutton_spike_obsi_1);
-		imagebutton_spike_obsi_2 = new ImageButton(this.leftPos + 86, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi_2.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(13, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 13, x, y, z);
+		imagebutton_spike_obsi_2 = new ImageButton(this.leftPos + 86, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_2.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(13, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi_2", imagebutton_spike_obsi_2);
 		this.addRenderableWidget(imagebutton_spike_obsi_2);
-		imagebutton_spike_obsi_3 = new ImageButton(this.leftPos + 105, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi_3.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(14, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 14, x, y, z);
+		imagebutton_spike_obsi_3 = new ImageButton(this.leftPos + 105, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_3.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(14, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 14, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi_3", imagebutton_spike_obsi_3);
 		this.addRenderableWidget(imagebutton_spike_obsi_3);
-		imagebutton_spike_obsi_4 = new ImageButton(this.leftPos + 124, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi_4.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(15, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 15, x, y, z);
+		imagebutton_spike_obsi_4 = new ImageButton(this.leftPos + 124, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_4.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(15, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 15, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi_4", imagebutton_spike_obsi_4);
 		this.addRenderableWidget(imagebutton_spike_obsi_4);
-		imagebutton_spike_obsi_5 = new ImageButton(this.leftPos + 143, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi_5.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(16, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 16, x, y, z);
+		imagebutton_spike_obsi_5 = new ImageButton(this.leftPos + 143, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_5.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(16, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 16, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi_5", imagebutton_spike_obsi_5);
 		this.addRenderableWidget(imagebutton_spike_obsi_5);
-		imagebutton_spike_obsi_6 = new ImageButton(this.leftPos + 162, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_spike_obsi_6.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(17, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 17, x, y, z);
+		imagebutton_spike_obsi_6 = new ImageButton(this.leftPos + 162, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_6.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(17, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 17, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_spike_obsi_6", imagebutton_spike_obsi_6);
 		this.addRenderableWidget(imagebutton_spike_obsi_6);
-		imagebutton_lava_obsi = new ImageButton(this.leftPos + 10, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_lava_obsi.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(18, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 18, x, y, z);
+		imagebutton_lava_obsi = new ImageButton(this.leftPos + 10, this.topPos + 67, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/lava_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(18, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 18, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_lava_obsi", imagebutton_lava_obsi);
 		this.addRenderableWidget(imagebutton_lava_obsi);
-		imagebutton_fake_obsi = new ImageButton(this.leftPos + 29, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_fake_obsi.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(19, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 19, x, y, z);
+		imagebutton_fake_obsi = new ImageButton(this.leftPos + 29, this.topPos + 67, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/fake_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(19, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 19, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_fake_obsi", imagebutton_fake_obsi);
 		this.addRenderableWidget(imagebutton_fake_obsi);
-		imagebutton_slime_obsi = new ImageButton(this.leftPos + 48, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_slime_obsi.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(20, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 20, x, y, z);
+		imagebutton_slime_obsi = new ImageButton(this.leftPos + 48, this.topPos + 67, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/slime_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(20, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 20, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_slime_obsi", imagebutton_slime_obsi);
 		this.addRenderableWidget(imagebutton_slime_obsi);
-		imagebutton_poison_obsi = new ImageButton(this.leftPos + 67, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_poison_obsi.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(21, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 21, x, y, z);
+		imagebutton_poison_obsi = new ImageButton(this.leftPos + 67, this.topPos + 67, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/poison_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(21, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 21, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_poison_obsi", imagebutton_poison_obsi);
 		this.addRenderableWidget(imagebutton_poison_obsi);
-		imagebutton_cave_block_vfufu = new ImageButton(this.leftPos + 86, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cave_block_vfufu.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(22, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 22, x, y, z);
+		imagebutton_cave_block_vfufu = new ImageButton(this.leftPos + 86, this.topPos + 67, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cave_block_vfufu.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(22, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 22, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cave_block_vfufu", imagebutton_cave_block_vfufu);
 		this.addRenderableWidget(imagebutton_cave_block_vfufu);
-		imagebutton_big_tnt_side = new ImageButton(this.leftPos + 105, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_big_tnt_side.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(23, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 23, x, y, z);
+		imagebutton_big_tnt_side = new ImageButton(this.leftPos + 105, this.topPos + 67, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/big_tnt_side.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(23, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 23, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_big_tnt_side", imagebutton_big_tnt_side);
 		this.addRenderableWidget(imagebutton_big_tnt_side);
-		imagebutton_effect_tnt_side = new ImageButton(this.leftPos + 124, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_effect_tnt_side.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(24, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 24, x, y, z);
+		imagebutton_effect_tnt_side = new ImageButton(this.leftPos + 124, this.topPos + 67, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/effect_tnt_side.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(24, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 24, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_effect_tnt_side", imagebutton_effect_tnt_side);
 		this.addRenderableWidget(imagebutton_effect_tnt_side);
-		imagebutton_wither_tnt_side = new ImageButton(this.leftPos + 143, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_wither_tnt_side.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(25, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 25, x, y, z);
+		imagebutton_wither_tnt_side = new ImageButton(this.leftPos + 143, this.topPos + 67, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/wither_tnt_side.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(25, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 25, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_wither_tnt_side", imagebutton_wither_tnt_side);
 		this.addRenderableWidget(imagebutton_wither_tnt_side);
-		imagebutton_sponge_tnt_side = new ImageButton(this.leftPos + 162, this.topPos + 67, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_sponge_tnt_side.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(26, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 26, x, y, z);
+		imagebutton_sponge_tnt_side = new ImageButton(this.leftPos + 162, this.topPos + 67, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sponge_tnt_side.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(26, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 26, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_sponge_tnt_side", imagebutton_sponge_tnt_side);
 		this.addRenderableWidget(imagebutton_sponge_tnt_side);
-		imagebutton_sponge = new ImageButton(this.leftPos + 10, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_sponge.png"), 16, 32, e -> {
+		imagebutton_sponge = new ImageButton(this.leftPos + 10, this.topPos + 86, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sponge.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(27, x, y, z));
+				PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(27, x, y, z));
 				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 27, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_sponge", imagebutton_sponge);
 		this.addRenderableWidget(imagebutton_sponge);
-		imagebutton_endium_tnt_side = new ImageButton(this.leftPos + 29, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_endium_tnt_side.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(28, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 28, x, y, z);
+		imagebutton_endium_tnt_side = new ImageButton(this.leftPos + 29, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_tnt_side.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(28, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 28, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_endium_tnt_side", imagebutton_endium_tnt_side);
 		this.addRenderableWidget(imagebutton_endium_tnt_side);
-		imagebutton_beta_block = new ImageButton(this.leftPos + 29, this.topPos + 48, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(29, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 29, x, y, z);
+		imagebutton_beta_block = new ImageButton(this.leftPos + 29, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/mega_boom_obsi_side.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(29, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 29, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_beta_block", imagebutton_beta_block);
 		this.addRenderableWidget(imagebutton_beta_block);
-		imagebutton_beta_block1 = new ImageButton(this.leftPos + 48, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block1.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(30, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 30, x, y, z);
+		imagebutton_beta_block1 = new ImageButton(this.leftPos + 48, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/builder_wand_amethyst.png"), ResourceLocation.parse("palamod:textures/screens/builder_wand_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(30, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 30, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_beta_block1", imagebutton_beta_block1);
 		this.addRenderableWidget(imagebutton_beta_block1);
-		imagebutton_beta_block2 = new ImageButton(this.leftPos + 67, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block2.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(31, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 31, x, y, z);
+		imagebutton_beta_block2 = new ImageButton(this.leftPos + 67, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/builder_wand_titane.png"), ResourceLocation.parse("palamod:textures/screens/builder_wand_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(31, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 31, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_beta_block2", imagebutton_beta_block2);
 		this.addRenderableWidget(imagebutton_beta_block2);
-		imagebutton_beta_block3 = new ImageButton(this.leftPos + 86, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block3.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(32, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 32, x, y, z);
+		imagebutton_beta_block3 = new ImageButton(this.leftPos + 86, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/builder_wand_paladium.png"), ResourceLocation.parse("palamod:textures/screens/builder_wand_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(32, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 32, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_beta_block3", imagebutton_beta_block3);
 		this.addRenderableWidget(imagebutton_beta_block3);
-		imagebutton_beta_block4 = new ImageButton(this.leftPos + 105, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block4.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(33, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 33, x, y, z);
+		imagebutton_beta_block4 = new ImageButton(this.leftPos + 105, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/builder_wand_endium.png"), ResourceLocation.parse("palamod:textures/screens/builder_wand_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(33, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 33, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_beta_block4", imagebutton_beta_block4);
 		this.addRenderableWidget(imagebutton_beta_block4);
-		imagebutton_cobblebreaker_front = new ImageButton(this.leftPos + 124, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_front.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(34, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 34, x, y, z);
+		imagebutton_cobblebreaker_front = new ImageButton(this.leftPos + 124, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cobblebreaker_front.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(34, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 34, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cobblebreaker_front", imagebutton_cobblebreaker_front);
 		this.addRenderableWidget(imagebutton_cobblebreaker_front);
-		imagebutton_cobblebreaker_amethyst_upgrade = new ImageButton(this.leftPos + 143, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_amethyst_upgrade.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(35, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 35, x, y, z);
+		imagebutton_cobblebreaker_amethyst_upgrade = new ImageButton(this.leftPos + 143, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cobblebreaker_amethyst_upgrade.png"), ResourceLocation.parse("palamod:textures/screens/upgrade_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(35, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 35, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cobblebreaker_amethyst_upgrade", imagebutton_cobblebreaker_amethyst_upgrade);
 		this.addRenderableWidget(imagebutton_cobblebreaker_amethyst_upgrade);
-		imagebutton_cobblebreaker_titane_upgrade = new ImageButton(this.leftPos + 162, this.topPos + 86, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_titane_upgrade.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(36, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 36, x, y, z);
+		imagebutton_cobblebreaker_titane_upgrade = new ImageButton(this.leftPos + 162, this.topPos + 86, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cobblebreaker_titane_upgrade.png"), ResourceLocation.parse("palamod:textures/screens/upgrade_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(36, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 36, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cobblebreaker_titane_upgrade", imagebutton_cobblebreaker_titane_upgrade);
 		this.addRenderableWidget(imagebutton_cobblebreaker_titane_upgrade);
-		imagebutton_cobblebreaker_paladium_upgrade = new ImageButton(this.leftPos + 10, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cobblebreaker_paladium_upgrade.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(37, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 37, x, y, z);
+		imagebutton_cobblebreaker_paladium_upgrade = new ImageButton(this.leftPos + 10, this.topPos + 105, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cobblebreaker_paladium_upgrade.png"), ResourceLocation.parse("palamod:textures/screens/upgrade_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(37, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 37, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cobblebreaker_paladium_upgrade", imagebutton_cobblebreaker_paladium_upgrade);
 		this.addRenderableWidget(imagebutton_cobblebreaker_paladium_upgrade);
-		imagebutton_voidstone_minage = new ImageButton(this.leftPos + 29, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_voidstone_minage.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(38, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 38, x, y, z);
+		imagebutton_voidstone_minage = new ImageButton(this.leftPos + 29, this.topPos + 105, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/voidstone_minage.png"), ResourceLocation.parse("palamod:textures/screens/voidstone_minage_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(38, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 38, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_voidstone_minage", imagebutton_voidstone_minage);
 		this.addRenderableWidget(imagebutton_voidstone_minage);
-		imagebutton_moula_stone = new ImageButton(this.leftPos + 47, this.topPos + 105, 18, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_moula_stone.png"), 18, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(39, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 39, x, y, z);
+		imagebutton_moula_stone = new ImageButton(this.leftPos + 47, this.topPos + 105, 18, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/moula_stone.png"), ResourceLocation.parse("palamod:textures/screens/white_moulastone.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(39, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 39, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_moula_stone", imagebutton_moula_stone);
 		this.addRenderableWidget(imagebutton_moula_stone);
-		imagebutton_sealed_xp_bottle = new ImageButton(this.leftPos + 70, this.topPos + 106, 11, 15, 0, 0, 15, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_sealed_xp_bottle.png"), 11, 30, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(40, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 40, x, y, z);
+		imagebutton_sealed_xp_bottle = new ImageButton(this.leftPos + 70, this.topPos + 106, 11, 15,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sealed_xp_bottle.png"), ResourceLocation.parse("palamod:textures/screens/white_sealed_xp_bottle.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(40, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 40, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_sealed_xp_bottle", imagebutton_sealed_xp_bottle);
 		this.addRenderableWidget(imagebutton_sealed_xp_bottle);
-		imagebutton_forge_front_off = new ImageButton(this.leftPos + 86, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_forge_front_off.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(41, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 41, x, y, z);
+		imagebutton_forge_front_off = new ImageButton(this.leftPos + 86, this.topPos + 105, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/forge_front_off.png"), ResourceLocation.parse("palamod:textures/screens/forge_front_on.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(41, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 41, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_forge_front_off", imagebutton_forge_front_off);
 		this.addRenderableWidget(imagebutton_forge_front_off);
-		imagebutton_beta_block5 = new ImageButton(this.leftPos + 105, this.topPos + 105, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_beta_block5.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsfarmercraftguiButtonMessage(42, x, y, z));
-				JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 42, x, y, z);
+		imagebutton_beta_block5 = new ImageButton(this.leftPos + 105, this.topPos + 105, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/beta_block.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(42, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 42, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_beta_block5", imagebutton_beta_block5);
 		this.addRenderableWidget(imagebutton_beta_block5);
 	}

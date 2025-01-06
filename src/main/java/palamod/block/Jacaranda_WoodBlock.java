@@ -1,7 +1,7 @@
 
 package palamod.block;
 
-import net.minecraftforge.common.IPlantable;
+import net.neoforged.neoforge.common.util.TriState;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,7 +28,7 @@ public class Jacaranda_WoodBlock extends Block {
 	}
 
 	@Override
-	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
-		return true;
+	public TriState canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, BlockState plant) {
+		return TriState.TRUE;
 	}
 }

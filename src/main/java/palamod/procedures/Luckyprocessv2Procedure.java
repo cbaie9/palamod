@@ -9,9 +9,9 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -43,7 +43,6 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import java.util.function.Supplier;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.Random;
 import java.util.Map;
 
@@ -90,17 +89,13 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 164500 && Random <= 164600) {
 			PalamodModVariables.lucky_name = "Duplicata";
-			{
-				AtomicReference<IItemHandler> _iitemhandlerref = new AtomicReference<>();
-				entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(_iitemhandlerref::set);
-				if (_iitemhandlerref.get() != null) {
-					for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
-						ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
-						if (entity instanceof Player _player) {
-							ItemStack _setstack = itemstackiterator.copy();
-							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-						}
+			if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
+				for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
+					ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = itemstackiterator.copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
 			}
@@ -143,7 +138,7 @@ public class Luckyprocessv2Procedure {
 						_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 						_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 						for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-							_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+							_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
@@ -296,11 +291,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX() + 1, entity.getY() + 1, entity.getZ());
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -310,11 +305,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX() + 1, entity.getY(), entity.getZ());
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -324,11 +319,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX() - 1, entity.getY() + 1, entity.getZ());
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -338,11 +333,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX() - 1, entity.getY(), entity.getZ());
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -352,11 +347,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX(), entity.getY(), entity.getZ() + 1);
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -366,11 +361,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX(), entity.getY() + 1, entity.getZ() + 1);
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -380,11 +375,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX(), entity.getY(), entity.getZ() - 1);
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -394,11 +389,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX(), entity.getY() + 1, entity.getZ() - 1);
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -408,11 +403,11 @@ public class Luckyprocessv2Procedure {
 				BlockPos _bp = BlockPos.containing(entity.getX(), entity.getY() + 2, entity.getZ());
 				BlockState _bs = PalamodModBlocks.RENFORCED_OBSIDIAN.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}

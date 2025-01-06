@@ -14,22 +14,20 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
-import java.util.Map;
-
 public class FertilizedbmplantProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.FERTILZED_DIRT.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(new ResourceLocation("forge:plant")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.FERTILZED_DIRT.get() && (world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("forge:plant")))) {
 			if (Math.random() < 0.05) {
 				if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == PalamodModBlocks.EGGPLANT_0.get()) {
 					{
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.EGGPLANT_1.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -40,11 +38,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.EGGPLANT_2.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -55,11 +53,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.EGGPLANT_3.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -73,11 +71,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.CHERVIL_1.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -88,11 +86,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.CHERVIL_2.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -103,11 +101,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.CHERVIL_3.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -121,11 +119,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.KIWANO_1.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -136,11 +134,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.KIWANO_2.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -151,11 +149,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.KIWANO_3.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -166,11 +164,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.KIWANO_4.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -184,11 +182,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.ORANGEBLUE_1.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -199,11 +197,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.ORANGEBLUE_2.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -214,11 +212,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.ORANGEBLUE_3.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}
@@ -229,11 +227,11 @@ public class FertilizedbmplantProcedure {
 						BlockPos _bp = BlockPos.containing(x, y + 1, z);
 						BlockState _bs = PalamodModBlocks.ORANGEBLUE_4.get().defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.getValue(_property) != null)
+						for (Property<?> _propertyOld : _bso.getProperties()) {
+							Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+							if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 								try {
-									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 								} catch (Exception e) {
 								}
 						}

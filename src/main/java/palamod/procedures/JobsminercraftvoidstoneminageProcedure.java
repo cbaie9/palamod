@@ -19,53 +19,39 @@ public class JobsminercraftvoidstoneminageProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "A trash bin";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text = "A trash bin";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "in your hand";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text2 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text2 = "in your hand";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "~minage edition~";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text3 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text3 = "~minage edition~";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text4 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text4 = "";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text5 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text5 = "";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "No durabilty";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text3 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text3 = "No durabilty";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "Lvl required : 30";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.lvl_required = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.lvl_required = "Lvl required : 30";
+			_vars.syncPlayerVariables(entity);
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Items.ENDER_PEARL)) : false) && (new Object() {
 			public int getAmount(int sltid) {

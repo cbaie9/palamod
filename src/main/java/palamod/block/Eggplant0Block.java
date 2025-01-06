@@ -7,7 +7,7 @@ import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,12 +28,7 @@ import net.minecraft.core.BlockPos;
 
 public class Eggplant0Block extends FlowerBlock {
 	public Eggplant0Block() {
-		super(() -> MobEffects.FIRE_RESISTANCE, 10, BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 10;
+		super(MobEffects.FIRE_RESISTANCE, 10, BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -42,8 +37,8 @@ public class Eggplant0Block extends FlowerBlock {
 	}
 
 	@Override
-	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
-		return BlockPathTypes.OPEN;
+	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
+		return PathType.OPEN;
 	}
 
 	@Override
@@ -52,7 +47,7 @@ public class Eggplant0Block extends FlowerBlock {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
 		return new ItemStack(PalamodModItems.EGGPLANT_SEED.get());
 	}
 

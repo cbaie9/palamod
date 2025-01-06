@@ -2,7 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:paladiumgreenpickaxe",
+    "palamod:paladiumgreenaxe",
+    "palamod:paladiumgreensword",
+    "palamod:paladiumgreenshovel",
+    "palamod:greenpaladiumarmor_helmet",
+    "palamod:greenpaladiumarmor_chestplate",
+    "palamod:greenpaladiumarmor_leggings",
+    "palamod:greenpaladiumarmor_boots"
+  ]
+}

@@ -10,8 +10,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import java.util.Map;
-
 public class ObsidianspikeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		Direction direction_block = Direction.NORTH;
@@ -29,11 +27,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.WOODEN_SPIKE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -59,11 +57,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.IRON_SPIKE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -87,11 +85,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.SPIKE_GOLD.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -116,11 +114,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.DIAMOND_SPIKE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -145,11 +143,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.AMETHYST_SPIKE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -174,11 +172,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.TITANE_SPIKE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
@@ -203,11 +201,11 @@ public class ObsidianspikeprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.PALADIUM_SPIKE.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}

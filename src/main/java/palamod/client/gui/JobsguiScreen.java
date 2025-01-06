@@ -9,7 +9,7 @@ import palamod.procedures.GetlevelalchiProcedure;
 
 import palamod.network.JobsguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -48,7 +49,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -59,23 +60,23 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 52, this.topPos + 101, 0, 0, 24, 8, 24, 8);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 52, this.topPos + 101, 0, 0, 24, 8, 24, 8);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 130, this.topPos + 101, 0, 0, 24, 8, 24, 8);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 130, this.topPos + 101, 0, 0, 24, 8, 24, 8);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 209, this.topPos + 101, 0, 0, 24, 8, 24, 8);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 209, this.topPos + 101, 0, 0, 24, 8, 24, 8);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 279, this.topPos + 101, 0, 0, 24, 8, 24, 8);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 279, this.topPos + 101, 0, 0, 24, 8, 24, 8);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 250, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 250, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -115,32 +116,62 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 119, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta_template_jobs.png"), 40, 80, e -> {
-		});
+		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 119, this.topPos + 57, 40, 40,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_famer_jobs.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_farm2.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_screen_beta_template_jobs", imagebutton_screen_beta_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta_template_jobs);
-		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 41, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta2_template_jobs.png"), 40, 80, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsguiButtonMessage(1, x, y, z));
-				JobsguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 41, this.topPos + 57, 40, 40,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_miner.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_miner2.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsguiButtonMessage(1, x, y, z));
+						JobsguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_screen_beta2_template_jobs", imagebutton_screen_beta2_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs);
-		imagebutton_screen_beta2_template_jobs1 = new ImageButton(this.leftPos + 201, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta2_template_jobs1.png"), 40, 80, e -> {
-		});
+		imagebutton_screen_beta2_template_jobs1 = new ImageButton(this.leftPos + 201, this.topPos + 57, 40, 40,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter2.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_screen_beta2_template_jobs1", imagebutton_screen_beta2_template_jobs1);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs1);
-		imagebutton_screen_beta2_template_jobs2 = new ImageButton(this.leftPos + 272, this.topPos + 57, 40, 40, 0, 0, 40, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_screen_beta2_template_jobs2.png"), 40, 80, e -> {
-		});
+		imagebutton_screen_beta2_template_jobs2 = new ImageButton(this.leftPos + 272, this.topPos + 57, 40, 40,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi2.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_screen_beta2_template_jobs2", imagebutton_screen_beta2_template_jobs2);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs2);
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 328, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobsguiButtonMessage(4, x, y, z));
-				JobsguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 328, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsguiButtonMessage(4, x, y, z));
+						JobsguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 	}

@@ -3,13 +3,6 @@ package palamod.item;
 
 import palamod.world.inventory.PhoneguiMenu;
 
-import palamod.item.inventory.PaladiumphoneInventoryCapability;
-
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
@@ -25,9 +18,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.nbt.CompoundTag;
-
-import javax.annotation.Nullable;
 
 import io.netty.buffer.Unpooled;
 
@@ -42,7 +32,7 @@ public class PaladiumphoneItem extends Item {
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
 		return 0f;
 	}
 
@@ -50,7 +40,7 @@ public class PaladiumphoneItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		if (entity instanceof ServerPlayer serverPlayer) {
-			NetworkHooks.openScreen(serverPlayer, new MenuProvider() {
+			serverPlayer.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
 					return Component.literal("Paladiumphone");
@@ -69,24 +59,5 @@ public class PaladiumphoneItem extends Item {
 			});
 		}
 		return ar;
-	}
-
-	@Override
-	public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundTag compound) {
-		return new PaladiumphoneInventoryCapability();
-	}
-
-	@Override
-	public CompoundTag getShareTag(ItemStack stack) {
-		CompoundTag nbt = stack.getOrCreateTag();
-		stack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> nbt.put("Inventory", ((ItemStackHandler) capability).serializeNBT()));
-		return nbt;
-	}
-
-	@Override
-	public void readShareTag(ItemStack stack, @Nullable CompoundTag nbt) {
-		super.readShareTag(stack, nbt);
-		if (nbt != null)
-			stack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> ((ItemStackHandler) capability).deserializeNBT((CompoundTag) nbt.get("Inventory")));
 	}
 }

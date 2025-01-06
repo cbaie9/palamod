@@ -17,53 +17,39 @@ public class JobsminercraftboomtntProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "A obsidian that";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text = "A obsidian that";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "make a explosion ";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text2 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text2 = "make a explosion ";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "who hurt only the enties";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text3 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text3 = "who hurt only the enties";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "in the area";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text4 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text4 = "in the area";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text5 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text5 = "";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "No durability";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_durability = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_durability = "No durability";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "Lvl required : 15";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.lvl_required = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.lvl_required = "Lvl required : 15";
+			_vars.syncPlayerVariables(entity);
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.OBSIDIAN)) : false) && (new Object() {
 			public int getAmount(int sltid) {

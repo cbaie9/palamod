@@ -22,18 +22,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Chervil3Block extends FlowerBlock {
 	public Chervil3Block() {
-		super(() -> MobEffects.FIRE_RESISTANCE, 60, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 60;
+		super(MobEffects.FIRE_RESISTANCE, 60, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -72,8 +66,8 @@ public class Chervil3Block extends FlowerBlock {
 	}
 
 	@Override
-	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
+	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
+		super.useWithoutItem(blockstate, world, pos, entity, hit);
 		Chervil3shearProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return InteractionResult.SUCCESS;
 	}

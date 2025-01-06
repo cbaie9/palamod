@@ -35,11 +35,11 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 		this.imageHeight = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/screens/factionhomegui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/factionhomegui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}

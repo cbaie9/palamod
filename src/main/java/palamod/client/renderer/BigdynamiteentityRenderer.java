@@ -16,6 +16,6 @@ public class BigdynamiteentityRenderer extends MobRenderer<BigdynamiteentityEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(BigdynamiteentityEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/pala_dyna.png");
+		return ResourceLocation.parse("palamod:textures/entities/pala_dyna.png");
 	}
 }

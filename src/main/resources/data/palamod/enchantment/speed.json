@@ -1,0 +1,26 @@
+{
+  "description": {
+    "translate": "enchantment.palamod.speed"
+  },
+  "supported_items": [
+    "palamod:endium_hammer",
+    "palamod:paladium_hammer",
+    "palamod:creative_hammer",
+    "palamod:green_paladium_hammer"
+  ],
+  "weight": 10,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

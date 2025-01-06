@@ -4,7 +4,7 @@ package palamod.block;
 import palamod.procedures.ForgesetupProcedure;
 import palamod.procedures.FertilizedbmplantProcedure;
 
-import net.minecraftforge.common.IPlantable;
+import net.neoforged.neoforge.common.util.TriState;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -47,8 +47,8 @@ public class FertilseddirtBlock extends Block {
 	}
 
 	@Override
-	public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
-		return true;
+	public TriState canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, BlockState plant) {
+		return TriState.TRUE;
 	}
 
 	@Override
@@ -61,10 +61,7 @@ public class FertilseddirtBlock extends Block {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		FertilizedbmplantProcedure.execute(world, x, y, z);
+		FertilizedbmplantProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 1);
 	}
 }

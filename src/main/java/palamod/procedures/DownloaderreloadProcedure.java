@@ -32,7 +32,7 @@ public class DownloaderreloadProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY)
-					.is(ItemTags.create(new ResourceLocation("forge:uploadersellable")))) {
+					.is(ItemTags.create(ResourceLocation.parse("forge:uploadersellable")))) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);

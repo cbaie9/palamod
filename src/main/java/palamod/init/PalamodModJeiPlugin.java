@@ -9,6 +9,7 @@ import palamod.jei_recipes.CrusherrecipetypeRecipeCategory;
 import palamod.jei_recipes.CrusherrecipetypeRecipe;
 
 import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.Minecraft;
@@ -19,6 +20,7 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.IModPlugin;
 
+import java.util.stream.Collectors;
 import java.util.Objects;
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class PalamodModJeiPlugin implements IModPlugin {
 
 	@Override
 	public ResourceLocation getPluginUid() {
-		return new ResourceLocation("palamod:jei_plugin");
+		return ResourceLocation.parse("palamod:jei_plugin");
 	}
 
 	@Override
@@ -43,11 +45,11 @@ public class PalamodModJeiPlugin implements IModPlugin {
 	@Override
 	public void registerRecipes(IRecipeRegistration registration) {
 		RecipeManager recipeManager = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
-		List<CrusherrecipetypeRecipe> CrusherrecipetypeRecipes = recipeManager.getAllRecipesFor(CrusherrecipetypeRecipe.Type.INSTANCE);
+		List<CrusherrecipetypeRecipe> CrusherrecipetypeRecipes = recipeManager.getAllRecipesFor(CrusherrecipetypeRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
 		registration.addRecipes(Crusherrecipetype_Type, CrusherrecipetypeRecipes);
-		List<PaladiummachinerecipetypejeiRecipe> PaladiummachinerecipetypejeiRecipes = recipeManager.getAllRecipesFor(PaladiummachinerecipetypejeiRecipe.Type.INSTANCE);
+		List<PaladiummachinerecipetypejeiRecipe> PaladiummachinerecipetypejeiRecipes = recipeManager.getAllRecipesFor(PaladiummachinerecipetypejeiRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
 		registration.addRecipes(Paladiummachinerecipetypejei_Type, PaladiummachinerecipetypejeiRecipes);
-		List<GrinderhighrecipetypejeiRecipe> GrinderhighrecipetypejeiRecipes = recipeManager.getAllRecipesFor(GrinderhighrecipetypejeiRecipe.Type.INSTANCE);
+		List<GrinderhighrecipetypejeiRecipe> GrinderhighrecipetypejeiRecipes = recipeManager.getAllRecipesFor(GrinderhighrecipetypejeiRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
 		registration.addRecipes(Grinderhighrecipetypejei_Type, GrinderhighrecipetypejeiRecipes);
 	}
 

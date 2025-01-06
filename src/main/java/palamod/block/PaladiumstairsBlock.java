@@ -12,17 +12,12 @@ import net.minecraft.core.BlockPos;
 
 public class PaladiumstairsBlock extends StairBlock {
 	public PaladiumstairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1.5f, 13f).requiresCorrectToolForDrops().dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1.5f, 13f).requiresCorrectToolForDrops().dynamicShape());
 	}
 
 	@Override
 	public float getExplosionResistance() {
 		return 13f;
-	}
-
-	@Override
-	public boolean isRandomlyTicking(BlockState state) {
-		return false;
 	}
 
 	@Override

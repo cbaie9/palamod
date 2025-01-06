@@ -55,10 +55,10 @@ import palamod.procedures.ConnectAdminshopmobs2blazeProcedure;
 import palamod.procedures.AdminshopblockconnectProcedure;
 import palamod.procedures.Adminshop_openProcedure;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.common.util.FakePlayerFactory;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.common.util.FakePlayerFactory;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
@@ -66,7 +66,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class AdminshopCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {

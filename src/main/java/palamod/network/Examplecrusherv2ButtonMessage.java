@@ -7,55 +7,52 @@ import palamod.procedures.ConnectpalahelpcrusherProcedure;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.function.Supplier;
 import java.util.HashMap;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class Examplecrusherv2ButtonMessage {
-	private final int buttonID, x, y, z;
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record Examplecrusherv2ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public Examplecrusherv2ButtonMessage(FriendlyByteBuf buffer) {
-		this.buttonID = buffer.readInt();
-		this.x = buffer.readInt();
-		this.y = buffer.readInt();
-		this.z = buffer.readInt();
-	}
-
-	public Examplecrusherv2ButtonMessage(int buttonID, int x, int y, int z) {
-		this.buttonID = buttonID;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
-
-	public static void buffer(Examplecrusherv2ButtonMessage message, FriendlyByteBuf buffer) {
+	public static final Type<Examplecrusherv2ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "examplecrusherv_2_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, Examplecrusherv2ButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, Examplecrusherv2ButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
+	}, (RegistryFriendlyByteBuf buffer) -> new Examplecrusherv2ButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	@Override
+	public Type<Examplecrusherv2ButtonMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(Examplecrusherv2ButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			Player entity = context.getSender();
-			int buttonID = message.buttonID;
-			int x = message.x;
-			int y = message.y;
-			int z = message.z;
-			handleButtonAction(entity, buttonID, x, y, z);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final Examplecrusherv2ButtonMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> {
+				Player entity = context.player();
+				int buttonID = message.buttonID;
+				int x = message.x;
+				int y = message.y;
+				int z = message.z;
+				handleButtonAction(entity, buttonID, x, y, z);
+			}).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
@@ -72,6 +69,6 @@ public class Examplecrusherv2ButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PalamodMod.addNetworkMessage(Examplecrusherv2ButtonMessage.class, Examplecrusherv2ButtonMessage::buffer, Examplecrusherv2ButtonMessage::new, Examplecrusherv2ButtonMessage::handler);
+		PalamodMod.addNetworkMessage(Examplecrusherv2ButtonMessage.TYPE, Examplecrusherv2ButtonMessage.STREAM_CODEC, Examplecrusherv2ButtonMessage::handleData);
 	}
 }

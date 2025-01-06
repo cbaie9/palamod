@@ -1,9 +1,9 @@
 package palamod.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
+import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import javax.annotation.Nullable;
 
@@ -11,10 +11,10 @@ import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class OpenModProcedure {
 	@SubscribeEvent
-	public static void onWorldLoad(net.minecraftforge.event.level.LevelEvent.Load event) {
+	public static void onWorldLoad(net.neoforged.neoforge.event.level.LevelEvent.Load event) {
 		execute(event);
 	}
 

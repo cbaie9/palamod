@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "forge:erable__log"
+    }
+  ],
+  "result": {
+    "id": "palamod:erable_planks",
+    "count": 4
+  }
+}

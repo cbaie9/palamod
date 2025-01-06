@@ -4,7 +4,7 @@ import palamod.world.inventory.AdminpanelmenuMenu;
 
 import palamod.network.AdminpanelmenuButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -42,7 +42,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -53,7 +53,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -78,7 +78,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		super.init();
 		button_hdv_stocks_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_hdv_stocks_panel"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new AdminpanelmenuButtonMessage(0, x, y, z));
 				AdminpanelmenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 30, this.topPos + 24, 108, 20).build();
@@ -86,7 +86,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		this.addRenderableWidget(button_hdv_stocks_panel);
 		button_spawn_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_spawn_panel"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new AdminpanelmenuButtonMessage(1, x, y, z));
 				AdminpanelmenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 43, this.topPos + 78, 82, 20).build();
@@ -94,7 +94,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		this.addRenderableWidget(button_spawn_panel);
 		button_trixium_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_trixium_panel"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(2, x, y, z));
+				PacketDistributor.sendToServer(new AdminpanelmenuButtonMessage(2, x, y, z));
 				AdminpanelmenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 38, this.topPos + 108, 93, 20).build();
@@ -102,7 +102,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		this.addRenderableWidget(button_trixium_panel);
 		button_jobs_panel = Button.builder(Component.translatable("gui.palamod.adminpanelmenu.button_jobs_panel"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminpanelmenuButtonMessage(3, x, y, z));
+				PacketDistributor.sendToServer(new AdminpanelmenuButtonMessage(3, x, y, z));
 				AdminpanelmenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 48, this.topPos + 135, 77, 20).build();

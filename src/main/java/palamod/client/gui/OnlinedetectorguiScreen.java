@@ -6,7 +6,7 @@ import palamod.procedures.OnlinedetectorgetplayerProcedure;
 
 import palamod.network.OnlinedetectorguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -44,7 +44,7 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		player_name.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -56,7 +56,7 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/onlinedetectorgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/onlinedetectorgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
 
 		RenderSystem.disableBlend();
 	}
@@ -70,12 +70,6 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 		if (player_name.isFocused())
 			return player_name.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
-		player_name.tick();
 	}
 
 	@Override
@@ -108,21 +102,21 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.palamod.onlinedetectorgui.player_name").getString());
 				else
 					setSuggestion(null);
 			}
 		};
-		player_name.setSuggestion(Component.translatable("gui.palamod.onlinedetectorgui.player_name").getString());
 		player_name.setMaxLength(32767);
+		player_name.setSuggestion(Component.translatable("gui.palamod.onlinedetectorgui.player_name").getString());
 		guistate.put("text:player_name", player_name);
 		this.addWidget(this.player_name);
 		button_detect = Button.builder(Component.translatable("gui.palamod.onlinedetectorgui.button_detect"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new OnlinedetectorguiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new OnlinedetectorguiButtonMessage(0, x, y, z));
 				OnlinedetectorguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 4, this.topPos + 37, 56, 20).build();

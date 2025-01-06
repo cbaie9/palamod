@@ -2,11 +2,13 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.core.component.DataComponents;
 
 public class HangboostProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
@@ -14,11 +16,19 @@ public class HangboostProcedure {
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.HANG_GLIDER.get()
 				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.HANG_GLIDER.get()) {
-			if (itemstack.getOrCreateTag().getBoolean("hang_glider_setup")) {
-				itemstack.getOrCreateTag().putBoolean("hang_glider_setup", true);
-				itemstack.getOrCreateTag().putBoolean("hang_state", false);
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("hang_glider_setup")) {
+				{
+					final String _tagName = "hang_glider_setup";
+					final boolean _tagValue = true;
+					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+				}
+				{
+					final String _tagName = "hang_state";
+					final boolean _tagValue = false;
+					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+				}
 			}
-			if (itemstack.getOrCreateTag().getBoolean("hang_state")) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("hang_state")) {
 				if (entity.isShiftKeyDown()) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1, 4, false, false));
@@ -29,10 +39,18 @@ public class HangboostProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 99999, 1, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 99999, 2, false, false));
-					itemstack.getOrCreateTag().putBoolean("hang_state", false);
+					{
+						final String _tagName = "hang_state";
+						final boolean _tagValue = false;
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+					}
 				}
 			} else {
-				itemstack.getOrCreateTag().putBoolean("hang_state", true);
+				{
+					final String _tagName = "hang_state";
+					final boolean _tagValue = true;
+					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putBoolean(_tagName, _tagValue));
+				}
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.SLOW_FALLING);
 				if (entity instanceof LivingEntity _entity)

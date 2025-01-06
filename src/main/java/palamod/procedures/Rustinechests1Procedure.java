@@ -156,7 +156,7 @@ public class Rustinechests1Procedure {
 			}
 		}
 		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY)
-				.is(ItemTags.create(new ResourceLocation("palamod:rings")))) {
+				.is(ItemTags.create(ResourceLocation.parse("palamod:rings")))) {
 			if (is12 && !is12full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();

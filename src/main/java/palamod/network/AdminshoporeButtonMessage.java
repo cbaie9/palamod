@@ -18,55 +18,52 @@ import palamod.procedures.Adminshop_openProcedure;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.function.Supplier;
 import java.util.HashMap;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class AdminshoporeButtonMessage {
-	private final int buttonID, x, y, z;
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record AdminshoporeButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public AdminshoporeButtonMessage(FriendlyByteBuf buffer) {
-		this.buttonID = buffer.readInt();
-		this.x = buffer.readInt();
-		this.y = buffer.readInt();
-		this.z = buffer.readInt();
-	}
-
-	public AdminshoporeButtonMessage(int buttonID, int x, int y, int z) {
-		this.buttonID = buttonID;
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
-
-	public static void buffer(AdminshoporeButtonMessage message, FriendlyByteBuf buffer) {
+	public static final Type<AdminshoporeButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "adminshopore_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, AdminshoporeButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AdminshoporeButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
+	}, (RegistryFriendlyByteBuf buffer) -> new AdminshoporeButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	@Override
+	public Type<AdminshoporeButtonMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(AdminshoporeButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			Player entity = context.getSender();
-			int buttonID = message.buttonID;
-			int x = message.x;
-			int y = message.y;
-			int z = message.z;
-			handleButtonAction(entity, buttonID, x, y, z);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final AdminshoporeButtonMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> {
+				Player entity = context.player();
+				int buttonID = message.buttonID;
+				int x = message.x;
+				int y = message.y;
+				int z = message.z;
+				handleButtonAction(entity, buttonID, x, y, z);
+			}).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
@@ -127,6 +124,6 @@ public class AdminshoporeButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PalamodMod.addNetworkMessage(AdminshoporeButtonMessage.class, AdminshoporeButtonMessage::buffer, AdminshoporeButtonMessage::new, AdminshoporeButtonMessage::handler);
+		PalamodMod.addNetworkMessage(AdminshoporeButtonMessage.TYPE, AdminshoporeButtonMessage.STREAM_CODEC, AdminshoporeButtonMessage::handleData);
 	}
 }

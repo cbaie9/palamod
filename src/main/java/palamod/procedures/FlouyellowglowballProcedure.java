@@ -11,6 +11,6 @@ public class FlouyellowglowballProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.TUNNELVISION.get(), 100, 1));
+			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.TUNNELVISION, 100, 1));
 	}
 }

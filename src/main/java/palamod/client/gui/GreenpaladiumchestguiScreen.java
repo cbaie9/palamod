@@ -33,7 +33,7 @@ public class GreenpaladiumchestguiScreen extends AbstractContainerScreen<Greenpa
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -44,17 +44,17 @@ public class GreenpaladiumchestguiScreen extends AbstractContainerScreen<Greenpa
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/greenpaladiumchestgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 306, 225, 306, 225);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/greenpaladiumchestgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 306, 225, 306, 225);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_to_set.png"), this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_to_set.png"), this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 269, this.topPos + 163, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_gui.png"), this.leftPos + 269, this.topPos + 163, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 251, this.topPos + 163, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_gui.png"), this.leftPos + 251, this.topPos + 163, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 251, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_gui.png"), this.leftPos + 251, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_gui.png"), this.leftPos + 269, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_gui.png"), this.leftPos + 269, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

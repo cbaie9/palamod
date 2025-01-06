@@ -4,7 +4,7 @@ import palamod.world.inventory.LanguageselectionMenu;
 
 import palamod.network.LanguageselectionButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -40,7 +40,7 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -51,11 +51,11 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/english_lang.png"), this.leftPos + 7, this.topPos + 31, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/english_lang.png"), this.leftPos + 7, this.topPos + 31, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/french_lang.png"), this.leftPos + 6, this.topPos + 66, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/french_lang.png"), this.leftPos + 6, this.topPos + 66, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -79,7 +79,7 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 		super.init();
 		button_franais = Button.builder(Component.translatable("gui.palamod.languageselection.button_franais"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new LanguageselectionButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new LanguageselectionButtonMessage(0, x, y, z));
 				LanguageselectionButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 28, this.topPos + 64, 67, 20).build();
@@ -87,7 +87,7 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 		this.addRenderableWidget(button_franais);
 		button_english = Button.builder(Component.translatable("gui.palamod.languageselection.button_english"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new LanguageselectionButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new LanguageselectionButtonMessage(1, x, y, z));
 				LanguageselectionButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 29, 61, 20).build();

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:endium_pickaxe",
+    "palamod:endium_axe",
+    "palamod:endium_sword",
+    "palamod:endium_armor_helmet",
+    "palamod:endium_armor_chestplate",
+    "palamod:endium_armor_leggings",
+    "palamod:endium_armor_boots"
+  ]
+}

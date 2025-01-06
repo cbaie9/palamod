@@ -1,0 +1,43 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license=" CC-BY-NC-4.0 + https://pastebin.com/47smwufD"
+
+[[mods]]
+modId="palamod"
+version="1.20.031"
+displayName="Palamod renew"
+updateJSONURL="https://github.com/cbaie9/ng_wpckiller/raw/main/update.json"
+displayURL="Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA"
+logoFile="logo.png"
+credits="Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games "
+authors="cb9, FufuBS1 ( + Paladium Games for the original mod)"
+description="Un univers alternatif o\u00F9 la v5 \u00E0 bien chang\u00E9 de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.palamod]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.65,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.palamod]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.palamod]]
+    modId="jei"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

@@ -46,7 +46,7 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -57,42 +57,42 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachinegui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachinegui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load0.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load0.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 
 		if (Palamachinesubprocess1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamchine_load1.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamchine_load1.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load2.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load2.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load3.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load3.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load4.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load4.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load5.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load5.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess6Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load6.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load6.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess7Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load7.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load7.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess8Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load8.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load8.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess9Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load9.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load9.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess10Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load10.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load10.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess11Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palamachine_load11.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load11.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		RenderSystem.disableBlend();
 	}

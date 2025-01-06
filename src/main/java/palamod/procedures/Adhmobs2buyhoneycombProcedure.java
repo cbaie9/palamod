@@ -6,8 +6,8 @@ import palamod.PalamodMod;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;

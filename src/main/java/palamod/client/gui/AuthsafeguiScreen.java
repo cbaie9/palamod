@@ -4,7 +4,7 @@ import palamod.world.inventory.AuthsafeguiMenu;
 
 import palamod.network.AuthsafeguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -42,7 +42,7 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		code_check.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -54,7 +54,7 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/authsafegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/authsafegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
 
 		RenderSystem.disableBlend();
 	}
@@ -68,12 +68,6 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 		if (code_check.isFocused())
 			return code_check.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
-		code_check.tick();
 	}
 
 	@Override
@@ -97,7 +91,7 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 		this.addWidget(this.code_check);
 		button_open = Button.builder(Component.translatable("gui.palamod.authsafegui.button_open"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AuthsafeguiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new AuthsafeguiButtonMessage(0, x, y, z));
 				AuthsafeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 3, this.topPos + 36, 46, 20).build();

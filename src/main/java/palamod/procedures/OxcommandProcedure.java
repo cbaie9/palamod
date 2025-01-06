@@ -2,15 +2,17 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.GameType;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.commands.arguments.MessageArgument;
 import net.minecraft.commands.CommandSourceStack;
 
@@ -50,7 +52,11 @@ public class OxcommandProcedure {
 				}
 			}
 		}).getMessage()).equals("ptg_jobs")) {
-			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("Pickaxe_stone", (DoubleArgumentType.getDouble(arguments, "quan")));
+			{
+				final String _tagName = "Pickaxe_stone";
+				final double _tagValue = (DoubleArgumentType.getDouble(arguments, "quan"));
+				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+			}
 			entity.getPersistentData().putDouble("Pickaxe_stone", (DoubleArgumentType.getDouble(arguments, "quan")));
 		}
 		if (((new Object() {

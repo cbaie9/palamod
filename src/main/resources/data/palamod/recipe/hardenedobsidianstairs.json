@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:renforced_obsidian"
+    }
+  },
+  "result": {
+    "id": "palamod:hardenedobsidianslab",
+    "count": 6
+  }
+}

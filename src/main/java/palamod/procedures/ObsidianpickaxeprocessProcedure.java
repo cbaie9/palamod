@@ -17,7 +17,7 @@ public class ObsidianpickaxeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("palamod:opic")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:opic")))) {
 			if ((new Object() {
 				public Direction getDirection(BlockState _bs) {
 					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");

@@ -6,11 +6,11 @@ package palamod.init;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -18,10 +18,10 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PalamodModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PalamodMod.MODID);
-	public static final RegistryObject<CreativeModeTab> PALAMOD = REGISTRY.register("palamod",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PALAMOD = REGISTRY.register("palamod",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.palamod")).icon(() -> new ItemStack(PalamodModItems.PALADIUM_INGOT.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.PALADIUM_INGOT.get());
 				tabData.accept(PalamodModBlocks.PALADIUM_ORE.get().asItem());
@@ -260,7 +260,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ROULETTEPALADIENNEDISC.get());
 				tabData.accept(PalamodModItems.CLASHKUMIZ.get());
 			}).build());
-	public static final RegistryObject<CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.EGGPLANT.get());
 				tabData.accept(PalamodModItems.ORANGEBLUE.get());
@@ -319,7 +319,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get());
 				tabData.accept(PalamodModItems.ENDIUM_SHOVEL_HEAD.get());
 			}).withTabsBefore(PALAMOD.getId()).build());
-	public static final RegistryObject<CreativeModeTab> DECORATIONCREATIVETAB = REGISTRY.register("decorationcreativetab",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DECORATIONCREATIVETAB = REGISTRY.register("decorationcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.decorationcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_WOOD.get().asItem());
 				tabData.accept(PalamodModBlocks.OSTRYA_WOOD_LOG.get().asItem());
@@ -362,7 +362,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
-	public static final RegistryObject<CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModBlocks.SLIMEPAD.get().asItem());
 				tabData.accept(PalamodModItems.HEAL_ORB.get());
@@ -390,7 +390,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ORANGEGLUEBALL.get().asItem());
 				tabData.accept(PalamodModBlocks.GRAYGLUEBALL.get().asItem());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
-	public static final RegistryObject<CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModBlocks.OBSIDIAN_TRAPDOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.RENFORCED_OBSIDIAN.get().asItem());
@@ -418,7 +418,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.OBSIDIANSLAB.get().asItem());
 				tabData.accept(PalamodModBlocks.HARDENEDOBSIDIANSLAB.get().asItem());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
-	public static final RegistryObject<CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.LEGENDARY_STONE_FORTUNE.get());
 				tabData.accept(PalamodModItems.LEGENDARY_STONE_INVISIBLE.get());
@@ -437,7 +437,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.CHUNKANASLYSER.get());
 				tabData.accept(PalamodModBlocks.ALARM_ON.get().asItem());
 			}).withTabsBefore(BASECLAIM.getId()).build());
-	public static final RegistryObject<CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_1.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_1.get());
 				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_2.get());
@@ -463,7 +463,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get());
 				tabData.accept(PalamodModItems.CREATIVEPOTG.get());
 			}).withTabsBefore(LUCKYBLOCKCREATIVETAB.getId()).build());
-	public static final RegistryObject<CreativeModeTab> JOBSCREATIVETABS = REGISTRY.register("jobscreativetabs",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> JOBSCREATIVETABS = REGISTRY.register("jobscreativetabs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.jobscreativetabs")).icon(() -> new ItemStack(PalamodModItems.PALADIUM_HOE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModBlocks.COBBLEBREAKER.get().asItem());
 				tabData.accept(PalamodModItems.DOLLARS_STONE.get());

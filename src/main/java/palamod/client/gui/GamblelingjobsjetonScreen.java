@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -38,7 +39,7 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 379 && mouseX < leftPos + 396 && mouseY > topPos + 4 && mouseY < topPos + 21)
@@ -73,12 +74,24 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_arrow_back_true_1 = new ImageButton(this.leftPos + 359, this.topPos + 4, 17, 17, 0, 0, 17, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_back_true_1.png"), 17, 34, e -> {
-		});
+		imagebutton_arrow_back_true_1 = new ImageButton(this.leftPos + 359, this.topPos + 4, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_arrow_back_true_1", imagebutton_arrow_back_true_1);
 		this.addRenderableWidget(imagebutton_arrow_back_true_1);
-		imagebutton_close_gui_nohover = new ImageButton(this.leftPos + 379, this.topPos + 4, 17, 17, 0, 0, 17, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_close_gui_nohover.png"), 17, 34, e -> {
-		});
+		imagebutton_close_gui_nohover = new ImageButton(this.leftPos + 379, this.topPos + 4, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_close_gui_nohover", imagebutton_close_gui_nohover);
 		this.addRenderableWidget(imagebutton_close_gui_nohover);
 	}

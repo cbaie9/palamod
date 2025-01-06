@@ -1,12 +1,12 @@
 package palamod.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -55,7 +55,7 @@ public class GetxpminerbreakblockProcedure {
 					bufferedReader.close();
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					for (int index0 = 0; index0 < 9; index0++) {
-						block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+						block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 						if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
 							output = output + 0.5;
 						} else if (block.getBlock() == Blocks.DIORITE) {

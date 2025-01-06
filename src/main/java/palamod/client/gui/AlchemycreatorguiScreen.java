@@ -31,11 +31,11 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/screens/alchemycreatorgui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/alchemycreatorgui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -47,7 +47,7 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/alchemy_arrow.png"), this.leftPos + 122, this.topPos + 25, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/alchemy_arrow.png"), this.leftPos + 122, this.topPos + 25, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

@@ -18,53 +18,39 @@ public class JobsminercraftendiumtntProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "A tnt that remove";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text = "A tnt that remove";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "any liquid in";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text2 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text2 = "any liquid in";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "the area";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text3 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text3 = "the area";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = " ";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text4 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text4 = " ";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = " ";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_get_text5 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_get_text5 = " ";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "No durability";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.jobs_durability = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.jobs_durability = "No durability";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			String _setval = "Lvl required : 74";
-			entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.lvl_required = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+			_vars.lvl_required = "Lvl required : 74";
+			_vars.syncPlayerVariables(entity);
 		}
 		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.TNT)) : false) && (new Object() {
 			public int getAmount(int sltid) {

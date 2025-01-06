@@ -8,7 +8,7 @@ import net.minecraft.core.BlockPos;
 
 public class MagicaltoolsprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("palamod:omt")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
 			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId((world.getBlockState(BlockPos.containing(x, y, z)))));
 			{
 				BlockPos _pos = BlockPos.containing(x, y, z);

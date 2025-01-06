@@ -2,20 +2,22 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
+import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
+import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
@@ -27,7 +29,7 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class MoneyitemuseProcedure {
 	@SubscribeEvent
 	public static void onGemDropped(ItemTossEvent event) {
@@ -46,9 +48,9 @@ public class MoneyitemuseProcedure {
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (money.exists()) {
 			if (PalamodModItems.MONEY_ITEM.get() == itemstack.getItem() || PalamodModItems.MONEY_1K.get() == itemstack.getItem()) {
-				if (itemstack.getOrCreateTag().getBoolean("Is_pname")) {
-					if ((itemstack.getOrCreateTag().getString("Money_spename")).equals(entity.getDisplayName().getString())) {
-						if (itemstack.getOrCreateTag().getBoolean("destri_money")) {
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("Is_pname")) {
+					if ((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("Money_spename")).equals(entity.getDisplayName().getString())) {
+						if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("destri_money")) {
 							if (entity instanceof Player _player) {
 								ItemStack _stktoremove = itemstack;
 								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -64,7 +66,7 @@ public class MoneyitemuseProcedure {
 								}
 								bufferedReader.close();
 								main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-								main_money.addProperty("money", (itemstack.getOrCreateTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
+								main_money.addProperty("money", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
 							} catch (IOException e) {
 								e.printStackTrace();
 							}
@@ -84,7 +86,7 @@ public class MoneyitemuseProcedure {
 							_player.displayClientMessage(Component.literal("wrong player"), false);
 					}
 				} else {
-					if (itemstack.getOrCreateTag().getBoolean("destri_money")) {
+					if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("destri_money")) {
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									"kill @e[limit=1,sort=nearest,distance=1..5,type=item]");
@@ -99,7 +101,7 @@ public class MoneyitemuseProcedure {
 							}
 							bufferedReader.close();
 							main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							main_money.addProperty("money", (itemstack.getOrCreateTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
+							main_money.addProperty("money", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
 						} catch (IOException e) {
 							e.printStackTrace();
 						}

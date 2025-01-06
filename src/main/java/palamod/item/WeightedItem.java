@@ -1,69 +1,50 @@
 
 package palamod.item;
 
+import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Holder;
+import net.minecraft.Util;
 
+import java.util.List;
+import java.util.EnumMap;
+
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class WeightedItem extends ArmorItem {
+	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
+
+	@SubscribeEvent
+	public static void registerArmorMaterial(RegisterEvent event) {
+		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
+			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+				map.put(ArmorItem.Type.BOOTS, 2);
+				map.put(ArmorItem.Type.LEGGINGS, 5);
+				map.put(ArmorItem.Type.CHESTPLATE, 6);
+				map.put(ArmorItem.Type.HELMET, 2);
+				map.put(ArmorItem.Type.BODY, 6);
+			}), 9, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:weighted_"))), 0f, 0f);
+			registerHelper.register(ResourceLocation.parse("palamod:weighted"), armorMaterial);
+			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
+		});
+	}
+
 	public WeightedItem(ArmorItem.Type type, Item.Properties properties) {
-		super(new ArmorMaterial() {
-			@Override
-			public int getDurabilityForType(ArmorItem.Type type) {
-				return new int[]{13, 15, 16, 11}[type.getSlot().getIndex()] * 100;
-			}
-
-			@Override
-			public int getDefenseForType(ArmorItem.Type type) {
-				return new int[]{2, 5, 6, 2}[type.getSlot().getIndex()];
-			}
-
-			@Override
-			public int getEnchantmentValue() {
-				return 9;
-			}
-
-			@Override
-			public SoundEvent getEquipSound() {
-				return SoundEvents.EMPTY;
-			}
-
-			@Override
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
-			}
-
-			@Override
-			public String getName() {
-				return "weighted";
-			}
-
-			@Override
-			public float getToughness() {
-				return 0f;
-			}
-
-			@Override
-			public float getKnockbackResistance() {
-				return 0f;
-			}
-		}, type, properties);
+		super(ARMOR_MATERIAL, type, properties);
 	}
 
 	public static class Boots extends WeightedItem {
 		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties());
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "palamod:textures/models/armor/weighted__layer_1.png";
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(100)));
 		}
 	}
 }

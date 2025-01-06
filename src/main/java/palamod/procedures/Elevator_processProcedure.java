@@ -18,7 +18,7 @@ public class Elevator_processProcedure {
 			y_pos = y;
 			add_num = 1;
 			for (int index0 = 0; index0 < 320; index0++) {
-				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(new ResourceLocation("palamod:elevator")))) {
+				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
 						_ent.teleportTo((x + 0.5), (y_pos - add_num + 1), (z + 0.5));
@@ -36,7 +36,7 @@ public class Elevator_processProcedure {
 			y_pos = y;
 			add_num = 1;
 			for (int index1 = 0; index1 < 320; index1++) {
-				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(new ResourceLocation("palamod:elevator")))) {
+				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
 						_ent.teleportTo((x + 0.5), (y_pos + add_num + 1), (z + 0.5));

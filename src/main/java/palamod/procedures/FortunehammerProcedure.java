@@ -34,7 +34,7 @@ public class FortunehammerProcedure {
 			for (int index1 = 0; index1 < 3; index1++) {
 				if (i != 0 || j != 0) {
 					if (entity.getXRot() > 40 || entity.getXRot() < -40) {
-						if ((world.getBlockState(BlockPos.containing(x + i, y, z + j))).is(BlockTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+						if ((world.getBlockState(BlockPos.containing(x + i, y, z + j))).is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
 							{
 								BlockPos _pos = BlockPos.containing(x + i, y, z + j);
 								Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
@@ -42,7 +42,7 @@ public class FortunehammerProcedure {
 							}
 						}
 					} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
-						if ((world.getBlockState(BlockPos.containing(x + i, y + j, z))).is(BlockTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+						if ((world.getBlockState(BlockPos.containing(x + i, y + j, z))).is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
 							{
 								BlockPos _pos = BlockPos.containing(x + i, y + j, z);
 								Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
@@ -50,7 +50,7 @@ public class FortunehammerProcedure {
 							}
 						}
 					} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
-						if ((world.getBlockState(BlockPos.containing(x, y + j, z + i))).is(BlockTags.create(new ResourceLocation((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+						if ((world.getBlockState(BlockPos.containing(x, y + j, z + i))).is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
 							{
 								BlockPos _pos = BlockPos.containing(x, y + j, z + i);
 								Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);

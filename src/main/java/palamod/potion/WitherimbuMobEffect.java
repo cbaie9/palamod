@@ -8,9 +8,4 @@ public class WitherimbuMobEffect extends MobEffect {
 	public WitherimbuMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13421773);
 	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

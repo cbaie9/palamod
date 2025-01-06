@@ -16,6 +16,6 @@ public class PrimedbigtntRenderer extends MobRenderer<PrimedbigtntEntity, Modelp
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedbigtntEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/big_tntmodel.png");
+		return ResourceLocation.parse("palamod:textures/entities/big_tntmodel.png");
 	}
 }

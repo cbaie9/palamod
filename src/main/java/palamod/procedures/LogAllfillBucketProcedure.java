@@ -4,21 +4,24 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.FillBucketEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class LogAllfillBucketProcedure {
 	@SubscribeEvent
-	public static void onBucketFill(FillBucketEvent event) {
-		execute(event, event.getLevel(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+	public static void onBucketFill(PlayerInteractEvent.RightClickItem event) {
+		if (event.getItemStack().getItem() == Items.BUCKET) {
+			execute(event, event.getLevel(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+		}
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

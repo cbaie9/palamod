@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class ObsidiandoorBlock extends DoorBlock {
 	public ObsidiandoorBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape(), BlockSetType.IRON);
+		super(BlockSetType.IRON, BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
 	}
 
 	@Override

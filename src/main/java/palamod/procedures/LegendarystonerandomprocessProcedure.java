@@ -2,7 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;

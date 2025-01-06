@@ -4,7 +4,7 @@ import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -2219,7 +2219,7 @@ public class GuijobsminercheckcraftProcedure {
 					}
 					if (((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi
 							? _bi.getBlock().defaultBlockState()
-							: Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("forge:cobblestone"))) && new Object() {
+							: Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone"))) && new Object() {
 								public int getAmount(int sltid) {
 									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -2231,23 +2231,23 @@ public class GuijobsminercheckcraftProcedure {
 							}.getAmount(1) == 0
 							&& ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi
 									? _bi.getBlock().defaultBlockState()
-									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("forge:cobblestone")))
+									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone")))
 							&& ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi
 									? _bi.getBlock().defaultBlockState()
-									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("forge:cobblestone")))
+									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone")))
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.VOIDSTONE.get()
 							&& ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(5)).getItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi
 									? _bi.getBlock().defaultBlockState()
-									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("forge:cobblestone")))
+									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone")))
 							&& ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(6)).getItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi
 									? _bi.getBlock().defaultBlockState()
-									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("forge:cobblestone")))
+									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone")))
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.FORTUNE_MODIFIER.get()
 							&& ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() instanceof BlockItem _bi
 									? _bi.getBlock().defaultBlockState()
-									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(new ResourceLocation("forge:cobblestone")))
+									: Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone")))
 							&& (new Object() {
 								public int getAmount(int sltid) {
 									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

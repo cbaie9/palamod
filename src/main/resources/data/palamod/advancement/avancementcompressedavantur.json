@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "palamod:compressed_paladium"
+    },
+    "title": {
+      "translate": "advancements.avancementcompressedavantur.title"
+    },
+    "description": {
+      "translate": "advancements.avancementcompressedavantur.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "avancementcompressedavantur_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "palamod:avancementanshinyredingot"
+}

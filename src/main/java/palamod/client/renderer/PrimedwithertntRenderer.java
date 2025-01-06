@@ -16,6 +16,6 @@ public class PrimedwithertntRenderer extends MobRenderer<PrimedwithertntEntity, 
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedwithertntEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/wither_tntmodel.png");
+		return ResourceLocation.parse("palamod:textures/entities/wither_tntmodel.png");
 	}
 }

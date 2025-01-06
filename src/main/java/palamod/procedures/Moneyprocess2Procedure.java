@@ -2,7 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;

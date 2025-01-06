@@ -8,9 +8,4 @@ public class PoisonimbueMobEffect extends MobEffect {
 	public PoisonimbueMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -16737997);
 	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

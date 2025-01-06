@@ -26,12 +26,7 @@ import net.minecraft.core.BlockPos;
 
 public class Eggplant1Block extends FlowerBlock {
 	public Eggplant1Block() {
-		super(() -> MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 5;
+		super(MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -45,7 +40,7 @@ public class Eggplant1Block extends FlowerBlock {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
 		return new ItemStack(PalamodModItems.EGGPLANT_SEED.get());
 	}
 

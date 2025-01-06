@@ -4,6 +4,9 @@ package palamod.item;
 import palamod.procedures.HangboostProcedure;
 import palamod.procedures.ClearhanggliderProcedure;
 
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
@@ -24,8 +27,9 @@ public class HanggliderItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.palamod.hang_glider.description_0"));
 	}
 
@@ -37,8 +41,8 @@ public class HanggliderItem extends Item {
 	}
 
 	@Override
-	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
-		boolean retval = super.onEntitySwing(itemstack, entity);
+	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
+		boolean retval = super.onEntitySwing(itemstack, entity, hand);
 		HangboostProcedure.execute(entity, itemstack);
 		return retval;
 	}

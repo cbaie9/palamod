@@ -7,7 +7,7 @@ import palamod.procedures.PotgtranfertValueProcedure;
 
 import palamod.network.PotgtranfertButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -42,7 +42,7 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -53,7 +53,7 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/potgtranfert.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/potgtranfert.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -83,7 +83,7 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 		super.init();
 		button_transfert = Button.builder(Component.translatable("gui.palamod.potgtranfert.button_transfert"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PotgtranfertButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new PotgtranfertButtonMessage(0, x, y, z));
 				PotgtranfertButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 93, this.topPos + 25, 72, 20).build();

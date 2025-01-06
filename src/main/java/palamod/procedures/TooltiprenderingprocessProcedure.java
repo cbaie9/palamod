@@ -2,21 +2,23 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.component.DataComponents;
 
 import javax.annotation.Nullable;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(value = {Dist.CLIENT})
 public class TooltiprenderingprocessProcedure {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
@@ -34,16 +36,16 @@ public class TooltiprenderingprocessProcedure {
 		String jobs = "";
 		if (itemstack.getItem() == PalamodModItems.XPBOTTLE.get()) {
 			tooltip.add(1, Component.literal((Component.translatable("palamod.procedure.get_info_xpbottle1").getString())));
-			tooltip.add(2, Component.literal((Component.translatable("palamod.procedure.get_info_xpbottle2").getString() + " " + itemstack.getOrCreateTag().getDouble("xp_jobs"))));
-			if (0 == itemstack.getOrCreateTag().getDouble("jobs_type")) {
+			tooltip.add(2, Component.literal((Component.translatable("palamod.procedure.get_info_xpbottle2").getString() + " " + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"))));
+			if (0 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")) {
 				jobs = "empty";
-			} else if (1 == itemstack.getOrCreateTag().getDouble("jobs_type")) {
+			} else if (1 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")) {
 				jobs = Component.translatable("palamod.procedure.jobs_miner").getString();
-			} else if (2 == itemstack.getOrCreateTag().getDouble("jobs_type")) {
+			} else if (2 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")) {
 				jobs = Component.translatable("palamod.procedure.jobs_farmer").getString();
-			} else if (3 == itemstack.getOrCreateTag().getDouble("jobs_type")) {
+			} else if (3 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")) {
 				jobs = Component.translatable("palamod.procedure.jobs_hunter").getString();
-			} else if (4 == itemstack.getOrCreateTag().getDouble("jobs_type")) {
+			} else if (4 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")) {
 				jobs = Component.translatable("palamod.procedure.jobs_alchi").getString();
 			}
 			tooltip.add(3, Component.literal((Component.translatable("palamod.procedure.get_info_xpbottle3").getString() + " " + jobs)));

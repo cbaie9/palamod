@@ -9,7 +9,7 @@ import palamod.procedures.AdshoppreviewamountfeatherProcedure;
 
 import palamod.network.Adminshopmobs2featherButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
@@ -50,11 +51,11 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/screens/adminshopmobs_2feather.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/adminshopmobs_2feather.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -73,11 +74,11 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -91,12 +92,6 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		if (number_buy.isFocused())
 			return number_buy.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
-		number_buy.tick();
 	}
 
 	@Override
@@ -130,21 +125,21 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.palamod.adminshopmobs_2feather.number_buy").getString());
 				else
 					setSuggestion(null);
 			}
 		};
-		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshopmobs_2feather.number_buy").getString());
 		number_buy.setMaxLength(32767);
+		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshopmobs_2feather.number_buy").getString());
 		guistate.put("text:number_buy", number_buy);
 		this.addWidget(this.number_buy);
 		button_buy = Button.builder(Component.translatable("gui.palamod.adminshopmobs_2feather.button_buy"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Adminshopmobs2featherButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new Adminshopmobs2featherButtonMessage(0, x, y, z));
 				Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 109, 40, 20).build();
@@ -152,34 +147,52 @@ public class Adminshopmobs2featherScreen extends AbstractContainerScreen<Adminsh
 		this.addRenderableWidget(button_buy);
 		button_sell = Button.builder(Component.translatable("gui.palamod.adminshopmobs_2feather.button_sell"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Adminshopmobs2featherButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new Adminshopmobs2featherButtonMessage(1, x, y, z));
 				Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 99, this.topPos + 109, 46, 20).build();
 		guistate.put("button:button_sell", button_sell);
 		this.addRenderableWidget(button_sell);
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 153, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Adminshopmobs2featherButtonMessage(2, x, y, z));
-				Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 2, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 153, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Adminshopmobs2featherButtonMessage(2, x, y, z));
+						Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 135, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Adminshopmobs2featherButtonMessage(3, x, y, z));
-				Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 135, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Adminshopmobs2featherButtonMessage(3, x, y, z));
+						Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
-		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 118, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Adminshopmobs2featherButtonMessage(4, x, y, z));
-				Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 4, x, y, z);
+		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 118, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new Adminshopmobs2featherButtonMessage(4, x, y, z));
+						Adminshopmobs2featherButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}

@@ -10,6 +10,6 @@ import net.minecraft.world.item.BucketItem;
 
 public class AngelicwterItem extends BucketItem {
 	public AngelicwterItem() {
-		super(PalamodModFluids.ANGELICWTER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.COMMON));
+		super(PalamodModFluids.ANGELICWTER.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.COMMON));
 	}
 }

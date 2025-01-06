@@ -33,7 +33,7 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> {
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -44,7 +44,7 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/notyetgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 210, 50, 210, 50);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/notyetgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 210, 50, 210, 50);
 
 		RenderSystem.disableBlend();
 	}

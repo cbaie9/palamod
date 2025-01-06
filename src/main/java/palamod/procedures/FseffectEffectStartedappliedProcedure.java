@@ -2,7 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModParticleTypes;
 
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;

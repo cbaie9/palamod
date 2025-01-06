@@ -17,13 +17,11 @@ public class DeleteallProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PalamodModVariables.PlayerVariables())).buyslot == 0) {
+		if (entity.getData(PalamodModVariables.PLAYER_VARIABLES).buyslot == 0) {
 			{
-				double _setval = 1;
-				entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.buyslot = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+				_vars.buyslot = 1;
+				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 				((Slot) _slots.get(0)).set(ItemStack.EMPTY);
@@ -31,11 +29,9 @@ public class DeleteallProcedure {
 			}
 			PalamodMod.queueServerWork(20, () -> {
 				{
-					double _setval = 0;
-					entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.buyslot = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+					_vars.buyslot = 0;
+					_vars.syncPlayerVariables(entity);
 				}
 			});
 		}

@@ -16,6 +16,6 @@ public class PaladiumgolemRenderer extends MobRenderer<PaladiumgolemEntity, Mode
 
 	@Override
 	public ResourceLocation getTextureLocation(PaladiumgolemEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/golem1.12.png");
+		return ResourceLocation.parse("palamod:textures/entities/golem1.12.png");
 	}
 }

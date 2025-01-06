@@ -4,7 +4,7 @@ import palamod.world.inventory.PhoneguiMenu;
 
 import palamod.network.PhoneguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -42,7 +42,7 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		cheat_code_secret.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -54,7 +54,7 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/phonegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/phonegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -68,12 +68,6 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 		if (cheat_code_secret.isFocused())
 			return cheat_code_secret.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
-		cheat_code_secret.tick();
 	}
 
 	@Override
@@ -102,21 +96,21 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.palamod.phonegui.cheat_code_secret").getString());
 				else
 					setSuggestion(null);
 			}
 		};
-		cheat_code_secret.setSuggestion(Component.translatable("gui.palamod.phonegui.cheat_code_secret").getString());
 		cheat_code_secret.setMaxLength(32767);
+		cheat_code_secret.setSuggestion(Component.translatable("gui.palamod.phonegui.cheat_code_secret").getString());
 		guistate.put("text:cheat_code_secret", cheat_code_secret);
 		this.addWidget(this.cheat_code_secret);
 		button_test_code = Button.builder(Component.translatable("gui.palamod.phonegui.button_test_code"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PhoneguiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new PhoneguiButtonMessage(0, x, y, z));
 				PhoneguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 98, this.topPos + 57, 72, 20).build();

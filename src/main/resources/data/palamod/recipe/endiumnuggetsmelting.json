@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 50,
+  "ingredient": {
+    "item": "palamod:endium_nugget_ore"
+  },
+  "result": {
+    "id": "palamod:endium_nugget"
+  }
+}

@@ -4,8 +4,6 @@ import palamod.world.inventory.GrinderguiMenu;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
@@ -45,10 +43,15 @@ public class GrinderopenProcedure {
 				_player.closeContainer();
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Grindergui");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override
@@ -88,10 +91,15 @@ public class GrinderopenProcedure {
 						_player.closeContainer();
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
-						NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						_ent.openMenu(new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
 								return Component.literal("Grindergui");
+							}
+
+							@Override
+							public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+								return false;
 							}
 
 							@Override
@@ -136,10 +144,15 @@ public class GrinderopenProcedure {
 				_player.closeContainer();
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Grindergui");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override
@@ -176,10 +189,15 @@ public class GrinderopenProcedure {
 				_player.closeContainer();
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Grindergui");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override

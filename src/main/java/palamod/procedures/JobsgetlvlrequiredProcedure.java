@@ -8,6 +8,6 @@ public class JobsgetlvlrequiredProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return (entity.getCapability(PalamodModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PalamodModVariables.PlayerVariables())).lvl_required;
+		return entity.getData(PalamodModVariables.PLAYER_VARIABLES).lvl_required;
 	}
 }

@@ -1,7 +1,7 @@
 package palamod.procedures;
 
-import net.minecraftforge.server.ServerLifecycleHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.client.Minecraft;

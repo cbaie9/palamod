@@ -13,7 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class DoubleexppotionItem extends Item {
 	public DoubleexppotionItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationMod(1f).alwaysEat().build()));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override

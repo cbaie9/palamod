@@ -33,7 +33,7 @@ public class AnalyserloadingScreen extends AbstractContainerScreen<Analyserloadi
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -44,7 +44,7 @@ public class AnalyserloadingScreen extends AbstractContainerScreen<Analyserloadi
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/analyserloading.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 100, 150, 100);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/analyserloading.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 100, 150, 100);
 
 		RenderSystem.disableBlend();
 	}

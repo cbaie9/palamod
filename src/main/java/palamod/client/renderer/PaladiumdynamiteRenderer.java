@@ -16,6 +16,6 @@ public class PaladiumdynamiteRenderer extends MobRenderer<PaladiumdynamiteEntity
 
 	@Override
 	public ResourceLocation getTextureLocation(PaladiumdynamiteEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/pala_dyna.png");
+		return ResourceLocation.parse("palamod:textures/entities/pala_dyna.png");
 	}
 }

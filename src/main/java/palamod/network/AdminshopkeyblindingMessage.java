@@ -5,42 +5,42 @@ import palamod.procedures.AdminshoptadbanProcedure;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 
-import java.util.function.Supplier;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class AdminshopkeyblindingMessage {
-	int type, pressedms;
-
-	public AdminshopkeyblindingMessage(int type, int pressedms) {
-		this.type = type;
-		this.pressedms = pressedms;
-	}
-
-	public AdminshopkeyblindingMessage(FriendlyByteBuf buffer) {
-		this.type = buffer.readInt();
-		this.pressedms = buffer.readInt();
-	}
-
-	public static void buffer(AdminshopkeyblindingMessage message, FriendlyByteBuf buffer) {
-		buffer.writeInt(message.type);
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record AdminshopkeyblindingMessage(int eventType, int pressedms) implements CustomPacketPayload {
+	public static final Type<AdminshopkeyblindingMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "key_adminshopkeyblinding"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, AdminshopkeyblindingMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AdminshopkeyblindingMessage message) -> {
+		buffer.writeInt(message.eventType);
 		buffer.writeInt(message.pressedms);
+	}, (RegistryFriendlyByteBuf buffer) -> new AdminshopkeyblindingMessage(buffer.readInt(), buffer.readInt()));
+
+	@Override
+	public Type<AdminshopkeyblindingMessage> type() {
+		return TYPE;
 	}
 
-	public static void handler(AdminshopkeyblindingMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			pressAction(context.getSender(), message.type, message.pressedms);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final AdminshopkeyblindingMessage message, final IPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.enqueueWork(() -> {
+				pressAction(context.player(), message.eventType, message.pressedms);
+			}).exceptionally(e -> {
+				context.connection().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void pressAction(Player entity, int type, int pressedms) {
@@ -59,6 +59,6 @@ public class AdminshopkeyblindingMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PalamodMod.addNetworkMessage(AdminshopkeyblindingMessage.class, AdminshopkeyblindingMessage::buffer, AdminshopkeyblindingMessage::new, AdminshopkeyblindingMessage::handler);
+		PalamodMod.addNetworkMessage(AdminshopkeyblindingMessage.TYPE, AdminshopkeyblindingMessage.STREAM_CODEC, AdminshopkeyblindingMessage::handleData);
 	}
 }

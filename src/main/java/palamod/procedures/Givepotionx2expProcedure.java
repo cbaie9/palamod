@@ -11,6 +11,6 @@ public class Givepotionx2expProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.MULTIEXP_2.get(), 36000, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.MULTIEXP_2, 36000, 1, false, false));
 	}
 }

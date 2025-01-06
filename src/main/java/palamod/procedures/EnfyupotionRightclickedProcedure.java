@@ -11,6 +11,6 @@ public class EnfyupotionRightclickedProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.FSEFFECT.get(), 200, 1, true, true));
+			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.FSEFFECT, 200, 1, true, true));
 	}
 }

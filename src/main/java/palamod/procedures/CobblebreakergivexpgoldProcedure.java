@@ -1,20 +1,19 @@
 package palamod.procedures;
 
 import palamod.init.PalamodModItems;
-import palamod.init.PalamodModEnchantments;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,12 +21,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -49,11 +50,12 @@ public class CobblebreakergivexpgoldProcedure {
 		if (entity instanceof Player _player)
 			_player.giveExperiencePoints(new Object() {
 				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-					AtomicInteger _retval = new AtomicInteger(0);
-					BlockEntity _ent = world.getBlockEntity(pos);
-					if (_ent != null)
-						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).getCount()));
-					return _retval.get();
+					if (world instanceof ILevelExtension _ext) {
+						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+						if (_itemHandler != null)
+							return _itemHandler.getStackInSlot(slotid).getCount();
+					}
+					return 0;
 				}
 			}.getAmount(world, BlockPos.containing(x, y, z), 2));
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
@@ -74,13 +76,22 @@ public class CobblebreakergivexpgoldProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 							main.addProperty("xpstreak_miner", 0);
 						}
-						if (EnchantmentHelper.getItemEnchantmentLevel(PalamodModEnchantments.BOTTELED.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
-								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type")
-										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("jobs_type"))
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
+								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
+										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type"))
 								&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
-							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("xp_jobs",
-									(4 * main.get("multi_exp").getAsDouble() + (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("xp_jobs")));
-							(entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("jobs_type", 1);
+							{
+								final String _tagName = "xp_jobs";
+								final double _tagValue = (4 * main.get("multi_exp").getAsDouble()
+										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
+								CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+							}
+							{
+								final String _tagName = "jobs_type";
+								final double _tagValue = 1;
+								CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+							}
 						} else {
 							main.addProperty("xp_miner", (4 * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
 						}
@@ -88,9 +99,14 @@ public class CobblebreakergivexpgoldProcedure {
 						main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(
-									Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (4 * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
-											+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((ForgeRegistries.BLOCKS.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
-													.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
+									Component
+											.literal(
+													(Component.translatable("palamod.procedure.jobswin1").getString() + "" + (4 * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
+															+ Component.translatable("palamod.procedure.jobswin2").getString() + " "
+															+ Component
+																	.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:",
+																			(world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft.")))
+																	.getString())),
 									true);
 					}
 					PalamodMod.LOGGER.debug("Debug : checking miner lvl");

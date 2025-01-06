@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "palamod:deepslate_titane_ore"
+  },
+  "result": {
+    "id": "palamod:titane_ingot"
+  }
+}

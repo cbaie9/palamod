@@ -16,6 +16,6 @@ public class EndiumdynamiteRenderer extends MobRenderer<EndiumdynamiteEntity, Mo
 
 	@Override
 	public ResourceLocation getTextureLocation(EndiumdynamiteEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/endium_dyna_t4.png");
+		return ResourceLocation.parse("palamod:textures/entities/endium_dyna_t4.png");
 	}
 }

@@ -9,20 +9,19 @@ import palamod.network.JobskeybindingMessage;
 import palamod.network.FactionblindingMessage;
 import palamod.network.AdminshopkeyblindingMessage;
 
-import palamod.PalamodMod;
-
 import org.lwjgl.glfw.GLFW;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class PalamodModKeyMappings {
 	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, "key.categories.palamod") {
 		private boolean isDownOld = false;
@@ -31,7 +30,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopkeyblindingMessage(0, 0));
+				PacketDistributor.sendToServer(new AdminshopkeyblindingMessage(0, 0));
 				AdminshopkeyblindingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -44,7 +43,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new FactionblindingMessage(0, 0));
+				PacketDistributor.sendToServer(new FactionblindingMessage(0, 0));
 				FactionblindingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -57,7 +56,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new JobskeybindingMessage(0, 0));
+				PacketDistributor.sendToServer(new JobskeybindingMessage(0, 0));
 				JobskeybindingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -70,7 +69,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new OpenclickerMessage(0, 0));
+				PacketDistributor.sendToServer(new OpenclickerMessage(0, 0));
 				OpenclickerMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -85,10 +84,10 @@ public class PalamodModKeyMappings {
 		event.register(OPENCLICKER);
 	}
 
-	@Mod.EventBusSubscriber({Dist.CLIENT})
+	@EventBusSubscriber({Dist.CLIENT})
 	public static class KeyEventListener {
 		@SubscribeEvent
-		public static void onClientTick(TickEvent.ClientTickEvent event) {
+		public static void onClientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().screen == null) {
 				ADMINSHOPKEYBLINDING.consumeClick();
 				FACTIONBLINDING.consumeClick();

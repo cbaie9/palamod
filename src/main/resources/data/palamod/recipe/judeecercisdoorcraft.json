@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aa",
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:judeecercis_planks"
+    }
+  },
+  "result": {
+    "id": "palamod:judeecercis_door",
+    "count": 3
+  }
+}

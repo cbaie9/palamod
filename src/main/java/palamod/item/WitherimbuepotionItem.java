@@ -14,7 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class WitherimbuepotionItem extends Item {
 	public WitherimbuepotionItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0.3f).build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(0.3f).build()));
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class WitherimbuepotionItem extends Item {
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
 		return 0f;
 	}
 

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:gold_mixedcoal",
+    "palamod:amethyst_mixedcoal",
+    "palamod:titane_mixed_coal",
+    "palamod:paladium_mixed_charcoal"
+  ]
+}

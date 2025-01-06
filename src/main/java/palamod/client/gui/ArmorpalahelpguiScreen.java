@@ -4,7 +4,7 @@ import palamod.world.inventory.ArmorpalahelpguiMenu;
 
 import palamod.network.ArmorpalahelpguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -42,7 +43,7 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -53,51 +54,51 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/armorpalahelpgui.png"), this.leftPos + -1, this.topPos + 1, 0, 0, 300, 200, 300, 200);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/armorpalahelpgui.png"), this.leftPos + -1, this.topPos + 1, 0, 0, 300, 200, 300, 200);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/amethyst_helmet.png"), this.leftPos + 12, this.topPos + 43, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_helmet.png"), this.leftPos + 12, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/amethyst_chestplate.png"), this.leftPos + 12, this.topPos + 69, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_chestplate.png"), this.leftPos + 12, this.topPos + 69, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/amethyst_leggings.png"), this.leftPos + 11, this.topPos + 98, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_leggings.png"), this.leftPos + 11, this.topPos + 98, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/amethyst_boots.png"), this.leftPos + 11, this.topPos + 124, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_boots.png"), this.leftPos + 11, this.topPos + 124, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endium_helmet.png"), this.leftPos + 221, this.topPos + 45, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_helmet.png"), this.leftPos + 221, this.topPos + 45, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endium_chestplate.png"), this.leftPos + 222, this.topPos + 70, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_chestplate.png"), this.leftPos + 222, this.topPos + 70, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endium_leggings.png"), this.leftPos + 221, this.topPos + 100, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_leggings.png"), this.leftPos + 221, this.topPos + 100, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endium_boots.png"), this.leftPos + 221, this.topPos + 125, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_boots.png"), this.leftPos + 221, this.topPos + 125, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_chestplate.png"), this.leftPos + 145, this.topPos + 70, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_chestplate.png"), this.leftPos + 145, this.topPos + 70, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_green_chestplate.png"), this.leftPos + 126, this.topPos + 70, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_chestplate.png"), this.leftPos + 126, this.topPos + 70, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_green_boots.png"), this.leftPos + 126, this.topPos + 124, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_boots.png"), this.leftPos + 126, this.topPos + 124, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_green_helmet.png"), this.leftPos + 126, this.topPos + 45, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_helmet.png"), this.leftPos + 126, this.topPos + 45, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_green_leggings.png"), this.leftPos + 126, this.topPos + 99, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_leggings.png"), this.leftPos + 126, this.topPos + 99, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_helmet.png"), this.leftPos + 145, this.topPos + 45, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_helmet.png"), this.leftPos + 145, this.topPos + 45, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_leggings.png"), this.leftPos + 143, this.topPos + 99, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_leggings.png"), this.leftPos + 143, this.topPos + 99, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/paladium_boots.png"), this.leftPos + 143, this.topPos + 124, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_boots.png"), this.leftPos + 143, this.topPos + 124, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/titane_helmet.png"), this.leftPos + 61, this.topPos + 43, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_helmet.png"), this.leftPos + 61, this.topPos + 43, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/titane_chestplate.png"), this.leftPos + 62, this.topPos + 69, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_chestplate.png"), this.leftPos + 62, this.topPos + 69, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/titane_leggings.png"), this.leftPos + 59, this.topPos + 98, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_leggings.png"), this.leftPos + 59, this.topPos + 98, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/titane_boots.png"), this.leftPos + 60, this.topPos + 124, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_boots.png"), this.leftPos + 60, this.topPos + 124, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -141,32 +142,56 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_left_gray_line = new ImageButton(this.leftPos + -1, this.topPos + 0, 100, 24, 0, 0, 24, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_left_gray_line.png"), 100, 48, e -> {
-		});
+		imagebutton_left_gray_line = new ImageButton(this.leftPos + -1, this.topPos + 0, 100, 24,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), ResourceLocation.parse("palamod:textures/screens/left_gray_line.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_left_gray_line", imagebutton_left_gray_line);
 		this.addRenderableWidget(imagebutton_left_gray_line);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
-				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 275, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
-				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 275, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 235, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new ArmorpalahelpguiButtonMessage(3, x, y, z));
-				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 235, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(3, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}

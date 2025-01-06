@@ -11,17 +11,12 @@ import net.minecraft.core.BlockPos;
 
 public class TitanestairsBlock extends StairBlock {
 	public TitanestairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(2f, 10f).requiresCorrectToolForDrops().dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(2f, 10f).requiresCorrectToolForDrops().dynamicShape());
 	}
 
 	@Override
 	public float getExplosionResistance() {
 		return 10f;
-	}
-
-	@Override
-	public boolean isRandomlyTicking(BlockState state) {
-		return false;
 	}
 
 	@Override

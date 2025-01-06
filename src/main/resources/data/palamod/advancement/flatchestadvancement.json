@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "palamod:flat_chest_upgrade"
+    },
+    "title": {
+      "translate": "advancements.flatchestadvancement.title"
+    },
+    "description": {
+      "translate": "advancements.flatchestadvancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "flatchestadvancement_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "palamod:achmchestamethyst"
+}

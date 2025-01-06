@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.world.inventory.SafeguiMenu;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -35,10 +33,15 @@ public class SafecodecheckProcedure {
 		}.getValue(world, BlockPos.containing(x, y, z), "safe_code"))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Safegui");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override

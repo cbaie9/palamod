@@ -8,8 +8,6 @@ import palamod.procedures.Grinder_resetProcedure;
 
 import palamod.block.entity.Tcv2BlockEntity;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -32,7 +30,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -86,10 +83,7 @@ public class Tcv2Block extends Block implements EntityBlock {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		Grinderluncherv2Procedure.execute(world, x, y, z);
+		Grinderluncherv2Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 10);
 	}
 
@@ -107,10 +101,10 @@ public class Tcv2Block extends Block implements EntityBlock {
 	}
 
 	@Override
-	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
-		super.use(blockstate, world, pos, entity, hand, hit);
+	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
+		super.useWithoutItem(blockstate, world, pos, entity, hit);
 		if (entity instanceof ServerPlayer player) {
-			NetworkHooks.openScreen(player, new MenuProvider() {
+			player.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
 					return Component.literal("Contructed grinder");

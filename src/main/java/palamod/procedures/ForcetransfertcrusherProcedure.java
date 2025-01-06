@@ -2,8 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -37,17 +38,10 @@ public class ForcetransfertcrusherProcedure {
 					return -1;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "crusher_num")) / 128) {
-				{
-					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-					if (_ent != null) {
-						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-						_setstack.setCount(1);
-						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable)
-								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-						});
-					}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+					_setstack.setCount(1);
+					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}
 			}
 		} else if (new Object() {
@@ -73,17 +67,10 @@ public class ForcetransfertcrusherProcedure {
 					return -1;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "crusher_num")) / 64) {
-				{
-					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-					if (_ent != null) {
-						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-						_setstack.setCount(10);
-						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable)
-								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-						});
-					}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+					_setstack.setCount(10);
+					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}
 			}
 		} else if (new Object() {
@@ -109,17 +96,10 @@ public class ForcetransfertcrusherProcedure {
 					return -1;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "crusher_num")) / 32) {
-				{
-					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-					if (_ent != null) {
-						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount(10);
-						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable)
-								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-						});
-					}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
+					_setstack.setCount(10);
+					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}
 			}
 		} else if (new Object() {
@@ -145,17 +125,10 @@ public class ForcetransfertcrusherProcedure {
 					return -1;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "crusher_num")) / 16) {
-				{
-					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
-					if (_ent != null) {
-						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount(20);
-						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable)
-								((IItemHandlerModifiable) capability).setStackInSlot(_slotid, _setstack);
-						});
-					}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+					_setstack.setCount(20);
+					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}
 			}
 		}

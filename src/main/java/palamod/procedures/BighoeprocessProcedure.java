@@ -3,8 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
@@ -14,15 +12,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
-
-import java.util.Map;
 
 public class BighoeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -53,16 +50,16 @@ public class BighoeprocessProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("palamod:cbtill")))) {
+						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("palamod:cbtill")))) {
 							{
 								BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
 								BlockState _bs = PalamodModBlocks.FERTILZED_DIRT.get().defaultBlockState();
 								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.getValue(_property) != null)
+								for (Property<?> _propertyOld : _bso.getProperties()) {
+									Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+									if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 										try {
-											_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 										} catch (Exception e) {
 										}
 								}
@@ -79,9 +76,9 @@ public class BighoeprocessProcedure {
 		if (act) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.hoe.till")), SoundSource.BLOCKS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.hoe.till")), SoundSource.BLOCKS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.hoe.till")), SoundSource.BLOCKS, 1, 1, false);
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.hoe.till")), SoundSource.BLOCKS, 1, 1, false);
 				}
 			}
 			if (!(new Object() {
@@ -95,12 +92,9 @@ public class BighoeprocessProcedure {
 					return false;
 				}
 			}.checkGamemode(entity))) {
-				{
-					ItemStack _ist = itemstack;
-					if (_ist.hurt(1, RandomSource.create(), null)) {
-						_ist.shrink(1);
-						_ist.setDamageValue(0);
-					}
+				if (world instanceof ServerLevel _level) {
+					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+					});
 				}
 			}
 		}

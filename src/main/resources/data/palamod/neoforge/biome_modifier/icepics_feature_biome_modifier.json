@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "palamod:forestender",
+  "features": "palamod:icepics_feature",
+  "step": "surface_structures"
+}

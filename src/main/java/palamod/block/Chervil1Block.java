@@ -22,12 +22,7 @@ import net.minecraft.core.BlockPos;
 
 public class Chervil1Block extends FlowerBlock {
 	public Chervil1Block() {
-		super(() -> MobEffects.FIRE_RESISTANCE, 60, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 60;
+		super(MobEffects.FIRE_RESISTANCE, 60, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

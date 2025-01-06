@@ -1,0 +1,27 @@
+{
+  "description": {
+    "translate": "enchantment.palamod.chargedenchant"
+  },
+  "supported_items": [
+    "palamod:legendary_stone_fortune",
+    "palamod:legendary_stone_invisible",
+    "palamod:legendary_stone_power",
+    "palamod:legendary_stone_jobs",
+    "palamod:legendary_stone_teleportation"
+  ],
+  "weight": 10,
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

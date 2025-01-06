@@ -3,8 +3,8 @@ package palamod.item;
 
 import palamod.procedures.LegendarystonerandomprocessProcedure;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
@@ -36,8 +36,9 @@ public class LegendarystonerandomItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.palamod.legendary_stone_random.description_0"));
 		list.add(Component.translatable("item.palamod.legendary_stone_random.description_1"));
 	}

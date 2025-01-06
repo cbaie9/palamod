@@ -1,0 +1,21 @@
+{
+  "description": {
+    "translate": "enchantment.palamod.botteled"
+  },
+  "supported_items": "#forge:pickaxe",
+  "weight": 5,
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "exclusive_set": []
+}

@@ -9,7 +9,7 @@ import palamod.procedures.AdshoppreviewamountsandProcedure;
 
 import palamod.network.AdminshopblockSandButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
@@ -52,7 +53,7 @@ public class AdminshopblockSandScreen extends AbstractContainerScreen<Adminshopb
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -70,11 +71,11 @@ public class AdminshopblockSandScreen extends AbstractContainerScreen<Adminshopb
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + -1, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + -1, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + -1, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + -1, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -88,12 +89,6 @@ public class AdminshopblockSandScreen extends AbstractContainerScreen<Adminshopb
 		if (number_buy.isFocused())
 			return number_buy.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
-		number_buy.tick();
 	}
 
 	@Override
@@ -127,21 +122,21 @@ public class AdminshopblockSandScreen extends AbstractContainerScreen<Adminshopb
 			}
 
 			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
+			public void moveCursorTo(int pos, boolean flag) {
+				super.moveCursorTo(pos, flag);
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.palamod.adminshopblock_sand.number_buy").getString());
 				else
 					setSuggestion(null);
 			}
 		};
-		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshopblock_sand.number_buy").getString());
 		number_buy.setMaxLength(32767);
+		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshopblock_sand.number_buy").getString());
 		guistate.put("text:number_buy", number_buy);
 		this.addWidget(this.number_buy);
 		button_buy = Button.builder(Component.translatable("gui.palamod.adminshopblock_sand.button_buy"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopblockSandButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new AdminshopblockSandButtonMessage(0, x, y, z));
 				AdminshopblockSandButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 109, 40, 20).build();
@@ -149,34 +144,52 @@ public class AdminshopblockSandScreen extends AbstractContainerScreen<Adminshopb
 		this.addRenderableWidget(button_buy);
 		button_sell = Button.builder(Component.translatable("gui.palamod.adminshopblock_sand.button_sell"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopblockSandButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new AdminshopblockSandButtonMessage(1, x, y, z));
 				AdminshopblockSandButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 100, this.topPos + 109, 46, 20).build();
 		guistate.put("button:button_sell", button_sell);
 		this.addRenderableWidget(button_sell);
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 155, this.topPos + 3, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopblockSandButtonMessage(2, x, y, z));
-				AdminshopblockSandButtonMessage.handleButtonAction(entity, 2, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 155, this.topPos + 3, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new AdminshopblockSandButtonMessage(2, x, y, z));
+						AdminshopblockSandButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 115, this.topPos + 3, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_home_pixel_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopblockSandButtonMessage(3, x, y, z));
-				AdminshopblockSandButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 115, this.topPos + 3, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new AdminshopblockSandButtonMessage(3, x, y, z));
+						AdminshopblockSandButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 134, this.topPos + 3, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new AdminshopblockSandButtonMessage(4, x, y, z));
-				AdminshopblockSandButtonMessage.handleButtonAction(entity, 4, x, y, z);
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 134, this.topPos + 3, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new AdminshopblockSandButtonMessage(4, x, y, z));
+						AdminshopblockSandButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 	}

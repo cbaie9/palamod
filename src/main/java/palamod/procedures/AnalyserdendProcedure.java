@@ -6,8 +6,6 @@ import palamod.network.PalamodModVariables;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -81,7 +79,7 @@ public class AnalyserdendProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("forge:ores"))) || aready_iden) {
+						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:ores"))) || aready_iden) {
 							ores = ores + 1;
 						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.BEDROCK || aready_iden) {
 							bedrock = bedrock + 1;
@@ -92,21 +90,21 @@ public class AnalyserdendProcedure {
 							grass = grass + 1;
 						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.MAGENTA_SHULKER_BOX || aready_iden) {
 							shulkers = cobblestone + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:anvil"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:anvil"))) || aready_iden) {
 							anvil = anvil + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("forge:planks"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:planks"))) || aready_iden) {
 							planks = planks + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:anvil"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:anvil"))) || aready_iden) {
 							anvil = anvil + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:wool"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:wool"))) || aready_iden) {
 							wool = wool + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:logs"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:logs"))) || aready_iden) {
 							logs = logs + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("minecraft:planks"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:planks"))) || aready_iden) {
 							planks = planks + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("forge:cobblestone"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone"))) || aready_iden) {
 							cobblestone = cobblestone + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("forge:chests"))) || aready_iden) {
+						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:chests"))) || aready_iden) {
 							chest = chest + 1;
 						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.END_STONE || aready_iden) {
 							endstone = endstone + 1;
@@ -151,10 +149,15 @@ public class AnalyserdendProcedure {
 		PalamodModVariables.analy_air = air;
 		if (entity instanceof ServerPlayer _ent) {
 			BlockPos _bpos = BlockPos.containing(x, y, z);
-			NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
 					return Component.literal("Analyserresult");
+				}
+
+				@Override
+				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+					return false;
 				}
 
 				@Override

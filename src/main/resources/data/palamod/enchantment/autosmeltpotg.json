@@ -1,0 +1,27 @@
+{
+  "description": {
+    "translate": "enchantment.palamod.autosmeltpotg"
+  },
+  "supported_items": [
+    "palamod:pickaxeofthegodslv_18",
+    "palamod:pickaxeofthegodslv_19",
+    "palamod:pickaxeofthegodslv_17",
+    "palamod:pickaxeofthegodslv_20",
+    "palamod:creativepotg"
+  ],
+  "weight": 1,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 8,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

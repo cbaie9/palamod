@@ -16,7 +16,7 @@ import java.util.List;
 public class PalamodModJeiInformation implements IModPlugin {
 	@Override
 	public ResourceLocation getPluginUid() {
-		return new ResourceLocation("palamod:information");
+		return ResourceLocation.parse("palamod:information");
 	}
 
 	@Override

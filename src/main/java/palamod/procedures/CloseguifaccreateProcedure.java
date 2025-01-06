@@ -6,7 +6,7 @@ import palamod.init.PalamodModItems;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;

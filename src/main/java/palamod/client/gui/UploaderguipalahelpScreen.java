@@ -8,7 +8,7 @@ import palamod.procedures.Palahelpuploader0Procedure;
 
 import palamod.network.UploaderguipalahelpButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -43,7 +43,7 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -54,7 +54,7 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/uploaderguipalahelp.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 319, 200, 319, 200);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/uploaderguipalahelp.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 319, 200, 319, 200);
 
 		RenderSystem.disableBlend();
 	}
@@ -89,7 +89,7 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 		super.init();
 		button_gui_example_wip = Button.builder(Component.translatable("gui.palamod.uploaderguipalahelp.button_gui_example_wip"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new UploaderguipalahelpButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new UploaderguipalahelpButtonMessage(0, x, y, z));
 				UploaderguipalahelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 6, this.topPos + 170, 123, 20).build();

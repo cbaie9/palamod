@@ -15,23 +15,23 @@ import palamod.procedures.DynamiccechkpaladiumProcedure;
 
 import org.checkerframework.checker.units.qual.h;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.client.event.RenderGuiEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.RenderGuiEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
-@Mod.EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber({Dist.CLIENT})
 public class DynamicorelayerOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
-		int w = event.getWindow().getGuiScaledWidth();
-		int h = event.getWindow().getGuiScaledHeight();
+		int w = event.getGuiGraphics().guiWidth();
+		int h = event.getGuiGraphics().guiHeight();
 		Level world = null;
 		double x = 0;
 		double y = 0;

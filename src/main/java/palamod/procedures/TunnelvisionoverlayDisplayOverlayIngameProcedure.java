@@ -10,7 +10,7 @@ public class TunnelvisionoverlayDisplayOverlayIngameProcedure {
 		if (entity == null)
 			return false;
 		boolean output = false;
-		if (0 < (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PalamodModMobEffects.TUNNELVISION.get()) ? _livEnt.getEffect(PalamodModMobEffects.TUNNELVISION.get()).getAmplifier() : 0)) {
+		if (0 < (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PalamodModMobEffects.TUNNELVISION) ? _livEnt.getEffect(PalamodModMobEffects.TUNNELVISION).getAmplifier() : 0)) {
 			output = true;
 		} else {
 			output = false;

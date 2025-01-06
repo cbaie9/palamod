@@ -16,6 +16,6 @@ public class PrimedspongetntRenderer extends MobRenderer<PrimedspongetntEntity, 
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedspongetntEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/sponge_tntmodel.png");
+		return ResourceLocation.parse("palamod:textures/entities/sponge_tntmodel.png");
 	}
 }

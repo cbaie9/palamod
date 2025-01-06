@@ -12,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class SpacefoodItem extends Item {
 	public SpacefoodItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(7).saturationMod(1f).alwaysEat().meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(7).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override

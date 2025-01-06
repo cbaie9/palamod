@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:leather"
+    },
+    "b": {
+      "item": "palamod:wing"
+    }
+  },
+  "result": {
+    "id": "palamod:hang_glider",
+    "count": 1
+  }
+}

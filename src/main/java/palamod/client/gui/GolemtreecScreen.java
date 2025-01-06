@@ -41,11 +41,11 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> {
 		this.imageHeight = 220;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("palamod:textures/screens/golemtreec.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/golemtreec.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -57,13 +57,13 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/golem_llh.png"), this.leftPos + 66, this.topPos + 156, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 66, this.topPos + 156, 0, 0, 64, 64, 64, 64);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/golem_llh.png"), this.leftPos + 125, this.topPos + 119, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 125, this.topPos + 119, 0, 0, 64, 64, 64, 64);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/golem_ltf.png"), this.leftPos + 192, this.topPos + 119, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 192, this.topPos + 119, 0, 0, 64, 64, 64, 64);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/golem_ltf.png"), this.leftPos + 255, this.topPos + 156, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 255, this.topPos + 156, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -98,13 +98,19 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> {
 		}).bounds(this.leftPos + 263, this.topPos + 29, 129, 20).build();
 		guistate.put("button:button_buy_selected_upgrade", button_buy_selected_upgrade);
 		this.addRenderableWidget(button_buy_selected_upgrade);
-		upgarde_base = new Checkbox(this.leftPos + 181, this.topPos + 99, 20, 20, Component.translatable("gui.palamod.golemtreec.upgarde_base"), false);
+		upgarde_base = Checkbox.builder(Component.translatable("gui.palamod.golemtreec.upgarde_base"), this.font).pos(this.leftPos + 181, this.topPos + 99)
+
+				.build();
 		guistate.put("checkbox:upgarde_base", upgarde_base);
 		this.addRenderableWidget(upgarde_base);
-		golem_v_hunter1 = new Checkbox(this.leftPos + 46, this.topPos + 194, 20, 20, Component.translatable("gui.palamod.golemtreec.golem_v_hunter1"), false);
+		golem_v_hunter1 = Checkbox.builder(Component.translatable("gui.palamod.golemtreec.golem_v_hunter1"), this.font).pos(this.leftPos + 46, this.topPos + 194)
+
+				.build();
 		guistate.put("checkbox:golem_v_hunter1", golem_v_hunter1);
 		this.addRenderableWidget(golem_v_hunter1);
-		golem_v_farmer1 = new Checkbox(this.leftPos + 318, this.topPos + 193, 20, 20, Component.translatable("gui.palamod.golemtreec.golem_v_farmer1"), false);
+		golem_v_farmer1 = Checkbox.builder(Component.translatable("gui.palamod.golemtreec.golem_v_farmer1"), this.font).pos(this.leftPos + 318, this.topPos + 193)
+
+				.build();
 		guistate.put("checkbox:golem_v_farmer1", golem_v_farmer1);
 		this.addRenderableWidget(golem_v_farmer1);
 	}

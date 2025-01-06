@@ -8,9 +8,4 @@ public class FireimbueMobEffect extends MobEffect {
 	public FireimbueMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -65536);
 	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

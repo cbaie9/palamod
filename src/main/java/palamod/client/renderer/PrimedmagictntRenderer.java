@@ -16,6 +16,6 @@ public class PrimedmagictntRenderer extends MobRenderer<PrimedmagictntEntity, Mo
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedmagictntEntity entity) {
-		return new ResourceLocation("palamod:textures/entities/magic_tntmodel.png");
+		return ResourceLocation.parse("palamod:textures/entities/magic_tntmodel.png");
 	}
 }

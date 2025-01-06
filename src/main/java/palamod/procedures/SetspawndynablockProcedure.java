@@ -27,8 +27,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import java.util.Map;
-
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
@@ -41,18 +39,18 @@ public class SetspawndynablockProcedure {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockState _bs = PalamodModBlocks.NBT_BLOCK.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
-				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-					Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-					if (_property != null && _bs.getValue(_property) != null)
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 						try {
-							_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 						} catch (Exception e) {
 						}
 				}
 				BlockEntity _be = world.getBlockEntity(_bp);
 				CompoundTag _bnbt = null;
 				if (_be != null) {
-					_bnbt = _be.saveWithFullMetadata();
+					_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 					_be.setRemoved();
 				}
 				world.setBlock(_bp, _bs, 3);
@@ -60,7 +58,7 @@ public class SetspawndynablockProcedure {
 					_be = world.getBlockEntity(_bp);
 					if (_be != null) {
 						try {
-							_be.load(_bnbt);
+							_be.loadWithComponents(_bnbt, world.registryAccess());
 						} catch (Exception ignored) {
 						}
 					}
@@ -128,7 +126,7 @@ public class SetspawndynablockProcedure {
 							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 							_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 						}
 					}
@@ -138,7 +136,7 @@ public class SetspawndynablockProcedure {
 						BlockEntity _be = world.getBlockEntity(_bp);
 						CompoundTag _bnbt = null;
 						if (_be != null) {
-							_bnbt = _be.saveWithFullMetadata();
+							_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 							_be.setRemoved();
 						}
 						world.setBlock(_bp, _bs, 3);
@@ -146,7 +144,7 @@ public class SetspawndynablockProcedure {
 							_be = world.getBlockEntity(_bp);
 							if (_be != null) {
 								try {
-									_be.load(_bnbt);
+									_be.loadWithComponents(_bnbt, world.registryAccess());
 								} catch (Exception ignored) {
 								}
 							}
@@ -172,7 +170,7 @@ public class SetspawndynablockProcedure {
 								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
 						}
@@ -182,7 +180,7 @@ public class SetspawndynablockProcedure {
 							BlockEntity _be = world.getBlockEntity(_bp);
 							CompoundTag _bnbt = null;
 							if (_be != null) {
-								_bnbt = _be.saveWithFullMetadata();
+								_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 								_be.setRemoved();
 							}
 							world.setBlock(_bp, _bs, 3);
@@ -190,7 +188,7 @@ public class SetspawndynablockProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.load(_bnbt);
+										_be.loadWithComponents(_bnbt, world.registryAccess());
 									} catch (Exception ignored) {
 									}
 								}
@@ -215,7 +213,7 @@ public class SetspawndynablockProcedure {
 								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
 						}
@@ -273,7 +271,7 @@ public class SetspawndynablockProcedure {
 							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 							_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 						}
 					}
@@ -283,7 +281,7 @@ public class SetspawndynablockProcedure {
 						BlockEntity _be = world.getBlockEntity(_bp);
 						CompoundTag _bnbt = null;
 						if (_be != null) {
-							_bnbt = _be.saveWithFullMetadata();
+							_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 							_be.setRemoved();
 						}
 						world.setBlock(_bp, _bs, 3);
@@ -291,7 +289,7 @@ public class SetspawndynablockProcedure {
 							_be = world.getBlockEntity(_bp);
 							if (_be != null) {
 								try {
-									_be.load(_bnbt);
+									_be.loadWithComponents(_bnbt, world.registryAccess());
 								} catch (Exception ignored) {
 								}
 							}
@@ -317,7 +315,7 @@ public class SetspawndynablockProcedure {
 								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
 						}
@@ -327,7 +325,7 @@ public class SetspawndynablockProcedure {
 							BlockEntity _be = world.getBlockEntity(_bp);
 							CompoundTag _bnbt = null;
 							if (_be != null) {
-								_bnbt = _be.saveWithFullMetadata();
+								_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 								_be.setRemoved();
 							}
 							world.setBlock(_bp, _bs, 3);
@@ -335,7 +333,7 @@ public class SetspawndynablockProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.load(_bnbt);
+										_be.loadWithComponents(_bnbt, world.registryAccess());
 									} catch (Exception ignored) {
 									}
 								}
@@ -360,7 +358,7 @@ public class SetspawndynablockProcedure {
 								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
 						}
@@ -418,7 +416,7 @@ public class SetspawndynablockProcedure {
 							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 							_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 						}
 					}
@@ -428,7 +426,7 @@ public class SetspawndynablockProcedure {
 						BlockEntity _be = world.getBlockEntity(_bp);
 						CompoundTag _bnbt = null;
 						if (_be != null) {
-							_bnbt = _be.saveWithFullMetadata();
+							_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 							_be.setRemoved();
 						}
 						world.setBlock(_bp, _bs, 3);
@@ -436,7 +434,7 @@ public class SetspawndynablockProcedure {
 							_be = world.getBlockEntity(_bp);
 							if (_be != null) {
 								try {
-									_be.load(_bnbt);
+									_be.loadWithComponents(_bnbt, world.registryAccess());
 								} catch (Exception ignored) {
 								}
 							}
@@ -462,7 +460,7 @@ public class SetspawndynablockProcedure {
 								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
-									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
+									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 								_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 							}
 						}
@@ -472,7 +470,7 @@ public class SetspawndynablockProcedure {
 							BlockEntity _be = world.getBlockEntity(_bp);
 							CompoundTag _bnbt = null;
 							if (_be != null) {
-								_bnbt = _be.saveWithFullMetadata();
+								_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 								_be.setRemoved();
 							}
 							world.setBlock(_bp, _bs, 3);
@@ -480,7 +478,7 @@ public class SetspawndynablockProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.load(_bnbt);
+										_be.loadWithComponents(_bnbt, world.registryAccess());
 									} catch (Exception ignored) {
 									}
 								}

@@ -4,7 +4,7 @@ import palamod.world.inventory.DownloaderlinkMenu;
 
 import palamod.network.DownloaderlinkButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -40,7 +40,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -51,7 +51,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/downloaderlink.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/downloaderlink.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -79,7 +79,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 		super.init();
 		button_no = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_no"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new DownloaderlinkButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new DownloaderlinkButtonMessage(0, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 71, 35, 20).build();
@@ -87,7 +87,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 		this.addRenderableWidget(button_no);
 		button_process = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_process"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new DownloaderlinkButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new DownloaderlinkButtonMessage(1, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 84, this.topPos + 71, 61, 20).build();

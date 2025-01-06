@@ -33,7 +33,7 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -44,11 +44,11 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/endiumchestgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 244, 140, 244, 140);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endiumchestgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 244, 140, 244, 140);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_endium.png"), this.leftPos + 212, this.topPos + 78, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_endium.png"), this.leftPos + 212, this.topPos + 78, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/ring_endium.png"), this.leftPos + 212, this.topPos + 96, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_endium.png"), this.leftPos + 212, this.topPos + 96, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}

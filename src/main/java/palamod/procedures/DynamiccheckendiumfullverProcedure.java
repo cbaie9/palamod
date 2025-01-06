@@ -17,10 +17,10 @@ public class DynamiccheckendiumfullverProcedure {
 					return blockEntity.getPersistentData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos(0, 10, 0), ("Minage_setlayer_dynamic_enda_" + entity.getDisplayName().getString())) || (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("palamod:forestender"))
-				|| world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("palamod:frozenforest")) || world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("palamod:roofedforest"))
-				|| world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("plains")) || world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("forest"))
-				|| world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("plains")) || world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("ocean"))) && new Object() {
+		}.getValue(world, new BlockPos(0, 10, 0), ("Minage_setlayer_dynamic_enda_" + entity.getDisplayName().getString())) || (world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("palamod:forestender"))
+				|| world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("palamod:frozenforest")) || world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("palamod:roofedforest"))
+				|| world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("plains")) || world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("forest"))
+				|| world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("plains")) || world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("ocean"))) && new Object() {
 					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);
 						if (blockEntity != null)

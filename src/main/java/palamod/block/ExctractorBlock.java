@@ -8,7 +8,7 @@ import org.checkerframework.checker.units.qual.s;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -32,6 +32,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
+import net.minecraft.util.FastColor;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -71,8 +72,8 @@ public class ExctractorBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public float[] getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
-		return new float[]{1f, 0.6f, 0.4f};
+	public Integer getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
+		return FastColor.ARGB32.opaque(-26266);
 	}
 
 	@Override
@@ -128,8 +129,8 @@ public class ExctractorBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
-		return BlockPathTypes.BLOCKED;
+	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
+		return PathType.BLOCKED;
 	}
 
 	@Override

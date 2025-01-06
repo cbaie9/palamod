@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class Judeecercis_FenceGateBlock extends FenceGateBlock {
 	public Judeecercis_FenceGateBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().dynamicShape().forceSolidOn(), WoodType.OAK);
+		super(WoodType.OAK, BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().dynamicShape().forceSolidOn());
 	}
 
 	@Override

@@ -2,13 +2,12 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.ModList;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -23,6 +22,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -34,7 +34,7 @@ import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class OpenpalamodgameProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
@@ -125,7 +125,7 @@ public class OpenpalamodgameProcedure {
 				exception.printStackTrace();
 			}
 			cache_main.addProperty("last_block_state", (-1));
-			cache_main.addProperty("block", (ForgeRegistries.BLOCKS.getKey(Blocks.AIR).toString()));
+			cache_main.addProperty("block", (BuiltInRegistries.BLOCK.getKey(Blocks.AIR).toString()));
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {

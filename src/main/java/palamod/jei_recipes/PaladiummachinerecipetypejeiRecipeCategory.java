@@ -7,18 +7,20 @@ import palamod.init.PalamodModBlocks;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.GuiGraphics;
 
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.constants.VanillaTypes;
 
 public class PaladiummachinerecipetypejeiRecipeCategory implements IRecipeCategory<PaladiummachinerecipetypejeiRecipe> {
-	public final static ResourceLocation UID = new ResourceLocation("palamod", "paladiummachinerecipetypejei");
-	public final static ResourceLocation TEXTURE = new ResourceLocation("palamod", "textures/screens/palamachine_jei.png");
+	public final static ResourceLocation UID = ResourceLocation.parse("palamod:paladiummachinerecipetypejei");
+	public final static ResourceLocation TEXTURE = ResourceLocation.parse("palamod:textures/screens/palamachine_jei.png");
 	private final IDrawable background;
 	private final IDrawable icon;
 
@@ -38,13 +40,23 @@ public class PaladiummachinerecipetypejeiRecipeCategory implements IRecipeCatego
 	}
 
 	@Override
-	public IDrawable getBackground() {
-		return this.background;
+	public IDrawable getIcon() {
+		return this.icon;
 	}
 
 	@Override
-	public IDrawable getIcon() {
-		return this.icon;
+	public int getWidth() {
+		return this.background.getWidth();
+	}
+
+	@Override
+	public int getHeight() {
+		return this.background.getHeight();
+	}
+
+	@Override
+	public void draw(PaladiummachinerecipetypejeiRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+		this.background.draw(guiGraphics);
 	}
 
 	@Override

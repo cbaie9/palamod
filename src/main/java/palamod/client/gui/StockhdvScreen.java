@@ -36,7 +36,7 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> {
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -47,7 +47,7 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/stockhdv.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 425, 240, 425, 240);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/stockhdv.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 425, 240, 425, 240);
 
 		RenderSystem.disableBlend();
 	}

@@ -7,7 +7,7 @@ import net.minecraft.core.BlockPos;
 
 public class SapplingBlockValidPlacementConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation("forge:placeable_sapling_on")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("forge:placeable_sapling_on")))) {
 			return true;
 		}
 		return false;

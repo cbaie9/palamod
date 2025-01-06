@@ -2,8 +2,8 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;

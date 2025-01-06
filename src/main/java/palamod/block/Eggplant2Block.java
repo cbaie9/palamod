@@ -6,8 +6,8 @@ import palamod.procedures.Eggplant2upProcedure;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.level.material.PushReaction;
@@ -30,12 +30,7 @@ import net.minecraft.core.BlockPos;
 
 public class Eggplant2Block extends FlowerBlock {
 	public Eggplant2Block() {
-		super(() -> MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
-	}
-
-	@Override
-	public int getEffectDuration() {
-		return 5;
+		super(MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -49,7 +44,7 @@ public class Eggplant2Block extends FlowerBlock {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
 		return new ItemStack(PalamodModItems.EGGPLANT_SEED.get());
 	}
 

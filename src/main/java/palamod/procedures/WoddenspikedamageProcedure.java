@@ -14,7 +14,7 @@ public class WoddenspikedamageProcedure {
 		if (entity == null)
 			return;
 		if (PalamodModVariables.cooltick_spike == 0) {
-			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("palamod:spikedamage")))), 2);
+			entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("palamod:spikedamage")))), 2);
 			PalamodModVariables.cooltick_spike = 20;
 		} else {
 			PalamodModVariables.cooltick_spike = PalamodModVariables.cooltick_spike - 1;

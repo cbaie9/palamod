@@ -11,6 +11,6 @@ public class AddpoisonimbueProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.POISONIMBUE.get(), 20000, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.POISONIMBUE, 20000, 1, false, false));
 	}
 }

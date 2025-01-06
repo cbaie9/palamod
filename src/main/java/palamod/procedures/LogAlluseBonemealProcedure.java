@@ -4,10 +4,10 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.BonemealEvent;
+import net.neoforged.neoforge.event.entity.player.BonemealEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -16,11 +16,11 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class LogAlluseBonemealProcedure {
 	@SubscribeEvent
 	public static void onBonemeal(BonemealEvent event) {
-		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getEntity());
+		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getPlayer());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

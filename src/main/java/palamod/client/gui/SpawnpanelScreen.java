@@ -6,7 +6,7 @@ import palamod.procedures.Spawnpanel_get_spawnProcedure;
 
 import palamod.network.SpawnpanelButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -41,7 +41,7 @@ public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> {
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -52,7 +52,7 @@ public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/spawnpanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 100, 150, 100);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/spawnpanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 100, 150, 100);
 
 		RenderSystem.disableBlend();
 	}
@@ -79,7 +79,7 @@ public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> {
 		super.init();
 		button_change_spawn = Button.builder(Component.translatable("gui.palamod.spawnpanel.button_change_spawn"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new SpawnpanelButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new SpawnpanelButtonMessage(0, x, y, z));
 				SpawnpanelButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 3, this.topPos + 75, 92, 20).build();

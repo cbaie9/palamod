@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class PalamodModBrewingRecipes implements IModPlugin {
 	@Override
 	public ResourceLocation getPluginUid() {
-		return new ResourceLocation("palamod:brewing_recipes");
+		return ResourceLocation.parse("palamod:brewing_recipes");
 	}
 
 	@Override

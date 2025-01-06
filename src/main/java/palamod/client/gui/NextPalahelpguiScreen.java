@@ -4,7 +4,7 @@ import palamod.world.inventory.NextPalahelpguiMenu;
 
 import palamod.network.NextPalahelpguiButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -41,7 +41,7 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -52,9 +52,9 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/next_palahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/next_palahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palablock_green_palahelp2-removebg-preview_1.png"), this.leftPos + 5, this.topPos + 20, 0, 0, 75, 80, 75, 80);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palablock_green_palahelp2-removebg-preview_1.png"), this.leftPos + 5, this.topPos + 20, 0, 0, 75, 80, 75, 80);
 
 		RenderSystem.disableBlend();
 	}
@@ -80,7 +80,7 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 		super.init();
 		button_commands = Button.builder(Component.translatable("gui.palamod.next_palahelpgui.button_commands"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new NextPalahelpguiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new NextPalahelpguiButtonMessage(0, x, y, z));
 				NextPalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 87, this.topPos + 24, 80, 20).build();
@@ -88,7 +88,7 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 		this.addRenderableWidget(button_commands);
 		button_lucky_stats = Button.builder(Component.translatable("gui.palamod.next_palahelpgui.button_lucky_stats"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new NextPalahelpguiButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new NextPalahelpguiButtonMessage(1, x, y, z));
 				NextPalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 87, this.topPos + 56, 80, 20).build();
@@ -96,7 +96,7 @@ public class NextPalahelpguiScreen extends AbstractContainerScreen<NextPalahelpg
 		this.addRenderableWidget(button_lucky_stats);
 		button_back = Button.builder(Component.translatable("gui.palamod.next_palahelpgui.button_back"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new NextPalahelpguiButtonMessage(2, x, y, z));
+				PacketDistributor.sendToServer(new NextPalahelpguiButtonMessage(2, x, y, z));
 				NextPalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 6, this.topPos + 134, 75, 20).build();

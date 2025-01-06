@@ -59,7 +59,7 @@ public class RtpcommandProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, new ResourceLocation("minecraft:ocean")))) {
+					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("minecraft:ocean")))) {
 						yrandom = world.getHeight(Heightmap.Types.OCEAN_FLOOR, (int) xrandom, (int) zrandom);
 					} else {
 						yrandom = world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) xrandom, (int) zrandom);

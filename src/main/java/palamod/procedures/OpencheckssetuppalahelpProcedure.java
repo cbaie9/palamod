@@ -3,8 +3,7 @@ package palamod.procedures;
 import palamod.world.inventory.Palahelpgui1Menu;
 import palamod.world.inventory.LanguageselectionMenu;
 
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -34,10 +33,15 @@ public class OpencheckssetuppalahelpProcedure {
 		if (!file.exists()) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+				_ent.openMenu(new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
 						return Component.literal("Languageselection");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
 					}
 
 					@Override
@@ -62,10 +66,15 @@ public class OpencheckssetuppalahelpProcedure {
 					if ((main_obj.get("language").getAsString()).equals("french") || (main_obj.get("language").getAsString()).equals("english")) {
 						if (entity instanceof ServerPlayer _ent) {
 							BlockPos _bpos = BlockPos.containing(x, y, z);
-							NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+							_ent.openMenu(new MenuProvider() {
 								@Override
 								public Component getDisplayName() {
 									return Component.literal("Palahelpgui1");
+								}
+
+								@Override
+								public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+									return false;
 								}
 
 								@Override
@@ -77,10 +86,15 @@ public class OpencheckssetuppalahelpProcedure {
 					} else if ((main_obj.get("language").getAsString()).equals("no_set")) {
 						if (entity instanceof ServerPlayer _ent) {
 							BlockPos _bpos = BlockPos.containing(x, y, z);
-							NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+							_ent.openMenu(new MenuProvider() {
 								@Override
 								public Component getDisplayName() {
 									return Component.literal("Languageselection");
+								}
+
+								@Override
+								public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+									return false;
 								}
 
 								@Override
@@ -92,10 +106,15 @@ public class OpencheckssetuppalahelpProcedure {
 					} else {
 						if (entity instanceof ServerPlayer _ent) {
 							BlockPos _bpos = BlockPos.containing(x, y, z);
-							NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+							_ent.openMenu(new MenuProvider() {
 								@Override
 								public Component getDisplayName() {
 									return Component.literal("Languageselection");
+								}
+
+								@Override
+								public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+									return false;
 								}
 
 								@Override

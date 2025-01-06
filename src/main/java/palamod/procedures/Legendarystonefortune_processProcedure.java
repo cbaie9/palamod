@@ -2,10 +2,11 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -13,6 +14,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.client.Minecraft;
 
 public class Legendarystonefortune_processProcedure {
@@ -21,7 +23,7 @@ public class Legendarystonefortune_processProcedure {
 			return;
 		ItemStack item = ItemStack.EMPTY;
 		double number = 0;
-		if (itemstack.getOrCreateTag().getDouble("cooldown") == 0 || new Object() {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
@@ -49,8 +51,16 @@ public class Legendarystonefortune_processProcedure {
 				_setstack.setCount(Mth.nextInt(RandomSource.create(), 10, 64));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			itemstack.getOrCreateTag().putString("name", (new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get()).getDisplayName().getString()));
-			itemstack.getOrCreateTag().putDouble("cooldown", 48000);
+			{
+				final String _tagName = "name";
+				final String _tagValue = (new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get()).getDisplayName().getString());
+				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
+			}
+			{
+				final String _tagName = "cooldown";
+				final double _tagValue = 48000;
+				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+			}
 		}
 	}
 }

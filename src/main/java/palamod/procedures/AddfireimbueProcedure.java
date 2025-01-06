@@ -11,6 +11,6 @@ public class AddfireimbueProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.FIREIMBUE.get(), 20000, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(PalamodModMobEffects.FIREIMBUE, 20000, 1, false, false));
 	}
 }

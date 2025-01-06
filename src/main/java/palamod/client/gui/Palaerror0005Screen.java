@@ -4,7 +4,7 @@ import palamod.world.inventory.Palaerror0005Menu;
 
 import palamod.network.Palaerror0005ButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -39,7 +39,7 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -50,7 +50,7 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/palaerror_0005.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 180, 80, 180, 80);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palaerror_0005.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 180, 80, 180, 80);
 
 		RenderSystem.disableBlend();
 	}
@@ -76,7 +76,7 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 		super.init();
 		button_quit = Button.builder(Component.translatable("gui.palamod.palaerror_0005.button_quit"), e -> {
 			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new Palaerror0005ButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new Palaerror0005ButtonMessage(0, x, y, z));
 				Palaerror0005ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 68, this.topPos + 53, 46, 20).build();

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:jacaranda_fence",
+    "palamod:jacaranda_fence_gate",
+    "palamod:erable_fence",
+    "palamod:erable_fence_gate",
+    "palamod:judeecercis_fence",
+    "palamod:judeecercis_fence_gate",
+    "palamod:ostrya_wood_fence",
+    "palamod:ostrya_wood_fence_gate"
+  ]
+}

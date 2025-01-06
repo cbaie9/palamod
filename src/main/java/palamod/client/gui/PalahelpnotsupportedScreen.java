@@ -4,7 +4,7 @@ import palamod.world.inventory.PalahelpnotsupportedMenu;
 
 import palamod.network.PalahelpnotsupportedButtonMessage;
 
-import palamod.PalamodMod;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -41,7 +42,7 @@ public class PalahelpnotsupportedScreen extends AbstractContainerScreen<Palahelp
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -52,19 +53,19 @@ public class PalahelpnotsupportedScreen extends AbstractContainerScreen<Palahelp
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 10, this.topPos + 26, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 10, this.topPos + 26, 0, 0, 32, 32, 32, 32);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 137, this.topPos + 26, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 137, this.topPos + 26, 0, 0, 32, 32, 32, 32);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 7, this.topPos + 127, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 7, this.topPos + 127, 0, 0, 32, 32, 32, 32);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 136, this.topPos + 129, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sad_ntsuport.png"), this.leftPos + 136, this.topPos + 129, 0, 0, 32, 32, 32, 32);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(new ResourceLocation("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -89,28 +90,46 @@ public class PalahelpnotsupportedScreen extends AbstractContainerScreen<Palahelp
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 4, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_cross_no_button.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PalahelpnotsupportedButtonMessage(0, x, y, z));
-				PalahelpnotsupportedButtonMessage.handleButtonAction(entity, 0, x, y, z);
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 4, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnotsupportedButtonMessage(0, x, y, z));
+						PalahelpnotsupportedButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 133, this.topPos + 3, 16, 16, 0, 0, 16, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_arrow_adminshop.png"), 16, 32, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PalahelpnotsupportedButtonMessage(1, x, y, z));
-				PalahelpnotsupportedButtonMessage.handleButtonAction(entity, 1, x, y, z);
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 133, this.topPos + 3, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnotsupportedButtonMessage(1, x, y, z));
+						PalahelpnotsupportedButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
-		imagebutton_language_btte = new ImageButton(this.leftPos + 76, this.topPos + 141, 21, 10, 0, 0, 10, new ResourceLocation("palamod:textures/screens/atlas/imagebutton_language_btte.png"), 21, 20, e -> {
-			if (true) {
-				PalamodMod.PACKET_HANDLER.sendToServer(new PalahelpnotsupportedButtonMessage(2, x, y, z));
-				PalahelpnotsupportedButtonMessage.handleButtonAction(entity, 2, x, y, z);
+		imagebutton_language_btte = new ImageButton(this.leftPos + 76, this.topPos + 141, 21, 10,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/language_btte.png"), ResourceLocation.parse("palamod:textures/screens/language_btte_poi.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnotsupportedButtonMessage(2, x, y, z));
+						PalahelpnotsupportedButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_language_btte", imagebutton_language_btte);
 		this.addRenderableWidget(imagebutton_language_btte);
 	}

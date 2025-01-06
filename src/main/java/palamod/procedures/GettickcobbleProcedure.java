@@ -1,13 +1,15 @@
 package palamod.procedures;
 
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
-
-import java.util.concurrent.atomic.AtomicReference;
 
 public class GettickcobbleProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
@@ -18,14 +20,15 @@ public class GettickcobbleProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "cobblebreak_tick")) + "- " + (new Object() {
+		}.getValue(world, BlockPos.containing(x, y, z), "cobblebreak_tick")) + "- " + ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-				BlockEntity _ent = world.getBlockEntity(pos);
-				if (_ent != null)
-					_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-				return _retval.get();
+				if (world instanceof ILevelExtension _ext) {
+					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+					if (_itemHandler != null)
+						return _itemHandler.getStackInSlot(slotid).copy();
+				}
+				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getOrCreateTag().getDouble("voidstone_count");
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count"));
 	}
 }
