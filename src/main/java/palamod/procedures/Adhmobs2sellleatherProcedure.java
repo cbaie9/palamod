@@ -36,7 +36,7 @@ public class Adhmobs2sellleatherProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 7;
-		item = new ItemStack(Items.LEATHER);
+		item = new ItemStack(Items.LEATHER).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

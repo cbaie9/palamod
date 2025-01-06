@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "onlinedetectorgui.png",
           "use1Xscale": false,
           "x": 138,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -27,7 +28,8 @@
           "width": 137,
           "height": 20,
           "x": 143,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -42,7 +44,8 @@
             "falpha": 0.0
           },
           "x": 145,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -57,7 +60,8 @@
           "width": 56,
           "height": 20,
           "x": 143,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -72,7 +76,8 @@
             "falpha": 0.0
           },
           "x": 202,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -88,7 +93,8 @@
             "falpha": 0.0
           },
           "x": 202,
-          "y": 137
+          "y": 137,
+          "locked": false
         }
       }
     ],

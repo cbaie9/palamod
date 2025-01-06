@@ -80,12 +80,18 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 60, 23) {
 			private final int slot = 0;
+			private int x = PaladumfurnaceMenu.this.x;
+			private int y = PaladumfurnaceMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 60, 59) {
 			private final int slot = 1;
+			private int x = PaladumfurnaceMenu.this.x;
+			private int y = PaladumfurnaceMenu.this.y;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 121, 41) {
 			private final int slot = 2;
+			private int x = PaladumfurnaceMenu.this.x;
+			private int y = PaladumfurnaceMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -94,6 +100,8 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 14, 41) {
 			private final int slot = 4;
+			private int x = PaladumfurnaceMenu.this.x;
+			private int y = PaladumfurnaceMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {

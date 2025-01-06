@@ -36,7 +36,7 @@ public class AdhsellcactusProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 50;
-		item = new ItemStack(Items.COCOA_BEANS);
+		item = new ItemStack(Items.COCOA_BEANS).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

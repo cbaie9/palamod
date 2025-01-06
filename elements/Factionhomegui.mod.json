@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 180,
-          "y": 23
+          "y": 23,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "falpha": 0.0
           },
           "x": 83,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -49,7 +51,8 @@
           "width": 56,
           "height": 20,
           "x": 72,
-          "y": 191
+          "y": 191,
+          "locked": false
         }
       },
       {
@@ -65,7 +68,8 @@
             "falpha": 0.0
           },
           "x": 68,
-          "y": 45
+          "y": 45,
+          "locked": false
         }
       }
     ],

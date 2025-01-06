@@ -36,7 +36,7 @@ public class AdhmobssellstringProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 2.25;
-		item = new ItemStack(Items.STRING);
+		item = new ItemStack(Items.STRING).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

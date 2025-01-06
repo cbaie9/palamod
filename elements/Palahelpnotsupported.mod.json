@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui176_166.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "sad_ntsuport.png",
           "use1Xscale": false,
           "x": 136,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -34,7 +36,8 @@
           "image": "sad_ntsuport.png",
           "use1Xscale": false,
           "x": 263,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -43,7 +46,8 @@
           "image": "sad_ntsuport.png",
           "use1Xscale": false,
           "x": 133,
-          "y": 164
+          "y": 164,
+          "locked": false
         }
       },
       {
@@ -52,7 +56,8 @@
           "image": "sad_ntsuport.png",
           "use1Xscale": false,
           "x": 262,
-          "y": 166
+          "y": 166,
+          "locked": false
         }
       },
       {
@@ -67,7 +72,8 @@
             "falpha": 0.0
           },
           "x": 136,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -76,7 +82,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 201,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -91,7 +98,8 @@
             "falpha": 0.0
           },
           "x": 172,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -106,7 +114,8 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 112
+          "y": 112,
+          "locked": false
         }
       },
       {
@@ -115,7 +124,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -128,7 +138,8 @@
             "name": "Closegui"
           },
           "x": 280,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -141,7 +152,8 @@
             "name": "Backpalahelp"
           },
           "x": 259,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -154,7 +166,8 @@
             "name": "Forcechlanguage"
           },
           "x": 202,
-          "y": 178
+          "y": 178,
+          "locked": false
         }
       },
       {
@@ -169,7 +182,8 @@
             "falpha": 0.0
           },
           "x": 173,
-          "y": 165
+          "y": 165,
+          "locked": false
         }
       }
     ],

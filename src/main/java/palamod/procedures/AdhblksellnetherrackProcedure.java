@@ -36,7 +36,7 @@ public class AdhblksellnetherrackProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 0.1;
-		item = new ItemStack(Blocks.NETHERRACK);
+		item = new ItemStack(Blocks.NETHERRACK).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

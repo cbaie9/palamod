@@ -79,6 +79,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 12, 138) {
 			private final int slot = 0;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -92,6 +94,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 81, 124) {
 			private final int slot = 1;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -105,6 +109,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 148, 138) {
 			private final int slot = 2;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -118,6 +124,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 44, 158) {
 			private final int slot = 3;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -131,6 +139,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 117, 159) {
 			private final int slot = 4;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -144,6 +154,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 81, 188) {
 			private final int slot = 5;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -157,6 +169,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 274, 124) {
 			private final int slot = 6;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -170,6 +184,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 274, 142) {
 			private final int slot = 7;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -183,6 +199,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 274, 160) {
 			private final int slot = 8;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -196,6 +214,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 292, 124) {
 			private final int slot = 9;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -209,6 +229,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 292, 142) {
 			private final int slot = 10;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -222,6 +244,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 292, 160) {
 			private final int slot = 11;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -235,6 +259,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 310, 124) {
 			private final int slot = 12;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -248,6 +274,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 310, 142) {
 			private final int slot = 13;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -261,6 +289,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 310, 160) {
 			private final int slot = 14;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {
@@ -274,6 +304,8 @@ public class SticknewhelpMenu extends AbstractContainerMenu implements Supplier<
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 362, 142) {
 			private final int slot = 15;
+			private int x = SticknewhelpMenu.this.x;
+			private int y = SticknewhelpMenu.this.y;
 
 			@Override
 			public boolean mayPickup(Player entity) {

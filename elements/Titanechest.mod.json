@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "block",
   "definition": {
     "texture": "titane_face2",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Flat titane chest",
     "specialInformation": {
       "fixedValue": []

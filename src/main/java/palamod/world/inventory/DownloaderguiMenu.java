@@ -79,6 +79,8 @@ public class DownloaderguiMenu extends AbstractContainerMenu implements Supplier
 		}
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 79, 44) {
 			private final int slot = 1;
+			private int x = DownloaderguiMenu.this.x;
+			private int y = DownloaderguiMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -87,6 +89,8 @@ public class DownloaderguiMenu extends AbstractContainerMenu implements Supplier
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 145, 17) {
 			private final int slot = 3;
+			private int x = DownloaderguiMenu.this.x;
+			private int y = DownloaderguiMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

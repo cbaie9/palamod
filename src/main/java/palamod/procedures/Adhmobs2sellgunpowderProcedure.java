@@ -36,7 +36,7 @@ public class Adhmobs2sellgunpowderProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 1.75;
-		item = new ItemStack(Items.GUNPOWDER);
+		item = new ItemStack(Items.GUNPOWDER).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

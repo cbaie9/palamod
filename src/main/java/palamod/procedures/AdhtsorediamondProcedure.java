@@ -36,7 +36,7 @@ public class AdhtsorediamondProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 40;
-		item = new ItemStack(Items.DIAMOND);
+		item = new ItemStack(Items.DIAMOND).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

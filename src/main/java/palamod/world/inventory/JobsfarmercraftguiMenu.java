@@ -85,6 +85,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 184, 37) {
 			private final int slot = 0;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -100,6 +102,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 202, 37) {
 			private final int slot = 1;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -115,6 +119,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 220, 37) {
 			private final int slot = 2;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -124,6 +130,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 184, 55) {
 			private final int slot = 3;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -139,6 +147,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 202, 55) {
 			private final int slot = 4;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -154,6 +164,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 220, 55) {
 			private final int slot = 5;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -169,6 +181,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 184, 73) {
 			private final int slot = 6;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -184,6 +198,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 202, 73) {
 			private final int slot = 7;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -193,6 +209,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 220, 73) {
 			private final int slot = 8;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -208,6 +226,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 262, 55) {
 			private final int slot = 9;
+			private int x = JobsfarmercraftguiMenu.this.x;
+			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {

@@ -36,7 +36,7 @@ public class Adhmobs2sellhoneycombProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 7.5;
-		item = new ItemStack(Items.HONEYCOMB);
+		item = new ItemStack(Items.HONEYCOMB).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

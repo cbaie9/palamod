@@ -36,7 +36,7 @@ public class Adhmobs2sellinksacProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 5.75;
-		item = new ItemStack(Items.INK_SAC);
+		item = new ItemStack(Items.INK_SAC).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

@@ -36,7 +36,7 @@ public class Adhmobs2sellfeatherProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 6.5;
-		item = new ItemStack(Items.FEATHER);
+		item = new ItemStack(Items.FEATHER).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

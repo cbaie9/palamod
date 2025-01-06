@@ -44,7 +44,7 @@ public class AdhmobsbuyslimeballProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 8;
-		item = new ItemStack(Items.SLIME_BALL);
+		item = new ItemStack(Items.SLIME_BALL).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

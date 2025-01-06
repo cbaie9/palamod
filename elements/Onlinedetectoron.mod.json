@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "block",
   "definition": {
     "texture": "onlinedetector_on",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Online detector",
     "specialInformation": {
       "fixedValue": []

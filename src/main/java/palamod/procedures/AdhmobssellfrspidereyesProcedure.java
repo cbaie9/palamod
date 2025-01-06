@@ -36,7 +36,7 @@ public class AdhmobssellfrspidereyesProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 5.75;
-		item = new ItemStack(Items.FERMENTED_SPIDER_EYE);
+		item = new ItemStack(Items.FERMENTED_SPIDER_EYE).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

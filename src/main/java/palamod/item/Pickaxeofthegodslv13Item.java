@@ -104,7 +104,7 @@ public class Pickaxeofthegodslv13Item extends TieredItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Level 13"));
+		list.add(Component.translatable("item.palamod.pickaxeofthegodslv_13.description_0"));
 	}
 
 	@Override
@@ -112,6 +112,6 @@ public class Pickaxeofthegodslv13Item extends TieredItem {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
 			MoucepotgProcedure.execute(entity, itemstack);
-		GetenchantpotgProcedure.execute(itemstack);
+		GetenchantpotgProcedure.execute(world, itemstack);
 	}
 }

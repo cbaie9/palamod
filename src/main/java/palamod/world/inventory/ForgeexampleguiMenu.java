@@ -85,12 +85,18 @@ public class ForgeexampleguiMenu extends AbstractContainerMenu implements Suppli
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 61, 17) {
 			private final int slot = 0;
+			private int x = ForgeexampleguiMenu.this.x;
+			private int y = ForgeexampleguiMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 61, 53) {
 			private final int slot = 1;
+			private int x = ForgeexampleguiMenu.this.x;
+			private int y = ForgeexampleguiMenu.this.y;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 107, 35) {
 			private final int slot = 2;
+			private int x = ForgeexampleguiMenu.this.x;
+			private int y = ForgeexampleguiMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {

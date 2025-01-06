@@ -1,11 +1,12 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "fluid",
   "definition": {
     "name": "Angelic water",
     "bucketName": "Angelic water Bucket",
     "textureStill": "angelicwater_still",
     "textureFlowing": "angelicwater_flowing",
+    "hasFog": false,
     "tintType": "No tint",
     "canMultiply": true,
     "flowRate": 5,

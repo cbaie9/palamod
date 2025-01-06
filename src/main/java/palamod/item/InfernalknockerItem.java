@@ -58,6 +58,6 @@ public class InfernalknockerItem extends SwordItem {
 	@Override
 	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
 		super.onCraftedBy(itemstack, world, entity);
-		Infernalknocker_aknoProcedure.execute(itemstack);
+		Infernalknocker_aknoProcedure.execute(world, itemstack);
 	}
 }

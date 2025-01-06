@@ -81,6 +81,8 @@ public class Examplecrusherv2Menu extends AbstractContainerMenu implements Suppl
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 20) {
 			private final int slot = 0;
+			private int x = Examplecrusherv2Menu.this.x;
+			private int y = Examplecrusherv2Menu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -89,6 +91,8 @@ public class Examplecrusherv2Menu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 56) {
 			private final int slot = 1;
+			private int x = Examplecrusherv2Menu.this.x;
+			private int y = Examplecrusherv2Menu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -97,6 +101,8 @@ public class Examplecrusherv2Menu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 159, 100) {
 			private final int slot = 2;
+			private int x = Examplecrusherv2Menu.this.x;
+			private int y = Examplecrusherv2Menu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {

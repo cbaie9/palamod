@@ -44,7 +44,7 @@ public class AdhmobsbuyfrspidereyesProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 7.5;
-		item = new ItemStack(Items.FERMENTED_SPIDER_EYE);
+		item = new ItemStack(Items.FERMENTED_SPIDER_EYE).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

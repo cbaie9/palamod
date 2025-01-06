@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui176_166.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "adminshopblockoakwood.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
           "width": 40,
           "height": 20,
           "x": 222,
-          "y": 68
+          "y": 68,
+          "locked": false
         }
       },
       {
@@ -67,7 +71,8 @@
           "width": 50,
           "height": 20,
           "x": 222,
-          "y": 93
+          "y": 93,
+          "locked": false
         }
       },
       {
@@ -82,7 +87,8 @@
           "width": 60,
           "height": 20,
           "x": 221,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -97,7 +103,8 @@
           "width": 50,
           "height": 20,
           "x": 222,
-          "y": 149
+          "y": 149,
+          "locked": false
         }
       },
       {
@@ -106,7 +113,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -115,7 +123,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 202,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -128,7 +137,8 @@
             "name": "Closegui"
           },
           "x": 279,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -142,7 +152,8 @@
           "width": 17,
           "height": 17,
           "x": 279,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -155,7 +166,8 @@
             "name": "Backpalahelp"
           },
           "x": 259,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -168,7 +180,8 @@
           "width": 15,
           "height": 15,
           "x": 260,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -177,7 +190,8 @@
           "image": "pack.png",
           "use1Xscale": true,
           "x": 132,
-          "y": 61
+          "y": 61,
+          "locked": false
         }
       }
     ],

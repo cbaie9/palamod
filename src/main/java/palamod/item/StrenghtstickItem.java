@@ -53,7 +53,7 @@ public class StrenghtstickItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		StrenghtstickprocessProcedure.execute(entity, ar.getObject());
+		StrenghtstickprocessProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
@@ -77,7 +77,7 @@ public class StrenghtstickItem extends Item {
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		StrenghtstickprocessProcedure.execute(context.getPlayer(), context.getItemInHand());
+		StrenghtstickprocessProcedure.execute(context.getLevel(), context.getPlayer(), context.getItemInHand());
 		return InteractionResult.SUCCESS;
 	}
 

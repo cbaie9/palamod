@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "jeirecipetype",
   "definition": {
     "textureSelector": "crusher_jei.png",
@@ -8,9 +8,11 @@
     "icon": {
       "value": "CUSTOM:Paladiumcrusher"
     },
-    "craftingtable": {
-      "value": "CUSTOM:Paladiumcrusher"
-    },
+    "craftingtables": [
+      {
+        "value": "CUSTOM:Paladiumcrusher"
+      }
+    ],
     "enableCraftingtable": true,
     "title": "Crusher",
     "slotList": [

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "palamachinegui.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 183,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -47,7 +49,8 @@
             "falpha": 0.0
           },
           "x": 130,
-          "y": 109
+          "y": 109,
+          "locked": false
         }
       },
       {
@@ -68,7 +71,8 @@
             "name": "Palamachineprocessv2"
           },
           "x": 146,
-          "y": 58
+          "y": 58,
+          "locked": false
         }
       },
       {
@@ -89,7 +93,8 @@
             "name": "Palamachineprocessv2"
           },
           "x": 254,
-          "y": 58
+          "y": 58,
+          "locked": false
         }
       },
       {
@@ -110,7 +115,8 @@
             "name": "Palamachineprocessv2"
           },
           "x": 201,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -131,7 +137,8 @@
             "name": "Palamachineprocessv2"
           },
           "x": 174,
-          "y": 76
+          "y": 76,
+          "locked": false
         }
       },
       {
@@ -152,7 +159,8 @@
             "name": "Palamachineprocessv2"
           },
           "x": 228,
-          "y": 76
+          "y": 76,
+          "locked": false
         }
       },
       {
@@ -167,7 +175,8 @@
             "name": "Palamachineprocessv2"
           },
           "x": 200,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -176,7 +185,8 @@
           "image": "palamachine_load0.png",
           "use1Xscale": false,
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -188,7 +198,8 @@
             "name": "Palamachinesubprocess1"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -200,7 +211,8 @@
             "name": "Palamachinesubprocess2"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -212,7 +224,8 @@
             "name": "Palamachinesubprocess3"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -224,7 +237,8 @@
             "name": "Palamachinesubprocess4"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -236,7 +250,8 @@
             "name": "Palamachinesubprocess5"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -248,7 +263,8 @@
             "name": "Palamachinesubprocess6"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -260,7 +276,8 @@
             "name": "Palamachinesubprocess7"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -272,7 +289,8 @@
             "name": "Palamachinesubprocess8"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -284,7 +302,8 @@
             "name": "Palamachinesubprocess9"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -296,7 +315,8 @@
             "name": "Palamachinesubprocess10"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -308,7 +328,8 @@
             "name": "Palamachinesubprocess11"
           },
           "x": 205,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       }
     ],

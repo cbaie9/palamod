@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PrimedendiumtntRenderer extends MobRenderer<PrimedendiumtntEntity, Modelprimed_tnt_sponge_v4<PrimedendiumtntEntity>> {
 	public PrimedendiumtntRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelprimed_tnt_sponge_v4(context.bakeLayer(Modelprimed_tnt_sponge_v4.LAYER_LOCATION)), 0f);
+		super(context, new Modelprimed_tnt_sponge_v4<PrimedendiumtntEntity>(context.bakeLayer(Modelprimed_tnt_sponge_v4.LAYER_LOCATION)), 0f);
 	}
 
 	@Override

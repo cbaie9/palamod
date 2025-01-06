@@ -1,15 +1,15 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "enchantment",
   "definition": {
     "name": "Smelt",
-    "type": "DIGGER",
-    "rarity": "COMMON",
+    "supportedSlots": "mainhand",
+    "weight": 10,
+    "anvilCost": 1,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "incompatibleEnchantments": [],
+    "supportedItems": [
       {
         "value": "CUSTOM:Paladiumhammer"
       },
@@ -23,10 +23,8 @@
         "value": "CUSTOM:Endiumhammer"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": false,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

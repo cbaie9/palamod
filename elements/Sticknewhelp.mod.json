@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "sticknewhelp.png",
           "use1Xscale": false,
           "x": 14,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 14,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -34,7 +36,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 113,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -43,7 +46,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 213,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -52,7 +56,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 314,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -67,7 +72,8 @@
             "falpha": 0.0
           },
           "x": 172,
-          "y": 16
+          "y": 16,
+          "locked": false
         }
       },
       {
@@ -80,7 +86,8 @@
             "name": "Closegui"
           },
           "x": 393,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       },
       {
@@ -93,7 +100,8 @@
             "name": "Connectitemmenu"
           },
           "x": 373,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       },
       {
@@ -106,7 +114,8 @@
             "name": "Backpalahelp"
           },
           "x": 356,
-          "y": 13
+          "y": 13,
+          "locked": false
         }
       },
       {
@@ -124,7 +133,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 25,
-          "y": 145
+          "y": 145,
+          "locked": false
         }
       },
       {
@@ -142,7 +152,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 94,
-          "y": 131
+          "y": 131,
+          "locked": false
         }
       },
       {
@@ -160,7 +171,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 161,
-          "y": 145
+          "y": 145,
+          "locked": false
         }
       },
       {
@@ -178,7 +190,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 57,
-          "y": 165
+          "y": 165,
+          "locked": false
         }
       },
       {
@@ -196,7 +209,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 130,
-          "y": 166
+          "y": 166,
+          "locked": false
         }
       },
       {
@@ -214,7 +228,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 94,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -232,7 +247,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 287,
-          "y": 131
+          "y": 131,
+          "locked": false
         }
       },
       {
@@ -250,7 +266,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 287,
-          "y": 149
+          "y": 149,
+          "locked": false
         }
       },
       {
@@ -268,7 +285,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 287,
-          "y": 167
+          "y": 167,
+          "locked": false
         }
       },
       {
@@ -286,7 +304,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 305,
-          "y": 131
+          "y": 131,
+          "locked": false
         }
       },
       {
@@ -304,7 +323,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 305,
-          "y": 149
+          "y": 149,
+          "locked": false
         }
       },
       {
@@ -322,7 +342,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 305,
-          "y": 167
+          "y": 167,
+          "locked": false
         }
       },
       {
@@ -340,7 +361,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 323,
-          "y": 131
+          "y": 131,
+          "locked": false
         }
       },
       {
@@ -358,7 +380,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 323,
-          "y": 149
+          "y": 149,
+          "locked": false
         }
       },
       {
@@ -376,7 +399,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 323,
-          "y": 167
+          "y": 167,
+          "locked": false
         }
       },
       {
@@ -385,7 +409,8 @@
           "image": "arrow_new.png",
           "use1Xscale": true,
           "x": 345,
-          "y": 152
+          "y": 152,
+          "locked": false
         }
       },
       {
@@ -403,7 +428,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 375,
-          "y": 149
+          "y": 149,
+          "locked": false
         }
       },
       {
@@ -418,7 +444,8 @@
             "falpha": 0.0
           },
           "x": 18,
-          "y": 34
+          "y": 34,
+          "locked": false
         }
       },
       {
@@ -433,7 +460,8 @@
             "falpha": 0.0
           },
           "x": 75,
-          "y": 114
+          "y": 114,
+          "locked": false
         }
       },
       {
@@ -448,7 +476,8 @@
             "falpha": 0.0
           },
           "x": 17,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -461,7 +490,8 @@
             "name": "Palahelpstickmodespeed"
           },
           "x": 20,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       },
       {
@@ -474,7 +504,8 @@
             "name": "Palahelpstickmodejump"
           },
           "x": 37,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       },
       {
@@ -487,7 +518,8 @@
             "name": "Palahelpstickmodehyperjump"
           },
           "x": 56,
-          "y": 13
+          "y": 13,
+          "locked": false
         }
       },
       {
@@ -500,7 +532,8 @@
             "name": "Palahelpstickmodeheal"
           },
           "x": 75,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       },
       {
@@ -513,7 +546,8 @@
             "name": "Palahelpstickmodedamage"
           },
           "x": 93,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       },
       {
@@ -526,7 +560,8 @@
             "name": "Palahelpstickmodestrenght"
           },
           "x": 109,
-          "y": 13
+          "y": 13,
+          "locked": false
         }
       },
       {
@@ -539,7 +574,8 @@
             "name": "Palahelpstickmodesog"
           },
           "x": 127,
-          "y": 13
+          "y": 13,
+          "locked": false
         }
       },
       {
@@ -555,7 +591,8 @@
             "falpha": 0.0
           },
           "x": 19,
-          "y": 47
+          "y": 47,
+          "locked": false
         }
       },
       {
@@ -564,7 +601,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 274,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -578,7 +616,8 @@
           "width": 16,
           "height": 16,
           "x": 393,
-          "y": 12
+          "y": 12,
+          "locked": false
         }
       }
     ],

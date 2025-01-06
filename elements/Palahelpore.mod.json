@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "palahelpore.png",
           "use1Xscale": false,
           "x": 63,
-          "y": 10
+          "y": 10,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 92,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
             "falpha": 0.0
           },
           "x": 91,
-          "y": 113
+          "y": 113,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
           "image": "amethyst_ingot.png",
           "use1Xscale": false,
           "x": 73,
-          "y": 165
+          "y": 165,
+          "locked": false
         }
       },
       {
@@ -64,7 +68,8 @@
           "image": "paladium_ingot.png",
           "use1Xscale": false,
           "x": 74,
-          "y": 87
+          "y": 87,
+          "locked": false
         }
       },
       {
@@ -73,7 +78,8 @@
           "image": "findium.png",
           "use1Xscale": true,
           "x": 74,
-          "y": 109
+          "y": 109,
+          "locked": false
         }
       },
       {
@@ -82,7 +88,8 @@
           "image": "titane_ingot.png",
           "use1Xscale": false,
           "x": 74,
-          "y": 133
+          "y": 133,
+          "locked": false
         }
       },
       {
@@ -97,7 +104,8 @@
             "falpha": 0.0
           },
           "x": 92,
-          "y": 136
+          "y": 136,
+          "locked": false
         }
       },
       {
@@ -112,7 +120,8 @@
             "falpha": 0.0
           },
           "x": 91,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -121,7 +130,8 @@
           "image": "paladium_green_ingot.png",
           "use1Xscale": false,
           "x": 74,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -136,7 +146,8 @@
             "falpha": 0.0
           },
           "x": 92,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       },
       {
@@ -145,7 +156,8 @@
           "image": "endium_ingot.png",
           "use1Xscale": true,
           "x": 74,
-          "y": 38
+          "y": 38,
+          "locked": false
         }
       },
       {
@@ -160,7 +172,8 @@
             "falpha": 0.0
           },
           "x": 92,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -175,7 +188,8 @@
             "falpha": 0.0
           },
           "x": 92,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -190,7 +204,8 @@
             "falpha": 0.0
           },
           "x": 93,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -205,7 +220,8 @@
             "falpha": 0.0
           },
           "x": 91,
-          "y": 187
+          "y": 187,
+          "locked": false
         }
       },
       {
@@ -214,7 +230,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 63,
-          "y": 9
+          "y": 9,
+          "locked": false
         }
       },
       {
@@ -223,7 +240,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 163,
-          "y": 9
+          "y": 9,
+          "locked": false
         }
       },
       {
@@ -232,7 +250,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 263,
-          "y": 9
+          "y": 9,
+          "locked": false
         }
       },
       {
@@ -245,7 +264,8 @@
             "name": "Backpalahelp"
           },
           "x": 300,
-          "y": 13
+          "y": 13,
+          "locked": false
         }
       },
       {
@@ -258,7 +278,8 @@
             "name": "Blockback"
           },
           "x": 319,
-          "y": 13
+          "y": 13,
+          "locked": false
         }
       },
       {
@@ -271,7 +292,8 @@
             "name": "Closegui"
           },
           "x": 342,
-          "y": 14
+          "y": 14,
+          "locked": false
         }
       },
       {
@@ -286,7 +308,8 @@
             "falpha": 0.0
           },
           "x": 159,
-          "y": 14
+          "y": 14,
+          "locked": false
         }
       }
     ],

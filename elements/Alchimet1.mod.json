@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "block",
   "definition": {
     "texture": "alchimie_texture",
@@ -42,6 +42,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Alchemy creator",
     "specialInformation": {
       "fixedValue": []

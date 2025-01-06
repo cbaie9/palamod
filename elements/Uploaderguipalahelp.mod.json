@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 75,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "falpha": 0.0
           },
           "x": 74,
-          "y": 31
+          "y": 31,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
             "falpha": 0.0
           },
           "x": 179,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -68,7 +71,8 @@
             "falpha": 0.0
           },
           "x": 58,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -84,7 +88,8 @@
             "falpha": 0.0
           },
           "x": 58,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -100,7 +105,8 @@
             "falpha": 0.0
           },
           "x": 58,
-          "y": 102
+          "y": 102,
+          "locked": false
         }
       },
       {
@@ -115,7 +121,8 @@
           "width": 123,
           "height": 20,
           "x": 60,
-          "y": 190
+          "y": 190,
+          "locked": false
         }
       },
       {
@@ -124,7 +131,8 @@
           "image": "uploaderguipalahelp.png",
           "use1Xscale": false,
           "x": 54,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       }
     ],

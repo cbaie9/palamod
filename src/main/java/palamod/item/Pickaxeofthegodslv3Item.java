@@ -103,7 +103,7 @@ public class Pickaxeofthegodslv3Item extends TieredItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Level 3"));
+		list.add(Component.translatable("item.palamod.pickaxeofthegodslv_3.description_0"));
 	}
 
 	@Override

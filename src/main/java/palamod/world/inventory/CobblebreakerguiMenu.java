@@ -83,9 +83,13 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 81, 8) {
 			private final int slot = 0;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 18, 60) {
 			private final int slot = 1;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -106,6 +110,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 39, 60) {
 			private final int slot = 2;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -126,6 +132,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 60, 60) {
 			private final int slot = 3;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -146,6 +154,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 81, 60) {
 			private final int slot = 4;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -166,6 +176,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 102, 60) {
 			private final int slot = 5;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -186,6 +198,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 123, 60) {
 			private final int slot = 6;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -206,6 +220,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 144, 60) {
 			private final int slot = 7;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
@@ -226,6 +242,8 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 148, 14) {
 			private final int slot = 8;
+			private int x = CobblebreakerguiMenu.this.x;
+			private int y = CobblebreakerguiMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

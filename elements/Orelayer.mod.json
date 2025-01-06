@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "overlay",
   "definition": {
     "priority": "LOW",
@@ -17,7 +17,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 2,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -33,7 +34,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 3,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -49,7 +51,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 2,
-          "y": 54
+          "y": 54,
+          "locked": false
         }
       },
       {
@@ -65,7 +68,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 3,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -81,7 +85,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 3,
-          "y": 100
+          "y": 100,
+          "locked": false
         }
       },
       {
@@ -97,7 +102,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 3,
-          "y": 111
+          "y": 111,
+          "locked": false
         }
       },
       {
@@ -113,7 +119,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 3,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -129,7 +136,8 @@
           },
           "anchorPoint": "CENTER",
           "x": 2,
-          "y": 122
+          "y": 122,
+          "locked": false
         }
       }
     ],

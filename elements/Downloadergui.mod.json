@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "downloadergui.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 264,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -43,7 +45,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 204,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -58,7 +61,8 @@
             "falpha": 0.0
           },
           "x": 197,
-          "y": 68
+          "y": 68,
+          "locked": false
         }
       },
       {
@@ -73,7 +77,8 @@
           "width": 56,
           "height": 20,
           "x": 239,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -85,7 +90,8 @@
             "name": "Downloaderchecked"
           },
           "x": 130,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -94,7 +100,8 @@
           "image": "arrow_down_downloader_gray.png",
           "use1Xscale": false,
           "x": 205,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -109,7 +116,8 @@
           "width": 46,
           "height": 20,
           "x": 129,
-          "y": 85
+          "y": 85,
+          "locked": false
         }
       },
       {
@@ -125,7 +133,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 108
+          "y": 108,
+          "locked": false
         }
       },
       {
@@ -143,7 +152,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 270,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -156,7 +166,8 @@
           "width": 56,
           "height": 20,
           "x": 239,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -169,7 +180,8 @@
           "width": 46,
           "height": 19,
           "x": 129,
-          "y": 85
+          "y": 85,
+          "locked": false
         }
       },
       {
@@ -182,7 +194,8 @@
           "width": 20,
           "height": 20,
           "x": 130,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -195,7 +208,8 @@
           "width": 32,
           "height": 30,
           "x": 264,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       }
     ],

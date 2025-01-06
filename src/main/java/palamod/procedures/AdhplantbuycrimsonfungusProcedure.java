@@ -44,7 +44,7 @@ public class AdhplantbuycrimsonfungusProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 7.5;
-		item = new ItemStack(Blocks.CRIMSON_FUNGUS);
+		item = new ItemStack(Blocks.CRIMSON_FUNGUS).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

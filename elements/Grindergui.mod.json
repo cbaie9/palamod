@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "grindergui_v4.png",
           "use1Xscale": false,
           "x": 106,
-          "y": 39
+          "y": 39,
+          "locked": false
         }
       },
       {
@@ -34,7 +35,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 132,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 132,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -70,7 +73,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 231,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -86,7 +90,8 @@
             "falpha": 0.0
           },
           "x": 250,
-          "y": 109
+          "y": 109,
+          "locked": false
         }
       },
       {
@@ -98,7 +103,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 182,
-          "y": 50
+          "y": 50,
+          "locked": false
         }
       },
       {
@@ -110,7 +116,8 @@
             "name": "Grindersubprocessarrowinsertn0"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -122,7 +129,8 @@
             "name": "Grindersubprocessarrowinsertn1"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -134,7 +142,8 @@
             "name": "Grindersubprocessarrowinsertn2"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -146,7 +155,8 @@
             "name": "Grindersubprocessarrowinsertn3"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -158,7 +168,8 @@
             "name": "Grindersubprocessarrowinsertn4"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -171,7 +182,8 @@
             "name": "Connectgrinderpag1"
           },
           "x": 301,
-          "y": 179
+          "y": 179,
+          "locked": false
         }
       },
       {
@@ -189,7 +201,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 132,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -198,7 +211,8 @@
           "image": "arrow_right01.png",
           "use1Xscale": true,
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -210,7 +224,8 @@
             "name": "Grinderguiarrow2n1"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -222,7 +237,8 @@
             "name": "Grinderguiarrow2n2"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -234,7 +250,8 @@
             "name": "Grinderguiarrow2n3"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -246,7 +263,8 @@
             "name": "Grinderguiarrow2n4"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -258,7 +276,8 @@
             "name": "Grinderguiarrow2n5"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -270,7 +289,8 @@
             "name": "Crushersubprocessv2n6"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -282,7 +302,8 @@
             "name": "Grinderguiarrow2n7"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -294,7 +315,8 @@
             "name": "Grinderguiarrow2n8"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -306,7 +328,8 @@
             "name": "Grinderguiarrow2n9"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -318,7 +341,8 @@
             "name": "Grinderguiarrow2n10"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -327,7 +351,8 @@
           "image": "arrow_1red_new.png",
           "use1Xscale": true,
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -339,7 +364,8 @@
             "name": "Grindersubprocessarrowsplit1"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -351,7 +377,8 @@
             "name": "Grindersubprocessarrowsplit2"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -363,7 +390,8 @@
             "name": "Grindersubprocessarrowsplit3"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -375,7 +403,8 @@
             "name": "Grindersubprocessarrowsplit4"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -387,7 +416,8 @@
             "name": "Grindersubprocessarrowsplit5"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -399,7 +429,8 @@
             "name": "Grindersubprocessarrowsplit6"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -411,7 +442,8 @@
             "name": "Grindersubprocessarrowsplit7"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -423,7 +455,8 @@
             "name": "Grindersubprocessarrowsplit8"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -435,7 +468,8 @@
             "name": "Grindersubprocessarrowsplit9"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -447,7 +481,8 @@
             "name": "Grindersubprocessarrowsplit10"
           },
           "x": 156,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -465,7 +500,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 193,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -474,7 +510,8 @@
           "image": "btn-all_off.png",
           "use1Xscale": false,
           "x": 266,
-          "y": 102
+          "y": 102,
+          "locked": false
         }
       },
       {
@@ -486,7 +523,8 @@
             "name": "Lightbluegrinderon"
           },
           "x": 296,
-          "y": 102
+          "y": 102,
+          "locked": false
         }
       },
       {
@@ -498,7 +536,8 @@
             "name": "Lightredgrinderon"
           },
           "x": 266,
-          "y": 102
+          "y": 102,
+          "locked": false
         }
       },
       {
@@ -510,7 +549,8 @@
             "name": "Lightgreengrinderon"
           },
           "x": 281,
-          "y": 102
+          "y": 102,
+          "locked": false
         }
       },
       {
@@ -522,7 +562,8 @@
             "name": "Progressbargrindergnum0"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -534,7 +575,8 @@
             "name": "Progressbargrindergnum1"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -546,7 +588,8 @@
             "name": "Progressbargrindergnum2"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -558,7 +601,8 @@
             "name": "Progressbargrindergnum3"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -570,7 +614,8 @@
             "name": "Progressbargrindergnum4"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -582,7 +627,8 @@
             "name": "Progressbargrindergnum5"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -594,7 +640,8 @@
             "name": "Progressbargrindergnum6"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -606,7 +653,8 @@
             "name": "Progressbargrindergnum7"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -618,7 +666,8 @@
             "name": "Progressbargrindergnum8"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -630,7 +679,8 @@
             "name": "Progressbargrindergnum9"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -642,7 +692,8 @@
             "name": "Progressbargrindergnum10"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -654,7 +705,8 @@
             "name": "Progressbargrindergnum11"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -666,7 +718,8 @@
             "name": "Progressbargrindergnum12"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -678,7 +731,8 @@
             "name": "Progressbargrindergnum13"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -690,7 +744,8 @@
             "name": "Progressbargrindergnum14"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -702,7 +757,8 @@
             "name": "Progressbargrindergnum15"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -714,7 +770,8 @@
             "name": "Progressbargrindergnum16"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -726,7 +783,8 @@
             "name": "Progressbargrindergnum17"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -738,7 +796,8 @@
             "name": "Progressbargrindergnum18"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -750,7 +809,8 @@
             "name": "Progressbargrindergnum19"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -762,7 +822,8 @@
             "name": "Progressbargrindergnum20"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -774,7 +835,8 @@
             "name": "Progressbargrindergnum21"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -786,7 +848,8 @@
             "name": "Progressbargrindergnum22"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -798,7 +861,8 @@
             "name": "Progressbargrindergnum23"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -810,7 +874,8 @@
             "name": "Progressbargrindergnum24"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -822,7 +887,8 @@
             "name": "Progressbargrindergnum25"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -834,7 +900,8 @@
             "name": "Progressbargrindergnum26"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -846,7 +913,8 @@
             "name": "Progressbargrindergnum27"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -858,7 +926,8 @@
             "name": "Progressbargrindergnum28"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -870,7 +939,8 @@
             "name": "Progressbargrindergnum29"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -882,7 +952,8 @@
             "name": "Progressbargrindergnum30"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -894,7 +965,8 @@
             "name": "Progressbargrindergnum31"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -906,7 +978,8 @@
             "name": "Progressbargrindergnum32"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -918,7 +991,8 @@
             "name": "Progressbargrindergnum33"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -930,7 +1004,8 @@
             "name": "Progressbargrindergnum34"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -942,7 +1017,8 @@
             "name": "Progressbargrindergnum35"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -954,7 +1030,8 @@
             "name": "Progressbargrindergnum36"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -966,7 +1043,8 @@
             "name": "Progressbargrindergnum37"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -978,7 +1056,8 @@
             "name": "Progressbargrindergnum38"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -990,7 +1069,8 @@
             "name": "Progressbargrindergnum39"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1002,7 +1082,8 @@
             "name": "Progressbargrindergnum40"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1014,7 +1095,8 @@
             "name": "Progressbargrindergnum41"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1026,7 +1108,8 @@
             "name": "Progressbargrindergnum42"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1038,7 +1121,8 @@
             "name": "Progressbargrindergnum43"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1050,7 +1134,8 @@
             "name": "Progressbargrindergnum44"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1062,7 +1147,8 @@
             "name": "Progressbargrindergnum45"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1074,7 +1160,8 @@
             "name": "Progressbargrindergnum46"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1086,7 +1173,8 @@
             "name": "Progressbargrindergnum47"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1098,7 +1186,8 @@
             "name": "Progressbargrindergnum48"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1110,7 +1199,8 @@
             "name": "Progressbargrindergnum49"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -1122,7 +1212,8 @@
             "name": "Progressbargrindergnum50"
           },
           "x": 258,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       }
     ],

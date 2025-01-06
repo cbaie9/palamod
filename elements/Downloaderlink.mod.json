@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 137,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "falpha": 0.0
           },
           "x": 140,
-          "y": 55
+          "y": 55,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
             "falpha": 0.0
           },
           "x": 162,
-          "y": 88
+          "y": 88,
+          "locked": false
         }
       },
       {
@@ -67,7 +70,8 @@
           "width": 35,
           "height": 20,
           "x": 151,
-          "y": 108
+          "y": 108,
+          "locked": false
         }
       },
       {
@@ -82,7 +86,8 @@
           "width": 61,
           "height": 20,
           "x": 210,
-          "y": 108
+          "y": 108,
+          "locked": false
         }
       },
       {
@@ -97,7 +102,8 @@
             "falpha": 0.0
           },
           "x": 135,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -112,7 +118,8 @@
             "falpha": 0.0
           },
           "x": 136,
-          "y": 168
+          "y": 168,
+          "locked": false
         }
       },
       {
@@ -121,7 +128,8 @@
           "image": "downloaderlink.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       }
     ],

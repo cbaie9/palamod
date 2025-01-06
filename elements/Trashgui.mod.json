@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "trashgui.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 143,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 107
+          "y": 107,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -64,7 +68,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 202,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -77,7 +82,8 @@
             "name": "Closegui"
           },
           "x": 281,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -91,7 +97,8 @@
           "width": 16,
           "height": 16,
           "x": 281,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -118,7 +125,8 @@
             "name": "Deleteall"
           },
           "x": 200,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       }
     ],

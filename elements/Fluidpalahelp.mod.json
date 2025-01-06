@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "fluidpalahelp.png",
           "use1Xscale": false,
           "x": 113,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 163,
-          "y": 27
+          "y": 27,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
           "image": "6_fluid.png",
           "use1Xscale": true,
           "x": 121,
-          "y": 57
+          "y": 57,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 83
+          "y": 83,
+          "locked": false
         }
       },
       {
@@ -70,7 +74,8 @@
             "falpha": 0.0
           },
           "x": 117,
-          "y": 93
+          "y": 93,
+          "locked": false
         }
       },
       {
@@ -85,7 +90,8 @@
             "falpha": 0.0
           },
           "x": 118,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -94,7 +100,8 @@
           "image": "7angel.png",
           "use1Xscale": true,
           "x": 119,
-          "y": 116
+          "y": 116,
+          "locked": false
         }
       },
       {
@@ -109,7 +116,8 @@
             "falpha": 0.0
           },
           "x": 118,
-          "y": 142
+          "y": 142,
+          "locked": false
         }
       },
       {
@@ -124,7 +132,8 @@
             "falpha": 0.0
           },
           "x": 117,
-          "y": 152
+          "y": 152,
+          "locked": false
         }
       },
       {
@@ -133,7 +142,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 113,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -142,7 +152,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 213,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -155,7 +166,8 @@
             "name": "Closegui"
           },
           "x": 292,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -168,7 +180,8 @@
             "name": "Blockback"
           },
           "x": 272,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -181,7 +194,8 @@
             "name": "Backpalahelp"
           },
           "x": 253,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       }
     ],

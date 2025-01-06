@@ -22,7 +22,7 @@ public class FlatchestupgradeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("This upgrade will hide chest from cave block"));
+		list.add(Component.translatable("item.palamod.flat_chest_upgrade.description_0"));
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -13,6 +13,19 @@
     "plantType": "normal",
     "suspiciousStewEffect": "SPEED",
     "suspiciousStewDuration": 5,
+    "secondaryTreeChance": 0.1,
+    "trees": [
+      null,
+      null
+    ],
+    "flowerTrees": [
+      null,
+      null
+    ],
+    "megaTrees": [
+      null,
+      null
+    ],
     "growapableSpawnType": "Plains",
     "growapableMaxHeight": 3,
     "customBoundingBox": false,
@@ -38,6 +51,7 @@
     "luminance": 0,
     "unbreakable": false,
     "isSolid": false,
+    "isWaterloggable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "PLANT"

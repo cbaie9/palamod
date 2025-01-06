@@ -98,6 +98,6 @@ public class CreativepotgItem extends TieredItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Level 20+"));
+		list.add(Component.translatable("item.palamod.creativepotg.description_0"));
 	}
 }

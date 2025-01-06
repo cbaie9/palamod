@@ -23,7 +23,7 @@ public class ChunkanaslyserItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Cause a big freeze when used"));
+		list.add(Component.translatable("item.palamod.chunkanaslyser.description_0"));
 	}
 
 	@Override

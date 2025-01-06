@@ -44,7 +44,7 @@ public class AdhplantbuysugarcaneProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 8;
-		item = new ItemStack(Blocks.SUGAR_CANE);
+		item = new ItemStack(Blocks.SUGAR_CANE).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

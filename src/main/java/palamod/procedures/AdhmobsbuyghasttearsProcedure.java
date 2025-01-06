@@ -44,7 +44,7 @@ public class AdhmobsbuyghasttearsProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 25;
-		item = new ItemStack(Items.GHAST_TEAR);
+		item = new ItemStack(Items.GHAST_TEAR).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

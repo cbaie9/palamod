@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "uploadergui.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 191,
-          "y": 45
+          "y": 45,
+          "locked": false
         }
       },
       {
@@ -49,7 +51,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 203,
-          "y": 64
+          "y": 64,
+          "locked": false
         }
       },
       {
@@ -65,7 +68,8 @@
             "falpha": 0.0
           },
           "x": 129,
-          "y": 108
+          "y": 108,
+          "locked": false
         }
       },
       {
@@ -74,7 +78,8 @@
           "image": "golem_treec_sep_nt1.png",
           "use1Xscale": true,
           "x": 203,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -86,7 +91,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 203,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -95,7 +101,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -104,7 +111,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 201,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -117,7 +125,8 @@
             "name": "Closegui"
           },
           "x": 277,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -130,7 +139,8 @@
           "width": 46,
           "height": 13,
           "x": 189,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -143,7 +153,8 @@
           "width": 18,
           "height": 18,
           "x": 203,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -156,7 +167,8 @@
           "width": 18,
           "height": 18,
           "x": 203,
-          "y": 64
+          "y": 64,
+          "locked": false
         }
       }
     ],

@@ -37,7 +37,7 @@ public class AdhtruesellexampleProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 10;
-		item = new ItemStack(PalamodModItems.LUCKY_BETA.get());
+		item = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "endiumchestgui.png",
           "use1Xscale": false,
           "x": 91,
-          "y": 50
+          "y": 50,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "name": "Ringchestprocess"
           },
           "x": 115,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -58,7 +60,8 @@
             "name": "Ringchestprocess"
           },
           "x": 115,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -79,7 +82,8 @@
             "name": "Ringchestprocess"
           },
           "x": 133,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -100,7 +104,8 @@
             "name": "Ringchestprocess"
           },
           "x": 133,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -121,7 +126,8 @@
             "name": "Ringchestprocess"
           },
           "x": 151,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -142,7 +148,8 @@
             "name": "Ringchestprocess"
           },
           "x": 151,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -163,7 +170,8 @@
             "name": "Ringchestprocess"
           },
           "x": 169,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -184,7 +192,8 @@
             "name": "Ringchestprocess"
           },
           "x": 169,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -205,7 +214,8 @@
             "name": "Ringchestprocess"
           },
           "x": 187,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -226,7 +236,8 @@
             "name": "Ringchestprocess"
           },
           "x": 187,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -247,7 +258,8 @@
             "name": "Ringchestprocess"
           },
           "x": 205,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -268,7 +280,8 @@
             "name": "Ringchestprocess"
           },
           "x": 205,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -286,7 +299,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 304,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -304,7 +318,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 304,
-          "y": 145
+          "y": 145,
+          "locked": false
         }
       },
       {
@@ -325,7 +340,8 @@
             "name": "Ringchestprocess"
           },
           "x": 241,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -346,7 +362,8 @@
             "name": "Ringchestprocess"
           },
           "x": 241,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -367,7 +384,8 @@
             "name": "Ringchestprocess"
           },
           "x": 259,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -388,7 +406,8 @@
             "name": "Ringchestprocess"
           },
           "x": 259,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -409,7 +428,8 @@
             "name": "Ringchestprocess"
           },
           "x": 277,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -430,7 +450,8 @@
             "name": "Ringchestprocess"
           },
           "x": 277,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -451,7 +472,8 @@
             "name": "Ringchestprocess"
           },
           "x": 295,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -472,7 +494,8 @@
             "name": "Ringchestprocess"
           },
           "x": 295,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -493,7 +516,8 @@
             "name": "Ringchestprocess"
           },
           "x": 313,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -514,7 +538,8 @@
             "name": "Ringchestprocess"
           },
           "x": 313,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -529,7 +554,8 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 93
+          "y": 93,
+          "locked": false
         }
       },
       {
@@ -544,7 +570,8 @@
             "falpha": 0.0
           },
           "x": 300,
-          "y": 114
+          "y": 114,
+          "locked": false
         }
       },
       {
@@ -565,7 +592,8 @@
             "name": "Ringchestprocess"
           },
           "x": 223,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -586,7 +614,8 @@
             "name": "Ringchestprocess"
           },
           "x": 223,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -595,7 +624,8 @@
           "image": "ring_endium.png",
           "use1Xscale": false,
           "x": 304,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -604,7 +634,8 @@
           "image": "ring_endium.png",
           "use1Xscale": false,
           "x": 304,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       }
     ],

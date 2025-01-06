@@ -36,7 +36,7 @@ public class AdhtsoreironProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 15;
-		item = new ItemStack(Items.IRON_INGOT);
+		item = new ItemStack(Items.IRON_INGOT).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

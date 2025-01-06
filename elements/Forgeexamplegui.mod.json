@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "forgegui.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -34,7 +35,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 186,
-          "y": 53
+          "y": 53,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 186,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -64,7 +67,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 232,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -79,7 +83,8 @@
             "falpha": 0.0
           },
           "x": 197,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -94,7 +99,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 109
+          "y": 109,
+          "locked": false
         }
       },
       {
@@ -103,7 +109,8 @@
           "image": "arrow_fullred_new.png",
           "use1Xscale": true,
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -112,7 +119,8 @@
           "image": "arrow_1red_new.png",
           "use1Xscale": true,
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -124,7 +132,8 @@
             "name": "Forgesubprocessgui1"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -136,7 +145,8 @@
             "name": "Forgesubprocessgui2"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -148,7 +158,8 @@
             "name": "Forgesubprocessgui3"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -160,7 +171,8 @@
             "name": "Forgesubprocessgui4"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -172,7 +184,8 @@
             "name": "Forgesubprocessgui5"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -184,7 +197,8 @@
             "name": "Forgesubprocessgui6"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -196,7 +210,8 @@
             "name": "Forgesubprocessgui7"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -208,7 +223,8 @@
             "name": "Forgesubprocessgui8"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -220,7 +236,8 @@
             "name": "Forgesubprocessgui9"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -232,7 +249,8 @@
             "name": "Forgesubprocessgui10"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -244,7 +262,8 @@
             "name": "Forgesubprocessgui11"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -256,7 +275,8 @@
             "name": "Forgesubprocessgui12"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -268,7 +288,8 @@
             "name": "Forgesubprocessgui13"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -280,7 +301,8 @@
             "name": "Forgesubprocessgui14"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -292,7 +314,8 @@
             "name": "Forgesubprocessgui15"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -304,7 +327,8 @@
             "name": "Forgesubprocessgui16"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -316,7 +340,8 @@
             "name": "Forgesubprocessgui17"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -328,7 +353,8 @@
             "name": "Forgesubprocessgui18"
           },
           "x": 207,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -337,7 +363,8 @@
           "image": "fire_1.png",
           "use1Xscale": false,
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -349,7 +376,8 @@
             "name": "Forgesubprocessfuelremaining2"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -361,7 +389,8 @@
             "name": "Forgesubprocessfuelremaining3"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -373,7 +402,8 @@
             "name": "Forgesubprocessfuelremaining4"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -385,7 +415,8 @@
             "name": "Forgesubprocessfuelremaining5"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -397,7 +428,8 @@
             "name": "Forgesubprocessfuelremaining6"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -409,7 +441,8 @@
             "name": "Forgesubprocessfuelremaining7"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -421,7 +454,8 @@
             "name": "Forgesubprocessfuelremaining8"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -433,7 +467,8 @@
             "name": "Forgesubprocessfuelremaining9"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -445,7 +480,8 @@
             "name": "Forgesubprocessfuelremaining10"
           },
           "x": 187,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       }
     ],

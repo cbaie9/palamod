@@ -44,7 +44,7 @@ public class AdhmobsbuywitherskullProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 50000;
-		item = new ItemStack(Blocks.WITHER_SKELETON_SKULL);
+		item = new ItemStack(Blocks.WITHER_SKELETON_SKULL).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

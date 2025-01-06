@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "palaerror_0005.png",
           "use1Xscale": false,
           "x": 123,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 171,
-          "y": 84
+          "y": 84,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
             "falpha": 0.0
           },
           "x": 129,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
             "falpha": 0.0
           },
           "x": 129,
-          "y": 116
+          "y": 116,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
           "width": 46,
           "height": 20,
           "x": 192,
-          "y": 133
+          "y": 133,
+          "locked": false
         }
       }
     ],

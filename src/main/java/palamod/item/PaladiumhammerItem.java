@@ -54,6 +54,6 @@ public class PaladiumhammerItem extends PickaxeItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		PaladiumhammerToolInInventoryTickProcedure.execute(itemstack);
+		PaladiumhammerToolInInventoryTickProcedure.execute(world, itemstack);
 	}
 }

@@ -53,7 +53,7 @@ public class DamagestickItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		DamagestickprocessProcedure.execute(entity, ar.getObject());
+		DamagestickprocessProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
@@ -77,7 +77,7 @@ public class DamagestickItem extends Item {
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		DamagestickprocessProcedure.execute(context.getPlayer(), context.getItemInHand());
+		DamagestickprocessProcedure.execute(context.getLevel(), context.getPlayer(), context.getItemInHand());
 		return InteractionResult.SUCCESS;
 	}
 

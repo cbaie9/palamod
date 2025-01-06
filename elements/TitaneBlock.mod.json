@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "block",
   "definition": {
     "texture": "titane_block",
@@ -33,6 +33,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Block of Titane",
     "specialInformation": {
       "fixedValue": []
@@ -87,7 +88,6 @@
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "hasInventory": false,
-    "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,

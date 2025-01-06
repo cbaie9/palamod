@@ -71,6 +71,7 @@ public class PalamodMod {
 		PalamodModMenus.REGISTRY.register(bus);
 		PalamodModFluids.REGISTRY.register(bus);
 		PalamodModFluidTypes.REGISTRY.register(bus);
+
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

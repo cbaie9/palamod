@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "palahelpgui_1.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
           "width": 81,
           "height": 20,
           "x": 214,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
           "image": "palablock_palahelp1-removebg-preview.png",
           "use1Xscale": true,
           "x": 129,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -70,7 +74,8 @@
           "width": 81,
           "height": 20,
           "x": 214,
-          "y": 68
+          "y": 68,
+          "locked": false
         }
       },
       {
@@ -85,7 +90,8 @@
           "width": 81,
           "height": 20,
           "x": 214,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -100,7 +106,8 @@
           "width": 45,
           "height": 20,
           "x": 133,
-          "y": 160
+          "y": 160,
+          "locked": false
         }
       },
       {
@@ -115,7 +122,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 184
+          "y": 184,
+          "locked": false
         }
       },
       {
@@ -130,7 +138,8 @@
           "width": 81,
           "height": 20,
           "x": 214,
-          "y": 159
+          "y": 159,
+          "locked": false
         }
       },
       {
@@ -145,7 +154,8 @@
           "width": 81,
           "height": 20,
           "x": 214,
-          "y": 134
+          "y": 134,
+          "locked": false
         }
       },
       {
@@ -160,7 +170,8 @@
             "falpha": 0.0
           },
           "x": 213,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       }
     ],

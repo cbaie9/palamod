@@ -32,15 +32,15 @@ public class Legendarystonefortune_processProcedure {
 			}
 		}.checkGamemode(entity)) {
 			if (Math.random() < 0.1) {
-				item = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
+				item = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			} else if (Math.random() < 0.15) {
-				item = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+				item = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 			} else if (Math.random() < 0.25) {
-				item = new ItemStack(PalamodModItems.AMETHYST.get());
+				item = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 			} else if (Math.random() < 0.5) {
-				item = new ItemStack(Items.DIAMOND);
+				item = new ItemStack(Items.DIAMOND).copy();
 			} else {
-				item = new ItemStack(Items.GOLD_INGOT);
+				item = new ItemStack(Items.GOLD_INGOT).copy();
 			}
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(PalamodModItems.LEGENDARY_STONE_FORTUNE.get()));

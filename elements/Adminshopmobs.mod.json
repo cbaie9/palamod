@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "adminshopmobs.png",
           "use1Xscale": false,
           "x": 119,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
           "width": 38,
           "height": 20,
           "x": 130,
-          "y": 124
+          "y": 124,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
           "width": 87,
           "height": 20,
           "x": 212,
-          "y": 47
+          "y": 47,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
           "width": 117,
           "height": 20,
           "x": 184,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
           "width": 87,
           "height": 20,
           "x": 212,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -91,7 +96,8 @@
           "width": 74,
           "height": 20,
           "x": 127,
-          "y": 154
+          "y": 154,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
           "width": 56,
           "height": 20,
           "x": 130,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -121,7 +128,8 @@
           "width": 81,
           "height": 20,
           "x": 219,
-          "y": 124
+          "y": 124,
+          "locked": false
         }
       },
       {
@@ -136,7 +144,8 @@
           "width": 34,
           "height": 20,
           "x": 131,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -151,7 +160,8 @@
           "width": 63,
           "height": 20,
           "x": 131,
-          "y": 47
+          "y": 47,
+          "locked": false
         }
       },
       {
@@ -166,7 +176,8 @@
           "width": 85,
           "height": 20,
           "x": 214,
-          "y": 154
+          "y": 154,
+          "locked": false
         }
       },
       {
@@ -175,7 +186,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 119,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -184,7 +196,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 209,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -199,7 +212,8 @@
             "falpha": 0.0
           },
           "x": 172,
-          "y": 22
+          "y": 22,
+          "locked": false
         }
       },
       {
@@ -214,7 +228,8 @@
             "falpha": 0.0
           },
           "x": 196,
-          "y": 31
+          "y": 31,
+          "locked": false
         }
       },
       {
@@ -227,7 +242,8 @@
             "name": "Closegui"
           },
           "x": 285,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -240,7 +256,8 @@
             "name": "Adminshop_open"
           },
           "x": 126,
-          "y": 23
+          "y": 23,
+          "locked": false
         }
       },
       {
@@ -253,7 +270,8 @@
             "name": "Connectadminshopmobs2"
           },
           "x": 145,
-          "y": 23
+          "y": 23,
+          "locked": false
         }
       },
       {
@@ -267,7 +285,8 @@
           "width": 16,
           "height": 16,
           "x": 285,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -281,7 +300,8 @@
           "width": 15,
           "height": 14,
           "x": 127,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -295,7 +315,8 @@
           "width": 15,
           "height": 14,
           "x": 145,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       }
     ],

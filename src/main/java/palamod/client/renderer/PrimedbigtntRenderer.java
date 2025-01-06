@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PrimedbigtntRenderer extends MobRenderer<PrimedbigtntEntity, Modelprimed_tnt_sponge_v4<PrimedbigtntEntity>> {
 	public PrimedbigtntRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelprimed_tnt_sponge_v4(context.bakeLayer(Modelprimed_tnt_sponge_v4.LAYER_LOCATION)), 0f);
+		super(context, new Modelprimed_tnt_sponge_v4<PrimedbigtntEntity>(context.bakeLayer(Modelprimed_tnt_sponge_v4.LAYER_LOCATION)), 0f);
 	}
 
 	@Override

@@ -15,8 +15,9 @@ public class OxdisenchantProcedure {
 			return;
 		ItemStack item_dis = ItemStack.EMPTY;
 		double dis_num = 0;
-		item_dis = new ItemStack(ForgeRegistries.ITEMS
-				.getValue(new ResourceLocation(((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))));
+		item_dis = new ItemStack(
+				ForgeRegistries.ITEMS.getValue(new ResourceLocation(((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))))
+				.copy();
 		dis_num = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
 		if (entity instanceof Player _player) {
 			ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);

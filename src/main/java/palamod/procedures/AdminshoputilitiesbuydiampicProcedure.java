@@ -39,7 +39,7 @@ public class AdminshoputilitiesbuydiampicProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 150;
-		item = new ItemStack(Items.DIAMOND_PICKAXE);
+		item = new ItemStack(Items.DIAMOND_PICKAXE).copy();
 		if (0 == n) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();

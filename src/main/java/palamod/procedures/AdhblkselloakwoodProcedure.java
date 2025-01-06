@@ -36,7 +36,7 @@ public class AdhblkselloakwoodProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 0.5;
-		item = new ItemStack(Blocks.OAK_LOG);
+		item = new ItemStack(Blocks.OAK_LOG).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

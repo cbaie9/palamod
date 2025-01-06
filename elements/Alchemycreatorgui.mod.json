@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -25,7 +25,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 275,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -43,7 +44,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 248,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -55,7 +57,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 248,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -73,7 +76,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 222,
-          "y": 49
+          "y": 49,
+          "locked": false
         }
       },
       {
@@ -82,7 +86,8 @@
           "image": "alchemy_arrow.png",
           "use1Xscale": false,
           "x": 248,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -97,7 +102,8 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 103
+          "y": 103,
+          "locked": false
         }
       },
       {
@@ -112,7 +118,8 @@
             "falpha": 0.0
           },
           "x": 129,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -127,7 +134,8 @@
             "falpha": 0.0
           },
           "x": 127,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       }
     ],

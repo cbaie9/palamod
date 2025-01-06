@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PaladiumdynamiteRenderer extends MobRenderer<PaladiumdynamiteEntity, Modeldynamite_model<PaladiumdynamiteEntity>> {
 	public PaladiumdynamiteRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modeldynamite_model(context.bakeLayer(Modeldynamite_model.LAYER_LOCATION)), 0.5f);
+		super(context, new Modeldynamite_model<PaladiumdynamiteEntity>(context.bakeLayer(Modeldynamite_model.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override

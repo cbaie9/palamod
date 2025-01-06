@@ -79,15 +79,23 @@ public class ExamplegrinderguiMenu extends AbstractContainerMenu implements Supp
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 27, 6) {
 			private final int slot = 0;
+			private int x = ExamplegrinderguiMenu.this.x;
+			private int y = ExamplegrinderguiMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 27, 24) {
 			private final int slot = 1;
+			private int x = ExamplegrinderguiMenu.this.x;
+			private int y = ExamplegrinderguiMenu.this.y;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 126, 6) {
 			private final int slot = 3;
+			private int x = ExamplegrinderguiMenu.this.x;
+			private int y = ExamplegrinderguiMenu.this.y;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 77, 12) {
 			private final int slot = 2;
+			private int x = ExamplegrinderguiMenu.this.x;
+			private int y = ExamplegrinderguiMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -96,9 +104,13 @@ public class ExamplegrinderguiMenu extends AbstractContainerMenu implements Supp
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 27, 59) {
 			private final int slot = 4;
+			private int x = ExamplegrinderguiMenu.this.x;
+			private int y = ExamplegrinderguiMenu.this.y;
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 88, 59) {
 			private final int slot = 5;
+			private int x = ExamplegrinderguiMenu.this.x;
+			private int y = ExamplegrinderguiMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

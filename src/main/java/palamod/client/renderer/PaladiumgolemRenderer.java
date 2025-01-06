@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PaladiumgolemRenderer extends MobRenderer<PaladiumgolemEntity, ModelGolem_gplacement_vlegtest<PaladiumgolemEntity>> {
 	public PaladiumgolemRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelGolem_gplacement_vlegtest(context.bakeLayer(ModelGolem_gplacement_vlegtest.LAYER_LOCATION)), 0.5f);
+		super(context, new ModelGolem_gplacement_vlegtest<PaladiumgolemEntity>(context.bakeLayer(ModelGolem_gplacement_vlegtest.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override

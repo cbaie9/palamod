@@ -36,7 +36,7 @@ public class AdhblksellsoulsandProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 0.5;
-		item = new ItemStack(Blocks.SOUL_SAND);
+		item = new ItemStack(Blocks.SOUL_SAND).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

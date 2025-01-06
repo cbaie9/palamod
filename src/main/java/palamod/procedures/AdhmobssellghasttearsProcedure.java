@@ -36,7 +36,7 @@ public class AdhmobssellghasttearsProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 20;
-		item = new ItemStack(Items.GHAST_TEAR);
+		item = new ItemStack(Items.GHAST_TEAR).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

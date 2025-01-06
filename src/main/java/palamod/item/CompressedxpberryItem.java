@@ -29,7 +29,7 @@ public class CompressedxpberryItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("enchantement kit"));
+		list.add(Component.translatable("item.palamod.compressedxpberry.description_0"));
 	}
 
 	@Override

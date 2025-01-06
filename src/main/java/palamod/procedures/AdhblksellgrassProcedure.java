@@ -36,7 +36,7 @@ public class AdhblksellgrassProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 0.3;
-		item = new ItemStack(Blocks.GRASS_BLOCK);
+		item = new ItemStack(Blocks.GRASS_BLOCK).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

@@ -44,7 +44,7 @@ public class AdhmobsbuyeggProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 10;
-		item = new ItemStack(Items.EGG);
+		item = new ItemStack(Items.EGG).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

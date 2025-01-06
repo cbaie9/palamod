@@ -53,7 +53,7 @@ public class HealstickItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		HealstickprocessProcedure.execute(entity, ar.getObject());
+		HealstickprocessProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
@@ -77,7 +77,7 @@ public class HealstickItem extends Item {
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		HealstickprocessProcedure.execute(context.getPlayer(), context.getItemInHand());
+		HealstickprocessProcedure.execute(context.getLevel(), context.getPlayer(), context.getItemInHand());
 		return InteractionResult.SUCCESS;
 	}
 

@@ -2,11 +2,12 @@ package palamod.procedures;
 
 import palamod.init.PalamodModEnchantments;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.ItemStack;
 
 public class PaladiumhammerToolInInventoryTickProcedure {
-	public static void execute(ItemStack itemstack) {
+	public static void execute(LevelAccessor world, ItemStack itemstack) {
 		if (itemstack.getOrCreateTag().getDouble("hammer_smelt") == 1) {
 			itemstack.enchant(PalamodModEnchantments.SMELT.get(), 1);
 		} else if (itemstack.getOrCreateTag().getDouble("hammer_speed") == 1) {

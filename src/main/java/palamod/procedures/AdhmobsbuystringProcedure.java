@@ -44,7 +44,7 @@ public class AdhmobsbuystringProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 15;
-		item = new ItemStack(Items.STRING);
+		item = new ItemStack(Items.STRING).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

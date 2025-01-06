@@ -79,6 +79,8 @@ public class SpecialmoneypanelMenu extends AbstractContainerMenu implements Supp
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 9, 91) {
 			private final int slot = 0;
+			private int x = SpecialmoneypanelMenu.this.x;
+			private int y = SpecialmoneypanelMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

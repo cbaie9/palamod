@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui176_166.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 130,
-          "y": 45
+          "y": 45,
+          "locked": false
         }
       },
       {
@@ -42,7 +44,8 @@
           "width": 120,
           "height": 20,
           "x": 152,
-          "y": 124
+          "y": 124,
+          "locked": false
         }
       },
       {
@@ -58,7 +61,8 @@
             "falpha": 0.0
           },
           "x": 155,
-          "y": 111
+          "y": 111,
+          "locked": false
         }
       },
       {
@@ -73,7 +77,8 @@
           "width": 40,
           "height": 20,
           "x": 152,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -88,7 +93,8 @@
           "width": 46,
           "height": 20,
           "x": 225,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -103,7 +109,8 @@
             "falpha": 0.0
           },
           "x": 151,
-          "y": 67
+          "y": 67,
+          "locked": false
         }
       },
       {
@@ -118,7 +125,8 @@
             "falpha": 0.0
           },
           "x": 151,
-          "y": 81
+          "y": 81,
+          "locked": false
         }
       },
       {
@@ -127,7 +135,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -136,7 +145,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 201,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -149,7 +159,8 @@
             "name": "Closegui"
           },
           "x": 279,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -162,7 +173,8 @@
             "name": "Connectadminshopmobs"
           },
           "x": 261,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -175,7 +187,8 @@
             "name": "Adminshop_open"
           },
           "x": 244,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -189,7 +202,8 @@
           "width": 16,
           "height": 16,
           "x": 279,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -203,7 +217,8 @@
           "width": 12,
           "height": 15,
           "x": 246,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -217,7 +232,8 @@
           "width": 15,
           "height": 14,
           "x": 262,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       }
     ],

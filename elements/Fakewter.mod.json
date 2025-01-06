@@ -1,11 +1,12 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "fluid",
   "definition": {
     "name": "Fake water",
     "bucketName": "Fake water Bucket",
     "textureStill": "fakewater_still",
     "textureFlowing": "fake_water",
+    "hasFog": false,
     "tintType": "No tint",
     "canMultiply": false,
     "flowRate": 5,

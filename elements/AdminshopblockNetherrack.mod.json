@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 184,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -33,7 +34,8 @@
           "width": 120,
           "height": 20,
           "x": 152,
-          "y": 124
+          "y": 124,
+          "locked": false
         }
       },
       {
@@ -49,7 +51,8 @@
             "falpha": 0.0
           },
           "x": 155,
-          "y": 111
+          "y": 111,
+          "locked": false
         }
       },
       {
@@ -64,7 +67,8 @@
           "width": 40,
           "height": 20,
           "x": 152,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -79,7 +83,8 @@
           "width": 46,
           "height": 20,
           "x": 226,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -94,7 +99,8 @@
             "falpha": 0.0
           },
           "x": 164,
-          "y": 60
+          "y": 60,
+          "locked": false
         }
       },
       {
@@ -109,7 +115,8 @@
             "falpha": 0.0
           },
           "x": 170,
-          "y": 73
+          "y": 73,
+          "locked": false
         }
       },
       {
@@ -119,7 +126,8 @@
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
           "x": 277,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -132,7 +140,8 @@
             "name": "Adminshop_open"
           },
           "x": 241,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -145,7 +154,8 @@
             "name": "Adminshopblockconnect"
           },
           "x": 258,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -159,7 +169,8 @@
           "width": 12,
           "height": 15,
           "x": 243,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -173,7 +184,8 @@
           "width": 15,
           "height": 14,
           "x": 259,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -187,7 +199,8 @@
           "width": 16,
           "height": 16,
           "x": 277,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -197,7 +210,8 @@
           "image": "left_gray_line.png",
           "hoveredImage": "",
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -206,7 +220,8 @@
           "image": "gui176_166.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -215,7 +230,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 201,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       }
     ],

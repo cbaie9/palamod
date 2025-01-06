@@ -79,57 +79,93 @@ public class SafeguiMenu extends AbstractContainerMenu implements Supplier<Map<I
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 59) {
 			private final int slot = 0;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 59) {
 			private final int slot = 1;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 59) {
 			private final int slot = 2;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 59) {
 			private final int slot = 3;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 59) {
 			private final int slot = 4;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 59) {
 			private final int slot = 5;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 59) {
 			private final int slot = 6;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 133, 59) {
 			private final int slot = 7;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 59) {
 			private final int slot = 8;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 7, 34) {
 			private final int slot = 9;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 25, 34) {
 			private final int slot = 10;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 43, 34) {
 			private final int slot = 11;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 61, 34) {
 			private final int slot = 12;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 79, 34) {
 			private final int slot = 13;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 97, 34) {
 			private final int slot = 14;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 115, 34) {
 			private final int slot = 15;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 34) {
 			private final int slot = 16;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 34) {
 			private final int slot = 17;
+			private int x = SafeguiMenu.this.x;
+			private int y = SafeguiMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

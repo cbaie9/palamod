@@ -36,7 +36,7 @@ public class Adhmobs2sellglowinksacProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 6;
-		item = new ItemStack(Items.GLOW_INK_SAC);
+		item = new ItemStack(Items.GLOW_INK_SAC).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "jobsminercraftgui.png",
           "use1Xscale": false,
           "x": 64,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 64,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -34,7 +36,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 164,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -43,7 +46,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 254,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -52,7 +56,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 264,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -67,7 +72,8 @@
             "falpha": 0.0
           },
           "x": 170,
-          "y": 22
+          "y": 22,
+          "locked": false
         }
       },
       {
@@ -76,7 +82,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 345,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -85,7 +92,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 329,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -94,7 +102,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 313,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -103,7 +112,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 297,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -112,7 +122,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 281,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -121,7 +132,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 265,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -130,7 +142,8 @@
           "image": "line_ver.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 206
+          "y": 206,
+          "locked": false
         }
       },
       {
@@ -139,7 +152,8 @@
           "image": "line_ver.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 190
+          "y": 190,
+          "locked": false
         }
       },
       {
@@ -148,7 +162,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 249,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -157,7 +172,8 @@
           "image": "line_ver.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 174
+          "y": 174,
+          "locked": false
         }
       },
       {
@@ -166,7 +182,8 @@
           "image": "line_ver.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -175,7 +192,8 @@
           "image": "line_ver.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 142
+          "y": 142,
+          "locked": false
         }
       },
       {
@@ -184,7 +202,8 @@
           "image": "line_hor.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -193,7 +212,8 @@
           "image": "line_ver.png",
           "use1Xscale": false,
           "x": 235,
-          "y": 128
+          "y": 128,
+          "locked": false
         }
       },
       {
@@ -208,7 +228,8 @@
             "falpha": 0.0
           },
           "x": 238,
-          "y": 130
+          "y": 130,
+          "locked": false
         }
       },
       {
@@ -232,7 +253,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 247,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -256,7 +278,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 265,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -277,7 +300,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 283,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -301,7 +325,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 247,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       },
       {
@@ -325,7 +350,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 265,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       },
       {
@@ -349,7 +375,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 283,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       },
       {
@@ -373,7 +400,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 247,
-          "y": 87
+          "y": 87,
+          "locked": false
         }
       },
       {
@@ -394,7 +422,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 265,
-          "y": 87
+          "y": 87,
+          "locked": false
         }
       },
       {
@@ -418,7 +447,8 @@
             "name": "Guijobsminercheckcraft"
           },
           "x": 283,
-          "y": 87
+          "y": 87,
+          "locked": false
         }
       },
       {
@@ -427,7 +457,8 @@
           "image": "arrow_right20.png",
           "use1Xscale": true,
           "x": 305,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -440,7 +471,8 @@
             "name": "Closegui"
           },
           "x": 341,
-          "y": 19
+          "y": 19,
+          "locked": false
         }
       },
       {
@@ -454,7 +486,8 @@
           "width": 16,
           "height": 16,
           "x": 341,
-          "y": 19
+          "y": 19,
+          "locked": false
         }
       },
       {
@@ -467,7 +500,8 @@
             "name": "Jobsminercraftendiumpickaxe"
           },
           "x": 74,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -477,7 +511,8 @@
           "image": "titane_radius_hoe.png",
           "hoveredImage": "titane_hoe_hover.png",
           "x": 94,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -490,7 +525,8 @@
             "name": "Jobsminercraftamethystexcavator"
           },
           "x": 112,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -503,7 +539,8 @@
             "name": "Jobsminercraftamethystexcavator"
           },
           "x": 131,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -516,7 +553,8 @@
             "name": "Jobsminercraftamethystexcavator"
           },
           "x": 150,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -529,7 +567,8 @@
             "name": "Jobsminercraftmagicialtool"
           },
           "x": 169,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -542,7 +581,8 @@
             "name": "Jobsminercraftvoidstone"
           },
           "x": 188,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -555,7 +595,8 @@
             "name": "Jobsminercraftobsidianpickaxe"
           },
           "x": 207,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -568,7 +609,8 @@
             "name": "Jobsminercraftboomtnt"
           },
           "x": 226,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -581,7 +623,8 @@
             "name": "Jobsminercraftcompactobsidian"
           },
           "x": 74,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -594,7 +637,8 @@
             "name": "Jobsminercraftwoddenspike"
           },
           "x": 112,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -607,7 +651,8 @@
             "name": "Jobsminercraftironspike"
           },
           "x": 131,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -620,7 +665,8 @@
             "name": "Jobsminercraftgoldenspike"
           },
           "x": 150,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -633,7 +679,8 @@
             "name": "Jobsminercraftdiamondspike"
           },
           "x": 169,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -646,7 +693,8 @@
             "name": "Jobsminercraftamethystspike"
           },
           "x": 188,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -659,7 +707,8 @@
             "name": "Jobsminercrafttitanespike"
           },
           "x": 207,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -672,7 +721,8 @@
             "name": "Jobsminercraftpaladiumspike"
           },
           "x": 226,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -685,7 +735,8 @@
             "name": "Jobsminercraftlavaobsidian"
           },
           "x": 74,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -698,7 +749,8 @@
             "name": "Jobsminercraftfakewaterobsidian"
           },
           "x": 93,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -711,7 +763,8 @@
             "name": "Jobsminercraftslimeobsidian"
           },
           "x": 112,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -724,7 +777,8 @@
             "name": "Jobsminercraftpoisonobsidian"
           },
           "x": 131,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -737,7 +791,8 @@
             "name": "Jobsminercraftcaveblock"
           },
           "x": 150,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -750,7 +805,8 @@
             "name": "Jobsminercraftcompacttnt"
           },
           "x": 169,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -763,7 +819,8 @@
             "name": "Jobsminercraftmagictnt"
           },
           "x": 188,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -776,7 +833,8 @@
             "name": "Jobsminercraftwithertnt"
           },
           "x": 207,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -789,7 +847,8 @@
             "name": "Jobsminercraftspongetnt"
           },
           "x": 226,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -802,7 +861,8 @@
             "name": "Jobsminercraftcompressedtnt"
           },
           "x": 74,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -815,7 +875,8 @@
             "name": "Jobsminercraftendiumtnt"
           },
           "x": 93,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -828,7 +889,8 @@
             "name": "Jobsminercraftmegaboomobsidian"
           },
           "x": 93,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -841,7 +903,8 @@
             "name": "Jobsminercraftnotingamesoon"
           },
           "x": 112,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -854,7 +917,8 @@
             "name": "Jobsminercraftnotingamesoon"
           },
           "x": 131,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -867,7 +931,8 @@
             "name": "Jobsminercraftnotingamesoon"
           },
           "x": 150,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -880,7 +945,8 @@
             "name": "Jobsminercraftnotingamesoon"
           },
           "x": 169,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -893,7 +959,8 @@
             "name": "Jobsminercraftcobblebreaker"
           },
           "x": 188,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -906,7 +973,8 @@
             "name": "Jobsminercraftcobblebreakeramethysteupgrade"
           },
           "x": 207,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -919,7 +987,8 @@
             "name": "Jobsminercraftcobblebreakertitaneupgrade"
           },
           "x": 226,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -932,7 +1001,8 @@
             "name": "Jobsminercraftcobblebreakerpaladiumupgrade"
           },
           "x": 74,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -945,7 +1015,8 @@
             "name": "Jobsminercraftvoidstoneminage"
           },
           "x": 93,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -958,7 +1029,8 @@
             "name": "Jobsminercraftmoulastone"
           },
           "x": 111,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -971,7 +1043,8 @@
             "name": "Jobsminercraftsealedxpbottle"
           },
           "x": 134,
-          "y": 121
+          "y": 121,
+          "locked": false
         }
       },
       {
@@ -984,7 +1057,8 @@
             "name": "Jobsminercraftpalaforge"
           },
           "x": 150,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -997,7 +1071,8 @@
             "name": "Jobsminercraftnotingamesoon"
           },
           "x": 169,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1010,7 +1085,8 @@
           "width": 16,
           "height": 16,
           "x": 74,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1023,7 +1099,8 @@
           "width": 15,
           "height": 16,
           "x": 94,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1036,7 +1113,8 @@
           "width": 16,
           "height": 16,
           "x": 112,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1049,7 +1127,8 @@
           "width": 16,
           "height": 16,
           "x": 131,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1062,7 +1141,8 @@
           "width": 16,
           "height": 16,
           "x": 150,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1075,7 +1155,8 @@
           "width": 16,
           "height": 16,
           "x": 169,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1088,7 +1169,8 @@
           "width": 16,
           "height": 16,
           "x": 188,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1101,7 +1183,8 @@
           "width": 16,
           "height": 16,
           "x": 207,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1114,7 +1197,8 @@
           "width": 16,
           "height": 16,
           "x": 226,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -1127,7 +1211,8 @@
           "width": 16,
           "height": 16,
           "x": 74,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1140,7 +1225,8 @@
           "width": 16,
           "height": 16,
           "x": 93,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1153,7 +1239,8 @@
           "width": 16,
           "height": 16,
           "x": 112,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1166,7 +1253,8 @@
           "width": 16,
           "height": 16,
           "x": 131,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1179,7 +1267,8 @@
           "width": 16,
           "height": 16,
           "x": 150,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1192,7 +1281,8 @@
           "width": 16,
           "height": 16,
           "x": 169,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1205,7 +1295,8 @@
           "width": 16,
           "height": 16,
           "x": 188,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1218,7 +1309,8 @@
           "width": 16,
           "height": 16,
           "x": 207,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1231,7 +1323,8 @@
           "width": 16,
           "height": 16,
           "x": 226,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -1244,7 +1337,8 @@
           "width": 16,
           "height": 16,
           "x": 74,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1257,7 +1351,8 @@
           "width": 16,
           "height": 16,
           "x": 93,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1270,7 +1365,8 @@
           "width": 16,
           "height": 16,
           "x": 112,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1283,7 +1379,8 @@
           "width": 16,
           "height": 16,
           "x": 131,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1296,7 +1393,8 @@
           "width": 16,
           "height": 16,
           "x": 150,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1309,7 +1407,8 @@
           "width": 16,
           "height": 16,
           "x": 169,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1322,7 +1421,8 @@
           "width": 16,
           "height": 16,
           "x": 188,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1335,7 +1435,8 @@
           "width": 16,
           "height": 16,
           "x": 207,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1348,7 +1449,8 @@
           "width": 16,
           "height": 16,
           "x": 226,
-          "y": 82
+          "y": 82,
+          "locked": false
         }
       },
       {
@@ -1361,7 +1463,8 @@
           "width": 16,
           "height": 16,
           "x": 74,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1374,7 +1477,8 @@
           "width": 16,
           "height": 16,
           "x": 93,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1387,7 +1491,8 @@
           "width": 16,
           "height": 16,
           "x": 112,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1400,7 +1505,8 @@
           "width": 16,
           "height": 16,
           "x": 131,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1413,7 +1519,8 @@
           "width": 16,
           "height": 16,
           "x": 150,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1426,7 +1533,8 @@
           "width": 16,
           "height": 16,
           "x": 169,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1439,7 +1547,8 @@
           "width": 16,
           "height": 16,
           "x": 188,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1452,7 +1561,8 @@
           "width": 16,
           "height": 16,
           "x": 207,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1465,7 +1575,8 @@
           "width": 16,
           "height": 16,
           "x": 226,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -1478,7 +1589,8 @@
           "width": 15,
           "height": 16,
           "x": 75,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1491,7 +1603,8 @@
           "width": 15,
           "height": 16,
           "x": 94,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1504,7 +1617,8 @@
           "width": 16,
           "height": 16,
           "x": 112,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1517,7 +1631,8 @@
           "width": 16,
           "height": 16,
           "x": 131,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1530,7 +1645,8 @@
           "width": 16,
           "height": 16,
           "x": 150,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1543,7 +1659,8 @@
           "width": 16,
           "height": 16,
           "x": 169,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -1559,7 +1676,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 143
+          "y": 143,
+          "locked": false
         }
       },
       {
@@ -1575,7 +1693,8 @@
             "falpha": 0.0
           },
           "x": 241,
-          "y": 208
+          "y": 208,
+          "locked": false
         }
       },
       {
@@ -1591,7 +1710,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 154
+          "y": 154,
+          "locked": false
         }
       },
       {
@@ -1607,7 +1727,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 164
+          "y": 164,
+          "locked": false
         }
       },
       {
@@ -1623,7 +1744,8 @@
             "falpha": 0.0
           },
           "x": 241,
-          "y": 198
+          "y": 198,
+          "locked": false
         }
       },
       {
@@ -1639,7 +1761,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 173
+          "y": 173,
+          "locked": false
         }
       },
       {
@@ -1655,7 +1778,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 182
+          "y": 182,
+          "locked": false
         }
       },
       {
@@ -1670,7 +1794,8 @@
             "name": "Craftdoneminer"
           },
           "x": 325,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       }
     ],

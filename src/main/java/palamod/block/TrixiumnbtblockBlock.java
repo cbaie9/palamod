@@ -30,7 +30,7 @@ public class TrixiumnbtblockBlock extends Block implements EntityBlock {
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("contain trixum scoreboard ( do not break )"));
+		list.add(Component.translatable("block.palamod.trixium_nbt_block.description_0"));
 	}
 
 	@Override

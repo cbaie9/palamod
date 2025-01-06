@@ -10,23 +10,27 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.EquipmentSlot;
 
 public class HammerforturneEnchantment extends Enchantment {
-	public HammerforturneEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.COMMON, EnchantmentCategory.BREAKABLE, slots);
+	private static final EnchantmentCategory ENCHANTMENT_CATEGORY = EnchantmentCategory.create("palamod_hammer_fortune",
+			item -> Ingredient
+					.of(new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()), new ItemStack(PalamodModItems.ENDIUM_HAMMER.get()), new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()), new ItemStack(PalamodModItems.CREATIVE_HAMMER.get()))
+					.test(new ItemStack(item)));
+
+	public HammerforturneEnchantment() {
+		super(Enchantment.Rarity.COMMON, ENCHANTMENT_CATEGORY, EquipmentSlot.values());
+	}
+
+	@Override
+	public int getMinCost(int level) {
+		return 1 + level * 10;
+	}
+
+	@Override
+	public int getMaxCost(int level) {
+		return 6 + level * 10;
 	}
 
 	@Override
 	public int getMaxLevel() {
 		return 3;
-	}
-
-	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack itemstack) {
-		return Ingredient.of(new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()), new ItemStack(PalamodModItems.ENDIUM_HAMMER.get()), new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()), new ItemStack(PalamodModItems.CREATIVE_HAMMER.get()))
-				.test(itemstack);
-	}
-
-	@Override
-	public boolean isAllowedOnBooks() {
-		return false;
 	}
 }

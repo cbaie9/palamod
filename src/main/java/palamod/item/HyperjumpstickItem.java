@@ -53,7 +53,7 @@ public class HyperjumpstickItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		HyperjumpstickprocessProcedure.execute(entity, ar.getObject());
+		HyperjumpstickprocessProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 
@@ -77,7 +77,7 @@ public class HyperjumpstickItem extends Item {
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		HyperjumpstickprocessProcedure.execute(context.getPlayer(), context.getItemInHand());
+		HyperjumpstickprocessProcedure.execute(context.getLevel(), context.getPlayer(), context.getItemInHand());
 		return InteractionResult.SUCCESS;
 	}
 

@@ -79,6 +79,8 @@ public class PotgtranfertMenu extends AbstractContainerMenu implements Supplier<
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 31, 27) {
 			private final int slot = 0;
+			private int x = PotgtranfertMenu.this.x;
+			private int y = PotgtranfertMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

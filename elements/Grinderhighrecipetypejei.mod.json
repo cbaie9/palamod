@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "jeirecipetype",
   "definition": {
     "textureSelector": "grinder_higher_part_jei.png",
@@ -8,9 +8,11 @@
     "icon": {
       "value": "CUSTOM:Grinderblock"
     },
-    "craftingtable": {
-      "value": "CUSTOM:Grinderblock"
-    },
+    "craftingtables": [
+      {
+        "value": "CUSTOM:Grinderblock"
+      }
+    ],
     "enableCraftingtable": false,
     "title": "Grinder ( structure )",
     "slotList": [

@@ -44,7 +44,7 @@ public class Adhmobs2buyinksacProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 12.5;
-		item = new ItemStack(Items.INK_SAC);
+		item = new ItemStack(Items.INK_SAC).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

@@ -44,7 +44,7 @@ public class AdhoresameProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 75;
-		item = new ItemStack(PalamodModItems.AMETHYST.get());
+		item = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

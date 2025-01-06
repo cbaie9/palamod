@@ -80,9 +80,13 @@ public class AlchemycreatorguiMenu extends AbstractContainerMenu implements Supp
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 150, 15) {
 			private final int slot = 0;
+			private int x = AlchemycreatorguiMenu.this.x;
+			private int y = AlchemycreatorguiMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 123, 5) {
 			private final int slot = 1;
+			private int x = AlchemycreatorguiMenu.this.x;
+			private int y = AlchemycreatorguiMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -91,6 +95,8 @@ public class AlchemycreatorguiMenu extends AbstractContainerMenu implements Supp
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 123, 46) {
 			private final int slot = 3;
+			private int x = AlchemycreatorguiMenu.this.x;
+			private int y = AlchemycreatorguiMenu.this.y;
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -99,6 +105,8 @@ public class AlchemycreatorguiMenu extends AbstractContainerMenu implements Supp
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 97, 13) {
 			private final int slot = 2;
+			private int x = AlchemycreatorguiMenu.this.x;
+			private int y = AlchemycreatorguiMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

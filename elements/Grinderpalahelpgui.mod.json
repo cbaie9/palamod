@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "grinderpalahelpgui.png",
           "use1Xscale": false,
           "x": 48,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 248,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -34,7 +36,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 48,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -49,7 +52,8 @@
             "falpha": 0.0
           },
           "x": 147,
-          "y": 35
+          "y": 35,
+          "locked": false
         }
       },
       {
@@ -65,7 +69,8 @@
             "falpha": 0.0
           },
           "x": 52,
-          "y": 68
+          "y": 68,
+          "locked": false
         }
       },
       {
@@ -81,7 +86,8 @@
             "falpha": 0.0
           },
           "x": 52,
-          "y": 81
+          "y": 81,
+          "locked": false
         }
       },
       {
@@ -97,7 +103,8 @@
             "falpha": 0.0
           },
           "x": 52,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -113,7 +120,8 @@
             "falpha": 0.0
           },
           "x": 51,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -129,7 +137,8 @@
             "falpha": 0.0
           },
           "x": 52,
-          "y": 118
+          "y": 118,
+          "locked": false
         }
       },
       {
@@ -145,7 +154,8 @@
             "falpha": 0.0
           },
           "x": 51,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -161,7 +171,8 @@
             "falpha": 0.0
           },
           "x": 52,
-          "y": 138
+          "y": 138,
+          "locked": false
         }
       },
       {
@@ -177,7 +188,8 @@
             "falpha": 0.0
           },
           "x": 52,
-          "y": 148
+          "y": 148,
+          "locked": false
         }
       },
       {
@@ -192,7 +204,8 @@
             "falpha": 0.0
           },
           "x": 103,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -208,7 +221,8 @@
             "falpha": 0.0
           },
           "x": 53,
-          "y": 160
+          "y": 160,
+          "locked": false
         }
       },
       {
@@ -224,7 +238,8 @@
             "falpha": 0.0
           },
           "x": 53,
-          "y": 173
+          "y": 173,
+          "locked": false
         }
       },
       {
@@ -239,7 +254,8 @@
             "falpha": 0.0
           },
           "x": 69,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -248,7 +264,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 278,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -261,7 +278,8 @@
             "name": "Closegui"
           },
           "x": 357,
-          "y": 32
+          "y": 32,
+          "locked": false
         }
       },
       {
@@ -274,7 +292,8 @@
             "name": "Connectgrinderpag2"
           },
           "x": 319,
-          "y": 32
+          "y": 32,
+          "locked": false
         }
       },
       {
@@ -287,7 +306,8 @@
             "name": "Machineconnectpalahelp"
           },
           "x": 299,
-          "y": 32
+          "y": 32,
+          "locked": false
         }
       },
       {
@@ -300,7 +320,8 @@
             "name": "Backpalahelp"
           },
           "x": 279,
-          "y": 32
+          "y": 32,
+          "locked": false
         }
       },
       {
@@ -309,7 +330,8 @@
           "image": "grinder_block_front16.png",
           "use1Xscale": false,
           "x": 52,
-          "y": 32
+          "y": 32,
+          "locked": false
         }
       },
       {
@@ -318,7 +340,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 148,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -331,7 +354,8 @@
             "name": "Openexamplegrinder"
           },
           "x": 337,
-          "y": 32
+          "y": 32,
+          "locked": false
         }
       }
     ],

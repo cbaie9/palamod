@@ -44,7 +44,7 @@ public class AdhplantbuycactusProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 6;
-		item = new ItemStack(Blocks.CACTUS);
+		item = new ItemStack(Blocks.CACTUS).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

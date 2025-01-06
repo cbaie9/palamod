@@ -89,6 +89,8 @@ public class TrashguiMenu extends AbstractContainerMenu implements Supplier<Map<
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 75, 27) {
 			private final int slot = 0;
+			private int x = TrashguiMenu.this.x;
+			private int y = TrashguiMenu.this.y;
 
 			@Override
 			public void setChanged() {

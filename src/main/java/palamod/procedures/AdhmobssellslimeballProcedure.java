@@ -36,7 +36,7 @@ public class AdhmobssellslimeballProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 6;
-		item = new ItemStack(Items.SLIME_BALL);
+		item = new ItemStack(Items.SLIME_BALL).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

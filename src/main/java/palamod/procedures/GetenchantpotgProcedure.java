@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -10,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import java.util.Map;
 
 public class GetenchantpotgProcedure {
-	public static void execute(ItemStack itemstack) {
+	public static void execute(LevelAccessor world, ItemStack itemstack) {
 		if (PalamodModItems.PICKAXEOFTHEGODSLV_20.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_19.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_18.get() == itemstack.getItem()
 				|| PalamodModItems.PICKAXEOFTHEGODSLV_17.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_16.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_15.get() == itemstack.getItem()
 				|| PalamodModItems.PICKAXEOFTHEGODSLV_14.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_13.get() == itemstack.getItem()) {

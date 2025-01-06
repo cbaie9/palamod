@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui176_166.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 128,
-          "y": 43
+          "y": 43,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
           "width": 75,
           "height": 20,
           "x": 218,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
           "width": 75,
           "height": 20,
           "x": 218,
-          "y": 88
+          "y": 88,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
           "width": 75,
           "height": 20,
           "x": 218,
-          "y": 110
+          "y": 110,
+          "locked": false
         }
       },
       {
@@ -91,7 +96,8 @@
           "width": 75,
           "height": 20,
           "x": 218,
-          "y": 133
+          "y": 133,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
           "width": 75,
           "height": 20,
           "x": 218,
-          "y": 155
+          "y": 155,
+          "locked": false
         }
       },
       {
@@ -121,7 +128,8 @@
           "width": 75,
           "height": 20,
           "x": 218,
-          "y": 177
+          "y": 177,
+          "locked": false
         }
       },
       {
@@ -130,7 +138,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -139,7 +148,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 202,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -148,7 +158,8 @@
           "image": "golem64.png",
           "use1Xscale": false,
           "x": 139,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -161,7 +172,8 @@
             "name": "Blockback"
           },
           "x": 248,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -174,7 +186,8 @@
             "name": "Backpalahelp"
           },
           "x": 265,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -187,7 +200,8 @@
             "name": "Closegui"
           },
           "x": 281,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -202,7 +216,8 @@
           "width": 77,
           "height": 20,
           "x": 130,
-          "y": 134
+          "y": 134,
+          "locked": false
         }
       },
       {
@@ -216,7 +231,8 @@
           "width": 16,
           "height": 16,
           "x": 281,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       }
     ],

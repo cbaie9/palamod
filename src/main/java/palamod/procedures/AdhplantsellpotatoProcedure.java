@@ -36,7 +36,7 @@ public class AdhplantsellpotatoProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 0.75;
-		item = new ItemStack(Items.POTATO);
+		item = new ItemStack(Items.POTATO).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

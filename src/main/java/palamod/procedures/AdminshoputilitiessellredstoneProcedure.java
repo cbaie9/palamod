@@ -38,7 +38,7 @@ public class AdminshoputilitiessellredstoneProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 1.5;
-		item = new ItemStack(Items.REDSTONE);
+		item = new ItemStack(Items.REDSTONE).copy();
 		if (n == 0) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();

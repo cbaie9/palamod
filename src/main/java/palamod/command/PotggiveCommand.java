@@ -43,7 +43,7 @@ public class PotggiveCommand {
 						index++;
 					}
 
-					PotggiveCommandExecutedProcedure.execute(entity);
+					PotggiveCommandExecutedProcedure.execute(world, entity);
 					return 0;
 				})).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -64,7 +64,7 @@ public class PotggiveCommand {
 						index++;
 					}
 
-					PotggiveCommandExecutedProcedure.execute(entity);
+					PotggiveCommandExecutedProcedure.execute(world, entity);
 					return 0;
 				}));
 	}

@@ -44,7 +44,7 @@ public class AdhbuycocaoProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 75;
-		item = new ItemStack(Items.COCOA_BEANS);
+		item = new ItemStack(Items.COCOA_BEANS).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

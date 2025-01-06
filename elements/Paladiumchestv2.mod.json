@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "block",
   "definition": {
     "texture": "pala_face1",
@@ -51,6 +51,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Paladium chest",
     "specialInformation": {
       "fixedValue": []

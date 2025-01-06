@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "clicker_paterne.png",
           "use1Xscale": false,
           "x": 34,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "clicker_v1.11.png",
           "use1Xscale": false,
           "x": 34,
-          "y": 15
+          "y": 15,
+          "locked": false
         }
       },
       {
@@ -35,7 +37,8 @@
           "image": "clicker_build_hive.png",
           "hoveredImage": "clicker_build_hive_hover.png",
           "x": 294,
-          "y": 171
+          "y": 171,
+          "locked": false
         }
       },
       {
@@ -45,7 +48,8 @@
           "image": "clicker_skip.png",
           "hoveredImage": "",
           "x": 263,
-          "y": 199
+          "y": 199,
+          "locked": false
         }
       },
       {
@@ -55,7 +59,8 @@
           "image": "clicker_build_cave.png",
           "hoveredImage": "clicker_build_cave_hover.png",
           "x": 294,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -65,7 +70,8 @@
           "image": "clicker_build_mine.png",
           "hoveredImage": "clicker_build_mine_hover.png",
           "x": 294,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -75,7 +81,8 @@
           "image": "clicker_build_dwarf.png",
           "hoveredImage": "clicker_build_dwarf_hover.png",
           "x": 294,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -88,7 +95,8 @@
             "name": "Closegui"
           },
           "x": 370,
-          "y": 21
+          "y": 21,
+          "locked": false
         }
       },
       {
@@ -98,7 +106,8 @@
           "image": "clicker_build_garden.png",
           "hoveredImage": "clicker_build_garden_hover.png",
           "x": 294,
-          "y": 123
+          "y": 123,
+          "locked": false
         }
       },
       {
@@ -108,7 +117,8 @@
           "image": "clicker_build_witch.png",
           "hoveredImage": "clicker_build_witch_hover.png",
           "x": 294,
-          "y": 147
+          "y": 147,
+          "locked": false
         }
       },
       {
@@ -121,7 +131,8 @@
             "name": "Addclickcoin"
           },
           "x": 45,
-          "y": 75
+          "y": 75,
+          "locked": false
         }
       },
       {
@@ -131,7 +142,8 @@
           "image": "clicker_more-build.png",
           "hoveredImage": "clicker_more_build_hover.png",
           "x": 295,
-          "y": 195
+          "y": 195,
+          "locked": false
         }
       },
       {
@@ -147,7 +159,8 @@
             "falpha": 0.0
           },
           "x": 46,
-          "y": 59
+          "y": 59,
+          "locked": false
         }
       }
     ],

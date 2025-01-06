@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui176_166.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 157,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
           "image": "english_lang.png",
           "use1Xscale": false,
           "x": 133,
-          "y": 68
+          "y": 68,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
           "width": 67,
           "height": 20,
           "x": 154,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -70,7 +74,8 @@
           "width": 61,
           "height": 20,
           "x": 152,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -79,7 +84,8 @@
           "image": "french_lang.png",
           "use1Xscale": false,
           "x": 132,
-          "y": 103
+          "y": 103,
+          "locked": false
         }
       }
     ],

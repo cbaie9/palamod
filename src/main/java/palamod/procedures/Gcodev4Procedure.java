@@ -8409,7 +8409,7 @@ public class Gcodev4Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 5));
+					}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
 					tempo_Item_stack.enchant(PalamodModEnchantments.SMELT.get(), 1);
 					{
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
@@ -8610,7 +8610,7 @@ public class Gcodev4Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 5));
+					}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
 					if (1 == tempo_Item_stack.getEnchantmentLevel(PalamodModEnchantments.SPEED.get())) {
 						{
 							Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments(tempo_Item_stack);
@@ -8848,7 +8848,7 @@ public class Gcodev4Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 5));
+					}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
 					if (1 == tempo_Item_stack.getEnchantmentLevel(PalamodModEnchantments.HAMMER_FORTUNE.get())) {
 						{
 							Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments(tempo_Item_stack);
@@ -9045,7 +9045,7 @@ public class Gcodev4Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 5));
+					}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
 					if (1 == tempo_Item_stack.getEnchantmentLevel(PalamodModEnchantments.BIGHOLE.get())) {
 						{
 							Map<Enchantment, Integer> _enchantments = EnchantmentHelper.getEnchantments(tempo_Item_stack);
@@ -9233,7 +9233,7 @@ public class Gcodev4Procedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 5));
+					}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
 					tempo_Item_stack.enchant(PalamodModEnchantments.AUTOSMELTPOTG.get(), 1);
 					{
 						BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));

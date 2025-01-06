@@ -36,7 +36,7 @@ public class Adhmobs2sellblazeProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 6.5;
-		item = new ItemStack(Items.BLAZE_ROD);
+		item = new ItemStack(Items.BLAZE_ROD).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

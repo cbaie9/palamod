@@ -28,7 +28,7 @@ public class StonyBlock extends Block {
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("auto-respawnable block for creating unbreakble wall ( creative )"));
+		list.add(Component.translatable("block.palamod.stony.description_0"));
 	}
 
 	@Override

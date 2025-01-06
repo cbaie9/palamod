@@ -86,6 +86,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 24, 4) {
 			private final int slot = 0;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -95,6 +97,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 24, 22) {
 			private final int slot = 1;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -104,6 +108,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 42, 4) {
 			private final int slot = 2;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -113,6 +119,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 42, 22) {
 			private final int slot = 3;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -122,6 +130,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 60, 4) {
 			private final int slot = 4;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -131,6 +141,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 60, 22) {
 			private final int slot = 5;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -140,6 +152,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 78, 4) {
 			private final int slot = 6;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -149,6 +163,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 78, 22) {
 			private final int slot = 7;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -158,6 +174,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 96, 4) {
 			private final int slot = 8;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -167,6 +185,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 96, 22) {
 			private final int slot = 9;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -176,6 +196,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 114, 4) {
 			private final int slot = 10;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -185,6 +207,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 114, 22) {
 			private final int slot = 11;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -194,12 +218,18 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 213, 78) {
 			private final int slot = 12;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 213, 96) {
 			private final int slot = 13;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 150, 4) {
 			private final int slot = 14;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -209,6 +239,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 150, 22) {
 			private final int slot = 15;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -218,6 +250,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 168, 4) {
 			private final int slot = 16;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -227,6 +261,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 168, 22) {
 			private final int slot = 17;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -236,6 +272,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 186, 4) {
 			private final int slot = 18;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -245,6 +283,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 186, 22) {
 			private final int slot = 19;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -254,6 +294,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 204, 4) {
 			private final int slot = 20;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -263,6 +305,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 204, 22) {
 			private final int slot = 21;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -272,6 +316,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 222, 4) {
 			private final int slot = 22;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -281,6 +327,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 222, 22) {
 			private final int slot = 23;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -290,6 +338,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 132, 4) {
 			private final int slot = 24;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -299,6 +349,8 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 132, 22) {
 			private final int slot = 25;
+			private int x = EndiumchestguiMenu.this.x;
+			private int y = EndiumchestguiMenu.this.y;
 
 			@Override
 			public void setChanged() {

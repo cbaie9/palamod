@@ -36,7 +36,7 @@ public class AdhtsorecoalProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 3;
-		item = new ItemStack(Items.COAL);
+		item = new ItemStack(Items.COAL).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

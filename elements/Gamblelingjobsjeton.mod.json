@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 29,
-          "y": 27
+          "y": 27,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "falpha": 0.0
           },
           "x": 29,
-          "y": 45
+          "y": 45,
+          "locked": false
         }
       },
       {
@@ -47,7 +49,8 @@
           "image": "arrow_back_true_1.png",
           "hoveredImage": "arrow_back_true2.png",
           "x": 373,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       },
       {
@@ -57,7 +60,8 @@
           "image": "close_gui_nohover.png",
           "hoveredImage": "close_gui_nohover.png",
           "x": 393,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       },
       {
@@ -71,7 +75,8 @@
           "width": 17,
           "height": 17,
           "x": 393,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       },
       {
@@ -84,7 +89,8 @@
           "width": 83,
           "height": 83,
           "x": 92,
-          "y": 109
+          "y": 109,
+          "locked": false
         }
       }
     ],

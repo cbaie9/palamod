@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "palahelptree.png",
           "use1Xscale": false,
           "x": 103,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "erable_log.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 139
+          "y": 139,
+          "locked": false
         }
       },
       {
@@ -41,7 +43,8 @@
             "falpha": 0.0
           },
           "x": 142,
-          "y": 133
+          "y": 133,
+          "locked": false
         }
       },
       {
@@ -57,7 +60,8 @@
             "falpha": 0.0
           },
           "x": 142,
-          "y": 145
+          "y": 145,
+          "locked": false
         }
       },
       {
@@ -66,7 +70,8 @@
           "image": "jacaranda_log.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -82,7 +87,8 @@
             "falpha": 0.0
           },
           "x": 139,
-          "y": 67
+          "y": 67,
+          "locked": false
         }
       },
       {
@@ -98,7 +104,8 @@
             "falpha": 0.0
           },
           "x": 139,
-          "y": 81
+          "y": 81,
+          "locked": false
         }
       },
       {
@@ -107,7 +114,8 @@
           "image": "judeecercis_log.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 104
+          "y": 104,
+          "locked": false
         }
       },
       {
@@ -123,7 +131,8 @@
             "falpha": 0.0
           },
           "x": 139,
-          "y": 102
+          "y": 102,
+          "locked": false
         }
       },
       {
@@ -139,7 +148,8 @@
             "falpha": 0.0
           },
           "x": 139,
-          "y": 114
+          "y": 114,
+          "locked": false
         }
       },
       {
@@ -148,7 +158,8 @@
           "image": "ostrya_log.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 170
+          "y": 170,
+          "locked": false
         }
       },
       {
@@ -164,7 +175,8 @@
             "falpha": 0.0
           },
           "x": 142,
-          "y": 168
+          "y": 168,
+          "locked": false
         }
       },
       {
@@ -180,7 +192,8 @@
             "falpha": 0.0
           },
           "x": 142,
-          "y": 181
+          "y": 181,
+          "locked": false
         }
       },
       {
@@ -189,7 +202,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 103,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -198,7 +212,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 181,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -207,7 +222,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 223,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -220,7 +236,8 @@
             "name": "Backpalahelp"
           },
           "x": 257,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -233,7 +250,8 @@
             "name": "Blockback"
           },
           "x": 277,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -246,7 +264,8 @@
             "name": "Closegui"
           },
           "x": 299,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -261,7 +280,8 @@
             "falpha": 0.0
           },
           "x": 163,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       }
     ],

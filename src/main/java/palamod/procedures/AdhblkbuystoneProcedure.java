@@ -44,7 +44,7 @@ public class AdhblkbuystoneProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 10;
-		item = new ItemStack(Blocks.COBBLESTONE);
+		item = new ItemStack(Blocks.COBBLESTONE).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

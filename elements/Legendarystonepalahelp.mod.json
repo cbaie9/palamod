@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "legendarystonepalahelp.png",
           "use1Xscale": false,
           "x": 103,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "legend_fortune.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 70
+          "y": 70,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
             "falpha": 0.0
           },
           "x": 107,
-          "y": 27
+          "y": 27,
+          "locked": false
         }
       },
       {
@@ -55,7 +58,8 @@
             "falpha": 0.0
           },
           "x": 130,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -70,7 +74,8 @@
             "falpha": 0.0
           },
           "x": 107,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -79,7 +84,8 @@
           "image": "legend_invisibility.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -94,7 +100,8 @@
             "falpha": 0.0
           },
           "x": 130,
-          "y": 96
+          "y": 96,
+          "locked": false
         }
       },
       {
@@ -103,7 +110,8 @@
           "image": "legend_jobs.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 115
+          "y": 115,
+          "locked": false
         }
       },
       {
@@ -118,7 +126,8 @@
             "falpha": 0.0
           },
           "x": 129,
-          "y": 118
+          "y": 118,
+          "locked": false
         }
       },
       {
@@ -127,7 +136,8 @@
           "image": "legend_power.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 136
+          "y": 136,
+          "locked": false
         }
       },
       {
@@ -142,7 +152,8 @@
             "falpha": 0.0
           },
           "x": 130,
-          "y": 139
+          "y": 139,
+          "locked": false
         }
       },
       {
@@ -157,7 +168,8 @@
             "falpha": 0.0
           },
           "x": 118,
-          "y": 150
+          "y": 150,
+          "locked": false
         }
       },
       {
@@ -166,7 +178,8 @@
           "image": "legend_tp.png",
           "use1Xscale": false,
           "x": 114,
-          "y": 160
+          "y": 160,
+          "locked": false
         }
       },
       {
@@ -181,7 +194,8 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 164
+          "y": 164,
+          "locked": false
         }
       },
       {
@@ -196,7 +210,8 @@
             "falpha": 0.0
           },
           "x": 117,
-          "y": 177
+          "y": 177,
+          "locked": false
         }
       },
       {
@@ -205,7 +220,8 @@
           "image": "legend_random.png",
           "use1Xscale": false,
           "x": 115,
-          "y": 187
+          "y": 187,
+          "locked": false
         }
       },
       {
@@ -220,7 +236,8 @@
             "falpha": 0.0
           },
           "x": 130,
-          "y": 193
+          "y": 193,
+          "locked": false
         }
       },
       {
@@ -235,7 +252,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 203
+          "y": 203,
+          "locked": false
         }
       },
       {
@@ -250,7 +268,8 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 105
+          "y": 105,
+          "locked": false
         }
       },
       {
@@ -259,7 +278,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 103,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -268,7 +288,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 192,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -277,7 +298,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 223,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -290,7 +312,8 @@
             "name": "Closegui"
           },
           "x": 302,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -303,7 +326,8 @@
             "name": "Backpalahelp"
           },
           "x": 268,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -316,7 +340,8 @@
             "name": "Connectitemmenu"
           },
           "x": 284,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       }
     ],

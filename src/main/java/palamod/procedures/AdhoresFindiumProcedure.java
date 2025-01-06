@@ -44,7 +44,7 @@ public class AdhoresFindiumProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 90;
-		item = new ItemStack(PalamodModItems.FINDIUM.get());
+		item = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

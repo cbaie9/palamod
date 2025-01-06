@@ -44,7 +44,7 @@ public class AdhplantbuywheatProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 0.5;
-		item = new ItemStack(Items.WHEAT_SEEDS);
+		item = new ItemStack(Items.WHEAT_SEEDS).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

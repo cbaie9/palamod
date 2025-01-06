@@ -682,8 +682,6 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> ENDIUM_SHOVEL_HEAD = REGISTRY.register("endium_shovel_head", () -> new EndiumshovelheadItem());
 	public static final RegistryObject<Item> ENDIUMSHOVEL = REGISTRY.register("endiumshovel", () -> new EndiumshovelItem());
 	public static final RegistryObject<Item> CAVE_BLOCK = block(PalamodModBlocks.CAVE_BLOCK);
-	public static final RegistryObject<Item> MIICHALENGE = REGISTRY.register("miichalenge", () -> new MiichalengeItem());
-	public static final RegistryObject<Item> FUZEDISC = REGISTRY.register("fuzedisc", () -> new FuzediscItem());
 	public static final RegistryObject<Item> ENDIUM_FRAGMENT = REGISTRY.register("endium_fragment", () -> new EndiumfragmentItem());
 	public static final RegistryObject<Item> FLAT_CHEST_UPGRADE = REGISTRY.register("flat_chest_upgrade", () -> new FlatchestupgradeItem());
 	public static final RegistryObject<Item> PALADIUM_CHEST = block(PalamodModBlocks.PALADIUM_CHEST);
@@ -724,9 +722,6 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> TYPESETTINGBOOK = block(PalamodModBlocks.TYPESETTINGBOOK);
 	public static final RegistryObject<Item> TYPESETTINGPLATE = block(PalamodModBlocks.TYPESETTINGPLATE);
 	public static final RegistryObject<Item> TYPESETTINGMAX = block(PalamodModBlocks.TYPESETTINGMAX);
-	public static final RegistryObject<Item> ANTIFUZEDISC = REGISTRY.register("antifuzedisc", () -> new AntifuzediscItem());
-	public static final RegistryObject<Item> ROULETTEPALADIENNEDISC = REGISTRY.register("roulettepaladiennedisc", () -> new RoulettepaladiennediscItem());
-	public static final RegistryObject<Item> CLASHKUMIZ = REGISTRY.register("clashkumiz", () -> new ClashkumizItem());
 	public static final RegistryObject<Item> DRAWBRIDGE = block(PalamodModBlocks.DRAWBRIDGE);
 	public static final RegistryObject<Item> PALADIUMARMORCUSTOM_4_HELMET = REGISTRY.register("paladiumarmorcustom_4_helmet", () -> new Paladiumarmorcustom4Item.Helmet());
 	public static final RegistryObject<Item> PALADIUMARMORCUSTOM_4_CHESTPLATE = REGISTRY.register("paladiumarmorcustom_4_chestplate", () -> new Paladiumarmorcustom4Item.Chestplate());
@@ -797,6 +792,11 @@ public class PalamodModItems {
 	public static final RegistryObject<Item> ORANGEGLUEBALL = block(PalamodModBlocks.ORANGEGLUEBALL);
 	public static final RegistryObject<Item> GRAYGLUEBALL = block(PalamodModBlocks.GRAYGLUEBALL);
 	public static final RegistryObject<Item> GLUEBALLPATERN = REGISTRY.register("glueballpatern", () -> new GlueballpaternItem());
+	public static final RegistryObject<Item> MIICHALENGE = REGISTRY.register("miichalenge", () -> new MiichalengeItem());
+	public static final RegistryObject<Item> FUZEDISC = REGISTRY.register("fuzedisc", () -> new FuzediscItem());
+	public static final RegistryObject<Item> ANTIFUZEDISC = REGISTRY.register("antifuzedisc", () -> new AntifuzediscItem());
+	public static final RegistryObject<Item> ROULETTEPALADIENNEDISC = REGISTRY.register("roulettepaladiennedisc", () -> new RoulettepaladiennediscItem());
+	public static final RegistryObject<Item> CLASHKUMIZ = REGISTRY.register("clashkumiz", () -> new ClashkumizItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

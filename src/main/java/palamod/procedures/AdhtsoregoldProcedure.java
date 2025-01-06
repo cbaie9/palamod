@@ -36,7 +36,7 @@ public class AdhtsoregoldProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 30;
-		item = new ItemStack(Items.GOLD_INGOT);
+		item = new ItemStack(Items.GOLD_INGOT).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

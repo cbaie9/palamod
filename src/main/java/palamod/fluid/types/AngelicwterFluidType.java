@@ -19,7 +19,8 @@ public class AngelicwterFluidType extends FluidType {
 	@Override
 	public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 		consumer.accept(new IClientFluidTypeExtensions() {
-			private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("palamod:block/angelicwater_still"), FLOWING_TEXTURE = new ResourceLocation("palamod:block/angelicwater_flowing");
+			private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("palamod:block/angelicwater_still");
+			private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("palamod:block/angelicwater_flowing");
 
 			@Override
 			public ResourceLocation getStillTexture() {

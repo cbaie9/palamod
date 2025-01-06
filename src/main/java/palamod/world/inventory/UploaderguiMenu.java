@@ -83,6 +83,8 @@ public class UploaderguiMenu extends AbstractContainerMenu implements Supplier<M
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 78, 28) {
 			private final int slot = 0;
+			private int x = UploaderguiMenu.this.x;
+			private int y = UploaderguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -92,6 +94,8 @@ public class UploaderguiMenu extends AbstractContainerMenu implements Supplier<M
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 78, 62) {
 			private final int slot = 1;
+			private int x = UploaderguiMenu.this.x;
+			private int y = UploaderguiMenu.this.y;
 
 			@Override
 			public void setChanged() {

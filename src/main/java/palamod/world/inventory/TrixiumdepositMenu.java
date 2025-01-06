@@ -85,6 +85,8 @@ public class TrixiumdepositMenu extends AbstractContainerMenu implements Supplie
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, 42) {
 			private final int slot = 0;
+			private int x = TrixiumdepositMenu.this.x;
+			private int y = TrixiumdepositMenu.this.y;
 
 			@Override
 			public void setChanged() {

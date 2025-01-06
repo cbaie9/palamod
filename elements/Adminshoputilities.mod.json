@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "adminshoputilities.png",
           "use1Xscale": false,
           "x": 118,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 147,
-          "y": 22
+          "y": 22,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
           "width": 81,
           "height": 20,
           "x": 217,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
           "width": 61,
           "height": 20,
           "x": 130,
-          "y": 188
+          "y": 188,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
           "width": 61,
           "height": 20,
           "x": 237,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -91,7 +96,8 @@
           "width": 43,
           "height": 20,
           "x": 255,
-          "y": 116
+          "y": 116,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
           "width": 82,
           "height": 20,
           "x": 130,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -121,7 +128,8 @@
           "width": 51,
           "height": 20,
           "x": 130,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -136,7 +144,8 @@
           "width": 77,
           "height": 20,
           "x": 221,
-          "y": 46
+          "y": 46,
+          "locked": false
         }
       },
       {
@@ -151,7 +160,8 @@
           "width": 51,
           "height": 20,
           "x": 130,
-          "y": 46
+          "y": 46,
+          "locked": false
         }
       },
       {
@@ -166,7 +176,8 @@
             "falpha": 0.0
           },
           "x": 195,
-          "y": 33
+          "y": 33,
+          "locked": false
         }
       },
       {
@@ -181,7 +192,8 @@
             "falpha": 0.0
           },
           "x": 193,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -196,7 +208,8 @@
           "width": 68,
           "height": 20,
           "x": 230,
-          "y": 189
+          "y": 189,
+          "locked": false
         }
       },
       {
@@ -211,7 +224,8 @@
           "width": 67,
           "height": 20,
           "x": 130,
-          "y": 117
+          "y": 117,
+          "locked": false
         }
       },
       {
@@ -220,7 +234,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 208,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -229,7 +244,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 118,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -242,7 +258,8 @@
             "name": "Adminshop_open"
           },
           "x": 123,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -255,7 +272,8 @@
             "name": "Closegui"
           },
           "x": 281,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -269,7 +287,8 @@
           "width": 16,
           "height": 16,
           "x": 281,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -283,7 +302,8 @@
           "width": 15,
           "height": 14,
           "x": 124,
-          "y": 27
+          "y": 27,
+          "locked": false
         }
       }
     ],

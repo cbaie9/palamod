@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 142,
-          "y": 96
+          "y": 96,
+          "locked": false
         }
       },
       {
@@ -33,7 +34,8 @@
           "width": 120,
           "height": 20,
           "x": 142,
-          "y": 105
+          "y": 105,
+          "locked": false
         }
       },
       {
@@ -48,7 +50,8 @@
           "width": 46,
           "height": 20,
           "x": 142,
-          "y": 126
+          "y": 126,
+          "locked": false
         }
       },
       {
@@ -57,7 +60,8 @@
           "image": "authsafegui.png",
           "use1Xscale": false,
           "x": 138,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       }
     ],

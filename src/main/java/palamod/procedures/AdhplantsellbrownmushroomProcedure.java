@@ -36,7 +36,7 @@ public class AdhplantsellbrownmushroomProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 1;
-		item = new ItemStack(Blocks.BROWN_MUSHROOM);
+		item = new ItemStack(Blocks.BROWN_MUSHROOM).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

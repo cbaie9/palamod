@@ -18,6 +18,6 @@ public class InternetcardItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Do you have internet connetion"));
+		list.add(Component.translatable("item.palamod.internet_card.description_0"));
 	}
 }

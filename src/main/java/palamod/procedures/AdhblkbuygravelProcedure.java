@@ -44,7 +44,7 @@ public class AdhblkbuygravelProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 15;
-		item = new ItemStack(Blocks.GRAVEL);
+		item = new ItemStack(Blocks.GRAVEL).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

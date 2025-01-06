@@ -38,7 +38,7 @@ public class AdhplantsellcrimsonfungusProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 1;
-		item = new ItemStack(Blocks.CRIMSON_FUNGUS);
+		item = new ItemStack(Blocks.CRIMSON_FUNGUS).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

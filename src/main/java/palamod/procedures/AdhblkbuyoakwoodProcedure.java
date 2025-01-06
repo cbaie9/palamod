@@ -44,7 +44,7 @@ public class AdhblkbuyoakwoodProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 20;
-		item = new ItemStack(Blocks.OAK_LOG);
+		item = new ItemStack(Blocks.OAK_LOG).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

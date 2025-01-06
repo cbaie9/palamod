@@ -24,7 +24,7 @@ public class PesyblpotionItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Fufu si c'est un ref au rire jaune t'es pas discret lol"));
+		list.add(Component.translatable("item.palamod.pesyblpotion.description_0"));
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class PesyblpotionItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		SpecialpotionvfufuProcedure.execute(entity, itemstack);
+		SpecialpotionvfufuProcedure.execute(world, entity, itemstack);
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {

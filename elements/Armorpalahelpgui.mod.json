@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "armorpalahelpgui.png",
           "use1Xscale": false,
           "x": 63,
-          "y": 21
+          "y": 21,
+          "locked": false
         }
       },
       {
@@ -25,7 +26,8 @@
           "image": "amethyst_helmet.png",
           "use1Xscale": false,
           "x": 76,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -34,7 +36,8 @@
           "image": "amethyst_chestplate.png",
           "use1Xscale": false,
           "x": 76,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -43,7 +46,8 @@
           "image": "amethyst_leggings.png",
           "use1Xscale": false,
           "x": 75,
-          "y": 118
+          "y": 118,
+          "locked": false
         }
       },
       {
@@ -52,7 +56,8 @@
           "image": "amethyst_boots.png",
           "use1Xscale": false,
           "x": 75,
-          "y": 144
+          "y": 144,
+          "locked": false
         }
       },
       {
@@ -61,7 +66,8 @@
           "image": "endium_helmet.png",
           "use1Xscale": false,
           "x": 285,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -70,7 +76,8 @@
           "image": "endium_chestplate.png",
           "use1Xscale": false,
           "x": 286,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -79,7 +86,8 @@
           "image": "endium_leggings.png",
           "use1Xscale": false,
           "x": 285,
-          "y": 120
+          "y": 120,
+          "locked": false
         }
       },
       {
@@ -88,7 +96,8 @@
           "image": "endium_boots.png",
           "use1Xscale": false,
           "x": 285,
-          "y": 145
+          "y": 145,
+          "locked": false
         }
       },
       {
@@ -97,7 +106,8 @@
           "image": "paladium_chestplate.png",
           "use1Xscale": false,
           "x": 209,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -106,7 +116,8 @@
           "image": "paladium_green_chestplate.png",
           "use1Xscale": false,
           "x": 190,
-          "y": 90
+          "y": 90,
+          "locked": false
         }
       },
       {
@@ -115,7 +126,8 @@
           "image": "paladium_green_boots.png",
           "use1Xscale": false,
           "x": 190,
-          "y": 144
+          "y": 144,
+          "locked": false
         }
       },
       {
@@ -124,7 +136,8 @@
           "image": "paladium_green_helmet.png",
           "use1Xscale": false,
           "x": 190,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -133,7 +146,8 @@
           "image": "paladium_green_leggings.png",
           "use1Xscale": false,
           "x": 190,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -142,7 +156,8 @@
           "image": "paladium_helmet.png",
           "use1Xscale": false,
           "x": 209,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -151,7 +166,8 @@
           "image": "paladium_leggings.png",
           "use1Xscale": false,
           "x": 207,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -160,7 +176,8 @@
           "image": "paladium_boots.png",
           "use1Xscale": false,
           "x": 207,
-          "y": 144
+          "y": 144,
+          "locked": false
         }
       },
       {
@@ -175,7 +192,8 @@
             "falpha": 0.0
           },
           "x": 93,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -190,7 +208,8 @@
             "falpha": 0.0
           },
           "x": 98,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -205,7 +224,8 @@
             "falpha": 0.0
           },
           "x": 96,
-          "y": 121
+          "y": 121,
+          "locked": false
         }
       },
       {
@@ -220,7 +240,8 @@
             "falpha": 0.0
           },
           "x": 93,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -229,7 +250,8 @@
           "image": "titane_helmet.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 63
+          "y": 63,
+          "locked": false
         }
       },
       {
@@ -238,7 +260,8 @@
           "image": "titane_chestplate.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -247,7 +270,8 @@
           "image": "titane_leggings.png",
           "use1Xscale": false,
           "x": 123,
-          "y": 118
+          "y": 118,
+          "locked": false
         }
       },
       {
@@ -256,7 +280,8 @@
           "image": "titane_boots.png",
           "use1Xscale": false,
           "x": 124,
-          "y": 144
+          "y": 144,
+          "locked": false
         }
       },
       {
@@ -271,7 +296,8 @@
             "falpha": 0.0
           },
           "x": 145,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -286,7 +312,8 @@
             "falpha": 0.0
           },
           "x": 143,
-          "y": 146
+          "y": 146,
+          "locked": false
         }
       },
       {
@@ -301,7 +328,8 @@
             "falpha": 0.0
           },
           "x": 143,
-          "y": 122
+          "y": 122,
+          "locked": false
         }
       },
       {
@@ -316,7 +344,8 @@
             "falpha": 0.0
           },
           "x": 150,
-          "y": 94
+          "y": 94,
+          "locked": false
         }
       },
       {
@@ -331,7 +360,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -346,7 +376,8 @@
             "falpha": 0.0
           },
           "x": 215,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -361,7 +392,8 @@
             "falpha": 0.0
           },
           "x": 240,
-          "y": 91
+          "y": 91,
+          "locked": false
         }
       },
       {
@@ -376,7 +408,8 @@
             "falpha": 0.0
           },
           "x": 240,
-          "y": 99
+          "y": 99,
+          "locked": false
         }
       },
       {
@@ -391,7 +424,8 @@
             "falpha": 0.0
           },
           "x": 239,
-          "y": 117
+          "y": 117,
+          "locked": false
         }
       },
       {
@@ -406,7 +440,8 @@
             "falpha": 0.0
           },
           "x": 242,
-          "y": 130
+          "y": 130,
+          "locked": false
         }
       },
       {
@@ -421,7 +456,8 @@
             "falpha": 0.0
           },
           "x": 227,
-          "y": 147
+          "y": 147,
+          "locked": false
         }
       },
       {
@@ -436,7 +472,8 @@
             "falpha": 0.0
           },
           "x": 304,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -451,7 +488,8 @@
             "falpha": 0.0
           },
           "x": 310,
-          "y": 89
+          "y": 89,
+          "locked": false
         }
       },
       {
@@ -466,7 +504,8 @@
             "falpha": 0.0
           },
           "x": 302,
-          "y": 116
+          "y": 116,
+          "locked": false
         }
       },
       {
@@ -481,7 +520,8 @@
             "falpha": 0.0
           },
           "x": 305,
-          "y": 139
+          "y": 139,
+          "locked": false
         }
       },
       {
@@ -496,7 +536,8 @@
             "falpha": 0.0
           },
           "x": 306,
-          "y": 100
+          "y": 100,
+          "locked": false
         }
       },
       {
@@ -511,7 +552,8 @@
             "falpha": 0.0
           },
           "x": 304,
-          "y": 126
+          "y": 126,
+          "locked": false
         }
       },
       {
@@ -526,7 +568,8 @@
             "falpha": 0.0
           },
           "x": 305,
-          "y": 148
+          "y": 148,
+          "locked": false
         }
       },
       {
@@ -536,7 +579,8 @@
           "image": "left_gray_line.png",
           "hoveredImage": "",
           "x": 63,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -545,7 +589,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 163,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -554,7 +599,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 263,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -569,7 +615,8 @@
             "falpha": 0.0
           },
           "x": 163,
-          "y": 25
+          "y": 25,
+          "locked": false
         }
       },
       {
@@ -582,7 +629,8 @@
             "name": "Connectitemmenu"
           },
           "x": 318,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -595,7 +643,8 @@
             "name": "Closegui"
           },
           "x": 339,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -608,7 +657,8 @@
             "name": "Backpalahelp"
           },
           "x": 299,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       }
     ],

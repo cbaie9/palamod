@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -17,7 +17,8 @@
           "image": "screen_beta3_famer_jobs.png",
           "hoveredImage": "screen_beta3_farm2.png",
           "x": 158,
-          "y": 77
+          "y": 77,
+          "locked": false
         }
       },
       {
@@ -26,7 +27,8 @@
           "image": "jobs_main_menu_bar20.png",
           "use1Xscale": false,
           "x": 91,
-          "y": 121
+          "y": 121,
+          "locked": false
         }
       },
       {
@@ -39,7 +41,8 @@
             "name": "Connectjobsminergui"
           },
           "x": 80,
-          "y": 77
+          "y": 77,
+          "locked": false
         }
       },
       {
@@ -48,7 +51,8 @@
           "image": "jobs_main_menu_bar20.png",
           "use1Xscale": false,
           "x": 169,
-          "y": 121
+          "y": 121,
+          "locked": false
         }
       },
       {
@@ -58,7 +62,8 @@
           "image": "screen_beta3_jobs_hunter.png",
           "hoveredImage": "screen_beta3_jobs_hunter2.png",
           "x": 240,
-          "y": 77
+          "y": 77,
+          "locked": false
         }
       },
       {
@@ -68,7 +73,8 @@
           "image": "screen_beta3_jobs_alchi.png",
           "hoveredImage": "screen_beta3_jobs_alchi2.png",
           "x": 311,
-          "y": 77
+          "y": 77,
+          "locked": false
         }
       },
       {
@@ -77,7 +83,8 @@
           "image": "jobs_main_menu_bar20.png",
           "use1Xscale": false,
           "x": 248,
-          "y": 121
+          "y": 121,
+          "locked": false
         }
       },
       {
@@ -86,7 +93,8 @@
           "image": "jobs_main_menu_bar20.png",
           "use1Xscale": false,
           "x": 318,
-          "y": 121
+          "y": 121,
+          "locked": false
         }
       },
       {
@@ -101,7 +109,8 @@
             "falpha": 0.0
           },
           "x": 173,
-          "y": 27
+          "y": 27,
+          "locked": false
         }
       },
       {
@@ -116,7 +125,8 @@
             "falpha": 0.0
           },
           "x": 44,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -131,7 +141,8 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -146,7 +157,8 @@
             "falpha": 0.0
           },
           "x": 162,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -161,7 +173,8 @@
             "falpha": 0.0
           },
           "x": 246,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -176,7 +189,8 @@
             "falpha": 0.0
           },
           "x": 308,
-          "y": 65
+          "y": 65,
+          "locked": false
         }
       },
       {
@@ -185,7 +199,8 @@
           "image": "jobsgui.png",
           "use1Xscale": false,
           "x": 39,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -194,7 +209,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 39,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -203,7 +219,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 139,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -212,7 +229,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 239,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -221,7 +239,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 289,
-          "y": 20
+          "y": 20,
+          "locked": false
         }
       },
       {
@@ -234,7 +253,8 @@
             "name": "Closegui"
           },
           "x": 367,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
@@ -250,7 +270,8 @@
             "falpha": 0.0
           },
           "x": 83,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -266,7 +287,8 @@
             "falpha": 0.0
           },
           "x": 158,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -282,7 +304,8 @@
             "falpha": 0.0
           },
           "x": 240,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -298,7 +321,8 @@
             "falpha": 0.0
           },
           "x": 311,
-          "y": 119
+          "y": 119,
+          "locked": false
         }
       },
       {
@@ -313,7 +337,8 @@
             "falpha": 0.0
           },
           "x": 47,
-          "y": 171
+          "y": 171,
+          "locked": false
         }
       }
     ],

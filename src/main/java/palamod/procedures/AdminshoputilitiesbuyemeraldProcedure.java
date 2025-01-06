@@ -39,7 +39,7 @@ public class AdminshoputilitiesbuyemeraldProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 55;
-		item = new ItemStack(Items.EMERALD);
+		item = new ItemStack(Items.EMERALD).copy();
 		if (0 == n) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();

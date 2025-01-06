@@ -44,7 +44,7 @@ public class AdhoresgoldProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 35;
-		item = new ItemStack(Items.GOLD_INGOT);
+		item = new ItemStack(Items.GOLD_INGOT).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

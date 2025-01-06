@@ -44,7 +44,7 @@ public class Adhmobs2buygunpowderProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 6.75;
-		item = new ItemStack(Items.GUNPOWDER);
+		item = new ItemStack(Items.GUNPOWDER).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

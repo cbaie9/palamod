@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "block",
   "definition": {
     "texture": "endium_down",
@@ -51,6 +51,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Endium chest",
     "specialInformation": {
       "fixedValue": []

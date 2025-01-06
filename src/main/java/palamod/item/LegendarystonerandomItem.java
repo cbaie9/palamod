@@ -38,8 +38,8 @@ public class LegendarystonerandomItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Surprise"));
-		list.add(Component.literal("Que va-t-il y avoir dedant ?"));
+		list.add(Component.translatable("item.palamod.legendary_stone_random.description_0"));
+		list.add(Component.translatable("item.palamod.legendary_stone_random.description_1"));
 	}
 
 	@Override

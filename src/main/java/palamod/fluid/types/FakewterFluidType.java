@@ -19,7 +19,8 @@ public class FakewterFluidType extends FluidType {
 	@Override
 	public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 		consumer.accept(new IClientFluidTypeExtensions() {
-			private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("palamod:block/fakewater_still"), FLOWING_TEXTURE = new ResourceLocation("palamod:block/fake_water");
+			private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("palamod:block/fakewater_still");
+			private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("palamod:block/fake_water");
 
 			@Override
 			public ResourceLocation getStillTexture() {

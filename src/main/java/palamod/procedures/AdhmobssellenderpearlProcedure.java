@@ -36,7 +36,7 @@ public class AdhmobssellenderpearlProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 5.5;
-		item = new ItemStack(Items.ENDER_PEARL);
+		item = new ItemStack(Items.ENDER_PEARL).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

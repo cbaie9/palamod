@@ -36,7 +36,7 @@ public class AdhmobssellwitherskullProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 1000;
-		item = new ItemStack(Blocks.WITHER_SKELETON_SKULL);
+		item = new ItemStack(Blocks.WITHER_SKELETON_SKULL).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

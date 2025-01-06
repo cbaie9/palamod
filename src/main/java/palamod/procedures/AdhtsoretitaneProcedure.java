@@ -37,7 +37,7 @@ public class AdhtsoretitaneProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 100;
-		item = new ItemStack(PalamodModItems.TITANE_INGOT.get());
+		item = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

@@ -36,7 +36,7 @@ public class AdhmobssellrottenfleshProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 0.25;
-		item = new ItemStack(Items.ROTTEN_FLESH);
+		item = new ItemStack(Items.ROTTEN_FLESH).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

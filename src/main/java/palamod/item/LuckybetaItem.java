@@ -24,6 +24,6 @@ public class LuckybetaItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("Lucky block Item no added"));
+		list.add(Component.translatable("item.palamod.lucky_beta.description_0"));
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "drawbrigegui.png",
           "use1Xscale": false,
           "x": 73,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -34,7 +35,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 92,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 119,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -70,7 +73,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 146,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -83,7 +87,8 @@
             "name": "Setblocksouth"
           },
           "x": 286,
-          "y": 165
+          "y": 165,
+          "locked": false
         }
       },
       {
@@ -96,7 +101,8 @@
             "name": "Setblockeast"
           },
           "x": 314,
-          "y": 135
+          "y": 135,
+          "locked": false
         }
       },
       {
@@ -109,7 +115,8 @@
             "name": "Setblocknorth"
           },
           "x": 286,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -118,7 +125,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 115,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -127,7 +135,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 89,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -136,7 +145,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 89,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -154,7 +164,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 173,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -172,7 +183,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 198,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -190,7 +202,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 223,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -208,7 +221,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 249,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -226,7 +240,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 275,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       },
       {
@@ -244,7 +259,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 92,
-          "y": 78
+          "y": 78,
+          "locked": false
         }
       },
       {
@@ -262,7 +278,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 119,
-          "y": 78
+          "y": 78,
+          "locked": false
         }
       },
       {
@@ -280,7 +297,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 146,
-          "y": 78
+          "y": 78,
+          "locked": false
         }
       },
       {
@@ -298,7 +316,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 173,
-          "y": 78
+          "y": 78,
+          "locked": false
         }
       },
       {
@@ -316,7 +335,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 198,
-          "y": 78
+          "y": 78,
+          "locked": false
         }
       },
       {
@@ -334,7 +354,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 224,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -352,7 +373,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 249,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -370,7 +392,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 275,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -379,7 +402,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 167,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -388,7 +412,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 141,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -397,7 +422,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 115,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -406,7 +432,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 141,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -415,7 +442,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 167,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -424,7 +452,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 193,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -433,7 +462,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 193,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -442,7 +472,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 219,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -451,7 +482,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 219,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -460,7 +492,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 245,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -469,7 +502,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 245,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -478,7 +512,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 271,
-          "y": 48
+          "y": 48,
+          "locked": false
         }
       },
       {
@@ -487,7 +522,8 @@
           "image": "big_slot.png",
           "use1Xscale": true,
           "x": 271,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -500,7 +536,8 @@
             "name": "Setblockwest"
           },
           "x": 253,
-          "y": 135
+          "y": 135,
+          "locked": false
         }
       }
     ],

@@ -52,6 +52,8 @@ public class PalamodModEntities {
 	public static final RegistryObject<EntityType<PrimedendiumtntEntity>> PRIMEDENDIUMTNT = register("primedendiumtnt", EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PrimedendiumtntEntity::new).fireImmune().sized(1f, 1f));
 
+	// Start of user code block custom entities
+	// End of user code block custom entities
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}

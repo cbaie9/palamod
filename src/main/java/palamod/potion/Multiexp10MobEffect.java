@@ -16,6 +16,7 @@ public class Multiexp10MobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.addAttributeModifiers(entity, attributeMap, amplifier);
 		Addmultixp10fileProcedure.execute(entity);
 	}
 

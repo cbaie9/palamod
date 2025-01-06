@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "grindergui.png",
           "use1Xscale": false,
           "x": 106,
-          "y": 39
+          "y": 39,
+          "locked": false
         }
       },
       {
@@ -34,7 +35,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 132,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 132,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -70,7 +73,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 231,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -85,7 +89,8 @@
             "falpha": 0.0
           },
           "x": 255,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -94,7 +99,8 @@
           "image": "gnew_indicator.png",
           "use1Xscale": false,
           "x": 252,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 182,
-          "y": 50
+          "y": 50,
+          "locked": false
         }
       },
       {
@@ -118,7 +125,8 @@
             "name": "Grindersubprocessarrowinsertn0"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -130,7 +138,8 @@
             "name": "Grindersubprocessarrowinsertn1"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -142,7 +151,8 @@
             "name": "Grindersubprocessarrowinsertn2"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -154,7 +164,8 @@
             "name": "Grindersubprocessarrowinsertn3"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -166,7 +177,8 @@
             "name": "Grindersubprocessarrowinsertn4"
           },
           "x": 227,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -184,7 +196,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 132,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
@@ -193,7 +206,8 @@
           "image": "arrow_right01.png",
           "use1Xscale": true,
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -205,7 +219,8 @@
             "name": "Grinderguiarrow2n1"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -217,7 +232,8 @@
             "name": "Grinderguiarrow2n2"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -229,7 +245,8 @@
             "name": "Grinderguiarrow2n3"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -241,7 +258,8 @@
             "name": "Grinderguiarrow2n4"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -253,7 +271,8 @@
             "name": "Grinderguiarrow2n5"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -265,7 +284,8 @@
             "name": "Crushersubprocessv2n6"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -277,7 +297,8 @@
             "name": "Grinderguiarrow2n7"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -289,7 +310,8 @@
             "name": "Grinderguiarrow2n8"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -301,7 +323,8 @@
             "name": "Grinderguiarrow2n9"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -313,7 +336,8 @@
             "name": "Grinderguiarrow2n10"
           },
           "x": 159,
-          "y": 51
+          "y": 51,
+          "locked": false
         }
       },
       {
@@ -322,7 +346,8 @@
           "image": "arrow_1red_new.png",
           "use1Xscale": true,
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -334,7 +359,8 @@
             "name": "Grindersubprocessarrowsplit1"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -346,7 +372,8 @@
             "name": "Grindersubprocessarrowsplit2"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -358,7 +385,8 @@
             "name": "Grindersubprocessarrowsplit3"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -370,7 +398,8 @@
             "name": "Grindersubprocessarrowsplit4"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -382,7 +411,8 @@
             "name": "Grindersubprocessarrowsplit5"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -394,7 +424,8 @@
             "name": "Grindersubprocessarrowsplit6"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -406,7 +437,8 @@
             "name": "Grindersubprocessarrowsplit7"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -418,7 +450,8 @@
             "name": "Grindersubprocessarrowsplit8"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -430,7 +463,8 @@
             "name": "Grindersubprocessarrowsplit9"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -442,7 +476,8 @@
             "name": "Grindersubprocessarrowsplit10"
           },
           "x": 160,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -460,7 +495,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 193,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       }
     ],

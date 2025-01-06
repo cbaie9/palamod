@@ -1,15 +1,15 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "enchantment",
   "definition": {
     "name": "Speed",
-    "type": "BREAKABLE",
-    "rarity": "COMMON",
+    "supportedSlots": "any",
+    "weight": 10,
+    "anvilCost": 1,
     "maxLevel": 3,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "incompatibleEnchantments": [],
+    "supportedItems": [
       {
         "value": "CUSTOM:Endiumhammer"
       },
@@ -23,10 +23,8 @@
         "value": "CUSTOM:Greenpaladiumhammer"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": false,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

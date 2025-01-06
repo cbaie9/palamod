@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "jeirecipetype",
   "definition": {
     "textureSelector": "palamachine_jei.png",
@@ -8,9 +8,11 @@
     "icon": {
       "value": "CUSTOM:Paladiummachine"
     },
-    "craftingtable": {
-      "value": "CUSTOM:Paladiummachine"
-    },
+    "craftingtables": [
+      {
+        "value": "CUSTOM:Paladiummachine"
+      }
+    ],
     "enableCraftingtable": true,
     "title": "Paladium Machine",
     "slotList": [

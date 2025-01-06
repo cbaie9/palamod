@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "jobsminergui.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -28,7 +29,8 @@
             "name": "Progressbarjobsminer1"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -43,7 +45,8 @@
             "falpha": 0.0
           },
           "x": 135,
-          "y": 87
+          "y": 87,
+          "locked": false
         }
       },
       {
@@ -56,7 +59,8 @@
             "name": "Connectminercraft"
           },
           "x": 230,
-          "y": 133
+          "y": 133,
+          "locked": false
         }
       },
       {
@@ -72,7 +76,8 @@
             "falpha": 0.0
           },
           "x": 139,
-          "y": 118
+          "y": 118,
+          "locked": false
         }
       },
       {
@@ -82,7 +87,8 @@
           "image": "button_helpjobs_v1.png",
           "hoveredImage": "button_helpjobs_poi_v1.png",
           "x": 140,
-          "y": 133
+          "y": 133,
+          "locked": false
         }
       },
       {
@@ -96,7 +102,8 @@
           "width": 145,
           "height": 10,
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -105,7 +112,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -114,7 +122,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 202,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -127,7 +136,8 @@
             "name": "Closegui"
           },
           "x": 280,
-          "y": 85
+          "y": 85,
+          "locked": false
         }
       },
       {
@@ -139,7 +149,8 @@
             "name": "Progressbarjobsminer2"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -151,7 +162,8 @@
             "name": "Progressbarjobsminer3"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -163,7 +175,8 @@
             "name": "Progressbarjobsminer4"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -175,7 +188,8 @@
             "name": "Progressbarjobsminer5"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -187,7 +201,8 @@
             "name": "Progressbarjobsminer6"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -199,7 +214,8 @@
             "name": "Progressbarjobsminer7"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -211,7 +227,8 @@
             "name": "Progressbarjobsminer8"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -223,7 +240,8 @@
             "name": "Progressbarjobsminer9"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -235,7 +253,8 @@
             "name": "Progressbarjobsminer10"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -247,7 +266,8 @@
             "name": "Progressbarjobsminer11"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -259,7 +279,8 @@
             "name": "Progressbarjobsminer12"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -271,7 +292,8 @@
             "name": "Progressbarjobsminer13"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -283,7 +305,8 @@
             "name": "Progressbarjobsminer14"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -295,7 +318,8 @@
             "name": "Progressbarjobsminer15"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -307,7 +331,8 @@
             "name": "Progressbarjobsminer16"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -319,7 +344,8 @@
             "name": "Progressbarjobsminer17"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -331,7 +357,8 @@
             "name": "Progressbarjobsminer18"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -343,7 +370,8 @@
             "name": "Progressbarjobsminer19"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -355,7 +383,8 @@
             "name": "Progressbarjobsminer20"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -367,7 +396,8 @@
             "name": "Progressbarjobsminer21"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -379,7 +409,8 @@
             "name": "Progressbarjobsminer22"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -391,7 +422,8 @@
             "name": "Progressbarjobsminer23"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -403,7 +435,8 @@
             "name": "Progressbarjobsminer24"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -415,7 +448,8 @@
             "name": "Progressbarjobsminer25"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -427,7 +461,8 @@
             "name": "Progressbarjobsminer26"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -439,7 +474,8 @@
             "name": "Progressbarjobsminer27"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -451,7 +487,8 @@
             "name": "Progressbarjobsminer28"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -463,7 +500,8 @@
             "name": "Progressbarjobsminer29"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -475,7 +513,8 @@
             "name": "Progressbarjobsminer30"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -487,7 +526,8 @@
             "name": "Progressbarjobsminer31"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -499,7 +539,8 @@
             "name": "Progressbarjobsminer32"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -511,7 +552,8 @@
             "name": "Progressbarjobsminer33"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -523,7 +565,8 @@
             "name": "Progressbarjobsminer34"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -535,7 +578,8 @@
             "name": "Progressbarjobsminer55"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -547,7 +591,8 @@
             "name": "Progressbarjobsminer36"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -559,7 +604,8 @@
             "name": "Progressbarjobsminer37"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -571,7 +617,8 @@
             "name": "Progressbarjobsminer38"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -583,7 +630,8 @@
             "name": "Progressbarjobsminer39"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -595,7 +643,8 @@
             "name": "Progressbarjobsminer40"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -607,7 +656,8 @@
             "name": "Progressbarjobsminer41"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -619,7 +669,8 @@
             "name": "Progressbarjobsminer42"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -631,7 +682,8 @@
             "name": "Progressbarjobsminer43"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -643,7 +695,8 @@
             "name": "Progressbarjobsminer44"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -655,7 +708,8 @@
             "name": "Progressbarjobsminer45"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -667,7 +721,8 @@
             "name": "Progressbarjobsminer46"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -679,7 +734,8 @@
             "name": "Progressbarjobsminer47"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -691,7 +747,8 @@
             "name": "Progressbarjobsminer48"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -703,7 +760,8 @@
             "name": "Progressbarjobsminer49"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -715,7 +773,8 @@
             "name": "Progressbarjobsminer50"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -727,7 +786,8 @@
             "name": "Progressbarjobsminer51"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -739,7 +799,8 @@
             "name": "Progressbarjobsminer52"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -751,7 +812,8 @@
             "name": "Progressbarjobsminer53"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -763,7 +825,8 @@
             "name": "Progressbarjobsminer54"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -775,7 +838,8 @@
             "name": "Progressbarjobsminer55"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -787,7 +851,8 @@
             "name": "Progressbarjobsminer56"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -799,7 +864,8 @@
             "name": "Progressbarjobsminer57"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -811,7 +877,8 @@
             "name": "Progressbarjobsminer58"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -823,7 +890,8 @@
             "name": "Progressbarjobsminer59"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -835,7 +903,8 @@
             "name": "Progressbarjobsminer60"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -847,7 +916,8 @@
             "name": "Progressbarjobsminer61"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -859,7 +929,8 @@
             "name": "Progressbarjobsminer62"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -871,7 +942,8 @@
             "name": "Progressbarjobsminer63"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -883,7 +955,8 @@
             "name": "Progressbarjobsminer64"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -895,7 +968,8 @@
             "name": "Progressbarjobsminer65"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -907,7 +981,8 @@
             "name": "Progressbarjobsminer66"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -919,7 +994,8 @@
             "name": "Progressbarjobsminer67"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -931,7 +1007,8 @@
             "name": "Progressbarjobsminer68"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -943,7 +1020,8 @@
             "name": "Progressbarjobsminer69"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -955,7 +1033,8 @@
             "name": "Progressbarjobsminer70"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -967,7 +1046,8 @@
             "name": "Progressbarjobsminer71"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -979,7 +1059,8 @@
             "name": "Progressbarjobsminer72"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -991,7 +1072,8 @@
             "name": "Progressbarjobsminer73"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1003,7 +1085,8 @@
             "name": "Progressbarjobsminer74"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1015,7 +1098,8 @@
             "name": "Progressbarjobsminer75"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1027,7 +1111,8 @@
             "name": "Progressbarjobsminer76"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1039,7 +1124,8 @@
             "name": "Progressbarjobsminer77"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1051,7 +1137,8 @@
             "name": "Progressbarjobsminer78"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1063,7 +1150,8 @@
             "name": "Progressbarjobsminer79"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1075,7 +1163,8 @@
             "name": "Progressbarjobsminer80"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1087,7 +1176,8 @@
             "name": "Progressbarjobsminer81"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1099,7 +1189,8 @@
             "name": "Progressbarjobsminer82"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1111,7 +1202,8 @@
             "name": "Progressbarjobsminer84"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1123,7 +1215,8 @@
             "name": "Progressbarjobsminer85"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1135,7 +1228,8 @@
             "name": "Progressbarjobsminer86"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1147,7 +1241,8 @@
             "name": "Progressbarjobsminer87"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1159,7 +1254,8 @@
             "name": "Progressbarjobsminer88"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1171,7 +1267,8 @@
             "name": "Progressbarjobsminer89"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1183,7 +1280,8 @@
             "name": "Progressbarjobsminer90"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1195,7 +1293,8 @@
             "name": "Progressbarjobsminer91"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1207,7 +1306,8 @@
             "name": "Progressbarjobsminer92"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1219,7 +1319,8 @@
             "name": "Progressbarjobsminer93"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1231,7 +1332,8 @@
             "name": "Progressbarjobsminer94"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1243,7 +1345,8 @@
             "name": "Progressbarjobsminer95"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1255,7 +1358,8 @@
             "name": "Progressbarjobsminer96"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1267,7 +1371,8 @@
             "name": "Progressbarjobsminer97"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1279,7 +1384,8 @@
             "name": "Progressbarjobsminer98"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1291,7 +1397,8 @@
             "name": "Progressbarjobsminer99"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       },
       {
@@ -1303,7 +1410,8 @@
             "name": "Progressbarjobsminer100"
           },
           "x": 140,
-          "y": 106
+          "y": 106,
+          "locked": false
         }
       }
     ],

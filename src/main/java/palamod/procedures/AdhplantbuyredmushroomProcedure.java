@@ -44,7 +44,7 @@ public class AdhplantbuyredmushroomProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 5;
-		item = new ItemStack(Blocks.RED_MUSHROOM);
+		item = new ItemStack(Blocks.RED_MUSHROOM).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

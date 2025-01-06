@@ -10,12 +10,19 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 
 public class BotteledEnchantment extends Enchantment {
-	public BotteledEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.DIGGER, slots);
+	private static final EnchantmentCategory ENCHANTMENT_CATEGORY = EnchantmentCategory.create("palamod_botteled", item -> Ingredient.of(ItemTags.create(new ResourceLocation("forge:pickaxe"))).test(new ItemStack(item)));
+
+	public BotteledEnchantment() {
+		super(Enchantment.Rarity.UNCOMMON, ENCHANTMENT_CATEGORY, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 	}
 
 	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack itemstack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("forge:pickaxe"))).test(itemstack);
+	public int getMinCost(int level) {
+		return 1 + level * 10;
+	}
+
+	@Override
+	public int getMaxCost(int level) {
+		return 6 + level * 10;
 	}
 }

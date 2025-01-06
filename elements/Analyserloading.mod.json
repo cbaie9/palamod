@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 152,
-          "y": 76
+          "y": 76,
+          "locked": false
         }
       },
       {
@@ -37,7 +38,8 @@
             "falpha": 0.0
           },
           "x": 152,
-          "y": 87
+          "y": 87,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
             "falpha": 0.0
           },
           "x": 182,
-          "y": 123
+          "y": 123,
+          "locked": false
         }
       },
       {
@@ -67,7 +70,8 @@
             "falpha": 0.0
           },
           "x": 165,
-          "y": 134
+          "y": 134,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
           "image": "analyserloading.png",
           "use1Xscale": false,
           "x": 138,
-          "y": 70
+          "y": 70,
+          "locked": false
         }
       }
     ],

@@ -105,7 +105,7 @@ public class CobblebreakerprocessProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0));
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy();
 					teststack.getOrCreateTag().putDouble("voidstone_count", (teststack.getOrCreateTag().getDouble("voidstone_count") - 1));
 					teststack.setHoverName(Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(teststack.getOrCreateTag().getDouble("voidstone_count")))));
 					{

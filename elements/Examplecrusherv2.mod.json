@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,7 +16,8 @@
           "image": "examplecrusherv_2.png",
           "use1Xscale": false,
           "x": 46,
-          "y": 18
+          "y": 18,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 167,
-          "y": 21
+          "y": 21,
+          "locked": false
         }
       },
       {
@@ -49,7 +51,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 52,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -65,7 +68,8 @@
             "falpha": 0.0
           },
           "x": 59,
-          "y": 129
+          "y": 129,
+          "locked": false
         }
       },
       {
@@ -83,7 +87,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 52,
-          "y": 73
+          "y": 73,
+          "locked": false
         }
       },
       {
@@ -99,7 +104,8 @@
             "falpha": 0.0
           },
           "x": 56,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -115,7 +121,8 @@
             "falpha": 0.0
           },
           "x": 55,
-          "y": 113
+          "y": 113,
+          "locked": false
         }
       },
       {
@@ -127,7 +134,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 204,
-          "y": 117
+          "y": 117,
+          "locked": false
         }
       },
       {
@@ -143,7 +151,8 @@
             "falpha": 0.0
           },
           "x": 73,
-          "y": 76
+          "y": 76,
+          "locked": false
         }
       },
       {
@@ -158,7 +167,8 @@
             "falpha": 0.0
           },
           "x": 72,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -167,7 +177,8 @@
           "image": "amethystmixedcoal.png",
           "use1Xscale": false,
           "x": 223,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -176,7 +187,8 @@
           "image": "titanemixedcoal.png",
           "use1Xscale": false,
           "x": 223,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -185,7 +197,8 @@
           "image": "goldmixedcoal.png",
           "use1Xscale": false,
           "x": 223,
-          "y": 140
+          "y": 140,
+          "locked": false
         }
       },
       {
@@ -194,7 +207,8 @@
           "image": "palamixed2.png",
           "use1Xscale": false,
           "x": 221,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -203,7 +217,8 @@
           "image": "orangeblue_1.png",
           "use1Xscale": true,
           "x": 53,
-          "y": 39
+          "y": 39,
+          "locked": false
         }
       },
       {
@@ -212,7 +227,8 @@
           "image": "amethyst_ingot.png",
           "use1Xscale": false,
           "x": 240,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -221,7 +237,8 @@
           "image": "titane_ingot.png",
           "use1Xscale": false,
           "x": 240,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       },
       {
@@ -230,7 +247,8 @@
           "image": "endium_ingot_vfufu.png",
           "use1Xscale": false,
           "x": 358,
-          "y": 69
+          "y": 69,
+          "locked": false
         }
       },
       {
@@ -239,7 +257,8 @@
           "image": "paladium_ingot.png",
           "use1Xscale": false,
           "x": 358,
-          "y": 38
+          "y": 38,
+          "locked": false
         }
       },
       {
@@ -251,7 +270,8 @@
             "name": "Crushersubprocessv2n0"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -263,7 +283,8 @@
             "name": "Crushersubprocessv2n1"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -275,7 +296,8 @@
             "name": "Crushersubprocessv2n2"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -287,7 +309,8 @@
             "name": "Crushersubprocessv2n3"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -299,7 +322,8 @@
             "name": "Crushersubprocessv2n4"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -311,7 +335,8 @@
             "name": "Crushersubprocessv2n5"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -323,7 +348,8 @@
             "name": "Crushersubprocessv2n6"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -335,7 +361,8 @@
             "name": "Crushersubprocessv2n7"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -347,7 +374,8 @@
             "name": "Crushersubprocessv2n8"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -359,7 +387,8 @@
             "name": "Crushersubprocessv2n9"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -371,7 +400,8 @@
             "name": "Crushersubprocessv2n10"
           },
           "x": 54,
-          "y": 56
+          "y": 56,
+          "locked": false
         }
       },
       {
@@ -381,7 +411,8 @@
           "image": "button_white.png",
           "hoveredImage": "button_blue.png",
           "x": 260,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -391,7 +422,8 @@
           "image": "button_white.png",
           "hoveredImage": "button_red.png",
           "x": 261,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -401,7 +433,8 @@
           "image": "button_white.png",
           "hoveredImage": "button_gray.png",
           "x": 145,
-          "y": 66
+          "y": 66,
+          "locked": false
         }
       },
       {
@@ -411,7 +444,8 @@
           "image": "button_white.png",
           "hoveredImage": "button_purple.png",
           "x": 145,
-          "y": 36
+          "y": 36,
+          "locked": false
         }
       },
       {
@@ -420,7 +454,8 @@
           "image": "paladium_mixed_coaltrans.png",
           "use1Xscale": false,
           "x": 52,
-          "y": 74
+          "y": 74,
+          "locked": false
         }
       },
       {
@@ -435,7 +470,8 @@
             "falpha": 0.0
           },
           "x": 248,
-          "y": 210
+          "y": 210,
+          "locked": false
         }
       },
       {
@@ -447,7 +483,8 @@
             "name": "Crushersubprocessv2progressbar1"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -459,7 +496,8 @@
             "name": "Crushersubprocessv2progressbar2"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -471,7 +509,8 @@
             "name": "Crushersubprocessv2progressbar3"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -483,7 +522,8 @@
             "name": "Crushersubprocessv2progressbar4"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -495,7 +535,8 @@
             "name": "Crushersubprocessv2progressbar5"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -507,7 +548,8 @@
             "name": "Crushersubprocessv2progressbar6"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -519,7 +561,8 @@
             "name": "Crushersubprocessv2progressbar7"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -531,7 +574,8 @@
             "name": "Crushersubprocessv2progressbar8"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -543,7 +587,8 @@
             "name": "Crushersubprocessv2progressbar9"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -555,7 +600,8 @@
             "name": "Crushersubprocessv2progressbar11"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -567,7 +613,8 @@
             "name": "Crushersubprocessv2progressbar12"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -579,7 +626,8 @@
             "name": "Crushersubprocessv2progressbar13"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -591,7 +639,8 @@
             "name": "Crushersubprocessv2progressbar14"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -603,7 +652,8 @@
             "name": "Crushersubprocessv2progressbar15"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -615,7 +665,8 @@
             "name": "Crushersubprocessv2progressbar16"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -627,7 +678,8 @@
             "name": "Crushersubprocessv2progressbar10"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -639,7 +691,8 @@
             "name": "Crushersubprocessv2progressbar0"
           },
           "x": 254,
-          "y": 141
+          "y": 141,
+          "locked": false
         }
       },
       {
@@ -651,7 +704,8 @@
             "name": "Crushersubprocessv2progressbartitane0"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -663,7 +717,8 @@
             "name": "Crushersubprocessv2progressbartitane1"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -675,7 +730,8 @@
             "name": "Crushersubprocessv2progressbartitane2"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -687,7 +743,8 @@
             "name": "Crushersubprocessv2progressbartitane3"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -699,7 +756,8 @@
             "name": "Crushersubprocessv2progressbartitane4"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -711,7 +769,8 @@
             "name": "Crushersubprocessv2progressbartitane5"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -723,7 +782,8 @@
             "name": "Crushersubprocessv2progressbartitane6"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -735,7 +795,8 @@
             "name": "Crushersubprocessv2progressbartitane7"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -747,7 +808,8 @@
             "name": "Crushersubprocessv2progressbartitane8"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -759,7 +821,8 @@
             "name": "Crushersubprocessv2progressbartitane9"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -771,7 +834,8 @@
             "name": "Crushersubprocessv2progressbartitane10"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -783,7 +847,8 @@
             "name": "Crushersubprocessv2progressbartitane11"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -795,7 +860,8 @@
             "name": "Crushersubprocessv2progressbartitane12"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -807,7 +873,8 @@
             "name": "Crushersubprocessv2progressbartitane13"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -819,7 +886,8 @@
             "name": "Crushersubprocessv2progressbartitane14"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -831,7 +899,8 @@
             "name": "Crushersubprocessv2progressbartitane15"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -843,7 +912,8 @@
             "name": "Crushersubprocessv2progressbartitane16"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -855,7 +925,8 @@
             "name": "Crushersubprocessv2progressbartitane17"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -867,7 +938,8 @@
             "name": "Crushersubprocessv2progressbartitane18"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -879,7 +951,8 @@
             "name": "Crushersubprocessv2progressbartitane19"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -891,7 +964,8 @@
             "name": "Crushersubprocessv2progressbartitane20"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -903,7 +977,8 @@
             "name": "Crushersubprocessv2progressbartitane21"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -915,7 +990,8 @@
             "name": "Crushersubprocessv2progressbartitane22"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -927,7 +1003,8 @@
             "name": "Crushersubprocessv2progressbartitane23"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -939,7 +1016,8 @@
             "name": "Crushersubprocessv2progressbartitane24"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -951,7 +1029,8 @@
             "name": "Crushersubprocessv2progressbartitane25"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -963,7 +1042,8 @@
             "name": "Crushersubprocessv2progressbartitane26"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -975,7 +1055,8 @@
             "name": "Crushersubprocessv2progressbartitane27"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -987,7 +1068,8 @@
             "name": "Crushersubprocessv2progressbartitane28"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -999,7 +1081,8 @@
             "name": "Crushersubprocessv2progressbartitane29"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -1011,7 +1094,8 @@
             "name": "Crushersubprocessv2progressbartitane30"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -1023,7 +1107,8 @@
             "name": "Crushersubprocessv2progressbartitane31"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -1035,7 +1120,8 @@
             "name": "Crushersubprocessv2progressbartitane32"
           },
           "x": 254,
-          "y": 158
+          "y": 158,
+          "locked": false
         }
       },
       {
@@ -1047,7 +1133,8 @@
             "name": "Crushersubprocessv2progressbarpaladium0"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1059,7 +1146,8 @@
             "name": "Crushersubprocessv2progressbarpaladium1"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1071,7 +1159,8 @@
             "name": "Crushersubprocessv2progressbarpaladium2"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1083,7 +1172,8 @@
             "name": "Crushersubprocessv2progressbarpaladium3"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1095,7 +1185,8 @@
             "name": "Crushersubprocessv2progressbarpaladium5"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1107,7 +1198,8 @@
             "name": "Crushersubprocessv2progressbarpaladium6"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1119,7 +1211,8 @@
             "name": "Crushersubprocessv2progressbarpaladium7"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1131,7 +1224,8 @@
             "name": "Crushersubprocessv2progressbarpaladium8"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1143,7 +1237,8 @@
             "name": "Crushersubprocessv2progressbarpaladium9"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1155,7 +1250,8 @@
             "name": "Crushersubprocessv2progressbarpaladium10"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1167,7 +1263,8 @@
             "name": "Crushersubprocessv2progressbarpaladium11"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1179,7 +1276,8 @@
             "name": "Crushersubprocessv2progressbarpaladium12"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1191,7 +1289,8 @@
             "name": "Crushersubprocessv2progressbarpaladium13"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1203,7 +1302,8 @@
             "name": "Crushersubprocessv2progressbarpaladium14"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1215,7 +1315,8 @@
             "name": "Crushersubprocessv2progressbarpaladium14"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1227,7 +1328,8 @@
             "name": "Crushersubprocessv2progressbarpaladium15"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1239,7 +1341,8 @@
             "name": "Crushersubprocessv2progressbarpaladium16"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1251,7 +1354,8 @@
             "name": "Crushersubprocessv2progressbarpaladium17"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1263,7 +1367,8 @@
             "name": "Crushersubprocessv2progressbarpaladium18"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1275,7 +1380,8 @@
             "name": "Crushersubprocessv2progressbarpaladium19"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1287,7 +1393,8 @@
             "name": "Crushersubprocessv2progressbarpaladium20"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1299,7 +1406,8 @@
             "name": "Crushersubprocessv2progressbarpaladium21"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1311,7 +1419,8 @@
             "name": "Crushersubprocessv2progressbarpaladium22"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1323,7 +1432,8 @@
             "name": "Crushersubprocessv2progressbarpaladium23"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1335,7 +1445,8 @@
             "name": "Crushersubprocessv2progressbarpaladium24"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1347,7 +1458,8 @@
             "name": "Crushersubprocessv2progressbarpaladium25"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1359,7 +1471,8 @@
             "name": "Crushersubprocessv2progressbarpaladium26"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1371,7 +1484,8 @@
             "name": "Crushersubprocessv2progressbarpaladium27"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1383,7 +1497,8 @@
             "name": "Crushersubprocessv2progressbarpaladium28"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1395,7 +1510,8 @@
             "name": "Crushersubprocessv2progressbarpaladium29"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1407,7 +1523,8 @@
             "name": "Crushersubprocessv2progressbarpaladium30"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1419,7 +1536,8 @@
             "name": "Crushersubprocessv2progressbarpaladium31"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1431,7 +1549,8 @@
             "name": "Crushersubprocessv2progressbarpaladium32"
           },
           "x": 254,
-          "y": 176
+          "y": 176,
+          "locked": false
         }
       },
       {
@@ -1443,7 +1562,8 @@
             "name": "Crushersubprocessv2progressbarendium0"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1455,7 +1575,8 @@
             "name": "Crushersubprocessv2progressbarendium1"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1467,7 +1588,8 @@
             "name": "Crushersubprocessv2progressbarendium2"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1479,7 +1601,8 @@
             "name": "Crushersubprocessv2progressbarendium3"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1491,7 +1614,8 @@
             "name": "Crushersubprocessv2progressbarendium4"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1503,7 +1627,8 @@
             "name": "Crushersubprocessv2progressbarendium5"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1515,7 +1640,8 @@
             "name": "Crushersubprocessv2progressbarendium6"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1527,7 +1653,8 @@
             "name": "Crushersubprocessv2progressbarendium7"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1539,7 +1666,8 @@
             "name": "Crushersubprocessv2progressbarendium8"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1551,7 +1679,8 @@
             "name": "Crushersubprocessv2progressbarendium9"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1563,7 +1692,8 @@
             "name": "Crushersubprocessv2progressbarendium10"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1575,7 +1705,8 @@
             "name": "Crushersubprocessv2progressbarendium11"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1587,7 +1718,8 @@
             "name": "Crushersubprocessv2progressbarendium12"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1599,7 +1731,8 @@
             "name": "Crushersubprocessv2progressbarendium13"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1611,7 +1744,8 @@
             "name": "Crushersubprocessv2progressbarendium14"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1623,7 +1757,8 @@
             "name": "Crushersubprocessv2progressbarendium15"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1635,7 +1770,8 @@
             "name": "Crushersubprocessv2progressbarendium16"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1647,7 +1783,8 @@
             "name": "Crushersubprocessv2progressbarendium17"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1659,7 +1796,8 @@
             "name": "Crushersubprocessv2progressbarendium18"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1671,7 +1809,8 @@
             "name": "Crushersubprocessv2progressbarendium19"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1683,7 +1822,8 @@
             "name": "Crushersubprocessv2progressbarendium20"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1695,7 +1835,8 @@
             "name": "Crushersubprocessv2progressbarendium21"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1707,7 +1848,8 @@
             "name": "Crushersubprocessv2progressbarendium22"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1719,7 +1861,8 @@
             "name": "Crushersubprocessv2progressbarendium23"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1731,7 +1874,8 @@
             "name": "Crushersubprocessv2progressbarendium24"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1743,7 +1887,8 @@
             "name": "Crushersubprocessv2progressbarendium25"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1755,7 +1900,8 @@
             "name": "Crushersubprocessv2progressbarendium26"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1767,7 +1913,8 @@
             "name": "Crushersubprocessv2progressbarendium27"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1779,7 +1926,8 @@
             "name": "Crushersubprocessv2progressbarendium28"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1791,7 +1939,8 @@
             "name": "Crushersubprocessv2progressbarendium29"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1803,7 +1952,8 @@
             "name": "Crushersubprocessv2progressbarendium30"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1815,7 +1965,8 @@
             "name": "Crushersubprocessv2progressbarendium31"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1827,7 +1978,8 @@
             "name": "Crushersubprocessv2progressbarendium32"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1839,7 +1991,8 @@
             "name": "Crushersubprocessv2progressbarendium33"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1851,7 +2004,8 @@
             "name": "Crushersubprocessv2progressbarendium34"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1863,7 +2017,8 @@
             "name": "Crushersubprocessv2progressbarendium35"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1875,7 +2030,8 @@
             "name": "Crushersubprocessv2progressbarendium36"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1887,7 +2043,8 @@
             "name": "Crushersubprocessv2progressbarendium37"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1899,7 +2056,8 @@
             "name": "Crushersubprocessv2progressbarendium38"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1911,7 +2069,8 @@
             "name": "Crushersubprocessv2progressbarendium39"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1923,7 +2082,8 @@
             "name": "Crushersubprocessv2progressbarendium40"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1935,7 +2095,8 @@
             "name": "Crushersubprocessv2progressbarendium41"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1947,7 +2108,8 @@
             "name": "Crushersubprocessv2progressbarendium42"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1959,7 +2121,8 @@
             "name": "Crushersubprocessv2progressbarendium43"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1971,7 +2134,8 @@
             "name": "Crushersubprocessv2progressbarendium44"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1983,7 +2147,8 @@
             "name": "Crushersubprocessv2progressbarendium45"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -1995,7 +2160,8 @@
             "name": "Crushersubprocessv2progressbarendium46"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2007,7 +2173,8 @@
             "name": "Crushersubprocessv2progressbarendium47"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2019,7 +2186,8 @@
             "name": "Crushersubprocessv2progressbarendium48"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2031,7 +2199,8 @@
             "name": "Crushersubprocessv2progressbarendium49"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2043,7 +2212,8 @@
             "name": "Crushersubprocessv2progressbarendium50"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2055,7 +2225,8 @@
             "name": "Crushersubprocessv2progressbarendium51"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2067,7 +2238,8 @@
             "name": "Crushersubprocessv2progressbarendium52"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2079,7 +2251,8 @@
             "name": "Crushersubprocessv2progressbarendium53"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2091,7 +2264,8 @@
             "name": "Crushersubprocessv2progressbarendium54"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2103,7 +2277,8 @@
             "name": "Crushersubprocessv2progressbarendium55"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2115,7 +2290,8 @@
             "name": "Crushersubprocessv2progressbarendium56"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2127,7 +2303,8 @@
             "name": "Crushersubprocessv2progressbarendium57"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2139,7 +2316,8 @@
             "name": "Crushersubprocessv2progressbarendium58"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2151,7 +2329,8 @@
             "name": "Crushersubprocessv2progressbarendium59"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2163,7 +2342,8 @@
             "name": "Crushersubprocessv2progressbarendium60"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2175,7 +2355,8 @@
             "name": "Crushersubprocessv2progressbarendium61"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2187,7 +2368,8 @@
             "name": "Crushersubprocessv2progressbarendium62"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2199,7 +2381,8 @@
             "name": "Crushersubprocessv2progressbarendium63"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2211,7 +2394,8 @@
             "name": "Crushersubprocessv2progressbarendium64"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2223,7 +2407,8 @@
             "name": "Crushersubprocessv2progressbarendium65"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2235,7 +2420,8 @@
             "name": "Crushersubprocessv2progressbarendium66"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2247,7 +2433,8 @@
             "name": "Crushersubprocessv2progressbarendium67"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2259,7 +2446,8 @@
             "name": "Crushersubprocessv2progressbarendium68"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2271,7 +2459,8 @@
             "name": "Crushersubprocessv2progressbarendium69"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2283,7 +2472,8 @@
             "name": "Crushersubprocessv2progressbarendium70"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2295,7 +2485,8 @@
             "name": "Crushersubprocessv2progressbarendium71"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2307,7 +2498,8 @@
             "name": "Crushersubprocessv2progressbarendium72"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2319,7 +2511,8 @@
             "name": "Crushersubprocessv2progressbarendium73"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2331,7 +2524,8 @@
             "name": "Crushersubprocessv2progressbarendium74"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2343,7 +2537,8 @@
             "name": "Crushersubprocessv2progressbarendium75"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2355,7 +2550,8 @@
             "name": "Crushersubprocessv2progressbarendium76"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2367,7 +2563,8 @@
             "name": "Crushersubprocessv2progressbarendium77"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2379,7 +2576,8 @@
             "name": "Crushersubprocessv2progressbarendium78"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2391,7 +2589,8 @@
             "name": "Crushersubprocessv2progressbarendium79"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2403,7 +2602,8 @@
             "name": "Crushersubprocessv2progressbarendium80"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2415,7 +2615,8 @@
             "name": "Crushersubprocessv2progressbarendium81"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2427,7 +2628,8 @@
             "name": "Crushersubprocessv2progressbarendium82"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2439,7 +2641,8 @@
             "name": "Crushersubprocessv2progressbarendium83"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2451,7 +2654,8 @@
             "name": "Crushersubprocessv2progressbarendium84"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2463,7 +2667,8 @@
             "name": "Crushersubprocessv2progressbarendium85"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2475,7 +2680,8 @@
             "name": "Crushersubprocessv2progressbarendium86"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2487,7 +2693,8 @@
             "name": "Crushersubprocessv2progressbarendium87"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2499,7 +2706,8 @@
             "name": "Crushersubprocessv2progressbarendium88"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2511,7 +2719,8 @@
             "name": "Crushersubprocessv2progressbarendium89"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2523,7 +2732,8 @@
             "name": "Crushersubprocessv2progressbarendium90"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2535,7 +2745,8 @@
             "name": "Crushersubprocessv2progressbarendium91"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2547,7 +2758,8 @@
             "name": "Crushersubprocessv2progressbarendium92"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2559,7 +2771,8 @@
             "name": "Crushersubprocessv2progressbarendium93"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2571,7 +2784,8 @@
             "name": "Crushersubprocessv2progressbarendium94"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2583,7 +2797,8 @@
             "name": "Crushersubprocessv2progressbarendium95"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2595,7 +2810,8 @@
             "name": "Crushersubprocessv2progressbarendium96"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2607,7 +2823,8 @@
             "name": "Crushersubprocessv2progressbarendium97"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2619,7 +2836,8 @@
             "name": "Crushersubprocessv2progressbarendium98"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2631,7 +2849,8 @@
             "name": "Crushersubprocessv2progressbarendium99"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2643,7 +2862,8 @@
             "name": "Crushersubprocessv2progressbarendium100"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2655,7 +2875,8 @@
             "name": "Crushersubprocessv2progressbarendium101"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2667,7 +2888,8 @@
             "name": "Crushersubprocessv2progressbarendium102"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2679,7 +2901,8 @@
             "name": "Crushersubprocessv2progressbarendium103"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2691,7 +2914,8 @@
             "name": "Crushersubprocessv2progressbarendium104"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2703,7 +2927,8 @@
             "name": "Crushersubprocessv2progressbarendium105"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2715,7 +2940,8 @@
             "name": "Crushersubprocessv2progressbarendium106"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2727,7 +2953,8 @@
             "name": "Crushersubprocessv2progressbarendium107"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2739,7 +2966,8 @@
             "name": "Crushersubprocessv2progressbarendium108"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2751,7 +2979,8 @@
             "name": "Crushersubprocessv2progressbarendium109"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2763,7 +2992,8 @@
             "name": "Crushersubprocessv2progressbarendium110"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2775,7 +3005,8 @@
             "name": "Crushersubprocessv2progressbarendium111"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2787,7 +3018,8 @@
             "name": "Crushersubprocessv2progressbarendium112"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2799,7 +3031,8 @@
             "name": "Crushersubprocessv2progressbarendium113"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2811,7 +3044,8 @@
             "name": "Crushersubprocessv2progressbarendium114"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2823,7 +3057,8 @@
             "name": "Crushersubprocessv2progressbarendium115"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2835,7 +3070,8 @@
             "name": "Crushersubprocessv2progressbarendium116"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2847,7 +3083,8 @@
             "name": "Crushersubprocessv2progressbarendium117"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2859,7 +3096,8 @@
             "name": "Crushersubprocessv2progressbarendium118"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2871,7 +3109,8 @@
             "name": "Crushersubprocessv2progressbarendium119"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2883,7 +3122,8 @@
             "name": "Crushersubprocessv2progressbarendium120"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2895,7 +3135,8 @@
             "name": "Crushersubprocessv2progressbarendium121"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2907,7 +3148,8 @@
             "name": "Crushersubprocessv2progressbarendium122"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2919,7 +3161,8 @@
             "name": "Crushersubprocessv2progressbarendium123"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2931,7 +3174,8 @@
             "name": "Crushersubprocessv2progressbarendium124"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2943,7 +3187,8 @@
             "name": "Crushersubprocessv2progressbarendium125"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2955,7 +3200,8 @@
             "name": "Crushersubprocessv2progressbarendium126"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2967,7 +3213,8 @@
             "name": "Crushersubprocessv2progressbarendium127"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2979,7 +3226,8 @@
             "name": "Crushersubprocessv2progressbarendium128"
           },
           "x": 239,
-          "y": 197
+          "y": 197,
+          "locked": false
         }
       },
       {
@@ -2994,7 +3242,8 @@
           "width": 103,
           "height": 20,
           "x": 258,
-          "y": 112
+          "y": 112,
+          "locked": false
         }
       }
     ],

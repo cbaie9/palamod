@@ -44,7 +44,7 @@ public class AdhplantbuymelonProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 5.8;
-		item = new ItemStack(Items.MELON_SLICE);
+		item = new ItemStack(Items.MELON_SLICE).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

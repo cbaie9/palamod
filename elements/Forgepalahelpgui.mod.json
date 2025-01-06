@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "forgepalahelpgui.png",
           "use1Xscale": false,
           "x": 63,
-          "y": 33
+          "y": 33,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 140,
-          "y": 40
+          "y": 40,
+          "locked": false
         }
       },
       {
@@ -47,7 +49,8 @@
             "falpha": 0.0
           },
           "x": 67,
-          "y": 88
+          "y": 88,
+          "locked": false
         }
       },
       {
@@ -63,7 +66,8 @@
             "falpha": 0.0
           },
           "x": 68,
-          "y": 101
+          "y": 101,
+          "locked": false
         }
       },
       {
@@ -79,7 +83,8 @@
             "falpha": 0.0
           },
           "x": 67,
-          "y": 114
+          "y": 114,
+          "locked": false
         }
       },
       {
@@ -95,7 +100,8 @@
             "falpha": 0.0
           },
           "x": 67,
-          "y": 127
+          "y": 127,
+          "locked": false
         }
       },
       {
@@ -104,7 +110,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 63,
-          "y": 33
+          "y": 33,
+          "locked": false
         }
       },
       {
@@ -113,7 +120,8 @@
           "image": "mid_gray_line.png",
           "use1Xscale": false,
           "x": 163,
-          "y": 33
+          "y": 33,
+          "locked": false
         }
       },
       {
@@ -122,7 +130,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 263,
-          "y": 33
+          "y": 33,
+          "locked": false
         }
       },
       {
@@ -135,7 +144,8 @@
             "name": "Backpalahelp"
           },
           "x": 279,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -148,7 +158,8 @@
             "name": "Closegui"
           },
           "x": 342,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -161,7 +172,8 @@
             "name": "Openforgeexamplegui"
           },
           "x": 321,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -174,7 +186,8 @@
             "name": "Palamachineprocess"
           },
           "x": 299,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -183,7 +196,8 @@
           "image": "forge_front_on.png",
           "use1Xscale": false,
           "x": 71,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -198,7 +212,8 @@
             "falpha": 0.0
           },
           "x": 68,
-          "y": 190
+          "y": 190,
+          "locked": false
         }
       }
     ],

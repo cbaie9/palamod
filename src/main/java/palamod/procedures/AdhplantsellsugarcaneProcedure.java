@@ -36,7 +36,7 @@ public class AdhplantsellsugarcaneProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 4;
-		item = new ItemStack(Blocks.SUGAR_CANE);
+		item = new ItemStack(Blocks.SUGAR_CANE).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

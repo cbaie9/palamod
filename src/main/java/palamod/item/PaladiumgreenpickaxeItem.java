@@ -46,6 +46,6 @@ public class PaladiumgreenpickaxeItem extends PickaxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("green"));
+		list.add(Component.translatable("item.palamod.paladiumgreenpickaxe.description_0"));
 	}
 }

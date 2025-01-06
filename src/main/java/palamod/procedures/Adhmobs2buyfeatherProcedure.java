@@ -44,7 +44,7 @@ public class Adhmobs2buyfeatherProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		fac_v = 13.5;
-		item = new ItemStack(Items.FEATHER);
+		item = new ItemStack(Items.FEATHER).copy();
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {

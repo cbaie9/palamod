@@ -36,7 +36,7 @@ public class AdhblksellblackstoneProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 1;
-		item = new ItemStack(Blocks.BLACKSTONE);
+		item = new ItemStack(Blocks.BLACKSTONE).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

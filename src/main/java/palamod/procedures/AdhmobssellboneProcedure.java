@@ -36,7 +36,7 @@ public class AdhmobssellboneProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 6.75;
-		item = new ItemStack(Items.BONE);
+		item = new ItemStack(Items.BONE).copy();
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

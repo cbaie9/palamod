@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
@@ -16,7 +17,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.client.Minecraft;
 
 public class DamagestickprocessProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if (itemstack.getOrCreateTag().getDouble("cooldown") == 0 || new Object() {

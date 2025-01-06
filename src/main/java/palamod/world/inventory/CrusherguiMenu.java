@@ -85,6 +85,8 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 20) {
 			private final int slot = 0;
+			private int x = CrusherguiMenu.this.x;
+			private int y = CrusherguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -99,6 +101,8 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 56) {
 			private final int slot = 1;
+			private int x = CrusherguiMenu.this.x;
+			private int y = CrusherguiMenu.this.y;
 
 			@Override
 			public void setChanged() {
@@ -113,6 +117,8 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 161, 100) {
 			private final int slot = 2;
+			private int x = CrusherguiMenu.this.x;
+			private int y = CrusherguiMenu.this.y;
 
 			@Override
 			public void setChanged() {

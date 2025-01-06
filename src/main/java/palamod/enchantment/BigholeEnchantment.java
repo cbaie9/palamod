@@ -10,24 +10,27 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.EquipmentSlot;
 
 public class BigholeEnchantment extends Enchantment {
-	public BigholeEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.VANISHABLE, slots);
+	private static final EnchantmentCategory ENCHANTMENT_CATEGORY = EnchantmentCategory.create("palamod_bighole",
+			item -> Ingredient.of(new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()), new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()), new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()),
+					new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()), new ItemStack(PalamodModItems.CREATIVEPOTG.get())).test(new ItemStack(item)));
+
+	public BigholeEnchantment() {
+		super(Enchantment.Rarity.VERY_RARE, ENCHANTMENT_CATEGORY, EquipmentSlot.values());
+	}
+
+	@Override
+	public int getMinCost(int level) {
+		return 1 + level * 10;
+	}
+
+	@Override
+	public int getMaxCost(int level) {
+		return 6 + level * 10;
 	}
 
 	@Override
 	public int getMaxLevel() {
 		return 2;
-	}
-
-	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack itemstack) {
-		return Ingredient.of(new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()), new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()), new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()),
-				new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()), new ItemStack(PalamodModItems.CREATIVEPOTG.get())).test(itemstack);
-	}
-
-	@Override
-	public boolean isAllowedOnBooks() {
-		return false;
 	}
 
 	@Override

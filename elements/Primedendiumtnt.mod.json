@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "livingentity",
   "definition": {
     "mobName": "Endium tnt",
@@ -10,6 +10,7 @@
       "fixedValue": false
     },
     "modelLayers": [],
+    "animations": [],
     "modelWidth": 1.0,
     "modelHeight": 1.0,
     "modelShadowSize": 0.0,
@@ -66,7 +67,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,

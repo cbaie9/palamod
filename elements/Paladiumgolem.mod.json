@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "livingentity",
   "definition": {
     "mobName": "Paladium golem",
@@ -10,6 +10,7 @@
       "fixedValue": false
     },
     "modelLayers": [],
+    "animations": [],
     "modelWidth": 1.2000000000000002,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,

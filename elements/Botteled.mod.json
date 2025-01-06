@@ -1,23 +1,21 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "enchantment",
   "definition": {
     "name": "Botteled",
-    "type": "DIGGER",
-    "rarity": "UNCOMMON",
+    "supportedSlots": "mainhand",
+    "weight": 5,
+    "anvilCost": 2,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "excludeEnchantments": false,
-    "compatibleItems": [
+    "incompatibleEnchantments": [],
+    "supportedItems": [
       {
         "value": "TAG:forge:pickaxe"
       }
     ],
-    "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

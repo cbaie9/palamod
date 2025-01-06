@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 167,
-          "y": 41
+          "y": 41,
+          "locked": false
         }
       },
       {
@@ -40,7 +41,8 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 183,
-          "y": 59
+          "y": 59,
+          "locked": false
         }
       },
       {
@@ -55,7 +57,8 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 110
+          "y": 110,
+          "locked": false
         }
       },
       {
@@ -70,7 +73,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 57
+          "y": 57,
+          "locked": false
         }
       },
       {
@@ -88,7 +92,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 183,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -100,7 +105,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 244,
-          "y": 77
+          "y": 77,
+          "locked": false
         }
       },
       {
@@ -112,7 +118,8 @@
             "name": "Palafurnacesubprocess0"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -124,7 +131,8 @@
             "name": "Palafurnacesubprocess1"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -136,7 +144,8 @@
             "name": "Palafurnacesubprocess2"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -148,7 +157,8 @@
             "name": "Palafurnacesubprocess3"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -160,7 +170,8 @@
             "name": "Palafurnacesubprocess4"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -172,7 +183,8 @@
             "name": "Palafurnacesubprocess5"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -184,7 +196,8 @@
             "name": "Palafurnacesubprocess6"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -196,7 +209,8 @@
             "name": "Palafurnacesubprocess7"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -208,7 +222,8 @@
             "name": "Palafurnacesubprocess8"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -220,7 +235,8 @@
             "name": "Palafurnacesubprocess9"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -232,7 +248,8 @@
             "name": "Palafurnacesubprocess10"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -244,7 +261,8 @@
             "name": "Palafurnacesubprocess11"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -256,7 +274,8 @@
             "name": "Palafurnacesubprocess12"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -268,7 +287,8 @@
             "name": "Palafurnacesubprocess13"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -280,7 +300,8 @@
             "name": "Palafurnacesubprocess14"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -292,7 +313,8 @@
             "name": "Palafurnacesubprocess15"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -304,7 +326,8 @@
             "name": "Palafurnacesubprocess16"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -316,7 +339,8 @@
             "name": "Palafurnacesubprocess17"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -328,7 +352,8 @@
             "name": "Palafurnacesubprocess18"
           },
           "x": 209,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -346,7 +371,8 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 137,
-          "y": 77
+          "y": 77,
+          "locked": false
         }
       },
       {
@@ -358,7 +384,8 @@
             "name": "Forgesubprocessfuelremaining2"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -370,7 +397,8 @@
             "name": "Forgesubprocessfuelremaining3"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -382,7 +410,8 @@
             "name": "Forgesubprocessfuelremaining4"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -394,7 +423,8 @@
             "name": "Forgesubprocessfuelremaining5"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -406,7 +436,8 @@
             "name": "Forgesubprocessfuelremaining6"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -418,7 +449,8 @@
             "name": "Forgesubprocessfuelremaining7"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -430,7 +462,8 @@
             "name": "Forgesubprocessfuelremaining8"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -442,7 +475,8 @@
             "name": "Forgesubprocessfuelremaining9"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       },
       {
@@ -454,7 +488,8 @@
             "name": "Forgesubprocessfuelremaining10"
           },
           "x": 184,
-          "y": 79
+          "y": 79,
+          "locked": false
         }
       }
     ],

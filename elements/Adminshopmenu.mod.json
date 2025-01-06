@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "adminshopmenu.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 47
+          "y": 47,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 186,
-          "y": 33
+          "y": 33,
+          "locked": false
         }
       },
       {
@@ -40,7 +42,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 125,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -49,7 +52,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 201,
-          "y": 28
+          "y": 28,
+          "locked": false
         }
       },
       {
@@ -62,7 +66,8 @@
             "name": "Closegui"
           },
           "x": 281,
-          "y": 31
+          "y": 31,
+          "locked": false
         }
       },
       {
@@ -75,7 +80,8 @@
             "name": "Connectadhore"
           },
           "x": 186,
-          "y": 92
+          "y": 92,
+          "locked": false
         }
       },
       {
@@ -88,7 +94,8 @@
             "name": "Adminshopblockconnect"
           },
           "x": 185,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -101,7 +108,8 @@
             "name": "Connectadminshopplant"
           },
           "x": 186,
-          "y": 123
+          "y": 123,
+          "locked": false
         }
       },
       {
@@ -114,7 +122,8 @@
             "name": "Connectadminshopmobs"
           },
           "x": 185,
-          "y": 155
+          "y": 155,
+          "locked": false
         }
       },
       {
@@ -127,7 +136,8 @@
             "name": "Connectadminshoputilities"
           },
           "x": 185,
-          "y": 186
+          "y": 186,
+          "locked": false
         }
       },
       {
@@ -141,7 +151,8 @@
           "width": 16,
           "height": 16,
           "x": 281,
-          "y": 31
+          "y": 31,
+          "locked": false
         }
       }
     ],

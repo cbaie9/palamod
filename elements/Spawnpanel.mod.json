@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -23,7 +23,8 @@
             "falpha": 0.0
           },
           "x": 144,
-          "y": 126
+          "y": 126,
+          "locked": false
         }
       },
       {
@@ -38,7 +39,8 @@
             "falpha": 0.0
           },
           "x": 185,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -53,7 +55,8 @@
           "width": 92,
           "height": 20,
           "x": 142,
-          "y": 145
+          "y": 145,
+          "locked": false
         }
       },
       {
@@ -62,7 +65,8 @@
           "image": "spawnpanel.png",
           "use1Xscale": false,
           "x": 138,
-          "y": 70
+          "y": 70,
+          "locked": false
         }
       }
     ],

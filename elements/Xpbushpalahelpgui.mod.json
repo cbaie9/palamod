@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "xpbushpalahelpgui.png",
           "use1Xscale": false,
           "x": 113,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -31,7 +32,8 @@
             "falpha": 0.0
           },
           "x": 118,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -46,7 +48,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -61,7 +64,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 72
+          "y": 72,
+          "locked": false
         }
       },
       {
@@ -76,7 +80,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 83
+          "y": 83,
+          "locked": false
         }
       },
       {
@@ -91,7 +96,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 93
+          "y": 93,
+          "locked": false
         }
       },
       {
@@ -106,7 +112,8 @@
             "falpha": 0.0
           },
           "x": 116,
-          "y": 104
+          "y": 104,
+          "locked": false
         }
       },
       {
@@ -115,7 +122,8 @@
           "image": "xp_berry.png",
           "use1Xscale": false,
           "x": 118,
-          "y": 117
+          "y": 117,
+          "locked": false
         }
       },
       {
@@ -124,7 +132,8 @@
           "image": "berry_xp_bush_fancy.png",
           "use1Xscale": false,
           "x": 120,
-          "y": 161
+          "y": 161,
+          "locked": false
         }
       },
       {
@@ -139,7 +148,8 @@
             "falpha": 0.0
           },
           "x": 152,
-          "y": 129
+          "y": 129,
+          "locked": false
         }
       },
       {
@@ -154,7 +164,8 @@
             "falpha": 0.0
           },
           "x": 157,
-          "y": 171
+          "y": 171,
+          "locked": false
         }
       },
       {
@@ -163,7 +174,8 @@
           "image": "left_gray_line.png",
           "use1Xscale": false,
           "x": 113,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -172,7 +184,8 @@
           "image": "right_gray_line.png",
           "use1Xscale": false,
           "x": 213,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -185,7 +198,8 @@
             "name": "Connectitemmenu"
           },
           "x": 272,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -198,7 +212,8 @@
             "name": "Closegui"
           },
           "x": 291,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       },
       {
@@ -211,7 +226,8 @@
             "name": "Backpalahelp"
           },
           "x": 253,
-          "y": 42
+          "y": 42,
+          "locked": false
         }
       }
     ],

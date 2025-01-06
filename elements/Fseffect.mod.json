@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 73,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Fly speed",
@@ -12,6 +12,10 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "isCuredByMilk": true,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
+    "modifiers": [],
     "onStarted": {
       "name": "FseffectEffectStartedapplied"
     }
