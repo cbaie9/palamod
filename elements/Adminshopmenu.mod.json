@@ -4,22 +4,12 @@
   "definition": {
     "type": 0,
     "width": 177,
-    "height": 186,
+    "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "image",
-        "data": {
-          "image": "adminshopmenu.png",
-          "use1Xscale": false,
-          "x": 125,
-          "y": 47,
-          "locked": false
-        }
-      },
       {
         "type": "label",
         "data": {
@@ -28,31 +18,11 @@
             "fixedValue": "Adminshop"
           },
           "color": {
-            "value": -1,
+            "value": -65536,
             "falpha": 0.0
           },
-          "x": 186,
-          "y": 33,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 125,
-          "y": 28,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 201,
-          "y": 28,
+          "x": 185,
+          "y": 44,
           "locked": false
         }
       },
@@ -65,22 +35,22 @@
           "onClick": {
             "name": "Closegui"
           },
-          "x": 281,
-          "y": 31,
-          "locked": false
+          "x": 279,
+          "y": 42,
+          "locked": true
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_admin_btte_ore",
-          "image": "admin_btte_ore.png",
-          "hoveredImage": "admin_btte_ore_poi.png",
+          "image": "adminshop_ore_icon.png",
+          "hoveredImage": "adminshop_ore_icon_hover.png",
           "onClick": {
             "name": "Connectadhore"
           },
-          "x": 186,
-          "y": 92,
+          "x": 185,
+          "y": 98,
           "locked": false
         }
       },
@@ -88,13 +58,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_btte_block",
-          "image": "btte_block.png",
-          "hoveredImage": "btte_block_poi.png",
+          "image": "adminshop_block_icon.png",
+          "hoveredImage": "adminshop_block_icon_hover.png",
           "onClick": {
             "name": "Adminshopblockconnect"
           },
           "x": 185,
-          "y": 62,
+          "y": 69,
           "locked": false
         }
       },
@@ -102,13 +72,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_btte_plant",
-          "image": "btte_plant.png",
-          "hoveredImage": "btte_plant_poi.png",
+          "image": "adminshop_plant_icon.png",
+          "hoveredImage": "adminshop_plant_icon_hover.png",
           "onClick": {
             "name": "Connectadminshopplant"
           },
-          "x": 186,
-          "y": 123,
+          "x": 185,
+          "y": 124,
           "locked": false
         }
       },
@@ -116,13 +86,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_btte_mobs",
-          "image": "btte_mobs.png",
-          "hoveredImage": "btte_mobs_poi.png",
+          "image": "adminshop_mobs_icon.png",
+          "hoveredImage": "adminshop_mobs_icon_hover.png",
           "onClick": {
             "name": "Connectadminshopmobs"
           },
-          "x": 185,
-          "y": 155,
+          "x": 186,
+          "y": 151,
           "locked": false
         }
       },
@@ -130,13 +100,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_btte_utilities",
-          "image": "btte_utilities.png",
-          "hoveredImage": "btte_utilities_poi.png",
+          "image": "adminshop_item_icon.png",
+          "hoveredImage": "adminshop_item_icon_hover.png",
           "onClick": {
             "name": "Connectadminshoputilities"
           },
-          "x": 185,
-          "y": 186,
+          "x": 186,
+          "y": 178,
           "locked": false
         }
       },
@@ -150,9 +120,19 @@
           },
           "width": 16,
           "height": 16,
-          "x": 281,
-          "y": 31,
-          "locked": false
+          "x": 279,
+          "y": 42,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 37,
+          "locked": true
         }
       }
     ],

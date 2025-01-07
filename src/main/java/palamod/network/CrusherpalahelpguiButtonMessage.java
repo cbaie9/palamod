@@ -70,7 +70,7 @@ public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 1) {
 
-			ConnectephcrusherProcedure.execute(world, x, y, z, entity);
+			ConnectephcrusherProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 

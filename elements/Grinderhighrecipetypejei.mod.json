@@ -13,7 +13,7 @@
         "value": "CUSTOM:Grinderblock"
       }
     ],
-    "enableCraftingtable": false,
+    "enableCraftingtable": true,
     "title": "Grinder ( structure )",
     "slotList": [
       {

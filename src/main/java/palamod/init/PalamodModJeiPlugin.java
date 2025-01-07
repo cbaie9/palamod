@@ -57,5 +57,6 @@ public class PalamodModJeiPlugin implements IModPlugin {
 	public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
 		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.PALADIUM_CRUSHER.get().asItem()), Crusherrecipetype_Type);
 		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.PALADIUM_MACHINE.get().asItem()), Paladiummachinerecipetypejei_Type);
+		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.GRINDER_BLOCK.get().asItem()), Grinderhighrecipetypejei_Type);
 	}
 }

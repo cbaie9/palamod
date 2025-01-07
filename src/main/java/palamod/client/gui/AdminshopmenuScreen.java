@@ -42,7 +42,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 177;
-		this.imageHeight = 186;
+		this.imageHeight = 166;
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 156 && mouseX < leftPos + 172 && mouseY > topPos + 4 && mouseY < topPos + 20)
+		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 5 && mouseY < topPos + 21)
 			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
 	}
 
@@ -60,11 +60,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/adminshopmenu.png"), this.leftPos + 0, this.topPos + 20, 0, 0, 176, 166, 176, 166);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 1, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -80,13 +76,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmenu.label_adminshop"), 61, 6, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmenu.label_adminshop"), 60, 7, -65536, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 156, this.topPos + 4, 16, 16,
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(0, x, y, z));
@@ -100,8 +96,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_admin_btte_ore = new ImageButton(this.leftPos + 61, this.topPos + 65, 48, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/admin_btte_ore.png"), ResourceLocation.parse("palamod:textures/screens/admin_btte_ore_poi.png")), e -> {
+		imagebutton_admin_btte_ore = new ImageButton(this.leftPos + 60, this.topPos + 61, 48, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_ore_icon.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_ore_icon_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(1, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -114,8 +110,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		};
 		guistate.put("button:imagebutton_admin_btte_ore", imagebutton_admin_btte_ore);
 		this.addRenderableWidget(imagebutton_admin_btte_ore);
-		imagebutton_btte_block = new ImageButton(this.leftPos + 60, this.topPos + 35, 48, 17, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/btte_block.png"), ResourceLocation.parse("palamod:textures/screens/btte_block_poi.png")),
-				e -> {
+		imagebutton_btte_block = new ImageButton(this.leftPos + 60, this.topPos + 32, 48, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_block_icon.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_block_icon_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(2, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -128,8 +124,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		};
 		guistate.put("button:imagebutton_btte_block", imagebutton_btte_block);
 		this.addRenderableWidget(imagebutton_btte_block);
-		imagebutton_btte_plant = new ImageButton(this.leftPos + 61, this.topPos + 96, 48, 17, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/btte_plant.png"), ResourceLocation.parse("palamod:textures/screens/btte_plant_poi.png")),
-				e -> {
+		imagebutton_btte_plant = new ImageButton(this.leftPos + 60, this.topPos + 87, 48, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_plant_icon.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_plant_icon_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(3, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -142,8 +138,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		};
 		guistate.put("button:imagebutton_btte_plant", imagebutton_btte_plant);
 		this.addRenderableWidget(imagebutton_btte_plant);
-		imagebutton_btte_mobs = new ImageButton(this.leftPos + 60, this.topPos + 128, 48, 17, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/btte_mobs.png"), ResourceLocation.parse("palamod:textures/screens/btte_mobs_poi.png")),
-				e -> {
+		imagebutton_btte_mobs = new ImageButton(this.leftPos + 61, this.topPos + 114, 48, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_mobs_icon.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_mobs_icon_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(4, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -156,8 +152,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		};
 		guistate.put("button:imagebutton_btte_mobs", imagebutton_btte_mobs);
 		this.addRenderableWidget(imagebutton_btte_mobs);
-		imagebutton_btte_utilities = new ImageButton(this.leftPos + 60, this.topPos + 159, 48, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/btte_utilities.png"), ResourceLocation.parse("palamod:textures/screens/btte_utilities_poi.png")), e -> {
+		imagebutton_btte_utilities = new ImageButton(this.leftPos + 61, this.topPos + 141, 48, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_item_icon.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_item_icon_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(5, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 5, x, y, z);

@@ -27,7 +27,6 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 	Button button_blocks;
 	Button button_items;
 	Button button_gui;
-	Button button_next;
 	Button button_lucky_blocks;
 	Button button_metiers_soon;
 
@@ -55,9 +54,9 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palahelpgui_1.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 176, 166, 176, 166);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palablock_palahelp1-removebg-preview.png"), this.leftPos + 3, this.topPos + 19, 0, 0, 100, 100, 100, 100);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_block_photo.png"), this.leftPos + 3, this.topPos + 20, 0, 0, 85, 84, 85, 84);
 
 		RenderSystem.disableBlend();
 	}
@@ -75,7 +74,7 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpgui_1.label_palahelp"), 6, 5, -52429, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpgui_1.label_12"), 6, 147, -16750951, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpgui_1.label_soon"), 87, 82, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpgui_1.label_soon"), 87, 82, -1, false);
 	}
 
 	@Override
@@ -105,26 +104,18 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 		}).bounds(this.leftPos + 88, this.topPos + 57, 81, 20).build();
 		guistate.put("button:button_gui", button_gui);
 		this.addRenderableWidget(button_gui);
-		button_next = Button.builder(Component.translatable("gui.palamod.palahelpgui_1.button_next"), e -> {
+		button_lucky_blocks = Button.builder(Component.translatable("gui.palamod.palahelpgui_1.button_lucky_blocks"), e -> {
 			if (true) {
 				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(3, x, y, z));
 				Palahelpgui1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}).bounds(this.leftPos + 7, this.topPos + 123, 45, 20).build();
-		guistate.put("button:button_next", button_next);
-		this.addRenderableWidget(button_next);
-		button_lucky_blocks = Button.builder(Component.translatable("gui.palamod.palahelpgui_1.button_lucky_blocks"), e -> {
-			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(4, x, y, z));
-				Palahelpgui1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 122, 81, 20).build();
 		guistate.put("button:button_lucky_blocks", button_lucky_blocks);
 		this.addRenderableWidget(button_lucky_blocks);
 		button_metiers_soon = Button.builder(Component.translatable("gui.palamod.palahelpgui_1.button_metiers_soon"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(5, x, y, z));
-				Palahelpgui1ButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(4, x, y, z));
+				Palahelpgui1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 97, 81, 20).build();
 		guistate.put("button:button_metiers_soon", button_metiers_soon);

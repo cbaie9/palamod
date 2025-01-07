@@ -13,11 +13,11 @@
       {
         "type": "image",
         "data": {
-          "image": "palahelpgui_1.png",
+          "image": "gui176_166.png",
           "use1Xscale": false,
-          "x": 125,
-          "y": 37,
-          "locked": false
+          "x": 126,
+          "y": 38,
+          "locked": true
         }
       },
       {
@@ -33,16 +33,6 @@
           "height": 20,
           "x": 214,
           "y": 43,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "palablock_palahelp1-removebg-preview.png",
-          "use1Xscale": true,
-          "x": 129,
-          "y": 56,
           "locked": false
         }
       },
@@ -82,7 +72,7 @@
         "type": "button",
         "data": {
           "name": "button_gui",
-          "text": "Gui",
+          "text": "Interface",
           "isUndecorated": false,
           "onClick": {
             "name": "Machineconnectpalahelp"
@@ -91,22 +81,6 @@
           "height": 20,
           "x": 214,
           "y": 94,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_next",
-          "text": "Next",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Nextpalahelp"
-          },
-          "width": 45,
-          "height": 20,
-          "x": 133,
-          "y": 160,
           "locked": false
         }
       },
@@ -146,7 +120,7 @@
         "type": "button",
         "data": {
           "name": "button_metiers_soon",
-          "text": "Metiers ",
+          "text": "Jobs",
           "isUndecorated": false,
           "onClick": {
             "name": "Connectnotyetgui"
@@ -166,12 +140,22 @@
             "fixedValue": "Soon"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 213,
           "y": 119,
           "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_block_photo.png",
+          "use1Xscale": true,
+          "x": 129,
+          "y": 57,
+          "locked": true
         }
       }
     ],

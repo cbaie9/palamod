@@ -3,7 +3,6 @@ package palamod.network;
 
 import palamod.world.inventory.Palahelpgui1Menu;
 
-import palamod.procedures.NextpalahelpProcedure;
 import palamod.procedures.MachineconnectpalahelpProcedure;
 import palamod.procedures.ConnectnotyetguiProcedure;
 import palamod.procedures.ConnectitemmenuProcedure;
@@ -79,13 +78,9 @@ public record Palahelpgui1ButtonMessage(int buttonID, int x, int y, int z) imple
 		}
 		if (buttonID == 3) {
 
-			NextpalahelpProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
 			ConnectnotyetguiProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 5) {
+		if (buttonID == 4) {
 
 			ConnectnotyetguiProcedure.execute(world, x, y, z, entity);
 		}
