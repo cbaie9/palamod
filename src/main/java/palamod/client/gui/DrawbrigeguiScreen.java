@@ -108,7 +108,7 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 	public void init() {
 		super.init();
 		imagebutton_arrow_down0001 = new ImageButton(this.leftPos + 212, this.topPos + 125, 28, 32,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_down0001.png"), ResourceLocation.parse("palamod:textures/screens/arrow_down0001.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_down0001.png"), ResourceLocation.parse("palamod:textures/screens/arrow_down_0001.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(0, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);

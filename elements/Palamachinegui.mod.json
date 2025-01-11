@@ -192,7 +192,7 @@
       {
         "type": "image",
         "data": {
-          "image": "palamchine_load1.png",
+          "image": "palamachine_load1.png",
           "use1Xscale": false,
           "displayCondition": {
             "name": "Palamachinesubprocess1"

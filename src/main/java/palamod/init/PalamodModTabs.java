@@ -389,6 +389,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.CYANGLUEBALL.get().asItem());
 				tabData.accept(PalamodModBlocks.ORANGEGLUEBALL.get().asItem());
 				tabData.accept(PalamodModBlocks.GRAYGLUEBALL.get().asItem());
+				tabData.accept(PalamodModBlocks.REDSLIMEPAD.get().asItem());
+				tabData.accept(PalamodModBlocks.BLUESLIMEPAD.get().asItem());
+				tabData.accept(PalamodModBlocks.ORANGESLIMEPAD.get().asItem());
+				tabData.accept(PalamodModBlocks.PURPLESLIMEPAD.get().asItem());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {

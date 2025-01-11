@@ -18,7 +18,7 @@
             "fixedValue": "This will link your palamod's"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 137,
@@ -34,7 +34,7 @@
             "fixedValue": "money account to this block"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 140,
@@ -50,7 +50,7 @@
             "fixedValue": "Are your sure..?"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 162,
@@ -98,7 +98,7 @@
             "fixedValue": "You can unlink the account at"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 135,
@@ -114,7 +114,7 @@
             "fixedValue": "any time"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 136,
@@ -125,11 +125,11 @@
       {
         "type": "image",
         "data": {
-          "image": "downloaderlink.png",
+          "image": "gui176_166.png",
           "use1Xscale": false,
-          "x": 125,
+          "x": 126,
           "y": 37,
-          "locked": false
+          "locked": true
         }
       }
     ],

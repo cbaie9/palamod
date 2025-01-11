@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "palamod:purpleslimepad",
+    "palamod:orangeslimepad",
+    "palamod:blueslimepad",
+    "palamod:redslimepad",
     "palamod:megaboomobsidian",
     "palamod:boomobsidian",
     "palamod:exctractor",

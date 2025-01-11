@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/v2_slimepad",
+  "textures": {
+    "all": "palamod:block/slime_blue",
+    "particle": "palamod:block/slime_blue",
+    "0": "palamod:block/slime_blue"
+  },
+  "render_type": "solid"
+}

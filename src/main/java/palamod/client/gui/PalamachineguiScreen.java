@@ -62,7 +62,7 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load0.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 
 		if (Palamachinesubprocess1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamchine_load1.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load1.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);
 		}
 		if (Palamachinesubprocess2Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachine_load2.png"), this.leftPos + 79, this.topPos + 42, 0, 0, 9, 11, 9, 11);

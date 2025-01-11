@@ -5,6 +5,30 @@
         "0": "slime_green"
       },
       "name": "default"
+    },
+    "slimepad_red": {
+      "map": {
+        "0": "slime_red"
+      },
+      "name": "slimepad_red"
+    },
+    "slimepad_orange": {
+      "map": {
+        "0": "slime_orange"
+      },
+      "name": "slimepad_orange"
+    },
+    "slimepad_blue": {
+      "map": {
+        "0": "slime_blue"
+      },
+      "name": "slimepad_blue"
+    },
+    "slimepad_purple": {
+      "map": {
+        "0": "slime_purple"
+      },
+      "name": "slimepad_purple"
     }
   }
 }

@@ -25,7 +25,6 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	ImageButton imagebutton_left_gray_line;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_home_pixel_adminshop;
@@ -46,6 +45,50 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 30 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_amethyst_armor"), mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 77 && mouseY > topPos + 69 && mouseY < topPos + 88)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable"), mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 89 && mouseY < topPos + 106)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e"), mouseX, mouseY);
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 30 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_titane_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 69 && mouseY < topPos + 87)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable1"), mouseX, mouseY);
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 69 && mouseY < topPos + 87)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable2"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 69 && mouseY < topPos + 87)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3"), mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 158 && mouseY < topPos + 176)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 158 && mouseY < topPos + 176)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable5"), mouseX, mouseY);
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 89 && mouseY < topPos + 106)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e1"), mouseX, mouseY);
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 89 && mouseY < topPos + 106)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 89 && mouseY < topPos + 106)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m1"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 178 && mouseY < topPos + 195)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m2"), mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 178 && mouseY < topPos + 195)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m3"), mouseX, mouseY);
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 158 && mouseY < topPos + 176)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl"), mouseX, mouseY);
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 158 && mouseY < topPos + 176)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl1"), mouseX, mouseY);
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 30 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_paladium_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 30 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_endium_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 119 && mouseY < topPos + 136)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_travel_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 119 && mouseY < topPos + 136)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_rainbow_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 119 && mouseY < topPos + 136)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 119 && mouseY < topPos + 136)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set"), mouseX, mouseY);
 	}
 
 	@Override
@@ -54,51 +97,7 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/armorpalahelpgui.png"), this.leftPos + -1, this.topPos + 1, 0, 0, 300, 200, 300, 200);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_helmet.png"), this.leftPos + 12, this.topPos + 43, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_chestplate.png"), this.leftPos + 12, this.topPos + 69, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_leggings.png"), this.leftPos + 11, this.topPos + 98, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_boots.png"), this.leftPos + 11, this.topPos + 124, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_helmet.png"), this.leftPos + 221, this.topPos + 45, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_chestplate.png"), this.leftPos + 222, this.topPos + 70, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_leggings.png"), this.leftPos + 221, this.topPos + 100, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_boots.png"), this.leftPos + 221, this.topPos + 125, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_chestplate.png"), this.leftPos + 145, this.topPos + 70, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_chestplate.png"), this.leftPos + 126, this.topPos + 70, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_boots.png"), this.leftPos + 126, this.topPos + 124, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_helmet.png"), this.leftPos + 126, this.topPos + 45, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_leggings.png"), this.leftPos + 126, this.topPos + 99, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_helmet.png"), this.leftPos + 145, this.topPos + 45, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_leggings.png"), this.leftPos + 143, this.topPos + 99, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_boots.png"), this.leftPos + 143, this.topPos + 124, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_helmet.png"), this.leftPos + 61, this.topPos + 43, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_chestplate.png"), this.leftPos + 62, this.topPos + 69, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_leggings.png"), this.leftPos + 59, this.topPos + 98, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_boots.png"), this.leftPos + 60, this.topPos + 124, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/armorpalahelpgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
 
 		RenderSystem.disableBlend();
 	}
@@ -114,49 +113,55 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_45"), 29, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_5"), 34, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_4"), 32, 101, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_451"), 29, 126, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_452"), 81, 46, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_453"), 79, 126, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_51"), 79, 102, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_52"), 86, 74, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_454"), 175, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_night_vision_ii"), 151, 31, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_65"), 176, 71, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_force"), 176, 79, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_55"), 175, 97, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_haste"), 178, 110, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_5_speed"), 163, 127, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_53"), 240, 46, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_7"), 246, 69, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_551"), 238, 96, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_552"), 241, 119, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_force1"), 242, 80, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_haste1"), 240, 106, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_speed"), 241, 128, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_palahelp_armor"), 99, 5, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_palahelp_armor"), 102, 4, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_amethyst"), 11, 20, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_titane_set"), 79, 20, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_paladium_set"), 147, 20, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_endium_set"), 215, 20, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_mixed_set"), 11, 109, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_invisible_set"), 79, 109, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_rainbow_set"), 149, 109, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_travel_set"), 215, 109, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name"), 37, 34, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name1"), 104, 35, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name2"), 173, 35, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name3"), 241, 35, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name4"), 33, 123, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name5"), 101, 122, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name6"), 169, 123, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_name7"), 237, 122, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect2"), 169, 52, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect3"), 238, 51, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect4"), 33, 142, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect5"), 100, 143, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect6"), 169, 142, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect7"), 238, 141, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_early_game"), 35, 93, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_early"), 106, 92, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_mid_game"), 170, 93, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_end_game"), 235, 93, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_midend"), 34, 180, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_na"), 112, 181, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_na1"), 178, 181, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_na2"), 237, 181, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_craftable"), 30, 74, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_craftable1"), 97, 74, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_craftable2"), 166, 73, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_craftable3"), 234, 74, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_craftable4"), 30, 162, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_lb_normal"), 97, 162, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_lb_classic"), 166, 163, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_craftable5"), 234, 162, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_left_gray_line = new ImageButton(this.leftPos + -1, this.topPos + 0, 100, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), ResourceLocation.parse("palamod:textures/screens/left_gray_line.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_left_gray_line", imagebutton_left_gray_line);
-		this.addRenderableWidget(imagebutton_left_gray_line);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
-						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(0, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
@@ -169,8 +174,8 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 275, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
-						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -183,8 +188,8 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 235, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(3, x, y, z));
-						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override

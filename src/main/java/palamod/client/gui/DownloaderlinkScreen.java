@@ -51,7 +51,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/downloaderlink.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -67,11 +67,11 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_this_will_link_your_palamod"), 11, 6, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_money_account_to_this_block"), 14, 18, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_are_your_sure"), 36, 51, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_you_can_unlink_the_account_at"), 9, 121, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_any_time"), 10, 131, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_this_will_link_your_palamod"), 11, 6, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_money_account_to_this_block"), 14, 18, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_are_your_sure"), 36, 51, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_you_can_unlink_the_account_at"), 9, 121, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_any_time"), 10, 131, -1, false);
 	}
 
 	@Override

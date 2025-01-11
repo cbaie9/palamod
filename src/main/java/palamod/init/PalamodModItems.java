@@ -802,6 +802,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ANTIFUZEDISC = REGISTRY.register("antifuzedisc", AntifuzediscItem::new);
 	public static final DeferredItem<Item> ROULETTEPALADIENNEDISC = REGISTRY.register("roulettepaladiennedisc", RoulettepaladiennediscItem::new);
 	public static final DeferredItem<Item> CLASHKUMIZ = REGISTRY.register("clashkumiz", ClashkumizItem::new);
+	public static final DeferredItem<Item> REDSLIMEPAD = block(PalamodModBlocks.REDSLIMEPAD);
+	public static final DeferredItem<Item> BLUESLIMEPAD = block(PalamodModBlocks.BLUESLIMEPAD);
+	public static final DeferredItem<Item> ORANGESLIMEPAD = block(PalamodModBlocks.ORANGESLIMEPAD);
+	public static final DeferredItem<Item> PURPLESLIMEPAD = block(PalamodModBlocks.PURPLESLIMEPAD);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -39,7 +39,9 @@ import palamod.block.SlimepadBlock;
 import palamod.block.SlimeobsidianBlock;
 import palamod.block.RenforcedobsidianstairsBlock;
 import palamod.block.RenforcedobsidianBlock;
+import palamod.block.RedslimepadBlock;
 import palamod.block.RedglueballBlock;
+import palamod.block.PurpleslimepadBlock;
 import palamod.block.PurpleglueballBlock;
 import palamod.block.PrintingpressBlock;
 import palamod.block.PoisonobsidianBlock;
@@ -70,6 +72,7 @@ import palamod.block.Ostrya_woodLogBlock;
 import palamod.block.Ostrya_woodLeavesBlock;
 import palamod.block.Ostrya_woodFenceGateBlock;
 import palamod.block.Ostrya_woodFenceBlock;
+import palamod.block.OrangeslimepadBlock;
 import palamod.block.OrangeglueballBlock;
 import palamod.block.Orangeblue4Block;
 import palamod.block.Orangeblue3Block;
@@ -201,6 +204,7 @@ import palamod.block.Chervil1Block;
 import palamod.block.Chervil0Block;
 import palamod.block.CaveblockBlock;
 import palamod.block.BoomobsidianBlock;
+import palamod.block.BlueslimepadBlock;
 import palamod.block.BlueglueballBlock;
 import palamod.block.BlackluckyblockBlock;
 import palamod.block.AngelicwterBlock;
@@ -438,6 +442,10 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> CYANGLUEBALL = REGISTRY.register("cyanglueball", CyanglueballBlock::new);
 	public static final DeferredBlock<Block> ORANGEGLUEBALL = REGISTRY.register("orangeglueball", OrangeglueballBlock::new);
 	public static final DeferredBlock<Block> GRAYGLUEBALL = REGISTRY.register("grayglueball", GrayglueballBlock::new);
+	public static final DeferredBlock<Block> REDSLIMEPAD = REGISTRY.register("redslimepad", RedslimepadBlock::new);
+	public static final DeferredBlock<Block> BLUESLIMEPAD = REGISTRY.register("blueslimepad", BlueslimepadBlock::new);
+	public static final DeferredBlock<Block> ORANGESLIMEPAD = REGISTRY.register("orangeslimepad", OrangeslimepadBlock::new);
+	public static final DeferredBlock<Block> PURPLESLIMEPAD = REGISTRY.register("purpleslimepad", PurpleslimepadBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -119,7 +119,7 @@ public class CrusherguiMenu extends AbstractContainerMenu implements Supplier<Ma
 				return stack.is(ItemTags.create(ResourceLocation.parse("palamod:palamodmoddedfuel")));
 			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 161, 100) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 160, 99) {
 			private final int slot = 2;
 			private int x = CrusherguiMenu.this.x;
 			private int y = CrusherguiMenu.this.y;

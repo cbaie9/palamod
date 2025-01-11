@@ -107,8 +107,8 @@
           "onSlotChanged": {
             "name": "Crusherluncherv2"
           },
-          "x": 206,
-          "y": 117,
+          "x": 205,
+          "y": 116,
           "locked": true
         }
       },
@@ -231,140 +231,6 @@
           "use1Xscale": false,
           "x": 358,
           "y": 38,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher0.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n0"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher1.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n1"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher2.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n2"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher3.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n3"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher4.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n4"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher5.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n5"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher6.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n6"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher7.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n7"
-          },
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher8.png",
-          "use1Xscale": false,
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher9.png",
-          "use1Xscale": false,
-          "x": 54,
-          "y": 56,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "flame_crusher10.png",
-          "use1Xscale": false,
-          "x": 54,
-          "y": 56,
           "locked": false
         }
       },
@@ -600,6 +466,20 @@
           "x": 50,
           "y": 6,
           "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "flamme_crusher_sprite.png",
+          "spritesCount": 10,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Crushersubprocessflamespritereturn"
+          },
+          "x": 53,
+          "y": 56,
+          "locked": true
         }
       }
     ],

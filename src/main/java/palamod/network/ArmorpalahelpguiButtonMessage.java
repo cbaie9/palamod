@@ -63,15 +63,15 @@ public record ArmorpalahelpguiButtonMessage(int buttonID, int x, int y, int z) i
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 1) {
+		if (buttonID == 0) {
 
 			ConnectitemmenuProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 1) {
 
 			CloseguiProcedure.execute(entity);
 		}
-		if (buttonID == 3) {
+		if (buttonID == 2) {
 
 			BackpalahelpProcedure.execute(world, x, y, z, entity);
 		}

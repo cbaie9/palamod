@@ -2,10 +2,10 @@
   "_fv": 73,
   "_type": "gui",
   "definition": {
-    "type": 0,
+    "type": 1,
     "width": 300,
     "height": 200,
-    "inventoryOffsetX": 0,
+    "inventoryOffsetX": 1000,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
     "doesPauseGame": false,
@@ -15,592 +15,9 @@
         "data": {
           "image": "armorpalahelpgui.png",
           "use1Xscale": false,
-          "x": 63,
-          "y": 21,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "amethyst_helmet.png",
-          "use1Xscale": false,
-          "x": 76,
-          "y": 63,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "amethyst_chestplate.png",
-          "use1Xscale": false,
-          "x": 76,
-          "y": 89,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "amethyst_leggings.png",
-          "use1Xscale": false,
-          "x": 75,
-          "y": 118,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "amethyst_boots.png",
-          "use1Xscale": false,
-          "x": 75,
-          "y": 144,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "endium_helmet.png",
-          "use1Xscale": false,
-          "x": 285,
-          "y": 65,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "endium_chestplate.png",
-          "use1Xscale": false,
-          "x": 286,
-          "y": 90,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "endium_leggings.png",
-          "use1Xscale": false,
-          "x": 285,
-          "y": 120,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "endium_boots.png",
-          "use1Xscale": false,
-          "x": 285,
-          "y": 145,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_chestplate.png",
-          "use1Xscale": false,
-          "x": 209,
-          "y": 90,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_green_chestplate.png",
-          "use1Xscale": false,
-          "x": 190,
-          "y": 90,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_green_boots.png",
-          "use1Xscale": false,
-          "x": 190,
-          "y": 144,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_green_helmet.png",
-          "use1Xscale": false,
-          "x": 190,
-          "y": 65,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_green_leggings.png",
-          "use1Xscale": false,
-          "x": 190,
-          "y": 119,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_helmet.png",
-          "use1Xscale": false,
-          "x": 209,
-          "y": 65,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_leggings.png",
-          "use1Xscale": false,
-          "x": 207,
-          "y": 119,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "paladium_boots.png",
-          "use1Xscale": false,
-          "x": 207,
-          "y": 144,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_45",
-          "text": {
-            "fixedValue": "+ 4.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 93,
-          "y": 65,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_5",
-          "text": {
-            "fixedValue": "+ 5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 98,
-          "y": 94,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_4",
-          "text": {
-            "fixedValue": "+ 4"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 121,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_451",
-          "text": {
-            "fixedValue": "+ 4.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 93,
-          "y": 146,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "titane_helmet.png",
-          "use1Xscale": false,
-          "x": 125,
-          "y": 63,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "titane_chestplate.png",
-          "use1Xscale": false,
-          "x": 126,
-          "y": 89,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "titane_leggings.png",
-          "use1Xscale": false,
-          "x": 123,
-          "y": 118,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "titane_boots.png",
-          "use1Xscale": false,
-          "x": 124,
-          "y": 144,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_452",
-          "text": {
-            "fixedValue": "+ 4.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 145,
-          "y": 66,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_453",
-          "text": {
-            "fixedValue": "+ 4.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 143,
-          "y": 146,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_51",
-          "text": {
-            "fixedValue": "+ 5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 143,
-          "y": 122,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_52",
-          "text": {
-            "fixedValue": "+ 5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 150,
-          "y": 94,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_454",
-          "text": {
-            "fixedValue": "+ 4.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 239,
-          "y": 65,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_night_vision_ii",
-          "text": {
-            "fixedValue": "Night Vision II"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 215,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_65",
-          "text": {
-            "fixedValue": "+ 6.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 240,
-          "y": 91,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_force",
-          "text": {
-            "fixedValue": "Force"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 240,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_55",
-          "text": {
-            "fixedValue": "+ 5.5 "
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 239,
-          "y": 117,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_haste",
-          "text": {
-            "fixedValue": "Haste"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 242,
-          "y": 130,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_5_speed",
-          "text": {
-            "fixedValue": "+ 5 Speed"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 227,
-          "y": 147,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_53",
-          "text": {
-            "fixedValue": "+ 5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 304,
-          "y": 66,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_7",
-          "text": {
-            "fixedValue": "+ 7"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 310,
-          "y": 89,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_551",
-          "text": {
-            "fixedValue": "+ 5.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 302,
-          "y": 116,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_552",
-          "text": {
-            "fixedValue": "+ 5.5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 305,
-          "y": 139,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_force1",
-          "text": {
-            "fixedValue": "Force"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 306,
-          "y": 100,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_haste1",
-          "text": {
-            "fixedValue": "Haste"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 304,
-          "y": 126,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_speed",
-          "text": {
-            "fixedValue": "Speed"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 305,
-          "y": 148,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_left_gray_line",
-          "image": "left_gray_line.png",
-          "hoveredImage": "",
-          "x": 63,
+          "x": 64,
           "y": 20,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 163,
-          "y": 20,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 263,
-          "y": 20,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -614,8 +31,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 163,
-          "y": 25,
+          "x": 166,
+          "y": 24,
           "locked": false
         }
       },
@@ -623,8 +40,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_adminshop.png",
-          "hoveredImage": "arrow_adminshop_poi.png",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
           "onClick": {
             "name": "Connectitemmenu"
           },
@@ -658,6 +75,1530 @@
           },
           "x": 299,
           "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_amethyst",
+          "text": {
+            "fixedValue": "Amethyst set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 75,
+          "y": 40,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_titane_set",
+          "text": {
+            "fixedValue": "Titane set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 143,
+          "y": 40,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium_set",
+          "text": {
+            "fixedValue": "Paladium set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 211,
+          "y": 40,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_endium_set",
+          "text": {
+            "fixedValue": "Endium set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 279,
+          "y": 40,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mixed_set",
+          "text": {
+            "fixedValue": "Mixed set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 75,
+          "y": 129,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_invisible_set",
+          "text": {
+            "fixedValue": "Invisible set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 143,
+          "y": 129,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rainbow_set",
+          "text": {
+            "fixedValue": "Rainbow set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 213,
+          "y": 129,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_travel_set",
+          "text": {
+            "fixedValue": "Travel set"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 279,
+          "y": 129,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 10,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 11,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 12,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 13,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 14,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 15,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 16,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 17,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 18,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 19,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 76,
+          "y": 198,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 20,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 21,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 22,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 23,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 144,
+          "y": 198,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 24,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 25,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 26,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 27,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 212,
+          "y": 198,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 28,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 29,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 30,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 31,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 280,
+          "y": 198,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 101,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name1",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 168,
+          "y": 55,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name2",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 237,
+          "y": 55,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name3",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 305,
+          "y": 55,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name4",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 97,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name5",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 165,
+          "y": 142,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name6",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 233,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name7",
+          "text": {
+            "fixedValue": "Name"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 301,
+          "y": 142,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect2",
+          "text": {
+            "fixedValue": "Effect"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 233,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect3",
+          "text": {
+            "fixedValue": "Effect"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 302,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect4",
+          "text": {
+            "fixedValue": "Effect"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 97,
+          "y": 162,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect5",
+          "text": {
+            "fixedValue": "Effect"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 164,
+          "y": 163,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect6",
+          "text": {
+            "fixedValue": "Effect"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 233,
+          "y": 162,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect7",
+          "text": {
+            "fixedValue": "Effect"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 302,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_early_game",
+          "text": {
+            "fixedValue": "Early"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 99,
+          "y": 113,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_early",
+          "text": {
+            "fixedValue": "Early"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 170,
+          "y": 112,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mid_game",
+          "text": {
+            "fixedValue": "Mid game"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 234,
+          "y": 113,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_end_game",
+          "text": {
+            "fixedValue": "End game"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 299,
+          "y": 113,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_midend",
+          "text": {
+            "fixedValue": "Mid/End"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 98,
+          "y": 200,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_na",
+          "text": {
+            "fixedValue": "N.A"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 176,
+          "y": 201,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_na1",
+          "text": {
+            "fixedValue": "N.A"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 242,
+          "y": 201,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_na2",
+          "text": {
+            "fixedValue": "Mid game"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 301,
+          "y": 201,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craftable",
+          "text": {
+            "fixedValue": "Craftable"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craftable1",
+          "text": {
+            "fixedValue": "Craftable"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 161,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craftable2",
+          "text": {
+            "fixedValue": "Craftable"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 230,
+          "y": 93,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craftable3",
+          "text": {
+            "fixedValue": "Craftable"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 298,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craftable4",
+          "text": {
+            "fixedValue": "Craftable"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 182,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_lb_normal",
+          "text": {
+            "fixedValue": "LB classic"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 161,
+          "y": 182,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_lb_classic",
+          "text": {
+            "fixedValue": "LB classic"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 230,
+          "y": 183,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_amethyst_armor",
+          "text": {
+            "fixedValue": "Amethyst armor "
+          },
+          "width": 46,
+          "height": 17,
+          "x": 94,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craftable5",
+          "text": {
+            "fixedValue": "Craftable"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 298,
+          "y": 182,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_craftable",
+          "text": {
+            "fixedValue": "This armor set is craftable "
+          },
+          "width": 47,
+          "height": 19,
+          "x": 94,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_is_obtenable_in_the_e",
+          "text": {
+            "fixedValue": "This armor is obtenable in the Early game"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 94,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_titane_armor_set",
+          "text": {
+            "fixedValue": "Titane armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 162,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_craftable1",
+          "text": {
+            "fixedValue": "This armor set is craftable"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 162,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_craftable2",
+          "text": {
+            "fixedValue": "This armor set is craftable"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 230,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_craftable3",
+          "text": {
+            "fixedValue": "This armor set is craftable"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 298,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_craftable4",
+          "text": {
+            "fixedValue": "This armor set is craftable"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 94,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_craftable5",
+          "text": {
+            "fixedValue": "This armor set is craftable"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 298,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_is_obtenable_in_the_e1",
+          "text": {
+            "fixedValue": "This armor is obtenable in the Early game"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 162,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_is_obtenable_in_the_m",
+          "text": {
+            "fixedValue": "This armor is obtenable in the Mid game"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 230,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_is_obtenable_in_the_m1",
+          "text": {
+            "fixedValue": "This armor is obtenable in the End game"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 298,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_is_obtenable_in_the_m2",
+          "text": {
+            "fixedValue": "This armor is obtenable in the Mid game"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 298,
+          "y": 198,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_is_obtenable_in_the_m3",
+          "text": {
+            "fixedValue": "This armor is obtenable in the Mid/End game"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 94,
+          "y": 198,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_in_in_lucky_bl",
+          "text": {
+            "fixedValue": "This armor set is in in Lucky block classic"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 162,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_this_armor_set_is_in_in_lucky_bl1",
+          "text": {
+            "fixedValue": "This armor set is in in Lucky block classic"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 230,
+          "y": 178,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_armor_set",
+          "text": {
+            "fixedValue": "Paladium armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 230,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_armor_set",
+          "text": {
+            "fixedValue": "Endium armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 298,
+          "y": 50,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_travel_armor_set",
+          "text": {
+            "fixedValue": "Travel armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 298,
+          "y": 139,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rainbow_armor_set",
+          "text": {
+            "fixedValue": "Rainbow armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 230,
+          "y": 139,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_invisible_armor_set",
+          "text": {
+            "fixedValue": "Invisible armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 162,
+          "y": 139,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mixed_endium_armor_set",
+          "text": {
+            "fixedValue": "Mixed endium armor set"
+          },
+          "width": 46,
+          "height": 17,
+          "x": 94,
+          "y": 139,
           "locked": false
         }
       }

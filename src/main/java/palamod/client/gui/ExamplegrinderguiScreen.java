@@ -26,7 +26,6 @@ import palamod.procedures.Grinderguiarrow2n3Procedure;
 import palamod.procedures.Grinderguiarrow2n2Procedure;
 import palamod.procedures.Grinderguiarrow2n1Procedure;
 import palamod.procedures.Grinderguiarrow2n10Procedure;
-import palamod.procedures.Crushersubprocessv2n6Procedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -70,9 +69,7 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grindergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gnew_indicator.png"), this.leftPos + 146, this.topPos + 3, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grindergui_v4.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
 
 		if (Grindersubprocessarrowinsertn0Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr0.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
@@ -107,9 +104,9 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 		if (Grinderguiarrow2n5Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right11.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
 		}
-		if (Crushersubprocessv2n6Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right13.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right13.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
+
 		if (Grinderguiarrow2n7Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right15.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
 		}
@@ -155,6 +152,11 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 		if (Grindersubprocessarrowsplit10Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_19red_new.png"), this.leftPos + 54, this.topPos + 62, 0, 0, 24, 10, 24, 10);
 		}
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/btn-all_off.png"), this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_sprite_full.png"), this.leftPos + 152, this.topPos + 9, 0, 0, 51, 50, 2601, 50);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -169,7 +171,7 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.examplegrindergui.label_varg_num_100"), 149, 67, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.examplegrindergui.label_varg_num_100"), 149, 70, -12829636, false);
 	}
 
 	@Override

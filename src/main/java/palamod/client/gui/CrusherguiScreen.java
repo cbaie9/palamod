@@ -9,14 +9,7 @@ import palamod.procedures.Crushertextad2Procedure;
 import palamod.procedures.Crushersubprocessv3barpaladiumProcedure;
 import palamod.procedures.Crushersubprocessv3barendiumProcedure;
 import palamod.procedures.Crushersubprocessv3baramethystProcedure;
-import palamod.procedures.Crushersubprocessv2n7Procedure;
-import palamod.procedures.Crushersubprocessv2n6Procedure;
-import palamod.procedures.Crushersubprocessv2n5Procedure;
-import palamod.procedures.Crushersubprocessv2n4Procedure;
-import palamod.procedures.Crushersubprocessv2n3Procedure;
-import palamod.procedures.Crushersubprocessv2n2Procedure;
-import palamod.procedures.Crushersubprocessv2n1Procedure;
-import palamod.procedures.Crushersubprocessv2n0Procedure;
+import palamod.procedures.CrushersubprocessflamespritereturnProcedure;
 import palamod.procedures.CrusherdebugProcedure;
 import palamod.procedures.CrushercustominfotitaneProcedure;
 import palamod.procedures.CrushercustominfopaladiumProcedure;
@@ -96,37 +89,6 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_ingot.png"), this.leftPos + 312, this.topPos + 20, 0, 0, 16, 16, 16, 16);
 
-		if (Crushersubprocessv2n0Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher0.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher1.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher2.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher3.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher4.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher5.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n6Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher6.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-		if (Crushersubprocessv2n7Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher7.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		}
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher8.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher9.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flame_crusher10.png"), this.leftPos + 8, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fuel_crusher.png"), this.leftPos + 7, this.topPos + 56, 0, 0, 16, 16, 16, 16);
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_ame_full.png"), this.leftPos + 198, this.topPos + 124, Mth.clamp((int) Crushersubprocessv3baramethystProcedure.execute(world, x, y, z) * 100, 0, 1600), 0, 100, 10, 1700,
@@ -139,6 +101,9 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_endium_v1.2.png"), this.leftPos + 198, this.topPos + 180, Mth.clamp((int) Crushersubprocessv3barendiumProcedure.execute(world, x, y, z) * 136, 0, 17272), 0, 136, 10,
 				17408, 10);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flamme_crusher_sprite.png"), this.leftPos + 7, this.topPos + 38, Mth.clamp((int) CrushersubprocessflamespritereturnProcedure.execute(world, x, y, z) * 16, 0, 144), 0, 16, 16,
+				160, 16);
 
 		RenderSystem.disableBlend();
 	}

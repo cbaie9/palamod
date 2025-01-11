@@ -13,7 +13,7 @@
       {
         "type": "image",
         "data": {
-          "image": "grindergui.png",
+          "image": "grindergui_v4.png",
           "use1Xscale": false,
           "x": 106,
           "y": 39,
@@ -89,17 +89,7 @@
             "falpha": 0.0
           },
           "x": 255,
-          "y": 106,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "gnew_indicator.png",
-          "use1Xscale": false,
-          "x": 252,
-          "y": 42,
+          "y": 109,
           "locked": false
         }
       },
@@ -280,9 +270,6 @@
         "data": {
           "image": "arrow_right13.png",
           "use1Xscale": true,
-          "displayCondition": {
-            "name": "Crushersubprocessv2n6"
-          },
           "x": 159,
           "y": 51,
           "locked": false
@@ -496,6 +483,29 @@
           "dropItemsWhenNotBound": true,
           "x": 193,
           "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "grinder_sprite_full.png",
+          "spritesCount": 51,
+          "spriteIndex": {
+            "fixedValue": 0.0
+          },
+          "x": 258,
+          "y": 48,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "btn-all_off.png",
+          "use1Xscale": false,
+          "x": 266,
+          "y": 102,
           "locked": false
         }
       }

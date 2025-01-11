@@ -82,7 +82,7 @@
         "data": {
           "name": "imagebutton_arrow_down0001",
           "image": "arrow_down0001.png",
-          "hoveredImage": "arrow_down0001.png",
+          "hoveredImage": "arrow_down_0001.png",
           "onClick": {
             "name": "Setblocksouth"
           },
