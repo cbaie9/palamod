@@ -121,6 +121,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "Tntcompactflint"
+    },
     "onRedstoneOn": {
       "name": "Spawncompacttnt"
     },
