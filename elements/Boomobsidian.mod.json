@@ -2,8 +2,8 @@
   "_fv": 73,
   "_type": "block",
   "definition": {
-    "texture": "redstone_obsi_top",
-    "textureTop": "redstone_obsi_top",
+    "texture": "minecraft:obsidian",
+    "textureTop": "minecraft:obsidian",
     "textureLeft": "boom_obsi",
     "textureFront": "boom_obsi",
     "textureRight": "boom_obsi",

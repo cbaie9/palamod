@@ -1,10 +1,10 @@
 {
   "parent": "block/stairs",
   "textures": {
-    "particle": "palamod:block/redstone_obsi_top",
-    "bottom": "palamod:block/redstone_obsi_top",
-    "top": "palamod:block/redstone_obsi_top",
-    "side": "palamod:block/redstone_obsi_top"
+    "particle": "minecraft:block/obsidian",
+    "bottom": "minecraft:block/obsidian",
+    "top": "minecraft:block/obsidian",
+    "side": "minecraft:block/obsidian"
   },
   "render_type": "solid"
 }

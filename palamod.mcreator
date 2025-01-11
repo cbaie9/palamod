@@ -8523,6 +8523,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -41931,6 +41943,52 @@
           }
         ]
       }
+    },
+    {
+      "name": "Explodecommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explodecommand",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/ExplodecommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Explodecommandtr",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explodecommandtr",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/ExplodecommandtrCommand.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -43230,6 +43288,11 @@
       "~CUSTOM:Judeecercis_Slab",
       "~CUSTOM:Jacaranda_Slab",
       "~CUSTOM:Ostrya_woodSlab"
+    ],
+    "BLOCKS:mod:unbreakable_explosion": [
+      "TAG:mod:omt",
+      "Blocks.OBSIDIAN",
+      "Blocks.CRYING_OBSIDIAN"
     ],
     "BLOCKS:mod:cbtill": [
       "Blocks.DIRT#2",
