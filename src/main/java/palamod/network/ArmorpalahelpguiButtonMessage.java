@@ -6,6 +6,7 @@ import palamod.world.inventory.ArmorpalahelpguiMenu;
 import palamod.procedures.ConnectitemmenuProcedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.ArmorpalahelpguiThisGUIIsOpenedProcedure;
 
 import palamod.PalamodMod;
 
@@ -65,13 +66,17 @@ public record ArmorpalahelpguiButtonMessage(int buttonID, int x, int y, int z) i
 			return;
 		if (buttonID == 0) {
 
-			ConnectitemmenuProcedure.execute(world, x, y, z, entity);
+			ArmorpalahelpguiThisGUIIsOpenedProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			CloseguiProcedure.execute(entity);
+			ConnectitemmenuProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
+
+			CloseguiProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
 
 			BackpalahelpProcedure.execute(world, x, y, z, entity);
 		}

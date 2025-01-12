@@ -5,7 +5,7 @@
     "type": 1,
     "width": 300,
     "height": 200,
-    "inventoryOffsetX": 200,
+    "inventoryOffsetX": 1000,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
     "doesPauseGame": false,
@@ -213,11 +213,11 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 0,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
           "x": 76,
@@ -327,7 +327,7 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 6,
           "disablePickup": {
@@ -1009,22 +1009,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_effect6",
-          "text": {
-            "fixedValue": "Effect"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 233,
-          "y": 162,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_effect7",
           "text": {
             "fixedValue": "Effect"
@@ -1523,7 +1507,7 @@
         "data": {
           "name": "tooltip_paladium_armor_set",
           "text": {
-            "fixedValue": "Paladium armor set"
+            "fixedValue": "Paladium armor set / green Paladium set"
           },
           "width": 46,
           "height": 17,
@@ -1601,8 +1585,111 @@
           "y": 139,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_night_vision_helmet_strengh",
+          "text": {
+            "fixedValue": "Night Vision ( helmet ), Strenght ( chestplate ), Haste (leggins), Speed ( boots )"
+          },
+          "width": 24,
+          "height": 18,
+          "x": 298,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_night_vision_helmet_strengh1",
+          "text": {
+            "fixedValue": "Night Vision ( helmet ), Strenght ( chestplate ), Haste (leggins), Speed ( boots )"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 230,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_full_set_invisible",
+          "text": {
+            "fixedValue": "Full set : invisible "
+          },
+          "width": 22,
+          "height": 18,
+          "x": 322,
+          "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_night_vision_helmet_strengh2",
+          "text": {
+            "fixedValue": "Night Vision ( helmet ), Strenght ( chestplate ), Haste (leggins), Speed ( boots )"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 94,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_night_vision_helmet_strengh3",
+          "text": {
+            "fixedValue": "Night Vision ( helmet ), Strenght ( chestplate ), Haste (leggins), Speed ( boots )"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 162,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_underwater_breathing_helmet",
+          "text": {
+            "fixedValue": "Underwater breathing ( helmet ), Jump ( chestplate), Speed ( leggins ),"
+          },
+          "width": 46,
+          "height": 18,
+          "x": 298,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_if_bugged",
+          "text": "If bugged ",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ArmorpalahelpguiThisGUIIsOpened"
+          },
+          "width": 57,
+          "height": 20,
+          "x": 76,
+          "y": 21,
+          "locked": false
+        }
       }
     ],
+    "onOpen": {
+      "name": "ArmorpalahelpguiThisGUIIsOpened"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

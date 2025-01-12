@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -25,6 +26,7 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_if_bugged;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_home_pixel_adminshop;
@@ -89,6 +91,18 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set"), mouseX, mouseY);
 		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 119 && mouseY < topPos + 136)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 258 && mouseY > topPos + 49 && mouseY < topPos + 67)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh"), mouseX, mouseY);
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 49 && mouseY < topPos + 67)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh1"), mouseX, mouseY);
+		if (mouseX > leftPos + 258 && mouseX < leftPos + 280 && mouseY > topPos + 49 && mouseY < topPos + 67)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_full_set_invisible"), mouseX, mouseY);
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 138 && mouseY < topPos + 156)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh2"), mouseX, mouseY);
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 138 && mouseY < topPos + 156)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh3"), mouseX, mouseY);
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 138 && mouseY < topPos + 156)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_underwater_breathing_helmet"), mouseX, mouseY);
 	}
 
 	@Override
@@ -134,7 +148,6 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect3"), 238, 51, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect4"), 33, 142, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect5"), 100, 143, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect6"), 169, 142, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_effect7"), 238, 141, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_early_game"), 35, 93, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.armorpalahelpgui.label_early"), 106, 92, -1, false);
@@ -157,11 +170,19 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	@Override
 	public void init() {
 		super.init();
+		button_if_bugged = Button.builder(Component.translatable("gui.palamod.armorpalahelpgui.button_if_bugged"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(0, x, y, z));
+				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 12, this.topPos + 1, 57, 20).build();
+		guistate.put("button:button_if_bugged", button_if_bugged);
+		this.addRenderableWidget(button_if_bugged);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 17, 17,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(0, x, y, z));
-						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -174,8 +195,8 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 275, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
-						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -188,8 +209,8 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 235, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
-						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(3, x, y, z));
+						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
