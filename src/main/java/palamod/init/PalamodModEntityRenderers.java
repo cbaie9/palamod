@@ -19,6 +19,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PalamodModEntityRenderers {
 	@SubscribeEvent
@@ -32,5 +34,6 @@ public class PalamodModEntityRenderers {
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDMAGICTNT.get(), PrimedmagictntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDBIGTNT.get(), PrimedbigtntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDENDIUMTNT.get(), PrimedendiumtntRenderer::new);
+		event.registerEntityRenderer(PalamodModEntities.SWITCHARROW.get(), ThrownItemRenderer::new);
 	}
 }

@@ -4,6 +4,7 @@
  */
 package palamod.init;
 
+import palamod.entity.SwitcharrowEntity;
 import palamod.entity.PrimedwithertntEntity;
 import palamod.entity.PrimedspongetntEntity;
 import palamod.entity.PrimedmagictntEntity;
@@ -54,6 +55,8 @@ public class PalamodModEntities {
 			EntityType.Builder.<PrimedbigtntEntity>of(PrimedbigtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PrimedendiumtntEntity>> PRIMEDENDIUMTNT = register("primedendiumtnt",
 			EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SwitcharrowEntity>> SWITCHARROW = register("switcharrow",
+			EntityType.Builder.<SwitcharrowEntity>of(SwitcharrowEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

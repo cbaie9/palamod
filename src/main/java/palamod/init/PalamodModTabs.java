@@ -259,6 +259,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ANTIFUZEDISC.get());
 				tabData.accept(PalamodModItems.ROULETTEPALADIENNEDISC.get());
 				tabData.accept(PalamodModItems.CLASHKUMIZ.get());
+				tabData.accept(PalamodModItems.SWITCHARROWITEM.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -393,6 +394,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.BLUESLIMEPAD.get().asItem());
 				tabData.accept(PalamodModBlocks.ORANGESLIMEPAD.get().asItem());
 				tabData.accept(PalamodModBlocks.PURPLESLIMEPAD.get().asItem());
+				tabData.accept(PalamodModItems.SWITCHARROWITEM.get());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {

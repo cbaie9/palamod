@@ -37,6 +37,7 @@ import palamod.item.TitaneAxeItem;
 import palamod.item.TitaneArmorItem;
 import palamod.item.SwordpaternItem;
 import palamod.item.SwordheadItem;
+import palamod.item.SwitcharrowitemItem;
 import palamod.item.StrenghtstickItem;
 import palamod.item.StrenghorbItem;
 import palamod.item.StickofgodsItem;
@@ -806,6 +807,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> BLUESLIMEPAD = block(PalamodModBlocks.BLUESLIMEPAD);
 	public static final DeferredItem<Item> ORANGESLIMEPAD = block(PalamodModBlocks.ORANGESLIMEPAD);
 	public static final DeferredItem<Item> PURPLESLIMEPAD = block(PalamodModBlocks.PURPLESLIMEPAD);
+	public static final DeferredItem<Item> SWITCHARROWITEM = REGISTRY.register("switcharrowitem", SwitcharrowitemItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
