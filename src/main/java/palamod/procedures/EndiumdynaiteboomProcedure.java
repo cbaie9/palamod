@@ -15,8 +15,6 @@ public class EndiumdynaiteboomProcedure {
 		if (entity == null)
 			return;
 		PalamodMod.queueServerWork(100, () -> {
-			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, (entity.getX()), (entity.getY()), (entity.getZ()), 16, Level.ExplosionInteraction.TNT);
 			int horizontalRadiusSquare = (int) 16 - 1;
 			int verticalRadiusSquare = (int) 16 - 1;
 			int yIterationsSquare = verticalRadiusSquare;
@@ -38,6 +36,8 @@ public class EndiumdynaiteboomProcedure {
 					}
 				}
 			}
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.explode(null, (entity.getX()), (entity.getY()), (entity.getZ()), 16, Level.ExplosionInteraction.TNT);
 			if (!entity.level().isClientSide())
 				entity.discard();
 		});

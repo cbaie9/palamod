@@ -31,8 +31,6 @@ public class ExplosioncompacttntProcedure {
 					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
-			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 6, Level.ExplosionInteraction.TNT);
 			int horizontalRadiusSquare = (int) 6 - 1;
 			int verticalRadiusSquare = (int) 6 - 1;
 			int yIterationsSquare = verticalRadiusSquare;
@@ -54,6 +52,8 @@ public class ExplosioncompacttntProcedure {
 					}
 				}
 			}
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.explode(null, x, y, z, 6, Level.ExplosionInteraction.TNT);
 			if (!entity.level().isClientSide())
 				entity.discard();
 		});

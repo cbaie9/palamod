@@ -86,16 +86,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Suppl
 			private final int slot = 0;
 			private int x = ArmorpalahelpguiMenu.this.x;
 			private int y = ArmorpalahelpguiMenu.this.y;
-
-			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 13, 50) {
 			private final int slot = 1;
@@ -529,9 +519,9 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Suppl
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 1062 + 8 + sj * 18, 17 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 262 + 8 + sj * 18, 17 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 1062 + 8 + si * 18, 17 + 142));
+			this.addSlot(new Slot(inv, si, 262 + 8 + si * 18, 17 + 142));
 	}
 
 	@Override
