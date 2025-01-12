@@ -46,6 +46,6 @@ public class EndiumSwordItem extends SwordItem {
 	};
 
 	public EndiumSwordItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 9f, -2.25f)).fireResistant());
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 9f, -2f)).fireResistant());
 	}
 }

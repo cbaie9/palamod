@@ -18,10 +18,13 @@
       }
     ],
     "efficiency": 1.0,
-    "attackSpeed": 1.75,
+    "attackSpeed": 2.0,
     "enchantability": 50,
     "damageVsEntity": 10.0,
     "usageCount": 10000,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:EndiumIngot"
