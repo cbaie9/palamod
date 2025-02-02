@@ -41,6 +41,7 @@ import palamod.client.gui.JobsminercraftguiScreen;
 import palamod.client.gui.JobsguiScreen;
 import palamod.client.gui.JobsfarmercraftguiScreen;
 import palamod.client.gui.ItemmenupalahelpScreen;
+import palamod.client.gui.InventorybackupScreen;
 import palamod.client.gui.GuardianguiScreen;
 import palamod.client.gui.GrinderpalahelpguiScreen;
 import palamod.client.gui.Grinderpalahelp2guiScreen;
@@ -63,6 +64,10 @@ import palamod.client.gui.CrusherpalahelpguiScreen;
 import palamod.client.gui.CrusherguiScreen;
 import palamod.client.gui.CobblebreakerguiScreen;
 import palamod.client.gui.ClickerScreen;
+import palamod.client.gui.BackpacktitaneScreen;
+import palamod.client.gui.BackpackpaladiumScreen;
+import palamod.client.gui.BackpackendiumScreen;
+import palamod.client.gui.BackpackamethystguiScreen;
 import palamod.client.gui.AuthsafeguiScreen;
 import palamod.client.gui.ArmorpalahelpguiScreen;
 import palamod.client.gui.AnalyserresultScreen;
@@ -260,5 +265,10 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.ADMINSHOPPLANTCACAO.get(), AdminshopplantcacaoScreen::new);
 		event.register(PalamodModMenus.CLICKER.get(), ClickerScreen::new);
 		event.register(PalamodModMenus.JOBSFARMERCRAFTGUI.get(), JobsfarmercraftguiScreen::new);
+		event.register(PalamodModMenus.BACKPACKAMETHYSTGUI.get(), BackpackamethystguiScreen::new);
+		event.register(PalamodModMenus.BACKPACKTITANE.get(), BackpacktitaneScreen::new);
+		event.register(PalamodModMenus.BACKPACKPALADIUM.get(), BackpackpaladiumScreen::new);
+		event.register(PalamodModMenus.INVENTORYBACKUP.get(), InventorybackupScreen::new);
+		event.register(PalamodModMenus.BACKPACKENDIUM.get(), BackpackendiumScreen::new);
 	}
 }

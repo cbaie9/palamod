@@ -29,6 +29,7 @@ import palamod.item.TitanehammerItem;
 import palamod.item.TitanefastswordItem;
 import palamod.item.TitaneexcavatorItem;
 import palamod.item.TitanebroadswordItem;
+import palamod.item.TitanebackpackItem;
 import palamod.item.TitaneSwordItem;
 import palamod.item.TitaneShovelItem;
 import palamod.item.TitanePickaxeItem;
@@ -82,6 +83,7 @@ import palamod.item.Pickaxeofthegodslv10Item;
 import palamod.item.PickaxeheadItem;
 import palamod.item.PesyblpotionItem;
 import palamod.item.PalamixedcharoalItem;
+import palamod.item.PaladumbackpackItem;
 import palamod.item.PaladiumstickItem;
 import palamod.item.PaladiumseedplanterItem;
 import palamod.item.PaladiumpollenItem;
@@ -205,6 +207,7 @@ import palamod.item.EndiumdynaItem;
 import palamod.item.EndiumbroadswordheadItem;
 import palamod.item.EndiumbroadswordItem;
 import palamod.item.EndiumbigringItem;
+import palamod.item.EndiumbackpackItem;
 import palamod.item.EndiumSwordItem;
 import palamod.item.EndiumPickaxeItem;
 import palamod.item.EndiumIngotItem;
@@ -259,6 +262,7 @@ import palamod.item.AmethystePickaxeItem;
 import palamod.item.AmethysteItem;
 import palamod.item.AmethysteAxeItem;
 import palamod.item.AmethysteArmorItem;
+import palamod.item.AmethystbackpackItem;
 import palamod.item.AmethtysthoeItem;
 
 import palamod.PalamodMod;
@@ -808,6 +812,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ORANGESLIMEPAD = block(PalamodModBlocks.ORANGESLIMEPAD);
 	public static final DeferredItem<Item> PURPLESLIMEPAD = block(PalamodModBlocks.PURPLESLIMEPAD);
 	public static final DeferredItem<Item> SWITCHARROWITEM = REGISTRY.register("switcharrowitem", SwitcharrowitemItem::new);
+	public static final DeferredItem<Item> AMETHYSTBACKPACK = REGISTRY.register("amethystbackpack", AmethystbackpackItem::new);
+	public static final DeferredItem<Item> TITANEBACKPACK = REGISTRY.register("titanebackpack", TitanebackpackItem::new);
+	public static final DeferredItem<Item> PALADUMBACKPACK = REGISTRY.register("paladumbackpack", PaladumbackpackItem::new);
+	public static final DeferredItem<Item> ENDIUMBACKPACK = REGISTRY.register("endiumbackpack", EndiumbackpackItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

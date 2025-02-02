@@ -9,6 +9,8 @@ import palamod.procedures.Luckyprocess1adminProcedure;
 import palamod.procedures.GivenbtProcedure;
 import palamod.procedures.GetuuidProcedure;
 import palamod.procedures.GetdirectoryjobsProcedure;
+import palamod.procedures.BackuploadconfigProcedure;
+import palamod.procedures.BackupconfigProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -143,6 +145,34 @@ public class OxmodsCommand {
 
 					GetdirectoryjobsProcedure.execute(entity);
 					return 0;
-				})));
+				})).then(Commands.literal("backup").then(Commands.literal("load").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					BackuploadconfigProcedure.execute(entity);
+					return 0;
+				})).then(Commands.literal("write").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					BackupconfigProcedure.execute(entity);
+					return 0;
+				}))));
 	}
 }

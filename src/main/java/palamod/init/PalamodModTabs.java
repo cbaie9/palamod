@@ -260,6 +260,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ROULETTEPALADIENNEDISC.get());
 				tabData.accept(PalamodModItems.CLASHKUMIZ.get());
 				tabData.accept(PalamodModItems.SWITCHARROWITEM.get());
+				tabData.accept(PalamodModItems.AMETHYSTBACKPACK.get());
+				tabData.accept(PalamodModItems.TITANEBACKPACK.get());
+				tabData.accept(PalamodModItems.PALADUMBACKPACK.get());
+				tabData.accept(PalamodModItems.ENDIUMBACKPACK.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -502,6 +506,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ORANGEGLUEBALL.get().asItem());
 				tabData.accept(PalamodModBlocks.GRAYGLUEBALL.get().asItem());
 				tabData.accept(PalamodModItems.GLUEBALLPATERN.get());
+				tabData.accept(PalamodModItems.AMETHYSTBACKPACK.get());
+				tabData.accept(PalamodModItems.TITANEBACKPACK.get());
+				tabData.accept(PalamodModItems.PALADUMBACKPACK.get());
+				tabData.accept(PalamodModItems.ENDIUMBACKPACK.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

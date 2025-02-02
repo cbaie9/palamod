@@ -41,6 +41,7 @@ import palamod.world.inventory.JobsminercraftguiMenu;
 import palamod.world.inventory.JobsguiMenu;
 import palamod.world.inventory.JobsfarmercraftguiMenu;
 import palamod.world.inventory.ItemmenupalahelpMenu;
+import palamod.world.inventory.InventorybackupMenu;
 import palamod.world.inventory.GuardianguiMenu;
 import palamod.world.inventory.GrinderpalahelpguiMenu;
 import palamod.world.inventory.Grinderpalahelp2guiMenu;
@@ -63,6 +64,10 @@ import palamod.world.inventory.CrusherpalahelpguiMenu;
 import palamod.world.inventory.CrusherguiMenu;
 import palamod.world.inventory.CobblebreakerguiMenu;
 import palamod.world.inventory.ClickerMenu;
+import palamod.world.inventory.BackpacktitaneMenu;
+import palamod.world.inventory.BackpackpaladiumMenu;
+import palamod.world.inventory.BackpackendiumMenu;
+import palamod.world.inventory.BackpackamethystguiMenu;
 import palamod.world.inventory.AuthsafeguiMenu;
 import palamod.world.inventory.ArmorpalahelpguiMenu;
 import palamod.world.inventory.AnalyserresultMenu;
@@ -262,4 +267,9 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<AdminshopplantcacaoMenu>> ADMINSHOPPLANTCACAO = REGISTRY.register("adminshopplantcacao", () -> IMenuTypeExtension.create(AdminshopplantcacaoMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ClickerMenu>> CLICKER = REGISTRY.register("clicker", () -> IMenuTypeExtension.create(ClickerMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsfarmercraftguiMenu>> JOBSFARMERCRAFTGUI = REGISTRY.register("jobsfarmercraftgui", () -> IMenuTypeExtension.create(JobsfarmercraftguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackamethystguiMenu>> BACKPACKAMETHYSTGUI = REGISTRY.register("backpackamethystgui", () -> IMenuTypeExtension.create(BackpackamethystguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpacktitaneMenu>> BACKPACKTITANE = REGISTRY.register("backpacktitane", () -> IMenuTypeExtension.create(BackpacktitaneMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackpaladiumMenu>> BACKPACKPALADIUM = REGISTRY.register("backpackpaladium", () -> IMenuTypeExtension.create(BackpackpaladiumMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<InventorybackupMenu>> INVENTORYBACKUP = REGISTRY.register("inventorybackup", () -> IMenuTypeExtension.create(InventorybackupMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BackpackendiumMenu>> BACKPACKENDIUM = REGISTRY.register("backpackendium", () -> IMenuTypeExtension.create(BackpackendiumMenu::new));
 }
