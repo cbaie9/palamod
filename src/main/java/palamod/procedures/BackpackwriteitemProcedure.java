@@ -87,7 +87,7 @@ public class BackpackwriteitemProcedure {
 								return 0;
 							}
 						}.getAmount((int) i)));
-					} else if (i >= 27 && i <= 54) {
+					} else if (i >= 27 && i <= 53) {
 						main_backpack_paladium.addProperty(("backpack_inv_" + i),
 								(BuiltInRegistries.ITEM
 										.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
@@ -102,7 +102,7 @@ public class BackpackwriteitemProcedure {
 								return 0;
 							}
 						}.getAmount((int) i)));
-					} else if (i >= 55 && i <= 80) {
+					} else if (i >= 54 && i <= 81) {
 						main_backpack_endium.addProperty(("backpack_inv_" + i),
 								(BuiltInRegistries.ITEM
 										.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
@@ -144,7 +144,7 @@ public class BackpackwriteitemProcedure {
 						exception.printStackTrace();
 					}
 				}
-				if (i2 > 9) {
+				if (i2 >= 27) {
 					{
 						com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 						try {
@@ -156,7 +156,7 @@ public class BackpackwriteitemProcedure {
 						}
 					}
 				}
-				if (i2 > 27) {
+				if (i2 >= 55) {
 					{
 						com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 						try {
@@ -168,7 +168,7 @@ public class BackpackwriteitemProcedure {
 						}
 					}
 				}
-				if (i2 > 54) {
+				if (i2 >= 82) {
 					{
 						com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 						try {

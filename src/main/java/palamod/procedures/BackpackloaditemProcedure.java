@@ -135,6 +135,8 @@ public class BackpackloaditemProcedure {
 						}
 					}
 				}
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("" + i)), false);
 				if (i2 >= 81) {
 					{
 						try {
@@ -146,7 +148,7 @@ public class BackpackloaditemProcedure {
 							}
 							bufferedReader.close();
 							main_backpack_endium = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							for (int index3 = 0; index3 < 27; index3++) {
+							for (int index3 = 0; index3 < 28; index3++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_endium.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 									_setstack.setCount((int) main_backpack_endium.get(("backpack_num_" + i)).getAsDouble());
