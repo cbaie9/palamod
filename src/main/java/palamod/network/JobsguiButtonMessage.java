@@ -4,6 +4,7 @@ package palamod.network;
 import palamod.world.inventory.JobsguiMenu;
 
 import palamod.procedures.ConnectjobsminerguiProcedure;
+import palamod.procedures.ConnectfarmerguiProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -62,6 +63,10 @@ public record JobsguiButtonMessage(int buttonID, int x, int y, int z) implements
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			ConnectfarmerguiProcedure.execute(world, x, y, z, entity);
+		}
 		if (buttonID == 1) {
 
 			ConnectjobsminerguiProcedure.execute(world, x, y, z, entity);

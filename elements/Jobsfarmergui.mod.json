@@ -1,0 +1,153 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 80,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "jobsminergui.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jobs_miner",
+          "text": {
+            "fixedValue": "Jobs : farmer"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 87,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_gray",
+          "image": "craft_button_v2.png",
+          "hoveredImage": "craft_button_v2_poi.png",
+          "onClick": {
+            "name": "Connectfarmercraftgui"
+          },
+          "x": 230,
+          "y": 133,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_0_100",
+          "text": {
+            "fixedValue": "98 / 100",
+            "name": "Getxpfarmer"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 139,
+          "y": 118,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_help_button",
+          "image": "button_helpjobs_v1.png",
+          "hoveredImage": "button_helpjobs_poi_v1.png",
+          "x": 140,
+          "y": 133,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_98100_0",
+          "text": {
+            "fixedValue": "98/100 | 98%  of the level1",
+            "name": "Getxpfarmertext"
+          },
+          "width": 145,
+          "height": 10,
+          "x": 140,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 280,
+          "y": 85,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "pgbar_jobs.png",
+          "spritesCount": 93,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Jobsfarmergetxpprogressbar"
+          },
+          "x": 140,
+          "y": 106,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

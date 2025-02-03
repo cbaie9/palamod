@@ -118,6 +118,10 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		super.init();
 		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 119, this.topPos + 57, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_famer_jobs.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_farm2.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsguiButtonMessage(0, x, y, z));
+						JobsguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {

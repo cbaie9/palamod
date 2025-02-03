@@ -16,6 +16,9 @@
           "name": "imagebutton_screen_beta_template_jobs",
           "image": "screen_beta3_famer_jobs.png",
           "hoveredImage": "screen_beta3_farm2.png",
+          "onClick": {
+            "name": "Connectfarmergui"
+          },
           "x": 158,
           "y": 77,
           "locked": false

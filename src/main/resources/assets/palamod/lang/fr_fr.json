@@ -1396,6 +1396,7 @@
   "item.palamod.paladium_hammer": "Marteau en paladium",
   "gui.palamod.grinderpalahelp_2gui.label_fastsword_broadsword": "fastsword + glaive",
   "item.palamod.flypotion": "Pomme en paladium",
+  "gui.palamod.jobsfarmergui.label_jobs_miner": "Jobs : miner",
   "gui.palamod.adminshopmenu.button_block": "Blocs",
   "item.palamod.greenpaladiumarmor_chestplate": "Plastron en paladium vert",
   "gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m": "This armor is obtenable in the Mid game",

@@ -39,6 +39,7 @@ import palamod.world.inventory.LanguageselectionMenu;
 import palamod.world.inventory.JobsminerguiMenu;
 import palamod.world.inventory.JobsminercraftguiMenu;
 import palamod.world.inventory.JobsguiMenu;
+import palamod.world.inventory.JobsfarmerguiMenu;
 import palamod.world.inventory.JobsfarmercraftguiMenu;
 import palamod.world.inventory.ItemmenupalahelpMenu;
 import palamod.world.inventory.InventorybackupMenu;
@@ -272,4 +273,5 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackpaladiumMenu>> BACKPACKPALADIUM = REGISTRY.register("backpackpaladium", () -> IMenuTypeExtension.create(BackpackpaladiumMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<InventorybackupMenu>> INVENTORYBACKUP = REGISTRY.register("inventorybackup", () -> IMenuTypeExtension.create(InventorybackupMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackendiumMenu>> BACKPACKENDIUM = REGISTRY.register("backpackendium", () -> IMenuTypeExtension.create(BackpackendiumMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<JobsfarmerguiMenu>> JOBSFARMERGUI = REGISTRY.register("jobsfarmergui", () -> IMenuTypeExtension.create(JobsfarmerguiMenu::new));
 }

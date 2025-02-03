@@ -39,6 +39,7 @@ import palamod.client.gui.LanguageselectionScreen;
 import palamod.client.gui.JobsminerguiScreen;
 import palamod.client.gui.JobsminercraftguiScreen;
 import palamod.client.gui.JobsguiScreen;
+import palamod.client.gui.JobsfarmerguiScreen;
 import palamod.client.gui.JobsfarmercraftguiScreen;
 import palamod.client.gui.ItemmenupalahelpScreen;
 import palamod.client.gui.InventorybackupScreen;
@@ -270,5 +271,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.BACKPACKPALADIUM.get(), BackpackpaladiumScreen::new);
 		event.register(PalamodModMenus.INVENTORYBACKUP.get(), InventorybackupScreen::new);
 		event.register(PalamodModMenus.BACKPACKENDIUM.get(), BackpackendiumScreen::new);
+		event.register(PalamodModMenus.JOBSFARMERGUI.get(), JobsfarmerguiScreen::new);
 	}
 }
