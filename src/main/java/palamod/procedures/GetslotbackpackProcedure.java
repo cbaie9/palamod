@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.world.inventory.BackpacktitaneMenu;
 import palamod.world.inventory.BackpackpaladiumMenu;
+import palamod.world.inventory.BackpackendiumMenu;
 import palamod.world.inventory.BackpackamethystguiMenu;
 
 import net.minecraft.world.entity.player.Player;
@@ -18,7 +19,7 @@ public class GetslotbackpackProcedure {
 			i2 = 27;
 		} else if (entity instanceof Player _plr2 && _plr2.containerMenu instanceof BackpackpaladiumMenu) {
 			i2 = 55;
-		} else if (entity instanceof Player _plr3 && _plr3.containerMenu instanceof BackpackamethystguiMenu) {
+		} else if (entity instanceof Player _plr3 && _plr3.containerMenu instanceof BackpackendiumMenu) {
 			i2 = 82;
 		} else {
 			i2 = 0;

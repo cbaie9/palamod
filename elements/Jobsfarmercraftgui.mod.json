@@ -631,8 +631,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_spike_obsi",
-          "image": "spike_obsi.png",
-          "hoveredImage": "block_white.png",
+          "image": "amethyst_backpack.png",
+          "hoveredImage": "backpack_hover.png",
           "onClick": {
             "name": "Jobsminercraftwoddenspike"
           },
@@ -645,8 +645,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_spike_obsi_1",
-          "image": "spike_obsi_1.png",
-          "hoveredImage": "block_white.png",
+          "image": "titan_backpack.png",
+          "hoveredImage": "backpack_hover.png",
           "onClick": {
             "name": "Jobsminercraftironspike"
           },
@@ -659,8 +659,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_spike_obsi_2",
-          "image": "spike_obsi_2.png",
-          "hoveredImage": "block_white.png",
+          "image": "paladium_backpack.png",
+          "hoveredImage": "backpack_hover.png",
           "onClick": {
             "name": "Jobsminercraftgoldenspike"
           },
@@ -673,8 +673,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_spike_obsi_3",
-          "image": "spike_obsi_3.png",
-          "hoveredImage": "block_white.png",
+          "image": "endium_backpack.png",
+          "hoveredImage": "backpack_hover.png",
           "onClick": {
             "name": "Jobsminercraftdiamondspike"
           },

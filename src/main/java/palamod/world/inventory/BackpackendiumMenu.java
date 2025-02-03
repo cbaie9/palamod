@@ -1,6 +1,8 @@
 
 package palamod.world.inventory;
 
+import palamod.procedures.BackpackwriteitemProcedure;
+
 import palamod.init.PalamodModMenus;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -606,6 +608,7 @@ public class BackpackendiumMenu extends AbstractContainerMenu implements Supplie
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		BackpackwriteitemProcedure.execute(world, x, y, z, entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

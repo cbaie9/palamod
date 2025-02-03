@@ -108,7 +108,7 @@ public class OpenbackpackProcedure {
 				}, _bpos);
 			}
 			BackpackloaditemProcedure.execute(world, x, y, z, entity);
-		} else if (PalamodModItems.PALADUMBACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+		} else if (PalamodModItems.ENDIUMBACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

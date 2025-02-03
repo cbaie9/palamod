@@ -360,8 +360,8 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		};
 		guistate.put("button:imagebutton_big_obsi", imagebutton_big_obsi);
 		this.addRenderableWidget(imagebutton_big_obsi);
-		imagebutton_spike_obsi = new ImageButton(this.leftPos + 48, this.topPos + 48, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
-				e -> {
+		imagebutton_spike_obsi = new ImageButton(this.leftPos + 48, this.topPos + 48, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/amethyst_backpack.png"), ResourceLocation.parse("palamod:textures/screens/backpack_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(11, x, y, z));
 						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 11, x, y, z);
@@ -375,7 +375,7 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		guistate.put("button:imagebutton_spike_obsi", imagebutton_spike_obsi);
 		this.addRenderableWidget(imagebutton_spike_obsi);
 		imagebutton_spike_obsi_1 = new ImageButton(this.leftPos + 67, this.topPos + 48, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_1.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/titan_backpack.png"), ResourceLocation.parse("palamod:textures/screens/backpack_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(12, x, y, z));
 						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 12, x, y, z);
@@ -389,7 +389,7 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		guistate.put("button:imagebutton_spike_obsi_1", imagebutton_spike_obsi_1);
 		this.addRenderableWidget(imagebutton_spike_obsi_1);
 		imagebutton_spike_obsi_2 = new ImageButton(this.leftPos + 86, this.topPos + 48, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_2.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_backpack.png"), ResourceLocation.parse("palamod:textures/screens/backpack_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(13, x, y, z));
 						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 13, x, y, z);
@@ -403,7 +403,7 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		guistate.put("button:imagebutton_spike_obsi_2", imagebutton_spike_obsi_2);
 		this.addRenderableWidget(imagebutton_spike_obsi_2);
 		imagebutton_spike_obsi_3 = new ImageButton(this.leftPos + 105, this.topPos + 48, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/spike_obsi_3.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_backpack.png"), ResourceLocation.parse("palamod:textures/screens/backpack_hover.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(14, x, y, z));
 						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 14, x, y, z);
