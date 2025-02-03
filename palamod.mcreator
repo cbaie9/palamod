@@ -42346,6 +42346,204 @@
           "src/main/java/palamod/item/EndiumbackpackItem.java"
         ]
       }
+    },
+    {
+      "name": "Jobsminerfarmeramethysthoe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmeramethysthoe",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmeramethysthoeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmercrafttitanehoe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmercrafttitanehoe",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmercrafttitanehoeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmerpaladiumhoe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmerpaladiumhoe",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmerpaladiumhoeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmergreenpaladiumhoe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmergreenpaladiumhoe",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmergreenpaladiumhoeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmerendiumhoe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmerendiumhoe",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmerendiumhoeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmeramethystseedplanter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmeramethystseedplanter",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmeramethystseedplanterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmertitaneseedplanter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmertitaneseedplanter",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmertitaneseedplanterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmergreenpaladiumseedplanter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmergreenpaladiumseedplanter",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmergreenpaladiumseedplanterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmerendiumseedplanter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmerendiumseedplanter",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmerendiumseedplanterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmerpaladiumseedplanter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmerpaladiumseedplanter",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmerpaladiumseedplanterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminerfarmerelevator",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminerfarmerelevator",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminerfarmerelevatorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -44004,7 +44202,7 @@
       "item.palamod.lucky_beta.description_0": "Lucky block Item no added",
       "advancements.achmluckyphone.title": "Is someone there ?",
       "gui.palamod.armorpalahelpgui.button_if_bugged": "If bugged ",
-      "gui.palamod.jobsfarmercraftgui.tooltip_mega_boom_tnt_soon": "Mega boom tnt ( soon )",
+      "gui.palamod.jobsfarmercraftgui.tooltip_mega_boom_tnt_soon": "Elevator",
       "gui.palamod.crusherpalahelpgui.label_lendium_pour_celuici_il_faudr": "endium insert 128 palamixed coal and orangeblue",
       "item.palamod.stickofgods": "Stick Of Gods",
       "gui.palamod.armorpalahelpgui.label_speed": "Speed",
@@ -44076,7 +44274,7 @@
       "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.titanebackpack": "Titane backpack",
       "item.palamod.green_paladium_small_ring": "Small ring green paladium",
-      "gui.palamod.jobsfarmercraftgui.tooltip_endium_pickaxe": "Endium pickaxe",
+      "gui.palamod.jobsfarmercraftgui.tooltip_endium_pickaxe": "Amethyst hoe",
       "gui.palamod.xpbushpalahelpgui.label_xp_berry": "xp berry",
       "gui.palamod.legendarystonepalahelp.label_forturne_permet_de_vous_give": "Forturne : can give you ingots",
       "item.palamod.pickaxeofthegodslv_14.description_0": "Level 14",
@@ -44100,7 +44298,7 @@
       "gui.palamod.gamblelingjobsjeton.label_jobs": "Jobs",
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
       "item.palamod.paladiumarmorcustom_4_chestplate": "Paladium Chestplate",
-      "gui.palamod.jobsfarmercraftgui.tooltip_pickaxe_of_the_gods": "Pickaxe of the gods",
+      "gui.palamod.jobsfarmercraftgui.tooltip_pickaxe_of_the_gods": "Titane hoe",
       "gui.palamod.adminpanelmenu.label_admin_panel": "Admin Panel",
       "block.palamod.renforcedobsidianstairs": "hardened obsidian stairs",
       "item.palamod.titanefastsword": "Forge fastsword",
@@ -44114,7 +44312,7 @@
       "gui.palamod.adminshopmobs_2inksac.label_paladium": "Ink sac",
       "item.palamod.compressed_green_paladum": "Compressed green paladum",
       "gui.palamod.adminshopplantcrimsonfungus.label_paladium": "Crimson fungus",
-      "gui.palamod.jobsfarmercraftgui.tooltip_iron_spike_obsidian": "Iron spike obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_iron_spike_obsidian": "Titane backpack",
       "gui.palamod.adminshopblockgrass.number_buy": "number here",
       "item.palamod.rainbowarmor_leggings": "Rainbow Leggings",
       "item.palamod.travelarmor_helmet": "Slimy Helmet",
@@ -44292,7 +44490,7 @@
       "advancements.achmpotg_17new.descr": "Obtain a pickaxe of the gods ( lv17)",
       "gui.palamod.adminshopmobswitherskull.number_buy": "number here",
       "gui.palamod.adminshopblockblackstone.button_sell": "sell",
-      "gui.palamod.jobsfarmercraftgui.tooltip_titane_excavator": "Titane excavator",
+      "gui.palamod.jobsfarmercraftgui.tooltip_titane_excavator": "Endium hoe",
       "gui.palamod.analyserresult.label_air": "Air :",
       "gui.palamod.palahelpblock.button_fluid": "fluid",
       "gui.palamod.alchemycreatorgui.label_nether_wart": "Verrue du nether :",
@@ -44613,11 +44811,11 @@
       "gui.palamod.crusherpalahelpgui.label_appuyer_sur_le_bouton_start_fus": "Press \"start fusion\" button give you 1 endium nugget every 128 orangeblue",
       "item.palamod.paladium_shovel": "Paladium Shovel",
       "gui.palamod.palahelpnotsupported.label_your_language_is_not_supported": "Your language is not supported ",
-      "gui.palamod.jobsfarmercraftgui.tooltip_wodden_spike_obsidian": "Wodden spike obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_wodden_spike_obsidian": "Amethyst backpack",
       "gui.palamod.adminshopplantcacao.button_buy": "buy",
       "gamerule.logsall": "logs all",
       "block.palamod.findium_stairs": "Findium stairs",
-      "gui.palamod.jobsfarmercraftgui.tooltip_lava_obsidian": "Lava obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_lava_obsidian": "Totem of fertility",
       "gui.palamod.armorpalahelpgui.label_451": "+ 4.5",
       "gui.palamod.armorpalahelpgui.label_452": "+ 4.5",
       "gui.palamod.armorpalahelpgui.label_rainbow_set": "Rainbow set",
@@ -44749,7 +44947,7 @@
       "gui.palamod.palahelpgui_1.button_items": "Items",
       "gui.palamod.grinderpalahelp_2gui.button_menu": "menu",
       "gui.palamod.palamachinepalahelpgui.label_vitesse_et_dgats": "speed and damage )",
-      "gui.palamod.jobsfarmercraftgui.tooltip_paladium_spike_obsidian": "Paladium spike obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_paladium_spike_obsidian": "Paladium Crusher",
       "gui.palamod.titanechestgui.label_inventory": "Inventory",
       "gui.palamod.adminshopblock.button_grass": "Grass",
       "gui.palamod.grindergui.button_debug": "debug",
@@ -44977,7 +45175,7 @@
       "gui.palamod.adminshopmobs_2glowinksac.label_paladium": "Glow ink sac",
       "gui.palamod.orelayer.label_endium_64_128_customs_p": "Endium : -64 --) 128 ; customs palamod biomes",
       "gui.palamod.adminshopmobs.button_melon": "Slime ball",
-      "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe": "Obsidian pickaxe",
+      "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe": "Paladium seedplanter",
       "item.palamod.pickaxeofthegodslv_8": "Pickaxe of the gods",
       "item.palamod.pickaxeofthegodslv_9": "Pickaxe of the gods",
       "gui.palamod.guardiangui.label_degats": "Dégats",
@@ -45000,7 +45198,7 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_sell_price_120": "Sell price :  1.75",
       "gui.palamod.adminshopplantsugarcane.label_sell_price_120": "Sell price : 4",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush1": "xp bush",
-      "gui.palamod.jobsfarmercraftgui.tooltip_amethyst_spike_obsidian": "Amethyst spike obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_amethyst_spike_obsidian": "Rooted seed",
       "item.palamod.greenpaladumexcator": "Green Paladium Exavator",
       "gui.palamod.adminshopmobswitherskull.label_mode_set": "Amount :",
       "gui.palamod.palahelpmachine.button_menu": "Menu",
@@ -45159,7 +45357,7 @@
       "gui.palamod.adminshoporepaladium.label_paladium": "Paladium ",
       "gui.palamod.golemtreec.button_see_ultilitary_branch": "See ultilitary branch",
       "item.palamod.minage_voidstone": "Minage voidstone",
-      "gui.palamod.jobsfarmercraftgui.tooltip_amethyst_excavator": "Amethyst excavator",
+      "gui.palamod.jobsfarmercraftgui.tooltip_amethyst_excavator": "Paladium hoe",
       "gui.palamod.adminshoputilitiesemerald.button_sell": "sell",
       "gui.palamod.palamachinegui.label_palamachine": "PalaMachine",
       "block.palamod.golden_obsidian_spike": "Golden spike obsidian",
@@ -45355,7 +45553,7 @@
       "gui.palamod.potgtranfert.label_potg_transfert_gui": "Potg transfert gui",
       "config.palamod.palamodconfirgurationfile": "Palamod_client_settings",
       "gui.palamod.jobsminercraftgui.tooltip_lava_obsidian": "Lava obsidian",
-      "gui.palamod.jobsfarmercraftgui.tooltip_golden_spike_obsidian": "Golden spike obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_golden_spike_obsidian": "Paladium backpack",
       "gui.palamod.adminshopmobs_2leather.label_buy_price_125": "Buy Price : 20",
       "gui.palamod.adminshopmobs_2gunpowder.button_buy": "buy",
       "gui.palamod.palahelpore.label_titane": "Titane :",
@@ -45374,7 +45572,7 @@
       "gui.palamod.analyserloading.label_veuiller_attendre": "Veuiller attendre",
       "gui.palamod.alchemycreatorgui.label_inventory": "Inventory",
       "palamod.procedure.joinwarning_journeymap": "Due to the keybinding bound to the same key, the key [ J ] may crash your game. to avoid that problem change this key in your settings.Have a good time.",
-      "gui.palamod.jobsfarmercraftgui.tooltip_poison_obsidian": "Poison Obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_poison_obsidian": "Endium axe",
       "effect.palamod.fseffect": "Fly speed",
       "item.palamod.paladium_hammer": "Paladium hammer",
       "gui.palamod.grinderpalahelp_2gui.label_fastsword_broadsword": "fastsword + broadsword",
@@ -45399,8 +45597,8 @@
       "palamod.procedure.get_info_xpbottle2": "Content xp :",
       "palamod.procedure.get_info_xpbottle1": "A bottle that give you xp when you use it ",
       "gui.palamod.adminshoporeiron.number_buy": "number here",
-      "gui.palamod.jobsfarmercraftgui.tooltip_fake_water_obsidian": "Fake water obsidian",
-      "gui.palamod.jobsfarmercraftgui.tooltip_compressed_obsidian": "Compressed obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_fake_water_obsidian": "Farmer throne",
+      "gui.palamod.jobsfarmercraftgui.tooltip_compressed_obsidian": "Endium seedplanter",
       "gui.palamod.downloaderlink.label_this_will_link_your_palamod": "This will link your palamod\u0027s",
       "gui.palamod.crushergui.label_empty3": "[----------------]",
       "gui.palamod.crushergui.label_empty2": "[----------------]",
@@ -45565,12 +45763,12 @@
       "entity.palamod.primedendiumtnt": "Endium tnt",
       "gui.palamod.adminshopmenu.button_utilities": "utilities",
       "gui.palamod.adminshopmobsbone.number_buy": "number here",
-      "gui.palamod.jobsfarmercraftgui.tooltip_paladium_excavator": "Paladium excavator",
+      "gui.palamod.jobsfarmercraftgui.tooltip_paladium_excavator": "Green paladium hoe ",
       "gui.palamod.adminshopmobs_2.button_gun_powder": "Gunpowder",
       "gui.palamod.onlinedetectorgui.label_unset": "Unset",
       "gui.palamod.adminshopplant.button_exit": "Exit",
       "item.palamod.flame_modifier": "Flame modifier",
-      "gui.palamod.jobsfarmercraftgui.tooltip_diamond_spike_obsidian": "Diamond spike obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_diamond_spike_obsidian": "Endium backpack",
       "painting.palamod.desertpaining_16.title": "Desertpaining 16x",
       "gui.palamod.stockhdv.button_return_to_admin_panel": "Return to Admin Panel",
       "gui.palamod.jobsminercraftgui.tooltip_amethyst_excavator": "Amethyst excavator",
@@ -45662,7 +45860,7 @@
       "gui.palamod.adminshopmobs_2inksac.label_mode_set": "Amount :",
       "block.palamod.trixium_nbt_block.description_0": "contain trixum scoreboard ( do not break )",
       "gui.palamod.adminshopmobs_2gunpowder.button_sell": "sell",
-      "gui.palamod.jobsfarmercraftgui.tooltip_magical_tool": "Magical tool",
+      "gui.palamod.jobsfarmercraftgui.tooltip_magical_tool": "Amethyst seedlplanter",
       "gui.palamod.jobsminercraftgui.tooltip_titane_excavator": "Titane excavator",
       "gui.palamod.adminshoporeiron.button_buy": "buy",
       "gui.palamod.trixiumdeposit.button_empty": "Add trixium",
@@ -45717,7 +45915,7 @@
       "item.palamod.clashkumiz.desc": "Kumiz - Clash fuze III",
       "gui.palamod.adminshoputilities.label_fast_sell": "Fast sell",
       "block.palamod.megaboomobsidian": "Mega boom obsidian",
-      "gui.palamod.jobsfarmercraftgui.tooltip_voidstone": "Voidstone",
+      "gui.palamod.jobsfarmercraftgui.tooltip_voidstone": "Titane seedplanter",
       "gui.palamod.megasafechestfirstsetup.label_safe_setup": "Safe setup",
       "gui.palamod.backpackpaladium.label_inventory": "Inventory",
       "gui.palamod.adminshoporefindium.label_amount": "Amount :",
@@ -45748,7 +45946,7 @@
       "gui.palamod.adminshopblockoakwood.button_sell": "sell",
       "item.palamod.hang_glider.description_0": "i m flying",
       "item.palamod.paladiumfastsword": "Paladium fastsword",
-      "gui.palamod.jobsfarmercraftgui.tooltip_slime_obsidian": "Slime Obsidian",
+      "gui.palamod.jobsfarmercraftgui.tooltip_slime_obsidian": "Endium chesplate",
       "advancements.achmchestgreenpaladium.descr": "Obtain or craft a green paladum chest",
       "block.palamod.redglueball": "Red glueball",
       "advancements.avancementluckytoday.title": "You are Lucky today",
@@ -45861,7 +46059,7 @@
       "gui.palamod.golemtreec.golem_v_hunter1": "la voie hunter",
       "gui.palamod.adminshopore.button_diamond": "Diamond",
       "item.palamod.pickaxeofthegodslv_4.description_0": "Level 4",
-      "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_tnt": "Boom tnt",
+      "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_tnt": "Green Paladium seedplanter",
       "block.palamod.deepslate_amethyst_ore": "Amethyste Ore",
       "palamod.procedure.sealed_xp_bottle_get_amount": "Contain xp :",
       "gui.palamod.legendarystonepalahelp.label_legendary_stone_wiki": "Palahelp : Legendary stone",

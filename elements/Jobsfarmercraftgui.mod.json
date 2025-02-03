@@ -497,7 +497,7 @@
           "image": "amethyst_hoe.png",
           "hoveredImage": "amethyst_hoe_hover.png",
           "onClick": {
-            "name": "Jobsminercraftendiumpickaxe"
+            "name": "Jobsminerfarmeramethysthoe"
           },
           "x": 74,
           "y": 44,
@@ -510,6 +510,9 @@
           "name": "imagebutton_potg_of_1",
           "image": "titane_radius_hoe.png",
           "hoveredImage": "titane_hoe_hover.png",
+          "onClick": {
+            "name": "Jobsfarmercrafttitanehoe"
+          },
           "x": 94,
           "y": 43,
           "locked": false
@@ -522,7 +525,7 @@
           "image": "paladium_radius_hoe.png",
           "hoveredImage": "paladium_hoe_hover.png",
           "onClick": {
-            "name": "Jobsminercraftamethystexcavator"
+            "name": "Jobsfarmerpaladiumhoe"
           },
           "x": 112,
           "y": 44,
@@ -536,7 +539,7 @@
           "image": "endium_radius_hoe.png",
           "hoveredImage": "endium_radius_hoe_hover.png",
           "onClick": {
-            "name": "Jobsminercraftamethystexcavator"
+            "name": "Jobsminerfarmerendiumhoe"
           },
           "x": 131,
           "y": 44,
@@ -550,7 +553,7 @@
           "image": "green_paladium_radius_hoe.png",
           "hoveredImage": "paladium_hoe_hover.png",
           "onClick": {
-            "name": "Jobsminercraftamethystexcavator"
+            "name": "Jobsminerfarmergreenpaladiumhoe"
           },
           "x": 150,
           "y": 44,
@@ -564,7 +567,7 @@
           "image": "seedplanter_amethyst.png",
           "hoveredImage": "seedplanter_hover.png",
           "onClick": {
-            "name": "Jobsminercraftmagicialtool"
+            "name": "Jobsminerfarmeramethystseedplanter"
           },
           "x": 169,
           "y": 44,
@@ -578,7 +581,7 @@
           "image": "seedplanter_titane.png",
           "hoveredImage": "seedplanter_hover.png",
           "onClick": {
-            "name": "Jobsminercraftvoidstone"
+            "name": "Jobsminerfarmertitaneseedplanter"
           },
           "x": 188,
           "y": 44,
@@ -592,7 +595,7 @@
           "image": "seedplanter_paladium.png",
           "hoveredImage": "seedplanter_hover.png",
           "onClick": {
-            "name": "Jobsminercraftobsidianpickaxe"
+            "name": "Jobsminerfarmerpaladiumseedplanter"
           },
           "x": 207,
           "y": 44,
@@ -606,7 +609,7 @@
           "image": "seedplanter_green_paladium.png",
           "hoveredImage": "seedplanter_hover.png",
           "onClick": {
-            "name": "Jobsminercraftboomtnt"
+            "name": "Jobsminerfarmergreenpaladiumseedplanter"
           },
           "x": 226,
           "y": 44,
@@ -620,7 +623,7 @@
           "image": "seedplanter_endium.png",
           "hoveredImage": "seedplanter_hover.png",
           "onClick": {
-            "name": "Jobsminercraftcompactobsidian"
+            "name": "Jobsminerfarmerendiumseedplanter"
           },
           "x": 74,
           "y": 63,
@@ -743,11 +746,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_fake_obsi",
-          "image": "fake_obsi.png",
+          "image": "beta_block.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftfakewaterobsidian"
-          },
           "x": 93,
           "y": 82,
           "locked": false
@@ -800,7 +800,7 @@
         "data": {
           "name": "tooltip_endium_pickaxe",
           "text": {
-            "fixedValue": "Endium pickaxe"
+            "fixedValue": "Amethyst hoe"
           },
           "width": 16,
           "height": 16,
@@ -814,7 +814,7 @@
         "data": {
           "name": "tooltip_pickaxe_of_the_gods",
           "text": {
-            "fixedValue": "Pickaxe of the gods"
+            "fixedValue": "Titane hoe"
           },
           "width": 15,
           "height": 16,
@@ -828,7 +828,7 @@
         "data": {
           "name": "tooltip_amethyst_excavator",
           "text": {
-            "fixedValue": "Amethyst excavator"
+            "fixedValue": "Paladium hoe"
           },
           "width": 16,
           "height": 16,
@@ -842,7 +842,7 @@
         "data": {
           "name": "tooltip_titane_excavator",
           "text": {
-            "fixedValue": "Titane excavator"
+            "fixedValue": "Endium hoe"
           },
           "width": 16,
           "height": 16,
@@ -856,7 +856,7 @@
         "data": {
           "name": "tooltip_paladium_excavator",
           "text": {
-            "fixedValue": "Paladium excavator"
+            "fixedValue": "Green paladium hoe "
           },
           "width": 16,
           "height": 16,
@@ -870,7 +870,7 @@
         "data": {
           "name": "tooltip_magical_tool",
           "text": {
-            "fixedValue": "Magical tool"
+            "fixedValue": "Amethyst seedlplanter"
           },
           "width": 16,
           "height": 16,
@@ -884,7 +884,7 @@
         "data": {
           "name": "tooltip_voidstone",
           "text": {
-            "fixedValue": "Voidstone"
+            "fixedValue": "Titane seedplanter"
           },
           "width": 16,
           "height": 16,
@@ -898,7 +898,7 @@
         "data": {
           "name": "tooltip_obsidian_pickaxe",
           "text": {
-            "fixedValue": "Obsidian pickaxe"
+            "fixedValue": "Paladium seedplanter"
           },
           "width": 16,
           "height": 16,
@@ -912,7 +912,7 @@
         "data": {
           "name": "tooltip_obsidian_tnt",
           "text": {
-            "fixedValue": "Boom tnt"
+            "fixedValue": "Green Paladium seedplanter"
           },
           "width": 16,
           "height": 16,
@@ -926,7 +926,7 @@
         "data": {
           "name": "tooltip_compressed_obsidian",
           "text": {
-            "fixedValue": "Compressed obsidian"
+            "fixedValue": "Endium seedplanter"
           },
           "width": 16,
           "height": 16,
@@ -940,7 +940,7 @@
         "data": {
           "name": "tooltip_mega_boom_tnt_soon",
           "text": {
-            "fixedValue": "Mega boom tnt ( soon )"
+            "fixedValue": "Elevator"
           },
           "width": 16,
           "height": 16,
@@ -954,7 +954,7 @@
         "data": {
           "name": "tooltip_wodden_spike_obsidian",
           "text": {
-            "fixedValue": "Wodden spike obsidian"
+            "fixedValue": "Amethyst backpack"
           },
           "width": 16,
           "height": 16,
@@ -968,7 +968,7 @@
         "data": {
           "name": "tooltip_iron_spike_obsidian",
           "text": {
-            "fixedValue": "Iron spike obsidian"
+            "fixedValue": "Titane backpack"
           },
           "width": 16,
           "height": 16,
@@ -982,7 +982,7 @@
         "data": {
           "name": "tooltip_golden_spike_obsidian",
           "text": {
-            "fixedValue": "Golden spike obsidian"
+            "fixedValue": "Paladium backpack"
           },
           "width": 16,
           "height": 16,
@@ -996,7 +996,7 @@
         "data": {
           "name": "tooltip_diamond_spike_obsidian",
           "text": {
-            "fixedValue": "Diamond spike obsidian"
+            "fixedValue": "Endium backpack"
           },
           "width": 16,
           "height": 16,
@@ -1010,7 +1010,7 @@
         "data": {
           "name": "tooltip_amethyst_spike_obsidian",
           "text": {
-            "fixedValue": "Amethyst spike obsidian"
+            "fixedValue": "Rooted seed"
           },
           "width": 16,
           "height": 16,
@@ -1038,7 +1038,7 @@
         "data": {
           "name": "tooltip_paladium_spike_obsidian",
           "text": {
-            "fixedValue": "Paladium spike obsidian"
+            "fixedValue": "Paladium Crusher"
           },
           "width": 16,
           "height": 16,
@@ -1052,7 +1052,7 @@
         "data": {
           "name": "tooltip_lava_obsidian",
           "text": {
-            "fixedValue": "Lava obsidian"
+            "fixedValue": "Totem of fertility"
           },
           "width": 16,
           "height": 16,
@@ -1066,7 +1066,7 @@
         "data": {
           "name": "tooltip_fake_water_obsidian",
           "text": {
-            "fixedValue": "Fake water obsidian"
+            "fixedValue": "Farmer throne"
           },
           "width": 16,
           "height": 16,
@@ -1080,7 +1080,7 @@
         "data": {
           "name": "tooltip_slime_obsidian",
           "text": {
-            "fixedValue": "Slime Obsidian"
+            "fixedValue": "Endium chesplate"
           },
           "width": 16,
           "height": 16,
@@ -1094,7 +1094,7 @@
         "data": {
           "name": "tooltip_poison_obsidian",
           "text": {
-            "fixedValue": "Poison Obsidian"
+            "fixedValue": "Endium axe"
           },
           "width": 16,
           "height": 16,

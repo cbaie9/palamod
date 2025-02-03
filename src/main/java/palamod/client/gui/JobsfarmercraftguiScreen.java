@@ -240,6 +240,10 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		this.addRenderableWidget(imagebutton_endium_pickaxe);
 		imagebutton_potg_of_1 = new ImageButton(this.leftPos + 30, this.topPos + 28, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/titane_radius_hoe.png"), ResourceLocation.parse("palamod:textures/screens/titane_hoe_hover.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(2, x, y, z));
+						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
@@ -471,12 +475,8 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 		};
 		guistate.put("button:imagebutton_lava_obsi", imagebutton_lava_obsi);
 		this.addRenderableWidget(imagebutton_lava_obsi);
-		imagebutton_fake_obsi = new ImageButton(this.leftPos + 29, this.topPos + 67, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/fake_obsi.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
+		imagebutton_fake_obsi = new ImageButton(this.leftPos + 29, this.topPos + 67, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/beta_block.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")),
 				e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new JobsfarmercraftguiButtonMessage(19, x, y, z));
-						JobsfarmercraftguiButtonMessage.handleButtonAction(entity, 19, x, y, z);
-					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {

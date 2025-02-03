@@ -3,25 +3,27 @@ package palamod.network;
 
 import palamod.world.inventory.JobsfarmercraftguiMenu;
 
+import palamod.procedures.JobsminerfarmertitaneseedplanterProcedure;
+import palamod.procedures.JobsminerfarmerpaladiumseedplanterProcedure;
+import palamod.procedures.JobsminerfarmergreenpaladiumseedplanterProcedure;
+import palamod.procedures.JobsminerfarmergreenpaladiumhoeProcedure;
+import palamod.procedures.JobsminerfarmerendiumseedplanterProcedure;
+import palamod.procedures.JobsminerfarmerendiumhoeProcedure;
+import palamod.procedures.JobsminerfarmeramethystseedplanterProcedure;
+import palamod.procedures.JobsminerfarmeramethysthoeProcedure;
 import palamod.procedures.JobsminercraftwoddenspikeProcedure;
-import palamod.procedures.JobsminercraftvoidstoneProcedure;
 import palamod.procedures.JobsminercrafttitanespikeProcedure;
 import palamod.procedures.JobsminercraftslimeobsidianProcedure;
 import palamod.procedures.JobsminercraftpoisonobsidianProcedure;
 import palamod.procedures.JobsminercraftpaladiumspikeProcedure;
-import palamod.procedures.JobsminercraftobsidianpickaxeProcedure;
 import palamod.procedures.JobsminercraftmegaboomobsidianProcedure;
-import palamod.procedures.JobsminercraftmagicialtoolProcedure;
 import palamod.procedures.JobsminercraftlavaobsidianProcedure;
 import palamod.procedures.JobsminercraftironspikeProcedure;
 import palamod.procedures.JobsminercraftgoldenspikeProcedure;
-import palamod.procedures.JobsminercraftfakewaterobsidianProcedure;
-import palamod.procedures.JobsminercraftendiumpickaxeProcedure;
 import palamod.procedures.JobsminercraftdiamondspikeProcedure;
-import palamod.procedures.JobsminercraftcompactobsidianProcedure;
-import palamod.procedures.JobsminercraftboomtntProcedure;
 import palamod.procedures.JobsminercraftamethystspikeProcedure;
-import palamod.procedures.JobsminercraftamethystexcavatorProcedure;
+import palamod.procedures.JobsfarmerpaladiumhoeProcedure;
+import palamod.procedures.JobsfarmercrafttitanehoeProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -86,39 +88,43 @@ public record JobsfarmercraftguiButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 1) {
 
-			JobsminercraftendiumpickaxeProcedure.execute(entity);
+			JobsminerfarmeramethysthoeProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			JobsfarmercrafttitanehoeProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			JobsminercraftamethystexcavatorProcedure.execute(entity);
+			JobsfarmerpaladiumhoeProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			JobsminercraftamethystexcavatorProcedure.execute(entity);
+			JobsminerfarmerendiumhoeProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			JobsminercraftamethystexcavatorProcedure.execute(entity);
+			JobsminerfarmergreenpaladiumhoeProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
-			JobsminercraftmagicialtoolProcedure.execute(entity);
+			JobsminerfarmeramethystseedplanterProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			JobsminercraftvoidstoneProcedure.execute(entity);
+			JobsminerfarmertitaneseedplanterProcedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			JobsminercraftobsidianpickaxeProcedure.execute(entity);
+			JobsminerfarmerpaladiumseedplanterProcedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			JobsminercraftboomtntProcedure.execute(entity);
+			JobsminerfarmergreenpaladiumseedplanterProcedure.execute(entity);
 		}
 		if (buttonID == 10) {
 
-			JobsminercraftcompactobsidianProcedure.execute(entity);
+			JobsminerfarmerendiumseedplanterProcedure.execute(entity);
 		}
 		if (buttonID == 11) {
 
@@ -151,10 +157,6 @@ public record JobsfarmercraftguiButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 18) {
 
 			JobsminercraftlavaobsidianProcedure.execute(entity);
-		}
-		if (buttonID == 19) {
-
-			JobsminercraftfakewaterobsidianProcedure.execute(entity);
 		}
 		if (buttonID == 20) {
 
