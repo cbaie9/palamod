@@ -1,0 +1,8 @@
+{
+  "comparator_output": 6,
+  "description": {
+    "translate": "item.palamod.disc_clash_kumiz.desc"
+  },
+  "length_in_seconds": 90,
+  "sound_event": "palamod:clash_kumiz"
+}

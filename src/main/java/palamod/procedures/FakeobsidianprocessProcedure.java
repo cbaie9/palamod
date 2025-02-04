@@ -11,7 +11,7 @@ public class FakeobsidianprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
 			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockState _bs = PalamodModBlocks.FAKEWTER.get().defaultBlockState();
+			BlockState _bs = PalamodModBlocks.FAKE_WATER.get().defaultBlockState();
 			BlockState _bso = world.getBlockState(_bp);
 			for (Property<?> _propertyOld : _bso.getProperties()) {
 				Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

@@ -52,7 +52,7 @@ public class JobsminercraftfakewaterobsidianProcedure {
 			_vars.lvl_required = "Lvl required : 42";
 			_vars.syncPlayerVariables(entity);
 		}
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.FAKEWTER_BUCKET.get())) : false) && new Object() {
+		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.FAKE_WATER_BUCKET.get())) : false) && new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
@@ -63,11 +63,11 @@ public class JobsminercraftfakewaterobsidianProcedure {
 			}
 		}.getAmount(0) == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.FAKEWTER_BUCKET.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.FAKE_WATER_BUCKET.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.FAKEWTER_BUCKET.get()).copy();
+				ItemStack _setstack = new ItemStack(PalamodModItems.FAKE_WATER_BUCKET.get()).copy();
 				_setstack.setCount(1);
 				((Slot) _slots.get(0)).set(_setstack);
 				_player.containerMenu.broadcastChanges();

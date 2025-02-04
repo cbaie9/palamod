@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.LiquidBlock;
 
 public abstract class AngelicwterFluid extends BaseFlowingFluid {
-	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> PalamodModFluidTypes.ANGELICWTER_TYPE.get(), () -> PalamodModFluids.ANGELICWTER.get(), () -> PalamodModFluids.FLOWING_ANGELICWTER.get())
-			.explosionResistance(100f).bucket(() -> PalamodModItems.ANGELICWTER_BUCKET.get()).block(() -> (LiquidBlock) PalamodModBlocks.ANGELICWTER.get());
+	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> PalamodModFluidTypes.ANGELIC_WATER_TYPE.get(), () -> PalamodModFluids.ANGELIC_WATER.get(), () -> PalamodModFluids.FLOWING_ANGELIC_WATER.get())
+			.explosionResistance(100f).bucket(() -> PalamodModItems.ANGELIC_WATER_BUCKET.get()).block(() -> (LiquidBlock) PalamodModBlocks.ANGELIC_WATER.get());
 
 	private AngelicwterFluid() {
 		super(PROPERTIES);

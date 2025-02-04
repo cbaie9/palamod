@@ -11,6 +11,6 @@ import net.minecraft.core.registries.Registries;
 
 public class RoulettepaladiennediscItem extends Item {
 	public RoulettepaladiennediscItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "roulettepaladiennedisc"))));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "disc_roulette_paladienne"))));
 	}
 }

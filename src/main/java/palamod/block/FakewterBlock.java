@@ -17,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 public class FakewterBlock extends LiquidBlock {
 	public FakewterBlock() {
-		super(PalamodModFluids.FAKEWTER.get(), BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+		super(PalamodModFluids.FAKE_WATER.get(), BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
 	}
 
 	@Override

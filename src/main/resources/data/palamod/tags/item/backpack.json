@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "palamod:amethystbackpack",
-    "palamod:titanebackpack",
-    "palamod:paladumbackpack",
-    "palamod:endiumbackpack"
+    "palamod:amethyst_backpack",
+    "palamod:titane_backpack",
+    "palamod:paladum_backpack",
+    "palamod:endium_backpack"
   ]
 }

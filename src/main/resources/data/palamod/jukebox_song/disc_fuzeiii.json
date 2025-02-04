@@ -1,0 +1,8 @@
+{
+  "comparator_output": 0,
+  "description": {
+    "translate": "item.palamod.disc_fuzeiii.desc"
+  },
+  "length_in_seconds": 135,
+  "sound_event": "palamod:fuzedisc"
+}

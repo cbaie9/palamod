@@ -111,25 +111,25 @@ public class ArmorpalahelpguiThisGUIIsOpenedProcedure {
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXEDENDIUMARMOR_HELMET.get()).copy();
+			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_HELMET.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(16)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXEDENDIUMARMOR_CHESTPLATE.get()).copy();
+			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_CHESTPLATE.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(17)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXEDENDIUMARMOR_LEGGINGS.get()).copy();
+			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_LEGGINGS.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(18)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
 		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXEDENDIUMARMOR_BOOTS.get()).copy();
+			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_BOOTS.get()).copy();
 			_setstack.setCount(1);
 			((Slot) _slots.get(19)).set(_setstack);
 			_player.containerMenu.broadcastChanges();

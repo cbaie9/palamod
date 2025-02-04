@@ -135,8 +135,6 @@ public class BackpackloaditemProcedure {
 						}
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("" + i)), false);
 				if (i2 >= 81) {
 					{
 						try {

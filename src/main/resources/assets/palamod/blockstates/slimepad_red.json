@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/slimepad_red"
+    },
+    "facing=east": {
+      "model": "palamod:block/slimepad_red",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/slimepad_red",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/slimepad_red",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "palamod:block/slimepad_red",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "palamod:block/slimepad_red",
+      "x": 90
+    }
+  }
+}

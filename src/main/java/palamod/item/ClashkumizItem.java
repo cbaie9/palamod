@@ -11,6 +11,6 @@ import net.minecraft.core.registries.Registries;
 
 public class ClashkumizItem extends Item {
 	public ClashkumizItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "clashkumiz"))));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "disc_clash_kumiz"))));
 	}
 }

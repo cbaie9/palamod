@@ -637,7 +637,7 @@
           "image": "amethyst_backpack.png",
           "hoveredImage": "backpack_hover.png",
           "onClick": {
-            "name": "Jobsminercraftwoddenspike"
+            "name": "Jobsfarmercraftamethystbackpack"
           },
           "x": 112,
           "y": 63,
@@ -651,7 +651,7 @@
           "image": "titan_backpack.png",
           "hoveredImage": "backpack_hover.png",
           "onClick": {
-            "name": "Jobsminercraftironspike"
+            "name": "Jobsfarmercrafttitanebackpack"
           },
           "x": 131,
           "y": 63,
@@ -665,7 +665,7 @@
           "image": "paladium_backpack.png",
           "hoveredImage": "backpack_hover.png",
           "onClick": {
-            "name": "Jobsminercraftgoldenspike"
+            "name": "Jobsfarmercraftpaladiumbackpack"
           },
           "x": 150,
           "y": 63,
@@ -679,7 +679,7 @@
           "image": "endium_backpack.png",
           "hoveredImage": "backpack_hover.png",
           "onClick": {
-            "name": "Jobsminercraftdiamondspike"
+            "name": "Jobsfarmercraftendiumbackpack"
           },
           "x": 169,
           "y": 63,

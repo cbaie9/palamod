@@ -9,11 +9,11 @@
   ],
   "key": {
     "a": {
-      "item": "palamod:mixedendiumingot"
+      "item": "palamod:mixed_endium_ingot"
     }
   },
   "result": {
-    "id": "palamod:mixedendiumarmor_chestplate",
+    "id": "palamod:mixed_endium_armor_chestplate",
     "count": 1
   }
 }

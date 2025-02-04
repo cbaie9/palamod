@@ -685,10 +685,10 @@ public class GuijobsminercheckcraftProcedure {
 									return 0;
 								}
 							}.getAmount(9) < 64 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.BOOMOBSIDIAN.get().asItem())
+									.getItem() == PalamodModBlocks.BOOM_OBSIDIAN.get().asItem())
 							&& (15 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							ItemStack _setstack = new ItemStack(PalamodModBlocks.BOOMOBSIDIAN.get()).copy();
+							ItemStack _setstack = new ItemStack(PalamodModBlocks.BOOM_OBSIDIAN.get()).copy();
 							_setstack.setCount(1);
 							((Slot) _slots.get(9)).set(_setstack);
 							_player.containerMenu.broadcastChanges();
@@ -1791,8 +1791,8 @@ public class GuijobsminercheckcraftProcedure {
 							_player.containerMenu.broadcastChanges();
 						}
 					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.FAKEWTER_BUCKET
-							.get()
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
+							.getItem() == PalamodModItems.FAKE_WATER_BUCKET.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.OBSIDIAN.asItem()
 							&& new Object() {
 								public int getAmount(int sltid) {
@@ -1940,10 +1940,10 @@ public class GuijobsminercheckcraftProcedure {
 									return 0;
 								}
 							}.getAmount(9) < 64 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.SLIMEOBSIDIAN.get().asItem())
+									.getItem() == PalamodModBlocks.SLIME_OBSIDIAN.get().asItem())
 							&& (22 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							ItemStack _setstack = new ItemStack(PalamodModBlocks.SLIMEOBSIDIAN.get()).copy();
+							ItemStack _setstack = new ItemStack(PalamodModBlocks.SLIME_OBSIDIAN.get()).copy();
 							_setstack.setCount(2);
 							((Slot) _slots.get(9)).set(_setstack);
 							_player.containerMenu.broadcastChanges();
@@ -1977,10 +1977,10 @@ public class GuijobsminercheckcraftProcedure {
 									return 0;
 								}
 							}.getAmount(9) < 64 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.POISONOBSIDIAN.get().asItem())
+									.getItem() == PalamodModBlocks.POISON_OBSIDIAN.get().asItem())
 							&& (22 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							ItemStack _setstack = new ItemStack(PalamodModBlocks.POISONOBSIDIAN.get()).copy();
+							ItemStack _setstack = new ItemStack(PalamodModBlocks.POISON_OBSIDIAN.get()).copy();
 							_setstack.setCount(8);
 							((Slot) _slots.get(9)).set(_setstack);
 							_player.containerMenu.broadcastChanges();

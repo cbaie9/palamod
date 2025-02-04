@@ -15,7 +15,7 @@ import net.minecraft.core.registries.Registries;
 
 public class FuzediscItem extends Item {
 	public FuzediscItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "fuzedisc"))));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "disc_fuzeiii"))));
 	}
 
 	@Override

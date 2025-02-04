@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "palamod:blocks/green_glueball",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "palamod:green_glueball"
+        }
+      ]
+    }
+  ]
+}

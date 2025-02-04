@@ -35,6 +35,6 @@ public class FakewterFluidType extends FluidType {
 			public ResourceLocation getFlowingTexture() {
 				return FLOWING_TEXTURE;
 			}
-		}, PalamodModFluidTypes.FAKEWTER_TYPE.get());
+		}, PalamodModFluidTypes.FAKE_WATER_TYPE.get());
 	}
 }

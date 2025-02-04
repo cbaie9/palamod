@@ -67,7 +67,7 @@ public class OpenbackpackProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (PalamodModItems.AMETHYSTBACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+			if (PalamodModItems.AMETHYST_BACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 				if (35 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -94,7 +94,7 @@ public class OpenbackpackProcedure {
 					is_lunching = false;
 					MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
 				}
-			} else if (PalamodModItems.TITANEBACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+			} else if (PalamodModItems.TITANE_BACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 				if (53 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -121,7 +121,7 @@ public class OpenbackpackProcedure {
 					is_lunching = false;
 					MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
 				}
-			} else if (PalamodModItems.PALADUMBACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
+			} else if (PalamodModItems.PALADUM_BACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 				if (70 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -148,8 +148,7 @@ public class OpenbackpackProcedure {
 					is_lunching = false;
 					MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
 				}
-			} else if (PalamodModItems.ENDIUMBACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()
-					&& (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE))) {
+			} else if (PalamodModItems.ENDIUM_BACKPACK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 				if (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);

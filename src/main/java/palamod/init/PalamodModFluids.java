@@ -24,19 +24,19 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 public class PalamodModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(BuiltInRegistries.FLUID, PalamodMod.MODID);
-	public static final DeferredHolder<Fluid, FlowingFluid> FAKEWTER = REGISTRY.register("fakewter", () -> new FakewterFluid.Source());
-	public static final DeferredHolder<Fluid, FlowingFluid> FLOWING_FAKEWTER = REGISTRY.register("flowing_fakewter", () -> new FakewterFluid.Flowing());
-	public static final DeferredHolder<Fluid, FlowingFluid> ANGELICWTER = REGISTRY.register("angelicwter", () -> new AngelicwterFluid.Source());
-	public static final DeferredHolder<Fluid, FlowingFluid> FLOWING_ANGELICWTER = REGISTRY.register("flowing_angelicwter", () -> new AngelicwterFluid.Flowing());
+	public static final DeferredHolder<Fluid, FlowingFluid> FAKE_WATER = REGISTRY.register("fake_water", () -> new FakewterFluid.Source());
+	public static final DeferredHolder<Fluid, FlowingFluid> FLOWING_FAKE_WATER = REGISTRY.register("flowing_fake_water", () -> new FakewterFluid.Flowing());
+	public static final DeferredHolder<Fluid, FlowingFluid> ANGELIC_WATER = REGISTRY.register("angelic_water", () -> new AngelicwterFluid.Source());
+	public static final DeferredHolder<Fluid, FlowingFluid> FLOWING_ANGELIC_WATER = REGISTRY.register("flowing_angelic_water", () -> new AngelicwterFluid.Flowing());
 
 	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class FluidsClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			ItemBlockRenderTypes.setRenderLayer(FAKEWTER.get(), RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_FAKEWTER.get(), RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(ANGELICWTER.get(), RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_ANGELICWTER.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FAKE_WATER.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_FAKE_WATER.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(ANGELIC_WATER.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_ANGELIC_WATER.get(), RenderType.translucent());
 		}
 	}
 }

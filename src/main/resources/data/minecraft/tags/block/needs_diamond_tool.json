@@ -2,9 +2,9 @@
   "replace": false,
   "values": [
     "palamod:megaboomobsidian",
-    "palamod:boomobsidian",
-    "palamod:poisonobsidian",
-    "palamod:slimeobsidian",
+    "palamod:boom_obsidian",
+    "palamod:poison_obsidian",
+    "palamod:slime_obsidian",
     "palamod:paladium_obsidian_spike",
     "palamod:titane_obsidian_spike",
     "palamod:amethys_tobsidian_spike",

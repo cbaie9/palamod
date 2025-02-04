@@ -35,6 +35,6 @@ public class AngelicwterFluidType extends FluidType {
 			public ResourceLocation getFlowingTexture() {
 				return FLOWING_TEXTURE;
 			}
-		}, PalamodModFluidTypes.ANGELICWTER_TYPE.get());
+		}, PalamodModFluidTypes.ANGELIC_WATER_TYPE.get());
 	}
 }

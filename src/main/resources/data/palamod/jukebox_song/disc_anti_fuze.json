@@ -1,0 +1,8 @@
+{
+  "comparator_output": 0,
+  "description": {
+    "translate": "item.palamod.disc_anti_fuze.desc"
+  },
+  "length_in_seconds": 105,
+  "sound_event": "palamod:anti_fuze_clash"
+}

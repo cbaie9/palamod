@@ -19,13 +19,13 @@ import java.util.List;
 
 public class AntifuzediscItem extends Item {
 	public AntifuzediscItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "antifuzedisc"))));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "disc_anti_fuze"))));
 	}
 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.antifuzedisc.description_0"));
+		list.add(Component.translatable("item.palamod.disc_anti_fuze.description_0"));
 	}
 }

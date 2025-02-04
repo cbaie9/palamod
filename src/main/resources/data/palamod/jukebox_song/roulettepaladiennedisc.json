@@ -1,8 +1,0 @@
-{
-  "comparator_output": 4,
-  "description": {
-    "translate": "item.palamod.roulettepaladiennedisc.desc"
-  },
-  "length_in_seconds": 104,
-  "sound_event": "palamod:roulette_paladienne"
-}

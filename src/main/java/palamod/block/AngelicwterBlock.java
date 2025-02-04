@@ -17,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 public class AngelicwterBlock extends LiquidBlock {
 	public AngelicwterBlock() {
-		super(PalamodModFluids.ANGELICWTER.get(), BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+		super(PalamodModFluids.ANGELIC_WATER.get(), BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
 	}
 
 	@Override

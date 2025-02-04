@@ -45,9 +45,9 @@ public abstract class MixedendiumarmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 7);
 				map.put(ArmorItem.Type.HELMET, 5);
 				map.put(ArmorItem.Type.BODY, 7);
-			}), 65, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), () -> Ingredient.of(new ItemStack(PalamodModItems.MIXEDENDIUMINGOT.get())),
+			}), 65, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), () -> Ingredient.of(new ItemStack(PalamodModItems.MIXED_ENDIUM_INGOT.get())),
 					List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:mixed_endium_armor_"))), 4.5f, 0.25f);
-			registerHelper.register(ResourceLocation.parse("palamod:mixedendiumarmor"), armorMaterial);
+			registerHelper.register(ResourceLocation.parse("palamod:mixed_endium_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}

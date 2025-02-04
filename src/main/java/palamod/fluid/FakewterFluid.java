@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.LiquidBlock;
 
 public abstract class FakewterFluid extends BaseFlowingFluid {
-	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> PalamodModFluidTypes.FAKEWTER_TYPE.get(), () -> PalamodModFluids.FAKEWTER.get(), () -> PalamodModFluids.FLOWING_FAKEWTER.get())
-			.explosionResistance(100f).slopeFindDistance(5).bucket(() -> PalamodModItems.FAKEWTER_BUCKET.get()).block(() -> (LiquidBlock) PalamodModBlocks.FAKEWTER.get());
+	public static final BaseFlowingFluid.Properties PROPERTIES = new BaseFlowingFluid.Properties(() -> PalamodModFluidTypes.FAKE_WATER_TYPE.get(), () -> PalamodModFluids.FAKE_WATER.get(), () -> PalamodModFluids.FLOWING_FAKE_WATER.get())
+			.explosionResistance(100f).slopeFindDistance(5).bucket(() -> PalamodModItems.FAKE_WATER_BUCKET.get()).block(() -> (LiquidBlock) PalamodModBlocks.FAKE_WATER.get());
 
 	private FakewterFluid() {
 		super(PROPERTIES);
