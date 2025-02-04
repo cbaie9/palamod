@@ -9,6 +9,7 @@ import palamod.procedures.JobsminerfarmergreenpaladiumseedplanterProcedure;
 import palamod.procedures.JobsminerfarmergreenpaladiumhoeProcedure;
 import palamod.procedures.JobsminerfarmerendiumseedplanterProcedure;
 import palamod.procedures.JobsminerfarmerendiumhoeProcedure;
+import palamod.procedures.JobsminerfarmerelevatorProcedure;
 import palamod.procedures.JobsminerfarmeramethystseedplanterProcedure;
 import palamod.procedures.JobsminerfarmeramethysthoeProcedure;
 import palamod.procedures.JobsminercraftwoddenspikeProcedure;
@@ -16,7 +17,6 @@ import palamod.procedures.JobsminercrafttitanespikeProcedure;
 import palamod.procedures.JobsminercraftslimeobsidianProcedure;
 import palamod.procedures.JobsminercraftpoisonobsidianProcedure;
 import palamod.procedures.JobsminercraftpaladiumspikeProcedure;
-import palamod.procedures.JobsminercraftmegaboomobsidianProcedure;
 import palamod.procedures.JobsminercraftlavaobsidianProcedure;
 import palamod.procedures.JobsminercraftironspikeProcedure;
 import palamod.procedures.JobsminercraftgoldenspikeProcedure;
@@ -168,7 +168,7 @@ public record JobsfarmercraftguiButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 22) {
 
-			JobsminercraftmegaboomobsidianProcedure.execute(entity);
+			JobsminerfarmerelevatorProcedure.execute(entity);
 		}
 	}
 

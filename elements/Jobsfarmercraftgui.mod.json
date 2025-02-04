@@ -788,7 +788,7 @@
           "image": "elevator_block.png",
           "hoveredImage": "block_white.png",
           "onClick": {
-            "name": "Jobsminercraftmegaboomobsidian"
+            "name": "Jobsminerfarmerelevator"
           },
           "x": 93,
           "y": 63,

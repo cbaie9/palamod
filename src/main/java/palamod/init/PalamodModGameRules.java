@@ -14,10 +14,12 @@ import net.minecraft.world.level.GameRules;
 public class PalamodModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> LOGSALL;
 	public static GameRules.Key<GameRules.BooleanValue> LOCKEDCRAFT;
+	public static GameRules.Key<GameRules.BooleanValue> LOCKEDUSE;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
 		LOGSALL = GameRules.register("logsall", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		LOCKEDCRAFT = GameRules.register("lockedcraft", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+		LOCKEDUSE = GameRules.register("lockeduse", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 	}
 }
