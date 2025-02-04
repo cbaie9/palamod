@@ -92,7 +92,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	public void init() {
 		super.init();
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_v2_poi.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_hover_v3.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsminerguiButtonMessage(0, x, y, z));
 						JobsminerguiButtonMessage.handleButtonAction(entity, 0, x, y, z);

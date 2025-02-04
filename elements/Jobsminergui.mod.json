@@ -41,7 +41,7 @@
         "data": {
           "name": "imagebutton_button_gray",
           "image": "craft_button_v2.png",
-          "hoveredImage": "craft_button_v2_poi.png",
+          "hoveredImage": "craft_button_hover_v3.png",
           "onClick": {
             "name": "Connectminercraft"
           },

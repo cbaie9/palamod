@@ -66,7 +66,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsfarmergetxpprogressbarProcedure.execute(entity) * 155, 0, 14345), 0, 155, 10, 14500, 10);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsfarmergetxpprogressbarProcedure.execute(entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,7 +92,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 	public void init() {
 		super.init();
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_v2_poi.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_hover_v3.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsfarmerguiButtonMessage(0, x, y, z));
 						JobsfarmerguiButtonMessage.handleButtonAction(entity, 0, x, y, z);

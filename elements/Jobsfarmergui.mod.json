@@ -41,7 +41,7 @@
         "data": {
           "name": "imagebutton_button_gray",
           "image": "craft_button_v2.png",
-          "hoveredImage": "craft_button_v2_poi.png",
+          "hoveredImage": "craft_button_hover_v3.png",
           "onClick": {
             "name": "Connectfarmercraftgui"
           },
@@ -131,7 +131,7 @@
         "type": "sprite",
         "data": {
           "sprite": "pgbar_jobs.png",
-          "spritesCount": 93,
+          "spritesCount": 100,
           "spriteIndex": {
             "fixedValue": 0.0,
             "name": "Jobsfarmergetxpprogressbar"
