@@ -721,7 +721,7 @@
           "image": "crusher_front.png",
           "hoveredImage": "block_white.png",
           "onClick": {
-            "name": "Jobsminercraftpaladiumspike"
+            "name": "Jobsfarmercraftcrusher"
           },
           "x": 226,
           "y": 63,
@@ -735,7 +735,7 @@
           "image": "totem.png",
           "hoveredImage": "block_white.png",
           "onClick": {
-            "name": "Jobsminercraftlavaobsidian"
+            "name": "Jobsfarmercraftfertilitytotem"
           },
           "x": 74,
           "y": 82,
@@ -748,6 +748,9 @@
           "name": "imagebutton_fake_obsi",
           "image": "beta_block.png",
           "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsfarmercraftfarmerthrone"
+          },
           "x": 93,
           "y": 82,
           "locked": false
@@ -760,7 +763,7 @@
           "image": "endium_chestplate.png",
           "hoveredImage": "chestplate_hover.png",
           "onClick": {
-            "name": "Jobsminercraftslimeobsidian"
+            "name": "Jobsfarmercraftendiumchestplate"
           },
           "x": 112,
           "y": 82,
@@ -774,7 +777,7 @@
           "image": "endium_axe.png",
           "hoveredImage": "endium_axe_hover.png",
           "onClick": {
-            "name": "Jobsminercraftpoisonobsidian"
+            "name": "Axebreakblock"
           },
           "x": 131,
           "y": 82,

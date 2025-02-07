@@ -21,7 +21,10 @@
     "attackSpeed": 1.0,
     "enchantability": 50,
     "damageVsEntity": 9.0,
-    "usageCount": 10000,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:EndiumIngot"
@@ -31,6 +34,9 @@
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "Axebreakblock"
+    }
   }
 }

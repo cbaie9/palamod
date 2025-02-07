@@ -42800,6 +42800,126 @@
           }
         ]
       }
+    },
+    {
+      "name": "Jobsfarmercraftcrusher",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmercraftcrusher",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmercraftcrusherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmercraftfertilitytotem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmercraftfertilitytotem",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmercraftfertilitytotemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmercraftfarmerthrone",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmercraftfarmerthrone",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmercraftfarmerthroneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmercraftendiumchestplate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmercraftendiumchestplate",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmercraftendiumchestplateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsfarmercraftendiumaxe",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsfarmercraftendiumaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsfarmercraftendiumaxeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Axebreakblock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axebreakblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/AxebreakblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [

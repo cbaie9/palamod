@@ -13,18 +13,19 @@ import palamod.procedures.JobsminerfarmerelevatorProcedure;
 import palamod.procedures.JobsminerfarmeramethystseedplanterProcedure;
 import palamod.procedures.JobsminerfarmeramethysthoeProcedure;
 import palamod.procedures.JobsminercrafttitanespikeProcedure;
-import palamod.procedures.JobsminercraftslimeobsidianProcedure;
-import palamod.procedures.JobsminercraftpoisonobsidianProcedure;
-import palamod.procedures.JobsminercraftpaladiumspikeProcedure;
-import palamod.procedures.JobsminercraftlavaobsidianProcedure;
 import palamod.procedures.JobsminercraftamethystspikeProcedure;
 import palamod.procedures.JobsfarmerpaladiumhoeProcedure;
 import palamod.procedures.JobsfarmercrafttitanehoeProcedure;
 import palamod.procedures.JobsfarmercrafttitanebackpackProcedure;
 import palamod.procedures.JobsfarmercraftpaladiumbackpackProcedure;
+import palamod.procedures.JobsfarmercraftfertilitytotemProcedure;
+import palamod.procedures.JobsfarmercraftfarmerthroneProcedure;
+import palamod.procedures.JobsfarmercraftendiumchestplateProcedure;
 import palamod.procedures.JobsfarmercraftendiumbackpackProcedure;
+import palamod.procedures.JobsfarmercraftcrusherProcedure;
 import palamod.procedures.JobsfarmercraftamethystbackpackProcedure;
 import palamod.procedures.CloseguiProcedure;
+import palamod.procedures.AxebreakblockProcedure;
 
 import palamod.PalamodMod;
 
@@ -152,19 +153,23 @@ public record JobsfarmercraftguiButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 17) {
 
-			JobsminercraftpaladiumspikeProcedure.execute(entity);
+			JobsfarmercraftcrusherProcedure.execute(entity);
 		}
 		if (buttonID == 18) {
 
-			JobsminercraftlavaobsidianProcedure.execute(entity);
+			JobsfarmercraftfertilitytotemProcedure.execute(entity);
+		}
+		if (buttonID == 19) {
+
+			JobsfarmercraftfarmerthroneProcedure.execute(entity);
 		}
 		if (buttonID == 20) {
 
-			JobsminercraftslimeobsidianProcedure.execute(entity);
+			JobsfarmercraftendiumchestplateProcedure.execute(entity);
 		}
 		if (buttonID == 21) {
 
-			JobsminercraftpoisonobsidianProcedure.execute(entity);
+			AxebreakblockProcedure.execute(world, x, y, z);
 		}
 		if (buttonID == 22) {
 

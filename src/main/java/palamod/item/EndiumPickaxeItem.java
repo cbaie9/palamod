@@ -5,6 +5,10 @@ import palamod.procedures.HammernormalProcedure;
 
 import palamod.init.PalamodModItems;
 
+import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
@@ -17,13 +21,15 @@ import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class EndiumPickaxeItem extends PickaxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override
 		public int getUses() {
-			return 4999;
+			return 0;
 		}
 
 		@Override
@@ -54,6 +60,11 @@ public class EndiumPickaxeItem extends PickaxeItem {
 
 	public EndiumPickaxeItem() {
 		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 5.5f, -3f)).fireResistant());
+	}
+
+	@SubscribeEvent
+	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
+		event.modify(PalamodModItems.ENDIUM_PICKAXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override
