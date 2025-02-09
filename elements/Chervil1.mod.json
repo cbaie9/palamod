@@ -73,7 +73,7 @@
     },
     "useLootTableForDrops": false,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Chervilseed"
     },
     "dropAmount": 1,
     "forceTicking": true,

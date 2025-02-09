@@ -65,8 +65,11 @@ public class BighoeprocessProcedure {
 								}
 								world.setBlock(_bp, _bs, 3);
 							}
-							world.scheduleTick(BlockPos.containing(x + xi, y + i + 1, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i + 1, z + zi)).getBlock(), 0);
 							world.scheduleTick(BlockPos.containing(x + xi, y + i, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).getBlock(), 0);
+							if ((world.getBlockState(BlockPos.containing(x + xi, y + i + 1, z + zi))).is(BlockTags.create(ResourceLocation.parse("palamod:deserbage")))) {
+								world.destroyBlock(BlockPos.containing(x + xi, y + i + 1, z + zi), false);
+								world.scheduleTick(BlockPos.containing(x + xi, y + i + 1, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i + 1, z + zi)).getBlock(), 1);
+							}
 							act = true;
 						}
 					}

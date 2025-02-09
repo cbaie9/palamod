@@ -108,9 +108,6 @@
     "onDestroyedByPlayer": {
       "name": "Kiwano3drop"
     },
-    "onDestroyedByExplosion": {
-      "name": "Kiwano3drop"
-    },
     "onRightClicked": {
       "name": "Kiwano4shear"
     }

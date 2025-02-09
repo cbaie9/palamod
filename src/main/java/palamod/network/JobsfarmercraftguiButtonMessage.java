@@ -22,10 +22,10 @@ import palamod.procedures.JobsfarmercraftfertilitytotemProcedure;
 import palamod.procedures.JobsfarmercraftfarmerthroneProcedure;
 import palamod.procedures.JobsfarmercraftendiumchestplateProcedure;
 import palamod.procedures.JobsfarmercraftendiumbackpackProcedure;
+import palamod.procedures.JobsfarmercraftendiumaxeProcedure;
 import palamod.procedures.JobsfarmercraftcrusherProcedure;
 import palamod.procedures.JobsfarmercraftamethystbackpackProcedure;
 import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.AxebreakblockProcedure;
 
 import palamod.PalamodMod;
 
@@ -169,7 +169,7 @@ public record JobsfarmercraftguiButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 21) {
 
-			AxebreakblockProcedure.execute(world, x, y, z);
+			JobsfarmercraftendiumaxeProcedure.execute(entity);
 		}
 		if (buttonID == 22) {
 

@@ -3,8 +3,8 @@ package palamod.network;
 
 import palamod.world.inventory.JobsfarmercraftguiMenu;
 
-import palamod.procedures.GuijobsminercheckcraftProcedure;
-import palamod.procedures.CraftdoneminerProcedure;
+import palamod.procedures.GuijobsfarmcheckcraftProcedure;
+import palamod.procedures.CraftdonefarmerProcedure;
 
 import palamod.PalamodMod;
 
@@ -68,71 +68,79 @@ public record JobsfarmercraftguiSlotMessage(int slotID, int x, int y, int z, int
 			return;
 		if (slot == 0 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 0 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 1 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 1 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 2 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
+		}
+		if (slot == 2 && changeType == 1) {
+
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 3 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 3 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 4 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 4 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 5 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 5 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 6 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 6 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 7 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
+		}
+		if (slot == 7 && changeType == 1) {
+
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 8 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 8 && changeType == 1) {
 
-			GuijobsminercheckcraftProcedure.execute(world, entity);
+			GuijobsfarmcheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 9 && changeType == 1) {
 
-			CraftdoneminerProcedure.execute(world, entity);
+			CraftdonefarmerProcedure.execute(world, entity);
 		}
 	}
 

@@ -108,9 +108,6 @@
     "onDestroyedByPlayer": {
       "name": "Eggplant3drop"
     },
-    "onDestroyedByExplosion": {
-      "name": "Eggplant3drop"
-    },
     "onRightClicked": {
       "name": "Eggplant3shear"
     }

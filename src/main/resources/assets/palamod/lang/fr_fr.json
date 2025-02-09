@@ -391,7 +391,7 @@
   "block.palamod.elevator_cyan": "Ascenseur cyan",
   "block.palamod.typesettingbook": "Table d\u0027écriture",
   "item.palamod.paladium_axe": "Hache en paladium",
-  "gui.palamod.loadingcrash.label_if_the_loading_is_stuck_to_100": "If the loading is stuck to 100% relunch the game in superflat",
+  "gui.palamod.loadingcrash.label_if_the_loading_is_stuck_to_100": "Si le chargement est bloqué a 100% relancer le jeu en superflat",
   "painting.palamod.desertpaining_16.author": "Unknown",
   "gui.palamod.adminshopmobsfrspidereyes.button_sell": "Vendre",
   "gui.palamod.uploaderguipalahelp.label_uploader": "Uploader",

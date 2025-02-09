@@ -34,7 +34,7 @@ public class GetxpfarmerbreakblockProcedure {
 				}
 				bufferedReader.close();
 				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				lvl = main.get("lvl_miner").getAsDouble();
+				lvl = main.get("lvl_farmer").getAsDouble();
 				if (7 == ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip5 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip5) : -1)
 						&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WHEAT) {
 					output = 2;

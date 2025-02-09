@@ -131,6 +131,12 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 				super.setChanged();
 				slotChanged(2, 0, 0);
 			}
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(2, 1, 0);
+			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 184, 55) {
 			private final int slot = 3;
@@ -209,6 +215,12 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 			public void setChanged() {
 				super.setChanged();
 				slotChanged(7, 0, 0);
+			}
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(7, 1, 0);
 			}
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 220, 73) {

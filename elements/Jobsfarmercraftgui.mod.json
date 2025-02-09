@@ -247,10 +247,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 247,
           "y": 51,
@@ -272,10 +272,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 265,
           "y": 51,
@@ -297,7 +297,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 283,
           "y": 51,
@@ -319,10 +322,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 247,
           "y": 69,
@@ -344,10 +347,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 265,
           "y": 69,
@@ -369,10 +372,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 283,
           "y": 69,
@@ -394,10 +397,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 247,
           "y": 87,
@@ -419,7 +422,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
+          },
+          "onTakenFromSlot": {
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 265,
           "y": 87,
@@ -441,10 +447,10 @@
           },
           "dropItemsWhenNotBound": true,
           "onSlotChanged": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "onTakenFromSlot": {
-            "name": "Guijobsminercheckcraft"
+            "name": "Guijobsfarmcheckcraft"
           },
           "x": 283,
           "y": 87,
@@ -777,7 +783,7 @@
           "image": "endium_axe.png",
           "hoveredImage": "endium_axe_hover.png",
           "onClick": {
-            "name": "Axebreakblock"
+            "name": "Jobsfarmercraftendiumaxe"
           },
           "x": 131,
           "y": 82,
@@ -1234,7 +1240,7 @@
           },
           "dropItemsWhenNotBound": false,
           "onTakenFromSlot": {
-            "name": "Craftdoneminer"
+            "name": "Craftdonefarmer"
           },
           "x": 325,
           "y": 69,

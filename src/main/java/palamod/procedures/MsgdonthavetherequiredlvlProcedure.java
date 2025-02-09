@@ -19,7 +19,7 @@ public class MsgdonthavetherequiredlvlProcedure {
 		if (entity.hasPermissions(2)) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"tellraw @p [\"\",{\"text\":\"[ \",\"color\":\"dark_red\"},{\"text\":\"Palamod\",\"color\":\"gold\"},{\"text\":\" ]\",\"color\":\"dark_red\"},{\"text\":\" ->\",\"color\":\"green\"},{\"text\":\" [ \",\"color\":\"dark_blue\"},{\"text\":\"hint\",\"color\":\"aqua\"},{\"text\":\" ]\",\"color\":\"dark_blue\"},{\"text\":\" : \"},{\"text\":\"you seem to be an opertor on this server, \",\"color\":\"#FF5E00\"},{\"text\":\"change the gamerule \\\"Locked_use\\\" to allow everyone to use the items without retriction \",\"color\":\"#FF5E00\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/gamerule lockeduse false\"}},{\"text\":\" \"}]");
+						"tellraw @p [\"\",{\"text\":\"[ \",\"color\":\"dark_red\"},{\"text\":\"Palamod\",\"color\":\"gold\"},{\"text\":\" ]\",\"color\":\"dark_red\"},{\"text\":\" ->\",\"color\":\"green\"},{\"text\":\" [ \",\"color\":\"dark_blue\"},{\"text\":\"hint\",\"color\":\"aqua\"},{\"text\":\" ]\",\"color\":\"dark_blue\"},{\"text\":\" : \"},{\"text\":\"you seem to be an operator on this server, \",\"color\":\"#FF5E00\"},{\"text\":\"change the gamerule \\\"Locked_use\\\" to allow everyone to use the items without retriction \",\"color\":\"#FF5E00\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/gamerule lockeduse false\"}},{\"text\":\" \"}]");
 		}
 	}
 }

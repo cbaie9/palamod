@@ -108,9 +108,6 @@
     "onDestroyedByPlayer": {
       "name": "Chervil3drop"
     },
-    "onDestroyedByExplosion": {
-      "name": "Chervil3drop"
-    },
     "onRightClicked": {
       "name": "Chervil3shear"
     }
