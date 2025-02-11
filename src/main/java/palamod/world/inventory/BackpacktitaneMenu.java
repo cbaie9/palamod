@@ -1,6 +1,7 @@
 
 package palamod.world.inventory;
 
+import palamod.procedures.Lasecu2conbackpackguiProcedure;
 import palamod.procedures.BackpackwriteitemProcedure;
 
 import palamod.init.PalamodModMenus;
@@ -10,7 +11,10 @@ import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
@@ -30,6 +34,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+@EventBusSubscriber
 public class BackpacktitaneMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
@@ -353,5 +358,17 @@ public class BackpacktitaneMenu extends AbstractContainerMenu implements Supplie
 
 	public Map<Integer, Slot> get() {
 		return customSlots;
+	}
+
+	@SubscribeEvent
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		Player entity = event.getEntity();
+		if (entity.containerMenu instanceof BackpacktitaneMenu) {
+			Level world = entity.level();
+			double x = entity.getX();
+			double y = entity.getY();
+			double z = entity.getZ();
+			Lasecu2conbackpackguiProcedure.execute(entity);
+		}
 	}
 }

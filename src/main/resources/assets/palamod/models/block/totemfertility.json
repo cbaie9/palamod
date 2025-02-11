@@ -1,0 +1,10 @@
+{
+  "parent": "palamod:custom/totem_fetility",
+  "textures": {
+    "all": "palamod:block/totem",
+    "particle": "palamod:block/totem",
+    "2": "palamod:block/head",
+    "7": "palamod:block/wing"
+  },
+  "render_type": "solid"
+}

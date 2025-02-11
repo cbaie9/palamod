@@ -40738,6 +40738,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -40803,6 +40807,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -42988,6 +42996,185 @@
           }
         ]
       }
+    },
+    {
+      "name": "Yourestucknow",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yourestucknow",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/yourestucknow.json"
+        ]
+      }
+    },
+    {
+      "name": "Backpackdropdeathnolock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpackdropdeathnolock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/BackpackdropdeathnolockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dropitemcraft",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dropitemcraft",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/DropitemcraftProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Totemfertility",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemfertility",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/totemfertility.json",
+          "src/main/resources/assets/palamod/blockstates/totemfertility.json",
+          "src/main/java/palamod/block/TotemfertilityBlock.java",
+          "src/main/resources/assets/palamod/models/block/totemfertility.json",
+          "src/main/java/palamod/block/entity/TotemfertilityBlockEntity.java",
+          "src/main/resources/data/palamod/loot_table/blocks/totemfertility.json"
+        ]
+      }
+    },
+    {
+      "name": "Lasecu2conbackpackgui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lasecu_2conbackpackgui",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/Lasecu2conbackpackguiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Totemsetup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemsetup",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/TotemsetupProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Totemclickprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemclickprocess",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/TotemclickprocessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -43337,9 +43524,9 @@
     }
   ],
   "tag_elements": {
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Angelicwter",
-      "~CUSTOM:Fakewter"
+    "BLOCKS:forge:unbreakable": [
+      "Blocks.BEDROCK",
+      "CUSTOM:Stony"
     ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:Mixedendiumarmor.body",
@@ -43362,9 +43549,9 @@
       "~CUSTOM:TitaneArmor.body",
       "~CUSTOM:PaladiumArmor.body"
     ],
-    "BLOCKS:forge:unbreakable": [
-      "Blocks.BEDROCK",
-      "CUSTOM:Stony"
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Angelicwter",
+      "~CUSTOM:Fakewter"
     ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:Endiumtnt",
@@ -44550,6 +44737,7 @@
       "Blocks.DEEPSLATE_IRON_ORE"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:Totemfertility",
       "~CUSTOM:Typesettingmax",
       "~CUSTOM:Typesettingplate",
       "~CUSTOM:Typesettingbook",
@@ -44737,8 +44925,8 @@
       "gui.palamod.crushergui.button_placeholder_tt": "placeholder_tt",
       "entity.palamod.primedbigtnt": "Compact tnt",
       "gui.palamod.adminshopmobs_2leather.button_buy": "buy",
-      "block.palamod.slimepad": "Slime pad",
       "block.palamod.amethyst_chest": "Amethyst chest",
+      "block.palamod.slimepad": "Slime pad",
       "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
       "palamod.procedure.jobs_miner_err_nel": "Your not enough experimented in the miner level to use this command",
       "item.palamod.green_paladium_ingot": "Green Paladium ingot",
@@ -44801,6 +44989,7 @@
       "gui.palamod.palamachinepalahelpgui.button_menu": "menu",
       "block.palamod.judeecercis_log": "Judeecercis Log",
       "item.palamod.disc_anti_fuze.desc": "Fuze III - Anti Anti fuze ",
+      "block.palamod.totemfertility": "Totem of fertility",
       "gui.palamod.adminshoporepaladium.button_sell": "sell",
       "gui.palamod.adminshopmobs_2glowinksac.button_sell": "sell",
       "block.palamod.ostrya_wood_leaves": "Ostrya Leaves",
@@ -45092,6 +45281,7 @@
       "item.palamod.paladiumarmorcustom_6_boots": "Paladium Boots",
       "gui.palamod.adminshopmobsstring.number_buy": "number here",
       "gui.palamod.adminshoputilitiesdiampic.label_paladium": "Diamond pickaxe",
+      "advancements.yourestucknow.title": "You\u0027re stuck now",
       "gui.palamod.adminshoporeiron.label_iron": "Iron",
       "gui.palamod.adminshopblock_glowstone.label_sell_price_5": "Sell price : 5",
       "gui.palamod.adminshopmobsenderpearl.number_buy": "number here",
@@ -45938,6 +46128,7 @@
       "gui.palamod.adminshopblockoakwood.number_buy": "number here",
       "item.palamod.paladiumarmorcustom_2_boots": "Paladium Boots",
       "gui.palamod.adminshopmobswitherskull.button_sell": "sell",
+      "advancements.yourestucknow.descr": "Put a backpack in the backpakck",
       "gui.palamod.adminshoporetitane.button_sell": "sell",
       "gui.palamod.adminshopplantbrownmushroom.label_sell_price_120": "Sell price :  1",
       "gui.palamod.forgepalahelpgui.label_pour_les_transforms_en_minerais": "pour les transform�s en minerais pour les r�-utilis�s",
@@ -46629,8 +46820,8 @@
       "gui.palamod.crushergui.button_placeholder_tt": "placeholder_tt",
       "entity.palamod.primedbigtnt": "Magic tnt",
       "gui.palamod.adminshopmobs_2leather.button_buy": "Acheter",
-      "block.palamod.amethyst_chest": "Coffre en améthyste",
       "block.palamod.slimepad": "Slime padd",
+      "block.palamod.amethyst_chest": "Coffre en améthyste",
       "gui.palamod.specialmoneypanel.label_specific_player": "Specific player",
       "palamod.procedure.jobs_miner_err_nel": "Vous n\u0027êtes pas assez experimenté dans le métier de mineur pour utiliser cette commande",
       "item.palamod.green_paladium_ingot": "Lingot en paladium vert",
@@ -46673,8 +46864,8 @@
       "gui.palamod.adminpanelmenu.label_admin_panel": "Panel des admins",
       "item.palamod.titanefastsword": "Épée rapide en titane",
       "advancements.avancementkaboom.title": "Ka-boom",
-      "block.palamod.black_lucky_block": "Bloc chanceux noir",
       "item.palamod.creative_trixium_sword": "Épée creative en trixium",
+      "block.palamod.black_lucky_block": "Bloc chanceux noir",
       "item_group.palamod.palamod": "Palamod Projet Renew",
       "gui.palamod.orelayerfat.label_amethyst_64_80": "Amethyst : -64 --) 80",
       "gui.palamod.adminshoputilitiesemerald.label_paladium": "Redstone",
@@ -46693,6 +46884,7 @@
       "gui.palamod.palamachinepalahelpgui.button_menu": "Menu",
       "block.palamod.judeecercis_log": "Bùche de judeecercis",
       "item.palamod.disc_anti_fuze.desc": "Fuze III - Anti Anti fuze ",
+      "block.palamod.totemfertility": "Totem of fertility",
       "gui.palamod.adminshopmobs_2glowinksac.button_sell": "Vendre",
       "gui.palamod.adminshoporepaladium.button_sell": "Vendre",
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
@@ -46988,6 +47180,7 @@
       "item.palamod.paladiumarmorcustom_6_boots": "Paladium Boots",
       "gui.palamod.adminshopmobsstring.number_buy": "Un nombre ici",
       "gui.palamod.adminshoputilitiesdiampic.label_paladium": "Emeraude",
+      "advancements.yourestucknow.title": "You\u0027re stuck now",
       "gui.palamod.adminshoporeiron.label_iron": "Fer",
       "gui.palamod.adminshopblock_glowstone.label_sell_price_5": "Prix de vente : 5",
       "gui.palamod.adminshopmobsenderpearl.number_buy": "Un nombre ici",
@@ -47839,6 +48032,7 @@
       "gui.palamod.adminshopblockoakwood.number_buy": "Un nombre ici",
       "item.palamod.paladiumarmorcustom_2_boots": "Bottes en Paladium Modifié",
       "gui.palamod.adminshopmobswitherskull.button_sell": "Vendre",
+      "advancements.yourestucknow.descr": "Put a backpack in the backpakck",
       "gui.palamod.adminshoporetitane.button_sell": "Vendre",
       "gui.palamod.adminshopplantbrownmushroom.label_sell_price_120": "Prix de vente :  1",
       "gui.palamod.forgepalahelpgui.label_pour_les_transforms_en_minerais": "pour les transformés en minerais pour les r�-utilis�s",

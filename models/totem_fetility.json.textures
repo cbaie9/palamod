@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "2": "head",
+        "7": "wing"
+      },
+      "name": "default"
+    }
+  }
+}

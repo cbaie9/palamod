@@ -85,7 +85,7 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				ClickerprintcoinsProcedure.execute(entity), 12, 44, -1, false);
+				ClickerprintcoinsProcedure.execute(world, entity), 12, 44, -1, false);
 	}
 
 	@Override

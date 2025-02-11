@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -97,7 +98,9 @@ public class OpenpalamodgameProcedure {
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
-		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/clicker/"), File.separator + (entity.getUUID().toString() + ".json"));
+		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+				File.separator + "clicker_info.json");
 		if (!money.exists()) {
 			try {
 				money.getParentFile().mkdirs();

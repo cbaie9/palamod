@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.world.inventory.InventorybackupMenu;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -51,11 +53,21 @@ public class BackpackloaditemProcedure {
 		com.google.gson.JsonObject main_backpack_titane = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_backpack_paladium = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_backpack_endium = new com.google.gson.JsonObject();
-		backpack = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_1.json"));
-		backpack_titane = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_2.json"));
-		backpack_paladium = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_3.json"));
-		backpack_endium = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_4.json"));
-		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_backup.json"));
+		backpack = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_1.json");
+		backpack_titane = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_2.json");
+		backpack_paladium = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_3.json");
+		backpack_endium = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_4.json");
+		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backup.json");
 		if (backpack.exists()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:backpack")))) {
 				i2 = GetslotbackpackProcedure.execute(entity);
@@ -74,7 +86,7 @@ public class BackpackloaditemProcedure {
 							for (int index0 = 0; index0 < 9; index0++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-									_setstack.setCount((int) main.get(("backpack_num_" + i)).getAsDouble());
+									_setstack.setCount((int) (64 < main.get(("backpack_num_" + i)).getAsDouble() ? 64 : main.get(("backpack_num_" + i)).getAsDouble()));
 									((Slot) _slots.get((int) i)).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}
@@ -99,7 +111,7 @@ public class BackpackloaditemProcedure {
 							for (int index1 = 0; index1 < 18; index1++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_titane.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-									_setstack.setCount((int) main_backpack_titane.get(("backpack_num_" + i)).getAsDouble());
+									_setstack.setCount((int) (64 < main_backpack_titane.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_titane.get(("backpack_num_" + i)).getAsDouble()));
 									((Slot) _slots.get((int) i)).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}
@@ -124,7 +136,7 @@ public class BackpackloaditemProcedure {
 							for (int index2 = 0; index2 < 27; index2++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_paladium.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-									_setstack.setCount((int) main_backpack_paladium.get(("backpack_num_" + i)).getAsDouble());
+									_setstack.setCount((int) (64 < main_backpack_paladium.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_paladium.get(("backpack_num_" + i)).getAsDouble()));
 									((Slot) _slots.get((int) i)).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}
@@ -149,7 +161,7 @@ public class BackpackloaditemProcedure {
 							for (int index3 = 0; index3 < 28; index3++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_endium.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-									_setstack.setCount((int) main_backpack_endium.get(("backpack_num_" + i)).getAsDouble());
+									_setstack.setCount((int) (64 < main_backpack_endium.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_endium.get(("backpack_num_" + i)).getAsDouble()));
 									((Slot) _slots.get((int) i)).set(_setstack);
 									_player.containerMenu.broadcastChanges();
 								}

@@ -1,0 +1,250 @@
+{
+  "_fv": 73,
+  "_type": "block",
+  "definition": {
+    "texture": "totem",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "totem_fetility:default",
+    "rotationMode": 0,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "totem",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "SOLID",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 2.0,
+        "my": 0.0,
+        "mz": 2.0,
+        "Mx": 14.0,
+        "My": 1.0,
+        "Mz": 14.0,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 12.0,
+        "mz": 4.0,
+        "Mx": 12.0,
+        "My": 21.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 12.0,
+        "my": 13.0,
+        "mz": 7.0,
+        "Mx": 14.0,
+        "My": 20.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 2.0,
+        "my": 13.0,
+        "mz": 7.0,
+        "Mx": 4.0,
+        "My": 20.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 14.0,
+        "my": 15.0,
+        "mz": 7.0,
+        "Mx": 16.0,
+        "My": 21.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 15.0,
+        "mz": 7.0,
+        "Mx": 2.0,
+        "My": 21.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 16.0,
+        "my": 18.0,
+        "mz": 7.0,
+        "Mx": 18.0,
+        "My": 22.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": -2.0,
+        "my": 18.0,
+        "mz": 7.0,
+        "Mx": 0.0,
+        "My": 22.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 18.0,
+        "my": 20.0,
+        "mz": 7.0,
+        "Mx": 19.0,
+        "My": 23.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": -3.0,
+        "my": 20.0,
+        "mz": 7.0,
+        "Mx": -2.0,
+        "My": 23.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 1.0,
+        "mz": 4.0,
+        "Mx": 12.0,
+        "My": 10.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 5.0,
+        "my": 10.0,
+        "mz": 5.0,
+        "Mx": 11.0,
+        "My": 12.0,
+        "Mz": 11.0,
+        "subtract": false
+      },
+      {
+        "mx": 5.0,
+        "my": 21.0,
+        "mz": 5.0,
+        "Mx": 11.0,
+        "My": 23.0,
+        "Mz": 11.0,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 23.0,
+        "mz": 4.0,
+        "Mx": 12.0,
+        "My": 32.0,
+        "Mz": 12.0,
+        "subtract": false
+      }
+    ],
+    "customProperties": [],
+    "name": "Totem of fertility",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 1.0,
+    "resistance": 10.0,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "creativeTabs": [],
+    "destroyTool": "axe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "WOOD"
+    },
+    "tickRate": 0,
+    "tickRandomly": true,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "vanillaToolTier": "STONE",
+    "isBonemealable": false,
+    "hasInventory": true,
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "generateFeature": false,
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

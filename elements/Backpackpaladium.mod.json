@@ -1098,6 +1098,9 @@
         }
       }
     ],
+    "onTick": {
+      "name": "Lasecu2conbackpackgui"
+    },
     "onClosed": {
       "name": "Backpackwriteitem"
     },

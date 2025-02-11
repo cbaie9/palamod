@@ -68,7 +68,7 @@ public record ClickerButtonMessage(int buttonID, int x, int y, int z) implements
 		}
 		if (buttonID == 8) {
 
-			AddclickcoinProcedure.execute(entity);
+			AddclickcoinProcedure.execute(world, entity);
 		}
 	}
 

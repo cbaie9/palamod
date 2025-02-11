@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.world.inventory.InventorybackupMenu;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -26,6 +27,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -64,16 +66,26 @@ public class BackpackdropdeathProcedure {
 		com.google.gson.JsonObject main_backpack3 = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_backpack4 = new com.google.gson.JsonObject();
 		if (!endconquered) {
-			backpack = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_1.json"));
-			backpack_titane = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_2.json"));
-			backpack_paladium = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_3.json"));
-			backpack_endium = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_4.json"));
-			backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_backup.json"));
+			backpack = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+					File.separator + "backpack_1.json");
+			backpack_titane = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+					File.separator + "backpack_2.json");
+			backpack_paladium = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+					File.separator + "backpack_3.json");
+			backpack_endium = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+					File.separator + "backpack_4.json");
+			backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+					File.separator + "backup.json");
 			if (backpack.exists()) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:backpack")))) {
-					i2 = GetslotbackpackProcedure.execute(entity);
+					i2 = 82;
 					i = 0;
-					if (i2 >= 9) {
+					if (i2 >= 0) {
 						{
 							try {
 								BufferedReader bufferedReader = new BufferedReader(new FileReader(backpack));
@@ -100,7 +112,7 @@ public class BackpackdropdeathProcedure {
 							}
 						}
 					}
-					if (i2 >= 27) {
+					if (i2 >= 9) {
 						{
 							try {
 								BufferedReader bufferedReader = new BufferedReader(new FileReader(backpack_titane));
@@ -127,7 +139,7 @@ public class BackpackdropdeathProcedure {
 							}
 						}
 					}
-					if (i2 >= 54) {
+					if (i2 >= 27) {
 						{
 							try {
 								BufferedReader bufferedReader = new BufferedReader(new FileReader(backpack_paladium));
@@ -154,7 +166,7 @@ public class BackpackdropdeathProcedure {
 							}
 						}
 					}
-					if (i2 >= 81) {
+					if (i2 >= 54) {
 						{
 							try {
 								BufferedReader bufferedReader = new BufferedReader(new FileReader(backpack_endium));
@@ -180,6 +192,22 @@ public class BackpackdropdeathProcedure {
 								e.printStackTrace();
 							}
 						}
+					}
+					for (int index8 = 0; index8 < 81; index8++) {
+						if (i >= 0 && i <= 8) {
+							main_backpaclk1.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+							main_backpaclk1.addProperty(("backpack_num_" + i), 0);
+						} else if (i >= 9 && i <= 26) {
+							main_backpack2.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+							main_backpack2.addProperty(("backpack_num_" + i), 0);
+						} else if (i >= 27 && i <= 54) {
+							main_backpack3.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+							main_backpack3.addProperty(("backpack_num_" + i), 0);
+						} else if (i >= 55 && i <= 80) {
+							main_backpack4.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+							main_backpack4.addProperty(("backpack_num_" + i), 0);
+						}
+						i = i + 1;
 					}
 					{
 						com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
@@ -275,19 +303,19 @@ public class BackpackdropdeathProcedure {
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
-				for (int index8 = 0; index8 < 81; index8++) {
+				for (int index9 = 0; index9 < 81; index9++) {
 					if (i >= 0 && i <= 8) {
 						main_backpaclk1.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
 						main_backpaclk1.addProperty(("backpack_num_" + i), 0);
 					} else if (i >= 9 && i <= 26) {
-						main_backpaclk1.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-						main_backpaclk1.addProperty(("backpack_num_" + i), 0);
+						main_backpack2.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+						main_backpack2.addProperty(("backpack_num_" + i), 0);
 					} else if (i >= 27 && i <= 54) {
-						main_backpaclk1.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-						main_backpaclk1.addProperty(("backpack_num_" + i), 0);
+						main_backpack3.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+						main_backpack3.addProperty(("backpack_num_" + i), 0);
 					} else if (i >= 55 && i <= 80) {
-						main_backpaclk1.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-						main_backpaclk1.addProperty(("backpack_num_" + i), 0);
+						main_backpack4.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
+						main_backpack4.addProperty(("backpack_num_" + i), 0);
 					}
 					i = i + 1;
 				}
@@ -305,7 +333,7 @@ public class BackpackdropdeathProcedure {
 					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 					try {
 						FileWriter fileWriter = new FileWriter(backpack_titane);
-						fileWriter.write(mainGSONBuilderVariable.toJson(main_backpaclk1));
+						fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack2));
 						fileWriter.close();
 					} catch (IOException exception) {
 						exception.printStackTrace();
@@ -315,7 +343,7 @@ public class BackpackdropdeathProcedure {
 					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 					try {
 						FileWriter fileWriter = new FileWriter(backpack_paladium);
-						fileWriter.write(mainGSONBuilderVariable.toJson(main_backpaclk1));
+						fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack3));
 						fileWriter.close();
 					} catch (IOException exception) {
 						exception.printStackTrace();
@@ -325,7 +353,7 @@ public class BackpackdropdeathProcedure {
 					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 					try {
 						FileWriter fileWriter = new FileWriter(backpack_endium);
-						fileWriter.write(mainGSONBuilderVariable.toJson(main_backpaclk1));
+						fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack4));
 						fileWriter.close();
 					} catch (IOException exception) {
 						exception.printStackTrace();

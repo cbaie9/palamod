@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:totemfertility",
     "palamod:typesettingmax",
     "palamod:typesettingplate",
     "palamod:typesettingbook",

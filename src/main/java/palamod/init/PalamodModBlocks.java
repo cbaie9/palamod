@@ -21,6 +21,7 @@ import palamod.block.TrixiumoredeepslateBlock;
 import palamod.block.TrixiumoreBlock;
 import palamod.block.TrixiumnbtblockBlock;
 import palamod.block.TrixiumblockBlock;
+import palamod.block.TotemfertilityBlock;
 import palamod.block.TitanestairsBlock;
 import palamod.block.TitanespikeBlock;
 import palamod.block.TitaneslabBlock;
@@ -446,6 +447,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SLIMEPAD_BLUE = REGISTRY.register("slimepad_blue", BlueslimepadBlock::new);
 	public static final DeferredBlock<Block> SLIMEPAD_ORANGE = REGISTRY.register("slimepad_orange", OrangeslimepadBlock::new);
 	public static final DeferredBlock<Block> SLIMEPAD_PURPLE = REGISTRY.register("slimepad_purple", PurpleslimepadBlock::new);
+	public static final DeferredBlock<Block> TOTEMFERTILITY = REGISTRY.register("totemfertility", TotemfertilityBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

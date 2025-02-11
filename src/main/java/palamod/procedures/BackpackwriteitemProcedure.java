@@ -1,26 +1,19 @@
 package palamod.procedures;
 
-import palamod.world.inventory.InventorybackupMenu;
-
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -28,8 +21,6 @@ import java.util.Map;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
-
-import io.netty.buffer.Unpooled;
 
 public class BackpackwriteitemProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -48,11 +39,21 @@ public class BackpackwriteitemProcedure {
 		com.google.gson.JsonObject main_backpack_titane = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_backpack_paladium = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_backpack_endium = new com.google.gson.JsonObject();
-		backpack = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_1.json"));
-		backpack_titane = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_2.json"));
-		backpack_paladium = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_3.json"));
-		backpack_endium = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_4.json"));
-		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_backup.json"));
+		backpack = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_1.json");
+		backpack_titane = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_2.json");
+		backpack_paladium = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_3.json");
+		backpack_endium = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backpack_4.json");
+		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backup.json");
 		if (backpack.exists()) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:backpack")))) {
 				i2 = GetslotbackpackProcedure.execute(entity);
@@ -193,27 +194,7 @@ public class BackpackwriteitemProcedure {
 					}
 				}
 			} else {
-				if (entity instanceof Player _player)
-					_player.closeContainer();
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = BlockPos.containing(x, y, z);
-					_ent.openMenu(new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("Inventorybackup");
-						}
-
-						@Override
-						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-							return false;
-						}
-
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new InventorybackupMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
+				BackpackdropdeathnolockProcedure.execute(world, x, y, z, entity);
 			}
 		} else {
 			try {
@@ -297,6 +278,16 @@ public class BackpackwriteitemProcedure {
 				try {
 					FileWriter fileWriter = new FileWriter(backpack_endium);
 					fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack_endium));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
+			{
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(backpack_backup);
+					fileWriter.write(mainGSONBuilderVariable.toJson(main_backup));
 					fileWriter.close();
 				} catch (IOException exception) {
 					exception.printStackTrace();

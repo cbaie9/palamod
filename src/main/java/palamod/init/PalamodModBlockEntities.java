@@ -10,6 +10,7 @@ import palamod.block.entity.TypesettingplateBlockEntity;
 import palamod.block.entity.TypesettingmaxBlockEntity;
 import palamod.block.entity.TypesettingbookBlockEntity;
 import palamod.block.entity.TrixiumnbtblockBlockEntity;
+import palamod.block.entity.TotemfertilityBlockEntity;
 import palamod.block.entity.Titanechestv2BlockEntity;
 import palamod.block.entity.TitanechestBlockEntity;
 import palamod.block.entity.Tcv2BlockEntity;
@@ -95,6 +96,7 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TYPESETTINGMAX = register("typesettingmax", PalamodModBlocks.TYPESETTINGMAX, TypesettingmaxBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> DRAWBRIDGE = register("drawbridge", PalamodModBlocks.DRAWBRIDGE, DrawbridgeBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> EXCTRACTOR = register("exctractor", PalamodModBlocks.EXCTRACTOR, ExctractorBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TOTEMFERTILITY = register("totemfertility", PalamodModBlocks.TOTEMFERTILITY, TotemfertilityBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -141,5 +143,6 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TYPESETTINGMAX.get(), (blockEntity, side) -> ((TypesettingmaxBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DRAWBRIDGE.get(), (blockEntity, side) -> ((DrawbridgeBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXCTRACTOR.get(), (blockEntity, side) -> ((ExctractorBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEMFERTILITY.get(), (blockEntity, side) -> ((TotemfertilityBlockEntity) blockEntity).getItemHandler());
 	}
 }

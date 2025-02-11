@@ -1,0 +1,24 @@
+{
+  "_fv": 73,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "You're stuck now",
+    "achievementDescription": "Put a backpack in the backpakck",
+    "achievementIcon": {
+      "value": "CUSTOM:Amethystbackpack"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": true,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardXP": 100,
+    "achievementType": "challenge",
+    "parent": {
+      "value": "CUSTOM:Palamodavancement"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

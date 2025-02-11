@@ -8,6 +8,7 @@ import palamod.world.inventory.BackpackamethystguiMenu;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -23,6 +24,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -45,11 +47,16 @@ public class OpenbackpackProcedure {
 		double ifull_backup = 0;
 		double checksum_now = 0;
 		double lvl = 0;
+		boolean is_lunching = false;
 		File backpack_backup = new File("");
 		File backpack = new File("");
 		File jobs = new File("");
-		boolean is_lunching = false;
-		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/backpack/"), File.separator + (entity.getUUID().toString() + "_backup.json"));
+		File backpack_titane = new File("");
+		File backpack_endium = new File("");
+		File backpack_paladium = new File("");
+		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				File.separator + "backup.json");
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (jobs.exists()) {
 			{
