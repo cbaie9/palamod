@@ -32646,40 +32646,6 @@
       }
     },
     {
-      "name": "Fertilizeddirtprocess",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fertilizeddirtprocess",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/FertilizeddirtprocessProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Fertilizedbmplant",
       "type": "procedure",
       "compiles": true,
@@ -43187,6 +43153,70 @@
           "src/main/java/palamod/procedures/TotemrandomprocessProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Totemdestroy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemdestroy",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/TotemdestroyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Totemdestroyplayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemdestroyplayer",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/TotemdestroyplayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"

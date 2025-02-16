@@ -243,6 +243,12 @@
     "onTickUpdate": {
       "name": "Totemrandomprocess"
     },
+    "onDestroyedByPlayer": {
+      "name": "Totemdestroyplayer"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Totemdestroy"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
