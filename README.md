@@ -7,8 +7,10 @@
 
 So for fun, I recreate it with his most fun features
 ### **Useful link** ( Very useful imo )
-- [Site du mod](https://fufubs1.github.io/palamod) 💻
+- [Site du mod](https://fufubs1.github.io/palamod) 💻 (  Work in progress )
 - [Discord](https://discord.gg/dVvNDrQENA) ⏫
+- [Modrinth](https://modrinth.com/mod/palamod-renew)
+- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/palamod-renew)
 
 ![1805b2171559094bee21acd2b6914875274e1c4f](https://github.com/cbaie9/palamod/assets/75169332/9b3ddeca-8f5c-4b86-b7a4-8d7c17474830)
 
