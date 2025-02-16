@@ -36,36 +36,62 @@ public class TotemclickprocessProcedure {
 				return -1;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")) {
-			removeitem = (64 - (new Object() {
+			removeitem = 64 - (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "totem_stock"))) - MaxItem;
-			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount((int) removeitem);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-				if (_entity instanceof Player _player)
-					_player.getInventory().setChanged();
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("totem_stock", (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "totem_stock") + MaxItem));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}.getValue(world, BlockPos.containing(x, y, z), "totem_stock"));
+			if (MaxItem > removeitem) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+					_setstack.setCount((int) removeitem);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("totem_stock", (new Object() {
+							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock") + removeitem));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			} else {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+					_setstack.setCount((int) removeitem);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("totem_stock", (new Object() {
+							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock") + MaxItem));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
 			}
 		} else if (entity.isShiftKeyDown()) {
 			if (entity instanceof Player _player) {
@@ -99,7 +125,7 @@ public class TotemclickprocessProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")) + "/64\",\"color\":\"green\"},{\"text\":\"\\n \"}]"));
+						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")) + "/64\",\"color\":\"green\"},{\"text\":\"\"}]"));
 		}
 	}
 }

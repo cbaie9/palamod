@@ -1,11 +1,16 @@
 
 package palamod.block;
 
+import palamod.procedures.TotemsetupProcedure;
+import palamod.procedures.TotemrandomprocessProcedure;
+import palamod.procedures.TotemclickprocessProcedure;
+
 import palamod.block.entity.TotemfertilityBlockEntity;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -16,8 +21,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class TotemfertilityBlock extends Block implements EntityBlock {
@@ -44,6 +54,32 @@ public class TotemfertilityBlock extends Block implements EntityBlock {
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(12, 13, 7, 14, 20, 9), box(2, 13, 7, 4, 20, 9), box(14, 15, 7, 16, 21, 9), box(0, 15, 7, 2, 21, 9), box(16, 18, 7, 18, 22, 9), box(-2, 18, 7, 0, 22, 9),
 				box(18, 20, 7, 19, 23, 9), box(-3, 20, 7, -2, 23, 9), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11), box(4, 23, 4, 12, 32, 12));
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		TotemsetupProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void randomTick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.randomTick(blockstate, world, pos, random);
+		TotemrandomprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
+		super.useWithoutItem(blockstate, world, pos, entity, hit);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		double hitX = hit.getLocation().x;
+		double hitY = hit.getLocation().y;
+		double hitZ = hit.getLocation().z;
+		Direction direction = hit.getDirection();
+		TotemclickprocessProcedure.execute(world, x, y, z, entity);
+		return InteractionResult.SUCCESS;
 	}
 
 	@Override

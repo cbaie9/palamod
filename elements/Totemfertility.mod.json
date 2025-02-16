@@ -234,6 +234,15 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "Totemclickprocess"
+    },
+    "onBlockAdded": {
+      "name": "Totemsetup"
+    },
+    "onTickUpdate": {
+      "name": "Totemrandomprocess"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
