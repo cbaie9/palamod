@@ -269,7 +269,7 @@ public class FertilizedbmplantProcedure {
 		}
 		if (apply) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.BUBBLE_POP, x, (y + 1.6), z, 5, 3, 3, 3, 1);
+				_level.sendParticles(ParticleTypes.COMPOSTER, x, (y + 1.6), z, 5, 3, 3, 3, 1);
 		}
 		world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 13);
 	}

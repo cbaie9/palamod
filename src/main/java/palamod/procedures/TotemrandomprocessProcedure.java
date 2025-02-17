@@ -50,7 +50,7 @@ public class TotemrandomprocessProcedure {
 									}
 								}
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles(ParticleTypes.BUBBLE_POP, x + xi, (y + i + 1.6), z + zi, 5, 3, 3, 3, 1);
+									_level.sendParticles(ParticleTypes.COMPOSTER, x + xi, (y + i + 1.6), z + zi, 5, 3, 3, 3, 1);
 								apply = true;
 							}
 						}

@@ -118,7 +118,7 @@ public class BackpackdropdeathnolockProcedure {
 						}
 						bufferedReader.close();
 						main_backpack3 = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						for (int index4 = 0; index4 < 27; index4++) {
+						for (int index4 = 0; index4 < 28; index4++) {
 							for (int index5 = 0; index5 < (int) main_backpack3.get(("backpack_num_" + i)).getAsDouble(); index5++) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z,
@@ -145,7 +145,7 @@ public class BackpackdropdeathnolockProcedure {
 						}
 						bufferedReader.close();
 						main_backpack4 = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						for (int index6 = 0; index6 < 28; index6++) {
+						for (int index6 = 0; index6 < 27; index6++) {
 							for (int index7 = 0; index7 < (int) main_backpack4.get(("backpack_num_" + i)).getAsDouble(); index7++) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z,

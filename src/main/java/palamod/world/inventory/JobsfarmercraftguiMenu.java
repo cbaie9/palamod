@@ -2,6 +2,7 @@
 package palamod.world.inventory;
 
 import palamod.procedures.JobscraftsetupProcedure;
+import palamod.procedures.DropitemcraftProcedure;
 
 import palamod.network.JobsfarmercraftguiSlotMessage;
 
@@ -371,6 +372,7 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		DropitemcraftProcedure.execute(entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

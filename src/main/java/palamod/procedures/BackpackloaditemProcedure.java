@@ -5,7 +5,6 @@ import palamod.world.inventory.InventorybackupMenu;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -28,7 +27,6 @@ import java.util.function.Supplier;
 import java.util.Map;
 
 import java.io.IOException;
-import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
@@ -196,93 +194,7 @@ public class BackpackloaditemProcedure {
 				}
 			}
 		} else {
-			try {
-				backpack.getParentFile().mkdirs();
-				backpack.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			try {
-				backpack_titane.getParentFile().mkdirs();
-				backpack_titane.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			try {
-				backpack_paladium.getParentFile().mkdirs();
-				backpack_paladium.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			try {
-				backpack_endium.getParentFile().mkdirs();
-				backpack_endium.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			try {
-				backpack_backup.getParentFile().mkdirs();
-				backpack_backup.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			for (int index4 = 0; index4 < 81; index4++) {
-				if (i >= 0 && i <= 8) {
-					main.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-					main.addProperty(("backpack_num_" + i), 0);
-				} else if (i >= 9 && i <= 26) {
-					main_backpack_titane.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-					main_backpack_titane.addProperty(("backpack_num_" + i), 0);
-				} else if (i >= 27 && i <= 54) {
-					main_backpack_paladium.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-					main_backpack_paladium.addProperty(("backpack_num_" + i), 0);
-				} else if (i >= 55 && i <= 80) {
-					main_backpack_endium.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
-					main_backpack_endium.addProperty(("backpack_num_" + i), 0);
-				}
-				i = i + 1;
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(backpack);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(backpack_titane);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack_titane));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(backpack_paladium);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack_paladium));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(backpack_endium);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main_backpack_endium));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-			BackpackwriteitemProcedure.execute(world, x, y, z, entity);
+			BackpackcreatefileProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

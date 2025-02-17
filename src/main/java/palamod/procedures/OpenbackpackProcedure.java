@@ -8,6 +8,8 @@ import palamod.world.inventory.BackpackamethystguiMenu;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
@@ -42,18 +44,18 @@ public class OpenbackpackProcedure {
 			return;
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_jobs = new com.google.gson.JsonObject();
-		double i2 = 0;
-		double i = 0;
-		double ifull_backup = 0;
-		double checksum_now = 0;
-		double lvl = 0;
-		boolean is_lunching = false;
 		File backpack_backup = new File("");
 		File backpack = new File("");
 		File jobs = new File("");
 		File backpack_titane = new File("");
 		File backpack_endium = new File("");
 		File backpack_paladium = new File("");
+		boolean is_lunching = false;
+		double i2 = 0;
+		double i = 0;
+		double ifull_backup = 0;
+		double checksum_now = 0;
+		double lvl = 0;
 		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
 				File.separator + "backup.json");
@@ -196,12 +198,23 @@ public class OpenbackpackProcedure {
 						}
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						ifull_backup = main.get("backpack_checksum").getAsDouble();
+						if (1 == main.get("backpack_asOpened").getAsDouble()) {
+							i2 = 9;
+							ifull_backup = main.get("backpack_backup1").getAsDouble();
+						} else if (2 == main.get("backpack_asOpened").getAsDouble()) {
+							i2 = 27;
+							ifull_backup = main.get("backpack_backup2").getAsDouble() + main.get("backpack_backup1").getAsDouble();
+						} else if (3 == main.get("backpack_asOpened").getAsDouble()) {
+							i2 = 55;
+							ifull_backup = main.get("backpack_backup2").getAsDouble() + main.get("backpack_backup1").getAsDouble() + main.get("backpack_backup3").getAsDouble();
+						} else if (4 == main.get("backpack_asOpened").getAsDouble()) {
+							i2 = 82;
+							ifull_backup = main.get("backpack_backup2").getAsDouble() + main.get("backpack_backup1").getAsDouble() + main.get("backpack_backup3").getAsDouble() + main.get("backpack_backup4").getAsDouble();
+						}
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
 				}
-				i2 = GetslotbackpackProcedure.execute(entity);
 				for (int index0 = 0; index0 < (int) i2; index0++) {
 					checksum_now = checksum_now + new Object() {
 						public int getAmount(int sltid) {
@@ -217,6 +230,7 @@ public class OpenbackpackProcedure {
 				}
 				if (checksum_now != ifull_backup) {
 					BackpackloaditemProcedure.execute(world, x, y, z, entity);
+					PalamodMod.LOGGER.warn("Backpack didn't load correctly reloading");
 				}
 			}
 		}
