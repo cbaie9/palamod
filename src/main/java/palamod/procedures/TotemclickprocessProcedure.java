@@ -133,18 +133,6 @@ public class TotemclickprocessProcedure {
 								return -1;
 							}
 						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")) + "/64\",\"color\":\"green\"},{\"text\":\"\"}]"));
-			removeitem = 64 - (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "totem_stock"));
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						("tellraw @p [\"\",{\"text\":\"[ \",\"color\":\"dark_red\"},{\"text\":\"REMOVE\",\"color\":\"gold\"},{\"text\":\" ]\",\"color\":\"dark_red\"},{\"text\":\" : " + "" + removeitem
-								+ "/64\",\"color\":\"green\"},{\"text\":\"\"}]"));
 		}
 	}
 }
