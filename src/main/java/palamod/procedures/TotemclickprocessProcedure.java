@@ -78,7 +78,7 @@ public class TotemclickprocessProcedure {
 			} else {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-					_setstack.setCount((int) MaxItem);
+					_setstack.setCount(0);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
