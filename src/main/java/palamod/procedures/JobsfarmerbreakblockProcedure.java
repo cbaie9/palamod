@@ -2,17 +2,12 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import palamod.PalamodMod;
-
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.component.CustomData;
@@ -22,7 +17,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
@@ -30,8 +24,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
@@ -122,29 +114,6 @@ public class JobsfarmerbreakblockProcedure {
 																	.getString())),
 									true);
 					}
-					PalamodMod.LOGGER.debug("Debug : checking farmer lvl");
-					if (main.get("next_level_farmer").getAsDouble() <= main.get("xp_farmer").getAsDouble()) {
-						main.addProperty("lvl_farmer", (1 + main.get("lvl_farmer").getAsDouble()));
-						main.addProperty("xp_farmer", (main.get("xp_farmer").getAsDouble() - main.get("next_level_farmer").getAsDouble()));
-						main.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(entity));
-						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-							_setstack.setCount((int) (1 + Math.floor(main.get("lvl_farmer").getAsDouble() / 2)));
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-						}
-						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
-							_setstack.setCount((int) main.get("lvl_alchi").getAsDouble());
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-						}
-						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-									("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" " + "" + Component.translatable("palamod.procedure.jobswinlvl_miner1").getString() + " \\n "
-											+ Component.translatable("palamod.procedure.jobswinlvl_miner2").getString() + " " + Math.round(main.get("lvl_farmer").getAsDouble()) + ","
-											+ Component.translatable("palamod.procedure.jobswinlvl_miner3").getString() + " " + Math.round(1000) + "$\",\"color\":\"gold\"}]"));
-						money_getadd = true;
-						money_add = 2 * (main.get("lvl_farmer").getAsDouble() + 1);
-					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -159,33 +128,7 @@ public class JobsfarmerbreakblockProcedure {
 					exception.printStackTrace();
 				}
 			}
-			if (money_getadd) {
-				{
-					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
-						StringBuilder jsonstringbuilder = new StringBuilder();
-						String line;
-						while ((line = bufferedReader.readLine()) != null) {
-							jsonstringbuilder.append(line);
-						}
-						bufferedReader.close();
-						money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						money_main.addProperty("money", (money_main.get("money").getAsDouble() + money_add));
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				{
-					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-					try {
-						FileWriter fileWriter = new FileWriter(money);
-						fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
-						fileWriter.close();
-					} catch (IOException exception) {
-						exception.printStackTrace();
-					}
-				}
-			}
+			ChecklvlfarmerProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }
