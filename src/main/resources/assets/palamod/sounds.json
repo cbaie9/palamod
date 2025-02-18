@@ -52,5 +52,50 @@
         "stream": true
       }
     ]
+  },
+  "level_up": {
+    "subtitle": "subtitles.level_up",
+    "sounds": [
+      {
+        "name": "palamod:levelup",
+        "stream": false
+      }
+    ]
+  },
+  "quest_complete": {
+    "subtitle": "subtitles.quest_complete",
+    "sounds": [
+      {
+        "name": "palamod:quest_complete",
+        "stream": false
+      }
+    ]
+  },
+  "totem_break1": {
+    "subtitle": "subtitles.totem_break1",
+    "sounds": [
+      {
+        "name": "palamod:totem_break1",
+        "stream": false
+      }
+    ]
+  },
+  "totem_break2": {
+    "subtitle": "subtitles.totem_break2",
+    "sounds": [
+      {
+        "name": "palamod:totem_break2",
+        "stream": false
+      }
+    ]
+  },
+  "totem_break3": {
+    "subtitle": "subtitles.totem_break3",
+    "sounds": [
+      {
+        "name": "palamod:totem_rare_break",
+        "stream": false
+      }
+    ]
   }
 }

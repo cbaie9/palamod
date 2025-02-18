@@ -13,12 +13,14 @@ import net.neoforged.fml.loading.FMLPaths;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -109,6 +111,13 @@ public class CobblebreakergivexppaladiumProcedure {
 									true);
 					}
 					PalamodMod.LOGGER.debug("Debug : checking miner lvl");
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:level_up")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:level_up")), SoundSource.PLAYERS, 1, 1, false);
+						}
+					}
 					if (main.get("next_level_miner").getAsDouble() <= main.get("xp_miner").getAsDouble()) {
 						main.addProperty("lvl_miner", (1 + main.get("lvl_miner").getAsDouble()));
 						main.addProperty("xp_miner", (main.get("xp_miner").getAsDouble() - main.get("next_level_miner").getAsDouble()));
@@ -122,6 +131,13 @@ public class CobblebreakergivexppaladiumProcedure {
 							ItemStack _setstack = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
 							_setstack.setCount((int) main.get("lvl_miner").getAsDouble());
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:level_up")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:level_up")), SoundSource.PLAYERS, 1, 1, false);
+							}
 						}
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

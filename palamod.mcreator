@@ -43599,6 +43599,46 @@
       ],
       "category": "record",
       "subtitle": "It\u0027s the paladienne roulette"
+    },
+    {
+      "name": "level_up",
+      "files": [
+        "levelup"
+      ],
+      "category": "player",
+      "subtitle": "Leveling up jobs"
+    },
+    {
+      "name": "quest_complete",
+      "files": [
+        "quest_complete"
+      ],
+      "category": "player",
+      "subtitle": "A quest is completed"
+    },
+    {
+      "name": "totem_break1",
+      "files": [
+        "totem_break1"
+      ],
+      "category": "block",
+      "subtitle": "Totem consuming 1 ingot"
+    },
+    {
+      "name": "totem_break2",
+      "files": [
+        "totem_break2"
+      ],
+      "category": "block",
+      "subtitle": "Totem consuming 1 ingot"
+    },
+    {
+      "name": "totem_break3",
+      "files": [
+        "totem_rare_break"
+      ],
+      "category": "block",
+      "subtitle": "Totem consuming 1 ingot"
     }
   ],
   "tag_elements": {
@@ -45218,6 +45258,9 @@
       "palamod.procedure.jobs_hunter": "Hunter",
       "gui.palamod.jobsfarmercraftgui.tooltip_titane_spike_obsidian": "Titane spike obsidian",
       "gui.palamod.adminshoporeamethyst.number_buy": "number here",
+      "subtitles.totem_break1": "Totem consuming 1 ingot",
+      "subtitles.totem_break3": "Totem consuming 1 ingot",
+      "subtitles.totem_break2": "Totem consuming 1 ingot",
       "block.palamod.erable_leaves": "Erable Leaves",
       "block.palamod.coloful_lamp": "Coloful  lamp",
       "jei.palamod.cobblebreakerpaladiumupgradejeiinfo": "An upgrade for the cobblebreaker who speed it to 4x it normal speed",
@@ -45516,6 +45559,7 @@
       "item.palamod.knockback_modifier": "Knockback modifier",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Broadsword",
       "item.palamod.amethyst_pickaxe": "Amethyst Pickaxe",
+      "subtitles.quest_complete": "A quest is completed",
       "gui.palamod.palahelpnotsupported.label_your_can_help_for_translation": "Your can  help for translation",
       "block.palamod.flatten_titane_chest": "Flat titane chest",
       "gui.palamod.armorpalahelpgui.label_craftable": "Craftable",
@@ -46069,6 +46113,7 @@
       "item.palamod.paladium_hoe": "Paladium hoe",
       "item.palamod.amethyst_excacvator": "Amethyste Exavator",
       "gui.palamod.orelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
+      "subtitles.level_up": "Leveling up jobs",
       "gui.palamod.armorpalahelpgui.label_night_vision_ii": "Night Vision II",
       "gui.palamod.adminshopblockoakwood.button_buy": "buy",
       "gui.palamod.adminshopmobsenderpearl.label_mode_set": "Amount :",
@@ -47113,6 +47158,9 @@
       "palamod.procedure.jobs_hunter": "Chasseur",
       "gui.palamod.adminshoporeamethyst.number_buy": "Un nombre ici",
       "gui.palamod.jobsfarmercraftgui.tooltip_titane_spike_obsidian": "Titane spike obsidian",
+      "subtitles.totem_break1": "Totem consuming 1 ingot",
+      "subtitles.totem_break3": "Totem consuming 1 ingot",
+      "subtitles.totem_break2": "Totem consuming 1 ingot",
       "block.palamod.erable_leaves": "Feuille en erable",
       "block.palamod.coloful_lamp": "Lampe coloré",
       "jei.palamod.cobblebreakerpaladiumupgradejeiinfo": "An upgrade for the cobblebreaker who speed it to 4x it normal speed",
@@ -47418,6 +47466,7 @@
       "item.palamod.knockback_modifier": "Modificateur de poussée",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Glaive",
       "item.palamod.amethyst_pickaxe": "Pioche en améthyste",
+      "subtitles.quest_complete": "A quest is completed",
       "gui.palamod.palahelpnotsupported.label_your_can_help_for_translation": "Vous pouvez aider à la traduction",
       "block.palamod.flatten_titane_chest": "Coffre applati en titane ",
       "gui.palamod.armorpalahelpgui.label_craftable": "Craftable",
@@ -47973,6 +48022,7 @@
       "item.palamod.paladium_hoe": "Houe en paladium",
       "item.palamod.amethyst_excacvator": "Excavateur en améthyste",
       "gui.palamod.orelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
+      "subtitles.level_up": "Leveling up jobs",
       "gui.palamod.armorpalahelpgui.label_night_vision_ii": "Vision nocturne 2",
       "gui.palamod.adminshopblockoakwood.button_buy": "Acheter",
       "gui.palamod.adminshopmobsenderpearl.label_mode_set": "Quantité :",

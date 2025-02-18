@@ -13,15 +13,19 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 public class TotemrandomprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
+		boolean apply = false;
 		double totem_stock = 0;
 		double random_base = 0;
-		boolean apply = false;
+		double random_sound = 0;
 		totem_stock = new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -81,7 +85,7 @@ public class TotemrandomprocessProcedure {
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, BlockPos.containing(x, y, z), "totem_usure") > 50) {
+				}.getValue(world, BlockPos.containing(x, y, z), "totem_usure") > 2) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -106,6 +110,32 @@ public class TotemrandomprocessProcedure {
 							_blockEntity.getPersistentData().putDouble("totem_usure", 0);
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					random_sound = Mth.nextInt(RandomSource.create(), 1, 10);
+					if (random_sound <= 4) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break1")), SoundSource.BLOCKS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break1")), SoundSource.BLOCKS, 1, 1, false);
+							}
+						}
+					} else if (random_sound <= 8) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break2")), SoundSource.BLOCKS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break2")), SoundSource.BLOCKS, 1, 1, false);
+							}
+						}
+					} else {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break3")), SoundSource.BLOCKS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break3")), SoundSource.BLOCKS, 1, 1, false);
+							}
+						}
 					}
 				}
 			}
