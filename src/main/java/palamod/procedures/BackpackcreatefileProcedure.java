@@ -14,7 +14,7 @@ import java.io.FileWriter;
 import java.io.File;
 
 public class BackpackcreatefileProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double i = 0;
@@ -143,6 +143,5 @@ public class BackpackcreatefileProcedure {
 				exception.printStackTrace();
 			}
 		}
-		BackpackwriteitemProcedure.execute(world, x, y, z, entity);
 	}
 }

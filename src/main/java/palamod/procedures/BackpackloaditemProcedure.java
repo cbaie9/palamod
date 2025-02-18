@@ -1,26 +1,17 @@
 package palamod.procedures;
 
-import palamod.world.inventory.InventorybackupMenu;
-
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
@@ -31,10 +22,8 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import io.netty.buffer.Unpooled;
-
 public class BackpackloaditemProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		ItemStack item = ItemStack.EMPTY;
@@ -156,7 +145,7 @@ public class BackpackloaditemProcedure {
 							}
 							bufferedReader.close();
 							main_backpack_endium = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							for (int index3 = 0; index3 < 28; index3++) {
+							for (int index3 = 0; index3 < 27; index3++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 									ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_endium.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 									_setstack.setCount((int) (64 < main_backpack_endium.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_endium.get(("backpack_num_" + i)).getAsDouble()));
@@ -170,31 +159,10 @@ public class BackpackloaditemProcedure {
 						}
 					}
 				}
-			} else {
-				if (entity instanceof Player _player)
-					_player.closeContainer();
-				if (entity instanceof ServerPlayer _ent) {
-					BlockPos _bpos = BlockPos.containing(x, y, z);
-					_ent.openMenu(new MenuProvider() {
-						@Override
-						public Component getDisplayName() {
-							return Component.literal("Inventorybackup");
-						}
-
-						@Override
-						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-							return false;
-						}
-
-						@Override
-						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new InventorybackupMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
-				}
 			}
 		} else {
-			BackpackcreatefileProcedure.execute(world, x, y, z, entity);
+			BackpackcreatefileProcedure.execute(world, entity);
+			BackpackwriteitemProcedure.execute(world, entity);
 		}
 	}
 }

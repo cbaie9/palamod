@@ -42100,18 +42100,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -42217,18 +42205,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -42991,15 +42967,7 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
+            "name": "slot_num",
             "type": "number"
           },
           {
@@ -43234,18 +43202,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -43744,9 +43700,9 @@
     }
   ],
   "tag_elements": {
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Angelicwter",
-      "~CUSTOM:Fakewter"
+    "BLOCKS:forge:unbreakable": [
+      "Blocks.BEDROCK",
+      "CUSTOM:Stony"
     ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:Mixedendiumarmor.body",
@@ -43769,9 +43725,9 @@
       "~CUSTOM:TitaneArmor.body",
       "~CUSTOM:PaladiumArmor.body"
     ],
-    "BLOCKS:forge:unbreakable": [
-      "Blocks.BEDROCK",
-      "CUSTOM:Stony"
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Angelicwter",
+      "~CUSTOM:Fakewter"
     ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:Endiumtnt",

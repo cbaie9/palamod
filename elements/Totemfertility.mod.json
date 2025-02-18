@@ -159,7 +159,14 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      },
+      {
+        "value": "CUSTOM:Jobscreativetabs"
+      }
+    ],
     "destroyTool": "axe",
     "customDrop": {
       "value": ""

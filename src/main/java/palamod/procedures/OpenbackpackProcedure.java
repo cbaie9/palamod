@@ -8,14 +8,11 @@ import palamod.world.inventory.BackpackamethystguiMenu;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
-import palamod.PalamodMod;
-
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -27,9 +24,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -98,7 +92,7 @@ public class OpenbackpackProcedure {
 						}, _bpos);
 					}
 					is_lunching = true;
-					BackpackloaditemProcedure.execute(world, x, y, z, entity);
+					BackpackloaditemProcedure.execute(world, entity);
 				} else {
 					is_lunching = false;
 					MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
@@ -124,7 +118,7 @@ public class OpenbackpackProcedure {
 							}
 						}, _bpos);
 					}
-					BackpackloaditemProcedure.execute(world, x, y, z, entity);
+					BackpackloaditemProcedure.execute(world, entity);
 					is_lunching = true;
 				} else {
 					is_lunching = false;
@@ -151,7 +145,7 @@ public class OpenbackpackProcedure {
 							}
 						}, _bpos);
 					}
-					BackpackloaditemProcedure.execute(world, x, y, z, entity);
+					BackpackloaditemProcedure.execute(world, entity);
 					is_lunching = true;
 				} else {
 					is_lunching = false;
@@ -178,7 +172,7 @@ public class OpenbackpackProcedure {
 							}
 						}, _bpos);
 					}
-					BackpackloaditemProcedure.execute(world, x, y, z, entity);
+					BackpackloaditemProcedure.execute(world, entity);
 					is_lunching = true;
 				} else {
 					is_lunching = false;
@@ -186,52 +180,6 @@ public class OpenbackpackProcedure {
 				}
 			} else {
 				is_lunching = false;
-			}
-			if (backpack_backup.exists() && is_lunching) {
-				{
-					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(backpack_backup));
-						StringBuilder jsonstringbuilder = new StringBuilder();
-						String line;
-						while ((line = bufferedReader.readLine()) != null) {
-							jsonstringbuilder.append(line);
-						}
-						bufferedReader.close();
-						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						if (1 == main.get("backpack_asOpened").getAsDouble()) {
-							i2 = 9;
-							ifull_backup = main.get("backpack_backup1").getAsDouble();
-						} else if (2 == main.get("backpack_asOpened").getAsDouble()) {
-							i2 = 27;
-							ifull_backup = main.get("backpack_backup2").getAsDouble() + main.get("backpack_backup1").getAsDouble();
-						} else if (3 == main.get("backpack_asOpened").getAsDouble()) {
-							i2 = 55;
-							ifull_backup = main.get("backpack_backup2").getAsDouble() + main.get("backpack_backup1").getAsDouble() + main.get("backpack_backup3").getAsDouble();
-						} else if (4 == main.get("backpack_asOpened").getAsDouble()) {
-							i2 = 82;
-							ifull_backup = main.get("backpack_backup2").getAsDouble() + main.get("backpack_backup1").getAsDouble() + main.get("backpack_backup3").getAsDouble() + main.get("backpack_backup4").getAsDouble();
-						}
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				for (int index0 = 0; index0 < (int) i2; index0++) {
-					checksum_now = checksum_now + new Object() {
-						public int getAmount(int sltid) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-								ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-								if (stack != null)
-									return stack.getCount();
-							}
-							return 0;
-						}
-					}.getAmount((int) i);
-					i = i + 1;
-				}
-				if (checksum_now != ifull_backup) {
-					BackpackloaditemProcedure.execute(world, x, y, z, entity);
-					PalamodMod.LOGGER.warn("Backpack didn't load correctly reloading");
-				}
 			}
 		}
 	}
