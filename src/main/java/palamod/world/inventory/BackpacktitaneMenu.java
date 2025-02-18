@@ -89,137 +89,137 @@ public class BackpacktitaneMenu extends AbstractContainerMenu implements Supplie
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 35) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 17) {
 			private final int slot = 0;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 26, 35) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 26, 17) {
 			private final int slot = 1;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 44, 35) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 44, 17) {
 			private final int slot = 2;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 62, 35) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 62, 17) {
 			private final int slot = 3;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 80, 35) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 80, 17) {
 			private final int slot = 4;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 98, 35) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 98, 17) {
 			private final int slot = 5;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 116, 35) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 116, 17) {
 			private final int slot = 6;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 134, 35) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 134, 17) {
 			private final int slot = 7;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 152, 35) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 152, 17) {
 			private final int slot = 8;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 8, 53) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 8, 35) {
 			private final int slot = 9;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 26, 53) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 26, 35) {
 			private final int slot = 10;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 44, 53) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 44, 35) {
 			private final int slot = 11;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 62, 53) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 62, 35) {
 			private final int slot = 12;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 80, 53) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 80, 35) {
 			private final int slot = 13;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 98, 53) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 98, 35) {
 			private final int slot = 14;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 116, 53) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 116, 35) {
 			private final int slot = 15;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 134, 53) {
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 134, 35) {
 			private final int slot = 16;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 152, 53) {
+		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 152, 35) {
 			private final int slot = 17;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 8, 17) {
+		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 8, 53) {
 			private final int slot = 18;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 26, 17) {
+		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 26, 53) {
 			private final int slot = 19;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 44, 17) {
+		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 44, 53) {
 			private final int slot = 20;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 62, 17) {
+		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 62, 53) {
 			private final int slot = 21;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 80, 17) {
+		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 80, 53) {
 			private final int slot = 22;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 98, 17) {
+		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 98, 53) {
 			private final int slot = 23;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 116, 17) {
+		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 116, 53) {
 			private final int slot = 24;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 134, 17) {
+		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 134, 53) {
 			private final int slot = 25;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;
 		}));
-		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 152, 17) {
+		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 152, 53) {
 			private final int slot = 26;
 			private int x = BackpacktitaneMenu.this.x;
 			private int y = BackpacktitaneMenu.this.y;

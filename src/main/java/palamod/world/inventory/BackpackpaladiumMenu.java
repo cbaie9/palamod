@@ -89,272 +89,272 @@ public class BackpackpaladiumMenu extends AbstractContainerMenu implements Suppl
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 28, 51) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 10, 15) {
 			private final int slot = 0;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 46, 51) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 28, 15) {
 			private final int slot = 1;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 64, 51) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 46, 15) {
 			private final int slot = 2;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 82, 51) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 64, 15) {
 			private final int slot = 3;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 100, 51) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 82, 15) {
 			private final int slot = 4;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 118, 51) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 100, 15) {
 			private final int slot = 5;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 136, 51) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 118, 15) {
 			private final int slot = 6;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 154, 51) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 136, 15) {
 			private final int slot = 7;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 172, 51) {
+		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 154, 15) {
 			private final int slot = 8;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 28, 69) {
+		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 172, 15) {
 			private final int slot = 9;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 46, 69) {
+		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 190, 15) {
 			private final int slot = 10;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 64, 69) {
+		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 10, 33) {
 			private final int slot = 11;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 82, 69) {
+		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 28, 33) {
 			private final int slot = 12;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 100, 69) {
+		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 46, 33) {
 			private final int slot = 13;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 118, 69) {
+		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 64, 33) {
 			private final int slot = 14;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 136, 69) {
+		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 82, 33) {
 			private final int slot = 15;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 154, 69) {
+		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 100, 33) {
 			private final int slot = 16;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 172, 69) {
+		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 118, 33) {
 			private final int slot = 17;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 28, 33) {
+		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 136, 33) {
 			private final int slot = 18;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 46, 33) {
+		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 154, 33) {
 			private final int slot = 19;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 64, 33) {
+		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 172, 33) {
 			private final int slot = 20;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 82, 33) {
+		this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 190, 33) {
 			private final int slot = 21;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 100, 33) {
+		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 10, 51) {
 			private final int slot = 22;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 118, 33) {
+		this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 28, 51) {
 			private final int slot = 23;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 136, 33) {
+		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 46, 51) {
 			private final int slot = 24;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 154, 33) {
+		this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 64, 51) {
 			private final int slot = 25;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 172, 33) {
+		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 82, 51) {
 			private final int slot = 26;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 28, 87) {
+		this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 100, 51) {
 			private final int slot = 27;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 46, 87) {
+		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 118, 51) {
 			private final int slot = 28;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 64, 87) {
+		this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 136, 51) {
 			private final int slot = 29;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 82, 87) {
+		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 154, 51) {
 			private final int slot = 30;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 100, 87) {
+		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 172, 51) {
 			private final int slot = 31;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 118, 87) {
+		this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 190, 51) {
 			private final int slot = 32;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 136, 87) {
+		this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 10, 69) {
 			private final int slot = 33;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 154, 87) {
+		this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 28, 69) {
 			private final int slot = 34;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 172, 87) {
+		this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 46, 69) {
 			private final int slot = 35;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 28, 15) {
+		this.customSlots.put(36, this.addSlot(new SlotItemHandler(internal, 36, 64, 69) {
 			private final int slot = 36;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(37, this.addSlot(new SlotItemHandler(internal, 37, 46, 15) {
+		this.customSlots.put(37, this.addSlot(new SlotItemHandler(internal, 37, 82, 69) {
 			private final int slot = 37;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(38, this.addSlot(new SlotItemHandler(internal, 38, 64, 15) {
+		this.customSlots.put(38, this.addSlot(new SlotItemHandler(internal, 38, 100, 69) {
 			private final int slot = 38;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(39, this.addSlot(new SlotItemHandler(internal, 39, 82, 15) {
+		this.customSlots.put(39, this.addSlot(new SlotItemHandler(internal, 39, 118, 69) {
 			private final int slot = 39;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(40, this.addSlot(new SlotItemHandler(internal, 40, 100, 15) {
+		this.customSlots.put(40, this.addSlot(new SlotItemHandler(internal, 40, 136, 69) {
 			private final int slot = 40;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(41, this.addSlot(new SlotItemHandler(internal, 41, 118, 15) {
+		this.customSlots.put(41, this.addSlot(new SlotItemHandler(internal, 41, 154, 69) {
 			private final int slot = 41;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(42, this.addSlot(new SlotItemHandler(internal, 42, 136, 15) {
+		this.customSlots.put(42, this.addSlot(new SlotItemHandler(internal, 42, 172, 69) {
 			private final int slot = 42;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(43, this.addSlot(new SlotItemHandler(internal, 43, 154, 15) {
+		this.customSlots.put(43, this.addSlot(new SlotItemHandler(internal, 43, 190, 69) {
 			private final int slot = 43;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(44, this.addSlot(new SlotItemHandler(internal, 44, 172, 15) {
+		this.customSlots.put(44, this.addSlot(new SlotItemHandler(internal, 44, 10, 87) {
 			private final int slot = 44;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(45, this.addSlot(new SlotItemHandler(internal, 45, 10, 15) {
+		this.customSlots.put(45, this.addSlot(new SlotItemHandler(internal, 45, 28, 87) {
 			private final int slot = 45;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(46, this.addSlot(new SlotItemHandler(internal, 46, 10, 33) {
+		this.customSlots.put(46, this.addSlot(new SlotItemHandler(internal, 46, 46, 87) {
 			private final int slot = 46;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(47, this.addSlot(new SlotItemHandler(internal, 47, 10, 51) {
+		this.customSlots.put(47, this.addSlot(new SlotItemHandler(internal, 47, 64, 87) {
 			private final int slot = 47;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(48, this.addSlot(new SlotItemHandler(internal, 48, 10, 69) {
+		this.customSlots.put(48, this.addSlot(new SlotItemHandler(internal, 48, 82, 87) {
 			private final int slot = 48;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(49, this.addSlot(new SlotItemHandler(internal, 49, 10, 87) {
+		this.customSlots.put(49, this.addSlot(new SlotItemHandler(internal, 49, 100, 87) {
 			private final int slot = 49;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(50, this.addSlot(new SlotItemHandler(internal, 50, 190, 15) {
+		this.customSlots.put(50, this.addSlot(new SlotItemHandler(internal, 50, 118, 87) {
 			private final int slot = 50;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(51, this.addSlot(new SlotItemHandler(internal, 51, 190, 33) {
+		this.customSlots.put(51, this.addSlot(new SlotItemHandler(internal, 51, 136, 87) {
 			private final int slot = 51;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(52, this.addSlot(new SlotItemHandler(internal, 52, 190, 51) {
+		this.customSlots.put(52, this.addSlot(new SlotItemHandler(internal, 52, 154, 87) {
 			private final int slot = 52;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
 		}));
-		this.customSlots.put(53, this.addSlot(new SlotItemHandler(internal, 53, 190, 69) {
+		this.customSlots.put(53, this.addSlot(new SlotItemHandler(internal, 53, 172, 87) {
 			private final int slot = 53;
 			private int x = BackpackpaladiumMenu.this.x;
 			private int y = BackpackpaladiumMenu.this.y;
