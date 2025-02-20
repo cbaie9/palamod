@@ -203,5 +203,6 @@ public class OpenpalamodgameProcedure {
 				}
 			}
 		}
+		OpenModProcedure.execute();
 	}
 }

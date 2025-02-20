@@ -368,7 +368,7 @@ public class BackpacktitaneMenu extends AbstractContainerMenu implements Supplie
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			Lasecu2conbackpackguiProcedure.execute(entity);
+			Lasecu2conbackpackguiProcedure.execute(world, entity);
 		}
 	}
 }

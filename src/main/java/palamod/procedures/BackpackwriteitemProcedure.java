@@ -70,7 +70,7 @@ public class BackpackwriteitemProcedure {
 					main_backup = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (main_backup.has("noSave")) {
 						if (true == main_backup.get("noSave").getAsBoolean()) {
-							exit = true;
+							main_backup.addProperty("noSave", false);
 						} else {
 							exit = false;
 						}
@@ -259,34 +259,20 @@ public class BackpackwriteitemProcedure {
 							main_backup.addProperty("backpack_asOpened", 4);
 						}
 						main_backup.addProperty("backpack_checksum_writen_slot", i2);
-						{
-							com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-							try {
-								FileWriter fileWriter = new FileWriter(backpack_backup);
-								fileWriter.write(mainGSONBuilderVariable.toJson(main_backup));
-								fileWriter.close();
-							} catch (IOException exception) {
-								exception.printStackTrace();
-							}
-						}
-					} else {
-						BackpackdropdeathnolockProcedure.execute(world, entity, GetslotbackpackProcedure.execute(entity));
 					}
 				} else {
 					BackpackcreatefileProcedure.execute(world, entity);
 					BackpackwriteitemProcedure.execute(world, entity);
 				}
-			} else {
-				main_backup.addProperty("noSave", false);
-				{
-					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-					try {
-						FileWriter fileWriter = new FileWriter(backpack_backup);
-						fileWriter.write(mainGSONBuilderVariable.toJson(main_backup));
-						fileWriter.close();
-					} catch (IOException exception) {
-						exception.printStackTrace();
-					}
+			}
+			{
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(backpack_backup);
+					fileWriter.write(mainGSONBuilderVariable.toJson(main_backup));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
 				}
 			}
 		}

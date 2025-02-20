@@ -106,10 +106,10 @@
         "entity": {
           "value": "EntityPig"
         },
-        "minGroup": 4,
+        "minGroup": 1,
         "maxGroup": 4,
-        "weight": 20,
-        "spawnType": "monster"
+        "weight": 10,
+        "spawnType": "creature"
       }
     ]
   }

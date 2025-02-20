@@ -508,7 +508,7 @@ public class BackpackpaladiumMenu extends AbstractContainerMenu implements Suppl
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			Lasecu2conbackpackguiProcedure.execute(entity);
+			Lasecu2conbackpackguiProcedure.execute(world, entity);
 		}
 	}
 }

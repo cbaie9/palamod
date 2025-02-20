@@ -1,28 +1,13 @@
 package palamod.procedures;
 
 import net.neoforged.fml.loading.FMLPaths;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
-
-import javax.annotation.Nullable;
 
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
 
-@EventBusSubscriber
 public class OpenModProcedure {
-	@SubscribeEvent
-	public static void onWorldLoad(net.neoforged.neoforge.event.level.LevelEvent.Load event) {
-		execute(event);
-	}
-
 	public static void execute() {
-		execute(null);
-	}
-
-	private static void execute(@Nullable Event event) {
 		File file = new File("");
 		File file2 = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
