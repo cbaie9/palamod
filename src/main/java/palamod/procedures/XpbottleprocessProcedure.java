@@ -2,13 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import palamod.PalamodMod;
-
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
@@ -17,8 +13,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -47,7 +42,9 @@ public class XpbottleprocessProcedure {
 			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type") == 4) {
 				jobs_text = "alchi";
 			}
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "jobs.json");
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 			if (jobs.exists() && money.exists()) {
 				{
@@ -75,31 +72,6 @@ public class XpbottleprocessProcedure {
 							_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
 									+ (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())
 									+ Component.translatable("palamod.procedure.jobswin3").getString() + " " + new ItemStack(PalamodModItems.XPBOTTLE.get()).getDisplayName().getString())), true);
-						PalamodMod.LOGGER
-								.debug(("Debug : " + (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs") * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())));
-						assert Boolean.TRUE; //#dbg:Xpbottleprocess:check_lvl_miner
-						if (main.get(("next_level_" + jobs_text)).getAsDouble() <= main.get(("xp_" + jobs_text)).getAsDouble()) {
-							main.addProperty(("lvl_" + jobs_text), (1 + main.get(("lvl_" + jobs_text)).getAsDouble()));
-							main.addProperty(("xp_" + jobs_text), (main.get(("xp_" + jobs_text)).getAsDouble() - main.get(("next_level_" + jobs_text)).getAsDouble()));
-							main.addProperty(("next_level_" + jobs_text), GetnextlevelxpProcedure.execute(entity));
-							if (entity instanceof Player _player) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-								_setstack.setCount((int) (1 + Math.floor(main.get(("lvl_" + jobs_text)).getAsDouble() / 2)));
-								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-							}
-							if (entity instanceof Player _player) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
-								_setstack.setCount((int) main.get(("lvl_" + jobs_text)).getAsDouble());
-								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-							}
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" " + "" + Component.translatable("palamod.procedure.jobswinlvl_miner1").getString() + " \\n "
-												+ Component.translatable("palamod.procedure.jobswinlvl_miner2").getString() + " " + Math.round(main.get("lvl_miner").getAsDouble()) + ","
-												+ Component.translatable("palamod.procedure.jobswinlvl_miner3").getString() + " " + Math.round(1000) + "$\",\"color\":\"gold\"}]"));
-							money_getadd = true;
-							money_add = 2 * (main.get(("lvl_" + jobs_text)).getAsDouble() + 1);
-						}
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
@@ -115,34 +87,14 @@ public class XpbottleprocessProcedure {
 					}
 				}
 			}
-			if (money.exists()) {
-				{
-					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
-						StringBuilder jsonstringbuilder = new StringBuilder();
-						String line;
-						while ((line = bufferedReader.readLine()) != null) {
-							jsonstringbuilder.append(line);
-						}
-						bufferedReader.close();
-						main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						if (money_getadd) {
-							main_money.addProperty("money", (main.get("money").getAsDouble() + money_add));
-						}
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				{
-					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-					try {
-						FileWriter fileWriter = new FileWriter(money);
-						fileWriter.write(mainGSONBuilderVariable.toJson(main_money));
-						fileWriter.close();
-					} catch (IOException exception) {
-						exception.printStackTrace();
-					}
-				}
+			if (("miner").equals(jobs_text)) {
+				ChecklvlminerProcedure.execute(world, x, y, z, entity);
+			} else if (("farmer").equals(jobs_text)) {
+				ChecklvlfarmerProcedure.execute(world, x, y, z, entity);
+			} else if (("hunter").equals(jobs_text)) {
+				ChecklvlhunterProcedure.execute(world, x, y, z, entity);
+			} else if (("alchi").equals(jobs_text)) {
+				ChecklvlalchimistProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

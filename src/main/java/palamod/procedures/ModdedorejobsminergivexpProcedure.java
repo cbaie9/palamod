@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -44,9 +45,11 @@ public class ModdedorejobsminergivexpProcedure {
 		double get_lvl_needed = 0;
 		double xp_reward = 0;
 		BlockState block = Blocks.AIR.defaultBlockState();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
+		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		if (cache.exists()) {
 			{
 				try {
@@ -64,7 +67,7 @@ public class ModdedorejobsminergivexpProcedure {
 					e.printStackTrace();
 				}
 			}
-			xp_reward = JobsminermoddedoresheetlvlProcedure.execute(entity);
+			xp_reward = JobsminermoddedoresheetlvlProcedure.execute(world, entity);
 			if (0 == blockstate) {
 				if (jobs.exists() && !(new Object() {
 					public boolean checkGamemode(Entity _ent) {
@@ -108,7 +111,6 @@ public class ModdedorejobsminergivexpProcedure {
 										CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 									}
 								} else {
-									assert Boolean.TRUE; //#dbg:Moddedorejobsminergivexp:xp
 									main.addProperty("xp_miner", ((xp_reward / 2) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
 								}
 								main.addProperty("xpstreak_miner", ((xp_reward / 2) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));

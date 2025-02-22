@@ -143,7 +143,7 @@ public class OxmodsCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					GetdirectoryjobsProcedure.execute(entity);
+					GetdirectoryjobsProcedure.execute(world, entity);
 					return 0;
 				})).then(Commands.literal("backup").then(Commands.literal("load").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

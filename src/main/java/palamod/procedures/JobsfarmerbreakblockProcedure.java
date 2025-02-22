@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -54,7 +55,8 @@ public class JobsfarmerbreakblockProcedure {
 		File money = new File("");
 		double money_add = 0;
 		boolean money_getadd = false;
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (jobs.exists() && money.exists() && !(new Object() {
 			public boolean checkGamemode(Entity _ent) {

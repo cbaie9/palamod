@@ -1,9 +1,12 @@
 package palamod.procedures;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -15,12 +18,13 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 public class JobsalchisetlevelProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
+	public static void execute(LevelAccessor world, CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
 			return;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		if (jobs.exists()) {
 			{
 				try {

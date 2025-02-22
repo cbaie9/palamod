@@ -4,6 +4,7 @@ import palamod.init.PalamodModItems;
 
 import palamod.PalamodMod;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -23,6 +24,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -51,9 +53,9 @@ public class CobblebreakergivexppaladiumProcedure {
 					return 0;
 				}
 			}.getAmount(world, BlockPos.containing(x, y, z), 6));
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		if (jobs.exists() && money.exists()) {
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+		if (jobs.exists()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

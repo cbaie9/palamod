@@ -27,16 +27,9 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	ImageButton imagebutton_clicker_build_hive;
 	ImageButton imagebutton_clicker_skip;
-	ImageButton imagebutton_clicker_build_cave;
-	ImageButton imagebutton_clicker_build_mine;
-	ImageButton imagebutton_clicker_build_dwarf;
 	ImageButton imagebutton_clicker_close_btn;
-	ImageButton imagebutton_clicker_build_garden;
-	ImageButton imagebutton_clicker_build_witch;
 	ImageButton imagebutton_clicker_potato_btn_v11;
-	ImageButton imagebutton_clicker_morebuild;
 
 	public ClickerScreen(ClickerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,8 +41,6 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		this.imageWidth = 360;
 		this.imageHeight = 210;
 	}
-
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/clicker.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -63,11 +54,26 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_paterne.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 360, 210, 360, 210);
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_v1.11.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 360, 210, 360, 210);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 38, 0, 0, 88, 21, 88, 21);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 61, 0, 0, 88, 21, 88, 21);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 83, 0, 0, 88, 21, 88, 21);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 106, 0, 0, 88, 21, 88, 21);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 128, 0, 0, 88, 21, 88, 21);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 151, 0, 0, 88, 21, 88, 21);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/page_btn_off.png"), this.leftPos + 260, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/page_btn_off.png"), this.leftPos + 332, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers.png"), this.leftPos + 296, this.topPos + 181, 64, 0, 16, 16, 144, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -91,18 +97,8 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_clicker_build_hive = new ImageButton(this.leftPos + 260, this.topPos + 156, 88, 21,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_build_hive.png"), ResourceLocation.parse("palamod:textures/screens/clicker_build_hive_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_build_hive", imagebutton_clicker_build_hive);
-		this.addRenderableWidget(imagebutton_clicker_build_hive);
 		imagebutton_clicker_skip = new ImageButton(this.leftPos + 229, this.topPos + 184, 12, 12,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_skip.png"), ResourceLocation.parse("palamod:textures/screens/clicker_skip.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_skip.png"), ResourceLocation.parse("palamod:textures/screens/clicker_skip_hover.png")), e -> {
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
@@ -111,41 +107,11 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		};
 		guistate.put("button:imagebutton_clicker_skip", imagebutton_clicker_skip);
 		this.addRenderableWidget(imagebutton_clicker_skip);
-		imagebutton_clicker_build_cave = new ImageButton(this.leftPos + 260, this.topPos + 60, 88, 21,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_build_cave.png"), ResourceLocation.parse("palamod:textures/screens/clicker_build_cave_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_build_cave", imagebutton_clicker_build_cave);
-		this.addRenderableWidget(imagebutton_clicker_build_cave);
-		imagebutton_clicker_build_mine = new ImageButton(this.leftPos + 260, this.topPos + 36, 88, 21,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_build_mine.png"), ResourceLocation.parse("palamod:textures/screens/clicker_build_mine_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_build_mine", imagebutton_clicker_build_mine);
-		this.addRenderableWidget(imagebutton_clicker_build_mine);
-		imagebutton_clicker_build_dwarf = new ImageButton(this.leftPos + 260, this.topPos + 84, 88, 21,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_build_dwarf.png"), ResourceLocation.parse("palamod:textures/screens/clicker_build_dwarf_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_build_dwarf", imagebutton_clicker_build_dwarf);
-		this.addRenderableWidget(imagebutton_clicker_build_dwarf);
 		imagebutton_clicker_close_btn = new ImageButton(this.leftPos + 336, this.topPos + 6, 17, 17,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ClickerButtonMessage(5, x, y, z));
-						ClickerButtonMessage.handleButtonAction(entity, 5, x, y, z);
+						PacketDistributor.sendToServer(new ClickerButtonMessage(1, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -155,31 +121,11 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		};
 		guistate.put("button:imagebutton_clicker_close_btn", imagebutton_clicker_close_btn);
 		this.addRenderableWidget(imagebutton_clicker_close_btn);
-		imagebutton_clicker_build_garden = new ImageButton(this.leftPos + 260, this.topPos + 108, 88, 21,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_build_garden.png"), ResourceLocation.parse("palamod:textures/screens/clicker_build_garden_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_build_garden", imagebutton_clicker_build_garden);
-		this.addRenderableWidget(imagebutton_clicker_build_garden);
-		imagebutton_clicker_build_witch = new ImageButton(this.leftPos + 260, this.topPos + 132, 88, 21,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_build_witch.png"), ResourceLocation.parse("palamod:textures/screens/clicker_build_witch_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_build_witch", imagebutton_clicker_build_witch);
-		this.addRenderableWidget(imagebutton_clicker_build_witch);
 		imagebutton_clicker_potato_btn_v11 = new ImageButton(this.leftPos + 11, this.topPos + 60, 91, 139,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_potato_btn_v1.1.png"), ResourceLocation.parse("palamod:textures/screens/clicker_potato_btn_v1.1.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ClickerButtonMessage(8, x, y, z));
-						ClickerButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.sendToServer(new ClickerButtonMessage(2, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -189,15 +135,5 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		};
 		guistate.put("button:imagebutton_clicker_potato_btn_v11", imagebutton_clicker_potato_btn_v11);
 		this.addRenderableWidget(imagebutton_clicker_potato_btn_v11);
-		imagebutton_clicker_morebuild = new ImageButton(this.leftPos + 261, this.topPos + 180, 86, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_more-build.png"), ResourceLocation.parse("palamod:textures/screens/clicker_more_build_hover.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_clicker_morebuild", imagebutton_clicker_morebuild);
-		this.addRenderableWidget(imagebutton_clicker_morebuild);
 	}
 }

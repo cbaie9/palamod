@@ -1,8 +1,11 @@
 package palamod.procedures;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -10,7 +13,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetxpfarmerProcedure {
-	public static String execute(Entity entity) {
+	public static String execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return "";
 		File jobs = new File("");
@@ -18,7 +21,8 @@ public class GetxpfarmerProcedure {
 		double xp_miner = 0;
 		double nextlvl_xp = 0;
 		String output = "";
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		if (jobs.exists()) {
 			{
 				try {

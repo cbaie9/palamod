@@ -67,7 +67,7 @@ public class ChecklvlfarmerProcedure {
 					if (main_jobs.get("next_level_farmer").getAsDouble() <= main_jobs.get("xp_farmer").getAsDouble()) {
 						main_jobs.addProperty("lvl_farmer", (1 + main_jobs.get("lvl_farmer").getAsDouble()));
 						main_jobs.addProperty("xp_farmer", (main_jobs.get("xp_miner").getAsDouble() - main_jobs.get("next_level_farmer").getAsDouble()));
-						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(entity));
+						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(world, entity));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_farmer").getAsDouble() / 2)));

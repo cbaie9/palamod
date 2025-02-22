@@ -1,5 +1,6 @@
 package palamod.procedures;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -16,6 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -44,11 +46,12 @@ public class SetblockstateincacheProcedure {
 		double j = 0;
 		double nloop = 0;
 		BlockState block_to_set = Blocks.AIR.defaultBlockState();
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
+		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
 		if (cache.exists()) {
 			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
 				main_chs.addProperty("last_block_state",
-						((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip7 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip7) : -1));
+						((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip8 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip8) : -1));
 			}
 			main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
 			i = -1;
@@ -68,7 +71,7 @@ public class SetblockstateincacheProcedure {
 						continue;
 					}
 					if (block_to_set.is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
-						main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip22 ? block_to_set.getValue(_getip22) : -1));
+						main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip23 ? block_to_set.getValue(_getip23) : -1));
 					}
 					main_chs.addProperty(("block_hammer_cache_" + nloop), (BuiltInRegistries.BLOCK.getKey(block_to_set.getBlock()).toString()));
 					j = j + 1;

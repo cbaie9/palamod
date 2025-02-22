@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.fml.loading.FMLPaths;
 
@@ -36,7 +37,8 @@ public class ChecklvlminerProcedure {
 		File jobs = new File("");
 		File money = new File("");
 		File cache = new File("");
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (jobs.exists() && !(new Object() {
 			public boolean checkGamemode(Entity _ent) {
@@ -61,7 +63,7 @@ public class ChecklvlminerProcedure {
 					if (main_jobs.get("next_level_miner").getAsDouble() <= main_jobs.get("xp_miner").getAsDouble()) {
 						main_jobs.addProperty("lvl_miner", (1 + main_jobs.get("lvl_miner").getAsDouble()));
 						main_jobs.addProperty("xp_miner", (main_jobs.get("xp_miner").getAsDouble() - main_jobs.get("next_level_miner").getAsDouble()));
-						main_jobs.addProperty("next_level_miner", GetnextlevelxpProcedure.execute(entity));
+						main_jobs.addProperty("next_level_miner", GetnextlevelxpProcedure.execute(world, entity));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_miner").getAsDouble() / 2)));

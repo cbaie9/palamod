@@ -7,19 +7,9 @@
     "height": 210,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "image",
-        "data": {
-          "image": "clicker_paterne.png",
-          "use1Xscale": false,
-          "x": 34,
-          "y": 15,
-          "locked": false
-        }
-      },
       {
         "type": "image",
         "data": {
@@ -27,18 +17,7 @@
           "use1Xscale": false,
           "x": 34,
           "y": 15,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_clicker_build_hive",
-          "image": "clicker_build_hive.png",
-          "hoveredImage": "clicker_build_hive_hover.png",
-          "x": 294,
-          "y": 171,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -46,42 +25,9 @@
         "data": {
           "name": "imagebutton_clicker_skip",
           "image": "clicker_skip.png",
-          "hoveredImage": "",
+          "hoveredImage": "clicker_skip_hover.png",
           "x": 263,
           "y": 199,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_clicker_build_cave",
-          "image": "clicker_build_cave.png",
-          "hoveredImage": "clicker_build_cave_hover.png",
-          "x": 294,
-          "y": 75,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_clicker_build_mine",
-          "image": "clicker_build_mine.png",
-          "hoveredImage": "clicker_build_mine_hover.png",
-          "x": 294,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_clicker_build_dwarf",
-          "image": "clicker_build_dwarf.png",
-          "hoveredImage": "clicker_build_dwarf_hover.png",
-          "x": 294,
-          "y": 99,
           "locked": false
         }
       },
@@ -102,28 +48,6 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_clicker_build_garden",
-          "image": "clicker_build_garden.png",
-          "hoveredImage": "clicker_build_garden_hover.png",
-          "x": 294,
-          "y": 123,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_clicker_build_witch",
-          "image": "clicker_build_witch.png",
-          "hoveredImage": "clicker_build_witch_hover.png",
-          "x": 294,
-          "y": 147,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_clicker_potato_btn_v11",
           "image": "clicker_potato_btn_v1.1.png",
           "hoveredImage": "",
@@ -132,17 +56,6 @@
           },
           "x": 45,
           "y": 75,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_clicker_morebuild",
-          "image": "clicker_more-build.png",
-          "hoveredImage": "clicker_more_build_hover.png",
-          "x": 295,
-          "y": 195,
           "locked": false
         }
       },
@@ -162,14 +75,107 @@
           "y": 59,
           "locked": false
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_button_noclick.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 53,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_button_noclick.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_button_noclick.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_button_noclick.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 121,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_button_noclick.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 143,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clicker_button_noclick.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 166,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "page_btn_off.png",
+          "use1Xscale": false,
+          "x": 294,
+          "y": 196,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "page_btn_off.png",
+          "use1Xscale": false,
+          "x": 366,
+          "y": 196,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "numbers.png",
+          "spritesCount": 9,
+          "spriteIndex": {
+            "fixedValue": 4.0
+          },
+          "x": 330,
+          "y": 196,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
       "sx": 18,
-      "sy": 18,
+      "sy": 15,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

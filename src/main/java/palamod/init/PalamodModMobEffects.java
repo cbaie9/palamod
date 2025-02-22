@@ -62,9 +62,9 @@ public class PalamodModMobEffects {
 
 	private static void expireEffects(Entity entity, MobEffectInstance effectInstance) {
 		if (effectInstance.getEffect().is(MULTIEXP_2)) {
-			Removemultixp2fileProcedure.execute(entity);
+			Removemultixp2fileProcedure.execute(entity.level(), entity);
 		} else if (effectInstance.getEffect().is(MULTIEXP_10)) {
-			Removemultixp10fileProcedure.execute(entity);
+			Removemultixp10fileProcedure.execute(entity.level(), entity);
 		} else if (effectInstance.getEffect().is(TUNNELVISION)) {
 			TunnelvisionEffectExpiresProcedure.execute(entity);
 		}

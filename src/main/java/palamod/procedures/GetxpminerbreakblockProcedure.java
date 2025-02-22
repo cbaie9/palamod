@@ -1,12 +1,15 @@
 package palamod.procedures;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -14,7 +17,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetxpminerbreakblockProcedure {
-	public static double execute(Entity entity) {
+	public static double execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return 0;
 		double output = 0;
@@ -26,8 +29,10 @@ public class GetxpminerbreakblockProcedure {
 		BlockState block = Blocks.AIR.defaultBlockState();
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
+		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		if (cache.exists() && jobs.exists()) {
 			{
 				try {

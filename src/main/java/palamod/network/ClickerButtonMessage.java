@@ -62,11 +62,11 @@ public record ClickerButtonMessage(int buttonID, int x, int y, int z) implements
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 5) {
+		if (buttonID == 1) {
 
 			CloseguiProcedure.execute(entity);
 		}
-		if (buttonID == 8) {
+		if (buttonID == 2) {
 
 			AddclickcoinProcedure.execute(world, entity);
 		}

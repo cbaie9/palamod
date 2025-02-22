@@ -67,7 +67,7 @@ public class ChecklvlhunterProcedure {
 					if (main_jobs.get("next_level_hunter").getAsDouble() <= main_jobs.get("xp_hunter").getAsDouble()) {
 						main_jobs.addProperty("lvl_hunter", (1 + main_jobs.get("lvl_hunter").getAsDouble()));
 						main_jobs.addProperty("xp_hunter", (main_jobs.get("xp_hunter").getAsDouble() - main_jobs.get("next_level_hunter").getAsDouble()));
-						main_jobs.addProperty("next_level_hunter", GetnextlevelxphunterProcedure.execute(entity));
+						main_jobs.addProperty("next_level_hunter", GetnextlevelxphunterProcedure.execute(world, entity));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_hunter").getAsDouble() / 2)));

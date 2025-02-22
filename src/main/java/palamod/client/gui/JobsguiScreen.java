@@ -100,16 +100,16 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 45, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelminerProcedure.execute(entity), 44, 99, -12829636, false);
+				GetlevelminerProcedure.execute(world, entity), 44, 99, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelfarmerProcedure.execute(entity), 119, 99, -12829636, false);
+				GetlevelfarmerProcedure.execute(world, entity), 119, 99, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelhunterProcedure.execute(entity), 201, 99, -12829636, false);
+				GetlevelhunterProcedure.execute(world, entity), 201, 99, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelalchiProcedure.execute(entity), 272, 99, -12829636, false);
+				GetlevelalchiProcedure.execute(world, entity), 272, 99, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_work_in_progress_will_be_updat"), 8, 151, -13434676, false);
 	}
 
