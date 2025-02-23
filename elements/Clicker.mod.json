@@ -162,9 +162,44 @@
           "sprite": "numbers.png",
           "spritesCount": 9,
           "spriteIndex": {
-            "fixedValue": 4.0
+            "fixedValue": 4.0,
+            "name": "Clickergetpagenum"
           },
           "x": 330,
+          "y": 196,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_page_up_clicker",
+          "image": "page_up_clicker.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Clickerpageup"
+          },
+          "displayCondition": {
+            "name": "Clickerconditionpageup"
+          },
+          "x": 366,
+          "y": 196,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_page_down",
+          "image": "page_down.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Clickerpagedown"
+          },
+          "displayCondition": {
+            "name": "Clickerconditionpagedown"
+          },
+          "x": 294,
           "y": 196,
           "locked": false
         }

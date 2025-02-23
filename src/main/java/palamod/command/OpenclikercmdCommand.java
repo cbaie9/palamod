@@ -20,7 +20,7 @@ public class OpenclikercmdCommand {
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("clicker")
 
-				.executes(arguments -> {
+				.then(Commands.literal("open").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -34,6 +34,6 @@ public class OpenclikercmdCommand {
 
 					ClickeropenprocProcedure.execute(world, x, y, z, entity);
 					return 0;
-				}));
+				})));
 	}
 }

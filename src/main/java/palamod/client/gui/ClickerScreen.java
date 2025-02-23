@@ -3,6 +3,9 @@ package palamod.client.gui;
 import palamod.world.inventory.ClickerMenu;
 
 import palamod.procedures.ClickerprintcoinsProcedure;
+import palamod.procedures.ClickergetpagenumProcedure;
+import palamod.procedures.ClickerconditionpageupProcedure;
+import palamod.procedures.ClickerconditionpagedownProcedure;
 
 import palamod.network.ClickerButtonMessage;
 
@@ -11,6 +14,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -30,6 +34,8 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 	ImageButton imagebutton_clicker_skip;
 	ImageButton imagebutton_clicker_close_btn;
 	ImageButton imagebutton_clicker_potato_btn_v11;
+	ImageButton imagebutton_page_up_clicker;
+	ImageButton imagebutton_page_down;
 
 	public ClickerScreen(ClickerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -73,7 +79,7 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/page_btn_off.png"), this.leftPos + 332, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers.png"), this.leftPos + 296, this.topPos + 181, 64, 0, 16, 16, 144, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers.png"), this.leftPos + 296, this.topPos + 181, Mth.clamp((int) ClickergetpagenumProcedure.execute(world) * 16, 0, 128), 0, 16, 16, 144, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -135,5 +141,35 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		};
 		guistate.put("button:imagebutton_clicker_potato_btn_v11", imagebutton_clicker_potato_btn_v11);
 		this.addRenderableWidget(imagebutton_clicker_potato_btn_v11);
+		imagebutton_page_up_clicker = new ImageButton(this.leftPos + 332, this.topPos + 181, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/page_up_clicker.png"), ResourceLocation.parse("palamod:textures/screens/page_up_clicker.png")), e -> {
+					if (ClickerconditionpageupProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new ClickerButtonMessage(3, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (ClickerconditionpageupProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_page_up_clicker", imagebutton_page_up_clicker);
+		this.addRenderableWidget(imagebutton_page_up_clicker);
+		imagebutton_page_down = new ImageButton(this.leftPos + 260, this.topPos + 181, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/page_down.png"), ResourceLocation.parse("palamod:textures/screens/page_down.png")),
+				e -> {
+					if (ClickerconditionpagedownProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new ClickerButtonMessage(4, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (ClickerconditionpagedownProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_page_down", imagebutton_page_down);
+		this.addRenderableWidget(imagebutton_page_down);
 	}
 }

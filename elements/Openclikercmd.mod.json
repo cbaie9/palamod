@@ -5,6 +5,6 @@
     "commandName": "clicker",
     "type": "STANDARD",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">Clickeropenproc</field></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">open</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Clickeropenproc</field></block></statement></block></next></block></xml>"
   }
 }

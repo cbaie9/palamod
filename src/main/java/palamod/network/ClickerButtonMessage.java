@@ -4,6 +4,8 @@ package palamod.network;
 import palamod.world.inventory.ClickerMenu;
 
 import palamod.procedures.CloseguiProcedure;
+import palamod.procedures.ClickerpageupProcedure;
+import palamod.procedures.ClickerpagedownProcedure;
 import palamod.procedures.AddclickcoinProcedure;
 
 import palamod.PalamodMod;
@@ -69,6 +71,14 @@ public record ClickerButtonMessage(int buttonID, int x, int y, int z) implements
 		if (buttonID == 2) {
 
 			AddclickcoinProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			ClickerpageupProcedure.execute(world);
+		}
+		if (buttonID == 4) {
+
+			ClickerpagedownProcedure.execute(world);
 		}
 	}
 
