@@ -428,6 +428,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.OBSIDIANSTAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.OBSIDIANSLAB.get().asItem());
 				tabData.accept(PalamodModBlocks.HARDENED_OBSIDIAN_SLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.SLIME_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.POISON_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.BOOM_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {

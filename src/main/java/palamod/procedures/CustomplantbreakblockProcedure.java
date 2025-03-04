@@ -73,7 +73,6 @@ public class CustomplantbreakblockProcedure {
 			} else {
 				lvlmin = -20;
 			}
-			PalamodMod.LOGGER.debug("Message");
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && lvlmin > lvl) {
 				PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)));
 				if (event instanceof ICancellableEvent _cancellable) {

@@ -33,7 +33,9 @@ import javax.annotation.Nullable;
 
 import java.io.IOException;
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.File;
+import java.io.BufferedReader;
 
 @EventBusSubscriber
 public class OpenpalamodgameProcedure {
@@ -49,14 +51,21 @@ public class OpenpalamodgameProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
-		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
-		double i = 0;
 		File money = new File("");
 		File jobs = new File("");
 		File cache = new File("");
 		File clicker = new File("");
+		File clicker_buildings = new File("");
+		File clicker_ame = new File("");
+		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject click_main = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject clicker_buidings = new com.google.gson.JsonObject();
+		com.google.gson.JsonObject clicker_ame_main = new com.google.gson.JsonObject();
+		double i = 0;
+		double page_clicker = 0;
+		double page_building = 0;
 		if (new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -103,6 +112,12 @@ public class OpenpalamodgameProcedure {
 		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
 				File.separator + "clicker_info.json");
+		clicker_buildings = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+				File.separator + "clicker_build.json");
+		clicker_ame = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+				File.separator + "clicker_upgrade.json");
 		if (!money.exists()) {
 			try {
 				money.getParentFile().mkdirs();
@@ -170,6 +185,8 @@ public class OpenpalamodgameProcedure {
 			jobs_main.addProperty("xpstreak_hunter", 0);
 			jobs_main.addProperty("xpstreak_time_alchi", 0);
 			jobs_main.addProperty("xpstreak_alchi", 0);
+			jobs_main.addProperty("last_unlocked_lvl", 0);
+			jobs_main.addProperty("last_unlocked_type", 0);
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
@@ -180,6 +197,35 @@ public class OpenpalamodgameProcedure {
 					exception.printStackTrace();
 				}
 			}
+		} else {
+			if (!(money_main.has("last_unlocked_lvl") && money_main.has("last_unlocked_type"))) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						jobs_main.addProperty("last_unlocked_lvl", 0);
+						jobs_main.addProperty("last_unlocked_type", 0);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(jobs);
+						fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
+				}
+			}
 		}
 		if (!clicker.exists()) {
 			try {
@@ -188,17 +234,41 @@ public class OpenpalamodgameProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
-			money_main.addProperty("coin", 0);
-			money_main.addProperty("click_tier", 0);
-			for (int index0 = 0; index0 < 100; index0++) {
-				money_main.addProperty(("im_" + i), 0);
-				i = i + 1;
-			}
+			click_main.addProperty("coin", 0);
+			click_main.addProperty("cps_active", 1);
+			click_main.addProperty("cps", 0);
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
 					FileWriter fileWriter = new FileWriter(clicker);
-					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+					fileWriter.write(mainGSONBuilderVariable.toJson(click_main));
+					fileWriter.close();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
+		}
+		if (!clicker_buildings.exists()) {
+			try {
+				clicker_buildings.getParentFile().mkdirs();
+				clicker_buildings.createNewFile();
+			} catch (IOException exception) {
+				exception.printStackTrace();
+			}
+			page_clicker = 1;
+			for (int index0 = 0; index0 < 6; index0++) {
+				page_building = 1;
+				for (int index1 = 0; index1 < 6; index1++) {
+					clicker_buidings.addProperty(("building_p" + Math.round(page_clicker) + "_n" + Math.round(page_building)), 0);
+					page_building = page_building + 1;
+				}
+				page_clicker = page_clicker + 1;
+			}
+			{
+				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+				try {
+					FileWriter fileWriter = new FileWriter(clicker_buildings);
+					fileWriter.write(mainGSONBuilderVariable.toJson(clicker_buidings));
 					fileWriter.close();
 				} catch (IOException exception) {
 					exception.printStackTrace();

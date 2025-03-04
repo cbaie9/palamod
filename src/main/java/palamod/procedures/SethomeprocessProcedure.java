@@ -1,5 +1,6 @@
 package palamod.procedures;
 
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
@@ -10,6 +11,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -26,14 +28,12 @@ public class SethomeprocessProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		File jobs = new File("");
 		File home = new File("");
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/"), File.separator + (entity.getUUID().toString() + ".json"));
-		main.addProperty("number_home", (entity.getPersistentData().getDouble("number_home") + 1));
-		main.addProperty(("home_" + StringArgumentType.getString(arguments, "home_name") + "_x"), x);
-		main.addProperty(("home_" + StringArgumentType.getString(arguments, "home_name") + "_y"), y);
-		main.addProperty(("home_" + StringArgumentType.getString(arguments, "home_name") + "_z"), z);
-		main.addProperty(("home_id_" + StringArgumentType.getString(arguments, "home_name")), (entity.getPersistentData().getDouble("number_home")));
-		main.addProperty((StringArgumentType.getString(arguments, "home_name")), true);
-		main.addProperty(("home_name_" + entity.getPersistentData().getDouble("number_home")), (StringArgumentType.getString(arguments, "home_name")));
+		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+				+ "\\home\\" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		main.addProperty("home_x", x);
+		main.addProperty("home_y", y);
+		main.addProperty("home_z", z);
+		main.addProperty("deleted", false);
 		if (!home.exists()) {
 			try {
 				home.getParentFile().mkdirs();

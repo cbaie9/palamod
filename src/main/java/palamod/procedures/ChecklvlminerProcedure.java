@@ -37,6 +37,7 @@ public class ChecklvlminerProcedure {
 		File jobs = new File("");
 		File money = new File("");
 		File cache = new File("");
+		File lu_jobs = new File("");
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
@@ -64,6 +65,8 @@ public class ChecklvlminerProcedure {
 						main_jobs.addProperty("lvl_miner", (1 + main_jobs.get("lvl_miner").getAsDouble()));
 						main_jobs.addProperty("xp_miner", (main_jobs.get("xp_miner").getAsDouble() - main_jobs.get("next_level_miner").getAsDouble()));
 						main_jobs.addProperty("next_level_miner", GetnextlevelxpProcedure.execute(world, entity));
+						main_jobs.addProperty("last_unlocked_lvl", main_jobs.get("lvl_miner").getAsDouble());
+						main_jobs.addProperty("last_unlocked_type", 1);
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_miner").getAsDouble() / 2)));
@@ -79,6 +82,16 @@ public class ChecklvlminerProcedure {
 									("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" " + "" + Component.translatable("palamod.procedure.jobswinlvl_miner1").getString() + " \\n "
 											+ Component.translatable("palamod.procedure.jobswinlvl_miner2").getString() + " " + Math.round(main_jobs.get("lvl_miner").getAsDouble()) + ","
 											+ Component.translatable("palamod.procedure.jobswinlvl_miner3").getString() + " " + Math.round(1000) + "$\",\"color\":\"gold\"}]"));
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"title @p times 20 140 40");
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									("title @p subtitle [\"\",{\"text\":\"You Gain 1 \",\"color\":\"gold\"},{\"text\":\"miner \",\"color\":\"dark_blue\"},{\"text\":\"level, you are at level \",\"color\":\"gold\"},{\"text\":\"" + ""
+											+ Math.round(main_jobs.get("lvl_miner").getAsDouble()) + "\",\"color\":\"dark_red\"},{\"text\":\".\",\"color\":\"gold\"}]"));
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"title @p title {\"text\":\"Congratutlation\",\"color\":\"dark_green\"}");
 						money_getadd = true;
 						money_add = 2 * (main_jobs.get("lvl_miner").getAsDouble() + 1);
 					}

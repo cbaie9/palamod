@@ -3,6 +3,7 @@ package palamod.network;
 
 import palamod.world.inventory.ClickerMenu;
 
+import palamod.procedures.Debugupbuild1Procedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.ClickerpageupProcedure;
 import palamod.procedures.ClickerpagedownProcedure;
@@ -64,19 +65,23 @@ public record ClickerButtonMessage(int buttonID, int x, int y, int z) implements
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 1) {
+		if (buttonID == 0) {
 
-			CloseguiProcedure.execute(entity);
+			Debugupbuild1Procedure.execute(world, entity);
 		}
 		if (buttonID == 2) {
 
-			AddclickcoinProcedure.execute(world, entity);
+			CloseguiProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			ClickerpageupProcedure.execute(world);
+			AddclickcoinProcedure.execute(world, entity);
 		}
 		if (buttonID == 4) {
+
+			ClickerpageupProcedure.execute(world);
+		}
+		if (buttonID == 5) {
 
 			ClickerpagedownProcedure.execute(world);
 		}

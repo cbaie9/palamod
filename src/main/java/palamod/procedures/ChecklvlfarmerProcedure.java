@@ -68,6 +68,8 @@ public class ChecklvlfarmerProcedure {
 						main_jobs.addProperty("lvl_farmer", (1 + main_jobs.get("lvl_farmer").getAsDouble()));
 						main_jobs.addProperty("xp_farmer", (main_jobs.get("xp_miner").getAsDouble() - main_jobs.get("next_level_farmer").getAsDouble()));
 						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(world, entity));
+						main_jobs.addProperty("last_unlocked_lvl", main_jobs.get("lvl_farmer").getAsDouble());
+						main_jobs.addProperty("last_unlocked_type", 2);
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_farmer").getAsDouble() / 2)));
@@ -90,6 +92,16 @@ public class ChecklvlfarmerProcedure {
 									("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" " + "" + Component.translatable("palamod.procedure.jobswinlvl_farmer1").getString() + " \\n "
 											+ Component.translatable("palamod.procedure.jobswinlvl_miner2").getString() + " " + Math.round(main_jobs.get("lvl_farmer").getAsDouble()) + ","
 											+ Component.translatable("palamod.procedure.jobswinlvl_miner3").getString() + " " + Math.round(1000) + "$\",\"color\":\"gold\"}]"));
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"title @p times 20 140 40");
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									("title @p subtitle [\"\",{\"text\":\"You Gain 1 \",\"color\":\"gold\"},{\"text\":\"farmer \",\"color\":\"yellow\"},{\"text\":\"level, you are at level \",\"color\":\"gold\"},{\"text\":\"" + ""
+											+ Math.round(main_jobs.get("lvl_farmer").getAsDouble()) + "\",\"color\":\"dark_red\"},{\"text\":\".\",\"color\":\"gold\"}]"));
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"title @p title {\"text\":\"Congratutlation\",\"color\":\"dark_green\"}0");
 						money_getadd = true;
 						money_add = 2 * (main_jobs.get("lvl_farmer").getAsDouble() + 1);
 					}

@@ -45,6 +45,9 @@
     "creativeTabs": [
       {
         "value": "CUSTOM:Palamod"
+      },
+      {
+        "value": "CUSTOM:Baseclaim"
       }
     ],
     "destroyTool": "pickaxe",

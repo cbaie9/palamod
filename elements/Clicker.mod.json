@@ -163,7 +163,7 @@
           "spritesCount": 9,
           "spriteIndex": {
             "fixedValue": 4.0,
-            "name": "Clickergetpagenum"
+            "name": "Clickergetpageforsprite"
           },
           "x": 330,
           "y": 196,
@@ -203,13 +203,57 @@
           "y": 196,
           "locked": false
         }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "numbers_mc_dungeons.png",
+          "spritesCount": 11,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Clickergetdizp1"
+          },
+          "x": 359,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "numbers_mc_dungeons.png",
+          "spritesCount": 11,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Clickergetnump1"
+          },
+          "x": 368,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_up",
+          "text": "up",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Debugupbuild1"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 8,
+          "y": 108,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
       "sx": 18,
       "sy": 15,
-      "ox": 11,
-      "oy": 15,
+      "ox": 14,
+      "oy": 20,
       "snapOnGrid": true
     }
   }

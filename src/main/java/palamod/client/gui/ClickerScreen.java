@@ -3,7 +3,9 @@ package palamod.client.gui;
 import palamod.world.inventory.ClickerMenu;
 
 import palamod.procedures.ClickerprintcoinsProcedure;
-import palamod.procedures.ClickergetpagenumProcedure;
+import palamod.procedures.ClickergetpageforspriteProcedure;
+import palamod.procedures.Clickergetnump1Procedure;
+import palamod.procedures.Clickergetdizp1Procedure;
 import palamod.procedures.ClickerconditionpageupProcedure;
 import palamod.procedures.ClickerconditionpagedownProcedure;
 
@@ -20,6 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -31,6 +34,7 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_up;
 	ImageButton imagebutton_clicker_skip;
 	ImageButton imagebutton_clicker_close_btn;
 	ImageButton imagebutton_clicker_potato_btn_v11;
@@ -79,7 +83,11 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/page_btn_off.png"), this.leftPos + 332, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers.png"), this.leftPos + 296, this.topPos + 181, Mth.clamp((int) ClickergetpagenumProcedure.execute(world) * 16, 0, 128), 0, 16, 16, 144, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers.png"), this.leftPos + 296, this.topPos + 181, Mth.clamp((int) ClickergetpageforspriteProcedure.execute(world) * 16, 0, 128), 0, 16, 16, 144, 16);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers_mc_dungeons.png"), this.leftPos + 325, this.topPos + 41, Mth.clamp((int) Clickergetdizp1Procedure.execute(world, entity) * 16, 0, 160), 0, 16, 16, 176, 16);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/numbers_mc_dungeons.png"), this.leftPos + 334, this.topPos + 41, Mth.clamp((int) Clickergetnump1Procedure.execute(world, entity) * 16, 0, 160), 0, 16, 16, 176, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -103,6 +111,14 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 	@Override
 	public void init() {
 		super.init();
+		button_up = Button.builder(Component.translatable("gui.palamod.clicker.button_up"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new ClickerButtonMessage(0, x, y, z));
+				ClickerButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + -26, this.topPos + 93, 35, 20).build();
+		guistate.put("button:button_up", button_up);
+		this.addRenderableWidget(button_up);
 		imagebutton_clicker_skip = new ImageButton(this.leftPos + 229, this.topPos + 184, 12, 12,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_skip.png"), ResourceLocation.parse("palamod:textures/screens/clicker_skip_hover.png")), e -> {
 				}) {
@@ -116,8 +132,8 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		imagebutton_clicker_close_btn = new ImageButton(this.leftPos + 336, this.topPos + 6, 17, 17,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ClickerButtonMessage(1, x, y, z));
-						ClickerButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new ClickerButtonMessage(2, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -130,8 +146,8 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		imagebutton_clicker_potato_btn_v11 = new ImageButton(this.leftPos + 11, this.topPos + 60, 91, 139,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_potato_btn_v1.1.png"), ResourceLocation.parse("palamod:textures/screens/clicker_potato_btn_v1.1.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new ClickerButtonMessage(2, x, y, z));
-						ClickerButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.sendToServer(new ClickerButtonMessage(3, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
@@ -144,8 +160,8 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		imagebutton_page_up_clicker = new ImageButton(this.leftPos + 332, this.topPos + 181, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/page_up_clicker.png"), ResourceLocation.parse("palamod:textures/screens/page_up_clicker.png")), e -> {
 					if (ClickerconditionpageupProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new ClickerButtonMessage(3, x, y, z));
-						ClickerButtonMessage.handleButtonAction(entity, 3, x, y, z);
+						PacketDistributor.sendToServer(new ClickerButtonMessage(4, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
@@ -159,8 +175,8 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> {
 		imagebutton_page_down = new ImageButton(this.leftPos + 260, this.topPos + 181, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/page_down.png"), ResourceLocation.parse("palamod:textures/screens/page_down.png")),
 				e -> {
 					if (ClickerconditionpagedownProcedure.execute(world)) {
-						PacketDistributor.sendToServer(new ClickerButtonMessage(4, x, y, z));
-						ClickerButtonMessage.handleButtonAction(entity, 4, x, y, z);
+						PacketDistributor.sendToServer(new ClickerButtonMessage(5, x, y, z));
+						ClickerButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
