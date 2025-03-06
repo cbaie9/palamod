@@ -12,7 +12,7 @@
           }
         },
         "state": {
-          "Name": "palamod:xpbush"
+          "Name": "palamod:xpbushlow"
         }
       },
       {
@@ -23,7 +23,7 @@
           }
         },
         "state": {
-          "Name": "palamod:xpbush"
+          "Name": "palamod:xpbushlow"
         }
       },
       {
@@ -34,7 +34,7 @@
           }
         },
         "state": {
-          "Name": "palamod:xpbush"
+          "Name": "palamod:xpbushlow"
         }
       },
       {
@@ -45,7 +45,21 @@
           }
         },
         "state": {
-          "Name": "palamod:xpbush"
+          "Name": "palamod:xpbushlow"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        },
+        "state": {
+          "Name": "palamod:xpbushlow"
         }
       }
     ]

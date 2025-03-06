@@ -201,14 +201,14 @@ public class OpenpalamodgameProcedure {
 			if (!(money_main.has("last_unlocked_lvl") && money_main.has("last_unlocked_type"))) {
 				{
 					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
 						StringBuilder jsonstringbuilder = new StringBuilder();
 						String line;
 						while ((line = bufferedReader.readLine()) != null) {
 							jsonstringbuilder.append(line);
 						}
 						bufferedReader.close();
-						money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						jobs_main.addProperty("last_unlocked_lvl", 0);
 						jobs_main.addProperty("last_unlocked_type", 0);
 					} catch (IOException e) {

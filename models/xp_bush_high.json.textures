@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "berry_xp_bush_fancy"
+      },
+      "name": "default"
+    },
+    "ready": {
+      "map": {
+        "0": "xp_bush"
+      },
+      "name": "ready"
+    }
+  }
+}

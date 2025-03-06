@@ -12,6 +12,7 @@ import palamod.entity.PrimedendiumtntEntity;
 import palamod.entity.PrimedbigtntEntity;
 import palamod.entity.PaladiumgolemEntity;
 import palamod.entity.PaladiumdynamiteEntity;
+import palamod.entity.GodvillagerEntity;
 import palamod.entity.EndiumdynamiteEntity;
 import palamod.entity.BigdynamiteentityEntity;
 
@@ -57,6 +58,10 @@ public class PalamodModEntities {
 			EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SwitcharrowEntity>> SWITCHARROW = register("switcharrow",
 			EntityType.Builder.<SwitcharrowEntity>of(SwitcharrowEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<GodvillagerEntity>> GODVILLAGER = register("godvillager",
+			EntityType.Builder.<GodvillagerEntity>of(GodvillagerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.95f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -80,6 +85,7 @@ public class PalamodModEntities {
 		PrimedmagictntEntity.init(event);
 		PrimedbigtntEntity.init(event);
 		PrimedendiumtntEntity.init(event);
+		GodvillagerEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -93,5 +99,6 @@ public class PalamodModEntities {
 		event.put(PRIMEDMAGICTNT.get(), PrimedmagictntEntity.createAttributes().build());
 		event.put(PRIMEDBIGTNT.get(), PrimedbigtntEntity.createAttributes().build());
 		event.put(PRIMEDENDIUMTNT.get(), PrimedendiumtntEntity.createAttributes().build());
+		event.put(GODVILLAGER.get(), GodvillagerEntity.createAttributes().build());
 	}
 }

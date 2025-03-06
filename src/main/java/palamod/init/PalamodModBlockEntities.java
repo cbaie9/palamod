@@ -4,6 +4,9 @@
  */
 package palamod.init;
 
+import palamod.block.entity.XpbushonBlockEntity;
+import palamod.block.entity.XpbushlowBlockEntity;
+import palamod.block.entity.XpbushBlockEntity;
 import palamod.block.entity.UploaderBlockEntity;
 import palamod.block.entity.TypesettingtableBlockEntity;
 import palamod.block.entity.TypesettingplateBlockEntity;
@@ -61,6 +64,8 @@ public class PalamodModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, PalamodMod.MODID);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> PALADIUM_CRUSHER = register("paladium_crusher", PalamodModBlocks.PALADIUM_CRUSHER, PaladiumcrusherBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> NBT_BLOCK = register("nbt_block", PalamodModBlocks.NBT_BLOCK, NbtblockBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> XPBUSH = register("xpbush", PalamodModBlocks.XPBUSH, XpbushBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> XPBUSHON = register("xpbushon", PalamodModBlocks.XPBUSHON, XpbushonBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> ALCHIMET_1 = register("alchimet_1", PalamodModBlocks.ALCHIMET_1, Alchimet1BlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> GRINDER_BLOCK = register("grinder_block", PalamodModBlocks.GRINDER_BLOCK, GrinderblockBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> PALADIUM_FURNACE = register("paladium_furnace", PalamodModBlocks.PALADIUM_FURNACE, PaladiumfurnaceBlockEntity::new);
@@ -97,6 +102,7 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> DRAWBRIDGE = register("drawbridge", PalamodModBlocks.DRAWBRIDGE, DrawbridgeBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> EXCTRACTOR = register("exctractor", PalamodModBlocks.EXCTRACTOR, ExctractorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TOTEMFERTILITY = register("totemfertility", PalamodModBlocks.TOTEMFERTILITY, TotemfertilityBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> XPBUSHLOW = register("xpbushlow", PalamodModBlocks.XPBUSHLOW, XpbushlowBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -108,6 +114,8 @@ public class PalamodModBlockEntities {
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PALADIUM_CRUSHER.get(), (blockEntity, side) -> ((PaladiumcrusherBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, NBT_BLOCK.get(), (blockEntity, side) -> ((NbtblockBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSH.get(), (blockEntity, side) -> ((XpbushBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSHON.get(), (blockEntity, side) -> ((XpbushonBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ALCHIMET_1.get(), (blockEntity, side) -> ((Alchimet1BlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, GRINDER_BLOCK.get(), (blockEntity, side) -> ((GrinderblockBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PALADIUM_FURNACE.get(), (blockEntity, side) -> ((PaladiumfurnaceBlockEntity) blockEntity).getItemHandler());
@@ -144,5 +152,6 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DRAWBRIDGE.get(), (blockEntity, side) -> ((DrawbridgeBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXCTRACTOR.get(), (blockEntity, side) -> ((ExctractorBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEMFERTILITY.get(), (blockEntity, side) -> ((TotemfertilityBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSHLOW.get(), (blockEntity, side) -> ((XpbushlowBlockEntity) blockEntity).getItemHandler());
 	}
 }

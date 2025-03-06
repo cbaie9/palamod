@@ -817,6 +817,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PALADUM_BACKPACK = REGISTRY.register("paladum_backpack", PaladumbackpackItem::new);
 	public static final DeferredItem<Item> ENDIUM_BACKPACK = REGISTRY.register("endium_backpack", EndiumbackpackItem::new);
 	public static final DeferredItem<Item> TOTEMFERTILITY = block(PalamodModBlocks.TOTEMFERTILITY);
+	public static final DeferredItem<Item> XPBUSHLOW = block(PalamodModBlocks.XPBUSHLOW);
 
 	// Start of user code block custom items
 	// End of user code block custom items

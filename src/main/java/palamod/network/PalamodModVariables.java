@@ -109,8 +109,12 @@ public class PalamodModVariables {
 			clone.jobs_durability = original.jobs_durability;
 			clone.jobs_get_text4 = original.jobs_get_text4;
 			clone.jobs_get_text5 = original.jobs_get_text5;
+			clone.last_unlocked_miner = original.last_unlocked_miner;
+			clone.last_unlocked_farmer = original.last_unlocked_farmer;
+			clone.last_unlocked_hunter = original.last_unlocked_hunter;
 			if (!event.isWasDeath()) {
 				clone.buyslot = original.buyslot;
+				clone.last_unlocked_alchi = original.last_unlocked_alchi;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -275,6 +279,10 @@ public class PalamodModVariables {
 		public String jobs_durability = "\"\"";
 		public String jobs_get_text4 = "\"\"";
 		public String jobs_get_text5 = "\"\"";
+		public String last_unlocked_miner = "\"go farm something\"";
+		public String last_unlocked_farmer = "\"go farm something\"";
+		public String last_unlocked_hunter = "\"go farm something\"";
+		public String last_unlocked_alchi = "\"go farm something\"";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -290,6 +298,10 @@ public class PalamodModVariables {
 			nbt.putString("jobs_durability", jobs_durability);
 			nbt.putString("jobs_get_text4", jobs_get_text4);
 			nbt.putString("jobs_get_text5", jobs_get_text5);
+			nbt.putString("last_unlocked_miner", last_unlocked_miner);
+			nbt.putString("last_unlocked_farmer", last_unlocked_farmer);
+			nbt.putString("last_unlocked_hunter", last_unlocked_hunter);
+			nbt.putString("last_unlocked_alchi", last_unlocked_alchi);
 			return nbt;
 		}
 
@@ -306,6 +318,10 @@ public class PalamodModVariables {
 			jobs_durability = nbt.getString("jobs_durability");
 			jobs_get_text4 = nbt.getString("jobs_get_text4");
 			jobs_get_text5 = nbt.getString("jobs_get_text5");
+			last_unlocked_miner = nbt.getString("last_unlocked_miner");
+			last_unlocked_farmer = nbt.getString("last_unlocked_farmer");
+			last_unlocked_hunter = nbt.getString("last_unlocked_hunter");
+			last_unlocked_alchi = nbt.getString("last_unlocked_alchi");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

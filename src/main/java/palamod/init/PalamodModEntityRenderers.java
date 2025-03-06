@@ -11,6 +11,7 @@ import palamod.client.renderer.PrimedendiumtntRenderer;
 import palamod.client.renderer.PrimedbigtntRenderer;
 import palamod.client.renderer.PaladiumgolemRenderer;
 import palamod.client.renderer.PaladiumdynamiteRenderer;
+import palamod.client.renderer.GodvillagerRenderer;
 import palamod.client.renderer.EndiumdynamiteRenderer;
 import palamod.client.renderer.BigdynamiteentityRenderer;
 
@@ -35,5 +36,6 @@ public class PalamodModEntityRenderers {
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDBIGTNT.get(), PrimedbigtntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDENDIUMTNT.get(), PrimedendiumtntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.SWITCHARROW.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PalamodModEntities.GODVILLAGER.get(), GodvillagerRenderer::new);
 	}
 }

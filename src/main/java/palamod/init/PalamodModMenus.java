@@ -49,6 +49,7 @@ import palamod.world.inventory.Grinderpalahelp2guiMenu;
 import palamod.world.inventory.GrinderguiMenu;
 import palamod.world.inventory.GreenpaladiumchestguiMenu;
 import palamod.world.inventory.GolemtreecMenu;
+import palamod.world.inventory.GodvillagerguiMenu;
 import palamod.world.inventory.GamblelingjobsjetonMenu;
 import palamod.world.inventory.ForgepalahelpguiMenu;
 import palamod.world.inventory.ForgeguiMenu;
@@ -274,4 +275,5 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<InventorybackupMenu>> INVENTORYBACKUP = REGISTRY.register("inventorybackup", () -> IMenuTypeExtension.create(InventorybackupMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackendiumMenu>> BACKPACKENDIUM = REGISTRY.register("backpackendium", () -> IMenuTypeExtension.create(BackpackendiumMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsfarmerguiMenu>> JOBSFARMERGUI = REGISTRY.register("jobsfarmergui", () -> IMenuTypeExtension.create(JobsfarmerguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<GodvillagerguiMenu>> GODVILLAGERGUI = REGISTRY.register("godvillagergui", () -> IMenuTypeExtension.create(GodvillagerguiMenu::new));
 }

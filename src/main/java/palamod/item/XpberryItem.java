@@ -14,7 +14,7 @@ import net.minecraft.world.InteractionHand;
 
 public class XpberryItem extends Item {
 	public XpberryItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class XpberryItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		XpberryprocessProcedure.execute(entity);
+		XpberryprocessProcedure.execute(world, entity, ar.getObject());
 		return ar;
 	}
 }

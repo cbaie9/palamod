@@ -49,6 +49,7 @@ import palamod.client.gui.Grinderpalahelp2guiScreen;
 import palamod.client.gui.GrinderguiScreen;
 import palamod.client.gui.GreenpaladiumchestguiScreen;
 import palamod.client.gui.GolemtreecScreen;
+import palamod.client.gui.GodvillagerguiScreen;
 import palamod.client.gui.GamblelingjobsjetonScreen;
 import palamod.client.gui.ForgepalahelpguiScreen;
 import palamod.client.gui.ForgeguiScreen;
@@ -272,5 +273,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.INVENTORYBACKUP.get(), InventorybackupScreen::new);
 		event.register(PalamodModMenus.BACKPACKENDIUM.get(), BackpackendiumScreen::new);
 		event.register(PalamodModMenus.JOBSFARMERGUI.get(), JobsfarmerguiScreen::new);
+		event.register(PalamodModMenus.GODVILLAGERGUI.get(), GodvillagerguiScreen::new);
 	}
 }

@@ -8,8 +8,8 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 11,
-    "customModelName": "Single texture",
+    "renderType": 2,
+    "customModelName": "xp_bush_high:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -24,12 +24,12 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 0.0,
+        "mx": 0.75,
         "my": 0.0,
-        "mz": 0.0,
-        "Mx": 16.0,
+        "mz": 0.75,
+        "Mx": 15.25,
         "My": 16.0,
-        "Mz": 16.0,
+        "Mz": 15.25,
         "subtract": false
       }
     ],
@@ -49,7 +49,7 @@
     ],
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Xpbushlow"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -57,7 +57,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 1,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },
@@ -105,7 +105,7 @@
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,
-    "hasInventory": false,
+    "hasInventory": true,
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -124,29 +124,9 @@
     "onTickUpdate": {
       "name": "Xpbushprocess"
     },
-    "onRandomUpdateEvent": {
-      "name": "Xpbushprocess"
-    },
-    "generateFeature": true,
-    "restrictionBiomes": [
-      {
-        "value": "#is_overworld"
-      }
-    ],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#1"
-      },
-      {
-        "value": "Blocks.STONE#3"
-      },
-      {
-        "value": "Blocks.STONE#5"
-      }
-    ],
+    "generateFeature": false,
+    "restrictionBiomes": [],
+    "blocksToReplace": [],
     "generationShape": "TRIANGLE",
     "frequencyPerChunks": 45,
     "frequencyOnChunk": 1,

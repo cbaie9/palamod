@@ -6,6 +6,7 @@ package palamod.init;
 
 import palamod.block.YellowglueballBlock;
 import palamod.block.XpbushonBlock;
+import palamod.block.XpbushlowBlock;
 import palamod.block.XpbushBlock;
 import palamod.block.WoddenspikeBlock;
 import palamod.block.WithertntBlock;
@@ -448,6 +449,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SLIMEPAD_ORANGE = REGISTRY.register("slimepad_orange", OrangeslimepadBlock::new);
 	public static final DeferredBlock<Block> SLIMEPAD_PURPLE = REGISTRY.register("slimepad_purple", PurpleslimepadBlock::new);
 	public static final DeferredBlock<Block> TOTEMFERTILITY = REGISTRY.register("totemfertility", TotemfertilityBlock::new);
+	public static final DeferredBlock<Block> XPBUSHLOW = REGISTRY.register("xpbushlow", XpbushlowBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

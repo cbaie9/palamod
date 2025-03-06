@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "profession": "god_armorer",
+        "profession_level": "god_stone",
+        "villager": "god_villager",
+        "type": "god_plains"
+      },
+      "name": "default"
+    }
+  }
+}

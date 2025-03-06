@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/xp_bush_low",
+  "textures": {
+    "all": "palamod:block/berry_xp_bush_fancy",
+    "particle": "palamod:block/berry_xp_bush_fancy",
+    "0": "palamod:block/berry_xp_bush_fancy"
+  },
+  "render_type": "cutout_mipped"
+}
