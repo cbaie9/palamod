@@ -22,7 +22,7 @@ public class XpbushongiveProcedure {
 			return;
 		{
 			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockState _bs = PalamodModBlocks.XPBUSHLOW.get().defaultBlockState();
+			BlockState _bs = PalamodModBlocks.XPBUSH.get().defaultBlockState();
 			BlockState _bso = world.getBlockState(_bp);
 			for (Property<?> _propertyOld : _bso.getProperties()) {
 				Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -59,7 +59,7 @@ public class XpbushongiveProcedure {
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putDouble("xp_bush_grown_count", 0);
+				_blockEntity.getPersistentData().putDouble("xp_bush_grown_count", 256);
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

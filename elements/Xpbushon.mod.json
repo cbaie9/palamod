@@ -120,6 +120,9 @@
     "onRightClicked": {
       "name": "Xpbushongive"
     },
+    "onEntityCollides": {
+      "name": "Xpbushdamage"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

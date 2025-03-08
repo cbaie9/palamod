@@ -79,7 +79,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.FINDIUM_BLOCK.get().asItem());
 				tabData.accept(PalamodModBlocks.FINDIUM_STAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.FINDIUM_SLAB.get().asItem());
-				tabData.accept(PalamodModBlocks.XPBUSH.get().asItem());
 				tabData.accept(PalamodModItems.XPBERRY.get());
 				tabData.accept(PalamodModItems.COMPRESSEDXPBERRY.get());
 				tabData.accept(PalamodModItems.PALADIUM_CORE.get());
@@ -517,6 +516,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.PALADUM_BACKPACK.get());
 				tabData.accept(PalamodModItems.ENDIUM_BACKPACK.get());
 				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
+				tabData.accept(PalamodModItems.GODVILLAGER_SPAWN_EGG.get());
+				tabData.accept(PalamodModItems.CHESTEXPLORER.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

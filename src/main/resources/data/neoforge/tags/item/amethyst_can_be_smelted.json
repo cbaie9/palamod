@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:amethyst_pickaxe",
+    "palamod:amethyst_axe",
+    "palamod:amethyst_sword",
+    "palamod:amethyst_shovel",
+    "palamod:amethyst_armor_helmet",
+    "palamod:amethyst_armor_chestplate",
+    "palamod:amethyst_armor_leggings",
+    "palamod:amethyst_armor_boots",
+    "palamod:amethyst_stick",
+    "palamod:amethyst_broadsword",
+    "palamod:amethyst_fastsword",
+    "palamod:amethyst_hammer",
+    "palamod:compressed_amethyst",
+    "palamod:amethyst_ore",
+    "palamod:deepslate_amethyst_ore"
+  ]
+}

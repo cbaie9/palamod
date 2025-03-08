@@ -2,6 +2,7 @@
 package palamod.block;
 
 import palamod.procedures.XpbushongiveProcedure;
+import palamod.procedures.XpbushdamageProcedure;
 
 import palamod.block.entity.XpbushonBlockEntity;
 
@@ -20,6 +21,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
@@ -49,6 +51,12 @@ public class XpbushonBlock extends Block implements EntityBlock {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return box(0.75, 0, 0.75, 15.25, 16, 15.25);
+	}
+
+	@Override
+	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity) {
+		super.entityInside(blockstate, world, pos, entity);
+		XpbushdamageProcedure.execute(world, entity);
 	}
 
 	@Override

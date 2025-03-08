@@ -367,7 +367,7 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 34 + 8 + sj * 18, -28 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, 34 + 8 + si * 18, -28 + 142));
-		PaladiumchestLorsDunClicDroitSurLeBlocProcedure.execute(world, x, y, z);
+		PaladiumchestLorsDunClicDroitSurLeBlocProcedure.execute(world, x, y, z, entity);
 	}
 
 	@Override
@@ -477,7 +477,7 @@ public class EndiumchestguiMenu extends AbstractContainerMenu implements Supplie
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		PaladiumchestguiQuandLeGUIEstFermeProcedure.execute(world, x, y, z);
+		PaladiumchestguiQuandLeGUIEstFermeProcedure.execute(world, x, y, z, entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:amethyst",
+    "palamod:amethyst_ore",
+    "palamod:amethyst_block",
+    "palamod:amethyst_pickaxe",
+    "palamod:amethyst_axe",
+    "palamod:amethyst_sword",
+    "palamod:amethyst_shovel",
+    "palamod:amethyst_armor_helmet",
+    "palamod:amethyst_armor_chestplate",
+    "palamod:amethyst_armor_leggings",
+    "palamod:amethyst_armor_boots",
+    "palamod:amethyst_stick",
+    "palamod:amethyst_broadsword",
+    "palamod:amethyst_fastsword",
+    "palamod:amethyst_hammer",
+    "palamod:amethyst_pollen",
+    "palamod:amethyst_particle",
+    "palamod:amethyst_stairs",
+    "palamod:amethyst_slab",
+    "palamod:deepslate_amethyst_ore",
+    "palamod:amethys_tobsidian_spike",
+    "palamod:compressed_amethyst"
+  ]
+}

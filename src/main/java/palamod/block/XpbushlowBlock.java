@@ -3,6 +3,7 @@ package palamod.block;
 
 import palamod.procedures.XpbushsetupProcedure;
 import palamod.procedures.XpbushprocessProcedure;
+import palamod.procedures.XpbushdamageProcedure;
 
 import palamod.block.entity.XpbushlowBlockEntity;
 
@@ -23,6 +24,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
@@ -78,6 +80,12 @@ public class XpbushlowBlock extends Block implements EntityBlock {
 		int y = pos.getY();
 		int z = pos.getZ();
 		XpbushprocessProcedure.execute(world, x, y, z);
+	}
+
+	@Override
+	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity) {
+		super.entityInside(blockstate, world, pos, entity);
+		XpbushdamageProcedure.execute(world, entity);
 	}
 
 	@Override

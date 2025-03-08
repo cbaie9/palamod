@@ -2,10 +2,15 @@
 package palamod.world.inventory;
 
 import palamod.procedures.OpengodvillagerguiProcedure;
+import palamod.procedures.KillgodvillagerProcedure;
+
+import palamod.network.GodvillagerguiSlotMessage;
 
 import palamod.init.PalamodModMenus;
+import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -91,18 +96,26 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 			private int y = GodvillagerguiMenu.this.y;
 
 			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return PalamodModBlocks.PALADIUM_BLOCK.get().asItem() == stack.getItem();
+			public void setChanged() {
+				super.setChanged();
+				slotChanged(0, 0, 0);
 			}
-		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 125, 50) {
-			private final int slot = 1;
-			private int x = GodvillagerguiMenu.this.x;
-			private int y = GodvillagerguiMenu.this.y;
 
 			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(0, 1, 0);
+			}
+
+			@Override
+			public void onQuickCraft(ItemStack a, ItemStack b) {
+				super.onQuickCraft(a, b);
+				slotChanged(0, 2, b.getCount() - a.getCount());
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return PalamodModBlocks.PALADIUM_BLOCK.get().asItem() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 55, 27) {
@@ -111,13 +124,8 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 			private int y = GodvillagerguiMenu.this.y;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
+			public boolean mayPlace(ItemStack stack) {
+				return PalamodModBlocks.PALADIUM_BLOCK.get().asItem() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 125, 25) {
@@ -126,12 +134,41 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 			private int y = GodvillagerguiMenu.this.y;
 
 			@Override
-			public boolean mayPickup(Player entity) {
-				return false;
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(3, 1, 0);
 			}
 
 			@Override
-			public boolean mayPlace(ItemStack itemstack) {
+			public boolean mayPlace(ItemStack stack) {
+				return PalamodModItems.ENDIUM_NUGGET.get() == stack.getItem();
+			}
+		}));
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 125, 50) {
+			private final int slot = 1;
+			private int x = GodvillagerguiMenu.this.x;
+			private int y = GodvillagerguiMenu.this.y;
+
+			@Override
+			public void setChanged() {
+				super.setChanged();
+				slotChanged(1, 0, 0);
+			}
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(1, 1, 0);
+			}
+
+			@Override
+			public void onQuickCraft(ItemStack a, ItemStack b) {
+				super.onQuickCraft(a, b);
+				slotChanged(1, 2, b.getCount() - a.getCount());
+			}
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
 				return false;
 			}
 		}));
@@ -250,20 +287,40 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		KillgodvillagerProcedure.execute(entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 0)
+						continue;
+					if (j == 2)
+						continue;
+					if (j == 3)
+						continue;
 					playerIn.drop(internal.getStackInSlot(j), false);
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 0)
+						continue;
+					if (i == 2)
+						continue;
+					if (i == 3)
+						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
+		}
+	}
+
+	private void slotChanged(int slotid, int ctype, int meta) {
+		if (this.world != null && this.world.isClientSide()) {
+			PacketDistributor.sendToServer(new GodvillagerguiSlotMessage(slotid, x, y, z, ctype, meta));
+			GodvillagerguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 

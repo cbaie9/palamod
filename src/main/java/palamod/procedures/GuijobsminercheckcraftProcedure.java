@@ -2714,6 +2714,52 @@ public class GuijobsminercheckcraftProcedure {
 							_player.containerMenu.broadcastChanges();
 						}
 					}
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY)
+							.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.PALADIUM_CORE.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(5)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(6)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& (new Object() {
+								public int getAmount(int sltid) {
+									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+										if (stack != null)
+											return stack.getCount();
+									}
+									return 0;
+								}
+							}.getAmount(9) == 0 || new Object() {
+								public int getAmount(int sltid) {
+									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
+										if (stack != null)
+											return stack.getCount();
+									}
+									return 0;
+								}
+							}.getAmount(9) < 64 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+									.getItem() == PalamodModItems.GODVILLAGER_SPAWN_EGG.get())
+							&& (95 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+							ItemStack _setstack = new ItemStack(PalamodModItems.GODVILLAGER_SPAWN_EGG.get()).copy();
+							_setstack.setCount(1);
+							((Slot) _slots.get(9)).set(_setstack);
+							_player.containerMenu.broadcastChanges();
+						}
+					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

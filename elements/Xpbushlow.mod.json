@@ -130,6 +130,9 @@
     "onRandomUpdateEvent": {
       "name": "Xpbushprocess"
     },
+    "onEntityCollides": {
+      "name": "Xpbushdamage"
+    },
     "generateFeature": true,
     "restrictionBiomes": [
       {

@@ -233,6 +233,7 @@ import palamod.item.CobblebreakerpaladiumupgradeItem;
 import palamod.item.CobblebreakeramethystupgradeItem;
 import palamod.item.ClashkumizItem;
 import palamod.item.ChunkanaslyserItem;
+import palamod.item.ChestexplorerItem;
 import palamod.item.ChervilseedItem;
 import palamod.item.ChervilItem;
 import palamod.item.BroadswordpaternItem;
@@ -817,7 +818,9 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PALADUM_BACKPACK = REGISTRY.register("paladum_backpack", PaladumbackpackItem::new);
 	public static final DeferredItem<Item> ENDIUM_BACKPACK = REGISTRY.register("endium_backpack", EndiumbackpackItem::new);
 	public static final DeferredItem<Item> TOTEMFERTILITY = block(PalamodModBlocks.TOTEMFERTILITY);
+	public static final DeferredItem<Item> GODVILLAGER_SPAWN_EGG = REGISTRY.register("godvillager_spawn_egg", () -> new DeferredSpawnEggItem(PalamodModEntities.GODVILLAGER, -65536, -16711936, new Item.Properties()));
 	public static final DeferredItem<Item> XPBUSHLOW = block(PalamodModBlocks.XPBUSHLOW);
+	public static final DeferredItem<Item> CHESTEXPLORER = REGISTRY.register("chestexplorer", ChestexplorerItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

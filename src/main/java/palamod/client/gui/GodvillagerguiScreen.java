@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.GodvillagerguiMenu;
 
+import palamod.procedures.ReturnusedtradeclickerProcedure;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -62,7 +64,10 @@ public class GodvillagerguiScreen extends AbstractContainerScreen<Godvillagergui
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.godvillagergui.label_god_villager"), 65, 8, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.godvillagergui.label_god_villager"), 65, 8, -1, false);
+		guiGraphics.drawString(this.font,
+
+				ReturnusedtradeclickerProcedure.execute(entity), 153, 23, -1, false);
 	}
 
 	@Override

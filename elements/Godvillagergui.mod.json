@@ -33,7 +33,16 @@
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "Godvillagercheckpala"
+          },
+          "onTakenFromSlot": {
+            "name": "Godvillagercheckpala"
+          },
+          "onStackTransfer": {
+            "name": "Godvillagercheckpala"
+          },
           "x": 168,
           "y": 84,
           "locked": false
@@ -53,35 +62,16 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Endiumnugget"
-          },
-          "disablePlacement": {
-            "fixedValue": true
-          },
-          "id": 1,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 238,
-          "y": 84,
-          "locked": false
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
             "value": "CUSTOM:PaladiumBlock"
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 2,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 168,
           "y": 61,
           "locked": false
@@ -94,13 +84,16 @@
             "value": "CUSTOM:Endiumnugget"
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 3,
           "disablePickup": {
-            "fixedValue": true
+            "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "Usecraftgodvillager"
+          },
           "x": 238,
           "y": 59,
           "locked": false
@@ -114,17 +107,59 @@
             "fixedValue": "God villager"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 179,
           "y": 43,
           "locked": true
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_returnusedtradeclicker",
+          "text": {
+            "fixedValue": "",
+            "name": "Returnusedtradeclicker"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 267,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Usecraftgodvillager"
+          },
+          "onTakenFromSlot": {
+            "name": "Usecraftgodvillager"
+          },
+          "onStackTransfer": {
+            "name": "Usecraftgodvillager"
+          },
+          "x": 238,
+          "y": 84,
+          "locked": false
+        }
       }
     ],
     "onOpen": {
       "name": "Opengodvillagergui"
+    },
+    "onClosed": {
+      "name": "Killgodvillager"
     },
     "gridSettings": {
       "sx": 18,

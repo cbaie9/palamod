@@ -59,9 +59,7 @@ public class PalamodModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<SwitcharrowEntity>> SWITCHARROW = register("switcharrow",
 			EntityType.Builder.<SwitcharrowEntity>of(SwitcharrowEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GodvillagerEntity>> GODVILLAGER = register("godvillager",
-			EntityType.Builder.<GodvillagerEntity>of(GodvillagerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 1.95f));
+			EntityType.Builder.<GodvillagerEntity>of(GodvillagerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.95f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -72,6 +70,7 @@ public class PalamodModEntities {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerEntity(Capabilities.ItemHandler.ENTITY, PALADIUMGOLEM.get(), (living, context) -> living.getCombinedInventory());
+		event.registerEntity(Capabilities.ItemHandler.ENTITY, GODVILLAGER.get(), (living, context) -> living.getCombinedInventory());
 	}
 
 	@SubscribeEvent

@@ -8,6 +8,7 @@
     "minecraft:farmland",
     "minecraft:grass_block",
     "minecraft:dirt_path",
-    "minecraft:moss_block"
+    "minecraft:moss_block",
+    "palamod:fertilzed_dirt"
   ]
 }

@@ -42,11 +42,7 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "Not specified",
     "customDrop": {
       "value": "CUSTOM:Xpbushlow"
@@ -123,6 +119,9 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "Xpbushprocess"
+    },
+    "onEntityCollides": {
+      "name": "Xpbushdamage"
     },
     "generateFeature": false,
     "restrictionBiomes": [],
