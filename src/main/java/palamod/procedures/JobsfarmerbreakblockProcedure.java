@@ -55,82 +55,80 @@ public class JobsfarmerbreakblockProcedure {
 		File money = new File("");
 		double money_add = 0;
 		boolean money_getadd = false;
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		if (jobs.exists() && money.exists() && !(new Object() {
-			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+		if (!IsgameserversideProcedure.execute()) {
+			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "jobs.json");
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+			if (jobs.exists() && money.exists() && !(new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayer _serverPlayer) {
+						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+					}
+					return false;
 				}
-				return false;
-			}
-		}.checkGamemode(entity))) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
-					}
-					bufferedReader.close();
-					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (world.dayTime() > main.get("xpstreak_time_farmer").getAsDouble()) {
-						main.addProperty("xpstreak_farmer", 0);
-					}
-					if (GetxpfarmerlogicProcedure.execute(world, x, y, z, entity)) {
-						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
-								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
-										|| 2 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type"))
-								&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
-							{
-								final String _tagName = "xp_jobs";
-								final double _tagValue = (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble()
-										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
-								CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-							}
-							{
-								final String _tagName = "jobs_type";
-								final double _tagValue = 2;
-								CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-							}
-						} else {
-							main.addProperty("xp_farmer", (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xp_farmer").getAsDouble()));
+			}.checkGamemode(entity))) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
 						}
-						main.addProperty("xpstreak_farmer", (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble()));
-						main.addProperty("xpstreak_time_farmer", (world.dayTime() + 80));
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(
-									Component
-											.literal(
-													(Component.translatable("palamod.procedure.jobswin1").getString() + ""
-															+ (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
-															+ Component.translatable("palamod.procedure.jobswin2").getString() + " "
-															+ Component
-																	.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:",
-																			(world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft.")))
-																	.getString())),
-									true);
+						bufferedReader.close();
+						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						if (world.dayTime() > main.get("xpstreak_time_farmer").getAsDouble()) {
+							main.addProperty("xpstreak_farmer", 0);
+						}
+						if (GetxpfarmerlogicProcedure.execute(world, x, y, z, entity)) {
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
+									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
+											|| 2 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type"))
+									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
+								{
+									final String _tagName = "xp_jobs";
+									final double _tagValue = (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble()
+											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
+									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+								}
+								{
+									final String _tagName = "jobs_type";
+									final double _tagValue = 2;
+									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+								}
+							} else {
+								main.addProperty("xp_farmer", (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xp_farmer").getAsDouble()));
+							}
+							main.addProperty("xpstreak_farmer", (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble()));
+							main.addProperty("xpstreak_time_farmer", (world.dayTime() + 80));
+							if (entity instanceof Player _player && !_player.level().isClientSide())
+								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
+										+ (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
+										+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
+												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
+										true);
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
-				} catch (IOException e) {
-					e.printStackTrace();
 				}
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(jobs);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(jobs);
+						fileWriter.write(mainGSONBuilderVariable.toJson(main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
 				}
+				ChecklvlfarmerProcedure.execute(world, x, y, z, entity);
 			}
-			ChecklvlfarmerProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

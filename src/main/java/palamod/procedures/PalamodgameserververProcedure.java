@@ -13,12 +13,12 @@ public class PalamodgameserververProcedure {
 		double build = 0;
 		double devloppement_stade = 0;
 		double patch_addon_ver = 0;
-		minecraft_version = "1.20.1";
-		beta_num = 1.2;
+		minecraft_version = "1.21.1";
+		beta_num = 1.4;
 		build = Math.round(10);
 		patch_addon_ver = 0;
 		devloppement_stade = 1;
-		update_name = "Cat-fac";
+		update_name = "clicker-QOL1";
 		if (build >= 1000) {
 			build_formated = "" + Math.round(build);
 		} else if (build >= 100) {

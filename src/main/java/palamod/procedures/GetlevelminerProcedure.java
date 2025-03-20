@@ -20,22 +20,29 @@ public class GetlevelminerProcedure {
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
-		{
-			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
+		if (!IsgameserversideProcedure.execute()) {
+			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "jobs.json");
+			if (jobs.exists()) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						lvl = jobs_main.get("lvl_miner").getAsDouble();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 				}
-				bufferedReader.close();
-				jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				lvl = jobs_main.get("lvl_miner").getAsDouble();
-			} catch (IOException e) {
-				e.printStackTrace();
 			}
+		} else {
+			lvl = 101;
 		}
 		return Component.translatable("palamod.procedure.jobsgetlvl").getString() + "" + Math.round(lvl);
 	}

@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.network.PalamodModVariables;
+
 import palamod.init.PalamodModBlocks;
 
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
@@ -14,7 +16,6 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
@@ -23,7 +24,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -105,116 +105,73 @@ public class OpenpalamodgameProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"tellraw @p [\"\",{\"text\":\"--------------------------\\nPowered by\",\"color\":\"yellow\"},{\"text\":\" Palamod Renew\",\"color\":\"#2ED0FF\"},{\"text\":\"\\n\"},{\"text\":\"Based on\",\"color\":\"dark_red\"},{\"text\":\" Paladium\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------\",\"color\":\"yellow\"}]");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
-		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
-				File.separator + "clicker_info.json");
-		clicker_buildings = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
-				File.separator + "clicker_build.json");
-		clicker_ame = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
-				File.separator + "clicker_upgrade.json");
-		if (!money.exists()) {
-			try {
-				money.getParentFile().mkdirs();
-				money.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			money_main.addProperty("money", 0);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+		if (!IsgameserversideProcedure.execute()) {
+			PalamodModVariables.MapVariables.get(world).isserverside = false;
+			PalamodModVariables.MapVariables.get(world).syncData(world);
+			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "jobs.json");
+			cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "cache_jobs.json");
+			clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+					File.separator + "clicker_info.json");
+			clicker_buildings = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+					File.separator + "clicker_build.json");
+			clicker_ame = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+					File.separator + "clicker_upgrade.json");
+			if (!money.exists()) {
 				try {
-					FileWriter fileWriter = new FileWriter(money);
-					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
-					fileWriter.close();
+					money.getParentFile().mkdirs();
+					money.createNewFile();
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
-			}
-		}
-		if (!cache.exists()) {
-			try {
-				cache.getParentFile().mkdirs();
-				cache.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			cache_main.addProperty("last_block_state", (-1));
-			cache_main.addProperty("block", (BuiltInRegistries.BLOCK.getKey(Blocks.AIR).toString()));
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(cache);
-					fileWriter.write(mainGSONBuilderVariable.toJson(cache_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		}
-		if (!jobs.exists()) {
-			try {
-				jobs.getParentFile().mkdirs();
-				jobs.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			jobs_main.addProperty("multi_exp", 1);
-			jobs_main.addProperty("next_level_miner", 50);
-			jobs_main.addProperty("next_level_farmer", 480);
-			jobs_main.addProperty("next_level_hunter", 480);
-			jobs_main.addProperty("next_level_alchi", 480);
-			jobs_main.addProperty("lvl_miner", 0);
-			jobs_main.addProperty("lvl_farmer", 0);
-			jobs_main.addProperty("lvl_hunter", 0);
-			jobs_main.addProperty("lvl_alchi", 0);
-			jobs_main.addProperty("xp_miner", 0);
-			jobs_main.addProperty("xp_farmer", 0);
-			jobs_main.addProperty("xp_hunter", 0);
-			jobs_main.addProperty("xp_alchi", 0);
-			jobs_main.addProperty("xpstreak_miner", 0);
-			jobs_main.addProperty("xpstreak_time_miner", 0);
-			jobs_main.addProperty("xpstreak_time_farmer", 0);
-			jobs_main.addProperty("xpstreak_farmer", 0);
-			jobs_main.addProperty("xpstreak_time_hunter", 0);
-			jobs_main.addProperty("xpstreak_hunter", 0);
-			jobs_main.addProperty("xpstreak_time_alchi", 0);
-			jobs_main.addProperty("xpstreak_alchi", 0);
-			jobs_main.addProperty("last_unlocked_lvl", 0);
-			jobs_main.addProperty("last_unlocked_type", 0);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(jobs);
-					fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		} else {
-			if (!(money_main.has("last_unlocked_lvl") && money_main.has("last_unlocked_type"))) {
+				money_main.addProperty("money", 0);
 				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-						StringBuilder jsonstringbuilder = new StringBuilder();
-						String line;
-						while ((line = bufferedReader.readLine()) != null) {
-							jsonstringbuilder.append(line);
-						}
-						bufferedReader.close();
-						jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						jobs_main.addProperty("last_unlocked_lvl", 0);
-						jobs_main.addProperty("last_unlocked_type", 0);
-					} catch (IOException e) {
-						e.printStackTrace();
+						FileWriter fileWriter = new FileWriter(money);
+						fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
 					}
 				}
+			}
+			if (!jobs.exists()) {
+				try {
+					jobs.getParentFile().mkdirs();
+					jobs.createNewFile();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+				jobs_main.addProperty("multi_exp", 1);
+				jobs_main.addProperty("next_level_miner", 50);
+				jobs_main.addProperty("next_level_farmer", 480);
+				jobs_main.addProperty("next_level_hunter", 480);
+				jobs_main.addProperty("next_level_alchi", 480);
+				jobs_main.addProperty("lvl_miner", 0);
+				jobs_main.addProperty("lvl_farmer", 0);
+				jobs_main.addProperty("lvl_hunter", 0);
+				jobs_main.addProperty("lvl_alchi", 0);
+				jobs_main.addProperty("xp_miner", 0);
+				jobs_main.addProperty("xp_farmer", 0);
+				jobs_main.addProperty("xp_hunter", 0);
+				jobs_main.addProperty("xp_alchi", 0);
+				jobs_main.addProperty("xpstreak_miner", 0);
+				jobs_main.addProperty("xpstreak_time_miner", 0);
+				jobs_main.addProperty("xpstreak_time_farmer", 0);
+				jobs_main.addProperty("xpstreak_farmer", 0);
+				jobs_main.addProperty("xpstreak_time_hunter", 0);
+				jobs_main.addProperty("xpstreak_hunter", 0);
+				jobs_main.addProperty("xpstreak_time_alchi", 0);
+				jobs_main.addProperty("xpstreak_alchi", 0);
+				jobs_main.addProperty("last_unlocked_lvl", 0);
+				jobs_main.addProperty("last_unlocked_type", 0);
 				{
 					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 					try {
@@ -225,56 +182,88 @@ public class OpenpalamodgameProcedure {
 						exception.printStackTrace();
 					}
 				}
+			} else {
+				if (!(money_main.has("last_unlocked_lvl") && money_main.has("last_unlocked_type"))) {
+					{
+						try {
+							BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+							StringBuilder jsonstringbuilder = new StringBuilder();
+							String line;
+							while ((line = bufferedReader.readLine()) != null) {
+								jsonstringbuilder.append(line);
+							}
+							bufferedReader.close();
+							jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+							jobs_main.addProperty("last_unlocked_lvl", 0);
+							jobs_main.addProperty("last_unlocked_type", 0);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+					{
+						com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+						try {
+							FileWriter fileWriter = new FileWriter(jobs);
+							fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
+							fileWriter.close();
+						} catch (IOException exception) {
+							exception.printStackTrace();
+						}
+					}
+				}
 			}
-		}
-		if (!clicker.exists()) {
-			try {
-				clicker.getParentFile().mkdirs();
-				clicker.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			click_main.addProperty("coin", 0);
-			click_main.addProperty("cps_active", 1);
-			click_main.addProperty("cps", 0);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+			if (!clicker.exists()) {
 				try {
-					FileWriter fileWriter = new FileWriter(clicker);
-					fileWriter.write(mainGSONBuilderVariable.toJson(click_main));
-					fileWriter.close();
+					clicker.getParentFile().mkdirs();
+					clicker.createNewFile();
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
-			}
-		}
-		if (!clicker_buildings.exists()) {
-			try {
-				clicker_buildings.getParentFile().mkdirs();
-				clicker_buildings.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			page_clicker = 1;
-			for (int index0 = 0; index0 < 6; index0++) {
-				page_building = 1;
-				for (int index1 = 0; index1 < 6; index1++) {
-					clicker_buidings.addProperty(("building_p" + Math.round(page_clicker) + "_n" + Math.round(page_building)), 0);
-					page_building = page_building + 1;
+				click_main.addProperty("coin", 0);
+				click_main.addProperty("cps_active", 1);
+				click_main.addProperty("cps", 0);
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(clicker);
+						fileWriter.write(mainGSONBuilderVariable.toJson(click_main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
 				}
-				page_clicker = page_clicker + 1;
 			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+			if (!clicker_buildings.exists()) {
 				try {
-					FileWriter fileWriter = new FileWriter(clicker_buildings);
-					fileWriter.write(mainGSONBuilderVariable.toJson(clicker_buidings));
-					fileWriter.close();
+					clicker_buildings.getParentFile().mkdirs();
+					clicker_buildings.createNewFile();
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
+				page_clicker = 1;
+				for (int index0 = 0; index0 < 6; index0++) {
+					page_building = 1;
+					for (int index1 = 0; index1 < 6; index1++) {
+						clicker_buidings.addProperty(("building_p" + Math.round(page_clicker) + "_n" + Math.round(page_building)), 0);
+						page_building = page_building + 1;
+					}
+					page_clicker = page_clicker + 1;
+				}
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(clicker_buildings);
+						fileWriter.write(mainGSONBuilderVariable.toJson(clicker_buidings));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
+				}
 			}
+			OpenModProcedure.execute();
+		} else {
+			PalamodModVariables.MapVariables.get(world).isserverside = true;
+			PalamodModVariables.MapVariables.get(world).syncData(world);
 		}
-		OpenModProcedure.execute();
 	}
 }

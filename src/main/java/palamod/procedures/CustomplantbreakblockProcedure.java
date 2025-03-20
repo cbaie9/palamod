@@ -44,41 +44,44 @@ public class CustomplantbreakblockProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double lvl = 0;
 		double lvlmin = 0;
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
-		if (jobs.exists()) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
+		if (!IsgameserversideProcedure.execute()) {
+			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "jobs.json");
+			if (jobs.exists()) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						lvl = main.get("lvl_farmer").getAsDouble();
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
-					bufferedReader.close();
-					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					lvl = main.get("lvl_farmer").getAsDouble();
-				} catch (IOException e) {
-					e.printStackTrace();
 				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:eggplant")))) {
-				lvlmin = 40;
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:chervil")))) {
-				lvlmin = 60;
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:kiwano")))) {
-				lvlmin = 80;
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:orangeblue")))) {
-				lvlmin = 100;
-			} else {
-				lvlmin = -20;
-			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && lvlmin > lvl) {
-				PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)));
-				if (event instanceof ICancellableEvent _cancellable) {
-					_cancellable.setCanceled(true);
+				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:eggplant")))) {
+					lvlmin = 40;
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:chervil")))) {
+					lvlmin = 60;
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:kiwano")))) {
+					lvlmin = 80;
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:orangeblue")))) {
+					lvlmin = 100;
+				} else {
+					lvlmin = -20;
 				}
-				MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
+				if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && lvlmin > lvl) {
+					PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)));
+					if (event instanceof ICancellableEvent _cancellable) {
+						_cancellable.setCanceled(true);
+					}
+					MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
+				}
 			}
 		}
 	}
