@@ -36,6 +36,7 @@ import palamod.world.inventory.MegasafechestfirstsetupMenu;
 import palamod.world.inventory.LuckyguiMenu;
 import palamod.world.inventory.LegendarystonepalahelpMenu;
 import palamod.world.inventory.LanguageselectionMenu;
+import palamod.world.inventory.JobsserverMenu;
 import palamod.world.inventory.JobsminerguiMenu;
 import palamod.world.inventory.JobsminercraftguiMenu;
 import palamod.world.inventory.JobsguiMenu;
@@ -276,4 +277,5 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<BackpackendiumMenu>> BACKPACKENDIUM = REGISTRY.register("backpackendium", () -> IMenuTypeExtension.create(BackpackendiumMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsfarmerguiMenu>> JOBSFARMERGUI = REGISTRY.register("jobsfarmergui", () -> IMenuTypeExtension.create(JobsfarmerguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GodvillagerguiMenu>> GODVILLAGERGUI = REGISTRY.register("godvillagergui", () -> IMenuTypeExtension.create(GodvillagerguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<JobsserverMenu>> JOBSSERVER = REGISTRY.register("jobsserver", () -> IMenuTypeExtension.create(JobsserverMenu::new));
 }

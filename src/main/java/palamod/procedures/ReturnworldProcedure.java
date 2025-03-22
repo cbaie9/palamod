@@ -28,7 +28,7 @@ public class ReturnworldProcedure {
 					("msg @a \"game dir : " + "" + FMLPaths.GAMEDIR.get().toString() + "\""));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("msg @a \"file dir : " + "" + ("" + ReadcacheProcedure.execute(world, entity)) + "\""));
+					("msg @a \"file dir : " + "" + ("" + ReadcacheProcedure.execute(entity)) + "\""));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					("msg @a \"client : " + "" + ("" + Minecraft.getInstance().gameDirectory.getAbsolutePath()) + "\""));

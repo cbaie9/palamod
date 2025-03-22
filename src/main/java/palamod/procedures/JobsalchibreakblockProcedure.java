@@ -55,7 +55,7 @@ public class JobsalchibreakblockProcedure {
 		File money = new File("");
 		double money_add = 0;
 		boolean money_getadd = false;
-		if (!IsgameserversideProcedure.execute()) {
+		if (!IsgameserversideProcedure.execute(world, x, y, z, entity)) {
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
 					File.separator + "jobs.json");

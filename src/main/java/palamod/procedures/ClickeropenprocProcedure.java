@@ -19,7 +19,7 @@ public class ClickeropenprocProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!IsgameserversideProcedure.execute()) {
+		if (!IsgameserversideProcedure.execute(world, x, y, z, entity)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

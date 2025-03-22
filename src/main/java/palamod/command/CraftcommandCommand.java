@@ -1,7 +1,7 @@
 
 package palamod.command;
 
-import palamod.procedures.IsgameserversidecommandeprocessProcedure;
+import palamod.procedures.CraftprocedureProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -15,10 +15,10 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
 @EventBusSubscriber
-public class IsserversideCommand {
+public class CraftcommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("isserverside")
+		event.getDispatcher().register(Commands.literal("craft")
 
 				.executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -32,7 +32,7 @@ public class IsserversideCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					IsgameserversidecommandeprocessProcedure.execute(world, x, y, z, entity);
+					CraftprocedureProcedure.execute(entity);
 					return 0;
 				}));
 	}

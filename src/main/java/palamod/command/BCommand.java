@@ -1,7 +1,7 @@
 
 package palamod.command;
 
-import palamod.procedures.ServersideoutputtextProcedure;
+import palamod.procedures.OutputserverProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -15,11 +15,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
 @EventBusSubscriber
-public class ServersideCommand {
+public class BCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		if (event.getCommandSelection() == Commands.CommandSelection.DEDICATED)
-			event.getDispatcher().register(Commands.literal("zzz_server_side")
+		if (event.getCommandSelection() == Commands.CommandSelection.INTEGRATED)
+			event.getDispatcher().register(Commands.literal("oxmods_nocrash")
 
 					.executes(arguments -> {
 						Level world = arguments.getSource().getUnsidedLevel();
@@ -33,7 +33,7 @@ public class ServersideCommand {
 						if (entity != null)
 							direction = entity.getDirection();
 
-						ServersideoutputtextProcedure.execute(entity);
+						OutputserverProcedure.execute(entity);
 						return 0;
 					}));
 	}

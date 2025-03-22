@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class JobsfarmergetxpprogressbarProcedure {
-	public static double execute(LevelAccessor world, Entity entity) {
+	public static double execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return 0;
 		File jobs = new File("");
@@ -21,7 +21,7 @@ public class JobsfarmergetxpprogressbarProcedure {
 		double nextlvl_xp = 0;
 		double xp_miner = 0;
 		double output = 0;
-		if (!IsgameserversideProcedure.execute()) {
+		if (!IsgameserversideProcedure.execute(world, x, y, z, entity)) {
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
 					File.separator + "jobs.json");

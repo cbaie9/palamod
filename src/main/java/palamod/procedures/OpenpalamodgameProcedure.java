@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.network.PalamodModVariables;
 
+import palamod.init.PalamodModGameRules;
 import palamod.init.PalamodModBlocks;
 
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
@@ -16,6 +17,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
@@ -24,6 +26,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -86,6 +89,9 @@ public class OpenpalamodgameProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p {\"text\":\"mip has been started\",\"color\":\"green\"}");
 		}
+		if (!((world.getBlockState(new BlockPos(0, 7, 0))).getBlock() == Blocks.CRAFTING_TABLE)) {
+			world.setBlock(new BlockPos(0, 7, 0), Blocks.CRAFTING_TABLE.defaultBlockState(), 3);
+		}
 		if (ModList.get().isLoaded("journeymap")) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -105,15 +111,13 @@ public class OpenpalamodgameProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"tellraw @p [\"\",{\"text\":\"--------------------------\\nPowered by\",\"color\":\"yellow\"},{\"text\":\" Palamod Renew\",\"color\":\"#2ED0FF\"},{\"text\":\"\\n\"},{\"text\":\"Based on\",\"color\":\"dark_red\"},{\"text\":\" Paladium\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------\",\"color\":\"yellow\"}]");
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		if (!IsgameserversideProcedure.execute()) {
+		cache = ReadcacheProcedure.execute(entity);
+		if (!IsgameserversideProcedure.execute(world, x, y, z, entity)) {
 			PalamodModVariables.MapVariables.get(world).isserverside = false;
 			PalamodModVariables.MapVariables.get(world).syncData(world);
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
 					File.separator + "jobs.json");
-			cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
-					File.separator + "cache_jobs.json");
 			clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
 					File.separator + "clicker_info.json");
@@ -260,10 +264,32 @@ public class OpenpalamodgameProcedure {
 					}
 				}
 			}
+			if (!cache.exists()) {
+				try {
+					cache.getParentFile().mkdirs();
+					cache.createNewFile();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+				cache_main.addProperty("last_block_state", (-1));
+				cache_main.addProperty("block", (BuiltInRegistries.BLOCK.getKey(Blocks.AIR).toString()));
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(cache);
+						fileWriter.write(mainGSONBuilderVariable.toJson(cache_main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
+				}
+			}
 			OpenModProcedure.execute();
 		} else {
 			PalamodModVariables.MapVariables.get(world).isserverside = true;
 			PalamodModVariables.MapVariables.get(world).syncData(world);
+			world.getLevelData().getGameRules().getRule(PalamodModGameRules.LOCKEDCRAFT).set(false, world.getServer());
+			world.getLevelData().getGameRules().getRule(PalamodModGameRules.LOCKEDUSE).set(false, world.getServer());
 		}
 	}
 }

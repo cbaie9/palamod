@@ -36,6 +36,7 @@ import palamod.client.gui.MegasafechestfirstsetupScreen;
 import palamod.client.gui.LuckyguiScreen;
 import palamod.client.gui.LegendarystonepalahelpScreen;
 import palamod.client.gui.LanguageselectionScreen;
+import palamod.client.gui.JobsserverScreen;
 import palamod.client.gui.JobsminerguiScreen;
 import palamod.client.gui.JobsminercraftguiScreen;
 import palamod.client.gui.JobsguiScreen;
@@ -274,5 +275,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.BACKPACKENDIUM.get(), BackpackendiumScreen::new);
 		event.register(PalamodModMenus.JOBSFARMERGUI.get(), JobsfarmerguiScreen::new);
 		event.register(PalamodModMenus.GODVILLAGERGUI.get(), GodvillagerguiScreen::new);
+		event.register(PalamodModMenus.JOBSSERVER.get(), JobsserverScreen::new);
 	}
 }

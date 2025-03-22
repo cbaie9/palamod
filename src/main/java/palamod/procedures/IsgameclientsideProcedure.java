@@ -12,7 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-public class IsgameserversideProcedure {
+public class IsgameclientsideProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return false;
@@ -141,9 +141,9 @@ public class IsgameserversideProcedure {
 				_player.displayClientMessage(Component.literal("-----------------end-com-----------------"), false);
 		}
 		if (FMLEnvironment.dist.isDedicatedServer()) {
-			exit = true;
-		} else if (FMLEnvironment.dist.isClient()) {
 			exit = false;
+		} else if (FMLEnvironment.dist.isClient()) {
+			exit = true;
 		}
 		if (debug) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())

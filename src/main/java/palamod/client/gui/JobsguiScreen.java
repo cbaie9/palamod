@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsguiMenu;
 
+import palamod.procedures.IsgameclientsideProcedure;
 import palamod.procedures.GetlevelminerProcedure;
 import palamod.procedures.GetlevelhunterProcedure;
 import palamod.procedures.GetlevelfarmerProcedure;
@@ -98,18 +99,22 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 123, 45, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_le_hunter"), 207, 45, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 45, -12829636, false);
-		guiGraphics.drawString(this.font,
+		if (IsgameclientsideProcedure.execute(world, x, y, z, entity))
+			guiGraphics.drawString(this.font,
 
-				GetlevelminerProcedure.execute(world, entity), 44, 99, -12829636, false);
-		guiGraphics.drawString(this.font,
+					GetlevelminerProcedure.execute(world, x, y, z, entity), 44, 99, -12829636, false);
+		if (IsgameclientsideProcedure.execute(world, x, y, z, entity))
+			guiGraphics.drawString(this.font,
 
-				GetlevelfarmerProcedure.execute(world, entity), 119, 99, -12829636, false);
-		guiGraphics.drawString(this.font,
+					GetlevelfarmerProcedure.execute(world, x, y, z, entity), 119, 99, -12829636, false);
+		if (IsgameclientsideProcedure.execute(world, x, y, z, entity))
+			guiGraphics.drawString(this.font,
 
-				GetlevelhunterProcedure.execute(world, entity), 201, 99, -12829636, false);
-		guiGraphics.drawString(this.font,
+					GetlevelhunterProcedure.execute(world, x, y, z, entity), 201, 99, -12829636, false);
+		if (IsgameclientsideProcedure.execute(world, x, y, z, entity))
+			guiGraphics.drawString(this.font,
 
-				GetlevelalchiProcedure.execute(world, entity), 272, 99, -12829636, false);
+					GetlevelalchiProcedure.execute(world, x, y, z, entity), 272, 99, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_work_in_progress_will_be_updat"), 8, 151, -13434676, false);
 	}
 

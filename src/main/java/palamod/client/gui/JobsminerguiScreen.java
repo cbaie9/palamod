@@ -51,7 +51,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36)
-			guiGraphics.renderTooltip(font, Component.literal(GetxpminertextProcedure.execute(world, entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(GetxpminertextProcedure.execute(world, x, y, z, entity)), mouseX, mouseY);
 	}
 
 	@Override
@@ -66,7 +66,8 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsminergetxpprogressbarProcedure.execute(world, entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsminergetxpprogressbarProcedure.execute(world, x, y, z, entity) * 145, 0, 14355), 0, 145, 10, 14500,
+				10);
 
 		RenderSystem.disableBlend();
 	}
@@ -85,7 +86,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_jobs_miner"), 9, 7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetxpminerProcedure.execute(world, entity), 13, 38, -12829636, false);
+				GetxpminerProcedure.execute(world, x, y, z, entity), 13, 38, -12829636, false);
 	}
 
 	@Override

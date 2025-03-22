@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "palamod:xpberry",
     "palamod:xpbottle",
     "palamod:flat_chest_upgrade",
     "palamod:pesyblpotion",
@@ -14,6 +13,7 @@
     "palamod:big_ring",
     "palamod:medium_ring",
     "palamod:small_ring",
-    "palamod:paladium_phone"
+    "palamod:paladium_phone",
+    "palamod:xpberry"
   ]
 }

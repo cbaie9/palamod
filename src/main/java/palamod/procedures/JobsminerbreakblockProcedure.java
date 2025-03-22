@@ -59,7 +59,7 @@ public class JobsminerbreakblockProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
-		if (!IsgameserversideProcedure.execute()) {
+		if (!IsgameserversideProcedure.execute(world, x, y, z, entity)) {
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
 					File.separator + "jobs.json");
