@@ -9,10 +9,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -46,13 +43,13 @@ public class SetblockstateincacheProcedure {
 		double j = 0;
 		double nloop = 0;
 		BlockState block_to_set = Blocks.AIR.defaultBlockState();
-		if (IsgameclientsideProcedure.execute() && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
+		if (IsgameclientsideProcedure.execute()) {
 			cache = ReadcacheProcedure.execute(entity);
 			if (cache.exists()) {
 				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
 					main_chs.addProperty("last_block_state",
-							((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip6
-									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip6)
+							((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip4
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip4)
 									: -1));
 				}
 				main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
@@ -73,7 +70,7 @@ public class SetblockstateincacheProcedure {
 							continue;
 						}
 						if (block_to_set.is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
-							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip21 ? block_to_set.getValue(_getip21) : -1));
+							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip19 ? block_to_set.getValue(_getip19) : -1));
 						}
 						main_chs.addProperty(("block_hammer_cache_" + nloop), (BuiltInRegistries.BLOCK.getKey(block_to_set.getBlock()).toString()));
 						j = j + 1;

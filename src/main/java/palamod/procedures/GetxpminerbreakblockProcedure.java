@@ -6,7 +6,10 @@ import net.neoforged.fml.loading.FMLPaths;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.client.Minecraft;
@@ -58,6 +61,9 @@ public class GetxpminerbreakblockProcedure {
 					}
 					bufferedReader.close();
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt"))))) {
+						nloop = 8;
+					}
 					for (int index0 = 0; index0 < 9; index0++) {
 						block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 						if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
@@ -83,7 +89,11 @@ public class GetxpminerbreakblockProcedure {
 								output = output + 25;
 							}
 						}
-						nloop = nloop + 1;
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
+							nloop = nloop + 1;
+						} else {
+							break;
+						}
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
