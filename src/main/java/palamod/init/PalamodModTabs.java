@@ -265,6 +265,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ENDIUM_BACKPACK.get());
 				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModBlocks.XPBUSHLOW.get().asItem());
+				tabData.accept(PalamodModItems.PALADIUMRAWORE.get());
+				tabData.accept(PalamodModItems.TITANERAWORE.get());
+				tabData.accept(PalamodModItems.AMETHYSTRAWORE.get());
+				tabData.accept(PalamodModItems.GREENPALADIUMRAWORE.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {

@@ -1,8 +1,6 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -11,13 +9,15 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -46,47 +46,50 @@ public class SetblockstateincacheProcedure {
 		double j = 0;
 		double nloop = 0;
 		BlockState block_to_set = Blocks.AIR.defaultBlockState();
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
-		if (cache.exists()) {
-			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
-				main_chs.addProperty("last_block_state",
-						((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip8 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip8) : -1));
-			}
-			main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
-			i = -1;
-			for (int index0 = 0; index0 < 3; index0++) {
-				j = -1;
-				for (int index1 = 0; index1 < 3; index1++) {
-					if (i != 0 || j != 0) {
-						if (entity.getXRot() > 40 || entity.getXRot() < -40) {
-							block_to_set = (world.getBlockState(BlockPos.containing(x + i, y, z + j)));
-						} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
-							block_to_set = (world.getBlockState(BlockPos.containing(x + i, y + j, z)));
-						} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
-							block_to_set = (world.getBlockState(BlockPos.containing(x, y + j, z + i)));
-						}
-					} else {
-						j = j + 1;
-						continue;
-					}
-					if (block_to_set.is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
-						main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip23 ? block_to_set.getValue(_getip23) : -1));
-					}
-					main_chs.addProperty(("block_hammer_cache_" + nloop), (BuiltInRegistries.BLOCK.getKey(block_to_set.getBlock()).toString()));
-					j = j + 1;
-					nloop = nloop + 1;
+		if (IsgameclientsideProcedure.execute() && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
+			cache = ReadcacheProcedure.execute(entity);
+			if (cache.exists()) {
+				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
+					main_chs.addProperty("last_block_state",
+							((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip6
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip6)
+									: -1));
 				}
-				i = i + 1;
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(cache);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main_chs));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
+				main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
+				i = -1;
+				for (int index0 = 0; index0 < 3; index0++) {
+					j = -1;
+					for (int index1 = 0; index1 < 3; index1++) {
+						if (i != 0 || j != 0) {
+							if (entity.getXRot() > 40 || entity.getXRot() < -40) {
+								block_to_set = (world.getBlockState(BlockPos.containing(x + i, y, z + j)));
+							} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
+								block_to_set = (world.getBlockState(BlockPos.containing(x + i, y + j, z)));
+							} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
+								block_to_set = (world.getBlockState(BlockPos.containing(x, y + j, z + i)));
+							}
+						} else {
+							j = j + 1;
+							continue;
+						}
+						if (block_to_set.is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
+							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip21 ? block_to_set.getValue(_getip21) : -1));
+						}
+						main_chs.addProperty(("block_hammer_cache_" + nloop), (BuiltInRegistries.BLOCK.getKey(block_to_set.getBlock()).toString()));
+						j = j + 1;
+						nloop = nloop + 1;
+					}
+					i = i + 1;
+				}
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(cache);
+						fileWriter.write(mainGSONBuilderVariable.toJson(main_chs));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
 				}
 			}
 		}

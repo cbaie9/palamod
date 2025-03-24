@@ -13,5 +13,7 @@ public class Paladiumapple_effectProcedure {
 			_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 900, 2));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 3));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 900, 1));
 	}
 }

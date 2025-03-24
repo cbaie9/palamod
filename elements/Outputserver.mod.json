@@ -1,0 +1,7 @@
+{
+  "_fv": 73,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\"> This is a client</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"actbar\"><block type=\"logic_boolean\"><field name=\"BOOL\">FALSE</field></block></value></block></next></block><block type=\"text_join\" x=\"189\" y=\"142\"><mutation items=\"2\"></mutation></block><block type=\"text\" x=\"190\" y=\"145\"><field name=\"TEXT\">Message</field></block><block type=\"entity_execute_command_result\" x=\"337\" y=\"254\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">clear</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"execute_command\" x=\"66\" y=\"435\"><value name=\"x\"><block type=\"coord_x\"></block></value><value name=\"y\"><block type=\"coord_y\"></block></value><value name=\"z\"><block type=\"coord_z\"></block></value></block></xml>"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 73,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 2.0,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:Paladiumrawore"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:PaladiumIngot"
+    },
+    "name": "paladiumraworefurnace_2",
+    "namespace": "mod"
+  }
+}

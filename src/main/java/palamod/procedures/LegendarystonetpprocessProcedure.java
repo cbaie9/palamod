@@ -11,11 +11,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.client.Minecraft;
-
-import java.util.Random;
 
 public class LegendarystonetpprocessProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
@@ -33,8 +33,8 @@ public class LegendarystonetpprocessProcedure {
 				return false;
 			}
 		}.checkGamemode(entity)) {
-			x = new Random().nextGaussian();
-			z = new Random().nextGaussian();
+			x = Mth.nextInt(RandomSource.create(), -1000000, 100000);
+			z = Mth.nextInt(RandomSource.create(), -1000000, 100000);
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get()));
 			{

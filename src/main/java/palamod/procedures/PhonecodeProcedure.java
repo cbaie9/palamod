@@ -202,7 +202,7 @@ public class PhonecodeProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Rejoins le serveur de la PunkAstik https://discord.gg[censored bc fdp]"), false);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("( c'est ma fac )"), false);
+				_player.displayClientMessage(Component.literal("( c'est plus ma fac )"), false);
 		}
 	}
 }

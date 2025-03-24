@@ -2,14 +2,12 @@
 package palamod.block;
 
 import palamod.procedures.SetblockstateincacheProcedure;
-import palamod.procedures.ModdedorejobsminergivexpProcedure;
 import palamod.procedures.JobsminerplacetagProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -51,13 +49,6 @@ public class TitaneOreBlock extends Block {
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(BLOCKSTATE);
-	}
-
-	@Override
-	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		ModdedorejobsminergivexpProcedure.execute(world, entity);
-		return retval;
 	}
 
 	@Override

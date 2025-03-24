@@ -21,6 +21,7 @@ import palamod.item.TrixiumItem;
 import palamod.item.TravelarmorItem;
 import palamod.item.TitanestickItem;
 import palamod.item.TitaneseedplanterItem;
+import palamod.item.TitaneraworeItem;
 import palamod.item.TitanepollenItem;
 import palamod.item.TitaneparticleItem;
 import palamod.item.TitanemixedcoalItem;
@@ -86,6 +87,7 @@ import palamod.item.PalamixedcharoalItem;
 import palamod.item.PaladumbackpackItem;
 import palamod.item.PaladiumstickItem;
 import palamod.item.PaladiumseedplanterItem;
+import palamod.item.PaladiumraworeItem;
 import palamod.item.PaladiumpollenItem;
 import palamod.item.PaladiumphoneItem;
 import palamod.item.PaladiumparticleItem;
@@ -167,6 +169,7 @@ import palamod.item.HammerheadItem;
 import palamod.item.GuardianstoneItem;
 import palamod.item.GreenpaladumexcatorItem;
 import palamod.item.GreenpaladiumseedplanterItem;
+import palamod.item.GreenpaladiumraworeItem;
 import palamod.item.GreenpaladiumparticleItem;
 import palamod.item.GreenpaladiumhoeItem;
 import palamod.item.GreenpaladiumhammerheadItem;
@@ -250,6 +253,7 @@ import palamod.item.AntifuzediscItem;
 import palamod.item.AngelicwterItem;
 import palamod.item.AmethytestickItem;
 import palamod.item.AmethystseedplanterItem;
+import palamod.item.AmethystraworeItem;
 import palamod.item.AmethystpollenItem;
 import palamod.item.AmethystparticleItem;
 import palamod.item.AmethystmixedcoalItem;
@@ -821,6 +825,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> GODVILLAGER_SPAWN_EGG = REGISTRY.register("godvillager_spawn_egg", () -> new DeferredSpawnEggItem(PalamodModEntities.GODVILLAGER, -65536, -16711936, new Item.Properties()));
 	public static final DeferredItem<Item> XPBUSHLOW = block(PalamodModBlocks.XPBUSHLOW);
 	public static final DeferredItem<Item> CHESTEXPLORER = REGISTRY.register("chestexplorer", ChestexplorerItem::new);
+	public static final DeferredItem<Item> PALADIUMRAWORE = REGISTRY.register("paladiumrawore", PaladiumraworeItem::new);
+	public static final DeferredItem<Item> TITANERAWORE = REGISTRY.register("titanerawore", TitaneraworeItem::new);
+	public static final DeferredItem<Item> AMETHYSTRAWORE = REGISTRY.register("amethystrawore", AmethystraworeItem::new);
+	public static final DeferredItem<Item> GREENPALADIUMRAWORE = REGISTRY.register("greenpaladiumrawore", GreenpaladiumraworeItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

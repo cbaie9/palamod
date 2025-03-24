@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 2,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "palamod:paladiumrawore"
+  },
+  "result": {
+    "id": "palamod:paladium_ingot"
+  }
+}

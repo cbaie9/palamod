@@ -31,6 +31,8 @@ import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
 
+import java.io.File;
+
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PalamodModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PalamodMod.MODID);
@@ -68,6 +70,7 @@ public class PalamodModVariables {
 	public static double analy_shulker = 0;
 	public static double analy_air = 0;
 	public static double analy_grass = 0;
+	public static File server_path_cache = new File("");
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -183,6 +186,7 @@ public class PalamodModVariables {
 		public double hdv_price3 = 0;
 		public double hdv_price4 = 0;
 		public double clicker_page = 1.0;
+		public boolean isserverside = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -197,6 +201,7 @@ public class PalamodModVariables {
 			hdv_price3 = nbt.getDouble("hdv_price3");
 			hdv_price4 = nbt.getDouble("hdv_price4");
 			clicker_page = nbt.getDouble("clicker_page");
+			isserverside = nbt.getBoolean("isserverside");
 		}
 
 		@Override
@@ -207,6 +212,7 @@ public class PalamodModVariables {
 			nbt.putDouble("hdv_price3", hdv_price3);
 			nbt.putDouble("hdv_price4", hdv_price4);
 			nbt.putDouble("clicker_page", clicker_page);
+			nbt.putBoolean("isserverside", isserverside);
 			return nbt;
 		}
 
