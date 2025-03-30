@@ -44519,6 +44519,40 @@
           "src/main/resources/assets/palamod/models/block/cobblebreakerserver.json"
         ]
       }
+    },
+    {
+      "name": "Opencobblebreaker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opencobblebreaker",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/OpencobblebreakerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [

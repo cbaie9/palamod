@@ -3,6 +3,7 @@ package palamod.block;
 
 import palamod.world.inventory.CobbleakerserverMenu;
 
+import palamod.procedures.OpencobblebreakerProcedure;
 import palamod.procedures.CobblebreakersetupProcedure;
 import palamod.procedures.CobblebreakerprocessProcedure;
 
@@ -29,6 +30,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
@@ -73,6 +75,14 @@ public class CobblebreakerserverBlock extends Block implements EntityBlock {
 				}
 			}, pos);
 		}
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		double hitX = hit.getLocation().x;
+		double hitY = hit.getLocation().y;
+		double hitZ = hit.getLocation().z;
+		Direction direction = hit.getDirection();
+		OpencobblebreakerProcedure.execute(world, x, y, z, entity);
 		return InteractionResult.SUCCESS;
 	}
 

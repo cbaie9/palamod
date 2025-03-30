@@ -132,6 +132,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "Opencobblebreaker"
+    },
     "onBlockAdded": {
       "name": "Cobblebreakersetup"
     },
