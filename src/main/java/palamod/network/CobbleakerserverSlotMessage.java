@@ -67,66 +67,66 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			return;
 		if (slot == 1 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 1 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 2 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 2 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 3 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 3 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 4 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 4 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 5 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 5 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 6 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 6 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 7 && changeType == 1) {
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 7 && changeType == 2) {
 			int amount = meta;
 
-			GivexpcobblebreakerserverProcedure.execute(entity);
+			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
