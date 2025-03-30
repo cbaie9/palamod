@@ -829,6 +829,11 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TITANERAWORE = REGISTRY.register("titanerawore", TitaneraworeItem::new);
 	public static final DeferredItem<Item> AMETHYSTRAWORE = REGISTRY.register("amethystrawore", AmethystraworeItem::new);
 	public static final DeferredItem<Item> GREENPALADIUMRAWORE = REGISTRY.register("greenpaladiumrawore", GreenpaladiumraworeItem::new);
+	public static final DeferredItem<Item> PALADIUMHOPPER = block(PalamodModBlocks.PALADIUMHOPPER);
+	public static final DeferredItem<Item> PALADIUMHOPPERSOUTH = block(PalamodModBlocks.PALADIUMHOPPERSOUTH);
+	public static final DeferredItem<Item> TRIXIUMSLAB = block(PalamodModBlocks.TRIXIUMSLAB);
+	public static final DeferredItem<Item> TRIXIUMSTAIRS = block(PalamodModBlocks.TRIXIUMSTAIRS);
+	public static final DeferredItem<Item> COBBLEBREAKERSERVER = block(PalamodModBlocks.COBBLEBREAKERSERVER);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -40,6 +40,7 @@ import palamod.block.entity.Endiumchestv2BlockEntity;
 import palamod.block.entity.EndiumchestBlockEntity;
 import palamod.block.entity.DrawbridgeBlockEntity;
 import palamod.block.entity.DownloaderBlockEntity;
+import palamod.block.entity.CobblebreakerserverBlockEntity;
 import palamod.block.entity.CobblebreakerBlockEntity;
 import palamod.block.entity.CloudblockBlockEntity;
 import palamod.block.entity.Amethystchestv2BlockEntity;
@@ -103,6 +104,7 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> EXCTRACTOR = register("exctractor", PalamodModBlocks.EXCTRACTOR, ExctractorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TOTEMFERTILITY = register("totemfertility", PalamodModBlocks.TOTEMFERTILITY, TotemfertilityBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> XPBUSHLOW = register("xpbushlow", PalamodModBlocks.XPBUSHLOW, XpbushlowBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> COBBLEBREAKERSERVER = register("cobblebreakerserver", PalamodModBlocks.COBBLEBREAKERSERVER, CobblebreakerserverBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -153,5 +155,6 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXCTRACTOR.get(), (blockEntity, side) -> ((ExctractorBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEMFERTILITY.get(), (blockEntity, side) -> ((TotemfertilityBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSHLOW.get(), (blockEntity, side) -> ((XpbushlowBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, COBBLEBREAKERSERVER.get(), (blockEntity, side) -> ((CobblebreakerserverBlockEntity) blockEntity).getItemHandler());
 	}
 }

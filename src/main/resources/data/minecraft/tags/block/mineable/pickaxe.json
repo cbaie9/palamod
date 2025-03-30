@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "palamod:cobblebreakerserver",
+    "palamod:mega_safe_chest",
+    "palamod:trixiumstairs",
+    "palamod:trixiumslab",
+    "palamod:paladiumhoppersouth",
+    "palamod:paladiumhopper",
     "palamod:slimepad_purple",
     "palamod:slimepad_orange",
     "palamod:slimepad_blue",

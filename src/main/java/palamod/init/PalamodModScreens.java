@@ -66,6 +66,7 @@ import palamod.client.gui.DownloaderguiScreen;
 import palamod.client.gui.CrusherpalahelpguiScreen;
 import palamod.client.gui.CrusherguiScreen;
 import palamod.client.gui.CobblebreakerguiScreen;
+import palamod.client.gui.CobbleakerserverScreen;
 import palamod.client.gui.ClickerScreen;
 import palamod.client.gui.BackpacktitaneScreen;
 import palamod.client.gui.BackpackpaladiumScreen;
@@ -276,5 +277,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.JOBSFARMERGUI.get(), JobsfarmerguiScreen::new);
 		event.register(PalamodModMenus.GODVILLAGERGUI.get(), GodvillagerguiScreen::new);
 		event.register(PalamodModMenus.JOBSSERVER.get(), JobsserverScreen::new);
+		event.register(PalamodModMenus.COBBLEAKERSERVER.get(), CobbleakerserverScreen::new);
 	}
 }

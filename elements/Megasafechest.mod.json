@@ -47,7 +47,7 @@
         "value": "CUSTOM:Palamod"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -79,7 +79,7 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "speedFactor": 1.0,
-    "jumpFactor": 1.5,
+    "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,

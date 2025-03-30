@@ -107,7 +107,7 @@
     "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "Cobblebreakergui",
-    "openGUIOnRightClick": true,
+    "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,

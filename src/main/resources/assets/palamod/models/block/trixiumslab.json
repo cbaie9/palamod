@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "palamod:block/trixium_block",
+    "bottom": "palamod:block/trixium_block",
+    "top": "palamod:block/trixium_block",
+    "side": "palamod:block/trixium_block"
+  },
+  "render_type": "solid"
+}

@@ -1,14 +1,11 @@
 
 package palamod.block;
 
-import palamod.world.inventory.CobblebreakerguiMenu;
-
 import palamod.procedures.CobblebreakersetupProcedure;
 import palamod.procedures.CobblebreakerprocessProcedure;
 
 import palamod.block.entity.CobblebreakerBlockEntity;
 
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,19 +16,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
-
-import io.netty.buffer.Unpooled;
 
 public class CobblebreakerBlock extends Block implements EntityBlock {
 	public CobblebreakerBlock() {
@@ -55,25 +44,6 @@ public class CobblebreakerBlock extends Block implements EntityBlock {
 		super.tick(blockstate, world, pos, random);
 		CobblebreakerprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 20);
-	}
-
-	@Override
-	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
-		super.useWithoutItem(blockstate, world, pos, entity, hit);
-		if (entity instanceof ServerPlayer player) {
-			player.openMenu(new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Cobblebreaker");
-				}
-
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new CobblebreakerguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
-				}
-			}, pos);
-		}
-		return InteractionResult.SUCCESS;
 	}
 
 	@Override

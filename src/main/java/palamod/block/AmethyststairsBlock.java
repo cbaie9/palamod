@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class AmethyststairsBlock extends StairBlock {
 	public AmethyststairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1.1f, 10f).requiresCorrectToolForDrops().dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.AMETHYST).strength(1.1f, 10f).requiresCorrectToolForDrops().dynamicShape());
 	}
 
 	@Override

@@ -1,0 +1,297 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 180,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 6,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "cobblebreakergui.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 30,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 206,
+          "y": 34,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 143,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 164,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 185,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 206,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 227,
+          "y": 100,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 248,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "onStackTransfer": {
+            "name": "Givexpcobblebreakerserver"
+          },
+          "x": 269,
+          "y": 99,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_iron.png",
+          "use1Xscale": false,
+          "x": 144,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_gold.png",
+          "use1Xscale": false,
+          "x": 165,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_diamond.png",
+          "use1Xscale": false,
+          "x": 186,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_amethyst.png",
+          "use1Xscale": false,
+          "x": 207,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_titane.png",
+          "use1Xscale": false,
+          "x": 228,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "particle_paladium.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "green_paladium_particle.png",
+          "use1Xscale": false,
+          "x": 270,
+          "y": 83,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 273,
+          "y": 43,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "upgrade_cobblebreaker.png",
+          "use1Xscale": false,
+          "x": 274,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "arrow_down_sprite16.png",
+          "spritesCount": 20,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Cobblebreakerarrowreturnsprite"
+          },
+          "x": 208,
+          "y": 55,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

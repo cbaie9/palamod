@@ -24,7 +24,7 @@ import net.minecraft.core.BlockPos;
 
 public class MegasafechestBlock extends Block implements EntityBlock {
 	public MegasafechestBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f, 1000f).jumpFactor(1.5f));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f, 1000f));
 	}
 
 	@Override

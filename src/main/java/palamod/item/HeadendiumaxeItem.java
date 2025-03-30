@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 
 public class HeadendiumaxeItem extends Item {
 	public HeadendiumaxeItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override

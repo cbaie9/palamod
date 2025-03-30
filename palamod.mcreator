@@ -21,14 +21,14 @@
       "registry_name": "paladium_ore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/paladium_ore.json",
+          "src/main/resources/assets/palamod/blockstates/paladium_ore.json",
+          "src/main/java/palamod/block/PaladiumOreBlock.java",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/paladium_ore_biome_modifier.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/paladium_ore.json",
           "src/main/resources/data/palamod/loot_table/blocks/paladium_ore.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/paladium_ore.json",
-          "src/main/resources/assets/palamod/models/item/paladium_ore.json",
-          "src/main/resources/assets/palamod/blockstates/paladium_ore.json",
-          "src/main/resources/assets/palamod/models/block/paladium_ore.json",
-          "src/main/java/palamod/block/PaladiumOreBlock.java",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/paladium_ore_biome_modifier.json"
+          "src/main/resources/assets/palamod/models/item/paladium_ore.json"
         ]
       }
     },
@@ -273,14 +273,14 @@
       "registry_name": "titane_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/titane_ore.json",
-          "src/main/resources/assets/palamod/models/block/titane_ore.json",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/titane_ore_biome_modifier.json",
-          "src/main/resources/data/palamod/worldgen/configured_feature/titane_ore.json",
-          "src/main/java/palamod/block/TitaneOreBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/titane_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/titane_ore.json",
           "src/main/resources/assets/palamod/blockstates/titane_ore.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/titane_ore.json"
+          "src/main/resources/data/palamod/neoforge/biome_modifier/titane_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/loot_table/blocks/titane_ore.json",
+          "src/main/java/palamod/block/TitaneOreBlock.java",
+          "src/main/resources/data/palamod/worldgen/configured_feature/titane_ore.json",
+          "src/main/resources/assets/palamod/models/block/titane_ore.json",
+          "src/main/resources/assets/palamod/models/item/titane_ore.json"
         ]
       }
     },
@@ -525,14 +525,14 @@
       "registry_name": "amethyst_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethyst_ore.json",
           "src/main/java/palamod/block/AmethysteOreBlock.java",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/amethyst_ore_biome_modifier.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/amethyst_ore.json",
           "src/main/resources/assets/palamod/models/block/amethyst_ore.json",
+          "src/main/resources/assets/palamod/blockstates/amethyst_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/amethyst_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/amethyst_ore_biome_modifier.json",
+          "src/main/resources/assets/palamod/models/item/amethyst_ore.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/amethyst_ore.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethyst_ore.json",
-          "src/main/resources/assets/palamod/blockstates/amethyst_ore.json"
+          "src/main/resources/data/palamod/loot_table/blocks/amethyst_ore.json"
         ]
       }
     },
@@ -544,11 +544,11 @@
       "registry_name": "amethyst_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/amethyst_block.json",
-          "src/main/resources/assets/palamod/models/block/amethyst_block.json",
           "src/main/resources/assets/palamod/models/item/amethyst_block.json",
           "src/main/resources/assets/palamod/blockstates/amethyst_block.json",
-          "src/main/java/palamod/block/AmethysteBlockBlock.java"
+          "src/main/java/palamod/block/AmethysteBlockBlock.java",
+          "src/main/resources/assets/palamod/models/block/amethyst_block.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethyst_block.json"
         ]
       }
     },
@@ -1206,8 +1206,8 @@
       "registry_name": "findium",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/FindiumItem.java",
-          "src/main/resources/assets/palamod/models/item/findium.json"
+          "src/main/resources/assets/palamod/models/item/findium.json",
+          "src/main/java/palamod/item/FindiumItem.java"
         ]
       }
     },
@@ -4889,8 +4889,8 @@
       "registry_name": "axe_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/axe_head.json",
-          "src/main/java/palamod/item/AxeheadItem.java"
+          "src/main/java/palamod/item/AxeheadItem.java",
+          "src/main/resources/assets/palamod/models/item/axe_head.json"
         ]
       }
     },
@@ -4915,8 +4915,8 @@
       "registry_name": "hammer_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/hammer_head.json",
-          "src/main/java/palamod/item/HammerheadItem.java"
+          "src/main/java/palamod/item/HammerheadItem.java",
+          "src/main/resources/assets/palamod/models/item/hammer_head.json"
         ]
       }
     },
@@ -4928,8 +4928,8 @@
       "registry_name": "fastsword_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/FastswordheadItem.java",
-          "src/main/resources/assets/palamod/models/item/fastsword_head.json"
+          "src/main/resources/assets/palamod/models/item/fastsword_head.json",
+          "src/main/java/palamod/item/FastswordheadItem.java"
         ]
       }
     },
@@ -4941,8 +4941,8 @@
       "registry_name": "broadsword_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/BroadswordheadItem.java",
-          "src/main/resources/assets/palamod/models/item/broadsword_head.json"
+          "src/main/resources/assets/palamod/models/item/broadsword_head.json",
+          "src/main/java/palamod/item/BroadswordheadItem.java"
         ]
       }
     },
@@ -4954,8 +4954,8 @@
       "registry_name": "shovel_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/ShovelheadItem.java",
-          "src/main/resources/assets/palamod/models/item/shovel_head.json"
+          "src/main/resources/assets/palamod/models/item/shovel_head.json",
+          "src/main/java/palamod/item/ShovelheadItem.java"
         ]
       }
     },
@@ -5483,11 +5483,11 @@
       "registry_name": "fake_water_obsidian",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/FakewaterobsidianBlock.java",
           "src/main/resources/assets/palamod/models/item/fake_water_obsidian.json",
           "src/main/resources/assets/palamod/models/block/fake_water_obsidian.json",
           "src/main/resources/data/palamod/loot_table/blocks/fake_water_obsidian.json",
-          "src/main/resources/assets/palamod/blockstates/fake_water_obsidian.json"
+          "src/main/resources/assets/palamod/blockstates/fake_water_obsidian.json",
+          "src/main/java/palamod/block/FakewaterobsidianBlock.java"
         ]
       }
     },
@@ -5593,11 +5593,11 @@
       "registry_name": "lava_obsidian",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/lava_obsidian.json",
-          "src/main/resources/assets/palamod/blockstates/lava_obsidian.json",
+          "src/main/resources/assets/palamod/models/item/lava_obsidian.json",
           "src/main/java/palamod/block/LavaobsidianBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/lava_obsidian.json",
-          "src/main/resources/assets/palamod/models/item/lava_obsidian.json"
+          "src/main/resources/assets/palamod/models/block/lava_obsidian.json",
+          "src/main/resources/assets/palamod/blockstates/lava_obsidian.json"
         ]
       }
     },
@@ -5622,10 +5622,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/palamod/models/item/iron_spike.json",
+          "src/main/resources/assets/palamod/blockstates/iron_spike.json",
           "src/main/resources/assets/palamod/models/block/iron_spike.json",
-          "src/main/java/palamod/block/IronspikeBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/iron_spike.json",
-          "src/main/resources/assets/palamod/blockstates/iron_spike.json"
+          "src/main/java/palamod/block/IronspikeBlock.java"
         ]
       }
     },
@@ -8301,10 +8301,10 @@
       "registry_name": "mega_safe_chest",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/MegasafechestBlock.java",
           "src/main/resources/assets/palamod/models/item/mega_safe_chest.json",
-          "src/main/resources/data/palamod/loot_table/blocks/mega_safe_chest.json",
           "src/main/resources/assets/palamod/models/block/mega_safe_chest.json",
+          "src/main/resources/data/palamod/loot_table/blocks/mega_safe_chest.json",
+          "src/main/java/palamod/block/MegasafechestBlock.java",
           "src/main/java/palamod/block/entity/MegasafechestBlockEntity.java",
           "src/main/resources/assets/palamod/blockstates/mega_safe_chest.json"
         ]
@@ -9151,9 +9151,9 @@
       "registry_name": "megasafechestfirstsetup",
       "metadata": {
         "files": [
-          "src/main/java/palamod/world/inventory/MegasafechestfirstsetupMenu.java",
           "src/main/java/palamod/client/gui/MegasafechestfirstsetupScreen.java",
-          "src/main/java/palamod/network/MegasafechestfirstsetupButtonMessage.java"
+          "src/main/java/palamod/network/MegasafechestfirstsetupButtonMessage.java",
+          "src/main/java/palamod/world/inventory/MegasafechestfirstsetupMenu.java"
         ]
       }
     },
@@ -9587,13 +9587,13 @@
       "registry_name": "amethyst_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/amethyst_stairs.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethyst_stairs.json",
-          "src/main/resources/assets/palamod/models/block/amethyst_stairs_inner.json",
+          "src/main/resources/assets/palamod/models/block/amethyst_stairs.json",
           "src/main/resources/assets/palamod/models/block/amethyst_stairs_outer.json",
           "src/main/resources/assets/palamod/models/item/amethyst_stairs.json",
           "src/main/java/palamod/block/AmethyststairsBlock.java",
-          "src/main/resources/assets/palamod/models/block/amethyst_stairs.json"
+          "src/main/resources/assets/palamod/blockstates/amethyst_stairs.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethyst_stairs.json",
+          "src/main/resources/assets/palamod/models/block/amethyst_stairs_inner.json"
         ]
       }
     },
@@ -9605,13 +9605,13 @@
       "registry_name": "amethyst_slab",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/AmethystslabBlock.java",
-          "src/main/resources/assets/palamod/blockstates/amethyst_slab.json",
-          "src/main/resources/assets/palamod/models/item/amethyst_slab.json",
+          "src/main/resources/assets/palamod/models/block/amethyst_slab_full.json",
           "src/main/resources/assets/palamod/models/block/amethyst_slab.json",
-          "src/main/resources/assets/palamod/models/block/amethyst_slab_top.json",
+          "src/main/java/palamod/block/AmethystslabBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/amethyst_slab.json",
-          "src/main/resources/assets/palamod/models/block/amethyst_slab_full.json"
+          "src/main/resources/assets/palamod/models/block/amethyst_slab_top.json",
+          "src/main/resources/assets/palamod/blockstates/amethyst_slab.json",
+          "src/main/resources/assets/palamod/models/item/amethyst_slab.json"
         ]
       }
     },
@@ -12071,8 +12071,8 @@
       "registry_name": "green_paladium_broadsword_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/HeadgreenbroadswordItem.java",
-          "src/main/resources/assets/palamod/models/item/green_paladium_broadsword_head.json"
+          "src/main/resources/assets/palamod/models/item/green_paladium_broadsword_head.json",
+          "src/main/java/palamod/item/HeadgreenbroadswordItem.java"
         ]
       }
     },
@@ -12084,8 +12084,8 @@
       "registry_name": "green_paladium_sword_head",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/HeadgreenswordItem.java",
-          "src/main/resources/assets/palamod/models/item/green_paladium_sword_head.json"
+          "src/main/resources/assets/palamod/models/item/green_paladium_sword_head.json",
+          "src/main/java/palamod/item/HeadgreenswordItem.java"
         ]
       }
     },
@@ -12097,8 +12097,8 @@
       "registry_name": "green_paladium_pickaxe_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/green_paladium_pickaxe_head.json",
-          "src/main/java/palamod/item/HeadgreenpickaxeItem.java"
+          "src/main/java/palamod/item/HeadgreenpickaxeItem.java",
+          "src/main/resources/assets/palamod/models/item/green_paladium_pickaxe_head.json"
         ]
       }
     },
@@ -12237,8 +12237,8 @@
       "registry_name": "endium_broadsword_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_broadsword_head.json",
-          "src/main/java/palamod/item/EndiumbroadswordheadItem.java"
+          "src/main/java/palamod/item/EndiumbroadswordheadItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_broadsword_head.json"
         ]
       }
     },
@@ -12289,8 +12289,8 @@
       "registry_name": "endium_hammer_head",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/endium_hammer_head.json",
-          "src/main/java/palamod/item/EndiumhammerheadItem.java"
+          "src/main/java/palamod/item/EndiumhammerheadItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_hammer_head.json"
         ]
       }
     },
@@ -12786,11 +12786,11 @@
       "registry_name": "stony",
       "metadata": {
         "files": [
+          "src/main/java/palamod/block/StonyBlock.java",
           "src/main/resources/assets/palamod/models/block/stony.json",
-          "src/main/resources/data/palamod/loot_table/blocks/stony.json",
-          "src/main/resources/assets/palamod/blockstates/stony.json",
           "src/main/resources/assets/palamod/models/item/stony.json",
-          "src/main/java/palamod/block/StonyBlock.java"
+          "src/main/resources/data/palamod/loot_table/blocks/stony.json",
+          "src/main/resources/assets/palamod/blockstates/stony.json"
         ]
       }
     },
@@ -12805,6 +12805,10 @@
           "src/main/java/palamod/procedures/StonyBlock_respawnProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -19478,12 +19482,12 @@
       "registry_name": "flatten_amethyst_chest",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/entity/AmethystchestBlockEntity.java",
           "src/main/resources/assets/palamod/models/item/flatten_amethyst_chest.json",
           "src/main/resources/data/palamod/loot_table/blocks/flatten_amethyst_chest.json",
-          "src/main/java/palamod/block/AmethystchestBlock.java",
           "src/main/resources/assets/palamod/models/block/flatten_amethyst_chest.json",
-          "src/main/resources/assets/palamod/blockstates/flatten_amethyst_chest.json"
+          "src/main/resources/assets/palamod/blockstates/flatten_amethyst_chest.json",
+          "src/main/java/palamod/block/entity/AmethystchestBlockEntity.java",
+          "src/main/java/palamod/block/AmethystchestBlock.java"
         ]
       }
     },
@@ -22588,14 +22592,14 @@
       "registry_name": "deepslate_amethyst_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_amethyst_ore_biome_modifier.json",
-          "src/main/resources/assets/palamod/blockstates/deepslate_amethyst_ore.json",
-          "src/main/resources/assets/palamod/models/block/deepslate_amethyst_ore.json",
           "src/main/java/palamod/block/AmethystoredeepslateBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/deepslate_amethyst_ore.json",
+          "src/main/resources/assets/palamod/blockstates/deepslate_amethyst_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_amethyst_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_amethyst_ore_biome_modifier.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_amethyst_ore.json",
           "src/main/resources/assets/palamod/models/item/deepslate_amethyst_ore.json",
-          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_amethyst_ore.json",
-          "src/main/resources/data/palamod/loot_table/blocks/deepslate_amethyst_ore.json"
+          "src/main/resources/assets/palamod/models/block/deepslate_amethyst_ore.json"
         ]
       }
     },
@@ -22607,14 +22611,14 @@
       "registry_name": "deepslate_titane_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_titane_ore.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_titane_ore.json",
-          "src/main/java/palamod/block/TitaneoredeepslateBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/deepslate_titane_ore.json",
+          "src/main/resources/assets/palamod/models/item/deepslate_titane_ore.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_titane_ore_biome_modifier.json",
           "src/main/resources/assets/palamod/models/block/deepslate_titane_ore.json",
-          "src/main/resources/assets/palamod/blockstates/deepslate_titane_ore.json",
-          "src/main/resources/assets/palamod/models/item/deepslate_titane_ore.json"
+          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_titane_ore.json",
+          "src/main/java/palamod/block/TitaneoredeepslateBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/deepslate_titane_ore.json",
+          "src/main/resources/assets/palamod/blockstates/deepslate_titane_ore.json"
         ]
       }
     },
@@ -22626,14 +22630,14 @@
       "registry_name": "deepslate_paladium_ore",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/PaladiumoredeepslateBlock.java",
           "src/main/resources/assets/palamod/blockstates/deepslate_paladium_ore.json",
-          "src/main/resources/assets/palamod/models/block/deepslate_paladium_ore.json",
-          "src/main/resources/assets/palamod/models/item/deepslate_paladium_ore.json",
-          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_paladium_ore.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_paladium_ore.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_paladium_ore_biome_modifier.json",
-          "src/main/resources/data/palamod/loot_table/blocks/deepslate_paladium_ore.json"
+          "src/main/resources/assets/palamod/models/block/deepslate_paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_paladium_ore.json",
+          "src/main/resources/data/palamod/loot_table/blocks/deepslate_paladium_ore.json",
+          "src/main/resources/assets/palamod/models/item/deepslate_paladium_ore.json",
+          "src/main/java/palamod/block/PaladiumoredeepslateBlock.java"
         ]
       }
     },
@@ -22645,14 +22649,14 @@
       "registry_name": "deepslate_trixium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_trixium_ore.json",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_trixium_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/loot_table/blocks/deepslate_trixium_ore.json",
+          "src/main/java/palamod/block/TrixiumoredeepslateBlock.java",
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_trixium_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_trixium_ore_biome_modifier.json",
           "src/main/resources/assets/palamod/models/item/deepslate_trixium_ore.json",
           "src/main/resources/assets/palamod/blockstates/deepslate_trixium_ore.json",
-          "src/main/resources/assets/palamod/models/block/deepslate_trixium_ore.json",
-          "src/main/java/palamod/block/TrixiumoredeepslateBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/deepslate_trixium_ore.json"
+          "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_trixium_ore.json",
+          "src/main/resources/assets/palamod/models/block/deepslate_trixium_ore.json"
         ]
       }
     },
@@ -22664,14 +22668,14 @@
       "registry_name": "deepslate_green_paladium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/deepslate_green_paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_green_paladium_ore.json",
           "src/main/resources/assets/palamod/blockstates/deepslate_green_paladium_ore.json",
+          "src/main/java/palamod/block/PaladiumgreenoredeepslateBlock.java",
           "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_green_paladium_ore.json",
           "src/main/resources/assets/palamod/models/block/deepslate_green_paladium_ore.json",
+          "src/main/resources/data/palamod/loot_table/blocks/deepslate_green_paladium_ore.json",
           "src/main/resources/assets/palamod/models/item/deepslate_green_paladium_ore.json",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_green_paladium_ore_biome_modifier.json",
-          "src/main/java/palamod/block/PaladiumgreenoredeepslateBlock.java",
-          "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_green_paladium_ore.json"
+          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_green_paladium_ore_biome_modifier.json"
         ]
       }
     },
@@ -22998,14 +23002,14 @@
       "registry_name": "deepslate_findium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/deepslate_findium_ore.json",
-          "src/main/java/palamod/block/FindiumoredeepslateBlock.java",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_findium_ore_biome_modifier.json",
           "src/main/resources/assets/palamod/models/item/deepslate_findium_ore.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_findium_ore.json",
+          "src/main/resources/assets/palamod/models/block/deepslate_findium_ore.json",
           "src/main/resources/assets/palamod/blockstates/deepslate_findium_ore.json",
-          "src/main/resources/data/palamod/loot_table/blocks/deepslate_findium_ore.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_findium_ore.json"
+          "src/main/java/palamod/block/FindiumoredeepslateBlock.java",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_findium_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_findium_ore.json",
+          "src/main/resources/data/palamod/loot_table/blocks/deepslate_findium_ore.json"
         ]
       }
     },
@@ -23072,11 +23076,11 @@
       "registry_name": "trixium_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/trixium_block.json",
           "src/main/java/palamod/block/TrixiumblockBlock.java",
           "src/main/resources/assets/palamod/models/block/trixium_block.json",
-          "src/main/resources/assets/palamod/models/item/trixium_block.json",
-          "src/main/resources/data/palamod/loot_table/blocks/trixium_block.json"
+          "src/main/resources/data/palamod/loot_table/blocks/trixium_block.json",
+          "src/main/resources/assets/palamod/blockstates/trixium_block.json",
+          "src/main/resources/assets/palamod/models/item/trixium_block.json"
         ]
       }
     },
@@ -31871,11 +31875,11 @@
       "registry_name": "cobblebreaker",
       "metadata": {
         "files": [
+          "src/main/java/palamod/block/CobblebreakerBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/cobblebreaker.json",
           "src/main/resources/assets/palamod/blockstates/cobblebreaker.json",
           "src/main/java/palamod/block/entity/CobblebreakerBlockEntity.java",
           "src/main/resources/assets/palamod/models/item/cobblebreaker.json",
-          "src/main/java/palamod/block/CobblebreakerBlock.java",
           "src/main/resources/assets/palamod/models/block/cobblebreaker.json"
         ]
       }
@@ -41144,18 +41148,6 @@
       }
     },
     {
-      "name": "Loadingcrash",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "loadingcrash",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/client/screens/LoadingcrashOverlay.java"
-        ]
-      }
-    },
-    {
       "name": "Miichalenge",
       "type": "item",
       "compiles": true,
@@ -44205,8 +44197,8 @@
       "registry_name": "paladiumrawore",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/PaladiumraworeItem.java",
-          "src/main/resources/assets/palamod/models/item/paladiumrawore.json"
+          "src/main/resources/assets/palamod/models/item/paladiumrawore.json",
+          "src/main/java/palamod/item/PaladiumraworeItem.java"
         ]
       }
     },
@@ -44342,6 +44334,189 @@
       "metadata": {
         "files": [
           "src/main/resources/data/palamod/recipe/greenpaladiumraworefurnace_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumhopper",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumhopper",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/paladiumhopper.json",
+          "src/main/resources/data/palamod/loot_table/blocks/paladiumhopper.json",
+          "src/main/java/palamod/block/PaladiumhopperBlock.java",
+          "src/main/resources/assets/palamod/models/item/paladiumhopper.json",
+          "src/main/resources/assets/palamod/blockstates/paladiumhopper.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumhoppersouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumhoppersouth",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/paladiumhoppersouth.json",
+          "src/main/resources/assets/palamod/models/item/paladiumhoppersouth.json",
+          "src/main/resources/assets/palamod/models/block/paladiumhoppersouth.json",
+          "src/main/resources/assets/palamod/blockstates/paladiumhoppersouth.json",
+          "src/main/java/palamod/block/PaladiumhoppersouthBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Palahopperswapprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahopperswapprocess",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/PalahopperswapprocessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trixiumslab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixiumslab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/trixiumslab.json",
+          "src/main/java/palamod/block/TrixiumslabBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/trixiumslab.json",
+          "src/main/resources/assets/palamod/models/block/trixiumslab.json",
+          "src/main/resources/assets/palamod/models/block/trixiumslab_full.json",
+          "src/main/resources/assets/palamod/models/block/trixiumslab_top.json",
+          "src/main/resources/assets/palamod/blockstates/trixiumslab.json"
+        ]
+      }
+    },
+    {
+      "name": "Trixiumstairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixiumstairs",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/TrixiumstairsBlock.java",
+          "src/main/resources/assets/palamod/models/block/trixiumstairs.json",
+          "src/main/resources/assets/palamod/models/block/trixiumstairs_inner.json",
+          "src/main/resources/assets/palamod/models/item/trixiumstairs.json",
+          "src/main/resources/data/palamod/loot_table/blocks/trixiumstairs.json",
+          "src/main/resources/assets/palamod/blockstates/trixiumstairs.json",
+          "src/main/resources/assets/palamod/models/block/trixiumstairs_outer.json"
+        ]
+      }
+    },
+    {
+      "name": "Trixiumslabcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixiumslabcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/trixiumslabcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Trixiumstairscraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trixiumstairscraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/trixiumstairscraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystingotrecipevanilla1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystingotrecipevanilla_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/amethystingotrecipevanilla_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobbleakerserver",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobbleakerserver",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/gui/CobbleakerserverScreen.java",
+          "src/main/java/palamod/network/CobbleakerserverSlotMessage.java",
+          "src/main/java/palamod/world/inventory/CobbleakerserverMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "Givexpcobblebreakerserver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "givexpcobblebreakerserver",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/GivexpcobblebreakerserverProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakerserver",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakerserver",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/CobblebreakerserverBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/cobblebreakerserver.json",
+          "src/main/java/palamod/block/entity/CobblebreakerserverBlockEntity.java",
+          "src/main/resources/assets/palamod/models/item/cobblebreakerserver.json",
+          "src/main/resources/assets/palamod/blockstates/cobblebreakerserver.json",
+          "src/main/resources/assets/palamod/models/block/cobblebreakerserver.json"
         ]
       }
     }
@@ -44978,6 +45153,8 @@
       "CUSTOM:Titaneoredeepslate"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Paladiumhoppersouth",
+      "~CUSTOM:Paladiumhopper",
       "~CUSTOM:Unknownblock",
       "~CUSTOM:Printingpress",
       "~CUSTOM:Onlinedetectoron",
@@ -45262,6 +45439,7 @@
       "~CUSTOM:PaladiumAxe"
     ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:Trixiumstairs",
       "~CUSTOM:Obsidianstairs",
       "~CUSTOM:Renforcedobsidianstairs",
       "~CUSTOM:Greenpaladiumstairs",
@@ -45352,6 +45530,8 @@
       "CUSTOM:Fertilseddirt"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Trixiumstairs",
+      "~CUSTOM:Trixiumslab",
       "~CUSTOM:Exctractor",
       "~CUSTOM:Diamondobsidianspike",
       "~CUSTOM:Goldenobsidianspike",
@@ -45524,6 +45704,12 @@
       "CUSTOM:Elevatorcyan"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Cobblebreakerserver",
+      "~CUSTOM:Megasafechest",
+      "~CUSTOM:Trixiumstairs",
+      "~CUSTOM:Trixiumslab",
+      "~CUSTOM:Paladiumhoppersouth",
+      "~CUSTOM:Paladiumhopper",
       "~CUSTOM:Purpleslimepad",
       "~CUSTOM:Orangeslimepad",
       "~CUSTOM:Blueslimepad",
@@ -45799,6 +45985,7 @@
       "CUSTOM:EndiumArmor.boots"
     ],
     "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:Trixiumslab",
       "~CUSTOM:Hardenedobsidianslab",
       "~CUSTOM:Obsidianslab",
       "~CUSTOM:Greenpaladiumslab",
@@ -46149,7 +46336,13 @@
       "CUSTOM:Diamondobsidianspike",
       "CUSTOM:Amethystobsidianspike",
       "CUSTOM:Titaneobsidianspike",
-      "CUSTOM:Paladiumobsidianspike"
+      "CUSTOM:Paladiumobsidianspike",
+      "CUSTOM:Ironspike",
+      "CUSTOM:Spikegold",
+      "CUSTOM:Diamondspike",
+      "CUSTOM:Ametystespike",
+      "CUSTOM:Titanespike",
+      "CUSTOM:Paladiumspike"
     ],
     "ITEMS:forge:jacaranda__log": [
       "CUSTOM:Jacaranda_Wood",
@@ -46211,7 +46404,7 @@
       "gui.palamod.adminshopblockblackstone.label_mode_set": "Amount :",
       "gui.palamod.palahelpnotsupported.label_on_crowdin": "On Crowdin",
       "gui.palamod.crusherpalahelpgui.label_et_128_tant_100_de_chance_p": "and 128 is 100% chance  ] not",
-      "gui.palamod.megasafechestfirstsetup.safe_code": "insert code ( chose something wou will not forget )",
+      "gui.palamod.megasafechestfirstsetup.safe_code": "Choose a code",
       "gui.palamod.adminshopblockoakwood.label_sell_price_05": "Sell price : 0.5",
       "block.palamod.judeecercis_sappling": "Judeecercis sappling",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_excavator": "Paladium excavator",
@@ -46283,7 +46476,7 @@
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": " probabilities of the nugget appear [",
       "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
       "gui.palamod.adminshoporefindium.button_sell": "sell",
-      "item.palamod.sword_head": "Sword head",
+      "item.palamod.sword_head": "Paladium sword head",
       "gui.palamod.gamblelingjobsjeton.label_jobs": "Jobs",
       "gui.palamod.notyetgui.label_if_there_is_updated_version_of_t": "if there is updated version of the mod",
       "item.palamod.paladiumarmorcustom_4_chestplate": "Paladium Chestplate",
@@ -46492,6 +46685,7 @@
       "item.palamod.disc_anti_fuze": "Antifuzedisc",
       "gui.palamod.grindergui.label_mode_paladium": "Mode : paladium",
       "item.palamod.travelarmor_chestplate": "Jump chestplate",
+      "block.palamod.paladiumhopper": "Paladium hopper",
       "gui.palamod.adminshopmobsstring.label_mode_set": "Amount :",
       "block.palamod.judeecercis_planks": "Judeecercis Planks",
       "item.palamod.lucky_beta": "Lucky beta",
@@ -46513,7 +46707,7 @@
       "gui.palamod.itemmenupalahelp.button_btons": "Sticks",
       "item.palamod.pickaxeofthegodslv_10": "Pickaxe of the gods",
       "block.palamod.slimepad_purple": "Purple slimepad",
-      "item.palamod.green_paladium_broadsword_head": "Green broadsword head",
+      "item.palamod.green_paladium_broadsword_head": "Green paladium broadsword head",
       "item.palamod.pickaxeofthegodslv_19": "Pickaxe of the gods",
       "gui.palamod.grinderpalahelp_2gui.label_comment_crafter_le_grinder": "Comment crafter le grinder",
       "item.palamod.pickaxeofthegodslv_17": "Pickaxe of the gods",
@@ -46531,7 +46725,7 @@
       "gui.palamod.jobsminercraftgui.tooltip_voidstone": "Voidstone",
       "item.palamod.paladum_backpack": "Paladium backpack",
       "block.palamod.slimepad_red": "Red slimepad",
-      "item.palamod.pickaxe_head": "Pickaxe head",
+      "item.palamod.pickaxe_head": "Paladium pickaxe head",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Paladium spike obsidian",
       "item.palamod.pickaxeofthegodslv_20": "Pickaxe of the gods",
       "advancements.achmringendium.descr": "Repair something with endium ring",
@@ -46567,11 +46761,11 @@
       "gui.palamod.jobsgui.label_farmer": "Farmer",
       "palamod.procedure.money_current": "Current player balance : ",
       "block.palamod.ostrya_wood_fence_gate": "Ostrya Fence Gate",
+      "block.palamod.paladiumhoppersouth": "Paladium hopper",
       "gui.palamod.xpbushpalahelpgui.button_back": "back",
       "block.palamod.elevator_cyan": "Elevator cyan",
       "block.palamod.typesettingbook": "Typesetting table",
       "item.palamod.paladium_axe": "Paladium Axe",
-      "gui.palamod.loadingcrash.label_if_the_loading_is_stuck_to_100": "If the loading is stuck to 100% relunch the game in superflat",
       "painting.palamod.desertpaining_16.author": "Unknown",
       "gui.palamod.adminshopmobsfrspidereyes.button_sell": "sell",
       "gui.palamod.uploaderguipalahelp.label_uploader": "Uploader",
@@ -46665,7 +46859,7 @@
       "block.palamod.endium_slab": "Endium slab",
       "item.palamod.xpbottle": "Xp bottle",
       "item.palamod.small_ring": "Small ring",
-      "item.palamod.green_paladium_axe_head": "Green axe head",
+      "item.palamod.green_paladium_axe_head": "Green paladium axe head",
       "item.palamod.disc_mii_chalenge": "Mii chalenge disc",
       "item.palamod.potato_backpack.description_0": "The original item who start everything",
       "gui.palamod.adminshopplantcactus.button_sell": "sell",
@@ -46789,7 +46983,7 @@
       "gui.palamod.paladumfurnace.label_upgrades": "Upgrades",
       "painting.palamod.luckypainting.title": "Logo",
       "gui.palamod.adminshopmobs_2steak.button_buy": "buy",
-      "item.palamod.green_paladium_pickaxe_head": "Green pickaxe head",
+      "item.palamod.green_paladium_pickaxe_head": "Green paladium pickaxe head",
       "item.palamod.invisiblearmor_leggings": "Insivible Leggings",
       "gui.palamod.palahelpore.label_facilement": "easily",
       "block.palamod.printingpress.description_0": "Remake from bibliocraft",
@@ -47022,7 +47216,7 @@
       "gui.palamod.adminshopmobs_2glowinksac.label_buy_price_125": "Buy Price : 14.5",
       "gui.palamod.notyetgui.label_this_feature_hasnt_been_develop": "This feature hasn\u0027t been developed yet",
       "block.palamod.guardian_block": "Guardian block",
-      "item.palamod.broadsword_head": "Broadsword head",
+      "item.palamod.broadsword_head": "Paladium broadsword head",
       "block.palamod.paladium_obsidian_spike": "Spike spike obsidian",
       "gui.palamod.palahelptree.label_jacaranda_permet_de_crafter": "Jacaranda : Allow you to craft",
       "gui.palamod.adminshopmobsghasttears.button_sell": "sell",
@@ -47117,7 +47311,7 @@
       "gui.palamod.backpackpaladium.label_backpack": "Backpack",
       "gui.palamod.palahelpore.label_assez_facilement": "assez facilement",
       "gui.palamod.adminshopplantcacao.button_sell": "sell",
-      "item.palamod.axe_head": "Axe head",
+      "item.palamod.axe_head": "Paladium axe head",
       "key.palamod.adminshopkeyblinding": "Open the Adminshop",
       "gui.palamod.downloadergui.tooltip_link_a_bank_account_who_will_be": "Link a bank account who will be charged for the bought items ",
       "gui.palamod.adminshoporegold.number_buy": "number here",
@@ -47241,7 +47435,7 @@
       "gui.palamod.jobsminercraftgui.tooltip_compressed_sponge": "Compressed sponge",
       "item.palamod.gold_mixedcoal": "Gold mixed coal",
       "gui.palamod.adminshopmobsghasttears.number_buy": "number here",
-      "block.palamod.deepslate_trixium_ore": "Trxium ore",
+      "block.palamod.deepslate_trixium_ore": "Trixium ore",
       "item.palamod.paladium_mixed_charcoal": "Palamixed charcoal",
       "gui.palamod.adminshopore.button_titane": "Titane",
       "gui.palamod.crushergui.button_placeholder_pala": "placeholder_pala",
@@ -47259,6 +47453,7 @@
       "gui.palamod.adminshopmobsegg.label_buy_price_125": "Buy Price : 10",
       "gui.palamod.specialmoneypanel.player_name": "name",
       "palamod.procedure.jobs_alchi": "Alchimist",
+      "block.palamod.trixiumstairs": "Trixium stairs",
       "item.palamod.endiumshovel": "Endium Shovel",
       "gui.palamod.adminshopmobsslimeball.label_paladium": "Slime ball",
       "gui.palamod.jobsminercraftgui.tooltip_obsidian_pickaxe": "Obsidian pickaxe",
@@ -47354,7 +47549,7 @@
       "gui.palamod.adminshopplantsugarcane.button_buy": "buy",
       "gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe": "Endium pickaxe",
       "palamod.procedure.money_item": "1000$ has been added to your balance ",
-      "item.palamod.hammer_head": "Hammer head",
+      "item.palamod.hammer_head": "Paladium hammer head",
       "gui.palamod.orelayer.label_empty": "----------------------------",
       "gui.palamod.adminshopplantwarpedfungus.label_mode_set": "Amount :",
       "palamod.procedure.return_ore_menu": "Return to the adminshop\u0027s ore menu",
@@ -47384,6 +47579,7 @@
       "gui.palamod.adminshopblocksoulsand.number_buy": "number here",
       "gui.palamod.crushergui.label_fuel": "Fuel",
       "gui.palamod.examplegrindergui.label_varg_num_100": "0 / 100",
+      "block.palamod.cobblebreakerserver": "Cobblebreaker",
       "item.palamod.invisiblearmor_helmet": "Invisible Helmet",
       "block.palamod.alarm_on": "Alarm",
       "advancements.avancementlittlekitforalchimist.descr": "Craft an alchemy creator ",
@@ -47398,6 +47594,7 @@
       "gui.palamod.armorpalahelpgui.label_effect6": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect7": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect4": "Effect",
+      "block.palamod.trixiumslab": "Trixium slab",
       "gui.palamod.armorpalahelpgui.label_effect5": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect2": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect3": "Effect",
@@ -47650,7 +47847,7 @@
       "gui.palamod.adminshopblock_glowstone.number_buy": "number here",
       "gui.palamod.adminshopmobsslimeball.label_sell_price_120": "Sell price :  6",
       "gui.palamod.adminshopblock.button_glowstone": "Glowstone",
-      "item.palamod.greenpaladiumbroadsword": "Greenpaladiumbroadsword",
+      "item.palamod.greenpaladiumbroadsword": "Green paladium broadsword",
       "effect.fireimbue": "Fire imbue",
       "gui.palamod.adminshopblockstone.label_sell_price_01": "Sell price : 0.1",
       "gui.palamod.xpbushpalahelpgui.label_quand_vous_faites_clique_droit_d": "quand vous faites clique droit dessus",
@@ -48001,7 +48198,7 @@
       "gui.palamod.crushergui.label_fruits": "Fruits",
       "block.palamod.glueball_dark_green": "Dark green glueball",
       "block.palamod.angelic_water": "Angelic water",
-      "item.palamod.findium": "Findium ingot",
+      "item.palamod.findium": "Findium",
       "item.palamod.paladiumarmorcustom_2_helmet": "Paladium Helmet",
       "entity.palamod.endiumdynamite": "Endium dynamite",
       "gui.palamod.adminshoporecoal.label_buy_price_5": "Buy price : 5",
@@ -48395,6 +48592,7 @@
       "item.palamod.disc_anti_fuze": "Antifuzedisc",
       "gui.palamod.grindergui.label_mode_paladium": "Mode : paladium",
       "item.palamod.travelarmor_chestplate": "Plastron de voyage",
+      "block.palamod.paladiumhopper": "Paladium hopper",
       "gui.palamod.adminshopmobsstring.label_mode_set": "Quantité :",
       "block.palamod.judeecercis_planks": "Planches de judeecercis",
       "item.palamod.lucky_beta": "Lucky beta",
@@ -48473,11 +48671,11 @@
       "gui.palamod.jobsgui.label_farmer": "Farmer",
       "palamod.procedure.money_current": "Portefeuille du joueur selectionné :",
       "block.palamod.ostrya_wood_fence_gate": "Portail en ostrya",
+      "block.palamod.paladiumhoppersouth": "Paladium hopper south",
       "gui.palamod.xpbushpalahelpgui.button_back": "Retour en arrière",
       "block.palamod.elevator_cyan": "Ascenseur cyan",
       "block.palamod.typesettingbook": "Table d\u0027écriture",
       "item.palamod.paladium_axe": "Hache en paladium",
-      "gui.palamod.loadingcrash.label_if_the_loading_is_stuck_to_100": "Si le chargement est bloqué a 100% relancer le jeu en superflat",
       "painting.palamod.desertpaining_16.author": "Unknown",
       "gui.palamod.adminshopmobsfrspidereyes.button_sell": "Vendre",
       "gui.palamod.uploaderguipalahelp.label_uploader": "Uploader",
@@ -49173,6 +49371,7 @@
       "gui.palamod.adminshopmobsegg.label_buy_price_125": "Prix d\u0027achat : 6",
       "gui.palamod.specialmoneypanel.player_name": "name",
       "palamod.procedure.jobs_alchi": "Alchimiste",
+      "block.palamod.trixiumstairs": "Trixium stairs",
       "item.palamod.endiumshovel": "Pelle en endium",
       "gui.palamod.adminshopmobsslimeball.label_paladium": "Os",
       "gui.palamod.jobsminercraftgui.tooltip_obsidian_pickaxe": "Pioche en obsidienne",
@@ -49296,6 +49495,7 @@
       "gui.palamod.adminshopblocksoulsand.number_buy": "Un nombre ici",
       "gui.palamod.crushergui.label_fuel": "Carburant",
       "gui.palamod.examplegrindergui.label_varg_num_100": "0 / 100",
+      "block.palamod.cobblebreakerserver": "Cobblebreaker",
       "item.palamod.invisiblearmor_helmet": "Casque invisible",
       "block.palamod.alarm_on": "Alarme",
       "advancements.avancementlittlekitforalchimist.descr": "Fabrique un alchemy créator",
@@ -49310,6 +49510,7 @@
       "gui.palamod.armorpalahelpgui.label_effect6": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect7": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect4": "Effect",
+      "block.palamod.trixiumslab": "Trixium slab",
       "gui.palamod.armorpalahelpgui.label_effect5": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect2": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect3": "Effect",
@@ -50014,7 +50215,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.040.2",
+    "version": "1.20.040.5",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

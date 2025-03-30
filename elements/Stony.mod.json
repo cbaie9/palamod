@@ -123,12 +123,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "StonyBlock_respawn"
-    },
-    "onDestroyedByExplosion": {
-      "name": "StonyBlock_respawn"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

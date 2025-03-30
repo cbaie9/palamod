@@ -84,7 +84,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "AMETHYST_CLUSTER"
     },
     "breakSound": {
       "value": ""
@@ -146,8 +146,8 @@
         "value": "Blocks.STONE#5"
       }
     ],
-    "generationShape": "UNIFORM",
-    "frequencyPerChunks": 13,
+    "generationShape": "TRIANGLE",
+    "frequencyPerChunks": 6,
     "frequencyOnChunk": 4,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 80

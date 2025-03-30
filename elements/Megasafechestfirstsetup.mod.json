@@ -23,7 +23,7 @@
       {
         "type": "textfield",
         "data": {
-          "placeholder": "insert code ( chose something wou will not forget )",
+          "placeholder": "Choose a code",
           "name": "safe_code",
           "width": 120,
           "height": 20,

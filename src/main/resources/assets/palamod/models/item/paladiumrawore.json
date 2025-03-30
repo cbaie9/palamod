@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:item/pala-row"
+    "layer0": "palamod:item/paladium_raw"
   }
 }

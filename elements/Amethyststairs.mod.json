@@ -85,7 +85,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "AMETHYST_BLOCK"
     },
     "breakSound": {
       "value": ""

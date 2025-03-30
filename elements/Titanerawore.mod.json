@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "minecraft:raw_iron",
+    "texture": "titane_raw",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

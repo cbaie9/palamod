@@ -66,6 +66,7 @@ import palamod.world.inventory.DownloaderguiMenu;
 import palamod.world.inventory.CrusherpalahelpguiMenu;
 import palamod.world.inventory.CrusherguiMenu;
 import palamod.world.inventory.CobblebreakerguiMenu;
+import palamod.world.inventory.CobbleakerserverMenu;
 import palamod.world.inventory.ClickerMenu;
 import palamod.world.inventory.BackpacktitaneMenu;
 import palamod.world.inventory.BackpackpaladiumMenu;
@@ -278,4 +279,5 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsfarmerguiMenu>> JOBSFARMERGUI = REGISTRY.register("jobsfarmergui", () -> IMenuTypeExtension.create(JobsfarmerguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GodvillagerguiMenu>> GODVILLAGERGUI = REGISTRY.register("godvillagergui", () -> IMenuTypeExtension.create(GodvillagerguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsserverMenu>> JOBSSERVER = REGISTRY.register("jobsserver", () -> IMenuTypeExtension.create(JobsserverMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<CobbleakerserverMenu>> COBBLEAKERSERVER = REGISTRY.register("cobbleakerserver", () -> IMenuTypeExtension.create(CobbleakerserverMenu::new));
 }

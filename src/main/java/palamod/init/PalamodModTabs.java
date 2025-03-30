@@ -153,6 +153,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.PALADIUMGOLEM_SPAWN_EGG.get());
 				tabData.accept(PalamodModItems.GUARDIAN_STONE.get());
 				tabData.accept(PalamodModBlocks.GUARDIAN_BLOCK.get().asItem());
+				tabData.accept(PalamodModItems.GREENPALADIUMBROADSWORD.get());
 				tabData.accept(PalamodModItems.MAGICAL_TOOL.get());
 				tabData.accept(PalamodModBlocks.STONY.get().asItem());
 				tabData.accept(PalamodModBlocks.CLOUD_BLOCK.get().asItem());
@@ -269,6 +270,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.TITANERAWORE.get());
 				tabData.accept(PalamodModItems.AMETHYSTRAWORE.get());
 				tabData.accept(PalamodModItems.GREENPALADIUMRAWORE.get());
+				tabData.accept(PalamodModBlocks.PALADIUMHOPPER.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUMHOPPERSOUTH.get().asItem());
+				tabData.accept(PalamodModBlocks.TRIXIUMSLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.TRIXIUMSTAIRS.get().asItem());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -371,6 +376,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.OSTRYA_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
+				tabData.accept(PalamodModBlocks.TRIXIUMSLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.TRIXIUMSTAIRS.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {

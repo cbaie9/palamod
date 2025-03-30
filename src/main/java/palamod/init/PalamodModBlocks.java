@@ -18,6 +18,8 @@ import palamod.block.TypesettingplateBlock;
 import palamod.block.TypesettingmaxBlock;
 import palamod.block.TypesettingbookBlock;
 import palamod.block.TruetresureBlock;
+import palamod.block.TrixiumstairsBlock;
+import palamod.block.TrixiumslabBlock;
 import palamod.block.TrixiumoredeepslateBlock;
 import palamod.block.TrixiumoreBlock;
 import palamod.block.TrixiumnbtblockBlock;
@@ -53,6 +55,8 @@ import palamod.block.PaladiumslabBlock;
 import palamod.block.PaladiumoredeepslateBlock;
 import palamod.block.PaladiumobsidianspikeBlock;
 import palamod.block.PaladiummachineBlock;
+import palamod.block.PaladiumhoppersouthBlock;
+import palamod.block.PaladiumhopperBlock;
 import palamod.block.PaladiumgreenoredeepslateBlock;
 import palamod.block.PaladiumfurnaceonBlock;
 import palamod.block.PaladiumfurnaceBlock;
@@ -198,6 +202,7 @@ import palamod.block.CompacttntBlock;
 import palamod.block.CompactedobsidianBlock;
 import palamod.block.ColoredlampBlock;
 import palamod.block.ColofullampBlock;
+import palamod.block.CobblebreakerserverBlock;
 import palamod.block.CobblebreakerBlock;
 import palamod.block.CloudblockBlock;
 import palamod.block.Chervil3Block;
@@ -450,6 +455,11 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SLIMEPAD_PURPLE = REGISTRY.register("slimepad_purple", PurpleslimepadBlock::new);
 	public static final DeferredBlock<Block> TOTEMFERTILITY = REGISTRY.register("totemfertility", TotemfertilityBlock::new);
 	public static final DeferredBlock<Block> XPBUSHLOW = REGISTRY.register("xpbushlow", XpbushlowBlock::new);
+	public static final DeferredBlock<Block> PALADIUMHOPPER = REGISTRY.register("paladiumhopper", PaladiumhopperBlock::new);
+	public static final DeferredBlock<Block> PALADIUMHOPPERSOUTH = REGISTRY.register("paladiumhoppersouth", PaladiumhoppersouthBlock::new);
+	public static final DeferredBlock<Block> TRIXIUMSLAB = REGISTRY.register("trixiumslab", TrixiumslabBlock::new);
+	public static final DeferredBlock<Block> TRIXIUMSTAIRS = REGISTRY.register("trixiumstairs", TrixiumstairsBlock::new);
+	public static final DeferredBlock<Block> COBBLEBREAKERSERVER = REGISTRY.register("cobblebreakerserver", CobblebreakerserverBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

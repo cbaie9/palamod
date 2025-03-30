@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/hopper_south",
+  "textures": {
+    "all": "palamod:block/paladium_hopper_outside",
+    "particle": "palamod:block/paladium_hopper_outside",
+    "side": "palamod:block/paladium_hopper_outside",
+    "top": "palamod:block/paladium_hopper_top",
+    "inside": "palamod:block/paladium_hopper_inside"
+  },
+  "render_type": "cutout"
+}

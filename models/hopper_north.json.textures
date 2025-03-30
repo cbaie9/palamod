@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "paladium_hopper_outside",
+        "top": "paladium_hopper_top",
+        "inside": "paladium_hopper_inside"
+      },
+      "name": "default"
+    }
+  }
+}

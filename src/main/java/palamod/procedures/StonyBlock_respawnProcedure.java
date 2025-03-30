@@ -2,42 +2,48 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
+import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.ICancellableEvent;
+import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
+
+import javax.annotation.Nullable;
+
+@EventBusSubscriber
 public class StonyBlock_respawnProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		{
-			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockState _bs = PalamodModBlocks.STONY.get().defaultBlockState();
-			BlockState _bso = world.getBlockState(_bp);
-			for (Property<?> _propertyOld : _bso.getProperties()) {
-				Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
-				if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
-					try {
-						_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
-					} catch (Exception e) {
-					}
-			}
-			BlockEntity _be = world.getBlockEntity(_bp);
-			CompoundTag _bnbt = null;
-			if (_be != null) {
-				_bnbt = _be.saveWithFullMetadata(world.registryAccess());
-				_be.setRemoved();
-			}
-			world.setBlock(_bp, _bs, 3);
-			if (_bnbt != null) {
-				_be = world.getBlockEntity(_bp);
-				if (_be != null) {
-					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
-					} catch (Exception ignored) {
-					}
+	@SubscribeEvent
+	public static void onBlockBreak(BlockEvent.BreakEvent event) {
+		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getPlayer());
+	}
+
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		if (PalamodModBlocks.STONY.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() || !(new Object() {
+			public boolean checkGamemode(Entity _ent) {
+				if (_ent instanceof ServerPlayer _serverPlayer) {
+					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 				}
+				return false;
+			}
+		}.checkGamemode(entity))) {
+			if (event instanceof ICancellableEvent _cancellable) {
+				_cancellable.setCanceled(true);
 			}
 		}
 	}

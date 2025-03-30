@@ -10,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class AmethysteBlockBlock extends Block {
 	public AmethysteBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(5f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override

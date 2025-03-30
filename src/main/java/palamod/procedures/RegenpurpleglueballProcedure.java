@@ -10,6 +10,6 @@ public class RegenpurpleglueballProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 1200, 1));
+			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600, 1));
 	}
 }

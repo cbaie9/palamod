@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -19,8 +21,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-
-import java.util.Random;
 
 public class RtpcommandProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -40,8 +40,8 @@ public class RtpcommandProcedure {
 					}
 				}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())))) {
 					while (!(1 < xrandom && 1000000 >= xrandom && 1 < zrandom && 1000000 >= xrandom)) {
-						xrandom = Math.abs(new Random().nextGaussian());
-						zrandom = Math.abs(new Random().nextGaussian());
+						xrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
+						zrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = new BlockPos(0, 10, 0);
