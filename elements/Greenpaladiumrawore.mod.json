@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "minecraft:raw_gold",
+    "texture": "green_paladium_raw",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
