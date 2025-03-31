@@ -41,6 +41,11 @@ import palamod.block.SpikeobsidianwoodBlock;
 import palamod.block.SpikegoldBlock;
 import palamod.block.SlimepadBlock;
 import palamod.block.SlimeobsidianBlock;
+import palamod.block.RotatedslimepadBlock;
+import palamod.block.RotatedredslimepadBlock;
+import palamod.block.RotatedpurpleslimepadBlock;
+import palamod.block.RotatedorangeslimepadBlock;
+import palamod.block.RotatedblueslimepadBlock;
 import palamod.block.RenforcedobsidianstairsBlock;
 import palamod.block.RenforcedobsidianBlock;
 import palamod.block.RedslimepadBlock;
@@ -460,6 +465,11 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> TRIXIUMSLAB = REGISTRY.register("trixiumslab", TrixiumslabBlock::new);
 	public static final DeferredBlock<Block> TRIXIUMSTAIRS = REGISTRY.register("trixiumstairs", TrixiumstairsBlock::new);
 	public static final DeferredBlock<Block> COBBLEBREAKERSERVER = REGISTRY.register("cobblebreakerserver", CobblebreakerserverBlock::new);
+	public static final DeferredBlock<Block> ROTATED_SLIMEPAD = REGISTRY.register("rotated_slimepad", RotatedslimepadBlock::new);
+	public static final DeferredBlock<Block> ROTATED_RED_SLIMEPAD = REGISTRY.register("rotated_red_slimepad", RotatedredslimepadBlock::new);
+	public static final DeferredBlock<Block> ROTATED_PURPLE_SLIMEPAD = REGISTRY.register("rotated_purple_slimepad", RotatedpurpleslimepadBlock::new);
+	public static final DeferredBlock<Block> ROTATED_BLUE_SLIMEPAD = REGISTRY.register("rotated_blue_slimepad", RotatedblueslimepadBlock::new);
+	public static final DeferredBlock<Block> ROTATED_ORANGE_SLIMEPAD = REGISTRY.register("rotated_orange_slimepad", RotatedorangeslimepadBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

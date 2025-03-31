@@ -834,6 +834,11 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TRIXIUMSLAB = block(PalamodModBlocks.TRIXIUMSLAB);
 	public static final DeferredItem<Item> TRIXIUMSTAIRS = block(PalamodModBlocks.TRIXIUMSTAIRS);
 	public static final DeferredItem<Item> COBBLEBREAKERSERVER = block(PalamodModBlocks.COBBLEBREAKERSERVER);
+	public static final DeferredItem<Item> ROTATED_SLIMEPAD = block(PalamodModBlocks.ROTATED_SLIMEPAD);
+	public static final DeferredItem<Item> ROTATED_RED_SLIMEPAD = block(PalamodModBlocks.ROTATED_RED_SLIMEPAD);
+	public static final DeferredItem<Item> ROTATED_PURPLE_SLIMEPAD = block(PalamodModBlocks.ROTATED_PURPLE_SLIMEPAD);
+	public static final DeferredItem<Item> ROTATED_BLUE_SLIMEPAD = block(PalamodModBlocks.ROTATED_BLUE_SLIMEPAD);
+	public static final DeferredItem<Item> ROTATED_ORANGE_SLIMEPAD = block(PalamodModBlocks.ROTATED_ORANGE_SLIMEPAD);
 
 	// Start of user code block custom items
 	// End of user code block custom items

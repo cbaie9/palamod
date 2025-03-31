@@ -1,8 +1,12 @@
 {
   "replace": false,
   "values": [
+    "palamod:rotated_orange_slimepad",
+    "palamod:rotated_blue_slimepad",
+    "palamod:rotated_purple_slimepad",
+    "palamod:rotated_red_slimepad",
+    "palamod:rotated_slimepad",
     "palamod:cobblebreakerserver",
-    "palamod:mega_safe_chest",
     "palamod:trixiumstairs",
     "palamod:trixiumslab",
     "palamod:paladiumhoppersouth",
@@ -81,6 +85,7 @@
     "palamod:paladium_stairs",
     "palamod:trixium_nbt_block",
     "palamod:fake_paladium_ore",
+    "palamod:mega_safe_chest",
     "palamod:alarm",
     "palamod:tresaure_true",
     "palamod:tresaure_false",

@@ -2,14 +2,14 @@
   "_fv": 73,
   "_type": "block",
   "definition": {
-    "texture": "slime_green",
+    "texture": "slime_purple",
     "textureTop": "slime_green",
     "textureLeft": "",
     "textureFront": "slime_green",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "v2_slimepad:default",
+    "customModelName": "rotated_slimepad:purple_slimepad",
     "rotationMode": 4,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -26,10 +26,10 @@
       {
         "mx": 1.0,
         "my": 1.0,
-        "mz": 1.0,
+        "mz": 4.0,
         "Mx": 15.0,
-        "My": 9.0,
-        "Mz": 15.0,
+        "My": 15.0,
+        "Mz": 12.0,
         "subtract": false
       }
     ],
@@ -42,14 +42,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": true,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Pvpcreativetab"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Purpleslimepad"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -122,7 +118,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "Slimepadswap"
+      "name": "Purpleslimepadswap"
     },
     "onEntityCollides": {
       "name": "Slimeprocess"
