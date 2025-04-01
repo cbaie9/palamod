@@ -46,7 +46,7 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 		super(PalamodModMenus.PALADUMFURNACE.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
-		this.internal = new ItemStackHandler(5);
+		this.internal = new ItemStackHandler(4);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -103,8 +103,8 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 				return false;
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 14, 41) {
-			private final int slot = 4;
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 14, 41) {
+			private final int slot = 3;
 			private int x = PaladumfurnaceMenu.this.x;
 			private int y = PaladumfurnaceMenu.this.y;
 

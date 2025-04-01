@@ -107,9 +107,9 @@ public class PaladiumfurnaceonBlockEntity extends RandomizableContainerBlockEnti
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		if (index == 3)
+		if (index == 2)
 			return false;
-		if (index == 1)
+		if (index == 3)
 			return false;
 		return true;
 	}
@@ -128,7 +128,7 @@ public class PaladiumfurnaceonBlockEntity extends RandomizableContainerBlockEnti
 	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
 		if (index == 0)
 			return false;
-		if (index == 2)
+		if (index == 1)
 			return false;
 		return true;
 	}

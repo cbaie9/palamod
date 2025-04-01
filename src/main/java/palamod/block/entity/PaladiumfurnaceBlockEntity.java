@@ -29,7 +29,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class PaladiumfurnaceBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(5, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
 	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
 
 	public PaladiumfurnaceBlockEntity(BlockPos position, BlockState state) {

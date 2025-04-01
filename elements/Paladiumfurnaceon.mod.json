@@ -111,12 +111,12 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
-      3,
-      1
+      2,
+      3
     ],
     "inventoryInSlotIDs": [
       0,
-      2
+      1
     ],
     "hasEnergyStorage": false,
     "energyInitial": 0,

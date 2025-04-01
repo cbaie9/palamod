@@ -110,7 +110,7 @@
     "hasInventory": true,
     "guiBoundTo": "Paladumfurnace",
     "openGUIOnRightClick": true,
-    "inventorySize": 5,
+    "inventorySize": 4,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
