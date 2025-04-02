@@ -161,6 +161,23 @@
           "y": 64,
           "locked": false
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_paladiumfurnacereturnsmelti",
+          "text": {
+            "fixedValue": "",
+            "name": "Paladiumfurnacereturnsmelting"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 212,
+          "y": 52,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

@@ -3,6 +3,7 @@ package palamod.client.gui;
 import palamod.world.inventory.PaladumfurnaceMenu;
 
 import palamod.procedures.PaladiumfurnacereturntimerProcedure;
+import palamod.procedures.PaladiumfurnacereturnsmeltingProcedure;
 import palamod.procedures.PaladiumfurnacereturnfuelProcedure;
 
 import net.minecraft.world.level.Level;
@@ -72,6 +73,9 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 		guiGraphics.drawString(this.font,
 
 				PaladiumfurnacereturnfuelProcedure.execute(world, x, y, z), 89, 27, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				PaladiumfurnacereturnsmeltingProcedure.execute(world, x, y, z), 88, 15, -12829636, false);
 	}
 
 	@Override

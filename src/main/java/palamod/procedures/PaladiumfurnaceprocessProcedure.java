@@ -32,6 +32,7 @@ public class PaladiumfurnaceprocessProcedure {
 		double fireHeight = 0;
 		double fuelpower = 0;
 		double previousRecipe = 0;
+		double coef_timer = 0;
 		fuel = ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
@@ -41,7 +42,7 @@ public class PaladiumfurnaceprocessProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy()).copy();
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).copy()).copy();
 		input = ((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
@@ -51,57 +52,27 @@ public class PaladiumfurnaceprocessProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).copy()).copy();
-		if (fuel.getBurnTime(null) > 0 && ((world instanceof Level _lvlSmeltResult
-				? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-				: ItemStack.EMPTY).getItem() == (new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						if (world instanceof ILevelExtension _ext) {
-							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-							if (_itemHandler != null)
-								return _itemHandler.getStackInSlot(slotid).copy();
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy()).copy();
+		if ((fuel.getBurnTime(null) > 0 || new Object() {
+			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getDouble(tag);
+				return -1;
+			}
+		}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof Level _level6 && _level6.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level6).isPresent()) {
+			if ((world instanceof Level _lvlSmeltResult
+					? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
+					: ItemStack.EMPTY).getItem() == (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+							if (world instanceof ILevelExtension _ext) {
+								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+								if (_itemHandler != null)
+									return _itemHandler.getStackInSlot(slotid).copy();
+							}
+							return ItemStack.EMPTY;
 						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() && new Object() {
-					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						if (world instanceof ILevelExtension _ext) {
-							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-							if (_itemHandler != null)
-								return _itemHandler.getStackInSlot(slotid).getCount();
-						}
-						return 0;
-					}
-				}.getAmount(world, BlockPos.containing(x, y, z), 2) <= 63 || new Object() {
-					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						if (world instanceof ILevelExtension _ext) {
-							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-							if (_itemHandler != null)
-								return _itemHandler.getStackInSlot(slotid).getCount();
-						}
-						return 0;
-					}
-				}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && world instanceof Level _level10 && _level10.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level10).isPresent()) {
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") == 0) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("pala_fuel", (fuel.getBurnTime(null)));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = fuel.copy();
-					_setstack.setCount((int) (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() && new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -110,33 +81,7 @@ public class PaladiumfurnaceprocessProcedure {
 							}
 							return 0;
 						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) - 1));
-					_itemHandlerModifiable.setStackInSlot(1, _setstack);
-				}
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("smelting", true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "timer") >= 200) {
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = (world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
-									.orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).copy();
-					_setstack.setCount((int) (new Object() {
+					}.getAmount(world, BlockPos.containing(x, y, z), 2) <= 63 || new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -145,17 +90,114 @@ public class PaladiumfurnaceprocessProcedure {
 							}
 							return 0;
 						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
-					_itemHandlerModifiable.setStackInSlot(2, _setstack);
+					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) {
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") == 0) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putDouble("pala_fuel", (fuel.getBurnTime(null)));
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putDouble("max_fuel", (fuel.getBurnTime(null)));
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = fuel.copy();
+						_setstack.setCount((int) (new Object() {
+							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+								if (world instanceof ILevelExtension _ext) {
+									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+									if (_itemHandler != null)
+										return _itemHandler.getStackInSlot(slotid).getCount();
+								}
+								return 0;
+							}
+						}.getAmount(world, BlockPos.containing(x, y, z), 1) - 1));
+						_itemHandlerModifiable.setStackInSlot(1, _setstack);
+					}
 				}
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putBoolean("smelting", false);
+						_blockEntity.getPersistentData().putBoolean("smelting", true);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "timer") >= 200) {
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = (world instanceof Level _lvlSmeltResult
+								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
+										.orElse(ItemStack.EMPTY)
+								: ItemStack.EMPTY).copy();
+						_setstack.setCount((int) (new Object() {
+							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+								if (world instanceof ILevelExtension _ext) {
+									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+									if (_itemHandler != null)
+										return _itemHandler.getStackInSlot(slotid).getCount();
+								}
+								return 0;
+							}
+						}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+						_itemHandlerModifiable.setStackInSlot(2, _setstack);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = input.copy();
+						_setstack.setCount((int) (new Object() {
+							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+								if (world instanceof ILevelExtension _ext) {
+									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+									if (_itemHandler != null)
+										return _itemHandler.getStackInSlot(slotid).getCount();
+								}
+								return 0;
+							}
+						}.getAmount(world, BlockPos.containing(x, y, z), 0) - 1));
+						_itemHandlerModifiable.setStackInSlot(0, _setstack);
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putDouble("timer", 0);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("smelting", false);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 			}
 		}
@@ -246,7 +288,14 @@ public class PaladiumfurnaceprocessProcedure {
 						return blockEntity.getPersistentData().getDouble(tag);
 					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "fuelRemaining")) / 100) * 0.0625;
+			}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel")) / (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "max_fuel"))) * 0.0625;
 			if ((new Object() {
 				public Direction getDirection(BlockPos pos) {
 					BlockState _bs = world.getBlockState(pos);
@@ -346,6 +395,42 @@ public class PaladiumfurnaceprocessProcedure {
 					return false;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "smelting")) {
+				if (PalamodModItems.FURNACE_UPGRADE.get() == (new Object() {
+					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+						if (world instanceof ILevelExtension _ext) {
+							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+							if (_itemHandler != null)
+								return _itemHandler.getStackInSlot(slotid).copy();
+						}
+						return ItemStack.EMPTY;
+					}
+				}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem()) {
+					if (16 >= new Object() {
+						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+							if (world instanceof ILevelExtension _ext) {
+								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+								if (_itemHandler != null)
+									return _itemHandler.getStackInSlot(slotid).getCount();
+							}
+							return 0;
+						}
+					}.getAmount(world, BlockPos.containing(x, y, z), 3)) {
+						coef_timer = new Object() {
+							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
+								if (world instanceof ILevelExtension _ext) {
+									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+									if (_itemHandler != null)
+										return _itemHandler.getStackInSlot(slotid).getCount();
+								}
+								return 0;
+							}
+						}.getAmount(world, BlockPos.containing(x, y, z), 3);
+					} else {
+						coef_timer = 16;
+					}
+				} else {
+					coef_timer = 1;
+				}
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -358,25 +443,7 @@ public class PaladiumfurnaceprocessProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "timer") + 1 * (PalamodModItems.FURNACE_UPGRADE.get() == (new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() ? new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 3) : 1)));
+						}.getValue(world, BlockPos.containing(x, y, z), "timer") + coef_timer));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
