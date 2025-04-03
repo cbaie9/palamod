@@ -33,7 +33,7 @@ public class PaladiumfurnaceprocessProcedure {
 		double fuelpower = 0;
 		double previousRecipe = 0;
 		double coef_timer = 0;
-		fuel = ((new Object() {
+		fuel = (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
 					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -42,8 +42,8 @@ public class PaladiumfurnaceprocessProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).copy()).copy();
-		input = ((new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).copy();
+		input = (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
 					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -52,7 +52,7 @@ public class PaladiumfurnaceprocessProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy()).copy();
+		}.getItemStack(world, BlockPos.containing(x, y, z), 0)).copy();
 		if ((fuel.getBurnTime(null) > 0 || new Object() {
 			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -60,7 +60,7 @@ public class PaladiumfurnaceprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof Level _level6 && _level6.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level6).isPresent()) {
+		}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof Level _level4 && _level4.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level4).isPresent()) {
 			if ((world instanceof Level _lvlSmeltResult
 					? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
 					: ItemStack.EMPTY).getItem() == (new Object() {
@@ -148,7 +148,7 @@ public class PaladiumfurnaceprocessProcedure {
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, BlockPos.containing(x, y, z), "timer") >= 200) {
+				}.getValue(world, BlockPos.containing(x, y, z), "timer") >= 50) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = (world instanceof Level _lvlSmeltResult
 								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
@@ -208,7 +208,7 @@ public class PaladiumfurnaceprocessProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") != 0) {
+		}.getValue(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) {
 			if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_FURNACE_ON.get())) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
@@ -387,6 +387,7 @@ public class PaladiumfurnaceprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
+			assert Boolean.TRUE; //#dbg:Paladiumfurnaceprocess:fuel_m1
 			if (new Object() {
 				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -405,6 +406,7 @@ public class PaladiumfurnaceprocessProcedure {
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem()) {
+					assert Boolean.TRUE; //#dbg:Paladiumfurnaceprocess:fuel_m2
 					if (16 >= new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
@@ -447,6 +449,7 @@ public class PaladiumfurnaceprocessProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
+				assert Boolean.TRUE; //#dbg:Paladiumfurnaceprocess:fuel_m3
 			}
 		}
 	}

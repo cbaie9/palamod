@@ -2,7 +2,6 @@
 package palamod.world.inventory;
 
 import palamod.init.PalamodModMenus;
-import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
@@ -107,11 +106,6 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Supplie
 			private final int slot = 3;
 			private int x = PaladumfurnaceMenu.this.x;
 			private int y = PaladumfurnaceMenu.this.y;
-
-			@Override
-			public boolean mayPlace(ItemStack stack) {
-				return PalamodModItems.FURNACE_UPGRADE.get() == stack.getItem();
-			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

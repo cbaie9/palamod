@@ -2,13 +2,13 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PaladumfurnaceMenu;
 
+import palamod.procedures.ReturnfuelspritepaladiumfurnaceProcedure;
 import palamod.procedures.PaladiumfurnacereturntimerProcedure;
-import palamod.procedures.PaladiumfurnacereturnsmeltingProcedure;
-import palamod.procedures.PaladiumfurnacereturnfuelProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -35,8 +35,6 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/paladumfurnace.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
@@ -49,7 +47,11 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladiumfurnace.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 180, 166, 180, 166);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fire_furnace.png"), this.leftPos + 60, this.topPos + 41, Mth.clamp((int) ReturnfuelspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -64,18 +66,12 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace"), 43, 4, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_inventory"), 7, 73, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_upgrades"), 8, 20, -65536, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace"), 46, 4, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_inventory"), 7, 73, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_upgrades"), 9, 23, -65536, false);
 		guiGraphics.drawString(this.font,
 
-				PaladiumfurnacereturntimerProcedure.execute(world, x, y, z), 90, 66, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				PaladiumfurnacereturnfuelProcedure.execute(world, x, y, z), 89, 27, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				PaladiumfurnacereturnsmeltingProcedure.execute(world, x, y, z), 88, 15, -12829636, false);
+				PaladiumfurnacereturntimerProcedure.execute(world, x, y, z), 17, -18, -1, false);
 	}
 
 	@Override

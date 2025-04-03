@@ -7,7 +7,7 @@
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
@@ -18,10 +18,10 @@
             "fixedValue": "Paladium Furnace"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 167,
+          "x": 170,
           "y": 41,
           "locked": false
         }
@@ -53,7 +53,7 @@
             "fixedValue": "Inventory"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 131,
@@ -72,8 +72,8 @@
             "value": -65536,
             "falpha": 0.0
           },
-          "x": 132,
-          "y": 57,
+          "x": 133,
+          "y": 60,
           "locked": false
         }
       },
@@ -113,7 +113,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Furnaceupgrade"
+            "value": ""
           },
           "disablePlacement": {
             "fixedValue": false
@@ -125,7 +125,17 @@
           "dropItemsWhenNotBound": true,
           "x": 137,
           "y": 77,
-          "locked": true
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladiumfurnace.png",
+          "use1Xscale": false,
+          "x": 124,
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -137,46 +147,26 @@
             "name": "Paladiumfurnacereturntimer"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 214,
-          "y": 103,
+          "x": 141,
+          "y": 19,
           "locked": false
         }
       },
       {
-        "type": "label",
+        "type": "sprite",
         "data": {
-          "name": "label_proc_paladiumfurnacereturnfuel",
-          "text": {
-            "fixedValue": "",
-            "name": "Paladiumfurnacereturnfuel"
+          "sprite": "fire_furnace.png",
+          "spritesCount": 15,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Returnfuelspritepaladiumfurnace"
           },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 213,
-          "y": 64,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_paladiumfurnacereturnsmelti",
-          "text": {
-            "fixedValue": "",
-            "name": "Paladiumfurnacereturnsmelting"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 212,
-          "y": 52,
-          "locked": false
+          "x": 184,
+          "y": 78,
+          "locked": true
         }
       }
     ],

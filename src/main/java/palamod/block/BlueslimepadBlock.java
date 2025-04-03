@@ -2,6 +2,7 @@
 package palamod.block;
 
 import palamod.procedures.SlimeprocessProcedure;
+import palamod.procedures.BlueslimepadswapProcedure;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -104,6 +105,12 @@ public class BlueslimepadBlock extends Block implements SimpleWaterloggedBlock {
 	@Override
 	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
 		return PathType.BLOCKED;
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		BlueslimepadswapProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
