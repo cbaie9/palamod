@@ -36,9 +36,7 @@
     "customProperties": [],
     "name": "Paladium furnace",
     "specialInformation": {
-      "fixedValue": [
-        "A L P H A"
-      ]
+      "fixedValue": []
     },
     "hardness": 1.0,
     "resistance": 10.0,

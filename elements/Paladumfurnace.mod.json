@@ -62,22 +62,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_upgrades",
-          "text": {
-            "fixedValue": "Upgrades"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 133,
-          "y": 60,
-          "locked": false
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -139,23 +123,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_proc_paladiumfurnacereturntimer",
-          "text": {
-            "fixedValue": "",
-            "name": "Paladiumfurnacereturntimer"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 141,
-          "y": 19,
-          "locked": false
-        }
-      },
-      {
         "type": "sprite",
         "data": {
           "sprite": "fire_furnace.png",
@@ -165,6 +132,30 @@
             "name": "Returnfuelspritepaladiumfurnace"
           },
           "x": 184,
+          "y": 78,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "arrow_right_furnace_sprite.png",
+          "spritesCount": 23,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Returntimerspritepaladiumfurnace"
+          },
+          "x": 211,
+          "y": 79,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_upgrade.png",
+          "use1Xscale": false,
+          "x": 138,
           "y": 78,
           "locked": true
         }

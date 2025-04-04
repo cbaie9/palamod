@@ -13,6 +13,6 @@ public class ReturntimerspritepaladiumfurnaceProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "timer")) / 50) * 15);
+		}.getValue(world, BlockPos.containing(x, y, z), "timer")) / 50) * 24);
 	}
 }

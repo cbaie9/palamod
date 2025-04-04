@@ -148,7 +148,7 @@ public class PaladiumfurnaceprocessProcedure {
 							return blockEntity.getPersistentData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, BlockPos.containing(x, y, z), "timer") >= 50) {
+				}.getValue(world, BlockPos.containing(x, y, z), "timer") >= 100) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = (world instanceof Level _lvlSmeltResult
 								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
@@ -387,7 +387,6 @@ public class PaladiumfurnaceprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			assert Boolean.TRUE; //#dbg:Paladiumfurnaceprocess:fuel_m1
 			if (new Object() {
 				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -406,7 +405,6 @@ public class PaladiumfurnaceprocessProcedure {
 						return ItemStack.EMPTY;
 					}
 				}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem()) {
-					assert Boolean.TRUE; //#dbg:Paladiumfurnaceprocess:fuel_m2
 					if (16 >= new Object() {
 						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
@@ -431,7 +429,7 @@ public class PaladiumfurnaceprocessProcedure {
 						coef_timer = 16;
 					}
 				} else {
-					coef_timer = 1;
+					coef_timer = 2;
 				}
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
@@ -449,7 +447,6 @@ public class PaladiumfurnaceprocessProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				assert Boolean.TRUE; //#dbg:Paladiumfurnaceprocess:fuel_m3
 			}
 		}
 	}

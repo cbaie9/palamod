@@ -2,8 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PaladumfurnaceMenu;
 
+import palamod.procedures.ReturntimerspritepaladiumfurnaceProcedure;
 import palamod.procedures.ReturnfuelspritepaladiumfurnaceProcedure;
-import palamod.procedures.PaladiumfurnacereturntimerProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -50,7 +50,12 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladiumfurnace.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 180, 166, 180, 166);
 
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_upgrade.png"), this.leftPos + 14, this.topPos + 41, 0, 0, 16, 16, 16, 16);
+
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fire_furnace.png"), this.leftPos + 60, this.topPos + 41, Mth.clamp((int) ReturnfuelspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 87, this.topPos + 42, Mth.clamp((int) ReturntimerspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22,
+				15, 506, 15);
 
 		RenderSystem.disableBlend();
 	}
@@ -68,10 +73,6 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace"), 46, 4, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_inventory"), 7, 73, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_upgrades"), 9, 23, -65536, false);
-		guiGraphics.drawString(this.font,
-
-				PaladiumfurnacereturntimerProcedure.execute(world, x, y, z), 17, -18, -1, false);
 	}
 
 	@Override
