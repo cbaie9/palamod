@@ -114,7 +114,7 @@ public class GrinderguiMenu extends AbstractContainerMenu implements Supplier<Ma
 			private int x = GrinderguiMenu.this.x;
 			private int y = GrinderguiMenu.this.y;
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 88, 59) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 77, 59) {
 			private final int slot = 5;
 			private int x = GrinderguiMenu.this.x;
 			private int y = GrinderguiMenu.this.y;

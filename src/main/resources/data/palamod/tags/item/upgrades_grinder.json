@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:speed_modifier",
+    "palamod:knockback_modifier",
+    "palamod:flame_modifier",
+    "palamod:fortune_modifier",
+    "palamod:smelt_modifier",
+    "palamod:one_more_modifier"
+  ]
+}

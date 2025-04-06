@@ -460,8 +460,8 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SLIMEPAD_PURPLE = REGISTRY.register("slimepad_purple", PurpleslimepadBlock::new);
 	public static final DeferredBlock<Block> TOTEMFERTILITY = REGISTRY.register("totemfertility", TotemfertilityBlock::new);
 	public static final DeferredBlock<Block> XPBUSHLOW = REGISTRY.register("xpbushlow", XpbushlowBlock::new);
-	public static final DeferredBlock<Block> PALADIUMHOPPER = REGISTRY.register("paladiumhopper", PaladiumhopperBlock::new);
-	public static final DeferredBlock<Block> PALADIUMHOPPERSOUTH = REGISTRY.register("paladiumhoppersouth", PaladiumhoppersouthBlock::new);
+	public static final DeferredBlock<Block> ROTATED_PALADIUM_HOPPER = REGISTRY.register("rotated_paladium_hopper", PaladiumhopperBlock::new);
+	public static final DeferredBlock<Block> PALADIUM_HOPPER = REGISTRY.register("paladium_hopper", PaladiumhoppersouthBlock::new);
 	public static final DeferredBlock<Block> TRIXIUMSLAB = REGISTRY.register("trixiumslab", TrixiumslabBlock::new);
 	public static final DeferredBlock<Block> TRIXIUMSTAIRS = REGISTRY.register("trixiumstairs", TrixiumstairsBlock::new);
 	public static final DeferredBlock<Block> COBBLEBREAKERSERVER = REGISTRY.register("cobblebreakerserver", CobblebreakerserverBlock::new);

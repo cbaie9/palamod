@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:axe_head",
+    "palamod:pickaxe_head",
+    "palamod:hammer_head",
+    "palamod:fastsword_head",
+    "palamod:broadsword_head",
+    "palamod:shovel_head",
+    "palamod:sword_head",
+    "palamod:green_paladium_broadsword_head",
+    "palamod:green_paladium_sword_head",
+    "palamod:green_paladium_pickaxe_head",
+    "palamod:green_paladium_axe_head",
+    "palamod:green_paladium_shovel_head",
+    "palamod:green_paladium_hammer_head",
+    "palamod:endium_hammer_head",
+    "palamod:headendiumsword",
+    "palamod:head_endium_pickaxe",
+    "palamod:head_endium_axe",
+    "palamod:endium_broadsword_head",
+    "palamod:endium_fastsword_head",
+    "palamod:green_paladium_fastsword_head",
+    "palamod:endium_shovel_head"
+  ]
+}

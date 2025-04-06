@@ -32,7 +32,7 @@ public class StonyBlock_respawnProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (PalamodModBlocks.STONY.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() || !(new Object() {
+		if (PalamodModBlocks.STONY.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() && !(new Object() {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;

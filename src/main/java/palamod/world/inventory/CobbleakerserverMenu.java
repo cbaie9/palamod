@@ -178,7 +178,7 @@ public class CobbleakerserverMenu extends AbstractContainerMenu implements Suppl
 				return false;
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 102, 71) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 102, 70) {
 			private final int slot = 5;
 			private int x = CobbleakerserverMenu.this.x;
 			private int y = CobbleakerserverMenu.this.y;

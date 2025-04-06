@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "palamod:paladiumhoppersouth",
-    "palamod:paladiumhopper",
+    "palamod:paladium_hopper",
+    "palamod:rotated_paladium_hopper",
     "palamod:unknownblock",
     "palamod:printingpress",
     "palamod:online_detector_on",

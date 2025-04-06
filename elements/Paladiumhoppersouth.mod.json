@@ -14,7 +14,7 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "paladium_hopper",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -49,7 +49,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:Paladiumhopper"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -70,7 +70,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": "CUSTOM:Paladiumhopper"
+      "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -121,10 +121,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
-      "name": "Palahopperswapprocess"
-    },
-    "onTickUpdate": {
+    "onBlockAdded": {
       "name": "Palahopperswapprocess"
     },
     "generateFeature": false,

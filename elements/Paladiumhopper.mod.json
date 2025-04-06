@@ -14,7 +14,7 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "paladium_hopper",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -42,14 +42,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
-    ],
+    "creativeTabs": [],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Paladiumhoppersouth"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -70,7 +66,7 @@
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:Paladiumhoppersouth"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -84,7 +80,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "METAL"
     },
     "breakSound": {
       "value": ""
@@ -121,7 +117,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onNeighbourBlockChanges": {
+    "onBlockAdded": {
       "name": "Palahopperswapprocess"
     },
     "generateFeature": false,

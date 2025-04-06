@@ -2,36 +2,16 @@ package palamod.client.gui;
 
 import palamod.world.inventory.GrinderguiMenu;
 
+import palamod.procedures.ReturntimerinputgrinderProcedure;
 import palamod.procedures.ProgressbargrinderspritereturnProcedure;
 import palamod.procedures.LightredgrinderonProcedure;
 import palamod.procedures.LightgreengrinderonProcedure;
 import palamod.procedures.LightbluegrinderonProcedure;
 import palamod.procedures.Grindertrans1Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit9Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit8Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit7Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit6Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit5Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit4Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit3Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit2Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit1Procedure;
-import palamod.procedures.Grindersubprocessarrowsplit10Procedure;
-import palamod.procedures.Grindersubprocessarrowinsertn4Procedure;
-import palamod.procedures.Grindersubprocessarrowinsertn3Procedure;
-import palamod.procedures.Grindersubprocessarrowinsertn2Procedure;
-import palamod.procedures.Grindersubprocessarrowinsertn1Procedure;
-import palamod.procedures.Grindersubprocessarrowinsertn0Procedure;
-import palamod.procedures.Grinderguiarrow2n9Procedure;
-import palamod.procedures.Grinderguiarrow2n8Procedure;
-import palamod.procedures.Grinderguiarrow2n7Procedure;
-import palamod.procedures.Grinderguiarrow2n6Procedure;
-import palamod.procedures.Grinderguiarrow2n5Procedure;
-import palamod.procedures.Grinderguiarrow2n4Procedure;
-import palamod.procedures.Grinderguiarrow2n3Procedure;
-import palamod.procedures.Grinderguiarrow2n2Procedure;
-import palamod.procedures.Grinderguiarrow2n1Procedure;
-import palamod.procedures.Grinderguiarrow2n10Procedure;
+import palamod.procedures.GrindergettimerfusionProcedure;
+import palamod.procedures.GrindergettimercraftProcedure;
+import palamod.procedures.DebuggetoutputcraftProcedure;
+import palamod.procedures.DebuggetgingotProcedure;
 
 import palamod.network.GrinderguiButtonMessage;
 
@@ -85,88 +65,6 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grindergui_v4.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
 
-		if (Grindersubprocessarrowinsertn0Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr0.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
-		}
-		if (Grindersubprocessarrowinsertn1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr1.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
-		}
-		if (Grindersubprocessarrowinsertn2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr2.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
-		}
-		if (Grindersubprocessarrowinsertn3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr3.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
-		}
-		if (Grindersubprocessarrowinsertn4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr4.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
-		}
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right01.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-
-		if (Grinderguiarrow2n1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right03.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right05.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right07.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right09.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right11.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n6Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right13.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n7Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right15.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n8Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right17.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n9Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right19.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n10Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right20.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_1red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-
-		if (Grindersubprocessarrowsplit1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_3red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_5red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_7red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_9red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_11red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit6Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_13red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit7Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_15red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit8Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_17red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit9Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_18red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-		if (Grindersubprocessarrowsplit10Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_19red_new.png"), this.leftPos + 50, this.topPos + 60, 0, 0, 24, 10, 24, 10);
-		}
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/btn-all_off.png"), this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
 
 		if (LightbluegrinderonProcedure.execute(world, x, y, z)) {
@@ -181,6 +79,15 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_sprite_full.png"), this.leftPos + 152, this.topPos + 9, Mth.clamp((int) ProgressbargrinderspritereturnProcedure.execute(world, x, y, z) * 51, 0, 2550), 0, 51, 50, 2601,
 				50);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fire_furnace.png"), this.leftPos + 126, this.topPos + 25, Mth.clamp((int) ReturntimerinputgrinderProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 53, this.topPos + 59, 0, 0, 22, 15, 506, 15);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 49, this.topPos + 13, Mth.clamp((int) GrindergettimercraftProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
+
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 48, this.topPos + 60, Mth.clamp((int) GrindergettimerfusionProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506,
+				15);
 
 		RenderSystem.disableBlend();
 	}
@@ -199,12 +106,18 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 		guiGraphics.drawString(this.font,
 
 				Grindertrans1Procedure.execute(world, x, y, z), 144, 70, -4671036, false);
+		guiGraphics.drawString(this.font,
+
+				DebuggetoutputcraftProcedure.execute(world, x, y, z), 9, -14, -1, false);
+		guiGraphics.drawString(this.font,
+
+				DebuggetgingotProcedure.execute(world, x, y, z), 7, -25, -10066177, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_help_button = new ImageButton(this.leftPos + 195, this.topPos + 140, 16, 16,
+		imagebutton_help_button = new ImageButton(this.leftPos + 193, this.topPos + 141, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/help_button.png"), ResourceLocation.parse("palamod:textures/screens/help_button_poi.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderguiButtonMessage(0, x, y, z));

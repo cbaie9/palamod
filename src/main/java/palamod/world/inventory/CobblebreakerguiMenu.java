@@ -178,7 +178,7 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Suppl
 				return false;
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 102, 71) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 102, 70) {
 			private final int slot = 5;
 			private int x = CobblebreakerguiMenu.this.x;
 			private int y = CobblebreakerguiMenu.this.y;

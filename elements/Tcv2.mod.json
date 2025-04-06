@@ -59,7 +59,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -118,7 +118,8 @@
     "inventoryInSlotIDs": [
       0,
       1,
-      3
+      3,
+      4
     ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
@@ -132,7 +133,7 @@
       "name": "Grinder_reset"
     },
     "onTickUpdate": {
-      "name": "Grinderluncherv2"
+      "name": "Gcodev6"
     },
     "onDestroyedByPlayer": {
       "name": "Grinder_reset"

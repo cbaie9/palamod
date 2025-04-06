@@ -11,10 +11,10 @@
     "rarity": "COMMON",
     "creativeTabs": [
       {
-        "value": "CUSTOM:Palamod"
+        "value": "CUSTOM:Jobscreativetabs"
       },
       {
-        "value": "CUSTOM:Jobscreativetabs"
+        "value": "CUSTOM:Grindercreativetab"
       }
     ],
     "stackSize": 64,
@@ -56,6 +56,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

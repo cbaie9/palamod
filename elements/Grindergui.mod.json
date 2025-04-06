@@ -108,71 +108,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "arr0.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn0"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr1.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn1"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr2.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn2"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr3.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn3"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr4.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn4"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_help_button",
@@ -181,8 +116,8 @@
           "onClick": {
             "name": "Connectgrinderpag1"
           },
-          "x": 301,
-          "y": 179,
+          "x": 299,
+          "y": 180,
           "locked": false
         }
       },
@@ -206,286 +141,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "arrow_right01.png",
-          "use1Xscale": true,
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right03.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n1"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right05.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n2"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right07.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n3"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right09.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n4"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right11.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n5"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right13.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n6"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right15.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n7"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right17.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n8"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right19.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n9"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_right20.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n10"
-          },
-          "x": 159,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_1red_new.png",
-          "use1Xscale": true,
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_3red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit1"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_5red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit2"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_7red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit3"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_9red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit4"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_11red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit5"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_13red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit6"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_15red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit7"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_17red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit8"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_18red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit9"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_19red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit10"
-          },
-          "x": 156,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -499,7 +154,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 193,
+          "x": 182,
           "y": 97,
           "locked": false
         }
@@ -564,6 +219,95 @@
           },
           "x": 258,
           "y": 48,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "fire_furnace.png",
+          "spritesCount": 15,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Returntimerinputgrinder"
+          },
+          "x": 232,
+          "y": 64,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "arrow_right_furnace_sprite.png",
+          "spritesCount": 23,
+          "spriteIndex": {
+            "fixedValue": 0.0
+          },
+          "x": 159,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_debuggetoutputcraft",
+          "text": {
+            "fixedValue": "",
+            "name": "Debuggetoutputcraft"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 115,
+          "y": 25,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_debuggetgingot",
+          "text": {
+            "fixedValue": "",
+            "name": "Debuggetgingot"
+          },
+          "color": {
+            "value": -10066177,
+            "falpha": 0.0
+          },
+          "x": 113,
+          "y": 14,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "arrow_right_furnace_sprite.png",
+          "spritesCount": 23,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Grindergettimercraft"
+          },
+          "x": 155,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "arrow_right_furnace_sprite.png",
+          "spritesCount": 23,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Grindergettimerfusion"
+          },
+          "x": 154,
+          "y": 99,
           "locked": false
         }
       }

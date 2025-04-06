@@ -130,6 +130,8 @@ public class GrinderblockBlockEntity extends RandomizableContainerBlockEntity im
 			return false;
 		if (index == 3)
 			return false;
+		if (index == 4)
+			return false;
 		return true;
 	}
 

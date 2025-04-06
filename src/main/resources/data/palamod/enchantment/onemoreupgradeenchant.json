@@ -1,0 +1,21 @@
+{
+  "description": {
+    "translate": "enchantment.palamod.onemoreupgradeenchant"
+  },
+  "supported_items": "#palamod:hammer_grinder",
+  "weight": 1,
+  "max_level": 2,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "mainhand"
+  ],
+  "exclusive_set": []
+}

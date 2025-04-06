@@ -2,8 +2,8 @@
 package palamod.block;
 
 import palamod.procedures.GrinderopenProcedure;
-import palamod.procedures.Grinderluncherv2Procedure;
 import palamod.procedures.Grinder_resetProcedure;
+import palamod.procedures.Gcodev6Procedure;
 
 import palamod.block.entity.GrinderblockBlockEntity;
 
@@ -77,7 +77,7 @@ public class GrinderblockBlock extends Block implements EntityBlock {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		Grinderluncherv2Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		Gcodev6Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 20);
 	}
 

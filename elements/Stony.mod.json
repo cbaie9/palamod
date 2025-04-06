@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "block",
   "definition": {
-    "texture": "stone_mc",
+    "texture": "minecraft:stone",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",

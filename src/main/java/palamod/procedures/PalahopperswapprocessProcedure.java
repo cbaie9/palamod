@@ -14,7 +14,7 @@ import net.minecraft.core.BlockPos;
 
 public class PalahopperswapprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUMHOPPER.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUMHOPPERSOUTH.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_HOPPER.get()) {
 			if (((new Object() {
 				public Direction getDirection(BlockState _bs) {
 					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
@@ -31,10 +31,10 @@ public class PalahopperswapprocessProcedure {
 					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN) && !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUMHOPPER.get())) {
+			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN) && !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get())) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.PALADIUMHOPPER.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -94,10 +94,10 @@ public class PalahopperswapprocessProcedure {
 					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
 					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUMHOPPER.get()) {
+			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.PALADIUMHOPPER.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

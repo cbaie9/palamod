@@ -1,8 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "palamod:block/stone_mc",
-    "particle": "palamod:block/stone_mc"
+    "all": "minecraft:block/stone",
+    "particle": "minecraft:block/stone"
   },
   "render_type": "solid"
 }
