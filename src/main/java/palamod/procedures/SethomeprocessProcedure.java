@@ -34,6 +34,7 @@ public class SethomeprocessProcedure {
 		main.addProperty("home_y", y);
 		main.addProperty("home_z", z);
 		main.addProperty("deleted", false);
+		main.addProperty("dim_id", ("" + entity.level().dimension()));
 		if (!home.exists()) {
 			try {
 				home.getParentFile().mkdirs();

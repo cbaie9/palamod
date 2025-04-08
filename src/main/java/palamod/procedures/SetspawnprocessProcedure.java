@@ -26,12 +26,20 @@ public class SetspawnprocessProcedure {
 		File home = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\home\\global"), File.separator + "spawn.json");
+				+ "\\home\\global\\"), File.separator + "spawn.json");
 		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.VOID_AIR
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CAVE_AIR)
 				&& ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.VOID_AIR
 						|| (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR)
 				|| entity.getPersistentData().getBoolean("spawn_warn")) {
+			if (!home.exists()) {
+				try {
+					home.getParentFile().mkdirs();
+					home.createNewFile();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+			}
 			main.addProperty("spawn_x", x);
 			main.addProperty("spawn_y", y);
 			main.addProperty("spawn_z", z);

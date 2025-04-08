@@ -37,7 +37,7 @@ public class SpawnCommandProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		boolean dim_check = false;
 		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\home\\global"), File.separator + "spawn.json");
+				+ "\\home\\global\\"), File.separator + "spawn.json");
 		if (home.exists()) {
 			{
 				try {
@@ -50,7 +50,7 @@ public class SpawnCommandProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (!(main.get("dim_id").getAsString()).equals("" + entity.level().dimension())) {
-						if (("" + Level.OVERWORLD).equals("" + entity.level().dimension())) {
+						if (("" + Level.OVERWORLD).equals(main.get("dim_id").getAsString())) {
 							if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 								ResourceKey<Level> destinationType = Level.OVERWORLD;
 								if (_player.level().dimension() == destinationType)
@@ -66,7 +66,7 @@ public class SpawnCommandProcedure {
 								}
 							}
 							dim_check = true;
-						} else if (("" + Level.NETHER).equals("" + entity.level().dimension())) {
+						} else if (("" + Level.NETHER).equals(main.get("dim_id").getAsString())) {
 							if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 								ResourceKey<Level> destinationType = Level.NETHER;
 								if (_player.level().dimension() == destinationType)
@@ -82,7 +82,7 @@ public class SpawnCommandProcedure {
 								}
 							}
 							dim_check = true;
-						} else if (("" + Level.END).equals("" + entity.level().dimension())) {
+						} else if (("" + Level.END).equals(main.get("dim_id").getAsString())) {
 							if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 								ResourceKey<Level> destinationType = Level.END;
 								if (_player.level().dimension() == destinationType)

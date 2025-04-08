@@ -122,56 +122,22 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "generateFeature": true,
-    "restrictionBiomes": [
-      {
-        "value": "CUSTOM:Frozenforest"
-      },
-      {
-        "value": "CUSTOM:Roofedforest"
-      },
-      {
-        "value": "CUSTOM:Forestender"
-      },
-      {
-        "value": "plains"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "forest_hills"
-      },
-      {
-        "value": "ocean"
-      },
-      {
-        "value": "lush_caves"
-      },
-      {
-        "value": "dripstone_caves"
-      },
-      {
-        "value": "meadow"
-      },
-      {
-        "value": "savanna_rock"
-      },
-      {
-        "value": "mutated_plains"
-      }
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE#0"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Blocks.DEEPSLATE"
+        "value": "Blocks.TUFF"
+      },
+      {
+        "value": "Blocks.GRAVEL"
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 1,
-    "frequencyOnChunk": 1,
-    "minGenerateHeight": -64,
-    "maxGenerateHeight": 0
+    "frequencyPerChunks": 16,
+    "frequencyOnChunk": 2,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 10
   }
 }

@@ -43524,36 +43524,6 @@
       }
     },
     {
-      "name": "Craftprocedure",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "craftprocedure",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/CraftprocedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Craftcommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "craftcommand",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/command/CraftcommandCommand.java"
-        ]
-      }
-    },
-    {
       "name": "Paladiumrawore",
       "type": "item",
       "compiles": true,
@@ -45608,28 +45578,6 @@
       "Blocks.FARMLAND",
       "CUSTOM:Fertilseddirt"
     ],
-    "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:Mixedendiumarmor.helmet",
-      "~CUSTOM:Paladiumarmorcustom10.helmet",
-      "~CUSTOM:Paladiumarmorcustom9.helmet",
-      "~CUSTOM:Paladiumarmorcustom8.helmet",
-      "~CUSTOM:Paladiumarmorcustom7.helmet",
-      "~CUSTOM:Paladiumarmorcustom6.helmet",
-      "~CUSTOM:Paladiumarmorcustom5.helmet",
-      "~CUSTOM:Paladiumarmorcustom4.helmet",
-      "~CUSTOM:Paladiumarmorcustom3.helmet",
-      "~CUSTOM:Paladiumarmorcustom2.helmet",
-      "~CUSTOM:Paladiumarmorcustom1.helmet",
-      "~CUSTOM:Ranbowarmor.helmet",
-      "~CUSTOM:Invisiblearmor.helmet",
-      "~CUSTOM:Scuba.helmet",
-      "~CUSTOM:Travelarmor.helmet",
-      "~CUSTOM:Greenpaladiumarmor.helmet",
-      "~CUSTOM:EndiumArmor.helmet",
-      "~CUSTOM:AmethysteArmor.helmet",
-      "~CUSTOM:TitaneArmor.helmet",
-      "~CUSTOM:PaladiumArmor.helmet"
-    ],
     "ITEMS:mod:heads": [
       "CUSTOM:Axehead",
       "CUSTOM:Pickaxehead",
@@ -45652,6 +45600,28 @@
       "CUSTOM:Endiumfastswordhead",
       "CUSTOM:Greenpaladiumfastswordhead",
       "CUSTOM:Endiumshovelhead"
+    ],
+    "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:Mixedendiumarmor.helmet",
+      "~CUSTOM:Paladiumarmorcustom10.helmet",
+      "~CUSTOM:Paladiumarmorcustom9.helmet",
+      "~CUSTOM:Paladiumarmorcustom8.helmet",
+      "~CUSTOM:Paladiumarmorcustom7.helmet",
+      "~CUSTOM:Paladiumarmorcustom6.helmet",
+      "~CUSTOM:Paladiumarmorcustom5.helmet",
+      "~CUSTOM:Paladiumarmorcustom4.helmet",
+      "~CUSTOM:Paladiumarmorcustom3.helmet",
+      "~CUSTOM:Paladiumarmorcustom2.helmet",
+      "~CUSTOM:Paladiumarmorcustom1.helmet",
+      "~CUSTOM:Ranbowarmor.helmet",
+      "~CUSTOM:Invisiblearmor.helmet",
+      "~CUSTOM:Scuba.helmet",
+      "~CUSTOM:Travelarmor.helmet",
+      "~CUSTOM:Greenpaladiumarmor.helmet",
+      "~CUSTOM:EndiumArmor.helmet",
+      "~CUSTOM:AmethysteArmor.helmet",
+      "~CUSTOM:TitaneArmor.helmet",
+      "~CUSTOM:PaladiumArmor.helmet"
     ],
     "BLOCKS:forge:air": [
       "Blocks.AIR",
@@ -50858,7 +50828,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.042",
+    "version": "1.20.042.2",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
