@@ -46,6 +46,6 @@ public class PaladiumSwordItem extends SwordItem {
 	};
 
 	public PaladiumSwordItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 9f, -2f)));
+		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 7f, -2f)));
 	}
 }

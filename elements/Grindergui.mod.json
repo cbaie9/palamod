@@ -255,7 +255,7 @@
           "name": "label_proc_debuggetoutputcraft",
           "text": {
             "fixedValue": "",
-            "name": "Debuggetoutputcraft"
+            "name": "Grinderdebugenchant"
           },
           "color": {
             "value": -1,

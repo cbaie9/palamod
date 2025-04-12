@@ -545,7 +545,7 @@ public class Gcodev6Procedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putString("llic_fusion", (output_craft.getDisplayName().getString()));
+								_blockEntity.getPersistentData().putString("llic_fusion", (new ItemStack(PalamodModItems.SPEED_MODIFIER.get()).getDisplayName().getString()));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -567,7 +567,7 @@ public class Gcodev6Procedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					}
-					if (10 <= new Object() {
+					if (40 <= new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -594,8 +594,8 @@ public class Gcodev6Procedure {
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
-						output_craft.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed"))),
-								(int) (output_craft.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1));
+						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed"))),
+								(int) (output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1));
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = 4;
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
@@ -603,7 +603,7 @@ public class Gcodev6Procedure {
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_craft.copy();
+							ItemStack _setstack = output_fusion.copy();
 							_setstack.setCount(1);
 							_itemHandlerModifiable.setStackInSlot(5, _setstack);
 						}
@@ -660,7 +660,7 @@ public class Gcodev6Procedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putString("llic_fusion", (output_craft.getDisplayName().getString()));
+								_blockEntity.getPersistentData().putString("llic_fusion", (new ItemStack(PalamodModItems.FORTUNE_MODIFIER.get()).getDisplayName().getString()));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -709,8 +709,8 @@ public class Gcodev6Procedure {
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
-						output_craft.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))),
-								(int) (output_craft.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1));
+						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))),
+								(int) (output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1));
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = 4;
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
@@ -718,7 +718,7 @@ public class Gcodev6Procedure {
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_craft.copy();
+							ItemStack _setstack = output_fusion.copy();
 							_setstack.setCount(1);
 							_itemHandlerModifiable.setStackInSlot(5, _setstack);
 						}
@@ -765,7 +765,7 @@ public class Gcodev6Procedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putString("llic_fusion", (output_craft.getDisplayName().getString()));
+								_blockEntity.getPersistentData().putString("llic_fusion", (new ItemStack(PalamodModItems.SMELT_MODIFIER.get()).getDisplayName().getString()));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -814,7 +814,7 @@ public class Gcodev6Procedure {
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
-						output_craft.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt"))), 1);
+						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt"))), 1);
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = 4;
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
@@ -822,7 +822,7 @@ public class Gcodev6Procedure {
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_craft.copy();
+							ItemStack _setstack = output_fusion.copy();
 							_setstack.setCount(1);
 							_itemHandlerModifiable.setStackInSlot(5, _setstack);
 						}
@@ -880,7 +880,7 @@ public class Gcodev6Procedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("llic_fusion", (output_craft.getDisplayName().getString()));
+							_blockEntity.getPersistentData().putString("llic_fusion", (new ItemStack(PalamodModItems.ONE_MORE_MODIFIER.get()).getDisplayName().getString()));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -929,8 +929,8 @@ public class Gcodev6Procedure {
 							return ItemStack.EMPTY;
 						}
 					}.getItemStack(world, BlockPos.containing(x, y, z), 5)).copy();
-					output_craft.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant"))),
-							(int) (output_craft.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) + 1));
+					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant"))),
+							(int) (output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) + 1));
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						int _slotid = 4;
 						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
@@ -938,7 +938,7 @@ public class Gcodev6Procedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = output_craft.copy();
+						ItemStack _setstack = output_fusion.copy();
 						_setstack.setCount(1);
 						_itemHandlerModifiable.setStackInSlot(5, _setstack);
 					}
