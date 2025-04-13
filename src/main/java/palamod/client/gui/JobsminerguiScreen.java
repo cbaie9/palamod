@@ -85,7 +85,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_jobs_miner"), 9, 7, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetxpminerProcedure.execute(world, entity), 13, 38, -12829636, false);
+				GetxpminerProcedure.execute(world, entity), 13, 38, -1, false);
 	}
 
 	@Override
