@@ -39,7 +39,7 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 350;
-		this.imageHeight = 200;
+		this.imageHeight = 100;
 	}
 
 	@Override
@@ -55,23 +55,7 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 52, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 130, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 209, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 279, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 250, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_gui_server.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 100, 350, 100);
 
 		RenderSystem.disableBlend();
 	}
@@ -87,19 +71,17 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_jobs"), 134, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_last_unlocked_items"), 5, 121, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_miner"), 48, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_farmer"), 123, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_le_hunter"), 207, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_alchimist"), 269, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_work_in_progress_will_be_updat"), 8, 151, -13434676, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_jobs"), 161, 5, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_miner"), 46, 24, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_farmer"), 124, 24, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_le_hunter"), 205, 24, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsserver.label_alchimist"), 268, 24, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 119, this.topPos + 57, 40, 40,
+		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 118, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_famer_jobs.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_farm2.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsserverButtonMessage(0, x, y, z));
@@ -113,7 +95,7 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		};
 		guistate.put("button:imagebutton_screen_beta_template_jobs", imagebutton_screen_beta_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta_template_jobs);
-		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 41, this.topPos + 57, 40, 40,
+		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 40, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_miner.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_miner2.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsserverButtonMessage(1, x, y, z));
@@ -127,7 +109,7 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		};
 		guistate.put("button:imagebutton_screen_beta2_template_jobs", imagebutton_screen_beta2_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs);
-		imagebutton_screen_beta2_template_jobs1 = new ImageButton(this.leftPos + 201, this.topPos + 57, 40, 40,
+		imagebutton_screen_beta2_template_jobs1 = new ImageButton(this.leftPos + 201, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter2.png")), e -> {
 				}) {
 			@Override
@@ -137,7 +119,7 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		};
 		guistate.put("button:imagebutton_screen_beta2_template_jobs1", imagebutton_screen_beta2_template_jobs1);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs1);
-		imagebutton_screen_beta2_template_jobs2 = new ImageButton(this.leftPos + 272, this.topPos + 57, 40, 40,
+		imagebutton_screen_beta2_template_jobs2 = new ImageButton(this.leftPos + 272, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi2.png")), e -> {
 				}) {
 			@Override
@@ -147,7 +129,7 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		};
 		guistate.put("button:imagebutton_screen_beta2_template_jobs2", imagebutton_screen_beta2_template_jobs2);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs2);
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 328, this.topPos + 4, 16, 16,
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 327, this.topPos + 6, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsserverButtonMessage(4, x, y, z));

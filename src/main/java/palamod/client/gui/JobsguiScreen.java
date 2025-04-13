@@ -60,23 +60,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 52, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 130, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 209, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_main_menu_bar20.png"), this.leftPos + 279, this.topPos + 101, 0, 0, 24, 8, 24, 8);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 250, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,24 +76,24 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_jobs"), 134, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items"), 5, 121, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_miner"), 48, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 123, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_le_hunter"), 207, 45, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 45, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_jobs"), 160, 5, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items"), 5, 121, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_miner"), 48, 45, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 123, 45, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_le_hunter"), 207, 45, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 45, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelminerProcedure.execute(world, entity), 44, 99, -12829636, false);
+				GetlevelminerProcedure.execute(world, entity), 44, 99, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelfarmerProcedure.execute(world, entity), 119, 99, -12829636, false);
+				GetlevelfarmerProcedure.execute(world, entity), 119, 99, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelhunterProcedure.execute(world, entity), 201, 99, -12829636, false);
+				GetlevelhunterProcedure.execute(world, entity), 201, 99, -1, false);
 		guiGraphics.drawString(this.font,
 
-				GetlevelalchiProcedure.execute(world, entity), 272, 99, -12829636, false);
+				GetlevelalchiProcedure.execute(world, entity), 272, 99, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_work_in_progress_will_be_updat"), 8, 151, -13434676, false);
 	}
 

@@ -4,7 +4,7 @@
   "definition": {
     "type": 0,
     "width": 350,
-    "height": 200,
+    "height": 100,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
@@ -19,19 +19,9 @@
           "onClick": {
             "name": "Connectfarmergui"
           },
-          "x": 158,
-          "y": 77,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "jobs_main_menu_bar20.png",
-          "use1Xscale": false,
-          "x": 91,
-          "y": 121,
-          "locked": false
+          "x": 157,
+          "y": 108,
+          "locked": true
         }
       },
       {
@@ -43,19 +33,9 @@
           "onClick": {
             "name": "Connectjobsminergui"
           },
-          "x": 80,
-          "y": 77,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "jobs_main_menu_bar20.png",
-          "use1Xscale": false,
-          "x": 169,
-          "y": 121,
-          "locked": false
+          "x": 79,
+          "y": 108,
+          "locked": true
         }
       },
       {
@@ -65,8 +45,8 @@
           "image": "screen_beta3_jobs_hunter.png",
           "hoveredImage": "screen_beta3_jobs_hunter2.png",
           "x": 240,
-          "y": 77,
-          "locked": false
+          "y": 108,
+          "locked": true
         }
       },
       {
@@ -76,28 +56,8 @@
           "image": "screen_beta3_jobs_alchi.png",
           "hoveredImage": "screen_beta3_jobs_alchi2.png",
           "x": 311,
-          "y": 77,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "jobs_main_menu_bar20.png",
-          "use1Xscale": false,
-          "x": 248,
-          "y": 121,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "jobs_main_menu_bar20.png",
-          "use1Xscale": false,
-          "x": 318,
-          "y": 121,
-          "locked": false
+          "y": 108,
+          "locked": true
         }
       },
       {
@@ -111,25 +71,9 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 173,
-          "y": 27,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_last_unlocked_items",
-          "text": {
-            "fixedValue": "Last unlocked items"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 44,
-          "y": 141,
-          "locked": false
+          "x": 200,
+          "y": 75,
+          "locked": true
         }
       },
       {
@@ -140,12 +84,12 @@
             "fixedValue": "Miner"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 65,
-          "locked": false
+          "x": 85,
+          "y": 94,
+          "locked": true
         }
       },
       {
@@ -156,12 +100,12 @@
             "fixedValue": "Farmer"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 162,
-          "y": 65,
-          "locked": false
+          "x": 163,
+          "y": 94,
+          "locked": true
         }
       },
       {
@@ -172,12 +116,12 @@
             "fixedValue": "Hunter"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 246,
-          "y": 65,
-          "locked": false
+          "x": 244,
+          "y": 94,
+          "locked": true
         }
       },
       {
@@ -188,62 +132,22 @@
             "fixedValue": "Alchimist"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 308,
-          "y": 65,
-          "locked": false
+          "x": 307,
+          "y": 94,
+          "locked": true
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "jobsgui.png",
+          "image": "jobs_gui_server.png",
           "use1Xscale": false,
           "x": 39,
-          "y": 20,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 39,
-          "y": 20,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 139,
-          "y": 20,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 239,
-          "y": 20,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 289,
-          "y": 20,
-          "locked": false
+          "y": 70,
+          "locked": true
         }
       },
       {
@@ -255,25 +159,9 @@
           "onClick": {
             "name": "Closegui"
           },
-          "x": 367,
-          "y": 24,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_work_in_progress_will_be_updat",
-          "text": {
-            "fixedValue": "Work in progress - will be updated soon"
-          },
-          "color": {
-            "value": -13434676,
-            "falpha": 0.0
-          },
-          "x": 47,
-          "y": 171,
-          "locked": false
+          "x": 366,
+          "y": 76,
+          "locked": true
         }
       }
     ],
