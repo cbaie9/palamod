@@ -12,17 +12,7 @@ public class MvprocessProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		while (itemstack.getDamageValue() > 0) {
-			{
-				final String _tagName = "voidstone_count";
-				final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") - 1);
-				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
-			}
-			itemstack.setDamageValue((int) (0 - itemstack.getDamageValue()));
-			itemstack.set(DataComponents.CUSTOM_NAME, Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Component.translatable("palamod.procedure.minagevoidstone_repair").getString() + " - "
-					+ Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count")))));
-		}
-		for (int index1 = 0; index1 < 64; index1++) {
+		for (int index0 = 0; index0 < 64; index0++) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
 				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SMOOTH_STONE)) : false) {
 					{
@@ -163,12 +153,5 @@ public class MvprocessProcedure {
 		}
 		itemstack.set(DataComponents.CUSTOM_NAME,
 				Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count")))));
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") > 0) {
-			{
-				final String _tagName = "cooldown";
-				final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") - 1);
-				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
-			}
-		}
 	}
 }

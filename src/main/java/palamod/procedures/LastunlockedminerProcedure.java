@@ -47,6 +47,30 @@ public class LastunlockedminerProcedure {
 									_vars.last_unlocked_miner = "God villager";
 									_vars.syncPlayerVariables(entity);
 								}
+							} else if (56 <= main.get("lvl_miner").getAsDouble()) {
+								{
+									PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+									_vars.last_unlocked_miner = "Paladium Forge";
+									_vars.syncPlayerVariables(entity);
+								}
+							} else if (50 <= main.get("lvl_miner").getAsDouble()) {
+								{
+									PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+									_vars.last_unlocked_miner = "Xp Bottle";
+									_vars.syncPlayerVariables(entity);
+								}
+							} else if (37 <= main.get("lvl_miner").getAsDouble()) {
+								{
+									PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+									_vars.last_unlocked_miner = "Dollars Stone";
+									_vars.syncPlayerVariables(entity);
+								}
+							} else if (30 <= main.get("lvl_miner").getAsDouble()) {
+								{
+									PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
+									_vars.last_unlocked_miner = "Voidstone Minage";
+									_vars.syncPlayerVariables(entity);
+								}
 							}
 						}
 					}
