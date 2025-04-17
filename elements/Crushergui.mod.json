@@ -452,23 +452,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_proc_crusherdebug",
-          "text": {
-            "fixedValue": "",
-            "name": "Crusherdebug"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 50,
-          "y": 6,
-          "locked": false
-        }
-      },
-      {
         "type": "sprite",
         "data": {
           "sprite": "flamme_crusher_sprite.png",

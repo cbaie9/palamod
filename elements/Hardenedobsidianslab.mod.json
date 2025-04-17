@@ -39,8 +39,8 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 50.0,
+    "resistance": 1200.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [
@@ -48,7 +48,7 @@
         "value": "CUSTOM:Baseclaim"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -104,7 +104,7 @@
     },
     "luminance": 0,
     "unbreakable": true,
-    "vanillaToolTier": "STONE",
+    "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "hasInventory": false,
     "openGUIOnRightClick": false,

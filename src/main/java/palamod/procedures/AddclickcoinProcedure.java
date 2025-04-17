@@ -21,6 +21,7 @@ public class AddclickcoinProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double lvl = 0;
 		double coin = 0;
+		double active_cps = 0;
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\clicker\\" + entity.getUUID().toString()), File.separator + "clicker_info.json");
 		{
@@ -34,11 +35,12 @@ public class AddclickcoinProcedure {
 				bufferedReader.close();
 				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				coin = main.get("coin").getAsDouble();
+				active_cps = main.get("cps_active").getAsDouble();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		main.addProperty("coin", (coin + 1));
+		main.addProperty("coin", (coin + active_cps));
 		{
 			com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 			try {

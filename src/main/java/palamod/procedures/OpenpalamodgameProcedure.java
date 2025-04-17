@@ -237,6 +237,7 @@ public class OpenpalamodgameProcedure {
 			click_main.addProperty("coin", 0);
 			click_main.addProperty("cps_active", 1);
 			click_main.addProperty("cps", 0);
+			click_main.addProperty("last_time_cps_unix", GetcustomunixProcedure.execute());
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {

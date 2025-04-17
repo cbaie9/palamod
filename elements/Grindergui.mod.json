@@ -250,40 +250,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_proc_debuggetoutputcraft",
-          "text": {
-            "fixedValue": "",
-            "name": "Grinderdebugenchant"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 115,
-          "y": 25,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_debuggetgingot",
-          "text": {
-            "fixedValue": "",
-            "name": "Debuggetgingot"
-          },
-          "color": {
-            "value": -10066177,
-            "falpha": 0.0
-          },
-          "x": 113,
-          "y": 14,
-          "locked": false
-        }
-      },
-      {
         "type": "sprite",
         "data": {
           "sprite": "arrow_right_furnace_sprite.png",

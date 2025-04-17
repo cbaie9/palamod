@@ -40,7 +40,7 @@ public class PalamodModVariables {
 	public static double alchemy = 0;
 	public static double cooltick_spike = 0;
 	public static String crusher_mode = "";
-	public static double crusher_num_var = 0;
+	public static double crusher_num_var = 0.0;
 	public static double crusher_num_var_seen = 0;
 	public static double g_num = 0;
 	public static double Lucky_destroy = 0;
@@ -186,7 +186,7 @@ public class PalamodModVariables {
 		public double hdv_price3 = 0;
 		public double hdv_price4 = 0;
 		public double clicker_page = 1.0;
-		public boolean isserverside = false;
+		public double cps_cooldown = 20.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -201,7 +201,7 @@ public class PalamodModVariables {
 			hdv_price3 = nbt.getDouble("hdv_price3");
 			hdv_price4 = nbt.getDouble("hdv_price4");
 			clicker_page = nbt.getDouble("clicker_page");
-			isserverside = nbt.getBoolean("isserverside");
+			cps_cooldown = nbt.getDouble("cps_cooldown");
 		}
 
 		@Override
@@ -212,7 +212,7 @@ public class PalamodModVariables {
 			nbt.putDouble("hdv_price3", hdv_price3);
 			nbt.putDouble("hdv_price4", hdv_price4);
 			nbt.putDouble("clicker_page", clicker_page);
-			nbt.putBoolean("isserverside", isserverside);
+			nbt.putDouble("cps_cooldown", cps_cooldown);
 			return nbt;
 		}
 

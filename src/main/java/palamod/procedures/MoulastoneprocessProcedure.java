@@ -1,18 +1,12 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.component.DataComponents;
 
 import java.io.IOException;
@@ -22,7 +16,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class MoulastoneprocessProcedure {
-	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
+	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
@@ -49,16 +43,106 @@ public class MoulastoneprocessProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
-				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
-					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
-						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
-						if ((itemstackiterator.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("forge:stone")))) {
-							if (entity instanceof Player _player) {
-								ItemStack _stktoremove = itemstackiterator;
-								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), itemstackiterator.getCount(), _player.inventoryMenu.getCraftSlots());
-							}
-							count = count + 0.15 * itemstackiterator.getCount();
+				for (int index0 = 0; index0 < 64; index0++) {
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DEEPSLATE)) : false) {
+						count = count + 0.15;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.DEEPSLATE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLED_DEEPSLATE)) : false) {
+						count = count + 0.1;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.COBBLED_DEEPSLATE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.STONE)) : false) {
+						count = count + 0.15;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.STONE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLESTONE)) : false) {
+						count = count + 0.1;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.COBBLESTONE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.GRANITE)) : false) {
+						count = count + 0.125;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.GRANITE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DIORITE)) : false) {
+						count = count + 0.125;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.DIORITE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.ANDESITE)) : false) {
+						count = count + 0.125;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.ANDESITE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BLACKSTONE)) : false) {
+						count = count + 0.5;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.BLACKSTONE);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BASALT)) : false) {
+						count = count + 0.5;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.BASALT);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.NETHERRACK)) : false) {
+						count = count + 0.125;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.NETHERRACK);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SOUL_SOIL)) : false) {
+						count = count + 0.5;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.SOUL_SOIL);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SOUL_SAND)) : false) {
+						count = count + 0.5;
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(Blocks.SOUL_SAND);
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					}
+					if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.STONE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLESTONE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.GRANITE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DIORITE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.ANDESITE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BLACKSTONE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BASALT)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLED_DEEPSLATE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DEEPSLATE)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SOUL_SAND)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SOUL_SOIL)) : false)
+							|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.NETHERRACK)) : false)) {
+						continue;
+					} else {
+						break;
 					}
 				}
 				main.addProperty("money", (money_old + count));
@@ -71,13 +155,6 @@ public class MoulastoneprocessProcedure {
 					} catch (IOException exception) {
 						exception.printStackTrace();
 					}
-				}
-			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") > 0) {
-				{
-					final String _tagName = "cooldown";
-					final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") - 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}
 		}

@@ -10,7 +10,6 @@ import palamod.procedures.Crushersubprocessv3barpaladiumProcedure;
 import palamod.procedures.Crushersubprocessv3barendiumProcedure;
 import palamod.procedures.Crushersubprocessv3baramethystProcedure;
 import palamod.procedures.CrushersubprocessflamespritereturnProcedure;
-import palamod.procedures.CrusherdebugProcedure;
 import palamod.procedures.CrushercustominfotitaneProcedure;
 import palamod.procedures.CrushercustominfopaladiumProcedure;
 import palamod.procedures.CrushercustominfoendiumProcedure;
@@ -140,9 +139,6 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> {
 			guiGraphics.drawString(this.font,
 
 					CrushercustominfoendiumProcedure.execute(world, x, y, z), 245, 70, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				CrusherdebugProcedure.execute(world, x, y, z), 4, -12, -1, false);
 	}
 
 	@Override

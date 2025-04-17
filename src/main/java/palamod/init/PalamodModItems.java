@@ -839,6 +839,20 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ROTATED_PURPLE_SLIMEPAD = block(PalamodModBlocks.ROTATED_PURPLE_SLIMEPAD);
 	public static final DeferredItem<Item> ROTATED_BLUE_SLIMEPAD = block(PalamodModBlocks.ROTATED_BLUE_SLIMEPAD);
 	public static final DeferredItem<Item> ROTATED_ORANGE_SLIMEPAD = block(PalamodModBlocks.ROTATED_ORANGE_SLIMEPAD);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_0 = block(PalamodModBlocks.WITHEREDOBSIDIAN_0);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_1 = block(PalamodModBlocks.WITHEREDOBSIDIAN_1);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_2 = block(PalamodModBlocks.WITHEREDOBSIDIAN_2);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_3 = block(PalamodModBlocks.WITHEREDOBSIDIAN_3);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_4 = block(PalamodModBlocks.WITHEREDOBSIDIAN_4);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_5 = block(PalamodModBlocks.WITHEREDOBSIDIAN_5);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_6 = block(PalamodModBlocks.WITHEREDOBSIDIAN_6);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_7 = block(PalamodModBlocks.WITHEREDOBSIDIAN_7);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_8 = block(PalamodModBlocks.WITHEREDOBSIDIAN_8);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_9 = block(PalamodModBlocks.WITHEREDOBSIDIAN_9);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_10 = block(PalamodModBlocks.WITHEREDOBSIDIAN_10);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_11 = block(PalamodModBlocks.WITHEREDOBSIDIAN_11);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_12 = block(PalamodModBlocks.WITHEREDOBSIDIAN_12);
+	public static final DeferredItem<Item> WITHEREDOBSIDIAN_13 = block(PalamodModBlocks.WITHEREDOBSIDIAN_13);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -14,6 +14,6 @@ public class RenforcedobsidianstairsBlock extends StairBlock {
 
 	@Override
 	public float getExplosionResistance() {
-		return 100f;
+		return 1200f;
 	}
 }

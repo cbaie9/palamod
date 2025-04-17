@@ -87,8 +87,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 44,
-          "y": 141,
+          "x": 47,
+          "y": 140,
           "locked": false
         }
       },
@@ -251,16 +251,31 @@
       {
         "type": "label",
         "data": {
-          "name": "label_work_in_progress_will_be_updat",
+          "name": "label_proc_lastunlockedminer",
           "text": {
-            "fixedValue": "Work in progress - will be updated soon"
+            "fixedValue": "",
+            "name": "Lastunlockedminer"
           },
           "color": {
-            "value": -13434676,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 47,
-          "y": 171,
+          "y": 154,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_last_unlocked_miner.png",
+          "spritesCount": 25,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Lastunlockedgetsprite"
+          },
+          "x": 49,
+          "y": 169,
           "locked": false
         }
       }

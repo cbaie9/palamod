@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/withered_obsidian_12",
+    "particle": "palamod:block/withered_obsidian_12"
+  },
+  "render_type": "solid"
+}

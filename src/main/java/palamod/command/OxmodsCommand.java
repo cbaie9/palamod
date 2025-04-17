@@ -8,6 +8,7 @@ import palamod.procedures.OpenProcedure;
 import palamod.procedures.Luckyprocess1adminProcedure;
 import palamod.procedures.GivenbtProcedure;
 import palamod.procedures.GetuuidProcedure;
+import palamod.procedures.GetunixtextchatProcedure;
 import palamod.procedures.GetdirectoryjobsProcedure;
 import palamod.procedures.BackuploadconfigProcedure;
 import palamod.procedures.BackupconfigProcedure;
@@ -173,6 +174,20 @@ public class OxmodsCommand {
 
 					BackupconfigProcedure.execute(entity);
 					return 0;
-				}))));
+				}))).then(Commands.literal("unix_timestamp").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					GetunixtextchatProcedure.execute(entity);
+					return 0;
+				})));
 	}
 }

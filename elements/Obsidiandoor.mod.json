@@ -39,8 +39,8 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 10.0,
-    "resistance": 10.0,
+    "hardness": 50.0,
+    "resistance": 1200.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [
@@ -60,7 +60,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
     "tickRate": 10,
     "tickRandomly": false,

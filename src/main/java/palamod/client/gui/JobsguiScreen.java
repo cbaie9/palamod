@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsguiMenu;
 
+import palamod.procedures.LastunlockedminerProcedure;
+import palamod.procedures.LastunlockedgetspriteProcedure;
 import palamod.procedures.GetlevelminerProcedure;
 import palamod.procedures.GetlevelhunterProcedure;
 import palamod.procedures.GetlevelfarmerProcedure;
@@ -14,6 +16,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -62,6 +65,9 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
 
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png"), this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(world, entity) * 16, 0, 400), 0, 16, 16, 416,
+				16);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -77,7 +83,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_jobs"), 160, 5, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items"), 5, 121, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items"), 8, 120, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_miner"), 48, 45, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 123, 45, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_le_hunter"), 207, 45, -1, false);
@@ -94,7 +100,9 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> {
 		guiGraphics.drawString(this.font,
 
 				GetlevelalchiProcedure.execute(world, entity), 272, 99, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_work_in_progress_will_be_updat"), 8, 151, -13434676, false);
+		guiGraphics.drawString(this.font,
+
+				LastunlockedminerProcedure.execute(world, entity), 8, 134, -1, false);
 	}
 
 	@Override

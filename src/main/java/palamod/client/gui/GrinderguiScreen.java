@@ -10,8 +10,6 @@ import palamod.procedures.LightbluegrinderonProcedure;
 import palamod.procedures.Grindertrans1Procedure;
 import palamod.procedures.GrindergettimerfusionProcedure;
 import palamod.procedures.GrindergettimercraftProcedure;
-import palamod.procedures.GrinderdebugenchantProcedure;
-import palamod.procedures.DebuggetgingotProcedure;
 
 import palamod.network.GrinderguiButtonMessage;
 
@@ -106,12 +104,6 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 		guiGraphics.drawString(this.font,
 
 				Grindertrans1Procedure.execute(world, x, y, z), 144, 70, -4671036, false);
-		guiGraphics.drawString(this.font,
-
-				GrinderdebugenchantProcedure.execute(world, x, y, z), 9, -14, -1, false);
-		guiGraphics.drawString(this.font,
-
-				DebuggetgingotProcedure.execute(world, x, y, z), 7, -25, -10066177, false);
 	}
 
 	@Override

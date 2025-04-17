@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 public class ObsidiantrapdoorBlock extends TrapDoorBlock {
 	public ObsidiantrapdoorBlock() {
 		super(BlockSetType.STONE,
-				BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(10f, 100f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
+				BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(50f, 1200f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
 	}
 
 	@Override

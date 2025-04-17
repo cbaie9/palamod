@@ -21,19 +21,23 @@ public class ClickerprintcoinsProcedure {
 		double lvl = 0;
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\clicker\\" + entity.getUUID().toString()), File.separator + "clicker_info.json");
-		{
-			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
+		if (jobs.exists()) {
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (main.get("coin").isJsonPrimitive() ? main.get("coin").getAsJsonPrimitive().isNumber() : false) {
+						lvl = main.get("coin").getAsDouble();
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
-				bufferedReader.close();
-				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				lvl = main.get("coin").getAsDouble();
-			} catch (IOException e) {
-				e.printStackTrace();
 			}
 		}
 		return "" + lvl;
