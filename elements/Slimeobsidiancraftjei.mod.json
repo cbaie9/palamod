@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Slimeobsidian"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "TAG:palamod:slimepad"
+      },
+      {
+        "value": "TAG:palamod:slimepad"
+      },
+      {
+        "value": "TAG:palamod:slimepad"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      }
+    ]
+  }
+}

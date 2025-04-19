@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Cobblebreakeramethystupgrade"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Cobblebreaker"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Speedmodifier"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      }
+    ]
+  }
+}

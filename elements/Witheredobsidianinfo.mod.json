@@ -1,0 +1,50 @@
+{
+  "_fv": 73,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Witheredobsidian0"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian1"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian2"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian3"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian4"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian5"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian6"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian7"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian8"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian9"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian10"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian11"
+      },
+      {
+        "value": "CUSTOM:Witheredobsidian12"
+      }
+    ],
+    "information": [
+      "Place a Paladium Block next to it to power it to the next tier"
+    ]
+  }
+}

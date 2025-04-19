@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:slimepad",
+    "palamod:slimepad_red",
+    "palamod:slimepad_blue",
+    "palamod:slimepad_orange",
+    "palamod:slimepad_purple",
+    "palamod:rotated_slimepad",
+    "palamod:rotated_red_slimepad",
+    "palamod:rotated_purple_slimepad",
+    "palamod:rotated_blue_slimepad",
+    "palamod:rotated_orange_slimepad"
+  ]
+}

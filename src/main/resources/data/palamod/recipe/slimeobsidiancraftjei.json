@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "tag": "palapalamod:slimepad"
+    },
+    {
+      "tag": "palapalamod:slimepad"
+    },
+    {
+      "tag": "palapalamod:slimepad"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    }
+  ],
+  "output": {
+    "id": "palamod:slime_obsidian",
+    "count": 1
+  }
+}

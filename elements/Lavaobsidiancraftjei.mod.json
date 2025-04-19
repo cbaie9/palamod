@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Lavaobsidian"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "Items.LAVA_BUCKET"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      }
+    ]
+  }
+}

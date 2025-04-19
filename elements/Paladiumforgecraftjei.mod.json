@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Paladiumforge"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "minecraft:block/nether_portal",
-    "portal": "minecraft:block/nether_portal"
+    "particle": "palamod:block/miner_portal",
+    "portal": "palamod:block/miner_portal"
   },
   "elements": [
     {

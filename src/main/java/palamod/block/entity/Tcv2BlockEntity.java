@@ -92,7 +92,7 @@ public class Tcv2BlockEntity extends RandomizableContainerBlockEntity implements
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Contructed grinder");
+		return Component.literal("Creative Contructed grinder");
 	}
 
 	@Override

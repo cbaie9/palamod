@@ -372,7 +372,7 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Sup
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		DropitemcraftProcedure.execute(entity);
+		DropitemcraftProcedure.execute(world, entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

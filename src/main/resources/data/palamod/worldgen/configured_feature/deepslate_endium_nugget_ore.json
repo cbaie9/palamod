@@ -6,15 +6,6 @@
     "targets": [
       {
         "target": {
-          "predicate_type": "tag_match",
-          "tag": "c:stones"
-        },
-        "state": {
-          "Name": "palamod:deepslate_endium_nugget_ore"
-        }
-      },
-      {
-        "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
             "Name": "minecraft:tuff"
@@ -29,6 +20,20 @@
           "predicate_type": "blockstate_match",
           "block_state": {
             "Name": "minecraft:gravel"
+          }
+        },
+        "state": {
+          "Name": "palamod:deepslate_endium_nugget_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
           }
         },
         "state": {

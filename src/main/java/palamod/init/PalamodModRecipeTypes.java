@@ -1,6 +1,7 @@
 package palamod.init;
 
 import palamod.jei_recipes.PaladiummachinerecipetypejeiRecipe;
+import palamod.jei_recipes.JobsminercraftjeiRecipe;
 import palamod.jei_recipes.GrinderhighrecipetypejeiRecipe;
 import palamod.jei_recipes.CrusherrecipetypeRecipe;
 
@@ -34,6 +35,8 @@ public class PalamodModRecipeTypes {
 			SERIALIZERS.register("paladiummachinerecipetypejei", () -> PaladiummachinerecipetypejeiRecipe.Serializer.INSTANCE);
 			RECIPE_TYPES.register("grinderhighrecipetypejei", () -> GrinderhighrecipetypejeiRecipe.Type.INSTANCE);
 			SERIALIZERS.register("grinderhighrecipetypejei", () -> GrinderhighrecipetypejeiRecipe.Serializer.INSTANCE);
+			RECIPE_TYPES.register("jobsminercraftjei", () -> JobsminercraftjeiRecipe.Type.INSTANCE);
+			SERIALIZERS.register("jobsminercraftjei", () -> JobsminercraftjeiRecipe.Serializer.INSTANCE);
 		});
 	}
 }

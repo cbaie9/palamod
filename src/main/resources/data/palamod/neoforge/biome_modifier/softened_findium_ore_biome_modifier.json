@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#palamod:is_miner_dimension",
+  "features": "palamod:softened_findium_ore",
+  "step": "underground_ores"
+}

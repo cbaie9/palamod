@@ -6,7 +6,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "plains",
+          "biome": "palamod:alternateplaines",
           "parameters": {
             "temperature": 0,
             "humidity": 0,
@@ -21,13 +21,13 @@
     },
     "settings": {
       "name": "palamod:minerdimension",
-      "sea_level": 0,
+      "sea_level": -64,
       "legacy_random_source": false,
       "disable_mob_generation": false,
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "minecraft:stone"
+        "Name": "palamod:soft_stone"
       },
       "default_fluid": {
         "Name": "minecraft:air"
@@ -360,7 +360,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "plains"
+                "palamod:alternateplaines"
               ]
             },
             "then_run": {
@@ -394,17 +394,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:grass_block",
-                              "Properties": {
-                                "snowy": "false"
-                              }
+                              "Name": "palamod:soft_stone"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:gravel"
+                            "Name": "minecraft:air"
                           }
                         }
                       ]
@@ -422,7 +419,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:dirt"
+                        "Name": "palamod:soft_stone"
                       }
                     }
                   }

@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "item": "palamod:findium"
+    },
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "tag": "neoforge:glass"
+    },
+    {
+      "tag": "neoforge:glass"
+    }
+  ],
+  "output": {
+    "id": "palamod:cave_block",
+    "count": 1
+  }
+}

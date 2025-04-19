@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Megaboomobsidian"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "Blocks.OBSIDIAN"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      }
+    ]
+  }
+}

@@ -8,6 +8,17 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
+            "Name": "minecraft:tuff"
+          }
+        },
+        "state": {
+          "Name": "palamod:deepslate_trixium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
             "Name": "minecraft:deepslate",
             "Properties": {
               "axis": "y"
@@ -22,40 +33,7 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:stone"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_trixium_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:granite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_trixium_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:diorite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_trixium_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:andesite"
+            "Name": "minecraft:gravel"
           }
         },
         "state": {

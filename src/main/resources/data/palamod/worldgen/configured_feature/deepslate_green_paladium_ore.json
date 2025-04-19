@@ -8,7 +8,10 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:stone"
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
           }
         },
         "state": {
@@ -19,10 +22,18 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:deepslate",
-            "Properties": {
-              "axis": "y"
-            }
+            "Name": "minecraft:tuff"
+          }
+        },
+        "state": {
+          "Name": "palamod:deepslate_green_paladium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:gravel"
           }
         },
         "state": {

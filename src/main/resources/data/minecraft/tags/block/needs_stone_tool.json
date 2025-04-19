@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "palamod:cobbled_soft_stone",
+    "palamod:trixiumstairs",
+    "palamod:trixiumslab",
     "palamod:paladium_hopper",
     "palamod:rotated_paladium_hopper",
     "palamod:unknownblock",
@@ -38,11 +41,15 @@
     "palamod:elevator_blue",
     "palamod:elevato_rred",
     "palamod:elevator_white",
+    "palamod:paladium_slab",
+    "palamod:paladium_stairs",
     "palamod:fake_paladium_ore",
     "palamod:lucky_block",
     "palamod:paladium_machine",
     "palamod:tcv_2",
     "palamod:loadblock_1t",
+    "palamod:titane_stairs",
+    "palamod:titane_slab",
     "palamod:amethyst_spike",
     "palamod:diamond_spike",
     "palamod:paladium_furnace_on",
@@ -52,6 +59,9 @@
     "palamod:grinder_casing",
     "palamod:alchimet_1",
     "palamod:findium_slab",
-    "palamod:paladium_crusher"
+    "palamod:endium_block",
+    "palamod:paladium_crusher",
+    "palamod:titane_block",
+    "palamod:paladium_block"
   ]
 }

@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "minecraft:lava_bucket"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:lava_obsidian",
+    "count": 1
+  }
+}

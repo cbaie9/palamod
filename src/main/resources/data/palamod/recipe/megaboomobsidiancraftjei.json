@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:megaboomobsidian",
+    "count": 1
+  }
+}

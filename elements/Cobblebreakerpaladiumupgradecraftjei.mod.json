@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Cobblebreakerpaladiumupgrade"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:Cobblebreakertitaneupgrade"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ]
+  }
+}

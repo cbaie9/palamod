@@ -61,7 +61,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -105,7 +105,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "DIAMOND",
+    "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "hasInventory": false,
     "openGUIOnRightClick": false,

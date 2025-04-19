@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Titaneexcavator"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:TitaneShovel"
+      },
+      {
+        "value": "CUSTOM:TitaneShovel"
+      },
+      {
+        "value": "CUSTOM:TitaneShovel"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      }
+    ]
+  }
+}

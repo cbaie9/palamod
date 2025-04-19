@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:cobblebreaker"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:speed_modifier"
+    },
+    {
+      "item": "palamod:amethyst"
+    }
+  ],
+  "output": {
+    "id": "palamod:cobblebreaker_amethyst_upgrade",
+    "count": 1
+  }
+}

@@ -107,7 +107,7 @@ public class Tcv2Block extends Block implements EntityBlock {
 			player.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Contructed grinder");
+					return Component.literal("Creative Contructed grinder");
 				}
 
 				@Override

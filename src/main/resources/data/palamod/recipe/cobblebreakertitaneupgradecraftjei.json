@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:cobblebreaker_amethyst_upgrade"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    }
+  ],
+  "output": {
+    "id": "palamod:cobblebreaker_titane_upgrade",
+    "count": 1
+  }
+}

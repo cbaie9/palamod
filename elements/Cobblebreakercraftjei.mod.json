@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Cobblebreaker"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "TAG:neoforge:cobblestone"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "TAG:neoforge:cobblestone"
+      },
+      {
+        "value": "TAG:neoforge:cobblestone"
+      },
+      {
+        "value": "CUSTOM:Voidstone"
+      },
+      {
+        "value": "TAG:neoforge:cobblestone"
+      },
+      {
+        "value": "TAG:neoforge:cobblestone"
+      },
+      {
+        "value": "CUSTOM:Forturnemodifier"
+      },
+      {
+        "value": "TAG:neoforge:cobblestone"
+      }
+    ]
+  }
+}

@@ -104,7 +104,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "DIAMOND",
+    "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "hasInventory": false,
     "openGUIOnRightClick": false,

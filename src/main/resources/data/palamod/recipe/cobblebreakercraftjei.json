@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "tag": "neoforge:cobblestone"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "tag": "neoforge:cobblestone"
+    },
+    {
+      "tag": "neoforge:cobblestone"
+    },
+    {
+      "item": "palamod:voidstone"
+    },
+    {
+      "tag": "neoforge:cobblestone"
+    },
+    {
+      "tag": "neoforge:cobblestone"
+    },
+    {
+      "item": "palamod:fortune_modifier"
+    },
+    {
+      "tag": "neoforge:cobblestone"
+    }
+  ],
+  "output": {
+    "id": "palamod:cobblebreaker",
+    "count": 1
+  }
+}

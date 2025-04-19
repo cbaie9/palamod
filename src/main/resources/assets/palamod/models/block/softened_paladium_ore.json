@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/softened_paladium_ore",
+    "particle": "palamod:block/softened_paladium_ore"
+  },
+  "render_type": "solid"
+}

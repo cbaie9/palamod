@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:voidstone"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titane_chest"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:minage_voidstone",
+    "count": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:xpbottle"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:sealedxpbottle",
+    "count": 1
+  }
+}

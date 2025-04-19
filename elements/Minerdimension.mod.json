@@ -4,17 +4,17 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "plains"
+        "value": "CUSTOM:Alternateplaines"
       }
     ],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "CUSTOM:Softstone"
     },
     "fluidBlock": {
       "value": "Blocks.AIR"
     },
-    "seaLevel": 0,
+    "seaLevel": -64,
     "generateOreVeins": true,
     "generateAquifers": false,
     "horizontalNoiseSize": 4,
@@ -24,10 +24,6 @@
     "hasClouds": true,
     "cloudHeight": 255.0,
     "skyType": "NORMAL",
-    "airColor": {
-      "value": -16737895,
-      "falpha": 0.0
-    },
     "sunHeightAffectsFog": false,
     "canRespawnHere": true,
     "hasFog": false,
@@ -45,6 +41,9 @@
     "minMonsterSpawnLightLimit": 0,
     "maxMonsterSpawnLightLimit": 0,
     "monsterSpawnBlockLightLimit": 0,
+    "onPlayerLeavesDimension": {
+      "name": "Clearportalexitminerdimension"
+    },
     "portalFrame": {
       "value": "CUSTOM:Witheredobsidian13"
     },
@@ -67,7 +66,7 @@
       }
     ],
     "texture": "flint_and_steel",
-    "portalTexture": "minecraft:nether_portal",
+    "portalTexture": "miner_portal",
     "enablePortal": true
   }
 }

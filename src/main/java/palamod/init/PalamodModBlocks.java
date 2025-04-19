@@ -53,6 +53,14 @@ import palamod.block.StonyBlock;
 import palamod.block.SpongetntBlock;
 import palamod.block.SpikeobsidianwoodBlock;
 import palamod.block.SpikegoldBlock;
+import palamod.block.SoftstoneBlock;
+import palamod.block.SoftenedtrixiumoreBlock;
+import palamod.block.SoftenedtitaneoreBlock;
+import palamod.block.SoftenedpaladiumoreBlock;
+import palamod.block.SoftenedgreenpaladiumoreBlock;
+import palamod.block.SoftenedfindiumoreBlock;
+import palamod.block.SoftenedendiumnuggetoreBlock;
+import palamod.block.SoftenedamethystoreBlock;
 import palamod.block.SlimepadBlock;
 import palamod.block.SlimeobsidianBlock;
 import palamod.block.RotatedslimepadBlock;
@@ -222,6 +230,7 @@ import palamod.block.CompacttntBlock;
 import palamod.block.CompactedobsidianBlock;
 import palamod.block.ColoredlampBlock;
 import palamod.block.ColofullampBlock;
+import palamod.block.CobbleledsoftstoneBlock;
 import palamod.block.CobblebreakerserverBlock;
 import palamod.block.CobblebreakerBlock;
 import palamod.block.CloudblockBlock;
@@ -500,6 +509,15 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> WITHEREDOBSIDIAN_12 = REGISTRY.register("witheredobsidian_12", Witheredobsidian12Block::new);
 	public static final DeferredBlock<Block> WITHEREDOBSIDIAN_13 = REGISTRY.register("witheredobsidian_13", Witheredobsidian13Block::new);
 	public static final DeferredBlock<Block> MINERDIMENSION_PORTAL = REGISTRY.register("minerdimension_portal", MinerdimensionPortalBlock::new);
+	public static final DeferredBlock<Block> SOFT_STONE = REGISTRY.register("soft_stone", SoftstoneBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_AMETHYST_ORE = REGISTRY.register("softened_amethyst_ore", SoftenedamethystoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_TITANE_ORE = REGISTRY.register("softened_titane_ore", SoftenedtitaneoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_PALADIUM_ORE = REGISTRY.register("softened_paladium_ore", SoftenedpaladiumoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_TRIXIUM_ORE = REGISTRY.register("softened_trixium_ore", SoftenedtrixiumoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_GREEN_PALADIUM_ORE = REGISTRY.register("softened_green_paladium_ore", SoftenedgreenpaladiumoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_FINDIUM_ORE = REGISTRY.register("softened_findium_ore", SoftenedfindiumoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_ENDIUM_NUGGET_ORE = REGISTRY.register("softened_endium_nugget_ore", SoftenedendiumnuggetoreBlock::new);
+	public static final DeferredBlock<Block> COBBLED_SOFT_STONE = REGISTRY.register("cobbled_soft_stone", CobbleledsoftstoneBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "palamod:paladium_spike"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:paladium_obsidian_spike",
+    "count": 1
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Moulastone"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "Items.ENDER_PEARL"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "Items.ENDER_PEARL"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Voidstone"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "Items.ENDER_PEARL"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "Items.ENDER_PEARL"
+      }
+    ]
+  }
+}

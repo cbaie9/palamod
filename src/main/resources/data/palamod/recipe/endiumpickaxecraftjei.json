@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:endium_ingot"
+    },
+    {
+      "item": "palamod:endium_ingot"
+    },
+    {
+      "item": "palamod:endium_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:endium_pickaxe",
+    "count": 1
+  }
+}

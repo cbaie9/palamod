@@ -1,0 +1,33 @@
+{
+  "_fv": 73,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Softenedamethystore"
+      },
+      {
+        "value": "CUSTOM:Softenedtitaneore"
+      },
+      {
+        "value": "CUSTOM:Softenedpaladiumore"
+      },
+      {
+        "value": "CUSTOM:Softenedtrixiumore"
+      },
+      {
+        "value": "CUSTOM:Softenedgreenpaladiumore"
+      },
+      {
+        "value": "CUSTOM:Softenedfindiumore"
+      },
+      {
+        "value": "CUSTOM:Softenedendiumnuggetore"
+      }
+    ],
+    "information": [
+      "Ores that can be obtain in miner dimension ( most of them are also obtenable in overworld )",
+      "Those ores have a boosted spawn rate in the miner dimension"
+    ]
+  }
+}

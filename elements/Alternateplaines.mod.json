@@ -1,0 +1,112 @@
+{
+  "_fv": 73,
+  "_type": "biome",
+  "definition": {
+    "name": "Alternate plaines",
+    "groundBlock": {
+      "value": "CUSTOM:Softstone"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:Softstone"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.AIR"
+    },
+    "grassColor": {
+      "value": -15833288,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -8977147,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -15317380,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": "music.overworld.flower_forest"
+    },
+    "moodSound": {
+      "value": "ambient.cave"
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:Flyparticle"
+    },
+    "particlesProbability": 0.5,
+    "rainingPossibility": 0.0,
+    "temperature": 0.5,
+    "spawnBiome": false,
+    "spawnInCaves": false,
+    "spawnBiomeNether": false,
+    "genTemperature": {
+      "min": 0.0,
+      "max": 1.0E-4
+    },
+    "genHumidity": {
+      "min": 0.0,
+      "max": 1.0E-4
+    },
+    "genContinentalness": {
+      "min": 0.0,
+      "max": 1.0E-4
+    },
+    "genErosion": {
+      "min": 0.0,
+      "max": 1.0E-4
+    },
+    "genWeirdness": {
+      "min": 0.0,
+      "max": 1.0E-4
+    },
+    "treesPerChunk": 0,
+    "vanillaTreeType": "Default",
+    "treeType": 0,
+    "minHeight": 7,
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "defaultFeatures": [
+      "Caves",
+      "Ores"
+    ],
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnMineshaftMesa": true,
+    "spawnPillagerOutpost": false,
+    "villageType": "plains",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "spawnShipwreckBeached": false,
+    "spawnBuriedTreasure": true,
+    "oceanRuinType": "NONE",
+    "spawnNetherBridge": true,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": true,
+    "spawnEndCity": true,
+    "spawnRuinedPortal": "STANDARD",
+    "spawnEntries": []
+  }
+}

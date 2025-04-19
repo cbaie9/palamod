@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst_pickaxe"
+    },
+    {
+      "item": "palamod:paladium_pickaxe"
+    },
+    {
+      "item": "palamod:titane_pickaxe"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:pickaxeofthegodslv_1",
+    "count": 1
+  }
+}

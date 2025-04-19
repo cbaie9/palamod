@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_block"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:magical_tool",
+    "count": 1
+  }
+}

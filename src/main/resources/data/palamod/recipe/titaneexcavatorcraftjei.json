@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:titane_shovel"
+    },
+    {
+      "item": "palamod:titane_shovel"
+    },
+    {
+      "item": "palamod:titane_shovel"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titane_stick"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titane_stick"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:titaneexcavator",
+    "count": 1
+  }
+}

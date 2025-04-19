@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Greenpaladumexcator"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Titaneexcavator"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Titaneexcavator"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Titaneexcavator"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Titaneexcavator"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      }
+    ]
+  }
+}

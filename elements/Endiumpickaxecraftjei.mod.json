@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:EndiumPickaxe"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      }
+    ]
+  }
+}

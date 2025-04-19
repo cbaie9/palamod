@@ -77,6 +77,8 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 	ImageButton imagebutton_sealed_xp_bottle;
 	ImageButton imagebutton_forge_front_off;
 	ImageButton imagebutton_beta_block5;
+	ImageButton imagebutton_withered_obsidian_0;
+	ImageButton imagebutton_green_paladium_excavator;
 
 	public JobsminercraftguiScreen(JobsminercraftguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -180,6 +182,10 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_palaforge"), mouseX, mouseY);
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 105 && mouseY < topPos + 121)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_autocrafter"), mouseX, mouseY);
+		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 105 && mouseY < topPos + 121)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_withered_obsidian"), mouseX, mouseY);
+		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 105 && mouseY < topPos + 121)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator"), mouseX, mouseY);
 	}
 
 	@Override
@@ -337,7 +343,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		guistate.put("button:imagebutton_titane_excavator", imagebutton_titane_excavator);
 		this.addRenderableWidget(imagebutton_titane_excavator);
 		imagebutton_paladium_excavator = new ImageButton(this.leftPos + 86, this.topPos + 29, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_excavator.png"), ResourceLocation.parse("palamod:textures/screens/paladium_excavator.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_excavator.png"), ResourceLocation.parse("palamod:textures/screens/paladium_excavator_white.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new JobsminercraftguiButtonMessage(5, x, y, z));
 						JobsminercraftguiButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -866,5 +872,33 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		};
 		guistate.put("button:imagebutton_beta_block5", imagebutton_beta_block5);
 		this.addRenderableWidget(imagebutton_beta_block5);
+		imagebutton_withered_obsidian_0 = new ImageButton(this.leftPos + 124, this.topPos + 105, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/withered_obsidian_0.png"), ResourceLocation.parse("palamod:textures/screens/block_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsminercraftguiButtonMessage(43, x, y, z));
+						JobsminercraftguiButtonMessage.handleButtonAction(entity, 43, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_withered_obsidian_0", imagebutton_withered_obsidian_0);
+		this.addRenderableWidget(imagebutton_withered_obsidian_0);
+		imagebutton_green_paladium_excavator = new ImageButton(this.leftPos + 143, this.topPos + 105, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/green_paladium_excavator.png"), ResourceLocation.parse("palamod:textures/screens/paladium_excavator_white.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new JobsminercraftguiButtonMessage(44, x, y, z));
+						JobsminercraftguiButtonMessage.handleButtonAction(entity, 44, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_green_paladium_excavator", imagebutton_green_paladium_excavator);
+		this.addRenderableWidget(imagebutton_green_paladium_excavator);
 	}
 }

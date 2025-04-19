@@ -131,28 +131,13 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.PLANKS#0"
-      },
-      {
-        "value": "Blocks.PLANKS#5"
-      },
-      {
-        "value": "Blocks.STONE#3"
-      },
-      {
-        "value": "Blocks.STONE#1"
-      },
-      {
-        "value": "Blocks.STONE#5"
-      },
-      {
-        "value": "Blocks.DIRT#1"
-      },
-      {
         "value": "Blocks.DEEPSLATE"
       },
       {
-        "value": "Blocks.STONE#0"
+        "value": "Blocks.TUFF"
+      },
+      {
+        "value": "Blocks.GRAVEL"
       }
     ],
     "generationShape": "TRIANGLE",

@@ -22,7 +22,7 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:stone"
+            "Name": "minecraft:tuff"
           }
         },
         "state": {
@@ -33,29 +33,7 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:granite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_amethyst_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:diorite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_amethyst_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:andesite"
+            "Name": "minecraft:gravel"
           }
         },
         "state": {

@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "palamod:compressedsponge"
+    },
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "palamod:compressedsponge"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    }
+  ],
+  "output": {
+    "id": "palamod:spongetnt",
+    "count": 1
+  }
+}

@@ -5,9 +5,11 @@ import palamod.world.inventory.JobsminercraftguiMenu;
 
 import palamod.procedures.JobsminercraftwoddenspikeProcedure;
 import palamod.procedures.JobsminercraftwithertntProcedure;
+import palamod.procedures.JobsminercraftwitheredobsidianProcedure;
 import palamod.procedures.JobsminercraftvoidstoneminageProcedure;
 import palamod.procedures.JobsminercraftvoidstoneProcedure;
 import palamod.procedures.JobsminercrafttitanespikeProcedure;
+import palamod.procedures.JobsminercrafttitaneexcavatorProcedure;
 import palamod.procedures.JobsminercraftspongetntProcedure;
 import palamod.procedures.JobsminercraftslimeobsidianProcedure;
 import palamod.procedures.JobsminercraftsealedxpbottleProcedure;
@@ -22,6 +24,7 @@ import palamod.procedures.JobsminercraftmagictntProcedure;
 import palamod.procedures.JobsminercraftmagicialtoolProcedure;
 import palamod.procedures.JobsminercraftlavaobsidianProcedure;
 import palamod.procedures.JobsminercraftironspikeProcedure;
+import palamod.procedures.JobsminercraftgreenpaladiumexcavatorProcedure;
 import palamod.procedures.JobsminercraftgoldenspikeProcedure;
 import palamod.procedures.JobsminercraftfakewaterobsidianProcedure;
 import palamod.procedures.JobsminercraftendiumtntProcedure;
@@ -110,11 +113,11 @@ public record JobsminercraftguiButtonMessage(int buttonID, int x, int y, int z) 
 		}
 		if (buttonID == 4) {
 
-			JobsminercraftamethystexcavatorProcedure.execute(entity);
+			JobsminercrafttitaneexcavatorProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			JobsminercraftamethystexcavatorProcedure.execute(entity);
+			JobsminercraftgreenpaladiumexcavatorProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
@@ -263,6 +266,14 @@ public record JobsminercraftguiButtonMessage(int buttonID, int x, int y, int z) 
 		if (buttonID == 42) {
 
 			JobsminercraftnotingamesoonProcedure.execute(entity);
+		}
+		if (buttonID == 43) {
+
+			JobsminercraftwitheredobsidianProcedure.execute(entity);
+		}
+		if (buttonID == 44) {
+
+			JobsminercraftgreenpaladiumexcavatorProcedure.execute(entity);
 		}
 	}
 

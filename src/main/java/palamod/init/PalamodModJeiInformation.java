@@ -37,5 +37,19 @@ public class PalamodModJeiInformation implements IModPlugin {
 		registration.addIngredientInfo(
 				List.of(new ItemStack(PalamodModBlocks.GRINDER_CASING.get()), new ItemStack(PalamodModBlocks.GRINDER_FRAME.get()), new ItemStack(PalamodModBlocks.GRINDER_BLOCK.get()), new ItemStack(PalamodModBlocks.TCV_2.get())),
 				VanillaTypes.ITEM_STACK, Component.translatable("jei.palamod.grinderjeiinfo"));
+		registration.addIngredientInfo(List.of(new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_0.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_1.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_2.get()),
+				new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_3.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_4.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_5.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_6.get()),
+				new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_7.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_8.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_9.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_10.get()),
+				new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_11.get()), new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_12.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.palamod.witheredobsidianinfo"));
+		registration.addIngredientInfo(List.of(new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_13.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.palamod.witheredobsidianmaxtierinfo"));
+		registration.addIngredientInfo(
+				List.of(new ItemStack(PalamodModBlocks.GRINDER_CASING.get()), new ItemStack(PalamodModBlocks.GRINDER_FRAME.get()), new ItemStack(PalamodModBlocks.GRINDER_BLOCK.get()), new ItemStack(PalamodModBlocks.TCV_2.get())),
+				VanillaTypes.ITEM_STACK, Component.translatable("jei.palamod.grindercomposant"));
+		registration.addIngredientInfo(List.of(new ItemStack(PalamodModBlocks.SOFTENED_AMETHYST_ORE.get()), new ItemStack(PalamodModBlocks.SOFTENED_TITANE_ORE.get()), new ItemStack(PalamodModBlocks.SOFTENED_PALADIUM_ORE.get()),
+				new ItemStack(PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get()), new ItemStack(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get()), new ItemStack(PalamodModBlocks.SOFTENED_FINDIUM_ORE.get()),
+				new ItemStack(PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.palamod.softenedoresjei"));
+		registration.addIngredientInfo(
+				List.of(new ItemStack(PalamodModItems.MINERJOBSITEM.get()), new ItemStack(PalamodModItems.FARMERJOBSITEM.get()), new ItemStack(PalamodModItems.HUNTERJOBSITEM.get()), new ItemStack(PalamodModItems.ALCHIMISTJOBSITEM.get())),
+				VanillaTypes.ITEM_STACK, Component.translatable("jei.palamod.jobsinfojei"));
 	}
 }

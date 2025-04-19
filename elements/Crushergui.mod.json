@@ -8,7 +8,7 @@
     "inventoryOffsetX": -72,
     "inventoryOffsetY": 19,
     "renderBgLayer": false,
-    "doesPauseGame": false,
+    "doesPauseGame": true,
     "components": [
       {
         "type": "image",

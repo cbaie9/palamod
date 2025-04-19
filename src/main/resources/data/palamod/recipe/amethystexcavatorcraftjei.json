@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst_shovel"
+    },
+    {
+      "item": "palamod:amethyst_shovel"
+    },
+    {
+      "item": "palamod:amethyst_shovel"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:amethyst_stick"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:amethyst_stick"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:amethyst_excavator",
+    "count": 1
+  }
+}

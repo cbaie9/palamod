@@ -536,7 +536,7 @@
           "image": "titane_excavator.png",
           "hoveredImage": "titane_excavator_white.png",
           "onClick": {
-            "name": "Jobsminercraftamethystexcavator"
+            "name": "Jobsminercrafttitaneexcavator"
           },
           "x": 131,
           "y": 44,
@@ -548,9 +548,9 @@
         "data": {
           "name": "imagebutton_paladium_excavator",
           "image": "paladium_excavator.png",
-          "hoveredImage": "paladium_excavator.png",
+          "hoveredImage": "paladium_excavator_white.png",
           "onClick": {
-            "name": "Jobsminercraftamethystexcavator"
+            "name": "Jobsminercraftgreenpaladiumexcavator"
           },
           "x": 150,
           "y": 44,
@@ -1795,6 +1795,62 @@
           },
           "x": 325,
           "y": 69,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_withered_obsidian_0",
+          "image": "withered_obsidian_0.png",
+          "hoveredImage": "block_white.png",
+          "onClick": {
+            "name": "Jobsminercraftwitheredobsidian"
+          },
+          "x": 188,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_withered_obsidian",
+          "text": {
+            "fixedValue": "Withered Obsidian"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 188,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_green_paladium_excavator",
+          "image": "green_paladium_excavator.png",
+          "hoveredImage": "paladium_excavator_white.png",
+          "onClick": {
+            "name": "Jobsminercraftgreenpaladiumexcavator"
+          },
+          "x": 207,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_green_paladium_excavator",
+          "text": {
+            "fixedValue": "Green Paladium Excavator"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 207,
+          "y": 120,
           "locked": false
         }
       }

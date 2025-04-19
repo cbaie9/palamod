@@ -3,6 +3,8 @@ package palamod.init;
 
 import palamod.jei_recipes.PaladiummachinerecipetypejeiRecipeCategory;
 import palamod.jei_recipes.PaladiummachinerecipetypejeiRecipe;
+import palamod.jei_recipes.JobsminercraftjeiRecipeCategory;
+import palamod.jei_recipes.JobsminercraftjeiRecipe;
 import palamod.jei_recipes.GrinderhighrecipetypejeiRecipeCategory;
 import palamod.jei_recipes.GrinderhighrecipetypejeiRecipe;
 import palamod.jei_recipes.CrusherrecipetypeRecipeCategory;
@@ -29,6 +31,7 @@ public class PalamodModJeiPlugin implements IModPlugin {
 	public static mezz.jei.api.recipe.RecipeType<CrusherrecipetypeRecipe> Crusherrecipetype_Type = new mezz.jei.api.recipe.RecipeType<>(CrusherrecipetypeRecipeCategory.UID, CrusherrecipetypeRecipe.class);
 	public static mezz.jei.api.recipe.RecipeType<PaladiummachinerecipetypejeiRecipe> Paladiummachinerecipetypejei_Type = new mezz.jei.api.recipe.RecipeType<>(PaladiummachinerecipetypejeiRecipeCategory.UID, PaladiummachinerecipetypejeiRecipe.class);
 	public static mezz.jei.api.recipe.RecipeType<GrinderhighrecipetypejeiRecipe> Grinderhighrecipetypejei_Type = new mezz.jei.api.recipe.RecipeType<>(GrinderhighrecipetypejeiRecipeCategory.UID, GrinderhighrecipetypejeiRecipe.class);
+	public static mezz.jei.api.recipe.RecipeType<JobsminercraftjeiRecipe> Jobsminercraftjei_Type = new mezz.jei.api.recipe.RecipeType<>(JobsminercraftjeiRecipeCategory.UID, JobsminercraftjeiRecipe.class);
 
 	@Override
 	public ResourceLocation getPluginUid() {
@@ -40,6 +43,7 @@ public class PalamodModJeiPlugin implements IModPlugin {
 		registration.addRecipeCategories(new CrusherrecipetypeRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 		registration.addRecipeCategories(new PaladiummachinerecipetypejeiRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 		registration.addRecipeCategories(new GrinderhighrecipetypejeiRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+		registration.addRecipeCategories(new JobsminercraftjeiRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
 	}
 
 	@Override
@@ -51,6 +55,8 @@ public class PalamodModJeiPlugin implements IModPlugin {
 		registration.addRecipes(Paladiummachinerecipetypejei_Type, PaladiummachinerecipetypejeiRecipes);
 		List<GrinderhighrecipetypejeiRecipe> GrinderhighrecipetypejeiRecipes = recipeManager.getAllRecipesFor(GrinderhighrecipetypejeiRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
 		registration.addRecipes(Grinderhighrecipetypejei_Type, GrinderhighrecipetypejeiRecipes);
+		List<JobsminercraftjeiRecipe> JobsminercraftjeiRecipes = recipeManager.getAllRecipesFor(JobsminercraftjeiRecipe.Type.INSTANCE).stream().map(RecipeHolder::value).collect(Collectors.toList());
+		registration.addRecipes(Jobsminercraftjei_Type, JobsminercraftjeiRecipes);
 	}
 
 	@Override
@@ -58,5 +64,7 @@ public class PalamodModJeiPlugin implements IModPlugin {
 		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.PALADIUM_CRUSHER.get().asItem()), Crusherrecipetype_Type);
 		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.PALADIUM_MACHINE.get().asItem()), Paladiummachinerecipetypejei_Type);
 		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.GRINDER_BLOCK.get().asItem()), Grinderhighrecipetypejei_Type);
+		registration.addRecipeCatalyst(new ItemStack(PalamodModBlocks.TCV_2.get().asItem()), Grinderhighrecipetypejei_Type);
+		registration.addRecipeCatalyst(new ItemStack(PalamodModItems.MINERJOBSITEM.get()), Jobsminercraftjei_Type);
 	}
 }

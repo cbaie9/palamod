@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Voidstone"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "Blocks.CHEST"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      }
+    ]
+  }
+}

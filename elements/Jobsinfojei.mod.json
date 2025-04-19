@@ -1,0 +1,25 @@
+{
+  "_fv": 73,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Minerjobsitem"
+      },
+      {
+        "value": "CUSTOM:Farmerjobsitem"
+      },
+      {
+        "value": "CUSTOM:Hunterjobsitem"
+      },
+      {
+        "value": "CUSTOM:Alchimistjobsitem"
+      }
+    ],
+    "information": [
+      "This is the representation of all items that can be craft with jobs craft gui ",
+      "With the basic configuration press [J], select a jobs then craft to use the crafting table",
+      "On servers, no need to farm for a levels all items are unlocked to prevent crash"
+    ]
+  }
+}

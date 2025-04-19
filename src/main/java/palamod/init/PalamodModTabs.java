@@ -35,7 +35,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.AMETHYST_AXE.get());
 				tabData.accept(PalamodModItems.AMETHYST_SWORD.get());
 				tabData.accept(PalamodModItems.AMETHYST_SHOVEL.get());
-				tabData.accept(PalamodModItems.AMETHYST_EXCACVATOR.get());
 				tabData.accept(PalamodModItems.AMETHYST_ARMOR_HELMET.get());
 				tabData.accept(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get());
@@ -272,6 +271,15 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModBlocks.XPBUSHLOW.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_HOPPER.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_AMETHYST_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_TITANE_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_PALADIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_FINDIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE.get().asItem());
+				tabData.accept(PalamodModItems.AMETHYST_EXCAVATOR.get());
+				tabData.accept(PalamodModBlocks.COBBLED_SOFT_STONE.get().asItem());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -375,6 +383,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.OSTRYA_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFT_STONE.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {
@@ -440,6 +449,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.POISON_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.BOOM_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.WITHEREDOBSIDIAN_0.get().asItem());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {

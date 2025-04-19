@@ -1,14 +1,11 @@
 {
   "replace": false,
   "values": [
-    "palamod:trixiumstairs",
-    "palamod:trixiumslab",
+    "palamod:softened_findium_ore",
     "palamod:exctractor",
     "palamod:deepslate_findium_ore",
     "palamod:amethyst_slab",
     "palamod:amethyst_stairs",
-    "palamod:titane_stairs",
-    "palamod:titane_slab",
     "palamod:paladium_forge",
     "palamod:paladium_spike",
     "palamod:titane_spike",
@@ -16,7 +13,6 @@
     "palamod:iron_spike",
     "palamod:paladium_green_block",
     "palamod:findium_block",
-    "palamod:amethyst_block",
-    "palamod:paladium_block"
+    "palamod:amethyst_block"
   ]
 }

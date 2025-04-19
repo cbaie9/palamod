@@ -9,6 +9,8 @@ import palamod.procedures.GetjobsfrombottleProcedure;
 
 import palamod.item.inventory.VoidstoneInventoryCapability;
 import palamod.item.inventory.PaladiumphoneInventoryCapability;
+import palamod.item.inventory.MinerjobsitemInventoryCapability;
+import palamod.item.inventory.FarmerjobsitemInventoryCapability;
 import palamod.item.XpbottleItem;
 import palamod.item.XpberryItem;
 import palamod.item.X10xppotionItem;
@@ -129,6 +131,8 @@ import palamod.item.MoneyitemItem;
 import palamod.item.Moneye1k1Item;
 import palamod.item.MixedendiumingotItem;
 import palamod.item.MixedendiumarmorItem;
+import palamod.item.MinerjobsitemItem;
+import palamod.item.MineclearerItem;
 import palamod.item.MinagevoidstoneItem;
 import palamod.item.MiichalengeItem;
 import palamod.item.MediumringgreenpaladiumItem;
@@ -153,6 +157,7 @@ import palamod.item.InternetcardItem;
 import palamod.item.IngotpaternItem;
 import palamod.item.InfernalknockerItem;
 import palamod.item.HyperjumpstickItem;
+import palamod.item.HunterjobsitemItem;
 import palamod.item.HealstickItem;
 import palamod.item.HealorbItem;
 import palamod.item.HeadgreenswordItem;
@@ -191,6 +196,7 @@ import palamod.item.FireimbuepotionItem;
 import palamod.item.FindiumItem;
 import palamod.item.FastswordpaternItem;
 import palamod.item.FastswordheadItem;
+import palamod.item.FarmerjobsitemItem;
 import palamod.item.FakewterItem;
 import palamod.item.EnfyupotionItem;
 import palamod.item.EndiumsmallringItem;
@@ -223,6 +229,7 @@ import palamod.item.DoubleexppotionItem;
 import palamod.item.DiamondstringItem;
 import palamod.item.DiamondparticleItem;
 import palamod.item.DamagestickItem;
+import palamod.item.CustomairItem;
 import palamod.item.CreativetrixiumswordItem;
 import palamod.item.CreativepotgItem;
 import palamod.item.CreativehammerItem;
@@ -269,6 +276,7 @@ import palamod.item.AmethysteAxeItem;
 import palamod.item.AmethysteArmorItem;
 import palamod.item.AmethystbackpackItem;
 import palamod.item.AmethtysthoeItem;
+import palamod.item.AlchimistjobsitemItem;
 
 import palamod.PalamodMod;
 
@@ -555,7 +563,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PICKAXEOFTHEGODSLV_19 = REGISTRY.register("pickaxeofthegodslv_19", Pickaxeofthegodslv19Item::new);
 	public static final DeferredItem<Item> PICKAXEOFTHEGODSLV_20 = REGISTRY.register("pickaxeofthegodslv_20", Pickaxeofthegodslv20Item::new);
 	public static final DeferredItem<Item> PICKAXEOFTHEGODSLV_13 = REGISTRY.register("pickaxeofthegodslv_13", Pickaxeofthegodslv13Item::new);
-	public static final DeferredItem<Item> AMETHYST_EXCACVATOR = REGISTRY.register("amethyst_excacvator", AmethystexacvatorItem::new);
+	public static final DeferredItem<Item> AMETHYST_EXCAVATOR = REGISTRY.register("amethyst_excavator", AmethystexacvatorItem::new);
 	public static final DeferredItem<Item> TITANEEXCAVATOR = REGISTRY.register("titaneexcavator", TitaneexcavatorItem::new);
 	public static final DeferredItem<Item> PALADIUMEXCAVATOR = REGISTRY.register("paladiumexcavator", PaladiumexcavatorItem::new);
 	public static final DeferredItem<Item> BIG_HOLE_UPGRADE = REGISTRY.register("big_hole_upgrade", BigholeupgradeItem::new);
@@ -853,6 +861,21 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> WITHEREDOBSIDIAN_11 = block(PalamodModBlocks.WITHEREDOBSIDIAN_11);
 	public static final DeferredItem<Item> WITHEREDOBSIDIAN_12 = block(PalamodModBlocks.WITHEREDOBSIDIAN_12);
 	public static final DeferredItem<Item> WITHEREDOBSIDIAN_13 = block(PalamodModBlocks.WITHEREDOBSIDIAN_13);
+	public static final DeferredItem<Item> MINE_CLEARER = REGISTRY.register("mine_clearer", MineclearerItem::new);
+	public static final DeferredItem<Item> SOFT_STONE = block(PalamodModBlocks.SOFT_STONE);
+	public static final DeferredItem<Item> SOFTENED_AMETHYST_ORE = block(PalamodModBlocks.SOFTENED_AMETHYST_ORE);
+	public static final DeferredItem<Item> SOFTENED_TITANE_ORE = block(PalamodModBlocks.SOFTENED_TITANE_ORE);
+	public static final DeferredItem<Item> SOFTENED_PALADIUM_ORE = block(PalamodModBlocks.SOFTENED_PALADIUM_ORE);
+	public static final DeferredItem<Item> SOFTENED_TRIXIUM_ORE = block(PalamodModBlocks.SOFTENED_TRIXIUM_ORE);
+	public static final DeferredItem<Item> SOFTENED_GREEN_PALADIUM_ORE = block(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE);
+	public static final DeferredItem<Item> SOFTENED_FINDIUM_ORE = block(PalamodModBlocks.SOFTENED_FINDIUM_ORE);
+	public static final DeferredItem<Item> SOFTENED_ENDIUM_NUGGET_ORE = block(PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE);
+	public static final DeferredItem<Item> MINERJOBSITEM = REGISTRY.register("minerjobsitem", MinerjobsitemItem::new);
+	public static final DeferredItem<Item> FARMERJOBSITEM = REGISTRY.register("farmerjobsitem", FarmerjobsitemItem::new);
+	public static final DeferredItem<Item> HUNTERJOBSITEM = REGISTRY.register("hunterjobsitem", HunterjobsitemItem::new);
+	public static final DeferredItem<Item> ALCHIMISTJOBSITEM = REGISTRY.register("alchimistjobsitem", AlchimistjobsitemItem::new);
+	public static final DeferredItem<Item> CUSTOMAIR = REGISTRY.register("customair", CustomairItem::new);
+	public static final DeferredItem<Item> COBBLED_SOFT_STONE = block(PalamodModBlocks.COBBLED_SOFT_STONE);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -860,6 +883,8 @@ public class PalamodModItems {
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PaladiumphoneInventoryCapability(stack), PALADIUM_PHONE.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidstoneInventoryCapability(stack), VOIDSTONE.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new MinerjobsitemInventoryCapability(stack), MINERJOBSITEM.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new FarmerjobsitemInventoryCapability(stack), FARMERJOBSITEM.get());
 	}
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {

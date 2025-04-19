@@ -12,6 +12,8 @@
     "minecraft:sandstone",
     "minecraft:red_sandstone",
     "minecraft:end_stone",
-    "minecraft:deepslate"
+    "minecraft:deepslate",
+    "palamod:soft_stone",
+    "palamod:cobbled_soft_stone"
   ]
 }

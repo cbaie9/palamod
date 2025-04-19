@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:voidstone"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "output": {
+    "id": "palamod:dollars_stone",
+    "count": 1
+  }
+}

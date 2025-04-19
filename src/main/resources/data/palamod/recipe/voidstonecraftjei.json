@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:voidstone",
+    "count": 1
+  }
+}

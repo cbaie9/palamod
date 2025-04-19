@@ -968,18 +968,6 @@
       }
     },
     {
-      "name": "EndiumPickaxeRecipe",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endium_pickaxe_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endium_pickaxe_recipe.json"
-        ]
-      }
-    },
-    {
       "name": "EndiumSwordRecipe",
       "type": "recipe",
       "compiles": true,
@@ -5544,18 +5532,6 @@
       }
     },
     {
-      "name": "Fakewaterobsidiancraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fakewaterobsidiancraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/fakewaterobsidiancraft.json"
-        ]
-      }
-    },
-    {
       "name": "Lavaobsidianprocess",
       "type": "procedure",
       "compiles": true,
@@ -5598,18 +5574,6 @@
           "src/main/resources/data/palamod/loot_table/blocks/lava_obsidian.json",
           "src/main/resources/assets/palamod/models/block/lava_obsidian.json",
           "src/main/resources/assets/palamod/blockstates/lava_obsidian.json"
-        ]
-      }
-    },
-    {
-      "name": "Lavaprocess",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lavaprocess",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/lavaprocess.json"
         ]
       }
     },
@@ -10627,10 +10591,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "amethyst_excacvator",
+      "registry_name": "amethyst_excavator",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethyst_excacvator.json",
+          "src/main/resources/assets/palamod/models/item/amethyst_excavator.json",
           "src/main/java/palamod/item/AmethystexacvatorItem.java"
         ]
       }
@@ -18515,18 +18479,6 @@
       }
     },
     {
-      "name": "Voidstonecraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "voidstonecraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/voidstonecraft.json"
-        ]
-      }
-    },
-    {
       "name": "Titanechest",
       "type": "block",
       "compiles": true,
@@ -19054,18 +19006,6 @@
       }
     },
     {
-      "name": "Excavatorgreenpaladium",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "excavatorgreenpaladium",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/excavatorgreenpaladium.json"
-        ]
-      }
-    },
-    {
       "name": "Ringchestprocess",
       "type": "procedure",
       "compiles": true,
@@ -19375,18 +19315,6 @@
       }
     },
     {
-      "name": "Voidstoneminagecraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "voidstoneminagecraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/voidstoneminagecraft.json"
-        ]
-      }
-    },
-    {
       "name": "Oxcommand",
       "type": "procedure",
       "compiles": true,
@@ -19520,42 +19448,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "Supportcommand",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "supportcommand",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/command/SupportcommandCommand.java"
-        ]
-      }
-    },
-    {
-      "name": "Discord",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "discord",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/command/DiscordCommand.java"
-        ]
-      }
-    },
-    {
-      "name": "Github",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "github",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/command/GithubCommand.java"
         ]
       }
     },
@@ -30166,18 +30058,6 @@
       }
     },
     {
-      "name": "Palalavacraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palalavacraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/palalavacraft.json"
-        ]
-      }
-    },
-    {
       "name": "Legendarystoneglintcondition",
       "type": "procedure",
       "compiles": true,
@@ -30461,18 +30341,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/palamod/advancement/avancementbigkaboom.json"
-        ]
-      }
-    },
-    {
-      "name": "Lavaobsidiancraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lavaobsidiancraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/lavaobsidiancraft.json"
         ]
       }
     },
@@ -31472,18 +31340,6 @@
       }
     },
     {
-      "name": "Cobblebreakercraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakercraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakercraft.json"
-        ]
-      }
-    },
-    {
       "name": "Dollarsstonecraft",
       "type": "recipe",
       "compiles": true,
@@ -31531,42 +31387,6 @@
         "files": [
           "src/main/resources/assets/palamod/models/item/cobblebreaker_paladium_upgrade.json",
           "src/main/java/palamod/item/CobblebreakerpaladiumupgradeItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakeramethystupgradecraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakeramethystupgradecraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakeramethystupgradecraft.json"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakertitaneupgradecraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakertitaneupgradecraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakertitaneupgradecraft.json"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakerpaladiumupgradecraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakerpaladiumupgradecraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakerpaladiumupgradecraft.json"
         ]
       }
     },
@@ -33178,18 +32998,6 @@
       }
     },
     {
-      "name": "Spongetntcraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spongetntcraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/sponge_tnt_craft.json"
-        ]
-      }
-    },
-    {
       "name": "Explosionspongetnt",
       "type": "procedure",
       "compiles": true,
@@ -33666,42 +33474,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "Withertntcraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "withertntcraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/wither_tnt_craft.json"
-        ]
-      }
-    },
-    {
-      "name": "Magictntcraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magictntcraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/magictntcraft.json"
-        ]
-      }
-    },
-    {
-      "name": "Compacttntcraft",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "compacttntcraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/compact_tnt_craft.json"
         ]
       }
     },
@@ -36515,18 +36287,6 @@
         "files": [
           "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipeCategory.java",
           "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipe.java"
-        ]
-      }
-    },
-    {
-      "name": "Hammersmeltrjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hammersmeltrjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/hammersmeltrjei.json"
         ]
       }
     },
@@ -42106,6 +41866,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -43345,18 +43109,6 @@
       }
     },
     {
-      "name": "B",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "b",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/command/BCommand.java"
-        ]
-      }
-    },
-    {
       "name": "Outputserver",
       "type": "procedure",
       "compiles": true,
@@ -44489,16 +44241,7 @@
         "files": [
           "src/main/java/palamod/procedures/CpspassifeffectProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/clicker"
     },
@@ -44841,6 +44584,890 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "Alternateplaines",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alternateplaines",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/worldgen/biome/alternateplaines.json"
+        ]
+      }
+    },
+    {
+      "name": "Mineclearer",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_clearer",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/MineclearerItem.java",
+          "src/main/resources/assets/palamod/models/item/mine_clearer.json"
+        ]
+      }
+    },
+    {
+      "name": "Mineclearerprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mineclearerprocess",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/MineclearerprocessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Softstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soft_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/soft_stone.json",
+          "src/main/resources/assets/palamod/models/item/soft_stone.json",
+          "src/main/resources/assets/palamod/blockstates/soft_stone.json",
+          "src/main/java/palamod/block/SoftstoneBlock.java",
+          "src/main/resources/assets/palamod/models/block/soft_stone.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedamethystore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_amethyst_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/softened_amethyst_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_amethyst_ore.json",
+          "src/main/java/palamod/block/SoftenedamethystoreBlock.java",
+          "src/main/resources/assets/palamod/models/item/softened_amethyst_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_amethyst_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_amethyst_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_amethyst_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_amethyst_ore_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedtitaneore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_titane_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_titane_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_titane_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_titane_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_titane_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_titane_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_titane_ore.json",
+          "src/main/java/palamod/block/SoftenedtitaneoreBlock.java",
+          "src/main/resources/assets/palamod/models/block/softened_titane_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedpaladiumore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_paladium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/softened_paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_paladium_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_paladium_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_paladium_ore_biome_modifier.json",
+          "src/main/java/palamod/block/SoftenedpaladiumoreBlock.java",
+          "src/main/resources/assets/palamod/blockstates/softened_paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_paladium_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_paladium_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedtrixiumore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_trixium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/softened_trixium_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_trixium_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_trixium_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_trixium_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_trixium_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_trixium_ore_biome_modifier.json",
+          "src/main/java/palamod/block/SoftenedtrixiumoreBlock.java",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_trixium_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedgreenpaladiumore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_green_paladium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_green_paladium_ore.json",
+          "src/main/java/palamod/block/SoftenedgreenpaladiumoreBlock.java",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_green_paladium_ore_biome_modifier.json",
+          "src/main/resources/assets/palamod/models/item/softened_green_paladium_ore.json",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_green_paladium_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_green_paladium_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_green_paladium_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_green_paladium_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedfindiumore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_findium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_findium_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_findium_ore.json",
+          "src/main/java/palamod/block/SoftenedfindiumoreBlock.java",
+          "src/main/resources/assets/palamod/models/block/softened_findium_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_findium_ore.json",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_findium_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_findium_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_findium_ore_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedendiumnuggetore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_endium_nugget_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/blockstates/softened_endium_nugget_ore.json",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_endium_nugget_ore.json",
+          "src/main/java/palamod/block/SoftenedendiumnuggetoreBlock.java",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_endium_nugget_ore_biome_modifier.json",
+          "src/main/resources/assets/palamod/models/item/softened_endium_nugget_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_endium_nugget_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_endium_nugget_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_endium_nugget_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Witheredobsidianinfo",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "witheredobsidianinfo",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Witheredobsidianmaxtierinfo",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "witheredobsidianmaxtierinfo",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Grindercomposant",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grindercomposant",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Softenedoresjei",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedoresjei",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Clearportalexitminerdimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clearportalexitminerdimension",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/ClearportalexitminerdimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftwitheredobsidian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftwitheredobsidian",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftwitheredobsidianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Minerjobsitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minerjobsitem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/minerjobsitem.json",
+          "src/main/java/palamod/item/inventory/MinerjobsitemInventoryCapability.java",
+          "src/main/java/palamod/item/MinerjobsitemItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Farmerjobsitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "farmerjobsitem",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/FarmerjobsitemItem.java",
+          "src/main/resources/assets/palamod/models/item/farmerjobsitem.json",
+          "src/main/java/palamod/item/inventory/FarmerjobsitemInventoryCapability.java"
+        ]
+      }
+    },
+    {
+      "name": "Hunterjobsitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunterjobsitem",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/HunterjobsitemItem.java",
+          "src/main/resources/assets/palamod/models/item/hunterjobsitem.json"
+        ]
+      }
+    },
+    {
+      "name": "Alchimistjobsitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alchimistjobsitem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/alchimistjobsitem.json",
+          "src/main/java/palamod/item/AlchimistjobsitemItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftjei",
+      "type": "jeirecipetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftjei",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/jei_recipes/JobsminercraftjeiRecipeCategory.java",
+          "src/main/java/palamod/jei_recipes/JobsminercraftjeiRecipe.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsinfojei",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsinfojei",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Endiumpickaxecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumpickaxecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumpickaxecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Customair",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customair",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/customair.json",
+          "src/main/java/palamod/item/CustomairItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Pickaxeofthegodscraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pickaxeofthegodscraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/pickaxeofthegodscraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystexcavatorcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystexcavatorcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/amethystexcavatorcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Titaneexcavatorcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaneexcavatorcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/titaneexcavatorcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumexcavatorcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumexcavatorcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiumexcavatorcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercrafttitaneexcavator",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercrafttitaneexcavator",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercrafttitaneexcavatorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftpaladiumexcavator",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftpaladiumexcavator",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftpaladiumexcavatorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jobsminercraftgreenpaladiumexcavator",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsminercraftgreenpaladiumexcavator",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/procedures/JobsminercraftgreenpaladiumexcavatorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Greenpaladiumexcavatorcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greenpaladiumexcavatorcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/greenpaladiumexcavatorcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Voidstonecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidstonecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/voidstonecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Magicaltoolcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicaltoolcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/magicaltoolcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Obsidianpickaxecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obsidianpickaxecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/obsidianpickaxecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Boomtntcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomtntcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/boomtntcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Bigobsidiancraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bigobsidiancraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/bigobsidiancraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Woddenspikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "woddenspikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/woddenspikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Ironspikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironspikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/ironspikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Goldenspikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldenspikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/goldenspikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Diamondspikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamondspikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/diamondspikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystspikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystspikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/amethystspikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Titanespikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanespikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/titanespikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumspikecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumspikecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiumspikecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Lavaobsidiancraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lavaobsidiancraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/lavaobsidiancraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Spongetntcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spongetntcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/spongetntcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Fakewaterobsidiancraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fakewaterobsidiancraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/fakewaterobsidiancraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Slimeobsidiancraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimeobsidiancraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/slimeobsidiancraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Caveblockcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caveblockcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/caveblockcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Megaboomobsidiancraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megaboomobsidiancraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/megaboomobsidiancraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Tntcompactcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tntcompactcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/tntcompactcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Withertntcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "withertntcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/withertntcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Magictntcraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magictntcraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/magictntcraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Endiumspongecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumspongecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumspongecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobbleledsoftstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobbled_soft_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/CobbleledsoftstoneBlock.java",
+          "src/main/resources/assets/palamod/models/block/cobbled_soft_stone.json",
+          "src/main/resources/assets/palamod/models/item/cobbled_soft_stone.json",
+          "src/main/resources/data/palamod/loot_table/blocks/cobbled_soft_stone.json",
+          "src/main/resources/assets/palamod/blockstates/cobbled_soft_stone.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakercraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakercraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cobblebreakercraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakeramethystupgradecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakeramethystupgradecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cobblebreakeramethystupgradecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakertitaneupgradecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakertitaneupgradecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cobblebreakertitaneupgradecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakerpaladiumupgradecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakerpaladiumupgradecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cobblebreakerpaladiumupgradecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Voidstoneminagecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidstoneminagecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/voidstoneminagecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Dollardstonecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dollardstonecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/dollardstonecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumforgecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumforgecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiumforgecraftjei.json"
+        ]
+      }
+    },
+    {
+      "name": "Sealedxpbottlecraftjei",
+      "type": "jeirecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sealedxpbottlecraftjei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/sealedxpbottlecraftjei.json"
         ]
       }
     }
@@ -45274,6 +45901,600 @@
     }
   ],
   "tag_elements": {
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Angelicwter",
+      "~CUSTOM:Fakewter"
+    ],
+    "ITEMS:mod:potgtag": [
+      "CUSTOM:Pickaxeofthegodslv1",
+      "CUSTOM:Pickaxeofthegodslv2",
+      "CUSTOM:Pickaxeofthegodslv3",
+      "CUSTOM:Pickaxeofthegodslv4",
+      "CUSTOM:Pickaxeofthegodslv5",
+      "CUSTOM:Pickaxeofthegodslv6",
+      "CUSTOM:Pickaxeofthegodslv7",
+      "CUSTOM:Pickaxeofthegodslv8",
+      "CUSTOM:Pickaxeofthegodslv9",
+      "CUSTOM:Pickaxeofthegodslv10",
+      "CUSTOM:Pickaxeofthegodslv11",
+      "CUSTOM:Pickaxeofthegodslv12",
+      "CUSTOM:Pickaxeofthegodslv14",
+      "CUSTOM:Pickaxeofthegodslv15",
+      "CUSTOM:Pickaxeofthegodslv16",
+      "CUSTOM:Pickaxeofthegodslv17",
+      "CUSTOM:Pickaxeofthegodslv18",
+      "CUSTOM:Pickaxeofthegodslv19",
+      "CUSTOM:Pickaxeofthegodslv13",
+      "CUSTOM:Pickaxeofthegodslv20",
+      "CUSTOM:Creativepotg"
+    ],
+    "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:Onemoreupgradeenchant"
+    ],
+    "ITEMS:forge:erable__log": [
+      "CUSTOM:Erable_Wood",
+      "CUSTOM:Erable_Log"
+    ],
+    "BLOCKS:minecraft:leaves": [
+      "CUSTOM:Ostrya_woodLeaves",
+      "CUSTOM:Erable_Leaves",
+      "CUSTOM:Jacaranda_Leaves",
+      "CUSTOM:Judeecercis_Leaves"
+    ],
+    "BLOCKS:forge:destructable": [
+      "CUSTOM:Ostrya_woodWood",
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Jacaranda_Wood",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Wood",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Erable_Wood",
+      "CUSTOM:Erable_Log",
+      "Blocks.DIRT#0",
+      "Blocks.LOG",
+      "Blocks.GRASS",
+      "Blocks.STONE#0",
+      "Blocks.COBBLESTONE"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Cobbleledsoftstone",
+      "~CUSTOM:Trixiumstairs",
+      "~CUSTOM:Trixiumslab",
+      "~CUSTOM:Paladiumhoppersouth",
+      "~CUSTOM:Paladiumhopper",
+      "~CUSTOM:Unknownblock",
+      "~CUSTOM:Printingpress",
+      "~CUSTOM:Onlinedetectoron",
+      "~CUSTOM:Onlinedetector",
+      "~CUSTOM:Woddenspike",
+      "~CUSTOM:Titanechestv2",
+      "~CUSTOM:Endiumchestv2",
+      "~CUSTOM:Amethystchestv2",
+      "~CUSTOM:Greenpaladiumchestv2",
+      "~CUSTOM:Paladiumchestv2",
+      "~CUSTOM:Caveblock",
+      "~CUSTOM:Trixiumblock",
+      "~CUSTOM:Downloader",
+      "~CUSTOM:Endiumchest",
+      "~CUSTOM:Greenpaladiumchest",
+      "~CUSTOM:Amethystchest",
+      "~CUSTOM:Paladiumchest",
+      "~CUSTOM:Titanechest",
+      "~CUSTOM:Uploader",
+      "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Endiumstairs",
+      "~CUSTOM:Endiumslab",
+      "~CUSTOM:Elevatorcyan",
+      "~CUSTOM:Elevatorlightgray",
+      "~CUSTOM:Elevatorgray",
+      "~CUSTOM:Elevatorpurple",
+      "~CUSTOM:Elevatororange",
+      "~CUSTOM:Elevatorbrown",
+      "~CUSTOM:Elevatorlightgreen",
+      "~CUSTOM:Elevatorlightblue",
+      "~CUSTOM:Elevatorpink",
+      "~CUSTOM:Elevatorgreen",
+      "~CUSTOM:Elevatorblue",
+      "~CUSTOM:Elevatorred",
+      "~CUSTOM:Elevatorwhite",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Fakepaladiumore",
+      "~CUSTOM:Luckyblock",
+      "~CUSTOM:Paladiummachine",
+      "~CUSTOM:Tcv2",
+      "~CUSTOM:Loadblock1t",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Ametystespike",
+      "~CUSTOM:Diamondspike",
+      "~CUSTOM:Paladiumfurnaceon",
+      "~CUSTOM:Paladiumfurnace",
+      "~CUSTOM:Grinderblock",
+      "~CUSTOM:Grinderframe",
+      "~CUSTOM:Grindercasing",
+      "~CUSTOM:Alchimet1",
+      "~CUSTOM:Findiumslab",
+      "~CUSTOM:EndiumBlock",
+      "~CUSTOM:Paladiumcrusher",
+      "~CUSTOM:TitaneBlock",
+      "~CUSTOM:PaladiumBlock"
+    ],
+    "ITEMS:neoforge:cobblestone": [
+      "Blocks.COBBLED_DEEPSLATE",
+      "Blocks.COBBLESTONE",
+      "CUSTOM:Cobbleledsoftstone"
+    ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:Trixiumstairs",
+      "~CUSTOM:Obsidianstairs",
+      "~CUSTOM:Renforcedobsidianstairs",
+      "~CUSTOM:Greenpaladiumstairs",
+      "~CUSTOM:Endiumstairs",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Paladiumstairs",
+      "~CUSTOM:Titanestairs",
+      "~CUSTOM:Findiumstairs",
+      "~CUSTOM:Erable_Stairs",
+      "~CUSTOM:Judeecercis_Stairs",
+      "~CUSTOM:Jacaranda_Stairs",
+      "~CUSTOM:Ostrya_woodStairs"
+    ],
+    "ITEMS:mod:cobblebreakable": [
+      "Blocks.COBBLED_DEEPSLATE",
+      "Blocks.COBBLESTONE",
+      "Blocks.MOSSY_COBBLESTONE",
+      "Blocks.STONE#1",
+      "Blocks.STONE#3",
+      "Blocks.BLACKSTONE",
+      "Blocks.STONE#0",
+      "Blocks.STONE#5",
+      "Blocks.SANDSTONE#0",
+      "Blocks.RED_SANDSTONE#0",
+      "Blocks.END_STONE",
+      "Blocks.DEEPSLATE",
+      "CUSTOM:Softstone",
+      "CUSTOM:Cobbleledsoftstone"
+    ],
+    "ITEMS:neoforge:amethyst_can_be_smelted": [
+      "CUSTOM:AmethystePickaxe",
+      "CUSTOM:AmethysteAxe",
+      "CUSTOM:AmethysteSword",
+      "CUSTOM:AmethysteShovel",
+      "CUSTOM:AmethysteArmor.helmet",
+      "CUSTOM:AmethysteArmor.body",
+      "CUSTOM:AmethysteArmor.legs",
+      "CUSTOM:AmethysteArmor.boots",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Amethystebroadsword",
+      "CUSTOM:Amethystefastsword",
+      "CUSTOM:Amethystehammer",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:AmethysteOre",
+      "CUSTOM:Amethystoredeepslate"
+    ],
+    "ITEMS:neoforge:glass": [
+      "Blocks.GLASS",
+      "Blocks.TINTED_GLASS",
+      "Blocks.STAINED_GLASS#0",
+      "Blocks.STAINED_GLASS#1",
+      "Blocks.STAINED_GLASS#2",
+      "Blocks.STAINED_GLASS#3",
+      "Blocks.STAINED_GLASS#4",
+      "Blocks.STAINED_GLASS#5",
+      "Blocks.STAINED_GLASS#6",
+      "Blocks.STAINED_GLASS#7",
+      "Blocks.STAINED_GLASS#8",
+      "Blocks.STAINED_GLASS#9",
+      "Blocks.STAINED_GLASS#10",
+      "Blocks.STAINED_GLASS#11",
+      "Blocks.STAINED_GLASS#12",
+      "Blocks.STAINED_GLASS#13",
+      "Blocks.STAINED_GLASS#14",
+      "Blocks.STAINED_GLASS#15"
+    ],
+    "BLOCKS:forge:dirt": [
+      "CUSTOM:Fertilseddirt"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Softenedfindiumore",
+      "~CUSTOM:Exctractor",
+      "~CUSTOM:Findiumoredeepslate",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Amethyststairs",
+      "~CUSTOM:Paladiumforge",
+      "~CUSTOM:Paladiumspike",
+      "~CUSTOM:Titanespike",
+      "~CUSTOM:Spikegold",
+      "~CUSTOM:Ironspike",
+      "~CUSTOM:PaladiumGreenblock",
+      "~CUSTOM:FindiumBlock",
+      "~CUSTOM:AmethysteBlock"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:Witheredobsidian13",
+      "~CUSTOM:Witheredobsidian12",
+      "~CUSTOM:Witheredobsidian11",
+      "~CUSTOM:Witheredobsidian10",
+      "~CUSTOM:Witheredobsidian9",
+      "~CUSTOM:Witheredobsidian8",
+      "~CUSTOM:Witheredobsidian7",
+      "~CUSTOM:Witheredobsidian6",
+      "~CUSTOM:Witheredobsidian5",
+      "~CUSTOM:Witheredobsidian4",
+      "~CUSTOM:Witheredobsidian3",
+      "~CUSTOM:Witheredobsidian2",
+      "~CUSTOM:Witheredobsidian1",
+      "~CUSTOM:Witheredobsidian0",
+      "~CUSTOM:Megaboomobsidian",
+      "~CUSTOM:Boomobsidian",
+      "~CUSTOM:Poisonobsidian",
+      "~CUSTOM:Slimeobsidian",
+      "~CUSTOM:Paladiumobsidianspike",
+      "~CUSTOM:Titaneobsidianspike",
+      "~CUSTOM:Amethystobsidianspike",
+      "~CUSTOM:Diamondobsidianspike",
+      "~CUSTOM:Goldenobsidianspike",
+      "~CUSTOM:Ironobsidianspike",
+      "~CUSTOM:Spikeobsidianwood",
+      "~CUSTOM:Trixiumnbtblock",
+      "~CUSTOM:Lavaobsidian",
+      "~CUSTOM:Fakewaterobsidian",
+      "~CUSTOM:Compactedobsidian",
+      "~CUSTOM:Obsidiandoor",
+      "~CUSTOM:Obsidiantrapdoor",
+      "~CUSTOM:Findiumstairs"
+    ],
+    "ITEMS:neoforge:amethyst": [
+      "CUSTOM:Amethyste",
+      "CUSTOM:AmethysteOre",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethystePickaxe",
+      "CUSTOM:AmethysteAxe",
+      "CUSTOM:AmethysteSword",
+      "CUSTOM:AmethysteShovel",
+      "CUSTOM:AmethysteArmor.helmet",
+      "CUSTOM:AmethysteArmor.body",
+      "CUSTOM:AmethysteArmor.legs",
+      "CUSTOM:AmethysteArmor.boots",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Amethystebroadsword",
+      "CUSTOM:Amethystefastsword",
+      "CUSTOM:Amethystehammer",
+      "CUSTOM:Amethystpollen",
+      "CUSTOM:Amethystparticle",
+      "CUSTOM:Amethyststairs",
+      "CUSTOM:Amethystslab",
+      "CUSTOM:Amethystoredeepslate",
+      "CUSTOM:Amethystobsidianspike",
+      "CUSTOM:Compressedamethyste"
+    ],
+    "BLOCKS:forge:placeable_sapling_on": [
+      "Blocks.DIRT#0",
+      "Blocks.DIRT#1",
+      "Blocks.DIRT#2",
+      "Blocks.ROOTED_DIRT",
+      "Blocks.FARMLAND",
+      "Blocks.GRASS",
+      "Blocks.GRASS_PATH",
+      "Blocks.MOSS_BLOCK",
+      "CUSTOM:Fertilseddirt"
+    ],
+    "ITEMS:forge:pickaxe": [
+      "CUSTOM:PaladiumPickaxe",
+      "CUSTOM:TitanePickaxe",
+      "CUSTOM:AmethystePickaxe",
+      "CUSTOM:EndiumPickaxe",
+      "CUSTOM:Paladiumgreenpickaxe",
+      "TAG:mod:potgtag",
+      "Items.WOODEN_PICKAXE",
+      "Items.STONE_PICKAXE",
+      "Items.IRON_PICKAXE",
+      "Items.GOLDEN_PICKAXE",
+      "Items.DIAMOND_PICKAXE",
+      "Items.NETHERITE_PICKAXE"
+    ],
+    "BLOCKS:mod:elevator": [
+      "CUSTOM:Elevatorwhite",
+      "CUSTOM:Elevatorred",
+      "CUSTOM:Elevatorblue",
+      "CUSTOM:Elevatorgreen",
+      "CUSTOM:Elevatorpink",
+      "CUSTOM:Elevatorlightblue",
+      "CUSTOM:Elevatorlightgreen",
+      "CUSTOM:Elevatorbrown",
+      "CUSTOM:Elevatororange",
+      "CUSTOM:Elevatorpurple",
+      "CUSTOM:Elevatorgray",
+      "CUSTOM:Elevatorlightgray",
+      "CUSTOM:Elevatorcyan"
+    ],
+    "BLOCKS:forge:tagores": [
+      "CUSTOM:Fakepaladiumore",
+      "CUSTOM:PaladiumOre",
+      "CUSTOM:TitaneOre",
+      "CUSTOM:AmethysteOre",
+      "CUSTOM:FindiumOre",
+      "CUSTOM:Trixiumore",
+      "CUSTOM:Amethystoredeepslate",
+      "CUSTOM:Titaneoredeepslate",
+      "CUSTOM:Paladiumoredeepslate",
+      "CUSTOM:Paladiumgreenoredeepslate",
+      "CUSTOM:Trixiumoredeepslate",
+      "CUSTOM:Endiumnuggetoredeepslate",
+      "CUSTOM:Findiumoredeepslate",
+      "Blocks.COAL_ORE",
+      "Blocks.IRON_ORE",
+      "Blocks.REDSTONE_ORE",
+      "Blocks.LIT_REDSTONE_ORE",
+      "Blocks.GOLD_ORE",
+      "Blocks.LAPIS_ORE",
+      "Blocks.DIAMOND_ORE",
+      "Blocks.EMERALD_ORE",
+      "Blocks.COPPER_ORE",
+      "Blocks.DEEPSLATE_COAL_ORE",
+      "Blocks.DEEPSLATE_IRON_ORE",
+      "Blocks.DEEPSLATE_REDSTONE_ORE",
+      "Blocks.DEEPSLATE_GOLD_ORE",
+      "Blocks.DEEPSLATE_LAPIS_ORE",
+      "Blocks.DEEPSLATE_DIAMOND_ORE",
+      "Blocks.DEEPSLATE_EMERALD_ORE",
+      "Blocks.DEEPSLATE_COPPER_ORE",
+      "Blocks.QUARTZ_ORE",
+      "Blocks.NETHER_GOLD_ORE",
+      "Blocks.ANCIENT_DEBRIS",
+      "CUSTOM:Endiumnuggetore",
+      "CUSTOM:PaladiumGreenore"
+    ],
+    "BLOCKS:minecraft:fences": [
+      "CUSTOM:Jacaranda_Fence",
+      "CUSTOM:Jacaranda_FenceGate",
+      "CUSTOM:Erable_Fence",
+      "CUSTOM:Erable_FenceGate",
+      "CUSTOM:Judeecercis_Fence",
+      "CUSTOM:Judeecercis_FenceGate",
+      "CUSTOM:Ostrya_woodFence",
+      "CUSTOM:Ostrya_woodFenceGate"
+    ],
+    "ITEMS:forge:ostrya_wood_log": [
+      "CUSTOM:Ostrya_woodWood",
+      "CUSTOM:Ostrya_woodLog"
+    ],
+    "ITEMS:forge:seed": [
+      "CUSTOM:Kiwanoseed",
+      "CUSTOM:Orangeblueseed",
+      "CUSTOM:Chervilseed",
+      "Items.WHEAT_SEEDS",
+      "Items.PUMPKIN_SEEDS",
+      "Items.MELON_SEEDS",
+      "Items.BEETROOT_SEEDS",
+      "Items.CARROT",
+      "Items.POTATO"
+    ],
+    "BLOCKS:mod:deserbage": [
+      "Blocks.TALLGRASS#2",
+      "Blocks.DOUBLE_PLANT#3",
+      "Blocks.TALLGRASS#1",
+      "Blocks.DOUBLE_PLANT#2",
+      "Blocks.SEAGRASS",
+      "Blocks.TALL_SEAGRASS"
+    ],
+    "BIOMES:minecraft:has_structure/village_plains": [
+      "~CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/stronghold": [
+      "~CUSTOM:Forestender"
+    ],
+    "ITEMS:mod:palamodmoddedfuel": [
+      "CUSTOM:Goldmixedcoal",
+      "CUSTOM:Amethystmixedcoal",
+      "CUSTOM:Titanemixedcoal",
+      "CUSTOM:Palamixedcharoal"
+    ],
+    "ITEMS:neoforge:obsidian": [
+      "Blocks.OBSIDIAN",
+      "Blocks.CRYING_OBSIDIAN",
+      "CUSTOM:Renforcedobsidian"
+    ],
+    "BLOCKS:minecraft:findium_ore": [
+      "CUSTOM:FindiumOre",
+      "CUSTOM:Findiumoredeepslate"
+    ],
+    "ITEMS:forge:fuelblaze": [
+      "Items.BLAZE_ROD",
+      "Items.BLAZE_POWDER"
+    ],
+    "ITEMS:forge:repairable_endium": [
+      "CUSTOM:EndiumPickaxe",
+      "CUSTOM:EndiumAxe",
+      "CUSTOM:EndiumSword",
+      "CUSTOM:EndiumArmor.helmet",
+      "CUSTOM:EndiumArmor.body",
+      "CUSTOM:EndiumArmor.legs",
+      "CUSTOM:EndiumArmor.boots"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:Trixiumslab",
+      "~CUSTOM:Hardenedobsidianslab",
+      "~CUSTOM:Obsidianslab",
+      "~CUSTOM:Greenpaladiumslab",
+      "~CUSTOM:Endiumslab",
+      "~CUSTOM:Amethystslab",
+      "~CUSTOM:Paladiumslab",
+      "~CUSTOM:Titaneslab",
+      "~CUSTOM:Findiumslab",
+      "~CUSTOM:Erable_Slab",
+      "~CUSTOM:Judeecercis_Slab",
+      "~CUSTOM:Jacaranda_Slab",
+      "~CUSTOM:Ostrya_woodSlab"
+    ],
+    "BLOCKS:mod:cbtill": [
+      "Blocks.DIRT#2",
+      "Blocks.DIRT#0",
+      "Blocks.GRASS",
+      "Blocks.GRASS_PATH",
+      "Blocks.MYCELIUM",
+      "Blocks.FARMLAND"
+    ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~CUSTOM:Frozenforest"
+    ],
+    "ITEMS:minecraft:planks": [
+      "CUSTOM:Erable_Planks",
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Jacaranda_Planks"
+    ],
+    "BLOCKS:mod:omt": [
+      "CUSTOM:Obsidiantrapdoor",
+      "CUSTOM:Renforcedobsidian",
+      "CUSTOM:Obsidiandoor",
+      "CUSTOM:Compactedobsidian",
+      "CUSTOM:Fakewaterobsidian",
+      "CUSTOM:Lavaobsidian",
+      "CUSTOM:Renforcedobsidianstairs",
+      "CUSTOM:Spikeobsidianwood",
+      "CUSTOM:Ironobsidianspike",
+      "CUSTOM:Goldenobsidianspike",
+      "CUSTOM:Diamondobsidianspike",
+      "CUSTOM:Amethystobsidianspike",
+      "CUSTOM:Titaneobsidianspike",
+      "CUSTOM:Paladiumobsidianspike",
+      "CUSTOM:Hardenedobsidianslab"
+    ],
+    "ITEMS:mod:paladiumarmorstag": [
+      "CUSTOM:PaladiumArmor.helmet",
+      "CUSTOM:PaladiumArmor.body",
+      "CUSTOM:PaladiumArmor.legs",
+      "CUSTOM:PaladiumArmor.boots",
+      "CUSTOM:Paladiumarmorcustom1.helmet",
+      "CUSTOM:Paladiumarmorcustom1.body",
+      "CUSTOM:Paladiumarmorcustom1.legs",
+      "CUSTOM:Paladiumarmorcustom1.boots",
+      "CUSTOM:Paladiumarmorcustom2.helmet",
+      "CUSTOM:Paladiumarmorcustom2.body",
+      "CUSTOM:Paladiumarmorcustom2.legs",
+      "CUSTOM:Paladiumarmorcustom2.boots",
+      "CUSTOM:Paladiumarmorcustom3.helmet",
+      "CUSTOM:Paladiumarmorcustom3.body",
+      "CUSTOM:Paladiumarmorcustom3.legs",
+      "CUSTOM:Paladiumarmorcustom3.boots",
+      "CUSTOM:Paladiumarmorcustom4.helmet",
+      "CUSTOM:Paladiumarmorcustom4.body",
+      "CUSTOM:Paladiumarmorcustom4.legs",
+      "CUSTOM:Paladiumarmorcustom4.boots",
+      "CUSTOM:Paladiumarmorcustom5.helmet",
+      "CUSTOM:Paladiumarmorcustom5.body",
+      "CUSTOM:Paladiumarmorcustom5.legs",
+      "CUSTOM:Paladiumarmorcustom5.boots",
+      "CUSTOM:Paladiumarmorcustom6.helmet",
+      "CUSTOM:Paladiumarmorcustom6.body",
+      "CUSTOM:Paladiumarmorcustom6.legs",
+      "CUSTOM:Paladiumarmorcustom6.boots",
+      "CUSTOM:Paladiumarmorcustom7.helmet",
+      "CUSTOM:Paladiumarmorcustom7.body",
+      "CUSTOM:Paladiumarmorcustom7.legs",
+      "CUSTOM:Paladiumarmorcustom7.boots",
+      "CUSTOM:Paladiumarmorcustom8.helmet",
+      "CUSTOM:Paladiumarmorcustom8.body",
+      "CUSTOM:Paladiumarmorcustom8.legs",
+      "CUSTOM:Paladiumarmorcustom8.boots",
+      "CUSTOM:Paladiumarmorcustom9.helmet",
+      "CUSTOM:Paladiumarmorcustom9.body",
+      "CUSTOM:Paladiumarmorcustom9.legs",
+      "CUSTOM:Paladiumarmorcustom9.boots",
+      "CUSTOM:Paladiumarmorcustom10.helmet",
+      "CUSTOM:Paladiumarmorcustom10.body",
+      "CUSTOM:Paladiumarmorcustom10.legs",
+      "CUSTOM:Paladiumarmorcustom10.boots"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:Endiumseedplanter",
+      "~CUSTOM:Greenpaladiumseedplanter",
+      "~CUSTOM:Paladiumseedplanter",
+      "~CUSTOM:Titaneseedplanter",
+      "~CUSTOM:Amethystseedplanter",
+      "~CUSTOM:Obsidianpickaxe",
+      "~CUSTOM:Creativehammer",
+      "~CUSTOM:Greenpaladiumhammer",
+      "~CUSTOM:Creativepotg",
+      "~CUSTOM:Pickaxeofthegodslv13",
+      "~CUSTOM:Pickaxeofthegodslv20",
+      "~CUSTOM:Pickaxeofthegodslv19",
+      "~CUSTOM:Pickaxeofthegodslv18",
+      "~CUSTOM:Pickaxeofthegodslv17",
+      "~CUSTOM:Pickaxeofthegodslv16",
+      "~CUSTOM:Pickaxeofthegodslv15",
+      "~CUSTOM:Pickaxeofthegodslv14",
+      "~CUSTOM:Pickaxeofthegodslv12",
+      "~CUSTOM:Pickaxeofthegodslv11",
+      "~CUSTOM:Pickaxeofthegodslv10",
+      "~CUSTOM:Pickaxeofthegodslv9",
+      "~CUSTOM:Pickaxeofthegodslv8",
+      "~CUSTOM:Pickaxeofthegodslv7",
+      "~CUSTOM:Pickaxeofthegodslv6",
+      "~CUSTOM:Pickaxeofthegodslv5",
+      "~CUSTOM:Pickaxeofthegodslv4",
+      "~CUSTOM:Pickaxeofthegodslv3",
+      "~CUSTOM:Pickaxeofthegodslv2",
+      "~CUSTOM:Pickaxeofthegodslv1",
+      "~CUSTOM:Endiumhammer",
+      "~CUSTOM:Paladiumhammer",
+      "~CUSTOM:Titanehammer",
+      "~CUSTOM:Amethystehammer",
+      "~CUSTOM:Paladiumgreenpickaxe",
+      "~CUSTOM:Stickofgods",
+      "~CUSTOM:Damagestick",
+      "~CUSTOM:Strenghtstick",
+      "~CUSTOM:Healstick",
+      "~CUSTOM:Hyperjumpstick",
+      "~CUSTOM:Jumpstick",
+      "~CUSTOM:Speedstick",
+      "~CUSTOM:EndiumPickaxe",
+      "~CUSTOM:AmethystePickaxe",
+      "~CUSTOM:TitanePickaxe",
+      "~CUSTOM:PaladiumPickaxe"
+    ],
+    "ITEMS:mod:repairable_green": [
+      "CUSTOM:Paladiumgreenpickaxe",
+      "CUSTOM:Paladiumgreenaxe",
+      "CUSTOM:Paladiumgreensword",
+      "CUSTOM:Paladiumgreenshovel",
+      "CUSTOM:Greenpaladiumarmor.helmet",
+      "CUSTOM:Greenpaladiumarmor.body",
+      "CUSTOM:Greenpaladiumarmor.legs",
+      "CUSTOM:Greenpaladiumarmor.boots"
+    ],
+    "BIOMES:minecraft:has_structure/end_city": [
+      "~CUSTOM:Alternateplaines"
+    ],
+    "BLOCKS:mod:kiwano": [
+      "CUSTOM:Kiwano0",
+      "CUSTOM:Kiwano1",
+      "CUSTOM:Kiwano2",
+      "CUSTOM:Kiwano3",
+      "CUSTOM:Kiwano4"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:Fertilseddirt"
+    ],
+    "BLOCKS:mod:eggplant": [
+      "CUSTOM:Eggplant0",
+      "CUSTOM:Eggplant1",
+      "CUSTOM:Eggplant2",
+      "CUSTOM:Eggplant3"
+    ],
+    "ITEMS:minecraft:shovels": [
+      "~CUSTOM:Endiumshovel",
+      "~CUSTOM:Greenpaladumexcator",
+      "~CUSTOM:Paladiumexcavator",
+      "~CUSTOM:Titaneexcavator",
+      "~CUSTOM:Amethystexacvator",
+      "~CUSTOM:Paladiumgreenshovel",
+      "~CUSTOM:AmethysteShovel",
+      "~CUSTOM:TitaneShovel",
+      "~CUSTOM:PaladiumShovel"
+    ],
     "BLOCKS:neoforge:amethyst_ore": [
       "CUSTOM:AmethysteOre",
       "CUSTOM:Amethystoredeepslate"
@@ -45303,10 +46524,6 @@
       "~CUSTOM:TitaneArmor.body",
       "~CUSTOM:PaladiumArmor.body"
     ],
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Angelicwter",
-      "~CUSTOM:Fakewter"
-    ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:Endiumtnt",
       "~CUSTOM:Compacttnt",
@@ -45316,29 +46533,6 @@
       "~CUSTOM:Lavasponge",
       "~CUSTOM:Spongetnt",
       "~CUSTOM:Compressedsponge"
-    ],
-    "ITEMS:mod:potgtag": [
-      "CUSTOM:Pickaxeofthegodslv1",
-      "CUSTOM:Pickaxeofthegodslv2",
-      "CUSTOM:Pickaxeofthegodslv3",
-      "CUSTOM:Pickaxeofthegodslv4",
-      "CUSTOM:Pickaxeofthegodslv5",
-      "CUSTOM:Pickaxeofthegodslv6",
-      "CUSTOM:Pickaxeofthegodslv7",
-      "CUSTOM:Pickaxeofthegodslv8",
-      "CUSTOM:Pickaxeofthegodslv9",
-      "CUSTOM:Pickaxeofthegodslv10",
-      "CUSTOM:Pickaxeofthegodslv11",
-      "CUSTOM:Pickaxeofthegodslv12",
-      "CUSTOM:Pickaxeofthegodslv14",
-      "CUSTOM:Pickaxeofthegodslv15",
-      "CUSTOM:Pickaxeofthegodslv16",
-      "CUSTOM:Pickaxeofthegodslv17",
-      "CUSTOM:Pickaxeofthegodslv18",
-      "CUSTOM:Pickaxeofthegodslv19",
-      "CUSTOM:Pickaxeofthegodslv13",
-      "CUSTOM:Pickaxeofthegodslv20",
-      "CUSTOM:Creativepotg"
     ],
     "ITEMS:forge:uploadersellable": [
       "CUSTOM:PaladiumIngot",
@@ -45430,12 +46624,8 @@
     "BIOMES:minecraft:has_structure/igloo": [
       "~CUSTOM:Frozenforest"
     ],
-    "ENCHANTMENTS:minecraft:treasure": [
-      "~CUSTOM:Onemoreupgradeenchant"
-    ],
-    "ITEMS:forge:erable__log": [
-      "CUSTOM:Erable_Wood",
-      "CUSTOM:Erable_Log"
+    "BIOMES:mod:is_miner_dimension": [
+      "CUSTOM:Alternateplaines"
     ],
     "ITEMS:mod:upgrades_grinder": [
       "CUSTOM:Speedmodifier",
@@ -45459,87 +46649,18 @@
       "CUSTOM:Erable_Log",
       "Blocks.LOG"
     ],
-    "BLOCKS:minecraft:leaves": [
-      "CUSTOM:Ostrya_woodLeaves",
-      "CUSTOM:Erable_Leaves",
-      "CUSTOM:Jacaranda_Leaves",
-      "CUSTOM:Judeecercis_Leaves"
+    "BIOMES:minecraft:has_structure/mineshaft_mesa": [
+      "~CUSTOM:Alternateplaines"
     ],
     "ITEMS:forge:fuel_coalblock": [
       "Blocks.COAL_BLOCK"
-    ],
-    "BLOCKS:forge:destructable": [
-      "CUSTOM:Ostrya_woodWood",
-      "CUSTOM:Ostrya_woodLog",
-      "CUSTOM:Jacaranda_Wood",
-      "CUSTOM:Jacaranda_Log",
-      "CUSTOM:Judeecercis_Wood",
-      "CUSTOM:Judeecercis_Log",
-      "CUSTOM:Erable_Wood",
-      "CUSTOM:Erable_Log",
-      "Blocks.DIRT#0",
-      "Blocks.LOG",
-      "Blocks.GRASS",
-      "Blocks.STONE#0",
-      "Blocks.COBBLESTONE"
     ],
     "BLOCKS:neoforge:titane_ore": [
       "CUSTOM:TitaneOre",
       "CUSTOM:Titaneoredeepslate"
     ],
-    "BLOCKS:minecraft:needs_stone_tool": [
-      "~CUSTOM:Paladiumhoppersouth",
-      "~CUSTOM:Paladiumhopper",
-      "~CUSTOM:Unknownblock",
-      "~CUSTOM:Printingpress",
-      "~CUSTOM:Onlinedetectoron",
-      "~CUSTOM:Onlinedetector",
-      "~CUSTOM:Woddenspike",
-      "~CUSTOM:Titanechestv2",
-      "~CUSTOM:Endiumchestv2",
-      "~CUSTOM:Amethystchestv2",
-      "~CUSTOM:Greenpaladiumchestv2",
-      "~CUSTOM:Paladiumchestv2",
-      "~CUSTOM:Caveblock",
-      "~CUSTOM:Trixiumblock",
-      "~CUSTOM:Downloader",
-      "~CUSTOM:Endiumchest",
-      "~CUSTOM:Greenpaladiumchest",
-      "~CUSTOM:Amethystchest",
-      "~CUSTOM:Paladiumchest",
-      "~CUSTOM:Titanechest",
-      "~CUSTOM:Uploader",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Elevatorcyan",
-      "~CUSTOM:Elevatorlightgray",
-      "~CUSTOM:Elevatorgray",
-      "~CUSTOM:Elevatorpurple",
-      "~CUSTOM:Elevatororange",
-      "~CUSTOM:Elevatorbrown",
-      "~CUSTOM:Elevatorlightgreen",
-      "~CUSTOM:Elevatorlightblue",
-      "~CUSTOM:Elevatorpink",
-      "~CUSTOM:Elevatorgreen",
-      "~CUSTOM:Elevatorblue",
-      "~CUSTOM:Elevatorred",
-      "~CUSTOM:Elevatorwhite",
-      "~CUSTOM:Fakepaladiumore",
-      "~CUSTOM:Luckyblock",
-      "~CUSTOM:Paladiummachine",
-      "~CUSTOM:Tcv2",
-      "~CUSTOM:Loadblock1t",
-      "~CUSTOM:Ametystespike",
-      "~CUSTOM:Diamondspike",
-      "~CUSTOM:Paladiumfurnaceon",
-      "~CUSTOM:Paladiumfurnace",
-      "~CUSTOM:Grinderblock",
-      "~CUSTOM:Grinderframe",
-      "~CUSTOM:Grindercasing",
-      "~CUSTOM:Alchimet1",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Paladiumcrusher"
+    "BIOMES:minecraft:has_structure/bastion_remnant": [
+      "~CUSTOM:Alternateplaines"
     ],
     "BLOCKS:mod:orangeblue": [
       "CUSTOM:Orangeblue0",
@@ -45773,20 +46894,10 @@
       "~CUSTOM:TitaneAxe",
       "~CUSTOM:PaladiumAxe"
     ],
-    "BLOCKS:minecraft:stairs": [
-      "~CUSTOM:Trixiumstairs",
-      "~CUSTOM:Obsidianstairs",
-      "~CUSTOM:Renforcedobsidianstairs",
-      "~CUSTOM:Greenpaladiumstairs",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Ostrya_woodStairs"
+    "BLOCKS:c:obsidian": [
+      "CUSTOM:Renforcedobsidian",
+      "Blocks.OBSIDIAN",
+      "Blocks.CRYING_OBSIDIAN"
     ],
     "ITEMS:mod:rings": [
       "CUSTOM:Mediumring",
@@ -45798,20 +46909,6 @@
       "CUSTOM:Smallringgreenpaladium",
       "CUSTOM:Mediumringgreenpaladium",
       "CUSTOM:Bigringgreenpaladium"
-    ],
-    "ITEMS:mod:cobblebreakable": [
-      "Blocks.COBBLED_DEEPSLATE",
-      "Blocks.COBBLESTONE",
-      "Blocks.MOSSY_COBBLESTONE",
-      "Blocks.STONE#1",
-      "Blocks.STONE#3",
-      "Blocks.BLACKSTONE",
-      "Blocks.STONE#0",
-      "Blocks.STONE#5",
-      "Blocks.SANDSTONE#0",
-      "Blocks.RED_SANDSTONE#0",
-      "Blocks.END_STONE",
-      "Blocks.DEEPSLATE"
     ],
     "BLOCKS:forge:farmland": [
       "Blocks.FARMLAND",
@@ -45867,82 +46964,17 @@
       "Blocks.VOID_AIR",
       "Blocks.CAVE_AIR"
     ],
-    "ITEMS:neoforge:amethyst_can_be_smelted": [
-      "CUSTOM:AmethystePickaxe",
-      "CUSTOM:AmethysteAxe",
-      "CUSTOM:AmethysteSword",
-      "CUSTOM:AmethysteShovel",
-      "CUSTOM:AmethysteArmor.helmet",
-      "CUSTOM:AmethysteArmor.body",
-      "CUSTOM:AmethysteArmor.legs",
-      "CUSTOM:AmethysteArmor.boots",
-      "CUSTOM:Amethytestick",
-      "CUSTOM:Amethystebroadsword",
-      "CUSTOM:Amethystefastsword",
-      "CUSTOM:Amethystehammer",
-      "CUSTOM:Compressedamethyste",
-      "CUSTOM:AmethysteOre",
-      "CUSTOM:Amethystoredeepslate"
-    ],
-    "BLOCKS:forge:dirt": [
-      "CUSTOM:Fertilseddirt"
-    ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:Trixiumstairs",
-      "~CUSTOM:Trixiumslab",
-      "~CUSTOM:Exctractor",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:PaladiumBlock"
-    ],
-    "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:Witheredobsidian13",
-      "~CUSTOM:Witheredobsidian12",
-      "~CUSTOM:Witheredobsidian11",
-      "~CUSTOM:Witheredobsidian10",
-      "~CUSTOM:Witheredobsidian9",
-      "~CUSTOM:Witheredobsidian8",
-      "~CUSTOM:Witheredobsidian7",
-      "~CUSTOM:Witheredobsidian6",
-      "~CUSTOM:Witheredobsidian5",
-      "~CUSTOM:Witheredobsidian4",
-      "~CUSTOM:Witheredobsidian3",
-      "~CUSTOM:Witheredobsidian2",
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Witheredobsidian1",
-      "~CUSTOM:Witheredobsidian0",
-      "~CUSTOM:Megaboomobsidian",
-      "~CUSTOM:Boomobsidian",
-      "~CUSTOM:Poisonobsidian",
-      "~CUSTOM:Slimeobsidian",
-      "~CUSTOM:Paladiumobsidianspike",
-      "~CUSTOM:Titaneobsidianspike",
-      "~CUSTOM:Amethystobsidianspike",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Trixiumnbtblock",
-      "~CUSTOM:Lavaobsidian",
-      "~CUSTOM:Fakewaterobsidian",
-      "~CUSTOM:Compactedobsidian",
-      "~CUSTOM:Obsidiandoor",
-      "~CUSTOM:Obsidiantrapdoor",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:EndiumBlock",
-      "~CUSTOM:TitaneBlock"
+    "ITEMS:mod:slimepad": [
+      "CUSTOM:Slimepad",
+      "CUSTOM:Redslimepad",
+      "CUSTOM:Blueslimepad",
+      "CUSTOM:Orangeslimepad",
+      "CUSTOM:Purpleslimepad",
+      "CUSTOM:Rotatedslimepad",
+      "CUSTOM:Rotatedredslimepad",
+      "CUSTOM:Rotatedpurpleslimepad",
+      "CUSTOM:Rotatedblueslimepad",
+      "CUSTOM:Rotatedorangeslimepad"
     ],
     "BLOCKS:mod:palablocks": [
       "CUSTOM:PaladiumOre",
@@ -46011,7 +47043,7 @@
       "~CUSTOM:Forestender"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.STONE#0"
+      "~CUSTOM:Softstone"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:Botteled",
@@ -46019,71 +47051,16 @@
       "~CUSTOM:Hammerforturne",
       "~CUSTOM:Smelt"
     ],
-    "BLOCKS:forge:placeable_sapling_on": [
-      "Blocks.DIRT#0",
-      "Blocks.DIRT#1",
-      "Blocks.DIRT#2",
-      "Blocks.ROOTED_DIRT",
-      "Blocks.FARMLAND",
-      "Blocks.GRASS",
-      "Blocks.GRASS_PATH",
-      "Blocks.MOSS_BLOCK",
-      "CUSTOM:Fertilseddirt"
-    ],
-    "ITEMS:neoforge:amethyst": [
-      "CUSTOM:Amethyste",
-      "CUSTOM:AmethysteOre",
-      "CUSTOM:AmethysteBlock",
-      "CUSTOM:AmethystePickaxe",
-      "CUSTOM:AmethysteAxe",
-      "CUSTOM:AmethysteSword",
-      "CUSTOM:AmethysteShovel",
-      "CUSTOM:AmethysteArmor.helmet",
-      "CUSTOM:AmethysteArmor.body",
-      "CUSTOM:AmethysteArmor.legs",
-      "CUSTOM:AmethysteArmor.boots",
-      "CUSTOM:Amethytestick",
-      "CUSTOM:Amethystebroadsword",
-      "CUSTOM:Amethystefastsword",
-      "CUSTOM:Amethystehammer",
-      "CUSTOM:Amethystpollen",
-      "CUSTOM:Amethystparticle",
-      "CUSTOM:Amethyststairs",
-      "CUSTOM:Amethystslab",
-      "CUSTOM:Amethystoredeepslate",
-      "CUSTOM:Amethystobsidianspike",
-      "CUSTOM:Compressedamethyste"
-    ],
-    "ITEMS:forge:pickaxe": [
-      "CUSTOM:PaladiumPickaxe",
-      "CUSTOM:TitanePickaxe",
-      "CUSTOM:AmethystePickaxe",
-      "CUSTOM:EndiumPickaxe",
-      "CUSTOM:Paladiumgreenpickaxe",
-      "TAG:mod:potgtag",
-      "Items.WOODEN_PICKAXE",
-      "Items.STONE_PICKAXE",
-      "Items.IRON_PICKAXE",
-      "Items.GOLDEN_PICKAXE",
-      "Items.DIAMOND_PICKAXE",
-      "Items.NETHERITE_PICKAXE"
-    ],
-    "BLOCKS:mod:elevator": [
-      "CUSTOM:Elevatorwhite",
-      "CUSTOM:Elevatorred",
-      "CUSTOM:Elevatorblue",
-      "CUSTOM:Elevatorgreen",
-      "CUSTOM:Elevatorpink",
-      "CUSTOM:Elevatorlightblue",
-      "CUSTOM:Elevatorlightgreen",
-      "CUSTOM:Elevatorbrown",
-      "CUSTOM:Elevatororange",
-      "CUSTOM:Elevatorpurple",
-      "CUSTOM:Elevatorgray",
-      "CUSTOM:Elevatorlightgray",
-      "CUSTOM:Elevatorcyan"
-    ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Cobbleledsoftstone",
+      "~CUSTOM:Softenedendiumnuggetore",
+      "~CUSTOM:Softenedfindiumore",
+      "~CUSTOM:Softenedgreenpaladiumore",
+      "~CUSTOM:Softenedtrixiumore",
+      "~CUSTOM:Softenedpaladiumore",
+      "~CUSTOM:Softenedtitaneore",
+      "~CUSTOM:Softenedamethystore",
+      "~CUSTOM:Softstone",
       "~CUSTOM:Witheredobsidian13",
       "~CUSTOM:Witheredobsidian12",
       "~CUSTOM:Witheredobsidian11",
@@ -46096,8 +47073,6 @@
       "~CUSTOM:Witheredobsidian4",
       "~CUSTOM:Witheredobsidian3",
       "~CUSTOM:Witheredobsidian2",
-      "~CUSTOM:Hardenedobsidianslab",
-      "~CUSTOM:Renforcedobsidianstairs",
       "~CUSTOM:Witheredobsidian1",
       "~CUSTOM:Witheredobsidian0",
       "~CUSTOM:Rotatedorangeslimepad",
@@ -46119,8 +47094,10 @@
       "~CUSTOM:Exctractor",
       "~CUSTOM:Poisonobsidian",
       "~CUSTOM:Slimeobsidian",
+      "~CUSTOM:Hardenedobsidianslab",
       "~CUSTOM:Obsidianslab",
       "~CUSTOM:Obsidianstairs",
+      "~CUSTOM:Renforcedobsidianstairs",
       "~CUSTOM:Unknownblock",
       "~CUSTOM:Drawbridge",
       "~CUSTOM:Printingpress",
@@ -46228,68 +47205,6 @@
       "~CUSTOM:PaladiumBlock",
       "~CUSTOM:PaladiumOre"
     ],
-    "BLOCKS:forge:tagores": [
-      "CUSTOM:Fakepaladiumore",
-      "CUSTOM:PaladiumOre",
-      "CUSTOM:TitaneOre",
-      "CUSTOM:AmethysteOre",
-      "CUSTOM:FindiumOre",
-      "CUSTOM:Trixiumore",
-      "CUSTOM:Amethystoredeepslate",
-      "CUSTOM:Titaneoredeepslate",
-      "CUSTOM:Paladiumoredeepslate",
-      "CUSTOM:Paladiumgreenoredeepslate",
-      "CUSTOM:Trixiumoredeepslate",
-      "CUSTOM:Endiumnuggetoredeepslate",
-      "CUSTOM:Findiumoredeepslate",
-      "Blocks.COAL_ORE",
-      "Blocks.IRON_ORE",
-      "Blocks.REDSTONE_ORE",
-      "Blocks.LIT_REDSTONE_ORE",
-      "Blocks.GOLD_ORE",
-      "Blocks.LAPIS_ORE",
-      "Blocks.DIAMOND_ORE",
-      "Blocks.EMERALD_ORE",
-      "Blocks.COPPER_ORE",
-      "Blocks.DEEPSLATE_COAL_ORE",
-      "Blocks.DEEPSLATE_IRON_ORE",
-      "Blocks.DEEPSLATE_REDSTONE_ORE",
-      "Blocks.DEEPSLATE_GOLD_ORE",
-      "Blocks.DEEPSLATE_LAPIS_ORE",
-      "Blocks.DEEPSLATE_DIAMOND_ORE",
-      "Blocks.DEEPSLATE_EMERALD_ORE",
-      "Blocks.DEEPSLATE_COPPER_ORE",
-      "Blocks.QUARTZ_ORE",
-      "Blocks.NETHER_GOLD_ORE",
-      "Blocks.ANCIENT_DEBRIS",
-      "CUSTOM:Endiumnuggetore",
-      "CUSTOM:PaladiumGreenore"
-    ],
-    "BLOCKS:minecraft:fences": [
-      "CUSTOM:Jacaranda_Fence",
-      "CUSTOM:Jacaranda_FenceGate",
-      "CUSTOM:Erable_Fence",
-      "CUSTOM:Erable_FenceGate",
-      "CUSTOM:Judeecercis_Fence",
-      "CUSTOM:Judeecercis_FenceGate",
-      "CUSTOM:Ostrya_woodFence",
-      "CUSTOM:Ostrya_woodFenceGate"
-    ],
-    "ITEMS:forge:ostrya_wood_log": [
-      "CUSTOM:Ostrya_woodWood",
-      "CUSTOM:Ostrya_woodLog"
-    ],
-    "ITEMS:forge:seed": [
-      "CUSTOM:Kiwanoseed",
-      "CUSTOM:Orangeblueseed",
-      "CUSTOM:Chervilseed",
-      "Items.WHEAT_SEEDS",
-      "Items.PUMPKIN_SEEDS",
-      "Items.MELON_SEEDS",
-      "Items.BEETROOT_SEEDS",
-      "Items.CARROT",
-      "Items.POTATO"
-    ],
     "BLOCKS:mod:got_blockstate": [
       "CUSTOM:PaladiumOre",
       "CUSTOM:TitaneOre",
@@ -46301,14 +47216,6 @@
       "CUSTOM:Paladiumoredeepslate",
       "CUSTOM:Paladiumgreenoredeepslate",
       "CUSTOM:Findiumoredeepslate"
-    ],
-    "BLOCKS:mod:deserbage": [
-      "Blocks.TALLGRASS#2",
-      "Blocks.DOUBLE_PLANT#3",
-      "Blocks.TALLGRASS#1",
-      "Blocks.DOUBLE_PLANT#2",
-      "Blocks.SEAGRASS",
-      "Blocks.TALL_SEAGRASS"
     ],
     "BLOCKS:neoforge:green_paladium_ore": [
       "CUSTOM:PaladiumGreenore",
@@ -46336,28 +47243,18 @@
       "~CUSTOM:TitaneArmor.boots",
       "~CUSTOM:PaladiumArmor.boots"
     ],
-    "BIOMES:minecraft:has_structure/stronghold": [
-      "~CUSTOM:Forestender"
-    ],
-    "ITEMS:mod:palamodmoddedfuel": [
-      "CUSTOM:Goldmixedcoal",
-      "CUSTOM:Amethystmixedcoal",
-      "CUSTOM:Titanemixedcoal",
-      "CUSTOM:Palamixedcharoal"
-    ],
     "ITEMS:mod:backpack": [
       "CUSTOM:Amethystbackpack",
       "CUSTOM:Titanebackpack",
       "CUSTOM:Paladumbackpack",
       "CUSTOM:Endiumbackpack"
     ],
+    "BIOMES:minecraft:has_structure/buried_treasure": [
+      "~CUSTOM:Alternateplaines"
+    ],
     "ITEMS:mod:trixium_depo": [
       "CUSTOM:Trixium",
       "CUSTOM:Trixiumblock"
-    ],
-    "BLOCKS:minecraft:findium_ore": [
-      "CUSTOM:FindiumOre",
-      "CUSTOM:Findiumoredeepslate"
     ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:Endiumhoe",
@@ -46366,61 +47263,22 @@
       "~CUSTOM:Titanehoe",
       "~CUSTOM:Amethtysthoe"
     ],
-    "ITEMS:forge:fuelblaze": [
-      "Items.BLAZE_ROD",
-      "Items.BLAZE_POWDER"
-    ],
     "BLOCKS:mod:chervil": [
       "CUSTOM:Chervil1",
       "CUSTOM:Chervil0",
       "CUSTOM:Chervil2",
       "CUSTOM:Chervil3"
     ],
-    "ITEMS:forge:repairable_endium": [
-      "CUSTOM:EndiumPickaxe",
-      "CUSTOM:EndiumAxe",
-      "CUSTOM:EndiumSword",
-      "CUSTOM:EndiumArmor.helmet",
-      "CUSTOM:EndiumArmor.body",
-      "CUSTOM:EndiumArmor.legs",
-      "CUSTOM:EndiumArmor.boots"
-    ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:Trixiumslab",
-      "~CUSTOM:Hardenedobsidianslab",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Ostrya_woodSlab"
-    ],
     "BLOCKS:mod:unbreakable_explosion": [
       "TAG:mod:omt",
       "Blocks.OBSIDIAN",
       "Blocks.CRYING_OBSIDIAN"
-    ],
-    "BLOCKS:mod:cbtill": [
-      "Blocks.DIRT#2",
-      "Blocks.DIRT#0",
-      "Blocks.GRASS",
-      "Blocks.GRASS_PATH",
-      "Blocks.MYCELIUM",
-      "Blocks.FARMLAND"
     ],
     "ITEMS:forge:palamd_fruits": [
       "CUSTOM:Kiwano",
       "CUSTOM:Eggplant",
       "CUSTOM:Orangeblue",
       "CUSTOM:Chervil"
-    ],
-    "BIOMES:minecraft:has_structure/village_snowy": [
-      "~CUSTOM:Frozenforest"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:Endiumfastsword",
@@ -46468,121 +47326,8 @@
       "~CUSTOM:Hammerforturne",
       "~CUSTOM:Smelt"
     ],
-    "ITEMS:minecraft:planks": [
-      "CUSTOM:Erable_Planks",
-      "CUSTOM:Judeecercis_Planks",
-      "CUSTOM:Ostrya_woodPlanks",
-      "CUSTOM:Jacaranda_Planks"
-    ],
-    "BLOCKS:mod:omt": [
-      "CUSTOM:Obsidiantrapdoor",
-      "CUSTOM:Renforcedobsidian",
-      "CUSTOM:Obsidiandoor",
-      "CUSTOM:Compactedobsidian",
-      "CUSTOM:Fakewaterobsidian",
-      "CUSTOM:Lavaobsidian",
-      "CUSTOM:Renforcedobsidianstairs",
-      "CUSTOM:Spikeobsidianwood",
-      "CUSTOM:Ironobsidianspike",
-      "CUSTOM:Goldenobsidianspike",
-      "CUSTOM:Diamondobsidianspike",
-      "CUSTOM:Amethystobsidianspike",
-      "CUSTOM:Titaneobsidianspike",
-      "CUSTOM:Paladiumobsidianspike",
-      "CUSTOM:Hardenedobsidianslab"
-    ],
-    "ITEMS:mod:paladiumarmorstag": [
-      "CUSTOM:PaladiumArmor.helmet",
-      "CUSTOM:PaladiumArmor.body",
-      "CUSTOM:PaladiumArmor.legs",
-      "CUSTOM:PaladiumArmor.boots",
-      "CUSTOM:Paladiumarmorcustom1.helmet",
-      "CUSTOM:Paladiumarmorcustom1.body",
-      "CUSTOM:Paladiumarmorcustom1.legs",
-      "CUSTOM:Paladiumarmorcustom1.boots",
-      "CUSTOM:Paladiumarmorcustom2.helmet",
-      "CUSTOM:Paladiumarmorcustom2.body",
-      "CUSTOM:Paladiumarmorcustom2.legs",
-      "CUSTOM:Paladiumarmorcustom2.boots",
-      "CUSTOM:Paladiumarmorcustom3.helmet",
-      "CUSTOM:Paladiumarmorcustom3.body",
-      "CUSTOM:Paladiumarmorcustom3.legs",
-      "CUSTOM:Paladiumarmorcustom3.boots",
-      "CUSTOM:Paladiumarmorcustom4.helmet",
-      "CUSTOM:Paladiumarmorcustom4.body",
-      "CUSTOM:Paladiumarmorcustom4.legs",
-      "CUSTOM:Paladiumarmorcustom4.boots",
-      "CUSTOM:Paladiumarmorcustom5.helmet",
-      "CUSTOM:Paladiumarmorcustom5.body",
-      "CUSTOM:Paladiumarmorcustom5.legs",
-      "CUSTOM:Paladiumarmorcustom5.boots",
-      "CUSTOM:Paladiumarmorcustom6.helmet",
-      "CUSTOM:Paladiumarmorcustom6.body",
-      "CUSTOM:Paladiumarmorcustom6.legs",
-      "CUSTOM:Paladiumarmorcustom6.boots",
-      "CUSTOM:Paladiumarmorcustom7.helmet",
-      "CUSTOM:Paladiumarmorcustom7.body",
-      "CUSTOM:Paladiumarmorcustom7.legs",
-      "CUSTOM:Paladiumarmorcustom7.boots",
-      "CUSTOM:Paladiumarmorcustom8.helmet",
-      "CUSTOM:Paladiumarmorcustom8.body",
-      "CUSTOM:Paladiumarmorcustom8.legs",
-      "CUSTOM:Paladiumarmorcustom8.boots",
-      "CUSTOM:Paladiumarmorcustom9.helmet",
-      "CUSTOM:Paladiumarmorcustom9.body",
-      "CUSTOM:Paladiumarmorcustom9.legs",
-      "CUSTOM:Paladiumarmorcustom9.boots",
-      "CUSTOM:Paladiumarmorcustom10.helmet",
-      "CUSTOM:Paladiumarmorcustom10.body",
-      "CUSTOM:Paladiumarmorcustom10.legs",
-      "CUSTOM:Paladiumarmorcustom10.boots"
-    ],
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:Endiumseedplanter",
-      "~CUSTOM:Greenpaladiumseedplanter",
-      "~CUSTOM:Paladiumseedplanter",
-      "~CUSTOM:Titaneseedplanter",
-      "~CUSTOM:Amethystseedplanter",
-      "~CUSTOM:Obsidianpickaxe",
-      "~CUSTOM:Creativehammer",
-      "~CUSTOM:Greenpaladiumhammer",
-      "~CUSTOM:Creativepotg",
-      "~CUSTOM:Pickaxeofthegodslv13",
-      "~CUSTOM:Pickaxeofthegodslv20",
-      "~CUSTOM:Pickaxeofthegodslv19",
-      "~CUSTOM:Pickaxeofthegodslv18",
-      "~CUSTOM:Pickaxeofthegodslv17",
-      "~CUSTOM:Pickaxeofthegodslv16",
-      "~CUSTOM:Pickaxeofthegodslv15",
-      "~CUSTOM:Pickaxeofthegodslv14",
-      "~CUSTOM:Pickaxeofthegodslv12",
-      "~CUSTOM:Pickaxeofthegodslv11",
-      "~CUSTOM:Pickaxeofthegodslv10",
-      "~CUSTOM:Pickaxeofthegodslv9",
-      "~CUSTOM:Pickaxeofthegodslv8",
-      "~CUSTOM:Pickaxeofthegodslv7",
-      "~CUSTOM:Pickaxeofthegodslv6",
-      "~CUSTOM:Pickaxeofthegodslv5",
-      "~CUSTOM:Pickaxeofthegodslv4",
-      "~CUSTOM:Pickaxeofthegodslv3",
-      "~CUSTOM:Pickaxeofthegodslv2",
-      "~CUSTOM:Pickaxeofthegodslv1",
-      "~CUSTOM:Endiumhammer",
-      "~CUSTOM:Paladiumhammer",
-      "~CUSTOM:Titanehammer",
-      "~CUSTOM:Amethystehammer",
-      "~CUSTOM:Paladiumgreenpickaxe",
-      "~CUSTOM:Stickofgods",
-      "~CUSTOM:Damagestick",
-      "~CUSTOM:Strenghtstick",
-      "~CUSTOM:Healstick",
-      "~CUSTOM:Hyperjumpstick",
-      "~CUSTOM:Jumpstick",
-      "~CUSTOM:Speedstick",
-      "~CUSTOM:EndiumPickaxe",
-      "~CUSTOM:AmethystePickaxe",
-      "~CUSTOM:TitanePickaxe",
-      "~CUSTOM:PaladiumPickaxe"
+    "BIOMES:minecraft:has_structure/nether_fortress": [
+      "~CUSTOM:Alternateplaines"
     ],
     "ITEMS:minecraft:meat": [
       "~CUSTOM:Spacefood"
@@ -46594,26 +47339,9 @@
       "~CUSTOM:Fuzedisc",
       "~CUSTOM:Miichalenge"
     ],
-    "ITEMS:mod:repairable_green": [
-      "CUSTOM:Paladiumgreenpickaxe",
-      "CUSTOM:Paladiumgreenaxe",
-      "CUSTOM:Paladiumgreensword",
-      "CUSTOM:Paladiumgreenshovel",
-      "CUSTOM:Greenpaladiumarmor.helmet",
-      "CUSTOM:Greenpaladiumarmor.body",
-      "CUSTOM:Greenpaladiumarmor.legs",
-      "CUSTOM:Greenpaladiumarmor.boots"
-    ],
     "ITEMS:forge:fuel_coal": [
       "Items.COAL#0",
       "Items.COAL#1"
-    ],
-    "BLOCKS:mod:kiwano": [
-      "CUSTOM:Kiwano0",
-      "CUSTOM:Kiwano1",
-      "CUSTOM:Kiwano2",
-      "CUSTOM:Kiwano3",
-      "CUSTOM:Kiwano4"
     ],
     "BLOCKS:mod:miner_dx_xp": [
       "Blocks.DEEPSLATE",
@@ -46683,15 +47411,6 @@
       "~CUSTOM:Ostrya_woodLog",
       "~CUSTOM:Ostrya_woodWood"
     ],
-    "BLOCKS:minecraft:mineable/shovel": [
-      "~CUSTOM:Fertilseddirt"
-    ],
-    "BLOCKS:mod:eggplant": [
-      "CUSTOM:Eggplant0",
-      "CUSTOM:Eggplant1",
-      "CUSTOM:Eggplant2",
-      "CUSTOM:Eggplant3"
-    ],
     "ITEMS:mod:repairable": [
       "CUSTOM:PaladiumPickaxe",
       "CUSTOM:PaladiumAxe",
@@ -46715,16 +47434,8 @@
       "CUSTOM:Paladiumarmorcustom3.boots",
       "TAG:mod:paladiumarmorstag"
     ],
-    "ITEMS:minecraft:shovels": [
-      "~CUSTOM:Endiumshovel",
-      "~CUSTOM:Greenpaladumexcator",
-      "~CUSTOM:Paladiumexcavator",
-      "~CUSTOM:Titaneexcavator",
-      "~CUSTOM:Amethystexacvator",
-      "~CUSTOM:Paladiumgreenshovel",
-      "~CUSTOM:AmethysteShovel",
-      "~CUSTOM:TitaneShovel",
-      "~CUSTOM:PaladiumShovel"
+    "BIOMES:minecraft:has_structure/ruined_portal_standard": [
+      "~CUSTOM:Alternateplaines"
     ],
     "BLOCKS:neoforge:paladium_ore": [
       "CUSTOM:PaladiumOre",
@@ -46785,7 +47496,6 @@
       "AmethysteAxe",
       "AmethysteSword",
       "AmethysteShovel",
-      "Amethystexacvator",
       "AmethysteArmor",
       "TitaneIngot",
       "Titanepollen",
@@ -46994,7 +47704,16 @@
       "Endiumbackpack",
       "Totemfertility",
       "Xpbushlow",
-      "Paladiumhoppersouth"
+      "Paladiumhoppersouth",
+      "Softenedamethystore",
+      "Softenedtitaneore",
+      "Softenedpaladiumore",
+      "Softenedtrixiumore",
+      "Softenedgreenpaladiumore",
+      "Softenedfindiumore",
+      "Softenedendiumnuggetore",
+      "Amethystexacvator",
+      "Cobbleledsoftstone"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -47095,7 +47814,8 @@
       "Judeecercisdoor",
       "Ostryadoor",
       "Erabledoor",
-      "Jacarandadoor"
+      "Jacarandadoor",
+      "Softstone"
     ],
     "CUSTOM:Pvpcreativetab": [
       "Slimepad",
@@ -47158,7 +47878,8 @@
       "Slimeobsidian",
       "Poisonobsidian",
       "Boomobsidian",
-      "Megaboomobsidian"
+      "Megaboomobsidian",
+      "Witheredobsidian0"
     ],
     "CUSTOM:Luckyblockcreativetab": [
       "Legendarystonefortune",
@@ -47304,8 +48025,8 @@
       "gui.palamod.adminshopblock_netherrack.label_sell_price_01": "Sell price : 0.1",
       "gui.palamod.adminshopmobsenderpearl.label_buy_price_125": "Buy Price : 10.5",
       "gui.palamod.xpbushpalahelpgui.label_vous_pouvez_les_compresser_en": "Vous pouvez les compresser en",
-      "item.palamod.pickaxeofthegodslv_12.description_0": "Level 12",
       "gui.palamod.crushergui.button_start_fusion": "start fusion",
+      "item.palamod.pickaxeofthegodslv_12.description_0": "Level 12",
       "gui.palamod.adminshoporefindium.label_sell_price_85": "Sell price : 85",
       "item.palamod.compressed_paladium": "Compressed Paladium",
       "gui.palamod.adminshopmobsendereyes.button_sell": "sell",
@@ -47498,8 +48219,8 @@
       "block.palamod.kiwano_3": "Kiwano state 3",
       "gui.palamod.uploadergui.tooltip_money_output": "Money ( output )",
       "gui.palamod.palahelpnotsupported.button_exit": "exit",
-      "gui.palamod.adminshopplantredmushroom.label_mode_set": "Amount :",
       "block.palamod.endium_lucky_block": "Endium lucky block",
+      "gui.palamod.adminshopplantredmushroom.label_mode_set": "Amount :",
       "gui.palamod.stockhdv.button_quit_admin_panel": "Quit Admin Panel",
       "item.palamod.paladium_pickaxe": "Paladium Pickaxe",
       "advancements.advinvicrea.title": "Creative_avancement",
@@ -47570,6 +48291,7 @@
       "gui.palamod.adminshopmobs_2leather.button_sell": "sell",
       "item.palamod.disc_anti_fuze": "Antifuzedisc",
       "gui.palamod.grindergui.label_mode_paladium": "Mode : paladium",
+      "item.palamod.alchimistjobsitem": "Alchimist jobs",
       "item.palamod.travelarmor_chestplate": "Jump chestplate",
       "gui.palamod.adminshopmobsstring.label_mode_set": "Amount :",
       "block.palamod.judeecercis_planks": "Judeecercis Planks",
@@ -47606,6 +48328,7 @@
       "gui.palamod.adminshopblock.button_sand": "Sand",
       "key.palamod.factionblinding": "Open or create the faction menu ( wip )",
       "block.palamod.endium_chest": "Endium chest",
+      "block.palamod.cobbled_soft_stone": "Cobbleled soft stone",
       "gui.palamod.palamachinepalahelpgui.label_palamachine": "Palamachine",
       "gui.palamod.jobsminercraftgui.tooltip_voidstone": "Voidstone",
       "item.palamod.paladum_backpack": "Paladium backpack",
@@ -47661,7 +48384,7 @@
       "gui.palamod.adminshopplantwheat.button_buy": "buy",
       "gui.palamod.adminshopmobs.button_cactus": "Bone",
       "enchantment.palamod.smelt": "Smelt",
-      "block.palamod.tcv_2": "Contructed grinder",
+      "block.palamod.tcv_2": "Creative Contructed grinder",
       "item.palamod.titane_pollen": "Titane pollen",
       "item.palamod.damagestick": "Damage stick",
       "gui.palamod.stockhdv.label_stocks_hdv_items_0_10_0": "Stocks hdv items - 0 10 0 ",
@@ -47818,6 +48541,7 @@
       "gui.palamod.forgeexamplegui.label_inventory": "Inventory",
       "gui.palamod.adminshopplantmelon.label_buy_price_125": "Buy Price : 5.8",
       "item.palamod.compressed_amethyst": "Compressed Amethyst",
+      "block.palamod.softened_titane_ore": "Titane Ore",
       "gamerule.lockedcraft.description": "lock certain craft behind jobs level you can farm to unlock more items",
       "gui.palamod.adminshopplantredmushroom.button_buy": "buy",
       "gui.palamod.crushergui.label_this_user_interface_is_in_graphi": "This user interface is in graphic upadate process",
@@ -47843,6 +48567,7 @@
       "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Rotten flesh",
       "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Buy Price : 2.5",
       "item.palamod.knockback_modifier": "Knockback modifier",
+      "biome.palamod.alternateplaines": "Alternate plaines",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Broadsword",
       "item.palamod.amethyst_pickaxe": "Amethyst Pickaxe",
       "subtitles.quest_complete": "A quest is completed",
@@ -47852,8 +48577,8 @@
       "gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set": "Mixed endium armor set",
       "gui.palamod.crusherpalahelpgui.label_il_faut_mettre_du_fuel_et_des_f": "You put fuel* and fruits into the ",
       "itemGroup.tabgrindercreativetab": "Palamod : Grinder tab",
-      "gui.palamod.palahelptree.label_crafter_le_portail_en_titane": "Craft the titane portal",
       "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.palahelptree.label_crafter_le_portail_en_titane": "Craft the titane portal",
       "gui.palamod.legendarystonepalahelp.label_deux_jour_dans_le_jeu": "deux jour ( dans le jeu )",
       "gui.palamod.grindergui.label_176": "176",
       "item.palamod.mixed_endium_ingot": "Mixed endium ingot",
@@ -47866,8 +48591,8 @@
       "block.palamod.erable_fence_gate": "Erable Fence Gate",
       "advancements.avancementcoreloading.descr": "Craft or Obtain a paladium core",
       "gui.palamod.paladumfurnace.label_upgrades": "Upgrades",
-      "painting.palamod.luckypainting.title": "Logo",
       "gui.palamod.adminshopmobs_2steak.button_buy": "buy",
+      "painting.palamod.luckypainting.title": "Logo",
       "item.palamod.green_paladium_pickaxe_head": "Green paladium pickaxe head",
       "item.palamod.invisiblearmor_leggings": "Insivible Leggings",
       "gui.palamod.palahelpore.label_facilement": "easily",
@@ -47988,6 +48713,7 @@
       "gui.palamod.megasafechestfirstsetup.label_3_save": "3. Save ",
       "item.palamod.compressed_titane": "Compressed Titane",
       "gui.palamod.adminshopplantpotato.label_buy_price_125": "Buy Price : 4.5",
+      "jei.palamod.jobsinfojei": "This is the representation of all items that can be craft with jobs craft gui \nWith the basic configuration press [J], select a jobs then craft to use the crafting table\nOn servers, no need to farm for a levels all items are unlocked to prevent crash",
       "gui.palamod.adminshopplantmelon.label_amount": "Amount :",
       "gui.palamod.adminshoputilitiesemerald.label_sell_price_120": "Sell price :  10.75",
       "item.palamod.fastsword_head": "Paladium fastsword head",
@@ -47999,6 +48725,7 @@
       "gui.palamod.guardiangui.label_renommer": "Renommer",
       "gui.palamod.armorpalahelpgui.label_na2": "Mid game",
       "block.palamod.amethyst_slab": "Amethyst slab",
+      "block.palamod.softened_green_paladium_ore": "Green Paladium Ore",
       "item.minecraft.potion.effect.antifakepotion": "Potion of Antifake",
       "block.palamod.ostrya_wood_planks": "Ostrya Planks",
       "gui.palamod.armorpalahelpgui.label_na1": "N.A",
@@ -48011,6 +48738,7 @@
       "item.palamod.green_paladium_shovel_head": "Green paladium shovel head",
       "gui.palamod.adminshopblock.button_netherrack": "Netherrack",
       "gui.palamod.armorpalahelpgui.label_mixed_set": "Mixed set",
+      "block.palamod.soft_stone": "Soft stone",
       "gui.palamod.titanechestgui.label_rings": "Rings",
       "gui.palamod.forgegui.label_inventory": "Inventory",
       "gui.palamod.phonegui.label_enter_your_secret_code": "Enter your secret code",
@@ -48050,6 +48778,7 @@
       "gui.palamod.adminshopblockstone.number_buy": "number here",
       "gui.palamod.adminshopplantmelon.button_sell": "sell",
       "gui.palamod.jobsfarmercraftgui.tooltip_endium_builder_wand": "Endium builder wand",
+      "block.palamod.softened_trixium_ore": "Trixium ore",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush": "Palahelp :Xp bush ",
       "gui.palamod.crushergui.button_show_debug_variable": "show debug variable",
       "block.palamod.amethyst_stairs": "Amethyst stairs",
@@ -48064,6 +48793,7 @@
       "gui.palamod.jobsfarmercraftgui.tooltip_autocrafter": "Autocrafter",
       "gui.palamod.armorpalahelpgui.label_night_vision_ii1": "Night Vision II",
       "gui.palamod.palahelpgui_1.label_palahelp": "Palahelp",
+      "item.palamod.minerjobsitem": "Miner jobs",
       "block.palamod.jacaranda_log": "Jacaranda Log",
       "item.palamod.paladium_armor_helmet": "Paladium Helmet",
       "gui.palamod.jobsminercraftgui.tooltip_poison_obsidian": "Poison Obsidian",
@@ -48072,6 +48802,7 @@
       "fluid.palamod.angelic_water": "Angelic water",
       "gui.palamod.grinderpalahelpgui.label_certain_outil_dont_le_hammerla": "Some tools the hammer, the fastsword",
       "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Palahelp :  crusher ",
+      "item.palamod.mine_clearer": "Mine clearer",
       "item.palamod.paladiumarmorcustom_7_helmet": "Paladium Helmet",
       "subtitles.clash_kumiz": "Clash kumiz record",
       "item_group.palamod.pvpcreativetab": "Palamod : Pvp tab",
@@ -48161,6 +48892,7 @@
       "gui.palamod.jobsserver.label_last_unlocked_items": "Last unlocked items",
       "item.palamod.endium_armor_chestplate": "Endium Chestplate",
       "item.palamod.titane_hammer": " Titane hammer",
+      "jei.palamod.witheredobsidianinfo": "Place a Paladium Block next to it to power it to the next tier",
       "gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set": "Invisible armor set",
       "gui.palamod.jobsfarmercraftgui.tooltip_compressed_sponge": "Compressed sponge",
       "gui.palamod.armorpalahelpgui.tooltip_travel_armor_set": "Travel armor set",
@@ -48402,7 +49134,6 @@
       "item.palamod.flat_chest_upgrade": "Flat chest upgrade",
       "gui.palamod.adminshopmobs_2.button_potato\u0026ç": "String",
       "item.palamod.paladium_hoe": "Paladium hoe",
-      "item.palamod.amethyst_excacvator": "Amethyste Exavator",
       "gui.palamod.orelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
       "subtitles.level_up": "Leveling up jobs",
       "gui.palamod.armorpalahelpgui.label_night_vision_ii": "Night Vision II",
@@ -48438,6 +49169,7 @@
       "gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe": "Endium pickaxe",
       "palamod.procedure.money_item": "1000$ has been added to your balance ",
       "item.palamod.hammer_head": "Paladium hammer head",
+      "block.palamod.softened_paladium_ore": "Paladium Ore",
       "gui.palamod.orelayer.label_empty": "----------------------------",
       "gui.palamod.adminshopplantwarpedfungus.label_mode_set": "Amount :",
       "palamod.procedure.return_ore_menu": "Return to the adminshop\u0027s ore menu",
@@ -48487,8 +49219,10 @@
       "gui.palamod.armorpalahelpgui.label_effect2": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect3": "Effect",
       "gui.palamod.jobsgui.label_alchimist": "Alchimist",
+      "block.palamod.softened_endium_nugget_ore": "Endium nugget Ore",
       "block.palamod.jacaranda_fence": "Jacaranda Fence",
       "item.palamod.endiumfastsword": "Endium fastsword",
+      "block.palamod.softened_findium_ore": "Findium Ore",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush_est_une_plant_qui_fait_p": "Xp bush est une plant qui fait pousser",
       "item.palamod.wither_imbue_potion": "Wither imbue potion",
       "gui.palamod.notyetgui.label_please_wait_or_check_on_the_disc": "Please wait or check on the discord",
@@ -48502,6 +49236,7 @@
       "gui.palamod.adminshopplantbrownmushroom.label_buy_price_125": "Buy Price : 5",
       "gamerule.lockedcraft": "Palamod : Locked crafts",
       "gui.palamod.armorpalahelpgui.label_na": "N.A",
+      "item.palamod.mine_clearer.description_0": "Admin item : clear all in 10*10*10 area",
       "block.palamod.obsidianstairs": "Obsidian stairs",
       "block.palamod.jacaranda_fence_gate": "Jacaranda Fence Gate",
       "gui.palamod.crushergui.button_placeholder_ame": "placeholder_ame",
@@ -48513,6 +49248,7 @@
       "item.palamod.green_paladium_hammer": "Green paladium hammer",
       "block.palamod.jacaranda_sappling": "Jacaranda sappling",
       "block.palamod.judeecercis_wood": "Judeecercis Wood",
+      "jei.palamod.grindercomposant": "Composant of the grinder structure",
       "item.palamod.travelarmor_leggings": "Travel Leggings",
       "gui.palamod.orelayer.label_titane_64_32": "Titane : -64 --) 32",
       "gui.palamod.analyserresult.label_dirt": "dirt",
@@ -48529,6 +49265,7 @@
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "show debug variable",
       "gui.palamod.adminshopore.button_gold": "Gold",
       "item.palamod.socket_patern": "Socket patern",
+      "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Green Paladium Excavator",
       "gui.palamod.adminshopplantwheat.label_paladium": "Wheat seed",
       "gui.palamod.adminshoporecoal.label_sell_price_3": "Sell price :  3",
       "gui.palamod.palamachinepalahelpgui.label_batn_qui_vous_permeteront_davo": "Bat�n qui vous permeteront d\u0027avoir des",
@@ -48558,6 +49295,7 @@
       "gui.palamod.jobsgui.label_le_hunter": "Hunter",
       "item.palamod.compressedxpberry": "Compressed xp berry",
       "item.palamod.endium_broadsword_head": "Endium broadsword head",
+      "item.palamod.farmerjobsitem": "Farmer jobs",
       "gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut": "vous fait des dégats Peut peut être",
       "gui.palamod.palahelpnotsupported.label_palahelp_error": "Palahelp - error",
       "gui.palamod.adminshopblockstone.button_sell": "sell",
@@ -48635,11 +49373,13 @@
       "item.palamod.invisiblearmor_boots": "Invisible Boots",
       "block.palamod.downloader": "Downloader",
       "item.palamod.speedstick": "Speed stick",
+      "jei.palamod.witheredobsidianmaxtierinfo": "Now make a portal with that block to acess miner dimension",
       "gui.palamod.adminshoporetitane.label_buy_price_110": "Buy Price : 110",
       "gui.palamod.dynamicorelayer.label_empty": "----------------------------",
       "block.palamod.hdv_block": "Hdvblock",
       "block.palamod.drawbridge.description_0": "In devloppement ( beta )",
       "enchantment.palamod.onemoreupgradeenchant": "One more upgrade",
+      "block.palamod.softened_amethyst_ore": "Amethyste Ore",
       "gui.palamod.trashgui.label_inventory": "Inventory",
       "gui.palamod.potgtranfert.label_potg_transfert_gui": "Potg transfert gui",
       "config.palamod.palamodconfirgurationfile": "Palamod_client_settings",
@@ -48654,6 +49394,7 @@
       "block.palamod.typesettingtable": "Typesetting table",
       "gui.palamod.jobsserver.label_farmer": "Farmer",
       "gui.palamod.phonegui.button_test_code": "test code",
+      "gui.palamod.jobsminercraftgui.tooltip_withered_obsidian": "Withered Obsidian",
       "item.palamod.paladiumarmorcustom_1_leggings": "Paladium Leggings",
       "gui.palamod.luckygui.button_open": "open",
       "gui.palamod.megasafechestfirstsetup.label_it_you": "if it you )",
@@ -48966,6 +49707,7 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_mode_set": "Amount :",
       "block.palamod.cloud_block": "Cloud block",
       "item.palamod.titane_armor_boots": "Titane Boots",
+      "jei.palamod.softenedoresjei": "Ores that can be obtain in miner dimension ( most of them are also obtenable in overworld )\nThose ores have a boosted spawn rate in the miner dimension",
       "advancements.avancementsupremearmor.descr": "Craft all endium armor and wear it",
       "item.palamod.mixed_endium_armor_boots": "Mixed Endium Boots",
       "gui.palamod.armorpalahelpgui.label_force1": "Force",
@@ -49068,6 +49810,7 @@
       "block.palamod.colored_lamp": "Colored lamp",
       "gui.palamod.analyserresult.label_cobblestone": "Cobblestone",
       "gui.palamod.crusherpalahelpgui.label_beta_nochange_0004": "r1.19.3",
+      "item.palamod.hunterjobsitem": "Hunter jobs",
       "effect.palamod.antifake": "antifake",
       "gui.palamod.adminshopmobs_rottenflesh.button_buy": "buy",
       "gui.palamod.adminshoputilitiesemerald.label_buy_price_125": "Buy Price : 55",
@@ -49104,6 +49847,7 @@
       "gui.palamod.adminshoporefindium.label_findium": "Findium",
       "gui.palamod.adminshoporeiron.label_buy_price_20": "Buy price :  20",
       "gui.palamod.jobsminercraftgui.tooltip_cave_block": "Cave block",
+      "item.palamod.amethyst_excavator": "Amethyste Exavator",
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3": "This armor set is craftable",
       "block.palamod.erable_wood": "Erable Wood",
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4": "This armor set is craftable",
@@ -49113,6 +49857,7 @@
       "advancements.achmpotg_12new.title": "It\u0027s the ultimate pickaxe, it\u0027s instant break anything",
       "item.palamod.amethyst_backpack": "Amethyst backpack",
       "death.attack.spikedamage": "%1$s was crushed by a spike",
+      "item.palamod.customair": "Air",
       "advancements.palamodavancement.title": "Palamod",
       "block.palamod.stony": "Stony",
       "item.palamod.legendary_stone_fortune": "Legendary stone fortune",
@@ -49231,8 +49976,8 @@
       "gui.palamod.adminshopblock_netherrack.label_sell_price_01": "Prix de vente : 0.1",
       "gui.palamod.adminshopmobsenderpearl.label_buy_price_125": "Prix d\u0027achat : 6",
       "gui.palamod.xpbushpalahelpgui.label_vous_pouvez_les_compresser_en": "Vous pouvez les compresser en",
-      "gui.palamod.crushergui.button_start_fusion": "Démarrer la fusion",
       "item.palamod.pickaxeofthegodslv_12.description_0": "Level 12",
+      "gui.palamod.crushergui.button_start_fusion": "Démarrer la fusion",
       "gui.palamod.adminshoporefindium.label_sell_price_85": "Prix de vente : 85",
       "item.palamod.compressed_paladium": "Paladium compressé",
       "gui.palamod.adminshopmobsendereyes.button_sell": "sell",
@@ -49425,8 +50170,8 @@
       "block.palamod.kiwano_3": "Kiwano état 3",
       "gui.palamod.uploadergui.tooltip_money_output": "Money ( output )",
       "gui.palamod.palahelpnotsupported.button_exit": "Sortie",
-      "gui.palamod.adminshopplantredmushroom.label_mode_set": "Quantité :",
       "block.palamod.endium_lucky_block": "Bloc chanceux en endium",
+      "gui.palamod.adminshopplantredmushroom.label_mode_set": "Quantité :",
       "gui.palamod.stockhdv.button_quit_admin_panel": "Sortir du panel d\u0027administration",
       "item.palamod.paladium_pickaxe": "Pioche en paladium",
       "advancements.advinvicrea.title": "Creative_avancement",
@@ -49497,6 +50242,7 @@
       "gui.palamod.adminshopmobs_2leather.button_sell": "Vendre",
       "item.palamod.disc_anti_fuze": "Antifuzedisc",
       "gui.palamod.grindergui.label_mode_paladium": "Mode : paladium",
+      "item.palamod.alchimistjobsitem": "Alchimist jobs",
       "item.palamod.travelarmor_chestplate": "Plastron de voyage",
       "gui.palamod.adminshopmobsstring.label_mode_set": "Quantité :",
       "block.palamod.judeecercis_planks": "Planches de judeecercis",
@@ -49533,6 +50279,7 @@
       "key.palamod.factionblinding": "Interface faction",
       "gui.palamod.adminshopblock.button_sand": "Sable",
       "block.palamod.endium_chest": "Coffre en endium",
+      "block.palamod.cobbled_soft_stone": "Cobbleled soft stone",
       "gui.palamod.palamachinepalahelpgui.label_palamachine": "Palamachine",
       "item.palamod.plateGlia": "Plate",
       "gui.palamod.jobsminercraftgui.tooltip_voidstone": "Voidstone",
@@ -49750,6 +50497,7 @@
       "gui.palamod.forgeexamplegui.label_inventory": "Inventory",
       "gui.palamod.adminshopplantmelon.label_buy_price_125": "Prix d\u0027achat : 5.5",
       "item.palamod.compressed_amethyst": "Améthyste compressé",
+      "block.palamod.softened_titane_ore": "Titane Ore",
       "gamerule.lockedcraft.description": "lock certain craft behind jobs level you can farm to unlock more items",
       "gui.palamod.adminshopplantredmushroom.button_buy": "Acheter",
       "gui.palamod.crushergui.label_this_user_interface_is_in_graphi": "Cette interface est en mise à jour graphique",
@@ -49772,11 +50520,12 @@
       "palamod.procedure.jobsgetlvl": "Niveau ",
       "gui.palamod.legendarystonepalahelp.label_teleportation_vous_tp_aletorem": "Teleportation : vous tp aletorement",
       "gui.palamod.jobsgui.label_last_unlocked_items": "Last unlocked items",
-      "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop - Menu des graines",
-      "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Viande putréfié",
-      "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Prix d\u0027achat : 6.75",
       "item.palamod.block_patern": "Block patern",
+      "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Prix d\u0027achat : 6.75",
+      "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Viande putréfié",
+      "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop - Menu des graines",
       "item.palamod.knockback_modifier": "Modificateur de poussée",
+      "biome.palamod.alternateplaines": "Alternate plaines",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Glaive",
       "item.palamod.amethyst_pickaxe": "Pioche en améthyste",
       "subtitles.quest_complete": "A quest is completed",
@@ -49786,8 +50535,8 @@
       "gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set": "Mixed endium armor set",
       "gui.palamod.crusherpalahelpgui.label_il_faut_mettre_du_fuel_et_des_f": "Il faut mettre du fuel* et des fruit dans le",
       "itemGroup.tabgrindercreativetab": "Table créative du grinder",
-      "gui.palamod.authsafegui.code_check": "Verification code",
       "gui.palamod.palahelptree.label_crafter_le_portail_en_titane": "Crafter le portail en titane",
+      "gui.palamod.authsafegui.code_check": "Verification code",
       "gui.palamod.legendarystonepalahelp.label_deux_jour_dans_le_jeu": "deux jour ( dans le jeu )",
       "gui.palamod.grindergui.label_176": "176",
       "item.palamod.mixed_endium_ingot": "Mixed endium ingot",
@@ -49924,6 +50673,7 @@
       "gui.palamod.megasafechestfirstsetup.label_3_save": "3. Sauvegarder",
       "gui.palamod.adminshopplantpotato.label_buy_price_125": "Prix d\u0027achat : 0.5",
       "item.palamod.compressed_titane": "Titane compressé",
+      "jei.palamod.jobsinfojei": "This is the representation of all items that can be craft with jobs craft gui \nWith the basic configuration press [J], select a jobs then craft to use the crafting table\nOn servers, no need to farm for a levels all items are unlocked to prevent crash",
       "gui.palamod.adminshopplantmelon.label_amount": "Quantité :",
       "gui.palamod.adminshoputilitiesemerald.label_sell_price_120": "Prix de vente :  1.5",
       "item.palamod.fastsword_head": "Tête épée rapide en paladium",
@@ -49935,6 +50685,7 @@
       "gui.palamod.guardiangui.label_renommer": "Renommer",
       "gui.palamod.armorpalahelpgui.label_na2": "Mid game",
       "block.palamod.amethyst_slab": "Dalle en améthyst",
+      "block.palamod.softened_green_paladium_ore": "Green Paladium Ore",
       "item.minecraft.potion.effect.antifakepotion": "Potion d\u0027Antifake",
       "block.palamod.ostrya_wood_planks": "Planches en Ostrya",
       "gui.palamod.armorpalahelpgui.label_na1": "N.A",
@@ -49947,6 +50698,7 @@
       "item.palamod.green_paladium_shovel_head": "Tête de pelle en paladium vert",
       "gui.palamod.adminshopblock.button_netherrack": "Netherrack",
       "gui.palamod.armorpalahelpgui.label_mixed_set": "Mixed set",
+      "block.palamod.soft_stone": "Soft stone",
       "gui.palamod.titanechestgui.label_rings": "Anneaux",
       "gui.palamod.forgegui.label_inventory": "Inventaire",
       "gui.palamod.phonegui.label_enter_your_secret_code": "Entrer votre code secret",
@@ -49986,6 +50738,7 @@
       "gui.palamod.adminshopblockstone.number_buy": "Un nombre ici",
       "gui.palamod.adminshopplantmelon.button_sell": "Vendre",
       "gui.palamod.jobsfarmercraftgui.tooltip_endium_builder_wand": "Endium builder wand",
+      "block.palamod.softened_trixium_ore": "Trixium ore",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush": "Xp bush ",
       "gui.palamod.crushergui.button_show_debug_variable": "show debug variable",
       "block.palamod.amethyst_stairs": "Escalier en améthyste",
@@ -50000,6 +50753,7 @@
       "gui.palamod.jobsfarmercraftgui.tooltip_autocrafter": "Autocrafter",
       "gui.palamod.armorpalahelpgui.label_night_vision_ii1": "Night Vision II",
       "gui.palamod.palahelpgui_1.label_palahelp": "Palahelp",
+      "item.palamod.minerjobsitem": "Miner jobs",
       "item.palamod.paladium_armor_helmet": "Casque en paladium",
       "block.palamod.jacaranda_log": "Bùche de jacaranda",
       "gui.palamod.jobsminercraftgui.tooltip_poison_obsidian": "Obsidienne empoisonné",
@@ -50008,6 +50762,7 @@
       "fluid.palamod.angelic_water": "Angelic water",
       "gui.palamod.grinderpalahelpgui.label_certain_outil_dont_le_hammerla": "Certain outil dont les marteaux,les fastswords",
       "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Paladium crusher wiki",
+      "item.palamod.mine_clearer": "Mine clearer",
       "item.palamod.paladiumarmorcustom_7_helmet": "Paladium Helmet",
       "subtitles.clash_kumiz": "rap battle kumiz",
       "item_group.palamod.pvpcreativetab": "Palamod : Pvp tab",
@@ -50097,6 +50852,7 @@
       "gui.palamod.jobsserver.label_last_unlocked_items": "Last unlocked items",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
       "item.palamod.titane_hammer": "Marteau en titane",
+      "jei.palamod.witheredobsidianinfo": "Place a Paladium Block next to it to power it to the next tier",
       "gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set": "Invisible armor set",
       "gui.palamod.jobsfarmercraftgui.tooltip_compressed_sponge": "Compressed sponge",
       "gui.palamod.armorpalahelpgui.tooltip_travel_armor_set": "Travel armor set",
@@ -50338,7 +51094,6 @@
       "block.palamod.rotated_red_slimepad": "Slime pad",
       "item.palamod.flat_chest_upgrade": "Modification de mise à plat",
       "item.palamod.paladium_hoe": "Houe en paladium",
-      "item.palamod.amethyst_excacvator": "Excavateur en améthyste",
       "gui.palamod.orelayer.label_green_paladium_64_128": "Green Paladium : -64 --) 128",
       "subtitles.level_up": "Leveling up jobs",
       "gui.palamod.armorpalahelpgui.label_night_vision_ii": "Vision nocturne 2",
@@ -50374,6 +51129,7 @@
       "gui.palamod.adminshopplantsugarcane.button_buy": "Acheter",
       "gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe": "Endium pickaxe",
       "item.palamod.hammer_head": "Tête de hammer en paladium",
+      "block.palamod.softened_paladium_ore": "Paladium Ore",
       "gui.palamod.orelayer.label_empty": "----------------------------",
       "gui.palamod.adminshopplantwarpedfungus.label_mode_set": "Quantité :",
       "palamod.procedure.return_ore_menu": "Retour au menu des minerais de l\u0027adminshop",
@@ -50423,8 +51179,10 @@
       "gui.palamod.armorpalahelpgui.label_effect2": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect3": "Effect",
       "gui.palamod.jobsgui.label_alchimist": "Alchimist",
+      "block.palamod.softened_endium_nugget_ore": "Endium nugget Ore",
       "block.palamod.jacaranda_fence": "Barrière en jacaranda",
       "item.palamod.endiumfastsword": "Épée rapide en endium",
+      "block.palamod.softened_findium_ore": "Findium Ore",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush_est_une_plant_qui_fait_p": "Xp bush est une plant qui fait pousser",
       "item.palamod.wither_imbue_potion": "Wither imbue potion",
       "gui.palamod.notyetgui.label_please_wait_or_check_on_the_disc": "Please wait or check on the discord",
@@ -50438,6 +51196,7 @@
       "gui.palamod.adminshopplantbrownmushroom.label_buy_price_125": "Prix d\u0027achat : 5",
       "gamerule.lockedcraft": "Palamod : Locked crafts",
       "gui.palamod.armorpalahelpgui.label_na": "N.A",
+      "item.palamod.mine_clearer.description_0": "Admin item : clear all in 10*10*10 area",
       "block.palamod.obsidianstairs": "Escalier en obsidienne renforcée",
       "block.palamod.jacaranda_fence_gate": "Portail en Jacaranda",
       "gui.palamod.crushergui.button_placeholder_ame": "placeholder_ame",
@@ -50449,6 +51208,7 @@
       "item.palamod.green_paladium_hammer": "Marteau en paladium vert",
       "block.palamod.jacaranda_sappling": "Pousse en jacaranda",
       "block.palamod.judeecercis_wood": "Bois de Judeecercis",
+      "jei.palamod.grindercomposant": "Composant of the grinder structure",
       "item.palamod.travelarmor_leggings": "Jambière de voyage",
       "gui.palamod.orelayer.label_titane_64_32": "Titane : -64 --) 32",
       "gui.palamod.analyserresult.label_dirt": "Terre",
@@ -50465,6 +51225,7 @@
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "Montrer les variable debug",
       "gui.palamod.adminshopore.button_gold": "Or",
       "item.palamod.socket_patern": "Socket patern",
+      "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Green Paladium Excavator",
       "gui.palamod.adminshopplantwheat.label_paladium": "Crimson fungus",
       "gui.palamod.adminshoporecoal.label_sell_price_3": "Prix de vente :  3",
       "gui.palamod.palamachinepalahelpgui.label_batn_qui_vous_permeteront_davo": "Bâton qui vous permeteront d\u0027avoir des",
@@ -50494,6 +51255,7 @@
       "gui.palamod.jobsgui.label_le_hunter": "Hunter",
       "item.palamod.compressedxpberry": "Baie d\u0027xp compressée",
       "item.palamod.endium_broadsword_head": "Tête de glaive en endium",
+      "item.palamod.farmerjobsitem": "Farmer jobs",
       "gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut": "vous fait des dégats Peut peut être",
       "gui.palamod.palahelpnotsupported.label_palahelp_error": "Palahelp - erreur",
       "gui.palamod.adminshopblockstone.button_sell": "Vendre",
@@ -50572,11 +51334,13 @@
       "item.palamod.invisiblearmor_boots": "Bottes invisible",
       "block.palamod.downloader": "Downloader",
       "item.palamod.speedstick": "Bàton de vitesse",
+      "jei.palamod.witheredobsidianmaxtierinfo": "Now make a portal with that block to acess miner dimension",
       "gui.palamod.adminshoporetitane.label_buy_price_110": "Prix d\u0027achat : 110",
       "gui.palamod.dynamicorelayer.label_empty": "----------------------------",
       "block.palamod.hdv_block": "Hdvblock",
       "block.palamod.drawbridge.description_0": "In devloppement ( beta )",
       "enchantment.palamod.onemoreupgradeenchant": "One_more_upgrade",
+      "block.palamod.softened_amethyst_ore": "Amethyste Ore",
       "gui.palamod.trashgui.label_inventory": "Inventaire",
       "gui.palamod.potgtranfert.label_potg_transfert_gui": "Interface du tranfert d\u0027xp de la potg ",
       "config.palamod.palamodconfirgurationfile": "Palamod_client_settings",
@@ -50591,6 +51355,7 @@
       "block.palamod.typesettingtable": "Table d\u0027écriture",
       "gui.palamod.jobsserver.label_farmer": "Farmer",
       "gui.palamod.phonegui.button_test_code": "Tester le code",
+      "gui.palamod.jobsminercraftgui.tooltip_withered_obsidian": "Withered Obsidian",
       "item.palamod.paladiumarmorcustom_1_leggings": "Jambière en Paladium Modifié",
       "gui.palamod.luckygui.button_open": "Ouvert",
       "gui.palamod.megasafechestfirstsetup.label_it_you": "si c\u0027est vous )",
@@ -50907,6 +51672,7 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_mode_set": "Quantité :",
       "block.palamod.cloud_block": "Bloc de nuage",
       "item.palamod.titane_armor_boots": "Bottes en titane",
+      "jei.palamod.softenedoresjei": "Ores that can be obtain in miner dimension ( most of them are also obtenable in overworld )\nThose ores have a boosted spawn rate in the miner dimension",
       "advancements.avancementsupremearmor.descr": "Fabrique toute l\u0027armure en endium et porte là",
       "item.palamod.mixed_endium_armor_boots": "Mixed Endium Boots",
       "gui.palamod.armorpalahelpgui.label_force1": "Force",
@@ -51010,6 +51776,7 @@
       "block.palamod.colored_lamp": "Lampe colorée",
       "gui.palamod.analyserresult.label_cobblestone": "Pierre concassé",
       "gui.palamod.crusherpalahelpgui.label_beta_nochange_0004": "beta no-change 0004",
+      "item.palamod.hunterjobsitem": "Hunter jobs",
       "effect.palamod.antifake": "Anti-dégat fausse eau",
       "gui.palamod.adminshopmobs_rottenflesh.button_buy": "Acheter",
       "gui.palamod.adminshoputilitiesemerald.label_buy_price_125": "Prix d\u0027achat : 2.5",
@@ -51046,6 +51813,7 @@
       "gui.palamod.adminshoporefindium.label_findium": "Findium",
       "gui.palamod.adminshoporeiron.label_buy_price_20": "Prix d\u0027achat :  20",
       "gui.palamod.jobsminercraftgui.tooltip_cave_block": "Cave block",
+      "item.palamod.amethyst_excavator": "Amethyste Exavator",
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3": "This armor set is craftable",
       "block.palamod.erable_wood": "Bois d\u0027érable",
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4": "This armor set is craftable",
@@ -51055,6 +51823,7 @@
       "advancements.achmpotg_12new.title": "C\u0027est la pioche ultime Elle casse tous instantanément.",
       "item.palamod.amethyst_backpack": "Amethyst backpack",
       "death.attack.spikedamage": "%1$s was crushed by a spike",
+      "item.palamod.customair": "Air",
       "advancements.palamodavancement.title": "Palamod",
       "block.palamod.stony": "Stony",
       "item.palamod.legendary_stone_fortune": "Legendary stone fortune",
@@ -51132,7 +51901,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.043",
+    "version": "1.20.044",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

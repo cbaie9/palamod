@@ -48,7 +48,7 @@ public class GreenpaladumexcatorItem extends ShovelItem {
 
 		@Override
 		public Ingredient getRepairIngredient() {
-			return Ingredient.of(new ItemStack(PalamodModItems.PALADIUM_INGOT.get()));
+			return Ingredient.of(new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()));
 		}
 	};
 

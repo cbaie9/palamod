@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsminercraftjei",
+    "result": {
+      "value": "CUSTOM:Pickaxeofthegodslv1"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:AmethystePickaxe"
+      },
+      {
+        "value": "CUSTOM:PaladiumPickaxe"
+      },
+      {
+        "value": "CUSTOM:TitanePickaxe"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      }
+    ]
+  }
+}

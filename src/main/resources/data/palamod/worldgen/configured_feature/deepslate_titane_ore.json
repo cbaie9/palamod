@@ -8,61 +8,6 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:granite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_titane_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:coarse_dirt"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_titane_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:dirt"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_titane_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:diorite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_titane_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
-            "Name": "minecraft:andesite"
-          }
-        },
-        "state": {
-          "Name": "palamod:deepslate_titane_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "blockstate_match",
-          "block_state": {
             "Name": "minecraft:deepslate",
             "Properties": {
               "axis": "y"
@@ -77,7 +22,18 @@
         "target": {
           "predicate_type": "blockstate_match",
           "block_state": {
-            "Name": "minecraft:stone"
+            "Name": "minecraft:tuff"
+          }
+        },
+        "state": {
+          "Name": "palamod:deepslate_titane_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:gravel"
           }
         },
         "state": {

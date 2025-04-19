@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:titaneexcavator"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:titaneexcavator"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:titaneexcavator"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:titaneexcavator"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    }
+  ],
+  "output": {
+    "id": "palamod:paladiumexcavator",
+    "count": 1
+  }
+}

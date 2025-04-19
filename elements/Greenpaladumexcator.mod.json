@@ -5,7 +5,7 @@
     "toolType": "Spade",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "vert_pala",
+    "texture": "green_paladium_excavator",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Green Paladium Exavator",
@@ -22,9 +22,12 @@
     "enchantability": 23,
     "damageVsEntity": 3.0,
     "usageCount": 4999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
-        "value": "CUSTOM:PaladiumIngot"
+        "value": "CUSTOM:PaladiumGreeningot"
       }
     ],
     "immuneToFire": false,

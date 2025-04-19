@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsminercraftjei",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_furnace"
+    },
+    {
+      "item": "minecraft:bricks"
+    },
+    {
+      "item": "minecraft:bricks"
+    },
+    {
+      "item": "palamod:paladium_furnace"
+    },
+    {
+      "item": "palamod:findium"
+    },
+    {
+      "item": "palamod:paladium_furnace"
+    },
+    {
+      "item": "minecraft:bricks"
+    },
+    {
+      "item": "palamod:paladium_furnace"
+    },
+    {
+      "item": "minecraft:bricks"
+    }
+  ],
+  "output": {
+    "id": "palamod:paladium_forge",
+    "count": 1
+  }
+}
