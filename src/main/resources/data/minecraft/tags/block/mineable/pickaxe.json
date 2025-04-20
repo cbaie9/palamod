@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "palamod:cobbledsoftstonestairs",
+    "palamod:cobbledsoftstoneslab",
+    "palamod:softstonestairs",
+    "palamod:softstoneslab",
     "palamod:cobbled_soft_stone",
     "palamod:softened_endium_nugget_ore",
     "palamod:softened_findium_ore",

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "palamod:cobbledsoftstoneslab",
+    "palamod:softstoneslab",
     "palamod:trixiumslab",
     "palamod:hardened_obsidian_slab",
     "palamod:obsidianslab",

@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Greenpaladiumseedplanter"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreenblock"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Paladiumseedplanter"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      }
+    ]
+  }
+}

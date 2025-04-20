@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:EndiumArmor.body"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:Customair"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      }
+    ]
+  }
+}

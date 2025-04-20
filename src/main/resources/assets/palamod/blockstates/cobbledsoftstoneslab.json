@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/cobbledsoftstoneslab"
+    },
+    "type=top": {
+      "model": "palamod:block/cobbledsoftstoneslab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/cobbledsoftstoneslab_full"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Paladiumcrusher"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Compressedamethyste"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      }
+    ]
+  }
+}

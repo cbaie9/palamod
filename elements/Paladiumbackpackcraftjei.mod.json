@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Paladumbackpack"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:Paladiumchestv2"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "Blocks.HOPPER"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "TAG:neoforge:leather"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "TAG:neoforge:leather"
+      }
+    ]
+  }
+}

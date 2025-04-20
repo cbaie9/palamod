@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Elevatorwhite"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "TAG:minecraft:wool"
+      },
+      {
+        "value": "TAG:minecraft:wool"
+      },
+      {
+        "value": "TAG:minecraft:wool"
+      },
+      {
+        "value": "CUSTOM:Furnaceupgrade"
+      },
+      {
+        "value": "Blocks.PISTON"
+      },
+      {
+        "value": "CUSTOM:Furnaceupgrade"
+      },
+      {
+        "value": "TAG:minecraft:planks"
+      },
+      {
+        "value": "Items.REDSTONE"
+      },
+      {
+        "value": "TAG:minecraft:planks"
+      }
+    ]
+  }
+}

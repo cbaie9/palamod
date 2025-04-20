@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "tag": "neoforge:stick"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "item": "palamod:customair"
+    },
+    {
+      "tag": "neoforge:stick"
+    },
+    {
+      "item": "palamod:customair"
+    }
+  ],
+  "output": {
+    "id": "palamod:titanehoe",
+    "count": 1
+  }
+}

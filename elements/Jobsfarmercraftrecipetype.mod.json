@@ -1,0 +1,81 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "miner_craft_jei_gui.png",
+    "width": 164,
+    "height": 102,
+    "icon": {
+      "value": "CUSTOM:Farmerjobsitem"
+    },
+    "craftingtables": [
+      {
+        "value": "CUSTOM:Farmerjobsitem"
+      }
+    ],
+    "enableCraftingtable": true,
+    "title": "Miner Crafts",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 23,
+        "y": 18,
+        "slotid": 0
+      },
+      {
+        "type": "INPUT",
+        "x": 41,
+        "y": 18,
+        "slotid": 1
+      },
+      {
+        "type": "INPUT",
+        "x": 59,
+        "y": 18,
+        "slotid": 2
+      },
+      {
+        "type": "INPUT",
+        "x": 23,
+        "y": 36,
+        "slotid": 3
+      },
+      {
+        "type": "INPUT",
+        "x": 41,
+        "y": 36,
+        "slotid": 4
+      },
+      {
+        "type": "INPUT",
+        "x": 59,
+        "y": 36,
+        "slotid": 5
+      },
+      {
+        "type": "INPUT",
+        "x": 23,
+        "y": 54,
+        "slotid": 6
+      },
+      {
+        "type": "INPUT",
+        "x": 41,
+        "y": 54,
+        "slotid": 7
+      },
+      {
+        "type": "INPUT",
+        "x": 59,
+        "y": 54,
+        "slotid": 8
+      },
+      {
+        "type": "OUTPUT",
+        "x": 118,
+        "y": 36,
+        "slotid": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Endiumseedplanter"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreenblock"
+      },
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumseedplanter"
+      },
+      {
+        "value": "CUSTOM:EndiumIngot"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      }
+    ]
+  }
+}

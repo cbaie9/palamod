@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "item": "palamod:furnace_upgrade"
+    },
+    {
+      "item": "minecraft:piston"
+    },
+    {
+      "item": "palamod:furnace_upgrade"
+    },
+    {
+      "tag": "minecraft:planks"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "output": {
+    "id": "palamod:elevator_white",
+    "count": 1
+  }
+}

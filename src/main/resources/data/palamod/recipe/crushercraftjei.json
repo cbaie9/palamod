@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_core"
+    },
+    {
+      "item": "palamod:compressed_amethyst"
+    },
+    {
+      "item": "palamod:paladium_core"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:findium"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_core"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_core"
+    }
+  ],
+  "output": {
+    "id": "palamod:paladium_crusher",
+    "count": 1
+  }
+}

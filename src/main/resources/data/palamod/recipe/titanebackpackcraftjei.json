@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_chest"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "minecraft:hopper"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "tag": "neoforge:leather"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "tag": "neoforge:leather"
+    }
+  ],
+  "output": {
+    "id": "palamod:titane_backpack",
+    "count": 1
+  }
+}

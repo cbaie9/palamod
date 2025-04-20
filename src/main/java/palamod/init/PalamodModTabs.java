@@ -26,6 +26,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.AMETHYST.get());
 				tabData.accept(PalamodModItems.AMETHYST_POLLEN.get());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_AMETHYST_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_AMETHYST_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.AMETHYST_ORE.get().asItem());
 				tabData.accept(PalamodModItems.AMETHYSTRAWORE.get());
 				tabData.accept(PalamodModBlocks.AMETHYST_BLOCK.get().asItem());
@@ -42,6 +43,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.TITANE_INGOT.get());
 				tabData.accept(PalamodModItems.TITANE_POLLEN.get());
 				tabData.accept(PalamodModBlocks.TITANE_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_TITANE_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_TITANE_ORE.get().asItem());
 				tabData.accept(PalamodModItems.TITANERAWORE.get());
 				tabData.accept(PalamodModBlocks.TITANE_BLOCK.get().asItem());
@@ -60,6 +62,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.PALADIUM_INGOT.get());
 				tabData.accept(PalamodModItems.PALADIUM_POLLEN.get());
 				tabData.accept(PalamodModBlocks.PALADIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModItems.PALADIUMRAWORE.get());
 				tabData.accept(PalamodModBlocks.PALADIUM_BLOCK.get().asItem());
@@ -77,6 +80,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.PALADIUM_ARMOR_BOOTS.get());
 				tabData.accept(PalamodModItems.GREEN_PALADIUM_INGOT.get());
 				tabData.accept(PalamodModBlocks.PALADIUM_GREEN_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_GREEN_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModItems.GREENPALADIUMRAWORE.get());
 				tabData.accept(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get().asItem());
@@ -92,6 +96,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ENDIUM_FRAGMENT.get());
 				tabData.accept(PalamodModItems.ENDIUM_POLLEN.get());
 				tabData.accept(PalamodModItems.ENDIUM_NUGGET.get());
+				tabData.accept(PalamodModBlocks.ENDIUM_NUGGET_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_ENDIUM_NUGGET_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.ENDIUM_BLOCK.get().asItem());
 				tabData.accept(PalamodModItems.ENDIUM_PICKAXE.get());
@@ -102,12 +108,15 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ENDIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.ENDIUM_ARMOR_BOOTS.get());
 				tabData.accept(PalamodModItems.TRIXIUM.get());
+				tabData.accept(PalamodModBlocks.TRIXIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_TRIXIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.TRIXIUM_BLOCK.get().asItem());
 				tabData.accept(PalamodModBlocks.TRIXIUMSTAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.TRIXIUMSLAB.get().asItem());
 				tabData.accept(PalamodModItems.FINDIUM.get());
 				tabData.accept(PalamodModBlocks.FINDIUM_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_FINDIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_FINDIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.FINDIUM_BLOCK.get().asItem());
 				tabData.accept(PalamodModBlocks.FINDIUM_STAIRS.get().asItem());
@@ -163,11 +172,11 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ELEVATOR_LIGHT_GREEN.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_BROWN.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_ORANGE.get().asItem());
-				tabData.accept(PalamodModItems.MINAGE_VOIDSTONE.get());
 				tabData.accept(PalamodModBlocks.ELEVATOR_PURPLE.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_GRAY.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_LIGHT_GRAY.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_CYAN.get().asItem());
+				tabData.accept(PalamodModItems.MINAGE_VOIDSTONE.get());
 				tabData.accept(PalamodModItems.PALADIUMGOLEM_SPAWN_EGG.get());
 				tabData.accept(PalamodModItems.GUARDIAN_STONE.get());
 				tabData.accept(PalamodModBlocks.GUARDIAN_BLOCK.get().asItem());
@@ -186,7 +195,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.RAINBOWARMOR_BOOTS.get());
 				tabData.accept(PalamodModItems.FLYPOTION.get());
 				tabData.accept(PalamodModBlocks.ENDIUM_LUCKY_BLOCK.get().asItem());
-				tabData.accept(PalamodModBlocks.ENDIUM_NUGGET_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.ENDIUM_SLAB.get().asItem());
 				tabData.accept(PalamodModBlocks.ENDIUM_STAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.GREEN_PALADIUM_STAIRS.get().asItem());
@@ -227,7 +235,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.FLATTEN_ENDIUM_CHEST.get().asItem());
 				tabData.accept(PalamodModBlocks.DOWNLOADER.get().asItem());
 				tabData.accept(PalamodModItems.CREATIVE_TRIXIUM_SWORD.get());
-				tabData.accept(PalamodModBlocks.TRIXIUM_ORE.get().asItem());
 				tabData.accept(PalamodModItems.POTATO_BACKPACK.get());
 				tabData.accept(PalamodModItems.GREENPALADIUMFASTSWORD.get());
 				tabData.accept(PalamodModItems.ENDIUMFASTSWORD.get());
@@ -271,15 +278,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModBlocks.XPBUSHLOW.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_HOPPER.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_AMETHYST_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_TITANE_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_PALADIUM_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_FINDIUM_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE.get().asItem());
 				tabData.accept(PalamodModItems.AMETHYST_EXCAVATOR.get());
-				tabData.accept(PalamodModBlocks.COBBLED_SOFT_STONE.get().asItem());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -384,6 +383,11 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.SOFT_STONE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTSTONESTAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTSTONESLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.COBBLED_SOFT_STONE.get().asItem());
+				tabData.accept(PalamodModBlocks.COBBLEDSOFTSTONESTAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.COBBLEDSOFTSTONESLAB.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {

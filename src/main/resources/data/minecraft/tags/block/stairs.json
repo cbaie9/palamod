@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "palamod:cobbledsoftstonestairs",
+    "palamod:softstonestairs",
     "palamod:trixiumstairs",
     "palamod:obsidianstairs",
     "palamod:renforcedobsidianstairs",

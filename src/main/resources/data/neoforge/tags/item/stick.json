@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:paladium_stick",
+    "palamod:titane_stick",
+    "palamod:amethyst_stick",
+    "minecraft:stick"
+  ]
+}

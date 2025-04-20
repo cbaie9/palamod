@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:cobbled_soft_stone"
+    }
+  },
+  "result": {
+    "id": "palamod:cobbledsoftstoneslab",
+    "count": 6
+  }
+}

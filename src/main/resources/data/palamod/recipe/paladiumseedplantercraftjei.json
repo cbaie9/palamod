@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:compressed_paladium"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:titane_seedplanter"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    }
+  ],
+  "output": {
+    "id": "palamod:titane_seedplanter",
+    "count": 1
+  }
+}

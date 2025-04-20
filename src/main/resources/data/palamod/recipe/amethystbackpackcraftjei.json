@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst_chest"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "item": "minecraft:hopper"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "tag": "neoforge:leather"
+    },
+    {
+      "item": "palamod:amethyst"
+    },
+    {
+      "tag": "neoforge:leather"
+    }
+  ],
+  "output": {
+    "id": "palamod:amethyst_backpack",
+    "count": 1
+  }
+}

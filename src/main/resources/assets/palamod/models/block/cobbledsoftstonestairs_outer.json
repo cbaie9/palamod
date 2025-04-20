@@ -1,0 +1,10 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "particle": "palamod:block/cobbleled_soft_stone",
+    "bottom": "palamod:block/cobbleled_soft_stone",
+    "top": "palamod:block/cobbleled_soft_stone",
+    "side": "palamod:block/cobbleled_soft_stone"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "palamod:cobbled_soft_stone"
+  },
+  "result": {
+    "id": "palamod:cobbledsoftstoneslab",
+    "count": 2
+  }
+}

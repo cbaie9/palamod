@@ -876,6 +876,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ALCHIMISTJOBSITEM = REGISTRY.register("alchimistjobsitem", AlchimistjobsitemItem::new);
 	public static final DeferredItem<Item> CUSTOMAIR = REGISTRY.register("customair", CustomairItem::new);
 	public static final DeferredItem<Item> COBBLED_SOFT_STONE = block(PalamodModBlocks.COBBLED_SOFT_STONE);
+	public static final DeferredItem<Item> SOFTSTONESLAB = block(PalamodModBlocks.SOFTSTONESLAB);
+	public static final DeferredItem<Item> SOFTSTONESTAIRS = block(PalamodModBlocks.SOFTSTONESTAIRS);
+	public static final DeferredItem<Item> COBBLEDSOFTSTONESLAB = block(PalamodModBlocks.COBBLEDSOFTSTONESLAB);
+	public static final DeferredItem<Item> COBBLEDSOFTSTONESTAIRS = block(PalamodModBlocks.COBBLEDSOFTSTONESTAIRS);
 
 	// Start of user code block custom items
 	// End of user code block custom items

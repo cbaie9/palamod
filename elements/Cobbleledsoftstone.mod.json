@@ -44,7 +44,7 @@
     "isWaterloggable": false,
     "creativeTabs": [
       {
-        "value": "CUSTOM:Palamod"
+        "value": "CUSTOM:Decorationcreativetab"
       }
     ],
     "destroyTool": "pickaxe",

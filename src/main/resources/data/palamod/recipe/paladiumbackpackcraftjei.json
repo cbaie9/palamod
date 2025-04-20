@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_chest"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "item": "minecraft:hopper"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "tag": "neoforge:leather"
+    },
+    {
+      "item": "palamod:paladium_ingot"
+    },
+    {
+      "tag": "neoforge:leather"
+    }
+  ],
+  "output": {
+    "id": "palamod:paladum_backpack",
+    "count": 1
+  }
+}

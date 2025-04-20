@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:compressed_paladium"
+    },
+    {
+      "item": "palamod:paladium_green_block"
+    },
+    {
+      "item": "palamod:compressed_paladium"
+    },
+    {
+      "item": "palamod:endium_ingot"
+    },
+    {
+      "item": "palamod:green_paladium_seedplanter"
+    },
+    {
+      "item": "palamod:endium_ingot"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    }
+  ],
+  "output": {
+    "id": "palamod:endium_seedplanter",
+    "count": 1
+  }
+}

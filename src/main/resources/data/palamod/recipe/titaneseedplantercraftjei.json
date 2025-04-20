@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:compressed_titane"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:amethyst_seedplanter"
+    },
+    {
+      "item": "palamod:titane_ingot"
+    },
+    {
+      "item": "palamod:titane_stick"
+    },
+    {
+      "item": "palamod:titane_stick"
+    },
+    {
+      "item": "palamod:titane_stick"
+    }
+  ],
+  "output": {
+    "id": "palamod:titane_seedplanter",
+    "count": 1
+  }
+}

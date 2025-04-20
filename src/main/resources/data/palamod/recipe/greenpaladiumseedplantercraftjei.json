@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "item": "palamod:green_paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_green_block"
+    },
+    {
+      "item": "palamod:green_paladium_ingot"
+    },
+    {
+      "item": "palamod:green_paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_seedplanter"
+    },
+    {
+      "item": "palamod:green_paladium_ingot"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    },
+    {
+      "item": "palamod:paladium_stick"
+    }
+  ],
+  "output": {
+    "id": "palamod:green_paladium_seedplanter",
+    "count": 1
+  }
+}

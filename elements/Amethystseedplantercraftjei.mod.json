@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Amethystseedplanter"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Compressedamethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethytestick"
+      },
+      {
+        "value": "CUSTOM:Amethytestick"
+      },
+      {
+        "value": "CUSTOM:Amethytestick"
+      }
+    ]
+  }
+}

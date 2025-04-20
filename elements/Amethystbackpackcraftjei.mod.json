@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Amethystbackpack"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethystchestv2"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "Blocks.HOPPER"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "TAG:neoforge:leather"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "TAG:neoforge:leather"
+      }
+    ]
+  }
+}

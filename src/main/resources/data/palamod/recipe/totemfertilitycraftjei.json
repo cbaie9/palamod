@@ -1,0 +1,36 @@
+{
+  "type": "palamod:jobsfarmercraftrecipetype",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "minecraft:creeper_head"
+    },
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "palamod:compressed_paladium"
+    },
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "palamod:compressed_paladium"
+    },
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "output": {
+    "id": "palamod:totemfertility",
+    "count": 1
+  }
+}

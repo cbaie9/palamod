@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Totemfertility"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "Items.SKULL#4"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "Items.DYE#15"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      }
+    ]
+  }
+}

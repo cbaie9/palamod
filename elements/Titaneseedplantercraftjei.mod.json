@@ -1,0 +1,40 @@
+{
+  "_fv": 73,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "jobsfarmercraftrecipetype",
+    "result": {
+      "value": "CUSTOM:Titaneseedplanter"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:Compressedtitane"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:Amethystseedplanter"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      },
+      {
+        "value": "CUSTOM:Titanestick"
+      }
+    ]
+  }
+}

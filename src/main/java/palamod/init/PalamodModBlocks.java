@@ -53,6 +53,8 @@ import palamod.block.StonyBlock;
 import palamod.block.SpongetntBlock;
 import palamod.block.SpikeobsidianwoodBlock;
 import palamod.block.SpikegoldBlock;
+import palamod.block.SoftstonestairsBlock;
+import palamod.block.SoftstoneslabBlock;
 import palamod.block.SoftstoneBlock;
 import palamod.block.SoftenedtrixiumoreBlock;
 import palamod.block.SoftenedtitaneoreBlock;
@@ -231,6 +233,8 @@ import palamod.block.CompactedobsidianBlock;
 import palamod.block.ColoredlampBlock;
 import palamod.block.ColofullampBlock;
 import palamod.block.CobbleledsoftstoneBlock;
+import palamod.block.CobbledsoftstonestairsBlock;
+import palamod.block.CobbledsoftstoneslabBlock;
 import palamod.block.CobblebreakerserverBlock;
 import palamod.block.CobblebreakerBlock;
 import palamod.block.CloudblockBlock;
@@ -518,6 +522,10 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SOFTENED_FINDIUM_ORE = REGISTRY.register("softened_findium_ore", SoftenedfindiumoreBlock::new);
 	public static final DeferredBlock<Block> SOFTENED_ENDIUM_NUGGET_ORE = REGISTRY.register("softened_endium_nugget_ore", SoftenedendiumnuggetoreBlock::new);
 	public static final DeferredBlock<Block> COBBLED_SOFT_STONE = REGISTRY.register("cobbled_soft_stone", CobbleledsoftstoneBlock::new);
+	public static final DeferredBlock<Block> SOFTSTONESLAB = REGISTRY.register("softstoneslab", SoftstoneslabBlock::new);
+	public static final DeferredBlock<Block> SOFTSTONESTAIRS = REGISTRY.register("softstonestairs", SoftstonestairsBlock::new);
+	public static final DeferredBlock<Block> COBBLEDSOFTSTONESLAB = REGISTRY.register("cobbledsoftstoneslab", CobbledsoftstoneslabBlock::new);
+	public static final DeferredBlock<Block> COBBLEDSOFTSTONESTAIRS = REGISTRY.register("cobbledsoftstonestairs", CobbledsoftstonestairsBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
