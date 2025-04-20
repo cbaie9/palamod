@@ -49,7 +49,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Cobbleledsoftstone"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

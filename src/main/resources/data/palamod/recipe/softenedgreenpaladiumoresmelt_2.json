@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "palamod:softened_green_paladium_ore"
+  },
+  "result": {
+    "id": "palamod:green_paladium_ingot"
+  }
+}

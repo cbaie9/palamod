@@ -45470,6 +45470,198 @@
           "src/main/resources/data/palamod/recipe/sealedxpbottlecraftjei.json"
         ]
       }
+    },
+    {
+      "name": "Softstonecraftsmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softstonecraftsmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softstonecraftsmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softstonecraftsmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softstonecraftsmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softstonecraftsmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedamethystoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedamethystoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedamethystoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedamethystoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedamethystoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedamethystoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedtitaneoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedtitaneoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedtitaneoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedtitaneoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedtitaneoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedtitaneoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedpaladiumoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedpaladiumoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedpaladiumoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedpaladiumoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedpaladiumoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedpaladiumoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedtrixiumoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedtrixiumoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedtrixiumoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedtrixiumoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedtrixiumoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedtrixiumoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedgreenpaladiumoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedgreenpaladiumoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedgreenpaladiumoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedgreenpaladiumoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedgreenpaladiumoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedgreenpaladiumoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedfindiumoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedfindiumoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedfindiumoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedfindiumoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedfindiumoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedfindiumoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedendiumoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedendiumoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedendiumoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedendiumoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedendiumoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedendiumoresmelt_2.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
