@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "palamod:softened_lapis_lazulis_ore"
+  },
+  "result": {
+    "id": "minecraft:lapis_lazuli"
+  }
+}

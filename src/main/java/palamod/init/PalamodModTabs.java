@@ -279,6 +279,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.XPBUSHLOW.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_HOPPER.get().asItem());
 				tabData.accept(PalamodModItems.AMETHYST_EXCAVATOR.get());
+				tabData.accept(PalamodModBlocks.HARPAGOPHYTUM.get().asItem());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -547,7 +548,17 @@ public class PalamodModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(PalamodModItems.INTERNET_CARD.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-			tabData.accept(PalamodModBlocks.HARPAGOPHYTUM.get().asItem());
+			tabData.accept(PalamodModBlocks.SOFTENED_COAL_ORE.get().asItem());
+			tabData.accept(PalamodModBlocks.SOFTENED_IRON_ORE.get().asItem());
+			tabData.accept(PalamodModBlocks.SOFTENED_GOLD_ORE.get().asItem());
+			tabData.accept(PalamodModBlocks.SOFTENED_DIAMOND_ORE.get().asItem());
+			tabData.accept(PalamodModBlocks.SOFTENED_REDSTONE_ORE.get().asItem());
+			tabData.accept(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get().asItem());
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+			tabData.accept(PalamodModItems.PIGARMOR_HELMET.get());
+			tabData.accept(PalamodModItems.PIGARMOR_CHESTPLATE.get());
+			tabData.accept(PalamodModItems.PIGARMOR_LEGGINGS.get());
+			tabData.accept(PalamodModItems.PIGARMOR_BOOTS.get());
 		}
 	}
 }

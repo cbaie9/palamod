@@ -58,11 +58,17 @@ import palamod.block.SoftstoneslabBlock;
 import palamod.block.SoftstoneBlock;
 import palamod.block.SoftenedtrixiumoreBlock;
 import palamod.block.SoftenedtitaneoreBlock;
+import palamod.block.SoftenedredstoneoreBlock;
 import palamod.block.SoftenedpaladiumoreBlock;
+import palamod.block.SoftenedlapislazulisoreBlock;
+import palamod.block.SoftenedironoreBlock;
 import palamod.block.SoftenedgreenpaladiumoreBlock;
+import palamod.block.SoftenedgoldoreBlock;
 import palamod.block.SoftenedfindiumoreBlock;
 import palamod.block.SoftenedendiumnuggetoreBlock;
+import palamod.block.SofteneddiamondoreBlock;
 import palamod.block.SoftenedamethystoreBlock;
+import palamod.block.SoftcoaloreBlock;
 import palamod.block.SlimepadBlock;
 import palamod.block.SlimeobsidianBlock;
 import palamod.block.RotatedslimepadBlock;
@@ -526,6 +532,12 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SOFTSTONESTAIRS = REGISTRY.register("softstonestairs", SoftstonestairsBlock::new);
 	public static final DeferredBlock<Block> COBBLEDSOFTSTONESLAB = REGISTRY.register("cobbledsoftstoneslab", CobbledsoftstoneslabBlock::new);
 	public static final DeferredBlock<Block> COBBLEDSOFTSTONESTAIRS = REGISTRY.register("cobbledsoftstonestairs", CobbledsoftstonestairsBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_COAL_ORE = REGISTRY.register("softened_coal_ore", SoftcoaloreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_IRON_ORE = REGISTRY.register("softened_iron_ore", SoftenedironoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_GOLD_ORE = REGISTRY.register("softened_gold_ore", SoftenedgoldoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_DIAMOND_ORE = REGISTRY.register("softened_diamond_ore", SofteneddiamondoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_REDSTONE_ORE = REGISTRY.register("softened_redstone_ore", SoftenedredstoneoreBlock::new);
+	public static final DeferredBlock<Block> SOFTENED_LAPIS_LAZULIS_ORE = REGISTRY.register("softened_lapis_lazulis_ore", SoftenedlapislazulisoreBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -4,10 +4,21 @@
   "definition": {
     "name": "Fake water",
     "bucketName": "Fake water Bucket",
-    "textureStill": "fakewater_still",
-    "textureFlowing": "fake_water",
-    "hasFog": false,
-    "tintType": "No tint",
+    "textureStill": "minecraft:water_still",
+    "textureFlowing": "minecraft:water_flow",
+    "textureRenderOverlay": "water_overlay",
+    "hasFog": true,
+    "fogColor": {
+      "value": -14337173,
+      "falpha": 0.0
+    },
+    "fogStartDistance": {
+      "fixedValue": 0.0
+    },
+    "fogEndDistance": {
+      "fixedValue": 48.0
+    },
+    "tintType": "Water",
     "canMultiply": false,
     "flowRate": 5,
     "levelDecrease": 1,
@@ -43,7 +54,7 @@
     "tickRate": 0,
     "flammability": 0,
     "fireSpreadSpeed": 0,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "WATER",
     "onEntityCollides": {
       "name": "FakewaterMobplayerCollidesBlock"
     }

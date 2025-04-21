@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModBlocks;
+
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
@@ -14,6 +16,28 @@ public class MvprocessProcedure {
 			return;
 		for (int index0 = 0; index0 < 64; index0++) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
+				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.SOFT_STONE.get())) : false) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get())) : false) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PalamodModBlocks.SOFT_STONE.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
 				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SMOOTH_STONE)) : false) {
 					{
 						final String _tagName = "voidstone_count";

@@ -46071,6 +46071,280 @@
           "src/main/resources/data/palamod/recipe/cobbledsoftstoneslabcraft_2.json"
         ]
       }
+    },
+    {
+      "name": "Softcoalore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_coal_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/softened_coal_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_coal_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_coal_ore.json",
+          "src/main/java/palamod/block/SoftcoaloreBlock.java",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_coal_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_coal_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_coal_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_coal_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedironore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_iron_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/softened_iron_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_iron_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_iron_ore.json",
+          "src/main/java/palamod/block/SoftenedironoreBlock.java",
+          "src/main/resources/assets/palamod/blockstates/softened_iron_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_iron_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_iron_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_iron_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedgoldore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_gold_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/softened_gold_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_gold_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_gold_ore_biome_modifier.json",
+          "src/main/resources/assets/palamod/models/block/softened_gold_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_gold_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_gold_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_gold_ore.json",
+          "src/main/java/palamod/block/SoftenedgoldoreBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Softeneddiamondore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_diamond_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_diamond_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_diamond_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_diamond_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_diamond_ore.json",
+          "src/main/java/palamod/block/SofteneddiamondoreBlock.java",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_diamond_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_diamond_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_diamond_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedredstoneore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_redstone_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_redstone_ore.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_redstone_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_redstone_ore_biome_modifier.json",
+          "src/main/resources/assets/palamod/models/item/softened_redstone_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_redstone_ore.json",
+          "src/main/java/palamod/block/SoftenedredstoneoreBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_redstone_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_redstone_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedlapislazulisore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softened_lapis_lazulis_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/SoftenedlapislazulisoreBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/softened_lapis_lazulis_ore.json",
+          "src/main/resources/assets/palamod/blockstates/softened_lapis_lazulis_ore.json",
+          "src/main/resources/assets/palamod/models/item/softened_lapis_lazulis_ore.json",
+          "src/main/resources/data/palamod/neoforge/biome_modifier/softened_lapis_lazulis_ore_biome_modifier.json",
+          "src/main/resources/data/palamod/worldgen/placed_feature/softened_lapis_lazulis_ore.json",
+          "src/main/resources/data/palamod/worldgen/configured_feature/softened_lapis_lazulis_ore.json",
+          "src/main/resources/assets/palamod/models/block/softened_lapis_lazulis_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedcoaloresmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedcoaloresmelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedcoaloresmelt.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedcoaloresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedcoaloresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedcoaloresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedironoresmelt1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedironoresmelt_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedironoresmelt_1.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedironoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedironoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedironoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedgoldoresmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedgoldoresmelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedgoldoresmelt.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedgoldoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedgoldoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedgoldoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softeneddiamondoresmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softeneddiamondoresmelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softeneddiamondoresmelt.json"
+        ]
+      }
+    },
+    {
+      "name": "Softeneddiamondsmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softeneddiamondsmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softeneddiamondsmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedredstoneoresmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedredstoneoresmelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedredstoneoresmelt.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedredstoneoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedredstoneoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedredstoneoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedlapislazulisoresmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedlapislazulisoresmelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedlapislazulisoresmelt.json"
+        ]
+      }
+    },
+    {
+      "name": "Softenedlapislazulisoresmelt2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softenedlapislazulisoresmelt_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/softenedlapislazulisoresmelt_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Pigarmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pigarmor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/pigarmor_leggings.json",
+          "src/main/java/palamod/item/PigarmorItem.java",
+          "src/main/resources/assets/palamod/models/item/pigarmor_helmet.json",
+          "src/main/resources/assets/palamod/models/item/pigarmor_boots.json",
+          "src/main/resources/assets/palamod/models/item/pigarmor_chestplate.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46502,10 +46776,6 @@
     }
   ],
   "tag_elements": {
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Angelicwter",
-      "~CUSTOM:Fakewter"
-    ],
     "ITEMS:minecraft:wool": [
       "Blocks.WOOL#0",
       "Blocks.WOOL#1",
@@ -46523,6 +46793,10 @@
       "Blocks.WOOL#13",
       "Blocks.WOOL#14",
       "Blocks.WOOL#15"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Angelicwter",
+      "~CUSTOM:Fakewter"
     ],
     "ITEMS:mod:potgtag": [
       "CUSTOM:Pickaxeofthegodslv1",
@@ -46576,6 +46850,9 @@
       "Blocks.COBBLESTONE"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Softenedlapislazulisore",
+      "~CUSTOM:Softenedredstoneore",
+      "~CUSTOM:Softenedironore",
       "~CUSTOM:Cobbledsoftstonestairs",
       "~CUSTOM:Cobbledsoftstoneslab",
       "~CUSTOM:Cobbleledsoftstone",
@@ -46720,6 +46997,8 @@
       "CUSTOM:Fertilseddirt"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Softeneddiamondore",
+      "~CUSTOM:Softenedgoldore",
       "~CUSTOM:Softenedfindiumore",
       "~CUSTOM:Exctractor",
       "~CUSTOM:Findiumoredeepslate",
@@ -46953,9 +47232,6 @@
       "~CUSTOM:Jacaranda_Slab",
       "~CUSTOM:Ostrya_woodSlab"
     ],
-    "BIOMES:minecraft:has_structure/village_snowy": [
-      "~CUSTOM:Frozenforest"
-    ],
     "BLOCKS:mod:cbtill": [
       "Blocks.DIRT#2",
       "Blocks.DIRT#0",
@@ -46963,6 +47239,9 @@
       "Blocks.GRASS_PATH",
       "Blocks.MYCELIUM",
       "Blocks.FARMLAND"
+    ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~CUSTOM:Frozenforest"
     ],
     "ITEMS:minecraft:planks": [
       "CUSTOM:Erable_Planks",
@@ -46985,7 +47264,25 @@
       "CUSTOM:Amethystobsidianspike",
       "CUSTOM:Titaneobsidianspike",
       "CUSTOM:Paladiumobsidianspike",
-      "CUSTOM:Hardenedobsidianslab"
+      "CUSTOM:Hardenedobsidianslab",
+      "CUSTOM:Boomobsidian",
+      "CUSTOM:Megaboomobsidian",
+      "CUSTOM:Poisonobsidian",
+      "CUSTOM:Slimeobsidian",
+      "CUSTOM:Witheredobsidian0",
+      "CUSTOM:Witheredobsidian1",
+      "CUSTOM:Witheredobsidian2",
+      "CUSTOM:Witheredobsidian3",
+      "CUSTOM:Witheredobsidian4",
+      "CUSTOM:Witheredobsidian5",
+      "CUSTOM:Witheredobsidian6",
+      "CUSTOM:Witheredobsidian7",
+      "CUSTOM:Witheredobsidian8",
+      "CUSTOM:Witheredobsidian9",
+      "CUSTOM:Witheredobsidian10",
+      "CUSTOM:Witheredobsidian11",
+      "CUSTOM:Witheredobsidian12",
+      "CUSTOM:Witheredobsidian13"
     ],
     "ITEMS:mod:paladiumarmorstag": [
       "CUSTOM:PaladiumArmor.helmet",
@@ -47129,6 +47426,7 @@
       "CUSTOM:Stony"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:Pigarmor.body",
       "~CUSTOM:Mixedendiumarmor.body",
       "~CUSTOM:Paladiumarmorcustom10.body",
       "~CUSTOM:Paladiumarmorcustom9.body",
@@ -47563,6 +47861,7 @@
       "CUSTOM:Endiumshovelhead"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:Pigarmor.helmet",
       "~CUSTOM:Mixedendiumarmor.helmet",
       "~CUSTOM:Paladiumarmorcustom10.helmet",
       "~CUSTOM:Paladiumarmorcustom9.helmet",
@@ -47677,6 +47976,12 @@
       "~CUSTOM:Smelt"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Softenedlapislazulisore",
+      "~CUSTOM:Softenedredstoneore",
+      "~CUSTOM:Softeneddiamondore",
+      "~CUSTOM:Softenedgoldore",
+      "~CUSTOM:Softenedironore",
+      "~CUSTOM:Softcoalore",
       "~CUSTOM:Cobbledsoftstonestairs",
       "~CUSTOM:Cobbledsoftstoneslab",
       "~CUSTOM:Softstonestairs",
@@ -47851,6 +48156,7 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:Pigarmor.boots",
       "~CUSTOM:Mixedendiumarmor.boots",
       "~CUSTOM:Paladiumarmorcustom10.boots",
       "~CUSTOM:Paladiumarmorcustom9.boots",
@@ -48099,6 +48405,7 @@
       "CUSTOM:Jacaranda_Log"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:Pigarmor.legs",
       "~CUSTOM:Mixedendiumarmor.legs",
       "~CUSTOM:Paladiumarmorcustom10.legs",
       "~CUSTOM:Paladiumarmorcustom9.legs",
@@ -48350,7 +48657,8 @@
       "Totemfertility",
       "Xpbushlow",
       "Paladiumhoppersouth",
-      "Amethystexacvator"
+      "Amethystexacvator",
+      "Harpagophytum"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48765,8 +49073,10 @@
       "gui.palamod.adminshopmobs.label_adminshop_mobs_menu": "Adminshop mobs menu",
       "gui.palamod.voidstoneminerconfig.label_de_la_pierre_dans_la_voidstone": "the stone into the voidstone",
       "gui.palamod.adminshopplantwheat.number_buy": "number here",
+      "block.palamod.softened_redstone_ore": "Soft redstone ore",
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
       "gui.palamod.armorpalahelpgui.label_endium_set": "Endium set",
+      "block.palamod.softened_coal_ore": "Soft coal ore",
       "block.palamod.witheredobsidian_3": "Withered obsidian",
       "item_group.palamod.grindercreativetab": "Palamod : Grinder tab",
       "jei.palamod.cobblebreakerjeiinfo": "The cobblebreaker is a machine who take cobblestone and compress them to obtain type of ore like paladium, titane, amethyst or nearly all vanilla ore\nYou can also use voidstone minage to replace cobblestone to make a afk farm",
@@ -48876,6 +49186,7 @@
       "gui.palamod.adminshoputilitiesemerald.number_buy": "number here",
       "block.palamod.erable_sappling": "Erable sappling",
       "block.palamod.flatten_amethyst_chest": "Flat amethyst chest",
+      "block.palamod.softened_iron_ore": "Soft iron ore",
       "gui.palamod.downloaderlink.label_money_account_to_this_block": "money account to this block",
       "gui.palamod.adminshopplantwarpedfungus.label_amount": "Amount :",
       "gui.palamod.palahelpore.button_back": "back",
@@ -49103,6 +49414,7 @@
       "advancements.avancementcrafttoegether.descr": "Craft an endium ingot ",
       "item.palamod.pickaxeofthegodslv_9.description_0": "Level 9",
       "gui.palamod.analyserresult.label_wool": "Wool",
+      "block.palamod.softened_diamond_ore": "Soft diamond ore",
       "gui.palamod.adminshoporediamond.button_sell": "sell",
       "painting.palamod.plains_16.title": "Plains 1 6",
       "block.palamod.endium_slab": "Endium slab",
@@ -49217,6 +49529,7 @@
       "block.palamod.flatten_titane_chest": "Flat titane chest",
       "gui.palamod.armorpalahelpgui.label_craftable": "Craftable",
       "gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set": "Mixed endium armor set",
+      "item.palamod.pigarmor_chestplate": "Pig Chestplate",
       "gui.palamod.crusherpalahelpgui.label_il_faut_mettre_du_fuel_et_des_f": "You put fuel* and fruits into the ",
       "itemGroup.tabgrindercreativetab": "Palamod : Grinder tab",
       "gui.palamod.authsafegui.code_check": "",
@@ -49476,6 +49789,7 @@
       "gui.palamod.notyetgui.label_this_feature_hasnt_been_develop": "This feature hasn\u0027t been developed yet",
       "block.palamod.guardian_block": "Guardian block",
       "item.palamod.broadsword_head": "Paladium broadsword head",
+      "block.palamod.softened_lapis_lazulis_ore": "Soft lapis lazulis ore",
       "block.palamod.paladium_obsidian_spike": "Spike spike obsidian",
       "gui.palamod.palahelptree.label_jacaranda_permet_de_crafter": "Jacaranda : Allow you to craft",
       "gui.palamod.adminshopmobsghasttears.button_sell": "sell",
@@ -49754,6 +50068,7 @@
       "gui.palamod.adminshopplantpotato.label_amount": "Amount :",
       "gui.palamod.adminshoporecoal.label_mode_set": "Amount :",
       "procedure.palamod.thank1": "Thank for installing the palamod",
+      "item.palamod.pigarmor_helmet": "Pig Helmet",
       "gui.palamod.orelayerfat.label_titane_64_32": "Titane : -64 --) 32",
       "procedure.palamod.thank2": "Made by cb9 and fufu",
       "gui.palamod.dynamicorelayer.label_amethyst_64_80": "Amethyst : -64 --) 80",
@@ -49820,6 +50135,7 @@
       "item.palamod.amethyst_shovel": "Amethyst Shovel",
       "gamerule.gameruledisablewarning.description": "Disable warning for palamod experimental feature",
       "gui.palamod.adminshoporepaladium.label_paladium": "Paladium ",
+      "item.palamod.pigarmor_leggings": "Pig Leggings",
       "gui.palamod.golemtreec.button_see_ultilitary_branch": "See ultilitary branch",
       "item.palamod.minage_voidstone": "Minage voidstone",
       "gui.palamod.jobsfarmercraftgui.tooltip_amethyst_excavator": "Paladium hoe",
@@ -49833,6 +50149,7 @@
       "gui.palamod.adminshopmobs_2honeycomb.button_buy": "buy",
       "gui.palamod.palamachinepalahelpgui.label_voir_bton_pour_les_craft": "Voir B�ton pour les craft",
       "gui.palamod.adminshopblockblackstone.label_sell_price_1": "Sell price : 1",
+      "item.palamod.pigarmor_boots": "Pig Boots",
       "advancements.achmpotg_1.descr": "Obatain or craft a pickaxe of the gods ( lv1)",
       "item.palamod.pesyblpotion.description_0": "Fufu si c\u0027est un ref au rire jaune t\u0027es pas discret lol",
       "gui.palamod.adminshopmobs.button_red_mushroom": "Ender pearl",
@@ -50155,6 +50472,7 @@
       "gui.palamod.guardiangui.label_golem": "Golem",
       "gui.palamod.palahelpore.label_paladium_le_minerais_le_plus_pu": "Paladium : The more powerful mineable ore",
       "item.palamod.paladiumarmorcustom_7_leggings": "Paladium Leggings",
+      "block.palamod.softened_gold_ore": "Soft golden ore",
       "gui.palamod.crusherpalahelpgui.label_crusher_le_fuel_est_soit_le_gol": "crusher. Le fuel est soit le gold mixed coal,",
       "gui.palamod.guardiangui.label_level": "Level ",
       "block.palamod.paladium_spike": "Paladium spike",
@@ -50720,8 +51038,10 @@
       "gui.palamod.adminshopmobs.label_adminshop_mobs_menu": "Adminshop mobs menu",
       "gui.palamod.voidstoneminerconfig.label_de_la_pierre_dans_la_voidstone": "De la pierre dans la voidstone",
       "gui.palamod.adminshopplantwheat.number_buy": "Un nombre ici",
+      "block.palamod.softened_redstone_ore": "Soft redstone ore",
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
       "gui.palamod.armorpalahelpgui.label_endium_set": "Endium set",
+      "block.palamod.softened_coal_ore": "Soft coal ore",
       "block.palamod.witheredobsidian_3": "Withered obsidian",
       "item_group.palamod.grindercreativetab": "Palamod : Grinder tab",
       "jei.palamod.cobblebreakerjeiinfo": "The cobblebreaker is a machine who take cobblestone and compress them to obtain type of ore like paladium, titane, amethyst or nearly all vanilla ore\nYou can also use voidstone minage to replace cobblestone to make a afk farm",
@@ -50831,6 +51151,7 @@
       "gui.palamod.adminshoputilitiesemerald.number_buy": "Un nombre ici",
       "block.palamod.erable_sappling": "Pousse en erable",
       "block.palamod.flatten_amethyst_chest": "Coffre applati en améthyste",
+      "block.palamod.softened_iron_ore": "Soft iron ore",
       "gui.palamod.downloaderlink.label_money_account_to_this_block": "du palamod au block ",
       "gui.palamod.adminshopplantwarpedfungus.label_amount": "Quantité",
       "gui.palamod.palahelpore.button_back": "Revenir en arrière",
@@ -51062,6 +51383,7 @@
       "advancements.avancementcrafttoegether.descr": "Fabrique un endium ingot",
       "item.palamod.pickaxeofthegodslv_9.description_0": "Level 9",
       "gui.palamod.analyserresult.label_wool": "Laine",
+      "block.palamod.softened_diamond_ore": "Soft diamond ore",
       "gui.palamod.adminshoporediamond.button_sell": "Vendre",
       "painting.palamod.plains_16.title": "Plains 1 6",
       "block.palamod.endium_slab": "Dalle en enidum",
@@ -51179,6 +51501,7 @@
       "block.palamod.flatten_titane_chest": "Coffre applati en titane ",
       "gui.palamod.armorpalahelpgui.label_craftable": "Craftable",
       "gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set": "Mixed endium armor set",
+      "item.palamod.pigarmor_chestplate": "Pig Chestplate",
       "gui.palamod.crusherpalahelpgui.label_il_faut_mettre_du_fuel_et_des_f": "Il faut mettre du fuel* et des fruit dans le",
       "itemGroup.tabgrindercreativetab": "Table créative du grinder",
       "gui.palamod.palahelptree.label_crafter_le_portail_en_titane": "Crafter le portail en titane",
@@ -51440,6 +51763,7 @@
       "gui.palamod.notyetgui.label_this_feature_hasnt_been_develop": "This feature hasn\u0027t been developed yet",
       "block.palamod.guardian_block": "Bloc de guardian",
       "item.palamod.broadsword_head": "Glaive en paladium",
+      "block.palamod.softened_lapis_lazulis_ore": "Soft lapis lazulis ore",
       "block.palamod.paladium_obsidian_spike": "Obsidienne de pic en paladium",
       "gui.palamod.palahelptree.label_jacaranda_permet_de_crafter": "Jacaranda : permet de crafter",
       "gui.palamod.adminshopmobsghasttears.button_sell": "Vendre",
@@ -51720,6 +52044,7 @@
       "gui.palamod.adminshopplantpotato.label_amount": "Quantité :",
       "gui.palamod.adminshoporecoal.label_mode_set": "Quantité :",
       "procedure.palamod.thank1": "Merci d\u0027avoir installer le Palamod",
+      "item.palamod.pigarmor_helmet": "Pig Helmet",
       "gui.palamod.orelayerfat.label_titane_64_32": "Titane : -64 --) 32",
       "procedure.palamod.thank2": "Créer par cb9 et fufu",
       "gui.palamod.dynamicorelayer.label_amethyst_64_80": "Amethyste : -64 --) 80",
@@ -51784,6 +52109,7 @@
       "item.palamod.amethyst_shovel": "Pelle en Améthyste",
       "gamerule.gameruledisablewarning.description": "Disable warning for palamod experimental feature",
       "gui.palamod.adminshoporepaladium.label_paladium": "Paladium ",
+      "item.palamod.pigarmor_leggings": "Pig Leggings",
       "gui.palamod.golemtreec.button_see_ultilitary_branch": "Voir la branche utilitaire",
       "item.palamod.minage_voidstone": "Minage voidstone",
       "gui.palamod.jobsfarmercraftgui.tooltip_amethyst_excavator": "Amethyst excavator",
@@ -51797,6 +52123,7 @@
       "gui.palamod.adminshopmobs_2honeycomb.button_buy": "Acheter",
       "gui.palamod.palamachinepalahelpgui.label_voir_bton_pour_les_craft": "Voir Bâton pour les craft",
       "gui.palamod.adminshopblockblackstone.label_sell_price_1": "Prix de vente : 1",
+      "item.palamod.pigarmor_boots": "Pig Boots",
       "advancements.achmpotg_1.descr": "Obatain or craft a pickaxe of the gods ( lv1)",
       "item.palamod.pesyblpotion.description_0": "Fufu si c\u0027est un ref au rire jaune t\u0027es pas discret lol",
       "gui.palamod.adminshopmobs.button_red_mushroom": "Champignon rouge",
@@ -52122,6 +52449,7 @@
       "gui.palamod.guardiangui.label_golem": "Golem",
       "gui.palamod.palahelpore.label_paladium_le_minerais_le_plus_pu": "Paladium : Le minerais le plus puissant minable",
       "item.palamod.paladiumarmorcustom_7_leggings": "Paladium Leggings",
+      "block.palamod.softened_gold_ore": "Soft golden ore",
       "gui.palamod.crusherpalahelpgui.label_crusher_le_fuel_est_soit_le_gol": "crusher. Le fuel est soit le gold mixed coal,",
       "gui.palamod.guardiangui.label_level": "Level ",
       "block.palamod.paladium_spike": "Pic en paladium",
@@ -52551,14 +52879,14 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.044",
+    "version": "1.20.044.1",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
     "license": " CC-BY-NC-4.0 + https://pastebin.com/47smwufD",
     "serverSideOnly": false,
     "updateURL": "https://github.com/cbaie9/ng_wpckiller/raw/main/update.json",
-    "modPicture": "minecraft",
+    "modPicture": "dev",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

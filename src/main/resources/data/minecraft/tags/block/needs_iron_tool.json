@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "palamod:softened_diamond_ore",
+    "palamod:softened_gold_ore",
     "palamod:softened_findium_ore",
     "palamod:exctractor",
     "palamod:deepslate_findium_ore",

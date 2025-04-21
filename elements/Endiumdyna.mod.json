@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "endium_dynamite",
+    "texture": "dynamite_endium",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
@@ -59,6 +59,10 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

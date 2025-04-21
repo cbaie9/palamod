@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "palamod:softened_lapis_lazulis_ore",
+    "palamod:softened_redstone_ore",
+    "palamod:softened_diamond_ore",
+    "palamod:softened_gold_ore",
+    "palamod:softened_iron_ore",
+    "palamod:softened_coal_ore",
     "palamod:cobbledsoftstonestairs",
     "palamod:cobbledsoftstoneslab",
     "palamod:softstonestairs",

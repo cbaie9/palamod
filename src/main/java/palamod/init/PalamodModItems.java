@@ -62,6 +62,7 @@ import palamod.item.RanbowarmorItem;
 import palamod.item.PotatobackpackItem;
 import palamod.item.PoisonimbuepotionItem;
 import palamod.item.PlateItem;
+import palamod.item.PigarmorItem;
 import palamod.item.PickaxepaternItem;
 import palamod.item.Pickaxeofthegodslv9Item;
 import palamod.item.Pickaxeofthegodslv8Item;
@@ -880,6 +881,16 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> SOFTSTONESTAIRS = block(PalamodModBlocks.SOFTSTONESTAIRS);
 	public static final DeferredItem<Item> COBBLEDSOFTSTONESLAB = block(PalamodModBlocks.COBBLEDSOFTSTONESLAB);
 	public static final DeferredItem<Item> COBBLEDSOFTSTONESTAIRS = block(PalamodModBlocks.COBBLEDSOFTSTONESTAIRS);
+	public static final DeferredItem<Item> SOFTENED_COAL_ORE = block(PalamodModBlocks.SOFTENED_COAL_ORE);
+	public static final DeferredItem<Item> SOFTENED_IRON_ORE = block(PalamodModBlocks.SOFTENED_IRON_ORE);
+	public static final DeferredItem<Item> SOFTENED_GOLD_ORE = block(PalamodModBlocks.SOFTENED_GOLD_ORE);
+	public static final DeferredItem<Item> SOFTENED_DIAMOND_ORE = block(PalamodModBlocks.SOFTENED_DIAMOND_ORE);
+	public static final DeferredItem<Item> SOFTENED_REDSTONE_ORE = block(PalamodModBlocks.SOFTENED_REDSTONE_ORE);
+	public static final DeferredItem<Item> SOFTENED_LAPIS_LAZULIS_ORE = block(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE);
+	public static final DeferredItem<Item> PIGARMOR_HELMET = REGISTRY.register("pigarmor_helmet", PigarmorItem.Helmet::new);
+	public static final DeferredItem<Item> PIGARMOR_CHESTPLATE = REGISTRY.register("pigarmor_chestplate", PigarmorItem.Chestplate::new);
+	public static final DeferredItem<Item> PIGARMOR_LEGGINGS = REGISTRY.register("pigarmor_leggings", PigarmorItem.Leggings::new);
+	public static final DeferredItem<Item> PIGARMOR_BOOTS = REGISTRY.register("pigarmor_boots", PigarmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -47,7 +47,7 @@
     },
     "creativeTabs": [
       {
-        "value": "DECORATIONS"
+        "value": "CUSTOM:Palamod"
       }
     ],
     "hardness": 0.0,
@@ -79,7 +79,7 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "forceTicking": false,
     "emissiveRendering": false,
     "hasTileEntity": false,
