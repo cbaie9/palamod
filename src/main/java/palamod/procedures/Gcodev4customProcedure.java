@@ -725,7 +725,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.INGOT_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.INGOT_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -734,7 +734,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && 1 <= new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 1 <= new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -1115,7 +1115,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.BLOCK_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.BLOCK_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -1124,7 +1124,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && 9 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 9 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -1514,7 +1514,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && 3 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 3 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -1895,7 +1895,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.PICKAXE_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.PICKAXE_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -1904,7 +1904,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && 3 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 3 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -2285,7 +2285,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.SHOVEL_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.SHOVEL_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -2294,7 +2294,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && 1 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 1 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -2675,7 +2675,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.SWORD_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.SWORD_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -2684,7 +2684,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && (2 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (2 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -3093,7 +3093,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.HAMMER_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.HAMMER_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -3102,7 +3102,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && (6 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (6 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -3511,7 +3511,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.BROADSWORD_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.BROADSWORD_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -3520,7 +3520,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && (4 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (4 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)
@@ -3929,7 +3929,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.FASTSWORD_PATERN.get() && (new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.FASTSWORD_PATTERN.get() && (new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							if (world instanceof ILevelExtension _ext) {
 								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -3938,7 +3938,7 @@ public class Gcodev4customProcedure {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATERN.get() && (4 < new Object() {
+					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (4 < new Object() {
 						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
 							if (blockEntity != null)

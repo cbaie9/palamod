@@ -31,7 +31,7 @@
     "specialInformation": {
       "fixedValue": [
         "Surprise",
-        "Que va-t-il y avoir dedant ?"
+        "What's gonna be inside ?"
       ]
     },
     "glowCondition": {
@@ -45,6 +45,9 @@
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "CUSTOM:Switcharrow"
+    },
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 0,
@@ -56,6 +59,10 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

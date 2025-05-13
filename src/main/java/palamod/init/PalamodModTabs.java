@@ -306,18 +306,9 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.SHOVEL_HEAD.get());
 				tabData.accept(PalamodModItems.SWORD_HEAD.get());
 				tabData.accept(PalamodModItems.AXE_PATERN.get());
-				tabData.accept(PalamodModItems.PICKAXE_PATERN.get());
-				tabData.accept(PalamodModItems.BROADSWORD_PATERN.get());
-				tabData.accept(PalamodModItems.BLOCK_PATERN.get());
-				tabData.accept(PalamodModItems.FASTSWORD_PATERN.get());
-				tabData.accept(PalamodModItems.INGOT_PATERN.get());
-				tabData.accept(PalamodModItems.HAMMER_PATERN.get());
-				tabData.accept(PalamodModItems.SWORD_PATERN.get());
-				tabData.accept(PalamodModItems.SHOVEL_PATERN.get());
 				tabData.accept(PalamodModItems.AMETHYST_HAMMER.get());
 				tabData.accept(PalamodModItems.TITANE_HAMMER.get());
 				tabData.accept(PalamodModItems.PALADIUM_HAMMER.get());
-				tabData.accept(PalamodModItems.SOCKET_PATERN.get());
 				tabData.accept(PalamodModItems.SMELT_MODIFIER.get());
 				tabData.accept(PalamodModItems.ENDIUM_HAMMER.get());
 				tabData.accept(PalamodModBlocks.TCV_2.get().asItem());
@@ -339,7 +330,16 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get());
 				tabData.accept(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get());
 				tabData.accept(PalamodModItems.ENDIUM_SHOVEL_HEAD.get());
-				tabData.accept(PalamodModItems.GLUEBALLPATERN.get());
+				tabData.accept(PalamodModItems.PICKAXE_PATTERN.get());
+				tabData.accept(PalamodModItems.BROADSWORD_PATTERN.get());
+				tabData.accept(PalamodModItems.BLOCK_PATTERN.get());
+				tabData.accept(PalamodModItems.FASTSWORD_PATTERN.get());
+				tabData.accept(PalamodModItems.INGOT_PATTERN.get());
+				tabData.accept(PalamodModItems.HAMMER_PATTERN.get());
+				tabData.accept(PalamodModItems.SWORD_PATTERN.get());
+				tabData.accept(PalamodModItems.SHOVEL_PATTERN.get());
+				tabData.accept(PalamodModItems.SOCKET_PATTERN.get());
+				tabData.accept(PalamodModItems.GLUEBALLPATTERN.get());
 			}).withTabsBefore(PALAMOD.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DECORATIONCREATIVETAB = REGISTRY.register("decorationcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.decorationcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get())).displayItems((parameters, tabData) -> {
@@ -533,7 +533,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.GLUEBALL_CYAN.get().asItem());
 				tabData.accept(PalamodModBlocks.GLUEBALL_ORANGE.get().asItem());
 				tabData.accept(PalamodModBlocks.GLUEBALL_GRAY.get().asItem());
-				tabData.accept(PalamodModItems.GLUEBALLPATERN.get());
 				tabData.accept(PalamodModItems.AMETHYST_BACKPACK.get());
 				tabData.accept(PalamodModItems.TITANE_BACKPACK.get());
 				tabData.accept(PalamodModItems.PALADUM_BACKPACK.get());
@@ -541,6 +540,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModItems.GODVILLAGER_SPAWN_EGG.get());
 				tabData.accept(PalamodModItems.CHESTEXPLORER.get());
+				tabData.accept(PalamodModItems.GLUEBALLPATTERN.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

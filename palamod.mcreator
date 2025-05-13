@@ -4978,11 +4978,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxe_patern",
+      "registry_name": "pickaxe_pattern",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/PickaxepaternItem.java",
-          "src/main/resources/assets/palamod/models/item/pickaxe_patern.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_pattern.json"
         ]
       }
     },
@@ -4991,10 +4991,10 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "broadsword_patern",
+      "registry_name": "broadsword_pattern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/broadsword_patern.json",
+          "src/main/resources/assets/palamod/models/item/broadsword_pattern.json",
           "src/main/java/palamod/item/BroadswordpaternItem.java"
         ]
       }
@@ -5004,10 +5004,10 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "block_patern",
+      "registry_name": "block_pattern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/block_patern.json",
+          "src/main/resources/assets/palamod/models/item/block_pattern.json",
           "src/main/java/palamod/item/BlockpaternItem.java"
         ]
       }
@@ -5017,11 +5017,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fastsword_patern",
+      "registry_name": "fastsword_pattern",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/FastswordpaternItem.java",
-          "src/main/resources/assets/palamod/models/item/fastsword_patern.json"
+          "src/main/resources/assets/palamod/models/item/fastsword_pattern.json"
         ]
       }
     },
@@ -5030,11 +5030,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ingot_patern",
+      "registry_name": "ingot_pattern",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/IngotpaternItem.java",
-          "src/main/resources/assets/palamod/models/item/ingot_patern.json"
+          "src/main/resources/assets/palamod/models/item/ingot_pattern.json",
+          "src/main/java/palamod/item/IngotpaternItem.java"
         ]
       }
     },
@@ -5043,11 +5043,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "hammer_patern",
+      "registry_name": "hammer_pattern",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/HammerpaternItem.java",
-          "src/main/resources/assets/palamod/models/item/hammer_patern.json"
+          "src/main/resources/assets/palamod/models/item/hammer_pattern.json"
         ]
       }
     },
@@ -5056,11 +5056,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sword_patern",
+      "registry_name": "sword_pattern",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/SwordpaternItem.java",
-          "src/main/resources/assets/palamod/models/item/sword_patern.json"
+          "src/main/resources/assets/palamod/models/item/sword_pattern.json"
         ]
       }
     },
@@ -5069,10 +5069,10 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shovel_patern",
+      "registry_name": "shovel_pattern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/shovel_patern.json",
+          "src/main/resources/assets/palamod/models/item/shovel_pattern.json",
           "src/main/java/palamod/item/ShovelpaternItem.java"
         ]
       }
@@ -6043,11 +6043,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "socket_patern",
+      "registry_name": "socket_pattern",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/SocketpaternItem.java",
-          "src/main/resources/assets/palamod/models/item/socket_patern.json"
+          "src/main/resources/assets/palamod/models/item/socket_pattern.json"
         ]
       }
     },
@@ -39891,10 +39891,10 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "glueballpatern",
+      "registry_name": "glueballpattern",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/glueballpatern.json",
+          "src/main/resources/assets/palamod/models/item/glueballpattern.json",
           "src/main/java/palamod/item/GlueballpaternItem.java"
         ]
       }
@@ -46345,6 +46345,18 @@
           "src/main/resources/assets/palamod/models/item/pigarmor_chestplate.json"
         ]
       }
+    },
+    {
+      "name": "OpenenderchestProcedure",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "openenderchest_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/OpenenderchestProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48684,18 +48696,9 @@
       "Shovelhead",
       "Swordhead",
       "Axepartern",
-      "Pickaxepatern",
-      "Broadswordpatern",
-      "Blockpatern",
-      "Fastswordpatern",
-      "Ingotpatern",
-      "Hammerpatern",
-      "Swordpatern",
-      "Shovelpatern",
       "Amethystehammer",
       "Titanehammer",
       "Paladiumhammer",
-      "Socketpatern",
       "Smeltmodifier",
       "Endiumhammer",
       "Tcv2",
@@ -48717,6 +48720,15 @@
       "Greenpaladiumfastswordhead",
       "Endiumfastswordhead",
       "Endiumshovelhead",
+      "Pickaxepatern",
+      "Broadswordpatern",
+      "Blockpatern",
+      "Fastswordpatern",
+      "Ingotpatern",
+      "Hammerpatern",
+      "Swordpatern",
+      "Shovelpatern",
+      "Socketpatern",
       "Glueballpatern"
     ],
     "CUSTOM:Decorationcreativetab": [
@@ -48905,14 +48917,14 @@
       "Cyanglueball",
       "Orangeglueball",
       "Grayglueball",
-      "Glueballpatern",
       "Amethystbackpack",
       "Titanebackpack",
       "Paladumbackpack",
       "Endiumbackpack",
       "Totemfertility",
       "Godvillager",
-      "Chestexplorer"
+      "Chestexplorer",
+      "Glueballpatern"
     ]
   },
   "language_map": {
@@ -48961,7 +48973,7 @@
       "gui.palamod.grinderpalahelpgui.label_2_min_12": "2 min 1/2",
       "advancements.avancementendiumingot.title": "Very rare blue nugget",
       "item.palamod.scuba_helmet": "Scuba Helmet",
-      "item.palamod.legendary_stone_random.description_1": "Que va-t-il y avoir dedant ?",
+      "item.palamod.legendary_stone_random.description_1": "What\u0027s gonna be inside ?",
       "item.palamod.legendary_stone_random.description_0": "Surprise",
       "item.palamod.godvillager_spawn_egg": "God villager Spawn Egg",
       "gui.palamod.adminshopmobs.tooltip_go_to_the_page_2": "Go to the page 2",
@@ -48985,6 +48997,7 @@
       "gui.palamod.palahelpore.label_outils": "tools",
       "gui.palamod.adminshopplantcacao.label_buy_price_90": "Buy price : 90",
       "gui.palamod.crushergui.button_placeholder_tt": "placeholder_tt",
+      "item.palamod.broadsword_pattern": "Broadsword pattern",
       "entity.palamod.primedbigtnt": "Compact tnt",
       "gui.palamod.adminshopmobs_2leather.button_buy": "buy",
       "block.palamod.amethyst_chest": "Amethyst chest",
@@ -49056,6 +49069,7 @@
       "gui.palamod.adminshopmobs_2glowinksac.button_sell": "sell",
       "block.palamod.ostrya_wood_leaves": "Ostrya Leaves",
       "gui.palamod.adminpanelmenu.button_spawn_panel": "Spawn Panel",
+      "item.palamod.ingot_pattern": "Ingot pattern",
       "block.palamod.flatten_green_paladium_chest": "Flat green Paladium chest",
       "gui.palamod.palahelpblock.label_palahelp_block_menu": "Palahelp : block menu",
       "gui.palamod.adminshoporecoal.label_coal": "Coal",
@@ -49113,7 +49127,6 @@
       "palamod.procedure.pay4": "by ",
       "palamod.procedure.pay5": "Reason :",
       "palamod.procedure.pay1": "You send ",
-      "item.palamod.fastsword_patern": "Fastsword patern",
       "painting.palamod.forest_332.title": "Forest 16x32",
       "gui.palamod.adminshopore.button_redstone": "Redstone",
       "gui.palamod.adminshopblockstone.label_mode_set": "Amount :",
@@ -49161,7 +49174,7 @@
       "block.palamod.glueball_cyan": "Cyan glueball",
       "gui.palamod.adminshopblock_glowstone.button_sell": "sell",
       "block.palamod.kiwano_2": "Kiwano state 2",
-      "gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi": "fake water: un type d\u0027eau invisible qui",
+      "gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi": "fake water: a type of water that hit",
       "block.palamod.kiwano_1": "Kiwano state",
       "block.palamod.kiwano_0": "Kiwano state 0",
       "gui.palamod.adminshopmobs_rottenflesh.button_sell": "sell",
@@ -49403,7 +49416,6 @@
       "block.palamod.slimepad_blue": "Blue slimepad",
       "gui.palamod.adminshopmobs_rottenflesh.label_paladium": "Rotten flesh",
       "gui.palamod.adminshopplantredmushroom.label_paladium": "Red Mushroom",
-      "item.palamod.hammer_patern": "Hammer patern",
       "enchantment.palamod.autosmeltpotg": "Auto Smelt",
       "block.palamod.judeecercis_leaves": "Judeecercis Leaves",
       "item.palamod.paladium_particle": "Paladium particle",
@@ -49455,6 +49467,7 @@
       "item.palamod.amethyst_hoe": "Amethyst hoe",
       "gui.palamod.adminshopmobs_2.label_adminshop_plant_section": "Adminshop - mobs\u0027s item section",
       "gui.palamod.adminshopblocksoulsand.label_buy_price_20": "Buy price :  20",
+      "item.palamod.socket_pattern": "Socket pattern",
       "gui.palamod.palamachinegui.label_inventory": "Inventory",
       "item.palamod.pickaxeofthegodslv_5.description_0": "Level 5",
       "death.attack.spike.paladium": "%1$s was crushed by a Paladium spike",
@@ -49495,7 +49508,7 @@
       "gui.palamod.forgeexamplegui.label_inventory": "Inventory",
       "gui.palamod.adminshopplantmelon.label_buy_price_125": "Buy Price : 5.8",
       "item.palamod.compressed_amethyst": "Compressed Amethyst",
-      "block.palamod.softened_titane_ore": "Titane Ore",
+      "block.palamod.softened_titane_ore": "Softened Titane Ore",
       "gamerule.lockedcraft.description": "lock certain craft behind jobs level you can farm to unlock more items",
       "gui.palamod.adminshopplantredmushroom.button_buy": "buy",
       "gui.palamod.crushergui.label_this_user_interface_is_in_graphi": "This user interface is in graphic upadate process",
@@ -49519,7 +49532,6 @@
       "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Buy Price : 2.5",
       "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Rotten flesh",
       "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop seed menu",
-      "item.palamod.block_patern": "Block patern",
       "item.palamod.knockback_modifier": "Knockback modifier",
       "biome.palamod.alternateplaines": "Alternate plaines",
       "gui.palamod.grinderpalahelpgui.label_broadsword": "Broadsword",
@@ -49630,7 +49642,6 @@
       "gui.palamod.adminpanelmenu.button_trixium_panel": "Trixium Panel",
       "block.palamod.deepslate_findium_ore": "Findium Ore",
       "gui.palamod.adminshopblocksoulsand.label_mode_set": "Amount :",
-      "item.palamod.sword_patern": "Sword patern",
       "gui.palamod.palahelptree.button_menu": "menu",
       "item.palamod.speed_modifier": "Speed modifier",
       "gui.palamod.jobsminercraftgui.tooltip_amethyst_builder_wand": "Amethyst builder wand",
@@ -49680,14 +49691,14 @@
       "gui.palamod.guardiangui.label_renommer": "Renommer",
       "gui.palamod.armorpalahelpgui.label_na2": "Mid game",
       "block.palamod.amethyst_slab": "Amethyst slab",
-      "block.palamod.softened_green_paladium_ore": "Green Paladium Ore",
+      "block.palamod.softened_green_paladium_ore": "Softened Green Paladium Ore",
       "item.minecraft.potion.effect.antifakepotion": "Potion of Antifake",
       "block.palamod.ostrya_wood_planks": "Ostrya Planks",
       "gui.palamod.armorpalahelpgui.label_na1": "N.A",
       "block.palamod.ostrya_wood_wood": "Ostrya Wood",
       "gui.palamod.adminshopmobsfrspidereyes.label_mode_set": "Amount :",
       "gui.palamod.crusherpalahelpgui.label_amthyste_soit_lamthyste_m": "( amethyst ) -\u003e l\u0027amethyst mixed coal,",
-      "gui.palamod.fluidpalahelp.label_soigne": "soigne",
+      "gui.palamod.fluidpalahelp.label_soigne": "heal any who is inside of it",
       "item.palamod.jump_orb": "Jump orb",
       "item.palamod.diamond_string": "Diamond string",
       "item.palamod.green_paladium_shovel_head": "Green paladium shovel head",
@@ -49733,7 +49744,7 @@
       "gui.palamod.adminshopblockstone.number_buy": "number here",
       "gui.palamod.adminshopplantmelon.button_sell": "sell",
       "gui.palamod.jobsfarmercraftgui.tooltip_endium_builder_wand": "Endium builder wand",
-      "block.palamod.softened_trixium_ore": "Trixium ore",
+      "block.palamod.softened_trixium_ore": "Softened Trixium ore",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush": "Palahelp :Xp bush ",
       "gui.palamod.crushergui.button_show_debug_variable": "show debug variable",
       "block.palamod.amethyst_stairs": "Amethyst stairs",
@@ -49766,7 +49777,7 @@
       "item.palamod.paladiumarmorcustom_4_helmet": "Paladium Helmet",
       "item.palamod.greenpaladiumfastsword": "Green paladium fastsword",
       "gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred": "An error has been encountred",
-      "gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui": "Angelique water : type d\u0027eau qui vous",
+      "gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui": "Angelique water : type of water who",
       "jei.palamod.grinderjeiinfo": "The grinder is structure who transform into a machine when built ( more info /palahelp -\u003e gui \u003e grinder ) it can create various item like hammer, fastsword or broadsword for example \nIt can be use to apply upgrade for those item or the pickaxe of the gods \nIt need fuel to work, it can work in 3 modes : paladium, green paladium and endium to make different tier of items To change modes make sure to empty the grinder via patern and break and replace the central block ( grinder block )",
       "item.palamod.disc_mii_chalenge.desc": "Koro - Mii chalenge - 2020",
       "advancements.advinvicrea.descr": "Use in trigger for potg",
@@ -49824,6 +49835,7 @@
       "block.palamod.ostrya_wood_slab": "Ostrya Slab",
       "block.palamod.ostrya_wood_log": "Ostrya Log",
       "item.palamod.paladiumarmorcustom_3_leggings": "Paladium Leggings",
+      "item.palamod.shovel_pattern": "Shove pattern",
       "gui.palamod.factionhomegui.label_faction_home": "Faction home",
       "gui.palamod.adminshoporefindium.button_buy": "buy",
       "gui.palamod.adminshopmobsfrspidereyes.label_paladium": "Fermented spider eyes",
@@ -49952,7 +49964,7 @@
       "item.palamod.pickaxeofthegodslv_8": "Pickaxe of the gods",
       "item.palamod.pickaxeofthegodslv_9": "Pickaxe of the gods",
       "gui.palamod.guardiangui.label_degats": "Dégats",
-      "gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p": "êmpecher la legendary stone de power",
+      "gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p": "To prevent damage use LG power of put",
       "item.palamod.pickaxeofthegodslv_4": "Pickaxe of the gods",
       "gui.palamod.grinderpalahelp_2gui.label_1_grinder_block_5_grinder_casin": "1 grinder block, 5 grinder casing, 20",
       "item.palamod.pickaxeofthegodslv_5": "Pickaxe of the gods",
@@ -50045,6 +50057,7 @@
       "item.palamod.legendary_stone_teleportation": "Legendary stone teleportation",
       "gui.palamod.crushergui.button_force_fusion": "Force Fusion ",
       "gui.palamod.palahelpblock.button_trees": "trees",
+      "item.palamod.pickaxe_pattern": "Pickaxe pattern",
       "block.palamod.withertnt": "Wither tnt",
       "gui.palamod.adminshopblock_gravel.label_sell_price_02": "Sell price : 0.2",
       "gui.palamod.paladiumchestgui.label_rings": "Rings",
@@ -50128,7 +50141,7 @@
       "gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe": "Endium pickaxe",
       "palamod.procedure.money_item": "1000$ has been added to your balance ",
       "item.palamod.hammer_head": "Paladium hammer head",
-      "block.palamod.softened_paladium_ore": "Paladium Ore",
+      "block.palamod.softened_paladium_ore": "Softened Paladium Ore",
       "gui.palamod.orelayer.label_empty": "----------------------------",
       "gui.palamod.adminshopplantwarpedfungus.label_mode_set": "Amount :",
       "palamod.procedure.return_ore_menu": "Return to the adminshop\u0027s ore menu",
@@ -50166,7 +50179,6 @@
       "advancements.avancementlittlekitforalchimist.descr": "Craft an alchemy creator ",
       "gui.palamod.crushergui.label_inventaire": "Inventory",
       "item.palamod.paladiumarmorcustom_7_chestplate": "Paladium Chestplate",
-      "item.palamod.ingot_patern": "Ingot patern",
       "gui.palamod.palahelpblock.button_back": "Back",
       "gui.palamod.grinderpalahelpgui.button_menu": "menu",
       "item.palamod.poison_imbue_potion": "Poison imbue potion",
@@ -50180,10 +50192,10 @@
       "gui.palamod.armorpalahelpgui.label_effect2": "Effect",
       "gui.palamod.armorpalahelpgui.label_effect3": "Effect",
       "gui.palamod.jobsgui.label_alchimist": "Alchimist",
-      "block.palamod.softened_endium_nugget_ore": "Endium nugget Ore",
+      "block.palamod.softened_endium_nugget_ore": "Softened Endium nugget Ore",
       "block.palamod.jacaranda_fence": "Jacaranda Fence",
       "item.palamod.endiumfastsword": "Endium fastsword",
-      "block.palamod.softened_findium_ore": "Findium Ore",
+      "block.palamod.softened_findium_ore": "Softened Findium Ore",
       "gui.palamod.xpbushpalahelpgui.label_xp_bush_est_une_plant_qui_fait_p": "Xp bush est une plant qui fait pousser",
       "item.palamod.wither_imbue_potion": "Wither imbue potion",
       "gui.palamod.notyetgui.label_please_wait_or_check_on_the_disc": "Please wait or check on the discord",
@@ -50196,6 +50208,7 @@
       "block.palamod.jacaranda_wood": "Jacaranda Wood",
       "gui.palamod.adminshopplantbrownmushroom.label_buy_price_125": "Buy Price : 5",
       "gamerule.lockedcraft": "Palamod : Locked crafts",
+      "item.palamod.hammer_pattern": "Hammer pattern",
       "gui.palamod.armorpalahelpgui.label_na": "N.A",
       "item.palamod.mine_clearer.description_0": "Admin item : clear all in 10*10*10 area",
       "block.palamod.obsidianstairs": "Obsidian stairs",
@@ -50225,7 +50238,6 @@
       "gui.palamod.adminshoporeiron.label_sell_price_15": "Sell price : 15",
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "show debug variable",
       "gui.palamod.adminshopore.button_gold": "Gold",
-      "item.palamod.socket_patern": "Socket patern",
       "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Green Paladium Excavator",
       "gui.palamod.adminshopplantwheat.label_paladium": "Wheat seed",
       "gui.palamod.adminshoporecoal.label_sell_price_3": "Sell price :  3",
@@ -50251,13 +50263,12 @@
       "block.palamod.online_detector_on": "Online detector",
       "gui.palamod.jobsminercraftgui.tooltip_dollard_stone": "Dollard stone ",
       "gui.palamod.jobsminercraftgui.tooltip_palaforge": "Palaforge",
-      "item.palamod.shovel_patern": "Shove lpatern",
       "gui.palamod.jobsfarmercraftgui.label_jobs_miner_crafts": "Jobs : Farmer crafts",
       "gui.palamod.jobsgui.label_le_hunter": "Hunter",
       "item.palamod.compressedxpberry": "Compressed xp berry",
       "item.palamod.endium_broadsword_head": "Endium broadsword head",
       "item.palamod.farmerjobsitem": "Farmer jobs",
-      "gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut": "vous fait des dégats Peut peut être",
+      "gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut": "any entity that is in contact ",
       "gui.palamod.palahelpnotsupported.label_palahelp_error": "Palahelp - error",
       "gui.palamod.adminshopblockstone.button_sell": "sell",
       "painting.palamod.forest_32.title": "Forest 32x",
@@ -50294,6 +50305,7 @@
       "block.palamod.eggplant_2": "Eggplant state 2",
       "item.palamod.paladiumgreenpickaxe": "Green Paladium Pickaxe",
       "gui.palamod.adminshopmobs_2glowinksac.label_mode_set": "Amount :",
+      "item.palamod.fastsword_pattern": "Fastsword pattern",
       "block.palamod.eggplant_1": "Eggplant state 1",
       "block.palamod.eggplant_0": "Eggplant state 0",
       "effect.palamod.fireimbue": "Fire imbue",
@@ -50340,7 +50352,7 @@
       "block.palamod.hdv_block": "Hdvblock",
       "block.palamod.drawbridge.description_0": "In devloppement ( beta )",
       "enchantment.palamod.onemoreupgradeenchant": "One more upgrade",
-      "block.palamod.softened_amethyst_ore": "Amethyste Ore",
+      "block.palamod.softened_amethyst_ore": "Softened Amethyste Ore",
       "gui.palamod.trashgui.label_inventory": "Inventory",
       "gui.palamod.potgtranfert.label_potg_transfert_gui": "Potg transfert gui",
       "config.palamod.palamodconfirgurationfile": "Palamod_client_settings",
@@ -50537,6 +50549,7 @@
       "gui.palamod.adminshoporepaladium.number_buy": "number here",
       "gui.palamod.palaerror_0005.label_you_dont_have_the_permission_to": "You don\u0027t have the permission to",
       "item.palamod.sealedxpbottle": "Sealed xp bottle",
+      "item.palamod.glueballpattern": "Glueball pattern",
       "item.palamod.titanebroadsword": "Titane broadsword",
       "gui.palamod.adminshoporediamond.button_buy": "buy",
       "gui.palamod.adminshopblockgrass.button_sell": "sell",
@@ -50552,7 +50565,6 @@
       "gui.palamod.adminshoputilities.label_wip": "Useful",
       "item.palamod.chestexplorer": "Chest explorer",
       "gui.palamod.adminshopmobs_2.button_wheat_seed": "Ghast\u0027s tears",
-      "item.palamod.glueballpatern": "Glueball patern",
       "gui.palamod.phonegui.cheat_code_secret": "enter code",
       "gui.palamod.adminshopplant.button_wheat_seed": "Wheat",
       "gui.palamod.adminshopblock_netherrack.number_buy": "number here",
@@ -50655,6 +50667,7 @@
       "gui.palamod.grindergui.button_execute": "code - v4.1",
       "gui.palamod.adminshopblockoakwood.label_oak_wood": "Oak wood",
       "gui.palamod.adminshopmobs_2blaze.button_buy": "buy",
+      "item.palamod.block_pattern": "Block pattern",
       "gui.palamod.crusherpalahelpgui.label_fruit_ici": "Fruit ici",
       "gui.palamod.adminshopmobsendereyes.button_buy": "buy",
       "gui.palamod.adminshopblock_netherrack.button_buy": "buy",
@@ -50700,6 +50713,7 @@
       "block.palamod.deepslate_endium_nugget_ore": "Endium nugget ore",
       "item.palamod.gt_2_spawn_egg": "Paladium golem Spawn Egg",
       "gui.palamod.adminshopmenu.button_ores": "Ores",
+      "gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg": "an enchantment who nullfy dmg",
       "gui.palamod.adminshopblock_sand.number_buy": "number here",
       "block.palamod.typesettingmax.description_0": "Remake from bibliocraft",
       "gui.palamod.adminshopplant.button_melon": "Melon",
@@ -50718,6 +50732,7 @@
       "gui.palamod.backpackpaladium.label_inventory": "Inventory",
       "gui.palamod.adminshoporefindium.label_amount": "Amount :",
       "gui.palamod.jobsserver.label_jobs": "Jobs",
+      "item.palamod.sword_pattern": "Sword pattern",
       "gui.palamod.adminshopmobsbone.label_paladium": "Bone",
       "item.palamod.pickaxeofthegodslv_19.description_0": "Level 19",
       "gui.palamod.adminshopplantpotato.label_paladium": "Potato",
@@ -50769,7 +50784,6 @@
       "gui.palamod.onlinedetectorgui.label_insert_player_to_detect": "Insert player to detect",
       "gui.palamod.endiumchestgui.label_ring": "Rings",
       "item.palamod.paladiumarmorcustom_10_leggings": "Paladium Leggings",
-      "item.palamod.broadsword_patern": "Broadsword patern",
       "block.palamod.lucky_block": "Lucky block ",
       "block.palamod.colored_lamp": "Colored lamp",
       "gui.palamod.analyserresult.label_cobblestone": "Cobblestone",
@@ -50866,7 +50880,6 @@
       "block.palamod.deepslate_amethyst_ore": "Amethyste Ore",
       "palamod.procedure.sealed_xp_bottle_get_amount": "Contain xp :",
       "gui.palamod.legendarystonepalahelp.label_legendary_stone_wiki": "Palahelp : Legendary stone",
-      "item.palamod.pickaxe_patern": "Pickaxe patern",
       "gui.palamod.adminshopmobsendereyes.label_buy_price_125": "Buy Price : 3.5",
       "gui.palamod.jobsminercraftgui.tooltip_sealed_xp_bottle": "Sealed xp bottle",
       "gui.palamod.adminshopplantcactus.button_buy": "buy",
@@ -50950,6 +50963,7 @@
       "gui.palamod.palahelpore.label_outils": "outils",
       "gui.palamod.adminshopplantcacao.label_buy_price_90": "Buy price : 90",
       "gui.palamod.crushergui.button_placeholder_tt": "placeholder_tt",
+      "item.palamod.broadsword_pattern": "Broadsword pattern",
       "entity.palamod.primedbigtnt": "Magic tnt",
       "gui.palamod.adminshopmobs_2leather.button_buy": "Acheter",
       "block.palamod.slimepad": "Slime padd",
@@ -51021,6 +51035,7 @@
       "gui.palamod.adminshoporepaladium.button_sell": "Vendre",
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
       "gui.palamod.adminpanelmenu.button_spawn_panel": "Panel du point d\u0027apparition",
+      "item.palamod.ingot_pattern": "Ingot pattern",
       "block.palamod.flatten_green_paladium_chest": "Flat green Paladium chest",
       "gui.palamod.palahelpblock.label_palahelp_block_menu": "Palahelp : Menu des blocs",
       "gui.palamod.adminshoporecoal.label_coal": "Charbon",
@@ -51078,7 +51093,6 @@
       "palamod.procedure.pay4": "de la part de",
       "palamod.procedure.pay5": "Raison : ",
       "palamod.procedure.pay1": "Vous avez envoyé",
-      "item.palamod.fastsword_patern": "Fastsword patern",
       "painting.palamod.forest_332.title": "Forest 3 3 2",
       "gui.palamod.adminshopblockstone.label_mode_set": "Quantité :",
       "gui.palamod.adminshopore.button_redstone": "Redstone",
@@ -51371,7 +51385,6 @@
       "subtitles.roulette_paladienne": "It\u0027s the paladienne roulette",
       "block.palamod.slimepad_blue": "Blue slimepad",
       "gui.palamod.adminshopmobs_rottenflesh.label_paladium": "Yeux d\u0027araignée",
-      "item.palamod.hammer_patern": "Hammer patern",
       "gui.palamod.adminshopplantredmushroom.label_paladium": "Cactus",
       "enchantment.palamod.autosmeltpotg": "Améloiration d\u0027auto cuiseur",
       "block.palamod.judeecercis_leaves": "Feuilles de judeecercis",
@@ -51425,6 +51438,7 @@
       "item.palamod.amethyst_hoe": "Houe en améthyste",
       "gui.palamod.adminshopblocksoulsand.label_buy_price_20": "Prix d\u0027achat :  20",
       "gui.palamod.adminshopmobs_2.label_adminshop_plant_section": "Adminshop - mobs\u0027s item section",
+      "item.palamod.socket_pattern": "Socket pattern",
       "gui.palamod.palamachinegui.label_inventory": "Inventaire",
       "item.palamod.pickaxeofthegodslv_5.description_0": "Level 5",
       "death.attack.spike.paladium": "",
@@ -51488,7 +51502,6 @@
       "palamod.procedure.jobsgetlvl": "Niveau ",
       "gui.palamod.legendarystonepalahelp.label_teleportation_vous_tp_aletorem": "Teleportation : vous tp aletorement",
       "gui.palamod.jobsgui.label_last_unlocked_items": "Last unlocked items",
-      "item.palamod.block_patern": "Block patern",
       "gui.palamod.adhutilitiesredstone.label_buy_price_125": "Prix d\u0027achat : 6.75",
       "gui.palamod.adminshopmobs_2.button_crimson_fungun": "Viande putréfié",
       "gui.palamod.adminshopplant.label_adminshop_seed_menu": "Adminshop - Menu des graines",
@@ -51604,7 +51617,6 @@
       "gui.palamod.adminpanelmenu.button_trixium_panel": "Panel des trixium",
       "block.palamod.deepslate_findium_ore": "Minerais de findium des abîmes",
       "gui.palamod.adminshopblocksoulsand.label_mode_set": "Quantité :",
-      "item.palamod.sword_patern": "Sword patern",
       "gui.palamod.palahelptree.button_menu": "Menu",
       "item.palamod.speed_modifier": "Modificateur de vitesse",
       "gui.palamod.adminshopore.button_amethyst": "Améthyste",
@@ -51798,6 +51810,7 @@
       "block.palamod.ostrya_wood_slab": "Dalle en ostrya",
       "block.palamod.ostrya_wood_log": "Bùche d\u0027ostrya",
       "item.palamod.paladiumarmorcustom_3_leggings": "Jambière en Paladium Modifié",
+      "item.palamod.shovel_pattern": "Shove pattern",
       "gui.palamod.factionhomegui.label_faction_home": "Maison de faction",
       "gui.palamod.adminshoporefindium.button_buy": "Acheter",
       "gui.palamod.adminshopmobsfrspidereyes.label_paladium": "String",
@@ -52021,6 +52034,7 @@
       "item.palamod.legendary_stone_teleportation": "Pierre legendaire de téléportation",
       "gui.palamod.crushergui.button_force_fusion": "Forcer la fusion",
       "gui.palamod.palahelpblock.button_trees": "Arbres",
+      "item.palamod.pickaxe_pattern": "Pickaxe pattern",
       "block.palamod.withertnt": "Wither tnt",
       "gui.palamod.adminshopblock_gravel.label_sell_price_02": "Prix de vente : 0.2",
       "gui.palamod.paladiumchestgui.label_rings": "Anneaux",
@@ -52140,7 +52154,6 @@
       "advancements.avancementlittlekitforalchimist.descr": "Fabrique un alchemy créator",
       "gui.palamod.crushergui.label_inventaire": "Inventaire",
       "item.palamod.paladiumarmorcustom_7_chestplate": "Paladium Chestplate",
-      "item.palamod.ingot_patern": "Ingot patern",
       "gui.palamod.palahelpblock.button_back": "Revenir en arrière",
       "gui.palamod.grinderpalahelpgui.button_menu": "Menu",
       "item.palamod.poison_imbue_potion": "Poison imbue potion",
@@ -52170,6 +52183,7 @@
       "block.palamod.jacaranda_wood": "Bois de Jacaranda",
       "gui.palamod.adminshopplantbrownmushroom.label_buy_price_125": "Prix d\u0027achat : 5",
       "gamerule.lockedcraft": "Palamod : Locked crafts",
+      "item.palamod.hammer_pattern": "Hammer pattern",
       "gui.palamod.armorpalahelpgui.label_na": "N.A",
       "item.palamod.mine_clearer.description_0": "Admin item : clear all in 10*10*10 area",
       "block.palamod.obsidianstairs": "Escalier en obsidienne renforcée",
@@ -52199,7 +52213,6 @@
       "gui.palamod.adminshoporeiron.label_sell_price_15": "Prix de vente : 15",
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "Montrer les variable debug",
       "gui.palamod.adminshopore.button_gold": "Or",
-      "item.palamod.socket_patern": "Socket patern",
       "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Green Paladium Excavator",
       "gui.palamod.adminshopplantwheat.label_paladium": "Crimson fungus",
       "gui.palamod.adminshoporecoal.label_sell_price_3": "Prix de vente :  3",
@@ -52225,7 +52238,6 @@
       "block.palamod.online_detector_on": "Détecteur d\u0027activité",
       "gui.palamod.jobsminercraftgui.tooltip_dollard_stone": "Dollard stone ",
       "gui.palamod.jobsminercraftgui.tooltip_palaforge": "Palaforge",
-      "item.palamod.shovel_patern": "Shove lpatern",
       "gui.palamod.jobsfarmercraftgui.label_jobs_miner_crafts": "Jobs : Miner crafts",
       "gui.palamod.jobsgui.label_le_hunter": "Hunter",
       "item.palamod.compressedxpberry": "Baie d\u0027xp compressée",
@@ -52268,6 +52280,7 @@
       "block.palamod.eggplant_2": "Eggplant état 2",
       "item.palamod.paladiumgreenpickaxe": "Pioche en paladium vert",
       "gui.palamod.adminshopmobs_2glowinksac.label_mode_set": "Quantité :",
+      "item.palamod.fastsword_pattern": "Fastsword pattern",
       "block.palamod.eggplant_1": "Eggplant état 1",
       "block.palamod.eggplant_0": "Eggplant état 0",
       "effect.palamod.fireimbue": "Feu imbue",
@@ -52514,6 +52527,7 @@
       "gui.palamod.adminshoporepaladium.number_buy": "Un nombre ici",
       "gui.palamod.palaerror_0005.label_you_dont_have_the_permission_to": "Vous n\u0027avez pas la permission requise pour",
       "item.palamod.sealedxpbottle": "Sealedxpbottle",
+      "item.palamod.glueballpattern": "Glueball pattern",
       "item.palamod.titanebroadsword": "Glaive en titane",
       "gui.palamod.adminshoporediamond.button_buy": "Acheter",
       "gui.palamod.adminshopblockgrass.button_sell": "Vendre",
@@ -52529,7 +52543,6 @@
       "gui.palamod.adminshoputilities.label_wip": "wip -- Sera fini bientôt",
       "item.palamod.chestexplorer": "Chest explorer",
       "gui.palamod.adminshopmobs_2.button_wheat_seed": "Larme de ghast",
-      "item.palamod.glueballpatern": "Glueball patern",
       "gui.palamod.phonegui.cheat_code_secret": "Entrer le code",
       "gui.palamod.adminshopplant.button_wheat_seed": "Wheat",
       "gui.palamod.adminshopblock_netherrack.number_buy": "Un nombre ici",
@@ -52634,6 +52647,7 @@
       "gui.palamod.grindergui.button_execute": "Executer",
       "gui.palamod.adminshopblockoakwood.label_oak_wood": "Bois de chène",
       "gui.palamod.adminshopmobs_2blaze.button_buy": "Acheter",
+      "item.palamod.block_pattern": "Block pattern",
       "gui.palamod.crusherpalahelpgui.label_fruit_ici": "Fruit ici",
       "gui.palamod.adminshopmobsendereyes.button_buy": "Acheter",
       "gui.palamod.adminshopblock_netherrack.button_buy": "Acheter",
@@ -52679,6 +52693,7 @@
       "block.palamod.deepslate_endium_nugget_ore": "Minerais d\u0027endium nugget des abîmes",
       "item.palamod.gt_2_spawn_egg": "Paladium golem Spawn Egg",
       "gui.palamod.adminshopmenu.button_ores": "Minerais",
+      "gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg": "an enchantment who nullfy dmg",
       "gui.palamod.adminshopblock_sand.number_buy": "Un nombre ici",
       "block.palamod.typesettingmax.description_0": "Remake from bibliocraft",
       "gui.palamod.adminshopplant.button_melon": "Melon",
@@ -52698,6 +52713,7 @@
       "gui.palamod.adminshopmobsbone.button_backd": "Revenir en arrière",
       "gui.palamod.adminshoporefindium.label_amount": "Amount :",
       "gui.palamod.jobsserver.label_jobs": "Jobs",
+      "item.palamod.sword_pattern": "Sword pattern",
       "gui.palamod.adminshopmobsbone.label_paladium": "Cactus",
       "item.palamod.pickaxeofthegodslv_19.description_0": "Level 19",
       "gui.palamod.adminshopplantpotato.label_paladium": "Graines de blé",
@@ -52749,7 +52765,6 @@
       "gui.palamod.onlinedetectorgui.label_insert_player_to_detect": "Insert player to detect",
       "gui.palamod.endiumchestgui.label_ring": "Anneaux",
       "item.palamod.paladiumarmorcustom_10_leggings": "Paladium Leggings",
-      "item.palamod.broadsword_patern": "Broadsword patern",
       "block.palamod.lucky_block": "Bloc chanceux",
       "block.palamod.colored_lamp": "Lampe colorée",
       "gui.palamod.analyserresult.label_cobblestone": "Pierre concassé",
@@ -52846,7 +52861,6 @@
       "block.palamod.deepslate_amethyst_ore": "Minerais d\u0027améthyste des abîmes",
       "palamod.procedure.sealed_xp_bottle_get_amount": "Xp contenue :",
       "gui.palamod.legendarystonepalahelp.label_legendary_stone_wiki": "Wiki des pierre légendaire",
-      "item.palamod.pickaxe_patern": "Pickaxe patern",
       "gui.palamod.adminshopmobsendereyes.label_buy_price_125": "Prix d\u0027achat : 6",
       "gui.palamod.jobsminercraftgui.tooltip_sealed_xp_bottle": "Sealed xp bottle",
       "gui.palamod.adminshopplantcactus.button_buy": "Acheter",

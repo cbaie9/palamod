@@ -17,7 +17,7 @@
           "use1Xscale": false,
           "x": 113,
           "y": 20,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -41,7 +41,7 @@
         "data": {
           "image": "6_fluid.png",
           "use1Xscale": true,
-          "x": 121,
+          "x": 120,
           "y": 57,
           "locked": false
         }
@@ -51,7 +51,7 @@
         "data": {
           "name": "label_fake_water_un_type_deau_invisi",
           "text": {
-            "fixedValue": "fake water: un type d'eau invisible qui"
+            "fixedValue": "fake water: a type of water that hit"
           },
           "color": {
             "value": -12829636,
@@ -67,7 +67,7 @@
         "data": {
           "name": "label_vous_fait_des_dgats_peut_peut",
           "text": {
-            "fixedValue": "vous fait des dégats Peut peut être"
+            "fixedValue": "any entity that is in contact "
           },
           "color": {
             "value": -12829636,
@@ -83,14 +83,14 @@
         "data": {
           "name": "label_mpecher_la_legendary_stone_de_p",
           "text": {
-            "fixedValue": "êmpecher la legendary stone de power"
+            "fixedValue": "To prevent damage use LG power of put"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "x": 118,
-          "y": 106,
+          "y": 103,
           "locked": false
         }
       },
@@ -99,8 +99,8 @@
         "data": {
           "image": "7angel.png",
           "use1Xscale": true,
-          "x": 119,
-          "y": 116,
+          "x": 117,
+          "y": 132,
           "locked": false
         }
       },
@@ -109,14 +109,14 @@
         "data": {
           "name": "label_angelique_water_type_deau_qui",
           "text": {
-            "fixedValue": "Angelique water : type d'eau qui vous"
+            "fixedValue": "Angelique water : type of water who"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 118,
-          "y": 142,
+          "x": 117,
+          "y": 153,
           "locked": false
         }
       },
@@ -125,14 +125,14 @@
         "data": {
           "name": "label_soigne",
           "text": {
-            "fixedValue": "soigne"
+            "fixedValue": "heal any who is inside of it"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "x": 117,
-          "y": 152,
+          "y": 163,
           "locked": false
         }
       },
@@ -174,8 +174,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_adminshop.png",
-          "hoveredImage": "arrow_adminshop_poi.png",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
           "onClick": {
             "name": "Blockback"
           },
@@ -195,6 +195,22 @@
           },
           "x": 253,
           "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_an_enchantment_who_nullfy_dmg",
+          "text": {
+            "fixedValue": "an enchantment who nullfy dmg"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 118,
+          "y": 114,
           "locked": false
         }
       }

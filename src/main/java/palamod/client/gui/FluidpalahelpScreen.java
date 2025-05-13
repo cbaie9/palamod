@@ -55,9 +55,9 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fluidpalahelp.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 200, 200, 200, 200);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/6_fluid.png"), this.leftPos + 7, this.topPos + 37, 0, 0, 22, 21, 22, 21);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/6_fluid.png"), this.leftPos + 6, this.topPos + 37, 0, 0, 22, 21, 22, 21);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/7angel.png"), this.leftPos + 5, this.topPos + 96, 0, 0, 21, 21, 21, 21);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/7angel.png"), this.leftPos + 3, this.topPos + 112, 0, 0, 21, 21, 21, 21);
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 
@@ -80,9 +80,10 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_fluid"), 49, 7, -1, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi"), 2, 63, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut"), 3, 73, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p"), 4, 86, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui"), 4, 122, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_soigne"), 3, 132, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p"), 4, 83, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui"), 3, 133, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_soigne"), 3, 143, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg"), 4, 94, -12829636, false);
 	}
 
 	@Override
@@ -102,8 +103,8 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 		};
 		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 158, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 158, this.topPos + 4, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new FluidpalahelpButtonMessage(1, x, y, z));
 						FluidpalahelpButtonMessage.handleButtonAction(entity, 1, x, y, z);

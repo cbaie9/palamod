@@ -15,23 +15,23 @@ public class GrinderresultcraftnumProcedure {
 		gnum_local = gnum;
 		input_item_slot1 = input_grinder_slot1.copy();
 		input_item_slot2 = input_grinder_slot2.copy();
-		if (input_item_slot1.getItem() == PalamodModItems.AXE_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 2) {
+		if (input_item_slot1.getItem() == PalamodModItems.AXE_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 2) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.PICKAXE_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 2) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.PICKAXE_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 2) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.BROADSWORD_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 3) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.BROADSWORD_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 3) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.BLOCK_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 9) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.BLOCK_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 9) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.FASTSWORD_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 3) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.FASTSWORD_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 3) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.INGOT_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.INGOT_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.HAMMER_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 6) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HAMMER_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 6) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.SWORD_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.SWORD_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_PATERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATERN.get() && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 1) {
 			output = 1;
 		} else if (input_item_slot1.getItem() == PalamodModItems.HAMMER_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
