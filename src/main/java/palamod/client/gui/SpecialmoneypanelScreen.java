@@ -45,7 +45,6 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		player_name.render(guiGraphics, mouseX, mouseY, partialTicks);
 		money.render(guiGraphics, mouseX, mouseY, partialTicks);

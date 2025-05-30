@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/exctractor",
+  "parent": "palamod:block/extractor",
   "display": {
     "thirdperson": {
       "rotation": [

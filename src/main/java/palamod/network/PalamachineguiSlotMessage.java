@@ -3,7 +3,7 @@ package palamod.network;
 
 import palamod.world.inventory.PalamachineguiMenu;
 
-import palamod.procedures.Palamachineprocessv2Procedure;
+import palamod.procedures.PalamachineprocessV3Procedure;
 
 import palamod.PalamodMod;
 
@@ -67,27 +67,23 @@ public record PalamachineguiSlotMessage(int slotID, int x, int y, int z, int cha
 			return;
 		if (slot == 0 && changeType == 0) {
 
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
+			PalamachineprocessV3Procedure.execute(world, x, y, z);
 		}
 		if (slot == 1 && changeType == 0) {
 
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
+			PalamachineprocessV3Procedure.execute(world, x, y, z);
 		}
 		if (slot == 2 && changeType == 0) {
 
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
+			PalamachineprocessV3Procedure.execute(world, x, y, z);
 		}
 		if (slot == 3 && changeType == 0) {
 
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
+			PalamachineprocessV3Procedure.execute(world, x, y, z);
 		}
 		if (slot == 4 && changeType == 0) {
 
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
-		}
-		if (slot == 5 && changeType == 0) {
-
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
+			PalamachineprocessV3Procedure.execute(world, x, y, z);
 		}
 	}
 

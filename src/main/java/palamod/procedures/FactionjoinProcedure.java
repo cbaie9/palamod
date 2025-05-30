@@ -23,42 +23,14 @@ public class FactionjoinProcedure {
 		double fac_id = 0;
 		String fac_name = "";
 		fac_name = StringArgumentType.getString(arguments, "fac_join_name");
-		fac_id = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_id_" + fac_name));
-		if ((new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_nojoin_" + fac_id))) == false || new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id + "_" + fac_name + "_" + entity.getStringUUID()))) {
+		fac_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_id_" + fac_name));
+		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_nojoin_" + fac_id)) == false || getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id + "_" + fac_name + "_" + entity.getStringUUID()))) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(0, 9, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("Faction_invite_" + fac_id), ((new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id))) - 1));
+					_blockEntity.getPersistentData().putDouble(("Faction_invite_" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)) - 1));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -94,14 +66,7 @@ public class FactionjoinProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("Faction_maxpower" + fac_id), (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_maxpower" + fac_id)) + 100));
+					_blockEntity.getPersistentData().putDouble(("Faction_maxpower" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_maxpower" + fac_id)) + 100));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -110,14 +75,7 @@ public class FactionjoinProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("Faction_power" + fac_id), (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_power" + fac_id)) + 50));
+					_blockEntity.getPersistentData().putDouble(("Faction_power" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_power" + fac_id)) + 50));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -130,5 +88,19 @@ public class FactionjoinProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" This faction required an invitation to join. Ask them how to join their faction \",\"color\":\"gold\"}]");
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

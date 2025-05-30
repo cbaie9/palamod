@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:extractor_item",
     "palamod:xpbottle",
     "palamod:flat_chest_upgrade",
     "palamod:pesyblpotion",

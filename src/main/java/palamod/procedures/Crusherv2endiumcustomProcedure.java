@@ -52,26 +52,10 @@ public class Crusherv2endiumcustomProcedure {
 					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					input = main_obj.get("Crusher-endium-input").getAsDouble();
 					output = main_obj.get("Crusher-endium-output").getAsDouble();
-					if (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_endium") >= input) {
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") >= input) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-							_setstack.setCount((int) (new Object() {
-								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-									if (world instanceof ILevelExtension _ext) {
-										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-										if (_itemHandler != null)
-											return _itemHandler.getStackInSlot(slotid).getCount();
-									}
-									return 0;
-								}
-							}.getAmount(world, BlockPos.containing(x, y, z), 2) + output));
+							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + output));
 							_itemHandlerModifiable.setStackInSlot(2, _setstack);
 						}
 						if (!world.isClientSide()) {
@@ -87,26 +71,10 @@ public class Crusherv2endiumcustomProcedure {
 							PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( endiui ) ( custom on )"));
 						}
 					} else {
-						if (Math.random() < (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_endium")) / input) {
+						if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") / input) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-								_setstack.setCount((int) (new Object() {
-									public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-										if (world instanceof ILevelExtension _ext) {
-											IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-											if (_itemHandler != null)
-												return _itemHandler.getStackInSlot(slotid).getCount();
-										}
-										return 0;
-									}
-								}.getAmount(world, BlockPos.containing(x, y, z), 2) + output));
+								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + output));
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
 							if (!world.isClientSide()) {
@@ -122,26 +90,10 @@ public class Crusherv2endiumcustomProcedure {
 								PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( endium ) ( custom on )"));
 							}
 						} else {
-							if (1 <= new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_endium")) {
+							if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium")) {
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (!world.isClientSide()) {
@@ -164,5 +116,21 @@ public class Crusherv2endiumcustomProcedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

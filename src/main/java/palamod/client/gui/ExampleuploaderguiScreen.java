@@ -42,15 +42,17 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 63 && mouseX < leftPos + 109 && mouseY > topPos + 5 && mouseY < topPos + 18)
+		if (mouseX > leftPos + 63 && mouseX < leftPos + 109 && mouseY > topPos + 5 && mouseY < topPos + 18) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_this_interface_need_an_upgrade"), mouseX, mouseY);
-		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 61 && mouseY < topPos + 79)
+		}
+		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 61 && mouseY < topPos + 79) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_money_output"), mouseX, mouseY);
-		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 27 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 27 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be"), mouseX, mouseY);
+		}
 	}
 
 	@Override

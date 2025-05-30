@@ -18,15 +18,7 @@ public class ObsidianpickaxeprocessProcedure {
 		if (entity == null)
 			return;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:opic")))) {
-			if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
+			if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 				{
 					Direction _dir = Direction.SOUTH;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -42,15 +34,7 @@ public class ObsidianpickaxeprocessProcedure {
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.SOUTH)), true);
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
+			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 				{
 					Direction _dir = Direction.EAST;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -66,15 +50,7 @@ public class ObsidianpickaxeprocessProcedure {
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.EAST)), true);
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
+			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 				{
 					Direction _dir = Direction.WEST;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -90,15 +66,7 @@ public class ObsidianpickaxeprocessProcedure {
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.WEST)), true);
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
+			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 				{
 					Direction _dir = Direction.UP;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -114,15 +82,7 @@ public class ObsidianpickaxeprocessProcedure {
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.UP)), true);
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.UP) {
+			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.UP) {
 				{
 					Direction _dir = Direction.SOUTH;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -138,15 +98,7 @@ public class ObsidianpickaxeprocessProcedure {
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.SOUTH)), true);
-			} else if ((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN) {
+			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN) {
 				{
 					Direction _dir = Direction.NORTH;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -164,5 +116,13 @@ public class ObsidianpickaxeprocessProcedure {
 					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.NORTH)), true);
 			}
 		}
+	}
+
+	private static Direction getDirectionFromBlockState(BlockState blockState) {
+		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (prop instanceof DirectionProperty dp)
+			return blockState.getValue(dp);
+		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 	}
 }

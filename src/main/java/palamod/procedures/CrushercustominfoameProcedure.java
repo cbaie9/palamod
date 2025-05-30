@@ -42,13 +42,13 @@ public class CrushercustominfoameProcedure {
 				}
 			}
 		}
-		return (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_amethyst")) + " / " + output;
+		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") + " / " + output;
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

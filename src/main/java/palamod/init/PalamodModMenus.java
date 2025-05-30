@@ -56,6 +56,7 @@ import palamod.world.inventory.ForgepalahelpguiMenu;
 import palamod.world.inventory.ForgeguiMenu;
 import palamod.world.inventory.ForgeexampleguiMenu;
 import palamod.world.inventory.FluidpalahelpMenu;
+import palamod.world.inventory.FlowertotemguiMenu;
 import palamod.world.inventory.FactionhomeguiMenu;
 import palamod.world.inventory.ExampleuploaderguiMenu;
 import palamod.world.inventory.ExamplegrinderguiMenu;
@@ -280,4 +281,5 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<GodvillagerguiMenu>> GODVILLAGERGUI = REGISTRY.register("godvillagergui", () -> IMenuTypeExtension.create(GodvillagerguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsserverMenu>> JOBSSERVER = REGISTRY.register("jobsserver", () -> IMenuTypeExtension.create(JobsserverMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<CobbleakerserverMenu>> COBBLEAKERSERVER = REGISTRY.register("cobbleakerserver", () -> IMenuTypeExtension.create(CobbleakerserverMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<FlowertotemguiMenu>> FLOWERTOTEMGUI = REGISTRY.register("flowertotemgui", () -> IMenuTypeExtension.create(FlowertotemguiMenu::new));
 }

@@ -48,22 +48,16 @@ public class AdshoppreviewamountbaseProcedure {
 			}
 		}.parse("{}");
 		if (n != 0) {
-			return "Amount : buy :" + (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) * fac_v + " / sell : " + (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) * n2;
+			return "Amount : buy :" + getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) * fac_v + " / sell : "
+					+ getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) * n2;
 		}
 		return "Amount : insert number in the bar";
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

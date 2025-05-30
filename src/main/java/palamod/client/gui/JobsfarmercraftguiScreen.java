@@ -25,7 +25,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -71,55 +73,80 @@ public class JobsfarmercraftguiScreen extends AbstractContainerScreen<Jobsfarmer
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 277 && mouseX < leftPos + 293 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
-		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		if (mouseX > leftPos + 277 && mouseX < leftPos + 293 && mouseY > topPos + 4 && mouseY < topPos + 20) {
+			String hoverText = ClosetheguitransProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
+		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_endium_pickaxe"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 45 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 45 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_pickaxe_of_the_gods"), mouseX, mouseY);
-		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_amethyst_excavator"), mouseX, mouseY);
-		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_titane_excavator"), mouseX, mouseY);
-		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_paladium_excavator"), mouseX, mouseY);
-		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_magical_tool"), mouseX, mouseY);
-		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_voidstone"), mouseX, mouseY);
-		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe"), mouseX, mouseY);
-		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 29 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 29 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_obsidian_tnt"), mouseX, mouseY);
-		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_compressed_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_mega_boom_tnt_soon"), mouseX, mouseY);
-		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_wodden_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_iron_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_golden_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_diamond_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_amethyst_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_titane_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 48 && mouseY < topPos + 64)
+		}
+		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 48 && mouseY < topPos + 64) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_paladium_spike_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 67 && mouseY < topPos + 83)
+		}
+		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 67 && mouseY < topPos + 83) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_lava_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 67 && mouseY < topPos + 83)
+		}
+		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 67 && mouseY < topPos + 83) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_fake_water_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 67 && mouseY < topPos + 83)
+		}
+		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 67 && mouseY < topPos + 83) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_slime_obsidian"), mouseX, mouseY);
-		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 67 && mouseY < topPos + 83)
+		}
+		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 67 && mouseY < topPos + 83) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsfarmercraftgui.tooltip_poison_obsidian"), mouseX, mouseY);
+		}
 	}
 
 	@Override

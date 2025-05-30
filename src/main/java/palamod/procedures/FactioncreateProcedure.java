@@ -26,47 +26,12 @@ public class FactioncreateProcedure {
 		double get_id = 0;
 		double nloop = 0;
 		fget_id = false;
-		nloop = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), "Faction_id") + 1;
-		if ((new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), "Faction_unlocked")) == true) {
-			if ((new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) == false) {
+		nloop = getBlockNBTNumber(world, new BlockPos(0, 9, 0), "Faction_id") + 1;
+		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), "Faction_unlocked") == true) {
+			if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID())) == false) {
 				while (fget_id == false) {
-					if (!(new Object() {
-						public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getBoolean(tag);
-							return false;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_oc_" + get_id)))) {
-						if (!(new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_hbc_" + get_id)))) {
+					if (!getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_oc_" + get_id))) {
+						if (!getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_hbc_" + get_id))) {
 							fget_id = true;
 							get_id = nloop;
 							break;
@@ -252,5 +217,19 @@ public class FactioncreateProcedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

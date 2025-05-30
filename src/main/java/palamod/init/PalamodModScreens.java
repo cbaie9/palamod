@@ -56,6 +56,7 @@ import palamod.client.gui.ForgepalahelpguiScreen;
 import palamod.client.gui.ForgeguiScreen;
 import palamod.client.gui.ForgeexampleguiScreen;
 import palamod.client.gui.FluidpalahelpScreen;
+import palamod.client.gui.FlowertotemguiScreen;
 import palamod.client.gui.FactionhomeguiScreen;
 import palamod.client.gui.ExampleuploaderguiScreen;
 import palamod.client.gui.ExamplegrinderguiScreen;
@@ -278,5 +279,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.GODVILLAGERGUI.get(), GodvillagerguiScreen::new);
 		event.register(PalamodModMenus.JOBSSERVER.get(), JobsserverScreen::new);
 		event.register(PalamodModMenus.COBBLEAKERSERVER.get(), CobbleakerserverScreen::new);
+		event.register(PalamodModMenus.FLOWERTOTEMGUI.get(), FlowertotemguiScreen::new);
 	}
 }

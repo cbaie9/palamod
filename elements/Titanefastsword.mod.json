@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -8,7 +8,7 @@
     "texture": "fastsword_titane",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Forge fastsword",
+    "name": "Titane fastsword",
     "specialInformation": {
       "fixedValue": []
     },
@@ -22,6 +22,9 @@
     "enchantability": 10,
     "damageVsEntity": 6.0,
     "usageCount": 400,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:TitaneIngot"

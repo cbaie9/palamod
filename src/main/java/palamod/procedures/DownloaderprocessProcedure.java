@@ -23,14 +23,7 @@ public class DownloaderprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "downloader_linked_account_uuid")) + ".json"));
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account_uuid") + ".json"));
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
@@ -41,86 +34,14 @@ public class DownloaderprocessProcedure {
 				}
 				bufferedReader.close();
 				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (new Object() {
-					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getBoolean(tag);
-						return false;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "downloader_filter") && new Object() {
-					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getBoolean(tag);
-						return false;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "downloader_state") && new Object() {
-					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getBoolean(tag);
-						return false;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "downloader_linked")) {
-					if (main.get("money").getAsDouble() >= StockedbaseadminshopbuyProcedure.execute(world, x, y, z) && (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) == 0 || new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) < 64 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem())) {
+				if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "downloader_filter") && getBlockNBTLogic(world, BlockPos.containing(x, y, z), "downloader_state")
+						&& getBlockNBTLogic(world, BlockPos.containing(x, y, z), "downloader_linked")) {
+					if (main.get("money").getAsDouble() >= StockedbaseadminshopbuyProcedure.execute(world, x, y, z)
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() == 0 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() < 64
+									&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem())) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = (new Object() {
-								public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-									if (world instanceof ILevelExtension _ext) {
-										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-										if (_itemHandler != null)
-											return _itemHandler.getStackInSlot(slotid).copy();
-									}
-									return ItemStack.EMPTY;
-								}
-							}.getItemStack(world, BlockPos.containing(x, y, z), 3)).copy();
-							_setstack.setCount((int) (1 + new Object() {
-								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-									if (world instanceof ILevelExtension _ext) {
-										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-										if (_itemHandler != null)
-											return _itemHandler.getStackInSlot(slotid).getCount();
-									}
-									return 0;
-								}
-							}.getAmount(world, BlockPos.containing(x, y, z), 1)));
+							ItemStack _setstack = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).copy();
+							_setstack.setCount((int) (1 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount()));
 							_itemHandlerModifiable.setStackInSlot(1, _setstack);
 						}
 						main.addProperty("money", (main.get("money").getAsDouble() - StockedbaseadminshopbuyProcedure.execute(world, x, y, z)));
@@ -159,5 +80,28 @@ public class DownloaderprocessProcedure {
 				exception.printStackTrace();
 			}
 		}
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

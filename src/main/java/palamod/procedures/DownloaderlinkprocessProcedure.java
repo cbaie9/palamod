@@ -40,35 +40,21 @@ public class DownloaderlinkprocessProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "language")).equals("french")) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "language")).equals("french")) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Le downloader a ete lie a votre compte bancaire : valeur =" + (new Object() {
-					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getString(tag);
-						return "";
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "downloader_linked_account")))), false);
+				_player.displayClientMessage(Component.literal(("Le downloader a ete lie a votre compte bancaire : valeur =" + getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account"))), false);
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Your bank account has been link to this block : value=" + (new Object() {
-					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getString(tag);
-						return "";
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "downloader_linked_account")))), false);
+				_player.displayClientMessage(Component.literal(("Your bank account has been link to this block : value=" + getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account"))), false);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

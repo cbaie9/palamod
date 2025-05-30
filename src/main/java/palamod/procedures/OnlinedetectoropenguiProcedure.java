@@ -12,13 +12,13 @@ public class OnlinedetectoropenguiProcedure {
 		if (guistate == null)
 			return;
 		if (guistate.get("text:player_name") instanceof EditBox _tf)
-			_tf.setValue((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "get_player_name")));
+			_tf.setValue((getBlockNBTString(world, BlockPos.containing(x, y, z), "get_player_name")));
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

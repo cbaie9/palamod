@@ -69,4 +69,5 @@ public class MoneyCommand {
 					return 0;
 				})))));
 	}
+
 }

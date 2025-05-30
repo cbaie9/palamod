@@ -46,14 +46,7 @@ public class Luckyprocessv1Procedure {
 		if (entity == null)
 			return;
 		double Random = 0;
-		if ((new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "Lucky_lock")) == false) {
+		if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "Lucky_lock") == false) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -893,5 +886,12 @@ public class Luckyprocessv1Procedure {
 				LuckyexitProcedure.execute(world, x, y, z, entity);
 			}
 		}
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

@@ -28,30 +28,9 @@ public class TotemclickprocessProcedure {
 		double MaxItem = 0;
 		double removeitem = 0;
 		MaxItem = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
-		if (PalamodModItems.PALADIUM_INGOT.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() && 64 > new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")) {
-			if (MaxItem + new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "totem_stock") > 64) {
-				removeitem = 64 - (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "totem_stock"));
+		if (PalamodModItems.PALADIUM_INGOT.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() && 64 > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock")) {
+			if (MaxItem + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") > 64) {
+				removeitem = 64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock");
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 					_setstack.setCount((int) (MaxItem - removeitem));
@@ -64,14 +43,7 @@ public class TotemclickprocessProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("totem_stock", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock") + removeitem));
+						_blockEntity.getPersistentData().putDouble("totem_stock", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") + removeitem));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -88,14 +60,7 @@ public class TotemclickprocessProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("totem_stock", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock") + MaxItem));
+						_blockEntity.getPersistentData().putDouble("totem_stock", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") + MaxItem));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -103,14 +68,7 @@ public class TotemclickprocessProcedure {
 		} else if (entity.isShiftKeyDown()) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount((int) (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")));
+				_setstack.setCount((int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock"));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 			if (!world.isClientSide()) {
@@ -125,14 +83,15 @@ public class TotemclickprocessProcedure {
 		} else {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						("tellraw @p [\"\",{\"text\":\"[ \",\"color\":\"dark_red\"},{\"text\":\"Totem\",\"color\":\"gold\"},{\"text\":\" ]\",\"color\":\"dark_red\"},{\"text\":\" : " + "" + Math.round(new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")) + "/64\",\"color\":\"green\"},{\"text\":\"\"}]"));
+						("tellraw @p [\"\",{\"text\":\"[ \",\"color\":\"dark_red\"},{\"text\":\"Totem\",\"color\":\"gold\"},{\"text\":\" ]\",\"color\":\"dark_red\"},{\"text\":\" : " + ""
+								+ Math.round(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock")) + "/64\",\"color\":\"green\"},{\"text\":\"\"}]"));
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

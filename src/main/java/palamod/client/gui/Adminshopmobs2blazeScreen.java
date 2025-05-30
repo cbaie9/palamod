@@ -24,7 +24,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -53,16 +55,27 @@ public class Adminshopmobs2blazeScreen extends AbstractContainerScreen<Adminshop
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 151 && mouseX < leftPos + 167 && mouseY > topPos + 5 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
-		if (mouseX > leftPos + 132 && mouseX < leftPos + 147 && mouseY > topPos + 7 && mouseY < topPos + 21)
-			guiGraphics.renderTooltip(font, Component.literal(Returnadminshopmobsp2Procedure.execute()), mouseX, mouseY);
-		if (mouseX > leftPos + 116 && mouseX < leftPos + 128 && mouseY > topPos + 5 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnadminshopmainmenuProcedure.execute()), mouseX, mouseY);
+		if (mouseX > leftPos + 151 && mouseX < leftPos + 167 && mouseY > topPos + 5 && mouseY < topPos + 21) {
+			String hoverText = ClosetheguitransProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
+		if (mouseX > leftPos + 132 && mouseX < leftPos + 147 && mouseY > topPos + 7 && mouseY < topPos + 21) {
+			String hoverText = Returnadminshopmobsp2Procedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
+		if (mouseX > leftPos + 116 && mouseX < leftPos + 128 && mouseY > topPos + 5 && mouseY < topPos + 20) {
+			String hoverText = ReturnadminshopmainmenuProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
 	}
 
 	@Override

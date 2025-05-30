@@ -44,16 +44,7 @@ public class CobblebreakergivexpdiamondProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		if (entity instanceof Player _player)
-			_player.giveExperiencePoints(new Object() {
-				public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).getCount();
-					}
-					return 0;
-				}
-			}.getAmount(world, BlockPos.containing(x, y, z), 3));
+			_player.giveExperiencePoints(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount());
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
@@ -125,5 +116,14 @@ public class CobblebreakergivexpdiamondProcedure {
 				ChecklvlminerProcedure.execute(world, x, y, z, entity);
 			}
 		}
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

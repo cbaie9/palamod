@@ -1,3 +1,4 @@
+
 package palamod.block.entity;
 
 import palamod.init.PalamodModBlockEntities;
@@ -29,7 +30,7 @@ public class ExctractorBlockEntity extends RandomizableContainerBlockEntity impl
 	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
 
 	public ExctractorBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.EXCTRACTOR.get(), position, state);
+		super(PalamodModBlockEntities.EXTRACTOR.get(), position, state);
 	}
 
 	@Override
@@ -73,7 +74,7 @@ public class ExctractorBlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("exctractor");
+		return Component.literal("extractor");
 	}
 
 	@Override
@@ -88,7 +89,7 @@ public class ExctractorBlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Extractor");
+		return Component.literal("Extractor block");
 	}
 
 	@Override
@@ -112,12 +113,12 @@ public class ExctractorBlockEntity extends RandomizableContainerBlockEntity impl
 	}
 
 	@Override
-	public boolean canPlaceItemThroughFace(int index, ItemStack stack, @Nullable Direction direction) {
-		return this.canPlaceItem(index, stack);
+	public boolean canPlaceItemThroughFace(int index, ItemStack itemstack, @Nullable Direction direction) {
+		return this.canPlaceItem(index, itemstack);
 	}
 
 	@Override
-	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
+	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
 	}
 

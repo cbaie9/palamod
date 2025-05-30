@@ -43,7 +43,7 @@ public class PaladiumphoneItem extends Item {
 			serverPlayer.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Paladiumphone");
+					return Component.literal("Paladium phone");
 				}
 
 				@Override

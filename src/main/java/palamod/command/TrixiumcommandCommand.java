@@ -66,4 +66,5 @@ public class TrixiumcommandCommand {
 					return 0;
 				})));
 	}
+
 }

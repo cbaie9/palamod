@@ -23,14 +23,7 @@ public class SafecodecheckProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
 		if (entity == null || guistate == null)
 			return;
-		if ((guistate.containsKey("text:code_check") ? ((EditBox) guistate.get("text:code_check")).getValue() : "").equals(new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "safe_code"))) {
+		if ((guistate.containsKey("text:code_check") ? ((EditBox) guistate.get("text:code_check")).getValue() : "").equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "safe_code"))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -54,5 +47,12 @@ public class SafecodecheckProcedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

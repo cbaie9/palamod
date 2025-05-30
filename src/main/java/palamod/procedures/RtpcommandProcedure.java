@@ -31,14 +31,7 @@ public class RtpcommandProcedure {
 		double yrandom = 0;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			if ((world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == PalamodModBlocks.NBT_BLOCK.get()) {
-				if (!(3 <= new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())))) {
+				if (!(3 <= getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())))) {
 					while (!(1 < xrandom && 1000000 >= xrandom && 1 < zrandom && 1000000 >= xrandom)) {
 						xrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 						zrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
@@ -48,14 +41,7 @@ public class RtpcommandProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putDouble(("use_trp_overworld_" + entity.getStringUUID()), (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())) + 1));
+							_blockEntity.getPersistentData().putDouble(("use_trp_overworld_" + entity.getStringUUID()), (getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())) + 1));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -81,5 +67,12 @@ public class RtpcommandProcedure {
 							"tellraw @p [\"\",{\"text\":\"[ palamod ]\",\"color\":\"dark_red\"},{\"text\":\" A required service from \",\"color\":\"gold\"},{\"text\":\"/$setup\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/$setup\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Execute /$setup\"}},{\"text\":\" is not installed Contact your administrator to excute this command to \\\"unlock\\\" that feature\",\"color\":\"gold\"}]");
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

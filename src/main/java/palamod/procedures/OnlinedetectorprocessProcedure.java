@@ -11,21 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class OnlinedetectorprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, new BlockPos(0, 10, 0), ("online_player_" + (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "get_player_name"))))) {
+		if (getBlockNBTLogic(world, new BlockPos(0, 10, 0), ("online_player_" + getBlockNBTString(world, BlockPos.containing(x, y, z), "get_player_name")))) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.ONLINE_DETECTOR_ON.get().defaultBlockState();
@@ -87,5 +73,19 @@ public class OnlinedetectorprocessProcedure {
 			}
 		}
 		world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

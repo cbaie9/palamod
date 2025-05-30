@@ -15,23 +15,8 @@ import net.minecraft.core.BlockPos;
 public class PalahopperswapprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_HOPPER.get()) {
-			if (((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.UP || (new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN) && !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get())) {
+			if (((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.UP || (getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN)
+					&& !((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get())) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get().defaultBlockState();
@@ -62,39 +47,9 @@ public class PalahopperswapprocessProcedure {
 					}
 				}
 			}
-			if (((new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH || (new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH || (new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST || (new Object() {
-				public Direction getDirection(BlockState _bs) {
-					Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_prop instanceof DirectionProperty _dp)
-						return _bs.getValue(_dp);
-					_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-					return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-				}
-			}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) && (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get()) {
+			if (((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH || (getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH
+					|| (getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST || (getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST)
+					&& (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = PalamodModBlocks.ROTATED_PALADIUM_HOPPER.get().defaultBlockState();
@@ -126,5 +81,13 @@ public class PalahopperswapprocessProcedure {
 				}
 			}
 		}
+	}
+
+	private static Direction getDirectionFromBlockState(BlockState blockState) {
+		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (prop instanceof DirectionProperty dp)
+			return blockState.getValue(dp);
+		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 	}
 }

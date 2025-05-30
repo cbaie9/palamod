@@ -1,0 +1,7 @@
+{
+  "parent": "palamod:custom/exctrator_v2",
+  "textures": {
+    "1": "palamod:block/exctrator",
+    "particle": "palamod:item/frag_am"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/totem_flower",
+  "textures": {
+    "all": "minecraft:block/stone",
+    "particle": "minecraft:block/stone",
+    "4": "palamod:block/flower_totem"
+  },
+  "render_type": "solid"
+}

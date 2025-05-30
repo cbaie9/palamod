@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:flowertotem",
     "palamod:softened_lapis_lazulis_ore",
     "palamod:softened_redstone_ore",
     "palamod:softened_diamond_ore",
@@ -50,7 +51,7 @@
     "palamod:slimepad_red",
     "palamod:megaboomobsidian",
     "palamod:boom_obsidian",
-    "palamod:exctractor",
+    "palamod:extractor",
     "palamod:poison_obsidian",
     "palamod:slime_obsidian",
     "palamod:hardened_obsidian_slab",

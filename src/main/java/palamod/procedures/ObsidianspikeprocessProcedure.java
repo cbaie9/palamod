@@ -13,15 +13,7 @@ import net.minecraft.core.BlockPos;
 public class ObsidianspikeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		Direction direction_block = Direction.NORTH;
-		direction_block = new Object() {
-			public Direction getDirection(BlockState _bs) {
-				Property<?> _prop = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_prop instanceof DirectionProperty _dp)
-					return _bs.getValue(_dp);
-				_prop = _bs.getBlock().getStateDefinition().getProperty("axis");
-				return _prop instanceof EnumProperty _ep && _ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) _bs.getValue(_ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
-			}
-		}.getDirection((world.getBlockState(BlockPos.containing(x, y, z))));
+		direction_block = getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))));
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.WOODEN_OBSIDIAN_SPIKE.get()) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -226,5 +218,13 @@ public class ObsidianspikeprocessProcedure {
 				}
 			}
 		}
+	}
+
+	private static Direction getDirectionFromBlockState(BlockState blockState) {
+		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		if (prop instanceof DirectionProperty dp)
+			return blockState.getValue(dp);
+		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 	}
 }

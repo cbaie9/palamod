@@ -48,26 +48,10 @@ public class Crusherv2amecustomProcedure {
 					}
 					bufferedReader.close();
 					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= main_obj.get("Crusher-amethyst-input").getAsDouble()) {
+					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= main_obj.get("Crusher-amethyst-input").getAsDouble()) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-							_setstack.setCount((int) (new Object() {
-								public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-									if (world instanceof ILevelExtension _ext) {
-										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-										if (_itemHandler != null)
-											return _itemHandler.getStackInSlot(slotid).getCount();
-									}
-									return 0;
-								}
-							}.getAmount(world, BlockPos.containing(x, y, z), 2) + main_obj.get("Crusher-amethyst-output").getAsDouble()));
+							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
 							_itemHandlerModifiable.setStackInSlot(2, _setstack);
 						}
 						if (!world.isClientSide()) {
@@ -83,26 +67,10 @@ public class Crusherv2amecustomProcedure {
 							PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( amethyst ) ( custom on )"));
 						}
 					} else {
-						if (Math.random() < (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_amethyst")) / main_obj.get("Crusher-amethyst-input").getAsDouble()) {
+						if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") / main_obj.get("Crusher-amethyst-input").getAsDouble()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-								_setstack.setCount((int) (new Object() {
-									public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-										if (world instanceof ILevelExtension _ext) {
-											IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-											if (_itemHandler != null)
-												return _itemHandler.getStackInSlot(slotid).getCount();
-										}
-										return 0;
-									}
-								}.getAmount(world, BlockPos.containing(x, y, z), 2) + main_obj.get("Crusher-amethyst-output").getAsDouble()));
+								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
 							if (!world.isClientSide()) {
@@ -118,26 +86,10 @@ public class Crusherv2amecustomProcedure {
 								PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( amethyst ) ( custom on )"));
 							}
 						} else {
-							if (1 <= new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "crusher_num_amethyst")) {
+							if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst")) {
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (!world.isClientSide()) {
@@ -160,5 +112,21 @@ public class Crusherv2amecustomProcedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

@@ -13,13 +13,13 @@ public class ProgressbargrinderspritereturnProcedure {
 		File jobs = new File("");
 		double nlm = 0;
 		double xp = 0;
-		return Math.round((new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "gnum")) / 2);
+		return Math.round(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") / 2);
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

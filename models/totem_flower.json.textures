@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "4": "flower_totem"
+      },
+      "name": "default"
+    }
+  }
+}

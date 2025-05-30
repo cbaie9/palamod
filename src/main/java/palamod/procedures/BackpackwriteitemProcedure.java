@@ -96,112 +96,31 @@ public class BackpackwriteitemProcedure {
 										(BuiltInRegistries.ITEM.getKey(
 												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
-								main_backpack.addProperty(("backpack_num_" + i), (new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
-								main_backup.addProperty("backpack_backup1", (main_backup.get("backpack_backup1").getAsDouble() + new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
+								main_backpack.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
+								main_backup.addProperty("backpack_backup1", (main_backup.get("backpack_backup1").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							} else if (i >= 9 && i <= 26) {
 								main_backpack_titane.addProperty(("backpack_inv_" + i),
 										(BuiltInRegistries.ITEM.getKey(
 												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
-								main_backpack_titane.addProperty(("backpack_num_" + i), (new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
-								main_backup.addProperty("backpack_backup2", (main_backup.get("backpack_backup2").getAsDouble() + new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
+								main_backpack_titane.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
+								main_backup.addProperty("backpack_backup2", (main_backup.get("backpack_backup2").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							} else if (i >= 27 && i <= 53) {
 								main_backpack_paladium.addProperty(("backpack_inv_" + i),
 										(BuiltInRegistries.ITEM.getKey(
 												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
-								main_backpack_paladium.addProperty(("backpack_num_" + i), (new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
-								main_backup.addProperty("backpack_backup3", (main_backup.get("backpack_backup3").getAsDouble() + new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
+								main_backpack_paladium.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
+								main_backup.addProperty("backpack_backup3", (main_backup.get("backpack_backup3").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							} else if (i >= 54 && i <= 81) {
 								main_backpack_endium.addProperty(("backpack_inv_" + i),
 										(BuiltInRegistries.ITEM.getKey(
 												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
-								main_backpack_endium.addProperty(("backpack_num_" + i), (new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
-								main_backup.addProperty("backpack_backup4", (main_backup.get("backpack_backup4").getAsDouble() + new Object() {
-									public int getAmount(int sltid) {
-										if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-											ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-											if (stack != null)
-												return stack.getCount();
-										}
-										return 0;
-									}
-								}.getAmount((int) i)));
+								main_backpack_endium.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
+								main_backup.addProperty("backpack_backup4", (main_backup.get("backpack_backup4").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							}
-							ifull_backup = ifull_backup + new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount((int) i);
+							ifull_backup = ifull_backup + getAmountInGUISlot(entity, (int) i);
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 								((Slot) _slots.get((int) i)).set(ItemStack.EMPTY);
 								_player.containerMenu.broadcastChanges();
@@ -276,5 +195,14 @@ public class BackpackwriteitemProcedure {
 				}
 			}
 		}
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
+			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

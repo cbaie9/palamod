@@ -24,46 +24,11 @@ public class DelfactiontrueProcedure {
 		double get_id = 0;
 		String get_name = "";
 		boolean fget_id = false;
-		if (entity.getPersistentData().getBoolean(("faction-warning_" + (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))) {
+		if (entity.getPersistentData().getBoolean(("faction-warning_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))))) {
 			if (entity.getPersistentData().getDouble("faction-code") == DoubleArgumentType.getDouble(arguments, "code")) {
-				if ((new Object() {
-					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getString(tag);
-						return "";
-					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_leader_" + (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))))).equals(entity.getStringUUID())) {
-					get_id = new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
-					get_name = new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_name_" + get_id));
+				if ((getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_leader_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))))).equals(entity.getStringUUID())) {
+					get_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
+					get_name = getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_name_" + get_id));
 					if (!world.isClientSide()) {
 						BlockPos _bp = new BlockPos(0, 9, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -201,5 +166,19 @@ public class DelfactiontrueProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"An unexpected error has been detected, retry using the /faction disband or /f disband without any arguments\",\"color\":\"gold\"}]");
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

@@ -25,131 +25,47 @@ public class Rustinechests1Procedure {
 		boolean is13full = false;
 		boolean is110full = false;
 		boolean is111full = false;
-		if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "setlocal_chestver") == 1) {
+		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "setlocal_chestver") == 1) {
 			is12 = true;
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(0) > 0) {
+			if (getAmountInGUISlot(entity, 0) > 0) {
 				is12full = true;
 			} else {
 				is12full = false;
 			}
-		} else if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "setlocal_chestver") == 2) {
+		} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "setlocal_chestver") == 2) {
 			is12 = true;
 			is13 = true;
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(0) > 0) {
+			if (getAmountInGUISlot(entity, 0) > 0) {
 				is12full = true;
 			} else {
 				is12full = false;
 			}
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(0) > 0) {
+			if (getAmountInGUISlot(entity, 0) > 0) {
 				is13full = true;
 			} else {
 				is13full = false;
 			}
-		} else if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "setlocal_chestver") == 3) {
+		} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "setlocal_chestver") == 3) {
 			is12 = true;
 			is13 = true;
 			is110 = true;
 			is111 = true;
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(12) > 0) {
+			if (getAmountInGUISlot(entity, 12) > 0) {
 				is12full = true;
 			} else {
 				is12full = true;
 			}
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(13) > 0) {
+			if (getAmountInGUISlot(entity, 13) > 0) {
 				is13full = true;
 			} else {
 				is13full = false;
 			}
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(110) > 0) {
+			if (getAmountInGUISlot(entity, 110) > 0) {
 				is110full = true;
 			} else {
 				is110full = false;
 			}
-			if (new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(111) > 0) {
+			if (getAmountInGUISlot(entity, 111) > 0) {
 				is111full = true;
 			} else {
 				is111full = false;
@@ -203,5 +119,21 @@ public class Rustinechests1Procedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
+			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

@@ -23,29 +23,8 @@ public class FactioninviteprocessProcedure {
 			return;
 		double fac_id = 0;
 		String fac_name = "";
-		fac_id = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
-		fac_name = new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_name" + (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID())))));
+		fac_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
+		fac_name = getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_name" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))));
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
 				if (world instanceof ServerLevel _level)
@@ -65,14 +44,7 @@ public class FactioninviteprocessProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble(("Faction_invite_" + fac_id), (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)) + 1));
+						_blockEntity.getPersistentData().putDouble(("Faction_invite_" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)) + 1));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -81,14 +53,7 @@ public class FactioninviteprocessProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putString(("Faction_invite_" + fac_id + "_" + (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)))), (entity.getStringUUID()));
+						_blockEntity.getPersistentData().putString(("Faction_invite_" + fac_id + "_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id))), (entity.getStringUUID()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -96,17 +61,24 @@ public class FactioninviteprocessProcedure {
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();
 		}
-		if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)) <= 0) {
+		if (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)) <= 0) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"A secutity error has been found with the existing invitation, \",\"color\":\"gold\"},{\"text\":\"please verify\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"f gui\"}},{\"text\":\" all the existing membre if they has the right to be in the faction\",\"color\":\"gold\"}]");
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
 	}
 }

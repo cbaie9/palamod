@@ -44,65 +44,92 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 30 && mouseY < topPos + 47)
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 30 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_amethyst_armor"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 77 && mouseY > topPos + 69 && mouseY < topPos + 88)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 77 && mouseY > topPos + 69 && mouseY < topPos + 88) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 89 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 89 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e"), mouseX, mouseY);
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 30 && mouseY < topPos + 47)
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 30 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_titane_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 69 && mouseY < topPos + 87)
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 69 && mouseY < topPos + 87) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable1"), mouseX, mouseY);
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 69 && mouseY < topPos + 87)
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 69 && mouseY < topPos + 87) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable2"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 69 && mouseY < topPos + 87)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 69 && mouseY < topPos + 87) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 158 && mouseY < topPos + 176)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 158 && mouseY < topPos + 176) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 158 && mouseY < topPos + 176)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 158 && mouseY < topPos + 176) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable5"), mouseX, mouseY);
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 89 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 89 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e1"), mouseX, mouseY);
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 89 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 89 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 89 && mouseY < topPos + 106)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 89 && mouseY < topPos + 106) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m1"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 178 && mouseY < topPos + 195)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 178 && mouseY < topPos + 195) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m2"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 178 && mouseY < topPos + 195)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 178 && mouseY < topPos + 195) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m3"), mouseX, mouseY);
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 158 && mouseY < topPos + 176)
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 158 && mouseY < topPos + 176) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl"), mouseX, mouseY);
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 158 && mouseY < topPos + 176)
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 158 && mouseY < topPos + 176) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl1"), mouseX, mouseY);
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 30 && mouseY < topPos + 47)
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 30 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_paladium_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 30 && mouseY < topPos + 47)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 30 && mouseY < topPos + 47) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_endium_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 119 && mouseY < topPos + 136)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 119 && mouseY < topPos + 136) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_travel_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 119 && mouseY < topPos + 136)
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 119 && mouseY < topPos + 136) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_rainbow_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 119 && mouseY < topPos + 136)
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 119 && mouseY < topPos + 136) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 119 && mouseY < topPos + 136)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 119 && mouseY < topPos + 136) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 258 && mouseY > topPos + 49 && mouseY < topPos + 67)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 258 && mouseY > topPos + 49 && mouseY < topPos + 67) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh"), mouseX, mouseY);
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 49 && mouseY < topPos + 67)
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 49 && mouseY < topPos + 67) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh1"), mouseX, mouseY);
-		if (mouseX > leftPos + 258 && mouseX < leftPos + 280 && mouseY > topPos + 49 && mouseY < topPos + 67)
+		}
+		if (mouseX > leftPos + 258 && mouseX < leftPos + 280 && mouseY > topPos + 49 && mouseY < topPos + 67) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_full_set_invisible"), mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 138 && mouseY < topPos + 156)
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 138 && mouseY < topPos + 156) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh2"), mouseX, mouseY);
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 138 && mouseY < topPos + 156)
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 138 && mouseY < topPos + 156) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh3"), mouseX, mouseY);
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 138 && mouseY < topPos + 156)
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 138 && mouseY < topPos + 156) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_underwater_breathing_helmet"), mouseX, mouseY);
+		}
 	}
 
 	@Override

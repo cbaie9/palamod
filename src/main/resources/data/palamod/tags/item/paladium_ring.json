@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:small_ring",
+    "palamod:medium_ring",
+    "palamod:big_ring"
+  ]
+}

@@ -1,7 +1,7 @@
 
 package palamod.world.inventory;
 
-import palamod.procedures.Palamachineprocessv2Procedure;
+import palamod.procedures.PalamachineprocessV3Procedure;
 
 import palamod.network.PalamachineguiSlotMessage;
 
@@ -91,7 +91,7 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 21, 22) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 48, 34) {
 			private final int slot = 0;
 			private int x = PalamachineguiMenu.this.x;
 			private int y = PalamachineguiMenu.this.y;
@@ -102,7 +102,7 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 				slotChanged(0, 0, 0);
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 129, 22) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 55, 66) {
 			private final int slot = 1;
 			private int x = PalamachineguiMenu.this.x;
 			private int y = PalamachineguiMenu.this.y;
@@ -113,7 +113,7 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 				slotChanged(1, 0, 0);
 			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 76, 15) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 12) {
 			private final int slot = 2;
 			private int x = PalamachineguiMenu.this.x;
 			private int y = PalamachineguiMenu.this.y;
@@ -124,7 +124,7 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 				slotChanged(2, 0, 0);
 			}
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 49, 40) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 112, 34) {
 			private final int slot = 3;
 			private int x = PalamachineguiMenu.this.x;
 			private int y = PalamachineguiMenu.this.y;
@@ -135,7 +135,7 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 				slotChanged(3, 0, 0);
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 103, 40) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 105, 66) {
 			private final int slot = 4;
 			private int x = PalamachineguiMenu.this.x;
 			private int y = PalamachineguiMenu.this.y;
@@ -146,16 +146,10 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 				slotChanged(4, 0, 0);
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 75, 58) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 80, 41) {
 			private final int slot = 5;
 			private int x = PalamachineguiMenu.this.x;
 			private int y = PalamachineguiMenu.this.y;
-
-			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(5, 0, 0);
-			}
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -164,9 +158,9 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 12 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 12 + 142));
 	}
 
 	@Override
@@ -312,7 +306,7 @@ public class PalamachineguiMenu extends AbstractContainerMenu implements Supplie
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();
-			Palamachineprocessv2Procedure.execute(world, x, y, z);
+			PalamachineprocessV3Procedure.execute(world, x, y, z);
 		}
 	}
 }

@@ -6,13 +6,13 @@ import net.minecraft.core.BlockPos;
 
 public class ReturntimerspritepaladiumfurnaceProcedure {
 	public static double execute(LevelAccessor world, double x, double y, double z) {
-		return Math.floor(((new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "timer")) / 100) * 24);
+		return Math.floor((getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") / 100) * 24);
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

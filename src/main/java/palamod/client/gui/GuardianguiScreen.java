@@ -46,7 +46,6 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		if (GuardianentityproviderProcedure.execute(world, x, y, z) instanceof LivingEntity livingEntity) {
 			this.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 55, this.topPos + 75, 30, 0f, 0, livingEntity);

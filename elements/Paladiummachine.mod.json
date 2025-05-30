@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "block",
   "definition": {
     "texture": "paladiummachine",
@@ -59,16 +59,16 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
-    "tickRate": 10,
+    "tickRate": 20,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "BLACK_TERRACOTTA",
     "creativePickItem": {
       "value": ""
     },
@@ -108,19 +108,19 @@
     "hasInventory": true,
     "guiBoundTo": "Palamachinegui",
     "openGUIOnRightClick": true,
-    "inventorySize": 7,
+    "inventorySize": 6,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
-      6
+      5
     ],
     "inventoryInSlotIDs": [
+      0,
       1,
-      3,
       2,
-      4,
-      5
+      3,
+      4
     ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
@@ -130,8 +130,11 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "Palamachinesetup"
+    },
     "onTickUpdate": {
-      "name": "Palamachineprocessv2"
+      "name": "PalamachineprocessV3"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

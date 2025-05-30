@@ -33,16 +33,7 @@ public class MoneypanelchangeProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((new Object() {
-			public Entity getEntity() {
-				try {
-					return EntityArgument.getEntity(arguments, "player");
-				} catch (CommandSyntaxException e) {
-					e.printStackTrace();
-					return null;
-				}
-			}
-		}.getEntity()).getUUID().toString() + ".json"));
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 		if (entity.hasPermissions(4)) {
@@ -77,6 +68,15 @@ public class MoneypanelchangeProcedure {
 					}
 				}, _bpos);
 			}
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

@@ -1,3 +1,4 @@
+
 package palamod.block.entity;
 
 import palamod.world.inventory.PalamachineguiMenu;
@@ -29,7 +30,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class PaladiummachineBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(7, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(6, ItemStack.EMPTY);
 	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
 
 	public PaladiummachineBlockEntity(BlockPos position, BlockState state) {
@@ -107,7 +108,7 @@ public class PaladiummachineBlockEntity extends RandomizableContainerBlockEntity
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
-		if (index == 6)
+		if (index == 5)
 			return false;
 		return true;
 	}
@@ -118,21 +119,21 @@ public class PaladiummachineBlockEntity extends RandomizableContainerBlockEntity
 	}
 
 	@Override
-	public boolean canPlaceItemThroughFace(int index, ItemStack stack, @Nullable Direction direction) {
-		return this.canPlaceItem(index, stack);
+	public boolean canPlaceItemThroughFace(int index, ItemStack itemstack, @Nullable Direction direction) {
+		return this.canPlaceItem(index, itemstack);
 	}
 
 	@Override
-	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
-		if (index == 1)
+	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
+		if (index == 0)
 			return false;
-		if (index == 3)
+		if (index == 1)
 			return false;
 		if (index == 2)
 			return false;
-		if (index == 4)
+		if (index == 3)
 			return false;
-		if (index == 5)
+		if (index == 4)
 			return false;
 		return true;
 	}

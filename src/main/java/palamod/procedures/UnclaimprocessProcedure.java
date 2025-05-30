@@ -23,62 +23,13 @@ public class UnclaimprocessProcedure {
 		double ennemy_id = 0;
 		double ennemy_power = 0;
 		boolean can_claim = false;
-		get_id = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
-		get_power = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_power_" + get_id));
-		get_name = new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_name_" + get_id));
-		if (new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
-			if (new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, new BlockPos(0, 9, 0), ("Faction_officer_" + entity.getStringUUID() + "_" + get_id))) {
-				if (new Object() {
-					public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getBoolean(tag);
-						return false;
-					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_claim_" + Math.floor(x / 16) + "_" + Math.floor(z / 16)))) {
-					if (get_id == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_posclaim_" + Math.floor(x / 16) + "_" + Math.floor(z / 16)))) {
+		get_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
+		get_power = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_power_" + get_id));
+		get_name = getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_name_" + get_id));
+		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
+			if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_officer_" + entity.getStringUUID() + "_" + get_id))) {
+				if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_claim_" + Math.floor(x / 16) + "_" + Math.floor(z / 16)))) {
+					if (get_id == getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_posclaim_" + Math.floor(x / 16) + "_" + Math.floor(z / 16)))) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos(0, 9, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -102,14 +53,7 @@ public class UnclaimprocessProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble(("Faction_ownclaim_" + get_id), ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, new BlockPos(0, 9, 0), ("Faction_ownclaim_" + get_id))) - 1));
+								_blockEntity.getPersistentData().putDouble(("Faction_ownclaim_" + get_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_ownclaim_" + get_id)) - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -136,5 +80,26 @@ public class UnclaimprocessProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" \",\"color\":\"red\"},{\"text\":\"You don't have a faction, you can't unclaim if you don't have one\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction create\"}}]");
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

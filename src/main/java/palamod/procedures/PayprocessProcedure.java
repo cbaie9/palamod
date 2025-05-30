@@ -33,16 +33,7 @@ public class PayprocessProcedure {
 		com.google.gson.JsonObject main_player2 = new com.google.gson.JsonObject();
 		double money_pl1 = 0;
 		double money_player2 = 0;
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((new Object() {
-			public Entity getEntity() {
-				try {
-					return EntityArgument.getEntity(arguments, "player");
-				} catch (CommandSyntaxException e) {
-					e.printStackTrace();
-					return null;
-				}
-			}
-		}.getEntity()).getUUID().toString() + ".json"));
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 		file_player2 = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		{
 			try {
@@ -100,29 +91,21 @@ public class PayprocessProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw " + entity + " {\"text\":\"" + Component.translatable("palamod.procedure.pay1").getString() + DoubleArgumentType.getDouble(arguments, "money") + "$ " + Component.translatable("palamod.procedure.pay2").getString()
-								+ " " + (new Object() {
-									public Entity getEntity() {
-										try {
-											return EntityArgument.getEntity(arguments, "player");
-										} catch (CommandSyntaxException e) {
-											e.printStackTrace();
-											return null;
-										}
-									}
-								}.getEntity()).getDisplayName().getString() + "\",\"color\":\"green\"}"));
+								+ " " + (commandParameterEntity(arguments, "player")).getDisplayName().getString() + "\",\"color\":\"green\"}"));
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						("tellraw " + new Object() {
-							public Entity getEntity() {
-								try {
-									return EntityArgument.getEntity(arguments, "player");
-								} catch (CommandSyntaxException e) {
-									e.printStackTrace();
-									return null;
-								}
-							}
-						}.getEntity() + " {\"text\":\"" + Component.translatable("palamod.procedure.pay3").getString() + " " + DoubleArgumentType.getDouble(arguments, "money") + "$ " + Component.translatable("palamod.procedure.pay4").getString()
-								+ entity + ", " + Component.translatable("palamod.procedure.pay5").getString() + " " + StringArgumentType.getString(arguments, "reason") + "\",\"color\":\"green\"}"));
+						("tellraw " + commandParameterEntity(arguments, "player") + " {\"text\":\"" + Component.translatable("palamod.procedure.pay3").getString() + " " + DoubleArgumentType.getDouble(arguments, "money") + "$ "
+								+ Component.translatable("palamod.procedure.pay4").getString() + entity + ", " + Component.translatable("palamod.procedure.pay5").getString() + " " + StringArgumentType.getString(arguments, "reason")
+								+ "\",\"color\":\"green\"}"));
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

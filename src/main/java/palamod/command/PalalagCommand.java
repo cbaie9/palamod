@@ -36,4 +36,5 @@ public class PalalagCommand {
 			return 0;
 		})));
 	}
+
 }

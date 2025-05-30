@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "bbb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:endium_fragment"
+    },
+    "b": {
+      "item": "palamod:paladium_block"
+    }
+  },
+  "result": {
+    "id": "palamod:compressedendium",
+    "count": 1
+  }
+}

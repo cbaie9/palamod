@@ -17,15 +17,15 @@ public class TotemdestroyplayerProcedure {
 			return;
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-			_setstack.setCount((int) (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "totem_stock")));
+			_setstack.setCount((int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock"));
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

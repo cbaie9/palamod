@@ -44,34 +44,13 @@ public class Gcodev4customProcedure {
 					}
 					bufferedReader.close();
 					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (0 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gpala_num")) {
+					if (0 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gpala_num")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "gnum") + new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "gpala_num")));
+								_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gpala_num")));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -94,61 +73,12 @@ public class Gcodev4customProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					}
-					PalamodModVariables.g_num = new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum");
-					PalamodModVariables.Grinder_ingot = new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot");
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == PalamodModItems.PALADIUM_INGOT.get() && main_obj.get("Grinder-Capacity").getAsDouble() > new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (4 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
+					PalamodModVariables.g_num = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum");
+					PalamodModVariables.Grinder_ingot = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot");
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get()
+							&& main_obj.get("Grinder-Capacity").getAsDouble() > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")
+							&& (4 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -172,14 +102,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum") + 1));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -198,58 +121,16 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl1", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl1", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get() && main_obj.get("Grinder-Capacity").getAsDouble() > new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (4 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
+							&& main_obj.get("Grinder-Capacity").getAsDouble() > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")
+							&& (4 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -273,14 +154,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum") + 1));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -299,58 +173,16 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl1", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl1", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && main_obj.get("Grinder-Capacity").getAsDouble() - 9 > new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (4 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
+							&& main_obj.get("Grinder-Capacity").getAsDouble() - 9 > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")
+							&& (4 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -374,14 +206,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum") + 9));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + 9));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -400,58 +225,16 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl1", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl1", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == PalamodModBlocks.PALADIUM_GREEN_BLOCK.get().asItem() && main_obj.get("Grinder-Capacity").getAsDouble() - 9 > new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (4 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_GREEN_BLOCK.get().asItem()
+							&& main_obj.get("Grinder-Capacity").getAsDouble() - 9 > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")
+							&& (4 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -475,14 +258,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum") + 9));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + 9));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -501,58 +277,16 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl1", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl1", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == PalamodModItems.ENDIUM_INGOT.get() && main_obj.get("Grinder-Capacity").getAsDouble() - 9 > new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (4 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 3 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.ENDIUM_INGOT.get()
+							&& main_obj.get("Grinder-Capacity").getAsDouble() - 9 > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")
+							&& (4 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -576,14 +310,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum") + 9));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + 9));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -602,58 +329,16 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl1", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl1", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 3)).getItem() == PalamodModItems.ENDIUM_NUGGET.get() && main_obj.get("Grinder-Capacity").getAsDouble() > new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (4 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 3 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.ENDIUM_NUGGET.get()
+							&& main_obj.get("Grinder-Capacity").getAsDouble() > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")
+							&& (4 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") >= main_obj.get("Grinder-loading_time1").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -677,14 +362,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum") + 1));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -703,45 +381,14 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl1", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl1", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl1") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.INGOT_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 1 <= new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.INGOT_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -765,60 +412,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.PALADIUM_INGOT.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -833,29 +433,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -867,61 +451,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -936,29 +473,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -970,61 +491,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.ENDIUM_NUGGET.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.ENDIUM_NUGGET.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1039,29 +513,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1073,28 +531,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1106,32 +550,8 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.BLOCK_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 9 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.BLOCK_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 9 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1155,60 +575,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1223,29 +596,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 9));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 9));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1257,61 +614,15 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModBlocks.PALADIUM_GREEN_BLOCK.get().asItem() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModBlocks.PALADIUM_GREEN_BLOCK.get().asItem()
+								&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)
+								&& 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1326,29 +637,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 9));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 9));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1360,61 +655,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.ENDIUM_INGOT.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.ENDIUM_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1429,29 +677,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 9));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 9));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_INGOT.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1463,28 +695,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1496,32 +714,8 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.AXE_PATERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 3 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AXE_PATERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 3 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1545,60 +739,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.AXE_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AXE_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1613,29 +760,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.AXE_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1647,61 +778,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1716,29 +800,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1750,61 +818,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1819,29 +840,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_AXE.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1853,28 +858,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1886,32 +877,8 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.PICKAXE_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 3 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.PICKAXE_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 3 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1935,60 +902,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.PICKAXE_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.PICKAXE_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2003,29 +923,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXE_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2037,61 +941,15 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get()
+								&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)
+								&& 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2106,29 +964,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2140,61 +982,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2209,29 +1004,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_PICKAXE.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2243,28 +1022,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2276,32 +1041,8 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.SHOVEL_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 1 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.SHOVEL_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get() && 1 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2325,60 +1066,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.SHOVEL_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.SHOVEL_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2393,29 +1087,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.SHOVEL_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2427,61 +1105,15 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get()
+								&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)
+								&& 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2496,29 +1128,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2530,61 +1146,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.ENDIUM_SHOVEL_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.ENDIUM_SHOVEL_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2599,29 +1168,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2633,28 +1186,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2666,60 +1205,10 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.SWORD_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (2 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) || 18 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && 3 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.SWORD_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get()
+							&& (2 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && (1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))
+									|| 18 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2743,60 +1232,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.SWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.SWORD_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2811,29 +1253,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.SWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2845,61 +1271,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -2914,29 +1293,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 3));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 3));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -2948,61 +1311,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.HEADENDIUMSWORD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEADENDIUMSWORD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") == main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3017,29 +1333,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 18));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 18));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HEADENDIUMSWORD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3051,28 +1351,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3084,60 +1370,10 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.HAMMER_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (6 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) || 54 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && 3 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HAMMER_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get()
+							&& (6 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && (1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))
+									|| 54 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3161,60 +1397,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.HAMMER_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HAMMER_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3229,29 +1418,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 6));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 6));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HAMMER_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3263,61 +1436,15 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()
+								&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)
+								&& 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3332,29 +1459,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 6));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 6));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3366,61 +1477,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3435,29 +1499,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 54));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 54));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3469,28 +1517,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3502,60 +1536,10 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.BROADSWORD_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (4 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) || 36 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && 3 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.BROADSWORD_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get()
+							&& (4 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && (1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))
+									|| 36 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3579,60 +1563,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.BROADSWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.BROADSWORD_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3647,29 +1584,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 4));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 4));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3681,61 +1602,15 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get()
+								&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)
+								&& 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3750,29 +1625,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 4));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 4));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3784,61 +1643,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.ENDIUM_BROADSWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.ENDIUM_BROADSWORD_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3853,29 +1665,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 36));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 36));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -3887,28 +1683,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3920,60 +1702,10 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if ((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.FASTSWORD_PATTERN.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.SOCKET_PATTERN.get() && (4 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && (1 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) || 36 < new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum") && 3 == new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "g_ingot"))) {
+					if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.FASTSWORD_PATTERN.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.SOCKET_PATTERN.get()
+							&& (4 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && (1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") || 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))
+									|| 36 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot"))) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -3997,60 +1729,13 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.FASTSWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 64 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 1 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.FASTSWORD_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 1 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4065,29 +1750,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 4));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 4));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -4099,61 +1768,15 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 63 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 2 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get()
+								&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 63 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)
+								&& 2 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4168,29 +1791,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 4));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 4));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -4202,61 +1809,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
-						} else if (((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).getItem() == PalamodModItems.ENDIUM_FASTSWORD_HEAD.get() && new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) < 63 || new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) && 3 == new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "g_ingot")) {
-							if (new Object() {
-								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getDouble(tag);
-									return -1;
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.ENDIUM_FASTSWORD_HEAD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 63
+								|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
+							if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4271,29 +1831,13 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 36));
+										_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 36));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (new Object() {
-										public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-											if (world instanceof ILevelExtension _ext) {
-												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-												if (_itemHandler != null)
-													return _itemHandler.getStackInSlot(slotid).getCount();
-											}
-											return 0;
-										}
-									}.getAmount(world, BlockPos.containing(x, y, z), 2) + 1));
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -4305,28 +1849,14 @@ public class Gcodev4customProcedure {
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
 									if (_blockEntity != null)
-										_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-											public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-												BlockEntity blockEntity = world.getBlockEntity(pos);
-												if (blockEntity != null)
-													return blockEntity.getPersistentData().getDouble(tag);
-												return -1;
-											}
-										}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4338,58 +1868,18 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.AXE_HEAD.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == Items.STICK) {
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AXE_HEAD.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == Items.STICK) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4425,71 +1915,24 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == Items.STICK) {
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == Items.STICK) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4525,47 +1968,14 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == Items.STICK) {
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == Items.STICK) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4589,25 +1999,11 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4643,54 +2039,14 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					}
-					if (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.HAMMER_HEAD.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.PALADIUM_STICK.get() && 1 <= new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HAMMER_HEAD.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_STICK.get() && 1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4714,25 +2070,11 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4747,14 +2089,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -4784,27 +2119,13 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4816,41 +2137,8 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.PALADIUM_STICK.get() && 1 <= new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_STICK.get() && 1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4874,25 +2162,11 @@ public class Gcodev4customProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-									public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getDouble(tag);
-										return -1;
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4907,14 +2181,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -4944,27 +2211,13 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -4976,41 +2229,8 @@ public class Gcodev4customProcedure {
 							}
 						}
 					}
-					if (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0 && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && (new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == PalamodModItems.PALADIUM_STICK.get() && 1 <= new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "gnum")) {
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get()
+							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_STICK.get() && 1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -5029,27 +2249,13 @@ public class Gcodev4customProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") >= main_obj.get("Grinder-loading_time2").getAsDouble()) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gnum", ((new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gnum")) - 1));
+									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -5058,14 +2264,7 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", ((new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "grinder_state_nofuel")) - 1));
+									_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -5104,27 +2303,13 @@ public class Gcodev4customProcedure {
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
 								if (_blockEntity != null)
-									_blockEntity.getPersistentData().putDouble("gstate_cl2", (new Object() {
-										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-											BlockEntity blockEntity = world.getBlockEntity(pos);
-											if (blockEntity != null)
-												return blockEntity.getPersistentData().getDouble(tag);
-											return -1;
-										}
-									}.getValue(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 						}
 					} else {
-						if ((new Object() {
-							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getBoolean(tag);
-								return false;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "grinder_norelock")) == false) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "grinder_norelock") == false) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -5142,5 +2327,28 @@ public class Gcodev4customProcedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

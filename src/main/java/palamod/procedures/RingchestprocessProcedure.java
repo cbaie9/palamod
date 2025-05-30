@@ -27,14 +27,7 @@ public class RingchestprocessProcedure {
 		boolean loop1 = false;
 		boolean loop2 = false;
 		boolean loop3 = false;
-		version = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "setlocal_chestver");
+		version = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "setlocal_chestver");
 		nloop = 0;
 		nloop2 = 12;
 		loop1 = false;
@@ -257,5 +250,12 @@ public class RingchestprocessProcedure {
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

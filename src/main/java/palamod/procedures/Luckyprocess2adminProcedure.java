@@ -52,14 +52,7 @@ public class Luckyprocess2adminProcedure {
 			return;
 		double Random = 0;
 		boolean illegal_operation_check = false;
-		Random = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "Random_lucky");
+		Random = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Random_lucky");
 		if (Random >= 164000 && Random <= 164500) {
 			PalamodModVariables.lucky_name = "Double Xp";
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -574,5 +567,12 @@ public class Luckyprocess2adminProcedure {
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

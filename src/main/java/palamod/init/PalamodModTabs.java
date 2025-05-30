@@ -178,7 +178,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ELEVATOR_CYAN.get().asItem());
 				tabData.accept(PalamodModItems.MINAGE_VOIDSTONE.get());
 				tabData.accept(PalamodModItems.PALADIUMGOLEM_SPAWN_EGG.get());
-				tabData.accept(PalamodModItems.GUARDIAN_STONE.get());
 				tabData.accept(PalamodModBlocks.GUARDIAN_BLOCK.get().asItem());
 				tabData.accept(PalamodModItems.GREENPALADIUMBROADSWORD.get());
 				tabData.accept(PalamodModItems.MAGICAL_TOOL.get());
@@ -280,7 +279,15 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.PALADIUM_HOPPER.get().asItem());
 				tabData.accept(PalamodModItems.AMETHYST_EXCAVATOR.get());
 				tabData.accept(PalamodModBlocks.HARPAGOPHYTUM.get().asItem());
-			}).build());
+				tabData.accept(PalamodModItems.GUARDIAN_STONE.get());
+				tabData.accept(PalamodModItems.COMPRESSEDENDIUM.get());
+				tabData.accept(PalamodModBlocks.FLOWERTOTEM.get().asItem());
+				tabData.accept(PalamodModBlocks.MINERALFLOWER.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUMFLOWER.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUMFLOWERON.get().asItem());
+				tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUMFLOWER.get().asItem());
+			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.EGGPLANT.get());
@@ -389,6 +396,11 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.COBBLED_SOFT_STONE.get().asItem());
 				tabData.accept(PalamodModBlocks.COBBLEDSOFTSTONESTAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.COBBLEDSOFTSTONESLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.MINERALFLOWER.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUMFLOWER.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUMFLOWERON.get().asItem());
+				tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUMFLOWER.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICKOFGODS.get())).displayItems((parameters, tabData) -> {
@@ -522,7 +534,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.DOUBLEEXPPOTION.get());
 				tabData.accept(PalamodModItems.X_10XPPOTION.get());
 				tabData.accept(PalamodModItems.XPBOTTLE.get());
-				tabData.accept(PalamodModBlocks.EXCTRACTOR.get().asItem());
 				tabData.accept(PalamodModBlocks.GLUEBALL_RED.get().asItem());
 				tabData.accept(PalamodModBlocks.GREEN_GLUEBALL.get().asItem());
 				tabData.accept(PalamodModBlocks.GLUEBALL_LIGHT_GREEN.get().asItem());
@@ -541,6 +552,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.GODVILLAGER_SPAWN_EGG.get());
 				tabData.accept(PalamodModItems.CHESTEXPLORER.get());
 				tabData.accept(PalamodModItems.GLUEBALLPATTERN.get());
+				tabData.accept(PalamodModBlocks.EXTRACTOR.get().asItem());
+				tabData.accept(PalamodModBlocks.FLOWERTOTEM.get().asItem());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent
@@ -554,6 +567,11 @@ public class PalamodModTabs {
 			tabData.accept(PalamodModBlocks.SOFTENED_DIAMOND_ORE.get().asItem());
 			tabData.accept(PalamodModBlocks.SOFTENED_REDSTONE_ORE.get().asItem());
 			tabData.accept(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get().asItem());
+			tabData.accept(PalamodModBlocks.MINERALFLOWER.get().asItem());
+			tabData.accept(PalamodModBlocks.ENDIUMFLOWER.get().asItem());
+			tabData.accept(PalamodModBlocks.ENDIUMFLOWERON.get().asItem());
+			tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
+			tabData.accept(PalamodModBlocks.PALADIUMFLOWER.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(PalamodModItems.PIGARMOR_HELMET.get());
 			tabData.accept(PalamodModItems.PIGARMOR_CHESTPLATE.get());

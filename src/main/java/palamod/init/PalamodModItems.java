@@ -199,6 +199,7 @@ import palamod.item.FastswordpaternItem;
 import palamod.item.FastswordheadItem;
 import palamod.item.FarmerjobsitemItem;
 import palamod.item.FakewterItem;
+import palamod.item.ExtractorItem;
 import palamod.item.EnfyupotionItem;
 import palamod.item.EndiumsmallringItem;
 import palamod.item.EndiumshovelheadItem;
@@ -238,6 +239,7 @@ import palamod.item.CompressedxpberryItem;
 import palamod.item.CompressedtitaneItem;
 import palamod.item.CompressedpaladiumItem;
 import palamod.item.CompressedgreenpaladumItem;
+import palamod.item.CompressedendiumItem;
 import palamod.item.CompressedamethysteItem;
 import palamod.item.CobblebreakertitaneupgradeItem;
 import palamod.item.CobblebreakerpaladiumupgradeItem;
@@ -801,7 +803,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> DOUBLEEXPPOTION = REGISTRY.register("doubleexppotion", DoubleexppotionItem::new);
 	public static final DeferredItem<Item> X_10XPPOTION = REGISTRY.register("x_10xppotion", X10xppotionItem::new);
 	public static final DeferredItem<Item> XPBOTTLE = REGISTRY.register("xpbottle", XpbottleItem::new);
-	public static final DeferredItem<Item> EXCTRACTOR = block(PalamodModBlocks.EXCTRACTOR);
+	public static final DeferredItem<Item> EXTRACTOR = block(PalamodModBlocks.EXTRACTOR);
 	public static final DeferredItem<Item> BOOM_OBSIDIAN = block(PalamodModBlocks.BOOM_OBSIDIAN);
 	public static final DeferredItem<Item> MEGABOOMOBSIDIAN = block(PalamodModBlocks.MEGABOOMOBSIDIAN);
 	public static final DeferredItem<Item> HARPAGOPHYTUM = block(PalamodModBlocks.HARPAGOPHYTUM);
@@ -891,6 +893,14 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PIGARMOR_CHESTPLATE = REGISTRY.register("pigarmor_chestplate", PigarmorItem.Chestplate::new);
 	public static final DeferredItem<Item> PIGARMOR_LEGGINGS = REGISTRY.register("pigarmor_leggings", PigarmorItem.Leggings::new);
 	public static final DeferredItem<Item> PIGARMOR_BOOTS = REGISTRY.register("pigarmor_boots", PigarmorItem.Boots::new);
+	public static final DeferredItem<Item> COMPRESSEDENDIUM = REGISTRY.register("compressedendium", CompressedendiumItem::new);
+	public static final DeferredItem<Item> EXTRACTOR_ITEM = REGISTRY.register("extractor_item", ExtractorItem::new);
+	public static final DeferredItem<Item> FLOWERTOTEM = block(PalamodModBlocks.FLOWERTOTEM);
+	public static final DeferredItem<Item> MINERALFLOWER = block(PalamodModBlocks.MINERALFLOWER);
+	public static final DeferredItem<Item> ENDIUMFLOWER = block(PalamodModBlocks.ENDIUMFLOWER);
+	public static final DeferredItem<Item> ENDIUMFLOWERON = block(PalamodModBlocks.ENDIUMFLOWERON);
+	public static final DeferredItem<Item> CLATHRUSARCHERI = block(PalamodModBlocks.CLATHRUSARCHERI);
+	public static final DeferredItem<Item> PALADIUMFLOWER = block(PalamodModBlocks.PALADIUMFLOWER);
 
 	// Start of user code block custom items
 	// End of user code block custom items

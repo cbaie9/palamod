@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 77,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -19,7 +19,7 @@
     ],
     "efficiency": 1.0,
     "attackSpeed": 0.01,
-    "enchantability": 0,
+    "enchantability": 1,
     "damageVsEntity": 4.0,
     "usageCount": 2999,
     "repairItems": [],

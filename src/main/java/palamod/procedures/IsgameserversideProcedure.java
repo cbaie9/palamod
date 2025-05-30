@@ -39,101 +39,12 @@ public class IsgameserversideProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("------------------com--------------------"), false);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((new Object() {
-					public String getResult(LevelAccessor world, Vec3 pos, String _command) {
-						StringBuilder _result = new StringBuilder();
-						if (world instanceof ServerLevel _level) {
-							CommandSource _dataConsumer = new CommandSource() {
-								@Override
-								public void sendSystemMessage(Component message) {
-									_result.append(message.getString());
-								}
-
-								@Override
-								public boolean acceptsSuccess() {
-									return true;
-								}
-
-								@Override
-								public boolean acceptsFailure() {
-									return true;
-								}
-
-								@Override
-								public boolean shouldInformAdmins() {
-									return false;
-								}
-							};
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(_dataConsumer, pos, Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null), _command);
-						}
-						return _result.toString();
-					}
-				}.getResult(world, new Vec3(x, y, z), "oxmods_nocrash"))), false);
+				_player.displayClientMessage(Component.literal((executeCommandGetResult(world, new Vec3(x, y, z), "oxmods_nocrash"))), false);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("------------------com2-------------------"), false);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((new Object() {
-					public String getResult(Entity _ent, String _command) {
-						StringBuilder _result = new StringBuilder();
-						if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-							CommandSource _dataConsumer = new CommandSource() {
-								@Override
-								public void sendSystemMessage(Component message) {
-									_result.append(message.getString());
-								}
-
-								@Override
-								public boolean acceptsSuccess() {
-									return true;
-								}
-
-								@Override
-								public boolean acceptsFailure() {
-									return true;
-								}
-
-								@Override
-								public boolean shouldInformAdmins() {
-									return false;
-								}
-							};
-							_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(_dataConsumer, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-									_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), _command);
-						}
-						return _result.toString();
-					}
-				}.getResult(entity, "oxmods_nocrash"))), false);
-			if ((new Object() {
-				public String getResult(Entity _ent, String _command) {
-					StringBuilder _result = new StringBuilder();
-					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-						CommandSource _dataConsumer = new CommandSource() {
-							@Override
-							public void sendSystemMessage(Component message) {
-								_result.append(message.getString());
-							}
-
-							@Override
-							public boolean acceptsSuccess() {
-								return true;
-							}
-
-							@Override
-							public boolean acceptsFailure() {
-								return true;
-							}
-
-							@Override
-							public boolean shouldInformAdmins() {
-								return false;
-							}
-						};
-						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(_dataConsumer, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), _command);
-					}
-					return _result.toString();
-				}
-			}.getResult(entity, "oxmods_nocrash")).isEmpty()) {
+				_player.displayClientMessage(Component.literal((executeCommandGetResult(entity, "oxmods_nocrash"))), false);
+			if ((executeCommandGetResult(entity, "oxmods_nocrash")).isEmpty()) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("yep"), false);
 			}
@@ -150,5 +61,64 @@ public class IsgameserversideProcedure {
 				_player.displayClientMessage(Component.literal("\\-----------------------------------------------\\"), false);
 		}
 		return exit;
+	}
+
+	private static String executeCommandGetResult(LevelAccessor world, Vec3 pos, String command) {
+		StringBuilder result = new StringBuilder();
+		if (world instanceof ServerLevel level) {
+			CommandSource dataConsumer = new CommandSource() {
+				@Override
+				public void sendSystemMessage(Component message) {
+					result.append(message.getString());
+				}
+
+				@Override
+				public boolean acceptsSuccess() {
+					return true;
+				}
+
+				@Override
+				public boolean acceptsFailure() {
+					return true;
+				}
+
+				@Override
+				public boolean shouldInformAdmins() {
+					return false;
+				}
+			};
+			level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(dataConsumer, pos, Vec2.ZERO, level, 4, "", Component.literal(""), level.getServer(), null), command);
+		}
+		return result.toString();
+	}
+
+	private static String executeCommandGetResult(Entity entity, String command) {
+		StringBuilder result = new StringBuilder();
+		if (!entity.level().isClientSide() && entity.getServer() != null) {
+			CommandSource dataConsumer = new CommandSource() {
+				@Override
+				public void sendSystemMessage(Component message) {
+					result.append(message.getString());
+				}
+
+				@Override
+				public boolean acceptsSuccess() {
+					return true;
+				}
+
+				@Override
+				public boolean acceptsFailure() {
+					return true;
+				}
+
+				@Override
+				public boolean shouldInformAdmins() {
+					return false;
+				}
+			};
+			entity.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(dataConsumer, entity.position(), entity.getRotationVector(), entity.level() instanceof ServerLevel ? (ServerLevel) entity.level() : null, 4,
+					entity.getName().getString(), entity.getDisplayName(), entity.level().getServer(), entity), command);
+		}
+		return result.toString();
 	}
 }

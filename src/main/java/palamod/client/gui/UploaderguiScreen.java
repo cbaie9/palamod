@@ -20,7 +20,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
 import java.util.HashMap;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -45,19 +47,26 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 61 && mouseY < topPos + 79)
+		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 61 && mouseY < topPos + 79) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
-		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 27 && mouseY < topPos + 45)
+		}
+		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 27 && mouseY < topPos + 45) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be"), mouseX, mouseY);
-		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 4 && mouseY < topPos + 20)
-			guiGraphics.renderTooltip(font, Component.literal(ClosetheguitransProcedure.execute()), mouseX, mouseY);
-		if (mouseX > leftPos + 61 && mouseX < leftPos + 107 && mouseY > topPos + 5 && mouseY < topPos + 18)
+		}
+		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 4 && mouseY < topPos + 20) {
+			String hoverText = ClosetheguitransProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+		}
+		if (mouseX > leftPos + 61 && mouseX < leftPos + 107 && mouseY > topPos + 5 && mouseY < topPos + 18) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_gui_interface_need_an_upgra"), mouseX, mouseY);
-		if (mouseX > leftPos + 132 && mouseX < leftPos + 148 && mouseY > topPos + 4 && mouseY < topPos + 20)
+		}
+		if (mouseX > leftPos + 132 && mouseX < leftPos + 148 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to"), mouseX, mouseY);
+		}
 	}
 
 	@Override

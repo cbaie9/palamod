@@ -57,7 +57,7 @@ public class JumpstickItem extends Item {
 
 	@Override
 	public int getEnchantmentValue() {
-		return 0;
+		return 1;
 	}
 
 	@Override

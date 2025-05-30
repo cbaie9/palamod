@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "palamod:block/flower_paladium",
+    "particle": "palamod:block/flower_paladium"
+  },
+  "render_type": "cutout"
+}

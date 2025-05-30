@@ -62,6 +62,7 @@ public class FakewterFluidType extends FluidType {
 				return new Vector3f(0.1450980392f, 0.231372549f, 0.4196078431f);
 			}
 
+			@Override
 			public void modifyFogRender(Camera camera, FogRenderer.FogMode mode, float renderDistance, float partialTick, float nearDistance, float farDistance, FogShape shape) {
 				Entity entity = camera.getEntity();
 				Level world = entity.level();

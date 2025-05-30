@@ -1,0 +1,48 @@
+{
+  "_fv": 77,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Endiumfragment"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumfragment"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumfragment"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumfragment"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Compressedendium"
+    },
+    "name": "compressedendiumcraft",
+    "namespace": "mod"
+  }
+}

@@ -16,7 +16,7 @@ Si vous trouvez des bugs, merci de les signaler pour améliorer le projet sur le
 Ou si vous voulez contribuer au projet vous pouvez via notre github ou via : ( fomurlaire fermé, veuiller se reférer au discord )
 
 Nous sommes aucune façon afilié avec le Paladium Group/games originel ou Microsoft/Mojang.
-Palamod Renew 2020-2023 ( dernière modification le 03/09/2023 )
+Palamod Renew 2020-2025 ( dernière modification le 03/09/2023 )
 Merci de soutenir cette initiative.
 
 Crédits
@@ -24,7 +24,7 @@ Crédits
 Devloppement :  Cb9
 Bug report : Derp, LuckingOoZ Cb9
 
-1.16x / 1.17x / 1.18x / 1.19x / 1.20x
+1.16x / 1.17x / 1.18x / 1.19x / 1.20x / 1.21x
 
 Devloppement Cb9 , Derp, FlixoPxf
 Texturage : FlixoPxf ( Pickaxe of the Gods ), FufuBS1 et Paladium games pour les texture Original + faithful

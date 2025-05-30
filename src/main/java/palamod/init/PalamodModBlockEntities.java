@@ -34,6 +34,7 @@ import palamod.block.entity.HdvblockBlockEntity;
 import palamod.block.entity.GrinderblockBlockEntity;
 import palamod.block.entity.Greenpaladiumchestv2BlockEntity;
 import palamod.block.entity.GreenpaladiumchestBlockEntity;
+import palamod.block.entity.FlowertotemBlockEntity;
 import palamod.block.entity.FactionblckBlockEntity;
 import palamod.block.entity.ExctractorBlockEntity;
 import palamod.block.entity.Endiumchestv2BlockEntity;
@@ -101,10 +102,11 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TYPESETTINGPLATE = register("typesettingplate", PalamodModBlocks.TYPESETTINGPLATE, TypesettingplateBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TYPESETTINGMAX = register("typesettingmax", PalamodModBlocks.TYPESETTINGMAX, TypesettingmaxBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> DRAWBRIDGE = register("drawbridge", PalamodModBlocks.DRAWBRIDGE, DrawbridgeBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> EXCTRACTOR = register("exctractor", PalamodModBlocks.EXCTRACTOR, ExctractorBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> EXTRACTOR = register("extractor", PalamodModBlocks.EXTRACTOR, ExctractorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> TOTEMFERTILITY = register("totemfertility", PalamodModBlocks.TOTEMFERTILITY, TotemfertilityBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> XPBUSHLOW = register("xpbushlow", PalamodModBlocks.XPBUSHLOW, XpbushlowBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> COBBLEBREAKERSERVER = register("cobblebreakerserver", PalamodModBlocks.COBBLEBREAKERSERVER, CobblebreakerserverBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> FLOWERTOTEM = register("flowertotem", PalamodModBlocks.FLOWERTOTEM, FlowertotemBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -152,9 +154,10 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TYPESETTINGPLATE.get(), (blockEntity, side) -> ((TypesettingplateBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TYPESETTINGMAX.get(), (blockEntity, side) -> ((TypesettingmaxBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DRAWBRIDGE.get(), (blockEntity, side) -> ((DrawbridgeBlockEntity) blockEntity).getItemHandler());
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXCTRACTOR.get(), (blockEntity, side) -> ((ExctractorBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXTRACTOR.get(), (blockEntity, side) -> ((ExctractorBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEMFERTILITY.get(), (blockEntity, side) -> ((TotemfertilityBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSHLOW.get(), (blockEntity, side) -> ((XpbushlowBlockEntity) blockEntity).getItemHandler());
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, COBBLEBREAKERSERVER.get(), (blockEntity, side) -> ((CobblebreakerserverBlockEntity) blockEntity).getItemHandler());
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FLOWERTOTEM.get(), (blockEntity, side) -> ((FlowertotemBlockEntity) blockEntity).getItemHandler());
 	}
 }

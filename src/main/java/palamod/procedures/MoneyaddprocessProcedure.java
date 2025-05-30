@@ -39,16 +39,7 @@ public class MoneyaddprocessProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((new Object() {
-			public Entity getEntity() {
-				try {
-					return EntityArgument.getEntity(arguments, "player");
-				} catch (CommandSyntaxException e) {
-					e.printStackTrace();
-					return null;
-				}
-			}
-		}.getEntity()).getUUID().toString() + ".json"));
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 		if (entity.hasPermissions(4)) {
 			{
 				try {
@@ -113,6 +104,15 @@ public class MoneyaddprocessProcedure {
 					}
 				}, _bpos);
 			}
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

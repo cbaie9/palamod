@@ -33,14 +33,7 @@ public class AdshoppreviewamountgravelProcedure {
 			}
 		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
 		buy = n * fac_v;
-		if (buy > new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) {
+		if (buy > getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) {
 			buy_out = "{Not enough money}";
 		} else {
 			buy_out = "" + Math.round(buy);
@@ -49,5 +42,12 @@ public class AdshoppreviewamountgravelProcedure {
 			return "Buy :" + buy_out + " / sell : " + Math.round(n2 * n);
 		}
 		return "Amount : insert number in the bar";
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

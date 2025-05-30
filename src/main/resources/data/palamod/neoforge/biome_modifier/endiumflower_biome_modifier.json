@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "flower_forest",
+  "features": "palamod:endiumflower",
+  "step": "vegetal_decoration"
+}

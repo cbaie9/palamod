@@ -36,7 +36,7 @@ public class GreenpaladiumfastswordItem extends SwordItem {
 
 		@Override
 		public int getEnchantmentValue() {
-			return 0;
+			return 1;
 		}
 
 		@Override

@@ -10,14 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class CloudblockdespawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (9000 >= new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "nbtick")) {
+		if (9000 >= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nbtick")) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = Blocks.AIR.defaultBlockState();
@@ -38,17 +31,17 @@ public class CloudblockdespawnProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("nbtick", (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "nbtick") + 1));
+					_blockEntity.getPersistentData().putDouble("nbtick", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nbtick") + 1));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
 	}
 }

@@ -28,23 +28,8 @@ public class TrixiumdepositprocessProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("trixium_score_" + entity.getDisplayName().getString()), (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())) + new Object() {
-						public int getAmount(int sltid) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-								ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-								if (stack != null)
-									return stack.getCount();
-							}
-							return 0;
-						}
-					}.getAmount(0) * 9));
+					_blockEntity.getPersistentData().putDouble(("trixium_score_" + entity.getDisplayName().getString()),
+							(getBlockNBTNumber(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())) + getAmountInGUISlot(entity, 0) * 9));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -53,23 +38,7 @@ public class TrixiumdepositprocessProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("trixium_totalscore", (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 11, 0), "trixium_totalscore") + new Object() {
-						public int getAmount(int sltid) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-								ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-								if (stack != null)
-									return stack.getCount();
-							}
-							return 0;
-						}
-					}.getAmount(0) * 9));
+					_blockEntity.getPersistentData().putDouble("trixium_totalscore", (getBlockNBTNumber(world, new BlockPos(0, 11, 0), "trixium_totalscore") + getAmountInGUISlot(entity, 0) * 9));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -83,23 +52,7 @@ public class TrixiumdepositprocessProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("trixium_totalscore", (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 11, 0), "trixium_totalscore") + new Object() {
-						public int getAmount(int sltid) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-								ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-								if (stack != null)
-									return stack.getCount();
-							}
-							return 0;
-						}
-					}.getAmount(0)));
+					_blockEntity.getPersistentData().putDouble("trixium_totalscore", (getBlockNBTNumber(world, new BlockPos(0, 11, 0), "trixium_totalscore") + getAmountInGUISlot(entity, 0)));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -108,23 +61,8 @@ public class TrixiumdepositprocessProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble(("trixium_score_" + entity.getDisplayName().getString()), (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())) + new Object() {
-						public int getAmount(int sltid) {
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-								ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-								if (stack != null)
-									return stack.getCount();
-							}
-							return 0;
-						}
-					}.getAmount(0)));
+					_blockEntity.getPersistentData().putDouble(("trixium_score_" + entity.getDisplayName().getString()),
+							(getBlockNBTNumber(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())) + getAmountInGUISlot(entity, 0)));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -133,5 +71,21 @@ public class TrixiumdepositprocessProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
+			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

@@ -20,69 +20,17 @@ public class FactionhomeprocessProcedure {
 		if (entity == null)
 			return;
 		double get_id = 0;
-		get_id = new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
-		if ((new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, new BlockPos(0, 9, 0), ("Faction_home_" + get_id + "_" + StringArgumentType.getString(arguments, "home_name")))) == true) {
+		get_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
+		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_home_" + get_id + "_" + StringArgumentType.getString(arguments, "home_name"))) == true) {
 			{
 				Entity _ent = entity;
-				_ent.teleportTo((new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"))), (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))), (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))));
+				_ent.teleportTo((getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"))),
+						(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))),
+						(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))));
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport((new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"))), (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))), (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))), _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport((getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"))),
+							(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))),
+							(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))), _ent.getYRot(), _ent.getXRot());
 			}
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -93,5 +41,19 @@ public class FactionhomeprocessProcedure {
 						("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" The faction home " + "" + StringArgumentType.getString(arguments, "home_name")
 								+ " witch you tried to teleported doesn't exist or has been deleted\",\"color\":\"gold\"}]"));
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 }

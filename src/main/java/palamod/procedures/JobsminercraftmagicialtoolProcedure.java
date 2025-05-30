@@ -52,16 +52,7 @@ public class JobsminercraftmagicialtoolProcedure {
 			_vars.lvl_required = "Lvl required : 15";
 			_vars.syncPlayerVariables(entity);
 		}
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) : false) && new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-					if (stack != null)
-						return stack.getCount();
-				}
-				return 0;
-			}
-		}.getAmount(1) == 0) {
+		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) : false) && getAmountInGUISlot(entity, 1) == 0) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -72,16 +63,7 @@ public class JobsminercraftmagicialtoolProcedure {
 				((Slot) _slots.get(1)).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) : false) && new Object() {
-				public int getAmount(int sltid) {
-					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-						ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-						if (stack != null)
-							return stack.getCount();
-					}
-					return 0;
-				}
-			}.getAmount(3) == 0) {
+			if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) : false) && getAmountInGUISlot(entity, 3) == 0) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -92,16 +74,7 @@ public class JobsminercraftmagicialtoolProcedure {
 					((Slot) _slots.get(3)).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) : false) && new Object() {
-					public int getAmount(int sltid) {
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-							if (stack != null)
-								return stack.getCount();
-						}
-						return 0;
-					}
-				}.getAmount(5) == 0) {
+				if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) : false) && getAmountInGUISlot(entity, 5) == 0) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PalamodModItems.PALADIUM_INGOT.get());
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -115,16 +88,7 @@ public class JobsminercraftmagicialtoolProcedure {
 				}
 			}
 		}
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get())) : false) && new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-					if (stack != null)
-						return stack.getCount();
-				}
-				return 0;
-			}
-		}.getAmount(4) == 0) {
+		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get())) : false) && getAmountInGUISlot(entity, 4) == 0) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -136,16 +100,7 @@ public class JobsminercraftmagicialtoolProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_STICK.get())) : false) && new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-					if (stack != null)
-						return stack.getCount();
-				}
-				return 0;
-			}
-		}.getAmount(7) == 0) {
+		if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_STICK.get())) : false) && getAmountInGUISlot(entity, 7) == 0) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(PalamodModItems.PALADIUM_STICK.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -157,5 +112,14 @@ public class JobsminercraftmagicialtoolProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
+			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

@@ -1,26 +1,26 @@
 {
   "variants": {
     "facing=north,blockstate=0": {
-      "model": "palamod:block/exctractor"
+      "model": "palamod:block/extractor"
     },
     "facing=east,blockstate=0": {
-      "model": "palamod:block/exctractor",
+      "model": "palamod:block/extractor",
       "y": 90
     },
     "facing=south,blockstate=0": {
-      "model": "palamod:block/exctractor",
+      "model": "palamod:block/extractor",
       "y": 180
     },
     "facing=west,blockstate=0": {
-      "model": "palamod:block/exctractor",
+      "model": "palamod:block/extractor",
       "y": 270
     },
     "facing=up,blockstate=0": {
-      "model": "palamod:block/exctractor",
+      "model": "palamod:block/extractor",
       "x": 270
     },
     "facing=down,blockstate=0": {
-      "model": "palamod:block/exctractor",
+      "model": "palamod:block/extractor",
       "x": 90
     },
     "facing=north,blockstate=1": {

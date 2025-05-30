@@ -56,16 +56,7 @@ public class BackpackdropdeathnolockProcedure {
 				for (int index0 = 0; index0 < 9; index0++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
-						_setstack.setCount(new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-									ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-									if (stack != null)
-										return stack.getCount();
-								}
-								return 0;
-							}
-						}.getAmount((int) i));
+						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 					i = i + 1;
@@ -75,16 +66,7 @@ public class BackpackdropdeathnolockProcedure {
 				for (int index1 = 0; index1 < 18; index1++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
-						_setstack.setCount(new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-									ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-									if (stack != null)
-										return stack.getCount();
-								}
-								return 0;
-							}
-						}.getAmount((int) i));
+						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 					i = i + 1;
@@ -94,16 +76,7 @@ public class BackpackdropdeathnolockProcedure {
 				for (int index2 = 0; index2 < 18; index2++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
-						_setstack.setCount(new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-									ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-									if (stack != null)
-										return stack.getCount();
-								}
-								return 0;
-							}
-						}.getAmount((int) i));
+						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 					i = i + 1;
@@ -114,16 +87,7 @@ public class BackpackdropdeathnolockProcedure {
 					i = i + 1;
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
-						_setstack.setCount(new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-									ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-									if (stack != null)
-										return stack.getCount();
-								}
-								return 0;
-							}
-						}.getAmount((int) i));
+						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
@@ -143,5 +107,14 @@ public class BackpackdropdeathnolockProcedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
+			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

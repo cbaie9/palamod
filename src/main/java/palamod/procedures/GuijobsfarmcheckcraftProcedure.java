@@ -54,52 +54,8 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.ENDIUM_NUGGET.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(5) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(6) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(8) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(3) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
+							&& (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HOE.get()).copy();
 							_setstack.setCount(1);
@@ -114,52 +70,8 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(4)).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(5) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(6) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(8) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(3) == 0 && (75 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
+							&& (75 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HOE.get()).copy();
 							_setstack.setCount(1);
@@ -185,16 +97,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.is(ItemTags.create(ResourceLocation.parse("minecraft:logs")))
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && (55 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (55 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModBlocks.TOTEMFERTILITY.get()).copy();
 							_setstack.setCount(1);
@@ -241,16 +144,7 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.ENDIUM_INGOT.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.ENDIUM_INGOT.get()
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_ARMOR_CHESTPLATE.get()).copy();
 							_setstack.setCount(1);
@@ -277,26 +171,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.PALADIUM_CORE.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 64 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.PALADIUM_CRUSHER.get().asItem())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModBlocks.PALADIUM_CRUSHER.get().asItem())
 							&& (40 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_CRUSHER.get()).copy();
@@ -321,16 +198,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.ENDIUM_NUGGET.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BACKPACK.get()).copy();
 							_setstack.setCount(1);
@@ -354,16 +222,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.PALADIUM_INGOT.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && (70 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (70 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADUM_BACKPACK.get()).copy();
 							_setstack.setCount(1);
@@ -387,16 +246,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.TITANE_INGOT.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && (53 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (53 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_BACKPACK.get()).copy();
 							_setstack.setCount(1);
@@ -419,16 +269,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(7)).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && (35 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (35 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_BACKPACK.get()).copy();
 							_setstack.setCount(1);
@@ -454,26 +295,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.is(ItemTags.create(ResourceLocation.parse("minecraft:planks")))
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.is(ItemTags.create(ResourceLocation.parse("minecraft:planks")))
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.ELEVATOR_WHITE.get().asItem())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModBlocks.ELEVATOR_WHITE.get().asItem())
 							&& (13 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModBlocks.ELEVATOR_WHITE.get()).copy();
@@ -501,26 +325,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.ENDIUM_SEEDPLANTER.get())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModItems.ENDIUM_SEEDPLANTER.get())
 							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SEEDPLANTER.get()).copy();
@@ -548,26 +355,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get())
 							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get()).copy();
@@ -595,26 +385,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.PALADIUM_SEEDPLANTER.get())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModItems.PALADIUM_SEEDPLANTER.get())
 							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SEEDPLANTER.get()).copy();
@@ -642,26 +415,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.PALADIUM_STICK.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.PALADIUM_SEEDPLANTER.get())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModItems.PALADIUM_SEEDPLANTER.get())
 							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_SEEDPLANTER.get()).copy();
@@ -688,26 +444,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.AMETHYST_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.AMETHYST_STICK.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.TITANE_SEEDPLANTER.get())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModItems.TITANE_SEEDPLANTER.get())
 							&& (30 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_SEEDPLANTER.get()).copy();
@@ -734,26 +473,9 @@ public class GuijobsfarmcheckcraftProcedure {
 									.getItem() == PalamodModItems.AMETHYST_STICK.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.AMETHYST_STICK.get()
-							&& (new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 || new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) < 0 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.AMETHYST_SEEDPLANTER.get())
+							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
+									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(9)).getItem() : ItemStack.EMPTY)
+											.getItem() == PalamodModItems.AMETHYST_SEEDPLANTER.get())
 							&& (10 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_SEEDPLANTER.get()).copy();
@@ -773,52 +495,8 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(5) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(6) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(8) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(3) == 0 && (5 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
+							&& (5 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_HOE.get()).copy();
 							_setstack.setCount(1);
@@ -838,52 +516,8 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(5) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(6) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(8) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(3) == 0 && (20 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
+							&& (20 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.TITANEHOE.get()).copy();
 							_setstack.setCount(1);
@@ -903,52 +537,8 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(8)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(3)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(2)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-							&& new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(5) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(6) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(8) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(9) == 0 && new Object() {
-								public int getAmount(int sltid) {
-									if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-										ItemStack stack = ((Slot) _slots.get(sltid)).getItem();
-										if (stack != null)
-											return stack.getCount();
-									}
-									return 0;
-								}
-							}.getAmount(3) == 0 && (50 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
+							&& (50 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_HOE.get()).copy();
 							_setstack.setCount(1);
@@ -968,5 +558,14 @@ public class GuijobsfarmcheckcraftProcedure {
 				}
 			}
 		}
+	}
+
+	private static int getAmountInGUISlot(Entity entity, int sltid) {
+		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
+			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+			if (stack != null)
+				return stack.getCount();
+		}
+		return 0;
 	}
 }

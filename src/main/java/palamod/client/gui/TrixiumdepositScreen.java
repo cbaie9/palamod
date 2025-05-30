@@ -44,11 +44,11 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 78 && mouseX < leftPos + 96 && mouseY > topPos + 41 && mouseY < topPos + 59)
+		if (mouseX > leftPos + 78 && mouseX < leftPos + 96 && mouseY > topPos + 41 && mouseY < topPos + 59) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.trixiumdeposit.tooltip_put_trixium_here"), mouseX, mouseY);
+		}
 	}
 
 	@Override
