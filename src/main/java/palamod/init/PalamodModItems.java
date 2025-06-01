@@ -901,6 +901,8 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ENDIUMFLOWERON = block(PalamodModBlocks.ENDIUMFLOWERON);
 	public static final DeferredItem<Item> CLATHRUSARCHERI = block(PalamodModBlocks.CLATHRUSARCHERI);
 	public static final DeferredItem<Item> PALADIUMFLOWER = block(PalamodModBlocks.PALADIUMFLOWER);
+	public static final DeferredItem<Item> DANKAROCTEST_1_SPAWN_EGG = REGISTRY.register("dankaroctest_1_spawn_egg", () -> new DeferredSpawnEggItem(PalamodModEntities.DANKAROCTEST_1, -256, -10027162, new Item.Properties()));
+	public static final DeferredItem<Item> DANKABLOCK = block(PalamodModBlocks.DANKABLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

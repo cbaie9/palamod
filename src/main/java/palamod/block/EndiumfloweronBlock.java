@@ -1,6 +1,7 @@
 
 package palamod.block;
 
+import palamod.procedures.TickaddedProcedure;
 import palamod.procedures.EndiumflowerOnTickUpdateProcedure;
 
 import net.minecraft.world.level.material.PushReaction;
@@ -9,6 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.util.RandomSource;
@@ -29,6 +31,12 @@ public class EndiumfloweronBlock extends FlowerBlock {
 	@Override
 	public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
 		return 60;
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		TickaddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

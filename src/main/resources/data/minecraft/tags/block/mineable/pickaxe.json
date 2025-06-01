@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:dankablock",
     "palamod:flowertotem",
     "palamod:softened_lapis_lazulis_ore",
     "palamod:softened_redstone_ore",

@@ -454,8 +454,8 @@
       {
         "type": "image",
         "data": {
-          "image": "arrow_right20.png",
-          "use1Xscale": true,
+          "image": "arrow_right_full.png",
+          "use1Xscale": false,
           "x": 305,
           "y": 71,
           "locked": false

@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 public class MineralflowerOnBoneMealSuccessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double random = 0;
-		random = Mth.nextDouble(RandomSource.create(), 1, 8);
+		random = Math.round(Mth.nextInt(RandomSource.create(), 1, 9));
 		if (random == 1) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.15), z, new ItemStack(Items.COAL));

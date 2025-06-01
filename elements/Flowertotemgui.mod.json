@@ -58,8 +58,8 @@
       {
         "type": "image",
         "data": {
-          "image": "arrow_right20.png",
-          "use1Xscale": true,
+          "image": "arrow_right_full.png",
+          "use1Xscale": false,
           "x": 200,
           "y": 73,
           "locked": false
@@ -203,6 +203,37 @@
           "dropItemsWhenNotBound": true,
           "x": 259,
           "y": 85,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_close_gui_nohover",
+          "image": "close_gui_nohover.png",
+          "hoveredImage": "close_gui_hover.png",
+          "onClick": {
+            "name": "Closegui"
+          },
+          "x": 280,
+          "y": 42,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getstringtotemnum",
+          "text": {
+            "fixedValue": "",
+            "name": "Getstringtotemnum"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 107,
           "locked": false
         }
       }

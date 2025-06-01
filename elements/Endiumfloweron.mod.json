@@ -112,6 +112,9 @@
     "generationType": "Flower",
     "patchSize": 1,
     "generateAtAnyHeight": false,
+    "onBlockAdded": {
+      "name": "Tickadded"
+    },
     "onTickUpdate": {
       "name": "EndiumflowerOnTickUpdate"
     }

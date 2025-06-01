@@ -88,5 +88,6 @@ public class EndiumflowerOnTickUpdateProcedure {
 				}
 			}
 		}
+		world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
 	}
 }

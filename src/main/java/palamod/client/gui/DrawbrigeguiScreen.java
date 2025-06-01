@@ -106,8 +106,8 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_arrow_down0001 = new ImageButton(this.leftPos + 212, this.topPos + 125, 28, 32,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_down0001.png"), ResourceLocation.parse("palamod:textures/screens/arrow_down_0001.png")), e -> {
+		imagebutton_arrow_down0001 = new ImageButton(this.leftPos + 224, this.topPos + 116, 14, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_down_empty.png"), ResourceLocation.parse("palamod:textures/screens/arrow_down_full.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(0, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -120,8 +120,8 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 		};
 		guistate.put("button:imagebutton_arrow_down0001", imagebutton_arrow_down0001);
 		this.addRenderableWidget(imagebutton_arrow_down0001);
-		imagebutton_arrow_right01 = new ImageButton(this.leftPos + 240, this.topPos + 95, 32, 28,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_right01.png"), ResourceLocation.parse("palamod:textures/screens/arrow_right01.png")), e -> {
+		imagebutton_arrow_right01 = new ImageButton(this.leftPos + 237, this.topPos + 102, 16, 14,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_right_empty.png"), ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(1, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -134,8 +134,8 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 		};
 		guistate.put("button:imagebutton_arrow_right01", imagebutton_arrow_right01);
 		this.addRenderableWidget(imagebutton_arrow_right01);
-		imagebutton_arrow_up01 = new ImageButton(this.leftPos + 212, this.topPos + 66, 28, 32, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_up01.png"), ResourceLocation.parse("palamod:textures/screens/arrow_up01.png")),
-				e -> {
+		imagebutton_arrow_up01 = new ImageButton(this.leftPos + 223, this.topPos + 86, 14, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_up_empty.png"), ResourceLocation.parse("palamod:textures/screens/arrow_up_full.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(2, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -148,8 +148,8 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 		};
 		guistate.put("button:imagebutton_arrow_up01", imagebutton_arrow_up01);
 		this.addRenderableWidget(imagebutton_arrow_up01);
-		imagebutton_arrow_left01 = new ImageButton(this.leftPos + 179, this.topPos + 95, 32, 28,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_left01.png"), ResourceLocation.parse("palamod:textures/screens/arrow_left01.png")), e -> {
+		imagebutton_arrow_left01 = new ImageButton(this.leftPos + 208, this.topPos + 102, 16, 14,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_left_empty.png"), ResourceLocation.parse("palamod:textures/screens/arrow_left_full.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(3, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 3, x, y, z);

@@ -287,6 +287,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ENDIUMFLOWERON.get().asItem());
 				tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUMFLOWER.get().asItem());
+				tabData.accept(PalamodModItems.DANKAROCTEST_1_SPAWN_EGG.get());
+				tabData.accept(PalamodModBlocks.DANKABLOCK.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -560,6 +562,7 @@ public class PalamodModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(PalamodModItems.INTERNET_CARD.get());
+			tabData.accept(PalamodModItems.DANKAROCTEST_1_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
 			tabData.accept(PalamodModBlocks.SOFTENED_COAL_ORE.get().asItem());
 			tabData.accept(PalamodModBlocks.SOFTENED_IRON_ORE.get().asItem());

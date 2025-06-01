@@ -17,14 +17,6 @@ import palamod.procedures.Grindersubprocessarrowinsertn3Procedure;
 import palamod.procedures.Grindersubprocessarrowinsertn2Procedure;
 import palamod.procedures.Grindersubprocessarrowinsertn1Procedure;
 import palamod.procedures.Grindersubprocessarrowinsertn0Procedure;
-import palamod.procedures.Grinderguiarrow2n9Procedure;
-import palamod.procedures.Grinderguiarrow2n8Procedure;
-import palamod.procedures.Grinderguiarrow2n7Procedure;
-import palamod.procedures.Grinderguiarrow2n5Procedure;
-import palamod.procedures.Grinderguiarrow2n4Procedure;
-import palamod.procedures.Grinderguiarrow2n3Procedure;
-import palamod.procedures.Grinderguiarrow2n2Procedure;
-import palamod.procedures.Grinderguiarrow2n1Procedure;
 import palamod.procedures.Grinderguiarrow2n10Procedure;
 
 import net.minecraft.world.level.Level;
@@ -85,38 +77,8 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 		if (Grindersubprocessarrowinsertn4Procedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arr4.png"), this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
 		}
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right01.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-
-		if (Grinderguiarrow2n1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right03.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right05.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right07.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right09.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right11.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right13.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-
-		if (Grinderguiarrow2n7Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right15.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n8Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right17.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
-		if (Grinderguiarrow2n9Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right19.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		}
 		if (Grinderguiarrow2n10Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right20.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png"), this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
 		}
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_1red_new.png"), this.leftPos + 54, this.topPos + 62, 0, 0, 24, 10, 24, 10);

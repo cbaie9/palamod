@@ -1,0 +1,9 @@
+{
+  "parent": "palamod:custom/dancarok_v1",
+  "textures": {
+    "all": "palamod:block/grinder_block_front16",
+    "particle": "palamod:block/grinder_block_front16",
+    "0": "palamod:block/danka"
+  },
+  "render_type": "solid"
+}

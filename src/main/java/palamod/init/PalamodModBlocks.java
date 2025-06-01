@@ -236,6 +236,7 @@ import palamod.block.DownloaderBlock;
 import palamod.block.DiamondspikeBlock;
 import palamod.block.DiamondobsidianspikeBlock;
 import palamod.block.DarkgreenglueballBlock;
+import palamod.block.DankablockBlock;
 import palamod.block.CyanglueballBlock;
 import palamod.block.CrownBlock;
 import palamod.block.CompressedspongeBlock;
@@ -550,6 +551,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> ENDIUMFLOWERON = REGISTRY.register("endiumfloweron", EndiumfloweronBlock::new);
 	public static final DeferredBlock<Block> CLATHRUSARCHERI = REGISTRY.register("clathrusarcheri", ClathrusarcheriBlock::new);
 	public static final DeferredBlock<Block> PALADIUMFLOWER = REGISTRY.register("paladiumflower", PaladiumflowerBlock::new);
+	public static final DeferredBlock<Block> DANKABLOCK = REGISTRY.register("dankablock", DankablockBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

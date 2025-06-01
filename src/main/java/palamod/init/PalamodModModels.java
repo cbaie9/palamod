@@ -11,6 +11,7 @@ import palamod.client.model.Modelprimed_tnt_sponge_v1;
 import palamod.client.model.Modeldynamite_model;
 import palamod.client.model.ModelGolem_gplacement_vlegtest;
 import palamod.client.model.ModelGolem_gplacement2;
+import palamod.client.model.ModelDancarok_V1_Converted;
 import palamod.client.model.ModelBIG_dynamitev2;
 import palamod.client.model.ModelBIG_dynamite2;
 
@@ -31,6 +32,7 @@ public class PalamodModModels {
 		event.registerLayerDefinition(ModelGolem_gplacement_vlegtest.LAYER_LOCATION, ModelGolem_gplacement_vlegtest::createBodyLayer);
 		event.registerLayerDefinition(ModelGolem_gplacement2.LAYER_LOCATION, ModelGolem_gplacement2::createBodyLayer);
 		event.registerLayerDefinition(Modelprimed_tnt_sponge_v3.LAYER_LOCATION, Modelprimed_tnt_sponge_v3::createBodyLayer);
+		event.registerLayerDefinition(ModelDancarok_V1_Converted.LAYER_LOCATION, ModelDancarok_V1_Converted::createBodyLayer);
 		event.registerLayerDefinition(Modelprimed_tnt_sponge_v4.LAYER_LOCATION, Modelprimed_tnt_sponge_v4::createBodyLayer);
 	}
 }

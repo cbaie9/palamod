@@ -13,6 +13,7 @@ import palamod.client.renderer.PaladiumgolemRenderer;
 import palamod.client.renderer.PaladiumdynamiteRenderer;
 import palamod.client.renderer.GodvillagerRenderer;
 import palamod.client.renderer.EndiumdynamiteRenderer;
+import palamod.client.renderer.Dankaroctest1Renderer;
 import palamod.client.renderer.BigdynamiteentityRenderer;
 
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -37,5 +38,6 @@ public class PalamodModEntityRenderers {
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDENDIUMTNT.get(), PrimedendiumtntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.SWITCHARROW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.GODVILLAGER.get(), GodvillagerRenderer::new);
+		event.registerEntityRenderer(PalamodModEntities.DANKAROCTEST_1.get(), Dankaroctest1Renderer::new);
 	}
 }

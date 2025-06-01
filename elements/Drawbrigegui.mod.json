@@ -17,7 +17,7 @@
           "use1Xscale": false,
           "x": 73,
           "y": 40,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -81,13 +81,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_down0001",
-          "image": "arrow_down0001.png",
-          "hoveredImage": "arrow_down_0001.png",
+          "image": "arrow_down_empty.png",
+          "hoveredImage": "arrow_down_full.png",
           "onClick": {
             "name": "Setblocksouth"
           },
-          "x": 286,
-          "y": 165,
+          "x": 298,
+          "y": 156,
           "locked": false
         }
       },
@@ -95,13 +95,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_right01",
-          "image": "arrow_right01.png",
-          "hoveredImage": "arrow_right01.png",
+          "image": "arrow_right_empty.png",
+          "hoveredImage": "arrow_right_full.png",
           "onClick": {
             "name": "Setblockeast"
           },
-          "x": 314,
-          "y": 135,
+          "x": 311,
+          "y": 142,
           "locked": false
         }
       },
@@ -109,13 +109,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_up01",
-          "image": "arrow_up01.png",
-          "hoveredImage": "arrow_up01.png",
+          "image": "arrow_up_empty.png",
+          "hoveredImage": "arrow_up_full.png",
           "onClick": {
             "name": "Setblocknorth"
           },
-          "x": 286,
-          "y": 106,
+          "x": 297,
+          "y": 126,
           "locked": false
         }
       },
@@ -530,13 +530,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_left01",
-          "image": "arrow_left01.png",
-          "hoveredImage": "arrow_left01.png",
+          "image": "arrow_left_empty.png",
+          "hoveredImage": "arrow_left_full.png",
           "onClick": {
             "name": "Setblockwest"
           },
-          "x": 253,
-          "y": 135,
+          "x": 282,
+          "y": 142,
           "locked": false
         }
       }

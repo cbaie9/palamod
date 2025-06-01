@@ -6,6 +6,6 @@ import net.minecraft.world.item.Item;
 
 public class PlateItem extends Item {
 	public PlateItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 }

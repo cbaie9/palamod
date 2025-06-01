@@ -281,7 +281,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 113, 0, 0, 3, 16, 3, 16);
 
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right20.png"), this.leftPos + 241, this.topPos + 56, 0, 0, 16, 14, 16, 14);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png"), this.leftPos + 241, this.topPos + 56, 0, 0, 16, 14, 16, 14);
 
 		RenderSystem.disableBlend();
 	}
