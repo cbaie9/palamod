@@ -454,7 +454,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 1) {
@@ -466,7 +466,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 2) {
@@ -478,7 +478,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 3) {
@@ -490,7 +490,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 4) {
@@ -502,7 +502,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 5) {
@@ -515,7 +515,7 @@ public class ForgeprocessProcedure {
 					if (Math.random() < 0.5) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
-							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 							_itemHandlerModifiable.setStackInSlot(2, _setstack);
 						}
 						palavert_ramdom = true;
@@ -523,7 +523,7 @@ public class ForgeprocessProcedure {
 					if (palavert_ramdom == false) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
-							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 							_itemHandlerModifiable.setStackInSlot(2, _setstack);
 						}
 					}
@@ -537,7 +537,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 3));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 3);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 7) {
@@ -549,7 +549,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 8) {
@@ -561,7 +561,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 9) {
@@ -573,7 +573,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_STICK.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 10) {
@@ -585,7 +585,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 11) {
@@ -597,7 +597,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 12) {
@@ -609,7 +609,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 13) {
@@ -621,7 +621,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 14) {
@@ -633,7 +633,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 3));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 3);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 15) {
@@ -645,7 +645,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 16) {
@@ -657,7 +657,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 17) {
@@ -669,7 +669,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_STICK.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 18) {
@@ -681,7 +681,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 9));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 9);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 19) {
@@ -693,7 +693,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 3));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 3);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 20) {
@@ -705,7 +705,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 21) {
@@ -717,7 +717,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 22) {
@@ -729,7 +729,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 8));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 8);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 23) {
@@ -741,7 +741,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 7));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 7);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 24) {
@@ -753,7 +753,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 25) {
@@ -765,7 +765,7 @@ public class ForgeprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe") == 26) {

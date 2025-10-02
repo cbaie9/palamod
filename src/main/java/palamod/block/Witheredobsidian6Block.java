@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.WitheredobsidiandropProcedure;
@@ -10,7 +9,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
@@ -21,7 +19,7 @@ import net.minecraft.core.BlockPos;
 
 public class Witheredobsidian6Block extends Block {
 	public Witheredobsidian6Block() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).sound(SoundType.STONE).strength(50f, 1200f).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(50f, 1200f).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK));
 	}
 
 	@Override

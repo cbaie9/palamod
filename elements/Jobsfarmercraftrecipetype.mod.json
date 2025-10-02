@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "jeirecipetype",
   "definition": {
     "textureSelector": "miner_craft_jei_gui.png",
@@ -14,6 +14,8 @@
       }
     ],
     "enableCraftingtable": true,
+    "enableIntList": false,
+    "enableStringList": false,
     "title": "Miner Crafts",
     "slotList": [
       {

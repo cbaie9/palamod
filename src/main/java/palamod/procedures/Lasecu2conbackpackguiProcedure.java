@@ -5,6 +5,7 @@ import palamod.world.inventory.BackpackpaladiumMenu;
 import palamod.world.inventory.BackpackendiumMenu;
 import palamod.world.inventory.BackpackamethystguiMenu;
 
+import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
@@ -13,14 +14,10 @@ import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.client.Minecraft;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -81,12 +78,12 @@ public class Lasecu2conbackpackguiProcedure {
 				if (i2 >= 0) {
 					for (int index0 = 0; index0 < 9; index0++) {
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
+							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu45 ? _menu45.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							((Slot) _slots.get((int) i)).set(ItemStack.EMPTY);
+						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
 							_player.containerMenu.broadcastChanges();
 						}
 						i = i + 1;
@@ -95,12 +92,12 @@ public class Lasecu2conbackpackguiProcedure {
 				if (i2 >= 9) {
 					for (int index1 = 0; index1 < 18; index1++) {
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
+							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu49 ? _menu49.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							((Slot) _slots.get((int) i)).set(ItemStack.EMPTY);
+						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
 							_player.containerMenu.broadcastChanges();
 						}
 						i = i + 1;
@@ -109,12 +106,12 @@ public class Lasecu2conbackpackguiProcedure {
 				if (i2 >= 27) {
 					for (int index2 = 0; index2 < 18; index2++) {
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
+							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu53 ? _menu53.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							((Slot) _slots.get((int) i)).set(ItemStack.EMPTY);
+						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
 							_player.containerMenu.broadcastChanges();
 						}
 						i = i + 1;
@@ -123,12 +120,12 @@ public class Lasecu2conbackpackguiProcedure {
 				if (i2 >= 55) {
 					for (int index3 = 0; index3 < 18; index3++) {
 						i = i + 1;
-						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-							((Slot) _slots.get((int) i)).set(ItemStack.EMPTY);
+						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
 							_player.containerMenu.broadcastChanges();
 						}
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).copy();
+							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu58 ? _menu58.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
@@ -166,8 +163,8 @@ public class Lasecu2conbackpackguiProcedure {
 	}
 
 	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
-			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+		if (entity instanceof Player player && player.containerMenu instanceof PalamodModMenus.MenuAccessor menuAccessor) {
+			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
 			if (stack != null)
 				return stack.getCount();
 		}

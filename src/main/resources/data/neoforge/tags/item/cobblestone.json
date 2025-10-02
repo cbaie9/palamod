@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
+    "palamod:cobbled_soft_stone",
     "minecraft:cobbled_deepslate",
-    "minecraft:cobblestone",
-    "palamod:cobbled_soft_stone"
+    "minecraft:cobblestone"
   ]
 }

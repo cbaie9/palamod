@@ -6,6 +6,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -102,7 +103,10 @@ public class JobsminercraftjeiRecipe implements Recipe<RecipeInput> {
 		private static void toNetwork(RegistryFriendlyByteBuf buf, JobsminercraftjeiRecipe recipe) {
 			buf.writeVarInt(recipe.getIngredients().size());
 			for (Ingredient ing : recipe.getIngredients()) {
-				Ingredient.CONTENTS_STREAM_CODEC.encode(buf, ing);
+				if (ing.getItems()[0].getItem() == Items.AIR)
+					Ingredient.CONTENTS_STREAM_CODEC.encode(buf, Ingredient.EMPTY);
+				else
+					Ingredient.CONTENTS_STREAM_CODEC.encode(buf, ing);
 			}
 			ItemStack.STREAM_CODEC.encode(buf, recipe.getResultItem(null));
 		}

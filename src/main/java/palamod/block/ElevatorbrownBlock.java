@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.Elevator_processProcedure;
@@ -15,7 +14,7 @@ import net.minecraft.core.BlockPos;
 
 public class ElevatorbrownBlock extends Block {
 	public ElevatorbrownBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

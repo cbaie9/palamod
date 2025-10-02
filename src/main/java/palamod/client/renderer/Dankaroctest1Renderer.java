@@ -1,4 +1,3 @@
-
 package palamod.client.renderer;
 
 import palamod.entity.Dankaroctest1Entity;

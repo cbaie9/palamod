@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.init.PalamodModItems;

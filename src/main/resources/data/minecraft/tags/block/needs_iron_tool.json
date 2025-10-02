@@ -1,20 +1,20 @@
 {
   "replace": false,
   "values": [
-    "palamod:softened_diamond_ore",
-    "palamod:softened_gold_ore",
-    "palamod:softened_findium_ore",
     "palamod:extractor",
-    "palamod:deepslate_findium_ore",
-    "palamod:amethyst_slab",
-    "palamod:amethyst_stairs",
-    "palamod:paladium_forge",
-    "palamod:paladium_spike",
     "palamod:titane_spike",
-    "palamod:spike_gold",
-    "palamod:iron_spike",
-    "palamod:paladium_green_block",
+    "palamod:amethyst_stairs",
     "palamod:findium_block",
-    "palamod:amethyst_block"
+    "palamod:paladium_green_block",
+    "palamod:paladium_forge",
+    "palamod:softened_findium_ore",
+    "palamod:amethyst_block",
+    "palamod:softened_gold_ore",
+    "palamod:deepslate_findium_ore",
+    "palamod:paladium_spike",
+    "palamod:spike_gold",
+    "palamod:softened_diamond_ore",
+    "palamod:amethyst_slab",
+    "palamod:iron_spike"
   ]
 }

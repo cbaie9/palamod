@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.SetblockstateincacheProcedure;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
@@ -26,13 +24,13 @@ public class FindiumOreBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
 	public FindiumOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(3f, 5f).lightLevel(s -> (new Object() {
+		super(BlockBehaviour.Properties.of().strength(3f, 5f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())));
+		}.getLightLevel())).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

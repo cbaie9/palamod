@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "findium_block",
@@ -14,9 +14,11 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "",
     "particleTexture": "",
     "blockBase": "Stairs",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -43,6 +45,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:Palamod"
@@ -59,19 +65,18 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "material": {
-      "value": "ROCK"
-    },
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
     "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "basedrum",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -88,6 +93,8 @@
     "unbreakable": false,
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

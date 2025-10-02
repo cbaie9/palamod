@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class AmethystslabBlock extends SlabBlock {
 	public AmethystslabBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.AMETHYST).strength(1.1f, 10f).requiresCorrectToolForDrops().dynamicShape());
+		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(1.1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

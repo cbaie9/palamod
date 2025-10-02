@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.TntendiumflintProcedure;
@@ -21,7 +20,7 @@ import net.minecraft.core.BlockPos;
 
 public class EndiumtntBlock extends Block {
 	public EndiumtntBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().mapColor(MapColor.FIRE).sound(SoundType.CROP).strength(0.75f, 10f));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).sound(SoundType.CROP).strength(0.75f, 10f).ignitedByLava());
 	}
 
 	@Override

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.CloudblockdespawnProcedure;
@@ -22,7 +21,7 @@ import net.minecraft.core.BlockPos;
 
 public class CloudblockBlock extends Block implements EntityBlock {
 	public CloudblockBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.SNOW).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.SNOW).strength(1f, 10f).ignitedByLava());
 	}
 
 	@Override
@@ -59,7 +58,7 @@ public class CloudblockBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

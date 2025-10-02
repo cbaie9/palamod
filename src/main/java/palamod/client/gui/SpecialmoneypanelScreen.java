@@ -4,6 +4,8 @@ import palamod.world.inventory.SpecialmoneypanelMenu;
 
 import palamod.network.SpecialmoneypanelButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -18,15 +20,13 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SpecialmoneypanelScreen extends AbstractContainerScreen<SpecialmoneypanelMenu> {
-	private final static HashMap<String, Object> guistate = SpecialmoneypanelMenu.guistate;
+public class SpecialmoneypanelScreen extends AbstractContainerScreen<SpecialmoneypanelMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox player_name;
 	EditBox money;
 	Checkbox custom_destructible;
@@ -44,6 +44,18 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("player_name"))
+				player_name.setValue(stringState);
+			else if (name.equals("money"))
+				money.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		player_name.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -52,13 +64,11 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/specialmoneypanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 224, 176, 224);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -94,64 +104,35 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	@Override
 	public void init() {
 		super.init();
-		player_name = new EditBox(this.font, this.leftPos + 8, this.topPos + 19, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.player_name")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.player_name").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.player_name").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		player_name.setMaxLength(32767);
-		player_name.setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.player_name").getString());
-		guistate.put("text:player_name", player_name);
+		player_name = new EditBox(this.font, this.leftPos + 8, this.topPos + 19, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.player_name"));
+		player_name.setMaxLength(8192);
+		player_name.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "player_name", content, false);
+		});
+		player_name.setHint(Component.translatable("gui.palamod.specialmoneypanel.player_name"));
 		this.addWidget(this.player_name);
-		money = new EditBox(this.font, this.leftPos + 8, this.topPos + 51, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.money")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.money").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.money").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		money.setMaxLength(32767);
-		money.setSuggestion(Component.translatable("gui.palamod.specialmoneypanel.money").getString());
-		guistate.put("text:money", money);
+		money = new EditBox(this.font, this.leftPos + 8, this.topPos + 51, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.money"));
+		money.setMaxLength(8192);
+		money.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "money", content, false);
+		});
+		money.setHint(Component.translatable("gui.palamod.specialmoneypanel.money"));
 		this.addWidget(this.money);
 		button_give = Button.builder(Component.translatable("gui.palamod.specialmoneypanel.button_give"), e -> {
+			int x = SpecialmoneypanelScreen.this.x;
+			int y = SpecialmoneypanelScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new SpecialmoneypanelButtonMessage(0, x, y, z));
 				SpecialmoneypanelButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 119, this.topPos + 90, 46, 20).build();
-		guistate.put("button:button_give", button_give);
 		this.addRenderableWidget(button_give);
-		custom_destructible = Checkbox.builder(Component.translatable("gui.palamod.specialmoneypanel.custom_destructible"), this.font).pos(this.leftPos + 6, this.topPos + 114)
-
-				.build();
-		guistate.put("checkbox:custom_destructible", custom_destructible);
+		custom_destructible = Checkbox.builder(Component.translatable("gui.palamod.specialmoneypanel.custom_destructible"), this.font).pos(this.leftPos + 6, this.topPos + 114).onValueChange((checkbox, value) -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 1, "custom_destructible", value, false);
+		}).build();
 		this.addRenderableWidget(custom_destructible);
 	}
 }

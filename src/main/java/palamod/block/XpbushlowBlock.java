@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.XpbushsetupProcedure;
@@ -23,18 +22,16 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 public class XpbushlowBlock extends Block implements EntityBlock {
 	public XpbushlowBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.GRASS).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -71,15 +68,11 @@ public class XpbushlowBlock extends Block implements EntityBlock {
 		world.scheduleTick(pos, this, 20);
 	}
 
-	@OnlyIn(Dist.CLIENT)
 	@Override
+	@OnlyIn(Dist.CLIENT)
 	public void animateTick(BlockState blockstate, Level world, BlockPos pos, RandomSource random) {
 		super.animateTick(blockstate, world, pos, random);
-		Player entity = Minecraft.getInstance().player;
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		XpbushprocessProcedure.execute(world, x, y, z);
+		XpbushprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
@@ -103,7 +96,7 @@ public class XpbushlowBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

@@ -4,6 +4,8 @@ import palamod.world.inventory.LegendarystonepalahelpMenu;
 
 import palamod.network.LegendarystonepalahelpButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -16,15 +18,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class LegendarystonepalahelpScreen extends AbstractContainerScreen<LegendarystonepalahelpMenu> {
-	private final static HashMap<String, Object> guistate = LegendarystonepalahelpMenu.guistate;
+public class LegendarystonepalahelpScreen extends AbstractContainerScreen<LegendarystonepalahelpMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_home_pixel_adminshop;
 	ImageButton imagebutton_arrow_adminshop;
@@ -41,37 +41,32 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legendarystonepalahelp.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 220, 200, 220, 200);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legend_fortune.png"), this.leftPos + 10, this.topPos + 50, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legend_invisibility.png"), this.leftPos + 10, this.topPos + 74, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legend_jobs.png"), this.leftPos + 10, this.topPos + 95, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legend_power.png"), this.leftPos + 10, this.topPos + 116, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legend_tp.png"), this.leftPos + 10, this.topPos + 140, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/legend_random.png"), this.leftPos + 11, this.topPos + 167, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 88, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 119, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -105,6 +100,8 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 		super.init();
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 198, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = LegendarystonepalahelpScreen.this.x;
+					int y = LegendarystonepalahelpScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new LegendarystonepalahelpButtonMessage(0, x, y, z));
 						LegendarystonepalahelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -115,10 +112,11 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 164, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = LegendarystonepalahelpScreen.this.x;
+					int y = LegendarystonepalahelpScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new LegendarystonepalahelpButtonMessage(1, x, y, z));
 						LegendarystonepalahelpButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -129,10 +127,11 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 180, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					int x = LegendarystonepalahelpScreen.this.x;
+					int y = LegendarystonepalahelpScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new LegendarystonepalahelpButtonMessage(2, x, y, z));
 						LegendarystonepalahelpButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -143,7 +142,6 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 	}
 }

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,7 +9,7 @@ import net.minecraft.core.BlockPos;
 
 public class TrixiumslabBlock extends SlabBlock {
 	public TrixiumslabBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().dynamicShape());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override

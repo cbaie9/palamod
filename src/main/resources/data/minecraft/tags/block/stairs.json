@@ -1,20 +1,20 @@
 {
   "replace": false,
   "values": [
-    "palamod:cobbledsoftstonestairs",
-    "palamod:softstonestairs",
+    "palamod:endium_stairs",
+    "palamod:findium_stairs",
+    "palamod:amethyst_stairs",
     "palamod:trixiumstairs",
     "palamod:obsidianstairs",
-    "palamod:renforcedobsidianstairs",
-    "palamod:green_paladium_stairs",
-    "palamod:endium_stairs",
-    "palamod:amethyst_stairs",
-    "palamod:paladium_stairs",
     "palamod:titane_stairs",
-    "palamod:findium_stairs",
-    "palamod:erable_stairs",
     "palamod:judeecercis_stairs",
+    "palamod:softstonestairs",
     "palamod:jacaranda_stairs",
+    "palamod:renforcedobsidianstairs",
+    "palamod:paladium_stairs",
+    "palamod:erable_stairs",
+    "palamod:green_paladium_stairs",
+    "palamod:cobbledsoftstonestairs",
     "palamod:ostrya_wood_stairs"
   ]
 }

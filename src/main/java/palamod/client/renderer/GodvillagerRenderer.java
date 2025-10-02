@@ -1,9 +1,9 @@
-
 package palamod.client.renderer;
 
 import palamod.entity.GodvillagerEntity;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.layers.CrossedArmsItemLayer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelLayers;
@@ -14,6 +14,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class GodvillagerRenderer extends MobRenderer<GodvillagerEntity, VillagerModel<GodvillagerEntity>> {
 	public GodvillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new VillagerModel<GodvillagerEntity>(context.bakeLayer(ModelLayers.VILLAGER)), 0.5f);
+		this.addLayer(new CrossedArmsItemLayer<>(this, context.getItemInHandRenderer()));
 	}
 
 	@Override

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.OpencobblebreakerProcedure;
@@ -12,7 +11,6 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
@@ -29,7 +27,7 @@ import net.minecraft.core.BlockPos;
 
 public class CobblebreakerBlock extends Block implements EntityBlock {
 	public CobblebreakerBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(2f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().strength(2f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -80,7 +78,7 @@ public class CobblebreakerBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

@@ -42,7 +42,7 @@ public class ExplosionspongetntProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 						if (distanceSq <= 1.0) {
-							if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PalamodModBlocks.FAKE_WATER.get()
+							if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PalamodModBlocks.FAKE_WATER.get()
 									|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.WATER
 									|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PalamodModBlocks.ANGELIC_WATER.get()) {
 								world.levelEvent(2001, BlockPos.containing(x + xi, y + i, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)))));

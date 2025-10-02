@@ -61,49 +61,49 @@ public class CobblebreakerprocessProcedure {
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() <= 63 && Math.random() < 0.15) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.IRON_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(1, _setstack);
 					}
 				}
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63 && Math.random() < 0.1) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.GOLD_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 				}
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() <= 63 && Math.random() < 0.05) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.DIAMOND_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(3, _setstack);
 					}
 				}
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() <= 63 && Math.random() < 0.0475) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(4, _setstack);
 					}
 				}
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() <= 63 && Math.random() < 0.0375) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(5, _setstack);
 					}
 				}
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() <= 63 && Math.random() < 0.025) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(6, _setstack);
 					}
 				}
 				if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() <= 63 && Math.random() < 0.005) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PARTICLE.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(7, _setstack);
 					}
 				}

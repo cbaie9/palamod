@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -12,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftstoneslabBlock extends SlabBlock {
 	public SoftstoneslabBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.NETHERRACK).strength(0.4f).requiresCorrectToolForDrops().dynamicShape());
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.NETHERRACK).strength(0.4f).requiresCorrectToolForDrops());
 	}
 
 	@Override

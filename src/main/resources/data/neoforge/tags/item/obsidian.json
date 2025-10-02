@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
+    "palamod:renforced_obsidian",
     "minecraft:obsidian",
-    "minecraft:crying_obsidian",
-    "palamod:renforced_obsidian"
+    "minecraft:crying_obsidian"
   ]
 }

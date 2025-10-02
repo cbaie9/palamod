@@ -1,17 +1,15 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
+
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 public class Rustinechests1Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -71,50 +69,50 @@ public class Rustinechests1Procedure {
 				is111full = false;
 			}
 		}
-		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY)
+		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(109).getItem() : ItemStack.EMPTY)
 				.is(ItemTags.create(ResourceLocation.parse("palamod:rings")))) {
 			if (is12 && !is12full) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu12 ? _menu12.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(12)).set(_setstack);
+					_menu.getSlots().get(12).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					((Slot) _slots.get(109)).set(ItemStack.EMPTY);
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (is13 && !is13full) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu15 ? _menu15.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(13)).set(_setstack);
+					_menu.getSlots().get(13).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					((Slot) _slots.get(109)).set(ItemStack.EMPTY);
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (is110 && !is110full) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu18 ? _menu18.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(110)).set(_setstack);
+					_menu.getSlots().get(110).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					((Slot) _slots.get(109)).set(ItemStack.EMPTY);
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (is111 && !is111full) {
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(109)).getItem() : ItemStack.EMPTY).copy();
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(111)).set(_setstack);
+					_menu.getSlots().get(111).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					((Slot) _slots.get(109)).set(ItemStack.EMPTY);
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			}
@@ -129,8 +127,8 @@ public class Rustinechests1Procedure {
 	}
 
 	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
-			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+		if (entity instanceof Player player && player.containerMenu instanceof PalamodModMenus.MenuAccessor menuAccessor) {
+			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
 			if (stack != null)
 				return stack.getCount();
 		}

@@ -1,4 +1,3 @@
-
 package palamod.jei_recipes;
 
 import palamod.init.PalamodModJeiPlugin;

@@ -15,7 +15,7 @@ public class CobblebreakerdiamondxpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player)
-			_player.giveExperiencePoints((int) (2 * itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount()));
+			_player.giveExperiencePoints(2 * itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount());
 	}
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {

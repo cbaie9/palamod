@@ -439,7 +439,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -479,7 +479,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -519,7 +519,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -602,7 +602,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -643,7 +643,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -683,7 +683,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_INGOT.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -766,7 +766,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.AXE_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -806,7 +806,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -846,7 +846,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_AXE.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -929,7 +929,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXE_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -970,7 +970,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1010,7 +1010,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_PICKAXE.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1093,7 +1093,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.SHOVEL_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1134,7 +1134,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1174,7 +1174,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1259,7 +1259,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.SWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1299,7 +1299,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1339,7 +1339,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HEADENDIUMSWORD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1424,7 +1424,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.HAMMER_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1465,7 +1465,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1505,7 +1505,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1590,7 +1590,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1631,7 +1631,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1671,7 +1671,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1756,7 +1756,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1797,7 +1797,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -1837,7 +1837,7 @@ public class Gcodev4customProcedure {
 								}
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {

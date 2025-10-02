@@ -8774,10 +8774,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -9085,10 +9081,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -9183,10 +9175,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "x",
@@ -13100,10 +13088,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -14574,10 +14558,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14598,10 +14578,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14626,10 +14602,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14650,10 +14622,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14678,10 +14646,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14702,10 +14666,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14730,10 +14690,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14754,10 +14710,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14782,10 +14734,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14806,10 +14754,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14834,10 +14778,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14858,10 +14798,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14886,10 +14822,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14910,10 +14842,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14938,10 +14866,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -14962,10 +14886,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -14990,10 +14910,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15014,10 +14930,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15228,10 +15140,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15252,10 +15160,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15280,10 +15184,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15304,10 +15204,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15332,10 +15228,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15356,10 +15248,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15384,10 +15272,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15408,10 +15292,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15436,10 +15316,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15460,10 +15336,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15488,10 +15360,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15512,10 +15380,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15540,10 +15404,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15564,10 +15424,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15592,10 +15448,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15616,10 +15468,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15644,10 +15492,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15668,10 +15512,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -15696,10 +15536,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -15720,10 +15556,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -17206,10 +17038,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           }
         ]
       }
@@ -20041,10 +19869,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "x",
@@ -26139,10 +25963,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26163,10 +25983,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26191,10 +26007,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26215,10 +26027,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26243,10 +26051,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26267,10 +26071,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26295,10 +26095,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26319,10 +26115,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26347,10 +26139,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26371,10 +26159,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26399,10 +26183,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26423,10 +26203,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26451,10 +26227,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26475,10 +26247,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26503,10 +26271,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26527,10 +26291,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26555,10 +26315,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26579,10 +26335,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -26607,10 +26359,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -26631,10 +26379,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27561,10 +27305,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27585,10 +27325,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27613,10 +27349,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27637,10 +27369,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27665,10 +27393,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27689,10 +27413,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27717,10 +27437,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27741,10 +27457,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27769,10 +27481,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27793,10 +27501,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27821,10 +27525,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27845,10 +27545,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27873,10 +27569,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27897,10 +27589,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27925,10 +27613,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -27949,10 +27633,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -27977,10 +27657,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28001,10 +27677,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28029,10 +27701,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28053,10 +27721,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28513,10 +28177,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28537,10 +28197,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28565,10 +28221,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28589,10 +28241,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28617,10 +28265,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28641,10 +28285,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28669,10 +28309,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28693,10 +28329,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28721,10 +28353,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28745,10 +28373,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28773,10 +28397,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28797,10 +28417,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28825,10 +28441,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28849,10 +28461,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -28877,10 +28485,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -28901,10 +28505,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -29025,10 +28625,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -29049,10 +28645,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -29125,10 +28717,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -29151,10 +28739,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -29175,10 +28759,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -30826,8 +30406,8 @@
         ],
         "dependencies": [
           {
-            "name": "guistate",
-            "type": "map"
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30953,8 +30533,8 @@
         ],
         "dependencies": [
           {
-            "name": "guistate",
-            "type": "map"
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -31995,57 +31575,6 @@
           "src/main/java/palamod/block/TypesettingtableBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/typesettingtable.json",
           "src/main/resources/assets/palamod/models/item/typesettingtable.json"
-        ]
-      }
-    },
-    {
-      "name": "Typesettingbook",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "typesettingbook",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/block/TypesettingbookBlock.java",
-          "src/main/resources/assets/palamod/models/item/typesettingbook.json",
-          "src/main/resources/assets/palamod/blockstates/typesettingbook.json",
-          "src/main/resources/data/palamod/loot_table/blocks/typesettingbook.json",
-          "src/main/java/palamod/block/entity/TypesettingbookBlockEntity.java",
-          "src/main/resources/assets/palamod/models/block/typesettingbook.json"
-        ]
-      }
-    },
-    {
-      "name": "Typesettingplate",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "typesettingplate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/blockstates/typesettingplate.json",
-          "src/main/resources/assets/palamod/models/block/typesettingplate.json",
-          "src/main/java/palamod/block/entity/TypesettingplateBlockEntity.java",
-          "src/main/resources/assets/palamod/models/item/typesettingplate.json",
-          "src/main/java/palamod/block/TypesettingplateBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/typesettingplate.json"
-        ]
-      }
-    },
-    {
-      "name": "Typesettingmax",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "typesettingmax",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/block/entity/TypesettingmaxBlockEntity.java",
-          "src/main/resources/data/palamod/loot_table/blocks/typesettingmax.json",
-          "src/main/resources/assets/palamod/models/block/typesettingmax.json",
-          "src/main/resources/assets/palamod/blockstates/typesettingmax.json",
-          "src/main/resources/assets/palamod/models/item/typesettingmax.json",
-          "src/main/java/palamod/block/TypesettingmaxBlock.java"
         ]
       }
     },
@@ -33755,10 +33284,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -33780,10 +33305,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -33809,10 +33330,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -33834,10 +33351,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -33863,10 +33376,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -33888,10 +33397,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -33917,10 +33422,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -33942,10 +33443,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -33971,10 +33468,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -33996,10 +33489,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34025,10 +33514,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34050,10 +33535,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34079,10 +33560,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34104,10 +33581,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34133,10 +33606,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34158,10 +33627,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34187,10 +33652,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34212,10 +33673,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34241,10 +33698,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34266,10 +33719,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34295,10 +33744,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34320,10 +33765,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34349,10 +33790,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34374,10 +33811,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34403,10 +33836,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34428,10 +33857,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34457,10 +33882,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34482,10 +33903,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34511,10 +33928,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34536,10 +33949,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34565,10 +33974,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34590,10 +33995,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34619,10 +34020,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34644,10 +34041,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34673,10 +34066,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34698,10 +34087,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34727,10 +34112,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34752,10 +34133,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34781,10 +34158,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34806,10 +34179,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34835,10 +34204,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34860,10 +34225,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34889,10 +34250,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34914,10 +34271,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -34943,10 +34296,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -34968,10 +34317,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -39272,10 +38617,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -39542,10 +38883,6 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -39566,10 +38903,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "world",
@@ -41591,10 +40924,6 @@
           "src/main/java/palamod/procedures/BackpackdropdeathProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "world",
             "type": "world"
@@ -46863,83 +46192,6 @@
       }
     },
     {
-      "name": "Typesettingtableloadenchant",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "typesettingtableloadenchant",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/TypesettingtableloadenchantProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "input_item",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "from",
-            "type": "string"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Enchantitemtypesetting",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enchantitemtypesetting",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/EnchantitemtypesettingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "item_input",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "return_type": "itemstack"
-      }
-    },
-    {
       "name": "Typesettingstableprocess",
       "type": "procedure",
       "compiles": true,
@@ -47066,16 +46318,111 @@
       }
     },
     {
-      "name": "Typesettingtableclearunloadenchant",
+      "name": "Testcopy",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "typesettingtableclearunloadenchant",
+      "registry_name": "testcopy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TestcopyProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Typesettingtableblockstate",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "typesettingtableblockstate",
       "metadata": {
         "files": [
-          "src/main/java/palamod/procedures/TypesettingtableclearunloadenchantProcedure.java"
-        ],
+          "src/main/resources/assets/palamod/models/block/typesettingtableblockstate_blockstate_1.json",
+          "src/main/resources/assets/palamod/models/block/typesettingtableblockstate_blockstate_0.json",
+          "src/main/resources/assets/palamod/models/block/typesettingtableblockstate_blockstate_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Typesettingtablestorage",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "typesettingtablestorage",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/world/inventory/TypesettingtablestorageMenu.java",
+          "src/main/java/palamod/client/gui/TypesettingtablestorageScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "Typesettingtablecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "typesettingtablecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/typesettingtablecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Platecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/platecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumink",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumink",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/PaladiuminkItem.java",
+          "src/main/resources/assets/palamod/models/item/paladiumink.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiuminkcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiuminkcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiuminkcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Printingpressprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "printingpressprocess",
+      "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -47092,6 +46439,9 @@
             "name": "world",
             "type": "world"
           }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PrintingpressprocessProcedure.java"
         ]
       }
     }
@@ -49137,9 +48487,6 @@
     ],
     "BLOCKS:minecraft:mineable/axe": [
       "~CUSTOM:Totemfertility",
-      "~CUSTOM:Typesettingmax",
-      "~CUSTOM:Typesettingplate",
-      "~CUSTOM:Typesettingbook",
       "~CUSTOM:Typesettingtable",
       "~CUSTOM:Erabletrapdoor",
       "~CUSTOM:Jacarandadoor",
@@ -49248,6 +48595,12 @@
       "~CUSTOM:AmethysteArmor.legs",
       "~CUSTOM:TitaneArmor.legs",
       "~CUSTOM:PaladiumArmor.legs"
+    ],
+    "BLOCKS:minecraft:wooden_fences": [
+      "~CUSTOM:Erable_Fence",
+      "~CUSTOM:Judeecercis_Fence",
+      "~CUSTOM:Jacaranda_Fence",
+      "~CUSTOM:Ostrya_woodFence"
     ]
   },
   "tab_element_order": {
@@ -49490,7 +48843,8 @@
       "Clathrusarcheri",
       "Paladiumflower",
       "Dankaroctest1",
-      "Dankablock"
+      "Dankablock",
+      "Paladiumink"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -49819,7 +49173,6 @@
       "gui.palamod.adminshoporefindium.label_sell_price_85": "Sell price : 85",
       "item.palamod.compressed_paladium": "Compressed Paladium",
       "gui.palamod.adminshopmobsendereyes.button_sell": "sell",
-      "block.palamod.typesettingplate.description_0": "Remake from bibliocraft",
       "gui.palamod.grinderpalahelpgui.label_smelt_cuit_les_minerais_mins": "Smelt : smelt the mined ores -) hammer",
       "gui.palamod.palahelpore.label_outils": "tools",
       "gui.palamod.adminshopplantcacao.label_buy_price_90": "Buy price : 90",
@@ -50164,7 +49517,6 @@
       "block.palamod.ostrya_wood_fence_gate": "Ostrya Fence Gate",
       "gui.palamod.xpbushpalahelpgui.button_back": "back",
       "block.palamod.elevator_cyan": "Elevator cyan",
-      "block.palamod.typesettingbook": "Typesetting table",
       "item.palamod.paladium_axe": "Paladium Axe",
       "painting.palamod.desertpaining_16.author": "Unknown",
       "gui.palamod.adminshopmobsfrspidereyes.button_sell": "sell",
@@ -50331,7 +49683,6 @@
       "block.palamod.endium_block": "Block of Endium",
       "item.palamod.wing": "Wing",
       "item.palamod.money_item": "Money item",
-      "block.palamod.typesettingmax": "Typesetting table",
       "item.palamod.orangeblue": "Orangeblue",
       "gui.palamod.adminshopmobs_2feather.number_buy": "number here",
       "item.palamod.paladiumrawore": "Paladium raw ore",
@@ -51086,7 +50437,6 @@
       "gui.palamod.adminshopplantcarrot.button_buy": "buy",
       "gui.palamod.analyserresult.label_ores": "ores :",
       "gui.palamod.adminshopmobs_2feather.label_sell_price_120": "Sell price :  6.5",
-      "block.palamod.typesettingplate": "Typesetting table",
       "gui.palamod.adminshopblockoakwood.number_buy": "number here",
       "item.palamod.paladiumarmorcustom_2_boots": "Paladium Boots",
       "gui.palamod.adminshopmobswitherskull.button_sell": "sell",
@@ -51483,7 +50833,6 @@
       "gui.palamod.adminshoputilities.button_stone": "Cobblestone",
       "gui.palamod.adminshopmobsbone.label_mode_set": "Amount :",
       "item.palamod.hyperjumpstick": "Hyper jump stick",
-      "block.palamod.typesettingbook.description_0": "Remake from bibliocraft",
       "block.palamod.erable_slab": "Erable Slab",
       "item.minecraft.splash_potion.effect.potion_mineur_fou": "Splash Potion of Potion Mineur Fou",
       "gui.palamod.adminshopblockgrass.label_sell_price_03": "Sell price : 0.3",
@@ -51554,7 +50903,6 @@
       "gui.palamod.adminshopmenu.button_ores": "Ores",
       "gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg": "an enchantment who nullfy dmg",
       "gui.palamod.adminshopblock_sand.number_buy": "number here",
-      "block.palamod.typesettingmax.description_0": "Remake from bibliocraft",
       "gui.palamod.adminshopplant.button_melon": "Melon",
       "gui.palamod.xpbushpalahelpgui.label_des_xp_berries_qui_vous_donne_de": "des xp berries qui vous donne de xp",
       "gui.palamod.jobsminercraftgui.tooltip_pickaxe_of_the_gods": "Pickaxe of the gods",
@@ -51733,7 +51081,10 @@
       "gui.palamod.adminshoporetitane.label_mode_set": "Amount :",
       "block.palamod.stony.description_0": "auto-respawnable block for creating unbreakble wall ( creative )",
       "item.palamod.endium_sword": "Endium Sword",
-      "block.palamod.erable_fence": "Erable Fence"
+      "block.palamod.erable_fence": "Erable Fence",
+      "fluid_type.palamod.fake_water": "Fake water",
+      "fluid_type.palamod.angelic_water": "Angelic water",
+      "item.palamod.paladiumink": "Paladium ink"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte ( pour passer le code ",
@@ -51801,7 +51152,6 @@
       "item.palamod.compressed_paladium": "Paladium compressé",
       "gui.palamod.adminshopmobsendereyes.button_sell": "sell",
       "gui.palamod.grinderpalahelpgui.label_smelt_cuit_les_minerais_mins": "Smelt : cuit les minerais minés -) Marteaux",
-      "block.palamod.typesettingplate.description_0": "Remake from bibliocraft",
       "gui.palamod.palahelpore.label_outils": "outils",
       "gui.palamod.adminshopplantcacao.label_buy_price_90": "Buy price : 90",
       "gui.palamod.crushergui.button_placeholder_tt": "placeholder_tt",
@@ -52148,7 +51498,6 @@
       "block.palamod.ostrya_wood_fence_gate": "Portail en ostrya",
       "gui.palamod.xpbushpalahelpgui.button_back": "Retour en arrière",
       "block.palamod.elevator_cyan": "Ascenseur cyan",
-      "block.palamod.typesettingbook": "Table d\u0027écriture",
       "item.palamod.paladium_axe": "Hache en paladium",
       "painting.palamod.desertpaining_16.author": "Unknown",
       "gui.palamod.adminshopmobsfrspidereyes.button_sell": "Vendre",
@@ -52317,7 +51666,6 @@
       "block.palamod.endium_block": "Block en Endium",
       "item.palamod.wing": "Ailes",
       "item.palamod.money_item": "Billet de dollars",
-      "block.palamod.typesettingmax": "Table d\u0027écriture",
       "item.palamod.orangeblue": "Orangeblue",
       "gui.palamod.adminshopmobs_2feather.number_buy": "Un nombre ici",
       "item.palamod.paladiumrawore": "Paladium raw ore",
@@ -53076,7 +52424,6 @@
       "gui.palamod.adminshopplantcarrot.button_buy": "Acheter",
       "gui.palamod.analyserresult.label_ores": "Minerais :",
       "gui.palamod.adminshopmobs_2feather.label_sell_price_120": "Prix de vente :  6",
-      "block.palamod.typesettingplate": "Table d\u0027écriture",
       "gui.palamod.adminshopblockoakwood.number_buy": "Un nombre ici",
       "item.palamod.paladiumarmorcustom_2_boots": "Bottes en Paladium Modifié",
       "gui.palamod.adminshopmobswitherskull.button_sell": "Vendre",
@@ -53478,7 +52825,6 @@
       "gui.palamod.adminshopmobsbone.label_mode_set": "Quantité :",
       "gui.palamod.moneypanel.Admin_money_change": "Money to add/remove",
       "item.palamod.hyperjumpstick": "Bàton de super saut",
-      "block.palamod.typesettingbook.description_0": "Remake from bibliocraft",
       "block.palamod.erable_slab": "Dalle d\u0027érable",
       "item.minecraft.splash_potion.effect.potion_mineur_fou": "Splash Potion of Potion Mineur Fou",
       "gui.palamod.adminshopblockgrass.label_sell_price_03": "Prix de vente : 0.3",
@@ -53549,7 +52895,6 @@
       "gui.palamod.adminshopmenu.button_ores": "Minerais",
       "gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg": "an enchantment who nullfy dmg",
       "gui.palamod.adminshopblock_sand.number_buy": "Un nombre ici",
-      "block.palamod.typesettingmax.description_0": "Remake from bibliocraft",
       "gui.palamod.adminshopplant.button_melon": "Melon",
       "gui.palamod.xpbushpalahelpgui.label_des_xp_berries_qui_vous_donne_de": "des xp berries qui vous donne de xp",
       "gui.palamod.jobsminercraftgui.tooltip_pickaxe_of_the_gods": "Pickaxe of the gods",
@@ -53730,8 +53075,55 @@
       "gui.palamod.adminshoporetitane.label_mode_set": "Quantité :",
       "block.palamod.stony.description_0": "auto-respawnable block for creating unbreakble wall ( creative )",
       "item.palamod.endium_sword": "Épée en endium",
-      "block.palamod.erable_fence": "Barrière en érable"
+      "block.palamod.erable_fence": "Barrière en érable",
+      "fluid_type.palamod.fake_water": "Fake water",
+      "fluid_type.palamod.angelic_water": "Angelic water",
+      "item.palamod.paladiumink": "Paladium ink"
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/palamod.mixins.json",
+      "src/main/java/palamod/PalamodMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/palamod/init/PalamodModTabs.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModModels.java",
+      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/java/palamod/init/PalamodModBiomes.java",
+      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/init/PalamodModFluids.java",
+      "src/main/java/palamod/init/PalamodModFluidTypes.java",
+      "src/main/java/palamod/network/MenuStateUpdateMessage.java",
+      "src/main/java/palamod/init/PalamodModMenus.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
+      "src/main/java/palamod/init/PalamodModGameRules.java",
+      "src/main/java/palamod/init/PalamodModFuels.java",
+      "src/main/java/palamod/init/PalamodModJeiInformation.java",
+      "src/main/resources/data/palamod/tags/item/jei_empty_tag.json",
+      "src/main/java/palamod/init/PalamodModJeiPlugin.java",
+      "src/main/java/palamod/init/PalamodModRecipeTypes.java",
+      "src/main/java/palamod/init/PalamodModKeyMappings.java",
+      "src/main/resources/data/minecraft/tags/painting_variant/placeable.json",
+      "src/main/java/palamod/init/PalamodModParticles.java",
+      "src/main/java/palamod/init/PalamodModParticleTypes.java",
+      "src/main/java/palamod/init/PalamodModMobEffects.java",
+      "src/main/java/palamod/init/PalamodModPotions.java",
+      "src/main/java/palamod/init/PalamodModBrewingRecipes.java",
+      "src/main/java/palamod/init/PalamodModVillagerProfessions.java",
+      "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
+      "src/main/java/palamod/init/PalamodModTrades.java",
+      "src/main/java/palamod/init/PalamodModBlocks.java",
+      "src/main/java/palamod/init/PalamodModBlockEntities.java",
+      "src/main/java/palamod/init/PalamodModItems.java",
+      "src/main/java/palamod/init/PalamodModEntities.java",
+      "src/main/java/palamod/init/PalamodModEntityRenderers.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -53749,7 +53141,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.047",
+    "version": "1.20.048",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
@@ -53767,5 +53159,5 @@
     "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games ",
     "modElementsPackage": "palamod"
   },
-  "mcreatorVersion": 202500113416
+  "mcreatorVersion": 202500228610
 }

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.JacarandasapdropProcedure;
@@ -16,7 +15,7 @@ import net.minecraft.core.BlockPos;
 
 public class Jacaranda_LeavesBlock extends LeavesBlock {
 	public Jacaranda_LeavesBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.GRASS).strength(0.2f).noOcclusion());
+		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(0.2f).noOcclusion().ignitedByLava().isSuffocating((bs, br, bp) -> false).isViewBlocking((bs, br, bp) -> false));
 	}
 
 	@Override

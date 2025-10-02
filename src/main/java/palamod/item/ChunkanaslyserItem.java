@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.procedures.AnalyserdendProcedure;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class ChunkanaslyserItem extends Item {
 	public ChunkanaslyserItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));
+		super(new Item.Properties().rarity(Rarity.EPIC));
 	}
 
 	@Override

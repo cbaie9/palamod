@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class TrixiumstairsBlock extends StairBlock {
 	public TrixiumstairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override

@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -28,9 +27,6 @@ import palamod.block.WetlavaspongeBlock;
 import palamod.block.UploaderBlock;
 import palamod.block.UnknownblockBlock;
 import palamod.block.TypesettingtableBlock;
-import palamod.block.TypesettingplateBlock;
-import palamod.block.TypesettingmaxBlock;
-import palamod.block.TypesettingbookBlock;
 import palamod.block.TruetresureBlock;
 import palamod.block.TrixiumstairsBlock;
 import palamod.block.TrixiumslabBlock;
@@ -460,9 +456,6 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> FERTILZED_DIRT = REGISTRY.register("fertilzed_dirt", FertilseddirtBlock::new);
 	public static final DeferredBlock<Block> PRINTINGPRESS = REGISTRY.register("printingpress", PrintingpressBlock::new);
 	public static final DeferredBlock<Block> TYPESETTINGTABLE = REGISTRY.register("typesettingtable", TypesettingtableBlock::new);
-	public static final DeferredBlock<Block> TYPESETTINGBOOK = REGISTRY.register("typesettingbook", TypesettingbookBlock::new);
-	public static final DeferredBlock<Block> TYPESETTINGPLATE = REGISTRY.register("typesettingplate", TypesettingplateBlock::new);
-	public static final DeferredBlock<Block> TYPESETTINGMAX = REGISTRY.register("typesettingmax", TypesettingmaxBlock::new);
 	public static final DeferredBlock<Block> DRAWBRIDGE = REGISTRY.register("drawbridge", DrawbridgeBlock::new);
 	public static final DeferredBlock<Block> UNKNOWNBLOCK = REGISTRY.register("unknownblock", UnknownblockBlock::new);
 	public static final DeferredBlock<Block> COMPRESSEDSPONGE = REGISTRY.register("compressedsponge", CompressedspongeBlock::new);

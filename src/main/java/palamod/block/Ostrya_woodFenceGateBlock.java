@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodFenceGateBlock extends FenceGateBlock {
 	public Ostrya_woodFenceGateBlock() {
-		super(WoodType.OAK, BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().dynamicShape().forceSolidOn());
+		super(WoodType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

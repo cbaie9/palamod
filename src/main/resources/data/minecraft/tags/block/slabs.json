@@ -1,20 +1,20 @@
 {
   "replace": false,
   "values": [
-    "palamod:cobbledsoftstoneslab",
-    "palamod:softstoneslab",
-    "palamod:trixiumslab",
     "palamod:hardened_obsidian_slab",
-    "palamod:obsidianslab",
-    "palamod:green_paladium_slab",
+    "palamod:jacaranda_slab",
+    "palamod:trixiumslab",
     "palamod:endium_slab",
-    "palamod:amethyst_slab",
-    "palamod:paladium_slab",
-    "palamod:titane_slab",
-    "palamod:findium_slab",
     "palamod:erable_slab",
     "palamod:judeecercis_slab",
-    "palamod:jacaranda_slab",
+    "palamod:paladium_slab",
+    "palamod:cobbledsoftstoneslab",
+    "palamod:obsidianslab",
+    "palamod:findium_slab",
+    "palamod:green_paladium_slab",
+    "palamod:softstoneslab",
+    "palamod:titane_slab",
+    "palamod:amethyst_slab",
     "palamod:ostrya_wood_slab"
   ]
 }

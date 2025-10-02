@@ -1,4 +1,3 @@
-
 package palamod.world.inventory;
 
 import palamod.procedures.OpengodvillagerguiProcedure;
@@ -35,9 +34,17 @@ import net.minecraft.core.BlockPos;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
-public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
+public class GodvillagerguiMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
+	public final Map<String, Object> menuState = new HashMap<>() {
+		@Override
+		public Object put(String key, Object value) {
+			if (!this.containsKey(key) && this.size() >= 8)
+				return null;
+			return super.put(key, value);
+		}
+	};
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
@@ -104,7 +111,7 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(0, 1, 0);
+				slotChanged(0, 1, stack.getCount());
 			}
 
 			@Override
@@ -136,7 +143,7 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(3, 1, 0);
+				slotChanged(3, 1, stack.getCount());
 			}
 
 			@Override
@@ -158,7 +165,7 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 			@Override
 			public void onTake(Player entity, ItemStack stack) {
 				super.onTake(entity, stack);
-				slotChanged(1, 1, 0);
+				slotChanged(1, 1, stack.getCount());
 			}
 
 			@Override
@@ -214,12 +221,14 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 				}
 				return ItemStack.EMPTY;
 			}
-			if (itemstack1.getCount() == 0)
-				slot.set(ItemStack.EMPTY);
-			else
+			if (itemstack1.isEmpty()) {
+				slot.setByPlayer(ItemStack.EMPTY);
+			} else {
 				slot.setChanged();
-			if (itemstack1.getCount() == itemstack.getCount())
+			}
+			if (itemstack1.getCount() == itemstack.getCount()) {
 				return ItemStack.EMPTY;
+			}
 			slot.onTake(playerIn, itemstack1);
 		}
 		return itemstack;
@@ -324,7 +333,13 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Supplie
 		}
 	}
 
-	public Map<Integer, Slot> get() {
-		return customSlots;
+	@Override
+	public Map<Integer, Slot> getSlots() {
+		return Collections.unmodifiableMap(customSlots);
+	}
+
+	@Override
+	public Map<String, Object> getMenuState() {
+		return menuState;
 	}
 }

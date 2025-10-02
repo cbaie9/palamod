@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
+
 import palamod.PalamodMod;
 
 import org.checkerframework.checker.units.qual.s;
@@ -14,9 +16,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -25,8 +24,8 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class AdhtsoregoldProcedure {
-	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		ItemStack item = ItemStack.EMPTY;
 		double fac_v = 0;
@@ -44,7 +43,7 @@ public class AdhtsoregoldProcedure {
 				}
 				return 0;
 			}
-		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
+		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {
@@ -80,7 +79,7 @@ public class AdhtsoregoldProcedure {
 						}
 					}
 				}
-				if ((guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "").equals("max")) {
+				if (((entity instanceof Player _entity12 && _entity12.containerMenu instanceof PalamodModMenus.MenuAccessor _menu12) ? _menu12.getMenuState(0, "number_buy", "") : "").equals("max")) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = item;
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) n2, _player.inventoryMenu.getCraftSlots());

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.block.entity.ExctractorBlockEntity;
@@ -18,7 +17,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.EntityBlock;
@@ -41,7 +39,7 @@ public class ExctractorBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public ExctractorBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.COLOR_MAGENTA).sound(SoundType.STONE).strength(1f, 10f).lightLevel(s -> (new Object() {
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).strength(1f, 10f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -67,7 +65,7 @@ public class ExctractorBlock extends Block implements EntityBlock {
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false));
+		}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -148,7 +146,7 @@ public class ExctractorBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

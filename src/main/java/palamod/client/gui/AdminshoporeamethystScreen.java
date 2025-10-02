@@ -9,6 +9,8 @@ import palamod.procedures.AdshoppreviewamountamethystProcedure;
 
 import palamod.network.AdminshoporeamethystButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -25,16 +27,15 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class AdminshoporeamethystScreen extends AbstractContainerScreen<AdminshoporeamethystMenu> {
-	private final static HashMap<String, Object> guistate = AdminshoporeamethystMenu.guistate;
+public class AdminshoporeamethystScreen extends AbstractContainerScreen<AdminshoporeamethystMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox number_buy;
 	Button button_buy;
 	Button button_sell;
@@ -54,42 +55,53 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("number_buy"))
+				number_buy.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 6 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshoporemenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 119 && mouseX < leftPos + 131 && mouseY > topPos + 5 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -114,9 +126,7 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_amethyst"), 60, 6, -1, false);
-		guiGraphics.drawString(this.font,
-
-				AdshoppreviewamountamethystProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, AdshoppreviewamountamethystProcedure.execute(world, entity), 29, 74, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_sell_price_70"), 39, 28, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporeamethyst.label_buy_price_75"), 45, 40, -4671036, false);
 	}
@@ -124,47 +134,36 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 	@Override
 	public void init() {
 		super.init();
-		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshoporeamethyst.number_buy")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.adminshoporeamethyst.number_buy").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.adminshoporeamethyst.number_buy").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		number_buy.setMaxLength(32767);
-		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshoporeamethyst.number_buy").getString());
-		guistate.put("text:number_buy", number_buy);
+		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshoporeamethyst.number_buy"));
+		number_buy.setMaxLength(8192);
+		number_buy.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "number_buy", content, false);
+		});
+		number_buy.setHint(Component.translatable("gui.palamod.adminshoporeamethyst.number_buy"));
 		this.addWidget(this.number_buy);
 		button_buy = Button.builder(Component.translatable("gui.palamod.adminshoporeamethyst.button_buy"), e -> {
+			int x = AdminshoporeamethystScreen.this.x;
+			int y = AdminshoporeamethystScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new AdminshoporeamethystButtonMessage(0, x, y, z));
 				AdminshoporeamethystButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 108, 40, 20).build();
-		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
 		button_sell = Button.builder(Component.translatable("gui.palamod.adminshoporeamethyst.button_sell"), e -> {
+			int x = AdminshoporeamethystScreen.this.x;
+			int y = AdminshoporeamethystScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new AdminshoporeamethystButtonMessage(1, x, y, z));
 				AdminshoporeamethystButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 100, this.topPos + 108, 46, 20).build();
-		guistate.put("button:button_sell", button_sell);
 		this.addRenderableWidget(button_sell);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = AdminshoporeamethystScreen.this.x;
+					int y = AdminshoporeamethystScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshoporeamethystButtonMessage(2, x, y, z));
 						AdminshoporeamethystButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -175,10 +174,11 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 133, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					int x = AdminshoporeamethystScreen.this.x;
+					int y = AdminshoporeamethystScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshoporeamethystButtonMessage(3, x, y, z));
 						AdminshoporeamethystButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -189,10 +189,11 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 117, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = AdminshoporeamethystScreen.this.x;
+					int y = AdminshoporeamethystScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshoporeamethystButtonMessage(4, x, y, z));
 						AdminshoporeamethystButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -203,7 +204,6 @@ public class AdminshoporeamethystScreen extends AbstractContainerScreen<Adminsho
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}
 }

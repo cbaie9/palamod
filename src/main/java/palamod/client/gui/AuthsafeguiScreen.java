@@ -4,6 +4,8 @@ import palamod.world.inventory.AuthsafeguiMenu;
 
 import palamod.network.AuthsafeguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -17,15 +19,13 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> {
-	private final static HashMap<String, Object> guistate = AuthsafeguiMenu.guistate;
+public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox code_check;
 	Button button_open;
 
@@ -41,6 +41,16 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("code_check"))
+				code_check.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		code_check.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -48,13 +58,11 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/authsafegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -85,16 +93,20 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 	public void init() {
 		super.init();
 		code_check = new EditBox(this.font, this.leftPos + 4, this.topPos + 16, 118, 18, Component.translatable("gui.palamod.authsafegui.code_check"));
-		code_check.setMaxLength(32767);
-		guistate.put("text:code_check", code_check);
+		code_check.setMaxLength(8192);
+		code_check.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "code_check", content, false);
+		});
 		this.addWidget(this.code_check);
 		button_open = Button.builder(Component.translatable("gui.palamod.authsafegui.button_open"), e -> {
+			int x = AuthsafeguiScreen.this.x;
+			int y = AuthsafeguiScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new AuthsafeguiButtonMessage(0, x, y, z));
 				AuthsafeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 3, this.topPos + 36, 46, 20).build();
-		guistate.put("button:button_open", button_open);
 		this.addRenderableWidget(button_open);
 	}
 }

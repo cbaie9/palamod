@@ -41,7 +41,7 @@ public class DownloaderprocessProcedure {
 									&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem())) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							ItemStack _setstack = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).copy();
-							_setstack.setCount((int) (1 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount()));
+							_setstack.setCount(1 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount());
 							_itemHandlerModifiable.setStackInSlot(1, _setstack);
 						}
 						main.addProperty("money", (main.get("money").getAsDouble() - StockedbaseadminshopbuyProcedure.execute(world, x, y, z)));

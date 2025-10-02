@@ -4,6 +4,8 @@ import palamod.world.inventory.MegasafechestfirstsetupMenu;
 
 import palamod.network.MegasafechestfirstsetupButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -18,15 +20,13 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<MegasafechestfirstsetupMenu> {
-	private final static HashMap<String, Object> guistate = MegasafechestfirstsetupMenu.guistate;
+public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<MegasafechestfirstsetupMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox safe_code;
 	Checkbox safe_link;
 	Button button_save;
@@ -43,6 +43,16 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("safe_code"))
+				safe_code.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		safe_code.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -50,13 +60,11 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/megasafechestfirstsetup.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -91,41 +99,27 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	@Override
 	public void init() {
 		super.init();
-		safe_code = new EditBox(this.font, this.leftPos + 9, this.topPos + 43, 118, 18, Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		safe_code.setMaxLength(32767);
-		safe_code.setSuggestion(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code").getString());
-		guistate.put("text:safe_code", safe_code);
+		safe_code = new EditBox(this.font, this.leftPos + 9, this.topPos + 43, 118, 18, Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code"));
+		safe_code.setMaxLength(8192);
+		safe_code.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "safe_code", content, false);
+		});
+		safe_code.setHint(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code"));
 		this.addWidget(this.safe_code);
 		button_save = Button.builder(Component.translatable("gui.palamod.megasafechestfirstsetup.button_save"), e -> {
+			int x = MegasafechestfirstsetupScreen.this.x;
+			int y = MegasafechestfirstsetupScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MegasafechestfirstsetupButtonMessage(0, x, y, z));
 				MegasafechestfirstsetupButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 135, 46, 20).build();
-		guistate.put("button:button_save", button_save);
 		this.addRenderableWidget(button_save);
-		safe_link = Checkbox.builder(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_link"), this.font).pos(this.leftPos + 5, this.topPos + 100)
-
-				.build();
-		guistate.put("checkbox:safe_link", safe_link);
+		safe_link = Checkbox.builder(Component.translatable("gui.palamod.megasafechestfirstsetup.safe_link"), this.font).pos(this.leftPos + 5, this.topPos + 100).onValueChange((checkbox, value) -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 1, "safe_link", value, false);
+		}).build();
 		this.addRenderableWidget(safe_link);
 	}
 }

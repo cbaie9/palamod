@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -46,6 +46,7 @@
     },
     "musicDiscDescription": "Kumiz - Clash fuze III",
     "musicDiscLengthInTicks": 1800,
-    "musicDiscAnalogOutput": 6
+    "musicDiscAnalogOutput": 6,
+    "providedBannerPatterns": []
   }
 }

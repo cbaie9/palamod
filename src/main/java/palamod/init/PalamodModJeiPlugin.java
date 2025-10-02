@@ -1,4 +1,3 @@
-
 package palamod.init;
 
 import palamod.jei_recipes.PaladiummachinerecipetypejeiRecipeCategory;

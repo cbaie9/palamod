@@ -1,17 +1,20 @@
 {
   "replace": false,
   "values": [
-    "palamod:paladium_pickaxe",
     "palamod:titane_pickaxe",
-    "palamod:amethyst_pickaxe",
     "palamod:endium_pickaxe",
-    "palamod:paladiumgreenpickaxe",
-    "#palamod:potgtag",
-    "minecraft:wooden_pickaxe",
+    "minecraft:netherite_pickaxe",
+    {
+      "id": "#palamod:potgtag",
+      "required": false
+    },
+    "palamod:paladium_pickaxe",
+    "palamod:amethyst_pickaxe",
     "minecraft:stone_pickaxe",
-    "minecraft:iron_pickaxe",
-    "minecraft:golden_pickaxe",
+    "palamod:paladiumgreenpickaxe",
     "minecraft:diamond_pickaxe",
-    "minecraft:netherite_pickaxe"
+    "minecraft:wooden_pickaxe",
+    "minecraft:iron_pickaxe",
+    "minecraft:golden_pickaxe"
   ]
 }

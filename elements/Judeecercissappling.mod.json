@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "judeecercis_sapling",
@@ -14,8 +14,10 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "judeecercis_sapling",
     "particleTexture": "",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -42,6 +44,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:Decorationcreativetab"
@@ -58,9 +64,6 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "material": {
-      "value": "GRASS"
-    },
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -69,11 +72,13 @@
       "fixedValue": 15.0
     },
     "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "harp",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -108,6 +113,8 @@
       "name": "SapplingBlockValidPlacementCondition"
     },
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

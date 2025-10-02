@@ -1,4 +1,3 @@
-
 package palamod.world.dimension;
 
 import palamod.procedures.ClearportalexitminerdimensionProcedure;

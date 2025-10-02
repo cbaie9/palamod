@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.ColofullampRedstoneOffProcedure;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class ColofullampBlock extends Block {
 	public ColofullampBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.LANTERN).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

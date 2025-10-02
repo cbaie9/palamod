@@ -114,7 +114,7 @@ public class UploaderprocessProcedure {
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Stocked_money") > 1000 && 64 > itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount()) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_1K.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(1, _setstack);
 					}
 					if (!world.isClientSide()) {

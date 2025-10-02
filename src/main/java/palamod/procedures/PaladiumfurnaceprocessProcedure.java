@@ -62,7 +62,7 @@ public class PaladiumfurnaceprocessProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = fuel.copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() - 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() - 1);
 						_itemHandlerModifiable.setStackInSlot(1, _setstack);
 					}
 				}
@@ -81,12 +81,12 @@ public class PaladiumfurnaceprocessProcedure {
 								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
 										.orElse(ItemStack.EMPTY)
 								: ItemStack.EMPTY).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = input.copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() - 1));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() - 1);
 						_itemHandlerModifiable.setStackInSlot(0, _setstack);
 					}
 					if (!world.isClientSide()) {

@@ -5,6 +5,8 @@ import palamod.world.inventory.PalamachineguiMenu;
 import palamod.procedures.Grindertrans0Procedure;
 import palamod.procedures.GetspritepalamachinecircleProcedure;
 
+import palamod.init.PalamodModScreens;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -14,15 +16,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class PalamachineguiScreen extends AbstractContainerScreen<PalamachineguiMenu> {
-	private final static HashMap<String, Object> guistate = PalamachineguiMenu.guistate;
+public class PalamachineguiScreen extends AbstractContainerScreen<PalamachineguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 
 	public PalamachineguiScreen(PalamachineguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -36,22 +36,25 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachinegui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 176, 176, 176);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/circle_sprite_palamachine.png"), this.leftPos + 48, this.topPos + 5, Mth.clamp((int) GetspritepalamachinecircleProcedure.execute(world, x, y, z) * 80, 0, 1040), 0, 80, 80,
 				1120, 80);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -67,9 +70,7 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palamachinegui.label_palamachine"), 3, 3, -3407872, false);
-		guiGraphics.drawString(this.font,
-
-				Grindertrans0Procedure.execute(entity), 4, 84, -4671036, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 4, 84, -4671036, false);
 	}
 
 	@Override

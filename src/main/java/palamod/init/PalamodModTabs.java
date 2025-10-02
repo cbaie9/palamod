@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -289,6 +288,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.PALADIUMFLOWER.get().asItem());
 				tabData.accept(PalamodModItems.DANKAROCTEST_1_SPAWN_EGG.get());
 				tabData.accept(PalamodModBlocks.DANKABLOCK.get().asItem());
+				tabData.accept(PalamodModItems.PALADIUMINK.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {

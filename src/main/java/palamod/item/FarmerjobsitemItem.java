@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.world.inventory.JobsfarmercraftguiMenu;

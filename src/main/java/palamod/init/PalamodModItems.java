@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -94,6 +93,7 @@ import palamod.item.PaladiumraworeItem;
 import palamod.item.PaladiumpollenItem;
 import palamod.item.PaladiumphoneItem;
 import palamod.item.PaladiumparticleItem;
+import palamod.item.PaladiuminkItem;
 import palamod.item.PaladiumhoeItem;
 import palamod.item.PaladiumhammerItem;
 import palamod.item.PaladiumgreenswordItem;
@@ -745,9 +745,6 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PRINTINGPRESS = block(PalamodModBlocks.PRINTINGPRESS);
 	public static final DeferredItem<Item> PLATE = REGISTRY.register("plate", PlateItem::new);
 	public static final DeferredItem<Item> TYPESETTINGTABLE = block(PalamodModBlocks.TYPESETTINGTABLE);
-	public static final DeferredItem<Item> TYPESETTINGBOOK = block(PalamodModBlocks.TYPESETTINGBOOK);
-	public static final DeferredItem<Item> TYPESETTINGPLATE = block(PalamodModBlocks.TYPESETTINGPLATE);
-	public static final DeferredItem<Item> TYPESETTINGMAX = block(PalamodModBlocks.TYPESETTINGMAX);
 	public static final DeferredItem<Item> DRAWBRIDGE = block(PalamodModBlocks.DRAWBRIDGE);
 	public static final DeferredItem<Item> PALADIUMARMORCUSTOM_4_HELMET = REGISTRY.register("paladiumarmorcustom_4_helmet", Paladiumarmorcustom4Item.Helmet::new);
 	public static final DeferredItem<Item> PALADIUMARMORCUSTOM_4_CHESTPLATE = REGISTRY.register("paladiumarmorcustom_4_chestplate", Paladiumarmorcustom4Item.Chestplate::new);
@@ -903,6 +900,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PALADIUMFLOWER = block(PalamodModBlocks.PALADIUMFLOWER);
 	public static final DeferredItem<Item> DANKAROCTEST_1_SPAWN_EGG = REGISTRY.register("dankaroctest_1_spawn_egg", () -> new DeferredSpawnEggItem(PalamodModEntities.DANKAROCTEST_1, -256, -10027162, new Item.Properties()));
 	public static final DeferredItem<Item> DANKABLOCK = block(PalamodModBlocks.DANKABLOCK);
+	public static final DeferredItem<Item> PALADIUMINK = REGISTRY.register("paladiumink", PaladiuminkItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -915,11 +913,19 @@ public class PalamodModItems {
 	}
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
-		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+		return block(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), properties));
 	}
 
 	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block) {
-		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties()));
+		return doubleBlock(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), properties));
 	}
 
 	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

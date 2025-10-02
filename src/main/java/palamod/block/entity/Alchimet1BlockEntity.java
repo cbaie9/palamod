@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.AlchemycreatorguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class Alchimet1BlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(4, ItemStack.EMPTY);
 
 	public Alchimet1BlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.ALCHIMET_1.get(), position, state);
@@ -132,9 +128,5 @@ public class Alchimet1BlockEntity extends RandomizableContainerBlockEntity imple
 		if (index == 2)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

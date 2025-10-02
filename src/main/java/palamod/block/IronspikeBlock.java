@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.IronspikedamageProcedure;
@@ -29,7 +28,7 @@ public class IronspikeBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public IronspikeBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(3f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(3f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

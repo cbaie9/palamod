@@ -1,18 +1,19 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
+
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
 
 public class OnlinedetectoropenguiProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, HashMap guistate) {
-		if (guistate == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		if (guistate.get("text:player_name") instanceof EditBox _tf)
-			_tf.setValue((getBlockNBTString(world, BlockPos.containing(x, y, z), "get_player_name")));
+		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu)
+			_menu.sendMenuStateUpdate(_player, 0, "player_name", (getBlockNBTString(world, BlockPos.containing(x, y, z), "get_player_name")), true);
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {

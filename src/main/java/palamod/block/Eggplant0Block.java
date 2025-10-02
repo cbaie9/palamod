@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.Eggplant0upProcedure;

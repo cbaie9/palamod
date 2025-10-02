@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.neoforged.neoforge.common.util.TriState;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class Judeecercis_WoodBlock extends Block {
 	public Judeecercis_WoodBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

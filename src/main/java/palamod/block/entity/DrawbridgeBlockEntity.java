@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.DrawbrigeguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class DrawbridgeBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(16, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(16, ItemStack.EMPTY);
 
 	public DrawbridgeBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.DRAWBRIDGE.get(), position, state);
@@ -156,9 +152,5 @@ public class DrawbridgeBlockEntity extends RandomizableContainerBlockEntity impl
 		if (index == 15)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

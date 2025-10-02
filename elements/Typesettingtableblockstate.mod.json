@@ -1,0 +1,48 @@
+{
+  "_fv": 79,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Typesettingtable",
+    "blockstateList": [
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "minecraft:oak_planks",
+        "renderType": 2,
+        "customModelName": "type_setting_table_book:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "minecraft:oak_planks",
+        "renderType": 2,
+        "customModelName": "type_setting_table_plate:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "minecraft:oak_planks",
+        "renderType": 2,
+        "customModelName": "type_setting_table_max:default",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

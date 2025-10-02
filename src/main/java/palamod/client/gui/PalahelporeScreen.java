@@ -4,6 +4,8 @@ import palamod.world.inventory.PalahelporeMenu;
 
 import palamod.network.PalahelporeButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -16,15 +18,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> {
-	private final static HashMap<String, Object> guistate = PalahelporeMenu.guistate;
+public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_home_pixel_adminshop;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_cross_no_button;
@@ -41,37 +41,32 @@ public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> 
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palahelpore.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 300, 220, 300, 220);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/amethyst_ingot.png"), this.leftPos + 9, this.topPos + 155, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_ingot.png"), this.leftPos + 10, this.topPos + 77, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/findium.png"), this.leftPos + 10, this.topPos + 99, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_ingot.png"), this.leftPos + 10, this.topPos + 123, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_green_ingot.png"), this.leftPos + 10, this.topPos + 56, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_ingot.png"), this.leftPos + 10, this.topPos + 28, 0, 0, 0, 0, 0, 0);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 199, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -103,6 +98,8 @@ public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> 
 		super.init();
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 236, this.topPos + 3, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = PalahelporeScreen.this.x;
+					int y = PalahelporeScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new PalahelporeButtonMessage(0, x, y, z));
 						PalahelporeButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -113,10 +110,11 @@ public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> 
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 255, this.topPos + 3, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					int x = PalahelporeScreen.this.x;
+					int y = PalahelporeScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new PalahelporeButtonMessage(1, x, y, z));
 						PalahelporeButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -127,10 +125,11 @@ public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> 
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 278, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = PalahelporeScreen.this.x;
+					int y = PalahelporeScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new PalahelporeButtonMessage(2, x, y, z));
 						PalahelporeButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -141,7 +140,6 @@ public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> 
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 	}
 }

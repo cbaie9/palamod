@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class ErabletrapdoorBlock extends TrapDoorBlock {
 	public ErabletrapdoorBlock() {
-		super(BlockSetType.OAK, BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape());
+		super(BlockSetType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

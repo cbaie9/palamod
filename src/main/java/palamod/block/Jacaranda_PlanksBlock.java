@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -12,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class Jacaranda_PlanksBlock extends Block {
 	public Jacaranda_PlanksBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

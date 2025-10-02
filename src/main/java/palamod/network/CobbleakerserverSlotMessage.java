@@ -1,7 +1,4 @@
-
 package palamod.network;
-
-import palamod.world.inventory.CobbleakerserverMenu;
 
 import palamod.procedures.GivexpcobblebreakerserverProcedure;
 
@@ -22,8 +19,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.HashMap;
-
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
@@ -43,16 +38,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 
 	public static void handleData(final CobbleakerserverSlotMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int slotID = message.slotID;
-				int changeType = message.changeType;
-				int meta = message.meta;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleSlotAction(entity, slotID, changeType, meta, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleSlotAction(context.player(), message.slotID, message.changeType, message.meta, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -61,11 +47,11 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 
 	public static void handleSlotAction(Player entity, int slot, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = CobbleakerserverMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (slot == 1 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
@@ -75,6 +61,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 2 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
@@ -84,6 +71,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 3 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
@@ -93,6 +81,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 4 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
@@ -102,6 +91,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 5 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
@@ -111,6 +101,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 6 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
@@ -120,6 +111,7 @@ public record CobbleakerserverSlotMessage(int slotID, int x, int y, int z, int c
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}
 		if (slot == 7 && changeType == 1) {
+			int amount = meta;
 
 			GivexpcobblebreakerserverProcedure.execute(world, x, y, z, entity);
 		}

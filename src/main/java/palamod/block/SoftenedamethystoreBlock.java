@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.SetblockstateincacheProcedure;
@@ -18,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedamethystoreBlock extends Block {
 	public SoftenedamethystoreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

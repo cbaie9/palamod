@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.GrinderguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class Tcv2BlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(6, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(6, ItemStack.EMPTY);
 
 	public Tcv2BlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.TCV_2.get(), position, state);
@@ -134,9 +130,5 @@ public class Tcv2BlockEntity extends RandomizableContainerBlockEntity implements
 		if (index == 4)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

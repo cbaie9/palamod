@@ -7,6 +7,8 @@ import palamod.procedures.GetspritetimerflowermachineProcedure;
 
 import palamod.network.FlowertotemguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -20,15 +22,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class FlowertotemguiScreen extends AbstractContainerScreen<FlowertotemguiMenu> {
-	private final static HashMap<String, Object> guistate = FlowertotemguiMenu.guistate;
+public class FlowertotemguiScreen extends AbstractContainerScreen<FlowertotemguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_close_gui_nohover;
 
 	public FlowertotemguiScreen(FlowertotemguiMenu container, Inventory inventory, Component text) {
@@ -43,25 +43,26 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/flowertotemgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png"), this.leftPos + 74, this.topPos + 36, 0, 0, 16, 14, 16, 14);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/bone_meal.png"), this.leftPos + 26, this.topPos + 34, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 15, this.topPos + 69, Mth.clamp((int) GetspritetimerflowermachineProcedure.execute(world, x, y, z) * 145, 0, 14355), 0, 145, 10, 14500, 10);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -77,9 +78,7 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.flowertotemgui.label_flower_totem"), 3, 3, -65536, false);
-		guiGraphics.drawString(this.font,
-
-				GetstringtotemnumProcedure.execute(world, x, y, z), 69, 70, -1, false);
+		guiGraphics.drawString(this.font, GetstringtotemnumProcedure.execute(world, x, y, z), 69, 70, -1, false);
 	}
 
 	@Override
@@ -87,6 +86,8 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 		super.init();
 		imagebutton_close_gui_nohover = new ImageButton(this.leftPos + 154, this.topPos + 5, 17, 17,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
+					int x = FlowertotemguiScreen.this.x;
+					int y = FlowertotemguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new FlowertotemguiButtonMessage(0, x, y, z));
 						FlowertotemguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -97,7 +98,6 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_close_gui_nohover", imagebutton_close_gui_nohover);
 		this.addRenderableWidget(imagebutton_close_gui_nohover);
 	}
 }

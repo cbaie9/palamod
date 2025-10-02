@@ -4,6 +4,8 @@ import palamod.world.inventory.ArmorpalahelpguiMenu;
 
 import palamod.network.ArmorpalahelpguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -17,15 +19,13 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ArmorpalahelpguiScreen extends AbstractContainerScreen<ArmorpalahelpguiMenu> {
-	private final static HashMap<String, Object> guistate = ArmorpalahelpguiMenu.guistate;
+public class ArmorpalahelpguiScreen extends AbstractContainerScreen<ArmorpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_if_bugged;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_cross_no_button;
@@ -43,103 +43,137 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 30 && mouseY < topPos + 47) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_amethyst_armor"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 77 && mouseY > topPos + 69 && mouseY < topPos + 88) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 89 && mouseY < topPos + 106) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 30 && mouseY < topPos + 47) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_titane_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 69 && mouseY < topPos + 87) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable1"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 69 && mouseY < topPos + 87) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable2"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 69 && mouseY < topPos + 87) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 158 && mouseY < topPos + 176) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 158 && mouseY < topPos + 176) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable5"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 89 && mouseY < topPos + 106) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e1"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 89 && mouseY < topPos + 106) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 89 && mouseY < topPos + 106) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m1"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 178 && mouseY < topPos + 195) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m2"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 178 && mouseY < topPos + 195) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m3"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 158 && mouseY < topPos + 176) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 158 && mouseY < topPos + 176) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl1"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 30 && mouseY < topPos + 47) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_paladium_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 30 && mouseY < topPos + 47) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_endium_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 119 && mouseY < topPos + 136) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_travel_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 119 && mouseY < topPos + 136) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_rainbow_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 119 && mouseY < topPos + 136) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 119 && mouseY < topPos + 136) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 258 && mouseY > topPos + 49 && mouseY < topPos + 67) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 49 && mouseY < topPos + 67) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh1"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 258 && mouseX < leftPos + 280 && mouseY > topPos + 49 && mouseY < topPos + 67) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_full_set_invisible"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 138 && mouseY < topPos + 156) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh2"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 138 && mouseY < topPos + 156) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh3"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 138 && mouseY < topPos + 156) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_underwater_breathing_helmet"), mouseX, mouseY);
-		}
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 30 && mouseY < topPos + 47) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_amethyst_armor"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 77 && mouseY > topPos + 69 && mouseY < topPos + 88) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 89 && mouseY < topPos + 106) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 30 && mouseY < topPos + 47) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_titane_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 69 && mouseY < topPos + 87) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable1"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 69 && mouseY < topPos + 87) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable2"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 69 && mouseY < topPos + 87) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 158 && mouseY < topPos + 176) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 158 && mouseY < topPos + 176) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable5"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 89 && mouseY < topPos + 106) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_e1"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 89 && mouseY < topPos + 106) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 89 && mouseY < topPos + 106) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m1"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 178 && mouseY < topPos + 195) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m2"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 178 && mouseY < topPos + 195) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m3"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 158 && mouseY < topPos + 176) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 158 && mouseY < topPos + 176) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_in_in_lucky_bl1"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 30 && mouseY < topPos + 47) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_paladium_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 30 && mouseY < topPos + 47) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_endium_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 119 && mouseY < topPos + 136) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_travel_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 119 && mouseY < topPos + 136) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_rainbow_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 119 && mouseY < topPos + 136) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 119 && mouseY < topPos + 136) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_mixed_endium_armor_set"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 258 && mouseY > topPos + 49 && mouseY < topPos + 67) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 166 && mouseX < leftPos + 212 && mouseY > topPos + 49 && mouseY < topPos + 67) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh1"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 258 && mouseX < leftPos + 280 && mouseY > topPos + 49 && mouseY < topPos + 67) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_full_set_invisible"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 30 && mouseX < leftPos + 76 && mouseY > topPos + 138 && mouseY < topPos + 156) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh2"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 98 && mouseX < leftPos + 144 && mouseY > topPos + 138 && mouseY < topPos + 156) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_night_vision_helmet_strengh3"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 234 && mouseX < leftPos + 280 && mouseY > topPos + 138 && mouseY < topPos + 156) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.armorpalahelpgui.tooltip_underwater_breathing_helmet"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
+	}
+
+	@Override
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/armorpalahelpgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -198,15 +232,18 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	public void init() {
 		super.init();
 		button_if_bugged = Button.builder(Component.translatable("gui.palamod.armorpalahelpgui.button_if_bugged"), e -> {
+			int x = ArmorpalahelpguiScreen.this.x;
+			int y = ArmorpalahelpguiScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(0, x, y, z));
 				ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 12, this.topPos + 1, 57, 20).build();
-		guistate.put("button:button_if_bugged", button_if_bugged);
 		this.addRenderableWidget(button_if_bugged);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 254, this.topPos + 4, 17, 17,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
+					int x = ArmorpalahelpguiScreen.this.x;
+					int y = ArmorpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(1, x, y, z));
 						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -217,10 +254,11 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 275, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = ArmorpalahelpguiScreen.this.x;
+					int y = ArmorpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(2, x, y, z));
 						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -231,10 +269,11 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 235, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = ArmorpalahelpguiScreen.this.x;
+					int y = ArmorpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new ArmorpalahelpguiButtonMessage(3, x, y, z));
 						ArmorpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -245,7 +284,6 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}
 }

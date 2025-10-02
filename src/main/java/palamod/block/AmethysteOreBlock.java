@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.SetblockstateincacheProcedure;
@@ -26,13 +25,13 @@ public class AmethysteOreBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
 	public AmethysteOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).lightLevel(s -> (new Object() {
+		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())));
+		}.getLightLevel())).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

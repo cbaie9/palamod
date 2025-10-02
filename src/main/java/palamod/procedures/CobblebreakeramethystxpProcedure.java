@@ -15,7 +15,7 @@ public class CobblebreakeramethystxpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player)
-			_player.giveExperiencePoints((int) (3 * itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount()));
+			_player.giveExperiencePoints(3 * itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount());
 	}
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {

@@ -6,6 +6,8 @@ import palamod.procedures.LuckyblockgetnameProcedure;
 
 import palamod.network.LuckyguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -19,15 +21,13 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
-	private final static HashMap<String, Object> guistate = LuckyguiMenu.guistate;
+public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_open;
 	ImageButton imagebutton_cross_no_button;
 
@@ -43,23 +43,25 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/luckygui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 180, 176, 180);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -75,24 +77,25 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.luckygui.label_lucky_block"), 55, 6, -1, false);
-		guiGraphics.drawString(this.font,
-
-				LuckyblockgetnameProcedure.execute(world, x, y, z), 26, 84, -3407821, false);
+		guiGraphics.drawString(this.font, LuckyblockgetnameProcedure.execute(world, x, y, z), 26, 84, -3407821, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		button_open = Button.builder(Component.translatable("gui.palamod.luckygui.button_open"), e -> {
+			int x = LuckyguiScreen.this.x;
+			int y = LuckyguiScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new LuckyguiButtonMessage(0, x, y, z));
 				LuckyguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 117, this.topPos + 44, 45, 20).build();
-		guistate.put("button:button_open", button_open);
 		this.addRenderableWidget(button_open);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 155, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = LuckyguiScreen.this.x;
+					int y = LuckyguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new LuckyguiButtonMessage(1, x, y, z));
 						LuckyguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -103,7 +106,6 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 	}
 }

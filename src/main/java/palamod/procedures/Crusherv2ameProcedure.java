@@ -25,7 +25,7 @@ public class Crusherv2ameProcedure {
 					|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-					_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5);
 					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}
 				if (!world.isClientSide()) {
@@ -47,7 +47,7 @@ public class Crusherv2ameProcedure {
 						|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
-						_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5));
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
 					if (!world.isClientSide()) {
@@ -69,7 +69,7 @@ public class Crusherv2ameProcedure {
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= 1) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 							_itemHandlerModifiable.setStackInSlot(2, _setstack);
 						}
 						if (!world.isClientSide()) {

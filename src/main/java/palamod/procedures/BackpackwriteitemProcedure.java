@@ -1,11 +1,12 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
+
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -13,9 +14,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.client.Minecraft;
-
-import java.util.function.Supplier;
-import java.util.Map;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -93,36 +91,36 @@ public class BackpackwriteitemProcedure {
 						for (int index1 = 0; index1 < (int) i2; index1++) {
 							if (i >= 0 && i <= 8) {
 								main_backpack.addProperty(("backpack_inv_" + i),
-										(BuiltInRegistries.ITEM.getKey(
-												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
+										(BuiltInRegistries.ITEM
+												.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu29 ? _menu29.getSlots().get((int) i).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
 								main_backpack.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
 								main_backup.addProperty("backpack_backup1", (main_backup.get("backpack_backup1").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							} else if (i >= 9 && i <= 26) {
 								main_backpack_titane.addProperty(("backpack_inv_" + i),
-										(BuiltInRegistries.ITEM.getKey(
-												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
+										(BuiltInRegistries.ITEM
+												.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu37 ? _menu37.getSlots().get((int) i).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
 								main_backpack_titane.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
 								main_backup.addProperty("backpack_backup2", (main_backup.get("backpack_backup2").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							} else if (i >= 27 && i <= 53) {
 								main_backpack_paladium.addProperty(("backpack_inv_" + i),
-										(BuiltInRegistries.ITEM.getKey(
-												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
+										(BuiltInRegistries.ITEM
+												.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu45 ? _menu45.getSlots().get((int) i).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
 								main_backpack_paladium.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
 								main_backup.addProperty("backpack_backup3", (main_backup.get("backpack_backup3").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							} else if (i >= 54 && i <= 81) {
 								main_backpack_endium.addProperty(("backpack_inv_" + i),
-										(BuiltInRegistries.ITEM.getKey(
-												(entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get((int) i)).getItem() : ItemStack.EMPTY).getItem())
+										(BuiltInRegistries.ITEM
+												.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu53 ? _menu53.getSlots().get((int) i).getItem() : ItemStack.EMPTY).getItem())
 												.toString()));
 								main_backpack_endium.addProperty(("backpack_num_" + i), (getAmountInGUISlot(entity, (int) i)));
 								main_backup.addProperty("backpack_backup4", (main_backup.get("backpack_backup4").getAsDouble() + getAmountInGUISlot(entity, (int) i)));
 							}
 							ifull_backup = ifull_backup + getAmountInGUISlot(entity, (int) i);
-							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-								((Slot) _slots.get((int) i)).set(ItemStack.EMPTY);
+							if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+								_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
 								_player.containerMenu.broadcastChanges();
 							}
 							i = i + 1;
@@ -198,8 +196,8 @@ public class BackpackwriteitemProcedure {
 	}
 
 	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
-			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+		if (entity instanceof Player player && player.containerMenu instanceof PalamodModMenus.MenuAccessor menuAccessor) {
+			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
 			if (stack != null)
 				return stack.getCount();
 		}

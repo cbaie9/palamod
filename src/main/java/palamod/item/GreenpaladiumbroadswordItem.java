@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import net.minecraft.world.level.block.Block;

@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.DownloaderguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class DownloaderBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(4, ItemStack.EMPTY);
 
 	public DownloaderBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.DOWNLOADER.get(), position, state);
@@ -130,9 +126,5 @@ public class DownloaderBlockEntity extends RandomizableContainerBlockEntity impl
 		if (index == 0)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

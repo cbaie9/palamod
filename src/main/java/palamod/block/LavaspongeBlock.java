@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.LavaspongeprocessProcedure;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class LavaspongeBlock extends Block {
 	public LavaspongeBlock() {
-		super(BlockBehaviour.Properties.of().liquid().sound(SoundType.GLASS).strength(0.7f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(0.7f, 10f));
 	}
 
 	@Override

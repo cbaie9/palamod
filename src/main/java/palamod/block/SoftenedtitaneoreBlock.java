@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.SetblockstateincacheProcedure;
@@ -18,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedtitaneoreBlock extends Block {
 	public SoftenedtitaneoreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.NETHER_GOLD_ORE).strength(5.05f, 18.1194915919f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.NETHER_GOLD_ORE).strength(5.05f, 18.1194915919f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

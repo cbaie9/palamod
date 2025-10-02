@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.StockhdvMenu;
 
+import palamod.init.PalamodModScreens;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,15 +13,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> {
-	private final static HashMap<String, Object> guistate = StockhdvMenu.guistate;
+public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_return_to_admin_panel;
 	Button button_quit_admin_panel;
 
@@ -35,19 +35,23 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> {
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/stockhdv.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 425, 240, 425, 240);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -75,11 +79,9 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> {
 		super.init();
 		button_return_to_admin_panel = Button.builder(Component.translatable("gui.palamod.stockhdv.button_return_to_admin_panel"), e -> {
 		}).bounds(this.leftPos + 115, this.topPos + 213, 134, 20).build();
-		guistate.put("button:button_return_to_admin_panel", button_return_to_admin_panel);
 		this.addRenderableWidget(button_return_to_admin_panel);
 		button_quit_admin_panel = Button.builder(Component.translatable("gui.palamod.stockhdv.button_quit_admin_panel"), e -> {
 		}).bounds(this.leftPos + 4, this.topPos + 213, 108, 20).build();
-		guistate.put("button:button_quit_admin_panel", button_quit_admin_panel);
 		this.addRenderableWidget(button_quit_admin_panel);
 	}
 }

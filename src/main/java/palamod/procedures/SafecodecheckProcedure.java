@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.world.inventory.SafeguiMenu;
 
+import palamod.init.PalamodModMenus;
+
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -13,17 +15,14 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
 
 import io.netty.buffer.Unpooled;
 
 public class SafecodecheckProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		if ((guistate.containsKey("text:code_check") ? ((EditBox) guistate.get("text:code_check")).getValue() : "").equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "safe_code"))) {
+		if (((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "code_check", "") : "").equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "safe_code"))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

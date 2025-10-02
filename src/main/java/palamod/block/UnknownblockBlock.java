@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -11,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class UnknownblockBlock extends Block {
 	public UnknownblockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.BASALT).strength(1f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.BASALT).strength(1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

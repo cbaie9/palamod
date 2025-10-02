@@ -1,4 +1,3 @@
-
 package palamod.potion;
 
 import net.minecraft.world.effect.MobEffectCategory;

@@ -1,17 +1,15 @@
-
 package palamod.item;
 
 import palamod.procedures.RingprocessgreenpaladiumProcedure;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 
 public class BigringgreenpaladiumItem extends Item {
 	public BigringgreenpaladiumItem() {
-		super(new Item.Properties().durability(3200).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(3200));
 	}
 
 	@Override

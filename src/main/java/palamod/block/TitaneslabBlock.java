@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,7 +9,7 @@ import net.minecraft.core.BlockPos;
 
 public class TitaneslabBlock extends SlabBlock {
 	public TitaneslabBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2f, 10f).requiresCorrectToolForDrops().dynamicShape());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override

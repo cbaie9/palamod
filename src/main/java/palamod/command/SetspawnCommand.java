@@ -1,4 +1,3 @@
-
 package palamod.command;
 
 import palamod.procedures.SetspawnprocessProcedure;

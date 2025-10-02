@@ -16,7 +16,7 @@ public class MvprocessProcedure {
 			return;
 		for (int index0 = 0; index0 < 64; index0++) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.SOFT_STONE.get())) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.SOFT_STONE.get()))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -27,7 +27,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get())) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get()))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -38,7 +38,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.SMOOTH_STONE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.SMOOTH_STONE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -49,7 +49,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DEEPSLATE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -60,7 +60,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLED_DEEPSLATE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -71,7 +71,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.STONE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.STONE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -82,7 +82,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLESTONE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.COBBLESTONE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -93,7 +93,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.GRANITE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.GRANITE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -104,7 +104,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DIORITE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.DIORITE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -115,7 +115,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.ANDESITE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.ANDESITE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -126,7 +126,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BLACKSTONE)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.BLACKSTONE))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -137,7 +137,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BASALT)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.BASALT))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -148,7 +148,7 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.NETHERRACK)) : false) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.NETHERRACK))) {
 					{
 						final String _tagName = "voidstone_count";
 						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
@@ -159,16 +159,10 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.STONE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLESTONE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.GRANITE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DIORITE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.ANDESITE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BLACKSTONE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.BASALT)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.COBBLED_DEEPSLATE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.DEEPSLATE)) : false)
-						|| (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(Blocks.NETHERRACK)) : false)) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.STONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLESTONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.GRANITE))
+						|| hasEntityInInventory(entity, new ItemStack(Blocks.DIORITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.ANDESITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.BLACKSTONE))
+						|| hasEntityInInventory(entity, new ItemStack(Blocks.BASALT)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE)) || hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))
+						|| hasEntityInInventory(entity, new ItemStack(Blocks.NETHERRACK))) {
 					continue;
 				} else {
 					break;
@@ -177,5 +171,11 @@ public class MvprocessProcedure {
 		}
 		itemstack.set(DataComponents.CUSTOM_NAME,
 				Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count")))));
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

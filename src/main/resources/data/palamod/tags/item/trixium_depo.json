@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "palamod:trixium",
-    "palamod:trixium_block"
+    "palamod:trixium_block",
+    "palamod:trixium"
   ]
 }

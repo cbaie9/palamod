@@ -4,6 +4,8 @@ import palamod.world.inventory.JobsserverMenu;
 
 import palamod.network.JobsserverButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -16,15 +18,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
-	private final static HashMap<String, Object> guistate = JobsserverMenu.guistate;
+public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_screen_beta_template_jobs;
 	ImageButton imagebutton_screen_beta2_template_jobs;
 	ImageButton imagebutton_screen_beta2_template_jobs1;
@@ -43,19 +43,23 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobs_gui_server.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 100, 350, 100);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -82,6 +86,8 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 		super.init();
 		imagebutton_screen_beta_template_jobs = new ImageButton(this.leftPos + 118, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_famer_jobs.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_farm2.png")), e -> {
+					int x = JobsserverScreen.this.x;
+					int y = JobsserverScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new JobsserverButtonMessage(0, x, y, z));
 						JobsserverButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -92,10 +98,11 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_screen_beta_template_jobs", imagebutton_screen_beta_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta_template_jobs);
 		imagebutton_screen_beta2_template_jobs = new ImageButton(this.leftPos + 40, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_miner.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_miner2.png")), e -> {
+					int x = JobsserverScreen.this.x;
+					int y = JobsserverScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new JobsserverButtonMessage(1, x, y, z));
 						JobsserverButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -106,7 +113,6 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_screen_beta2_template_jobs", imagebutton_screen_beta2_template_jobs);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs);
 		imagebutton_screen_beta2_template_jobs1 = new ImageButton(this.leftPos + 201, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter2.png")), e -> {
@@ -116,7 +122,6 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_screen_beta2_template_jobs1", imagebutton_screen_beta2_template_jobs1);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs1);
 		imagebutton_screen_beta2_template_jobs2 = new ImageButton(this.leftPos + 272, this.topPos + 38, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi2.png")), e -> {
@@ -126,10 +131,11 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_screen_beta2_template_jobs2", imagebutton_screen_beta2_template_jobs2);
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs2);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 327, this.topPos + 6, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = JobsserverScreen.this.x;
+					int y = JobsserverScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new JobsserverButtonMessage(4, x, y, z));
 						JobsserverButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -140,7 +146,6 @@ public class JobsserverScreen extends AbstractContainerScreen<JobsserverMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 	}
 }

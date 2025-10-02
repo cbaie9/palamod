@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.world.inventory.AlchemycreatorguiMenu;
@@ -18,7 +17,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -44,7 +42,7 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public Alchimet1Block() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(2f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().strength(2f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
@@ -127,7 +125,7 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override

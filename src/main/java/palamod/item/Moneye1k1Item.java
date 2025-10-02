@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.procedures.Moneyprocess2Procedure;
@@ -15,7 +14,7 @@ import net.minecraft.world.InteractionHand;
 
 public class Moneye1k1Item extends Item {
 	public Moneye1k1Item() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));
+		super(new Item.Properties().rarity(Rarity.EPIC));
 	}
 
 	@Override

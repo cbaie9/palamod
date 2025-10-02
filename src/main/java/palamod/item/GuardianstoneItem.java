@@ -1,18 +1,16 @@
-
 package palamod.item;
 
 import palamod.procedures.Guardianstone_spawnProcedure;
 
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 public class GuardianstoneItem extends Item {
 	public GuardianstoneItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties());
 	}
 
 	@Override

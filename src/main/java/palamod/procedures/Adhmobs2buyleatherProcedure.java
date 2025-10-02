@@ -1,5 +1,6 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
@@ -15,9 +16,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -26,8 +24,8 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class Adhmobs2buyleatherProcedure {
-	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
 		double n = 0;
 		double fac_v = 0;
@@ -42,7 +40,7 @@ public class Adhmobs2buyleatherProcedure {
 				}
 				return 0;
 			}
-		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
+		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		fac_v = 20;
 		item = new ItemStack(Items.LEATHER).copy();
 		main = new Object() {

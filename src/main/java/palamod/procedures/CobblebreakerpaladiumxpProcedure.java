@@ -15,7 +15,7 @@ public class CobblebreakerpaladiumxpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player)
-			_player.giveExperiencePoints((int) (4 * itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount()));
+			_player.giveExperiencePoints(4 * itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount());
 	}
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {

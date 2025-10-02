@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.CobbleakerserverMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class CobblebreakerserverBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public CobblebreakerserverBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.COBBLEBREAKERSERVER.get(), position, state);
@@ -140,9 +136,5 @@ public class CobblebreakerserverBlockEntity extends RandomizableContainerBlockEn
 		if (index == 0)
 			return false;
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,25 +12,21 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Checkbox;
-
-import java.util.HashMap;
 
 public class SafekeepcodeprocessProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putString("safe_code", (guistate.containsKey("text:safe_code") ? ((EditBox) guistate.get("text:safe_code")).getValue() : ""));
+				_blockEntity.getPersistentData().putString("safe_code", ((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "safe_code", "") : ""));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		if (guistate.containsKey("checkbox:safe_link") && ((Checkbox) guistate.get("checkbox:safe_link")).selected()) {
+		if ((entity instanceof Player _entity2 && _entity2.containerMenu instanceof PalamodModMenus.MenuAccessor _menu2) ? _menu2.getMenuState(1, "safe_link", false) : false) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

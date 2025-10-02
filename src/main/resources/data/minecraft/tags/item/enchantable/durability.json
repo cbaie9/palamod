@@ -1,20 +1,20 @@
 {
   "replace": false,
   "values": [
+    "palamod:endium_medium_ring",
+    "palamod:small_ring",
+    "palamod:green_paladium_small_ring",
+    "palamod:flat_chest_upgrade",
+    "palamod:green_paladium_medium_ring",
+    "palamod:endium_big_ring",
+    "palamod:pesyblpotion",
+    "palamod:endium_small_ring",
     "palamod:extractor_item",
     "palamod:xpbottle",
-    "palamod:flat_chest_upgrade",
-    "palamod:pesyblpotion",
+    "palamod:paladium_phone",
     "palamod:green_paladium_big_ring",
-    "palamod:green_paladium_medium_ring",
-    "palamod:green_paladium_small_ring",
-    "palamod:endium_big_ring",
-    "palamod:endium_medium_ring",
-    "palamod:endium_small_ring",
     "palamod:big_ring",
     "palamod:medium_ring",
-    "palamod:small_ring",
-    "palamod:paladium_phone",
     "palamod:xpberry"
   ]
 }

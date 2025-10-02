@@ -14,6 +14,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -27,7 +28,7 @@ import javax.annotation.Nullable;
 public class FlintandsteelopendimProcedure {
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-		if (event.getHand() != event.getEntity().getUsedItemHand())
+		if (event.getHand() != InteractionHand.MAIN_HAND)
 			return;
 		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getFace(), event.getEntity());
 	}

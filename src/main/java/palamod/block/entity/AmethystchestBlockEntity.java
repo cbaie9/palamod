@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.AmethystchestguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class AmethystchestBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(110, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(110, ItemStack.EMPTY);
 
 	public AmethystchestBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.FLATTEN_AMETHYST_CHEST.get(), position, state);
@@ -126,9 +122,5 @@ public class AmethystchestBlockEntity extends RandomizableContainerBlockEntity i
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

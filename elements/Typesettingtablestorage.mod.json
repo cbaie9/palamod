@@ -1,0 +1,41 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 32,
+    "height": 32,
+    "inventoryOffsetX": 900,
+    "inventoryOffsetY": 900,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 204,
+          "y": 109,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

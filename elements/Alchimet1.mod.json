@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "block",
   "definition": {
     "texture": "alchimie_texture",
@@ -14,8 +14,10 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "animations": [],
     "itemTexture": "",
     "particleTexture": "",
+    "blockSetType": "OAK",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -51,6 +53,10 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": true,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:Palamod"
@@ -67,9 +73,6 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "material": {
-      "value": "ROCK"
-    },
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
@@ -78,11 +81,13 @@
       "fixedValue": 15.0
     },
     "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "basedrum",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -114,6 +119,8 @@
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
     "hasInventory": true,
     "guiBoundTo": "Alchemycreatorgui",
     "openGUIOnRightClick": true,

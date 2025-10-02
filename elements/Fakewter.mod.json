@@ -1,5 +1,5 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "fluid",
   "definition": {
     "name": "Fake water",
@@ -52,6 +52,7 @@
     "lightOpacity": 1,
     "emissiveRendering": false,
     "tickRate": 0,
+    "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "colorOnMap": "WATER",

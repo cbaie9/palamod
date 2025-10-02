@@ -1602,10 +1602,10 @@ public class Gcodecustompt2Procedure {
 							}
 							temp_itemstack = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
 							temp_itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed"))),
-									(int) ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-											.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1));
+									(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
+											.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1);
 							temp_itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY),
-									(int) ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) + 1));
+									(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) + 1);
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = temp_itemstack.copy();
 								_setstack.setCount(1);
@@ -1694,8 +1694,8 @@ public class Gcodecustompt2Procedure {
 							}
 							temp_itemstack = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
 							temp_itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))),
-									(int) ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-											.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1));
+									(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
+											.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1);
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = temp_itemstack.copy();
 								_setstack.setCount(1);

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.Orangeblue0upProcedure;

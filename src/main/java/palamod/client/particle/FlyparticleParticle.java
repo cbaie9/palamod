@@ -1,4 +1,3 @@
-
 package palamod.client.particle;
 
 import net.neoforged.api.distmarker.OnlyIn;

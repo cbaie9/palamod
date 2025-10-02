@@ -9,6 +9,8 @@ import palamod.procedures.AdshoppreviewamountdiamondpickaxeProcedure;
 
 import palamod.network.AdminshoputilitiesdiampicButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -25,16 +27,15 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<AdminshoputilitiesdiampicMenu> {
-	private final static HashMap<String, Object> guistate = AdminshoputilitiesdiampicMenu.guistate;
+public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<AdminshoputilitiesdiampicMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox number_buy;
 	Button button_buy;
 	ImageButton imagebutton_cross_no_button;
@@ -53,42 +54,53 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("number_buy"))
+				number_buy.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 121 && mouseX < leftPos + 133 && mouseY > topPos + 5 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 6 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshoputilitiesmenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -113,48 +125,34 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.label_paladium"), 37, 8, -1, false);
-		guiGraphics.drawString(this.font,
-
-				AdshoppreviewamountdiamondpickaxeProcedure.execute(world, entity, guistate), 25, 75, -4671036, false);
+		guiGraphics.drawString(this.font, AdshoppreviewamountdiamondpickaxeProcedure.execute(world, entity), 25, 75, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoputilitiesdiampic.label_buy_price_125"), 25, 39, -4671036, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		number_buy.setMaxLength(32767);
-		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy").getString());
-		guistate.put("text:number_buy", number_buy);
+		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy"));
+		number_buy.setMaxLength(8192);
+		number_buy.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "number_buy", content, false);
+		});
+		number_buy.setHint(Component.translatable("gui.palamod.adminshoputilitiesdiampic.number_buy"));
 		this.addWidget(this.number_buy);
 		button_buy = Button.builder(Component.translatable("gui.palamod.adminshoputilitiesdiampic.button_buy"), e -> {
+			int x = AdminshoputilitiesdiampicScreen.this.x;
+			int y = AdminshoputilitiesdiampicScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new AdminshoputilitiesdiampicButtonMessage(0, x, y, z));
 				AdminshoputilitiesdiampicButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 68, this.topPos + 108, 40, 20).build();
-		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 153, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = AdminshoputilitiesdiampicScreen.this.x;
+					int y = AdminshoputilitiesdiampicScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshoputilitiesdiampicButtonMessage(1, x, y, z));
 						AdminshoputilitiesdiampicButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -165,10 +163,11 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 135, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					int x = AdminshoputilitiesdiampicScreen.this.x;
+					int y = AdminshoputilitiesdiampicScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshoputilitiesdiampicButtonMessage(2, x, y, z));
 						AdminshoputilitiesdiampicButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -179,10 +178,11 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 119, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = AdminshoputilitiesdiampicScreen.this.x;
+					int y = AdminshoputilitiesdiampicScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshoputilitiesdiampicButtonMessage(3, x, y, z));
 						AdminshoputilitiesdiampicButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -193,7 +193,6 @@ public class AdminshoputilitiesdiampicScreen extends AbstractContainerScreen<Adm
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}
 }

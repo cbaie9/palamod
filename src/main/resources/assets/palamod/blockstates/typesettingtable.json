@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "blockstate=0": {
       "model": "palamod:block/typesettingtable"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/typesettingtableblockstate_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "palamod:block/typesettingtableblockstate_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "palamod:block/typesettingtableblockstate_blockstate_2"
     }
   }
 }

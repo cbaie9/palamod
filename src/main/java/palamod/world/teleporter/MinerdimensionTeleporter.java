@@ -1,4 +1,3 @@
-
 package palamod.world.teleporter;
 
 import palamod.init.PalamodModBlocks;

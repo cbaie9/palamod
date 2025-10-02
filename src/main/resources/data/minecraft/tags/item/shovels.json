@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "palamod:endiumshovel",
-    "palamod:greenpaladumexcator",
-    "palamod:paladiumexcavator",
-    "palamod:titaneexcavator",
-    "palamod:amethyst_excavator",
-    "palamod:paladiumgreenshovel",
     "palamod:amethyst_shovel",
     "palamod:titane_shovel",
+    "palamod:paladiumexcavator",
+    "palamod:amethyst_excavator",
+    "palamod:endiumshovel",
+    "palamod:greenpaladumexcator",
+    "palamod:titaneexcavator",
+    "palamod:paladiumgreenshovel",
     "palamod:paladium_shovel"
   ]
 }

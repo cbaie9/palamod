@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "minecraft:cobbled_deepslate",
-    "minecraft:cobblestone",
-    "minecraft:mossy_cobblestone",
-    "minecraft:granite",
     "minecraft:diorite",
+    "minecraft:end_stone",
+    "minecraft:andesite",
+    "palamod:cobbled_soft_stone",
+    "minecraft:cobbled_deepslate",
     "minecraft:blackstone",
     "minecraft:stone",
-    "minecraft:andesite",
+    "minecraft:granite",
+    "palamod:soft_stone",
     "minecraft:sandstone",
     "minecraft:red_sandstone",
-    "minecraft:end_stone",
     "minecraft:deepslate",
-    "palamod:soft_stone",
-    "palamod:cobbled_soft_stone"
+    "minecraft:mossy_cobblestone",
+    "minecraft:cobblestone"
   ]
 }

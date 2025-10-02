@@ -4,6 +4,8 @@ import palamod.world.inventory.DownloaderlinkMenu;
 
 import palamod.network.DownloaderlinkButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -15,15 +17,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class DownloaderlinkScreen extends AbstractContainerScreen<DownloaderlinkMenu> {
-	private final static HashMap<String, Object> guistate = DownloaderlinkMenu.guistate;
+public class DownloaderlinkScreen extends AbstractContainerScreen<DownloaderlinkMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_no;
 	Button button_process;
 
@@ -39,19 +39,23 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -77,20 +81,22 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	public void init() {
 		super.init();
 		button_no = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_no"), e -> {
+			int x = DownloaderlinkScreen.this.x;
+			int y = DownloaderlinkScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new DownloaderlinkButtonMessage(0, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 71, 35, 20).build();
-		guistate.put("button:button_no", button_no);
 		this.addRenderableWidget(button_no);
 		button_process = Button.builder(Component.translatable("gui.palamod.downloaderlink.button_process"), e -> {
+			int x = DownloaderlinkScreen.this.x;
+			int y = DownloaderlinkScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new DownloaderlinkButtonMessage(1, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 84, this.topPos + 71, 61, 20).build();
-		guistate.put("button:button_process", button_process);
 		this.addRenderableWidget(button_process);
 	}
 }

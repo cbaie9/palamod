@@ -1,18 +1,18 @@
 {
   "replace": false,
   "values": [
-    "palamod:wooden_obsidian_spike",
-    "palamod:iron_obsidian_spike",
-    "palamod:golden_obsidian_spike",
-    "palamod:diamond_obsidian_spike",
     "palamod:amethys_tobsidian_spike",
-    "palamod:titane_obsidian_spike",
-    "palamod:paladium_obsidian_spike",
-    "palamod:iron_spike",
-    "palamod:spike_gold",
-    "palamod:diamond_spike",
     "palamod:amethyst_spike",
     "palamod:titane_spike",
-    "palamod:paladium_spike"
+    "palamod:wooden_obsidian_spike",
+    "palamod:iron_obsidian_spike",
+    "palamod:titane_obsidian_spike",
+    "palamod:paladium_obsidian_spike",
+    "palamod:spike_gold",
+    "palamod:paladium_spike",
+    "palamod:diamond_obsidian_spike",
+    "palamod:golden_obsidian_spike",
+    "palamod:iron_spike",
+    "palamod:diamond_spike"
   ]
 }

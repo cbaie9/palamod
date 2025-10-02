@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.PalahopperswapprocessProcedure;
@@ -10,7 +9,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.DirectionalBlock;
@@ -25,7 +23,7 @@ public class PaladiumhoppersouthBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public PaladiumhoppersouthBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

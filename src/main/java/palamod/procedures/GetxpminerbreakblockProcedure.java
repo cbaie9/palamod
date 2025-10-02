@@ -80,7 +80,7 @@ public class GetxpminerbreakblockProcedure {
 							output = output + 6;
 						} else if (block.getBlock() == Blocks.OBSIDIAN) {
 							output = output + 6;
-						} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
+						} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == Blocks.AIR || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
 							output = output + 15;
 						} else if (block.getBlock() == Blocks.EMERALD_ORE || block.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE) {
 							output = output + 50;

@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -38,29 +37,47 @@ import net.minecraft.core.registries.Registries;
 public class PalamodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PalamodMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumdynamiteEntity>> PALADIUMDYNAMITE = register("paladiumdynamite",
-			EntityType.Builder.<PaladiumdynamiteEntity>of(PaladiumdynamiteEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<PaladiumdynamiteEntity>of(PaladiumdynamiteEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EndiumdynamiteEntity>> ENDIUMDYNAMITE = register("endiumdynamite",
-			EntityType.Builder.<EndiumdynamiteEntity>of(EndiumdynamiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<EndiumdynamiteEntity>of(EndiumdynamiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BigdynamiteentityEntity>> BIGDYNAMITEENTITY = register("bigdynamiteentity",
-			EntityType.Builder.<BigdynamiteentityEntity>of(BigdynamiteentityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<BigdynamiteentityEntity>of(BigdynamiteentityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumgolemEntity>> PALADIUMGOLEM = register("paladiumgolem",
 			EntityType.Builder.<PaladiumgolemEntity>of(PaladiumgolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1.2f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PrimedspongetntEntity>> PRIMEDSPONGETNT = register("primedspongetnt",
-			EntityType.Builder.<PrimedspongetntEntity>of(PrimedspongetntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<PrimedspongetntEntity>of(PrimedspongetntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PrimedwithertntEntity>> PRIMEDWITHERTNT = register("primedwithertnt",
-			EntityType.Builder.<PrimedwithertntEntity>of(PrimedwithertntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<PrimedwithertntEntity>of(PrimedwithertntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PrimedmagictntEntity>> PRIMEDMAGICTNT = register("primedmagictnt",
-			EntityType.Builder.<PrimedmagictntEntity>of(PrimedmagictntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<PrimedmagictntEntity>of(PrimedmagictntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PrimedbigtntEntity>> PRIMEDBIGTNT = register("primedbigtnt",
-			EntityType.Builder.<PrimedbigtntEntity>of(PrimedbigtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<PrimedbigtntEntity>of(PrimedbigtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PrimedendiumtntEntity>> PRIMEDENDIUMTNT = register("primedendiumtnt",
-			EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<PrimedendiumtntEntity>of(PrimedendiumtntEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SwitcharrowEntity>> SWITCHARROW = register("switcharrow",
 			EntityType.Builder.<SwitcharrowEntity>of(SwitcharrowEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GodvillagerEntity>> GODVILLAGER = register("godvillager",
-			EntityType.Builder.<GodvillagerEntity>of(GodvillagerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.95f));
+			EntityType.Builder.<GodvillagerEntity>of(GodvillagerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.95f));
 	public static final DeferredHolder<EntityType<?>, EntityType<Dankaroctest1Entity>> DANKAROCTEST_1 = register("dankaroctest_1",
 			EntityType.Builder.<Dankaroctest1Entity>of(Dankaroctest1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    },
+    "b": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result": {
+    "id": "palamod:paladiumink",
+    "count": 4
+  }
+}

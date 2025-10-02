@@ -4,6 +4,8 @@ import palamod.world.inventory.FluidpalahelpMenu;
 
 import palamod.network.FluidpalahelpButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -16,15 +18,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMenu> {
-	private final static HashMap<String, Object> guistate = FluidpalahelpMenu.guistate;
+public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_arrow_adminshop;
 	ImageButton imagebutton_home_pixel_adminshop;
@@ -41,27 +41,27 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fluidpalahelp.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 200, 200, 200, 200);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/6_fluid.png"), this.leftPos + 6, this.topPos + 37, 0, 0, 22, 21, 22, 21);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/7angel.png"), this.leftPos + 3, this.topPos + 112, 0, 0, 21, 21, 21, 21);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -90,6 +90,8 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 		super.init();
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 178, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = FluidpalahelpScreen.this.x;
+					int y = FluidpalahelpScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new FluidpalahelpButtonMessage(0, x, y, z));
 						FluidpalahelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -100,10 +102,11 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 158, this.topPos + 4, 17, 17,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
+					int x = FluidpalahelpScreen.this.x;
+					int y = FluidpalahelpScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new FluidpalahelpButtonMessage(1, x, y, z));
 						FluidpalahelpButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -114,10 +117,11 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 139, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = FluidpalahelpScreen.this.x;
+					int y = FluidpalahelpScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new FluidpalahelpButtonMessage(2, x, y, z));
 						FluidpalahelpButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -128,7 +132,6 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}
 }

@@ -1,4 +1,3 @@
-
 package palamod.fluid.types;
 
 import palamod.init.PalamodModFluidTypes;

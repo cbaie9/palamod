@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.SafeguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class MegasafechestBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(18, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(18, ItemStack.EMPTY);
 
 	public MegasafechestBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.MEGA_SAFE_CHEST.get(), position, state);
@@ -124,9 +120,5 @@ public class MegasafechestBlockEntity extends RandomizableContainerBlockEntity i
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

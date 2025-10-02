@@ -1,19 +1,19 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
+
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import java.util.HashMap;
 
 public class AdshoppreviewamountfeatherProcedure {
-	public static String execute(LevelAccessor world, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static String execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return "";
 		ItemStack item = ItemStack.EMPTY;
 		double fac_v = 0;
@@ -31,7 +31,7 @@ public class AdshoppreviewamountfeatherProcedure {
 				}
 				return 0;
 			}
-		}.convert(guistate.containsKey("text:number_buy") ? ((EditBox) guistate.get("text:number_buy")).getValue() : "")));
+		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		buy = n * fac_v;
 		if (buy > getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) {
 			buy_out = "{Not enough money}";

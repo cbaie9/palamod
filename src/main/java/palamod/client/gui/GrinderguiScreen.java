@@ -13,6 +13,8 @@ import palamod.procedures.GrindergettimercraftProcedure;
 
 import palamod.network.GrinderguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -26,15 +28,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
-	private final static HashMap<String, Object> guistate = GrinderguiMenu.guistate;
+public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_help_button;
 
 	public GrinderguiScreen(GrinderguiMenu container, Inventory inventory, Component text) {
@@ -49,6 +49,12 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public boolean isPauseScreen() {
 		return true;
 	}
@@ -60,15 +66,12 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grindergui_v4.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/btn-all_off.png"), this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
-
 		if (LightbluegrinderonProcedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/btn-blue_on.png"), this.leftPos + 190, this.topPos + 63, 0, 0, 7, 7, 7, 7);
 		}
@@ -78,19 +81,13 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 		if (LightgreengrinderonProcedure.execute(world, x, y, z)) {
 			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/btn-green_on.png"), this.leftPos + 175, this.topPos + 63, 0, 0, 7, 7, 7, 7);
 		}
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_sprite_full.png"), this.leftPos + 152, this.topPos + 9, Mth.clamp((int) ProgressbargrinderspritereturnProcedure.execute(world, x, y, z) * 51, 0, 2550), 0, 51, 50, 2601,
 				50);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fire_furnace.png"), this.leftPos + 126, this.topPos + 25, Mth.clamp((int) ReturntimerinputgrinderProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 53, this.topPos + 59, 0, 0, 22, 15, 506, 15);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 49, this.topPos + 13, Mth.clamp((int) GrindergettimercraftProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 48, this.topPos + 60, Mth.clamp((int) GrindergettimerfusionProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506,
 				15);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -105,9 +102,7 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font,
-
-				Grindertrans1Procedure.execute(world, x, y, z), 144, 70, -4671036, false);
+		guiGraphics.drawString(this.font, Grindertrans1Procedure.execute(world, x, y, z), 144, 70, -4671036, false);
 	}
 
 	@Override
@@ -115,6 +110,8 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 		super.init();
 		imagebutton_help_button = new ImageButton(this.leftPos + 193, this.topPos + 141, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/help_button.png"), ResourceLocation.parse("palamod:textures/screens/help_button_poi.png")), e -> {
+					int x = GrinderguiScreen.this.x;
+					int y = GrinderguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderguiButtonMessage(0, x, y, z));
 						GrinderguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -125,7 +122,6 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_help_button", imagebutton_help_button);
 		this.addRenderableWidget(imagebutton_help_button);
 	}
 }

@@ -28,7 +28,7 @@ public class SeeddropsProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
-		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.SHORT_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.TALL_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.1) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.EGGPLANT_SEED.get()));
@@ -36,7 +36,7 @@ public class SeeddropsProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		}
-		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.SHORT_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.TALL_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.05) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.CHERVILSEED.get()));
@@ -44,7 +44,7 @@ public class SeeddropsProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		}
-		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.SHORT_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.TALL_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.01) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.KIWANOSEED.get()));
@@ -52,7 +52,7 @@ public class SeeddropsProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		}
-		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.SHORT_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
+		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DEAD_BUSH
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.TALL_GRASS || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.LARGE_FERN) && Math.random() < 0.005) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ORANGEBLUESEED.get()));

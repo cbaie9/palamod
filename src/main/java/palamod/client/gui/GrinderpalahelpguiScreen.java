@@ -15,6 +15,8 @@ import palamod.procedures.Palahelpgrinder10Procedure;
 
 import palamod.network.GrinderpalahelpguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -27,15 +29,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GrinderpalahelpguiScreen extends AbstractContainerScreen<GrinderpalahelpguiMenu> {
-	private final static HashMap<String, Object> guistate = GrinderpalahelpguiMenu.guistate;
+public class GrinderpalahelpguiScreen extends AbstractContainerScreen<GrinderpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_cross_no_button;
 	ImageButton imagebutton_revert_adminshop_arrow;
 	ImageButton imagebutton_arrow_adminshop;
@@ -54,29 +54,28 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinderpalahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 330, 185, 330, 185);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png"), this.leftPos + 3, this.topPos + 4, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -92,37 +91,17 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelpgui.label_grinder"), 98, 7, -1, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder10Procedure.execute(entity), 3, 40, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder11Procedure.execute(entity), 3, 53, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder12Procedure.execute(entity), 3, 66, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder13Procedure.execute(entity), 2, 78, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder14Procedure.execute(entity), 3, 90, -256, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder15Procedure.execute(entity), 2, 99, -256, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrindet16Procedure.execute(entity), 3, 110, -8504309, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder17Procedure.execute(entity), 3, 120, -816878, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder10Procedure.execute(entity), 3, 40, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder11Procedure.execute(entity), 3, 53, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder12Procedure.execute(entity), 3, 66, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder13Procedure.execute(entity), 2, 78, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder14Procedure.execute(entity), 3, 90, -256, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder15Procedure.execute(entity), 2, 99, -256, false);
+		guiGraphics.drawString(this.font, Palahelpgrindet16Procedure.execute(entity), 3, 110, -8504309, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder17Procedure.execute(entity), 3, 120, -816878, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelpgui.label_empty"), 54, 71, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder18Procedure.execute(entity), 4, 132, -3335911, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpgrinder19Procedure.execute(entity), 4, 145, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder18Procedure.execute(entity), 4, 132, -3335911, false);
+		guiGraphics.drawString(this.font, Palahelpgrinder19Procedure.execute(entity), 4, 145, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelpgui.label_2_min_12"), 20, 14, -1, false);
 	}
 
@@ -131,6 +110,8 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 		super.init();
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 308, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = GrinderpalahelpguiScreen.this.x;
+					int y = GrinderpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderpalahelpguiButtonMessage(0, x, y, z));
 						GrinderpalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -141,10 +122,11 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_revert_adminshop_arrow = new ImageButton(this.leftPos + 270, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/revert_adminshop_arrow.png"), ResourceLocation.parse("palamod:textures/screens/pointed_revert_adminshop_arrow.png")), e -> {
+					int x = GrinderpalahelpguiScreen.this.x;
+					int y = GrinderpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderpalahelpguiButtonMessage(1, x, y, z));
 						GrinderpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -155,10 +137,11 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_revert_adminshop_arrow", imagebutton_revert_adminshop_arrow);
 		this.addRenderableWidget(imagebutton_revert_adminshop_arrow);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 250, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					int x = GrinderpalahelpguiScreen.this.x;
+					int y = GrinderpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderpalahelpguiButtonMessage(2, x, y, z));
 						GrinderpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -169,10 +152,11 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 230, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = GrinderpalahelpguiScreen.this.x;
+					int y = GrinderpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderpalahelpguiButtonMessage(3, x, y, z));
 						GrinderpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -183,10 +167,11 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 		imagebutton_example_gui_button = new ImageButton(this.leftPos + 288, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/example_gui_button.png"), ResourceLocation.parse("palamod:textures/screens/example_gui_button_poi.png")), e -> {
+					int x = GrinderpalahelpguiScreen.this.x;
+					int y = GrinderpalahelpguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new GrinderpalahelpguiButtonMessage(4, x, y, z));
 						GrinderpalahelpguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -197,7 +182,6 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_example_gui_button", imagebutton_example_gui_button);
 		this.addRenderableWidget(imagebutton_example_gui_button);
 	}
 }

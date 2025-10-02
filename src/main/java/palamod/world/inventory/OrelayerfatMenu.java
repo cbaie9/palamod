@@ -1,4 +1,3 @@
-
 package palamod.world.inventory;
 
 import palamod.init.PalamodModMenus;
@@ -21,9 +20,17 @@ import net.minecraft.core.BlockPos;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
-public class OrelayerfatMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
+public class OrelayerfatMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
+	public final Map<String, Object> menuState = new HashMap<>() {
+		@Override
+		public Object put(String key, Object value) {
+			if (!this.containsKey(key) && this.size() >= 7)
+				return null;
+			return super.put(key, value);
+		}
+	};
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
@@ -68,7 +75,13 @@ public class OrelayerfatMenu extends AbstractContainerMenu implements Supplier<M
 		return ItemStack.EMPTY;
 	}
 
-	public Map<Integer, Slot> get() {
-		return customSlots;
+	@Override
+	public Map<Integer, Slot> getSlots() {
+		return Collections.unmodifiableMap(customSlots);
+	}
+
+	@Override
+	public Map<String, Object> getMenuState() {
+		return menuState;
 	}
 }

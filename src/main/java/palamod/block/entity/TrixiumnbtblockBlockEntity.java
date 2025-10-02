@@ -1,9 +1,6 @@
-
 package palamod.block.entity;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -26,8 +23,7 @@ import javax.annotation.Nullable;
 import java.util.stream.IntStream;
 
 public class TrixiumnbtblockBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public TrixiumnbtblockBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.TRIXIUM_NBT_BLOCK.get(), position, state);
@@ -120,9 +116,5 @@ public class TrixiumnbtblockBlockEntity extends RandomizableContainerBlockEntity
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

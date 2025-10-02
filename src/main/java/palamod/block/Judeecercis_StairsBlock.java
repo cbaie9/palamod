@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Judeecercis_StairsBlock extends StairBlock {
 	public Judeecercis_StairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(3f, 2f).requiresCorrectToolForDrops().dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(3f, 2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

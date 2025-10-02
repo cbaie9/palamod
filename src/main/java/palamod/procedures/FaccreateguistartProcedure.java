@@ -2,17 +2,17 @@ package palamod.procedures;
 
 import palamod.network.PalamodModVariables;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.client.gui.components.EditBox;
+import palamod.init.PalamodModMenus;
 
-import java.util.HashMap;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
 public class FaccreateguistartProcedure {
-	public static void execute(Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		if (guistate.get("text:faction_name_input_bow") instanceof EditBox _tf)
-			_tf.setValue((entity.getPersistentData().getString("temp_fact_name")));
+		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu)
+			_menu.sendMenuStateUpdate(_player, 0, "faction_name_input_bow", (entity.getPersistentData().getString("temp_fact_name")), true);
 		PalamodModVariables.faction_create_ing = "remaining to insert : 100";
 	}
 }

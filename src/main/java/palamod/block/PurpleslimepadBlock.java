@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.SlimeprocessProcedure;
@@ -37,8 +36,8 @@ public class PurpleslimepadBlock extends Block implements SimpleWaterloggedBlock
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public PurpleslimepadBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().mapColor(MapColor.COLOR_GREEN).sound(SoundType.SLIME_BLOCK).strength(1f, 10f).requiresCorrectToolForDrops().noCollission().friction(0.8f).noOcclusion()
-				.isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).sound(SoundType.SLIME_BLOCK).strength(1f, 10f).requiresCorrectToolForDrops().noCollission().friction(0.8f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false)
+				.ignitedByLava());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
 	}
 

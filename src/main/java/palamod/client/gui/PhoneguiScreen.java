@@ -4,6 +4,8 @@ import palamod.world.inventory.PhoneguiMenu;
 
 import palamod.network.PhoneguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -17,15 +19,13 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
-	private final static HashMap<String, Object> guistate = PhoneguiMenu.guistate;
+public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox cheat_code_secret;
 	Button button_test_code;
 
@@ -41,6 +41,16 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("cheat_code_secret"))
+				cheat_code_secret.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		cheat_code_secret.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -48,13 +58,11 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/phonegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -84,36 +92,22 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> {
 	@Override
 	public void init() {
 		super.init();
-		cheat_code_secret = new EditBox(this.font, this.leftPos + 5, this.topPos + 21, 118, 18, Component.translatable("gui.palamod.phonegui.cheat_code_secret")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.phonegui.cheat_code_secret").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.phonegui.cheat_code_secret").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		cheat_code_secret.setMaxLength(32767);
-		cheat_code_secret.setSuggestion(Component.translatable("gui.palamod.phonegui.cheat_code_secret").getString());
-		guistate.put("text:cheat_code_secret", cheat_code_secret);
+		cheat_code_secret = new EditBox(this.font, this.leftPos + 5, this.topPos + 21, 118, 18, Component.translatable("gui.palamod.phonegui.cheat_code_secret"));
+		cheat_code_secret.setMaxLength(8192);
+		cheat_code_secret.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "cheat_code_secret", content, false);
+		});
+		cheat_code_secret.setHint(Component.translatable("gui.palamod.phonegui.cheat_code_secret"));
 		this.addWidget(this.cheat_code_secret);
 		button_test_code = Button.builder(Component.translatable("gui.palamod.phonegui.button_test_code"), e -> {
+			int x = PhoneguiScreen.this.x;
+			int y = PhoneguiScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new PhoneguiButtonMessage(0, x, y, z));
 				PhoneguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 98, this.topPos + 57, 72, 20).build();
-		guistate.put("button:button_test_code", button_test_code);
 		this.addRenderableWidget(button_test_code);
 	}
 }

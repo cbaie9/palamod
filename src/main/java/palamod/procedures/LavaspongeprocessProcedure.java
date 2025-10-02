@@ -31,7 +31,7 @@ public class LavaspongeprocessProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.LAVA || (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.LAVA) {
+						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.LAVA) {
 							world.levelEvent(2001, BlockPos.containing(x + xi, y + i, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)))));
 							world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
 							{

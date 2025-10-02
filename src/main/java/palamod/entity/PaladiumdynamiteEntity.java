@@ -1,4 +1,3 @@
-
 package palamod.entity;
 
 import palamod.procedures.Paladiumdynamite_boomProcedure;

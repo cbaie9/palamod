@@ -8,6 +8,8 @@ import palamod.procedures.GetxpminerProcedure;
 
 import palamod.network.JobsminerguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -22,16 +24,15 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu> {
-	private final static HashMap<String, Object> guistate = JobsminerguiMenu.guistate;
+public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_button_gray;
 	ImageButton imagebutton_help_button;
 	ImageButton imagebutton_cross_no_button;
@@ -48,31 +49,35 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36) {
 			String hoverText = GetxpminertextProcedure.execute(world, entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsminergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 80, 176, 80);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsminergetxpprogressbarProcedure.execute(world, entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -88,9 +93,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_jobs_miner"), 9, 7, -1, false);
-		guiGraphics.drawString(this.font,
-
-				GetxpminerProcedure.execute(world, entity), 13, 38, -1, false);
+		guiGraphics.drawString(this.font, GetxpminerProcedure.execute(world, entity), 13, 38, -1, false);
 	}
 
 	@Override
@@ -98,6 +101,8 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 		super.init();
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_hover_v3.png")), e -> {
+					int x = JobsminerguiScreen.this.x;
+					int y = JobsminerguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new JobsminerguiButtonMessage(0, x, y, z));
 						JobsminerguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -108,7 +113,6 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_button_gray", imagebutton_button_gray);
 		this.addRenderableWidget(imagebutton_button_gray);
 		imagebutton_help_button = new ImageButton(this.leftPos + 14, this.topPos + 53, 48, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_helpjobs_v1.png"), ResourceLocation.parse("palamod:textures/screens/button_helpjobs_poi_v1.png")), e -> {
@@ -118,10 +122,11 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_help_button", imagebutton_help_button);
 		this.addRenderableWidget(imagebutton_help_button);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = JobsminerguiScreen.this.x;
+					int y = JobsminerguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new JobsminerguiButtonMessage(2, x, y, z));
 						JobsminerguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -132,7 +137,6 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 	}
 }

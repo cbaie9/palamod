@@ -1,25 +1,25 @@
 {
   "replace": false,
   "values": [
-    "palamod:pigarmor_leggings",
-    "palamod:mixed_endium_armor_leggings",
+    "palamod:amethyst_armor_leggings",
+    "palamod:paladium_armor_leggings",
+    "palamod:greenpaladiumarmor_leggings",
     "palamod:paladiumarmorcustom_10_leggings",
-    "palamod:paladiumarmorcustom_9_leggings",
-    "palamod:paladiumarmorcustom_8_leggings",
-    "palamod:paladiumarmorcustom_7_leggings",
+    "palamod:endium_armor_leggings",
     "palamod:paladiumarmorcustom_6_leggings",
-    "palamod:paladiumarmorcustom_5_leggings",
-    "palamod:paladiumarmorcustom_4_leggings",
+    "palamod:pigarmor_leggings",
+    "palamod:travelarmor_leggings",
     "palamod:paladiumarmorcustom_3_leggings",
+    "palamod:paladiumarmorcustom_8_leggings",
+    "palamod:invisiblearmor_leggings",
+    "palamod:paladiumarmorcustom_5_leggings",
     "palamod:paladiumarmorcustom_2_leggings",
+    "palamod:mixed_endium_armor_leggings",
     "palamod:paladiumarmorcustom_1_leggings",
     "palamod:rainbowarmor_leggings",
-    "palamod:invisiblearmor_leggings",
-    "palamod:travelarmor_leggings",
-    "palamod:greenpaladiumarmor_leggings",
-    "palamod:endium_armor_leggings",
-    "palamod:amethyst_armor_leggings",
+    "palamod:paladiumarmorcustom_9_leggings",
+    "palamod:paladiumarmorcustom_7_leggings",
     "palamod:titane_armor_leggings",
-    "palamod:paladium_armor_leggings"
+    "palamod:paladiumarmorcustom_4_leggings"
   ]
 }

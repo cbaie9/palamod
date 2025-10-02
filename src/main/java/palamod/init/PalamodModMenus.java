@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -7,6 +6,7 @@ package palamod.init;
 import palamod.world.inventory.XpbushpalahelpguiMenu;
 import palamod.world.inventory.UploaderguipalahelpMenu;
 import palamod.world.inventory.UploaderguiMenu;
+import palamod.world.inventory.TypesettingtablestorageMenu;
 import palamod.world.inventory.TrixiumdepositMenu;
 import palamod.world.inventory.TrashguiMenu;
 import palamod.world.inventory.TitanechestguiMenu;
@@ -138,14 +138,23 @@ import palamod.world.inventory.AdminshopblockDirtMenu;
 import palamod.world.inventory.AdminpanelmenuMenu;
 import palamod.world.inventory.AdhutilitiesredstoneMenu;
 
+import palamod.network.MenuStateUpdateMessage;
+
 import palamod.PalamodMod;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.client.Minecraft;
+
+import java.util.Map;
 
 public class PalamodModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, PalamodMod.MODID);
@@ -282,4 +291,30 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsserverMenu>> JOBSSERVER = REGISTRY.register("jobsserver", () -> IMenuTypeExtension.create(JobsserverMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<CobbleakerserverMenu>> COBBLEAKERSERVER = REGISTRY.register("cobbleakerserver", () -> IMenuTypeExtension.create(CobbleakerserverMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<FlowertotemguiMenu>> FLOWERTOTEMGUI = REGISTRY.register("flowertotemgui", () -> IMenuTypeExtension.create(FlowertotemguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<TypesettingtablestorageMenu>> TYPESETTINGTABLESTORAGE = REGISTRY.register("typesettingtablestorage", () -> IMenuTypeExtension.create(TypesettingtablestorageMenu::new));
+
+	public interface MenuAccessor {
+		Map<String, Object> getMenuState();
+
+		Map<Integer, Slot> getSlots();
+
+		default void sendMenuStateUpdate(Player player, int elementType, String name, Object elementState, boolean needClientUpdate) {
+			getMenuState().put(elementType + ":" + name, elementState);
+			if (player instanceof ServerPlayer serverPlayer) {
+				PacketDistributor.sendToPlayer(serverPlayer, new MenuStateUpdateMessage(elementType, name, elementState));
+			} else if (player.level().isClientSide) {
+				if (Minecraft.getInstance().screen instanceof PalamodModScreens.ScreenAccessor accessor && needClientUpdate)
+					accessor.updateMenuState(elementType, name, elementState);
+				PacketDistributor.sendToServer(new MenuStateUpdateMessage(elementType, name, elementState));
+			}
+		}
+
+		default <T> T getMenuState(int elementType, String name, T defaultValue) {
+			try {
+				return (T) getMenuState().getOrDefault(elementType + ":" + name, defaultValue);
+			} catch (ClassCastException e) {
+				return defaultValue;
+			}
+		}
+	}
 }

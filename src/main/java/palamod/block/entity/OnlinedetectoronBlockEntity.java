@@ -1,11 +1,8 @@
-
 package palamod.block.entity;
 
 import palamod.world.inventory.OnlinedetectorguiMenu;
 
 import palamod.init.PalamodModBlockEntities;
-
-import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -30,8 +27,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class OnlinedetectoronBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
-	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public OnlinedetectoronBlockEntity(BlockPos position, BlockState state) {
 		super(PalamodModBlockEntities.ONLINE_DETECTOR_ON.get(), position, state);
@@ -124,9 +120,5 @@ public class OnlinedetectoronBlockEntity extends RandomizableContainerBlockEntit
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack itemstack, Direction direction) {
 		return true;
-	}
-
-	public SidedInvWrapper getItemHandler() {
-		return handler;
 	}
 }

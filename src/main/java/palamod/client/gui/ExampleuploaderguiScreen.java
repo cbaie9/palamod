@@ -6,6 +6,8 @@ import palamod.procedures.Grindertrans0Procedure;
 
 import palamod.network.ExampleuploaderguiButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -18,15 +20,13 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ExampleuploaderguiScreen extends AbstractContainerScreen<ExampleuploaderguiMenu> {
-	private final static HashMap<String, Object> guistate = ExampleuploaderguiMenu.guistate;
+public class ExampleuploaderguiScreen extends AbstractContainerScreen<ExampleuploaderguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_cross_no_button;
 
 	public ExampleuploaderguiScreen(ExampleuploaderguiMenu container, Inventory inventory, Component text) {
@@ -41,34 +41,40 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 63 && mouseX < leftPos + 109 && mouseY > topPos + 5 && mouseY < topPos + 18) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_this_interface_need_an_upgrade"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 61 && mouseY < topPos + 79) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_money_output"), mouseX, mouseY);
-		}
-		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 27 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be"), mouseX, mouseY);
-		}
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 63 && mouseX < leftPos + 109 && mouseY > topPos + 5 && mouseY < topPos + 18) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_this_interface_need_an_upgrade"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 61 && mouseY < topPos + 79) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_money_output"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 27 && mouseY < topPos + 45) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
+	}
+
+	@Override
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_treec_sep_nt1.png"), this.leftPos + 77, this.topPos + 45, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -84,9 +90,7 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.exampleuploadergui.label_uploader"), 65, 8, -1, false);
-		guiGraphics.drawString(this.font,
-
-				Grindertrans0Procedure.execute(entity), 3, 71, -12829636, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 3, 71, -12829636, false);
 	}
 
 	@Override
@@ -94,6 +98,8 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 		super.init();
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 151, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = ExampleuploaderguiScreen.this.x;
+					int y = ExampleuploaderguiScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new ExampleuploaderguiButtonMessage(0, x, y, z));
 						ExampleuploaderguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -104,7 +110,6 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 	}
 }

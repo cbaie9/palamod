@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.procedures.MoulastoneprocessProcedure;
@@ -6,7 +5,6 @@ import palamod.procedures.MoulastoneconfProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -16,7 +14,7 @@ import net.minecraft.world.InteractionHand;
 
 public class MoulastoneItem extends Item {
 	public MoulastoneItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1));
 	}
 
 	@Override

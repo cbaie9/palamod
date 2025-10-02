@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.procedures.Paladiumapple_effectProcedure;
@@ -13,7 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class PaladiumappleItem extends Item {
 	public PaladiumappleItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(9).saturationModifier(1f).alwaysEdible().build()));
+		super(new Item.Properties().rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(9).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override

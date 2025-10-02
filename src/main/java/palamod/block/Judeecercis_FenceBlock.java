@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -12,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class Judeecercis_FenceBlock extends FenceBlock {
 	public Judeecercis_FenceBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().dynamicShape().forceSolidOn());
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

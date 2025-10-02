@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "palamod:endium_small_ring",
     "palamod:endium_medium_ring",
-    "palamod:endium_big_ring"
+    "palamod:endium_big_ring",
+    "palamod:endium_small_ring"
   ]
 }

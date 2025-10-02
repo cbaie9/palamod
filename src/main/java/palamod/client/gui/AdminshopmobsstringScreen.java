@@ -9,6 +9,8 @@ import palamod.procedures.AdshoppreviewamountstringProcedure;
 
 import palamod.network.AdminshopmobsstringButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -25,16 +27,15 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import java.util.stream.Collectors;
-import java.util.HashMap;
 import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class AdminshopmobsstringScreen extends AbstractContainerScreen<AdminshopmobsstringMenu> {
-	private final static HashMap<String, Object> guistate = AdminshopmobsstringMenu.guistate;
+public class AdminshopmobsstringScreen extends AbstractContainerScreen<AdminshopmobsstringMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	EditBox number_buy;
 	Button button_buy;
 	Button button_sell;
@@ -54,42 +55,53 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("number_buy"))
+				number_buy.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 169 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 135 && mouseX < leftPos + 150 && mouseY > topPos + 6 && mouseY < topPos + 20) {
 			String hoverText = Returnadminshopmobsmenup1Procedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 119 && mouseX < leftPos + 131 && mouseY > topPos + 5 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
+			customTooltipShown = true;
 		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -114,9 +126,7 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_paladium"), 68, 6, -1, false);
-		guiGraphics.drawString(this.font,
-
-				AdshoppreviewamountstringProcedure.execute(world, entity, guistate), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, AdshoppreviewamountstringProcedure.execute(world, entity), 29, 74, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_sell_price_120"), 25, 30, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmobsstring.label_buy_price_125"), 25, 44, -4671036, false);
 	}
@@ -124,47 +134,36 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 	@Override
 	public void init() {
 		super.init();
-		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshopmobsstring.number_buy")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.adminshopmobsstring.number_buy").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos, boolean flag) {
-				super.moveCursorTo(pos, flag);
-				if (getValue().isEmpty())
-					setSuggestion(Component.translatable("gui.palamod.adminshopmobsstring.number_buy").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		number_buy.setMaxLength(32767);
-		number_buy.setSuggestion(Component.translatable("gui.palamod.adminshopmobsstring.number_buy").getString());
-		guistate.put("text:number_buy", number_buy);
+		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.adminshopmobsstring.number_buy"));
+		number_buy.setMaxLength(8192);
+		number_buy.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "number_buy", content, false);
+		});
+		number_buy.setHint(Component.translatable("gui.palamod.adminshopmobsstring.number_buy"));
 		this.addWidget(this.number_buy);
 		button_buy = Button.builder(Component.translatable("gui.palamod.adminshopmobsstring.button_buy"), e -> {
+			int x = AdminshopmobsstringScreen.this.x;
+			int y = AdminshopmobsstringScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new AdminshopmobsstringButtonMessage(0, x, y, z));
 				AdminshopmobsstringButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 109, 40, 20).build();
-		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
 		button_sell = Button.builder(Component.translatable("gui.palamod.adminshopmobsstring.button_sell"), e -> {
+			int x = AdminshopmobsstringScreen.this.x;
+			int y = AdminshopmobsstringScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new AdminshopmobsstringButtonMessage(1, x, y, z));
 				AdminshopmobsstringButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 99, this.topPos + 109, 46, 20).build();
-		guistate.put("button:button_sell", button_sell);
 		this.addRenderableWidget(button_sell);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 153, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+					int x = AdminshopmobsstringScreen.this.x;
+					int y = AdminshopmobsstringScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmobsstringButtonMessage(2, x, y, z));
 						AdminshopmobsstringButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -175,10 +174,11 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_cross_no_button", imagebutton_cross_no_button);
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 134, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+					int x = AdminshopmobsstringScreen.this.x;
+					int y = AdminshopmobsstringScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmobsstringButtonMessage(3, x, y, z));
 						AdminshopmobsstringButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -189,10 +189,11 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_arrow_adminshop", imagebutton_arrow_adminshop);
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 117, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+					int x = AdminshopmobsstringScreen.this.x;
+					int y = AdminshopmobsstringScreen.this.y;
 					if (true) {
 						PacketDistributor.sendToServer(new AdminshopmobsstringButtonMessage(4, x, y, z));
 						AdminshopmobsstringButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -203,7 +204,6 @@ public class AdminshopmobsstringScreen extends AbstractContainerScreen<Adminshop
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_home_pixel_adminshop", imagebutton_home_pixel_adminshop);
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}
 }

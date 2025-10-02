@@ -1,12 +1,15 @@
 {
-  "_fv": 77,
+  "_fv": 79,
   "_type": "potioneffect",
   "definition": {
     "effectName": "x10 experience boost",
-    "icon": "potion_job_x10.png",
+    "icon": "potion_job_x10",
     "color": {
       "value": -10027264,
       "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
     },
     "isInstant": false,
     "mobEffectCategory": "BENEFICIAL",

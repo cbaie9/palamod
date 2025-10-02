@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -7,7 +6,6 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.TooltipFlag;
@@ -20,7 +18,7 @@ import java.util.List;
 
 public class BlackluckyblockBlock extends Block {
 	public BlackluckyblockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

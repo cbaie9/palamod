@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.neoforged.api.distmarker.OnlyIn;

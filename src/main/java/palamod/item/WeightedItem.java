@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import net.neoforged.neoforge.registries.RegisterEvent;

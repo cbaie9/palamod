@@ -239,7 +239,7 @@ public class Gcodev6Procedure {
 						}
 						output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
 						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed"))),
-								(int) (output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1));
+								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1);
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = 4;
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
@@ -298,7 +298,7 @@ public class Gcodev6Procedure {
 						}
 						output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
 						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))),
-								(int) (output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1));
+								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1);
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = 4;
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
@@ -414,7 +414,7 @@ public class Gcodev6Procedure {
 					}
 					output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
 					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant"))),
-							(int) (output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) + 1));
+							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) + 1);
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						int _slotid = 4;
 						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();

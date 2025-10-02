@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.ColoredlampRedstoneOnProcedure;
@@ -14,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class ColoredlampBlock extends Block {
 	public ColoredlampBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.LANTERN).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

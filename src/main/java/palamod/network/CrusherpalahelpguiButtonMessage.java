@@ -1,7 +1,4 @@
-
 package palamod.network;
-
-import palamod.world.inventory.CrusherpalahelpguiMenu;
 
 import palamod.procedures.MachineconnectpalahelpProcedure;
 import palamod.procedures.ConnectephcrusherProcedure;
@@ -25,8 +22,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.HashMap;
-
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
@@ -44,14 +39,7 @@ public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 
 	public static void handleData(final CrusherpalahelpguiButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -60,7 +48,6 @@ public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = CrusherpalahelpguiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

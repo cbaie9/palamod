@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
+    "palamod:disc_fuzeiii",
+    "palamod:disc_anti_fuze",
     "palamod:disc_clash_kumiz",
     "palamod:disc_roulette_paladienne",
-    "palamod:disc_anti_fuze",
-    "palamod:disc_fuzeiii",
     "palamod:disc_mii_chalenge"
   ]
 }

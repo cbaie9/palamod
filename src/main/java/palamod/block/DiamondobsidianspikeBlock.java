@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.DiamondspikeobsiprocessProcedure;
@@ -9,7 +8,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.DirectionalBlock;
@@ -26,7 +24,7 @@ public class DiamondobsidianspikeBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public DiamondobsidianspikeBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(50f, 1200f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().strength(50f, 1200f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

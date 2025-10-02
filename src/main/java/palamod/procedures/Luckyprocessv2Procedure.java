@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.network.PalamodModVariables;
 
+import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 import palamod.init.PalamodModEntities;
@@ -23,7 +24,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.MobSpawnType;
@@ -42,9 +42,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import java.util.function.Supplier;
 import java.util.Random;
-import java.util.Map;
 
 public class Luckyprocessv2Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -55,22 +53,22 @@ public class Luckyprocessv2Procedure {
 		Random = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Random_lucky");
 		if (Random >= 164000 && Random <= 164500) {
 			PalamodModVariables.lucky_name = "Double Xp";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player)
@@ -92,22 +90,22 @@ public class Luckyprocessv2Procedure {
 					}
 				}
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Blocks.STRUCTURE_BLOCK).copy();
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+				ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.COMMAND_BLOCK).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(Blocks.STRUCTURE_BLOCK).copy();
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+				ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -135,22 +133,22 @@ public class Luckyprocessv2Procedure {
 						_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 					}
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					ItemStack _setstack = new ItemStack(Blocks.END_PORTAL_FRAME).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(3)).set(_setstack);
+					_menu.getSlots().get(3).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					ItemStack _setstack = new ItemStack(Blocks.END_PORTAL).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(4)).set(_setstack);
+					_menu.getSlots().get(4).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					ItemStack _setstack = new ItemStack(Blocks.END_PORTAL_FRAME).copy();
 					_setstack.setCount(1);
-					((Slot) _slots.get(5)).set(_setstack);
+					_menu.getSlots().get(5).set(_setstack);
 					_player.containerMenu.broadcastChanges();
 				}
 				if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
@@ -160,22 +158,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 166800 && Random <= 168000) {
 			PalamodModVariables.lucky_name = "Endium beacon";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.LAPIS_BLOCK).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.BEACON).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.LAPIS_BLOCK).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level)
@@ -196,22 +194,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 168000 && Random <= 168100) {
 			PalamodModVariables.lucky_name = "Endium \"Grade\"";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player) {
@@ -227,22 +225,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 168100 && Random <= 168200) {
 			PalamodModVariables.lucky_name = "Endium Block";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player) {
@@ -258,22 +256,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 168200 && Random <= 191200) {
 			PalamodModVariables.lucky_name = "Enferm\uFFFD";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.IRON_BARS).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.IRON_BARS).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.IRON_BARS).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level)
@@ -414,22 +412,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 191200 && Random <= 193500) {
 			PalamodModVariables.lucky_name = " Et Les Phant";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.BAMBOO).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.BAMBOO).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.BAMBOO).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level) {
@@ -449,22 +447,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 193500 && Random <= 193600) {
 			PalamodModVariables.lucky_name = " Et Paf des \"sous \"";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player) {
@@ -480,25 +478,25 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 193600 && Random <= 193700) {
 			PalamodModVariables.lucky_name = " Et Paf plus de \"sous\"";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())) : false) {
+			if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get()))) {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 20, _player.inventoryMenu.getCraftSlots());
@@ -512,22 +510,22 @@ public class Luckyprocessv2Procedure {
 		}
 		if (Random >= 193700 && Random <= 196800) {
 			PalamodModVariables.lucky_name = "Ex-pala-osion";
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(3)).set(_setstack);
+				_menu.getSlots().get(3).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(Blocks.TNT).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(4)).set(_setstack);
+				_menu.getSlots().get(4).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 				_setstack.setCount(1);
-				((Slot) _slots.get(5)).set(_setstack);
+				_menu.getSlots().get(5).set(_setstack);
 				_player.containerMenu.broadcastChanges();
 			}
 			for (int index0 = 0; index0 < 64; index0++) {
@@ -574,5 +572,11 @@ public class Luckyprocessv2Procedure {
 		if (blockEntity != null)
 			return blockEntity.getPersistentData().getDouble(tag);
 		return -1;
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

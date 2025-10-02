@@ -1,31 +1,25 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Checkbox;
-
-import java.util.function.Supplier;
-import java.util.Map;
-import java.util.HashMap;
 
 public class SpecialmoneyprocessProcedure {
-	public static void execute(Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
 		if (getAmountInGUISlot(entity, 0) != 0) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY).copy()).copy();
+				ItemStack _setstack = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu1 ? _menu1.getSlots().get(0).getItem() : ItemStack.EMPTY).copy()).copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -40,7 +34,7 @@ public class SpecialmoneyprocessProcedure {
 					_player.getInventory().setChanged();
 			}
 		}
-		if (("").equals(guistate.containsKey("text:name") ? ((EditBox) guistate.get("text:name")).getValue() : "")) {
+		if (("").equals((entity instanceof Player _entity5 && _entity5.containerMenu instanceof PalamodModMenus.MenuAccessor _menu5) ? _menu5.getMenuState(0, "name", "") : "")) {
 			{
 				final String _tagName = "Is_pname";
 				final boolean _tagValue = false;
@@ -59,11 +53,11 @@ public class SpecialmoneyprocessProcedure {
 			}
 			{
 				final String _tagName = "Money_spename";
-				final String _tagValue = (guistate.containsKey("text:name") ? ((EditBox) guistate.get("text:name")).getValue() : "");
+				final String _tagValue = ((entity instanceof Player _entity13 && _entity13.containerMenu instanceof PalamodModMenus.MenuAccessor _menu13) ? _menu13.getMenuState(0, "name", "") : "");
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putString(_tagName, _tagValue));
 			}
 		}
-		if (("").equals(guistate.containsKey("text:amount") ? ((EditBox) guistate.get("text:amount")).getValue() : "")) {
+		if (("").equals((entity instanceof Player _entity16 && _entity16.containerMenu instanceof PalamodModMenus.MenuAccessor _menu16) ? _menu16.getMenuState(0, "amount", "") : "")) {
 			{
 				final String _tagName = "Money_amount";
 				final double _tagValue = 1000;
@@ -80,11 +74,11 @@ public class SpecialmoneyprocessProcedure {
 						}
 						return 0;
 					}
-				}.convert(guistate.containsKey("text:amount") ? ((EditBox) guistate.get("text:amount")).getValue() : "");
+				}.convert((entity instanceof Player _entity19 && _entity19.containerMenu instanceof PalamodModMenus.MenuAccessor _menu19) ? _menu19.getMenuState(0, "amount", "") : "");
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
 		}
-		if (guistate.containsKey("checkbox:custom_destructible") && ((Checkbox) guistate.get("checkbox:custom_destructible")).selected()) {
+		if ((entity instanceof Player _entity22 && _entity22.containerMenu instanceof PalamodModMenus.MenuAccessor _menu22) ? _menu22.getMenuState(1, "custom_destructible", false) : false) {
 			{
 				final String _tagName = "destri_money";
 				final boolean _tagValue = true;
@@ -102,8 +96,8 @@ public class SpecialmoneyprocessProcedure {
 	}
 
 	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof Supplier slotSupplier && slotSupplier.get() instanceof Map guiSlots) {
-			ItemStack stack = ((Slot) guiSlots.get(sltid)).getItem();
+		if (entity instanceof Player player && player.containerMenu instanceof PalamodModMenus.MenuAccessor menuAccessor) {
+			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
 			if (stack != null)
 				return stack.getCount();
 		}

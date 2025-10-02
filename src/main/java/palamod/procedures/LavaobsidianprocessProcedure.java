@@ -10,7 +10,7 @@ public class LavaobsidianprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
 			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockState _bs = Blocks.LAVA.defaultBlockState();
+			BlockState _bs = Blocks.AIR.defaultBlockState();
 			BlockState _bso = world.getBlockState(_bp);
 			for (Property<?> _propertyOld : _bso.getProperties()) {
 				Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

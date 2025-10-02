@@ -1,7 +1,4 @@
-
 package palamod.network;
-
-import palamod.world.inventory.JobsminercraftguiMenu;
 
 import palamod.procedures.GuijobsminercheckcraftProcedure;
 import palamod.procedures.CraftdoneminerProcedure;
@@ -23,8 +20,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.HashMap;
-
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
@@ -44,16 +39,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 
 	public static void handleData(final JobsminercraftguiSlotMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int slotID = message.slotID;
-				int changeType = message.changeType;
-				int meta = message.meta;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleSlotAction(entity, slotID, changeType, meta, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleSlotAction(context.player(), message.slotID, message.changeType, message.meta, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -62,7 +48,6 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 
 	public static void handleSlotAction(Player entity, int slot, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = JobsminercraftguiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -71,6 +56,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 0 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
@@ -79,6 +65,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 1 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
@@ -91,6 +78,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 3 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
@@ -99,6 +87,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 4 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
@@ -107,6 +96,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 5 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
@@ -115,6 +105,7 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 6 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
@@ -127,10 +118,12 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 8 && changeType == 1) {
+			int amount = meta;
 
 			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 9 && changeType == 1) {
+			int amount = meta;
 
 			CraftdoneminerProcedure.execute(world, entity);
 		}

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "palamod:angelic_water",
-    "palamod:fake_water"
+    "palamod:fake_water",
+    "palamod:angelic_water"
   ]
 }

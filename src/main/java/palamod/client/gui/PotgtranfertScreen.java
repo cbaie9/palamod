@@ -7,6 +7,8 @@ import palamod.procedures.PotgtranfertValueProcedure;
 
 import palamod.network.PotgtranfertButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -18,15 +20,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu> {
-	private final static HashMap<String, Object> guistate = PotgtranfertMenu.guistate;
+public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_transfert;
 
 	public PotgtranfertScreen(PotgtranfertMenu container, Inventory inventory, Component text) {
@@ -41,19 +41,23 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/potgtranfert.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -69,24 +73,21 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.potgtranfert.label_potg_transfert_gui"), 4, 3, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				PotgtranfertValueProcedure.execute(entity), 5, 69, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				PotgtransfertvalueentityProcedure.execute(entity), 4, 56, -12829636, false);
+		guiGraphics.drawString(this.font, PotgtranfertValueProcedure.execute(entity), 5, 69, -12829636, false);
+		guiGraphics.drawString(this.font, PotgtransfertvalueentityProcedure.execute(entity), 4, 56, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		button_transfert = Button.builder(Component.translatable("gui.palamod.potgtranfert.button_transfert"), e -> {
+			int x = PotgtranfertScreen.this.x;
+			int y = PotgtranfertScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new PotgtranfertButtonMessage(0, x, y, z));
 				PotgtranfertButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 93, this.topPos + 25, 72, 20).build();
-		guistate.put("button:button_transfert", button_transfert);
 		this.addRenderableWidget(button_transfert);
 	}
 }

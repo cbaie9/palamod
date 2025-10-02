@@ -1,4 +1,3 @@
-
 package palamod.potion;
 
 import palamod.procedures.AntifakeOnEffect_delete_nbtProcedure;

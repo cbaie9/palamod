@@ -251,55 +251,55 @@ public class FlowermachineprocessProcedure {
 						if (set.getItem() == Blocks.OXEYE_DAISY.asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(Blocks.OXEYE_DAISY).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(1, _setstack);
 							}
 						} else if (set.getItem() == PalamodModBlocks.ENDIUMFLOWER.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUMFLOWER.get()).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
 						} else if (set.getItem() == PalamodModBlocks.PALADIUMFLOWER.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUMFLOWER.get()).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(3, _setstack);
 							}
 						} else if (set.getItem() == Blocks.POPPY.asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(Blocks.POPPY).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(4, _setstack);
 							}
 						} else if (set.getItem() == PalamodModBlocks.CLATHRUSARCHERI.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(PalamodModBlocks.CLATHRUSARCHERI.get()).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(5, _setstack);
 							}
 						} else if (set.getItem() == PalamodModBlocks.MINERALFLOWER.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(PalamodModBlocks.MINERALFLOWER.get()).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(6, _setstack);
 							}
 						} else if (set.getItem() == Blocks.DANDELION.asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(Blocks.DANDELION).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(7, _setstack);
 							}
 						} else if (set.getItem() == Blocks.LILY_OF_THE_VALLEY.asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(Blocks.LILY_OF_THE_VALLEY).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 8).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 8).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(8, _setstack);
 							}
 						} else if (set.getItem() == Blocks.ALLIUM.asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 								ItemStack _setstack = new ItemStack(Blocks.ALLIUM).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).getCount() + 1));
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(9, _setstack);
 							}
 						}

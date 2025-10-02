@@ -1,4 +1,3 @@
-
 package palamod.item;
 
 import palamod.procedures.EndiumspawndynaProcedure;
@@ -6,7 +5,6 @@ import palamod.procedures.EndiumspawndynaProcedure;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -16,7 +14,7 @@ import net.minecraft.world.InteractionHand;
 
 public class EndiumdynaItem extends Item {
 	public EndiumdynaItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON));
+		super(new Item.Properties().fireResistant());
 	}
 
 	@Override

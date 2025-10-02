@@ -93,7 +93,7 @@ public class Crusherv2endiumcustomProcedure {
 							if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium")) {
 								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 									ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1));
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 									_itemHandlerModifiable.setStackInSlot(2, _setstack);
 								}
 								if (!world.isClientSide()) {

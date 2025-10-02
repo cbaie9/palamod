@@ -4,6 +4,8 @@ import palamod.world.inventory.FactionhomeguiMenu;
 
 import palamod.procedures.Factionhomeguisubprocess1Procedure;
 
+import palamod.init.PalamodModScreens;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,15 +15,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class FactionhomeguiScreen extends AbstractContainerScreen<FactionhomeguiMenu> {
-	private final static HashMap<String, Object> guistate = FactionhomeguiMenu.guistate;
+public class FactionhomeguiScreen extends AbstractContainerScreen<FactionhomeguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_invite;
 
 	public FactionhomeguiScreen(FactionhomeguiMenu container, Inventory inventory, Component text) {
@@ -35,6 +35,12 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 		this.imageHeight = 200;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/factionhomegui.png");
 
 	@Override
@@ -44,7 +50,7 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -65,9 +71,7 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.factionhomegui.label_faction_home"), 116, 3, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.factionhomegui.label_empty"), 19, 71, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Factionhomeguisubprocess1Procedure.execute(world, entity), 4, 25, -12829636, false);
+		guiGraphics.drawString(this.font, Factionhomeguisubprocess1Procedure.execute(world, entity), 4, 25, -12829636, false);
 	}
 
 	@Override
@@ -75,7 +79,6 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 		super.init();
 		button_invite = Button.builder(Component.translatable("gui.palamod.factionhomegui.button_invite"), e -> {
 		}).bounds(this.leftPos + 8, this.topPos + 171, 56, 20).build();
-		guistate.put("button:button_invite", button_invite);
 		this.addRenderableWidget(button_invite);
 	}
 }

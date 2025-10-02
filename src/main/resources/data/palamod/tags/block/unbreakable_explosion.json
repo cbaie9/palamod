@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#palamod:omt",
+    {
+      "id": "#palamod:omt",
+      "required": false
+    },
     "minecraft:obsidian",
     "minecraft:crying_obsidian"
   ]

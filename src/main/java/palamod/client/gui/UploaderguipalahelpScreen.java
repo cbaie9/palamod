@@ -8,6 +8,8 @@ import palamod.procedures.Palahelpuploader0Procedure;
 
 import palamod.network.UploaderguipalahelpButtonMessage;
 
+import palamod.init.PalamodModScreens;
+
 import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
@@ -19,15 +21,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class UploaderguipalahelpScreen extends AbstractContainerScreen<UploaderguipalahelpMenu> {
-	private final static HashMap<String, Object> guistate = UploaderguipalahelpMenu.guistate;
+public class UploaderguipalahelpScreen extends AbstractContainerScreen<UploaderguipalahelpMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_gui_example_wip;
 
 	public UploaderguipalahelpScreen(UploaderguipalahelpMenu container, Inventory inventory, Component text) {
@@ -42,19 +42,23 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/uploaderguipalahelp.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 319, 200, 319, 200);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -72,27 +76,22 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploaderguipalahelp.label_page_en_cours_de_redaction"), 21, 24, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploaderguipalahelp.label_this_page_is_working_in_progress"), 20, 11, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploaderguipalahelp.label_uploader"), 125, 46, -65536, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpuploader0Procedure.execute(entity), 4, 60, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpuploader1Procedure.execute(entity), 4, 71, -12829636, false);
-		guiGraphics.drawString(this.font,
-
-				Palahelpuploader2Procedure.execute(entity), 4, 82, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpuploader0Procedure.execute(entity), 4, 60, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpuploader1Procedure.execute(entity), 4, 71, -12829636, false);
+		guiGraphics.drawString(this.font, Palahelpuploader2Procedure.execute(entity), 4, 82, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		button_gui_example_wip = Button.builder(Component.translatable("gui.palamod.uploaderguipalahelp.button_gui_example_wip"), e -> {
+			int x = UploaderguipalahelpScreen.this.x;
+			int y = UploaderguipalahelpScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new UploaderguipalahelpButtonMessage(0, x, y, z));
 				UploaderguipalahelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 6, this.topPos + 170, 123, 20).build();
-		guistate.put("button:button_gui_example_wip", button_gui_example_wip);
 		this.addRenderableWidget(button_gui_example_wip);
 	}
 }

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.SlimeprocessProcedure;
@@ -37,8 +36,8 @@ public class RotatedslimepadBlock extends Block implements SimpleWaterloggedBloc
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public RotatedslimepadBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().mapColor(MapColor.COLOR_GREEN).sound(SoundType.SLIME_BLOCK).strength(1f, 10f).requiresCorrectToolForDrops().noCollission().friction(0.8f).noOcclusion()
-				.isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).sound(SoundType.SLIME_BLOCK).strength(1f, 10f).requiresCorrectToolForDrops().noCollission().friction(0.8f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false)
+				.ignitedByLava());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
 	}
 

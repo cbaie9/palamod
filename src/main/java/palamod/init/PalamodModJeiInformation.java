@@ -1,4 +1,3 @@
-
 package palamod.init;
 
 import net.minecraft.world.item.ItemStack;

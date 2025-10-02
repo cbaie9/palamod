@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.RegenpurpleglueballProcedure;
@@ -26,7 +25,7 @@ public class PurpleglueballBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public PurpleglueballBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.SLIME_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.SLIME_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import palamod.procedures.Ametyste_spike_damageProcedure;
@@ -27,7 +26,7 @@ public class DiamondspikeBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public DiamondspikeBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

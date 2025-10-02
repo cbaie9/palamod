@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "minecraft:dirt",
-    "minecraft:coarse_dirt",
     "minecraft:podzol",
-    "minecraft:rooted_dirt",
-    "minecraft:farmland",
     "minecraft:grass_block",
+    "minecraft:dirt",
+    "minecraft:farmland",
+    "minecraft:coarse_dirt",
+    "palamod:fertilzed_dirt",
+    "minecraft:rooted_dirt",
     "minecraft:dirt_path",
-    "minecraft:moss_block",
-    "palamod:fertilzed_dirt"
+    "minecraft:moss_block"
   ]
 }

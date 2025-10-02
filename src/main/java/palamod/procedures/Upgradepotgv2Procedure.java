@@ -623,7 +623,7 @@ public class Upgradepotgv2Procedure {
 		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 				.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0
-				&& ((entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PalamodModItems.PALADIUM_MIXED_CHARCOAL.get())) : false)
+				&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.PALADIUM_MIXED_CHARCOAL.get()))
 						|| 0 < (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("potg_fuel"))) {
 			if (2 == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))))) {
@@ -672,5 +672,11 @@ public class Upgradepotgv2Procedure {
 			}
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 		}
+	}
+
+	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
+		if (entity instanceof Player player)
+			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
+		return false;
 	}
 }

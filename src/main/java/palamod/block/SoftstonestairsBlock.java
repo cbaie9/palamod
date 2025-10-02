@@ -1,4 +1,3 @@
-
 package palamod.block;
 
 import net.minecraft.world.level.material.MapColor;
@@ -13,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftstonestairsBlock extends StairBlock {
 	public SoftstonestairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.NETHERRACK).strength(0.4f).requiresCorrectToolForDrops().dynamicShape());
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.NETHERRACK).strength(0.4f).requiresCorrectToolForDrops());
 	}
 
 	@Override

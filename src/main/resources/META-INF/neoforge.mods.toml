@@ -16,10 +16,16 @@ description="Un univers alternatif o\u00F9 la v5 \u00E0 bien chang\u00E9 de vers
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+    [[mixins]]
+    config = "palamod.mixins.json"
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
 [[dependencies.palamod]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.92,)"
+    versionRange="[21.1.176,)"
     ordering="AFTER"
     side="BOTH"
 

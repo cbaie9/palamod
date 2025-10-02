@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "ccc",
+    "ded"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "palamod:plate"
+    },
+    "c": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "d": {
+      "tag": "minecraft:planks"
+    },
+    "e": {
+      "item": "palamod:findium"
+    }
+  },
+  "result": {
+    "id": "palamod:typesettingtable",
+    "count": 1
+  }
+}

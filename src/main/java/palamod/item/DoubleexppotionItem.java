@@ -1,11 +1,9 @@
-
 package palamod.item;
 
 import palamod.procedures.Givepotionx2expProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -13,7 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class DoubleexppotionItem extends Item {
 	public DoubleexppotionItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(1f).alwaysEdible().build()));
+		super(new Item.Properties().stacksTo(1).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override

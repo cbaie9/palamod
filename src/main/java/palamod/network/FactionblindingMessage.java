@@ -1,4 +1,3 @@
-
 package palamod.network;
 
 import palamod.procedures.OpenfhguiProcedure;
