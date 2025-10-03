@@ -3164,6 +3164,234 @@ public class Palamachineprocessv2Procedure {
 				}
 			}
 		}
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.FINDIUM.get() && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.UNCLAIMFINDER.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.FINDIUM.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0
+				&& getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_cooldown") == 0 && (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "pmachine_lock") == false
+						|| getBlockNBTLogic(world, BlockPos.containing(x, y, z), "pmachine_lock") && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_recipe") == 26)) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.bubble_column.bubble_pop")), SoundSource.BLOCKS, 45, 1);
+				} else {
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.bubble_column.bubble_pop")), SoundSource.BLOCKS, 45, 1, false);
+				}
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("pmachine_lock", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("pmachine_recipe", 26);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("pmachine_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_state") + 1));
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("pmachine_cooldown", 3);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_state") == 27) {
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 0;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 1;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 2;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 3;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 4;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.UNCLAIMFINDERORANGE.get()).copy();
+					_setstack.setCount(1);
+					_itemHandlerModifiable.setStackInSlot(5, _setstack);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("pmachine_state", 0);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("pmachine_recipe", (-1));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("pmachine_lock", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+		}
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.FINDIUM.get() && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_CORE.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.UNCLAIMFINDERORANGE.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.PALADIUM_CORE.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0
+				&& getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_cooldown") == 0 && (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "pmachine_lock") == false
+						|| getBlockNBTLogic(world, BlockPos.containing(x, y, z), "pmachine_lock") && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_recipe") == 26)) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.bubble_column.bubble_pop")), SoundSource.BLOCKS, 45, 1);
+				} else {
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.bubble_column.bubble_pop")), SoundSource.BLOCKS, 45, 1, false);
+				}
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("pmachine_lock", true);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("pmachine_recipe", 26);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("pmachine_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_state") + 1));
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("pmachine_cooldown", 3);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_state") == 27) {
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 0;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 1;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 2;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 3;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					int _slotid = 4;
+					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+					_stk.shrink(1);
+					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				}
+				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					ItemStack _setstack = new ItemStack(PalamodModItems.UNCLAIMFINDERRED.get()).copy();
+					_setstack.setCount(1);
+					_itemHandlerModifiable.setStackInSlot(5, _setstack);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("pmachine_state", 0);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("pmachine_recipe", (-1));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("pmachine_lock", false);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+			}
+		}
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pmachine_cooldown") > 0) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);

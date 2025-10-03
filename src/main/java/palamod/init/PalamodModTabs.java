@@ -289,6 +289,9 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.DANKAROCTEST_1_SPAWN_EGG.get());
 				tabData.accept(PalamodModBlocks.DANKABLOCK.get().asItem());
 				tabData.accept(PalamodModItems.PALADIUMINK.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -436,6 +439,9 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.SLIMEPAD_ORANGE.get().asItem());
 				tabData.accept(PalamodModBlocks.SLIMEPAD_PURPLE.get().asItem());
 				tabData.accept(PalamodModItems.SWITCHARROWITEM.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {
@@ -469,6 +475,9 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.BOOM_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.WITHEREDOBSIDIAN_0.get().asItem());
+				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {

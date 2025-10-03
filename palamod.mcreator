@@ -46444,6 +46444,95 @@
           "src/main/java/palamod/procedures/PrintingpressprocessProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Unclaimfinderprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfinderprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/UnclaimfinderprocessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Unclaimfinder",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfinder",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/UnclaimfinderItem.java",
+          "src/main/resources/assets/palamod/models/item/unclaimfinder.json"
+        ]
+      }
+    },
+    {
+      "name": "Unclaimfinderorange",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfinderorange",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/unclaimfinderorange.json",
+          "src/main/java/palamod/item/UnclaimfinderorangeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Unclaimfinderred",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfinderred",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/unclaimfinderred.json",
+          "src/main/java/palamod/item/UnclaimfinderredItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Unclaimfindercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfindercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/unclaimfindercraft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -47674,6 +47763,9 @@
       "Items.EMERALD"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Unclaimfinderred",
+      "~CUSTOM:Unclaimfinderorange",
+      "~CUSTOM:Unclaimfinder",
       "~CUSTOM:Extractor",
       "~CUSTOM:Xpbottle",
       "~CUSTOM:Flatchestupgrade",
@@ -48601,6 +48693,37 @@
       "~CUSTOM:Judeecercis_Fence",
       "~CUSTOM:Jacaranda_Fence",
       "~CUSTOM:Ostrya_woodFence"
+    ],
+    "BLOCKS:mod:tile_entity": [
+      "TAG:forge:chest",
+      "TAG:minecraft:shulker_boxes",
+      "CUSTOM:Paladiumfurnace",
+      "CUSTOM:Paladiumfurnaceon",
+      "Blocks.FURNACE",
+      "Blocks.BLAST_FURNACE",
+      "Blocks.HOPPER",
+      "CUSTOM:Paladiumhopper",
+      "CUSTOM:Paladiumhoppersouth",
+      "Blocks.BREWING_STAND",
+      "Blocks.BARREL",
+      "Blocks.DROPPER",
+      "Blocks.DISPENSER",
+      "Blocks.SMOKER",
+      "TAG:c:chests",
+      "TAG:minecraft:chest"
+    ],
+    "BLOCKS:minecraft:chest": [
+      "CUSTOM:Megasafechest",
+      "CUSTOM:Titanechest",
+      "CUSTOM:Paladiumchest",
+      "CUSTOM:Amethystchest",
+      "CUSTOM:Greenpaladiumchest",
+      "CUSTOM:Endiumchest",
+      "CUSTOM:Paladiumchestv2",
+      "CUSTOM:Greenpaladiumchestv2",
+      "CUSTOM:Amethystchestv2",
+      "CUSTOM:Endiumchestv2",
+      "CUSTOM:Titanechestv2"
     ]
   },
   "tab_element_order": {
@@ -48844,7 +48967,10 @@
       "Paladiumflower",
       "Dankaroctest1",
       "Dankablock",
-      "Paladiumink"
+      "Paladiumink",
+      "Unclaimfinder",
+      "Unclaimfinderorange",
+      "Unclaimfinderred"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48988,7 +49114,10 @@
       "Blueslimepad",
       "Orangeslimepad",
       "Purpleslimepad",
-      "Switcharrowitem"
+      "Switcharrowitem",
+      "Unclaimfinder",
+      "Unclaimfinderorange",
+      "Unclaimfinderred"
     ],
     "CUSTOM:Baseclaim": [
       "Obsidiantrapdoor",
@@ -49020,7 +49149,10 @@
       "Poisonobsidian",
       "Boomobsidian",
       "Megaboomobsidian",
-      "Witheredobsidian0"
+      "Witheredobsidian0",
+      "Unclaimfinder",
+      "Unclaimfinderorange",
+      "Unclaimfinderred"
     ],
     "CUSTOM:Luckyblockcreativetab": [
       "Legendarystonefortune",
@@ -51084,7 +51216,10 @@
       "block.palamod.erable_fence": "Erable Fence",
       "fluid_type.palamod.fake_water": "Fake water",
       "fluid_type.palamod.angelic_water": "Angelic water",
-      "item.palamod.paladiumink": "Paladium ink"
+      "item.palamod.paladiumink": "Paladium ink",
+      "item.palamod.unclaimfinder": "Unclaim finder",
+      "item.palamod.unclaimfinderorange": "Unclaim finder orange",
+      "item.palamod.unclaimfinderred": "Red unclaim finder"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte ( pour passer le code ",
@@ -53078,7 +53213,10 @@
       "block.palamod.erable_fence": "Barrière en érable",
       "fluid_type.palamod.fake_water": "Fake water",
       "fluid_type.palamod.angelic_water": "Angelic water",
-      "item.palamod.paladiumink": "Paladium ink"
+      "item.palamod.paladiumink": "Paladium ink",
+      "item.palamod.unclaimfinder": "Unclaim finder",
+      "item.palamod.unclaimfinderorange": "Unclaim finder",
+      "item.palamod.unclaimfinderred": "Unclaim finder orange"
     }
   },
   "metadata": {
@@ -53141,7 +53279,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.048",
+    "version": "1.20.048.1",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

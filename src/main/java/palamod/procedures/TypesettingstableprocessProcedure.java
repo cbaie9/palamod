@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -28,6 +29,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -38,7 +40,7 @@ public class TypesettingstableprocessProcedure {
 			return;
 		ItemStack output_book = ItemStack.EMPTY;
 		ItemStack input_book = ItemStack.EMPTY;
-		PalamodMod.LOGGER.info((world.getBlockState(BlockPos.containing(x, y, z)) + " - "
+		PalamodMod.LOGGER.debug((world.getBlockState(BlockPos.containing(x, y, z)) + " - "
 				+ ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING)))));
 		if (!entity.isShiftKeyDown()) {
 			if (Items.ENCHANTED_BOOK == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() && !getBlockNBTLogic(world, BlockPos.containing(x, y, z), "book_loaded")) {
@@ -92,9 +94,12 @@ public class TypesettingstableprocessProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = new ItemStack(PalamodModItems.PLATE.get());
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+					_setstack.setCount(0);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
 				}
 				if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "book_loaded")) {
 					{
@@ -192,6 +197,11 @@ public class TypesettingstableprocessProcedure {
 					if (30 <= (entity instanceof Player _plr ? _plr.experienceLevel : 0)) {
 						output_book = new ItemStack(PalamodModItems.PLATE.get()).copy();
 						output_book.applyComponents((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getComponents());
+						{
+							final String _tagName = "enchanted";
+							final boolean _tagValue = true;
+							CustomData.update(DataComponents.CUSTOM_DATA, output_book, tag -> tag.putBoolean(_tagName, _tagValue));
+						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = output_book.copy();
 							_setstack.setCount(1);

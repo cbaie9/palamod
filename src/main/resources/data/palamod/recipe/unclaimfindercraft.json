@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:paladium_core"
+    },
+    "c": {
+      "item": "palamod:findium"
+    }
+  },
+  "result": {
+    "id": "palamod:unclaimfinder",
+    "count": 1
+  }
+}

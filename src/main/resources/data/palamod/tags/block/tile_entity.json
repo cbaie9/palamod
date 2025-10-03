@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:dropper",
+    "minecraft:dispenser",
+    "minecraft:smoker",
+    "palamod:paladium_furnace_on",
+    "minecraft:blast_furnace",
+    "palamod:paladium_hopper",
+    "minecraft:brewing_stand",
+    {
+      "id": "#minecraft:chest",
+      "required": false
+    },
+    "minecraft:furnace",
+    "palamod:rotated_paladium_hopper",
+    "minecraft:barrel",
+    {
+      "id": "#forge:chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:shulker_boxes",
+      "required": false
+    },
+    "palamod:paladium_furnace",
+    {
+      "id": "#c:chests",
+      "required": false
+    },
+    "minecraft:hopper"
+  ]
+}

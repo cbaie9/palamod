@@ -1990,5 +1990,8 @@
   "block.palamod.erable_fence": "Barrière en érable",
   "fluid_type.palamod.fake_water": "Fake water",
   "fluid_type.palamod.angelic_water": "Angelic water",
-  "item.palamod.paladiumink": "Paladium ink"
+  "item.palamod.paladiumink": "Paladium ink",
+  "item.palamod.unclaimfinder": "Unclaim finder",
+  "item.palamod.unclaimfinderorange": "Unclaim finder",
+  "item.palamod.unclaimfinderred": "Unclaim finder orange"
 }

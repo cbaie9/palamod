@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:flatten_green_paladium_chest",
+    "palamod:mega_safe_chest",
+    "palamod:amethyst_chest",
+    "palamod:titane_chest",
+    "palamod:paladium_chest",
+    "palamod:flatten_paladium_chest",
+    "palamod:flatten_amethyst_chest",
+    "palamod:flatten_endium_chest",
+    "palamod:green_paladium_chest",
+    "palamod:flatten_titane_chest",
+    "palamod:endium_chest"
+  ]
+}

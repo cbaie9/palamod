@@ -18,6 +18,9 @@ import palamod.item.WitherimbuepotionItem;
 import palamod.item.WingItem;
 import palamod.item.WeightedItem;
 import palamod.item.VoidstoneItem;
+import palamod.item.UnclaimfinderredItem;
+import palamod.item.UnclaimfinderorangeItem;
+import palamod.item.UnclaimfinderItem;
 import palamod.item.TrixiumItem;
 import palamod.item.TravelarmorItem;
 import palamod.item.TitanestickItem;
@@ -901,6 +904,9 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> DANKAROCTEST_1_SPAWN_EGG = REGISTRY.register("dankaroctest_1_spawn_egg", () -> new DeferredSpawnEggItem(PalamodModEntities.DANKAROCTEST_1, -256, -10027162, new Item.Properties()));
 	public static final DeferredItem<Item> DANKABLOCK = block(PalamodModBlocks.DANKABLOCK);
 	public static final DeferredItem<Item> PALADIUMINK = REGISTRY.register("paladiumink", PaladiuminkItem::new);
+	public static final DeferredItem<Item> UNCLAIMFINDER = REGISTRY.register("unclaimfinder", UnclaimfinderItem::new);
+	public static final DeferredItem<Item> UNCLAIMFINDERORANGE = REGISTRY.register("unclaimfinderorange", UnclaimfinderorangeItem::new);
+	public static final DeferredItem<Item> UNCLAIMFINDERRED = REGISTRY.register("unclaimfinderred", UnclaimfinderredItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
