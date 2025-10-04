@@ -62,8 +62,8 @@ public class PalamachineprocessgetrecipeProcedure {
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.JUMPSTICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEAL_ORB.get()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.JUMPSTICK.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.JUMPSTICK.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
 			output = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem()
@@ -237,6 +237,18 @@ public class PalamachineprocessgetrecipeProcedure {
 				&& 144 == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getDamageValue() && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == Items.WATER_BUCKET && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
 			output = new ItemStack(PalamodModItems.EXTRACTOR_ITEM.get()).copy();
+		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.UNCLAIMFINDER.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.FINDIUM.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
+			output = new ItemStack(PalamodModItems.UNCLAIMFINDERORANGE.get()).copy();
+		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_CORE.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.UNCLAIMFINDERORANGE.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.FINDIUM.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.PALADIUM_CORE.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
+			output = new ItemStack(PalamodModItems.UNCLAIMFINDERRED.get()).copy();
 		} else {
 			output = new ItemStack(Blocks.BARRIER).copy();
 		}

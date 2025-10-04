@@ -183,7 +183,7 @@
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
           "onClick": {
-            "name": "Palamachineprocess"
+            "name": "Machineconnectpalahelp"
           },
           "x": 299,
           "y": 37,
