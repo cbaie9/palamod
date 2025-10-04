@@ -47763,6 +47763,7 @@
       "Items.EMERALD"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Compressedxpberry",
       "~CUSTOM:Unclaimfinderred",
       "~CUSTOM:Unclaimfinderorange",
       "~CUSTOM:Unclaimfinder",
@@ -48710,7 +48711,8 @@
       "Blocks.DISPENSER",
       "Blocks.SMOKER",
       "TAG:c:chests",
-      "TAG:minecraft:chest"
+      "TAG:minecraft:chest",
+      "TAG:forge:chests"
     ],
     "BLOCKS:minecraft:chest": [
       "CUSTOM:Megasafechest",

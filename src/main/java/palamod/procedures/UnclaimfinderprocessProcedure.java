@@ -34,7 +34,7 @@ public class UnclaimfinderprocessProcedure {
 			} else if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDERORANGE.get()) {
 				radius = 16;
 			} else if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDERRED.get()) {
-				radius = 80;
+				radius = 40;
 			}
 			int horizontalRadiusSphere = (int) radius - 1;
 			int verticalRadiusSphere = (int) 150 - 1;
@@ -59,7 +59,7 @@ public class UnclaimfinderprocessProcedure {
 			}
 			{
 				final String _tagName = "cooldown";
-				final double _tagValue = 20;
+				final double _tagValue = 100;
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
