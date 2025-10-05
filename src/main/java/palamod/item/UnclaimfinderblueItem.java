@@ -9,8 +9,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 
-public class UnclaimfinderredItem extends Item {
-	public UnclaimfinderredItem() {
+public class UnclaimfinderblueItem extends Item {
+	public UnclaimfinderblueItem() {
 		super(new Item.Properties().durability(8400).rarity(Rarity.UNCOMMON));
 	}
 

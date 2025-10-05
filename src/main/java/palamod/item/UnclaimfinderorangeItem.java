@@ -11,7 +11,7 @@ import net.minecraft.world.entity.Entity;
 
 public class UnclaimfinderorangeItem extends Item {
 	public UnclaimfinderorangeItem() {
-		super(new Item.Properties().durability(15000).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().durability(8400).rarity(Rarity.UNCOMMON));
 	}
 
 	@Override

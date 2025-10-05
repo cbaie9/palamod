@@ -20,6 +20,7 @@ import palamod.item.WeightedItem;
 import palamod.item.VoidstoneItem;
 import palamod.item.UnclaimfinderredItem;
 import palamod.item.UnclaimfinderorangeItem;
+import palamod.item.UnclaimfinderblueItem;
 import palamod.item.UnclaimfinderItem;
 import palamod.item.TrixiumItem;
 import palamod.item.TravelarmorItem;
@@ -907,6 +908,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> UNCLAIMFINDER = REGISTRY.register("unclaimfinder", UnclaimfinderItem::new);
 	public static final DeferredItem<Item> UNCLAIMFINDERORANGE = REGISTRY.register("unclaimfinderorange", UnclaimfinderorangeItem::new);
 	public static final DeferredItem<Item> UNCLAIMFINDERRED = REGISTRY.register("unclaimfinderred", UnclaimfinderredItem::new);
+	public static final DeferredItem<Item> UNCLAIMFINDERBLUE = REGISTRY.register("unclaimfinderblue", UnclaimfinderblueItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

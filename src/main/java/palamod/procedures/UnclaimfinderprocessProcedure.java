@@ -24,17 +24,15 @@ public class UnclaimfinderprocessProcedure {
 			return;
 		double pourcentage = 0;
 		double radius = 0;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") > 0) {
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown"));
-		}
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0) {
 			if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDER.get()) {
 				radius = 8;
 			} else if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDERORANGE.get()) {
 				radius = 16;
 			} else if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDERRED.get()) {
-				radius = 40;
+				radius = 32;
+			} else if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDERBLUE.get()) {
+				radius = 64;
 			}
 			int horizontalRadiusSphere = (int) radius - 1;
 			int verticalRadiusSphere = (int) 150 - 1;
@@ -53,20 +51,22 @@ public class UnclaimfinderprocessProcedure {
 				}
 			}
 			{
-				final String _tagName = "name";
+				final String _tagName = "cooldown";
 				final String _tagValue = (itemstack.getDisplayName().getString());
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
 			}
 			{
 				final String _tagName = "cooldown";
-				final double _tagValue = 100;
+				final double _tagValue = 20;
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal((pourcentage + " % ")), true);
-			if (world instanceof ServerLevel _level) {
-				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
-				});
+			if (!(getEntityGameType(entity) == GameType.CREATIVE)) {
+				if (world instanceof ServerLevel _level) {
+					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+					});
+				}
 			}
 		}
 	}

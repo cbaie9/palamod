@@ -3,22 +3,19 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "unclaimfinder_orange",
+    "texture": "unclaimfinder_precise",
     "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
-    "name": "Unclaim finder orange",
+    "name": "Blue Unclaim Finder",
     "rarity": "UNCOMMON",
     "creativeTabs": [
       {
-        "value": "CUSTOM:Palamod"
+        "value": "CUSTOM:Baseclaim"
       },
       {
         "value": "CUSTOM:Pvpcreativetab"
-      },
-      {
-        "value": "CUSTOM:Baseclaim"
       }
     ],
     "stackSize": 1,

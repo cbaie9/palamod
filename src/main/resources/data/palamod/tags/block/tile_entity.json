@@ -12,6 +12,10 @@
       "id": "#minecraft:chest",
       "required": false
     },
+    {
+      "id": "#forge:chests",
+      "required": false
+    },
     "minecraft:furnace",
     "palamod:rotated_paladium_hopper",
     "minecraft:barrel",

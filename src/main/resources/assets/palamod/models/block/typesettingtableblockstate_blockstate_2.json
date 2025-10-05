@@ -1,7 +1,7 @@
 {
   "parent": "palamod:custom/type_setting_table_max",
   "textures": {
-    "all": ":block/",
+    "all": "palamod:block/",
     "particle": "minecraft:block/oak_planks",
     "0": "palamod:block/typesettingtable"
   },

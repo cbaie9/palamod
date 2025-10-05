@@ -442,6 +442,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERBLUE.get());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {
@@ -478,6 +479,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
+				tabData.accept(PalamodModItems.UNCLAIMFINDERBLUE.get());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {
