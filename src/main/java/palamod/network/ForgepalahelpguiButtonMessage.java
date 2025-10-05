@@ -1,7 +1,7 @@
 package palamod.network;
 
-import palamod.procedures.PalamachineprocessProcedure;
 import palamod.procedures.OpenforgeexampleguiProcedure;
+import palamod.procedures.MachineconnectpalahelpProcedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.BackpalahelpProcedure;
 
@@ -65,7 +65,7 @@ public record ForgepalahelpguiButtonMessage(int buttonID, int x, int y, int z) i
 		}
 		if (buttonID == 3) {
 
-			PalamachineprocessProcedure.execute(world, x, y, z, entity);
+			MachineconnectpalahelpProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
