@@ -61,7 +61,7 @@ public class PalamachineprocessgetrecipeProcedure {
 			output = new ItemStack(PalamodModItems.DAMAGESTICK.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.JUMPSTICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEAL_ORB.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.JUMP_ORB.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.JUMPSTICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
 			output = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).copy();
