@@ -56008,7 +56008,7 @@
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
     "license": " CC-BY-NC-4.0 + https://pastebin.com/47smwufD",
     "serverSideOnly": false,
-    "updateURL": "https://raw.githubusercontent.com/cbaie9/palamod/refs/heads/main/update.json",
+    "updateURL": "https://raw.githubusercontent.com/cbaie9/palamod/refs/heads/Neoforge-1.21.1/update.json",
     "modPicture": "dev",
     "requiredMods": [],
     "dependencies": [],

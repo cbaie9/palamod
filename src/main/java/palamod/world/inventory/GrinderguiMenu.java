@@ -34,7 +34,7 @@ public class GrinderguiMenu extends AbstractContainerMenu implements PalamodModM
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 18)
+			if (!this.containsKey(key) && this.size() >= 17)
 				return null;
 			return super.put(key, value);
 		}

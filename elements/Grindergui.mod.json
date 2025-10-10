@@ -8,7 +8,7 @@
     "inventoryOffsetX": -1,
     "inventoryOffsetY": 1,
     "renderBgLayer": false,
-    "doesPauseGame": true,
+    "doesPauseGame": false,
     "components": [
       {
         "type": "image",
@@ -234,19 +234,6 @@
           "x": 232,
           "y": 64,
           "locked": true
-        }
-      },
-      {
-        "type": "sprite",
-        "data": {
-          "sprite": "arrow_right_furnace_sprite.png",
-          "spritesCount": 23,
-          "spriteIndex": {
-            "fixedValue": 0.0
-          },
-          "x": 159,
-          "y": 98,
-          "locked": false
         }
       },
       {

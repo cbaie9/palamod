@@ -55,11 +55,6 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 	}
 
 	@Override
-	public boolean isPauseScreen() {
-		return true;
-	}
-
-	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -84,7 +79,6 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_sprite_full.png"), this.leftPos + 152, this.topPos + 9, Mth.clamp((int) ProgressbargrinderspritereturnProcedure.execute(world, x, y, z) * 51, 0, 2550), 0, 51, 50, 2601,
 				50);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fire_furnace.png"), this.leftPos + 126, this.topPos + 25, Mth.clamp((int) ReturntimerinputgrinderProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 53, this.topPos + 59, 0, 0, 22, 15, 506, 15);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 49, this.topPos + 13, Mth.clamp((int) GrindergettimercraftProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png"), this.leftPos + 48, this.topPos + 60, Mth.clamp((int) GrindergettimerfusionProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506,
 				15);
