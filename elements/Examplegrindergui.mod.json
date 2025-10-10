@@ -111,61 +111,6 @@
         "data": {
           "image": "arr0.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn0"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr1.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn1"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr2.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn2"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr3.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn3"
-          },
-          "x": 227,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arr4.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowinsertn4"
-          },
           "x": 227,
           "y": 62,
           "locked": false
@@ -195,9 +140,6 @@
         "data": {
           "image": "arrow_right_full.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Grinderguiarrow2n10"
-          },
           "x": 159,
           "y": 51,
           "locked": false
@@ -208,138 +150,8 @@
         "data": {
           "image": "arrow_1red_new.png",
           "use1Xscale": true,
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_3red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit1"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_5red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit2"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_7red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit3"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_9red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit4"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_11red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit5"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_13red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit6"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_15red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit7"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_17red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit8"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_18red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit9"
-          },
-          "x": 160,
-          "y": 101,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrow_19red_new.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Grindersubprocessarrowsplit10"
-          },
-          "x": 160,
-          "y": 101,
+          "x": 154,
+          "y": 102,
           "locked": false
         }
       },
