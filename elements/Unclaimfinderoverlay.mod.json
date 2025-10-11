@@ -1,0 +1,60 @@
+{
+  "_fv": 79,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "overlay_unclaimfinder.png",
+          "spritesCount": 4,
+          "displayCondition": {
+            "name": "Hasunclaiminhand"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Getunclaimfindertype"
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 376,
+          "y": 20,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_unclaimfindergetpctg",
+          "text": {
+            "fixedValue": "",
+            "name": "Unclaimfindergetpctg"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Hasunclaiminhand"
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 374,
+          "y": 39,
+          "locked": false
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Hasunclaiminhand"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

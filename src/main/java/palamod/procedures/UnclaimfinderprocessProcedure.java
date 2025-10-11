@@ -12,7 +12,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.multiplayer.PlayerInfo;
@@ -60,8 +59,11 @@ public class UnclaimfinderprocessProcedure {
 				final double _tagValue = 20;
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((pourcentage + " % ")), true);
+			{
+				final String _tagName = "pourcentage";
+				final double _tagValue = pourcentage;
+				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+			}
 			if (!(getEntityGameType(entity) == GameType.CREATIVE)) {
 				if (world instanceof ServerLevel _level) {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {

@@ -30377,7 +30377,12 @@
         "files": [
           "src/main/java/palamod/procedures/OrelayershowProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -45304,6 +45309,75 @@
           "src/main/java/palamod/item/UnclaimfinderblueItem.java"
         ]
       }
+    },
+    {
+      "name": "Hasunclaiminhand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hasunclaiminhand",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/HasunclaiminhandProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Getunclaimfindertype",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getunclaimfindertype",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetunclaimfindertypeProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Unclaimfindergetpctg",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfindergetpctg",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/UnclaimfindergetpctgProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Unclaimfinderoverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unclaimfinderoverlay",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/screens/UnclaimfinderoverlayOverlay.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -47498,6 +47572,12 @@
       "CUSTOM:Amethystchestv2",
       "CUSTOM:Endiumchestv2",
       "CUSTOM:Titanechestv2"
+    ],
+    "ITEMS:mod:unclaim_finder": [
+      "CUSTOM:Unclaimfinder",
+      "CUSTOM:Unclaimfinderorange",
+      "CUSTOM:Unclaimfinderred",
+      "CUSTOM:Unclaimfinderblue"
     ]
   },
   "tab_element_order": {

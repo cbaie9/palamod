@@ -32,7 +32,7 @@ public class OrelayerOverlay {
 			y = entity.getY();
 			z = entity.getZ();
 		}
-		if (OrelayershowProcedure.execute()) {
+		if (OrelayershowProcedure.execute(entity)) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.palamod.orelayer.label_empty"), w / 2 + -211, h / 2 + -76, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.palamod.orelayer.label_paladium_64_15"), w / 2 + -210, h / 2 + -31, -3407872, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.palamod.orelayer.label_endium_64_128_customs_p"), w / 2 + -211, h / 2 + -66, -16777114, false);
