@@ -37,7 +37,7 @@ public class UnclaimfinderoverlayOverlay {
 		}
 		if (HasunclaiminhandProcedure.execute(entity)) {
 			if (HasunclaiminhandProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(ResourceLocation.parse("palamod:textures/screens/overlay_unclaimfinder.png"), w - 51, 20, Mth.clamp((int) GetunclaimfindertypeProcedure.execute(entity) * 16, 0, 48), 0, 16, 16, 64, 16);
+				event.getGuiGraphics().blit(ResourceLocation.parse("palamod:textures/screens/overlay_unclaimfinder.png"), w - 51, 20, Mth.clamp((int) GetunclaimfindertypeProcedure.execute(entity) * 32, 0, 96), 0, 32, 32, 128, 32);
 			}
 			if (HasunclaiminhandProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,

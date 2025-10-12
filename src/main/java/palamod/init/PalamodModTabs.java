@@ -292,6 +292,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
+				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -499,6 +500,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.SPACE_FOOD.get());
 				tabData.accept(PalamodModItems.CHUNKANASLYSER.get());
 				tabData.accept(PalamodModBlocks.ALARM_ON.get().asItem());
+				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
 			}).withTabsBefore(BASECLAIM.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_1.get())).displayItems((parameters, tabData) -> {

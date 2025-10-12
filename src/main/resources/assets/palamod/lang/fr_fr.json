@@ -1977,5 +1977,6 @@
   "gui.palamod.authsafegui.code_check": "",
   "gui.palamod.golemtreec.golem_v_farmer1": "",
   "gui.palamod.factionhomegui.label_empty": "",
-  "gui.palamod.adminshoporeiron.label_empty": ""
+  "gui.palamod.adminshoporeiron.label_empty": "",
+  "item.palamod.pocketenderchest": "Pocket Enderchest"
 }

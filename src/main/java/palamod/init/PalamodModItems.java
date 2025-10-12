@@ -64,6 +64,7 @@ import palamod.item.RoulettepaladiennediscItem;
 import palamod.item.RanbowarmorItem;
 import palamod.item.PotatobackpackItem;
 import palamod.item.PoisonimbuepotionItem;
+import palamod.item.PocketenderchestItem;
 import palamod.item.PlateItem;
 import palamod.item.PigarmorItem;
 import palamod.item.PickaxepaternItem;
@@ -909,6 +910,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> UNCLAIMFINDERORANGE = REGISTRY.register("unclaimfinderorange", UnclaimfinderorangeItem::new);
 	public static final DeferredItem<Item> UNCLAIMFINDERRED = REGISTRY.register("unclaimfinderred", UnclaimfinderredItem::new);
 	public static final DeferredItem<Item> UNCLAIMFINDERBLUE = REGISTRY.register("unclaimfinderblue", UnclaimfinderblueItem::new);
+	public static final DeferredItem<Item> POCKETENDERCHEST = REGISTRY.register("pocketenderchest", PocketenderchestItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
