@@ -44986,7 +44986,6 @@
         "files": [
           "src/main/java/palamod/entity/Dankaroctest1Entity.java",
           "src/main/java/palamod/client/renderer/Dankaroctest1Renderer.java",
-          "src/main/resources/data/palamod/neoforge/biome_modifier/dankaroctest_1_biome_modifier.json",
           "src/main/resources/assets/palamod/models/item/dankaroctest_1_spawn_egg.json"
         ]
       }
@@ -56102,7 +56101,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.049.1",
+    "version": "1.20.049.4",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
