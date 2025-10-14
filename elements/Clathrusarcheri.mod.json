@@ -107,11 +107,30 @@
     "speedFactor": 1.0,
     "canBePlacedOn": [],
     "isBonemealable": false,
-    "frequencyOnChunks": 5,
-    "generateFeature": false,
-    "restrictionBiomes": [],
+    "frequencyOnChunks": 1,
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Roofedforest"
+      },
+      {
+        "value": "jungle"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "basalt_deltas"
+      }
+    ],
     "generationType": "Flower",
-    "patchSize": 64,
+    "patchSize": 1,
     "generateAtAnyHeight": false,
     "onTickUpdate": {
       "name": "ClathrusarcheriOnTickUpdate"
