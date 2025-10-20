@@ -45391,6 +45391,65 @@
           "src/main/resources/assets/palamod/models/item/pocketenderchest.json"
         ]
       }
+    },
+    {
+      "name": "Cavernehammer",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cavernehammer",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/CavernehammerItem.java",
+          "src/main/resources/assets/palamod/models/item/cavernehammer.json"
+        ]
+      }
+    },
+    {
+      "name": "Brokenspawner",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brokenspawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/brokenspawner.json",
+          "src/main/resources/assets/palamod/models/block/brokenspawner.json",
+          "src/main/java/palamod/block/BrokenspawnerBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/brokenspawner.json",
+          "src/main/resources/assets/palamod/blockstates/brokenspawner.json"
+        ]
+      }
+    },
+    {
+      "name": "Dropspawnercreeper",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dropspawnercreeper",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/DropspawnercreeperProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46621,6 +46680,7 @@
       "Items.EMERALD"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:Cavernehammer",
       "~CUSTOM:Unclaimfinderblue",
       "~CUSTOM:Unclaimfinderred",
       "~CUSTOM:Unclaimfinderorange",
@@ -47591,6 +47651,9 @@
       "CUSTOM:Unclaimfinderorange",
       "CUSTOM:Unclaimfinderred",
       "CUSTOM:Unclaimfinderblue"
+    ],
+    "ENTITIES:mod:creeper": [
+      "EntityCreeper"
     ]
   },
   "tab_element_order": {
@@ -47838,7 +47901,9 @@
       "Unclaimfinder",
       "Unclaimfinderorange",
       "Unclaimfinderred",
-      "Pocketenderchest"
+      "Pocketenderchest",
+      "Cavernehammer",
+      "Brokenspawner"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48107,7 +48172,9 @@
       "Chestexplorer",
       "Glueballpatern",
       "Exctractor",
-      "Flowertotem"
+      "Flowertotem",
+      "Cavernehammer",
+      "Brokenspawner"
     ]
   },
   "language_map": {
@@ -50092,7 +50159,9 @@
       "item.palamod.unclaimfinderorange": "Unclaim finder orange",
       "item.palamod.unclaimfinderred": "Red unclaim finder",
       "item.palamod.unclaimfinderblue": "Blue Unclaim Finder",
-      "item.palamod.pocketenderchest": "Pocket Enderchest"
+      "item.palamod.pocketenderchest": "Pocket Enderchest",
+      "item.palamod.cavernehammer": "Caverne hammer",
+      "block.palamod.brokenspawner": "Broken spawner"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52074,7 +52143,9 @@
       "gui.palamod.golemtreec.golem_v_farmer1": "",
       "gui.palamod.factionhomegui.label_empty": "",
       "gui.palamod.adminshoporeiron.label_empty": "",
-      "item.palamod.pocketenderchest": "Pocket Enderchest"
+      "item.palamod.pocketenderchest": "Pocket Enderchest",
+      "item.palamod.cavernehammer": "Caverne hammer",
+      "block.palamod.brokenspawner": "Broken spawner"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54056,7 +54127,9 @@
       "gui.palamod.golemtreec.golem_v_farmer1": "",
       "gui.palamod.factionhomegui.label_empty": "",
       "gui.palamod.adminshoporeiron.label_empty": "",
-      "item.palamod.pocketenderchest": "Pocket Enderchest"
+      "item.palamod.pocketenderchest": "Pocket Enderchest",
+      "item.palamod.cavernehammer": "Caverne hammer",
+      "block.palamod.brokenspawner": "Broken spawner"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56038,7 +56111,9 @@
       "gui.palamod.golemtreec.golem_v_farmer1": "",
       "gui.palamod.factionhomegui.label_empty": "",
       "gui.palamod.adminshoporeiron.label_empty": "",
-      "item.palamod.pocketenderchest": "Pocket Enderchest"
+      "item.palamod.pocketenderchest": "Pocket Enderchest",
+      "item.palamod.cavernehammer": "Caverne hammer",
+      "block.palamod.brokenspawner": "Broken spawner"
     }
   },
   "metadata": {

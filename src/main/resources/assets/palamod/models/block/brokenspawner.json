@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/spawner_top",
+    "up": "palamod:block/spawner_top",
+    "north": "palamod:block/empty_broken_mob_spawner",
+    "east": "palamod:block/empty_broken_mob_spawner",
+    "south": "palamod:block/empty_broken_mob_spawner",
+    "west": "palamod:block/empty_broken_mob_spawner",
+    "particle": "palamod:block/spawner_top"
+  },
+  "render_type": "cutout"
+}

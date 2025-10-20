@@ -252,6 +252,7 @@ import palamod.block.Chervil2Block;
 import palamod.block.Chervil1Block;
 import palamod.block.Chervil0Block;
 import palamod.block.CaveblockBlock;
+import palamod.block.BrokenspawnerBlock;
 import palamod.block.BoomobsidianBlock;
 import palamod.block.BlueslimepadBlock;
 import palamod.block.BlueglueballBlock;
@@ -545,6 +546,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> CLATHRUSARCHERI = REGISTRY.register("clathrusarcheri", ClathrusarcheriBlock::new);
 	public static final DeferredBlock<Block> PALADIUMFLOWER = REGISTRY.register("paladiumflower", PaladiumflowerBlock::new);
 	public static final DeferredBlock<Block> DANKABLOCK = REGISTRY.register("dankablock", DankablockBlock::new);
+	public static final DeferredBlock<Block> BROKENSPAWNER = REGISTRY.register("brokenspawner", BrokenspawnerBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

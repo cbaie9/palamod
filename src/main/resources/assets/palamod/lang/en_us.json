@@ -1979,5 +1979,7 @@
   "item.palamod.unclaimfinderorange": "Unclaim finder orange",
   "item.palamod.unclaimfinderred": "Red unclaim finder",
   "item.palamod.unclaimfinderblue": "Blue Unclaim Finder",
-  "item.palamod.pocketenderchest": "Pocket Enderchest"
+  "item.palamod.pocketenderchest": "Pocket Enderchest",
+  "item.palamod.cavernehammer": "Caverne hammer",
+  "block.palamod.brokenspawner": "Broken spawner"
 }

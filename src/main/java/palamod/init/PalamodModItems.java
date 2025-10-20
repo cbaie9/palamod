@@ -254,6 +254,7 @@ import palamod.item.ChunkanaslyserItem;
 import palamod.item.ChestexplorerItem;
 import palamod.item.ChervilseedItem;
 import palamod.item.ChervilItem;
+import palamod.item.CavernehammerItem;
 import palamod.item.BroadswordpaternItem;
 import palamod.item.BroadswordheadItem;
 import palamod.item.BlockpaternItem;
@@ -911,6 +912,8 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> UNCLAIMFINDERRED = REGISTRY.register("unclaimfinderred", UnclaimfinderredItem::new);
 	public static final DeferredItem<Item> UNCLAIMFINDERBLUE = REGISTRY.register("unclaimfinderblue", UnclaimfinderblueItem::new);
 	public static final DeferredItem<Item> POCKETENDERCHEST = REGISTRY.register("pocketenderchest", PocketenderchestItem::new);
+	public static final DeferredItem<Item> CAVERNEHAMMER = REGISTRY.register("cavernehammer", CavernehammerItem::new);
+	public static final DeferredItem<Item> BROKENSPAWNER = block(PalamodModBlocks.BROKENSPAWNER, new Item.Properties().stacksTo(1));
 
 	// Start of user code block custom items
 	// End of user code block custom items
