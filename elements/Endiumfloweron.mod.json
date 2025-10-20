@@ -108,7 +108,7 @@
     "canBePlacedOn": [],
     "isBonemealable": false,
     "frequencyOnChunks": 1,
-    "generateFeature": false,
+    "generateFeature": true,
     "restrictionBiomes": [
       {
         "value": "mutated_forest"

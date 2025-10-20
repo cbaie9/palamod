@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "badlands",
+    "savanna_plateau",
+    "windswept_savanna",
+    "savanna",
+    "jungle",
+    "bamboo_jungle"
+  ],
+  "features": "palamod:paladiumflower",
+  "step": "vegetal_decoration"
+}

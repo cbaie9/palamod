@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "palamod:roofedforest",
+    "jungle",
+    "flower_forest",
+    "sunflower_plains",
+    "savanna",
+    "basalt_deltas"
+  ],
+  "features": "palamod:clathrusarcheri",
+  "step": "vegetal_decoration"
+}

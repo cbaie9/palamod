@@ -113,11 +113,27 @@
     "onBonemealSuccess": {
       "name": "MineralflowerOnBoneMealSuccess"
     },
-    "frequencyOnChunks": 5,
-    "generateFeature": false,
-    "restrictionBiomes": [],
+    "frequencyOnChunks": 2,
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "roofed_forest"
+      },
+      {
+        "value": "warped_forest"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "forest"
+      }
+    ],
     "generationType": "Flower",
-    "patchSize": 64,
+    "patchSize": 3,
     "generateAtAnyHeight": false
   }
 }

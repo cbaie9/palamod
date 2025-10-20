@@ -107,11 +107,30 @@
     "speedFactor": 1.0,
     "canBePlacedOn": [],
     "isBonemealable": false,
-    "frequencyOnChunks": 5,
-    "generateFeature": false,
-    "restrictionBiomes": [],
+    "frequencyOnChunks": 1,
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "badlands"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "mutated_savanna"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "jungle"
+      },
+      {
+        "value": "bamboo_jungle"
+      }
+    ],
     "generationType": "Flower",
-    "patchSize": 64,
+    "patchSize": 2,
     "generateAtAnyHeight": false
   }
 }
