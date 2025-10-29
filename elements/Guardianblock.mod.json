@@ -38,7 +38,9 @@
     "customProperties": [],
     "name": "Guardian block",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Non functionnal, in developpement"
+      ]
     },
     "hardness": 1.0,
     "resistance": 10.0,
@@ -112,6 +114,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

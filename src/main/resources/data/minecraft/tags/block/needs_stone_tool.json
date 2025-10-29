@@ -3,6 +3,7 @@
   "values": [
     "palamod:flatten_green_paladium_chest",
     "palamod:online_detector_on",
+    "palamod:emptyspawner",
     "palamod:trixiumstairs",
     "palamod:online_detector",
     "palamod:flatten_endium_chest",
@@ -48,6 +49,7 @@
     "palamod:cobbledsoftstoneslab",
     "palamod:cave_block",
     "palamod:elevator_light_gray",
+    "palamod:spawncontroller",
     "palamod:grinder_block",
     "palamod:titane_chest",
     "palamod:paladium_chest",

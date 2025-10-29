@@ -5,6 +5,7 @@ package palamod.init;
 
 import palamod.procedures.GetxpfrombottleProcedure;
 import palamod.procedures.GetjobsfrombottleProcedure;
+import palamod.procedures.GetcustomunixProcedure;
 
 import palamod.item.inventory.VoidstoneInventoryCapability;
 import palamod.item.inventory.PaladiumphoneInventoryCapability;
@@ -229,6 +230,7 @@ import palamod.item.EndiumPickaxeItem;
 import palamod.item.EndiumIngotItem;
 import palamod.item.EndiumAxeItem;
 import palamod.item.EndiumArmorItem;
+import palamod.item.EmptyspawneritemItem;
 import palamod.item.EggplantseedItem;
 import palamod.item.EggplantItem;
 import palamod.item.DynamiteItem;
@@ -914,6 +916,13 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> POCKETENDERCHEST = REGISTRY.register("pocketenderchest", PocketenderchestItem::new);
 	public static final DeferredItem<Item> CAVERNEHAMMER = REGISTRY.register("cavernehammer", CavernehammerItem::new);
 	public static final DeferredItem<Item> BROKENSPAWNER = block(PalamodModBlocks.BROKENSPAWNER, new Item.Properties().stacksTo(1));
+	public static final DeferredItem<Item> SPAWNCONTROLLER = block(PalamodModBlocks.SPAWNCONTROLLER);
+	public static final DeferredItem<Item> EMPTYSPAWNER = block(PalamodModBlocks.EMPTYSPAWNER);
+	public static final DeferredItem<Item> DIAMONDINFUSEDOBSIDIAN = block(PalamodModBlocks.DIAMONDINFUSEDOBSIDIAN);
+	public static final DeferredItem<Item> AMETHYSTINFUSEDOBSIDIAN = block(PalamodModBlocks.AMETHYSTINFUSEDOBSIDIAN);
+	public static final DeferredItem<Item> TITANEINFUSEDOBSIDIAN = block(PalamodModBlocks.TITANEINFUSEDOBSIDIAN);
+	public static final DeferredItem<Item> PALADIUMINFUSEDOBSIDIAN = block(PalamodModBlocks.PALADIUMINFUSEDOBSIDIAN);
+	public static final DeferredItem<Item> EMPTYSPAWNERITEM = REGISTRY.register("emptyspawneritem", EmptyspawneritemItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -949,6 +958,7 @@ public class PalamodModItems {
 			event.enqueueWork(() -> {
 				ItemProperties.register(XPBOTTLE.get(), ResourceLocation.parse("palamod:xpbottle_xp"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetxpfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(XPBOTTLE.get(), ResourceLocation.parse("palamod:xpbottle_jobs_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetjobsfrombottleProcedure.execute(itemStackToRender));
+				ItemProperties.register(EMPTYSPAWNERITEM.get(), ResourceLocation.parse("palamod:emptyspawneritem_souls"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetcustomunixProcedure.execute());
 			});
 		}
 	}

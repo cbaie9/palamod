@@ -1980,5 +1980,14 @@
   "gui.palamod.adminshoporeiron.label_empty": "",
   "item.palamod.pocketenderchest": "Pocket Enderchest",
   "item.palamod.cavernehammer": "Caverne hammer",
-  "block.palamod.brokenspawner": "Broken spawner"
+  "block.palamod.brokenspawner": "Broken spawner",
+  "block.palamod.spawncontroller": "Spawn controller",
+  "block.palamod.emptyspawner": "Empty spawner",
+  "block.palamod.guardian_block.description_0": "Non functionnal, in developpement",
+  "block.palamod.brokenspawner.description_0": "Can be obtain where a creeper explode a vanilla spawner",
+  "block.palamod.diamondinfusedobsidian": "Diamond infused obsidian",
+  "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
+  "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
+  "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
+  "item.palamod.emptyspawneritem": "Empty spawner item"
 }

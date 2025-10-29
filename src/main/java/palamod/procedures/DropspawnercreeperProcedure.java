@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import palamod.PalamodMod;
-
 import net.neoforged.neoforge.event.level.ExplosionEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -38,7 +36,6 @@ public class DropspawnercreeperProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
-		PalamodMod.LOGGER.info("1");
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
@@ -51,7 +48,6 @@ public class DropspawnercreeperProcedure {
 							for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
 								// Execute the desired statements within the square/cube
 								if (Blocks.SPAWNER == (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock()) {
-									PalamodMod.LOGGER.info("2");
 									world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
 									if (Math.random() < 2d / 6) {
 										if (world instanceof ServerLevel _level) {
@@ -60,7 +56,6 @@ public class DropspawnercreeperProcedure {
 											entityToSpawn.setUnlimitedLifetime();
 											_level.addFreshEntity(entityToSpawn);
 										}
-										PalamodMod.LOGGER.info("3");
 									}
 								}
 							}

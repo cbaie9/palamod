@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/spawner_structure_one",
+    "particle": "palamod:block/spawner_structure_one"
+  },
+  "render_type": "solid"
+}

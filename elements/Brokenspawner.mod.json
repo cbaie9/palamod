@@ -38,7 +38,9 @@
     "customProperties": [],
     "name": "Broken spawner",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Can be obtain where a creeper explode a vanilla spawner"
+      ]
     },
     "hardness": 1.0,
     "resistance": 10.0,

@@ -295,6 +295,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
 				tabData.accept(PalamodModItems.CAVERNEHAMMER.get());
 				tabData.accept(PalamodModBlocks.BROKENSPAWNER.get().asItem());
+				tabData.accept(PalamodModItems.EMPTYSPAWNERITEM.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -573,6 +574,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.FLOWERTOTEM.get().asItem());
 				tabData.accept(PalamodModItems.CAVERNEHAMMER.get());
 				tabData.accept(PalamodModBlocks.BROKENSPAWNER.get().asItem());
+				tabData.accept(PalamodModItems.EMPTYSPAWNERITEM.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent
