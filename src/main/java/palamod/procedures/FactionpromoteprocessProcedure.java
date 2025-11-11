@@ -33,17 +33,10 @@ public class FactionpromoteprocessProcedure {
 						BlockPos _bp = new BlockPos(0, 9, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putBoolean(("Faction_officer_" + entity.getStringUUID() + "_" + get_id), true);
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_nb-offi_" + get_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_nb-offi_" + get_id)) + 1));
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}

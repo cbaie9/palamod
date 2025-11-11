@@ -13,12 +13,7 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnGroupData;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
@@ -77,11 +72,6 @@ public class EndiumdynamiteEntity extends PathfinderMob {
 
 	@Override
 	public boolean ignoreExplosion(Explosion explosion) {
-		return true;
-	}
-
-	@Override
-	public boolean fireImmune() {
 		return true;
 	}
 

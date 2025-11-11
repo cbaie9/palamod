@@ -12,195 +12,102 @@ public class ArmorpalahelpguiThisGUIIsOpenedProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(0).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(1).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(2).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(3).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_ARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(4).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_ARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(5).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_ARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(6).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_ARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(7).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(8).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(9).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(10).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(11).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_ARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(12).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_ARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(13).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_ARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(14).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_ARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(15).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(16).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(17).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(18).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(19).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.INVISIBLEARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(20).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.INVISIBLEARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(21).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.INVISIBLEARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(22).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.INVISIBLEARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(23).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.RAINBOWARMOR_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(24).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.RAINBOWARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(25).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.RAINBOWARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(26).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.RAINBOWARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(27).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.SCUBA_HELMET.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(28).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TRAVELARMOR_CHESTPLATE.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(29).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TRAVELARMOR_LEGGINGS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(30).set(_setstack);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.TRAVELARMOR_BOOTS.get()).copy();
-			_setstack.setCount(1);
-			_menu.getSlots().get(31).set(_setstack);
+			ItemStack _setstack0 = new ItemStack(PalamodModItems.AMETHYST_ARMOR_HELMET.get()).copy();
+			_setstack0.setCount(1);
+			_menu.getSlots().get(0).set(_setstack0);
+			ItemStack _setstack1 = new ItemStack(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get()).copy();
+			_setstack1.setCount(1);
+			_menu.getSlots().get(1).set(_setstack1);
+			ItemStack _setstack2 = new ItemStack(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get()).copy();
+			_setstack2.setCount(1);
+			_menu.getSlots().get(2).set(_setstack2);
+			ItemStack _setstack3 = new ItemStack(PalamodModItems.AMETHYST_ARMOR_BOOTS.get()).copy();
+			_setstack3.setCount(1);
+			_menu.getSlots().get(3).set(_setstack3);
+			ItemStack _setstack4 = new ItemStack(PalamodModItems.TITANE_ARMOR_HELMET.get()).copy();
+			_setstack4.setCount(1);
+			_menu.getSlots().get(4).set(_setstack4);
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.TITANE_ARMOR_CHESTPLATE.get()).copy();
+			_setstack5.setCount(1);
+			_menu.getSlots().get(5).set(_setstack5);
+			ItemStack _setstack6 = new ItemStack(PalamodModItems.TITANE_ARMOR_LEGGINGS.get()).copy();
+			_setstack6.setCount(1);
+			_menu.getSlots().get(6).set(_setstack6);
+			ItemStack _setstack7 = new ItemStack(PalamodModItems.TITANE_ARMOR_BOOTS.get()).copy();
+			_setstack7.setCount(1);
+			_menu.getSlots().get(7).set(_setstack7);
+			ItemStack _setstack8 = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
+			_setstack8.setCount(1);
+			_menu.getSlots().get(8).set(_setstack8);
+			ItemStack _setstack9 = new ItemStack(PalamodModItems.PALADIUM_ARMOR_CHESTPLATE.get()).copy();
+			_setstack9.setCount(1);
+			_menu.getSlots().get(9).set(_setstack9);
+			ItemStack _setstack10 = new ItemStack(PalamodModItems.PALADIUM_ARMOR_LEGGINGS.get()).copy();
+			_setstack10.setCount(1);
+			_menu.getSlots().get(10).set(_setstack10);
+			ItemStack _setstack11 = new ItemStack(PalamodModItems.PALADIUM_ARMOR_BOOTS.get()).copy();
+			_setstack11.setCount(1);
+			_menu.getSlots().get(11).set(_setstack11);
+			ItemStack _setstack12 = new ItemStack(PalamodModItems.ENDIUM_ARMOR_HELMET.get()).copy();
+			_setstack12.setCount(1);
+			_menu.getSlots().get(12).set(_setstack12);
+			ItemStack _setstack13 = new ItemStack(PalamodModItems.ENDIUM_ARMOR_CHESTPLATE.get()).copy();
+			_setstack13.setCount(1);
+			_menu.getSlots().get(13).set(_setstack13);
+			ItemStack _setstack14 = new ItemStack(PalamodModItems.ENDIUM_ARMOR_LEGGINGS.get()).copy();
+			_setstack14.setCount(1);
+			_menu.getSlots().get(14).set(_setstack14);
+			ItemStack _setstack15 = new ItemStack(PalamodModItems.ENDIUM_ARMOR_BOOTS.get()).copy();
+			_setstack15.setCount(1);
+			_menu.getSlots().get(15).set(_setstack15);
+			ItemStack _setstack16 = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_HELMET.get()).copy();
+			_setstack16.setCount(1);
+			_menu.getSlots().get(16).set(_setstack16);
+			ItemStack _setstack17 = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_CHESTPLATE.get()).copy();
+			_setstack17.setCount(1);
+			_menu.getSlots().get(17).set(_setstack17);
+			ItemStack _setstack18 = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_LEGGINGS.get()).copy();
+			_setstack18.setCount(1);
+			_menu.getSlots().get(18).set(_setstack18);
+			ItemStack _setstack19 = new ItemStack(PalamodModItems.MIXED_ENDIUM_ARMOR_BOOTS.get()).copy();
+			_setstack19.setCount(1);
+			_menu.getSlots().get(19).set(_setstack19);
+			ItemStack _setstack20 = new ItemStack(PalamodModItems.INVISIBLEARMOR_HELMET.get()).copy();
+			_setstack20.setCount(1);
+			_menu.getSlots().get(20).set(_setstack20);
+			ItemStack _setstack21 = new ItemStack(PalamodModItems.INVISIBLEARMOR_CHESTPLATE.get()).copy();
+			_setstack21.setCount(1);
+			_menu.getSlots().get(21).set(_setstack21);
+			ItemStack _setstack22 = new ItemStack(PalamodModItems.INVISIBLEARMOR_LEGGINGS.get()).copy();
+			_setstack22.setCount(1);
+			_menu.getSlots().get(22).set(_setstack22);
+			ItemStack _setstack23 = new ItemStack(PalamodModItems.INVISIBLEARMOR_BOOTS.get()).copy();
+			_setstack23.setCount(1);
+			_menu.getSlots().get(23).set(_setstack23);
+			ItemStack _setstack24 = new ItemStack(PalamodModItems.RAINBOWARMOR_HELMET.get()).copy();
+			_setstack24.setCount(1);
+			_menu.getSlots().get(24).set(_setstack24);
+			ItemStack _setstack25 = new ItemStack(PalamodModItems.RAINBOWARMOR_CHESTPLATE.get()).copy();
+			_setstack25.setCount(1);
+			_menu.getSlots().get(25).set(_setstack25);
+			ItemStack _setstack26 = new ItemStack(PalamodModItems.RAINBOWARMOR_LEGGINGS.get()).copy();
+			_setstack26.setCount(1);
+			_menu.getSlots().get(26).set(_setstack26);
+			ItemStack _setstack27 = new ItemStack(PalamodModItems.RAINBOWARMOR_BOOTS.get()).copy();
+			_setstack27.setCount(1);
+			_menu.getSlots().get(27).set(_setstack27);
+			ItemStack _setstack28 = new ItemStack(PalamodModItems.SCUBA_HELMET.get()).copy();
+			_setstack28.setCount(1);
+			_menu.getSlots().get(28).set(_setstack28);
+			ItemStack _setstack29 = new ItemStack(PalamodModItems.TRAVELARMOR_CHESTPLATE.get()).copy();
+			_setstack29.setCount(1);
+			_menu.getSlots().get(29).set(_setstack29);
+			ItemStack _setstack30 = new ItemStack(PalamodModItems.TRAVELARMOR_LEGGINGS.get()).copy();
+			_setstack30.setCount(1);
+			_menu.getSlots().get(30).set(_setstack30);
+			ItemStack _setstack31 = new ItemStack(PalamodModItems.TRAVELARMOR_BOOTS.get()).copy();
+			_setstack31.setCount(1);
+			_menu.getSlots().get(31).set(_setstack31);
 			_player.containerMenu.broadcastChanges();
 		}
 	}

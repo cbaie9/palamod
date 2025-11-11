@@ -250,7 +250,7 @@ public class RtpnetherProcedure {
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("This command is in beta due minecraft generation being extremely slow | type /nether true to do it anyway"), false);
+				_player.displayClientMessage(Component.literal("This command is in beta due minecraft generation being extremely slow  | type /nether true to do it anyway"), false);
 		}
 	}
 }

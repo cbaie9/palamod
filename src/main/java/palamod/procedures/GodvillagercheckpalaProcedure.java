@@ -21,9 +21,9 @@ public class GodvillagercheckpalaProcedure {
 				&& PalamodModBlocks.PALADIUM_BLOCK.get().asItem() == (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem()
 				&& !(entity instanceof GodvillagerEntity _datEntL5 && _datEntL5.getEntityData().get(GodvillagerEntity.DATA_trade_used))) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(1).set(_setstack);
+				ItemStack _setstack6 = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+				_setstack6.setCount(1);
+				_menu.getSlots().get(1).set(_setstack6);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

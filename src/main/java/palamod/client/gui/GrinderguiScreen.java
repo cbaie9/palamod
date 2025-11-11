@@ -2,14 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.GrinderguiMenu;
 
-import palamod.procedures.ReturntimerinputgrinderProcedure;
-import palamod.procedures.ProgressbargrinderspritereturnProcedure;
-import palamod.procedures.LightredgrinderonProcedure;
-import palamod.procedures.LightgreengrinderonProcedure;
-import palamod.procedures.LightbluegrinderonProcedure;
-import palamod.procedures.Grindertrans1Procedure;
-import palamod.procedures.GrindergettimerfusionProcedure;
-import palamod.procedures.GrindergettimercraftProcedure;
+import palamod.procedures.*;
 
 import palamod.network.GrinderguiButtonMessage;
 
@@ -35,7 +28,7 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_help_button;
+	private ImageButton imagebutton_help_button;
 
 	public GrinderguiScreen(GrinderguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -112,7 +105,7 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

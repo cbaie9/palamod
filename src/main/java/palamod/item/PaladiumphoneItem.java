@@ -14,6 +14,8 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
@@ -28,6 +30,11 @@ public class PaladiumphoneItem extends Item {
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
+	}
+
+	@Override
+	public SoundEvent getEatingSound() {
+		return SoundEvents.EMPTY;
 	}
 
 	@Override

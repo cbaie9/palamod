@@ -40,8 +40,9 @@ public class RtpcommandProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble(("use_trp_overworld_" + entity.getStringUUID()), (getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())) + 1));
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}

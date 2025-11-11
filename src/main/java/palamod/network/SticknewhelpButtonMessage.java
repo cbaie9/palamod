@@ -1,15 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.PalahelpstickmodestrenghtProcedure;
-import palamod.procedures.PalahelpstickmodespeedProcedure;
-import palamod.procedures.PalahelpstickmodesogProcedure;
-import palamod.procedures.PalahelpstickmodejumpProcedure;
-import palamod.procedures.PalahelpstickmodehyperjumpProcedure;
-import palamod.procedures.PalahelpstickmodehealProcedure;
-import palamod.procedures.PalahelpstickmodedamageProcedure;
-import palamod.procedures.ConnectitemmenuProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -28,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record SticknewhelpButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<SticknewhelpButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "sticknewhelp_buttons"));

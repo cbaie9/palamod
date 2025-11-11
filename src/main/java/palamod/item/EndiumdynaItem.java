@@ -11,6 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 
 public class EndiumdynaItem extends Item {
 	public EndiumdynaItem() {
@@ -20,6 +22,11 @@ public class EndiumdynaItem extends Item {
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
+	}
+
+	@Override
+	public SoundEvent getEatingSound() {
+		return SoundEvents.EMPTY;
 	}
 
 	@Override

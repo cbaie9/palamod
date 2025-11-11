@@ -7,6 +7,8 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
@@ -19,6 +21,11 @@ public class LuckybetaItem extends Item {
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
+	}
+
+	@Override
+	public SoundEvent getEatingSound() {
+		return SoundEvents.EMPTY;
 	}
 
 	@Override

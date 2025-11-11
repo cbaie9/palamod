@@ -1,18 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectadminshopplantwheatProcedure;
-import palamod.procedures.ConnectadminshopplantwarpedfungusProcedure;
-import palamod.procedures.ConnectadminshopplantsugarcaneProcedure;
-import palamod.procedures.ConnectadminshopplantredmushroomProcedure;
-import palamod.procedures.ConnectadminshopplantpotatoProcedure;
-import palamod.procedures.ConnectadminshopplantmelonProcedure;
-import palamod.procedures.ConnectadminshopplantcrimsonfungusProcedure;
-import palamod.procedures.ConnectadminshopplantcarrotProcedure;
-import palamod.procedures.ConnectadminshopplantcactusProcedure;
-import palamod.procedures.ConnectadminshopplantbrownmushroomProcedure;
-import palamod.procedures.ConnectadminshopcocoabeanProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.Adminshop_openProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -31,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AdminshopplantButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<AdminshopplantButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "adminshopplant_buttons"));

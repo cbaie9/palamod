@@ -1,16 +1,6 @@
 package palamod.client.screens;
 
-import palamod.procedures.MinageprocessdynamicchecknbtProcedure;
-import palamod.procedures.DynamicchecktitaneProcedure;
-import palamod.procedures.Dynamicchecksector5Procedure;
-import palamod.procedures.Dynamicchecksector4Procedure;
-import palamod.procedures.Dynamicchecksector3Procedure;
-import palamod.procedures.Dynamicchecksector2Procedure;
-import palamod.procedures.Dynamicchecksector1Procedure;
-import palamod.procedures.DynamiccheckendiumfullverenverProcedure;
-import palamod.procedures.DynamiccheckendiumfullverProcedure;
-import palamod.procedures.DynamiccheckamethystProcedure;
-import palamod.procedures.DynamiccechkpaladiumProcedure;
+import palamod.procedures.*;
 
 import org.checkerframework.checker.units.qual.h;
 
@@ -25,7 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class DynamicorelayerOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

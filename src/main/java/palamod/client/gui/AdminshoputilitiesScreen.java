@@ -32,18 +32,18 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_honey_comb;
-	Button button_leather;
-	Button button_feather;
-	Button button_ink_sac;
-	Button button_glow_in_sac;
-	Button button_blaze;
-	Button button_gun_powder;
-	Button button_steak;
-	Button button_stone;
-	Button button_emeraude;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_cross_no_button;
+	private Button button_honey_comb;
+	private Button button_leather;
+	private Button button_feather;
+	private Button button_ink_sac;
+	private Button button_glow_in_sac;
+	private Button button_blaze;
+	private Button button_gun_powder;
+	private Button button_steak;
+	private Button button_stone;
+	private Button button_emeraude;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_cross_no_button;
 
 	public AdminshoputilitiesScreen(AdminshoputilitiesMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -214,7 +214,7 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -229,7 +229,7 @@ public class AdminshoputilitiesScreen extends AbstractContainerScreen<Adminshopu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

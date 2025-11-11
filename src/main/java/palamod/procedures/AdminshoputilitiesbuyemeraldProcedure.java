@@ -44,7 +44,7 @@ public class AdminshoputilitiesbuyemeraldProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("You cannot bought nothing put a number greater than 0 to continue"), false);
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
-				PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0 " + item.getDisplayName().getString()));
+				PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0  " + item.getDisplayName().getString()));
 			}
 		}
 		if (n * fac_v <= getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) {
@@ -52,8 +52,9 @@ public class AdminshoputilitiesbuyemeraldProcedure {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putDouble(("money_" + entity.getDisplayName().getString()), (getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) - n * fac_v));
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

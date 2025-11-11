@@ -12,37 +12,13 @@ public class CraftdoneminerProcedure {
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(0).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(1).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(2).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(3).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(4).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(5).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(6).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(7).remove(1);
-			_player.containerMenu.broadcastChanges();
-		}
-		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 			_menu.getSlots().get(8).remove(1);
 			_player.containerMenu.broadcastChanges();
 		}

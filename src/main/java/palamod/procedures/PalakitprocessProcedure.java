@@ -44,9 +44,10 @@ public class PalakitprocessProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble((main.get("money").getAsDouble() + "" + entity.getDisplayName().getString()),
 										(getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) + 500));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}

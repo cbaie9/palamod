@@ -25,7 +25,7 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_arbre_de_competance;
+	private Button button_arbre_de_competance;
 
 	public GuardianguiScreen(GuardianguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

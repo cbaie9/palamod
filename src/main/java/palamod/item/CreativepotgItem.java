@@ -32,7 +32,7 @@ import net.minecraft.core.BlockPos;
 
 import java.util.List;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class CreativepotgItem extends TieredItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

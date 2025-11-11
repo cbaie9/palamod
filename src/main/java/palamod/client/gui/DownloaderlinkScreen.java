@@ -24,8 +24,8 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_no;
-	Button button_process;
+	private Button button_no;
+	private Button button_process;
 
 	public DownloaderlinkScreen(DownloaderlinkMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

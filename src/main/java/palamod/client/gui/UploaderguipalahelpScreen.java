@@ -28,7 +28,7 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_gui_example_wip;
+	private Button button_gui_example_wip;
 
 	public UploaderguipalahelpScreen(UploaderguipalahelpMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

@@ -31,16 +31,16 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_grinder;
-	Button button_palamachine;
-	Button button_crusher;
-	Button button_forge;
-	Button button_uploader;
-	Button button_downloader;
-	Button button_drawbridge;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_cross_no_button;
+	private Button button_grinder;
+	private Button button_palamachine;
+	private Button button_crusher;
+	private Button button_forge;
+	private Button button_uploader;
+	private Button button_downloader;
+	private Button button_drawbridge;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_cross_no_button;
 
 	public PalahelpmachineScreen(PalahelpmachineMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -176,7 +176,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -191,7 +191,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -206,7 +206,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

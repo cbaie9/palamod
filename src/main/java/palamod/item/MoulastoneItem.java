@@ -11,6 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 
 public class MoulastoneItem extends Item {
 	public MoulastoneItem() {
@@ -20,6 +22,11 @@ public class MoulastoneItem extends Item {
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
+	}
+
+	@Override
+	public SoundEvent getEatingSound() {
+		return SoundEvents.EMPTY;
 	}
 
 	@Override

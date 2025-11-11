@@ -42,7 +42,7 @@ public class LuckyexitProcedure {
 			}
 		} else if (PalamodModVariables.Lucky_destroy == 0) {
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL) == true) {
-				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + "Ferme un lucky block ( echap ) [ code 0 ]"));
+				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + "Ferme un lucky block ( echap ) [ code  0 ]"));
 			}
 		} else {
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL) == true) {

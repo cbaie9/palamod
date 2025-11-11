@@ -24,8 +24,8 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_franais;
-	Button button_english;
+	private Button button_franais;
+	private Button button_english;
 
 	public LanguageselectionScreen(LanguageselectionMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

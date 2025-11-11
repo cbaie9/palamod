@@ -20,7 +20,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PalamodModKeyMappings {
 	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, "key.categories.palamod") {
 		private boolean isDownOld = false;
@@ -83,7 +83,7 @@ public class PalamodModKeyMappings {
 		event.register(OPENCLICKER);
 	}
 
-	@EventBusSubscriber({Dist.CLIENT})
+	@EventBusSubscriber(Dist.CLIENT)
 	public static class KeyEventListener {
 		@SubscribeEvent
 		public static void onClientTick(ClientTickEvent.Post event) {

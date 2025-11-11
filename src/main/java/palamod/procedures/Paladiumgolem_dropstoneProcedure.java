@@ -20,7 +20,7 @@ public class Paladiumgolem_dropstoneProcedure {
 			entityToSpawn.setPickUpDelay(10);
 			_level.addFreshEntity(entityToSpawn);
 		}
-		new ItemStack(PalamodModItems.GUARDIAN_STONE.get()).set(DataComponents.CUSTOM_NAME, Component.literal(("Guardian stone - Contain " + entity.getPersistentData().getDouble("Golem_level") + " level Golem")));
+		new ItemStack(PalamodModItems.GUARDIAN_STONE.get()).set(DataComponents.CUSTOM_NAME, Component.literal(("Guardian stone - Contain  " + entity.getPersistentData().getDouble("Golem_level") + " level Golem")));
 		{
 			final String _tagName = "golem_kac";
 			final boolean _tagValue = true;

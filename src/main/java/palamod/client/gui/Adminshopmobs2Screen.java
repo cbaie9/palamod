@@ -33,17 +33,17 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_honey_comb;
-	Button button_leather;
-	Button button_feather;
-	Button button_ink_sac;
-	Button button_glow_in_sac;
-	Button button_blaze;
-	Button button_gun_powder;
-	Button button_steak;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_arrow_adminshop;
+	private Button button_honey_comb;
+	private Button button_leather;
+	private Button button_feather;
+	private Button button_ink_sac;
+	private Button button_glow_in_sac;
+	private Button button_blaze;
+	private Button button_gun_powder;
+	private Button button_steak;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_arrow_adminshop;
 
 	public Adminshopmobs2Screen(Adminshopmobs2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -196,7 +196,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -211,7 +211,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -226,7 +226,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

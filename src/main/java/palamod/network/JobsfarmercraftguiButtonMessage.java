@@ -1,28 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.JobsminerfarmertitaneseedplanterProcedure;
-import palamod.procedures.JobsminerfarmerpaladiumseedplanterProcedure;
-import palamod.procedures.JobsminerfarmergreenpaladiumseedplanterProcedure;
-import palamod.procedures.JobsminerfarmergreenpaladiumhoeProcedure;
-import palamod.procedures.JobsminerfarmerendiumseedplanterProcedure;
-import palamod.procedures.JobsminerfarmerendiumhoeProcedure;
-import palamod.procedures.JobsminerfarmerelevatorProcedure;
-import palamod.procedures.JobsminerfarmeramethystseedplanterProcedure;
-import palamod.procedures.JobsminerfarmeramethysthoeProcedure;
-import palamod.procedures.JobsminercrafttitanespikeProcedure;
-import palamod.procedures.JobsminercraftamethystspikeProcedure;
-import palamod.procedures.JobsfarmerpaladiumhoeProcedure;
-import palamod.procedures.JobsfarmercrafttitanehoeProcedure;
-import palamod.procedures.JobsfarmercrafttitanebackpackProcedure;
-import palamod.procedures.JobsfarmercraftpaladiumbackpackProcedure;
-import palamod.procedures.JobsfarmercraftfertilitytotemProcedure;
-import palamod.procedures.JobsfarmercraftfarmerthroneProcedure;
-import palamod.procedures.JobsfarmercraftendiumchestplateProcedure;
-import palamod.procedures.JobsfarmercraftendiumbackpackProcedure;
-import palamod.procedures.JobsfarmercraftendiumaxeProcedure;
-import palamod.procedures.JobsfarmercraftcrusherProcedure;
-import palamod.procedures.JobsfarmercraftamethystbackpackProcedure;
-import palamod.procedures.CloseguiProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -41,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record JobsfarmercraftguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<JobsfarmercraftguiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "jobsfarmercraftgui_buttons"));

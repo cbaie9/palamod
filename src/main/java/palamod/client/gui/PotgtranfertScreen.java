@@ -27,7 +27,7 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_transfert;
+	private Button button_transfert;
 
 	public PotgtranfertScreen(PotgtranfertMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

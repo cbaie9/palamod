@@ -26,7 +26,7 @@ import java.util.EnumMap;
 
 import com.google.common.collect.Iterables;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public abstract class ScubaItem extends ArmorItem {
 	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
 

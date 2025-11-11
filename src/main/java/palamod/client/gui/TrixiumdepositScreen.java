@@ -28,8 +28,8 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_empty;
-	ImageButton imagebutton_cross_no_button;
+	private Button button_empty;
+	private ImageButton imagebutton_cross_no_button;
 
 	public TrixiumdepositScreen(TrixiumdepositMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -109,7 +109,7 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

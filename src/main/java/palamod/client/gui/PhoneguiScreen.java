@@ -26,8 +26,8 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implem
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox cheat_code_secret;
-	Button button_test_code;
+	private EditBox cheat_code_secret;
+	private Button button_test_code;
 
 	public PhoneguiScreen(PhoneguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

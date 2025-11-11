@@ -25,7 +25,7 @@ public class DelfactionProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" Are you sure you want to delete this faction, to confiirm yes type \",\"color\":\"gold\"},{\"text\":\"/faction disband\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction disband "
-								+ "" + random + "\"}},{\"text\":\" \\u0020" + random + " or \",\"color\":\"gold\"},{\"text\":\"/f disband\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/f disband " + random
+								+ "" + random + "\"}},{\"text\":\" \\u0020" + random + " or \",\"color\":\"gold\"},{\"text\":\"/f disband\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/f disband  " + random
 								+ "\"}},{\"text\":\"" + random + "\",\"color\":\"gold\"}]"));
 		} else {
 			if (world instanceof ServerLevel _level)

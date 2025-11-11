@@ -18,7 +18,7 @@ import net.minecraft.client.renderer.DimensionSpecialEffects;
 
 @EventBusSubscriber
 public class MinerdimensionDimension {
-	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	@EventBusSubscriber(Dist.CLIENT)
 	public static class MinerdimensionSpecialEffectsHandler {
 		@SubscribeEvent
 		public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {

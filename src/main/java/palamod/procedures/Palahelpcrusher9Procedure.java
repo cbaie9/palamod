@@ -7,8 +7,8 @@ public class Palahelpcrusher9Procedure {
 		if (entity == null)
 			return "";
 		if ((entity.getPersistentData().getString("language")).equals("french")) {
-			return "Pour finaliser la creation du minerais appuyer le bouton \"start fusion\"";
+			return "Pour finaliser la creation du minerais appuyer le bouton  \"start fusion\"";
 		}
-		return "To finish the creation of the ingot press the \"start fusion\" button";
+		return "To finish the creation of the ingot  press the \"start fusion\" button";
 	}
 }

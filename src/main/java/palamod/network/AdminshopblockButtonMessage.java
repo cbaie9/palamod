@@ -1,17 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectadhblkstoneProcedure;
-import palamod.procedures.ConnectadhblksoulsandProcedure;
-import palamod.procedures.ConnectadhblksandProcedure;
-import palamod.procedures.ConnectadhblkoakwoodProcedure;
-import palamod.procedures.ConnectadhblknetherrackProcedure;
-import palamod.procedures.ConnectadhblkgravelProcedure;
-import palamod.procedures.ConnectadhblkgrassProcedure;
-import palamod.procedures.ConnectadhblkglowstoneProcedure;
-import palamod.procedures.ConnectadhblkdirtProcedure;
-import palamod.procedures.ConnectadhblkblackstoneProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.Adminshop_openProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -30,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AdminshopblockButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<AdminshopblockButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "adminshopblock_buttons"));

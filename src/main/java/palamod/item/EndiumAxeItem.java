@@ -23,7 +23,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class EndiumAxeItem extends AxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

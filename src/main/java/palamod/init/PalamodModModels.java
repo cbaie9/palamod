@@ -3,23 +3,14 @@
  */
 package palamod.init;
 
-import palamod.client.model.Modelprimed_tnt_sponge_v4;
-import palamod.client.model.Modelprimed_tnt_sponge_v3;
-import palamod.client.model.Modelprimed_tnt_sponge_v2;
-import palamod.client.model.Modelprimed_tnt_sponge_v1;
-import palamod.client.model.Modeldynamite_model;
-import palamod.client.model.ModelGolem_gplacement_vlegtest;
-import palamod.client.model.ModelGolem_gplacement2;
-import palamod.client.model.ModelDancarok_V1_Converted;
-import palamod.client.model.ModelBIG_dynamitev2;
-import palamod.client.model.ModelBIG_dynamite2;
+import palamod.client.model.*;
 
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class PalamodModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

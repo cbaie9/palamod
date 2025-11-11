@@ -30,12 +30,12 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_admin_btte_ore;
-	ImageButton imagebutton_btte_block;
-	ImageButton imagebutton_btte_plant;
-	ImageButton imagebutton_btte_mobs;
-	ImageButton imagebutton_btte_utilities;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_admin_btte_ore;
+	private ImageButton imagebutton_btte_block;
+	private ImageButton imagebutton_btte_plant;
+	private ImageButton imagebutton_btte_mobs;
+	private ImageButton imagebutton_btte_utilities;
 
 	public AdminshopmenuScreen(AdminshopmenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -105,7 +105,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -120,7 +120,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -135,7 +135,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -150,7 +150,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -165,7 +165,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -180,7 +180,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

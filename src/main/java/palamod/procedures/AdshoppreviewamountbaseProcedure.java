@@ -48,7 +48,7 @@ public class AdshoppreviewamountbaseProcedure {
 			}
 		}.parse("{}");
 		if (n != 0) {
-			return "Amount : buy :" + getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) * fac_v + " / sell : "
+			return "Amount :  buy :" + getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) * fac_v + "   / sell : "
 					+ getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) * n2;
 		}
 		return "Amount : insert number in the bar";

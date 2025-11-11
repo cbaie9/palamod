@@ -32,18 +32,18 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_dirt;
-	Button button_grass;
-	Button button_stone;
-	Button button_netherrack;
-	Button button_soul_sand;
-	Button button_sand;
-	Button button_gravel;
-	Button button_glowstone;
-	Button button_oak_wood;
-	Button button_blackstone;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_arrow_adminshop;
+	private Button button_dirt;
+	private Button button_grass;
+	private Button button_stone;
+	private Button button_netherrack;
+	private Button button_soul_sand;
+	private Button button_sand;
+	private Button button_gravel;
+	private Button button_glowstone;
+	private Button button_oak_wood;
+	private Button button_blackstone;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_arrow_adminshop;
 
 	public AdminshopblockScreen(AdminshopblockMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -213,7 +213,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -228,7 +228,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

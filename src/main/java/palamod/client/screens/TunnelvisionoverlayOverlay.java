@@ -19,7 +19,7 @@ import net.minecraft.client.Minecraft;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class TunnelvisionoverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

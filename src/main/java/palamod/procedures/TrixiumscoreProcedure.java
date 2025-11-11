@@ -13,10 +13,10 @@ public class TrixiumscoreProcedure {
 			return;
 		if ((entity.getPersistentData().getString("language")).equals("french")) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Votre nombre de trixium accumul\u00E9e est de " + getBlockNBTNumber(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())))), false);
+				_player.displayClientMessage(Component.literal(("Votre nombre de trixium accumul\u00E9e est de  " + getBlockNBTNumber(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())))), false);
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Your trxium score is " + getBlockNBTNumber(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())))), false);
+				_player.displayClientMessage(Component.literal(("Your trxium score is  " + getBlockNBTNumber(world, new BlockPos(0, 11, 0), ("trixium_score_" + entity.getDisplayName().getString())))), false);
 		}
 	}
 

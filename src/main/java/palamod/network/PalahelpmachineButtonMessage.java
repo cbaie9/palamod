@@ -1,13 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectpalamachinepalahelpProcedure;
-import palamod.procedures.ConnectpalahelpcrusherProcedure;
-import palamod.procedures.ConnectnotyetguiProcedure;
-import palamod.procedures.Connectgrinderpag1Procedure;
-import palamod.procedures.ConnectforgepalahelpProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.BlockbackProcedure;
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -26,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record PalahelpmachineButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<PalahelpmachineButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "palahelpmachine_buttons"));

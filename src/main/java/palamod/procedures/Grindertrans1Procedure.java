@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 
 public class Grindertrans1Procedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
-		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + " / 100";
+		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") + "   / 100";
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

@@ -27,7 +27,7 @@ import net.minecraft.client.Camera;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.shaders.FogShape;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class FakewterFluidType extends FluidType {
 	public FakewterFluidType() {
 		super(FluidType.Properties.create().fallDistanceModifier(0F).canExtinguish(true).supportsBoating(true).canHydrate(true).motionScale(0.007D).sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)

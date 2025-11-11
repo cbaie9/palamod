@@ -32,7 +32,7 @@ public class LogAlluseBonemealProcedure {
 			return;
 		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 			PalamodMod.LOGGER.debug(
-					(entity.getDisplayName().getString() + " use bonemeal on ( " + (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())).getDisplayName().getString() + " ) at " + " x : " + x + " y : " + y + " z : " + z));
+					(entity.getDisplayName().getString() + " use bonemeal on  ( " + (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())).getDisplayName().getString() + " ) at " + " x : " + x + " y : " + y + " z : " + z));
 		}
 	}
 }

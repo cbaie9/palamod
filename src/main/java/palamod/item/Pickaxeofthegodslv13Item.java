@@ -37,7 +37,7 @@ import net.minecraft.core.BlockPos;
 
 import java.util.List;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class Pickaxeofthegodslv13Item extends TieredItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

@@ -56,7 +56,7 @@ public class LogAllfallProcedure {
 					}
 				}
 			}
-			PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get creative trigger at " + " x : " + x + " y : " + y + " z : " + z));
+			PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get  creative trigger at " + " x : " + x + " y : " + y + " z : " + z));
 		}
 	}
 

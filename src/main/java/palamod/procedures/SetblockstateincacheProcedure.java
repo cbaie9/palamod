@@ -88,6 +88,14 @@ public class SetblockstateincacheProcedure {
 						exception.printStackTrace();
 					}
 				}
+			} else {
+				try {
+					cache.getParentFile().mkdirs();
+					cache.createNewFile();
+				} catch (IOException exception) {
+					exception.printStackTrace();
+				}
+				SetblockstateincacheProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

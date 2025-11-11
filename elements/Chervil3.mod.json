@@ -80,6 +80,8 @@
       "value": ""
     },
     "dropAmount": 1,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
     "forceTicking": true,
     "emissiveRendering": false,
     "hasTileEntity": false,

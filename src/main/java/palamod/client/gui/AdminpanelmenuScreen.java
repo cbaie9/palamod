@@ -24,10 +24,10 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_hdv_stocks_panel;
-	Button button_spawn_panel;
-	Button button_trixium_panel;
-	Button button_jobs_panel;
+	private Button button_hdv_stocks_panel;
+	private Button button_spawn_panel;
+	private Button button_trixium_panel;
+	private Button button_jobs_panel;
 
 	public AdminpanelmenuScreen(AdminpanelmenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

@@ -28,8 +28,8 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox player_name;
-	Button button_detect;
+	private EditBox player_name;
+	private Button button_detect;
 
 	public OnlinedetectorguiScreen(OnlinedetectorguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

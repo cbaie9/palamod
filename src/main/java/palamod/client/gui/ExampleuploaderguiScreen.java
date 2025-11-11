@@ -27,7 +27,7 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_cross_no_button;
 
 	public ExampleuploaderguiScreen(ExampleuploaderguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -106,7 +106,7 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

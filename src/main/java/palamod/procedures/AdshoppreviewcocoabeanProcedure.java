@@ -34,7 +34,7 @@ public class AdshoppreviewcocoabeanProcedure {
 		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		buy = n * fac_v;
 		if (buy > getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) {
-			buy_out = "{Not enough money} -" + Math.round(buy);
+			buy_out = "{Not enough money}  -" + Math.round(buy);
 		} else {
 			buy_out = "" + Math.round(buy);
 		}

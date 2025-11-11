@@ -98,9 +98,9 @@ public class SpawnerupbreakblockProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = spawner_item.copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+				ItemStack _setstack26 = spawner_item.copy();
+				_setstack26.setCount(1);
+				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack26);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}

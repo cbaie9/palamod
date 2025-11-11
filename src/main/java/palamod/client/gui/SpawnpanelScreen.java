@@ -26,7 +26,7 @@ public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> im
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_change_spawn;
+	private Button button_change_spawn;
 
 	public SpawnpanelScreen(SpawnpanelMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

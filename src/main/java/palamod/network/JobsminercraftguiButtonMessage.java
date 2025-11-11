@@ -1,44 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.JobsminercraftwoddenspikeProcedure;
-import palamod.procedures.JobsminercraftwithertntProcedure;
-import palamod.procedures.JobsminercraftwitheredobsidianProcedure;
-import palamod.procedures.JobsminercraftvoidstoneminageProcedure;
-import palamod.procedures.JobsminercraftvoidstoneProcedure;
-import palamod.procedures.JobsminercrafttitanespikeProcedure;
-import palamod.procedures.JobsminercrafttitaneexcavatorProcedure;
-import palamod.procedures.JobsminercraftspongetntProcedure;
-import palamod.procedures.JobsminercraftslimeobsidianProcedure;
-import palamod.procedures.JobsminercraftsealedxpbottleProcedure;
-import palamod.procedures.JobsminercraftpoisonobsidianProcedure;
-import palamod.procedures.JobsminercraftpalaforgeProcedure;
-import palamod.procedures.JobsminercraftpaladiumspikeProcedure;
-import palamod.procedures.JobsminercraftobsidianpickaxeProcedure;
-import palamod.procedures.JobsminercraftnotingamesoonProcedure;
-import palamod.procedures.JobsminercraftmoulastoneProcedure;
-import palamod.procedures.JobsminercraftmegaboomobsidianProcedure;
-import palamod.procedures.JobsminercraftmagictntProcedure;
-import palamod.procedures.JobsminercraftmagicialtoolProcedure;
-import palamod.procedures.JobsminercraftlavaobsidianProcedure;
-import palamod.procedures.JobsminercraftironspikeProcedure;
-import palamod.procedures.JobsminercraftgreenpaladiumexcavatorProcedure;
-import palamod.procedures.JobsminercraftgoldenspikeProcedure;
-import palamod.procedures.JobsminercraftfakewaterobsidianProcedure;
-import palamod.procedures.JobsminercraftendiumtntProcedure;
-import palamod.procedures.JobsminercraftendiumpickaxeProcedure;
-import palamod.procedures.JobsminercraftdiamondspikeProcedure;
-import palamod.procedures.JobsminercraftcompressedtntProcedure;
-import palamod.procedures.JobsminercraftcompacttntProcedure;
-import palamod.procedures.JobsminercraftcompactobsidianProcedure;
-import palamod.procedures.JobsminercraftcobblebreakertitaneupgradeProcedure;
-import palamod.procedures.JobsminercraftcobblebreakerpaladiumupgradeProcedure;
-import palamod.procedures.JobsminercraftcobblebreakeramethysteupgradeProcedure;
-import palamod.procedures.JobsminercraftcobblebreakerProcedure;
-import palamod.procedures.JobsminercraftcaveblockProcedure;
-import palamod.procedures.JobsminercraftboomtntProcedure;
-import palamod.procedures.JobsminercraftamethystspikeProcedure;
-import palamod.procedures.JobsminercraftamethystexcavatorProcedure;
-import palamod.procedures.CloseguiProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -57,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record JobsminercraftguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<JobsminercraftguiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "jobsminercraftgui_buttons"));

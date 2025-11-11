@@ -27,9 +27,9 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox safe_code;
-	Checkbox safe_link;
-	Button button_save;
+	private EditBox safe_code;
+	private Checkbox safe_link;
+	private Button button_save;
 
 	public MegasafechestfirstsetupScreen(MegasafechestfirstsetupMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,6 +48,12 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 		if (elementType == 0 && elementState instanceof String stringState) {
 			if (name.equals("safe_code"))
 				safe_code.setValue(stringState);
+		}
+		if (elementType == 1 && elementState instanceof Boolean logicState) {
+			if (name.equals("safe_link")) {
+				if (safe_link.selected() != logicState)
+					safe_link.onPress();
+			}
 		}
 		menuStateUpdateActive = false;
 	}

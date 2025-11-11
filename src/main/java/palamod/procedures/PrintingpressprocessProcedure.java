@@ -47,8 +47,9 @@ public class PrintingpressprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putBoolean("locked", true);
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -63,8 +64,9 @@ public class PrintingpressprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("nb_book", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_book") + 1));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -73,26 +75,11 @@ public class PrintingpressprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble("ink_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count") - 6));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble("book_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count") - 3));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble("nb_book", 0);
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -102,17 +89,10 @@ public class PrintingpressprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putBoolean("locked", false);
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putBoolean("isplateready", false);
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -142,8 +122,9 @@ public class PrintingpressprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("isplateready", true);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -157,9 +138,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal("plate ready"), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
-							_setstack.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack40 = new ItemStack(Blocks.AIR).copy();
+							_setstack40.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack40);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -171,18 +152,19 @@ public class PrintingpressprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("ink_count",
 										((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMINK.get()).copy();
-							_setstack.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack57 = new ItemStack(PalamodModItems.PALADIUMINK.get()).copy();
+							_setstack57.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack57);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -191,9 +173,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMINK.get()).copy();
-							_setstack.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack68 = new ItemStack(PalamodModItems.PALADIUMINK.get()).copy();
+							_setstack68.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack68);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -205,18 +187,19 @@ public class PrintingpressprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("book_count",
 										((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count")));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.WRITTEN_BOOK).copy();
-							_setstack.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack85 = new ItemStack(Items.WRITTEN_BOOK).copy();
+							_setstack85.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack85);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -225,9 +208,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Items.BOOK).copy();
-							_setstack.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							ItemStack _setstack96 = new ItemStack(Items.BOOK).copy();
+							_setstack96.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack96);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -238,8 +221,9 @@ public class PrintingpressprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("isplateready", false);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -257,8 +241,9 @@ public class PrintingpressprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("ink_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -274,8 +259,9 @@ public class PrintingpressprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("book_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}

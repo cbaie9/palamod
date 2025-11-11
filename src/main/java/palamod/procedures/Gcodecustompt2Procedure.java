@@ -58,26 +58,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -86,17 +71,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -125,8 +103,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -137,8 +116,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -152,26 +132,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -180,17 +145,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -219,8 +177,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -231,8 +190,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -246,26 +206,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -274,17 +219,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -313,8 +251,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -325,8 +264,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -340,26 +280,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -368,17 +293,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -407,8 +325,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -419,8 +338,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -434,26 +354,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -462,17 +367,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -501,8 +399,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -513,8 +412,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -528,26 +428,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -556,17 +441,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -595,8 +473,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -607,8 +486,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -622,26 +502,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -650,17 +515,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -689,8 +547,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -701,8 +560,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -716,26 +576,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -744,17 +589,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -783,8 +621,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -795,8 +634,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -810,26 +650,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -838,17 +663,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -877,8 +695,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -889,8 +708,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -904,26 +724,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -932,17 +737,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -971,8 +769,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -983,8 +782,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -998,26 +798,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1026,17 +811,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1065,8 +843,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1077,8 +856,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1092,26 +872,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1120,17 +885,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1159,8 +917,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1171,8 +930,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1186,26 +946,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1214,17 +959,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1253,8 +991,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1265,8 +1004,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1280,26 +1020,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1308,17 +1033,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1347,8 +1065,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1359,8 +1078,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1374,26 +1094,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_norelock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1402,17 +1107,10 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", 0);
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putDouble("gnum", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum") - 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1441,8 +1139,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1453,8 +1152,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1473,26 +1173,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_nolock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("gstate_nofuel2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_nofuel2") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1501,8 +1186,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1527,8 +1213,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl3") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1539,8 +1226,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1561,26 +1249,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_nolock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("gstate_nofuel2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_nofuel2") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1589,8 +1262,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1612,15 +1286,16 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(0, _setstack);
 							}
 							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
-								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "upgrade hammer ( speed ) 1"));
+								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "upgrade  hammer ( speed ) 1"));
 							}
 						} else {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl3") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1631,8 +1306,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1653,26 +1329,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_nolock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("gstate_nofuel2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_nofuel2") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1681,8 +1342,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1709,8 +1371,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl3") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1721,8 +1384,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1736,26 +1400,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_nolock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("gstate_nofuel2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_nofuel2") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1764,8 +1413,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1796,8 +1446,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl3") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1808,8 +1459,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1825,26 +1477,11 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_nolock", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putDouble("gstate_nofuel2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_nofuel2") - 1));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1853,8 +1490,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1879,8 +1517,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_cl3", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl3") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1891,8 +1530,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("grinder_norequirement2", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1906,8 +1546,9 @@ public class Gcodecustompt2Procedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("gstate_cl2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") - 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -1916,8 +1557,9 @@ public class Gcodecustompt2Procedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "grinder_state_nofuel") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -1928,8 +1570,9 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("grinder_state_nofuel", 0);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1939,8 +1582,9 @@ public class Gcodecustompt2Procedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("grinder_nolock", false);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -1951,8 +1595,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_nofuel2", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1961,8 +1606,9 @@ public class Gcodecustompt2Procedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("gstate_cl3", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl3") - 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -1972,8 +1618,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_nofuel2", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_nofuel2") + 1));
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -1984,8 +1631,9 @@ public class Gcodecustompt2Procedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("gstate_nofuel2", 0);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}

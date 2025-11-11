@@ -33,9 +33,9 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_button_gray;
-	ImageButton imagebutton_help_button;
-	ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_button_gray;
+	private ImageButton imagebutton_help_button;
+	private ImageButton imagebutton_cross_no_button;
 
 	public JobsminerguiScreen(JobsminerguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -109,7 +109,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -118,7 +118,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_helpjobs_v1.png"), ResourceLocation.parse("palamod:textures/screens/button_helpjobs_poi_v1.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -133,7 +133,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

@@ -7,15 +7,7 @@ import palamod.procedures.TunnelvisionEffectExpiresProcedure;
 import palamod.procedures.Removemultixp2fileProcedure;
 import palamod.procedures.Removemultixp10fileProcedure;
 
-import palamod.potion.WitherimbuMobEffect;
-import palamod.potion.TunnelvisionMobEffect;
-import palamod.potion.PoisonimbueMobEffect;
-import palamod.potion.Multiexp2MobEffect;
-import palamod.potion.Multiexp10MobEffect;
-import palamod.potion.MineurFouMobEffect;
-import palamod.potion.FseffectMobEffect;
-import palamod.potion.FireimbueMobEffect;
-import palamod.potion.AntifakeMobEffect;
+import palamod.potion.*;
 
 import palamod.PalamodMod;
 

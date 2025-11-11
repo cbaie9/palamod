@@ -32,8 +32,8 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_help_img;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_help_img;
 
 	public UploaderguiScreen(UploaderguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -124,7 +124,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -132,7 +132,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		imagebutton_help_img = new ImageButton(this.leftPos + 132, this.topPos + 4, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/help_img.png"), ResourceLocation.parse("palamod:textures/screens/help_hover.png")), e -> {
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

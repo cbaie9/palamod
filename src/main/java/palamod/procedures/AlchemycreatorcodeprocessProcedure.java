@@ -23,24 +23,12 @@ public class AlchemycreatorcodeprocessProcedure {
 			PalamodMod.queueServerWork(60, () -> {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(0).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(1).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(2).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(3).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.FIRE_IMBUE_POTION.get()).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(3).set(_setstack);
+					ItemStack _setstack12 = new ItemStack(PalamodModItems.FIRE_IMBUE_POTION.get()).copy();
+					_setstack12.setCount(1);
+					_menu.getSlots().get(3).set(_setstack12);
 					_player.containerMenu.broadcastChanges();
 				}
 			});
@@ -52,24 +40,12 @@ public class AlchemycreatorcodeprocessProcedure {
 			PalamodMod.queueServerWork(60, () -> {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(0).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(1).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(2).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(3).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.WITHER_IMBUE_POTION.get()).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(3).set(_setstack);
+					ItemStack _setstack26 = new ItemStack(PalamodModItems.WITHER_IMBUE_POTION.get()).copy();
+					_setstack26.setCount(1);
+					_menu.getSlots().get(3).set(_setstack26);
 					_player.containerMenu.broadcastChanges();
 				}
 			});
@@ -81,24 +57,12 @@ public class AlchemycreatorcodeprocessProcedure {
 			PalamodMod.queueServerWork(60, () -> {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(0).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(1).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(2).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					_menu.getSlots().get(3).set(ItemStack.EMPTY);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.POISON_IMBUE_POTION.get()).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(3).set(_setstack);
+					ItemStack _setstack40 = new ItemStack(PalamodModItems.POISON_IMBUE_POTION.get()).copy();
+					_setstack40.setCount(1);
+					_menu.getSlots().get(3).set(_setstack40);
 					_player.containerMenu.broadcastChanges();
 				}
 			});

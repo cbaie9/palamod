@@ -16,8 +16,9 @@ public class XpbushprocessProcedure {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putDouble("xp_bush_grown_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "xp_bush_grown_count") + 1));
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

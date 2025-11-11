@@ -18,7 +18,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.Minecraft;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class UnclaimfinderoverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

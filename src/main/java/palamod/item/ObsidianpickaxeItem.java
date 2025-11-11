@@ -20,7 +20,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.component.DataComponents;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class ObsidianpickaxeItem extends PickaxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override

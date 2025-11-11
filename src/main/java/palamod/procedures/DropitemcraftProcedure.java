@@ -8,6 +8,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
 public class DropitemcraftProcedure {
@@ -22,8 +23,9 @@ public class DropitemcraftProcedure {
 					_setstack.setCount(getAmountInGUISlot(entity, (int) idrop));
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("dropped :" + idrop)), false);
+				if (world instanceof ServerLevel _level) {
+					_level.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("dropped :" + idrop)), false);
+				}
 			}
 			idrop = idrop + 1;
 		}

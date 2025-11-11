@@ -24,11 +24,11 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_blocks;
-	Button button_items;
-	Button button_gui;
-	Button button_lucky_blocks;
-	Button button_metiers_soon;
+	private Button button_blocks;
+	private Button button_items;
+	private Button button_gui;
+	private Button button_lucky_blocks;
+	private Button button_metiers_soon;
 
 	public Palahelpgui1Screen(Palahelpgui1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

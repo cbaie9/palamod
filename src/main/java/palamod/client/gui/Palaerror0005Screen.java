@@ -24,7 +24,7 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_quit;
+	private Button button_quit;
 
 	public Palaerror0005Screen(Palaerror0005Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

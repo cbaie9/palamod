@@ -2,19 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.AnalyserresultMenu;
 
-import palamod.procedures.AnalyreturnwoolProcedure;
-import palamod.procedures.AnalyreturnstoneProcedure;
-import palamod.procedures.AnalyreturnshulkerProcedure;
-import palamod.procedures.AnalyreturnplanksProcedure;
-import palamod.procedures.AnalyreturnoresProcedure;
-import palamod.procedures.AnalyreturnlogsProcedure;
-import palamod.procedures.AnalyreturnendstoneProcedure;
-import palamod.procedures.AnalyreturndirtProcedure;
-import palamod.procedures.AnalyreturncobbleProcedure;
-import palamod.procedures.AnalyreturnclayProcedure;
-import palamod.procedures.AnalyreturnchestProcedure;
-import palamod.procedures.AnalyreturnbedrockProcedure;
-import palamod.procedures.AnalyreturnairProcedure;
+import palamod.procedures.*;
 
 import palamod.init.PalamodModScreens;
 

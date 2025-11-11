@@ -18,7 +18,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record FactionblindingMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<FactionblindingMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "key_factionblinding"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, FactionblindingMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, FactionblindingMessage message) -> {

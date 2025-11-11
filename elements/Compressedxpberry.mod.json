@@ -8,6 +8,7 @@
     "guiTexture": "",
     "customProperties": {},
     "states": [],
+    "animations": [],
     "name": "Compressed xp berry",
     "rarity": "COMMON",
     "creativeTabs": [
@@ -25,6 +26,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": true,

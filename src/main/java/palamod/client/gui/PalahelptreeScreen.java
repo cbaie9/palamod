@@ -2,14 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelptreeMenu;
 
-import palamod.procedures.Palahelptree7Procedure;
-import palamod.procedures.Palahelptree6Procedure;
-import palamod.procedures.Palahelptree5Procedure;
-import palamod.procedures.Palahelptree4Procedure;
-import palamod.procedures.Palahelptree3Procedure;
-import palamod.procedures.Palahelptree2Procedure;
-import palamod.procedures.Palahelptree1Procedure;
-import palamod.procedures.Palahelptree0Procedure;
+import palamod.procedures.*;
 
 import palamod.network.PalahelptreeButtonMessage;
 
@@ -34,9 +27,9 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_cross_no_button;
 
 	public PalahelptreeScreen(PalahelptreeMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -112,7 +105,7 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -127,7 +120,7 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -142,7 +135,7 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

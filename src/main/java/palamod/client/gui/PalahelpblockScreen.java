@@ -31,12 +31,12 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_ore;
-	Button button_trees;
-	Button button_machine;
-	Button button_fluid;
-	ImageButton imagebutton_close_gui_nohover;
-	ImageButton imagebutton_arrow_back_true_1;
+	private Button button_ore;
+	private Button button_trees;
+	private Button button_machine;
+	private Button button_fluid;
+	private ImageButton imagebutton_close_gui_nohover;
+	private ImageButton imagebutton_arrow_back_true_1;
 
 	public PalahelpblockScreen(PalahelpblockMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -144,7 +144,7 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -159,7 +159,7 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

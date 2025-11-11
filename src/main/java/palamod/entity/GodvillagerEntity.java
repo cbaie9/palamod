@@ -133,11 +133,6 @@ public class GodvillagerEntity extends Villager {
 		return true;
 	}
 
-	@Override
-	public boolean fireImmune() {
-		return true;
-	}
-
 	private final ItemStackHandler inventory = new ItemStackHandler(4) {
 		@Override
 		public int getSlotLimit(int slot) {

@@ -27,10 +27,10 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox player_name;
-	EditBox money;
-	Checkbox custom_destructible;
-	Button button_give;
+	private EditBox player_name;
+	private EditBox money;
+	private Checkbox custom_destructible;
+	private Button button_give;
 
 	public SpecialmoneypanelScreen(SpecialmoneypanelMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -51,6 +51,12 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 				player_name.setValue(stringState);
 			else if (name.equals("money"))
 				money.setValue(stringState);
+		}
+		if (elementType == 1 && elementState instanceof Boolean logicState) {
+			if (name.equals("custom_destructible")) {
+				if (custom_destructible.selected() != logicState)
+					custom_destructible.onPress();
+			}
 		}
 		menuStateUpdateActive = false;
 	}

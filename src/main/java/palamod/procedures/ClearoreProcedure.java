@@ -18,10 +18,10 @@ public class ClearoreProcedure {
 					"fill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:tuff");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"fill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:stone");
+					"fill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air  replace minecraft:stone");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"fill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:andersite");
+					"fill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air  replace minecraft:andersite");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"fill ~1 ~ ~ ~3 ~-64 ~2 minecraft:air replace minecraft:diorite");

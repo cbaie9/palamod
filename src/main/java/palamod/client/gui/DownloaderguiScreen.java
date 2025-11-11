@@ -28,9 +28,9 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Checkbox download_state;
-	Button button_reload;
-	Button button_link;
+	private Checkbox download_state;
+	private Button button_reload;
+	private Button button_link;
 
 	public DownloaderguiScreen(DownloaderguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -46,6 +46,12 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
+		if (elementType == 1 && elementState instanceof Boolean logicState) {
+			if (name.equals("download_state")) {
+				if (download_state.selected() != logicState)
+					download_state.onPress();
+			}
+		}
 		menuStateUpdateActive = false;
 	}
 

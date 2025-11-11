@@ -1,11 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.OpennewstickguiProcedure;
-import palamod.procedures.ConnectlegendarystoneProcedure;
-import palamod.procedures.ConnectarmorpalahelpProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.BlockbackProcedure;
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -24,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record ItemmenupalahelpButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<ItemmenupalahelpButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "itemmenupalahelp_buttons"));

@@ -28,8 +28,8 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implem
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_open;
-	ImageButton imagebutton_cross_no_button;
+	private Button button_open;
+	private ImageButton imagebutton_cross_no_button;
 
 	public LuckyguiScreen(LuckyguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -102,7 +102,7 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implem
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

@@ -23,9 +23,9 @@ public class OxdisenchantProcedure {
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount(), _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = item_dis.copy();
-			_setstack.setCount((int) dis_num);
-			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+			ItemStack _setstack9 = item_dis.copy();
+			_setstack9.setCount((int) dis_num);
+			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack9);
 			if (_entity instanceof Player _player)
 				_player.getInventory().setChanged();
 		}

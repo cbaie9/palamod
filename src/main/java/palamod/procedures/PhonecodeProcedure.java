@@ -148,7 +148,7 @@ public class PhonecodeProcedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).set(DataComponents.CUSTOM_NAME, Component.literal("Legudary diorite of unPower"));
+			new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).set(DataComponents.CUSTOM_NAME, Component.literal("Legudary diorite  of unPower"));
 		} else if (((entity instanceof Player _entity62 && _entity62.containerMenu instanceof PalamodModMenus.MenuAccessor _menu62) ? _menu62.getMenuState(0, "cheat_code_secret", "") : "").contains("alo")
 				|| ((entity instanceof Player _entity63 && _entity63.containerMenu instanceof PalamodModMenus.MenuAccessor _menu63) ? _menu63.getMenuState(0, "cheat_code_secret", "") : "").contains("allo")) {
 			if (Math.random() < 0.5) {

@@ -57,17 +57,10 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("crusher_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state_nofuel") - 1));
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", false);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -76,8 +69,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", 0);
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -97,8 +91,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_num_endium", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -107,8 +102,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -118,8 +114,9 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -133,17 +130,10 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("crusher_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state_nofuel") - 1));
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", false);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -152,8 +142,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", 0);
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -173,8 +164,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_num_paladium", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_paladium") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -183,8 +175,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -194,8 +187,9 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -209,17 +203,10 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("crusher_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state_nofuel") - 1));
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", false);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -228,8 +215,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", 0);
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -249,17 +237,10 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_num_titane", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_titane") + 1));
-									if (world instanceof Level _level)
-										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-								}
-								if (!world.isClientSide()) {
-									BlockPos _bp = BlockPos.containing(x, y, z);
-									BlockEntity _blockEntity = world.getBlockEntity(_bp);
-									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
 										_blockEntity.getPersistentData().putBoolean("crusher_norequirement", false);
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -268,8 +249,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -279,8 +261,9 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -294,17 +277,10 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putDouble("crusher_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state_nofuel") - 1));
-								if (world instanceof Level _level)
-									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-							}
-							if (!world.isClientSide()) {
-								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockEntity _blockEntity = world.getBlockEntity(_bp);
-								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", false);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -313,8 +289,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", 0);
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -334,8 +311,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_num_amethyst", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -344,8 +322,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -355,8 +334,9 @@ public class PaladiumcrusherV2customProcedure {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_blockEntity != null)
+								if (_blockEntity != null) {
 									_blockEntity.getPersistentData().putBoolean("crusher_norequirement", true);
+								}
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
@@ -367,8 +347,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state") - 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
@@ -377,8 +358,9 @@ public class PaladiumcrusherV2customProcedure {
 									BlockPos _bp = BlockPos.containing(x, y, z);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
 									BlockState _bs = world.getBlockState(_bp);
-									if (_blockEntity != null)
+									if (_blockEntity != null) {
 										_blockEntity.getPersistentData().putDouble("crusher_state_nofuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state_nofuel") + 1));
+									}
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}

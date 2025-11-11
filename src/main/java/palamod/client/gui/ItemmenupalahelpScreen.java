@@ -26,13 +26,13 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_legendary_stone;
-	Button button_armor;
-	Button button_xp_bush_xp_berries;
-	Button button_newstck;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
+	private Button button_legendary_stone;
+	private Button button_armor;
+	private Button button_xp_bush_xp_berries;
+	private Button button_newstck;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
 
 	public ItemmenupalahelpScreen(ItemmenupalahelpMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -131,7 +131,7 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -146,7 +146,7 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -161,7 +161,7 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

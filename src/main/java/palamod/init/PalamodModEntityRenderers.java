@@ -3,17 +3,7 @@
  */
 package palamod.init;
 
-import palamod.client.renderer.PrimedwithertntRenderer;
-import palamod.client.renderer.PrimedspongetntRenderer;
-import palamod.client.renderer.PrimedmagictntRenderer;
-import palamod.client.renderer.PrimedendiumtntRenderer;
-import palamod.client.renderer.PrimedbigtntRenderer;
-import palamod.client.renderer.PaladiumgolemRenderer;
-import palamod.client.renderer.PaladiumdynamiteRenderer;
-import palamod.client.renderer.GodvillagerRenderer;
-import palamod.client.renderer.EndiumdynamiteRenderer;
-import palamod.client.renderer.Dankaroctest1Renderer;
-import palamod.client.renderer.BigdynamiteentityRenderer;
+import palamod.client.renderer.*;
 
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -22,7 +12,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
 public class PalamodModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {

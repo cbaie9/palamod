@@ -26,8 +26,8 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox code_check;
-	Button button_open;
+	private EditBox code_check;
+	private Button button_open;
 
 	public AuthsafeguiScreen(AuthsafeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

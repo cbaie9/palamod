@@ -69,7 +69,7 @@ public class AnalyserdendProcedure {
 		endstone = 0;
 		xloop = x - 8;
 		zloop = z - 8;
-		PalamodMod.LOGGER.debug(("[ Palamod ] proc1 :" + proc1id + "( staus proc2an )" + "( server may lag )"));
+		PalamodMod.LOGGER.debug(("[ Palamod ]  proc1 :" + proc1id + "( staus proc2an )" + "( server may lag  )"));
 		int horizontalRadiusSphere = (int) 200 - 1;
 		int verticalRadiusSphere = (int) 320 - 1;
 		int yIterationsSphere = verticalRadiusSphere;
@@ -119,7 +119,7 @@ public class AnalyserdendProcedure {
 				}
 			}
 		}
-		PalamodMod.LOGGER.debug(("[ Palamod ] proc1 :" + proc1id + "( staus proc2result )" + "( server may lag )"));
+		PalamodMod.LOGGER.debug(("[ Palamod ]  proc1 :" + proc1id + "( staus proc2result )" + "( server may lag  )"));
 		entity.getPersistentData().putDouble("analy_ores", ores);
 		entity.getPersistentData().putDouble("analy_stone", stone);
 		entity.getPersistentData().putDouble("analy_air", air);

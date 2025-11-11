@@ -3,18 +3,7 @@
  */
 package palamod.init;
 
-import palamod.entity.SwitcharrowEntity;
-import palamod.entity.PrimedwithertntEntity;
-import palamod.entity.PrimedspongetntEntity;
-import palamod.entity.PrimedmagictntEntity;
-import palamod.entity.PrimedendiumtntEntity;
-import palamod.entity.PrimedbigtntEntity;
-import palamod.entity.PaladiumgolemEntity;
-import palamod.entity.PaladiumdynamiteEntity;
-import palamod.entity.GodvillagerEntity;
-import palamod.entity.EndiumdynamiteEntity;
-import palamod.entity.Dankaroctest1Entity;
-import palamod.entity.BigdynamiteentityEntity;
+import palamod.entity.*;
 
 import palamod.PalamodMod;
 
@@ -33,7 +22,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PalamodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PalamodMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumdynamiteEntity>> PALADIUMDYNAMITE = register("paladiumdynamite",

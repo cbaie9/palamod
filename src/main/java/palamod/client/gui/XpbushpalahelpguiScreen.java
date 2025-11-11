@@ -25,9 +25,9 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_home_pixel_adminshop;
 
 	public XpbushpalahelpguiScreen(XpbushpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -99,7 +99,7 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -114,7 +114,7 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -129,7 +129,7 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

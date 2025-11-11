@@ -2,18 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.CrusherguiMenu;
 
-import palamod.procedures.CrushertextadProcedure;
-import palamod.procedures.Crushertextad4Procedure;
-import palamod.procedures.Crushertextad3Procedure;
-import palamod.procedures.Crushertextad2Procedure;
-import palamod.procedures.Crushersubprocessv3barpaladiumProcedure;
-import palamod.procedures.Crushersubprocessv3barendiumProcedure;
-import palamod.procedures.Crushersubprocessv3baramethystProcedure;
-import palamod.procedures.CrushersubprocessflamespritereturnProcedure;
-import palamod.procedures.CrushercustominfotitaneProcedure;
-import palamod.procedures.CrushercustominfopaladiumProcedure;
-import palamod.procedures.CrushercustominfoendiumProcedure;
-import palamod.procedures.CrushercustominfoameProcedure;
+import palamod.procedures.*;
 
 import palamod.network.CrusherguiButtonMessage;
 
@@ -39,10 +28,10 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_button_white3;
-	ImageButton imagebutton_button_white4;
-	ImageButton imagebutton_button_white5;
-	ImageButton imagebutton_button_white6;
+	private ImageButton imagebutton_button_white3;
+	private ImageButton imagebutton_button_white4;
+	private ImageButton imagebutton_button_white5;
+	private ImageButton imagebutton_button_white6;
 
 	public CrusherguiScreen(CrusherguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -139,7 +128,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -154,7 +143,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -169,7 +158,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -184,7 +173,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

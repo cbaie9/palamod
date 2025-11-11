@@ -2,34 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.ForgeguiMenu;
 
-import palamod.procedures.Forgesubprocessgui9Procedure;
-import palamod.procedures.Forgesubprocessgui8Procedure;
-import palamod.procedures.Forgesubprocessgui7Procedure;
-import palamod.procedures.Forgesubprocessgui6Procedure;
-import palamod.procedures.Forgesubprocessgui5Procedure;
-import palamod.procedures.Forgesubprocessgui4Procedure;
-import palamod.procedures.Forgesubprocessgui3Procedure;
-import palamod.procedures.Forgesubprocessgui2Procedure;
-import palamod.procedures.Forgesubprocessgui1Procedure;
-import palamod.procedures.Forgesubprocessgui18Procedure;
-import palamod.procedures.Forgesubprocessgui17Procedure;
-import palamod.procedures.Forgesubprocessgui16Procedure;
-import palamod.procedures.Forgesubprocessgui15Procedure;
-import palamod.procedures.Forgesubprocessgui14Procedure;
-import palamod.procedures.Forgesubprocessgui13Procedure;
-import palamod.procedures.Forgesubprocessgui12Procedure;
-import palamod.procedures.Forgesubprocessgui11Procedure;
-import palamod.procedures.Forgesubprocessgui10Procedure;
-import palamod.procedures.Forgesubprocessgui0Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining9Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining8Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining7Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining6Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining5Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining4Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining3Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining2Procedure;
-import palamod.procedures.Forgesubprocessfuelremaining10Procedure;
+import palamod.procedures.*;
 
 import palamod.init.PalamodModScreens;
 

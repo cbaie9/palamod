@@ -79,26 +79,11 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("spawn_x", (DoubleArgumentType.getDouble(arguments, "x_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_y", (DoubleArgumentType.getDouble(arguments, "y_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_z", (DoubleArgumentType.getDouble(arguments, "z_pos")));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -110,8 +95,9 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("spawn_dim_id", "0");
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -154,8 +140,9 @@ public class SetspawndynablockProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putString("spawn_dim_id", "0");
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -198,8 +185,9 @@ public class SetspawndynablockProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("spawn_dim_id", "0");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -224,26 +212,11 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("spawn_x", (DoubleArgumentType.getDouble(arguments, "x_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_y", (DoubleArgumentType.getDouble(arguments, "y_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_z", (DoubleArgumentType.getDouble(arguments, "z_pos")));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -255,8 +228,9 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("spawn_dim_id", "1");
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -299,8 +273,9 @@ public class SetspawndynablockProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putString("spawn_dim_id", "1");
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -343,8 +318,9 @@ public class SetspawndynablockProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("spawn_dim_id", "1");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -369,26 +345,11 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("spawn_x", (DoubleArgumentType.getDouble(arguments, "x_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_y", (DoubleArgumentType.getDouble(arguments, "y_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_z", (DoubleArgumentType.getDouble(arguments, "z_pos")));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -400,8 +361,9 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("spawn_dim_id", "2");
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -444,8 +406,9 @@ public class SetspawndynablockProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putString("spawn_dim_id", "2");
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -488,8 +451,9 @@ public class SetspawndynablockProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("spawn_dim_id", "2");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}

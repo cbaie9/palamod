@@ -1,17 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectadminshoputilitiesredstoneProcedure;
-import palamod.procedures.ConnectadminshoputilitiesemeraldProcedure;
-import palamod.procedures.ConnectadhoretitaneProcedure;
-import palamod.procedures.ConnectadhorepalaProcedure;
-import palamod.procedures.ConnectadhoreironProcedure;
-import palamod.procedures.ConnectadhoregoldProcedure;
-import palamod.procedures.ConnectadhorefindiumProcedure;
-import palamod.procedures.ConnectadhorediamondProcedure;
-import palamod.procedures.ConnectadhorecoalProcedure;
-import palamod.procedures.ConnectadhoreameProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.Adminshop_openProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -30,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AdminshoporeButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<AdminshoporeButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "adminshopore_buttons"));

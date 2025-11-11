@@ -57,9 +57,9 @@ public class Upgradepotgv2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack33 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()).copy();
+					_setstack33.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack33);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -129,9 +129,9 @@ public class Upgradepotgv2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack61 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()).copy();
+					_setstack61.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack61);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -194,9 +194,9 @@ public class Upgradepotgv2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack89 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()).copy();
+					_setstack89.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack89);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -257,9 +257,9 @@ public class Upgradepotgv2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack115 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()).copy();
+					_setstack115.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack115);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -317,9 +317,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr136 && _plr136.level() instanceof ServerLevel
 							&& _plr136.getAdvancements().getOrStartProgress(_plr136.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_16.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack137 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_16.get()).copy();
+					_setstack137.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack137);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -352,9 +352,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr150 && _plr150.level() instanceof ServerLevel
 							&& _plr150.getAdvancements().getOrStartProgress(_plr150.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_15.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack151 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_15.get()).copy();
+					_setstack151.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack151);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -382,9 +382,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr162 && _plr162.level() instanceof ServerLevel
 							&& _plr162.getAdvancements().getOrStartProgress(_plr162.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_14.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack163 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_14.get()).copy();
+					_setstack163.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack163);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -412,9 +412,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr174 && _plr174.level() instanceof ServerLevel
 							&& _plr174.getAdvancements().getOrStartProgress(_plr174.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_13.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack175 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_13.get()).copy();
+					_setstack175.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack175);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -441,9 +441,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr184 && _plr184.level() instanceof ServerLevel
 							&& _plr184.getAdvancements().getOrStartProgress(_plr184.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_12.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack185 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_12.get()).copy();
+					_setstack185.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack185);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -470,9 +470,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr194 && _plr194.level() instanceof ServerLevel
 							&& _plr194.getAdvancements().getOrStartProgress(_plr194.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_11.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack195 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_11.get()).copy();
+					_setstack195.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack195);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -486,9 +486,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr202 && _plr202.level() instanceof ServerLevel
 							&& _plr202.getAdvancements().getOrStartProgress(_plr202.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_10.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack203 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_10.get()).copy();
+					_setstack203.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack203);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -502,9 +502,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr210 && _plr210.level() instanceof ServerLevel
 							&& _plr210.getAdvancements().getOrStartProgress(_plr210.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_9.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack211 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_9.get()).copy();
+					_setstack211.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack211);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -518,9 +518,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr218 && _plr218.level() instanceof ServerLevel
 							&& _plr218.getAdvancements().getOrStartProgress(_plr218.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_8.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack219 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_8.get()).copy();
+					_setstack219.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack219);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -533,9 +533,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr224 && _plr224.level() instanceof ServerLevel
 							&& _plr224.getAdvancements().getOrStartProgress(_plr224.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_7.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack225 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_7.get()).copy();
+					_setstack225.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack225);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -548,9 +548,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr230 && _plr230.level() instanceof ServerLevel
 							&& _plr230.getAdvancements().getOrStartProgress(_plr230.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_6.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack231 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_6.get()).copy();
+					_setstack231.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack231);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -563,9 +563,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr236 && _plr236.level() instanceof ServerLevel
 							&& _plr236.getAdvancements().getOrStartProgress(_plr236.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_5.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack237 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_5.get()).copy();
+					_setstack237.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack237);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -578,9 +578,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr242 && _plr242.level() instanceof ServerLevel
 							&& _plr242.getAdvancements().getOrStartProgress(_plr242.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_4.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack243 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_4.get()).copy();
+					_setstack243.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack243);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -593,9 +593,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr248 && _plr248.level() instanceof ServerLevel
 							&& _plr248.getAdvancements().getOrStartProgress(_plr248.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_3.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack249 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_3.get()).copy();
+					_setstack249.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack249);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -608,9 +608,9 @@ public class Upgradepotgv2Procedure {
 					&& !(entity instanceof ServerPlayer _plr254 && _plr254.level() instanceof ServerLevel
 							&& _plr254.getAdvancements().getOrStartProgress(_plr254.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_2.get()).copy();
-					_setstack.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack255 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_2.get()).copy();
+					_setstack255.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack255);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}

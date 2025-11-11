@@ -36,12 +36,12 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox number_buy;
-	Button button_buy;
-	Button button_sell;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_cross_no_button;
+	private EditBox number_buy;
+	private Button button_buy;
+	private Button button_sell;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_cross_no_button;
 
 	public AdminshopblockDirtScreen(AdminshopblockDirtMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -170,7 +170,7 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -185,7 +185,7 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -194,7 +194,7 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

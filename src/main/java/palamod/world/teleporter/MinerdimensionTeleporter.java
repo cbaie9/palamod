@@ -31,7 +31,7 @@ import java.util.Comparator;
 
 import com.google.common.collect.ImmutableSet;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class MinerdimensionTeleporter {
 	public static Holder<PoiType> poi = null;
 

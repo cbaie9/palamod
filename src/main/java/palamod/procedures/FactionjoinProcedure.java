@@ -29,53 +29,14 @@ public class FactionjoinProcedure {
 				BlockPos _bp = new BlockPos(0, 9, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putDouble(("Faction_invite_" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_invite_" + fac_id)) - 1));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 9, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putBoolean(("Faction_invite_" + fac_id + "_" + fac_name + "_" + entity.getStringUUID()), false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 9, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getStringUUID()), true);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 9, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putDouble(("Faction_" + entity.getStringUUID()), fac_id);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 9, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putDouble(("Faction_maxpower" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_maxpower" + fac_id)) + 100));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 9, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putDouble(("Faction_power" + fac_id), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_power" + fac_id)) + 50));
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

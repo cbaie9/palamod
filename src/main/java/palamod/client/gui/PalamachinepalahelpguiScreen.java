@@ -30,8 +30,8 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_back;
-	Button button_menu;
+	private Button button_back;
+	private Button button_menu;
 
 	public PalamachinepalahelpguiScreen(PalamachinepalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

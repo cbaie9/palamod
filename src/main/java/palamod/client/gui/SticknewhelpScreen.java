@@ -31,16 +31,16 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_speed_stick;
-	ImageButton imagebutton_jump_stick2;
-	ImageButton imagebutton_hyperjump_stick;
-	ImageButton imagebutton_heal_stick;
-	ImageButton imagebutton_damage_stick;
-	ImageButton imagebutton_strenghtstick;
-	ImageButton imagebutton_stickofgod;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_speed_stick;
+	private ImageButton imagebutton_jump_stick2;
+	private ImageButton imagebutton_hyperjump_stick;
+	private ImageButton imagebutton_heal_stick;
+	private ImageButton imagebutton_damage_stick;
+	private ImageButton imagebutton_strenghtstick;
+	private ImageButton imagebutton_stickofgod;
 
 	public SticknewhelpScreen(SticknewhelpMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -120,7 +120,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -135,7 +135,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -150,7 +150,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -165,7 +165,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -180,7 +180,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -195,7 +195,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -210,7 +210,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -225,7 +225,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -240,7 +240,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -255,7 +255,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

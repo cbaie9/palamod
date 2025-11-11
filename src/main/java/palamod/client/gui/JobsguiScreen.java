@@ -2,12 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsguiMenu;
 
-import palamod.procedures.LastunlockedminerProcedure;
-import palamod.procedures.LastunlockedgetspriteProcedure;
-import palamod.procedures.GetlevelminerProcedure;
-import palamod.procedures.GetlevelhunterProcedure;
-import palamod.procedures.GetlevelfarmerProcedure;
-import palamod.procedures.GetlevelalchiProcedure;
+import palamod.procedures.*;
 
 import palamod.network.JobsguiButtonMessage;
 
@@ -33,11 +28,11 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_screen_beta_template_jobs;
-	ImageButton imagebutton_screen_beta2_template_jobs;
-	ImageButton imagebutton_screen_beta2_template_jobs1;
-	ImageButton imagebutton_screen_beta2_template_jobs2;
-	ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_screen_beta_template_jobs;
+	private ImageButton imagebutton_screen_beta2_template_jobs;
+	private ImageButton imagebutton_screen_beta2_template_jobs1;
+	private ImageButton imagebutton_screen_beta2_template_jobs2;
+	private ImageButton imagebutton_cross_no_button;
 
 	public JobsguiScreen(JobsguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -110,7 +105,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -125,7 +120,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -134,7 +129,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter2.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -143,7 +138,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi2.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -158,7 +153,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

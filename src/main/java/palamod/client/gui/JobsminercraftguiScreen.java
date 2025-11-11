@@ -2,14 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsminercraftguiMenu;
 
-import palamod.procedures.JobsgetlvlrequiredProcedure;
-import palamod.procedures.JobsgetinfotextProcedure;
-import palamod.procedures.Jobsgetinfotext5Procedure;
-import palamod.procedures.Jobsgetinfotext4Procedure;
-import palamod.procedures.Jobsgetinfotext3Procedure;
-import palamod.procedures.Jobsgetinfotext2Procedure;
-import palamod.procedures.JobsgetdurabilityProcedure;
-import palamod.procedures.ClosetheguitransProcedure;
+import palamod.procedures.*;
 
 import palamod.network.JobsminercraftguiButtonMessage;
 
@@ -37,51 +30,51 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_endium_pickaxe;
-	ImageButton imagebutton_potg_of_1;
-	ImageButton imagebutton_amethyste_exca;
-	ImageButton imagebutton_titane_excavator;
-	ImageButton imagebutton_paladium_excavator;
-	ImageButton imagebutton_magical_tool16;
-	ImageButton imagebutton_voidstone;
-	ImageButton imagebutton_obsidian_pickaxe;
-	ImageButton imagebutton_boom_obsi;
-	ImageButton imagebutton_big_obsi;
-	ImageButton imagebutton_spike_obsi;
-	ImageButton imagebutton_spike_obsi_1;
-	ImageButton imagebutton_spike_obsi_2;
-	ImageButton imagebutton_spike_obsi_3;
-	ImageButton imagebutton_spike_obsi_4;
-	ImageButton imagebutton_spike_obsi_5;
-	ImageButton imagebutton_spike_obsi_6;
-	ImageButton imagebutton_lava_obsi;
-	ImageButton imagebutton_fake_obsi;
-	ImageButton imagebutton_slime_obsi;
-	ImageButton imagebutton_poison_obsi;
-	ImageButton imagebutton_cave_block_vfufu;
-	ImageButton imagebutton_big_tnt_side;
-	ImageButton imagebutton_effect_tnt_side;
-	ImageButton imagebutton_wither_tnt_side;
-	ImageButton imagebutton_sponge_tnt_side;
-	ImageButton imagebutton_sponge;
-	ImageButton imagebutton_endium_tnt_side;
-	ImageButton imagebutton_beta_block;
-	ImageButton imagebutton_beta_block1;
-	ImageButton imagebutton_beta_block2;
-	ImageButton imagebutton_beta_block3;
-	ImageButton imagebutton_beta_block4;
-	ImageButton imagebutton_cobblebreaker_front;
-	ImageButton imagebutton_cobblebreaker_amethyst_upgrade;
-	ImageButton imagebutton_cobblebreaker_titane_upgrade;
-	ImageButton imagebutton_cobblebreaker_paladium_upgrade;
-	ImageButton imagebutton_voidstone_minage;
-	ImageButton imagebutton_moula_stone;
-	ImageButton imagebutton_sealed_xp_bottle;
-	ImageButton imagebutton_forge_front_off;
-	ImageButton imagebutton_beta_block5;
-	ImageButton imagebutton_withered_obsidian_0;
-	ImageButton imagebutton_green_paladium_excavator;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_endium_pickaxe;
+	private ImageButton imagebutton_potg_of_1;
+	private ImageButton imagebutton_amethyste_exca;
+	private ImageButton imagebutton_titane_excavator;
+	private ImageButton imagebutton_paladium_excavator;
+	private ImageButton imagebutton_magical_tool16;
+	private ImageButton imagebutton_voidstone;
+	private ImageButton imagebutton_obsidian_pickaxe;
+	private ImageButton imagebutton_boom_obsi;
+	private ImageButton imagebutton_big_obsi;
+	private ImageButton imagebutton_spike_obsi;
+	private ImageButton imagebutton_spike_obsi_1;
+	private ImageButton imagebutton_spike_obsi_2;
+	private ImageButton imagebutton_spike_obsi_3;
+	private ImageButton imagebutton_spike_obsi_4;
+	private ImageButton imagebutton_spike_obsi_5;
+	private ImageButton imagebutton_spike_obsi_6;
+	private ImageButton imagebutton_lava_obsi;
+	private ImageButton imagebutton_fake_obsi;
+	private ImageButton imagebutton_slime_obsi;
+	private ImageButton imagebutton_poison_obsi;
+	private ImageButton imagebutton_cave_block_vfufu;
+	private ImageButton imagebutton_big_tnt_side;
+	private ImageButton imagebutton_effect_tnt_side;
+	private ImageButton imagebutton_wither_tnt_side;
+	private ImageButton imagebutton_sponge_tnt_side;
+	private ImageButton imagebutton_sponge;
+	private ImageButton imagebutton_endium_tnt_side;
+	private ImageButton imagebutton_beta_block;
+	private ImageButton imagebutton_beta_block1;
+	private ImageButton imagebutton_beta_block2;
+	private ImageButton imagebutton_beta_block3;
+	private ImageButton imagebutton_beta_block4;
+	private ImageButton imagebutton_cobblebreaker_front;
+	private ImageButton imagebutton_cobblebreaker_amethyst_upgrade;
+	private ImageButton imagebutton_cobblebreaker_titane_upgrade;
+	private ImageButton imagebutton_cobblebreaker_paladium_upgrade;
+	private ImageButton imagebutton_voidstone_minage;
+	private ImageButton imagebutton_moula_stone;
+	private ImageButton imagebutton_sealed_xp_bottle;
+	private ImageButton imagebutton_forge_front_off;
+	private ImageButton imagebutton_beta_block5;
+	private ImageButton imagebutton_withered_obsidian_0;
+	private ImageButton imagebutton_green_paladium_excavator;
 
 	public JobsminercraftguiScreen(JobsminercraftguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -354,7 +347,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -369,7 +362,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -378,7 +371,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 				e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -393,7 +386,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -408,7 +401,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -423,7 +416,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -438,7 +431,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -453,7 +446,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -468,7 +461,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -483,7 +476,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -497,7 +490,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 			}
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -512,7 +505,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -527,7 +520,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -542,7 +535,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -557,7 +550,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -572,7 +565,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -587,7 +580,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -602,7 +595,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -617,7 +610,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -632,7 +625,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -647,7 +640,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -662,7 +655,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -677,7 +670,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -692,7 +685,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -707,7 +700,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -722,7 +715,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -737,7 +730,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -751,7 +744,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 			}
 		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -766,7 +759,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -781,7 +774,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -796,7 +789,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -811,7 +804,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -826,7 +819,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -841,7 +834,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -856,7 +849,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -871,7 +864,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -886,7 +879,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -901,7 +894,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -916,7 +909,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -931,7 +924,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -946,7 +939,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -961,7 +954,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -976,7 +969,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -991,7 +984,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -1006,7 +999,7 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

@@ -2,17 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.Grinderpalahelp2guiMenu;
 
-import palamod.procedures.Palahelpgrinder32Procedure;
-import palamod.procedures.Palahelpgrinder28Procedure;
-import palamod.procedures.Palahelpgrinder27Procedure;
-import palamod.procedures.Palahelpgrinder26Procedure;
-import palamod.procedures.Palahelpgrinder25Procedure;
-import palamod.procedures.Palahelpgrinder24Procedure;
-import palamod.procedures.Palahelpgrinder23Procedure;
-import palamod.procedures.Palahelpgrinder22Procedure;
-import palamod.procedures.Palahelpgrinder21Procedure;
-import palamod.procedures.Palahelpgrinder20Procedure;
-import palamod.procedures.Palahelpgrinder202Procedure;
+import palamod.procedures.*;
 
 import palamod.network.Grinderpalahelp2guiButtonMessage;
 
@@ -37,10 +27,10 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_example_gui_button;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_example_gui_button;
 
 	public Grinderpalahelp2guiScreen(Grinderpalahelp2guiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -122,7 +112,7 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -137,7 +127,7 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -152,7 +142,7 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -167,7 +157,7 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

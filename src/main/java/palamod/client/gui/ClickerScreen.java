@@ -2,12 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.ClickerMenu;
 
-import palamod.procedures.ClickerprintcoinsProcedure;
-import palamod.procedures.ClickergetpageforspriteProcedure;
-import palamod.procedures.Clickergetnump1Procedure;
-import palamod.procedures.Clickergetdizp1Procedure;
-import palamod.procedures.ClickerconditionpageupProcedure;
-import palamod.procedures.ClickerconditionpagedownProcedure;
+import palamod.procedures.*;
 
 import palamod.network.ClickerButtonMessage;
 
@@ -34,12 +29,12 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_up;
-	ImageButton imagebutton_clicker_skip;
-	ImageButton imagebutton_clicker_close_btn;
-	ImageButton imagebutton_clicker_potato_btn_v11;
-	ImageButton imagebutton_page_up_clicker;
-	ImageButton imagebutton_page_down;
+	private Button button_up;
+	private ImageButton imagebutton_clicker_skip;
+	private ImageButton imagebutton_clicker_close_btn;
+	private ImageButton imagebutton_clicker_potato_btn_v11;
+	private ImageButton imagebutton_page_up_clicker;
+	private ImageButton imagebutton_page_down;
 
 	public ClickerScreen(ClickerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -114,7 +109,7 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/clicker_skip.png"), ResourceLocation.parse("palamod:textures/screens/clicker_skip_hover.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -129,7 +124,7 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -144,7 +139,7 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -159,7 +154,9 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = ClickerScreen.this.x;
+				int y = ClickerScreen.this.y;
 				if (ClickerconditionpageupProcedure.execute(world))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
@@ -175,7 +172,9 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = ClickerScreen.this.x;
+				int y = ClickerScreen.this.y;
 				if (ClickerconditionpagedownProcedure.execute(world))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}

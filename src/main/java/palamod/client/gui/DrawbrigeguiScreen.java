@@ -25,10 +25,10 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_arrow_down0001;
-	ImageButton imagebutton_arrow_right01;
-	ImageButton imagebutton_arrow_up01;
-	ImageButton imagebutton_arrow_left01;
+	private ImageButton imagebutton_arrow_down0001;
+	private ImageButton imagebutton_arrow_right01;
+	private ImageButton imagebutton_arrow_up01;
+	private ImageButton imagebutton_arrow_left01;
 
 	public DrawbrigeguiScreen(DrawbrigeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -104,7 +104,7 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -119,7 +119,7 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -134,7 +134,7 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -149,7 +149,7 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

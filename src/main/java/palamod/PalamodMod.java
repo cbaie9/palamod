@@ -4,19 +4,7 @@ import palamod.world.features.StructureFeature;
 
 import palamod.network.PalamodModVariables;
 
-import palamod.init.PalamodModVillagerProfessions;
-import palamod.init.PalamodModTabs;
-import palamod.init.PalamodModSounds;
-import palamod.init.PalamodModPotions;
-import palamod.init.PalamodModParticleTypes;
-import palamod.init.PalamodModMobEffects;
-import palamod.init.PalamodModMenus;
-import palamod.init.PalamodModItems;
-import palamod.init.PalamodModFluids;
-import palamod.init.PalamodModFluidTypes;
-import palamod.init.PalamodModEntities;
-import palamod.init.PalamodModBlocks;
-import palamod.init.PalamodModBlockEntities;
+import palamod.init.*;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -60,7 +48,6 @@ public class PalamodMod {
 		PalamodModEntities.REGISTRY.register(modEventBus);
 		PalamodModTabs.REGISTRY.register(modEventBus);
 		PalamodModVariables.ATTACHMENT_TYPES.register(modEventBus);
-
 		StructureFeature.REGISTRY.register(modEventBus);
 		PalamodModPotions.REGISTRY.register(modEventBus);
 		PalamodModMobEffects.REGISTRY.register(modEventBus);
@@ -69,7 +56,6 @@ public class PalamodMod {
 		PalamodModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		PalamodModFluids.REGISTRY.register(modEventBus);
 		PalamodModFluidTypes.REGISTRY.register(modEventBus);
-
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

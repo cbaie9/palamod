@@ -73,45 +73,33 @@ public class Rustinechests1Procedure {
 				.is(ItemTags.create(ResourceLocation.parse("palamod:rings")))) {
 			if (is12 && !is12full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu12 ? _menu12.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(12).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack13 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu12 ? _menu12.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
+					_setstack13.setCount(1);
+					_menu.getSlots().get(12).set(_setstack13);
 					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (is13 && !is13full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu15 ? _menu15.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(13).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack16 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu15 ? _menu15.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
+					_setstack16.setCount(1);
+					_menu.getSlots().get(13).set(_setstack16);
 					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (is110 && !is110full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu18 ? _menu18.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(110).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack19 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu18 ? _menu18.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
+					_setstack19.setCount(1);
+					_menu.getSlots().get(110).set(_setstack19);
 					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}
 			} else if (is111 && !is111full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(111).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+					ItemStack _setstack22 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();
+					_setstack22.setCount(1);
+					_menu.getSlots().get(111).set(_setstack22);
 					_menu.getSlots().get(109).set(ItemStack.EMPTY);
 					_player.containerMenu.broadcastChanges();
 				}

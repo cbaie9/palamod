@@ -22,7 +22,7 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_invite;
+	private Button button_invite;
 
 	public FactionhomeguiScreen(FactionhomeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);

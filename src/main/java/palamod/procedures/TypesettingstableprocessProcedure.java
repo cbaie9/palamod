@@ -48,8 +48,9 @@ public class TypesettingstableprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putBoolean("book_loaded", true);
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -61,9 +62,9 @@ public class TypesettingstableprocessProcedure {
 					_itemHandlerModifiable.setStackInSlot(0, _setstack);
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
-					_setstack.setCount(0);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack12 = new ItemStack(Blocks.AIR).copy();
+					_setstack12.setCount(0);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack12);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -89,15 +90,16 @@ public class TypesettingstableprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putBoolean("plate_loaded", true);
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
-					_setstack.setCount(0);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack20 = new ItemStack(Blocks.AIR).copy();
+					_setstack20.setCount(0);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack20);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -124,8 +126,9 @@ public class TypesettingstableprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putBoolean("book_loaded", false);
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -161,8 +164,9 @@ public class TypesettingstableprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("plate_loaded", false);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -215,17 +219,10 @@ public class TypesettingstableprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("plate_loaded", false);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
 								_blockEntity.getPersistentData().putBoolean("book_loaded", false);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}

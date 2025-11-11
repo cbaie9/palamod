@@ -26,8 +26,8 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_arrow_back_true_1;
-	ImageButton imagebutton_close_gui_nohover;
+	private ImageButton imagebutton_arrow_back_true_1;
+	private ImageButton imagebutton_close_gui_nohover;
 
 	public GamblelingjobsjetonScreen(GamblelingjobsjetonMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -95,7 +95,7 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -104,7 +104,7 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

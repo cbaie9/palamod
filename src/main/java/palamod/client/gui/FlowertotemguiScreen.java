@@ -29,7 +29,7 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_close_gui_nohover;
+	private ImageButton imagebutton_close_gui_nohover;
 
 	public FlowertotemguiScreen(FlowertotemguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -94,7 +94,7 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

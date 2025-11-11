@@ -34218,187 +34218,6 @@
       }
     },
     {
-      "name": "Crusherrecipetype",
-      "type": "jeirecipetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crusherrecipetype",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipe.java",
-          "src/main/java/palamod/jei_recipes/CrusherrecipetypeRecipeCategory.java"
-        ]
-      }
-    },
-    {
-      "name": "Endiumnuggetjeicraft",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumnuggetjeicraft",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumnuggetjeicraft.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumingotcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumingotcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumingotcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Titaneingotcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titaneingotcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/titaneingotcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Amethystingotcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethystingotcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/amethystingotcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Crusherinfojei",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crusherinfojei",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Paladiummachinerecipetypejei",
-      "type": "jeirecipetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiummachinerecipetypejei",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/jei_recipes/PaladiummachinerecipetypejeiRecipe.java",
-          "src/main/java/palamod/jei_recipes/PaladiummachinerecipetypejeiRecipeCategory.java"
-        ]
-      }
-    },
-    {
-      "name": "Speedstickrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speedstickrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/speedstickrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Healstickrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "healstickrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/healstickrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Strenghtstickrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strenghtstickrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/strenghtstickrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Jumpstickrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jumpstickrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/jumpstickrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Stickofgodsrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stickofgodsrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/stickofgodsrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Damagestickrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "damagestickrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/damagestickrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Hyperjumpstickrecipejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hyperjumpstickrecipejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/hyperjumpstickrecipejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Grinderhighrecipetypejei",
-      "type": "jeirecipetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grinderhighrecipetypejei",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipeCategory.java",
-          "src/main/java/palamod/jei_recipes/GrinderhighrecipetypejeiRecipe.java"
-        ]
-      }
-    },
-    {
       "name": "MixedendiumarmorLeggingsTickEvent",
       "type": "procedure",
       "compiles": true,
@@ -37167,76 +36986,6 @@
           "src/main/java/palamod/procedures/ClosetheguitransProcedure.java"
         ],
         "dependencies": []
-      }
-    },
-    {
-      "name": "Palamachineinfojei",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palamachineinfojei",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Pickaxeofthegodsgen",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pickaxeofthegodsgen",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Cobblebreakerjeiinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakerjeiinfo",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Cobbblebreakerupgradeamethystjeiinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobbblebreakerupgradeamethystjeiinfo",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Cobblebreakertitaneupgradejeiinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakertitaneupgradejeiinfo",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Cobblebreakerpaladiumupgradejeiinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakerpaladiumupgradejeiinfo",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Grinderjeiinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grinderjeiinfo",
-      "metadata": {
-        "files": []
       }
     },
     {
@@ -42884,46 +42633,6 @@
       }
     },
     {
-      "name": "Witheredobsidianinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "witheredobsidianinfo",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Witheredobsidianmaxtierinfo",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "witheredobsidianmaxtierinfo",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Grindercomposant",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grindercomposant",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Softenedoresjei",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "softenedoresjei",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
       "name": "Clearportalexitminerdimension",
       "type": "procedure",
       "compiles": true,
@@ -43026,41 +42735,6 @@
       }
     },
     {
-      "name": "Jobsminercraftjei",
-      "type": "jeirecipetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jobsminercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/jei_recipes/JobsminercraftjeiRecipeCategory.java",
-          "src/main/java/palamod/jei_recipes/JobsminercraftjeiRecipe.java"
-        ]
-      }
-    },
-    {
-      "name": "Jobsinfojei",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jobsinfojei",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "Endiumpickaxecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumpickaxecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumpickaxecraftjei.json"
-        ]
-      }
-    },
-    {
       "name": "Customair",
       "type": "item",
       "compiles": true,
@@ -43070,54 +42744,6 @@
         "files": [
           "src/main/resources/assets/palamod/models/item/customair.json",
           "src/main/java/palamod/item/CustomairItem.java"
-        ]
-      }
-    },
-    {
-      "name": "Pickaxeofthegodscraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pickaxeofthegodscraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/pickaxeofthegodscraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Amethystexcavatorcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethystexcavatorcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/amethystexcavatorcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Titaneexcavatorcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titaneexcavatorcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/titaneexcavatorcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumexcavatorcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumexcavatorcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumexcavatorcraftjei.json"
         ]
       }
     },
@@ -43176,282 +42802,6 @@
       }
     },
     {
-      "name": "Greenpaladiumexcavatorcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "greenpaladiumexcavatorcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/greenpaladiumexcavatorcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Voidstonecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "voidstonecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/voidstonecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Magicaltoolcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magicaltoolcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/magicaltoolcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Obsidianpickaxecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "obsidianpickaxecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/obsidianpickaxecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Boomtntcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "boomtntcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/boomtntcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Bigobsidiancraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bigobsidiancraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/bigobsidiancraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Woddenspikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "woddenspikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/woddenspikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Ironspikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ironspikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/ironspikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Goldenspikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goldenspikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/goldenspikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Diamondspikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "diamondspikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/diamondspikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Amethystspikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethystspikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/amethystspikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Titanespikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titanespikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/titanespikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumspikecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumspikecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumspikecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Lavaobsidiancraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lavaobsidiancraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/lavaobsidiancraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Spongetntcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spongetntcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/spongetntcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Fakewaterobsidiancraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fakewaterobsidiancraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/fakewaterobsidiancraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Slimeobsidiancraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slimeobsidiancraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/slimeobsidiancraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Caveblockcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "caveblockcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/caveblockcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Megaboomobsidiancraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "megaboomobsidiancraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/megaboomobsidiancraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Tntcompactcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tntcompactcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/tntcompactcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Withertntcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "withertntcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/withertntcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Magictntcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magictntcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/magictntcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Endiumspongecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumspongecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumspongecraftjei.json"
-        ]
-      }
-    },
-    {
       "name": "Cobbleledsoftstone",
       "type": "block",
       "compiles": true,
@@ -43464,102 +42814,6 @@
           "src/main/resources/assets/palamod/models/item/cobbled_soft_stone.json",
           "src/main/resources/data/palamod/loot_table/blocks/cobbled_soft_stone.json",
           "src/main/resources/assets/palamod/blockstates/cobbled_soft_stone.json"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakeramethystupgradecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakeramethystupgradecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakeramethystupgradecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakertitaneupgradecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakertitaneupgradecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakertitaneupgradecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Cobblebreakerpaladiumupgradecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblebreakerpaladiumupgradecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/cobblebreakerpaladiumupgradecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Voidstoneminagecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "voidstoneminagecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/voidstoneminagecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Dollardstonecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dollardstonecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/dollardstonecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumforgecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumforgecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumforgecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Sealedxpbottlecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sealedxpbottlecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/sealedxpbottlecraftjei.json"
         ]
       }
     },
@@ -43752,247 +43006,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/palamod/recipe/softenedendiumoresmelt_2.json"
-        ]
-      }
-    },
-    {
-      "name": "Jobsfarmercraftrecipetype",
-      "type": "jeirecipetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jobsfarmercraftrecipetype",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/jei_recipes/JobsfarmercraftrecipetypeRecipe.java",
-          "src/main/java/palamod/jei_recipes/JobsfarmercraftrecipetypeRecipeCategory.java"
-        ]
-      }
-    },
-    {
-      "name": "Amethysthoecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethysthoecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/amethysthoecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Titanehoecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titanehoecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/titanehoecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumhoecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumhoecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumhoecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Endiumhoecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumhoecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumhoecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Greenpaladiumhoejei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "greenpaladiumhoejei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/greenpaladiumhoejei.json"
-        ]
-      }
-    },
-    {
-      "name": "Amethystseedplantercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethystseedplantercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/amethystseedplantercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Titaneseedplantercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titaneseedplantercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/titaneseedplantercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumseedplantercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumseedplantercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumseedplantercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Greenpaladiumseedplantercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "greenpaladiumseedplantercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/greenpaladiumseedplantercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Endiumseedplantercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumseedplantercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumseedplantercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Elevatorcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elevatorcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/elevatorcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Amethystbackpackcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethystbackpackcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/amethystbackpackcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Titanebackpackcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titanebackpackcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/titanebackpackcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumbackpackcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumbackpackcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/paladiumbackpackcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Endiumbackpackcraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumbackpackcraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumbackpackcraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Crushercraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crushercraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/crushercraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Totemfertilitycraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "totemfertilitycraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/totemfertilitycraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Endiumchestplatecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumchestplatecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumchestplatecraftjei.json"
-        ]
-      }
-    },
-    {
-      "name": "Endiumaxecraftjei",
-      "type": "jeirecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endiumaxecraftjei",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/palamod/recipe/endiumaxecraftjei.json"
         ]
       }
     },
@@ -47905,6 +46918,24 @@
     ],
     "ENTITIES:mod:creeper": [
       "EntityCreeper"
+    ],
+    "BLOCKS:minecraft:trapdoors": [
+      "~CUSTOM:Obsidiantrapdoor"
+    ],
+    "BLOCKS:minecraft:doors": [
+      "~CUSTOM:Obsidiandoor"
+    ],
+    "BLOCKS:minecraft:mob_interactable_doors": [
+      "~CUSTOM:Obsidiandoor"
+    ],
+    "BLOCKS:minecraft:wooden_doors": [
+      "~CUSTOM:Jacarandadoor",
+      "~CUSTOM:Erabledoor",
+      "~CUSTOM:Ostryadoor",
+      "~CUSTOM:Judeecercisdoor"
+    ],
+    "BLOCKS:minecraft:wooden_trapdoors": [
+      "~CUSTOM:Erabletrapdoor"
     ]
   },
   "tab_element_order": {
@@ -48513,7 +47544,6 @@
       "item.palamod.titane_armor_leggings": "Titane Leggings",
       "gui.palamod.palahelpore.label_unsed1": "include the cave block",
       "gui.palamod.adminshopblock.button_blackstone": "blackstone",
-      "jei.palamod.cobbblebreakerupgradeamethystjeiinfo": "An upgrade for the cobblebreaker who speed it to 1.5x it normal speed",
       "gui.palamod.adminshopmenu.button_mobss_items": "Mobs\u0027s items ",
       "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.green_paladium_small_ring": "Small ring green paladium",
@@ -48525,7 +47555,6 @@
       "item.palamod.paladiumarmorcustom_10_chestplate": "Paladium Chestplate",
       "gui.palamod.grindergui.label_grinder_v41_noautotick": "Grinder - v5",
       "gui.palamod.adminshopmobsstring.label_paladium": "String",
-      "jei.palamod.pickaxeofthegodsgen": "The pickaxe of the gods is an unbreakable pickaxe who can be upgraded by breaking a certain amount of block The maximun level is the miner level /5 \nIt has some upgrade like auto-smelt or big-hole who made the pickaxe smelt block or make it like act like a hammer It can be applied in the grinder\nPush sneak when the item is in your hand to see how many block you need to break to reach the next",
       "gui.palamod.adminshopmobs_2.button_next": "Back",
       "gui.palamod.adminshopblock_netherrack.label_mode_set": "Amount :",
       "block.palamod.boom_obsidian": "Boom obsidian",
@@ -48534,7 +47563,6 @@
       "advancements.avancementgrindre.title": "Need a smeltery ?",
       "subtitles.miichallengemusic": "Mii chalenge music",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": " probabilities of the nugget appear [",
-      "jei.palamod.crusherinfojei": "A block that crusher modded fruit with infused coal to make superior ingots\n One of the only way to obtain endium\nTo make a ingot insert enough mixed coal with the right fruit to make the progressbar go higher When the progressbar is at it maximun you can extract ( click on the buttons ) the ingot from the machine\nWhen the progressbar is superior to one but not a it max You can also try to extract the ingot but it will not will be a 100% chance you obtain the ingot ",
       "gui.palamod.adminshoporefindium.button_sell": "sell",
       "item.palamod.sword_head": "Paladium sword head",
       "gui.palamod.gamblelingjobsjeton.label_jobs": "Jobs",
@@ -48594,7 +47622,6 @@
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
       "gui.palamod.armorpalahelpgui.label_endium_set": "Endium set",
       "block.palamod.softened_coal_ore": "Soft coal ore",
-      "jei.palamod.cobblebreakerjeiinfo": "The cobblebreaker is a machine who take cobblestone and compress them to obtain type of ore like paladium, titane, amethyst or nearly all vanilla ore\nYou can also use voidstone minage to replace cobblestone to make a afk farm",
       "item_group.palamod.grindercreativetab": "Palamod : Grinder tab",
       "block.palamod.witheredobsidian_3": "Withered obsidian",
       "block.palamod.witheredobsidian_4": "Withered obsidian",
@@ -48735,7 +47762,6 @@
       "subtitles.totem_break2": "Totem consuming 1 ingot",
       "block.palamod.erable_leaves": "Erable Leaves",
       "block.palamod.coloful_lamp": "Coloful  lamp",
-      "jei.palamod.cobblebreakerpaladiumupgradejeiinfo": "An upgrade for the cobblebreaker who speed it to 4x it normal speed",
       "item.palamod.weighted_boots": "Weighted Boots",
       "gui.palamod.forgepalahelpgui.label_cuit": "cuit :]",
       "item.minecraft.splash_potion.effect.antifakepotion": "Splash Potion of Antifake",
@@ -49184,7 +48210,6 @@
       "gui.palamod.megasafechestfirstsetup.label_3_save": "3. Save ",
       "item.palamod.compressed_titane": "Compressed Titane",
       "gui.palamod.adminshopplantpotato.label_buy_price_125": "Buy Price : 4.5",
-      "jei.palamod.jobsinfojei": "This is the representation of all items that can be craft with jobs craft gui \nWith the basic configuration press [J], select a jobs then craft to use the crafting table\nOn servers, no need to farm for a levels all items are unlocked to prevent crash",
       "gui.palamod.adminshopplantmelon.label_amount": "Amount :",
       "gui.palamod.adminshoputilitiesemerald.label_sell_price_120": "Sell price :  10.75",
       "item.palamod.fastsword_head": "Paladium fastsword head",
@@ -49283,7 +48308,6 @@
       "item.palamod.greenpaladiumfastsword": "Green paladium fastsword",
       "gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred": "An error has been encountred",
       "gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui": "Angelique water : type of water who",
-      "jei.palamod.grinderjeiinfo": "The grinder is structure who transform into a machine when built ( more info /palahelp -\u003e gui \u003e grinder ) it can create various item like hammer, fastsword or broadsword for example \nIt can be use to apply upgrade for those item or the pickaxe of the gods \nIt need fuel to work, it can work in 3 modes : paladium, green paladium and endium to make different tier of items To change modes make sure to empty the grinder via patern and break and replace the central block ( grinder block )",
       "item.palamod.disc_mii_chalenge.desc": "Koro - Mii chalenge - 2020",
       "advancements.advinvicrea.descr": "Use in trigger for potg",
       "gui.palamod.adminshopblock_dirt.label_sell_price_01": "Sell price : 0.1",
@@ -49365,7 +48389,6 @@
       "gui.palamod.jobsserver.label_last_unlocked_items": "Last unlocked items",
       "item.palamod.endium_armor_chestplate": "Endium Chestplate",
       "item.palamod.titane_hammer": " Titane hammer",
-      "jei.palamod.witheredobsidianinfo": "Place a Paladium Block next to it to power it to the next tier",
       "gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set": "Invisible armor set",
       "gui.palamod.jobsfarmercraftgui.tooltip_compressed_sponge": "Compressed sponge",
       "gui.palamod.armorpalahelpgui.tooltip_travel_armor_set": "Travel armor set",
@@ -49731,7 +48754,6 @@
       "item.palamod.green_paladium_hammer": "Green paladium hammer",
       "block.palamod.jacaranda_sappling": "Jacaranda sappling",
       "block.palamod.judeecercis_wood": "Judeecercis Wood",
-      "jei.palamod.grindercomposant": "Composant of the grinder structure",
       "item.palamod.travelarmor_leggings": "Travel Leggings",
       "gui.palamod.orelayer.label_titane_64_32": "Titane : -64 --) 32",
       "gui.palamod.analyserresult.label_dirt": "dirt",
@@ -49829,7 +48851,6 @@
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable": "This armor set is craftable ",
       "effect.palamod.witherimbu": "Wither imbue",
       "gui.palamod.specialmoneypanel.custom_destructible": "Delete the item when used",
-      "jei.palamod.palamachineinfojei": "The paladium machine aka palamachine is a block who permiter you to craft \"stick\" who give useful effet like jump, strenght, healing effet or speed for example",
       "palamod.procedure.return_block_menu": "Return to the adminshop\u0027s block menu",
       "gui.palamod.armorpalahelpgui.label_lb_classic": "LB classic",
       "gui.palamod.adminshopmobs_2.button_steak": "Steak",
@@ -49854,7 +48875,6 @@
       "item.palamod.invisiblearmor_boots": "Invisible Boots",
       "block.palamod.downloader": "Downloader",
       "item.palamod.speedstick": "Speed stick",
-      "jei.palamod.witheredobsidianmaxtierinfo": "Now make a portal with that block to acess miner dimension",
       "gui.palamod.adminshoporetitane.label_buy_price_110": "Buy Price : 110",
       "gui.palamod.dynamicorelayer.label_empty": "----------------------------",
       "block.palamod.hdv_block": "Hdvblock",
@@ -50194,7 +49214,6 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_mode_set": "Amount :",
       "block.palamod.cloud_block": "Cloud block",
       "item.palamod.titane_armor_boots": "Titane Boots",
-      "jei.palamod.softenedoresjei": "Ores that can be obtain in miner dimension ( most of them are also obtenable in overworld )\nThose ores have a boosted spawn rate in the miner dimension",
       "advancements.avancementsupremearmor.descr": "Craft all endium armor and wear it",
       "item.palamod.mixed_endium_armor_boots": "Mixed Endium Boots",
       "gui.palamod.armorpalahelpgui.label_force1": "Force",
@@ -50361,7 +49380,6 @@
       "palamod.procedure.jobswin1": "You win ",
       "advancements.achmchestgreenpaladium.title": "A extended ultra premium stokage deluxe",
       "palamod.procedure.jobswin2": "xp for breaking",
-      "jei.palamod.cobblebreakertitaneupgradejeiinfo": "An upgrade for the cobblebreaker who speed it to 2.5x it normal speed",
       "gui.palamod.adminshopore.button_iron": "Iron",
       "gui.palamod.adminshopplantcactus.label_sell_price_120": "Sell price :  50",
       "item.palamod.paladiumarmorcustom_9_chestplate": "Paladium Chestplate",
@@ -50504,7 +49522,6 @@
       "item.palamod.titane_armor_leggings": "Jambière en titane",
       "gui.palamod.palahelpore.label_unsed1": "inclus le cave bloc",
       "gui.palamod.adminshopblock.button_blackstone": "roche noire",
-      "jei.palamod.cobbblebreakerupgradeamethystjeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 1.5x de vitesse normale",
       "gui.palamod.adminshopmenu.button_mobss_items": "Item de créatures",
       "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.green_paladium_small_ring": "Petit anneau de réparation en paladium vert",
@@ -50516,7 +49533,6 @@
       "item.palamod.paladiumarmorcustom_10_chestplate": "Plastron en Paladium Modifié",
       "gui.palamod.grindergui.label_grinder_v41_noautotick": "Grinder - v5",
       "gui.palamod.adminshopmobsstring.label_paladium": "Fil",
-      "jei.palamod.pickaxeofthegodsgen": "La pioche des dieux est une pioche incassable qui peut être améliorée en cassant une certaine quantité de blocs. Le niveau maximum est le niveau mineur /5 \nElle a quelques améliorations comme la fonderie automatique ou le gros trou qui ont fait fondre le bloc cassé la pioche ou la faire fonctionner comme un marteau. Elle peut être appliquée dans le grinder\nAccroupisser-vous quand l\u0027objet est dans votre main pour voir combien de blocs vous avez besoin de casser pour atteindre le prochain",
       "gui.palamod.adminshopmobs_2.button_next": "Retour en arrière",
       "gui.palamod.adminshopblock_netherrack.label_mode_set": "Quantité :",
       "block.palamod.boom_obsidian": "Boom obsidienne",
@@ -50525,7 +49541,6 @@
       "advancements.avancementgrindre.title": "Besoin d\u0027une fonderie ?",
       "subtitles.miichallengemusic": "Musique du chalenge Mii",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "probabilité que la pépite apparaisse [",
-      "jei.palamod.crusherinfojei": "Un bloc qui broie des fruits modérés avec du charbon infusé pour faire des lingots supérieurs\n Une des seules façons d\u0027obtenir de l\u0027endium\nPour qu\u0027un lingot, insère suffisamment de charbon infusée avec le bon fruit pour que la barre de progression devienne plus élevée lorsque la barre de progression est au maximum, vous pouvez extraire ( cliquer sur les boutons ) le lingot de la machine\nQuand la barre de progression est supérieure à un mais pas à un maximum, vous pouvez également essayer d\u0027extraire le lingot mais il ne sera pas 100% de chance d\u0027obtenir le lingot ",
       "gui.palamod.adminshoporefindium.button_sell": "vendre",
       "item.palamod.sword_head": "Tête d\u0027épée en Paladium",
       "gui.palamod.gamblelingjobsjeton.label_jobs": "Métiers ",
@@ -50585,7 +49600,6 @@
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
       "gui.palamod.armorpalahelpgui.label_endium_set": "Set en endium",
       "block.palamod.softened_coal_ore": "Minerai de charbon ramolli",
-      "jei.palamod.cobblebreakerjeiinfo": "Le cobblebreaker est une machine qui prend de la pierre et les compresse pour obtenir des particules de minerai comme le paladium, le titane, améthyste ou presque tous les minerais de base\nVous pouvez également utiliser le minage de voidstone pour remplacer la pierre pour créer une ferme afk",
       "item_group.palamod.grindercreativetab": "Palamod : Onglet du grinder",
       "block.palamod.witheredobsidian_3": "Obsidienne flétrie",
       "block.palamod.witheredobsidian_4": "Obsidienne flétrie",
@@ -50726,7 +49740,6 @@
       "subtitles.totem_break2": "Le totem consomme 1 lingot",
       "block.palamod.erable_leaves": "Feuillage en érable",
       "block.palamod.coloful_lamp": "Lampe colorée",
-      "jei.palamod.cobblebreakerpaladiumupgradejeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 4x de sa vitesse normale",
       "item.palamod.weighted_boots": "Bottes lestées",
       "gui.palamod.forgepalahelpgui.label_cuit": "cuit :]",
       "item.minecraft.splash_potion.effect.antifakepotion": "Potion jetable d\u0027Antifake",
@@ -51174,7 +50187,6 @@
       "gui.palamod.megasafechestfirstsetup.label_3_save": "3. Enregistrer",
       "item.palamod.compressed_titane": "Titane compressé",
       "gui.palamod.adminshopplantpotato.label_buy_price_125": "Prix d\u0027achat : 4.5",
-      "jei.palamod.jobsinfojei": "Ceci est la représentation de tous les items qui peuvent être fabriqués avec l\u0027interface de fabrication des métier.\nAvec la configuration de base, appuyez sur [J], sélectionnez un métier, puis clicker sur [Craft] pour utiliser la table de fabrication.\nSur les serveurs, pas besoin de monter en niveau, tous les éléments sont déverrouillés de base pour éviter les plantages",
       "gui.palamod.adminshopplantmelon.label_amount": "Quantité :",
       "gui.palamod.adminshoputilitiesemerald.label_sell_price_120": "Prix de vente :  10.75",
       "item.palamod.fastsword_head": "Tête de fastsword en paladium",
@@ -51272,7 +50284,6 @@
       "item.palamod.greenpaladiumfastsword": "Fastsword en Paladium vert",
       "gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred": "Une erreur a été trouvée",
       "gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui": "Eau angélique : type d\u0027eau qui",
-      "jei.palamod.grinderjeiinfo": "Le broyeur est une structure qui se transforme en une machine lorsqu\u0027elle est construite ( plus d\u0027informations /palahelp -\u003e gui \u003e grinder ) il peut créer divers objets comme le marteau, épée fastsword ou broadsword par exemple \nIl peut être utilisé pour appliquer des améliorations des objets\nIl a besoin de carburant pour fonctionner, il peut fonctionner en 3 modes : paladium, vert paladium et endium pour faire différents niveaux d\u0027éléments. Pour changer de mode, assurez-vous de vider le broyeur via patern et de casser et de remplacer le bloc central (bloc du grinder)",
       "item.palamod.disc_mii_chalenge.desc": "Koro - Mii chalenge - 2020",
       "advancements.advinvicrea.descr": "Utiliser dans le déclencheur pour la pioche des dieux",
       "gui.palamod.adminshopblock_dirt.label_sell_price_01": "Prix de vente : 0.1",
@@ -51354,7 +50365,6 @@
       "gui.palamod.jobsserver.label_last_unlocked_items": "Derniers objets déverrouillés",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
       "item.palamod.titane_hammer": "Marteau en titane",
-      "jei.palamod.witheredobsidianinfo": "Placez un bloc de Paladium à côté de lui pour l\u0027alimenter au niveau suivant",
       "gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set": "Ensemble d\u0027armure invisible",
       "gui.palamod.jobsfarmercraftgui.tooltip_compressed_sponge": "Éponge compressée",
       "gui.palamod.armorpalahelpgui.tooltip_travel_armor_set": "Ensemble d\u0027armure de voyage",
@@ -51720,7 +50730,6 @@
       "item.palamod.green_paladium_hammer": "Marteau en paladium vert",
       "block.palamod.jacaranda_sappling": "Pousse en jacaranda",
       "block.palamod.judeecercis_wood": "Bois de Judeecercis",
-      "jei.palamod.grindercomposant": "Composant de la structure du grinder",
       "item.palamod.travelarmor_leggings": "Jambière de voyage",
       "gui.palamod.orelayer.label_titane_64_32": "Titane : -64 → 32",
       "gui.palamod.analyserresult.label_dirt": "Terre",
@@ -51818,7 +50827,6 @@
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable": "Cet ensemble d\u0027armure peut être fabriqué",
       "effect.palamod.witherimbu": "Touché flétrie",
       "gui.palamod.specialmoneypanel.custom_destructible": "Supprime l\u0027item dès qu\u0027il est utilisé",
-      "jei.palamod.palamachineinfojei": "La machine en paladium aka palamachine est un bloc qui vous permet de fabriquer des bâtons qui donne un effet utile comme le saut, force, effet de guérison ou vitesse par exemple",
       "palamod.procedure.return_block_menu": "Retour au menu blocs de l\u0027adminshop",
       "gui.palamod.armorpalahelpgui.label_lb_classic": "LB classique",
       "gui.palamod.adminshopmobs_2.button_steak": "Viande cuite",
@@ -51843,7 +50851,6 @@
       "item.palamod.invisiblearmor_boots": "Bottes invisible",
       "block.palamod.downloader": "Téléchargeur",
       "item.palamod.speedstick": "Bàton de vitesse",
-      "jei.palamod.witheredobsidianmaxtierinfo": "Maintenant, créez un portail avec ce bloc pour accéder à la dimension mineur",
       "gui.palamod.adminshoporetitane.label_buy_price_110": "Prix d\u0027achat : 110",
       "gui.palamod.dynamicorelayer.label_empty": "----------------------------",
       "block.palamod.hdv_block": "Bloc du HdV",
@@ -52182,7 +51189,6 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_mode_set": "Quantité :",
       "block.palamod.cloud_block": "Bloc de nuage",
       "item.palamod.titane_armor_boots": "Bottes en titane",
-      "jei.palamod.softenedoresjei": "Les minerais qui peuvent être obtenus dans la dimension de mineur (la plupart sont également obtenables dans le monde normal)\nCes minerais ont une probabilité d\u0027apparition augmentée dans la dimension du mineur",
       "advancements.avancementsupremearmor.descr": "Fabrique toute l\u0027armure en endium puis équiper la",
       "item.palamod.mixed_endium_armor_boots": "Bottes en Endium mixée",
       "gui.palamod.armorpalahelpgui.label_force1": "Force",
@@ -52349,7 +51355,6 @@
       "palamod.procedure.jobswin1": "Vous gagnez",
       "advancements.achmchestgreenpaladium.title": "Un coffre très rare pour un meilleur stockage",
       "palamod.procedure.jobswin2": "Casser pour récupérer de l\u0027xp",
-      "jei.palamod.cobblebreakertitaneupgradejeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 2.5x de sa vitesse normale",
       "gui.palamod.adminshopore.button_iron": "Fer",
       "gui.palamod.adminshopplantcactus.label_sell_price_120": "Prix de vente :  120",
       "item.palamod.paladiumarmorcustom_9_chestplate": "Plastron en Paladium Modifié",
@@ -52497,7 +51502,6 @@
       "item.palamod.titane_armor_leggings": "Jambière en titane",
       "gui.palamod.palahelpore.label_unsed1": "inclus le cave bloc",
       "gui.palamod.adminshopblock.button_blackstone": "roche noire",
-      "jei.palamod.cobbblebreakerupgradeamethystjeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 1.5x de vitesse normale",
       "gui.palamod.adminshopmenu.button_mobss_items": "Item de créatures",
       "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.green_paladium_small_ring": "Petit anneau de réparation en paladium vert",
@@ -52509,7 +51513,6 @@
       "item.palamod.paladiumarmorcustom_10_chestplate": "Plastron en Paladium Modifié",
       "gui.palamod.grindergui.label_grinder_v41_noautotick": "Grinder - v5",
       "gui.palamod.adminshopmobsstring.label_paladium": "Fil",
-      "jei.palamod.pickaxeofthegodsgen": "La pioche des dieux est une pioche incassable qui peut être améliorée en cassant une certaine quantité de blocs. Le niveau maximum est le niveau mineur /5 \nElle a quelques améliorations comme la fonderie automatique ou le gros trou qui ont fait fondre le bloc cassé la pioche ou la faire fonctionner comme un marteau. Elle peut être appliquée dans le grinder\nAccroupisser-vous quand l\u0027objet est dans votre main pour voir combien de blocs vous avez besoin de casser pour atteindre le prochain",
       "gui.palamod.adminshopmobs_2.button_next": "Retour en arrière",
       "gui.palamod.adminshopblock_netherrack.label_mode_set": "Quantité :",
       "block.palamod.boom_obsidian": "Boom obsidienne",
@@ -52518,7 +51521,6 @@
       "advancements.avancementgrindre.title": "Besoin d\u0027une fonderie ?",
       "subtitles.miichallengemusic": "Musique du chalenge Mii",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "probabilité que la pépite apparaisse [",
-      "jei.palamod.crusherinfojei": "Un bloc qui broie des fruits modérés avec du charbon infusé pour faire des lingots supérieurs\n Une des seules façons d\u0027obtenir de l\u0027endium\nPour qu\u0027un lingot, insère suffisamment de charbon infusée avec le bon fruit pour que la barre de progression devienne plus élevée lorsque la barre de progression est au maximum, vous pouvez extraire ( cliquer sur les boutons ) le lingot de la machine\nQuand la barre de progression est supérieure à un mais pas à un maximum, vous pouvez également essayer d\u0027extraire le lingot mais il ne sera pas 100% de chance d\u0027obtenir le lingot ",
       "gui.palamod.adminshoporefindium.button_sell": "vendre",
       "item.palamod.sword_head": "Tête d\u0027épée en Paladium",
       "gui.palamod.gamblelingjobsjeton.label_jobs": "Métiers ",
@@ -52578,7 +51580,6 @@
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
       "gui.palamod.armorpalahelpgui.label_endium_set": "Set en endium",
       "block.palamod.softened_coal_ore": "Minerai de charbon ramolli",
-      "jei.palamod.cobblebreakerjeiinfo": "Le cobblebreaker est une machine qui prend de la pierre et les compresse pour obtenir des particules de minerai comme le paladium, le titane, améthyste ou presque tous les minerais de base\nVous pouvez également utiliser le minage de voidstone pour remplacer la pierre pour créer une ferme afk",
       "item_group.palamod.grindercreativetab": "Palamod : Onglet du grinder",
       "block.palamod.witheredobsidian_3": "Obsidienne flétrie",
       "block.palamod.witheredobsidian_4": "Obsidienne flétrie",
@@ -52719,7 +51720,6 @@
       "subtitles.totem_break2": "Le totem consomme 1 lingot",
       "block.palamod.erable_leaves": "Feuillage en érable",
       "block.palamod.coloful_lamp": "Lampe colorée",
-      "jei.palamod.cobblebreakerpaladiumupgradejeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 4x de sa vitesse normale",
       "item.palamod.weighted_boots": "Bottes lestées",
       "gui.palamod.forgepalahelpgui.label_cuit": "cuit :]",
       "item.minecraft.splash_potion.effect.antifakepotion": "Potion jetable d\u0027Antifake",
@@ -53167,7 +52167,6 @@
       "gui.palamod.megasafechestfirstsetup.label_3_save": "3. Enregistrer",
       "item.palamod.compressed_titane": "Titane compressé",
       "gui.palamod.adminshopplantpotato.label_buy_price_125": "Prix d\u0027achat : 4.5",
-      "jei.palamod.jobsinfojei": "Ceci est la représentation de tous les items qui peuvent être fabriqués avec l\u0027interface de fabrication des métier.\nAvec la configuration de base, appuyez sur [J], sélectionnez un métier, puis clicker sur [Craft] pour utiliser la table de fabrication.\nSur les serveurs, pas besoin de monter en niveau, tous les éléments sont déverrouillés de base pour éviter les plantages",
       "gui.palamod.adminshopplantmelon.label_amount": "Quantité :",
       "gui.palamod.adminshoputilitiesemerald.label_sell_price_120": "Prix de vente :  10.75",
       "item.palamod.fastsword_head": "Tête de fastsword en paladium",
@@ -53265,7 +52264,6 @@
       "item.palamod.greenpaladiumfastsword": "Fastsword en Paladium vert",
       "gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred": "Une erreur a été trouvée",
       "gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui": "Eau angélique : type d\u0027eau qui",
-      "jei.palamod.grinderjeiinfo": "Le broyeur est une structure qui se transforme en une machine lorsqu\u0027elle est construite ( plus d\u0027informations /palahelp -\u003e gui \u003e grinder ) il peut créer divers objets comme le marteau, épée fastsword ou broadsword par exemple \nIl peut être utilisé pour appliquer des améliorations des objets\nIl a besoin de carburant pour fonctionner, il peut fonctionner en 3 modes : paladium, vert paladium et endium pour faire différents niveaux d\u0027éléments. Pour changer de mode, assurez-vous de vider le broyeur via patern et de casser et de remplacer le bloc central (bloc du grinder)",
       "item.palamod.disc_mii_chalenge.desc": "Koro - Mii chalenge - 2020",
       "advancements.advinvicrea.descr": "Utiliser dans le déclencheur pour la pioche des dieux",
       "gui.palamod.adminshopblock_dirt.label_sell_price_01": "Prix de vente : 0.1",
@@ -53347,7 +52345,6 @@
       "gui.palamod.jobsserver.label_last_unlocked_items": "Derniers objets déverrouillés",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
       "item.palamod.titane_hammer": "Marteau en titane",
-      "jei.palamod.witheredobsidianinfo": "Placez un bloc de Paladium à côté de lui pour l\u0027alimenter au niveau suivant",
       "gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set": "Ensemble d\u0027armure invisible",
       "gui.palamod.jobsfarmercraftgui.tooltip_compressed_sponge": "Éponge compressée",
       "gui.palamod.armorpalahelpgui.tooltip_travel_armor_set": "Ensemble d\u0027armure de voyage",
@@ -53713,7 +52710,6 @@
       "item.palamod.green_paladium_hammer": "Marteau en paladium vert",
       "block.palamod.jacaranda_sappling": "Pousse en jacaranda",
       "block.palamod.judeecercis_wood": "Bois de Judeecercis",
-      "jei.palamod.grindercomposant": "Composant de la structure du grinder",
       "item.palamod.travelarmor_leggings": "Jambière de voyage",
       "gui.palamod.orelayer.label_titane_64_32": "Titane : -64 → 32",
       "gui.palamod.analyserresult.label_dirt": "Terre",
@@ -53811,7 +52807,6 @@
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable": "Cet ensemble d\u0027armure peut être fabriqué",
       "effect.palamod.witherimbu": "Touché flétrie",
       "gui.palamod.specialmoneypanel.custom_destructible": "Supprime l\u0027item dès qu\u0027il est utilisé",
-      "jei.palamod.palamachineinfojei": "La machine en paladium aka palamachine est un bloc qui vous permet de fabriquer des bâtons qui donne un effet utile comme le saut, force, effet de guérison ou vitesse par exemple",
       "palamod.procedure.return_block_menu": "Retour au menu blocs de l\u0027adminshop",
       "gui.palamod.armorpalahelpgui.label_lb_classic": "LB classique",
       "gui.palamod.adminshopmobs_2.button_steak": "Viande cuite",
@@ -53836,7 +52831,6 @@
       "item.palamod.invisiblearmor_boots": "Bottes invisible",
       "block.palamod.downloader": "Téléchargeur",
       "item.palamod.speedstick": "Bàton de vitesse",
-      "jei.palamod.witheredobsidianmaxtierinfo": "Maintenant, créez un portail avec ce bloc pour accéder à la dimension mineur",
       "gui.palamod.adminshoporetitane.label_buy_price_110": "Prix d\u0027achat : 110",
       "gui.palamod.dynamicorelayer.label_empty": "----------------------------",
       "block.palamod.hdv_block": "Bloc du HdV",
@@ -54175,7 +53169,6 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_mode_set": "Quantité :",
       "block.palamod.cloud_block": "Bloc de nuage",
       "item.palamod.titane_armor_boots": "Bottes en titane",
-      "jei.palamod.softenedoresjei": "Les minerais qui peuvent être obtenus dans la dimension de mineur (la plupart sont également obtenables dans le monde normal)\nCes minerais ont une probabilité d\u0027apparition augmentée dans la dimension du mineur",
       "advancements.avancementsupremearmor.descr": "Fabrique toute l\u0027armure en endium puis équiper la",
       "item.palamod.mixed_endium_armor_boots": "Bottes en Endium mixée",
       "gui.palamod.armorpalahelpgui.label_force1": "Force",
@@ -54342,7 +53335,6 @@
       "palamod.procedure.jobswin1": "Vous gagnez",
       "advancements.achmchestgreenpaladium.title": "Un coffre très rare pour un meilleur stockage",
       "palamod.procedure.jobswin2": "Casser pour récupérer de l\u0027xp",
-      "jei.palamod.cobblebreakertitaneupgradejeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 2.5x de sa vitesse normale",
       "gui.palamod.adminshopore.button_iron": "Fer",
       "gui.palamod.adminshopplantcactus.label_sell_price_120": "Prix de vente :  120",
       "item.palamod.paladiumarmorcustom_9_chestplate": "Plastron en Paladium Modifié",
@@ -54490,7 +53482,6 @@
       "item.palamod.titane_armor_leggings": "Jambière en titane",
       "gui.palamod.palahelpore.label_unsed1": "inclus le cave bloc",
       "gui.palamod.adminshopblock.button_blackstone": "roche noire",
-      "jei.palamod.cobbblebreakerupgradeamethystjeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 1.5x de vitesse normale",
       "gui.palamod.adminshopmenu.button_mobss_items": "Item de créatures",
       "gui.palamod.guardiangui.button_arbre_de_competance": "Arbre de compétance",
       "item.palamod.green_paladium_small_ring": "Petit anneau de réparation en paladium vert",
@@ -54502,7 +53493,6 @@
       "item.palamod.paladiumarmorcustom_10_chestplate": "Plastron en Paladium Modifié",
       "gui.palamod.grindergui.label_grinder_v41_noautotick": "Grinder - v5",
       "gui.palamod.adminshopmobsstring.label_paladium": "Fil",
-      "jei.palamod.pickaxeofthegodsgen": "La pioche des dieux est une pioche incassable qui peut être améliorée en cassant une certaine quantité de blocs. Le niveau maximum est le niveau mineur /5 \nElle a quelques améliorations comme la fonderie automatique ou le gros trou qui ont fait fondre le bloc cassé la pioche ou la faire fonctionner comme un marteau. Elle peut être appliquée dans le grinder\nAccroupisser-vous quand l\u0027objet est dans votre main pour voir combien de blocs vous avez besoin de casser pour atteindre le prochain",
       "gui.palamod.adminshopmobs_2.button_next": "Retour en arrière",
       "gui.palamod.adminshopblock_netherrack.label_mode_set": "Quantité :",
       "block.palamod.boom_obsidian": "Boom obsidienne",
@@ -54511,7 +53501,6 @@
       "advancements.avancementgrindre.title": "Besoin d\u0027une fonderie ?",
       "subtitles.miichallengemusic": "Musique du chalenge Mii",
       "gui.palamod.crusherpalahelpgui.label_que_le_nugget_napparaise_prob": "probabilité que la pépite apparaisse [",
-      "jei.palamod.crusherinfojei": "Un bloc qui broie des fruits modérés avec du charbon infusé pour faire des lingots supérieurs\n Une des seules façons d\u0027obtenir de l\u0027endium\nPour qu\u0027un lingot, insère suffisamment de charbon infusée avec le bon fruit pour que la barre de progression devienne plus élevée lorsque la barre de progression est au maximum, vous pouvez extraire ( cliquer sur les boutons ) le lingot de la machine\nQuand la barre de progression est supérieure à un mais pas à un maximum, vous pouvez également essayer d\u0027extraire le lingot mais il ne sera pas 100% de chance d\u0027obtenir le lingot ",
       "gui.palamod.adminshoporefindium.button_sell": "vendre",
       "item.palamod.sword_head": "Tête d\u0027épée en Paladium",
       "gui.palamod.gamblelingjobsjeton.label_jobs": "Métiers ",
@@ -54571,7 +53560,6 @@
       "gui.palamod.analyserresult.label_bedrock": "Bedrock",
       "gui.palamod.armorpalahelpgui.label_endium_set": "Set en endium",
       "block.palamod.softened_coal_ore": "Minerai de charbon ramolli",
-      "jei.palamod.cobblebreakerjeiinfo": "Le cobblebreaker est une machine qui prend de la pierre et les compresse pour obtenir des particules de minerai comme le paladium, le titane, améthyste ou presque tous les minerais de base\nVous pouvez également utiliser le minage de voidstone pour remplacer la pierre pour créer une ferme afk",
       "item_group.palamod.grindercreativetab": "Palamod : Onglet du grinder",
       "block.palamod.witheredobsidian_3": "Obsidienne flétrie",
       "block.palamod.witheredobsidian_4": "Obsidienne flétrie",
@@ -54712,7 +53700,6 @@
       "subtitles.totem_break2": "Le totem consomme 1 lingot",
       "block.palamod.erable_leaves": "Feuillage en érable",
       "block.palamod.coloful_lamp": "Lampe colorée",
-      "jei.palamod.cobblebreakerpaladiumupgradejeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 4x de sa vitesse normale",
       "item.palamod.weighted_boots": "Bottes lestées",
       "gui.palamod.forgepalahelpgui.label_cuit": "cuit :]",
       "item.minecraft.splash_potion.effect.antifakepotion": "Potion jetable d\u0027Antifake",
@@ -55160,7 +54147,6 @@
       "gui.palamod.megasafechestfirstsetup.label_3_save": "3. Enregistrer",
       "item.palamod.compressed_titane": "Titane compressé",
       "gui.palamod.adminshopplantpotato.label_buy_price_125": "Prix d\u0027achat : 4.5",
-      "jei.palamod.jobsinfojei": "Ceci est la représentation de tous les items qui peuvent être fabriqués avec l\u0027interface de fabrication des métier.\nAvec la configuration de base, appuyez sur [J], sélectionnez un métier, puis clicker sur [Craft] pour utiliser la table de fabrication.\nSur les serveurs, pas besoin de monter en niveau, tous les éléments sont déverrouillés de base pour éviter les plantages",
       "gui.palamod.adminshopplantmelon.label_amount": "Quantité :",
       "gui.palamod.adminshoputilitiesemerald.label_sell_price_120": "Prix de vente :  10.75",
       "item.palamod.fastsword_head": "Tête de fastsword en paladium",
@@ -55258,7 +54244,6 @@
       "item.palamod.greenpaladiumfastsword": "Fastsword en Paladium vert",
       "gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred": "Une erreur a été trouvée",
       "gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui": "Eau angélique : type d\u0027eau qui",
-      "jei.palamod.grinderjeiinfo": "Le broyeur est une structure qui se transforme en une machine lorsqu\u0027elle est construite ( plus d\u0027informations /palahelp -\u003e gui \u003e grinder ) il peut créer divers objets comme le marteau, épée fastsword ou broadsword par exemple \nIl peut être utilisé pour appliquer des améliorations des objets\nIl a besoin de carburant pour fonctionner, il peut fonctionner en 3 modes : paladium, vert paladium et endium pour faire différents niveaux d\u0027éléments. Pour changer de mode, assurez-vous de vider le broyeur via patern et de casser et de remplacer le bloc central (bloc du grinder)",
       "item.palamod.disc_mii_chalenge.desc": "Koro - Mii chalenge - 2020",
       "advancements.advinvicrea.descr": "Utiliser dans le déclencheur pour la pioche des dieux",
       "gui.palamod.adminshopblock_dirt.label_sell_price_01": "Prix de vente : 0.1",
@@ -55340,7 +54325,6 @@
       "gui.palamod.jobsserver.label_last_unlocked_items": "Derniers objets déverrouillés",
       "item.palamod.endium_armor_chestplate": "Plastron en endium",
       "item.palamod.titane_hammer": "Marteau en titane",
-      "jei.palamod.witheredobsidianinfo": "Placez un bloc de Paladium à côté de lui pour l\u0027alimenter au niveau suivant",
       "gui.palamod.armorpalahelpgui.tooltip_invisible_armor_set": "Ensemble d\u0027armure invisible",
       "gui.palamod.jobsfarmercraftgui.tooltip_compressed_sponge": "Éponge compressée",
       "gui.palamod.armorpalahelpgui.tooltip_travel_armor_set": "Ensemble d\u0027armure de voyage",
@@ -55706,7 +54690,6 @@
       "item.palamod.green_paladium_hammer": "Marteau en paladium vert",
       "block.palamod.jacaranda_sappling": "Pousse en jacaranda",
       "block.palamod.judeecercis_wood": "Bois de Judeecercis",
-      "jei.palamod.grindercomposant": "Composant de la structure du grinder",
       "item.palamod.travelarmor_leggings": "Jambière de voyage",
       "gui.palamod.orelayer.label_titane_64_32": "Titane : -64 → 32",
       "gui.palamod.analyserresult.label_dirt": "Terre",
@@ -55804,7 +54787,6 @@
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable": "Cet ensemble d\u0027armure peut être fabriqué",
       "effect.palamod.witherimbu": "Touché flétrie",
       "gui.palamod.specialmoneypanel.custom_destructible": "Supprime l\u0027item dès qu\u0027il est utilisé",
-      "jei.palamod.palamachineinfojei": "La machine en paladium aka palamachine est un bloc qui vous permet de fabriquer des bâtons qui donne un effet utile comme le saut, force, effet de guérison ou vitesse par exemple",
       "palamod.procedure.return_block_menu": "Retour au menu blocs de l\u0027adminshop",
       "gui.palamod.armorpalahelpgui.label_lb_classic": "LB classique",
       "gui.palamod.adminshopmobs_2.button_steak": "Viande cuite",
@@ -55829,7 +54811,6 @@
       "item.palamod.invisiblearmor_boots": "Bottes invisible",
       "block.palamod.downloader": "Téléchargeur",
       "item.palamod.speedstick": "Bàton de vitesse",
-      "jei.palamod.witheredobsidianmaxtierinfo": "Maintenant, créez un portail avec ce bloc pour accéder à la dimension mineur",
       "gui.palamod.adminshoporetitane.label_buy_price_110": "Prix d\u0027achat : 110",
       "gui.palamod.dynamicorelayer.label_empty": "----------------------------",
       "block.palamod.hdv_block": "Bloc du HdV",
@@ -56168,7 +55149,6 @@
       "gui.palamod.adminshopmobs_2gunpowder.label_mode_set": "Quantité :",
       "block.palamod.cloud_block": "Bloc de nuage",
       "item.palamod.titane_armor_boots": "Bottes en titane",
-      "jei.palamod.softenedoresjei": "Les minerais qui peuvent être obtenus dans la dimension de mineur (la plupart sont également obtenables dans le monde normal)\nCes minerais ont une probabilité d\u0027apparition augmentée dans la dimension du mineur",
       "advancements.avancementsupremearmor.descr": "Fabrique toute l\u0027armure en endium puis équiper la",
       "item.palamod.mixed_endium_armor_boots": "Bottes en Endium mixée",
       "gui.palamod.armorpalahelpgui.label_force1": "Force",
@@ -56335,7 +55315,6 @@
       "palamod.procedure.jobswin1": "Vous gagnez",
       "advancements.achmchestgreenpaladium.title": "Un coffre très rare pour un meilleur stockage",
       "palamod.procedure.jobswin2": "Casser pour récupérer de l\u0027xp",
-      "jei.palamod.cobblebreakertitaneupgradejeiinfo": "Une amélioration pour le cobblebreaker qui l\u0027accélère à 2.5x de sa vitesse normale",
       "gui.palamod.adminshopore.button_iron": "Fer",
       "gui.palamod.adminshopplantcactus.label_sell_price_120": "Prix de vente :  120",
       "item.palamod.paladiumarmorcustom_9_chestplate": "Plastron en Paladium Modifié",
@@ -56407,16 +55386,6 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/java/palamod/network/PalamodModVariables.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/resources/palamod.mixins.json",
-      "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/palamod/init/PalamodModTabs.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/java/palamod/init/PalamodModModels.java",
-      "src/main/resources/assets/palamod/sounds.json",
       "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
       "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
@@ -56428,10 +55397,6 @@
       "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
-      "src/main/java/palamod/init/PalamodModJeiInformation.java",
-      "src/main/resources/data/palamod/tags/item/jei_empty_tag.json",
-      "src/main/java/palamod/init/PalamodModJeiPlugin.java",
-      "src/main/java/palamod/init/PalamodModRecipeTypes.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
       "src/main/resources/data/minecraft/tags/painting_variant/placeable.json",
       "src/main/java/palamod/init/PalamodModParticles.java",
@@ -56446,7 +55411,17 @@
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
       "src/main/java/palamod/init/PalamodModEntities.java",
-      "src/main/java/palamod/init/PalamodModEntityRenderers.java"
+      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
+      "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/palamod.mixins.json",
+      "src/main/java/palamod/PalamodMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/palamod/init/PalamodModTabs.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModModels.java",
+      "src/main/resources/assets/palamod/sounds.json"
     ]
   },
   "foldersRoot": {
@@ -56465,7 +55440,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.050",
+    "version": "1.20.053",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
@@ -56483,5 +55458,5 @@
     "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games ",
     "modElementsPackage": "palamod"
   },
-  "mcreatorVersion": 202500228610
+  "mcreatorVersion": 202500345720
 }

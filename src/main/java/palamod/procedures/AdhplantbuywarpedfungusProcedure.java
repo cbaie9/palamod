@@ -70,7 +70,7 @@ public class AdhplantbuywarpedfungusProcedure {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("You cannot bought nothing put a number greater than 0 to continue"), false);
 					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
-						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0 " + item.getDisplayName().getString()));
+						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0  " + item.getDisplayName().getString()));
 					}
 				}
 				if (n * fac_v <= main.get("money").getAsDouble()) {

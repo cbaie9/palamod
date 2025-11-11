@@ -7,6 +7,8 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 
 public class EggplantseedItem extends Item {
 	public EggplantseedItem() {
@@ -16,6 +18,11 @@ public class EggplantseedItem extends Item {
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
+	}
+
+	@Override
+	public SoundEvent getEatingSound() {
+		return SoundEvents.EMPTY;
 	}
 
 	@Override

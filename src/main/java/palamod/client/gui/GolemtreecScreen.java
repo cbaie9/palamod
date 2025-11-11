@@ -24,11 +24,11 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Checkbox upgarde_base;
-	Checkbox golem_v_hunter1;
-	Checkbox golem_v_farmer1;
-	Button button_see_ultilitary_branch;
-	Button button_buy_selected_upgrade;
+	private Checkbox upgarde_base;
+	private Checkbox golem_v_hunter1;
+	private Checkbox golem_v_farmer1;
+	private Button button_see_ultilitary_branch;
+	private Button button_buy_selected_upgrade;
 
 	public GolemtreecScreen(GolemtreecMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,6 +44,18 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
+		if (elementType == 1 && elementState instanceof Boolean logicState) {
+			if (name.equals("upgarde_base")) {
+				if (upgarde_base.selected() != logicState)
+					upgarde_base.onPress();
+			} else if (name.equals("golem_v_hunter1")) {
+				if (golem_v_hunter1.selected() != logicState)
+					golem_v_hunter1.onPress();
+			} else if (name.equals("golem_v_farmer1")) {
+				if (golem_v_farmer1.selected() != logicState)
+					golem_v_farmer1.onPress();
+			}
+		}
 		menuStateUpdateActive = false;
 	}
 

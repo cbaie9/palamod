@@ -1,22 +1,6 @@
 package palamod.command;
 
-import palamod.procedures.JobsminersetxpProcedure;
-import palamod.procedures.JobsminersetlevelProcedure;
-import palamod.procedures.JobsmineraddxpProcedure;
-import palamod.procedures.JobsmineraddlevelsProcedure;
-import palamod.procedures.JobshuntersetxpProcedure;
-import palamod.procedures.JobshuntersetlevelProcedure;
-import palamod.procedures.JobshunteraddxpProcedure;
-import palamod.procedures.JobshunteraddlevelProcedure;
-import palamod.procedures.JobsfarmersetxpProcedure;
-import palamod.procedures.JobsfarmersetlevelProcedure;
-import palamod.procedures.JobsfarmeraddxpProcedure;
-import palamod.procedures.JobsfarmeraddlevelProcedure;
-import palamod.procedures.JobsalchisetxpProcedure;
-import palamod.procedures.JobsalchisetlevelProcedure;
-import palamod.procedures.JobsalchiaddxpProcedure;
-import palamod.procedures.JobsalchiaddlevelProcedure;
-import palamod.procedures.ConnectOpenjobsguiProcedure;
+import palamod.procedures.*;
 
 import org.checkerframework.checker.units.qual.s;
 
