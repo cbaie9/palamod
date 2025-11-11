@@ -86,7 +86,7 @@ public class AdhplantsellmelonProcedure {
 					}
 					main.addProperty("money", (main.get("money").getAsDouble() + n2 * fac_v));
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You sell " + n2 + " items")), false);
+						_player.displayClientMessage(Component.literal(("You sell  " + n2 + " items")), false);
 				} else if (n <= n2) {
 					main.addProperty("money", (main.get("money").getAsDouble() + n * fac_v));
 					if (entity instanceof Player _player) {
@@ -94,7 +94,7 @@ public class AdhplantsellmelonProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) n, _player.inventoryMenu.getCraftSlots());
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You sell " + n + " items")), false);
+						_player.displayClientMessage(Component.literal(("You sell  " + n + " items")), false);
 				} else {
 					if (entity instanceof Player _player)
 						_player.closeContainer();

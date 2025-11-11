@@ -6,6 +6,7 @@ import palamod.PalamodMod;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceKey;
@@ -26,6 +28,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+
+import java.util.Set;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
@@ -58,7 +62,7 @@ public class SetspawndynablockProcedure {
 					_be = world.getBlockEntity(_bp);
 					if (_be != null) {
 						try {
-							_be.loadWithComponents(_bnbt, world.registryAccess());
+							_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 						} catch (Exception ignored) {
 						}
 					}
@@ -73,32 +77,17 @@ public class SetspawndynablockProcedure {
 								.getBlock() == Blocks.VOID_AIR
 						|| (world.getBlockState(BlockPos.containing(DoubleArgumentType.getDouble(arguments, "x_pos"), DoubleArgumentType.getDouble(arguments, "y_pos") + 1, DoubleArgumentType.getDouble(arguments, "z_pos"))))
 								.getBlock() == Blocks.CAVE_AIR)
-				|| entity.getPersistentData().getBoolean("spawn_warn")) {
+				|| entity.getPersistentData().getBooleanOr("spawn_warn", false)) {
 			if ((entity.level().dimension()) == Level.OVERWORLD) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("spawn_x", (DoubleArgumentType.getDouble(arguments, "x_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_y", (DoubleArgumentType.getDouble(arguments, "y_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_z", (DoubleArgumentType.getDouble(arguments, "z_pos")));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -110,20 +99,21 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("spawn_dim_id", "0");
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				PalamodMod.queueServerWork(20, () -> {
-					if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 						ResourceKey<Level> destinationType = Level.NETHER;
 						if (_player.level().dimension() == destinationType)
 							return;
-						ServerLevel nextLevel = _player.server.getLevel(destinationType);
+						ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 						if (nextLevel != null) {
 							_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -144,7 +134,7 @@ public class SetspawndynablockProcedure {
 							_be = world.getBlockEntity(_bp);
 							if (_be != null) {
 								try {
-									_be.loadWithComponents(_bnbt, world.registryAccess());
+									_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 								} catch (Exception ignored) {
 								}
 							}
@@ -154,20 +144,21 @@ public class SetspawndynablockProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putString("spawn_dim_id", "0");
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 					PalamodMod.queueServerWork(20, () -> {
-						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 							ResourceKey<Level> destinationType = Level.END;
 							if (_player.level().dimension() == destinationType)
 								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 							if (nextLevel != null) {
 								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -188,7 +179,7 @@ public class SetspawndynablockProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.loadWithComponents(_bnbt, world.registryAccess());
+										_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 									} catch (Exception ignored) {
 									}
 								}
@@ -198,19 +189,20 @@ public class SetspawndynablockProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("spawn_dim_id", "0");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 							ResourceKey<Level> destinationType = Level.OVERWORLD;
 							if (_player.level().dimension() == destinationType)
 								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 							if (nextLevel != null) {
 								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -224,26 +216,11 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("spawn_x", (DoubleArgumentType.getDouble(arguments, "x_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_y", (DoubleArgumentType.getDouble(arguments, "y_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_z", (DoubleArgumentType.getDouble(arguments, "z_pos")));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -255,20 +232,21 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("spawn_dim_id", "1");
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				PalamodMod.queueServerWork(20, () -> {
-					if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 						ResourceKey<Level> destinationType = Level.OVERWORLD;
 						if (_player.level().dimension() == destinationType)
 							return;
-						ServerLevel nextLevel = _player.server.getLevel(destinationType);
+						ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 						if (nextLevel != null) {
 							_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -289,7 +267,7 @@ public class SetspawndynablockProcedure {
 							_be = world.getBlockEntity(_bp);
 							if (_be != null) {
 								try {
-									_be.loadWithComponents(_bnbt, world.registryAccess());
+									_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 								} catch (Exception ignored) {
 								}
 							}
@@ -299,20 +277,21 @@ public class SetspawndynablockProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putString("spawn_dim_id", "1");
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 					PalamodMod.queueServerWork(20, () -> {
-						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 							ResourceKey<Level> destinationType = Level.END;
 							if (_player.level().dimension() == destinationType)
 								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 							if (nextLevel != null) {
 								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -333,7 +312,7 @@ public class SetspawndynablockProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.loadWithComponents(_bnbt, world.registryAccess());
+										_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 									} catch (Exception ignored) {
 									}
 								}
@@ -343,19 +322,20 @@ public class SetspawndynablockProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("spawn_dim_id", "1");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 							ResourceKey<Level> destinationType = Level.NETHER;
 							if (_player.level().dimension() == destinationType)
 								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 							if (nextLevel != null) {
 								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -369,26 +349,11 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("spawn_x", (DoubleArgumentType.getDouble(arguments, "x_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_y", (DoubleArgumentType.getDouble(arguments, "y_pos")));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = new BlockPos(0, 10, 0);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("spawn_z", (DoubleArgumentType.getDouble(arguments, "z_pos")));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -400,20 +365,21 @@ public class SetspawndynablockProcedure {
 					BlockPos _bp = new BlockPos(0, 10, 0);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putString("spawn_dim_id", "2");
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				PalamodMod.queueServerWork(20, () -> {
-					if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 						ResourceKey<Level> destinationType = Level.OVERWORLD;
 						if (_player.level().dimension() == destinationType)
 							return;
-						ServerLevel nextLevel = _player.server.getLevel(destinationType);
+						ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 						if (nextLevel != null) {
 							_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+							_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 							_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 							for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 								_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -434,7 +400,7 @@ public class SetspawndynablockProcedure {
 							_be = world.getBlockEntity(_bp);
 							if (_be != null) {
 								try {
-									_be.loadWithComponents(_bnbt, world.registryAccess());
+									_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 								} catch (Exception ignored) {
 								}
 							}
@@ -444,20 +410,21 @@ public class SetspawndynablockProcedure {
 						BlockPos _bp = new BlockPos(0, 10, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putString("spawn_dim_id", "2");
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 					PalamodMod.queueServerWork(20, () -> {
-						if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 							ResourceKey<Level> destinationType = Level.NETHER;
 							if (_player.level().dimension() == destinationType)
 								return;
-							ServerLevel nextLevel = _player.server.getLevel(destinationType);
+							ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 							if (nextLevel != null) {
 								_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+								_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 								_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 								for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 									_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -478,7 +445,7 @@ public class SetspawndynablockProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.loadWithComponents(_bnbt, world.registryAccess());
+										_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 									} catch (Exception ignored) {
 									}
 								}
@@ -488,8 +455,9 @@ public class SetspawndynablockProcedure {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putString("spawn_dim_id", "2");
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}

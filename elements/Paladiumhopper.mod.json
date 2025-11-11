@@ -18,6 +18,9 @@
     "itemTexture": "paladium_hopper",
     "particleTexture": "",
     "blockSetType": "OAK",
+    "pottedPlant": {
+      "value": ""
+    },
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -38,7 +41,9 @@
     "customProperties": [],
     "name": "Paladium hopper",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "Don't work, still in developpement"
+      ]
     },
     "hardness": 1.0,
     "resistance": 10.0,
@@ -54,6 +59,8 @@
       "value": "CUSTOM:Paladiumhoppersouth"
     },
     "dropAmount": 1,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
     "useLootTableForDrops": false,
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
@@ -74,6 +81,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -108,6 +118,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

@@ -5,12 +5,8 @@
     "ab"
   ],
   "key": {
-    "a": {
-      "item": "palamod:slimepad"
-    },
-    "b": {
-      "item": "minecraft:blue_dye"
-    }
+    "a": "palamod:slimepad",
+    "b": "minecraft:blue_dye"
   },
   "result": {
     "id": "palamod:slimepad_blue",

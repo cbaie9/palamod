@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:papillusion_322",
   "height": 2,
-  "width": 4
+  "width": 4,
+  "title": {
+    "translate": "painting.palamod.papillusion_322.title"
+  },
+  "author": {
+    "translate": "painting.palamod.papillusion_322.author"
+  }
 }

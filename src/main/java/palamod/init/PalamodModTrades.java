@@ -11,12 +11,15 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 
 @EventBusSubscriber
 public class PalamodModTrades {
 	@SubscribeEvent
 	public static void registerTrades(VillagerTradesEvent event) {
-		if (event.getType() == PalamodModVillagerProfessions.SANTA.get()) {
+		if (event.getType() == ResourceKey.create(Registries.VILLAGER_PROFESSION, ResourceLocation.parse("palamod:santa"))) {
 			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get(), 64), new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()), 1, 5000, 0f));
 			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get(), 64), new ItemStack(Blocks.DIRT), 1000, 500, 0f));
 			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Blocks.SNOW_BLOCK, 2), new ItemStack(Items.SNOWBALL, 8), new ItemStack(Items.POWDER_SNOW_BUCKET), 20, 7, 0.05f));

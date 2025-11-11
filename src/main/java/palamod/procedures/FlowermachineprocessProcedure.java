@@ -43,17 +43,10 @@ public class FlowermachineprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("flower_fuel", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "flower_fuel") - 1));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("flower_timer", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "flower_timer") + 1));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -309,8 +302,9 @@ public class FlowermachineprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble("flower_timer", 0);
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -320,8 +314,9 @@ public class FlowermachineprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("flower_fuel", 100);
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -339,14 +334,14 @@ public class FlowermachineprocessProcedure {
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 

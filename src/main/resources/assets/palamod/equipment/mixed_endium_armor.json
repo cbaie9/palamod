@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:mixed_endium_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:mixed_endium_armor"
+      }
+    ]
+  }
+}

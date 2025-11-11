@@ -12,23 +12,22 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Checkbox upgarde_base;
-	Checkbox golem_v_hunter1;
-	Checkbox golem_v_farmer1;
-	Button button_see_ultilitary_branch;
-	Button button_buy_selected_upgrade;
+	private Checkbox upgarde_base;
+	private Checkbox golem_v_hunter1;
+	private Checkbox golem_v_farmer1;
+	private Button button_see_ultilitary_branch;
+	private Button button_buy_selected_upgrade;
 
 	public GolemtreecScreen(GolemtreecMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,6 +43,18 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 	@Override
 	public void updateMenuState(int elementType, String name, Object elementState) {
 		menuStateUpdateActive = true;
+		if (elementType == 1 && elementState instanceof Boolean logicState) {
+			if (name.equals("upgarde_base")) {
+				if (upgarde_base.selected() != logicState)
+					upgarde_base.onPress();
+			} else if (name.equals("golem_v_hunter1")) {
+				if (golem_v_hunter1.selected() != logicState)
+					golem_v_hunter1.onPress();
+			} else if (name.equals("golem_v_farmer1")) {
+				if (golem_v_farmer1.selected() != logicState)
+					golem_v_farmer1.onPress();
+			}
+		}
 		menuStateUpdateActive = false;
 	}
 
@@ -57,15 +68,11 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 66, this.topPos + 156, 0, 0, 64, 64, 64, 64);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 125, this.topPos + 119, 0, 0, 64, 64, 64, 64);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 192, this.topPos + 119, 0, 0, 64, 64, 64, 64);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 255, this.topPos + 156, 0, 0, 64, 64, 64, 64);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 66, this.topPos + 156, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 125, this.topPos + 119, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 192, this.topPos + 119, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 255, this.topPos + 156, 0, 0, 64, 64, 64, 64);
 	}
 
 	@Override

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:rainbowarmor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:rainbowarmor"
+      }
+    ]
+  }
+}

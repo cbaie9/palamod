@@ -3,46 +3,7 @@
  */
 package palamod.init;
 
-import palamod.block.entity.XpbushonBlockEntity;
-import palamod.block.entity.XpbushlowBlockEntity;
-import palamod.block.entity.XpbushBlockEntity;
-import palamod.block.entity.UploaderBlockEntity;
-import palamod.block.entity.TypesettingtableBlockEntity;
-import palamod.block.entity.TrixiumnbtblockBlockEntity;
-import palamod.block.entity.TotemfertilityBlockEntity;
-import palamod.block.entity.Titanechestv2BlockEntity;
-import palamod.block.entity.TitanechestBlockEntity;
-import palamod.block.entity.Tcv2BlockEntity;
-import palamod.block.entity.PrintingpressBlockEntity;
-import palamod.block.entity.PaladiummachineBlockEntity;
-import palamod.block.entity.PaladiumfurnaceonBlockEntity;
-import palamod.block.entity.PaladiumfurnaceBlockEntity;
-import palamod.block.entity.PaladiumforgeBlockEntity;
-import palamod.block.entity.PaladiumcrusherBlockEntity;
-import palamod.block.entity.Paladiumchestv2BlockEntity;
-import palamod.block.entity.PaladiumchestBlockEntity;
-import palamod.block.entity.OnlinedetectoronBlockEntity;
-import palamod.block.entity.OnlinedetectorBlockEntity;
-import palamod.block.entity.NbtblockBlockEntity;
-import palamod.block.entity.MegasafechestBlockEntity;
-import palamod.block.entity.LuckyblockBlockEntity;
-import palamod.block.entity.HdvblockBlockEntity;
-import palamod.block.entity.GrinderblockBlockEntity;
-import palamod.block.entity.Greenpaladiumchestv2BlockEntity;
-import palamod.block.entity.GreenpaladiumchestBlockEntity;
-import palamod.block.entity.FlowertotemBlockEntity;
-import palamod.block.entity.FactionblckBlockEntity;
-import palamod.block.entity.ExctractorBlockEntity;
-import palamod.block.entity.Endiumchestv2BlockEntity;
-import palamod.block.entity.EndiumchestBlockEntity;
-import palamod.block.entity.DrawbridgeBlockEntity;
-import palamod.block.entity.DownloaderBlockEntity;
-import palamod.block.entity.CobblebreakerserverBlockEntity;
-import palamod.block.entity.CobblebreakerBlockEntity;
-import palamod.block.entity.CloudblockBlockEntity;
-import palamod.block.entity.Amethystchestv2BlockEntity;
-import palamod.block.entity.AmethystchestBlockEntity;
-import palamod.block.entity.Alchimet1BlockEntity;
+import palamod.block.entity.*;
 
 import palamod.PalamodMod;
 
@@ -59,7 +20,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PalamodModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, PalamodMod.MODID);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PaladiumcrusherBlockEntity>> PALADIUM_CRUSHER = register("paladium_crusher", PalamodModBlocks.PALADIUM_CRUSHER, PaladiumcrusherBlockEntity::new);
@@ -107,7 +68,7 @@ public class PalamodModBlockEntities {
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
 	private static <T extends BlockEntity> DeferredHolder<BlockEntityType<?>, BlockEntityType<T>> register(String registryname, DeferredHolder<Block, Block> block, BlockEntityType.BlockEntitySupplier<T> supplier) {
-		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
+		return REGISTRY.register(registryname, () -> new BlockEntityType(supplier, block.get()));
 	}
 
 	@SubscribeEvent

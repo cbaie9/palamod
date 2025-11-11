@@ -7,15 +7,9 @@
     "ccc"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:ink_sac"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:titane_ingot"
-    }
+    "a": "minecraft:ink_sac",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:titane_ingot"
   },
   "result": {
     "id": "palamod:online_detector",

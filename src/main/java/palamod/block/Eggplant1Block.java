@@ -5,7 +5,6 @@ import palamod.procedures.Eggplant1upProcedure;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,8 +23,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Eggplant1Block extends FlowerBlock {
-	public Eggplant1Block() {
-		super(MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+	public Eggplant1Block(BlockBehaviour.Properties properties) {
+		super(MobEffects.SPEED, 5, properties.mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -39,7 +38,7 @@ public class Eggplant1Block extends FlowerBlock {
 	}
 
 	@Override
-	public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader world, BlockPos pos, Player player) {
+	public ItemStack getCloneItemStack(LevelReader world, BlockPos pos, BlockState state, boolean includeData, Player entity) {
 		return new ItemStack(PalamodModItems.EGGPLANT_SEED.get());
 	}
 

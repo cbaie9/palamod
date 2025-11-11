@@ -19,17 +19,17 @@ public class SpecialmoneyprocessProcedure {
 			return;
 		if (getAmountInGUISlot(entity, 0) != 0) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu1 ? _menu1.getSlots().get(0).getItem() : ItemStack.EMPTY).copy()).copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				ItemStack _setstack3 = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu1 ? _menu1.getSlots().get(0).getItem() : ItemStack.EMPTY).copy()).copy();
+				_setstack3.setCount(1);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack3);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
 		} else {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_ITEM.get()).copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				ItemStack _setstack4 = new ItemStack(PalamodModItems.MONEY_ITEM.get()).copy();
+				_setstack4.setCount(1);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack4);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
@@ -78,7 +78,7 @@ public class SpecialmoneyprocessProcedure {
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
 		}
-		if ((entity instanceof Player _entity22 && _entity22.containerMenu instanceof PalamodModMenus.MenuAccessor _menu22) ? _menu22.getMenuState(1, "custom_destructible", false) : false) {
+		if ((entity instanceof Player _entity22 && _entity22.containerMenu instanceof PalamodModMenus.MenuAccessor _menu22) && _menu22.getMenuState(1, "custom_destructible", false)) {
 			{
 				final String _tagName = "destri_money";
 				final boolean _tagValue = true;

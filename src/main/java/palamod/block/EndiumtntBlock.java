@@ -4,6 +4,7 @@ import palamod.procedures.TntendiumflintProcedure;
 import palamod.procedures.SpawnendiumtntProcedure;
 
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,13 +19,15 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import javax.annotation.Nullable;
+
 public class EndiumtntBlock extends Block {
-	public EndiumtntBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).sound(SoundType.CROP).strength(0.75f, 10f).ignitedByLava());
+	public EndiumtntBlock(BlockBehaviour.Properties properties) {
+		super(properties.mapColor(MapColor.FIRE).sound(SoundType.CROP).strength(0.75f, 10f).ignitedByLava());
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 
@@ -39,8 +42,8 @@ public class EndiumtntBlock extends Block {
 	}
 
 	@Override
-	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, orientation, moving);
 		if (world.getBestNeighborSignal(pos) > 0) {
 			SpawnendiumtntProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		}

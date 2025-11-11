@@ -1,47 +1,16 @@
 package palamod.item;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
-public class PaladiumbroadswordItem extends SwordItem {
-	private static final Tier TOOL_TIER = new Tier() {
-		@Override
-		public int getUses() {
-			return 3999;
-		}
+public class PaladiumbroadswordItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3999, 2f, 0, 1, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:paladiumbroadsword_repair_items")));
 
-		@Override
-		public float getSpeed() {
-			return 2f;
-		}
-
-		@Override
-		public float getAttackDamageBonus() {
-			return 0;
-		}
-
-		@Override
-		public TagKey<Block> getIncorrectBlocksForDrops() {
-			return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-		}
-
-		@Override
-		public int getEnchantmentValue() {
-			return 1;
-		}
-
-		@Override
-		public Ingredient getRepairIngredient() {
-			return Ingredient.of();
-		}
-	};
-
-	public PaladiumbroadswordItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 11f, -3.5f)));
+	public PaladiumbroadswordItem(Item.Properties properties) {
+		super(properties.sword(TOOL_MATERIAL, 11f, -3.5f));
 	}
 }

@@ -44,7 +44,7 @@ public class Orangeblue4dropProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && 100 <= lvl) {
+			if (!(world instanceof ServerLevel _serverLevelGR6 && _serverLevelGR6.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) && 100 <= lvl) {
 				if (Math.random() < 0.1) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ORANGEBLUESEED.get()));
@@ -58,10 +58,10 @@ public class Orangeblue4dropProcedure {
 					_level.addFreshEntity(entityToSpawn);
 				}
 				if (Math.random() < 0.00390625) {
-					if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
-							&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"))).isDone())) {
-						if (entity instanceof ServerPlayer _player) {
-							AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"));
+					if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel _serverLevel9
+							&& _plr9.getAdvancements().getOrStartProgress(_serverLevel9.getServer().getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"))).isDone())) {
+						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+							AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"));
 							if (_adv != null) {
 								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 								if (!_ap.isDone()) {

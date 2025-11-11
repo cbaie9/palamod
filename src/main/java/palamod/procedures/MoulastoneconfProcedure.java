@@ -17,7 +17,7 @@ public class MoulastoneconfProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered")) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("powered", false)) {
 			{
 				final String _tagName = "powered";
 				final boolean _tagValue = false;
@@ -27,7 +27,7 @@ public class MoulastoneconfProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p {\"text\":\"Moulastone : Deactivated\",\"color\":\"gold\"}");
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 20);
+				_player.getCooldowns().addCooldown(itemstack, 20);
 		} else {
 			{
 				final String _tagName = "powered";
@@ -38,7 +38,7 @@ public class MoulastoneconfProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @p {\"text\":\"Moulastone : Activated\",\"color\":\"gold\"}");
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 20);
+				_player.getCooldowns().addCooldown(itemstack, 20);
 		}
 	}
 }

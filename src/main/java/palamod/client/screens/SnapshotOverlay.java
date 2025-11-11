@@ -15,7 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
-@EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber(Dist.CLIENT)
 public class SnapshotOverlay {
 	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

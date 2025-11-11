@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:titane_pickaxe"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:titane_pickaxe"
   },
   "result": {
     "id": "palamod:pickaxe_pattern",

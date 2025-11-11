@@ -17,6 +17,7 @@ import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Holder;
@@ -29,18 +30,18 @@ import java.util.HashMap;
 
 import com.google.common.collect.ImmutableSet;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PalamodModVillagerProfessions {
 	private static final Map<String, ProfessionPoiType> POI_TYPES = new HashMap<>();
 	public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(Registries.VILLAGER_PROFESSION, PalamodMod.MODID);
 	public static final DeferredHolder<VillagerProfession, VillagerProfession> SANTA = registerProfession("santa", () -> PalamodModBlocks.LUCKY_BLOCK.get(),
-			() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.villager.work_cartographer")));
+			() -> BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.villager.work_cartographer")));
 
 	private static DeferredHolder<VillagerProfession, VillagerProfession> registerProfession(String name, Supplier<Block> block, Supplier<SoundEvent> soundEvent) {
 		POI_TYPES.put(name, new ProfessionPoiType(block, null));
 		return PROFESSIONS.register(name, () -> {
 			Predicate<Holder<PoiType>> poiPredicate = poiTypeHolder -> (POI_TYPES.get(name).poiType != null) && (poiTypeHolder.value() == POI_TYPES.get(name).poiType.value());
-			return new VillagerProfession(PalamodMod.MODID + ":" + name, poiPredicate, poiPredicate, ImmutableSet.of(), ImmutableSet.of(), soundEvent.get());
+			return new VillagerProfession(Component.translatable("entity.villager." + PalamodMod.MODID + "." + name), poiPredicate, poiPredicate, ImmutableSet.of(), ImmutableSet.of(), soundEvent.get());
 		});
 	}
 

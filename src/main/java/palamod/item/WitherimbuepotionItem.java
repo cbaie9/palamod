@@ -4,20 +4,15 @@ import palamod.procedures.AddwitherimbueProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 
 public class WitherimbuepotionItem extends Item {
-	public WitherimbuepotionItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(0).saturationModifier(0.3f).build()));
-	}
-
-	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.DRINK;
+	public WitherimbuepotionItem(Item.Properties properties) {
+		super(properties.food((new FoodProperties.Builder()).nutrition(0).saturationModifier(0.3f).build(), Consumables.DEFAULT_DRINK));
 	}
 
 	@Override
@@ -28,9 +23,6 @@ public class WitherimbuepotionItem extends Item {
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
 		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
 		AddwitherimbueProcedure.execute(entity);
 		return retval;
 	}

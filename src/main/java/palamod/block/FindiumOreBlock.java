@@ -23,8 +23,8 @@ import net.minecraft.core.BlockPos;
 public class FindiumOreBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
-	public FindiumOreBlock() {
-		super(BlockBehaviour.Properties.of().strength(3f, 5f).lightLevel(s -> (new Object() {
+	public FindiumOreBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(3f, 5f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -34,7 +34,7 @@ public class FindiumOreBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

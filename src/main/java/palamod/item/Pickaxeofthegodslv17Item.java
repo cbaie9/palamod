@@ -11,69 +11,42 @@ import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
+import javax.annotation.Nullable;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public class Pickaxeofthegodslv17Item extends TieredItem {
-	private static final Tier TOOL_TIER = new Tier() {
-		@Override
-		public int getUses() {
-			return 0;
-		}
+import java.util.function.Consumer;
 
-		@Override
-		public float getSpeed() {
-			return 30f;
-		}
+@EventBusSubscriber
+public class Pickaxeofthegodslv17Item extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 30f, 0, 10, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pickaxeofthegodslv_17_repair_items")));
 
-		@Override
-		public float getAttackDamageBonus() {
-			return 0;
-		}
-
-		@Override
-		public TagKey<Block> getIncorrectBlocksForDrops() {
-			return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-		}
-
-		@Override
-		public int getEnchantmentValue() {
-			return 10;
-		}
-
-		@Override
-		public Ingredient getRepairIngredient() {
-			return Ingredient.of();
-		}
-	};
-
-	public Pickaxeofthegodslv17Item() {
-		super(TOOL_TIER, new Item.Properties().attributes(ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, 5.5, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
-				.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.5, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
+	public Pickaxeofthegodslv17Item(Item.Properties properties) {
+		super(TOOL_MATERIAL.applyToolProperties(properties, BlockTags.MINEABLE_WITH_PICKAXE, 5.5f, -2.5f, 0)
+				.attributes(ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, 5.5, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
+						.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.5, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build()));
 	}
 
 	@SubscribeEvent
@@ -88,8 +61,7 @@ public class Pickaxeofthegodslv17Item extends TieredItem {
 
 	@Override
 	public boolean canPerformAction(ItemStack stack, ItemAbility toolAction) {
-		return ItemAbilities.DEFAULT_AXE_ACTIONS.contains(toolAction) || ItemAbilities.DEFAULT_HOE_ACTIONS.contains(toolAction) || ItemAbilities.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || ItemAbilities.DEFAULT_PICKAXE_ACTIONS.contains(toolAction)
-				|| ItemAbilities.DEFAULT_SWORD_ACTIONS.contains(toolAction);
+		return ItemAbilities.DEFAULT_AXE_ACTIONS.contains(toolAction) || ItemAbilities.DEFAULT_HOE_ACTIONS.contains(toolAction) || ItemAbilities.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) || toolAction == ItemAbilities.SWORD_SWEEP;
 	}
 
 	@Override
@@ -105,22 +77,20 @@ public class Pickaxeofthegodslv17Item extends TieredItem {
 	}
 
 	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+	public void hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		itemstack.hurtAndBreak(2, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
-		return true;
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.pickaxeofthegodslv_17.description_0"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.palamod.pickaxeofthegodslv_17.description_0"));
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		if (selected)
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
+		if (equipmentSlot == EquipmentSlot.MAINHAND)
 			MoucepotgProcedure.execute(entity, itemstack);
 		GetenchantpotgProcedure.execute(world, itemstack);
 	}

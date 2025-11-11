@@ -2,12 +2,14 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -49,15 +51,16 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
 					}
 				}
-				if (!(entity instanceof ServerPlayer _plr6 && _plr6.level() instanceof ServerLevel && _plr6.getAdvancements().getOrStartProgress(_plr6.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr6 && _plr6.level() instanceof ServerLevel _serverLevel6
+						&& _plr6.getAdvancements().getOrStartProgress(_serverLevel6.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -91,7 +94,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -101,10 +104,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr13 && _plr13.level() instanceof ServerLevel
-						&& _plr13.getAdvancements().getOrStartProgress(_plr13.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr13 && _plr13.level() instanceof ServerLevel _serverLevel13
+						&& _plr13.getAdvancements().getOrStartProgress(_serverLevel13.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -138,7 +141,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -148,10 +151,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr20 && _plr20.level() instanceof ServerLevel
-						&& _plr20.getAdvancements().getOrStartProgress(_plr20.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr20 && _plr20.level() instanceof ServerLevel _serverLevel20
+						&& _plr20.getAdvancements().getOrStartProgress(_serverLevel20.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -185,7 +188,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -195,10 +198,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr27 && _plr27.level() instanceof ServerLevel
-						&& _plr27.getAdvancements().getOrStartProgress(_plr27.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr27 && _plr27.level() instanceof ServerLevel _serverLevel27
+						&& _plr27.getAdvancements().getOrStartProgress(_serverLevel27.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -232,7 +235,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -242,10 +245,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr34 && _plr34.level() instanceof ServerLevel
-						&& _plr34.getAdvancements().getOrStartProgress(_plr34.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr34 && _plr34.level() instanceof ServerLevel _serverLevel34
+						&& _plr34.getAdvancements().getOrStartProgress(_serverLevel34.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -279,7 +282,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -289,10 +292,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr41 && _plr41.level() instanceof ServerLevel
-						&& _plr41.getAdvancements().getOrStartProgress(_plr41.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr41 && _plr41.level() instanceof ServerLevel _serverLevel41
+						&& _plr41.getAdvancements().getOrStartProgress(_serverLevel41.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -326,7 +329,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -336,10 +339,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr48 && _plr48.level() instanceof ServerLevel
-						&& _plr48.getAdvancements().getOrStartProgress(_plr48.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr48 && _plr48.level() instanceof ServerLevel _serverLevel48
+						&& _plr48.getAdvancements().getOrStartProgress(_serverLevel48.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -373,7 +376,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -383,10 +386,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr55 && _plr55.level() instanceof ServerLevel
-						&& _plr55.getAdvancements().getOrStartProgress(_plr55.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr55 && _plr55.level() instanceof ServerLevel _serverLevel55
+						&& _plr55.getAdvancements().getOrStartProgress(_serverLevel55.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -420,7 +423,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -430,10 +433,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr62 && _plr62.level() instanceof ServerLevel
-						&& _plr62.getAdvancements().getOrStartProgress(_plr62.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr62 && _plr62.level() instanceof ServerLevel _serverLevel62
+						&& _plr62.getAdvancements().getOrStartProgress(_serverLevel62.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
@@ -467,7 +470,7 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -477,10 +480,10 @@ public class FlatchestupgradeRightclickedOnBlockProcedure {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
-				if (!(entity instanceof ServerPlayer _plr69 && _plr69.level() instanceof ServerLevel
-						&& _plr69.getAdvancements().getOrStartProgress(_plr69.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
+				if (!(entity instanceof ServerPlayer _plr69 && _plr69.level() instanceof ServerLevel _serverLevel69
+						&& _plr69.getAdvancements().getOrStartProgress(_serverLevel69.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"))).isDone())) {
+					if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+						AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:flatchestadvancement"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {

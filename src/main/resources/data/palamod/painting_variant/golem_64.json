@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:golem_64",
   "height": 4,
-  "width": 4
+  "width": 4,
+  "title": {
+    "translate": "painting.palamod.golem_64.title"
+  },
+  "author": {
+    "translate": "painting.palamod.golem_64.author"
+  }
 }

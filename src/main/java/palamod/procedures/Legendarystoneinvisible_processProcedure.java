@@ -20,7 +20,7 @@ public class Legendarystoneinvisible_processProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 9000, 1, false, false));
 			if (world.isClientSide())

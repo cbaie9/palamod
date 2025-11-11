@@ -6,12 +6,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:stick"
-    },
-    "b": {
-      "item": "palamod:ostrya_wood_planks"
-    }
+    "a": "minecraft:stick",
+    "b": "palamod:ostrya_wood_planks"
   },
   "result": {
     "id": "palamod:ostrya_wood_fence_gate",

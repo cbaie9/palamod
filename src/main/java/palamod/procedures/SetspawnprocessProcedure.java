@@ -31,7 +31,7 @@ public class SetspawnprocessProcedure {
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CAVE_AIR)
 				&& ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.VOID_AIR
 						|| (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR)
-				|| entity.getPersistentData().getBoolean("spawn_warn")) {
+				|| entity.getPersistentData().getBooleanOr("spawn_warn", false)) {
 			if (!home.exists()) {
 				try {
 					home.getParentFile().mkdirs();

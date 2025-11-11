@@ -6,12 +6,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:jacaranda_planks"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "palamod:jacaranda_planks",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "palamod:jacaranda_fence",

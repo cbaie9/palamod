@@ -2,10 +2,12 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
@@ -35,7 +37,7 @@ public class OnlinedetectorprocessProcedure {
 					_be = world.getBlockEntity(_bp);
 					if (_be != null) {
 						try {
-							_be.loadWithComponents(_bnbt, world.registryAccess());
+							_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 						} catch (Exception ignored) {
 						}
 					}
@@ -65,7 +67,7 @@ public class OnlinedetectorprocessProcedure {
 					_be = world.getBlockEntity(_bp);
 					if (_be != null) {
 						try {
-							_be.loadWithComponents(_bnbt, world.registryAccess());
+							_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 						} catch (Exception ignored) {
 						}
 					}
@@ -78,14 +80,14 @@ public class OnlinedetectorprocessProcedure {
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 }

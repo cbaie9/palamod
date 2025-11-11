@@ -10,6 +10,6 @@ public class Angelicwater_healProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 10, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 10, 1, false, false));
 	}
 }

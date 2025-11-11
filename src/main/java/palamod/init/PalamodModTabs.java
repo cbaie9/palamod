@@ -17,7 +17,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PalamodModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PalamodMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PALAMOD = REGISTRY.register("palamod",

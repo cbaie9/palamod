@@ -11,13 +11,14 @@ import palamod.network.AdminshoporeironButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -29,19 +30,17 @@ import net.minecraft.client.Minecraft;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class AdminshoporeironScreen extends AbstractContainerScreen<AdminshoporeironMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox number_buy;
-	Button button_buy;
-	Button button_sell;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
+	private EditBox number_buy;
+	private Button button_buy;
+	private Button button_sell;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
 
 	public AdminshoporeironScreen(AdminshoporeironMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -72,21 +71,21 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 3 && mouseY < topPos + 19) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 138 && mouseX < leftPos + 153 && mouseY > topPos + 5 && mouseY < topPos + 19) {
 			String hoverText = ReturnadminshoporemenuProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 123 && mouseX < leftPos + 135 && mouseY > topPos + 4 && mouseY < topPos + 19) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -96,13 +95,9 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 	}
 
 	@Override
@@ -147,7 +142,7 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 			int x = AdminshoporeironScreen.this.x;
 			int y = AdminshoporeironScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshoporeironButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshoporeironButtonMessage(0, x, y, z));
 				AdminshoporeironButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 108, 40, 20).build();
@@ -156,7 +151,7 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 			int x = AdminshoporeironScreen.this.x;
 			int y = AdminshoporeironScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshoporeironButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshoporeironButtonMessage(1, x, y, z));
 				AdminshoporeironButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 100, this.topPos + 108, 46, 20).build();
@@ -166,13 +161,13 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 					int x = AdminshoporeironScreen.this.x;
 					int y = AdminshoporeironScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshoporeironButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshoporeironButtonMessage(2, x, y, z));
 						AdminshoporeironButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -181,13 +176,13 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 					int x = AdminshoporeironScreen.this.x;
 					int y = AdminshoporeironScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshoporeironButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshoporeironButtonMessage(3, x, y, z));
 						AdminshoporeironButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
@@ -196,13 +191,13 @@ public class AdminshoporeironScreen extends AbstractContainerScreen<Adminshopore
 					int x = AdminshoporeironScreen.this.x;
 					int y = AdminshoporeironScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshoporeironButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshoporeironButtonMessage(4, x, y, z));
 						AdminshoporeironButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);

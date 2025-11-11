@@ -82,13 +82,13 @@ public class JobsminerbreakblockProcedure {
 					if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z, entity)) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
-								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
-										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type"))
+								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0)
+										|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0))
 								&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
 							{
 								final String _tagName = "xp_jobs";
 								final double _tagValue = (GetxpminerbreakblockProcedure.execute(world, entity) * main.get("multi_exp").getAsDouble()
-										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
+										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("xp_jobs", 0));
 								CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 							}
 							{
@@ -100,7 +100,7 @@ public class JobsminerbreakblockProcedure {
 							main.addProperty("xp_miner", (GetxpminerbreakblockProcedure.execute(world, entity) * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
 						}
 						main.addProperty("xpstreak_miner", (GetxpminerbreakblockProcedure.execute(world, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
-						main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
+						main.addProperty("xpstreak_time_miner", (world.dayTime() + 30));
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(
 									Component

@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:black_concrete"
-    },
-    "b": {
-      "item": "palamod:titane_stick"
-    },
-    "c": {
-      "item": "palamod:internet_card"
-    }
+    "a": "minecraft:black_concrete",
+    "b": "palamod:titane_stick",
+    "c": "palamod:internet_card"
   },
   "result": {
     "id": "palamod:uploader",

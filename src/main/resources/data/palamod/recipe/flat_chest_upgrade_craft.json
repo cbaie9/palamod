@@ -7,15 +7,9 @@
     " c "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_block"
-    },
-    "b": {
-      "item": "minecraft:chest"
-    },
-    "c": {
-      "item": "palamod:harpagophytum"
-    }
+    "a": "palamod:paladium_block",
+    "b": "minecraft:chest",
+    "c": "palamod:harpagophytum"
   },
   "result": {
     "id": "palamod:flat_chest_upgrade",

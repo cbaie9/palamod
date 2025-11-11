@@ -6,9 +6,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:erable_planks"
-    }
+    "a": "palamod:erable_planks"
   },
   "result": {
     "id": "minecraft:stick",

@@ -13,6 +13,6 @@ public class ConsolesayprocessProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("[ Console ] : " + StringArgumentType.getString(arguments, "chat_text"))), false);
+			_player.displayClientMessage(Component.literal(("[ Console ] :  " + StringArgumentType.getString(arguments, "chat_text"))), false);
 	}
 }

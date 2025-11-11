@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "palamod:titane_spike"
-    }
+    "minecraft:obsidian",
+    "palamod:titane_spike"
   ],
   "result": {
     "id": "palamod:titane_obsidian_spike",

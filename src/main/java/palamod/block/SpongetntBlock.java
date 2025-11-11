@@ -3,6 +3,7 @@ package palamod.block;
 import palamod.procedures.UpdateblockProcedure;
 import palamod.procedures.SpawnprimedtntProcedure;
 
+import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -12,13 +13,15 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import javax.annotation.Nullable;
+
 public class SpongetntBlock extends Block {
-	public SpongetntBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.LILY_PAD).strength(1f, 10f));
+	public SpongetntBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.LILY_PAD).strength(1f, 10f));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 
@@ -34,8 +37,8 @@ public class SpongetntBlock extends Block {
 	}
 
 	@Override
-	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
-		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, @Nullable Orientation orientation, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, orientation, moving);
 		if (world.getBestNeighborSignal(pos) > 0) {
 			SpawnprimedtntProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		}

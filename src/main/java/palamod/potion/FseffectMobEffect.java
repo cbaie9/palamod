@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.InstantenousMobEffect;
+import net.minecraft.server.level.ServerLevel;
 
 public class FseffectMobEffect extends InstantenousMobEffect {
 	public FseffectMobEffect() {
@@ -13,7 +14,7 @@ public class FseffectMobEffect extends InstantenousMobEffect {
 	}
 
 	@Override
-	public void applyInstantenousEffect(Entity source, Entity indirectSource, LivingEntity entity, int amplifier, double health) {
-		FseffectEffectStartedappliedProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	public void applyInstantenousEffect(ServerLevel level, Entity source, Entity indirectSource, LivingEntity entity, int amplifier, double health) {
+		FseffectEffectStartedappliedProcedure.execute(level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 }

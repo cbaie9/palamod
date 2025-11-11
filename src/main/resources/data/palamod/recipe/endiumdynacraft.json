@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:dynamite"
-    },
-    {
-      "item": "palamod:endium_nugget"
-    }
+    "palamod:dynamite",
+    "palamod:endium_nugget"
   ],
   "result": {
     "id": "palamod:endium_dynamite",

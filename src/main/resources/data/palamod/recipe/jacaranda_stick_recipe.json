@@ -6,9 +6,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:jacaranda_planks"
-    }
+    "a": "palamod:jacaranda_planks"
   },
   "result": {
     "id": "minecraft:stick",

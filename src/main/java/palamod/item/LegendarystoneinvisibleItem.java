@@ -4,45 +4,45 @@ import palamod.procedures.LegendarystonestickProcedure;
 import palamod.procedures.Legendarystoneinvisible_processProcedure;
 import palamod.procedures.LegendarystoneglintconditionProcedure;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerLevel;
+
+import javax.annotation.Nullable;
 
 public class LegendarystoneinvisibleItem extends Item {
-	public LegendarystoneinvisibleItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
+	public LegendarystoneinvisibleItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.EPIC).stacksTo(1));
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
 	public boolean isFoil(ItemStack itemstack) {
 		return LegendarystoneglintconditionProcedure.execute(itemstack);
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Legendarystoneinvisible_processProcedure.execute(world, entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		Legendarystoneinvisible_processProcedure.execute(world, entity, entity.getItemInHand(hand));
 		return ar;
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		LegendarystonestickProcedure.execute(entity, itemstack);
 	}
 }

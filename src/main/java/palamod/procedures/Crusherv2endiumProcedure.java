@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class Crusherv2endiumProcedure {
@@ -32,12 +33,13 @@ public class Crusherv2endiumProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("crusher_num_endium", 0);
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR8 && _serverLevelGR8.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 					PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( endium )"));
 				}
 			}
@@ -54,12 +56,13 @@ public class Crusherv2endiumProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble("crusher_num_endium", 0);
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 						PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( endium )"));
 					}
 				}
@@ -76,12 +79,13 @@ public class Crusherv2endiumProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("crusher_num_endium", 0);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR28 && _serverLevelGR28.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( failed ) ( endium ) "));
 						}
 					}
@@ -93,7 +97,7 @@ public class Crusherv2endiumProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 

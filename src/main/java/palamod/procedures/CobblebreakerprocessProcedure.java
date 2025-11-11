@@ -34,17 +34,17 @@ public class CobblebreakerprocessProcedure {
 		}
 		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:cobblebreakable")))
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.MINAGE_VOIDSTONE.get()
-						&& 0 < (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count")) {
+						&& 0 < (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0)) {
 			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "cobblebreak_tick") >= 100) {
 				if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.MINAGE_VOIDSTONE.get()) {
 					teststack = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (teststack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") - 1);
+						final double _tagValue = (teststack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) - 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, teststack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
-					teststack.set(DataComponents.CUSTOM_NAME,
-							Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(teststack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count")))));
+					teststack.set(DataComponents.CUSTOM_NAME, Component
+							.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(teststack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0)))));
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = teststack.copy();
 						_setstack.setCount(1);
@@ -111,8 +111,9 @@ public class CobblebreakerprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("cobblebreak_tick", 0);
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -121,8 +122,9 @@ public class CobblebreakerprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("cobblebreak_tick", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "cobblebreak_tick") + 1 * coef));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -132,8 +134,9 @@ public class CobblebreakerprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("cobblebreak_tickbreak", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "cobblebreak_tickbreak") - 1));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -145,8 +148,9 @@ public class CobblebreakerprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble("cobblebreak_tick", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "cobblebreak_tick") - 1));
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -155,8 +159,9 @@ public class CobblebreakerprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble("cobblebreak_tickbreak", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "cobblebreak_tickbreak") + 1));
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -178,7 +183,7 @@ public class CobblebreakerprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

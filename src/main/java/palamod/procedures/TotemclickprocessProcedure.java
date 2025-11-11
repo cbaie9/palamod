@@ -32,9 +32,9 @@ public class TotemclickprocessProcedure {
 			if (MaxItem + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") > 64) {
 				removeitem = 64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock");
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-					_setstack.setCount((int) (MaxItem - removeitem));
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack7 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+					_setstack7.setCount((int) (MaxItem - removeitem));
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack7);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -42,16 +42,17 @@ public class TotemclickprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("totem_stock", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") + removeitem));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 			} else {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-					_setstack.setCount(0);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					ItemStack _setstack10 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+					_setstack10.setCount(0);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack10);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -59,8 +60,9 @@ public class TotemclickprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("totem_stock", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") + MaxItem));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -75,8 +77,9 @@ public class TotemclickprocessProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putDouble("totem_stock", 0);
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -91,7 +94,7 @@ public class TotemclickprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

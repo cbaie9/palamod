@@ -1,23 +1,22 @@
 package palamod.block;
 
-import net.neoforged.neoforge.common.util.TriState;
-
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.util.TriState;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Erable_LogBlock extends Block {
-	public Erable_LogBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+	public Erable_LogBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

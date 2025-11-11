@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:amethyst_block"
-    }
+    "palamod:amethyst_block"
   ],
   "result": {
     "id": "palamod:amethyst",

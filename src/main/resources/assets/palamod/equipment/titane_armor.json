@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:titane_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:titane_armor"
+      }
+    ]
+  }
+}

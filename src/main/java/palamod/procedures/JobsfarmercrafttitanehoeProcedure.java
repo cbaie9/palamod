@@ -17,37 +17,13 @@ public class JobsfarmercrafttitanehoeProcedure {
 		{
 			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text = "This hoe spade";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text2 = "in 4x4 area";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text3 = "in a single click";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text4 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text5 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_durability = "Durability : 4000";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.lvl_required = "Lvl required : 20";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANE_INGOT.get())) && (getAmountInGUISlot(entity, 1) == 0
 				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu2 ? _menu2.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANE_INGOT.get()
@@ -57,9 +33,9 @@ public class JobsfarmercrafttitanehoeProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 1) + 1);
-				_menu.getSlots().get(1).set(_setstack);
+				ItemStack _setstack7 = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
+				_setstack7.setCount(getAmountInGUISlot(entity, 1) + 1);
+				_menu.getSlots().get(1).set(_setstack7);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -71,9 +47,9 @@ public class JobsfarmercrafttitanehoeProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 0) + 1);
-				_menu.getSlots().get(0).set(_setstack);
+				ItemStack _setstack15 = new ItemStack(PalamodModItems.TITANE_INGOT.get()).copy();
+				_setstack15.setCount(getAmountInGUISlot(entity, 0) + 1);
+				_menu.getSlots().get(0).set(_setstack15);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -85,9 +61,9 @@ public class JobsfarmercrafttitanehoeProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Items.STICK).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 4) + 1);
-				_menu.getSlots().get(4).set(_setstack);
+				ItemStack _setstack23 = new ItemStack(Items.STICK).copy();
+				_setstack23.setCount(getAmountInGUISlot(entity, 4) + 1);
+				_menu.getSlots().get(4).set(_setstack23);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -99,9 +75,9 @@ public class JobsfarmercrafttitanehoeProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Items.STICK).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 7) + 1);
-				_menu.getSlots().get(7).set(_setstack);
+				ItemStack _setstack31 = new ItemStack(Items.STICK).copy();
+				_setstack31.setCount(getAmountInGUISlot(entity, 7) + 1);
+				_menu.getSlots().get(7).set(_setstack31);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

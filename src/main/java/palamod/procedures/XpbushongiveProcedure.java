@@ -5,6 +5,7 @@ import palamod.init.PalamodModBlocks;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
@@ -43,7 +45,7 @@ public class XpbushongiveProcedure {
 				_be = world.getBlockEntity(_bp);
 				if (_be != null) {
 					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
+						_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 					} catch (Exception ignored) {
 					}
 				}
@@ -58,8 +60,9 @@ public class XpbushongiveProcedure {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putDouble("xp_bush_grown_count", 256);
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

@@ -22,6 +22,8 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
+import java.util.Set;
+
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.File;
@@ -57,14 +59,14 @@ public class HomeprocessProcedure {
 						if (main.has("home_x") && main.has("home_y") && !main.get("deleted").getAsBoolean() && main.has("home_z")) {
 							if (!(main.get("dim_id").getAsString()).equals("" + entity.level().dimension())) {
 								if (("" + Level.OVERWORLD).equals(main.get("dim_id").getAsString())) {
-									if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+									if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 										ResourceKey<Level> destinationType = Level.OVERWORLD;
 										if (_player.level().dimension() == destinationType)
 											return;
-										ServerLevel nextLevel = _player.server.getLevel(destinationType);
+										ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 										if (nextLevel != null) {
 											_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-											_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+											_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 											_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 											for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 												_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -73,14 +75,14 @@ public class HomeprocessProcedure {
 									}
 									dim_check = true;
 								} else if (("" + Level.NETHER).equals(main.get("dim_id").getAsString())) {
-									if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+									if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 										ResourceKey<Level> destinationType = Level.NETHER;
 										if (_player.level().dimension() == destinationType)
 											return;
-										ServerLevel nextLevel = _player.server.getLevel(destinationType);
+										ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 										if (nextLevel != null) {
 											_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-											_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+											_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 											_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 											for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 												_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -89,14 +91,14 @@ public class HomeprocessProcedure {
 									}
 									dim_check = true;
 								} else if (("" + Level.END).equals(main.get("dim_id").getAsString())) {
-									if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+									if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 										ResourceKey<Level> destinationType = Level.END;
 										if (_player.level().dimension() == destinationType)
 											return;
-										ServerLevel nextLevel = _player.server.getLevel(destinationType);
+										ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 										if (nextLevel != null) {
 											_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-											_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+											_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 											_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 											for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 												_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));

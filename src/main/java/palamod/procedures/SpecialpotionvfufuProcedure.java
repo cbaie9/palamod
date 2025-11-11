@@ -13,19 +13,19 @@ public class SpecialpotionvfufuProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 999999, 5, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 999999, 5, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 999999, 10, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.HASTE, 999999, 10, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 999999, 20, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 999999, 20, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 999999, 5, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 999999, 100, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 999999, 100, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 999999, 4, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 999999, 4, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 999999, 80, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 999999, 80, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 999999, 80, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

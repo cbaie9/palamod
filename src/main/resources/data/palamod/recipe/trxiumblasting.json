@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 1,
   "cookingtime": 100,
-  "ingredient": {
-    "item": "palamod:trixium_ore"
-  },
+  "ingredient": "palamod:trixium_ore",
   "result": {
     "id": "palamod:trixium"
   }

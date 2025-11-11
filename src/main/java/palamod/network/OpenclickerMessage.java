@@ -18,7 +18,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record OpenclickerMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<OpenclickerMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "key_openclicker"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, OpenclickerMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, OpenclickerMessage message) -> {

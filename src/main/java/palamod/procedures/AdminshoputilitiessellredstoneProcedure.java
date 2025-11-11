@@ -60,20 +60,22 @@ public class AdminshoputilitiessellredstoneProcedure {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putDouble(("money_" + entity.getDisplayName().getString()), (getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) + n2 * fac_v));
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You sell " + n2 + " items")), false);
+				_player.displayClientMessage(Component.literal(("You sell  " + n2 + " items")), false);
 		} else if (n <= n2) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putDouble(("money_" + entity.getDisplayName().getString()), (getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) + n * fac_v));
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
@@ -82,7 +84,7 @@ public class AdminshoputilitiessellredstoneProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) n, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You sell " + n + " items")), false);
+				_player.displayClientMessage(Component.literal(("You sell  " + n + " items")), false);
 		} else {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
@@ -94,7 +96,7 @@ public class AdminshoputilitiessellredstoneProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

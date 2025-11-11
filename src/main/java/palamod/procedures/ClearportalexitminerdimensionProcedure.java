@@ -22,9 +22,9 @@ public class ClearportalexitminerdimensionProcedure {
 						world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PalamodModBlocks.WITHEREDOBSIDIAN_0.get().defaultBlockState(), 3);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x + xi, y + i, z + zi), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate.break")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x + xi, y + i, z + zi), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.deepslate.break")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound(x + xi, y + i, z + zi, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate.break")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound(x + xi, y + i, z + zi, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.deepslate.break")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 					}

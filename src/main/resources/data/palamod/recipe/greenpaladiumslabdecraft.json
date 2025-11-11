@@ -5,9 +5,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:green_paladium_slab"
-    }
+    "a": "palamod:green_paladium_slab"
   },
   "result": {
     "id": "palamod:green_paladium_ingot",

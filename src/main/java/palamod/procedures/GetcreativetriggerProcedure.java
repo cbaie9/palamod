@@ -37,10 +37,10 @@ public class GetcreativetriggerProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (getEntityGameType(entity) == GameType.CREATIVE
-				&& !(entity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel && _plr1.getAdvancements().getOrStartProgress(_plr1.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
-			if (entity instanceof ServerPlayer _player) {
-				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"));
+		if (getEntityGameType(entity) == GameType.CREATIVE && !(entity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel _serverLevel1
+				&& _plr1.getAdvancements().getOrStartProgress(_serverLevel1.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
+			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+				AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"));
 				if (_adv != null) {
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
@@ -49,7 +49,7 @@ public class GetcreativetriggerProcedure {
 					}
 				}
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get creative trigger"));
 			}
 		}

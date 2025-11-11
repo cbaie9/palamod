@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:weighted"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:weighted"
+      }
+    ]
+  }
+}

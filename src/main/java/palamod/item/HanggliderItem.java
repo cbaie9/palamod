@@ -3,38 +3,39 @@ package palamod.item;
 import palamod.procedures.HangboostProcedure;
 import palamod.procedures.ClearhanggliderProcedure;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
-import java.util.List;
+import javax.annotation.Nullable;
+
+import java.util.function.Consumer;
 
 public class HanggliderItem extends Item {
-	public HanggliderItem() {
-		super(new Item.Properties());
+	public HanggliderItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.hang_glider.description_0"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.palamod.hang_glider.description_0"));
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		HangboostProcedure.execute(entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		HangboostProcedure.execute(entity, entity.getItemInHand(hand));
 		return ar;
 	}
 
@@ -46,8 +47,8 @@ public class HanggliderItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		ClearhanggliderProcedure.execute(entity);
 	}
 

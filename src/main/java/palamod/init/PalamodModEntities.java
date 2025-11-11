@@ -3,18 +3,7 @@
  */
 package palamod.init;
 
-import palamod.entity.SwitcharrowEntity;
-import palamod.entity.PrimedwithertntEntity;
-import palamod.entity.PrimedspongetntEntity;
-import palamod.entity.PrimedmagictntEntity;
-import palamod.entity.PrimedendiumtntEntity;
-import palamod.entity.PrimedbigtntEntity;
-import palamod.entity.PaladiumgolemEntity;
-import palamod.entity.PaladiumdynamiteEntity;
-import palamod.entity.GodvillagerEntity;
-import palamod.entity.EndiumdynamiteEntity;
-import palamod.entity.Dankaroctest1Entity;
-import palamod.entity.BigdynamiteentityEntity;
+import palamod.entity.*;
 
 import palamod.PalamodMod;
 
@@ -31,9 +20,11 @@ import net.neoforged.bus.api.EventPriority;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public class PalamodModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PalamodMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumdynamiteEntity>> PALADIUMDYNAMITE = register("paladiumdynamite",
@@ -86,7 +77,7 @@ public class PalamodModEntities {
 	// Start of user code block custom entities
 	// End of user code block custom entities
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, registryname))));
 	}
 
 	@SubscribeEvent(priority = EventPriority.HIGHEST)

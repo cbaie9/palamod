@@ -59,8 +59,9 @@ public class TotemrandomprocessProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
+					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("totem_usure", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_usure") + 1));
+					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -69,17 +70,10 @@ public class TotemrandomprocessProcedure {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putDouble("totem_stock", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock") - 1));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble("totem_usure", 0);
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -87,25 +81,25 @@ public class TotemrandomprocessProcedure {
 					if (random_sound <= 4) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break1")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:totem_break1")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break1")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:totem_break1")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 					} else if (random_sound <= 8) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break2")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:totem_break2")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break2")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:totem_break2")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 					} else {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break3")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:totem_break3")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:totem_break3")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:totem_break3")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 					}
@@ -117,7 +111,7 @@ public class TotemrandomprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

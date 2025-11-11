@@ -18,8 +18,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Kiwano2Block extends FlowerBlock {
-	public Kiwano2Block() {
-		super(MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+	public Kiwano2Block(BlockBehaviour.Properties properties) {
+		super(MobEffects.SPEED, 5, properties.mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

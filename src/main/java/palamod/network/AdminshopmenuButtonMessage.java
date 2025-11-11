@@ -1,11 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectadminshoputilitiesProcedure;
-import palamod.procedures.ConnectadminshopplantProcedure;
-import palamod.procedures.ConnectadminshopmobsProcedure;
-import palamod.procedures.ConnectadhoreProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.AdminshopblockconnectProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -24,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AdminshopmenuButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<AdminshopmenuButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "adminshopmenu_buttons"));

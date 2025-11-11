@@ -2,13 +2,14 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
@@ -45,7 +46,7 @@ public class BlueslimepadswapProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -78,7 +79,7 @@ public class BlueslimepadswapProcedure {
 						_be = world.getBlockEntity(_bp);
 						if (_be != null) {
 							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
+								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
 						}
@@ -89,10 +90,10 @@ public class BlueslimepadswapProcedure {
 	}
 
 	private static Direction getDirectionFromBlockState(BlockState blockState) {
-		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
-		if (prop instanceof DirectionProperty dp)
-			return blockState.getValue(dp);
-		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
-		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+		if (blockState.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty ep && ep.getValueClass() == Direction.class)
+			return (Direction) blockState.getValue(ep);
+		if (blockState.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty ep && ep.getValueClass() == Direction.Axis.class)
+			return Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE);
+		return Direction.NORTH;
 	}
 }

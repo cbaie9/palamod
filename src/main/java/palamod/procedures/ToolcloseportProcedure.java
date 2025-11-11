@@ -15,8 +15,9 @@ public class ToolcloseportProcedure {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putBoolean(("market_buyed" + nloop), true);
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:findium"
-    }
+    "a": "palamod:findium"
   },
   "result": {
     "id": "palamod:findium_stairs",

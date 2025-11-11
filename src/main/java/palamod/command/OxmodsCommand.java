@@ -1,18 +1,6 @@
 package palamod.command;
 
-import palamod.procedures.TestcopyProcedure;
-import palamod.procedures.SupportProcedure;
-import palamod.procedures.OxmodsreturnverProcedure;
-import palamod.procedures.OxdisenchantProcedure;
-import palamod.procedures.OxdebugdonotshowtrueProcedure;
-import palamod.procedures.OpenProcedure;
-import palamod.procedures.Luckyprocess1adminProcedure;
-import palamod.procedures.GivenbtProcedure;
-import palamod.procedures.GetuuidProcedure;
-import palamod.procedures.GetunixtextchatProcedure;
-import palamod.procedures.GetdirectoryjobsProcedure;
-import palamod.procedures.BackuploadconfigProcedure;
-import palamod.procedures.BackupconfigProcedure;
+import palamod.procedures.*;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;

@@ -6,12 +6,8 @@
     "bab"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:leather"
-    },
-    "b": {
-      "item": "palamod:wing"
-    }
+    "a": "minecraft:leather",
+    "b": "palamod:wing"
   },
   "result": {
     "id": "palamod:hang_glider",

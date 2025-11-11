@@ -84,8 +84,9 @@ public class IssetupflowertotemokProcedure {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
+				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putBoolean("setup_verified", true);
+				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

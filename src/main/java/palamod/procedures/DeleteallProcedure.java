@@ -19,7 +19,7 @@ public class DeleteallProcedure {
 			{
 				PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 				_vars.buyslot = 1;
-				_vars.syncPlayerVariables(entity);
+				_vars.markSyncDirty();
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(0).set(ItemStack.EMPTY);
@@ -29,7 +29,7 @@ public class DeleteallProcedure {
 				{
 					PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 					_vars.buyslot = 0;
-					_vars.syncPlayerVariables(entity);
+					_vars.markSyncDirty();
 				}
 			});
 		}

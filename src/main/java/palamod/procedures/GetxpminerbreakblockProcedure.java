@@ -61,11 +61,40 @@ public class GetxpminerbreakblockProcedure {
 					}
 					bufferedReader.close();
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt"))))) {
-						nloop = 8;
-					}
-					for (int index0 = 0; index0 < 9; index0++) {
-						block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
+						for (int index0 = 0; index0 < 9; index0++) {
+							block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+							if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
+								output = output + 0.5;
+							} else if (block.getBlock() == Blocks.DIORITE) {
+								output = output + 3;
+							} else if (block.getBlock() == Blocks.GRANITE) {
+								output = output + 3;
+							} else if (block.getBlock() == Blocks.ANDESITE) {
+								output = output + 3;
+							} else if (block.getBlock() == Blocks.COAL_ORE || block.getBlock() == Blocks.DEEPSLATE_COAL_ORE) {
+								output = output + 4;
+							} else if (block.getBlock() == Blocks.NETHER_QUARTZ_ORE) {
+								output = output + 6;
+							} else if (block.getBlock() == Blocks.OBSIDIAN) {
+								output = output + 6;
+							} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == Blocks.AIR || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
+								output = output + 15;
+							} else if (block.getBlock() == Blocks.EMERALD_ORE || block.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE) {
+								output = output + 50;
+							} else if (block.getBlock() == Blocks.DIAMOND_ORE || block.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE) {
+								if (10 < lvl) {
+									output = output + 25;
+								}
+							}
+							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
+								nloop = nloop + 1;
+							} else {
+								break;
+							}
+						}
+					} else {
+						block = BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse((cache_main.get("block").getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 						if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
 							output = output + 0.5;
 						} else if (block.getBlock() == Blocks.DIORITE) {
@@ -88,11 +117,6 @@ public class GetxpminerbreakblockProcedure {
 							if (10 < lvl) {
 								output = output + 25;
 							}
-						}
-						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
-							nloop = nloop + 1;
-						} else {
-							break;
 						}
 					}
 				} catch (IOException e) {

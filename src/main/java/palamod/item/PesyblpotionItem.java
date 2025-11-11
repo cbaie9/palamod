@@ -2,49 +2,33 @@ package palamod.item;
 
 import palamod.procedures.SpecialpotionvfufuProcedure;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class PesyblpotionItem extends Item {
-	public PesyblpotionItem() {
-		super(new Item.Properties().durability(1).food((new FoodProperties.Builder()).nutrition(4).saturationModifier(0.3f).alwaysEdible().build()));
+	public PesyblpotionItem(Item.Properties properties) {
+		super(properties.durability(1).food((new FoodProperties.Builder()).nutrition(4).saturationModifier(0.3f).alwaysEdible().build()).usingConvertsTo(Items.GLASS_BOTTLE));
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.pesyblpotion.description_0"));
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		componentConsumer.accept(Component.translatable("item.palamod.pesyblpotion.description_0"));
 	}
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-		ItemStack retval = new ItemStack(Items.GLASS_BOTTLE);
-		super.finishUsingItem(itemstack, world, entity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
+		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
 		SpecialpotionvfufuProcedure.execute(world, entity, itemstack);
-		if (itemstack.isEmpty()) {
-			return retval;
-		} else {
-			if (entity instanceof Player player && !player.getAbilities().instabuild) {
-				if (!player.getInventory().add(retval))
-					player.drop(retval, false);
-			}
-			return itemstack;
-		}
+		return retval;
 	}
 }

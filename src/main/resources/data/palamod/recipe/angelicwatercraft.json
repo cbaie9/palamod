@@ -5,12 +5,8 @@
     "ab"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:water_bucket"
-    },
-    "b": {
-      "item": "minecraft:golden_carrot"
-    }
+    "a": "minecraft:water_bucket",
+    "b": "minecraft:golden_carrot"
   },
   "result": {
     "id": "palamod:angelic_water_bucket",

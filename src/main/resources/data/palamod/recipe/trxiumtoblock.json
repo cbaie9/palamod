@@ -2,33 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    },
-    {
-      "item": "palamod:trixium"
-    }
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium",
+    "palamod:trixium"
   ],
   "result": {
     "id": "palamod:trixium_block",

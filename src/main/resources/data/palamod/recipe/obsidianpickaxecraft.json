@@ -7,15 +7,9 @@
     " c "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_spike"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:paladium_stick"
-    }
+    "a": "palamod:paladium_spike",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:paladium_stick"
   },
   "result": {
     "id": "palamod:obsidianpickaxe",

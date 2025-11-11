@@ -9,10 +9,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class AlchemycreatorguiScreen extends AbstractContainerScreen<AlchemycreatorguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -47,12 +46,8 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/alchemy_arrow.png"), this.leftPos + 122, this.topPos + 25, 0, 0, 16, 16, 16, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/alchemy_arrow.png"), this.leftPos + 122, this.topPos + 25, 0, 0, 16, 16, 16, 16);
 	}
 
 	@Override

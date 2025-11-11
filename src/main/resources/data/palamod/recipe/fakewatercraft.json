@@ -5,12 +5,8 @@
     "ab"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:water_bucket"
-    },
-    "b": {
-      "item": "palamod:paladium_stick"
-    }
+    "a": "minecraft:water_bucket",
+    "b": "palamod:paladium_stick"
   },
   "result": {
     "id": "palamod:fake_water_bucket",

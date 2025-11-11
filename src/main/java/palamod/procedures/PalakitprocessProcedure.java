@@ -39,14 +39,15 @@ public class PalakitprocessProcedure {
 					}
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (entity.getPersistentData().getBoolean("take_palakit") == false) {
+					if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos(0, 10, 0);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble((main.get("money").getAsDouble() + "" + entity.getDisplayName().getString()),
 										(getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) + 500));
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -87,7 +88,7 @@ public class PalakitprocessProcedure {
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 						entity.getPersistentData().putBoolean("take_palakit", true);
-					} else if (entity.hasPermissions(3)) {
+					} else if (entity instanceof Player _playerCmd20 && _playerCmd20.hasPermissions(3)) {
 						main.addProperty("money", (main.get("money").getAsDouble() + 500));
 					}
 				} catch (IOException e) {
@@ -95,7 +96,7 @@ public class PalakitprocessProcedure {
 				}
 			}
 		} else {
-			if (entity.getPersistentData().getBoolean("take_palakit") == false) {
+			if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false) {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 					_setstack.setCount(1);
@@ -132,7 +133,7 @@ public class PalakitprocessProcedure {
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				entity.getPersistentData().putBoolean("take_palakit", true);
-			} else if (entity.hasPermissions(3)) {
+			} else if (entity instanceof Player _playerCmd33 && _playerCmd33.hasPermissions(3)) {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 					_setstack.setCount(1);
@@ -176,7 +177,7 @@ public class PalakitprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

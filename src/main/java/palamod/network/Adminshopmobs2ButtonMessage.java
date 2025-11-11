@@ -1,15 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectadminshopmobsProcedure;
-import palamod.procedures.ConnectAdminshopmobs2steakProcedure;
-import palamod.procedures.ConnectAdminshopmobs2leatherProcedure;
-import palamod.procedures.ConnectAdminshopmobs2inksacProcedure;
-import palamod.procedures.ConnectAdminshopmobs2honeycombProcedure;
-import palamod.procedures.ConnectAdminshopmobs2gunpowderProcedure;
-import palamod.procedures.ConnectAdminshopmobs2glowinksacProcedure;
-import palamod.procedures.ConnectAdminshopmobs2featherProcedure;
-import palamod.procedures.ConnectAdminshopmobs2blazeProcedure;
-import palamod.procedures.Adminshop_openProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -28,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record Adminshopmobs2ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<Adminshopmobs2ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "adminshopmobs_2_buttons"));

@@ -5,9 +5,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:trixium"
-    }
+    "a": "palamod:trixium"
   },
   "result": {
     "id": "palamod:trixiumslab",

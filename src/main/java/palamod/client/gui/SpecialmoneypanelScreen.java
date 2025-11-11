@@ -6,13 +6,14 @@ import palamod.network.SpecialmoneypanelButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Checkbox;
@@ -20,17 +21,15 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class SpecialmoneypanelScreen extends AbstractContainerScreen<SpecialmoneypanelMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	EditBox player_name;
-	EditBox money;
-	Checkbox custom_destructible;
-	Button button_give;
+	private EditBox player_name;
+	private EditBox money;
+	private Checkbox custom_destructible;
+	private Button button_give;
 
 	public SpecialmoneypanelScreen(SpecialmoneypanelMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -52,6 +51,12 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 			else if (name.equals("money"))
 				money.setValue(stringState);
 		}
+		if (elementType == 1 && elementState instanceof Boolean logicState) {
+			if (name.equals("custom_destructible")) {
+				if (custom_destructible.selected() != logicState)
+					custom_destructible.onPress();
+			}
+		}
 		menuStateUpdateActive = false;
 	}
 
@@ -65,11 +70,7 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/specialmoneypanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 224, 176, 224);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/specialmoneypanel.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 224, 176, 224);
 	}
 
 	@Override
@@ -124,7 +125,7 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 			int x = SpecialmoneypanelScreen.this.x;
 			int y = SpecialmoneypanelScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new SpecialmoneypanelButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new SpecialmoneypanelButtonMessage(0, x, y, z));
 				SpecialmoneypanelButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 119, this.topPos + 90, 46, 20).build();

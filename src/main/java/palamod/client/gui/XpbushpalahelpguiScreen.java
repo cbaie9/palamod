@@ -6,28 +6,27 @@ import palamod.network.XpbushpalahelpguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class XpbushpalahelpguiScreen extends AbstractContainerScreen<XpbushpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_home_pixel_adminshop;
 
 	public XpbushpalahelpguiScreen(XpbushpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,15 +53,11 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/xpbushpalahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 200, 166, 200, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/xp_berry.png"), this.leftPos + 4, this.topPos + 80, 0, 0, 32, 32, 32, 32);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/berry_xp_bush_fancy.png"), this.leftPos + 6, this.topPos + 124, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/xpbushpalahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 200, 166, 200, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/xp_berry.png"), this.leftPos + 4, this.topPos + 80, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/berry_xp_bush_fancy.png"), this.leftPos + 6, this.topPos + 124, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 	}
 
 	@Override
@@ -94,13 +89,13 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 					int x = XpbushpalahelpguiScreen.this.x;
 					int y = XpbushpalahelpguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new XpbushpalahelpguiButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new XpbushpalahelpguiButtonMessage(0, x, y, z));
 						XpbushpalahelpguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
@@ -109,13 +104,13 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 					int x = XpbushpalahelpguiScreen.this.x;
 					int y = XpbushpalahelpguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new XpbushpalahelpguiButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new XpbushpalahelpguiButtonMessage(1, x, y, z));
 						XpbushpalahelpguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -124,13 +119,13 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 					int x = XpbushpalahelpguiScreen.this.x;
 					int y = XpbushpalahelpguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new XpbushpalahelpguiButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new XpbushpalahelpguiButtonMessage(2, x, y, z));
 						XpbushpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);

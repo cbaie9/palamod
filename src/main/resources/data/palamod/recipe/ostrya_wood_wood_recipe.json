@@ -6,9 +6,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:ostrya_wood_log"
-    }
+    "a": "palamod:ostrya_wood_log"
   },
   "result": {
     "id": "palamod:ostrya_wood_wood",

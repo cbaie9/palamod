@@ -7,12 +7,8 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "minecraft:ghast_tear"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:ghast_tear"
   },
   "result": {
     "id": "palamod:knockback_orb",

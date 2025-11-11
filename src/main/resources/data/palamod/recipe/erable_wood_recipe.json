@@ -6,9 +6,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:erable_log"
-    }
+    "a": "palamod:erable_log"
   },
   "result": {
     "id": "palamod:erable_wood",

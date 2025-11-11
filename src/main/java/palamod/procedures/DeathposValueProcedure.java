@@ -15,6 +15,6 @@ public class DeathposValueProcedure {
 		entity.getPersistentData().putDouble("death_pos_x", x);
 		entity.getPersistentData().putDouble("death_pos_y", y);
 		entity.getPersistentData().putDouble("death_pos_z", z);
-		return "Death position = x : " + xpos + "y :" + ypos + "z : " + zpos;
+		return "Death position =  x : " + xpos + "y :" + ypos + "z : " + zpos;
 	}
 }

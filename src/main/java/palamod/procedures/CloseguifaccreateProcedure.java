@@ -47,6 +47,6 @@ public class CloseguifaccreateProcedure {
 			}
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("[ Palamod ] La faction" + entity.getPersistentData().getString("temp_fact_name") + "n'a pas pus \u00EAtre creer")), true);
+			_player.displayClientMessage(Component.literal(("[ Palamod ] La faction" + entity.getPersistentData().getStringOr("temp_fact_name", "") + "n'a pas pus \u00EAtre creer")), true);
 	}
 }

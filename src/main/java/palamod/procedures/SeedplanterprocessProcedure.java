@@ -40,7 +40,7 @@ public class SeedplanterprocessProcedure {
 		double turn = 0;
 		double xplus = 0;
 		double zplus = 0;
-		if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("seedplanter_setup")) {
+		if (!itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("seedplanter_setup", false)) {
 			{
 				final String _tagName = "seedplanter_setup";
 				final boolean _tagValue = true;
@@ -53,7 +53,7 @@ public class SeedplanterprocessProcedure {
 			}
 		}
 		if (entity.isShiftKeyDown()) {
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 1) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 1) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 2;
@@ -63,7 +63,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.minecraft.carrot").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 2) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 2) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 3;
@@ -73,7 +73,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.minecraft.potato").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 3) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 3) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 4;
@@ -83,7 +83,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("block.minecraft.melon").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 4) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 4) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 5;
@@ -93,7 +93,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("block.minecraft.pumpkin").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 5) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 5) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 6;
@@ -103,7 +103,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.palamod.eggplant_seed").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 6) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 6) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 7;
@@ -113,7 +113,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.palamod.chervilseed").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 7) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 7) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 8;
@@ -123,7 +123,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.palamod.kiwanoseed").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 8) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 8) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 9;
@@ -133,7 +133,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.palamod.orangeblueseed").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 9) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 9) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 10;
@@ -143,7 +143,7 @@ public class SeedplanterprocessProcedure {
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @p [\"\",{\"text\":\"" + "" + Component.translatable("palamod.procedure.select_seed").getString() + " : \",\"color\":\"yellow\"},{\"text\":\"" + Component.translatable("item.minecraft.beetroot").getString()
 									+ "\",\"color\":\"dark_green\"},{\"text\":\"\\n \"}]"));
-			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 10) {
+			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 10) {
 				{
 					final String _tagName = "mode";
 					final double _tagValue = 1;
@@ -177,7 +177,7 @@ public class SeedplanterprocessProcedure {
 						if (distanceSq <= 1.0) {
 							if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:farmland")))
 									&& (world.getBlockState(BlockPos.containing(x + xi, y + i + 1, z + zi))).getBlock() == Blocks.AIR) {
-								if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 1
+								if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 1
 										&& (hasEntityInInventory(entity, new ItemStack(Items.WHEAT_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									{
@@ -198,7 +198,7 @@ public class SeedplanterprocessProcedure {
 										ItemStack _stktoremove = new ItemStack(Items.WHEAT_SEEDS);
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 2
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 2
 										&& (hasEntityInInventory(entity, new ItemStack(Items.CARROT)) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
@@ -219,7 +219,7 @@ public class SeedplanterprocessProcedure {
 										}
 										world.setBlock(_bp, _bs, 3);
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 3
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 3
 										&& (hasEntityInInventory(entity, new ItemStack(Items.POTATO)) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									{
@@ -240,7 +240,7 @@ public class SeedplanterprocessProcedure {
 										ItemStack _stktoremove = new ItemStack(Items.POTATO);
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 4
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 4
 										&& (hasEntityInInventory(entity, new ItemStack(Items.MELON_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									{
@@ -261,7 +261,7 @@ public class SeedplanterprocessProcedure {
 										ItemStack _stktoremove = new ItemStack(Items.MELON_SEEDS);
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 5
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 5
 										&& (hasEntityInInventory(entity, new ItemStack(Items.PUMPKIN_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
@@ -282,7 +282,7 @@ public class SeedplanterprocessProcedure {
 										}
 										world.setBlock(_bp, _bs, 3);
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 6
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 6
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.EGGPLANT_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
@@ -303,7 +303,7 @@ public class SeedplanterprocessProcedure {
 										}
 										world.setBlock(_bp, _bs, 3);
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 7
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 7
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.CHERVILSEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									{
@@ -324,7 +324,7 @@ public class SeedplanterprocessProcedure {
 										ItemStack _stktoremove = new ItemStack(PalamodModItems.CHERVILSEED.get());
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 8
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 8
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.KIWANOSEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
@@ -345,7 +345,7 @@ public class SeedplanterprocessProcedure {
 										}
 										world.setBlock(_bp, _bs, 3);
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 9
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 9
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.ORANGEBLUESEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									act = true;
 									{
@@ -366,7 +366,7 @@ public class SeedplanterprocessProcedure {
 										ItemStack _stktoremove = new ItemStack(PalamodModItems.ORANGEBLUESEED.get());
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
-								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("mode") == 10
+								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 10
 										&& (hasEntityInInventory(entity, new ItemStack(Items.BEETROOT_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(Items.BEETROOT_SEEDS);
@@ -395,9 +395,9 @@ public class SeedplanterprocessProcedure {
 			if (act) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.crop.plant")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.crop.plant")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.crop.plant")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("item.crop.plant")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}

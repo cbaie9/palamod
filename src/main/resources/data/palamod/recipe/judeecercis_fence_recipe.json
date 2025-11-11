@@ -6,12 +6,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:judeecercis_planks"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "palamod:judeecercis_planks",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "palamod:judeecercis_fence",

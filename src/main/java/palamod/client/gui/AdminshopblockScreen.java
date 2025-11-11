@@ -9,13 +9,14 @@ import palamod.network.AdminshopblockButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -25,25 +26,23 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class AdminshopblockScreen extends AbstractContainerScreen<AdminshopblockMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_dirt;
-	Button button_grass;
-	Button button_stone;
-	Button button_netherrack;
-	Button button_soul_sand;
-	Button button_sand;
-	Button button_gravel;
-	Button button_glowstone;
-	Button button_oak_wood;
-	Button button_blackstone;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_arrow_adminshop;
+	private Button button_dirt;
+	private Button button_grass;
+	private Button button_stone;
+	private Button button_netherrack;
+	private Button button_soul_sand;
+	private Button button_sand;
+	private Button button_gravel;
+	private Button button_glowstone;
+	private Button button_oak_wood;
+	private Button button_blackstone;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_arrow_adminshop;
 
 	public AdminshopblockScreen(AdminshopblockMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -69,14 +68,14 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 		if (mouseX > leftPos + 185 && mouseX < leftPos + 201 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 166 && mouseX < leftPos + 181 && mouseY > topPos + 6 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -86,14 +85,10 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/adminshopblock.png"), this.leftPos + 0, this.topPos + 16, 0, 0, 205, 190, 205, 190);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 105, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 73, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/adminshopblock.png"), this.leftPos + 0, this.topPos + 16, 0, 0, 205, 190, 205, 190);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 105, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 73, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 	}
 
 	@Override
@@ -117,7 +112,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(0, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 31, 46, 20).build();
@@ -126,7 +121,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(1, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 145, this.topPos + 30, 51, 20).build();
@@ -135,7 +130,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(2, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(2, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 58, 82, 20).build();
@@ -144,7 +139,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(3, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(3, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 85, 82, 20).build();
@@ -153,7 +148,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(4, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(4, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 113, 72, 20).build();
@@ -162,7 +157,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(5, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(5, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}).bounds(this.leftPos + 150, this.topPos + 58, 46, 20).build();
@@ -171,7 +166,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(6, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(6, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}).bounds(this.leftPos + 141, this.topPos + 85, 56, 20).build();
@@ -180,7 +175,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(7, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(7, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 140, 72, 20).build();
@@ -189,7 +184,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(8, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(8, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}).bounds(this.leftPos + 13, this.topPos + 169, 66, 20).build();
@@ -198,7 +193,7 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 			int x = AdminshopblockScreen.this.x;
 			int y = AdminshopblockScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new AdminshopblockButtonMessage(9, x, y, z));
+				ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(9, x, y, z));
 				AdminshopblockButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}).bounds(this.leftPos + 120, this.topPos + 113, 77, 20).build();
@@ -208,13 +203,13 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 					int x = AdminshopblockScreen.this.x;
 					int y = AdminshopblockScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopblockButtonMessage(10, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(10, x, y, z));
 						AdminshopblockButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -223,13 +218,13 @@ public class AdminshopblockScreen extends AbstractContainerScreen<Adminshopblock
 					int x = AdminshopblockScreen.this.x;
 					int y = AdminshopblockScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopblockButtonMessage(11, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopblockButtonMessage(11, x, y, z));
 						AdminshopblockButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);

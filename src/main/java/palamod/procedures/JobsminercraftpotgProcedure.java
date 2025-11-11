@@ -17,37 +17,13 @@ public class JobsminercraftpotgProcedure {
 		{
 			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text = "The Unbreakable pickaxe !!";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text2 = "Can be upgrade when mining";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text3 = "a large amount of blocks";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text4 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text5 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_durability = "Durability : Unbreakable";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.lvl_required = "Lvl required : 1";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get())) && getAmountInGUISlot(entity, 0) == 0) {
 			if (entity instanceof Player _player) {
@@ -55,9 +31,9 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(0).set(_setstack);
+				ItemStack _setstack3 = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get()).copy();
+				_setstack3.setCount(1);
+				_menu.getSlots().get(0).set(_setstack3);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -67,9 +43,9 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(1).set(_setstack);
+				ItemStack _setstack7 = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
+				_setstack7.setCount(1);
+				_menu.getSlots().get(1).set(_setstack7);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -79,9 +55,9 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(2).set(_setstack);
+				ItemStack _setstack11 = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
+				_setstack11.setCount(1);
+				_menu.getSlots().get(2).set(_setstack11);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -91,9 +67,9 @@ public class JobsminercraftpotgProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Items.STICK).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
+				ItemStack _setstack15 = new ItemStack(Items.STICK).copy();
+				_setstack15.setCount(1);
+				_menu.getSlots().get(4).set(_setstack15);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (hasEntityInInventory(entity, new ItemStack(Items.STICK)) && getAmountInGUISlot(entity, 7) == 0) {
@@ -102,9 +78,9 @@ public class JobsminercraftpotgProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(Items.STICK).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(7).set(_setstack);
+					ItemStack _setstack19 = new ItemStack(Items.STICK).copy();
+					_setstack19.setCount(1);
+					_menu.getSlots().get(7).set(_setstack19);
 					_player.containerMenu.broadcastChanges();
 				}
 			}

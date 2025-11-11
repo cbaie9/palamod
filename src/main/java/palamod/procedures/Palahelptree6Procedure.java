@@ -6,7 +6,7 @@ public class Palahelptree6Procedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		if ((entity.getPersistentData().getString("language")).equals("french")) {
+		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
 			return "Ostrya : Permet de crafter le portail";
 		}
 		return "Ostrya : Allow to craft the Endium";

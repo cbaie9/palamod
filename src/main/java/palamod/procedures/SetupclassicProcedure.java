@@ -2,11 +2,13 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
@@ -36,7 +38,7 @@ public class SetupclassicProcedure {
 				_be = world.getBlockEntity(_bp);
 				if (_be != null) {
 					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
+						_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 					} catch (Exception ignored) {
 					}
 				}
@@ -65,7 +67,7 @@ public class SetupclassicProcedure {
 				_be = world.getBlockEntity(_bp);
 				if (_be != null) {
 					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
+						_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 					} catch (Exception ignored) {
 					}
 				}
@@ -94,7 +96,7 @@ public class SetupclassicProcedure {
 				_be = world.getBlockEntity(_bp);
 				if (_be != null) {
 					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
+						_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 					} catch (Exception ignored) {
 					}
 				}
@@ -104,8 +106,9 @@ public class SetupclassicProcedure {
 			BlockPos _bp = new BlockPos(0, 10, 0);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putBoolean("backdown_state", false);
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -113,17 +116,10 @@ public class SetupclassicProcedure {
 			BlockPos _bp = new BlockPos(0, 9, 0);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putBoolean("Faction_unlocked", true);
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putDouble("Faction_id", 0);
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}

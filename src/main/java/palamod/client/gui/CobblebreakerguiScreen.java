@@ -12,10 +12,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CobblebreakerguiScreen extends AbstractContainerScreen<CobblebreakerguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -48,21 +47,17 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/cobblebreakergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_iron.png"), this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_gold.png"), this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_diamond.png"), this.leftPos + 60, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_amethyst.png"), this.leftPos + 81, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_titane.png"), this.leftPos + 102, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_paladium.png"), this.leftPos + 123, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/green_paladium_particle.png"), this.leftPos + 144, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/upgrade_cobblebreaker.png"), this.leftPos + 148, this.topPos + 14, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_down_sprite16.png"), this.leftPos + 82, this.topPos + 25, Mth.clamp((int) CobblebreakerarrowreturnspriteProcedure.execute(world, x, y, z) * 14, 0, 266), 0, 14, 16, 280,
-				16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/cobblebreakergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/particle_iron.png"), this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/particle_gold.png"), this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/particle_diamond.png"), this.leftPos + 60, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/particle_amethyst.png"), this.leftPos + 81, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/particle_titane.png"), this.leftPos + 102, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/particle_paladium.png"), this.leftPos + 123, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/green_paladium_particle.png"), this.leftPos + 144, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/upgrade_cobblebreaker.png"), this.leftPos + 148, this.topPos + 14, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/arrow_down_sprite16.png"), this.leftPos + 82, this.topPos + 25,
+				Mth.clamp((int) CobblebreakerarrowreturnspriteProcedure.execute(world, x, y, z) * 14, 0, 266), 0, 14, 16, 280, 16);
 	}
 
 	@Override

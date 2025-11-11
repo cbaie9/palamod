@@ -5,12 +5,8 @@
     "ab"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_stick"
-    },
-    "b": {
-      "item": "minecraft:coal"
-    }
+    "a": "palamod:paladium_stick",
+    "b": "minecraft:coal"
   },
   "result": {
     "id": "palamod:furnace_upgrade",

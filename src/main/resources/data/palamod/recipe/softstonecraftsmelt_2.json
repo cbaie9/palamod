@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 1,
   "cookingtime": 100,
-  "ingredient": {
-    "item": "palamod:cobbled_soft_stone"
-  },
+  "ingredient": "palamod:cobbled_soft_stone",
   "result": {
     "id": "palamod:soft_stone"
   }

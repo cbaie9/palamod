@@ -14,9 +14,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("mezz.jei:jei-1.21.1-common-api:19.21.0.247")
-    compileOnly("mezz.jei:jei-1.21.1-neoforge-api:19.21.0.247")
-    runtimeOnly("mezz.jei:jei-1.21.1-neoforge:19.21.0.247")
+    compileOnly("mezz.jei:jei-1.21.8-common-api:24.2.0.6")
+    compileOnly("mezz.jei:jei-1.21.8-neoforge-api:24.2.0.6")
+    runtimeOnly("mezz.jei:jei-1.21.8-neoforge:24.2.0.6")
 }
 
 

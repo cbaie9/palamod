@@ -10,6 +10,6 @@ public class MixedendiumarmorBootsTickEventProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 3, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.RESISTANCE, 20, 3, false, false));
 	}
 }

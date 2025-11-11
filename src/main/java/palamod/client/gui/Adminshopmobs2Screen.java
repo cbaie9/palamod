@@ -10,13 +10,14 @@ import palamod.network.Adminshopmobs2ButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -26,24 +27,22 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2Menu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_honey_comb;
-	Button button_leather;
-	Button button_feather;
-	Button button_ink_sac;
-	Button button_glow_in_sac;
-	Button button_blaze;
-	Button button_gun_powder;
-	Button button_steak;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_arrow_adminshop;
+	private Button button_honey_comb;
+	private Button button_leather;
+	private Button button_feather;
+	private Button button_ink_sac;
+	private Button button_glow_in_sac;
+	private Button button_blaze;
+	private Button button_gun_powder;
+	private Button button_steak;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_arrow_adminshop;
 
 	public Adminshopmobs2Screen(Adminshopmobs2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -69,21 +68,21 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 		if (mouseX > leftPos + 10 && mouseX < leftPos + 22 && mouseY > topPos + 6 && mouseY < topPos + 21) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 27 && mouseX < leftPos + 42 && mouseY > topPos + 7 && mouseY < topPos + 21) {
 			String hoverText = Returnadminshopmobsmenup1Procedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 165 && mouseX < leftPos + 181 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -93,13 +92,9 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/adminshopmobs.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 190, 200, 190, 200);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 89, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/adminshopmobs.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 190, 200, 190, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 89, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 	}
 
 	@Override
@@ -124,7 +119,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(0, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 9, this.topPos + 135, 77, 20).build();
@@ -133,7 +128,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(1, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 115, this.topPos + 135, 61, 20).build();
@@ -142,7 +137,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(2, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(2, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 116, this.topPos + 104, 61, 20).build();
@@ -151,7 +146,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(3, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(3, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 116, this.topPos + 77, 61, 20).build();
@@ -160,7 +155,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(4, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(4, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 10, this.topPos + 104, 82, 20).build();
@@ -169,7 +164,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(5, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(5, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}).bounds(this.leftPos + 10, this.topPos + 77, 51, 20).build();
@@ -178,7 +173,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(6, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(6, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}).bounds(this.leftPos + 100, this.topPos + 47, 77, 20).build();
@@ -187,7 +182,7 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 			int x = Adminshopmobs2Screen.this.x;
 			int y = Adminshopmobs2Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(7, x, y, z));
+				ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(7, x, y, z));
 				Adminshopmobs2ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}).bounds(this.leftPos + 10, this.topPos + 46, 51, 20).build();
@@ -196,8 +191,8 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -206,13 +201,13 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 					int x = Adminshopmobs2Screen.this.x;
 					int y = Adminshopmobs2Screen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(9, x, y, z));
+						ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(9, x, y, z));
 						Adminshopmobs2ButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
@@ -221,13 +216,13 @@ public class Adminshopmobs2Screen extends AbstractContainerScreen<Adminshopmobs2
 					int x = Adminshopmobs2Screen.this.x;
 					int y = Adminshopmobs2Screen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(10, x, y, z));
+						ClientPacketDistributor.sendToServer(new Adminshopmobs2ButtonMessage(10, x, y, z));
 						Adminshopmobs2ButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);

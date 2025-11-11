@@ -3,9 +3,7 @@
   "group": "mixed_endium",
   "category": "equipment",
   "ingredients": [
-    {
-      "item": "palamod:endium_nugget"
-    }
+    "palamod:endium_nugget"
   ],
   "result": {
     "id": "palamod:endium_fragment",

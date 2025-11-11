@@ -11,9 +11,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -31,9 +31,10 @@ public class PhonecodeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel && _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().get(ResourceLocation.parse("palamod:achmluckyphone"))).isDone())) {
-			if (entity instanceof ServerPlayer _player) {
-				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmluckyphone"));
+		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel _serverLevel0
+				&& _plr0.getAdvancements().getOrStartProgress(_serverLevel0.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmluckyphone"))).isDone())) {
+			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+				AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmluckyphone"));
 				if (_adv != null) {
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
@@ -148,7 +149,7 @@ public class PhonecodeProcedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).set(DataComponents.CUSTOM_NAME, Component.literal("Legudary diorite of unPower"));
+			new ItemStack(PalamodModItems.LEGENDARY_STONE_POWER.get()).set(DataComponents.CUSTOM_NAME, Component.literal("Legudary diorite  of unPower"));
 		} else if (((entity instanceof Player _entity62 && _entity62.containerMenu instanceof PalamodModMenus.MenuAccessor _menu62) ? _menu62.getMenuState(0, "cheat_code_secret", "") : "").contains("alo")
 				|| ((entity instanceof Player _entity63 && _entity63.containerMenu instanceof PalamodModMenus.MenuAccessor _menu63) ? _menu63.getMenuState(0, "cheat_code_secret", "") : "").contains("allo")) {
 			if (Math.random() < 0.5) {
@@ -188,7 +189,7 @@ public class PhonecodeProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Oh tiens un chat"), false);
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = EntityType.CAT.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = EntityType.CAT.spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}

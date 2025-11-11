@@ -16,37 +16,13 @@ public class JobsminercraftsealedxpbottleProcedure {
 		{
 			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text = "A bottle that";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text2 = "can stock xp";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text3 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text4 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text5 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_durability = "No durability";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.lvl_required = "Lvl required : 50";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.PALADIUM_INGOT.get())) && (getAmountInGUISlot(entity, 7) == 0
 				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu2 ? _menu2.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.PALADIUM_INGOT.get()
@@ -56,9 +32,9 @@ public class JobsminercraftsealedxpbottleProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 7) + 1);
-				_menu.getSlots().get(7).set(_setstack);
+				ItemStack _setstack7 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+				_setstack7.setCount(getAmountInGUISlot(entity, 7) + 1);
+				_menu.getSlots().get(7).set(_setstack7);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -70,9 +46,9 @@ public class JobsminercraftsealedxpbottleProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 3) + 1);
-				_menu.getSlots().get(3).set(_setstack);
+				ItemStack _setstack15 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+				_setstack15.setCount(getAmountInGUISlot(entity, 3) + 1);
+				_menu.getSlots().get(3).set(_setstack15);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -84,9 +60,9 @@ public class JobsminercraftsealedxpbottleProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.XPBOTTLE.get()).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 4) + 1);
-				_menu.getSlots().get(4).set(_setstack);
+				ItemStack _setstack23 = new ItemStack(PalamodModItems.XPBOTTLE.get()).copy();
+				_setstack23.setCount(getAmountInGUISlot(entity, 4) + 1);
+				_menu.getSlots().get(4).set(_setstack23);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -98,9 +74,9 @@ public class JobsminercraftsealedxpbottleProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 5) + 1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack31 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+				_setstack31.setCount(getAmountInGUISlot(entity, 5) + 1);
+				_menu.getSlots().get(5).set(_setstack31);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "palamod:textures/screens/paladium_block.png",
+    "background": "palamod:screens/paladium_block",
     "icon": {
       "id": "palamod:paladium_block"
     },

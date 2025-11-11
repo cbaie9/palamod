@@ -7,15 +7,9 @@
     "ccc"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:sponge"
-    },
-    "b": {
-      "item": "palamod:paladium_core"
-    },
-    "c": {
-      "item": "minecraft:sponge"
-    }
+    "a": "minecraft:sponge",
+    "b": "palamod:paladium_core",
+    "c": "minecraft:sponge"
   },
   "result": {
     "id": "palamod:compressedsponge",

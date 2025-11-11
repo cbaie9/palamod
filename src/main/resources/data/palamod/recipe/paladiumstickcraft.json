@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:paladium_ingot"
-    },
-    {
-      "item": "palamod:paladium_ingot"
-    }
+    "palamod:paladium_ingot",
+    "palamod:paladium_ingot"
   ],
   "result": {
     "id": "palamod:paladium_stick",

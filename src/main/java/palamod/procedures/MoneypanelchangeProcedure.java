@@ -36,7 +36,7 @@ public class MoneypanelchangeProcedure {
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 		if (entity instanceof Player _player)
 			_player.closeContainer();
-		if (entity.hasPermissions(4)) {
+		if (entity instanceof Player _playerCmd5 && _playerCmd5.hasPermissions(4)) {
 			main_money.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();

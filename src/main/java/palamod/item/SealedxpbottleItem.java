@@ -8,20 +8,23 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerLevel;
+
+import javax.annotation.Nullable;
 
 public class SealedxpbottleItem extends Item {
-	public SealedxpbottleItem() {
-		super(new Item.Properties().stacksTo(1));
+	public SealedxpbottleItem(Item.Properties properties) {
+		super(properties.stacksTo(1));
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		SealedxpbottleprocessProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
+		InteractionResult ar = super.use(world, entity, hand);
+		SealedxpbottleprocessProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));
 		return ar;
 	}
 
@@ -33,9 +36,9 @@ public class SealedxpbottleItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		if (selected)
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
+		if (equipmentSlot == EquipmentSlot.MAINHAND)
 			SealedxpbottlegetcontainxpProcedure.execute(entity, itemstack);
 	}
 }

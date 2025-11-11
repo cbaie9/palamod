@@ -24,9 +24,10 @@ public class FullendiuminvisibleProcedure {
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_ARMOR_HELMET.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 900, 1, false, false));
-			if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel && _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("palamod:avancementsupremearmor"))).isDone())) {
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:avancementsupremearmor"));
+			if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel _serverLevel9
+					&& _plr9.getAdvancements().getOrStartProgress(_serverLevel9.getServer().getAdvancements().get(ResourceLocation.parse("palamod:avancementsupremearmor"))).isDone())) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:avancementsupremearmor"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
@@ -43,15 +44,15 @@ public class FullendiuminvisibleProcedure {
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_ARMOR_BOOTS.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 900, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 900, 1, false, false));
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_ARMOR_LEGGINGS.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 900, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.HASTE, 900, 1, false, false));
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_ARMOR_CHESTPLATE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 900, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 900, 1, false, false));
 		}
 	}
 }

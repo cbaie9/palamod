@@ -9,17 +9,17 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class FakewaterobsidianBlock extends Block {
-	public FakewaterobsidianBlock() {
-		super(BlockBehaviour.Properties.of().strength(50f, 1200f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public FakewaterobsidianBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(50f, 1200f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 
@@ -31,7 +31,7 @@ public class FakewaterobsidianBlock extends Block {
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+	public void wasExploded(ServerLevel world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
 		FakeobsidianprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}

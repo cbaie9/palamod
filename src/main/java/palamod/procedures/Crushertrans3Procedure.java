@@ -11,7 +11,7 @@ public class Crushertrans3Procedure {
 	public static String execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return "";
-		if ((entity.getPersistentData().getString("language")).equals("french")) {
+		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
 			return "Probabilit\u00E9 :" + PalamodModVariables.crusher_num_var_seen + " - " + PalamodModVariables.crusher_num_var + " - " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state");
 		}
 		return "Probability : " + PalamodModVariables.crusher_num_var_seen + " - " + PalamodModVariables.crusher_num_var + " - " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_state");
@@ -20,7 +20,7 @@ public class Crushertrans3Procedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

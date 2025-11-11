@@ -9,13 +9,16 @@ import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
@@ -36,6 +39,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
+@EventBusSubscriber
 public class GodvillagerguiMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
@@ -184,7 +188,6 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Palamod
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 12 + 8 + sj * 18, 2 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, 12 + 8 + si * 18, 2 + 142));
-		OpengodvillagerguiProcedure.execute(entity);
 	}
 
 	@Override
@@ -328,7 +331,7 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Palamod
 
 	private void slotChanged(int slotid, int ctype, int meta) {
 		if (this.world != null && this.world.isClientSide()) {
-			PacketDistributor.sendToServer(new GodvillagerguiSlotMessage(slotid, x, y, z, ctype, meta));
+			ClientPacketDistributor.sendToServer(new GodvillagerguiSlotMessage(slotid, x, y, z, ctype, meta));
 			GodvillagerguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
@@ -341,5 +344,17 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Palamod
 	@Override
 	public Map<String, Object> getMenuState() {
 		return menuState;
+	}
+
+	@SubscribeEvent
+	public static void onContainerOpen(PlayerContainerEvent.Open event) {
+		Player entity = event.getEntity();
+		if (event.getContainer() instanceof GodvillagerguiMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
+			OpengodvillagerguiProcedure.execute(entity);
+		}
 	}
 }

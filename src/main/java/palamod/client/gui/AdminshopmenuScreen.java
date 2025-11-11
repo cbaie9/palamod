@@ -8,13 +8,14 @@ import palamod.network.AdminshopmenuButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -23,19 +24,17 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	ImageButton imagebutton_cross_no_button;
-	ImageButton imagebutton_admin_btte_ore;
-	ImageButton imagebutton_btte_block;
-	ImageButton imagebutton_btte_plant;
-	ImageButton imagebutton_btte_mobs;
-	ImageButton imagebutton_btte_utilities;
+	private ImageButton imagebutton_cross_no_button;
+	private ImageButton imagebutton_admin_btte_ore;
+	private ImageButton imagebutton_btte_block;
+	private ImageButton imagebutton_btte_plant;
+	private ImageButton imagebutton_btte_mobs;
+	private ImageButton imagebutton_btte_utilities;
 
 	public AdminshopmenuScreen(AdminshopmenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -61,7 +60,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 5 && mouseY < topPos + 21) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -71,11 +70,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 	}
 
 	@Override
@@ -100,13 +95,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(0, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -115,13 +110,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(1, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_admin_btte_ore);
@@ -130,13 +125,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(2, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_btte_block);
@@ -145,13 +140,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(3, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_btte_plant);
@@ -160,13 +155,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(4, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_btte_mobs);
@@ -175,13 +170,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(5, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(5, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_btte_utilities);

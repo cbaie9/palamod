@@ -10,6 +10,6 @@ public class MixedendiumarmorLeggingsTickEventProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 180, 2, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.HASTE, 180, 2, false, false));
 	}
 }

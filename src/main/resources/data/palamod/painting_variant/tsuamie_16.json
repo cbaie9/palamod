@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:tsuamie_16",
   "height": 1,
-  "width": 1
+  "width": 1,
+  "title": {
+    "translate": "painting.palamod.tsuamie_16.title"
+  },
+  "author": {
+    "translate": "painting.palamod.tsuamie_16.author"
+  }
 }

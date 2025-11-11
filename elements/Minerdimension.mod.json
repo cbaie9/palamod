@@ -22,7 +22,7 @@
     "defaultEffects": "overworld",
     "useCustomEffects": true,
     "hasClouds": true,
-    "cloudHeight": 255.0,
+    "cloudHeight": 255,
     "skyType": "NORMAL",
     "sunHeightAffectsFog": false,
     "canRespawnHere": true,

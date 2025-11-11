@@ -48,9 +48,9 @@ public class MoneyitemuseProcedure {
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (money.exists()) {
 			if (PalamodModItems.MONEY_ITEM.get() == itemstack.getItem() || PalamodModItems.MONEY_1K.get() == itemstack.getItem()) {
-				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("Is_pname")) {
-					if ((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("Money_spename")).equals(entity.getDisplayName().getString())) {
-						if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("destri_money")) {
+				if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("Is_pname", false)) {
+					if ((itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("Money_spename", "")).equals(entity.getDisplayName().getString())) {
+						if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("destri_money", false)) {
 							if (entity instanceof Player _player) {
 								ItemStack _stktoremove = itemstack;
 								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -66,7 +66,7 @@ public class MoneyitemuseProcedure {
 								}
 								bufferedReader.close();
 								main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-								main_money.addProperty("money", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
+								main_money.addProperty("money", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("Money_amount", 0) + main_money.get("money").getAsDouble()));
 							} catch (IOException e) {
 								e.printStackTrace();
 							}
@@ -86,7 +86,7 @@ public class MoneyitemuseProcedure {
 							_player.displayClientMessage(Component.literal("wrong player"), false);
 					}
 				} else {
-					if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("destri_money")) {
+					if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("destri_money", false)) {
 						if (world instanceof ServerLevel _level)
 							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									"kill @e[limit=1,sort=nearest,distance=1..5,type=item]");
@@ -101,7 +101,7 @@ public class MoneyitemuseProcedure {
 							}
 							bufferedReader.close();
 							main_money = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							main_money.addProperty("money", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Money_amount") + main_money.get("money").getAsDouble()));
+							main_money.addProperty("money", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("Money_amount", 0) + main_money.get("money").getAsDouble()));
 						} catch (IOException e) {
 							e.printStackTrace();
 						}

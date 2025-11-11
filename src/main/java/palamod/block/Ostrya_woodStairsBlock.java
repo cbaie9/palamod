@@ -11,8 +11,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodStairsBlock extends StairBlock {
-	public Ostrya_woodStairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(3f, 2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+	public Ostrya_woodStairsBlock(BlockBehaviour.Properties properties) {
+		super(Blocks.AIR.defaultBlockState(), properties.sound(SoundType.WOOD).strength(3f, 2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
@@ -21,7 +21,7 @@ public class Ostrya_woodStairsBlock extends StairBlock {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 

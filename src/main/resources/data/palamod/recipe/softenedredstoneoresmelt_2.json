@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 1,
   "cookingtime": 100,
-  "ingredient": {
-    "item": "palamod:softened_redstone_ore"
-  },
+  "ingredient": "palamod:softened_redstone_ore",
   "result": {
     "id": "minecraft:redstone"
   }

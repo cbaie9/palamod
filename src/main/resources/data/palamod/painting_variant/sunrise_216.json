@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:sunrise_216",
   "height": 1,
-  "width": 1
+  "width": 1,
+  "title": {
+    "translate": "painting.palamod.sunrise_216.title"
+  },
+  "author": {
+    "translate": "painting.palamod.sunrise_216.author"
+  }
 }

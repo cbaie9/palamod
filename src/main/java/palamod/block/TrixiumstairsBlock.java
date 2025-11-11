@@ -5,12 +5,10 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.core.BlockPos;
 
 public class TrixiumstairsBlock extends StairBlock {
-	public TrixiumstairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops());
+	public TrixiumstairsBlock(BlockBehaviour.Properties properties) {
+		super(Blocks.AIR.defaultBlockState(), properties.sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override
@@ -19,7 +17,7 @@ public class TrixiumstairsBlock extends StairBlock {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 }

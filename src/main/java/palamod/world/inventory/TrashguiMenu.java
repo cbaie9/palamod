@@ -6,13 +6,13 @@ import palamod.network.TrashguiSlotMessage;
 
 import palamod.init.PalamodModMenus;
 
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -256,7 +256,7 @@ public class TrashguiMenu extends AbstractContainerMenu implements PalamodModMen
 
 	private void slotChanged(int slotid, int ctype, int meta) {
 		if (this.world != null && this.world.isClientSide()) {
-			PacketDistributor.sendToServer(new TrashguiSlotMessage(slotid, x, y, z, ctype, meta));
+			ClientPacketDistributor.sendToServer(new TrashguiSlotMessage(slotid, x, y, z, ctype, meta));
 			TrashguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}

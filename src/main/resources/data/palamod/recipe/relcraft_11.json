@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "palamod:elevator_light_gray"
-    },
-    {
-      "item": "minecraft:white_dye"
-    }
+    "palamod:elevator_light_gray",
+    "minecraft:white_dye"
   ],
   "result": {
     "id": "palamod:elevator_white",

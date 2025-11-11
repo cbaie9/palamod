@@ -5,12 +5,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.core.BlockPos;
 
 public class FindiumstairsBlock extends StairBlock {
-	public FindiumstairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().strength(1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public FindiumstairsBlock(BlockBehaviour.Properties properties) {
+		super(Blocks.AIR.defaultBlockState(), properties.strength(1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -19,7 +17,7 @@ public class FindiumstairsBlock extends StairBlock {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 }

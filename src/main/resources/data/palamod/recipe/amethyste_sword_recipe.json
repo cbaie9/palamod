@@ -7,12 +7,8 @@
     "b"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "palamod:amethyst",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "palamod:amethyst_sword",

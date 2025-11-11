@@ -4,7 +4,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 
 public class EndiumpollenItem extends Item {
-	public EndiumpollenItem() {
-		super(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON));
+	public EndiumpollenItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.UNCOMMON).fireResistant());
 	}
 }

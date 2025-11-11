@@ -4,16 +4,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.core.BlockPos;
 
 public class PaladiumBlockBlock extends Block {
-	public PaladiumBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f, 10f).requiresCorrectToolForDrops());
+	public PaladiumBlockBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.METAL).strength(5f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 }

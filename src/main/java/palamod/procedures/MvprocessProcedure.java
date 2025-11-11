@@ -15,11 +15,11 @@ public class MvprocessProcedure {
 		if (entity == null)
 			return;
 		for (int index0 = 0; index0 < 64; index0++) {
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("powered", false) == true) {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.SOFT_STONE.get()))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -30,7 +30,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get()))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -41,7 +41,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.SMOOTH_STONE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -52,7 +52,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -63,7 +63,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -74,7 +74,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.STONE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -85,7 +85,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.COBBLESTONE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -96,7 +96,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.GRANITE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -107,7 +107,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.DIORITE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -118,7 +118,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.ANDESITE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -129,7 +129,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.BLACKSTONE))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -140,7 +140,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.BASALT))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -151,7 +151,7 @@ public class MvprocessProcedure {
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.NETHERRACK))) {
 					{
 						final String _tagName = "voidstone_count";
-						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
 						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 					}
 					if (entity instanceof Player _player) {
@@ -170,7 +170,7 @@ public class MvprocessProcedure {
 			}
 		}
 		itemstack.set(DataComponents.CUSTOM_NAME,
-				Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count")))));
+				Component.literal((Component.translatable("item.palamod.minage_voidstone").getString() + " - " + Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0)))));
 	}
 
 	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {

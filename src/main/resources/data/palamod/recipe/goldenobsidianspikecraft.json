@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "palamod:spike_gold"
-    }
+    "minecraft:obsidian",
+    "palamod:spike_gold"
   ],
   "result": {
     "id": "palamod:golden_obsidian_spike",

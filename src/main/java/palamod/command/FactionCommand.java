@@ -1,20 +1,6 @@
 package palamod.command;
 
-import palamod.procedures.UnclaimprocessProcedure;
-import palamod.procedures.SethomefactionprocessProcedure;
-import palamod.procedures.OpenfhguiProcedure;
-import palamod.procedures.FinfofacProcedure;
-import palamod.procedures.FactionpromoteprocessProcedure;
-import palamod.procedures.FactionleaveProcedure;
-import palamod.procedures.FactionjoinProcedure;
-import palamod.procedures.FactioninviteprocessProcedure;
-import palamod.procedures.FactionhomeprocessProcedure;
-import palamod.procedures.FactionhomelistProcedure;
-import palamod.procedures.FactiondemoteprocessProcedure;
-import palamod.procedures.FactioncreateProcedure;
-import palamod.procedures.DelfactiontrueProcedure;
-import palamod.procedures.DelfactionProcedure;
-import palamod.procedures.ClaimsystemProcedure;
+import palamod.procedures.*;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;

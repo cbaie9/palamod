@@ -6,7 +6,7 @@ public class Palahelpgrinder15Procedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		if ((entity.getPersistentData().getString("language")).equals("french")) {
+		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
 			return "minerais min\u00E9s -> hammer";
 		}
 		return "mined ores -> hammer";

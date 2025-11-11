@@ -10,6 +10,6 @@ public class TravelarmorBody_jumpboostProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 300, 3, false, true));
+			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 300, 3, false, true));
 	}
 }

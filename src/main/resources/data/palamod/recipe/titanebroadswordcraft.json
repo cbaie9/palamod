@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "equipment",
   "ingredients": [
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "minecraft:stick"
-    }
+    "palamod:titane_ingot",
+    "palamod:titane_ingot",
+    "palamod:titane_ingot",
+    "palamod:titane_ingot",
+    "minecraft:stick"
   ],
   "result": {
     "id": "palamod:titanebroadsword",

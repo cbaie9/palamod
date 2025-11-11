@@ -6,9 +6,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_ingot"
-    }
+    "a": "palamod:endium_ingot"
   },
   "result": {
     "id": "palamod:endium_armor_boots",

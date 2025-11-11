@@ -18,7 +18,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record JobskeybindingMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<JobskeybindingMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "key_jobskeybinding"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, JobskeybindingMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, JobskeybindingMessage message) -> {

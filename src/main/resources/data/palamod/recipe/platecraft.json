@@ -7,12 +7,8 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_slab"
-    },
-    "b": {
-      "item": "minecraft:iron_block"
-    }
+    "a": "palamod:paladium_slab",
+    "b": "minecraft:iron_block"
   },
   "result": {
     "id": "palamod:plate",

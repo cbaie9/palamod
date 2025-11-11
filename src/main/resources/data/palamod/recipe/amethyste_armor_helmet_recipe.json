@@ -6,9 +6,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst"
-    }
+    "a": "palamod:amethyst"
   },
   "result": {
     "id": "palamod:amethyst_armor_helmet",

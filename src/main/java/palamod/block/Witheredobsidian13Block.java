@@ -14,15 +14,16 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class Witheredobsidian13Block extends Block {
-	public Witheredobsidian13Block() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(50f, 1200f).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK));
+	public Witheredobsidian13Block(BlockBehaviour.Properties properties) {
+		super(properties.mapColor(MapColor.COLOR_BLACK).strength(50f, 1200f).requiresCorrectToolForDrops().pushReaction(PushReaction.BLOCK));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 
@@ -39,7 +40,7 @@ public class Witheredobsidian13Block extends Block {
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+	public void wasExploded(ServerLevel world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
 		WitheredobsidiandropProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}

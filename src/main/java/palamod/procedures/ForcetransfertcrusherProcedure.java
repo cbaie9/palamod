@@ -52,26 +52,11 @@ public class ForcetransfertcrusherProcedure {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putString("crusher_mode", "None");
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putBoolean("crusher_lock", true);
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putDouble("crusher_num", 0);
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -80,21 +65,21 @@ public class ForcetransfertcrusherProcedure {
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

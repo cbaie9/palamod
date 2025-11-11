@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:titane_hammer"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:titane_hammer"
   },
   "result": {
     "id": "palamod:hammer_pattern",

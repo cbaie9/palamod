@@ -7,7 +7,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -20,7 +20,7 @@ public class EndiumspawndynaProcedure {
 		if (entity == null)
 			return;
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = PalamodModEntities.ENDIUMDYNAMITE.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = PalamodModEntities.ENDIUMDYNAMITE.get().spawn(_level, BlockPos.containing(x, y + 1, z), EntitySpawnReason.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 				entityToSpawn.setDeltaMovement((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y()), (entity.getDeltaMovement().z()));
 			}

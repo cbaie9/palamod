@@ -1,16 +1,16 @@
 package palamod.item;
 
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
 public class PaladiumcoreItem extends Item {
-	public PaladiumcoreItem() {
-		super(new Item.Properties());
+	public PaladiumcoreItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

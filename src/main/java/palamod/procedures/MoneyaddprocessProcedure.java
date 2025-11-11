@@ -40,7 +40,7 @@ public class MoneyaddprocessProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
-		if (entity.hasPermissions(4)) {
+		if (entity instanceof Player _playerCmd4 && _playerCmd4.hasPermissions(4)) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));

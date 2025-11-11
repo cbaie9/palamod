@@ -12,6 +12,7 @@
       }
     },
     "states": [],
+    "animations": [],
     "name": "Empty spawner item",
     "rarity": "UNCOMMON",
     "creativeTabs": [
@@ -32,6 +33,7 @@
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
+    "isPiglinCurrency": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

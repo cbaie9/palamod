@@ -22,7 +22,7 @@ public class HdvstocksopenProcedure {
 			return;
 		if (entity instanceof Player _player)
 			_player.closeContainer();
-		if (entity.hasPermissions(4)) {
+		if (entity instanceof Player _playerCmd1 && _playerCmd1.hasPermissions(4)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = new BlockPos(0, 10, 0);
 				_ent.openMenu(new MenuProvider() {

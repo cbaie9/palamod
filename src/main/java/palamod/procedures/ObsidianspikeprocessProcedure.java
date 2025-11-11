@@ -4,7 +4,6 @@ import palamod.init.PalamodModBlocks;
 
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.Direction;
@@ -34,13 +33,10 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.IRON_OBSIDIAN_SPIKE.get()) {
@@ -63,13 +59,10 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.GOLDEN_OBSIDIAN_SPIKE.get()) {
@@ -92,13 +85,10 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DIAMOND_OBSIDIAN_SPIKE.get()) {
@@ -121,13 +111,10 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYS_TOBSIDIAN_SPIKE.get()) {
@@ -150,13 +137,10 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TITANE_OBSIDIAN_SPIKE.get()) {
@@ -179,13 +163,10 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_OBSIDIAN_SPIKE.get()) {
@@ -208,23 +189,20 @@ public class ObsidianspikeprocessProcedure {
 				Direction _dir = direction_block;
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
-				Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-				if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+				if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 					world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-				} else {
-					_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-					if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+				} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
 		}
 	}
 
 	private static Direction getDirectionFromBlockState(BlockState blockState) {
-		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
-		if (prop instanceof DirectionProperty dp)
-			return blockState.getValue(dp);
-		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
-		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+		if (blockState.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty ep && ep.getValueClass() == Direction.class)
+			return (Direction) blockState.getValue(ep);
+		if (blockState.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty ep && ep.getValueClass() == Direction.Axis.class)
+			return Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE);
+		return Direction.NORTH;
 	}
 }

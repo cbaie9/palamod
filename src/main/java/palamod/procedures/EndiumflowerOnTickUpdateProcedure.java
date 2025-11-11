@@ -4,11 +4,13 @@ import palamod.init.PalamodModBlocks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -22,8 +24,8 @@ public class EndiumflowerOnTickUpdateProcedure {
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-				if (entityiterator instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel
-						&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone()) {
+				if (entityiterator instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel _serverLevel0
+						&& _plr0.getAdvancements().getOrStartProgress(_serverLevel0.getServer().getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone()) {
 					if (!(PalamodModBlocks.ENDIUMFLOWERON.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock())) {
 						{
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -48,7 +50,7 @@ public class EndiumflowerOnTickUpdateProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.loadWithComponents(_bnbt, world.registryAccess());
+										_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 									} catch (Exception ignored) {
 									}
 								}
@@ -78,7 +80,7 @@ public class EndiumflowerOnTickUpdateProcedure {
 								_be = world.getBlockEntity(_bp);
 								if (_be != null) {
 									try {
-										_be.loadWithComponents(_bnbt, world.registryAccess());
+										_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 									} catch (Exception ignored) {
 									}
 								}

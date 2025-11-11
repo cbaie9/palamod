@@ -15,6 +15,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
@@ -73,8 +74,8 @@ public class CustomplantbreakblockProcedure {
 			} else {
 				lvlmin = -20;
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && lvlmin > lvl) {
-				PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)));
+			if (world instanceof ServerLevel _serverLevelGR15 && _serverLevelGR15.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && lvlmin > lvl) {
+				PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + (world instanceof ServerLevel _serverLevelGR16 && _serverLevelGR16.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE))));
 				if (event instanceof ICancellableEvent _cancellable) {
 					_cancellable.setCanceled(true);
 				}

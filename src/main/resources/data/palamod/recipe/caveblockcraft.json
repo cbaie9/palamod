@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:glass"
-    },
-    "b": {
-      "item": "palamod:findium"
-    }
+    "a": "minecraft:glass",
+    "b": "palamod:findium"
   },
   "result": {
     "id": "palamod:cave_block",

@@ -7,12 +7,8 @@
     "bbb"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:wooden_sword"
-    },
-    "b": {
-      "item": "minecraft:iron_ingot"
-    }
+    "a": "minecraft:wooden_sword",
+    "b": "minecraft:iron_ingot"
   },
   "result": {
     "id": "palamod:iron_spike",

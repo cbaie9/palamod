@@ -21,9 +21,9 @@ public class HyperjumpstickprocessProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 15, false, true));
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 200, 15, false, true));
 			if (world instanceof ServerLevel _level) {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});

@@ -10,12 +10,12 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Erable_FenceBlock extends FenceBlock {
-	public Erable_FenceBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
+	public Erable_FenceBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 

@@ -5,9 +5,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst"
-    }
+    "a": "palamod:amethyst"
   },
   "result": {
     "id": "palamod:amethyst_slab",

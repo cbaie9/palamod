@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "palamod:green_paladium_stairs"
-    }
+    "palamod:green_paladium_stairs"
   ],
   "result": {
     "id": "palamod:green_paladium_ingot",

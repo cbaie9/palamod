@@ -2,12 +2,11 @@ package palamod.block;
 
 import palamod.procedures.TypesettingstableprocessProcedure;
 
+import palamod.init.PalamodModBlocks;
+
 import palamod.block.entity.TypesettingtableBlockEntity;
 
 import org.checkerframework.checker.units.qual.s;
-
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -24,9 +23,11 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
@@ -35,13 +36,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class TypesettingtableBlock extends Block implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 3);
 
-	public TypesettingtableBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).lightLevel(s -> (new Object() {
+	public TypesettingtableBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.WOOD).strength(1f, 10f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -55,19 +56,12 @@ public class TypesettingtableBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("block.palamod.typesettingtable.description_0"));
-	}
-
-	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+	public boolean propagatesSkylightDown(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 
@@ -131,5 +125,17 @@ public class TypesettingtableBlock extends Block implements EntityBlock {
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;
+	}
+
+	public static class Item extends BlockItem {
+		public Item(Item.Properties properties) {
+			super(PalamodModBlocks.TYPESETTINGTABLE.get(), properties);
+		}
+
+		@Override
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			componentConsumer.accept(Component.translatable("block.palamod.typesettingtable.description_0"));
+		}
 	}
 }

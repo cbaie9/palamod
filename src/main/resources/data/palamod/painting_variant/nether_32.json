@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:nether_32",
   "height": 1,
-  "width": 2
+  "width": 2,
+  "title": {
+    "translate": "painting.palamod.nether_32.title"
+  },
+  "author": {
+    "translate": "painting.palamod.nether_32.author"
+  }
 }

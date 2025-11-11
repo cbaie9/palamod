@@ -8,7 +8,7 @@ public class ClickerpagedownProcedure {
 	public static void execute(LevelAccessor world) {
 		if (PalamodModVariables.MapVariables.get(world).clicker_page > 0 && PalamodModVariables.MapVariables.get(world).clicker_page <= 6) {
 			PalamodModVariables.MapVariables.get(world).clicker_page = PalamodModVariables.MapVariables.get(world).clicker_page - 1;
-			PalamodModVariables.MapVariables.get(world).syncData(world);
+			PalamodModVariables.MapVariables.get(world).markSyncDirty();
 		}
 	}
 }

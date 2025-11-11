@@ -19,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record TrixiumdepositSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
 	public static final Type<TrixiumdepositSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "trixiumdeposit_slots"));

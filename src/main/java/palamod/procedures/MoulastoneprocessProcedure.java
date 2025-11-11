@@ -42,7 +42,7 @@ public class MoulastoneprocessProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("powered", false) == true) {
 				for (int index0 = 0; index0 < 64; index0++) {
 					if (hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))) {
 						count = count + 0.15;

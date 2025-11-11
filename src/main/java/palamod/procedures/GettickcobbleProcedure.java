@@ -14,13 +14,13 @@ import net.minecraft.core.BlockPos;
 public class GettickcobbleProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
 		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "cobblebreak_tick") + "- "
-				+ (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count");
+				+ (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0);
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 

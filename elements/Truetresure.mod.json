@@ -58,6 +58,8 @@
       "value": ""
     },
     "dropAmount": 0,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
     "useLootTableForDrops": true,
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,

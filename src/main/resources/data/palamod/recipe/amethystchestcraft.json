@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst"
-    },
-    "b": {
-      "item": "palamod:compressed_amethyst"
-    },
-    "c": {
-      "item": "minecraft:chest"
-    }
+    "a": "palamod:amethyst",
+    "b": "palamod:compressed_amethyst",
+    "c": "minecraft:chest"
   },
   "result": {
     "id": "palamod:amethyst_chest",

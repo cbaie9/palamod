@@ -7,15 +7,9 @@
     "c c"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:leather"
-    },
-    "b": {
-      "item": "minecraft:feather"
-    },
-    "c": {
-      "item": "palamod:titane_ingot"
-    }
+    "a": "minecraft:leather",
+    "b": "minecraft:feather",
+    "c": "palamod:titane_ingot"
   },
   "result": {
     "id": "palamod:travelarmor_leggings",

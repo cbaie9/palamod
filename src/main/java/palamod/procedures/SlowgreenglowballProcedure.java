@@ -14,7 +14,7 @@ public class SlowgreenglowballProcedure {
 		if (PalamodModVariables.cooltick_spike == 0) {
 			PalamodModVariables.cooltick_spike = 20;
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1));
+				_entity.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 40, 1));
 		} else {
 			PalamodModVariables.cooltick_spike = PalamodModVariables.cooltick_spike - 1;
 		}

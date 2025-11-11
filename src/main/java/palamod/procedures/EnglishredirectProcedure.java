@@ -16,7 +16,7 @@ public class EnglishredirectProcedure {
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(Component.literal("To change for all world :"), false);
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal("Type Win+r : %appdata%\\.minecraft\\config"), false);
+			_player.displayClientMessage(Component.literal("Type Win+r  : %appdata%\\.minecraft\\config"), false);
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(Component.literal("and search for a file name Palamod _client_settings.toml"), false);
 		if (entity instanceof Player _player && !_player.level().isClientSide())

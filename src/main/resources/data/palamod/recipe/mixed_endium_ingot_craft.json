@@ -8,12 +8,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:green_paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:endium_fragment"
-    }
+    "a": "palamod:green_paladium_ingot",
+    "b": "palamod:endium_fragment"
   },
   "result": {
     "id": "palamod:mixed_endium_ingot",

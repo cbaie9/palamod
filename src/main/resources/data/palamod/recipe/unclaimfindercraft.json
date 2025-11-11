@@ -7,15 +7,9 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_core"
-    },
-    "c": {
-      "item": "palamod:findium"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:paladium_core",
+    "c": "palamod:findium"
   },
   "result": {
     "id": "palamod:unclaimfinder",

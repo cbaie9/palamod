@@ -26,7 +26,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
@@ -42,6 +42,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import java.util.Set;
 import java.util.Random;
 
 public class Luckyprocessv2Procedure {
@@ -54,26 +55,20 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 164000 && Random <= 164500) {
 			PalamodModVariables.lucky_name = "Double Xp";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack1 = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
+				_setstack1.setCount(1);
+				_menu.getSlots().get(3).set(_setstack1);
+				ItemStack _setstack2 = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
+				_setstack2.setCount(1);
+				_menu.getSlots().get(4).set(_setstack2);
+				ItemStack _setstack3 = new ItemStack(Items.EXPERIENCE_BOTTLE).copy();
+				_setstack3.setCount(1);
+				_menu.getSlots().get(5).set(_setstack3);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player)
 				_player.giveExperienceLevels(entity instanceof Player _plr ? _plr.experienceLevel : 0);
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR6 && _serverLevelGR6.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Double Xp"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -91,24 +86,18 @@ public class Luckyprocessv2Procedure {
 				}
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
+				ItemStack _setstack12 = new ItemStack(Blocks.AIR).copy();
+				_setstack12.setCount(1);
+				_menu.getSlots().get(3).set(_setstack12);
+				ItemStack _setstack13 = new ItemStack(Blocks.COMMAND_BLOCK).copy();
+				_setstack13.setCount(1);
+				_menu.getSlots().get(4).set(_setstack13);
+				ItemStack _setstack14 = new ItemStack(Blocks.AIR).copy();
+				_setstack14.setCount(1);
+				_menu.getSlots().get(5).set(_setstack14);
 				_player.containerMenu.broadcastChanges();
 			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.COMMAND_BLOCK).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR15 && _serverLevelGR15.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Duplicata"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -119,14 +108,14 @@ public class Luckyprocessv2Procedure {
 			PalamodModVariables.Lucky_destroy = 1;
 			illegal_operation_check = true;
 			PalamodMod.queueServerWork(100, () -> {
-				if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
 					ResourceKey<Level> destinationType = Level.END;
 					if (_player.level().dimension() == destinationType)
 						return;
-					ServerLevel nextLevel = _player.server.getLevel(destinationType);
+					ServerLevel nextLevel = _serverLevel.getServer().getLevel(destinationType);
 					if (nextLevel != null) {
 						_player.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
-						_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), _player.getYRot(), _player.getXRot());
+						_player.teleportTo(nextLevel, _player.getX(), _player.getY(), _player.getZ(), Set.of(), _player.getYRot(), _player.getXRot(), true);
 						_player.connection.send(new ClientboundPlayerAbilitiesPacket(_player.getAbilities()));
 						for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 							_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
@@ -134,24 +123,18 @@ public class Luckyprocessv2Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(Blocks.END_PORTAL_FRAME).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(3).set(_setstack);
+					ItemStack _setstack19 = new ItemStack(Blocks.END_PORTAL_FRAME).copy();
+					_setstack19.setCount(1);
+					_menu.getSlots().get(3).set(_setstack19);
+					ItemStack _setstack20 = new ItemStack(Blocks.END_PORTAL).copy();
+					_setstack20.setCount(1);
+					_menu.getSlots().get(4).set(_setstack20);
+					ItemStack _setstack21 = new ItemStack(Blocks.END_PORTAL_FRAME).copy();
+					_setstack21.setCount(1);
+					_menu.getSlots().get(5).set(_setstack21);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(Blocks.END_PORTAL).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(4).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack = new ItemStack(Blocks.END_PORTAL_FRAME).copy();
-					_setstack.setCount(1);
-					_menu.getSlots().get(5).set(_setstack);
-					_player.containerMenu.broadcastChanges();
-				}
-				if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR22 && _serverLevelGR22.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " End"));
 				}
 			});
@@ -159,21 +142,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 166800 && Random <= 168000) {
 			PalamodModVariables.lucky_name = "Endium beacon";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.LAPIS_BLOCK).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.BEACON).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.LAPIS_BLOCK).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack26 = new ItemStack(Blocks.LAPIS_BLOCK).copy();
+				_setstack26.setCount(1);
+				_menu.getSlots().get(3).set(_setstack26);
+				ItemStack _setstack27 = new ItemStack(Blocks.BEACON).copy();
+				_setstack27.setCount(1);
+				_menu.getSlots().get(4).set(_setstack27);
+				ItemStack _setstack28 = new ItemStack(Blocks.LAPIS_BLOCK).copy();
+				_setstack28.setCount(1);
+				_menu.getSlots().get(5).set(_setstack28);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level)
@@ -186,7 +163,7 @@ public class Luckyprocessv2Procedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"fill ~-1 ~2 ~1 ~1 ~2 ~-1 minecraft:lapis_block");
 			world.setBlock(BlockPos.containing(x, y + 1, z), Blocks.BEACON.defaultBlockState(), 3);
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR33 && _serverLevelGR33.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Endium beacon"));
 			}
 			PalamodModVariables.Lucky_destroy = 2;
@@ -195,21 +172,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 168000 && Random <= 168100) {
 			PalamodModVariables.lucky_name = "Endium \"Grade\"";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack36 = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+				_setstack36.setCount(1);
+				_menu.getSlots().get(3).set(_setstack36);
+				ItemStack _setstack37 = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+				_setstack37.setCount(1);
+				_menu.getSlots().get(4).set(_setstack37);
+				ItemStack _setstack38 = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+				_setstack38.setCount(1);
+				_menu.getSlots().get(5).set(_setstack38);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player) {
@@ -217,7 +188,7 @@ public class Luckyprocessv2Procedure {
 				_setstack.setCount(64);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR40 && _serverLevelGR40.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Endium \"Grade\" ( core beta v1 )"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -226,21 +197,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 168100 && Random <= 168200) {
 			PalamodModVariables.lucky_name = "Endium Block";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack43 = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
+				_setstack43.setCount(1);
+				_menu.getSlots().get(3).set(_setstack43);
+				ItemStack _setstack44 = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
+				_setstack44.setCount(1);
+				_menu.getSlots().get(4).set(_setstack44);
+				ItemStack _setstack45 = new ItemStack(PalamodModBlocks.ENDIUM_BLOCK.get()).copy();
+				_setstack45.setCount(1);
+				_menu.getSlots().get(5).set(_setstack45);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player) {
@@ -248,7 +213,7 @@ public class Luckyprocessv2Procedure {
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR47 && _serverLevelGR47.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Endium Block"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -257,21 +222,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 168200 && Random <= 191200) {
 			PalamodModVariables.lucky_name = "Enferm\uFFFD";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.IRON_BARS).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.IRON_BARS).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.IRON_BARS).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack50 = new ItemStack(Blocks.IRON_BARS).copy();
+				_setstack50.setCount(1);
+				_menu.getSlots().get(3).set(_setstack50);
+				ItemStack _setstack51 = new ItemStack(Blocks.IRON_BARS).copy();
+				_setstack51.setCount(1);
+				_menu.getSlots().get(4).set(_setstack51);
+				ItemStack _setstack52 = new ItemStack(Blocks.IRON_BARS).copy();
+				_setstack52.setCount(1);
+				_menu.getSlots().get(5).set(_setstack52);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level)
@@ -404,7 +363,7 @@ public class Luckyprocessv2Procedure {
 				}
 				world.setBlock(_bp, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR93 && _serverLevelGR93.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Enferm\uFFFD"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -413,25 +372,19 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 191200 && Random <= 193500) {
 			PalamodModVariables.lucky_name = " Et Les Phant";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.BAMBOO).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.BAMBOO).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.BAMBOO).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack96 = new ItemStack(Blocks.BAMBOO).copy();
+				_setstack96.setCount(1);
+				_menu.getSlots().get(3).set(_setstack96);
+				ItemStack _setstack97 = new ItemStack(Blocks.BAMBOO).copy();
+				_setstack97.setCount(1);
+				_menu.getSlots().get(4).set(_setstack97);
+				ItemStack _setstack98 = new ItemStack(Blocks.BAMBOO).copy();
+				_setstack98.setCount(1);
+				_menu.getSlots().get(5).set(_setstack98);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = PalamodModEntities.PALADIUMGOLEM.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = PalamodModEntities.PALADIUMGOLEM.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}
@@ -439,7 +392,7 @@ public class Luckyprocessv2Procedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"Title title In current devloppement");
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR101 && _serverLevelGR101.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Et Les Phant"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -448,21 +401,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 193500 && Random <= 193600) {
 			PalamodModVariables.lucky_name = " Et Paf des \"sous \"";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack104 = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
+				_setstack104.setCount(1);
+				_menu.getSlots().get(3).set(_setstack104);
+				ItemStack _setstack105 = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
+				_setstack105.setCount(1);
+				_menu.getSlots().get(4).set(_setstack105);
+				ItemStack _setstack106 = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
+				_setstack106.setCount(1);
+				_menu.getSlots().get(5).set(_setstack106);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (entity instanceof Player _player) {
@@ -470,7 +417,7 @@ public class Luckyprocessv2Procedure {
 				_setstack.setCount(64);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR108 && _serverLevelGR108.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Et paf des sous"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -479,21 +426,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 193600 && Random <= 193700) {
 			PalamodModVariables.lucky_name = " Et Paf plus de \"sous\"";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack111 = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
+				_setstack111.setCount(1);
+				_menu.getSlots().get(3).set(_setstack111);
+				ItemStack _setstack112 = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
+				_setstack112.setCount(1);
+				_menu.getSlots().get(4).set(_setstack112);
+				ItemStack _setstack113 = new ItemStack(PalamodModItems.MONEY_OTHER.get()).copy();
+				_setstack113.setCount(1);
+				_menu.getSlots().get(5).set(_setstack113);
 				_player.containerMenu.broadcastChanges();
 			}
 			if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get()))) {
@@ -502,7 +443,7 @@ public class Luckyprocessv2Procedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 20, _player.inventoryMenu.getCraftSlots());
 				}
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR116 && _serverLevelGR116.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + " Et paf plus de sous"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -511,21 +452,15 @@ public class Luckyprocessv2Procedure {
 		if (Random >= 193700 && Random <= 196800) {
 			PalamodModVariables.lucky_name = "Ex-pala-osion";
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(3).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.TNT).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(4).set(_setstack);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(5).set(_setstack);
+				ItemStack _setstack119 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+				_setstack119.setCount(1);
+				_menu.getSlots().get(3).set(_setstack119);
+				ItemStack _setstack120 = new ItemStack(Blocks.TNT).copy();
+				_setstack120.setCount(1);
+				_menu.getSlots().get(4).set(_setstack120);
+				ItemStack _setstack121 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+				_setstack121.setCount(1);
+				_menu.getSlots().get(5).set(_setstack121);
 				_player.containerMenu.broadcastChanges();
 			}
 			for (int index0 = 0; index0 < 64; index0++) {
@@ -539,7 +474,7 @@ public class Luckyprocessv2Procedure {
 					}
 				});
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR125 && _serverLevelGR125.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + "Ex-pala-osion"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -550,7 +485,7 @@ public class Luckyprocessv2Procedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"/give @p written_book{pages:['{\"text\":\"Voici Les coordonn\uFFFDes de Fuze et des r\uFFFDcompences \\n\\nCalcule la page \\n(( 3 + 90 / 3 + 6 ) / 3 + 2 ) / 5\\n\\nBonne chance ;)\"}','[\"\",{\"text\":\"1 : Coordonn\uFFFDes\\n\\n\"},{\"selector\":\"https://youtu.be/3Y7aWLpuxA4\"}]','[\"\",{\"text\":\"2 Coordonn\uFFFD de fuze\\n\\n\"},{\"selector\":\"https://youtu.be/ajlkhFnz8eo?list=TLPQMTcwMjIwMjI29uqOA1D3sQ&t=4\"}]','[\"\",{\"text\":\"3 Coordonn\uFFFDes de Fuze \\n\\n\"},{\"selector\":\"https://youtu.be/GPXkjtpGCFI?t=7\"}]','[\"\",{\"text\":\"4 Coordonn\uFFFDes de fuze \\n\\n\"},{\"selector\":\"https://youtu.be/O91DT1pR1ew\"}]'],title:\"Ma base\",author:Fuzay,display:{Lore:[\"Les Coo de ma base\"]}}");
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR129 && _serverLevelGR129.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu l'event aux Lucky Block " + "Coordonn\uFFFD de fuze"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -560,8 +495,9 @@ public class Luckyprocessv2Procedure {
 			BlockPos _bp = BlockPos.containing(x, y, z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putString("lucky_name", PalamodModVariables.lucky_name);
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -570,7 +506,7 @@ public class Luckyprocessv2Procedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 

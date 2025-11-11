@@ -11,8 +11,8 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 
 public class PaladiumappleItem extends Item {
-	public PaladiumappleItem() {
-		super(new Item.Properties().rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(9).saturationModifier(1f).alwaysEdible().build()));
+	public PaladiumappleItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(9).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -23,9 +23,6 @@ public class PaladiumappleItem extends Item {
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
 		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
 		Paladiumapple_effectProcedure.execute(entity);
 		return retval;
 	}

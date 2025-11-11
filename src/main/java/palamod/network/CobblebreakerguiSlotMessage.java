@@ -1,12 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.CobblebreakergivexptitaneProcedure;
-import palamod.procedures.CobblebreakergivexppaladiumProcedure;
-import palamod.procedures.CobblebreakergivexpironProcedure;
-import palamod.procedures.CobblebreakergivexpgreenpaladiumProcedure;
-import palamod.procedures.CobblebreakergivexpgoldProcedure;
-import palamod.procedures.CobblebreakergivexpdiamondProcedure;
-import palamod.procedures.CobblebreakergivexpamethystProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -25,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record CobblebreakerguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
 
 	public static final Type<CobblebreakerguiSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "cobblebreakergui_slots"));

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "palamod:cobbled_soft_stone"
-  },
+  "ingredient": "palamod:cobbled_soft_stone",
   "result": {
     "id": "palamod:cobbledsoftstonestairs",
     "count": 1

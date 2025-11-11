@@ -18,7 +18,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record AdminshopkeyblindingMessage(int eventType, int pressedms) implements CustomPacketPayload {
 	public static final Type<AdminshopkeyblindingMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "key_adminshopkeyblinding"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, AdminshopkeyblindingMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AdminshopkeyblindingMessage message) -> {

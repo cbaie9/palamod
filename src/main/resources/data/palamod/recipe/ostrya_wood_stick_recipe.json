@@ -6,9 +6,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:ostrya_wood_planks"
-    }
+    "a": "palamod:ostrya_wood_planks"
   },
   "result": {
     "id": "minecraft:stick",

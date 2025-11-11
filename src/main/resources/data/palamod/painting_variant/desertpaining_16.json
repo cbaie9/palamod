@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:desertpaining_16",
   "height": 1,
-  "width": 1
+  "width": 1,
+  "title": {
+    "translate": "painting.palamod.desertpaining_16.title"
+  },
+  "author": {
+    "translate": "painting.palamod.desertpaining_16.author"
+  }
 }

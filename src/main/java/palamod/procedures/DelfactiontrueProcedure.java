@@ -24,8 +24,8 @@ public class DelfactiontrueProcedure {
 		double get_id = 0;
 		String get_name = "";
 		boolean fget_id = false;
-		if (entity.getPersistentData().getBoolean(("faction-warning_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))))) {
-			if (entity.getPersistentData().getDouble("faction-code") == DoubleArgumentType.getDouble(arguments, "code")) {
+		if (entity.getPersistentData().getBooleanOr(("faction-warning_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))), false)) {
+			if (entity.getPersistentData().getDoubleOr("faction-code", 0) == DoubleArgumentType.getDouble(arguments, "code")) {
 				if ((getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_leader_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))))).equals(entity.getStringUUID())) {
 					get_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 					get_name = getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_name_" + get_id));
@@ -33,116 +33,21 @@ public class DelfactiontrueProcedure {
 						BlockPos _bp = new BlockPos(0, 9, 0);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
+						if (_blockEntity != null) {
 							_blockEntity.getPersistentData().putBoolean(("Faction_oc_" + get_id), false);
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_nb-m_" + get_id), (-1));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_nb-off_" + get_id), (-1));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_nb-co-leader_" + get_id), (-1));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_xp" + get_id), (-1));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_lv" + get_id), (-1));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putString(("Faction_name_" + get_id), ("[ deleted-faction: \"" + "" + get_name + "\" ]"));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putString(("Faction_leader_" + get_id), ("[ deleted-faction: \"" + "" + get_name + "\" ]"));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_id_" + get_name), ((-1) * get_id));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putString(("Faction_leader_" + get_id), ("[ deleted-faction: \"" + "" + get_name + "\" ]"));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putBoolean(("Faction_has_" + entity.getStringUUID()), false);
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putBoolean(("Faction_hbc_" + get_id), true);
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = new BlockPos(0, 9, 0);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
 							_blockEntity.getPersistentData().putDouble(("Faction_" + entity.getStringUUID()), ((-1) * get_id));
+						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
@@ -150,7 +55,7 @@ public class DelfactiontrueProcedure {
 						_player.displayClientMessage(Component.literal(("The faction " + get_name + "has been deleted")), false);
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("tellraw @a [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"The faction " + "" + get_name + " has been disband\",\"color\":\"gold\"}]"));
+								("tellraw @a [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"The faction  " + "" + get_name + " has been disband\",\"color\":\"gold\"}]"));
 				} else {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -171,14 +76,14 @@ public class DelfactiontrueProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 }

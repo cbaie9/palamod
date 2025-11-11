@@ -6,7 +6,7 @@ public class Palahelpgrinder21Procedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		if ((entity.getPersistentData().getString("language")).equals("french")) {
+		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
 			return "Comment crafter le grinder";
 		}
 		return "How to craft the grinder";

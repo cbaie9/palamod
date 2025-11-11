@@ -8,13 +8,14 @@ import palamod.network.PalahelpmachineButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -24,23 +25,21 @@ import net.minecraft.client.gui.GuiGraphics;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class PalahelpmachineScreen extends AbstractContainerScreen<PalahelpmachineMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	Button button_grinder;
-	Button button_palamachine;
-	Button button_crusher;
-	Button button_forge;
-	Button button_uploader;
-	Button button_downloader;
-	Button button_drawbridge;
-	ImageButton imagebutton_arrow_adminshop;
-	ImageButton imagebutton_home_pixel_adminshop;
-	ImageButton imagebutton_cross_no_button;
+	private Button button_grinder;
+	private Button button_palamachine;
+	private Button button_crusher;
+	private Button button_forge;
+	private Button button_uploader;
+	private Button button_downloader;
+	private Button button_drawbridge;
+	private ImageButton imagebutton_arrow_adminshop;
+	private ImageButton imagebutton_home_pixel_adminshop;
+	private ImageButton imagebutton_cross_no_button;
 
 	public PalahelpmachineScreen(PalahelpmachineMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -66,7 +65,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -76,14 +75,10 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem64.png"), this.leftPos + 13, this.topPos + 28, 0, 0, 64, 64, 64, 64);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem64.png"), this.leftPos + 13, this.topPos + 28, 0, 0, 64, 64, 64, 64);
 	}
 
 	@Override
@@ -107,7 +102,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(0, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 92, this.topPos + 29, 75, 20).build();
@@ -116,7 +111,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(1, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 92, this.topPos + 51, 75, 20).build();
@@ -125,7 +120,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(2, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(2, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 92, this.topPos + 73, 75, 20).build();
@@ -134,7 +129,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(3, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(3, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 92, this.topPos + 96, 75, 20).build();
@@ -143,7 +138,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(4, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(4, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 92, this.topPos + 118, 75, 20).build();
@@ -152,7 +147,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(5, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(5, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}).bounds(this.leftPos + 92, this.topPos + 140, 75, 20).build();
@@ -161,7 +156,7 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 			int x = PalahelpmachineScreen.this.x;
 			int y = PalahelpmachineScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(6, x, y, z));
+				ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(6, x, y, z));
 				PalahelpmachineButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}).bounds(this.leftPos + 4, this.topPos + 97, 77, 20).build();
@@ -171,13 +166,13 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 					int x = PalahelpmachineScreen.this.x;
 					int y = PalahelpmachineScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(7, x, y, z));
+						ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(7, x, y, z));
 						PalahelpmachineButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
@@ -186,13 +181,13 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 					int x = PalahelpmachineScreen.this.x;
 					int y = PalahelpmachineScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(8, x, y, z));
+						ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(8, x, y, z));
 						PalahelpmachineButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
@@ -201,13 +196,13 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 					int x = PalahelpmachineScreen.this.x;
 					int y = PalahelpmachineScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new PalahelpmachineButtonMessage(9, x, y, z));
+						ClientPacketDistributor.sendToServer(new PalahelpmachineButtonMessage(9, x, y, z));
 						PalahelpmachineButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);

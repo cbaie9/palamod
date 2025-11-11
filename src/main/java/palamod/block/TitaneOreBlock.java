@@ -23,8 +23,8 @@ import net.minecraft.core.BlockPos;
 public class TitaneOreBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
-	public TitaneOreBlock() {
-		super(BlockBehaviour.Properties.of().strength(5.05f, 18.1194915919f).lightLevel(s -> (new Object() {
+	public TitaneOreBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(5.05f, 18.1194915919f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -34,7 +34,7 @@ public class TitaneOreBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

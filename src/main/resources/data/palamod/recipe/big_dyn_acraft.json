@@ -5,9 +5,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:dynamite"
-    }
+    "a": "palamod:dynamite"
   },
   "result": {
     "id": "palamod:big_dynamite",

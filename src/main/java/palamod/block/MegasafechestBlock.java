@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
@@ -21,12 +20,12 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class MegasafechestBlock extends Block implements EntityBlock {
-	public MegasafechestBlock() {
-		super(BlockBehaviour.Properties.of().strength(10f, 1000f).instrument(NoteBlockInstrument.BASEDRUM));
+	public MegasafechestBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(10f, 1000f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

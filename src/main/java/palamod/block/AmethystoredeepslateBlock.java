@@ -24,8 +24,8 @@ import net.minecraft.core.BlockPos;
 public class AmethystoredeepslateBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
-	public AmethystoredeepslateBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).lightLevel(s -> (new Object() {
+	public AmethystoredeepslateBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
 					return 0;
@@ -35,7 +35,7 @@ public class AmethystoredeepslateBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 

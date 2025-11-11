@@ -19,7 +19,7 @@ public class Legendarystonejobs_processProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
 			if (entity instanceof Player _player)
 				_player.giveExperiencePoints((int) Math.pow(Mth.nextInt(RandomSource.create(), 1, 10), 10));
 			if (world.isClientSide())

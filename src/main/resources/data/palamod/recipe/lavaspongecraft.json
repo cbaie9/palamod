@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:lava_bucket"
-    },
-    "b": {
-      "item": "minecraft:soul_sand"
-    },
-    "c": {
-      "item": "minecraft:sponge"
-    }
+    "a": "minecraft:lava_bucket",
+    "b": "minecraft:soul_sand",
+    "c": "minecraft:sponge"
   },
   "result": {
     "id": "palamod:lavasponge",

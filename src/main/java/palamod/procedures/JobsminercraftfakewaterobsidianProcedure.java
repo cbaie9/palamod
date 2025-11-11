@@ -17,37 +17,13 @@ public class JobsminercraftfakewaterobsidianProcedure {
 		{
 			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text = "A obsidian that pose";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text2 = "fake water when broken";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text3 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text4 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text5 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_durability = "No durability";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.lvl_required = "Lvl required : 42";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.FAKE_WATER_BUCKET.get())) && getAmountInGUISlot(entity, 0) == 0) {
 			if (entity instanceof Player _player) {
@@ -55,9 +31,9 @@ public class JobsminercraftfakewaterobsidianProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.FAKE_WATER_BUCKET.get()).copy();
-				_setstack.setCount(1);
-				_menu.getSlots().get(0).set(_setstack);
+				ItemStack _setstack3 = new ItemStack(PalamodModItems.FAKE_WATER_BUCKET.get()).copy();
+				_setstack3.setCount(1);
+				_menu.getSlots().get(0).set(_setstack3);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
@@ -69,9 +45,9 @@ public class JobsminercraftfakewaterobsidianProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN).copy();
-				_setstack.setCount(getAmountInGUISlot(entity, 1) + 1);
-				_menu.getSlots().get(1).set(_setstack);
+				ItemStack _setstack11 = new ItemStack(Blocks.OBSIDIAN).copy();
+				_setstack11.setCount(getAmountInGUISlot(entity, 1) + 1);
+				_menu.getSlots().get(1).set(_setstack11);
 				_player.containerMenu.broadcastChanges();
 			}
 		}

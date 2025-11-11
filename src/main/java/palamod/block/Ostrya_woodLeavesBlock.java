@@ -5,21 +5,21 @@ import palamod.procedures.OstryasapdropProcedure;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.TintedParticleLeavesBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-public class Ostrya_woodLeavesBlock extends LeavesBlock {
-	public Ostrya_woodLeavesBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(0.2f).noOcclusion().ignitedByLava().isSuffocating((bs, br, bp) -> false).isViewBlocking((bs, br, bp) -> false));
+public class Ostrya_woodLeavesBlock extends TintedParticleLeavesBlock {
+	public Ostrya_woodLeavesBlock(BlockBehaviour.Properties properties) {
+		super(0.01f, properties.sound(SoundType.GRASS).strength(0.2f).noOcclusion().ignitedByLava().isSuffocating((bs, br, bp) -> false).isViewBlocking((bs, br, bp) -> false));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 1;
 	}
 

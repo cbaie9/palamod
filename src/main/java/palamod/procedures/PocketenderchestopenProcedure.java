@@ -1,23 +1,19 @@
 package palamod.procedures;
 
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.ChestMenu;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.Level;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.SimpleMenuProvider;
-import net.minecraft.world.entity.Entity; // Import pour Entity
+import net.minecraft.world.inventory.ChestMenu;
 
 public class PocketenderchestopenProcedure {
-    public static void execute(Entity entity) {
-        // On vérifie si l'entité qui a déclenché est un joueur sur le serveur
-        if (entity instanceof ServerPlayer) {
-            // On convertit l'entité générique en un objet Player pour accéder à ses fonctions
-            Player player = (Player) entity;
+    public static void execute(Level level, Player player) {
+        if (player == null || level == null) return;
 
-            // On ouvre le menu du coffre du joueur
+        if (!level.isClientSide()) {
             player.openMenu(new SimpleMenuProvider(
-                (id, inventory, p) -> ChestMenu.threeRows(id, inventory, player.getEnderChestInventory()),
-                player.getDisplayName()
-            ));
+                    (id, inv, p) -> ChestMenu.threeRows(id, inv, p.getEnderChestInventory()),
+                    Component.translatable("container.enderchest")));
         }
     }
 }

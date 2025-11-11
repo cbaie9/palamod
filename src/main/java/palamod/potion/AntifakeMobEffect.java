@@ -6,6 +6,7 @@ import palamod.procedures.AntifakeEffect_add_nbtProcedure;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.server.level.ServerLevel;
 
 public class AntifakeMobEffect extends MobEffect {
 	public AntifakeMobEffect() {
@@ -23,8 +24,8 @@ public class AntifakeMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+	public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
 		AntifakeOnEffect_delete_nbtProcedure.execute(entity);
-		return super.applyEffectTick(entity, amplifier);
+		return super.applyEffectTick(level, entity, amplifier);
 	}
 }

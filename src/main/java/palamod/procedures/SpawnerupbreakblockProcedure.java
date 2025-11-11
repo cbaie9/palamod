@@ -52,7 +52,7 @@ public class SpawnerupbreakblockProcedure {
 				spawner_item = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
 			}
 			data = executeCommandGetResult(world, new Vec3(x, y, z), "data get block ~ ~ ~ SpawnData.entity");
-			if (data.contains("witch") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("witch"))) {
+			if (data.contains("witch") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("witch"))) {
 				{
 					final String _tagName = "spawner_type";
 					final String _tagValue = "witch";
@@ -60,10 +60,10 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if (data.contains("zombie") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("zombie"))) {
+			} else if (data.contains("zombie") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("zombie"))) {
 				{
 					final String _tagName = "spawner_type";
 					final String _tagValue = "zombie";
@@ -71,10 +71,10 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if (data.contains("skeleton") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("creeper"))) {
+			} else if (data.contains("skeleton") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("creeper"))) {
 				{
 					final String _tagName = "spawner_type";
 					final String _tagValue = "skeleton";
@@ -82,10 +82,10 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if (data.contains("creeper") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("creeper"))) {
+			} else if (data.contains("creeper") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("creeper"))) {
 				{
 					final String _tagName = "spawner_type";
 					final String _tagValue = "creeper";
@@ -93,14 +93,14 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = spawner_item.copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+				ItemStack _setstack26 = spawner_item.copy();
+				_setstack26.setCount(1);
+				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack26);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}

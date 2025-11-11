@@ -24,8 +24,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Orangeblue4Block extends FlowerBlock {
-	public Orangeblue4Block() {
-		super(MobEffects.MOVEMENT_SPEED, 100, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+	public Orangeblue4Block(BlockBehaviour.Properties properties) {
+		super(MobEffects.SPEED, 100, properties.mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

@@ -39,15 +39,16 @@ public class LogAllfallProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 			PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " fall at " + " x : " + x + " y : " + y + " z : " + z));
 		}
-		if (entity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel && _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone()) {
+		if (entity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel _serverLevel3
+				&& _plr3.getAdvancements().getOrStartProgress(_serverLevel3.getServer().getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone()) {
 			entity.getPersistentData().putBoolean("player.jumping", false);
 		}
 		if (getEntityGameType(entity) == GameType.CREATIVE) {
-			if (entity instanceof ServerPlayer _player) {
-				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"));
+			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+				AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"));
 				if (_adv != null) {
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
@@ -56,7 +57,7 @@ public class LogAllfallProcedure {
 					}
 				}
 			}
-			PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get creative trigger at " + " x : " + x + " y : " + y + " z : " + z));
+			PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get  creative trigger at " + " x : " + x + " y : " + y + " z : " + z));
 		}
 	}
 

@@ -11,37 +11,13 @@ public class JobsminercraftnotingamesoonProcedure {
 		{
 			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text = "[ not in game ]";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text2 = "Will be added soon";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text3 = "";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text4 = " ";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_get_text5 = " ";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.jobs_durability = "No durability";
-			_vars.syncPlayerVariables(entity);
-		}
-		{
-			PalamodModVariables.PlayerVariables _vars = entity.getData(PalamodModVariables.PLAYER_VARIABLES);
 			_vars.lvl_required = "Lvl required : //";
-			_vars.syncPlayerVariables(entity);
+			_vars.markSyncDirty();
 		}
 	}
 }

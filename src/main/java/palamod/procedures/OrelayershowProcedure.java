@@ -11,6 +11,6 @@ public class OrelayershowProcedure {
 		File file = new File("");
 		com.google.gson.JsonObject main_obj = new com.google.gson.JsonObject();
 		boolean boo = false;
-		return entity.getPersistentData().getBoolean("orelayer");
+		return entity.getPersistentData().getBooleanOr("orelayer", false);
 	}
 }

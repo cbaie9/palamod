@@ -1,0 +1,91 @@
+{
+  "model": {
+    "type": "palamod:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xpbottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xpbottle/jobs_type"
+            },
+            "value": 1
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xpbottle_0"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xpbottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xpbottle/jobs_type"
+            },
+            "value": 2
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xpbottle_1"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xpbottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xpbottle/jobs_type"
+            },
+            "value": 3
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xpbottle_2"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xpbottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xpbottle/jobs_type"
+            },
+            "value": 4
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xpbottle_3"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "palamod:item/xpbottle"
+    }
+  }
+}

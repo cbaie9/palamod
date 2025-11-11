@@ -7,15 +7,9 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_stick"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:gold_mixedcoal"
-    }
+    "a": "palamod:paladium_stick",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:gold_mixedcoal"
   },
   "result": {
     "id": "palamod:paladium_mixed_charcoal",

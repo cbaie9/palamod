@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "minecraft:obsidian"
-    }
+    "minecraft:obsidian",
+    "minecraft:obsidian",
+    "minecraft:obsidian"
   ],
   "result": {
     "id": "palamod:obsidianslab",

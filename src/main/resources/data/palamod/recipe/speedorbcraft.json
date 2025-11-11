@@ -7,12 +7,8 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "minecraft:sugar"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:sugar"
   },
   "result": {
     "id": "palamod:speed_orb",

@@ -9,10 +9,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class AnalyserloadingScreen extends AbstractContainerScreen<AnalyserloadingMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -45,11 +44,7 @@ public class AnalyserloadingScreen extends AbstractContainerScreen<Analyserloadi
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/analyserloading.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 100, 150, 100);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/analyserloading.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 100, 150, 100);
 	}
 
 	@Override

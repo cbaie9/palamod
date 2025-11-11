@@ -2,33 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    }
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot"
   ],
   "result": {
     "id": "palamod:paladium_green_block",

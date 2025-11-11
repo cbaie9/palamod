@@ -14,20 +14,21 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class SlimeobsidianBlock extends Block {
-	public SlimeobsidianBlock() {
-		super(BlockBehaviour.Properties.of().strength(50f, 1200f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
+	public SlimeobsidianBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(50f, 1200f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+	public boolean propagatesSkylightDown(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 
@@ -44,7 +45,7 @@ public class SlimeobsidianBlock extends Block {
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+	public void wasExploded(ServerLevel world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
 		SlimeobsidianprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}

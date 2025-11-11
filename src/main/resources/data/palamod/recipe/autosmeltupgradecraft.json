@@ -2,24 +2,12 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "palamod:paladium_furnace"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "minecraft:glass"
-    }
+    "minecraft:glass",
+    "palamod:paladium_furnace",
+    "minecraft:glass",
+    "minecraft:glass",
+    "minecraft:glass",
+    "minecraft:glass"
   ],
   "result": {
     "id": "palamod:auto_smelt_upgrade_potg",

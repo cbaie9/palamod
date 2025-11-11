@@ -15,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
 import java.io.IOException;
@@ -69,8 +70,8 @@ public class Adhmobs2buyinksacProcedure {
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("You cannot bought nothing put a number greater than 0 to continue"), false);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
-						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0 " + item.getDisplayName().getString()));
+					if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0  " + item.getDisplayName().getString()));
 					}
 				}
 				if (n * fac_v <= main.get("money").getAsDouble()) {
@@ -84,7 +85,7 @@ public class Adhmobs2buyinksacProcedure {
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("You succesfuly bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $")), false);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $"));
 					}
 				} else {

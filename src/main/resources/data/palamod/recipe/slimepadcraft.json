@@ -6,9 +6,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:slime_ball"
-    }
+    "a": "minecraft:slime_ball"
   },
   "result": {
     "id": "palamod:slimepad",

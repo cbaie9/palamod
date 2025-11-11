@@ -1,9 +1,8 @@
 package palamod.block;
 
-import palamod.block.entity.TrixiumnbtblockBlockEntity;
+import palamod.init.PalamodModBlocks;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
+import palamod.block.entity.TrixiumnbtblockBlockEntity;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -12,32 +11,27 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class TrixiumnbtblockBlock extends Block implements EntityBlock {
-	public TrixiumnbtblockBlock() {
-		super(BlockBehaviour.Properties.of().strength(-1, 3600000).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public TrixiumnbtblockBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(-1, 3600000).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("block.palamod.trixium_nbt_block.description_0"));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 
@@ -60,15 +54,8 @@ public class TrixiumnbtblockBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-		if (state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof TrixiumnbtblockBlockEntity be) {
-				Containers.dropContents(world, pos, be);
-				world.updateNeighbourForOutputSignal(pos, this);
-			}
-			super.onRemove(state, world, pos, newState, isMoving);
-		}
+	protected void affectNeighborsAfterRemoval(BlockState blockstate, ServerLevel world, BlockPos blockpos, boolean flag) {
+		Containers.updateNeighboursAfterDestroy(blockstate, world, blockpos);
 	}
 
 	@Override
@@ -83,5 +70,17 @@ public class TrixiumnbtblockBlock extends Block implements EntityBlock {
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;
+	}
+
+	public static class Item extends BlockItem {
+		public Item(Item.Properties properties) {
+			super(PalamodModBlocks.TRIXIUM_NBT_BLOCK.get(), properties);
+		}
+
+		@Override
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			componentConsumer.accept(Component.translatable("block.palamod.trixium_nbt_block.description_0"));
+		}
 	}
 }

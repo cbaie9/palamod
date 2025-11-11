@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:titanebroadsword"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:titanebroadsword"
   },
   "result": {
     "id": "palamod:broadsword_pattern",

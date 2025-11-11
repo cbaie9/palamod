@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "function",
   "definition": {
-    "code": "# Enter the function code here\nkill @e[type=item]\nkill @e[type=experience_bottle]\nkill @e[type=experience_orb]\nkill @e[type=potion]",
+    "code": "# Enter the function code here\nkill @e[type=item]\nkill @e[type=experience_bottle]\nkill @e[type=experience_orb]\nkill @e[type=splash_potion]\nkill @e[type=lingering_potion]",
     "name": "palalag_item",
     "namespace": "mod"
   }

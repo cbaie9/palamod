@@ -49,8 +49,9 @@ public class DownloaderprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("Has_money", true);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -59,8 +60,9 @@ public class DownloaderprocessProcedure {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
+							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putBoolean("Has_money", false);
+							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
@@ -85,14 +87,14 @@ public class DownloaderprocessProcedure {
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 

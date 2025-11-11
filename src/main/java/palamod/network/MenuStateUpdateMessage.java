@@ -19,10 +19,10 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.client.Minecraft;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber
 public record MenuStateUpdateMessage(int elementType, String name, Object elementState) implements CustomPacketPayload {
 
-	public static final Type<MenuStateUpdateMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "guistate_update"));
+	public static final Type<MenuStateUpdateMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "menustate_update"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, MenuStateUpdateMessage> STREAM_CODEC = StreamCodec.of(MenuStateUpdateMessage::write, MenuStateUpdateMessage::read);
 	public static void write(FriendlyByteBuf buffer, MenuStateUpdateMessage message) {
 		buffer.writeInt(message.elementType);
@@ -31,6 +31,8 @@ public record MenuStateUpdateMessage(int elementType, String name, Object elemen
 			buffer.writeUtf((String) message.elementState);
 		} else if (message.elementType == 1) {
 			buffer.writeBoolean((boolean) message.elementState);
+		} else if (message.elementType == 2 && message.elementState instanceof Number n) {
+			buffer.writeDouble(n.doubleValue());
 		}
 	}
 
@@ -42,6 +44,8 @@ public record MenuStateUpdateMessage(int elementType, String name, Object elemen
 			elementState = buffer.readUtf();
 		} else if (elementType == 1) {
 			elementState = buffer.readBoolean();
+		} else if (elementType == 2) {
+			elementState = buffer.readDouble();
 		}
 		return new MenuStateUpdateMessage(elementType, name, elementState);
 	}

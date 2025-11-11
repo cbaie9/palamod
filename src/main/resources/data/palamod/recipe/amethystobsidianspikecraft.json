@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:obsidian"
-    },
-    {
-      "item": "palamod:amethyst_spike"
-    }
+    "minecraft:obsidian",
+    "palamod:amethyst_spike"
   ],
   "result": {
     "id": "palamod:amethys_tobsidian_spike",

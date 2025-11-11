@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_particle"
-    }
+    "a": "palamod:paladium_particle"
   },
   "result": {
     "id": "palamod:paladium_ingot",

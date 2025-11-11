@@ -24,7 +24,7 @@ public class Legendarystonefortune_processProcedure {
 			return;
 		ItemStack item = ItemStack.EMPTY;
 		double number = 0;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
 			if (Math.random() < 0.1) {
 				item = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			} else if (Math.random() < 0.15) {

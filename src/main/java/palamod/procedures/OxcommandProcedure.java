@@ -25,7 +25,7 @@ public class OxcommandProcedure {
 		if (entity == null)
 			return;
 		if ((commandParameterMessage(arguments, "code")).equals("205686")) {
-			if (entity.getPersistentData().getBoolean("debug_pala")) {
+			if (entity.getPersistentData().getBooleanOr("debug_pala", false)) {
 				entity.getPersistentData().putBoolean("debug_pala", false);
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("Debug off"), false);

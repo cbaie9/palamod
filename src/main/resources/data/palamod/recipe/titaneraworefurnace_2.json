@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 2,
   "cookingtime": 100,
-  "ingredient": {
-    "item": "palamod:titanerawore"
-  },
+  "ingredient": "palamod:titanerawore",
   "result": {
     "id": "palamod:titane_ingot"
   }

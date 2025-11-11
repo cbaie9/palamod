@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:elevator_pink"
-    },
-    {
-      "item": "minecraft:white_dye"
-    }
+    "palamod:elevator_pink",
+    "minecraft:white_dye"
   ],
   "result": {
     "id": "palamod:elevator_white",

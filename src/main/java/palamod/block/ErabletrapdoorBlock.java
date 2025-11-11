@@ -11,12 +11,12 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class ErabletrapdoorBlock extends TrapDoorBlock {
-	public ErabletrapdoorBlock() {
-		super(BlockSetType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS));
+	public ErabletrapdoorBlock(BlockBehaviour.Properties properties) {
+		super(BlockSetType.OAK, properties.sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 0;
 	}
 

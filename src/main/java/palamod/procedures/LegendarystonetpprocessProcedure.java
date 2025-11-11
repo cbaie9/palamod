@@ -24,7 +24,7 @@ public class LegendarystonetpprocessProcedure {
 			return;
 		double x = 0;
 		double z = 0;
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
 			x = Mth.nextInt(RandomSource.create(), -1000000, 100000);
 			z = Mth.nextInt(RandomSource.create(), -1000000, 100000);
 			if (world.isClientSide())

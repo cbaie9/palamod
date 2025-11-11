@@ -10,6 +10,6 @@ public class SpeedorangeglueballProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 10));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 30, 10));
 	}
 }

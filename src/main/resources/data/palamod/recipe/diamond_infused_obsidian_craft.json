@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:diamond"
-    },
-    "b": {
-      "item": "minecraft:obsidian"
-    },
-    "c": {
-      "item": "palamod:paladium_block"
-    }
+    "a": "minecraft:diamond",
+    "b": "minecraft:obsidian",
+    "c": "palamod:paladium_block"
   },
   "result": {
     "id": "palamod:diamondinfusedobsidian",

@@ -1,13 +1,6 @@
 package palamod.command;
 
-import palamod.procedures.MinegeprocesssetlayerendiumonProcedure;
-import palamod.procedures.MinageprocesssetlayeronProcedure;
-import palamod.procedures.MinageprocesssetlayeroffProcedure;
-import palamod.procedures.MinageprocesssetlayerendiumtdynaProcedure;
-import palamod.procedures.MinageprocesssetlayerendiumoffProcedure;
-import palamod.procedures.MinageprocesssetlayerdynamiconProcedure;
-import palamod.procedures.MinageprocesssetlayerdynamicoffProcedure;
-import palamod.procedures.ConnectorelayerProcedure;
+import palamod.procedures.*;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;

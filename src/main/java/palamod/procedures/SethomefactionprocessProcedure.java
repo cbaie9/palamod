@@ -26,62 +26,15 @@ public class SethomefactionprocessProcedure {
 			BlockPos _bp = new BlockPos(0, 9, 0);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
+			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putDouble(("Faction_" + get_id + "number_home"), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "number_home")) + 1));
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putDouble(("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"), x);
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putDouble(("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"), y);
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putDouble(("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_z"), z);
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putDouble(("Faction_home_id_" + StringArgumentType.getString(arguments, "home_name")), (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "number_home"))));
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putBoolean(("Faction_home_" + get_id + "_" + StringArgumentType.getString(arguments, "home_name")), true);
-			if (world instanceof Level _level)
-				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-		}
-		if (!world.isClientSide()) {
-			BlockPos _bp = new BlockPos(0, 9, 0);
-			BlockEntity _blockEntity = world.getBlockEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_blockEntity != null)
 				_blockEntity.getPersistentData().putString(("Faction_home_name_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "number_home"))), (StringArgumentType.getString(arguments, "home_name")));
+			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
@@ -94,7 +47,7 @@ public class SethomefactionprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

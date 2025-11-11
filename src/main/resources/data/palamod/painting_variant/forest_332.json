@@ -1,5 +1,11 @@
 {
   "asset_id": "palamod:forest_332",
   "height": 2,
-  "width": 1
+  "width": 1,
+  "title": {
+    "translate": "painting.palamod.forest_332.title"
+  },
+  "author": {
+    "translate": "painting.palamod.forest_332.author"
+  }
 }
