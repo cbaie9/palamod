@@ -1,6 +1,5 @@
 package palamod.network;
 
-import palamod.procedures.ConnectadhoreProcedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.Adminshop_openProcedure;
 import palamod.procedures.AdhtsoregoldProcedure;
@@ -60,15 +59,11 @@ public record AdminshoporegoldButtonMessage(int buttonID, int x, int y, int z) i
 
 			AdhtsoregoldProcedure.execute(world, entity);
 		}
-		if (buttonID == 3) {
+		if (buttonID == 2) {
 
 			CloseguiProcedure.execute(entity);
 		}
-		if (buttonID == 4) {
-
-			ConnectadhoreProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
+		if (buttonID == 3) {
 
 			Adminshop_openProcedure.execute(world, x, y, z, entity);
 		}

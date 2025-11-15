@@ -3,7 +3,6 @@ package palamod.client.gui;
 import palamod.world.inventory.AdminshoporepaladiumMenu;
 
 import palamod.procedures.ReturnadminshoporemenuProcedure;
-import palamod.procedures.ReturnadminshopmainmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountpalaProcedure;
 
@@ -41,7 +40,6 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 	private Button button_sell;
 	private ImageButton imagebutton_cross_no_button;
 	private ImageButton imagebutton_arrow_adminshop;
-	private ImageButton imagebutton_home_pixel_adminshop;
 
 	public AdminshoporepaladiumScreen(AdminshoporepaladiumMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -69,14 +67,7 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 119 && mouseX < leftPos + 131 && mouseY > topPos + 4 && mouseY < topPos + 19) {
-			String hoverText = ReturnadminshopmainmenuProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
-			}
-			customTooltipShown = true;
-		}
-		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 5 && mouseY < topPos + 19) {
+		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 4 && mouseY < topPos + 19) {
 			String hoverText = ReturnadminshoporemenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
@@ -100,8 +91,6 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 
@@ -125,7 +114,7 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_paladium"), 62, 5, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_paladium"), 60, 8, -1, false);
 		guiGraphics.drawString(this.font, AdshoppreviewamountpalaProcedure.execute(world, entity), 29, 74, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_sell_price_120"), 25, 30, -4671036, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshoporepaladium.label_buy_price_125"), 25, 44, -4671036, false);
@@ -175,8 +164,8 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 135, this.topPos + 3, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 135, this.topPos + 3, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					int x = AdminshoporepaladiumScreen.this.x;
 					int y = AdminshoporepaladiumScreen.this.y;
 					if (true) {
@@ -190,20 +179,5 @@ public class AdminshoporepaladiumScreen extends AbstractContainerScreen<Adminsho
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
-		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 117, this.topPos + 3, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
-					int x = AdminshoporepaladiumScreen.this.x;
-					int y = AdminshoporepaladiumScreen.this.y;
-					if (true) {
-						PacketDistributor.sendToServer(new AdminshoporepaladiumButtonMessage(4, x, y, z));
-						AdminshoporepaladiumButtonMessage.handleButtonAction(entity, 4, x, y, z);
-					}
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 	}
 }

@@ -1,7 +1,6 @@
 package palamod.network;
 
 import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.AdminshopblockconnectProcedure;
 import palamod.procedures.Adminshop_openProcedure;
 import palamod.procedures.AdhblksellgrassProcedure;
 import palamod.procedures.AdhblkbuygrassProcedure;
@@ -67,10 +66,6 @@ public record AdminshopblockgrassButtonMessage(int buttonID, int x, int y, int z
 		if (buttonID == 3) {
 
 			Adminshop_openProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			AdminshopblockconnectProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

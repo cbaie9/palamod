@@ -11,16 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "gui176_166.png",
-          "use1Xscale": false,
-          "x": 125,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_titane",
@@ -130,26 +120,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 125,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 201,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_cross_no_button",
@@ -167,26 +137,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_adminshop.png",
-          "hoveredImage": "arrow_adminshop_poi.png",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
           "onClick": {
             "name": "Connectadhore"
           },
           "x": 261,
-          "y": 41,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_home_pixel_adminshop",
-          "image": "home_pixel_adminshop.png",
-          "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Adminshop_open"
-          },
-          "x": 242,
           "y": 41,
           "locked": false
         }
@@ -212,7 +168,7 @@
           "name": "tooltip_return_to_the_ore_menu",
           "text": {
             "fixedValue": "Return to the ore menu",
-            "name": "Returnadminshoporemenu"
+            "name": "Returnadminshopmainmenu"
           },
           "width": 15,
           "height": 14,
@@ -222,17 +178,12 @@
         }
       },
       {
-        "type": "tooltip",
+        "type": "image",
         "data": {
-          "name": "tooltip_return_to_the_adminshop_menu",
-          "text": {
-            "fixedValue": "Return to the adminshop menu",
-            "name": "Returnadminshopmainmenu"
-          },
-          "width": 12,
-          "height": 15,
-          "x": 244,
-          "y": 42,
+          "image": "gui176_166.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37,
           "locked": false
         }
       }

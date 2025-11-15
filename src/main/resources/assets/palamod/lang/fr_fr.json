@@ -1976,5 +1976,7 @@
   "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
   "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
   "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
-  "item.palamod.emptyspawneritem": "Empty spawner item"
+  "item.palamod.emptyspawneritem": "Empty spawner item",
+  "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
+  "gui.palamod.adminshopmenu.slider_suffix": ""
 }

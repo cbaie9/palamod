@@ -3,7 +3,6 @@ package palamod.client.gui;
 import palamod.world.inventory.AdminshopblockDirtMenu;
 
 import palamod.procedures.ReturnadminshopmainmenuProcedure;
-import palamod.procedures.ReturnadminshopblockmenuProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 import palamod.procedures.AdshoppreviewamountdirtProcedure;
 
@@ -40,7 +39,6 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 	private Button button_buy;
 	private Button button_sell;
 	private ImageButton imagebutton_arrow_adminshop;
-	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_cross_no_button;
 
 	public AdminshopblockDirtScreen(AdminshopblockDirtMenu container, Inventory inventory, Component text) {
@@ -76,14 +74,7 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 			}
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 137 && mouseX < leftPos + 152 && mouseY > topPos + 6 && mouseY < topPos + 20) {
-			String hoverText = ReturnadminshopblockmenuProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
-			}
-			customTooltipShown = true;
-		}
-		if (mouseX > leftPos + 122 && mouseX < leftPos + 134 && mouseY > topPos + 5 && mouseY < topPos + 20) {
+		if (mouseX > leftPos + 137 && mouseX < leftPos + 152 && mouseY > topPos + 5 && mouseY < topPos + 20) {
 			String hoverText = ReturnadminshopmainmenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
@@ -100,8 +91,6 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 
@@ -160,8 +149,8 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 			}
 		}).bounds(this.leftPos + 99, this.topPos + 109, 46, 20).build();
 		this.addRenderableWidget(button_sell);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 136, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 136, this.topPos + 4, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					int x = AdminshopblockDirtScreen.this.x;
 					int y = AdminshopblockDirtScreen.this.y;
 					if (true) {
@@ -175,21 +164,6 @@ public class AdminshopblockDirtScreen extends AbstractContainerScreen<Adminshopb
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
-		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 120, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
-					int x = AdminshopblockDirtScreen.this.x;
-					int y = AdminshopblockDirtScreen.this.y;
-					if (true) {
-						PacketDistributor.sendToServer(new AdminshopblockDirtButtonMessage(3, x, y, z));
-						AdminshopblockDirtButtonMessage.handleButtonAction(entity, 3, x, y, z);
-					}
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 				}) {

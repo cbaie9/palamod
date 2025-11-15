@@ -130,26 +130,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 125,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 201,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_cross_no_button",
@@ -167,42 +147,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_adminshop.png",
-          "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Connectadhore"
-          },
-          "x": 261,
-          "y": 41,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_home_pixel_adminshop",
-          "image": "home_pixel_adminshop.png",
-          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
           "onClick": {
             "name": "Adminshop_open"
           },
-          "x": 244,
+          "x": 261,
           "y": 41,
-          "locked": false
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_return_to_the_adminshop_menu",
-          "text": {
-            "fixedValue": "Return to the adminshop menu",
-            "name": "Returnadminshopmainmenu"
-          },
-          "width": 12,
-          "height": 15,
-          "x": 246,
-          "y": 42,
           "locked": false
         }
       },
@@ -215,9 +166,9 @@
             "name": "Returnadminshoporemenu"
           },
           "width": 15,
-          "height": 14,
+          "height": 15,
           "x": 262,
-          "y": 43,
+          "y": 42,
           "locked": false
         }
       },

@@ -1,6 +1,5 @@
 package palamod.network;
 
-import palamod.procedures.AdminshopblockconnectProcedure;
 import palamod.procedures.Adminshop_openProcedure;
 import palamod.procedures.AdhblkselldirtProcedure;
 import palamod.procedures.AdhblkbuydirtProcedure;
@@ -60,10 +59,6 @@ public record AdminshopblockDirtButtonMessage(int buttonID, int x, int y, int z)
 			AdhblkselldirtProcedure.execute(world, entity);
 		}
 		if (buttonID == 2) {
-
-			AdminshopblockconnectProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
 
 			Adminshop_openProcedure.execute(world, x, y, z, entity);
 		}

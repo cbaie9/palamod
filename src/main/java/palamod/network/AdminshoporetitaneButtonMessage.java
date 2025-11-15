@@ -2,7 +2,6 @@ package palamod.network;
 
 import palamod.procedures.ConnectadhoreProcedure;
 import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.Adminshop_openProcedure;
 import palamod.procedures.AdhtsoretitaneProcedure;
 import palamod.procedures.AdhorestitaneProcedure;
 
@@ -67,10 +66,6 @@ public record AdminshoporetitaneButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 3) {
 
 			ConnectadhoreProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			Adminshop_openProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

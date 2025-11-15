@@ -44702,6 +44702,853 @@
           "src/main/java/palamod/procedures/SpawnerupbreakblockProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Adminshopcol1adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_1adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol1adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Adminshopcol2adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_2adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol2adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Adminshopcol3adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_3adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol3adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Adminshopcol4adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_4adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol4adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Adminshopcol5adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_5adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol5adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Adminshopcol6adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_6adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol6adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Adminshopcol7adminshopgetsprite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adminshopcol_7adminshopgetsprite",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/Adminshopcol7adminshopgetspriteProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1col2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1col_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1col2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1col3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1col_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1col3Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1col4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1col_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1col4Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1col5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1col_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1col5Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1col6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1col_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1col6Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow1col7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_1col_7",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow1col7Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col1Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col3Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col4Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col5Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col6Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow2col7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_2col_7",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow2col7Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col1Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col3Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col4Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col5Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col6Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Connectadminshoprow3col7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connectadminshoprow_3col_7",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Connectadminshoprow3col7Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49441,7 +50288,9 @@
       "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
       "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
-      "item.palamod.emptyspawneritem": "Empty spawner item"
+      "item.palamod.emptyspawneritem": "Empty spawner item",
+      "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
+      "gui.palamod.adminshopmenu.slider_suffix": ""
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51421,7 +52270,9 @@
       "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
       "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
-      "item.palamod.emptyspawneritem": "Empty spawner item"
+      "item.palamod.emptyspawneritem": "Empty spawner item",
+      "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
+      "gui.palamod.adminshopmenu.slider_suffix": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53401,7 +54252,9 @@
       "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
       "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
-      "item.palamod.emptyspawneritem": "Empty spawner item"
+      "item.palamod.emptyspawneritem": "Empty spawner item",
+      "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
+      "gui.palamod.adminshopmenu.slider_suffix": ""
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -55381,7 +56234,9 @@
       "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
       "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
-      "item.palamod.emptyspawneritem": "Empty spawner item"
+      "item.palamod.emptyspawneritem": "Empty spawner item",
+      "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
+      "gui.palamod.adminshopmenu.slider_suffix": ""
     }
   },
   "metadata": {
