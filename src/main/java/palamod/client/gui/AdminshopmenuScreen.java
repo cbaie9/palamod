@@ -81,7 +81,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 270 && mouseX < leftPos + 286 && mouseY > topPos + 9 && mouseY < topPos + 25) {
+		if (mouseX > leftPos + 280 && mouseX < leftPos + 296 && mouseY > topPos + 17 && mouseY < topPos + 33) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
@@ -138,13 +138,12 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.adminshopmenu.label_adminshop"), 108, 10, -65536, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 270, this.topPos + 9, 16, 16,
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 280, this.topPos + 17, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;

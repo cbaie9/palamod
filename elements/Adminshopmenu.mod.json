@@ -11,22 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "label",
-        "data": {
-          "name": "label_adminshop",
-          "text": {
-            "fixedValue": "Adminshop"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 172,
-          "y": 30,
-          "locked": true
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_close_the_gui",
@@ -36,8 +20,8 @@
           },
           "width": 16,
           "height": 16,
-          "x": 334,
-          "y": 29,
+          "x": 344,
+          "y": 37,
           "locked": true
         }
       },
@@ -50,8 +34,8 @@
           "onClick": {
             "name": "Closegui"
           },
-          "x": 334,
-          "y": 29,
+          "x": 344,
+          "y": 37,
           "locked": true
         }
       },
