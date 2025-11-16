@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.world.inventory.FactionhomeguiMenu;
 
+import palamod.init.PalamodModGameRules;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -25,30 +27,32 @@ public class OpenfhguiProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Factionhomegui");
-					}
+		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.COMMANDFACTIONNOPERMACCESS) || entity.hasPermissions(2)) {
+			if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("Factionhomegui");
+						}
 
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
 
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new FactionhomeguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new FactionhomeguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" You can't do this because you aren't in a faction \",\"color\":\"gold\"},{\"text\":\"Create\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction create\"}},{\"text\":\" or \",\"color\":\"gold\"},{\"text\":\"join\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction join\"}},{\"text\":\" one to access this \",\"color\":\"gold\"}]");
 			}
-		} else {
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" You can't do this because you aren't in a faction \",\"color\":\"gold\"},{\"text\":\"Create\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction create\"}},{\"text\":\" or \",\"color\":\"gold\"},{\"text\":\"join\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction join\"}},{\"text\":\" one to access this \",\"color\":\"gold\"}]");
 		}
 	}
 

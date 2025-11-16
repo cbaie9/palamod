@@ -27,53 +27,68 @@ public class HomelistProcedure {
 		double lvl = 0;
 		File home = new File("");
 		File jobs = new File("");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"tellraw @p [{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" Home list\",\"color\":\"dark_green\"}]");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"tellraw @p [\"\",{\"text\":\"-------------------------------\",\"color\":\"dark_green\"},{\"text\":\"\"}]");
-		{
-			File dir_files_ = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()));
-			if (dir_files_.isDirectory())
-				for (File file : dir_files_.listFiles()) {
-					String stringiterator = file.getPath();
-					home = new File(stringiterator);
-					{
-						try {
-							BufferedReader bufferedReader = new BufferedReader(new FileReader(home));
-							StringBuilder jsonstringbuilder = new StringBuilder();
-							String line;
-							while ((line = bufferedReader.readLine()) != null) {
-								jsonstringbuilder.append(line);
-							}
-							bufferedReader.close();
-							main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							if (main.has("deleted")) {
-								if (!main.get("deleted").getAsBoolean()) {
-									cycle_loop = cycle_loop + 1;
-									if (world instanceof ServerLevel _level)
-										_level.getServer().getCommands().performPrefixedCommand(
-												new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-												("tellraw @p [\"\",{\"text\":\"Home N\u00B0" + "" + Math.round(cycle_loop) + " - \\u0020\",\"color\":\"aqua\"},{\"text\":\"" + home.getName().replace(".json", "")
-														+ " \\u0020 \\u0020\",\"color\":\"dark_green\"},{\"text\":\"[TP]\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/home " + home.getName().replace(".json", "")
-														+ "\"}},{\"text\":\" \",\"color\":\"gold\"},{\"text\":\"[INFO]\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/home info " + home.getName().replace(".json", "")
-														+ "\"}},{\"text\":\" \",\"color\":\"gold\"},{\"text\":\"[DELETE]\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/delhome " + home.getName().replace(".json", "")
-														+ "\"}}]"));
+		String folder = "";
+		if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+			folder = FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString();
+		} else if (IsgameclientsideProcedure.execute()) {
+			folder = FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
+					+ "\\home\\" + entity.getUUID().toString();
+		} else {
+			folder = "null";
+		}
+		if (!("null").equals(folder)) {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"tellraw @p [{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" Home list\",\"color\":\"dark_green\"}]");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"tellraw @p [\"\",{\"text\":\"-------------------------------\",\"color\":\"dark_green\"},{\"text\":\"\"}]");
+			{
+				File dir_files_ = new File(folder);
+				if (dir_files_.isDirectory())
+					for (File file : dir_files_.listFiles()) {
+						String stringiterator = file.getPath();
+						home = new File(stringiterator);
+						{
+							try {
+								BufferedReader bufferedReader = new BufferedReader(new FileReader(home));
+								StringBuilder jsonstringbuilder = new StringBuilder();
+								String line;
+								while ((line = bufferedReader.readLine()) != null) {
+									jsonstringbuilder.append(line);
 								}
+								bufferedReader.close();
+								main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+								if (main.has("deleted")) {
+									if (!main.get("deleted").getAsBoolean()) {
+										cycle_loop = cycle_loop + 1;
+										if (world instanceof ServerLevel _level)
+											_level.getServer().getCommands().performPrefixedCommand(
+													new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+													("tellraw @p [\"\",{\"text\":\"Home N\u00B0" + "" + Math.round(cycle_loop) + " - \\u0020\",\"color\":\"aqua\"},{\"text\":\"" + home.getName().replace(".json", "")
+															+ " \\u0020 \\u0020\",\"color\":\"dark_green\"},{\"text\":\"[TP]\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/home " + home.getName().replace(".json", "")
+															+ "\"}},{\"text\":\" \",\"color\":\"gold\"},{\"text\":\"[INFO]\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/home info "
+															+ home.getName().replace(".json", "")
+															+ "\"}},{\"text\":\" \",\"color\":\"gold\"},{\"text\":\"[DELETE]\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/delhome "
+															+ home.getName().replace(".json", "") + "\"}}]"));
+									}
+								}
+							} catch (IOException e) {
+								e.printStackTrace();
 							}
-						} catch (IOException e) {
-							e.printStackTrace();
 						}
 					}
-				}
+			}
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("tellraw @p [{\"text\":\"" + "" + Math.round(cycle_loop) + "\",\"color\":\"dark_green\"},{\"text\":\" were home found\",\"color\":\"aqua\"},{\"text\":\"\"}]"));
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"tellraw @p [\"\",{\"text\":\"-------------------------------\",\"color\":\"dark_green\"},{\"text\":\"\"}]");
+		} else {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"tellraw @p [\"\",{\"text\":\"An exepected error has happened, please report this to Palamod Renew developper\",\"color\":\"dark_green\"},{\"text\":\"\"}]");
 		}
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("tellraw @p [{\"text\":\"" + "" + Math.round(cycle_loop) + "\",\"color\":\"dark_green\"},{\"text\":\" were home found\",\"color\":\"aqua\"},{\"text\":\"\"}]"));
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"tellraw @p [\"\",{\"text\":\"-------------------------------\",\"color\":\"dark_green\"},{\"text\":\"\"}]");
 	}
 }

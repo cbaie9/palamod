@@ -11,7 +11,7 @@
     "disableDisplay": false,
     "showPopup": true,
     "announceToChat": true,
-    "hideIfNotCompleted": false,
+    "hideIfNotCompleted": true,
     "rewardLoot": [],
     "rewardRecipes": [],
     "rewardXP": 0,
@@ -19,6 +19,6 @@
     "parent": {
       "value": "CUSTOM:Achmringpaladium"
     },
-    "triggerxml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"advancement_trigger\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\" x=\"45\" y=\"77\"/></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
   }
 }

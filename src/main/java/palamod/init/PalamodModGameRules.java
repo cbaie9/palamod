@@ -14,11 +14,17 @@ public class PalamodModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> LOGSALL;
 	public static GameRules.Key<GameRules.BooleanValue> LOCKEDCRAFT;
 	public static GameRules.Key<GameRules.BooleanValue> LOCKEDUSE;
+	public static GameRules.Key<GameRules.BooleanValue> COMMANDFURNACENOPERMACCESS;
+	public static GameRules.Key<GameRules.BooleanValue> COMMANDFACTIONNOPERMACCESS;
+	public static GameRules.Key<GameRules.BooleanValue> COMMANDFEEDNOPERMACCESS;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
 		LOGSALL = GameRules.register("logsall", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		LOCKEDCRAFT = GameRules.register("lockedcraft", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 		LOCKEDUSE = GameRules.register("lockeduse", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+		COMMANDFURNACENOPERMACCESS = GameRules.register("commandfurnacenopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+		COMMANDFACTIONNOPERMACCESS = GameRules.register("commandfactionnopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
+		COMMANDFEEDNOPERMACCESS = GameRules.register("commandfeednopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 	}
 }

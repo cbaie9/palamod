@@ -44,10 +44,6 @@ public class Moneyprocess2Procedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), ("tellraw "
 							+ entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\" " + Component.translatable("palamod.procedure.money_item").getString() + "\",\"color\":\"gold\"}]"));
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"Current Money :" + Component.translatable("palamod.procedure.money_current").getString()
-									+ main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -66,5 +62,6 @@ public class Moneyprocess2Procedure {
 			ItemStack _stktoremove = new ItemStack(PalamodModItems.MONEY_1K.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
+		MoneyprocessProcedure.execute(world, x, y, z, entity);
 	}
 }

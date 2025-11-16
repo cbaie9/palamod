@@ -1401,7 +1401,7 @@
   "gui.palamod.paladumfurnace.label_varintegerg_num": "\u003cVAR:integer:g_num\u003e",
   "gui.palamod.jobsgui.label_miner": "Miner",
   "gui.palamod.adminshopmobsendereyes.label_mode_set": "Amount :",
-  "advancements.avancementanshinyredingot.title": "An shiny red ingot",
+  "advancements.avancementanshinyredingot.title": "A shiny red ingot",
   "advancements.avancementanuncommoncristal.title": "An uncommon crystal",
   "item.palamod.amethyst_fastsword": "Amethyste fastsword",
   "gui.palamod.palahelpore.label_minable": "minable",
@@ -1979,5 +1979,13 @@
   "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
   "item.palamod.emptyspawneritem": "Empty spawner item",
   "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
-  "gui.palamod.adminshopmenu.slider_suffix": ""
+  "gui.palamod.adminshopmenu.slider_suffix": "",
+  "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+  "gamerule.commandfurnacenopermaccess": "/furnace access to players",
+  "palamod.procedure.noperm": "You don\u0027t have the permission do to that",
+  "palamod.procedure.furnace_cantbesmelted": "The item in your main hand can\u0027t be smelted",
+  "gamerule.commandfactionnopermaccess": "/faction access to players",
+  "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+  "gamerule.commandfeednopermaccess": "/feed access to players",
+  "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
 }

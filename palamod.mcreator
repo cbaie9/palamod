@@ -9583,10 +9583,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -45549,6 +45545,119 @@
           "src/main/java/palamod/procedures/Connectadminshoprow3col7Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Commandfurnacenopermaccess",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "commandfurnacenopermaccess",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Furnacecommandprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "furnacecommandprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/FurnacecommandprocessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Furnacecommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "furnacecommand",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/FurnacecommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Commandfactionnopermaccess",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "commandfactionnopermaccess",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Commandfeednopermaccess",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "commandfeednopermaccess",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
+    },
+    {
+      "name": "Forturneprocessoredrop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forturneprocessoredrop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ForturneprocessoredropProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49712,7 +49821,7 @@
       "gui.palamod.paladumfurnace.label_varintegerg_num": "\u003cVAR:integer:g_num\u003e",
       "gui.palamod.jobsgui.label_miner": "Miner",
       "gui.palamod.adminshopmobsendereyes.label_mode_set": "Amount :",
-      "advancements.avancementanshinyredingot.title": "An shiny red ingot",
+      "advancements.avancementanshinyredingot.title": "A shiny red ingot",
       "advancements.avancementanuncommoncristal.title": "An uncommon crystal",
       "item.palamod.amethyst_fastsword": "Amethyste fastsword",
       "gui.palamod.palahelpore.label_minable": "minable",
@@ -50290,7 +50399,15 @@
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
       "item.palamod.emptyspawneritem": "Empty spawner item",
       "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
-      "gui.palamod.adminshopmenu.slider_suffix": ""
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.commandfurnacenopermaccess": "/furnace access to players",
+      "palamod.procedure.noperm": "You don\u0027t have the permission do to that",
+      "palamod.procedure.furnace_cantbesmelted": "The item in your main hand can\u0027t be smelted",
+      "gamerule.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.commandfeednopermaccess": "/feed access to players",
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52272,7 +52389,15 @@
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
       "item.palamod.emptyspawneritem": "Empty spawner item",
       "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
-      "gui.palamod.adminshopmenu.slider_suffix": ""
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.commandfurnacenopermaccess": "/furnace access to players",
+      "palamod.procedure.noperm": "",
+      "palamod.procedure.furnace_cantbesmelted": "",
+      "gamerule.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.commandfeednopermaccess": "/feed access to players",
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54254,7 +54379,15 @@
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
       "item.palamod.emptyspawneritem": "Empty spawner item",
       "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
-      "gui.palamod.adminshopmenu.slider_suffix": ""
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.commandfurnacenopermaccess": "/furnace access to players",
+      "palamod.procedure.noperm": "",
+      "palamod.procedure.furnace_cantbesmelted": "",
+      "gamerule.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.commandfeednopermaccess": "/feed access to players",
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56236,19 +56369,27 @@
       "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
       "item.palamod.emptyspawneritem": "Empty spawner item",
       "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
-      "gui.palamod.adminshopmenu.slider_suffix": ""
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.commandfurnacenopermaccess": "/furnace access to players",
+      "palamod.procedure.noperm": "",
+      "palamod.procedure.furnace_cantbesmelted": "",
+      "gamerule.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.commandfeednopermaccess": "/feed access to players",
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
-      "src/main/java/palamod/world/features/StructureFeature.java",
       "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
-      "src/main/java/palamod/init/PalamodModFluidTypes.java",
+      "src/main/java/palamod/world/features/StructureFeature.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
-      "src/main/java/palamod/init/PalamodModMenus.java",
+      "src/main/java/palamod/init/PalamodModFluidTypes.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
+      "src/main/java/palamod/init/PalamodModMenus.java",
       "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
@@ -56265,18 +56406,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
       "src/main/java/palamod/init/PalamodModEntities.java",
-      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
       "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/java/palamod/network/PalamodModVariables.java",
       "src/main/resources/pack.mcmeta",
+      "src/main/resources/palamod.mixins.json",
       "src/main/java/palamod/PalamodMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/java/palamod/network/PalamodModVariables.java",
-      "src/main/resources/palamod.mixins.json",
       "src/main/java/palamod/init/PalamodModTabs.java",
-      "src/main/java/palamod/init/PalamodModModels.java"
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModModels.java",
+      "src/main/resources/assets/palamod/sounds.json"
     ]
   },
   "foldersRoot": {
@@ -56295,7 +56436,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.053",
+    "version": "1.20.055.1",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

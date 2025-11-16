@@ -1978,5 +1978,13 @@
   "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
   "item.palamod.emptyspawneritem": "Empty spawner item",
   "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
-  "gui.palamod.adminshopmenu.slider_suffix": ""
+  "gui.palamod.adminshopmenu.slider_suffix": "",
+  "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+  "gamerule.commandfurnacenopermaccess": "/furnace access to players",
+  "palamod.procedure.noperm": "",
+  "palamod.procedure.furnace_cantbesmelted": "",
+  "gamerule.commandfactionnopermaccess": "/faction access to players",
+  "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+  "gamerule.commandfeednopermaccess": "/feed access to players",
+  "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
 }
