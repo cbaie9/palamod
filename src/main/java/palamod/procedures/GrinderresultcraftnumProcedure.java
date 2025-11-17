@@ -69,8 +69,6 @@ public class GrinderresultcraftnumProcedure {
 			output = 1;
 		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else {
-			output = 1;
 		}
 		return output;
 	}
