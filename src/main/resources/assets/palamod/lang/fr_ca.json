@@ -1986,6 +1986,5 @@
   "gamerule.commandfactionnopermaccess": "/faction access to players",
   "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
   "gamerule.commandfeednopermaccess": "/feed access to players",
-  "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
-  "palamod.procedure.money_uploader": ""
+  "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
 }

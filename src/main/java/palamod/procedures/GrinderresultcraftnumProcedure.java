@@ -33,41 +33,43 @@ public class GrinderresultcraftnumProcedure {
 			output = 1;
 		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.HAMMER_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HAMMER_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.AXE_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.AXE_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.PICKAXE_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.PICKAXE_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.FASTSWORD_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.FASTSWORD_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.BROADSWORD_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.BROADSWORD_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_HEAD.get() && (input_item_slot1.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot1.getItem() == Items.STICK && gnum_local >= 1)) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && gnum_local >= 1)) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.HEADENDIUMSWORD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HEADENDIUMSWORD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_BROADSWORD_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_BROADSWORD_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && input_item_slot1.getItem() == Items.STICK && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
+			output = 1;
+		} else {
 			output = 1;
 		}
 		return output;
