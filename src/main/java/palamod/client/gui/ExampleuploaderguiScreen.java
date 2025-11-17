@@ -71,7 +71,7 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 220, 180, 220, 180);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_treec_sep_nt1.png"), this.leftPos + 77, this.topPos + 45, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
@@ -90,7 +90,7 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.exampleuploadergui.label_uploader"), 65, 8, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 3, 71, -12829636, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 3, 71, -12829636, false);
 	}
 
 	@Override

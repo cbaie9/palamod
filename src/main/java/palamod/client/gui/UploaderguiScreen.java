@@ -85,6 +85,12 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 220, 180, 220, 180);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 28, this.topPos + 72, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 43, this.topPos + 72, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 130, this.topPos + 71, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 141, this.topPos + 71, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 85, this.topPos + 6, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 86, this.topPos + 6, 0, 0, 50, 16, 50, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -99,9 +105,9 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploadergui.label_uploader"), 89, 11, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 29, 80, -1, false);
-		guiGraphics.drawString(this.font, UploaderdebugProcedure.execute(world, x, y, z), 5, 5, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploadergui.label_uploader"), 89, 8, -1, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 30, 76, -1, false);
+		guiGraphics.drawString(this.font, UploaderdebugProcedure.execute(world, x, y, z), 133, 73, -1, false);
 	}
 
 	@Override

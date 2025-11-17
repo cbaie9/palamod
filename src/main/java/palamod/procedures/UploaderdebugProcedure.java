@@ -2,11 +2,12 @@ package palamod.procedures;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 public class UploaderdebugProcedure {
 	public static String execute(LevelAccessor world, double x, double y, double z) {
-		return "money : " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Stocked_money") + " $";
+		return Component.translatable("palamod.procedure.money_uploader").getString() + " : " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "Stocked_money") + " $";
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

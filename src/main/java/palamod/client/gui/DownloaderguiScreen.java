@@ -102,7 +102,7 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloadergui.label_filter"), 138, 3, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloadergui.label_output"), 71, 31, -12829636, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 6, 71, -12829636, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 6, 71, -12829636, false);
 	}
 
 	@Override

@@ -70,7 +70,7 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palamachinegui.label_palamachine"), 3, 3, -3407872, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 4, 84, -4671036, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 4, 84, -4671036, false);
 	}
 
 	@Override
