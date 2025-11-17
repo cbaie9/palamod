@@ -2,7 +2,8 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -60,12 +61,18 @@ public class JobsminerbreakblockProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+		if (IsgameclientsideProcedure.execute()) {
+			jobs = ReadjobsclientProcedure.execute(world, entity);
+			PalamodMod.LOGGER.fatal("Message");
+		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+			jobs = ReadjobsserverProcedure.execute(entity);
+			PalamodMod.LOGGER.debug("servfile");
+		}
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
+		cache = ReadcacheProcedure.execute(entity);
+		PalamodMod.LOGGER.info("Message");
 		if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
+			PalamodMod.LOGGER.info("Message2");
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

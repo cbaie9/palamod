@@ -1,12 +1,8 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -14,14 +10,13 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetlevelfarmerProcedure {
-	public static String execute(LevelAccessor world, Entity entity) {
+	public static String execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return "";
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+		jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

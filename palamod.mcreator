@@ -34398,6 +34398,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -34419,6 +34431,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -34444,6 +34468,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -34465,6 +34501,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -34792,6 +34840,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -35180,6 +35240,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -35327,6 +35399,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -36649,6 +36733,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -36672,6 +36768,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -36693,6 +36801,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -38254,6 +38374,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -38726,6 +38858,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -39261,6 +39405,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -39638,6 +39794,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -40507,6 +40675,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -42021,6 +42201,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -45695,6 +45887,83 @@
           "src/main/java/palamod/procedures/Paladiumpickaxehaste3Procedure.java"
         ]
       }
+    },
+    {
+      "name": "Readjobsserver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "readjobsserver",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "file",
+        "files": [
+          "src/main/java/palamod/procedures/ReadjobsserverProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Readjobsclient",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "readjobsclient",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "file",
+        "files": [
+          "src/main/java/palamod/procedures/ReadjobsclientProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Getjobsfile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getjobsfile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "file",
+        "files": [
+          "src/main/java/palamod/procedures/GetjobsfileProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46172,14 +46441,14 @@
       "CUSTOM:Creativepotg"
     ],
     "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:Nomodifier",
+      "~CUSTOM:Onemoreupgradeenchant",
       "~CUSTOM:Botteled",
       "~CUSTOM:Chargedenchant",
       "~CUSTOM:Autosmeltpotg",
       "~CUSTOM:Bighole",
-      "~CUSTOM:Hammerforturne",
       "~CUSTOM:Speed",
-      "~CUSTOM:Nomodifier",
-      "~CUSTOM:Onemoreupgradeenchant"
+      "~CUSTOM:Hammerforturne"
     ],
     "ITEMS:forge:erable__log": [
       "CUSTOM:Erable_Wood",
@@ -47926,13 +48195,13 @@
       "~CUSTOM:Erabletrapdoor"
     ],
     "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:Nomodifier",
       "~CUSTOM:Onemoreupgradeenchant",
       "~CUSTOM:Chargedenchant",
       "~CUSTOM:Autosmeltpotg",
       "~CUSTOM:Bighole",
       "~CUSTOM:Speed",
-      "~CUSTOM:Hammerforturne",
-      "~CUSTOM:Nomodifier"
+      "~CUSTOM:Hammerforturne"
     ]
   },
   "tab_element_order": {

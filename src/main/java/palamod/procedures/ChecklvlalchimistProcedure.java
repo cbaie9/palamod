@@ -42,9 +42,12 @@ public class ChecklvlalchimistProcedure {
 		boolean money_getadd = false;
 		com.google.gson.JsonObject main_jobs = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		if (IsgameclientsideProcedure.execute()) {
+			jobs = ReadjobsclientProcedure.execute(world, entity);
+		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+			jobs = ReadjobsserverProcedure.execute(entity);
+		}
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
 		if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
 			{
 				try {
@@ -59,7 +62,7 @@ public class ChecklvlalchimistProcedure {
 					if (main_jobs.get("next_level_alchi").getAsDouble() <= main_jobs.get("xp_alchi").getAsDouble()) {
 						main_jobs.addProperty("lvl_miner", (1 + main_jobs.get("lvl_alchi").getAsDouble()));
 						main_jobs.addProperty("xp_alchi", (main_jobs.get("xp_alchi").getAsDouble() - main_jobs.get("next_level_alchi").getAsDouble()));
-						main_jobs.addProperty("next_level_alchi", GetnextlevelxpalchiProcedure.execute(world, entity));
+						main_jobs.addProperty("next_level_alchi", GetnextlevelxpalchiProcedure.execute(world, x, y, z, entity));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_alchi").getAsDouble() / 2)));
