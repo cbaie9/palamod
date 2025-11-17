@@ -45653,6 +45653,48 @@
           "src/main/java/palamod/procedures/ForturneprocessoredropProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Nomodifier",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nomodifier",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/enchantment/nomodifier.json"
+        ]
+      }
+    },
+    {
+      "name": "Greenpaladiumingotcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greenpaladiumingotcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/greenpaladiumingotcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumpickaxehaste3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumpickaxehaste_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Paladiumpickaxehaste3Procedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46130,6 +46172,13 @@
       "CUSTOM:Creativepotg"
     ],
     "ENCHANTMENTS:minecraft:treasure": [
+      "~CUSTOM:Botteled",
+      "~CUSTOM:Chargedenchant",
+      "~CUSTOM:Autosmeltpotg",
+      "~CUSTOM:Bighole",
+      "~CUSTOM:Hammerforturne",
+      "~CUSTOM:Speed",
+      "~CUSTOM:Nomodifier",
       "~CUSTOM:Onemoreupgradeenchant"
     ],
     "ITEMS:forge:erable__log": [
@@ -47288,12 +47337,6 @@
       "CUSTOM:Fakepaladiumore"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Botteled",
-      "~CUSTOM:Chargedenchant",
-      "~CUSTOM:Autosmeltpotg",
-      "~CUSTOM:Bighole",
-      "~CUSTOM:Speed",
-      "~CUSTOM:Hammerforturne",
       "~CUSTOM:Smelt"
     ],
     "BLOCKS:forge:plant": [
@@ -47340,9 +47383,6 @@
       "~CUSTOM:Softstone"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:Botteled",
-      "~CUSTOM:Speed",
-      "~CUSTOM:Hammerforturne",
       "~CUSTOM:Smelt"
     ],
     "ITEMS:mod:green_paladium_ring": [
@@ -47656,9 +47696,6 @@
       "~CUSTOM:PaladiumSword"
     ],
     "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:Botteled",
-      "~CUSTOM:Speed",
-      "~CUSTOM:Hammerforturne",
       "~CUSTOM:Smelt"
     ],
     "ITEMS:neoforge:stick": [
@@ -47887,6 +47924,15 @@
     ],
     "BLOCKS:minecraft:wooden_trapdoors": [
       "~CUSTOM:Erabletrapdoor"
+    ],
+    "ENCHANTMENTS:minecraft:curse": [
+      "~CUSTOM:Onemoreupgradeenchant",
+      "~CUSTOM:Chargedenchant",
+      "~CUSTOM:Autosmeltpotg",
+      "~CUSTOM:Bighole",
+      "~CUSTOM:Speed",
+      "~CUSTOM:Hammerforturne",
+      "~CUSTOM:Nomodifier"
     ]
   },
   "tab_element_order": {
@@ -50402,7 +50448,8 @@
       "gamerule.commandfactionnopermaccess": "/faction access to players",
       "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
       "gamerule.commandfeednopermaccess": "/feed access to players",
-      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "enchantment.palamod.nomodifier": "No modifier"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52392,7 +52439,8 @@
       "gamerule.commandfactionnopermaccess": "/faction access to players",
       "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
       "gamerule.commandfeednopermaccess": "/feed access to players",
-      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "enchantment.palamod.nomodifier": "No modifier"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54382,7 +54430,8 @@
       "gamerule.commandfactionnopermaccess": "/faction access to players",
       "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
       "gamerule.commandfeednopermaccess": "/feed access to players",
-      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "enchantment.palamod.nomodifier": "No modifier"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56372,7 +56421,8 @@
       "gamerule.commandfactionnopermaccess": "/faction access to players",
       "gamerule.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
       "gamerule.commandfeednopermaccess": "/feed access to players",
-      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission"
+      "gamerule.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "enchantment.palamod.nomodifier": "No modifier"
     }
   },
   "metadata": {
@@ -56431,7 +56481,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.055.1",
+    "version": "1.20.056",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

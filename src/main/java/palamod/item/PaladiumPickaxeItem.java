@@ -1,14 +1,18 @@
 package palamod.item;
 
+import palamod.procedures.Paladiumpickaxehaste3Procedure;
+
 import palamod.init.PalamodModItems;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 
@@ -47,5 +51,12 @@ public class PaladiumPickaxeItem extends PickaxeItem {
 
 	public PaladiumPickaxeItem() {
 		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 5.5f, -2.5f)));
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			Paladiumpickaxehaste3Procedure.execute(entity);
 	}
 }

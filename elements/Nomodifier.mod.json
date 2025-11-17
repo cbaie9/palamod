@@ -2,28 +2,25 @@
   "_fv": 79,
   "_type": "enchantment",
   "definition": {
-    "name": "Big hole ",
+    "name": "No modifier",
     "supportedSlots": "any",
     "weight": 1,
-    "anvilCost": 8,
-    "maxLevel": 2,
+    "anvilCost": 1,
+    "maxLevel": 1,
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
       {
-        "value": "CUSTOM:Pickaxeofthegodslv18"
+        "value": "CUSTOM:Creativehammer"
       },
       {
-        "value": "CUSTOM:Pickaxeofthegodslv19"
+        "value": "CUSTOM:Greenpaladiumhammer"
       },
       {
-        "value": "CUSTOM:Pickaxeofthegodslv20"
+        "value": "CUSTOM:Paladiumhammer"
       },
       {
-        "value": "CUSTOM:Pickaxeofthegodslv17"
-      },
-      {
-        "value": "CUSTOM:Creativepotg"
+        "value": "CUSTOM:Endiumhammer"
       }
     ],
     "isTreasureEnchantment": true,

@@ -26,8 +26,8 @@
         "value": "CUSTOM:Creativepotg"
       }
     ],
-    "isTreasureEnchantment": false,
-    "isCurse": false,
+    "isTreasureEnchantment": true,
+    "isCurse": true,
     "canGenerateInLootTables": false,
     "canVillagerTrade": false
   }

@@ -15,7 +15,7 @@
       }
     ],
     "isTreasureEnchantment": true,
-    "isCurse": false,
+    "isCurse": true,
     "canGenerateInLootTables": false,
     "canVillagerTrade": false
   }

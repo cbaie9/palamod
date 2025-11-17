@@ -14,9 +14,9 @@
         "value": "TAG:forge:pickaxe"
       }
     ],
-    "isTreasureEnchantment": false,
+    "isTreasureEnchantment": true,
     "isCurse": false,
-    "canGenerateInLootTables": true,
-    "canVillagerTrade": true
+    "canGenerateInLootTables": false,
+    "canVillagerTrade": false
   }
 }

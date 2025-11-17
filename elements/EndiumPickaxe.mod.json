@@ -8,6 +8,7 @@
     "texture": "endium_pickaxe",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Endium Pickaxe",
     "specialInformation": {
       "fixedValue": []
@@ -35,6 +36,9 @@
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "Paladiumpickaxehaste3"
+    },
     "onBlockDestroyedWithTool": {
       "name": "Hammernormal"
     }

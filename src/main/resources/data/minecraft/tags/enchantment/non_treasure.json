@@ -1,12 +1,6 @@
 {
   "replace": false,
   "values": [
-    "palamod:autosmeltpotg",
-    "palamod:speed",
-    "palamod:hammer_fortune",
-    "palamod:smelt",
-    "palamod:botteled",
-    "palamod:chargedenchant",
-    "palamod:bighole"
+    "palamod:smelt"
   ]
 }

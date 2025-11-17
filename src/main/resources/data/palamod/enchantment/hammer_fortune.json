@@ -8,7 +8,7 @@
     "palamod:green_paladium_hammer",
     "palamod:creative_hammer"
   ],
-  "weight": 10,
+  "weight": 1,
   "max_level": 3,
   "min_cost": {
     "base": 1,

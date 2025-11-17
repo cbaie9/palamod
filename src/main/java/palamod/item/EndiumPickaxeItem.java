@@ -1,5 +1,6 @@
 package palamod.item;
 
+import palamod.procedures.Paladiumpickaxehaste3Procedure;
 import palamod.procedures.HammernormalProcedure;
 
 import palamod.init.PalamodModItems;
@@ -18,6 +19,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.core.component.DataComponents;
@@ -71,5 +73,12 @@ public class EndiumPickaxeItem extends PickaxeItem {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
 		HammernormalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			Paladiumpickaxehaste3Procedure.execute(entity);
 	}
 }
