@@ -23,7 +23,6 @@ import net.minecraft.core.BlockPos;
 
 public class Gcodev6Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		boolean pass_mode = false;
 		double input_g1 = 0;
 		double g_num_max = 0;
 		double g_num = 0;
@@ -32,6 +31,8 @@ public class Gcodev6Procedure {
 		double num_enchant = 0;
 		ItemStack output_craft = ItemStack.EMPTY;
 		ItemStack output_fusion = ItemStack.EMPTY;
+		boolean pass_mode = false;
+		boolean stack_num = false;
 		input_g1 = GrinderresultinputnumProcedure.execute(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy());
 		input_mode_grinder = GrinderresultinputmodeProcedure.execute(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy());
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") == input_mode_grinder || getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") == 4) {
@@ -103,8 +104,10 @@ public class Gcodev6Procedure {
 		if (input_g2 > 0) {
 			output_craft = GrinderresultcraftresultProcedure.execute(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy(), itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy(),
 					getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum"), getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")).copy();
-			if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 || input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 64
-					&& output_craft.getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && !output_craft.is(ItemTags.create(ResourceLocation.parse("palamod:heads")))) {
+			if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0
+					|| input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 64 && output_craft.getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()
+							&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getMaxStackSize()
+							&& !output_craft.is(ItemTags.create(ResourceLocation.parse("palamod:heads")))) {
 				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_craft")).equals(output_craft.getDisplayName().getString())) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -145,6 +148,18 @@ public class Gcodev6Procedure {
 						ItemStack _setstack = output_craft.copy();
 						_setstack.setCount((int) (input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()));
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						int _slotid = 0;
+						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+						_stk.shrink(1);
+						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						int _slotid = 1;
+						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+						_stk.shrink(1);
+						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
