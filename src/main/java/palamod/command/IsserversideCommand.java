@@ -31,7 +31,7 @@ public class IsserversideCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					IsgameserversidecommandeprocessProcedure.execute(world, x, y, z, entity);
+					IsgameserversidecommandeprocessProcedure.execute(entity);
 					return 0;
 				}));
 	}

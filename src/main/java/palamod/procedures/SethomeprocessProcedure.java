@@ -29,9 +29,9 @@ public class SethomeprocessProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		File jobs = new File("");
 		File home = new File("");
-		if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		if (IsgameserversideProcedure.execute()) {
 			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		} else if (IsgameclientsideProcedure.execute()) {
+		} else if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()),
 					File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));

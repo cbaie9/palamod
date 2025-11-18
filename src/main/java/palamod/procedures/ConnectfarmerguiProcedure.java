@@ -22,7 +22,7 @@ public class ConnectfarmerguiProcedure {
 			return;
 		if (entity instanceof Player _player)
 			_player.closeContainer();
-		if (IsgameclientsideProcedure.execute()) {
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

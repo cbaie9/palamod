@@ -30,11 +30,11 @@ public class HomeinfoprocessProcedure {
 		double lvl = 0;
 		File home = new File("");
 		File jobs = new File("");
-		if (IsgameclientsideProcedure.execute()) {
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()),
 					File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		} else if (IsgameserversideProcedure.execute()) {
 			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
 		}
 		if (home.exists()) {

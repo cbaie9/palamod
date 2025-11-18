@@ -41,9 +41,9 @@ public class ChecklvlfarmerProcedure {
 		boolean money_getadd = false;
 		com.google.gson.JsonObject main_jobs = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		if (IsgameclientsideProcedure.execute()) {
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			jobs = ReadjobsclientProcedure.execute(world, entity);
-		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		} else if (IsgameserversideProcedure.execute()) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 		}
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));

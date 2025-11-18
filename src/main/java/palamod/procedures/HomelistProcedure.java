@@ -28,9 +28,9 @@ public class HomelistProcedure {
 		File home = new File("");
 		File jobs = new File("");
 		String folder = "";
-		if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		if (IsgameserversideProcedure.execute()) {
 			folder = FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString();
-		} else if (IsgameclientsideProcedure.execute()) {
+		} else if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			folder = FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 					+ "\\home\\" + entity.getUUID().toString();
 		} else {

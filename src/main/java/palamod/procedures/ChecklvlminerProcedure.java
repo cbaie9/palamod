@@ -38,9 +38,9 @@ public class ChecklvlminerProcedure {
 		File money = new File("");
 		File cache = new File("");
 		File lu_jobs = new File("");
-		if (IsgameclientsideProcedure.execute()) {
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			jobs = ReadjobsclientProcedure.execute(world, entity);
-		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		} else if (IsgameserversideProcedure.execute()) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 		}
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));

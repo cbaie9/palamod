@@ -28,7 +28,7 @@ public class OpencobblebreakerProcedure {
 			return;
 		if (entity instanceof Player _player)
 			_player.closeContainer();
-		if (IsgameclientsideProcedure.execute()) {
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			if (!(PalamodModBlocks.COBBLEBREAKER.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock())) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);

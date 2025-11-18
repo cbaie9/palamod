@@ -63,8 +63,10 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png"), this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(world, x, y, z, entity) * 16, 0, 400), 0, 16, 16,
-				416, 16);
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png"), this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(world, x, y, z, entity) * 16, 0, 400), 0, 16,
+					16, 416, 16);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -89,7 +91,8 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 		guiGraphics.drawString(this.font, GetlevelfarmerProcedure.execute(world, x, y, z, entity), 119, 99, -1, false);
 		guiGraphics.drawString(this.font, GetlevelhunterProcedure.execute(world, x, y, z, entity), 201, 99, -1, false);
 		guiGraphics.drawString(this.font, GetlevelalchiProcedure.execute(world, x, y, z, entity), 272, 99, -1, false);
-		guiGraphics.drawString(this.font, LastunlockedminerProcedure.execute(world, x, y, z, entity), 8, 134, -1, false);
+		if (IsgameclientsideProcedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, LastunlockedminerProcedure.execute(world, x, y, z, entity), 8, 134, -1, false);
 	}
 
 	@Override
