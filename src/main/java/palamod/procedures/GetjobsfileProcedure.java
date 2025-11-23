@@ -12,10 +12,12 @@ public class GetjobsfileProcedure {
 		if (entity == null)
 			return new File("");
 		File output = new File("");
-		if (IsgameclientsideProcedure.execute()) {
-			output = ReadjobsclientProcedure.execute(world, entity);
-		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		if (IsgameserversideProcedure.execute()) {
 			output = ReadjobsserverProcedure.execute(entity);
+			PalamodMod.LOGGER.debug("read server side jobs");
+		} else if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			output = ReadjobsclientProcedure.execute(world, entity);
+			PalamodMod.LOGGER.debug("read client side jobs");
 		} else {
 			output = ReadjobsserverProcedure.execute(entity);
 			PalamodMod.LOGGER.fatal("FATAL ERROR : jobs file don't exist");

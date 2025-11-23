@@ -61,10 +61,10 @@ public class JobsminerbreakblockProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
-		if (IsgameclientsideProcedure.execute()) {
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			jobs = ReadjobsclientProcedure.execute(world, entity);
 			PalamodMod.LOGGER.fatal("Message");
-		} else if (IsgameserversideProcedure.execute(world, x, y, z, entity)) {
+		} else if (IsgameserversideProcedure.execute()) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			PalamodMod.LOGGER.debug("servfile");
 		}

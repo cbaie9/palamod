@@ -59,7 +59,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36) {
-			String hoverText = GetxpfarmertextProcedure.execute(world, entity);
+			String hoverText = GetxpfarmertextProcedure.execute(world, x, y, z, entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
@@ -94,7 +94,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsfarmergui.label_jobs_miner"), 9, 7, -1, false);
-		guiGraphics.drawString(this.font, GetxpfarmerProcedure.execute(world, entity), 13, 38, -1, false);
+		guiGraphics.drawString(this.font, GetxpfarmerProcedure.execute(world, x, y, z, entity), 13, 38, -1, false);
 	}
 
 	@Override
