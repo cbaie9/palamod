@@ -5,8 +5,11 @@ import palamod.init.PalamodModBlocks;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
@@ -159,10 +162,40 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-				if (hasEntityInInventory(entity, new ItemStack(Blocks.STONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLESTONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.GRANITE))
-						|| hasEntityInInventory(entity, new ItemStack(Blocks.DIORITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.ANDESITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.BLACKSTONE))
-						|| hasEntityInInventory(entity, new ItemStack(Blocks.BASALT)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE)) || hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))
-						|| hasEntityInInventory(entity, new ItemStack(Blocks.NETHERRACK))) {
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.TUFF))) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(Blocks.TUFF);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.SOFT_STONE.get()))) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PalamodModBlocks.SOFT_STONE.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get()))) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("voidstone_count") + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if ((itemstack.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("minecraft:mv_blocks")))) {
 					continue;
 				} else {
 					break;

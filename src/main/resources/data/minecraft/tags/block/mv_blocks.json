@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diorite",
+    "minecraft:andesite",
+    "minecraft:netherrack",
+    "minecraft:cobbled_deepslate",
+    "minecraft:blackstone",
+    "minecraft:granite",
+    "minecraft:basalt",
+    "palamod:soft_stone",
+    "minecraft:cobblestone"
+  ]
+}

@@ -46231,6 +46231,18 @@
           "src/main/java/palamod/procedures/GetclickerfileProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Endiumchesplatecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumchesplatecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumchesplatecraft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48469,6 +48481,17 @@
       "~CUSTOM:Bighole",
       "~CUSTOM:Speed",
       "~CUSTOM:Hammerforturne"
+    ],
+    "BLOCKS:minecraft:mv_blocks": [
+      "CUSTOM:Softstone",
+      "Blocks.COBBLED_DEEPSLATE",
+      "Blocks.COBBLESTONE",
+      "Blocks.NETHERRACK",
+      "Blocks.BASALT",
+      "Blocks.BLACKSTONE",
+      "Blocks.STONE#5",
+      "Blocks.STONE#3",
+      "Blocks.STONE#1"
     ]
   },
   "tab_element_order": {
