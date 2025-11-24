@@ -121,7 +121,7 @@ public class Pickaxeofthegodslv18Item extends TieredItem {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			MoucepotgProcedure.execute(entity, itemstack);
+			MoucepotgProcedure.execute(entity);
 		GetenchantpotgProcedure.execute(world, itemstack);
 	}
 }
