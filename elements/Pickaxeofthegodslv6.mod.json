@@ -8,11 +8,13 @@
     "texture": "potg_of_6",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Pickaxe of the gods",
     "specialInformation": {
       "fixedValue": [
         "Level 6"
-      ]
+      ],
+      "name": "Titlepog"
     },
     "creativeTabs": [
       {
@@ -24,6 +26,9 @@
     "enchantability": 30,
     "damageVsEntity": 5.0,
     "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",

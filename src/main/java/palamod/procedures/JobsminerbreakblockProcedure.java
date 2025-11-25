@@ -63,16 +63,14 @@ public class JobsminerbreakblockProcedure {
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
 		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
 			jobs = ReadjobsclientProcedure.execute(world, entity);
-			PalamodMod.LOGGER.fatal("Message");
+			PalamodMod.LOGGER.fatal("clientfile");
 		} else if (IsgameserversideProcedure.execute()) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			PalamodMod.LOGGER.debug("servfile");
 		}
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		cache = ReadcacheProcedure.execute(entity);
-		PalamodMod.LOGGER.info("Message");
 		if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
-			PalamodMod.LOGGER.info("Message2");
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

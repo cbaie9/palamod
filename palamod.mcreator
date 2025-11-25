@@ -46239,6 +46239,25 @@
           "src/main/resources/data/palamod/recipe/endiumchesplatecraft.json"
         ]
       }
+    },
+    {
+      "name": "Titlepog",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titlepog",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/TitlepogProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

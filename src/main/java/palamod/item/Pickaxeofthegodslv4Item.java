@@ -1,6 +1,7 @@
 package palamod.item;
 
 import palamod.procedures.Upgradepotgv2Procedure;
+import palamod.procedures.TitlepogProcedure;
 import palamod.procedures.MoucepotgProcedure;
 
 import palamod.init.PalamodModItems;
@@ -33,6 +34,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
@@ -113,7 +115,13 @@ public class Pickaxeofthegodslv4Item extends TieredItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.pickaxeofthegodslv_4.description_0"));
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = TitlepogProcedure.execute(entity);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

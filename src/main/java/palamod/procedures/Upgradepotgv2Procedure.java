@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import palamod.PalamodMod;
+
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -15,11 +17,11 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
@@ -34,54 +36,45 @@ public class Upgradepotgv2Procedure {
 		double big_hole = 0;
 		double Pickaxe_stone_seen = 0;
 		double potg_fuel = 0;
-		Pickaxe_stone_seen = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone");
-		potg_fuel = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("potg_fuel");
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.STONE || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.GRANITE
-				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.DIORITE || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.ANDESITE
-				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.COBBLESTONE || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.BLACKSTONE
-				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.NETHERRACK || (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("forge:stone")))
-				|| (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("forge:multitool_mb")))) {
-			{
-				final String _tagName = "Pickaxe_stone";
-				final double _tagValue = (Pickaxe_stone_seen + 1);
-				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 150000) {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
+		ItemStack main_hand = ItemStack.EMPTY;
+		main_hand = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy();
+		if (entity instanceof Player _player && !_player.level().isClientSide())
+			_player.displayClientMessage(
+					Component.literal((main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") + "" + main_hand.isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x, y, z)))))), false);
+		Pickaxe_stone_seen = main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone");
+		potg_fuel = main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("potg_fuel");
+		if (main_hand.isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x, y, z))))) {
+			if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 150000) {
+				if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
-					big_hole = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
+				} else if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
+					big_hole = main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack32 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()).copy();
-					_setstack32.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack32);
+					ItemStack _setstack13 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()).copy();
+					_setstack13.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack13);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 3);
+				main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
+				main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 3);
 				if (auto_smelt) {
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg"))), 1);
+					main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg"))), 1);
 				} else if (0 < big_hole) {
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))), (int) big_hole);
+					main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))), (int) big_hole);
 				}
 				{
 					final String _tagName = "Pickaxe_stone";
 					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+					CustomData.update(DataComponents.CUSTOM_DATA, main_hand, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				{
 					final String _tagName = "potg_fuel";
 					final double _tagValue = (potg_fuel + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+					CustomData.update(DataComponents.CUSTOM_DATA, main_hand, tag -> tag.putDouble(_tagName, _tagValue));
 				}
-				if (!(entity instanceof ServerPlayer _plr45 && _plr45.level() instanceof ServerLevel && _plr45.getAdvancements().getOrStartProgress(_plr45.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr20 && _plr20.level() instanceof ServerLevel && _plr20.getAdvancements().getOrStartProgress(_plr20.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"));
 						if (_adv != null) {
@@ -93,7 +86,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-				if (!(entity instanceof ServerPlayer _plr47 && _plr47.level() instanceof ServerLevel && _plr47.getAdvancements().getOrStartProgress(_plr47.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr22 && _plr22.level() instanceof ServerLevel && _plr22.getAdvancements().getOrStartProgress(_plr22.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
 						if (_adv != null) {
@@ -105,7 +98,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-				if (!(entity instanceof ServerPlayer _plr49 && _plr49.level() instanceof ServerLevel && _plr49.getAdvancements().getOrStartProgress(_plr49.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_20new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr24 && _plr24.level() instanceof ServerLevel && _plr24.getAdvancements().getOrStartProgress(_plr24.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_20new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_20new"));
 						if (_adv != null) {
@@ -117,47 +110,42 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 88582) {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
+			} else if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 88582) {
+				if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
-					big_hole = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
+				} else if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
+					big_hole = main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack59 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()).copy();
-					_setstack59.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack59);
+					ItemStack _setstack30 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()).copy();
+					_setstack30.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack30);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
 				{
 					final String _tagName = "Pickaxe_stone";
 					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+					CustomData.update(DataComponents.CUSTOM_DATA, main_hand, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				{
 					final String _tagName = "potg_fuel";
 					final double _tagValue = (potg_fuel + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+					CustomData.update(DataComponents.CUSTOM_DATA, main_hand, tag -> tag.putDouble(_tagName, _tagValue));
 				}
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 3);
+				main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
+				main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 3);
 				if (auto_smelt) {
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg"))), 1);
+					main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg"))), 1);
 				} else if (0 < big_hole) {
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))), (int) big_hole);
+					main_hand.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))), (int) big_hole);
 				}
 				{
 					final String _tagName = "Pickaxe_stone";
 					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+					CustomData.update(DataComponents.CUSTOM_DATA, main_hand, tag -> tag.putDouble(_tagName, _tagValue));
 				}
-				if (!(entity instanceof ServerPlayer _plr74 && _plr74.level() instanceof ServerLevel && _plr74.getAdvancements().getOrStartProgress(_plr74.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr38 && _plr38.level() instanceof ServerLevel && _plr38.getAdvancements().getOrStartProgress(_plr38.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
 						if (_adv != null) {
@@ -169,7 +157,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-				if (!(entity instanceof ServerPlayer _plr76 && _plr76.level() instanceof ServerLevel && _plr76.getAdvancements().getOrStartProgress(_plr76.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr40 && _plr40.level() instanceof ServerLevel && _plr40.getAdvancements().getOrStartProgress(_plr40.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"));
 						if (_adv != null) {
@@ -181,19 +169,16 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 55598) {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
+			} else if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 55598) {
+				if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
-					big_hole = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
+				} else if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
+					big_hole = main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack86 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()).copy();
-					_setstack86.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack86);
+					ItemStack _setstack46 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()).copy();
+					_setstack46.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack46);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -216,7 +201,7 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-				if (!(entity instanceof ServerPlayer _plr99 && _plr99.level() instanceof ServerLevel && _plr99.getAdvancements().getOrStartProgress(_plr99.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr59 && _plr59.level() instanceof ServerLevel && _plr59.getAdvancements().getOrStartProgress(_plr59.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"));
 						if (_adv != null) {
@@ -228,8 +213,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-				if (!(entity instanceof ServerPlayer _plr101 && _plr101.level() instanceof ServerLevel
-						&& _plr101.getAdvancements().getOrStartProgress(_plr101.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr61 && _plr61.level() instanceof ServerLevel && _plr61.getAdvancements().getOrStartProgress(_plr61.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
 						if (_adv != null) {
@@ -251,9 +235,9 @@ public class Upgradepotgv2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack111 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()).copy();
-					_setstack111.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack111);
+					ItemStack _setstack71 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()).copy();
+					_setstack71.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack71);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -281,8 +265,7 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-				if (!(entity instanceof ServerPlayer _plr126 && _plr126.level() instanceof ServerLevel
-						&& _plr126.getAdvancements().getOrStartProgress(_plr126.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr86 && _plr86.level() instanceof ServerLevel && _plr86.getAdvancements().getOrStartProgress(_plr86.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_17new"));
 						if (_adv != null) {
@@ -294,8 +277,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-				if (!(entity instanceof ServerPlayer _plr128 && _plr128.level() instanceof ServerLevel
-						&& _plr128.getAdvancements().getOrStartProgress(_plr128.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+				if (!(entity instanceof ServerPlayer _plr88 && _plr88.level() instanceof ServerLevel && _plr88.getAdvancements().getOrStartProgress(_plr88.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
 					if (entity instanceof ServerPlayer _player) {
 						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
 						if (_adv != null) {
@@ -309,9 +291,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 25242) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack132 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_16.get()).copy();
-					_setstack132.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack132);
+					ItemStack _setstack92 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_16.get()).copy();
+					_setstack92.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack92);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -322,6 +304,116 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (potg_fuel + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
+				{
+					final String _tagName = "Pickaxe_stone";
+					final double _tagValue = (Pickaxe_stone_seen + 1);
+					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+				}
+				if (!(entity instanceof ServerPlayer _plr101 && _plr101.level() instanceof ServerLevel
+						&& _plr101.getAdvancements().getOrStartProgress(_plr101.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+				}
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 14620) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack105 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_15.get()).copy();
+					_setstack105.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack105);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 2);
+				{
+					final String _tagName = "Pickaxe_stone";
+					final double _tagValue = (Pickaxe_stone_seen + 1);
+					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+				}
+				if (!(entity instanceof ServerPlayer _plr112 && _plr112.level() instanceof ServerLevel
+						&& _plr112.getAdvancements().getOrStartProgress(_plr112.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+				}
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 10000) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack116 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_14.get()).copy();
+					_setstack116.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack116);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 1);
+				{
+					final String _tagName = "Pickaxe_stone";
+					final double _tagValue = (Pickaxe_stone_seen + 1);
+					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+				}
+				if (!(entity instanceof ServerPlayer _plr123 && _plr123.level() instanceof ServerLevel
+						&& _plr123.getAdvancements().getOrStartProgress(_plr123.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+				}
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 7804) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack127 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_13.get()).copy();
+					_setstack127.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack127);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
+				{
+					final String _tagName = "Pickaxe_stone";
+					final double _tagValue = (Pickaxe_stone_seen + 1);
+					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+				}
+				if (!(entity instanceof ServerPlayer _plr132 && _plr132.level() instanceof ServerLevel
+						&& _plr132.getAdvancements().getOrStartProgress(_plr132.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
+						}
+					}
+				}
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 6895) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack136 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_12.get()).copy();
+					_setstack136.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack136);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 4);
 				{
 					final String _tagName = "Pickaxe_stone";
 					final double _tagValue = (Pickaxe_stone_seen + 1);
@@ -340,121 +432,11 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 14620) {
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack145 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_15.get()).copy();
-					_setstack145.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack145);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 2);
-				{
-					final String _tagName = "Pickaxe_stone";
-					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-				}
-				if (!(entity instanceof ServerPlayer _plr152 && _plr152.level() instanceof ServerLevel
-						&& _plr152.getAdvancements().getOrStartProgress(_plr152.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
-						if (_adv != null) {
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
-							}
-						}
-					}
-				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 10000) {
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack156 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_14.get()).copy();
-					_setstack156.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack156);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 1);
-				{
-					final String _tagName = "Pickaxe_stone";
-					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-				}
-				if (!(entity instanceof ServerPlayer _plr163 && _plr163.level() instanceof ServerLevel
-						&& _plr163.getAdvancements().getOrStartProgress(_plr163.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
-						if (_adv != null) {
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
-							}
-						}
-					}
-				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 7804) {
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack167 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_13.get()).copy();
-					_setstack167.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack167);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
-				{
-					final String _tagName = "Pickaxe_stone";
-					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-				}
-				if (!(entity instanceof ServerPlayer _plr172 && _plr172.level() instanceof ServerLevel
-						&& _plr172.getAdvancements().getOrStartProgress(_plr172.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
-						if (_adv != null) {
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
-							}
-						}
-					}
-				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 6895) {
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack176 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_12.get()).copy();
-					_setstack176.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack176);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 4);
-				{
-					final String _tagName = "Pickaxe_stone";
-					final double _tagValue = (Pickaxe_stone_seen + 1);
-					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-				}
-				if (!(entity instanceof ServerPlayer _plr181 && _plr181.level() instanceof ServerLevel
-						&& _plr181.getAdvancements().getOrStartProgress(_plr181.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"))).isDone())) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmpotg_12new"));
-						if (_adv != null) {
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
-							}
-						}
-					}
-				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 5403) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack185 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_11.get()).copy();
-					_setstack185.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack185);
+					ItemStack _setstack145 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_11.get()).copy();
+					_setstack145.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack145);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -466,9 +448,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 4326) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack192 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_10.get()).copy();
-					_setstack192.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack192);
+					ItemStack _setstack152 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_10.get()).copy();
+					_setstack152.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack152);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -480,9 +462,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 3542) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack199 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_9.get()).copy();
-					_setstack199.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack199);
+					ItemStack _setstack159 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_9.get()).copy();
+					_setstack159.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack159);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -494,9 +476,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 2138) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack206 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_8.get()).copy();
-					_setstack206.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack206);
+					ItemStack _setstack166 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_8.get()).copy();
+					_setstack166.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack166);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -507,9 +489,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1589) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack211 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_7.get()).copy();
-					_setstack211.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack211);
+					ItemStack _setstack171 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_7.get()).copy();
+					_setstack171.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack171);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -520,9 +502,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1370) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack216 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_6.get()).copy();
-					_setstack216.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack216);
+					ItemStack _setstack176 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_6.get()).copy();
+					_setstack176.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack176);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -533,9 +515,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1172) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack221 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_5.get()).copy();
-					_setstack221.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack221);
+					ItemStack _setstack181 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_5.get()).copy();
+					_setstack181.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack181);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -546,9 +528,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 757) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack226 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_4.get()).copy();
-					_setstack226.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack226);
+					ItemStack _setstack186 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_4.get()).copy();
+					_setstack186.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack186);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -559,9 +541,9 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 250) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack231 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_3.get()).copy();
-					_setstack231.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack231);
+					ItemStack _setstack191 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_3.get()).copy();
+					_setstack191.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack191);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
@@ -572,15 +554,22 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 100) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack236 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_2.get()).copy();
-					_setstack236.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack236);
+					ItemStack _setstack196 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_2.get()).copy();
+					_setstack196.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack196);
 					if (_entity instanceof Player _player)
 						_player.getInventory().setChanged();
 				}
 				{
 					final String _tagName = "Pickaxe_stone";
 					final double _tagValue = (Pickaxe_stone_seen + 1);
+					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+				}
+			} else {
+				PalamodMod.LOGGER.debug("+1potg");
+				{
+					final String _tagName = "Pickaxe_stone";
+					final double _tagValue = ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}
@@ -623,8 +612,8 @@ public class Upgradepotgv2Procedure {
 				}
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-				.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0 && world instanceof Level _level265
-				&& _level265.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()))), _level265).isPresent()) {
+				.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0 && world instanceof Level _level230
+				&& _level230.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()))), _level230).isPresent()) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z,
 						(world instanceof Level _lvlSmeltResult
