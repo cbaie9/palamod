@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsfarmerguiMenu;
 
+import palamod.procedures.ReturnfalseProcedure;
 import palamod.procedures.JobsfarmergetxpprogressbarProcedure;
 import palamod.procedures.GetxpfarmertextProcedure;
 import palamod.procedures.GetxpfarmerProcedure;
@@ -120,7 +121,10 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = JobsfarmerguiScreen.this.x;
+				int y = JobsfarmerguiScreen.this.y;
+				if (ReturnfalseProcedure.execute())
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_help_button);

@@ -46407,6 +46407,34 @@
           "src/main/java/palamod/procedures/NewadminshopsellProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Returnfalse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "returnfalse",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ReturnfalseProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Returntrue",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "returntrue",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ReturntrueProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

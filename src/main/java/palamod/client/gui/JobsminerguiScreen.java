@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsminerguiMenu;
 
+import palamod.procedures.ReturnfalseProcedure;
 import palamod.procedures.JobsminergetxpprogressbarProcedure;
 import palamod.procedures.GetxpminertextProcedure;
 import palamod.procedures.GetxpminerProcedure;
@@ -120,7 +121,10 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = JobsminerguiScreen.this.x;
+				int y = JobsminerguiScreen.this.y;
+				if (ReturnfalseProcedure.execute())
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_help_button);
