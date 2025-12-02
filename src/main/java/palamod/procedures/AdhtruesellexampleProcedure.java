@@ -1,7 +1,6 @@
 package palamod.procedures;
 
 import palamod.init.PalamodModMenus;
-import palamod.init.PalamodModItems;
 
 import palamod.PalamodMod;
 
@@ -33,8 +32,8 @@ public class AdhtruesellexampleProcedure {
 		double n2 = 0;
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		fac_v = 10;
-		item = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
+		item = AdminshopgetitemProcedure.execute(world, entity).copy();
+		fac_v = StockedbaseadminshopsellProcedure.execute(item);
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

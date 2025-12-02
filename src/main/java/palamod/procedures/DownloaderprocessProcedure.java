@@ -36,7 +36,7 @@ public class DownloaderprocessProcedure {
 				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "downloader_filter") && getBlockNBTLogic(world, BlockPos.containing(x, y, z), "downloader_state")
 						&& getBlockNBTLogic(world, BlockPos.containing(x, y, z), "downloader_linked")) {
-					if (main.get("money").getAsDouble() >= StockedbaseadminshopbuyProcedure.execute(world, x, y, z)
+					if (main.get("money").getAsDouble() >= StockedbaseadminshopbuyProcedure.execute(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy())
 							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() == 0 || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() < 64
 									&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem())) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
@@ -44,7 +44,7 @@ public class DownloaderprocessProcedure {
 							_setstack.setCount(1 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount());
 							_itemHandlerModifiable.setStackInSlot(1, _setstack);
 						}
-						main.addProperty("money", (main.get("money").getAsDouble() - StockedbaseadminshopbuyProcedure.execute(world, x, y, z)));
+						main.addProperty("money", (main.get("money").getAsDouble() - StockedbaseadminshopbuyProcedure.execute(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy())));
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);

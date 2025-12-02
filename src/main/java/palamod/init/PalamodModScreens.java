@@ -155,6 +155,7 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.COBBLEAKERSERVER.get(), CobbleakerserverScreen::new);
 		event.register(PalamodModMenus.FLOWERTOTEMGUI.get(), FlowertotemguiScreen::new);
 		event.register(PalamodModMenus.TYPESETTINGTABLESTORAGE.get(), TypesettingtablestorageScreen::new);
+		event.register(PalamodModMenus.NEW_ADMINSHOPGUI.get(), NewAdminshopguiScreen::new);
 	}
 
 	public interface ScreenAccessor {
