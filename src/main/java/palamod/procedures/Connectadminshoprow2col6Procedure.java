@@ -1,10 +1,20 @@
 package palamod.procedures;
 
-import palamod.world.inventory.*;
+import palamod.world.inventory.NotyetguiMenu;
+import palamod.world.inventory.NewAdminshopguiMenu;
+import palamod.world.inventory.AdminshopplantbrownmushroomMenu;
+import palamod.world.inventory.AdminshopmobsstringMenu;
+import palamod.world.inventory.AdminshopmobsfrspidereyesMenu;
 
 import palamod.init.PalamodModMenus;
+import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,6 +23,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
@@ -25,225 +36,145 @@ public class Connectadminshoprow2col6Procedure {
 		double num_connect = 0;
 		rownum = 5;
 		num_connect = rownum + ((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(2, "slider", 0.0) : 0.0);
+		if (entity instanceof ServerPlayer _ent) {
+			BlockPos _bpos = BlockPos.containing(x, y, z);
+			_ent.openMenu(new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return Component.literal("NewAdminshopgui");
+				}
+
+				@Override
+				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+					return false;
+				}
+
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new NewAdminshopguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+				}
+			}, _bpos);
+		}
 		if (num_connect == 0) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopblockstone");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopblockstoneMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.STONE.asItem()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 1) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshoporecoal");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshoporecoalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.COAL).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 2) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopblockoakwood");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopblockoakwoodMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.OAK_LOG.asItem()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 3) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopmobsenderpearl");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopmobsenderpearlMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.ENDER_PEARL).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 4) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopmobs2steak");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new Adminshopmobs2steakMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.COOKED_BEEF).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 5) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adhutilitiesredstone");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdhutilitiesredstoneMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.REDSTONE).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 6) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopplantsugarcane");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopplantsugarcaneMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.SUGAR_CANE.asItem()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 7) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopblockgrass");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopblockgrassMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.GRASS_BLOCK.asItem()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 8) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopblockblackstone");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopblockblackstoneMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.BLACKSTONE.asItem()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 9) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopplantpotato");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopplantpotatoMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.POTATO).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 10) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopplantwheat");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopplantwheatMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.WHEAT_SEEDS).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 11) {
 			if (entity instanceof ServerPlayer _ent) {
@@ -265,6 +196,16 @@ public class Connectadminshoprow2col6Procedure {
 					}
 				}, _bpos);
 			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.BROWN_MUSHROOM.asItem()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
 		} else if (num_connect == 12) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -284,6 +225,16 @@ public class Connectadminshoprow2col6Procedure {
 						return new AdminshopmobsstringMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.STRING).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 13) {
 			if (entity instanceof ServerPlayer _ent) {
@@ -305,45 +256,37 @@ public class Connectadminshoprow2col6Procedure {
 					}
 				}, _bpos);
 			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.SPIDER_EYE).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
 		} else if (num_connect == 14) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopmobswitherskull");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new AdminshopmobswitherskullMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.WITHER_SKELETON_SKULL).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 15) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Adminshopmobs2glowinksac");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new Adminshopmobs2glowinksacMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.GLOW_INK_SAC).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		} else if (num_connect == 16) {
 			if (entity instanceof ServerPlayer _ent) {
@@ -364,6 +307,16 @@ public class Connectadminshoprow2col6Procedure {
 						return new NotyetguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = new BlockPos(0, 10, 0);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(PalamodModItems.DISC_ANTI_FUZE.get()).toString()));
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
 	}
