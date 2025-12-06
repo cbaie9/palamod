@@ -1,6 +1,5 @@
 package palamod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import java.io.IOException;
@@ -9,7 +8,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetxpfarmerProcedure {
-	public static String execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
 		File jobs = new File("");
@@ -17,7 +16,7 @@ public class GetxpfarmerProcedure {
 		double xp_miner = 0;
 		double nextlvl_xp = 0;
 		String output = "";
-		jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {

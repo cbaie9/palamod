@@ -1,7 +1,5 @@
 package palamod.procedures;
 
-import palamod.PalamodMod;
-
 import net.neoforged.fml.loading.FMLEnvironment;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -13,7 +11,6 @@ public class IsgameclientsideProcedure {
 		if (world instanceof Level _level)
 			_level.updateNeighborsAt(BlockPos.containing(x, y, z), _level.getBlockState(BlockPos.containing(x, y, z)).getBlock());
 		if (FMLEnvironment.dist.isClient() == !FMLEnvironment.dist.isDedicatedServer()) {
-			PalamodMod.LOGGER.info(FMLEnvironment.dist.isClient());
 			return true;
 		}
 		return false;

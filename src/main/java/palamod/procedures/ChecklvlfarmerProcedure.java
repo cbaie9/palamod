@@ -61,7 +61,7 @@ public class ChecklvlfarmerProcedure {
 					if (main_jobs.get("next_level_farmer").getAsDouble() <= main_jobs.get("xp_farmer").getAsDouble()) {
 						main_jobs.addProperty("lvl_farmer", (1 + main_jobs.get("lvl_farmer").getAsDouble()));
 						main_jobs.addProperty("xp_farmer", (main_jobs.get("xp_miner").getAsDouble() - main_jobs.get("next_level_farmer").getAsDouble()));
-						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(world, x, y, z, entity));
+						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(entity));
 						main_jobs.addProperty("last_unlocked_lvl", main_jobs.get("lvl_farmer").getAsDouble());
 						main_jobs.addProperty("last_unlocked_type", 2);
 						if (entity instanceof Player _player) {

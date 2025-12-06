@@ -36,7 +36,7 @@ public class GetxpalchibreakblockProcedure {
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
+		jobs = GetjobsfileProcedure.execute(entity);
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

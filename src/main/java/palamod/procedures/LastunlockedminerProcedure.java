@@ -2,7 +2,6 @@ package palamod.procedures;
 
 import palamod.network.PalamodModVariables;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import java.io.IOException;
@@ -11,12 +10,12 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class LastunlockedminerProcedure {
-	public static String execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {

@@ -4,7 +4,6 @@ import palamod.procedures.TrixiumsetupProcedure;
 import palamod.procedures.SetupclassicProcedure;
 import palamod.procedures.LunchallsetupProcedure;
 import palamod.procedures.FactionsetupProcedure;
-import palamod.procedures.AdminshoppricesetupProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -36,20 +35,6 @@ public class HdvsetupCommand {
 						direction = entity.getDirection();
 
 					SetupclassicProcedure.execute(world);
-					return 0;
-				})).then(Commands.literal("adminshop").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
-
-					AdminshoppricesetupProcedure.execute(world);
 					return 0;
 				})).then(Commands.literal("faction").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

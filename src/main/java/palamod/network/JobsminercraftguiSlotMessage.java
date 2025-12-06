@@ -53,79 +53,79 @@ public record JobsminercraftguiSlotMessage(int slotID, int x, int y, int z, int 
 			return;
 		if (slot == 0 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 0 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 1 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 1 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 2 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 3 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 3 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 4 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 4 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 5 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 5 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 6 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 6 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 7 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 8 && changeType == 0) {
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 8 && changeType == 1) {
 			int amount = meta;
 
-			GuijobsminercheckcraftProcedure.execute(world, x, y, z, entity);
+			GuijobsminercheckcraftProcedure.execute(world, entity);
 		}
 		if (slot == 9 && changeType == 1) {
 			int amount = meta;
 
-			CraftdoneminerProcedure.execute(world, x, y, z, entity);
+			CraftdoneminerProcedure.execute(world, entity);
 		}
 	}
 

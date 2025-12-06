@@ -50,7 +50,7 @@ public class CobblebreakergivexpdiamondProcedure {
 			}
 		}
 		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
+			jobs = GetjobsfileProcedure.execute(entity);
 			if (jobs.exists()) {
 				{
 					try {

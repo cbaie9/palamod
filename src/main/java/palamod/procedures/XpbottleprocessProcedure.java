@@ -40,7 +40,7 @@ public class XpbottleprocessProcedure {
 			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type") == 4) {
 				jobs_text = "alchi";
 			}
-			jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
+			jobs = GetjobsfileProcedure.execute(entity);
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 			if (jobs.exists() && money.exists()) {
 				{

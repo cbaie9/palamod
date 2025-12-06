@@ -1,18 +1,13 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -20,7 +15,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetxpminerbreakblockProcedure {
-	public static double execute(LevelAccessor world, Entity entity) {
+	public static double execute(Entity entity) {
 		if (entity == null)
 			return 0;
 		double output = 0;
@@ -33,8 +28,7 @@ public class GetxpminerbreakblockProcedure {
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
 		cache = ReadcacheProcedure.execute(entity);
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (cache.exists() && jobs.exists()) {
 			{
 				try {

@@ -55,7 +55,7 @@ public class PalamodModMobEffects {
 		if (effectInstance.getEffect().is(MULTIEXP_2)) {
 			Removemultixp2fileProcedure.execute(entity.level(), entity);
 		} else if (effectInstance.getEffect().is(MULTIEXP_10)) {
-			Removemultixp10fileProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+			Removemultixp10fileProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(TUNNELVISION)) {
 			TunnelvisionEffectExpiresProcedure.execute(entity);
 		}

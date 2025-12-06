@@ -20,14 +20,14 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GuijobsfarmcheckcraftProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		boolean is_a_craft = false;
-		jobs = GetjobsfileProcedure.execute(world, x, y, z, entity);
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {

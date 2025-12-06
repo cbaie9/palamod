@@ -61,7 +61,7 @@ public class ChecklvlhunterProcedure {
 					if (main_jobs.get("next_level_hunter").getAsDouble() <= main_jobs.get("xp_hunter").getAsDouble()) {
 						main_jobs.addProperty("lvl_hunter", (1 + main_jobs.get("lvl_hunter").getAsDouble()));
 						main_jobs.addProperty("xp_hunter", (main_jobs.get("xp_hunter").getAsDouble() - main_jobs.get("next_level_hunter").getAsDouble()));
-						main_jobs.addProperty("next_level_hunter", GetnextlevelxphunterProcedure.execute(world, x, y, z, entity));
+						main_jobs.addProperty("next_level_hunter", GetnextlevelxphunterProcedure.execute(entity));
 						main_jobs.addProperty("last_unlocked_lvl", main_jobs.get("lvl_hunter").getAsDouble());
 						main_jobs.addProperty("last_unlocked_type", 3);
 						if (entity instanceof Player _player) {
