@@ -1557,5 +1557,7 @@
   "palamod.adminshop.preview_not_enough_money": "{Not enough money}",
   "palamod.adminshop.preview_base": "Amount : insert number in the bar",
   "palamod.adminshop.preview_1": "Buy",
-  "palamod.adminshop.preview_2": "sell"
+  "palamod.adminshop.preview_2": "sell",
+  "palamod.item.withered_portal": "Upgrade the tier of the obsidian by placing paladium block next to it",
+  "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension"
 }

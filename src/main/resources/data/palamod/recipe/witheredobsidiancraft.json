@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:wither_rose"
+    },
+    "b": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "palamod:witheredobsidian_0",
+    "count": 1
+  }
+}
