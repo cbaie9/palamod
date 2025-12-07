@@ -9,7 +9,7 @@ import net.minecraft.core.BlockPos;
 
 public class TrixiumoreBlock extends Block {
 	public TrixiumoreBlock() {
-		super(BlockBehaviour.Properties.of().strength(1.3f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().strength(1.3f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

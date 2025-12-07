@@ -41568,6 +41568,11 @@
       "CUSTOM:Bigring"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:Softenedtrixiumore",
+      "~CUSTOM:Softenedamethystore",
+      "~CUSTOM:Trixiumore",
+      "~CUSTOM:FindiumOre",
+      "~CUSTOM:AmethysteOre",
       "~CUSTOM:Softeneddiamondore",
       "~CUSTOM:Softenedgoldore",
       "~CUSTOM:Softenedfindiumore",
@@ -41585,6 +41590,15 @@
       "~CUSTOM:AmethysteBlock"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:Softenedendiumnuggetore",
+      "~CUSTOM:Softenedtitaneore",
+      "~CUSTOM:TitaneOre",
+      "~CUSTOM:Softenedgreenpaladiumore",
+      "~CUSTOM:Softenedpaladiumore",
+      "~CUSTOM:Paladiumgreenoredeepslate",
+      "~CUSTOM:Paladiumoredeepslate",
+      "~CUSTOM:PaladiumGreenore",
+      "~CUSTOM:PaladiumOre",
       "~CUSTOM:Paladiuminfusedobsidian",
       "~CUSTOM:Titaneinfusedobsidian",
       "~CUSTOM:Amethystinfusedobsidian",

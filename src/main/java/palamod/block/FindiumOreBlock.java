@@ -30,7 +30,7 @@ public class FindiumOreBlock extends Block {
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
+		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

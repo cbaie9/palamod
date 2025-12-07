@@ -16,7 +16,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedgreenpaladiumoreBlock extends Block {
 	public SoftenedgreenpaladiumoreBlock() {
-		super(BlockBehaviour.Properties.of().strength(3f, 5f).instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
