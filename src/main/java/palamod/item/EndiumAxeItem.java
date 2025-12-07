@@ -1,5 +1,6 @@
 package palamod.item;
 
+import palamod.procedures.GettextcraftableviajobsProcedure;
 import palamod.procedures.AxebreakblockProcedure;
 
 import palamod.init.PalamodModItems;
@@ -7,21 +8,24 @@ import palamod.init.PalamodModItems;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
+
+import java.util.List;
 
 @EventBusSubscriber
 public class EndiumAxeItem extends AxeItem {
@@ -71,5 +75,18 @@ public class EndiumAxeItem extends AxeItem {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
 		AxebreakblockProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		return retval;
+	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = GettextcraftableviajobsProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 }

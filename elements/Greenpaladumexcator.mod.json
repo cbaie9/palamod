@@ -8,9 +8,11 @@
     "texture": "green_paladium_excavator",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Green Paladium Exavator",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettextcraftableviajobs"
     },
     "creativeTabs": [
       {

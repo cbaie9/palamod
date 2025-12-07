@@ -8,9 +8,11 @@
     "texture": "endium_axe",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Endium Axe",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettextcraftableviajobs"
     },
     "creativeTabs": [
       {

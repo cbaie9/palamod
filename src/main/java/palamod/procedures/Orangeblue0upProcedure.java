@@ -10,6 +10,8 @@ public class Orangeblue0upProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (Math.random() < 0.01125 && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.FARMLAND) {
 			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.ORANGEBLUE_1.get().defaultBlockState(), 3);
+		} else if (Math.random() < 0.0225 && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.FERTILZED_DIRT.get()) {
+			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.ORANGEBLUE_1.get().defaultBlockState(), 3);
 		}
 	}
 }

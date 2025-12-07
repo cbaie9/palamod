@@ -3,8 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -27,7 +25,7 @@ public class Orangeblue4dropProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double lvl = 0;
 		File jobs = new File("");
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {
@@ -44,7 +42,7 @@ public class Orangeblue4dropProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && 100 <= lvl) {
+			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 100 <= lvl) {
 				if (Math.random() < 0.1) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ORANGEBLUESEED.get()));
@@ -58,8 +56,8 @@ public class Orangeblue4dropProcedure {
 					_level.addFreshEntity(entityToSpawn);
 				}
 				if (Math.random() < 0.00390625) {
-					if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
-							&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr6 && _plr6.level() instanceof ServerLevel
+							&& _plr6.getAdvancements().getOrStartProgress(_plr6.server.getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"));
 							if (_adv != null) {

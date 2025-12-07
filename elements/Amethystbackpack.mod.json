@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "amethyst_backpack",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -34,7 +35,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettextcraftableviajobs"
     },
     "glowCondition": {
       "fixedValue": false

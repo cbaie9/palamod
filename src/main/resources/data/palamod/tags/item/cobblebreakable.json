@@ -13,7 +13,9 @@
     "minecraft:sandstone",
     "minecraft:red_sandstone",
     "minecraft:deepslate",
+    "minecraft:tuff",
     "minecraft:mossy_cobblestone",
+    "minecraft:netherrack",
     "minecraft:cobblestone"
   ]
 }

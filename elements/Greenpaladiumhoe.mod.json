@@ -8,9 +8,11 @@
     "texture": "green_paladium_radius_hoe",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Green paladium hoe",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettextcraftableviajobs"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 2,
     "damageVsEntity": 4.0,
     "usageCount": 5000,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:PaladiumGreeningot"

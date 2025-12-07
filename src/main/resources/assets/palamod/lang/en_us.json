@@ -1451,7 +1451,7 @@
   "gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m3": "This armor is obtenable in the Mid/End game",
   "gui.palamod.downloadergui.label_filter": "Filter",
   "gui.palamod.jobsminercraftgui.tooltip_cave_block": "Cave block",
-  "item.palamod.amethyst_excavator": "Amethyste Exavator",
+  "item.palamod.amethyst_excavator": "Amethyste Excavator",
   "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3": "This armor set is craftable",
   "block.palamod.erable_wood": "Erable Wood",
   "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4": "This armor set is craftable",
@@ -1559,5 +1559,6 @@
   "palamod.adminshop.preview_1": "Buy",
   "palamod.adminshop.preview_2": "sell",
   "palamod.item.withered_portal": "Upgrade the tier of the obsidian by placing paladium block next to it",
-  "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension"
+  "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension",
+  "palamod.item.craft_via_jobs": "Can be craft via the Palamod Jobs Interface"
 }

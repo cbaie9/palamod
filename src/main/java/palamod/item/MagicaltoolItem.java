@@ -1,14 +1,24 @@
 package palamod.item;
 
 import palamod.procedures.MagicaltoolsprocessProcedure;
+import palamod.procedures.GettextcraftableviajobsProcedure;
+
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.Minecraft;
+
+import java.util.List;
 
 public class MagicaltoolItem extends Item {
 	public MagicaltoolItem() {
@@ -23,6 +33,19 @@ public class MagicaltoolItem extends Item {
 	@Override
 	public SoundEvent getEatingSound() {
 		return SoundEvents.EMPTY;
+	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+		String hoverText = GettextcraftableviajobsProcedure.execute();
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

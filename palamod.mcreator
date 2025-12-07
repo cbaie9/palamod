@@ -24668,6 +24668,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -40904,6 +40908,20 @@
           "src/main/java/palamod/procedures/GettranslationtextwitheredobsidianportalProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Gettextcraftableviajobs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gettextcraftableviajobs",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GettextcraftableviajobsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -41539,7 +41557,9 @@
       "Blocks.END_STONE",
       "Blocks.DEEPSLATE",
       "CUSTOM:Softstone",
-      "CUSTOM:Cobbleledsoftstone"
+      "CUSTOM:Cobbleledsoftstone",
+      "Blocks.TUFF",
+      "Blocks.NETHERRACK"
     ],
     "ITEMS:neoforge:amethyst_can_be_smelted": [
       "CUSTOM:AmethystePickaxe",
@@ -43166,7 +43186,8 @@
       "Blocks.BLACKSTONE",
       "Blocks.STONE#5",
       "Blocks.STONE#3",
-      "Blocks.STONE#1"
+      "Blocks.STONE#1",
+      "Blocks.TUFF"
     ]
   },
   "tab_element_order": {
@@ -45146,7 +45167,7 @@
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_is_obtenable_in_the_m3": "This armor is obtenable in the Mid/End game",
       "gui.palamod.downloadergui.label_filter": "Filter",
       "gui.palamod.jobsminercraftgui.tooltip_cave_block": "Cave block",
-      "item.palamod.amethyst_excavator": "Amethyste Exavator",
+      "item.palamod.amethyst_excavator": "Amethyste Excavator",
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable3": "This armor set is craftable",
       "block.palamod.erable_wood": "Erable Wood",
       "gui.palamod.armorpalahelpgui.tooltip_this_armor_set_is_craftable4": "This armor set is craftable",
@@ -45254,7 +45275,8 @@
       "palamod.adminshop.preview_1": "Buy",
       "palamod.adminshop.preview_2": "sell",
       "palamod.item.withered_portal": "Upgrade the tier of the obsidian by placing paladium block next to it",
-      "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension"
+      "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension",
+      "palamod.item.craft_via_jobs": "Can be craft via the Palamod Jobs Interface"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -46816,7 +46838,8 @@
       "gui.palamod.golemtreec.golem_v_farmer1": "",
       "gui.palamod.factionhomegui.label_empty": "",
       "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
-      "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur"
+      "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
+      "palamod.item.craft_via_jobs": "Peut être fabriqué "
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -48378,7 +48401,8 @@
       "gui.palamod.golemtreec.golem_v_farmer1": "",
       "gui.palamod.factionhomegui.label_empty": "",
       "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
-      "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur"
+      "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
+      "palamod.item.craft_via_jobs": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -49940,7 +49964,8 @@
       "gui.palamod.golemtreec.golem_v_farmer1": "",
       "gui.palamod.factionhomegui.label_empty": "",
       "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
-      "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur"
+      "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
+      "palamod.item.craft_via_jobs": ""
     }
   },
   "metadata": {
@@ -49999,7 +50024,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.056.2",
+    "version": "1.20.057",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some texture )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

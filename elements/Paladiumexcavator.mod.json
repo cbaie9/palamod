@@ -8,9 +8,11 @@
     "texture": "paladium_excavator",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Paladium Exavator",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettextcraftableviajobs"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 23,
     "damageVsEntity": 3.0,
     "usageCount": 4999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:PaladiumIngot"

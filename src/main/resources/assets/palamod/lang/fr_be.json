@@ -1558,5 +1558,6 @@
   "gui.palamod.golemtreec.golem_v_farmer1": "",
   "gui.palamod.factionhomegui.label_empty": "",
   "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
-  "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur"
+  "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
+  "palamod.item.craft_via_jobs": ""
 }

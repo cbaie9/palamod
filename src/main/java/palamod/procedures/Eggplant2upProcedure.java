@@ -9,7 +9,9 @@ import net.minecraft.core.BlockPos;
 public class Eggplant2upProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (Math.random() < 0.02 && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.FARMLAND) {
-			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.CHERVIL_2.get().defaultBlockState(), 3);
+			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.EGGPLANT_3.get().defaultBlockState(), 3);
+		} else if (Math.random() < 0.04 && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.FERTILZED_DIRT.get()) {
+			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.EGGPLANT_3.get().defaultBlockState(), 3);
 		}
 	}
 }

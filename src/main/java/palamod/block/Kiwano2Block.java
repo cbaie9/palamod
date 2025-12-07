@@ -2,6 +2,8 @@ package palamod.block;
 
 import palamod.procedures.Kiwano2upProcedure;
 
+import palamod.init.PalamodModBlocks;
+
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
@@ -34,7 +36,7 @@ public class Kiwano2Block extends FlowerBlock {
 
 	@Override
 	public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-		return groundState.is(Blocks.FARMLAND);
+		return groundState.is(Blocks.FARMLAND) || groundState.is(PalamodModBlocks.FERTILZED_DIRT.get());
 	}
 
 	@Override

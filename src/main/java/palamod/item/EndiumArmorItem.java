@@ -1,5 +1,6 @@
 package palamod.item;
 
+import palamod.procedures.GettextcraftableviajobsProcedure;
 import palamod.procedures.FullendiuminvisibleProcedure;
 
 import palamod.init.PalamodModItems;
@@ -8,9 +9,12 @@ import net.neoforged.neoforge.registries.RegisterEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
@@ -18,9 +22,11 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Holder;
+import net.minecraft.client.Minecraft;
 import net.minecraft.Util;
 
 import java.util.List;
@@ -69,6 +75,19 @@ public abstract class EndiumArmorItem extends ArmorItem {
 	public static class Chestplate extends EndiumArmorItem {
 		public Chestplate() {
 			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(400)).fireResistant());
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, list, flag);
+			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+			String hoverText = GettextcraftableviajobsProcedure.execute();
+			if (hoverText != null) {
+				for (String line : hoverText.split("\n")) {
+					list.add(Component.literal(line));
+				}
+			}
 		}
 
 		@Override
