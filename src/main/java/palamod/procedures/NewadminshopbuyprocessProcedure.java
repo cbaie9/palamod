@@ -40,7 +40,7 @@ public class NewadminshopbuyprocessProcedure {
 				return 0;
 			}
 		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
-		item = AdminshopgetitemProcedure.execute(world, entity).copy();
+		item = AdminshopgetitemProcedure.execute(entity).copy();
 		fac_v = StockedbaseadminshopbuyProcedure.execute(item);
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {

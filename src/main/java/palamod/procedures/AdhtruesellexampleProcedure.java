@@ -32,7 +32,7 @@ public class AdhtruesellexampleProcedure {
 		double n2 = 0;
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		item = AdminshopgetitemProcedure.execute(world, entity).copy();
+		item = AdminshopgetitemProcedure.execute(entity).copy();
 		fac_v = StockedbaseadminshopsellProcedure.execute(item);
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {

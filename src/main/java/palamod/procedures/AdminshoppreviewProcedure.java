@@ -6,7 +6,6 @@ import org.checkerframework.checker.units.qual.s;
 
 import net.neoforged.fml.loading.FMLPaths;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
@@ -17,7 +16,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class AdminshoppreviewProcedure {
-	public static String execute(LevelAccessor world, Entity entity) {
+	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
 		double n2 = 0;
@@ -28,8 +27,8 @@ public class AdminshoppreviewProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		String buy_out = "";
 		String output = "";
-		fac_v = StockedbaseadminshopbuyProcedure.execute(AdminshopgetitemProcedure.execute(world, entity));
-		n2 = StockedbaseadminshopsellProcedure.execute(AdminshopgetitemProcedure.execute(world, entity));
+		fac_v = StockedbaseadminshopbuyProcedure.execute(AdminshopgetitemProcedure.execute(entity));
+		n2 = StockedbaseadminshopsellProcedure.execute(AdminshopgetitemProcedure.execute(entity));
 		n = Math.round(Math.abs(new Object() {
 			double convert(String s) {
 				try {

@@ -1,16 +1,12 @@
 package palamod.procedures;
 
-import palamod.world.inventory.NotyetguiMenu;
 import palamod.world.inventory.NewAdminshopguiMenu;
 
 import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -53,211 +49,39 @@ public class Connectadminshoprow2col4Procedure {
 			}, _bpos);
 		}
 		if (num_connect == 0) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.STONE.asItem()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Blocks.STONE.asItem()).toString()));
 		} else if (num_connect == 1) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.COAL).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.COAL).toString()));
 		} else if (num_connect == 2) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.OAK_LOG.asItem()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Blocks.OAK_LOG.asItem()).toString()));
 		} else if (num_connect == 3) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.ENDER_PEARL).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.ENDER_PEARL).toString()));
 		} else if (num_connect == 4) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.COOKED_BEEF).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.COOKED_BEEF).toString()));
 		} else if (num_connect == 5) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.REDSTONE).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.REDSTONE).toString()));
 		} else if (num_connect == 6) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.SUGAR_CANE.asItem()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Blocks.SUGAR_CANE.asItem()).toString()));
 		} else if (num_connect == 7) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.GRASS_BLOCK.asItem()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Blocks.GRASS_BLOCK.asItem()).toString()));
 		} else if (num_connect == 8) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.BLACKSTONE.asItem()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Blocks.BLACKSTONE.asItem()).toString()));
 		} else if (num_connect == 9) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.POTATO).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.POTATO).toString()));
 		} else if (num_connect == 10) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.WHEAT_SEEDS).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.WHEAT).toString()));
 		} else if (num_connect == 11) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Blocks.BROWN_MUSHROOM.asItem()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Blocks.BROWN_MUSHROOM.asItem()).toString()));
 		} else if (num_connect == 12) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.STRING).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.STRING).toString()));
 		} else if (num_connect == 13) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.SPIDER_EYE).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.SPIDER_EYE).toString()));
 		} else if (num_connect == 14) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.WITHER_SKELETON_SKULL).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.WITHER_SKELETON_SKULL).toString()));
 		} else if (num_connect == 15) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(Items.GLOW_INK_SAC).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.GLOW_INK_SAC).toString()));
 		} else if (num_connect == 16) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Notyetgui");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new NotyetguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString(("mode_adminshop_" + entity.getUUID().toString()), (BuiltInRegistries.ITEM.getKey(PalamodModItems.DISC_ANTI_FUZE.get()).toString()));
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(PalamodModItems.DISC_ANTI_FUZE.get()).toString()));
 		}
 	}
 }

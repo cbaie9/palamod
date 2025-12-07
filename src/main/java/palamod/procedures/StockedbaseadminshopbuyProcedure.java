@@ -76,8 +76,8 @@ public class StockedbaseadminshopbuyProcedure {
 			num = 8;
 		} else if (itemstack.getItem() == Items.GHAST_TEAR) {
 			num = 25;
-		} else if (itemstack.getItem() == Items.WHEAT_SEEDS) {
-			num = 0.5;
+		} else if (itemstack.getItem() == Items.WHEAT) {
+			num = 3;
 		} else if (itemstack.getItem() == Items.AMETHYST_SHARD) {
 			num = 7;
 		} else if (itemstack.getItem() == Items.FLINT) {

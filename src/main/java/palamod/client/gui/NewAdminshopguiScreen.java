@@ -113,10 +113,10 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, NewadminshopguigettitleProcedure.execute(world, entity), 37, 9, -1, false);
-		guiGraphics.drawString(this.font, AdminshoppreviewProcedure.execute(world, entity), 29, 74, -4671036, false);
-		guiGraphics.drawString(this.font, GetsellpricetextProcedure.execute(world, entity), 25, 30, -4671036, false);
-		guiGraphics.drawString(this.font, GetbuypricetextProcedure.execute(world, entity), 25, 44, -4671036, false);
+		guiGraphics.drawString(this.font, NewadminshopguigettitleProcedure.execute(entity), 37, 9, -1, false);
+		guiGraphics.drawString(this.font, AdminshoppreviewProcedure.execute(entity), 29, 74, -4671036, false);
+		guiGraphics.drawString(this.font, GetsellpricetextProcedure.execute(entity), 25, 30, -4671036, false);
+		guiGraphics.drawString(this.font, GetbuypricetextProcedure.execute(entity), 25, 44, -4671036, false);
 	}
 
 	@Override
