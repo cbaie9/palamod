@@ -27,7 +27,7 @@ public class BrokenspawnerBlock extends Block {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("block.palamod.brokenspawner.description_0"));
+		list.add(Component.translatable("block.palamod.broken_spawner.description_0"));
 	}
 
 	@Override

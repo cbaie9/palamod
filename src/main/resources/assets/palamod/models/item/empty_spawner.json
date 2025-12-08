@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/diamondinfusedobsidian",
+  "parent": "palamod:block/empty_spawner",
   "display": {
     "thirdperson": {
       "rotation": [

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/diamondinfusedobsidian",
+  "random_sequence": "palamod:blocks/diamond_infused_obsidian",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:diamondinfusedobsidian"
+          "name": "palamod:diamond_infused_obsidian"
         }
       ]
     }

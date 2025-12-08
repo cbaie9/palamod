@@ -39306,11 +39306,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cavernehammer",
+      "registry_name": "caverne_hammer",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/cavernehammer.json",
-          "src/main/java/palamod/item/CavernehammerItem.java"
+          "src/main/java/palamod/item/CavernehammerItem.java",
+          "src/main/resources/assets/palamod/models/item/caverne_hammer.json"
         ]
       }
     },
@@ -39319,14 +39319,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "brokenspawner",
+      "registry_name": "broken_spawner",
       "metadata": {
         "files": [
           "src/main/java/palamod/block/BrokenspawnerBlock.java",
-          "src/main/resources/assets/palamod/models/block/brokenspawner.json",
-          "src/main/resources/assets/palamod/blockstates/brokenspawner.json",
-          "src/main/resources/data/palamod/loot_table/blocks/brokenspawner.json",
-          "src/main/resources/assets/palamod/models/item/brokenspawner.json"
+          "src/main/resources/data/palamod/loot_table/blocks/broken_spawner.json",
+          "src/main/resources/assets/palamod/models/item/broken_spawner.json",
+          "src/main/resources/assets/palamod/blockstates/broken_spawner.json",
+          "src/main/resources/assets/palamod/models/block/broken_spawner.json"
         ]
       }
     },
@@ -39365,14 +39365,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "spawncontroller",
+      "registry_name": "spawn_controller",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/spawncontroller.json",
-          "src/main/resources/assets/palamod/models/block/spawncontroller.json",
-          "src/main/resources/data/palamod/loot_table/blocks/spawncontroller.json",
-          "src/main/resources/assets/palamod/models/item/spawncontroller.json",
-          "src/main/java/palamod/block/SpawncontrollerBlock.java"
+          "src/main/resources/assets/palamod/models/item/spawn_controller.json",
+          "src/main/resources/assets/palamod/blockstates/spawn_controller.json",
+          "src/main/resources/data/palamod/loot_table/blocks/spawn_controller.json",
+          "src/main/java/palamod/block/SpawncontrollerBlock.java",
+          "src/main/resources/assets/palamod/models/block/spawn_controller.json"
         ]
       }
     },
@@ -39381,14 +39381,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "emptyspawner",
+      "registry_name": "empty_spawner",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/emptyspawner.json",
-          "src/main/resources/data/palamod/loot_table/blocks/emptyspawner.json",
+          "src/main/resources/data/palamod/loot_table/blocks/empty_spawner.json",
+          "src/main/resources/assets/palamod/models/block/empty_spawner.json",
           "src/main/java/palamod/block/EmptyspawnerBlock.java",
-          "src/main/resources/assets/palamod/blockstates/emptyspawner.json",
-          "src/main/resources/assets/palamod/models/block/emptyspawner.json"
+          "src/main/resources/assets/palamod/blockstates/empty_spawner.json",
+          "src/main/resources/assets/palamod/models/item/empty_spawner.json"
         ]
       }
     },
@@ -39421,14 +39421,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "diamondinfusedobsidian",
+      "registry_name": "diamond_infused_obsidian",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/diamond_infused_obsidian.json",
           "src/main/java/palamod/block/DiamondinfusedobsidianBlock.java",
-          "src/main/resources/assets/palamod/models/item/diamondinfusedobsidian.json",
-          "src/main/resources/assets/palamod/blockstates/diamondinfusedobsidian.json",
-          "src/main/resources/assets/palamod/models/block/diamondinfusedobsidian.json",
-          "src/main/resources/data/palamod/loot_table/blocks/diamondinfusedobsidian.json"
+          "src/main/resources/assets/palamod/blockstates/diamond_infused_obsidian.json",
+          "src/main/resources/data/palamod/loot_table/blocks/diamond_infused_obsidian.json",
+          "src/main/resources/assets/palamod/models/item/diamond_infused_obsidian.json"
         ]
       }
     },
@@ -39437,14 +39437,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "amethystinfusedobsidian",
+      "registry_name": "amethyst_infused_obsidian",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/item/amethyst_infused_obsidian.json",
           "src/main/java/palamod/block/AmethystinfusedobsidianBlock.java",
-          "src/main/resources/assets/palamod/models/item/amethystinfusedobsidian.json",
-          "src/main/resources/assets/palamod/blockstates/amethystinfusedobsidian.json",
-          "src/main/resources/assets/palamod/models/block/amethystinfusedobsidian.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethystinfusedobsidian.json"
+          "src/main/resources/assets/palamod/models/block/amethyst_infused_obsidian.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethyst_infused_obsidian.json",
+          "src/main/resources/assets/palamod/blockstates/amethyst_infused_obsidian.json"
         ]
       }
     },
@@ -39453,14 +39453,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "titaneinfusedobsidian",
+      "registry_name": "titane_infused_obsidian",
       "metadata": {
         "files": [
           "src/main/java/palamod/block/TitaneinfusedobsidianBlock.java",
-          "src/main/resources/assets/palamod/models/item/titaneinfusedobsidian.json",
-          "src/main/resources/data/palamod/loot_table/blocks/titaneinfusedobsidian.json",
-          "src/main/resources/assets/palamod/models/block/titaneinfusedobsidian.json",
-          "src/main/resources/assets/palamod/blockstates/titaneinfusedobsidian.json"
+          "src/main/resources/data/palamod/loot_table/blocks/titane_infused_obsidian.json",
+          "src/main/resources/assets/palamod/models/block/titane_infused_obsidian.json",
+          "src/main/resources/assets/palamod/models/item/titane_infused_obsidian.json",
+          "src/main/resources/assets/palamod/blockstates/titane_infused_obsidian.json"
         ]
       }
     },
@@ -39469,14 +39469,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "paladiuminfusedobsidian",
+      "registry_name": "paladium_infused_obsidian",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/paladiuminfusedobsidian.json",
-          "src/main/resources/assets/palamod/models/block/paladiuminfusedobsidian.json",
-          "src/main/resources/assets/palamod/blockstates/paladiuminfusedobsidian.json",
+          "src/main/resources/assets/palamod/models/item/paladium_infused_obsidian.json",
+          "src/main/resources/assets/palamod/blockstates/paladium_infused_obsidian.json",
+          "src/main/resources/assets/palamod/models/block/paladium_infused_obsidian.json",
           "src/main/java/palamod/block/PaladiuminfusedobsidianBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/paladiuminfusedobsidian.json"
+          "src/main/resources/data/palamod/loot_table/blocks/paladium_infused_obsidian.json"
         ]
       }
     },
@@ -39533,10 +39533,10 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "emptyspawneritem",
+      "registry_name": "empty_spawner_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/emptyspawneritem.json",
+          "src/main/resources/assets/palamod/models/item/empty_spawner_item.json",
           "src/main/java/palamod/item/EmptyspawneritemItem.java"
         ]
       }
@@ -40920,6 +40920,37 @@
         "return_type": "string",
         "files": [
           "src/main/java/palamod/procedures/GettextcraftableviajobsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Checkstructurespawnercontroller",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "checkstructurespawnercontroller",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/CheckstructurespawnercontrollerProcedure.java"
         ]
       }
     }
@@ -43436,8 +43467,14 @@
       "Unclaimfinderorange",
       "Unclaimfinderred",
       "Pocketenderchest",
-      "Cavernehammer",
+      "Spawncontroller",
+      "Emptyspawner",
       "Brokenspawner",
+      "Cavernehammer",
+      "Diamondinfusedobsidian",
+      "Amethystinfusedobsidian",
+      "Titaneinfusedobsidian",
+      "Paladiuminfusedobsidian",
       "Emptyspawneritem"
     ],
     "CUSTOM:Grindercreativetab": [
@@ -43708,8 +43745,8 @@
       "Glueballpatern",
       "Exctractor",
       "Flowertotem",
-      "Cavernehammer",
       "Brokenspawner",
+      "Cavernehammer",
       "Emptyspawneritem"
     ]
   },
@@ -45229,17 +45266,7 @@
       "item.palamod.unclaimfinderred": "Red unclaim finder",
       "item.palamod.unclaimfinderblue": "Blue Unclaim Finder",
       "item.palamod.pocketenderchest": "Pocket Enderchest",
-      "item.palamod.cavernehammer": "Caverne hammer",
-      "block.palamod.brokenspawner": "Broken spawner",
-      "block.palamod.spawncontroller": "Spawn controller",
-      "block.palamod.emptyspawner": "Empty spawner",
       "block.palamod.guardian_block.description_0": "Non functionnal, in developpement",
-      "block.palamod.brokenspawner.description_0": "Can be obtain where a creeper explode a vanilla spawner",
-      "block.palamod.diamondinfusedobsidian": "Diamond infused obsidian",
-      "block.palamod.amethystinfusedobsidian": "Amethyst infused obsidian",
-      "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
-      "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
-      "item.palamod.emptyspawneritem": "Empty spawner item",
       "gui.palamod.adminshopmenu.slider_prefix": "Adminshop page : ",
       "gui.palamod.adminshopmenu.slider_suffix": "",
       "gamerule.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
@@ -45276,7 +45303,17 @@
       "palamod.adminshop.preview_2": "sell",
       "palamod.item.withered_portal": "Upgrade the tier of the obsidian by placing paladium block next to it",
       "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension",
-      "palamod.item.craft_via_jobs": "Can be craft via the Palamod Jobs Interface"
+      "palamod.item.craft_via_jobs": "Can be craft via the Palamod Jobs Interface",
+      "block.palamod.spawn_controller": "Spawn controller",
+      "block.palamod.empty_spawner": "Empty spawner",
+      "block.palamod.broken_spawner": "Broken spawner",
+      "block.palamod.broken_spawner.description_0": "Can be obtain where a creeper explode a vanilla spawner",
+      "item.palamod.caverne_hammer": "Caverne hammer",
+      "block.palamod.diamond_infused_obsidian": "Diamond infused obsidian",
+      "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
+      "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
+      "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
+      "item.palamod.empty_spawner_item": "Empty spawner item"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -46788,17 +46825,7 @@
       "item.palamod.unclaimfinderred": "Unclaim finder rouge",
       "item.palamod.unclaimfinderblue": "Unclaim Finder électrique",
       "item.palamod.pocketenderchest": "Coffre de l\u0027ender portable",
-      "item.palamod.cavernehammer": "Hammer des cavernes",
-      "block.palamod.brokenspawner": "Spawner cassé",
-      "block.palamod.spawncontroller": "Controller de spawner",
-      "block.palamod.emptyspawner": "Spawner vide",
       "block.palamod.guardian_block.description_0": "Non fonctionnel, en développement",
-      "block.palamod.brokenspawner.description_0": "Peut être obtenu quand un creeper explose un spawner vanilla",
-      "block.palamod.diamondinfusedobsidian": "Obsidienne fourée de pic en diamant",
-      "block.palamod.amethystinfusedobsidian": "Obsidienne fourré de pic en améthyste",
-      "block.palamod.titaneinfusedobsidian": "Obsidienne fourée de pic en diamant",
-      "block.palamod.paladiuminfusedobsidian": "Obsidienne fourée de pic en paladium",
-      "item.palamod.emptyspawneritem": "Spawner vide",
       "gui.palamod.adminshopmenu.slider_prefix": "Page de l\u0027Adminshop :",
       "gamerule.commandfurnacenopermaccess.description": "Détermine si les joueurs ont accès au /furnace sans aucune permission",
       "gamerule.commandfurnacenopermaccess": "Accès aux joueurs du /furnace",
@@ -46839,7 +46866,17 @@
       "gui.palamod.factionhomegui.label_empty": "",
       "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
       "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
-      "palamod.item.craft_via_jobs": "Peut être fabriqué "
+      "palamod.item.craft_via_jobs": "Peut être fabriqué ",
+      "block.palamod.spawn_controller": "Spawn controller",
+      "block.palamod.empty_spawner": "Empty spawner",
+      "block.palamod.broken_spawner": "Broken spawner",
+      "block.palamod.broken_spawner.description_0": "Can be obtain where a creeper explode a vanilla spawner",
+      "item.palamod.caverne_hammer": "Caverne hammer",
+      "block.palamod.diamond_infused_obsidian": "Diamond infused obsidian",
+      "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
+      "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
+      "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
+      "item.palamod.empty_spawner_item": "Empty spawner item"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -48351,17 +48388,7 @@
       "item.palamod.unclaimfinderred": "Unclaim finder rouge",
       "item.palamod.unclaimfinderblue": "Unclaim Finder électrique",
       "item.palamod.pocketenderchest": "Coffre de l\u0027ender portable",
-      "item.palamod.cavernehammer": "Hammer des cavernes",
-      "block.palamod.brokenspawner": "Spawner cassé",
-      "block.palamod.spawncontroller": "Controller de spawner",
-      "block.palamod.emptyspawner": "Spawner vide",
       "block.palamod.guardian_block.description_0": "Non fonctionnel, en développement",
-      "block.palamod.brokenspawner.description_0": "Peut être obtenu quand un creeper explose un spawner vanilla",
-      "block.palamod.diamondinfusedobsidian": "Obsidienne fourée de pic en diamant",
-      "block.palamod.amethystinfusedobsidian": "Obsidienne fourré de pic en améthyste",
-      "block.palamod.titaneinfusedobsidian": "Obsidienne fourée de pic en diamant",
-      "block.palamod.paladiuminfusedobsidian": "Obsidienne fourée de pic en paladium",
-      "item.palamod.emptyspawneritem": "Spawner vide",
       "gui.palamod.adminshopmenu.slider_prefix": "Page de l\u0027Adminshop :",
       "gamerule.commandfurnacenopermaccess.description": "Détermine si les joueurs ont accès au /furnace sans aucune permission",
       "gamerule.commandfurnacenopermaccess": "Accès aux joueurs du /furnace",
@@ -48402,7 +48429,17 @@
       "gui.palamod.factionhomegui.label_empty": "",
       "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
       "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
-      "palamod.item.craft_via_jobs": ""
+      "palamod.item.craft_via_jobs": "",
+      "block.palamod.spawn_controller": "Spawn controller",
+      "block.palamod.empty_spawner": "Empty spawner",
+      "block.palamod.broken_spawner": "Broken spawner",
+      "block.palamod.broken_spawner.description_0": "Can be obtain where a creeper explode a vanilla spawner",
+      "item.palamod.caverne_hammer": "Caverne hammer",
+      "block.palamod.diamond_infused_obsidian": "Diamond infused obsidian",
+      "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
+      "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
+      "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
+      "item.palamod.empty_spawner_item": "Empty spawner item"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -49914,17 +49951,7 @@
       "item.palamod.unclaimfinderred": "Unclaim finder rouge",
       "item.palamod.unclaimfinderblue": "Unclaim Finder électrique",
       "item.palamod.pocketenderchest": "Coffre de l\u0027ender portable",
-      "item.palamod.cavernehammer": "Hammer des cavernes",
-      "block.palamod.brokenspawner": "Spawner cassé",
-      "block.palamod.spawncontroller": "Controller de spawner",
-      "block.palamod.emptyspawner": "Spawner vide",
       "block.palamod.guardian_block.description_0": "Non fonctionnel, en développement",
-      "block.palamod.brokenspawner.description_0": "Peut être obtenu quand un creeper explose un spawner vanilla",
-      "block.palamod.diamondinfusedobsidian": "Obsidienne fourée de pic en diamant",
-      "block.palamod.amethystinfusedobsidian": "Obsidienne fourré de pic en améthyste",
-      "block.palamod.titaneinfusedobsidian": "Obsidienne fourée de pic en diamant",
-      "block.palamod.paladiuminfusedobsidian": "Obsidienne fourée de pic en paladium",
-      "item.palamod.emptyspawneritem": "Spawner vide",
       "gui.palamod.adminshopmenu.slider_prefix": "Page de l\u0027Adminshop :",
       "gamerule.commandfurnacenopermaccess.description": "Détermine si les joueurs ont accès au /furnace sans aucune permission",
       "gamerule.commandfurnacenopermaccess": "Accès aux joueurs du /furnace",
@@ -49965,7 +49992,17 @@
       "gui.palamod.factionhomegui.label_empty": "",
       "palamod.item.withered_portal": "Améliore le tier de cet obsidienne en plaçant un block de paladium a coté",
       "palamod.item.withered_portal_place": "Créer un portal avec cet obsidienne pour accéder à la dimension mineur",
-      "palamod.item.craft_via_jobs": ""
+      "palamod.item.craft_via_jobs": "",
+      "block.palamod.spawn_controller": "Spawn controller",
+      "block.palamod.empty_spawner": "Empty spawner",
+      "block.palamod.broken_spawner": "Broken spawner",
+      "block.palamod.broken_spawner.description_0": "Can be obtain where a creeper explode a vanilla spawner",
+      "item.palamod.caverne_hammer": "Caverne hammer",
+      "block.palamod.diamond_infused_obsidian": "Diamond infused obsidian",
+      "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
+      "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
+      "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
+      "item.palamod.empty_spawner_item": "Empty spawner item"
     }
   },
   "metadata": {

@@ -11,14 +11,14 @@
       "item": "palamod:amethyst"
     },
     "b": {
-      "item": "palamod:diamondinfusedobsidian"
+      "item": "palamod:diamond_infused_obsidian"
     },
     "c": {
       "item": "palamod:paladium_block"
     }
   },
   "result": {
-    "id": "palamod:amethystinfusedobsidian",
+    "id": "palamod:amethyst_infused_obsidian",
     "count": 4
   }
 }

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/emptyspawner",
+  "random_sequence": "palamod:blocks/titane_infused_obsidian",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:emptyspawner"
+          "name": "palamod:titane_infused_obsidian"
         }
       ]
     }

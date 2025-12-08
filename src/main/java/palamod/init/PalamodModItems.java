@@ -639,15 +639,15 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> UNCLAIMFINDERRED;
 	public static final DeferredItem<Item> UNCLAIMFINDERBLUE;
 	public static final DeferredItem<Item> POCKETENDERCHEST;
-	public static final DeferredItem<Item> CAVERNEHAMMER;
-	public static final DeferredItem<Item> BROKENSPAWNER;
-	public static final DeferredItem<Item> SPAWNCONTROLLER;
-	public static final DeferredItem<Item> EMPTYSPAWNER;
-	public static final DeferredItem<Item> DIAMONDINFUSEDOBSIDIAN;
-	public static final DeferredItem<Item> AMETHYSTINFUSEDOBSIDIAN;
-	public static final DeferredItem<Item> TITANEINFUSEDOBSIDIAN;
-	public static final DeferredItem<Item> PALADIUMINFUSEDOBSIDIAN;
-	public static final DeferredItem<Item> EMPTYSPAWNERITEM;
+	public static final DeferredItem<Item> CAVERNE_HAMMER;
+	public static final DeferredItem<Item> BROKEN_SPAWNER;
+	public static final DeferredItem<Item> SPAWN_CONTROLLER;
+	public static final DeferredItem<Item> EMPTY_SPAWNER;
+	public static final DeferredItem<Item> DIAMOND_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> AMETHYST_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> TITANE_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> PALADIUM_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> EMPTY_SPAWNER_ITEM;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1250,15 +1250,15 @@ public class PalamodModItems {
 		UNCLAIMFINDERRED = REGISTRY.register("unclaimfinderred", UnclaimfinderredItem::new);
 		UNCLAIMFINDERBLUE = REGISTRY.register("unclaimfinderblue", UnclaimfinderblueItem::new);
 		POCKETENDERCHEST = REGISTRY.register("pocketenderchest", PocketenderchestItem::new);
-		CAVERNEHAMMER = REGISTRY.register("cavernehammer", CavernehammerItem::new);
-		BROKENSPAWNER = block(PalamodModBlocks.BROKENSPAWNER, new Item.Properties().stacksTo(1));
-		SPAWNCONTROLLER = block(PalamodModBlocks.SPAWNCONTROLLER);
-		EMPTYSPAWNER = block(PalamodModBlocks.EMPTYSPAWNER);
-		DIAMONDINFUSEDOBSIDIAN = block(PalamodModBlocks.DIAMONDINFUSEDOBSIDIAN);
-		AMETHYSTINFUSEDOBSIDIAN = block(PalamodModBlocks.AMETHYSTINFUSEDOBSIDIAN);
-		TITANEINFUSEDOBSIDIAN = block(PalamodModBlocks.TITANEINFUSEDOBSIDIAN);
-		PALADIUMINFUSEDOBSIDIAN = block(PalamodModBlocks.PALADIUMINFUSEDOBSIDIAN);
-		EMPTYSPAWNERITEM = REGISTRY.register("emptyspawneritem", EmptyspawneritemItem::new);
+		CAVERNE_HAMMER = REGISTRY.register("caverne_hammer", CavernehammerItem::new);
+		BROKEN_SPAWNER = block(PalamodModBlocks.BROKEN_SPAWNER, new Item.Properties().stacksTo(1));
+		SPAWN_CONTROLLER = block(PalamodModBlocks.SPAWN_CONTROLLER);
+		EMPTY_SPAWNER = block(PalamodModBlocks.EMPTY_SPAWNER);
+		DIAMOND_INFUSED_OBSIDIAN = block(PalamodModBlocks.DIAMOND_INFUSED_OBSIDIAN);
+		AMETHYST_INFUSED_OBSIDIAN = block(PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN);
+		TITANE_INFUSED_OBSIDIAN = block(PalamodModBlocks.TITANE_INFUSED_OBSIDIAN);
+		PALADIUM_INFUSED_OBSIDIAN = block(PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN);
+		EMPTY_SPAWNER_ITEM = REGISTRY.register("empty_spawner_item", EmptyspawneritemItem::new);
 	}
 
 	// Start of user code block custom items
@@ -1297,7 +1297,7 @@ public class PalamodModItems {
 			event.enqueueWork(() -> {
 				ItemProperties.register(XPBOTTLE.get(), ResourceLocation.parse("palamod:xpbottle_xp"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetxpfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(XPBOTTLE.get(), ResourceLocation.parse("palamod:xpbottle_jobs_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetjobsfrombottleProcedure.execute(itemStackToRender));
-				ItemProperties.register(EMPTYSPAWNERITEM.get(), ResourceLocation.parse("palamod:emptyspawneritem_souls"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetcustomunixProcedure.execute());
+				ItemProperties.register(EMPTY_SPAWNER_ITEM.get(), ResourceLocation.parse("palamod:empty_spawner_item_souls"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetcustomunixProcedure.execute());
 			});
 		}
 	}

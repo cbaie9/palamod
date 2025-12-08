@@ -92,6 +92,9 @@
     },
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 100,
     "fireSpreadSpeed": 60,

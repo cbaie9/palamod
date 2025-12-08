@@ -11,14 +11,14 @@
       "item": "palamod:titane_ingot"
     },
     "b": {
-      "item": "palamod:amethystinfusedobsidian"
+      "item": "palamod:amethyst_infused_obsidian"
     },
     "c": {
       "item": "palamod:paladium_block"
     }
   },
   "result": {
-    "id": "palamod:titaneinfusedobsidian",
+    "id": "palamod:titane_infused_obsidian",
     "count": 2
   }
 }

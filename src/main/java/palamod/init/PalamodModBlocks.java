@@ -280,13 +280,13 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> CLATHRUSARCHERI;
 	public static final DeferredBlock<Block> PALADIUMFLOWER;
 	public static final DeferredBlock<Block> DANKABLOCK;
-	public static final DeferredBlock<Block> BROKENSPAWNER;
-	public static final DeferredBlock<Block> SPAWNCONTROLLER;
-	public static final DeferredBlock<Block> EMPTYSPAWNER;
-	public static final DeferredBlock<Block> DIAMONDINFUSEDOBSIDIAN;
-	public static final DeferredBlock<Block> AMETHYSTINFUSEDOBSIDIAN;
-	public static final DeferredBlock<Block> TITANEINFUSEDOBSIDIAN;
-	public static final DeferredBlock<Block> PALADIUMINFUSEDOBSIDIAN;
+	public static final DeferredBlock<Block> BROKEN_SPAWNER;
+	public static final DeferredBlock<Block> SPAWN_CONTROLLER;
+	public static final DeferredBlock<Block> EMPTY_SPAWNER;
+	public static final DeferredBlock<Block> DIAMOND_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> AMETHYST_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> TITANE_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> PALADIUM_INFUSED_OBSIDIAN;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -554,13 +554,13 @@ public class PalamodModBlocks {
 		CLATHRUSARCHERI = REGISTRY.register("clathrusarcheri", ClathrusarcheriBlock::new);
 		PALADIUMFLOWER = REGISTRY.register("paladiumflower", PaladiumflowerBlock::new);
 		DANKABLOCK = REGISTRY.register("dankablock", DankablockBlock::new);
-		BROKENSPAWNER = REGISTRY.register("brokenspawner", BrokenspawnerBlock::new);
-		SPAWNCONTROLLER = REGISTRY.register("spawncontroller", SpawncontrollerBlock::new);
-		EMPTYSPAWNER = REGISTRY.register("emptyspawner", EmptyspawnerBlock::new);
-		DIAMONDINFUSEDOBSIDIAN = REGISTRY.register("diamondinfusedobsidian", DiamondinfusedobsidianBlock::new);
-		AMETHYSTINFUSEDOBSIDIAN = REGISTRY.register("amethystinfusedobsidian", AmethystinfusedobsidianBlock::new);
-		TITANEINFUSEDOBSIDIAN = REGISTRY.register("titaneinfusedobsidian", TitaneinfusedobsidianBlock::new);
-		PALADIUMINFUSEDOBSIDIAN = REGISTRY.register("paladiuminfusedobsidian", PaladiuminfusedobsidianBlock::new);
+		BROKEN_SPAWNER = REGISTRY.register("broken_spawner", BrokenspawnerBlock::new);
+		SPAWN_CONTROLLER = REGISTRY.register("spawn_controller", SpawncontrollerBlock::new);
+		EMPTY_SPAWNER = REGISTRY.register("empty_spawner", EmptyspawnerBlock::new);
+		DIAMOND_INFUSED_OBSIDIAN = REGISTRY.register("diamond_infused_obsidian", DiamondinfusedobsidianBlock::new);
+		AMETHYST_INFUSED_OBSIDIAN = REGISTRY.register("amethyst_infused_obsidian", AmethystinfusedobsidianBlock::new);
+		TITANE_INFUSED_OBSIDIAN = REGISTRY.register("titane_infused_obsidian", TitaneinfusedobsidianBlock::new);
+		PALADIUM_INFUSED_OBSIDIAN = REGISTRY.register("paladium_infused_obsidian", PaladiuminfusedobsidianBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

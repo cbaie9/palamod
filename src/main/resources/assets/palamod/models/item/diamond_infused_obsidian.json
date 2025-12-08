@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/paladiuminfusedobsidian",
+  "parent": "palamod:block/diamond_infused_obsidian",
   "display": {
     "thirdperson": {
       "rotation": [

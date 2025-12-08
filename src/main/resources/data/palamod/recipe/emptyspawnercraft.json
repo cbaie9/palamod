@@ -17,7 +17,7 @@
       "item": "palamod:compressed_paladium"
     },
     "d": {
-      "item": "palamod:brokenspawner"
+      "item": "palamod:broken_spawner"
     },
     "e": {
       "item": "palamod:guardian_stone"
@@ -27,7 +27,7 @@
     }
   },
   "result": {
-    "id": "palamod:emptyspawner",
+    "id": "palamod:empty_spawner",
     "count": 1
   }
 }

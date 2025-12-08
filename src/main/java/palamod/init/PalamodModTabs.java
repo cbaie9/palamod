@@ -293,9 +293,15 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
 				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
-				tabData.accept(PalamodModItems.CAVERNEHAMMER.get());
-				tabData.accept(PalamodModBlocks.BROKENSPAWNER.get().asItem());
-				tabData.accept(PalamodModItems.EMPTYSPAWNERITEM.get());
+				tabData.accept(PalamodModBlocks.SPAWN_CONTROLLER.get().asItem());
+				tabData.accept(PalamodModBlocks.EMPTY_SPAWNER.get().asItem());
+				tabData.accept(PalamodModBlocks.BROKEN_SPAWNER.get().asItem());
+				tabData.accept(PalamodModItems.CAVERNE_HAMMER.get());
+				tabData.accept(PalamodModBlocks.DIAMOND_INFUSED_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.TITANE_INFUSED_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModItems.EMPTY_SPAWNER_ITEM.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -572,9 +578,9 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.GLUEBALLPATTERN.get());
 				tabData.accept(PalamodModBlocks.EXTRACTOR.get().asItem());
 				tabData.accept(PalamodModBlocks.FLOWERTOTEM.get().asItem());
-				tabData.accept(PalamodModItems.CAVERNEHAMMER.get());
-				tabData.accept(PalamodModBlocks.BROKENSPAWNER.get().asItem());
-				tabData.accept(PalamodModItems.EMPTYSPAWNERITEM.get());
+				tabData.accept(PalamodModBlocks.BROKEN_SPAWNER.get().asItem());
+				tabData.accept(PalamodModItems.CAVERNE_HAMMER.get());
+				tabData.accept(PalamodModItems.EMPTY_SPAWNER_ITEM.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

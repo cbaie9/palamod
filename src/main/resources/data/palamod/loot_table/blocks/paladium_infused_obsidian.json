@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/amethystinfusedobsidian",
+  "random_sequence": "palamod:blocks/paladium_infused_obsidian",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:amethystinfusedobsidian"
+          "name": "palamod:paladium_infused_obsidian"
         }
       ]
     }

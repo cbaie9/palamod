@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/paladiuminfusedobsidian",
+  "random_sequence": "palamod:blocks/empty_spawner",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:paladiuminfusedobsidian"
+          "name": "palamod:empty_spawner"
         }
       ]
     }

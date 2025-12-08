@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/spawncontroller",
+  "parent": "palamod:block/broken_spawner",
   "display": {
     "thirdperson": {
       "rotation": [
