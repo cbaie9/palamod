@@ -40987,6 +40987,36 @@
           "src/main/java/palamod/procedures/PotgenchantProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Debugcheckstructurespawnercontroller",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debugcheckstructurespawnercontroller",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/DebugcheckstructurespawnercontrollerProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
