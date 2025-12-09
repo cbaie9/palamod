@@ -1,5 +1,7 @@
 package palamod.item;
 
+import palamod.procedures.PotgenchantProcedure;
+
 import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
@@ -95,6 +97,7 @@ public class CreativepotgItem extends TieredItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		itemstack.hurtAndBreak(1, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
+		PotgenchantProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return true;
 	}
 

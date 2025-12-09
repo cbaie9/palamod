@@ -429,6 +429,127 @@ public class Gcodev6Procedure {
 				}
 			}
 		}
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:potg_can_be_enchanted")))) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get() && !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0)) {
+				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get()).getDisplayName().getString())) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_fusion", 1);
+							_blockEntity.getPersistentData().putString("llic_fusion", (new ItemStack(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get()).getDisplayName().getString()));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				} else {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_fusion", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer_fusion") + 1));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				}
+				if (10 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer_fusion")) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_fusion", 0);
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
+					{
+						final String _tagName = "modifier";
+						final boolean _tagValue = true;
+						CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
+					}
+					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg"))),
+							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) + 1);
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						int _slotid = 4;
+						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+						_stk.shrink(1);
+						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = output_fusion.copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot(5, _setstack);
+					}
+				}
+			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.BIG_HOLE_UPGRADE.get() && (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0)
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
+							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0
+							&& 1 == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
+									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))))) {
+				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.BIG_HOLE_UPGRADE.get()).getDisplayName().getString())) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_fusion", 1);
+							_blockEntity.getPersistentData().putString("llic_fusion", (new ItemStack(PalamodModItems.BIG_HOLE_UPGRADE.get()).getDisplayName().getString()));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				} else {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_fusion", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer_fusion") + 1));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				}
+				if (10 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer_fusion")) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_fusion", 0);
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
+					{
+						final String _tagName = "modifier";
+						final boolean _tagValue = true;
+						CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
+					}
+					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))),
+							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) + 1);
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						int _slotid = 4;
+						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+						_stk.shrink(1);
+						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = output_fusion.copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot(5, _setstack);
+					}
+				}
+			}
+		}
 		world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
 	}
 

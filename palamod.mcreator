@@ -40953,6 +40953,40 @@
           "src/main/java/palamod/procedures/CheckstructurespawnercontrollerProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Potgenchant",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potgenchant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PotgenchantProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -43219,6 +43253,13 @@
       "Blocks.STONE#3",
       "Blocks.STONE#1",
       "Blocks.TUFF"
+    ],
+    "ITEMS:mod:potg_can_be_enchanted": [
+      "CUSTOM:Pickaxeofthegodslv17",
+      "CUSTOM:Pickaxeofthegodslv18",
+      "CUSTOM:Pickaxeofthegodslv19",
+      "CUSTOM:Pickaxeofthegodslv20",
+      "CUSTOM:Creativepotg"
     ]
   },
   "tab_element_order": {

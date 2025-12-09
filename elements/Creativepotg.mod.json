@@ -8,6 +8,7 @@
     "texture": "potg_of_20",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Creative Pickaxe of the gods",
     "specialInformation": {
       "fixedValue": [
@@ -24,11 +25,17 @@
     "enchantability": 1000,
     "damageVsEntity": 6.5,
     "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "Potgenchant"
+    }
   }
 }
