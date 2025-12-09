@@ -28,8 +28,8 @@ public class GetxpminerbreakblocklogicProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		File jobs = new File("");
 		double nloop = 0;
-		jobs = GetjobsfileProcedure.execute(entity);
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))
+		jobs = ReadcacheProcedure.execute(entity);
+		if (jobs.exists() && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0) {
 			for (int index0 = 0; index0 < 9; index0++) {
@@ -43,7 +43,7 @@ public class GetxpminerbreakblocklogicProcedure {
 						}
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						if (BuiltInRegistries.BLOCK.get(ResourceLocation.parse((main.get((9 == nloop ? "block_hammer_cache_" + nloop : "block")).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState()
+						if (BuiltInRegistries.BLOCK.get(ResourceLocation.parse((main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState()
 								.is(BlockTags.create(ResourceLocation.parse("palamod:miner_dx_xp")))) {
 							output = true;
 							break;
