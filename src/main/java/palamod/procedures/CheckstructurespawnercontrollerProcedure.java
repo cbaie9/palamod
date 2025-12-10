@@ -7,9 +7,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
 
 public class CheckstructurespawnercontrollerProcedure {
-	public static boolean execute(LevelAccessor world, double x, double y, double z) {
-		boolean output = false;
+	public static double execute(LevelAccessor world, double x, double y, double z) {
 		double num = 0;
+		double output = 0;
 		num = 1;
 		for (int index0 = 0; index0 < 2; index0++) {
 			if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get() && (world.getBlockState(BlockPos.containing(x, y - 2, z))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get()
@@ -33,7 +33,17 @@ public class CheckstructurespawnercontrollerProcedure {
 					&& (world.getBlockState(BlockPos.containing(x - 2 * num, y - 2, z + 3 * num))).getBlock() == Blocks.SOUL_SAND && (world.getBlockState(BlockPos.containing(x - 2 * num, y - 2, z - 3 * num))).getBlock() == Blocks.SOUL_SAND
 					&& (world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z - 3 * num))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get()
 					&& (world.getBlockState(BlockPos.containing(x - 2 * num, y - 2, z - 3 * num))).getBlock() == Blocks.SOUL_SAND) {
-				output = true;
+				if ((world.getBlockState(BlockPos.containing(x, y - 1, z - 3 * num))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get() && (world.getBlockState(BlockPos.containing(x, y - 2, z - 3 * num))).getBlock() == Blocks.OBSIDIAN
+						&& (world.getBlockState(BlockPos.containing(x, y - 1, z + 3 * num))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()
+						&& (world.getBlockState(BlockPos.containing(x, y - 2, z + 3 * num))).getBlock() == Blocks.OBSIDIAN
+						&& (world.getBlockState(BlockPos.containing(x - 6 * num, y - 1, z + 3 * num))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()
+						&& (world.getBlockState(BlockPos.containing(x - 6 * num, y - 2, z + 3 * num))).getBlock() == Blocks.OBSIDIAN
+						&& (world.getBlockState(BlockPos.containing(x - 6 * num, y - 1, z - 3 * num))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()
+						&& (world.getBlockState(BlockPos.containing(x - 6 * num, y - 2, z - 3 * num))).getBlock() == Blocks.OBSIDIAN) {
+					output = 2;
+				} else {
+					output = 1;
+				}
 				break;
 			} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get() && (world.getBlockState(BlockPos.containing(x, y - 2, z))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get()
 					&& (world.getBlockState(BlockPos.containing(x, y - 2, z - 1 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x, y - 2, z - 2 * num))).getBlock() == Blocks.OBSIDIAN
@@ -56,8 +66,17 @@ public class CheckstructurespawnercontrollerProcedure {
 					&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z - 2 * num))).getBlock() == Blocks.SOUL_SAND && (world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z - 2 * num))).getBlock() == Blocks.SOUL_SAND
 					&& (world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z - 3 * num))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get()
 					&& (world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z - 2 * num))).getBlock() == Blocks.SOUL_SAND) {
-				output = true;
-				break;
+				if ((world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 3 * num, y - 1, z))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()
+						&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z))).getBlock() == Blocks.OBSIDIAN
+						&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 1, z))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()
+						&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+						&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 1, z - 6 * num))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()
+						&& (world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+						&& (world.getBlockState(BlockPos.containing(x - 3 * num, y - 1, z - 6 * num))).getBlock() == PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN.get()) {
+					output = 2;
+				} else {
+					output = 1;
+				}
 			}
 			num = -1;
 		}

@@ -34603,16 +34603,7 @@
         "files": [
           "src/main/java/palamod/procedures/DropitemcraftProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -40948,7 +40939,7 @@
             "type": "world"
           }
         ],
-        "return_type": "logic",
+        "return_type": "number",
         "files": [
           "src/main/java/palamod/procedures/CheckstructurespawnercontrollerProcedure.java"
         ]

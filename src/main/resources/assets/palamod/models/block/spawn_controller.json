@@ -4,5 +4,5 @@
     "all": "palamod:block/spawn_controller",
     "particle": "palamod:block/spawn_controller"
   },
-  "render_type": "cutout"
+  "render_type": "cutout_mipped"
 }
