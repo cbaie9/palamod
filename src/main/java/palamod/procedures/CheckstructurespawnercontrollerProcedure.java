@@ -56,7 +56,46 @@ public class CheckstructurespawnercontrollerProcedure {
 							&& (world.getBlockState(BlockPos.containing(x - 8 * num, y - 1, z + 2 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 8 * num, y - 2, z + 2 * num))).getBlock() == Blocks.OBSIDIAN
 							&& (world.getBlockState(BlockPos.containing(x - 8 * num, y, z - 2 * num))).getBlock() == PalamodModBlocks.TITANE_INFUSED_OBSIDIAN.get()
 							&& (world.getBlockState(BlockPos.containing(x - 8 * num, y - 1, z - 2 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 8 * num, y - 2, z - 2 * num))).getBlock() == Blocks.OBSIDIAN) {
-						output = 3;
+						if ((world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z - 4 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x + 3 * num, y - 1, z - 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y, z - 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y + 1, z - 4 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z - 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x + 3 * num, y - 1, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y + 1, z - 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x + 1 * num, y - 2, z - 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x + 1 * num, y - 1, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 1 * num, y, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 1 * num, y + 1, z - 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x + 1 * num, y - 2, z + 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x + 1 * num, y - 1, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 1 * num, y, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 1 * num, y + 1, z + 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z + 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x + 3 * num, y - 1, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y + 1, z + 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y - 2, z + 4 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x + 3 * num, y - 1, z + 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y, z + 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x + 3 * num, y + 1, z + 4 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x - 7 * num, y - 2, z + 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 7 * num, y - 1, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 7 * num, y, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 7 * num, y + 1, z + 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y - 2, z + 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 9 * num, y - 1, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y, z + 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y + 1, z + 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y - 2, z + 4 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 9 * num, y - 1, z + 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y, z + 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y + 1, z + 4 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y - 2, z - 4 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 9 * num, y - 1, z - 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y, z - 4 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y + 1, z - 4 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y - 2, z - 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 9 * num, y - 1, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 9 * num, y + 1, z - 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()
+								&& (world.getBlockState(BlockPos.containing(x - 7 * num, y - 2, z - 6 * num))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 7 * num, y - 1, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 7 * num, y, z - 6 * num))).getBlock() == Blocks.OBSIDIAN
+								&& (world.getBlockState(BlockPos.containing(x - 7 * num, y + 1, z - 6 * num))).getBlock() == PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get()) {
+							output = 4;
+						} else {
+							output = 3;
+						}
 					} else {
 						output = 2;
 					}
