@@ -60,7 +60,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("soul") + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("zombie") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("zombie"))) {
@@ -71,7 +71,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("soul") + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("skeleton") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("creeper"))) {
@@ -82,7 +82,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("soul") + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("creeper") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("spawner_type")).equals("creeper"))) {
@@ -93,7 +93,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("souls") + 0);
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("soul") + 0);
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}

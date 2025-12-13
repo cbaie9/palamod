@@ -5,7 +5,6 @@ package palamod.init;
 
 import palamod.procedures.GetxpfrombottleProcedure;
 import palamod.procedures.GetjobsfrombottleProcedure;
-import palamod.procedures.GetcustomunixProcedure;
 
 import palamod.item.inventory.VoidstoneInventoryCapability;
 import palamod.item.inventory.PaladiumphoneInventoryCapability;
@@ -1297,7 +1296,6 @@ public class PalamodModItems {
 			event.enqueueWork(() -> {
 				ItemProperties.register(XPBOTTLE.get(), ResourceLocation.parse("palamod:xpbottle_xp"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetxpfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(XPBOTTLE.get(), ResourceLocation.parse("palamod:xpbottle_jobs_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetjobsfrombottleProcedure.execute(itemStackToRender));
-				ItemProperties.register(EMPTY_SPAWNER_ITEM.get(), ResourceLocation.parse("palamod:empty_spawner_item_souls"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetcustomunixProcedure.execute());
 			});
 		}
 	}

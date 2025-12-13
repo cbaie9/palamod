@@ -1559,5 +1559,9 @@
   "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
   "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
   "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
-  "item.palamod.empty_spawner_item": "Empty spawner item"
+  "item.palamod.empty_spawner_item": "Empty spawner item",
+  "palamod.item.cavern_hammer_souls": "",
+  "palamod.item.cavern_hammer_no_soul": "",
+  "palamod.item.cavern_hammer_tier": "",
+  "palamod.item.custom_spawner_display": ""
 }

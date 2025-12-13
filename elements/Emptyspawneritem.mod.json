@@ -6,11 +6,7 @@
     "texture": "empty_broken_mob_spawner",
     "customModelName": "Normal",
     "guiTexture": "",
-    "customProperties": {
-      "souls": {
-        "name": "Getcustomunix"
-      }
-    },
+    "customProperties": {},
     "states": [],
     "animations": [],
     "name": "Empty spawner item",
@@ -39,7 +35,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettooptipcavernhammer"
     },
     "glowCondition": {
       "fixedValue": false

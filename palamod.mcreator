@@ -39300,8 +39300,8 @@
       "registry_name": "caverne_hammer",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/CavernehammerItem.java",
-          "src/main/resources/assets/palamod/models/item/caverne_hammer.json"
+          "src/main/resources/assets/palamod/models/item/caverne_hammer.json",
+          "src/main/java/palamod/item/CavernehammerItem.java"
         ]
       }
     },
@@ -39527,8 +39527,8 @@
       "registry_name": "empty_spawner_item",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/empty_spawner_item.json",
-          "src/main/java/palamod/item/EmptyspawneritemItem.java"
+          "src/main/java/palamod/item/EmptyspawneritemItem.java",
+          "src/main/resources/assets/palamod/models/item/empty_spawner_item.json"
         ]
       }
     },
@@ -41006,6 +41006,25 @@
         ],
         "files": [
           "src/main/java/palamod/procedures/DebugcheckstructurespawnercontrollerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Gettooptipcavernhammer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gettooptipcavernhammer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GettooptipcavernhammerProcedure.java"
         ]
       }
     }
@@ -45375,7 +45394,11 @@
       "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
       "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
       "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
-      "item.palamod.empty_spawner_item": "Empty spawner item"
+      "item.palamod.empty_spawner_item": "Empty spawner item",
+      "palamod.item.cavern_hammer_souls": "souls",
+      "palamod.item.cavern_hammer_no_soul": "No souls is contained in this spawner",
+      "palamod.item.cavern_hammer_tier": "Tier",
+      "palamod.item.custom_spawner_display": "Custom Spawner"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -46938,7 +46961,11 @@
       "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
       "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
       "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
-      "item.palamod.empty_spawner_item": "Empty spawner item"
+      "item.palamod.empty_spawner_item": "Empty spawner item",
+      "palamod.item.cavern_hammer_souls": "âmes",
+      "palamod.item.cavern_hammer_no_soul": "Il n\u0027y a pas d\u0027âme dans ce spawner",
+      "palamod.item.cavern_hammer_tier": "Tier",
+      "palamod.item.custom_spawner_display": "Spawner customisée"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -48501,7 +48528,11 @@
       "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
       "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
       "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
-      "item.palamod.empty_spawner_item": "Empty spawner item"
+      "item.palamod.empty_spawner_item": "Empty spawner item",
+      "palamod.item.cavern_hammer_souls": "",
+      "palamod.item.cavern_hammer_no_soul": "",
+      "palamod.item.cavern_hammer_tier": "",
+      "palamod.item.custom_spawner_display": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50064,7 +50095,11 @@
       "block.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
       "block.palamod.titane_infused_obsidian": "Titane infused obsidian",
       "block.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
-      "item.palamod.empty_spawner_item": "Empty spawner item"
+      "item.palamod.empty_spawner_item": "Empty spawner item",
+      "palamod.item.cavern_hammer_souls": "",
+      "palamod.item.cavern_hammer_no_soul": "",
+      "palamod.item.cavern_hammer_tier": "",
+      "palamod.item.custom_spawner_display": ""
     }
   },
   "metadata": {
