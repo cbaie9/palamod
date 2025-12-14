@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:endiumshovel",
     "palamod:paladium_green_block",
     "palamod:endium_ingot",
     "palamod:paladium_block"

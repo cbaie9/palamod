@@ -1,4 +1,18 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "palamod:greenpaladiumarmor_boots",
+    "palamod:paladiumarmorcustom_5_boots",
+    "palamod:paladiumarmorcustom_1_boots",
+    "palamod:paladiumarmorcustom_6_boots",
+    "palamod:paladiumarmorcustom_2_boots",
+    "palamod:paladiumarmorcustom_8_boots",
+    "palamod:paladiumarmorcustom_9_boots",
+    "palamod:paladium_armor_boots",
+    "palamod:paladiumarmorcustom_3_boots",
+    "palamod:paladiumarmorcustom_7_boots",
+    "palamod:paladiumarmorcustom_10_boots",
+    "palamod:paladiumarmorcustom_4_boots",
+    "palamod:endium_armor_boots"
+  ]
 }
