@@ -246,7 +246,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "TAG:mod:cobblebreaker_upgrades"
           },
           "disablePlacement": {
             "fixedValue": false

@@ -126,7 +126,7 @@
     },
     "hasInventory": true,
     "guiBoundTo": "Cobblebreakergui",
-    "openGUIOnRightClick": false,
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -138,12 +138,14 @@
       4,
       5,
       6,
-      7,
-      8
+      7
     ],
     "inventoryInSlotIDs": [
       0
     ],
+    "inventoryAutomationPlaceCondition": {
+      "name": "CobblebreakerInventorySlotAutomationPlaceCondition"
+    },
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -152,9 +154,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "Opencobblebreaker"
-    },
     "onBlockAdded": {
       "name": "Cobblebreakersetup"
     },

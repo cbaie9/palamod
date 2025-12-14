@@ -2,6 +2,8 @@ package palamod.block.entity;
 
 import palamod.world.inventory.CobblebreakerguiMenu;
 
+import palamod.procedures.CobblebreakerInventorySlotAutomationPlaceConditionProcedure;
+
 import palamod.init.PalamodModBlockEntities;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -118,8 +120,6 @@ public class CobblebreakerBlockEntity extends RandomizableContainerBlockEntity i
 			return false;
 		if (index == 7)
 			return false;
-		if (index == 8)
-			return false;
 		return true;
 	}
 
@@ -130,7 +130,7 @@ public class CobblebreakerBlockEntity extends RandomizableContainerBlockEntity i
 
 	@Override
 	public boolean canPlaceItemThroughFace(int index, ItemStack itemstack, @Nullable Direction direction) {
-		return this.canPlaceItem(index, itemstack);
+		return this.canPlaceItem(index, itemstack) && CobblebreakerInventorySlotAutomationPlaceConditionProcedure.execute(itemstack, index);
 	}
 
 	@Override
