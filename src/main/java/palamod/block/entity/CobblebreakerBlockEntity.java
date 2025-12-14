@@ -118,6 +118,8 @@ public class CobblebreakerBlockEntity extends RandomizableContainerBlockEntity i
 			return false;
 		if (index == 7)
 			return false;
+		if (index == 8)
+			return false;
 		return true;
 	}
 
