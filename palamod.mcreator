@@ -43328,7 +43328,65 @@
       "CUSTOM:Cobblebreakeramethystupgrade",
       "CUSTOM:Cobblebreakertitaneupgrade",
       "CUSTOM:Cobblebreakerpaladiumupgrade"
-    ]
+    ],
+    "ITEMS:mod:grinder_type_ingot": [
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:Endiumnugget",
+      "CUSTOM:Paladiumrawore",
+      "CUSTOM:Greenpaladiumrawore"
+    ],
+    "ITEMS:mod:grinder_type_block": [
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumGreenblock",
+      "CUSTOM:EndiumIngot"
+    ],
+    "ITEMS:mod:grinder_type_armor_helmet": [
+      "CUSTOM:PaladiumArmor.helmet",
+      "CUSTOM:Greenpaladiumarmor.helmet",
+      "CUSTOM:Paladiumarmorcustom1.helmet",
+      "CUSTOM:Paladiumarmorcustom2.helmet",
+      "CUSTOM:Paladiumarmorcustom4.helmet",
+      "CUSTOM:Paladiumarmorcustom3.helmet",
+      "CUSTOM:Paladiumarmorcustom5.helmet",
+      "CUSTOM:Paladiumarmorcustom6.helmet",
+      "CUSTOM:Paladiumarmorcustom7.helmet",
+      "CUSTOM:Paladiumarmorcustom8.helmet",
+      "CUSTOM:Paladiumarmorcustom9.helmet",
+      "CUSTOM:Paladiumarmorcustom10.helmet",
+      "CUSTOM:EndiumArmor.helmet"
+    ],
+    "ITEMS:mod:grinder_type_armor_chestplate": [
+      "CUSTOM:PaladiumArmor.body",
+      "CUSTOM:Greenpaladiumarmor.body",
+      "CUSTOM:Paladiumarmorcustom1.body",
+      "CUSTOM:Paladiumarmorcustom2.body",
+      "CUSTOM:Paladiumarmorcustom3.body",
+      "CUSTOM:Paladiumarmorcustom4.body",
+      "CUSTOM:Paladiumarmorcustom5.body",
+      "CUSTOM:Paladiumarmorcustom6.body",
+      "CUSTOM:Paladiumarmorcustom7.body",
+      "CUSTOM:Paladiumarmorcustom8.body",
+      "CUSTOM:Paladiumarmorcustom9.body",
+      "CUSTOM:Paladiumarmorcustom10.body",
+      "CUSTOM:EndiumArmor.body"
+    ],
+    "ITEMS:mod:grinder_type_armor_legging": [
+      "CUSTOM:PaladiumArmor.legs",
+      "CUSTOM:Greenpaladiumarmor.legs",
+      "CUSTOM:Paladiumarmorcustom1.legs",
+      "CUSTOM:Paladiumarmorcustom2.legs",
+      "CUSTOM:Paladiumarmorcustom3.legs",
+      "CUSTOM:Paladiumarmorcustom4.legs",
+      "CUSTOM:Paladiumarmorcustom5.legs",
+      "CUSTOM:Paladiumarmorcustom6.legs",
+      "CUSTOM:Paladiumarmorcustom7.legs",
+      "CUSTOM:Paladiumarmorcustom8.legs",
+      "CUSTOM:Paladiumarmorcustom9.legs",
+      "CUSTOM:Paladiumarmorcustom10.legs",
+      "CUSTOM:EndiumArmor.boots"
+    ],
+    "ITEMS:mod:grinder_type_armor_boots": []
   },
   "tab_element_order": {
     "CUSTOM:Palamod": [
