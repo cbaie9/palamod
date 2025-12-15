@@ -1564,5 +1564,6 @@
   "palamod.item.cavern_hammer_souls": "souls",
   "palamod.item.cavern_hammer_no_soul": "No souls is contained in this spawner",
   "palamod.item.cavern_hammer_tier": "Tier",
-  "palamod.item.custom_spawner_display": "Custom Spawner"
+  "palamod.item.custom_spawner_display": "Custom Spawner",
+  "palamod.procedure.spawner_tier": "Spawner Controller t"
 }

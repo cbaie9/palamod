@@ -1563,5 +1563,6 @@
   "palamod.item.cavern_hammer_souls": "",
   "palamod.item.cavern_hammer_no_soul": "",
   "palamod.item.cavern_hammer_tier": "",
-  "palamod.item.custom_spawner_display": ""
+  "palamod.item.custom_spawner_display": "",
+  "palamod.procedure.spawner_tier": ""
 }

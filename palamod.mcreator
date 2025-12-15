@@ -39359,11 +39359,12 @@
       "registry_name": "spawn_controller",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/spawn_controller.json",
-          "src/main/resources/data/palamod/loot_table/blocks/spawn_controller.json",
           "src/main/resources/assets/palamod/models/item/spawn_controller.json",
           "src/main/resources/assets/palamod/blockstates/spawn_controller.json",
-          "src/main/java/palamod/block/SpawncontrollerBlock.java"
+          "src/main/java/palamod/block/entity/SpawncontrollerBlockEntity.java",
+          "src/main/resources/data/palamod/loot_table/blocks/spawn_controller.json",
+          "src/main/java/palamod/block/SpawncontrollerBlock.java",
+          "src/main/resources/assets/palamod/models/block/spawn_controller.json"
         ]
       }
     },
@@ -41048,6 +41049,80 @@
         "return_type": "logic",
         "files": [
           "src/main/java/palamod/procedures/CobblebreakerInventorySlotAutomationPlaceConditionProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Spawncontrollertick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawncontrollertick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SpawncontrollertickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Spawnercontrollerguitexttier",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawnercontrollerguitexttier",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/SpawnercontrollerguitexttierProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Spawncontrollergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawncontrollergui",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/gui/SpawncontrollerguiScreen.java",
+          "src/main/java/palamod/world/inventory/SpawncontrollerguiMenu.java"
         ]
       }
     }
@@ -45653,7 +45728,8 @@
       "palamod.item.cavern_hammer_souls": "souls",
       "palamod.item.cavern_hammer_no_soul": "No souls is contained in this spawner",
       "palamod.item.cavern_hammer_tier": "Tier",
-      "palamod.item.custom_spawner_display": "Custom Spawner"
+      "palamod.item.custom_spawner_display": "Custom Spawner",
+      "palamod.procedure.spawner_tier": "Spawner Controller t"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -47220,7 +47296,8 @@
       "palamod.item.cavern_hammer_souls": "âmes",
       "palamod.item.cavern_hammer_no_soul": "Il n\u0027y a pas d\u0027âme dans ce spawner",
       "palamod.item.cavern_hammer_tier": "Tier",
-      "palamod.item.custom_spawner_display": "Spawner customisée"
+      "palamod.item.custom_spawner_display": "Spawner customisée",
+      "palamod.procedure.spawner_tier": "Controller de spanwer t"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -48787,7 +48864,8 @@
       "palamod.item.cavern_hammer_souls": "",
       "palamod.item.cavern_hammer_no_soul": "",
       "palamod.item.cavern_hammer_tier": "",
-      "palamod.item.custom_spawner_display": ""
+      "palamod.item.custom_spawner_display": "",
+      "palamod.procedure.spawner_tier": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50354,7 +50432,8 @@
       "palamod.item.cavern_hammer_souls": "",
       "palamod.item.cavern_hammer_no_soul": "",
       "palamod.item.cavern_hammer_tier": "",
-      "palamod.item.custom_spawner_display": ""
+      "palamod.item.custom_spawner_display": "",
+      "palamod.procedure.spawner_tier": ""
     }
   },
   "metadata": {

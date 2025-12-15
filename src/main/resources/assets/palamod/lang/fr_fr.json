@@ -1563,5 +1563,6 @@
   "palamod.item.cavern_hammer_souls": "âmes",
   "palamod.item.cavern_hammer_no_soul": "Il n\u0027y a pas d\u0027âme dans ce spawner",
   "palamod.item.cavern_hammer_tier": "Tier",
-  "palamod.item.custom_spawner_display": "Spawner customisée"
+  "palamod.item.custom_spawner_display": "Spawner customisée",
+  "palamod.procedure.spawner_tier": "Controller de spanwer t"
 }
