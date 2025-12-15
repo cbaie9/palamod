@@ -4685,12 +4685,12 @@
       "registry_name": "grinder_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/grinder_block.json",
-          "src/main/java/palamod/block/entity/GrinderblockBlockEntity.java",
-          "src/main/resources/data/palamod/loot_table/blocks/grinder_block.json",
           "src/main/resources/assets/palamod/models/item/grinder_block.json",
+          "src/main/resources/assets/palamod/blockstates/grinder_block.json",
           "src/main/java/palamod/block/GrinderblockBlock.java",
-          "src/main/resources/assets/palamod/models/block/grinder_block.json"
+          "src/main/resources/data/palamod/loot_table/blocks/grinder_block.json",
+          "src/main/resources/assets/palamod/models/block/grinder_block.json",
+          "src/main/java/palamod/block/entity/GrinderblockBlockEntity.java"
         ]
       }
     },
@@ -4829,9 +4829,9 @@
       "registry_name": "grindergui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/world/inventory/GrinderguiMenu.java",
+          "src/main/java/palamod/client/gui/GrinderguiScreen.java",
           "src/main/java/palamod/network/GrinderguiButtonMessage.java",
-          "src/main/java/palamod/client/gui/GrinderguiScreen.java"
+          "src/main/java/palamod/world/inventory/GrinderguiMenu.java"
         ]
       }
     },
@@ -6098,11 +6098,11 @@
       "registry_name": "tcv_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/tcv_2.json",
-          "src/main/java/palamod/block/Tcv2Block.java",
-          "src/main/resources/assets/palamod/models/block/tcv_2.json",
-          "src/main/resources/assets/palamod/blockstates/tcv_2.json",
           "src/main/java/palamod/block/entity/Tcv2BlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/tcv_2.json",
+          "src/main/java/palamod/block/Tcv2Block.java",
+          "src/main/resources/assets/palamod/blockstates/tcv_2.json",
+          "src/main/resources/assets/palamod/models/item/tcv_2.json",
           "src/main/resources/data/palamod/loot_table/blocks/tcv_2.json"
         ]
       }
@@ -43543,6 +43543,18 @@
       "CUSTOM:Endiumshovel",
       "CUSTOM:Endiumslab",
       "CUSTOM:Endiumstairs"
+    ],
+    "ITEMS:mod:grinder_craft_noclear": [
+      "CUSTOM:Axepartern",
+      "CUSTOM:Pickaxepatern",
+      "CUSTOM:Broadswordpatern",
+      "CUSTOM:Blockpatern",
+      "CUSTOM:Fastswordpatern",
+      "CUSTOM:Ingotpatern",
+      "CUSTOM:Hammerpatern",
+      "CUSTOM:Swordpatern",
+      "CUSTOM:Shovelpatern",
+      "CUSTOM:Socketpatern"
     ]
   },
   "tab_element_order": {
@@ -50347,15 +50359,15 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
-      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
       "src/main/java/palamod/init/PalamodModFluidTypes.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
       "src/main/java/palamod/init/PalamodModMenus.java",
-      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
@@ -50371,18 +50383,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/java/palamod/init/PalamodModEntityRenderers.java",
-      "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/resources/palamod.mixins.json",
-      "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModTabs.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModModels.java",
-      "src/main/resources/assets/palamod/sounds.json"
+      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/PalamodMod.java",
+      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/palamod.mixins.json"
     ]
   },
   "foldersRoot": {

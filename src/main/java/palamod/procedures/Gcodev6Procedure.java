@@ -149,17 +149,21 @@ public class Gcodev6Procedure {
 						_setstack.setCount((int) (input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()));
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						int _slotid = 0;
-						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-						_stk.shrink(1);
-						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					if (!(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:grinder_craft_noclear")))) {
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+							int _slotid = 0;
+							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+							_stk.shrink(1);
+							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+						}
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						int _slotid = 1;
-						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-						_stk.shrink(1);
-						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					if (!(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:grinder_craft_noclear")))) {
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+							int _slotid = 1;
+							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+							_stk.shrink(1);
+							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+						}
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
