@@ -10,7 +10,7 @@ import net.minecraft.core.BlockPos;
 
 public class SpawncontrollertickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") > 6) {
+		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") > 24) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
