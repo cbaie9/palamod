@@ -37,12 +37,6 @@ description="Un univers alternatif o\u00F9 la v5 \u00E0 bien chang\u00E9 de vers
     side="BOTH"
 
 
-[[dependencies.palamod]]
-    modId="jei"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 
 # Start of user code block dependencies configuration

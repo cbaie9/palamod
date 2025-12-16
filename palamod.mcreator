@@ -41177,6 +41177,20 @@
           "src/main/java/palamod/item/SpawnerupgradelootingItem.java"
         ]
       }
+    },
+    {
+      "name": "Divby2check",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divby_2check",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/Divby2checkProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
