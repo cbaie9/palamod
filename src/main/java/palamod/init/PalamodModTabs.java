@@ -302,6 +302,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.TITANE_INFUSED_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModItems.EMPTY_SPAWNER_ITEM.get());
+				tabData.accept(PalamodModItems.SPAWNERUPGRADESLIME.get());
+				tabData.accept(PalamodModItems.SPAWNERUPGRADESPEED.get());
+				tabData.accept(PalamodModItems.SPAWNERUPGRADEMORE.get());
+				tabData.accept(PalamodModItems.SPAWNERUPGRADELOOTING.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {

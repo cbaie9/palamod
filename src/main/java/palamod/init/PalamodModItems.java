@@ -647,6 +647,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TITANE_INFUSED_OBSIDIAN;
 	public static final DeferredItem<Item> PALADIUM_INFUSED_OBSIDIAN;
 	public static final DeferredItem<Item> EMPTY_SPAWNER_ITEM;
+	public static final DeferredItem<Item> SPAWNERUPGRADESLIME;
+	public static final DeferredItem<Item> SPAWNERUPGRADESPEED;
+	public static final DeferredItem<Item> SPAWNERUPGRADEMORE;
+	public static final DeferredItem<Item> SPAWNERUPGRADELOOTING;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1258,6 +1262,10 @@ public class PalamodModItems {
 		TITANE_INFUSED_OBSIDIAN = block(PalamodModBlocks.TITANE_INFUSED_OBSIDIAN);
 		PALADIUM_INFUSED_OBSIDIAN = block(PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN);
 		EMPTY_SPAWNER_ITEM = REGISTRY.register("empty_spawner_item", EmptyspawneritemItem::new);
+		SPAWNERUPGRADESLIME = REGISTRY.register("spawnerupgradeslime", SpawnerupgradeslimeItem::new);
+		SPAWNERUPGRADESPEED = REGISTRY.register("spawnerupgradespeed", SpawnerupgradespeedItem::new);
+		SPAWNERUPGRADEMORE = REGISTRY.register("spawnerupgrademore", SpawnerupgrademoreItem::new);
+		SPAWNERUPGRADELOOTING = REGISTRY.register("spawnerupgradelooting", SpawnerupgradelootingItem::new);
 	}
 
 	// Start of user code block custom items

@@ -1564,5 +1564,9 @@
   "palamod.item.cavern_hammer_no_soul": "Il n\u0027y a pas d\u0027âme dans ce spawner",
   "palamod.item.cavern_hammer_tier": "Tier",
   "palamod.item.custom_spawner_display": "Spawner customisée",
-  "palamod.procedure.spawner_tier": "Controller de spanwer t"
+  "palamod.procedure.spawner_tier": "Controller de spanwer t",
+  "item.palamod.spawnerupgradeslime": "Spawner upgrade slime",
+  "item.palamod.spawnerupgradespeed": "Spawner upgrade speed",
+  "item.palamod.spawnerupgrademore": "Spawner upgrade more",
+  "item.palamod.spawnerupgradelooting": "Spawner upgrade looting"
 }

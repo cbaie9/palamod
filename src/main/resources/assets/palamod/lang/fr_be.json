@@ -1564,5 +1564,9 @@
   "palamod.item.cavern_hammer_no_soul": "",
   "palamod.item.cavern_hammer_tier": "",
   "palamod.item.custom_spawner_display": "",
-  "palamod.procedure.spawner_tier": ""
+  "palamod.procedure.spawner_tier": "",
+  "item.palamod.spawnerupgradeslime": "Spawner upgrade slime",
+  "item.palamod.spawnerupgradespeed": "Spawner upgrade speed",
+  "item.palamod.spawnerupgrademore": "Spawner upgrade more",
+  "item.palamod.spawnerupgradelooting": "Spawner upgrade looting"
 }
