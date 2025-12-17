@@ -1,5 +1,7 @@
 package palamod.world.inventory;
 
+import palamod.procedures.SpawnerupgrademorecheckProcedure;
+
 import palamod.init.PalamodModMenus;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -19,7 +21,9 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
@@ -93,21 +97,41 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 			private final int slot = 0;
 			private int x = SpawncontrollerguiMenu.this.x;
 			private int y = SpawncontrollerguiMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return stack.is(ItemTags.create(ResourceLocation.parse("palamod:spawner_upgrades")));
+			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 80, 28) {
 			private final int slot = 1;
 			private int x = SpawncontrollerguiMenu.this.x;
 			private int y = SpawncontrollerguiMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return stack.is(ItemTags.create(ResourceLocation.parse("palamod:spawner_upgrades")));
+			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 62, 46) {
 			private final int slot = 2;
 			private int x = SpawncontrollerguiMenu.this.x;
 			private int y = SpawncontrollerguiMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !SpawnerupgrademorecheckProcedure.execute(world, x, y, z, itemstack);
+			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 80, 46) {
 			private final int slot = 3;
 			private int x = SpawncontrollerguiMenu.this.x;
 			private int y = SpawncontrollerguiMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !SpawnerupgrademorecheckProcedure.execute(world, x, y, z, itemstack);
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
@@ -228,12 +252,16 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 2)
+						continue;
 					playerIn.drop(internal.getStackInSlot(j), false);
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 2)
+						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(i, ItemStack.EMPTY);

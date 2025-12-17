@@ -31,7 +31,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "TAG:mod:spawner_upgrades"
           },
           "disablePlacement": {
             "fixedValue": false
@@ -50,7 +50,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "TAG:mod:spawner_upgrades"
           },
           "disablePlacement": {
             "fixedValue": false
@@ -72,13 +72,14 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "Spawnerupgrademorecheck"
           },
           "id": 2,
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 187,
           "y": 82,
           "locked": false
@@ -91,7 +92,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "Spawnerupgrademorecheck"
           },
           "id": 3,
           "disablePickup": {
