@@ -39380,6 +39380,7 @@
           "src/main/resources/assets/palamod/models/block/empty_spawner.json",
           "src/main/java/palamod/block/EmptyspawnerBlock.java",
           "src/main/resources/assets/palamod/blockstates/empty_spawner.json",
+          "src/main/java/palamod/block/entity/EmptyspawnerBlockEntity.java",
           "src/main/resources/assets/palamod/models/item/empty_spawner.json"
         ]
       }
@@ -41224,6 +41225,70 @@
         "return_type": "logic",
         "files": [
           "src/main/java/palamod/procedures/SpawnerupgrademorecheckProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Placeemptyspawner",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "placeemptyspawner",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PlaceemptyspawnerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Getspawnerbackitem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getspawnerbackitem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetspawnerbackitemProcedure.java"
         ]
       }
     }

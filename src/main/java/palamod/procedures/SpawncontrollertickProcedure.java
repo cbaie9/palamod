@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModBlocks;
+
 import palamod.PalamodMod;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,7 +12,8 @@ import net.minecraft.core.BlockPos;
 
 public class SpawncontrollertickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") > 24) {
+		world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
+		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") > 120) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -22,9 +25,7 @@ public class SpawncontrollertickProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			PalamodMod.LOGGER.info("Message");
 		} else {
-			PalamodMod.LOGGER.info("2");
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -36,7 +37,25 @@ public class SpawncontrollertickProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
+		int horizontalRadiusHemiTop = (int) 4 - 1;
+		int verticalRadiusHemiTop = (int) 3;
+		int yIterationsHemiTop = verticalRadiusHemiTop;
+		for (int i = 0; i < yIterationsHemiTop; i++) {
+			if (i == verticalRadiusHemiTop) {
+				continue;
+			}
+			for (int xi = -horizontalRadiusHemiTop; xi <= horizontalRadiusHemiTop; xi++) {
+				for (int zi = -horizontalRadiusHemiTop; zi <= horizontalRadiusHemiTop; zi++) {
+					double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (i * i) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
+							+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
+					if (distanceSq <= 1.0) {
+						if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.EMPTY_SPAWNER.get()) {
+							PalamodMod.LOGGER.debug("\u00A8SPW");
+						}
+					}
+				}
+			}
+		}
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
