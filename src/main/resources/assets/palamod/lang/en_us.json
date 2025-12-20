@@ -1569,5 +1569,6 @@
   "item.palamod.spawnerupgradeslime": "Spawner upgrade slime",
   "item.palamod.spawnerupgradespeed": "Spawner upgrade speed",
   "item.palamod.spawnerupgrademore": "Spawner upgrade more",
-  "item.palamod.spawnerupgradelooting": "Spawner upgrade looting"
+  "item.palamod.spawnerupgradelooting": "Spawner upgrade looting",
+  "palamod.procedure.empty_spawner": "Due to the instant break, there is a bug where the spawner does not the information from the block before it break, to prevent this problem, please put you in survival gamemode and break this block normally with a pîckaxe"
 }

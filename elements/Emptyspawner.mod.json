@@ -23,9 +23,9 @@
     },
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -139,11 +139,14 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "GetinfoPlaceemptyspawneret"
+    },
     "onDestroyedByPlayer": {
       "name": "Getspawnerbackitem"
     },
-    "onDestroyedByExplosion": {
-      "name": "Getspawnerbackitem"
+    "onStartToDestroy": {
+      "name": "Cachespawner"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

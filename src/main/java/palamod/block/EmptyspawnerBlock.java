@@ -1,9 +1,15 @@
 package palamod.block;
 
 import palamod.procedures.GetspawnerbackitemProcedure;
+import palamod.procedures.GetinfoPlaceemptyspawneretProcedure;
+import palamod.procedures.CachespawnerProcedure;
 
 import palamod.block.entity.EmptyspawnerBlockEntity;
 
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -13,17 +19,18 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
+import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class EmptyspawnerBlock extends Block implements EntityBlock {
 	public EmptyspawnerBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -32,16 +39,35 @@ public class EmptyspawnerBlock extends Block implements EntityBlock {
 	}
 
 	@Override
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
+	}
+
+	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		GetspawnerbackitemProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		GetspawnerbackitemProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
-		super.wasExploded(world, pos, e);
-		GetspawnerbackitemProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
+		super.attack(blockstate, world, pos, entity);
+		CachespawnerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+	}
+
+	@Override
+	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
+		super.useWithoutItem(blockstate, world, pos, entity, hit);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		double hitX = hit.getLocation().x;
+		double hitY = hit.getLocation().y;
+		double hitZ = hit.getLocation().z;
+		Direction direction = hit.getDirection();
+		GetinfoPlaceemptyspawneretProcedure.execute(world, x, y, z);
+		return InteractionResult.SUCCESS;
 	}
 
 	@Override

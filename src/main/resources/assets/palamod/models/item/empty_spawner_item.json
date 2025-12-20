@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "palamod:custom/empty_spawner_item",
   "textures": {
-    "layer0": "palamod:item/empty_broken_mob_spawner"
+    "0": "palamod:block/empty_broken_mob_spawner",
+    "particle": "palamod:item/empty_broken_mob_spawner"
   }
 }

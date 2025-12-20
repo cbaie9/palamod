@@ -9,5 +9,5 @@
     "west": "palamod:block/regular_spawner_side",
     "particle": "palamod:block/spawner_top"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }
