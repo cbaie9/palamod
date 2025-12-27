@@ -142,7 +142,16 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#is_overworld"
+        "value": "deep_ocean"
+      },
+      {
+        "value": "deep_cold_ocean"
+      },
+      {
+        "value": "deep_frozen_ocean"
+      },
+      {
+        "value": "deep_lukewarm_ocean"
       }
     ],
     "blocksToReplace": [
@@ -160,9 +169,9 @@
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 2,
+    "frequencyPerChunks": 1,
     "frequencyOnChunk": 2,
-    "minGenerateHeight": 25,
-    "maxGenerateHeight": 255
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 20
   }
 }
