@@ -73,10 +73,10 @@ public class SpawncontrollertickProcedure {
 									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
 										tier_witch = tier_witch + 1;
 										nb_witch = nb_witch + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
 										tier_witch = tier_witch + 2;
 										nb_witch = nb_witch + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
 										tier_witch = tier_witch + 3;
 										nb_witch = nb_witch + 1;
 									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
@@ -88,10 +88,10 @@ public class SpawncontrollertickProcedure {
 									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
 										tier_zombie = tier_zombie + 1;
 										nb_zombie = nb_zombie + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
 										tier_zombie = tier_zombie + 2;
 										nb_zombie = nb_zombie + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
 										tier_zombie = tier_zombie + 3;
 										nb_zombie = nb_zombie + 1;
 									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
@@ -103,10 +103,10 @@ public class SpawncontrollertickProcedure {
 									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
 										tier_skelette = tier_skelette + 1;
 										nb_skeleton = nb_skeleton + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
 										tier_skelette = tier_skelette + 2;
 										nb_skeleton = nb_skeleton + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
 										tier_zombie = tier_skelette + 3;
 										nb_skeleton = nb_skeleton + 1;
 									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
@@ -118,18 +118,18 @@ public class SpawncontrollertickProcedure {
 									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
 										tier_creeper = tier_creeper + 1;
 										nb_creeper = nb_creeper + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
 										tier_creeper = tier_creeper + 2;
 										nb_creeper = nb_creeper + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
+									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
 										tier_creeper = tier_creeper + 3;
 										nb_creeper = nb_creeper + 1;
 									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
 										tier_creeper = tier_creeper + 4;
 										nb_creeper = nb_creeper + 1;
 									}
+									nb_spawn = nb_spawn + 1;
 								}
-								nb_spawn = nb_spawn + 1;
 							}
 						}
 					}
@@ -167,6 +167,8 @@ public class SpawncontrollertickProcedure {
 			}
 			i_loop_speed_upgrades = 0;
 			for (int index0 = 0; index0 < 4; index0++) {
+				PalamodMod.LOGGER.info(itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) i_loop_speed_upgrades).copy());
+				PalamodMod.LOGGER.info(i_loop_speed_upgrades);
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -197,6 +199,10 @@ public class SpawncontrollertickProcedure {
 				}
 				i_loop_speed_upgrades = i_loop_speed_upgrades + 1;
 			}
+			PalamodMod.LOGGER.info(("nb zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") + "\n" + "tier zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "nb spawner"
+					+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") + "\n" + "calc"
+					+ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "slime"
+					+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") + "\n" + "speed" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades")));
 		} else {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -210,13 +216,16 @@ public class SpawncontrollertickProcedure {
 			}
 		}
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") == 480 / (1 + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades"))) {
-			PalamodMod.LOGGER.info(("" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner")));
-			PalamodMod.LOGGER.info(("" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie")));
 			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") > 0) {
-				for (int index2 = 0; index2 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner"); index2++) {
-					if (Math.random() < 1
-							- (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch")) / (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch") * 4)) {
-						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
+				for (int index2 = 0; index2 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch"); index2++) {
+					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch")) / 4) {
+						if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3) {
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = EntityType.SLIME.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
+							}
+						} else {
 							if (world instanceof ServerLevel _level) {
 								Entity entityToSpawn = EntityType.WITCH.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
 								if (entityToSpawn != null) {
@@ -224,8 +233,9 @@ public class SpawncontrollertickProcedure {
 							}
 						}
 					}
-					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper"))
-							/ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper") * 4)) {
+				}
+				for (int index3 = 0; index3 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper"); index3++) {
+					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper")) / 4) {
 						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
 							if (world instanceof ServerLevel _level) {
 								Entity entityToSpawn = EntityType.CREEPER.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -240,8 +250,9 @@ public class SpawncontrollertickProcedure {
 							}
 						}
 					}
-					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton"))
-							/ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton") * 4)) {
+				}
+				for (int index4 = 0; index4 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton"); index4++) {
+					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton")) / 4) {
 						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
 							if (world instanceof ServerLevel _level) {
 								Entity entityToSpawn = EntityType.SKELETON.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -256,8 +267,9 @@ public class SpawncontrollertickProcedure {
 							}
 						}
 					}
-					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie"))
-							/ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") * 4)) {
+				}
+				for (int index5 = 0; index5 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie"); index5++) {
+					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie")) {
 						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
 							if (world instanceof ServerLevel _level) {
 								Entity entityToSpawn = EntityType.ZOMBIE.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
