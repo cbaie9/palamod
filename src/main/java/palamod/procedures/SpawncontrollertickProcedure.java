@@ -219,68 +219,36 @@ public class SpawncontrollertickProcedure {
 			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") > 0) {
 				for (int index2 = 0; index2 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch"); index2++) {
 					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch")) / 4) {
-						if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.SLIME.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
-							}
-						} else {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.WITCH.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = EntityType.WITCH.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
 							}
 						}
 					}
 				}
 				for (int index3 = 0; index3 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper"); index3++) {
 					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper")) / 4) {
-						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.CREEPER.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
-							}
-						} else {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.SLIME.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = EntityType.CREEPER.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
 							}
 						}
 					}
 				}
 				for (int index4 = 0; index4 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton"); index4++) {
 					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton")) / 4) {
-						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.SKELETON.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
-							}
-						} else {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.SLIME.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = EntityType.SKELETON.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
 							}
 						}
 					}
 				}
 				for (int index5 = 0; index5 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie"); index5++) {
 					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie")) {
-						if (!(Math.random() < 1 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") / 3)) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.ZOMBIE.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
-							}
-						} else {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = EntityType.SLIME.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-								}
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = EntityType.ZOMBIE.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
 							}
 						}
 					}
