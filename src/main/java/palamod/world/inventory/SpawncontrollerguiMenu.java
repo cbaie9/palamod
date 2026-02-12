@@ -2,8 +2,11 @@ package palamod.world.inventory;
 
 import palamod.procedures.SpawnerupgrademorecheckProcedure;
 
+import palamod.network.SpawncontrollerguiSlotMessage;
+
 import palamod.init.PalamodModMenus;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -36,7 +39,7 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 5)
+			if (!this.containsKey(key) && this.size() >= 7)
 				return null;
 			return super.put(key, value);
 		}
@@ -99,6 +102,12 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 			private int y = SpawncontrollerguiMenu.this.y;
 
 			@Override
+			public void setChanged() {
+				super.setChanged();
+				slotChanged(0, 0, 0);
+			}
+
+			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return stack.is(ItemTags.create(ResourceLocation.parse("palamod:spawner_upgrades")));
 			}
@@ -107,6 +116,12 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 			private final int slot = 1;
 			private int x = SpawncontrollerguiMenu.this.x;
 			private int y = SpawncontrollerguiMenu.this.y;
+
+			@Override
+			public void setChanged() {
+				super.setChanged();
+				slotChanged(1, 0, 0);
+			}
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -119,6 +134,12 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 			private int y = SpawncontrollerguiMenu.this.y;
 
 			@Override
+			public void setChanged() {
+				super.setChanged();
+				slotChanged(2, 0, 0);
+			}
+
+			@Override
 			public boolean mayPlace(ItemStack itemstack) {
 				return !SpawnerupgrademorecheckProcedure.execute(world, x, y, z, itemstack);
 			}
@@ -127,6 +148,12 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 			private final int slot = 3;
 			private int x = SpawncontrollerguiMenu.this.x;
 			private int y = SpawncontrollerguiMenu.this.y;
+
+			@Override
+			public void setChanged() {
+				super.setChanged();
+				slotChanged(3, 0, 0);
+			}
 
 			@Override
 			public boolean mayPlace(ItemStack itemstack) {
@@ -267,6 +294,13 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
+		}
+	}
+
+	private void slotChanged(int slotid, int ctype, int meta) {
+		if (this.world != null && this.world.isClientSide()) {
+			PacketDistributor.sendToServer(new SpawncontrollerguiSlotMessage(slotid, x, y, z, ctype, meta));
+			SpawncontrollerguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 

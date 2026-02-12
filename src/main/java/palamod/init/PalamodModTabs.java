@@ -306,6 +306,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.SPAWNERUPGRADESPEED.get());
 				tabData.accept(PalamodModItems.SPAWNERUPGRADEMORE.get());
 				tabData.accept(PalamodModItems.SPAWNERUPGRADELOOTING.get());
+				tabData.accept(PalamodModBlocks.FROZENOBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.KNOCKBACKOBSIDIAN.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -494,6 +496,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
 				tabData.accept(PalamodModItems.UNCLAIMFINDERBLUE.get());
+				tabData.accept(PalamodModBlocks.FROZENOBSIDIAN.get().asItem());
+				tabData.accept(PalamodModBlocks.KNOCKBACKOBSIDIAN.get().asItem());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {
@@ -604,11 +608,26 @@ public class PalamodModTabs {
 			tabData.accept(PalamodModBlocks.ENDIUMFLOWERON.get().asItem());
 			tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
 			tabData.accept(PalamodModBlocks.PALADIUMFLOWER.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_LEAVES.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(PalamodModItems.PIGARMOR_HELMET.get());
 			tabData.accept(PalamodModItems.PIGARMOR_CHESTPLATE.get());
 			tabData.accept(PalamodModItems.PIGARMOR_LEGGINGS.get());
 			tabData.accept(PalamodModItems.PIGARMOR_BOOTS.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+			tabData.accept(PalamodModBlocks.DEAD_LOG.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_WOOD.get().asItem());
+			tabData.accept(PalamodModBlocks.STRIPPED_DEAD_LOG.get().asItem());
+			tabData.accept(PalamodModBlocks.STRIPPED_DEAD_WOOD.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_PLANKS.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_STAIRS.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_SLAB.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_FENCE.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_FENCE_GATE.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_DOOR.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_TRAPDOOR.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_PRESSURE_PLATE.get().asItem());
+			tabData.accept(PalamodModBlocks.DEAD_BUTTON.get().asItem());
 		}
 	}
 }

@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.world.inventory.Palaerror0005Menu;
 
+import palamod.init.PalamodModGameRules;
+
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -33,41 +35,44 @@ public class MoneypanelchangeProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
-		if (entity instanceof Player _player)
-			_player.closeContainer();
-		if (entity.hasPermissions(4)) {
-			main_money.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(money);
-					fileWriter.write(mainGSONBuilderVariable.toJson(main_money));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
+		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+			if (entity.hasPermissions(4)) {
+				main_money.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(money);
+						fileWriter.write(mainGSONBuilderVariable.toJson(main_money));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+					}
+				}
+			} else {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("Palaerror0005");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new Palaerror0005Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		} else {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Palaerror0005");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new Palaerror0005Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
-			}
 		}
 	}
 

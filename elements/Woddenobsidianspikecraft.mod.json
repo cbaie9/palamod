@@ -13,7 +13,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "Blocks.OBSIDIAN"
+        "value": "TAG:neoforge:obsidian"
       },
       {
         "value": "CUSTOM:Woddenspike"

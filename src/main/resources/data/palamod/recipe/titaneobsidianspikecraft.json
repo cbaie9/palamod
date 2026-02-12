@@ -3,7 +3,7 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "minecraft:obsidian"
+      "tag": "neoforge:obsidian"
     },
     {
       "item": "palamod:titane_spike"

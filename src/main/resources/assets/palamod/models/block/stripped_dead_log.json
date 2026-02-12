@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/stripped_dead_log_top",
+    "up": "palamod:block/stripped_dead_log_top",
+    "north": "palamod:block/stripped_dead_log",
+    "east": "palamod:block/stripped_dead_log",
+    "south": "palamod:block/stripped_dead_log",
+    "west": "palamod:block/stripped_dead_log",
+    "particle": "palamod:block/stripped_dead_log_top"
+  },
+  "render_type": "solid"
+}

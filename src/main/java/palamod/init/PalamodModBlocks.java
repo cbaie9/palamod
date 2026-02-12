@@ -287,6 +287,22 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> AMETHYST_INFUSED_OBSIDIAN;
 	public static final DeferredBlock<Block> TITANE_INFUSED_OBSIDIAN;
 	public static final DeferredBlock<Block> PALADIUM_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> DEAD_LOG;
+	public static final DeferredBlock<Block> DEAD_WOOD;
+	public static final DeferredBlock<Block> STRIPPED_DEAD_LOG;
+	public static final DeferredBlock<Block> STRIPPED_DEAD_WOOD;
+	public static final DeferredBlock<Block> DEAD_PLANKS;
+	public static final DeferredBlock<Block> DEAD_LEAVES;
+	public static final DeferredBlock<Block> DEAD_STAIRS;
+	public static final DeferredBlock<Block> DEAD_SLAB;
+	public static final DeferredBlock<Block> DEAD_FENCE;
+	public static final DeferredBlock<Block> DEAD_FENCE_GATE;
+	public static final DeferredBlock<Block> DEAD_DOOR;
+	public static final DeferredBlock<Block> DEAD_TRAPDOOR;
+	public static final DeferredBlock<Block> DEAD_PRESSURE_PLATE;
+	public static final DeferredBlock<Block> DEAD_BUTTON;
+	public static final DeferredBlock<Block> FROZENOBSIDIAN;
+	public static final DeferredBlock<Block> KNOCKBACKOBSIDIAN;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -561,6 +577,22 @@ public class PalamodModBlocks {
 		AMETHYST_INFUSED_OBSIDIAN = REGISTRY.register("amethyst_infused_obsidian", AmethystinfusedobsidianBlock::new);
 		TITANE_INFUSED_OBSIDIAN = REGISTRY.register("titane_infused_obsidian", TitaneinfusedobsidianBlock::new);
 		PALADIUM_INFUSED_OBSIDIAN = REGISTRY.register("paladium_infused_obsidian", PaladiuminfusedobsidianBlock::new);
+		DEAD_LOG = REGISTRY.register("dead_log", DeadLogBlock::new);
+		DEAD_WOOD = REGISTRY.register("dead_wood", DeadWoodBlock::new);
+		STRIPPED_DEAD_LOG = REGISTRY.register("stripped_dead_log", StrippedDeadLogBlock::new);
+		STRIPPED_DEAD_WOOD = REGISTRY.register("stripped_dead_wood", StrippedDeadWoodBlock::new);
+		DEAD_PLANKS = REGISTRY.register("dead_planks", DeadPlanksBlock::new);
+		DEAD_LEAVES = REGISTRY.register("dead_leaves", DeadLeavesBlock::new);
+		DEAD_STAIRS = REGISTRY.register("dead_stairs", DeadStairsBlock::new);
+		DEAD_SLAB = REGISTRY.register("dead_slab", DeadSlabBlock::new);
+		DEAD_FENCE = REGISTRY.register("dead_fence", DeadFenceBlock::new);
+		DEAD_FENCE_GATE = REGISTRY.register("dead_fence_gate", DeadFenceGateBlock::new);
+		DEAD_DOOR = REGISTRY.register("dead_door", DeadDoorBlock::new);
+		DEAD_TRAPDOOR = REGISTRY.register("dead_trapdoor", DeadTrapdoorBlock::new);
+		DEAD_PRESSURE_PLATE = REGISTRY.register("dead_pressure_plate", DeadPressurePlateBlock::new);
+		DEAD_BUTTON = REGISTRY.register("dead_button", DeadButtonBlock::new);
+		FROZENOBSIDIAN = REGISTRY.register("frozenobsidian", FrozenobsidianBlock::new);
+		KNOCKBACKOBSIDIAN = REGISTRY.register("knockbackobsidian", KnockbackobsidianBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

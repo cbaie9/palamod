@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "palamod:dead_trapdoor",
     "palamod:erabletrapdoor"
   ]
 }

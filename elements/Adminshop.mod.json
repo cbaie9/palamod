@@ -5,6 +5,6 @@
     "commandName": "adminshop",
     "type": "STANDARD",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"69\" y=\"34\"><next><block type=\"call_procedure\"><field name=\"procedure\">Adminshop_open</field></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"69\" y=\"34\"><next><block type=\"call_procedure\"><field name=\"procedure\">Adminshopopencommand</field></block></next></block></xml>"
   }
 }

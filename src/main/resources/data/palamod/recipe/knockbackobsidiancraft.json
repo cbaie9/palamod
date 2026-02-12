@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "neoforge:obsidian"
+    },
+    "b": {
+      "item": "palamod:knockback_orb"
+    }
+  },
+  "result": {
+    "id": "palamod:knockbackobsidian",
+    "count": 1
+  }
+}

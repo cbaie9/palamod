@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "palamod:block/frozen_obsi",
+    "particle": "palamod:block/frozen_obsi"
+  },
+  "render_type": "solid"
+}

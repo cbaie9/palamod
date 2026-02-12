@@ -1,19 +1,13 @@
 package palamod.procedures;
 
-import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
-
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.common.extensions.ILevelExtension;
-import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
@@ -38,7 +32,7 @@ public class SpawncontrollertickProcedure {
 		PalamodMod.LOGGER.info(("" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick")));
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") % 120 == 0) {
 			PalamodMod.LOGGER.info("chtick");
-			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") > 400) {
+			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") >= 800) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -165,40 +159,6 @@ public class SpawncontrollertickProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			i_loop_speed_upgrades = 0;
-			for (int index0 = 0; index0 < 4; index0++) {
-				PalamodMod.LOGGER.info(itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) i_loop_speed_upgrades).copy());
-				PalamodMod.LOGGER.info(i_loop_speed_upgrades);
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putDouble("nb_speed_upgrades",
-								(((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) i_loop_speed_upgrades).copy()).getItem() == PalamodModItems.SPAWNERUPGRADESPEED.get() ? 1 : 0)
-										+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades")));
-					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				i_loop_speed_upgrades = i_loop_speed_upgrades + 1;
-			}
-			i_loop_speed_upgrades = 0;
-			for (int index1 = 0; index1 < 4; index1++) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putDouble("nb_slime_upgrades",
-								(((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) i_loop_speed_upgrades).copy()).getItem() == PalamodModItems.SPAWNERUPGRADESLIME.get() ? 1 : 0)
-										+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades")));
-					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				i_loop_speed_upgrades = i_loop_speed_upgrades + 1;
-			}
 			PalamodMod.LOGGER.info(("nb zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") + "\n" + "tier zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "nb spawner"
 					+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") + "\n" + "calc"
 					+ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "slime"
@@ -215,9 +175,9 @@ public class SpawncontrollertickProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") == 480 / (1 + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades"))) {
+		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") >= 800 * (1 - 0.1 * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades"))) {
 			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") > 0) {
-				for (int index2 = 0; index2 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch"); index2++) {
+				for (int index0 = 0; index0 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch"); index0++) {
 					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch")) / 4) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.WITCH.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -226,7 +186,7 @@ public class SpawncontrollertickProcedure {
 						}
 					}
 				}
-				for (int index3 = 0; index3 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper"); index3++) {
+				for (int index1 = 0; index1 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper"); index1++) {
 					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper")) / 4) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.CREEPER.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -235,7 +195,7 @@ public class SpawncontrollertickProcedure {
 						}
 					}
 				}
-				for (int index4 = 0; index4 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton"); index4++) {
+				for (int index2 = 0; index2 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton"); index2++) {
 					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton")) / 4) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.SKELETON.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -244,11 +204,24 @@ public class SpawncontrollertickProcedure {
 						}
 					}
 				}
-				for (int index5 = 0; index5 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie"); index5++) {
+				for (int index3 = 0; index3 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie"); index3++) {
 					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie")) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.ZOMBIE.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
+							}
+						}
+					}
+				}
+				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") > 0) {
+					for (int index4 = 0; index4 < (int) Math.ceil(0.25 * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner")); index4++) {
+						if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") * 4)
+								/ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton")
+										+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper") + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch"))) {
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = EntityType.SLIME.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
 							}
 						}
 					}
@@ -269,14 +242,5 @@ public class SpawncontrollertickProcedure {
 		if (blockEntity != null)
 			return blockEntity.getPersistentData().getString(tag);
 		return "";
-	}
-
-	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
-		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
-		}
-		return ItemStack.EMPTY;
 	}
 }

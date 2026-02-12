@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.world.inventory.Palaerror0005Menu;
 
+import palamod.init.PalamodModGameRules;
+
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
@@ -39,71 +41,75 @@ public class MoneyaddprocessProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
-		if (entity.hasPermissions(4)) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
+		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
+			if (entity.hasPermissions(4)) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						money_main.addProperty("money", (money_main.get("money").getAsDouble() + DoubleArgumentType.getDouble(arguments, "money")));
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
-					bufferedReader.close();
-					money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					money_main.addProperty("money", (money_main.get("money").getAsDouble() + DoubleArgumentType.getDouble(arguments, "money")));
-				} catch (IOException e) {
-					e.printStackTrace();
 				}
-			}
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(money);
-					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(money);
+						fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
 					}
-					bufferedReader.close();
-					money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"" + Component.translatable("palamod.procedure.money_current").getString()
-										+ money_main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
-				} catch (IOException e) {
-					e.printStackTrace();
+				}
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"" + Component.translatable("palamod.procedure.money_current").getString()
+											+ money_main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			} else {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("Palaerror0005");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new Palaerror0005Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		} else {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				_ent.openMenu(new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("Palaerror0005");
-					}
-
-					@Override
-					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-						return false;
-					}
-
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new Palaerror0005Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
-			}
+			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_money").getString());
 		}
 	}
 

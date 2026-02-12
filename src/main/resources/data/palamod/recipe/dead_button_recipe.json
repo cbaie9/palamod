@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "palamod:dead_planks"
+    }
+  ],
+  "result": {
+    "id": "palamod:dead_button",
+    "count": 1
+  }
+}

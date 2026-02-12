@@ -651,6 +651,22 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> SPAWNERUPGRADESPEED;
 	public static final DeferredItem<Item> SPAWNERUPGRADEMORE;
 	public static final DeferredItem<Item> SPAWNERUPGRADELOOTING;
+	public static final DeferredItem<Item> DEAD_LOG;
+	public static final DeferredItem<Item> DEAD_WOOD;
+	public static final DeferredItem<Item> STRIPPED_DEAD_LOG;
+	public static final DeferredItem<Item> STRIPPED_DEAD_WOOD;
+	public static final DeferredItem<Item> DEAD_PLANKS;
+	public static final DeferredItem<Item> DEAD_LEAVES;
+	public static final DeferredItem<Item> DEAD_STAIRS;
+	public static final DeferredItem<Item> DEAD_SLAB;
+	public static final DeferredItem<Item> DEAD_FENCE;
+	public static final DeferredItem<Item> DEAD_FENCE_GATE;
+	public static final DeferredItem<Item> DEAD_DOOR;
+	public static final DeferredItem<Item> DEAD_TRAPDOOR;
+	public static final DeferredItem<Item> DEAD_PRESSURE_PLATE;
+	public static final DeferredItem<Item> DEAD_BUTTON;
+	public static final DeferredItem<Item> FROZENOBSIDIAN;
+	public static final DeferredItem<Item> KNOCKBACKOBSIDIAN;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1266,6 +1282,22 @@ public class PalamodModItems {
 		SPAWNERUPGRADESPEED = REGISTRY.register("spawnerupgradespeed", SpawnerupgradespeedItem::new);
 		SPAWNERUPGRADEMORE = REGISTRY.register("spawnerupgrademore", SpawnerupgrademoreItem::new);
 		SPAWNERUPGRADELOOTING = REGISTRY.register("spawnerupgradelooting", SpawnerupgradelootingItem::new);
+		DEAD_LOG = block(PalamodModBlocks.DEAD_LOG);
+		DEAD_WOOD = block(PalamodModBlocks.DEAD_WOOD);
+		STRIPPED_DEAD_LOG = block(PalamodModBlocks.STRIPPED_DEAD_LOG);
+		STRIPPED_DEAD_WOOD = block(PalamodModBlocks.STRIPPED_DEAD_WOOD);
+		DEAD_PLANKS = block(PalamodModBlocks.DEAD_PLANKS);
+		DEAD_LEAVES = block(PalamodModBlocks.DEAD_LEAVES);
+		DEAD_STAIRS = block(PalamodModBlocks.DEAD_STAIRS);
+		DEAD_SLAB = block(PalamodModBlocks.DEAD_SLAB);
+		DEAD_FENCE = block(PalamodModBlocks.DEAD_FENCE);
+		DEAD_FENCE_GATE = block(PalamodModBlocks.DEAD_FENCE_GATE);
+		DEAD_DOOR = doubleBlock(PalamodModBlocks.DEAD_DOOR);
+		DEAD_TRAPDOOR = block(PalamodModBlocks.DEAD_TRAPDOOR);
+		DEAD_PRESSURE_PLATE = block(PalamodModBlocks.DEAD_PRESSURE_PLATE);
+		DEAD_BUTTON = block(PalamodModBlocks.DEAD_BUTTON);
+		FROZENOBSIDIAN = block(PalamodModBlocks.FROZENOBSIDIAN);
+		KNOCKBACKOBSIDIAN = block(PalamodModBlocks.KNOCKBACKOBSIDIAN, new Item.Properties().fireResistant());
 	}
 
 	// Start of user code block custom items

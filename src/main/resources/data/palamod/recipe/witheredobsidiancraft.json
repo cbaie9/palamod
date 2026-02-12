@@ -10,7 +10,7 @@
       "item": "minecraft:wither_rose"
     },
     "b": {
-      "item": "minecraft:obsidian"
+      "tag": "neoforge:obsidian"
     }
   },
   "result": {

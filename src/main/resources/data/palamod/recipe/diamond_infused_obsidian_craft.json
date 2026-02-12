@@ -11,7 +11,7 @@
       "item": "minecraft:diamond"
     },
     "b": {
-      "item": "minecraft:obsidian"
+      "tag": "neoforge:obsidian"
     },
     "c": {
       "item": "palamod:paladium_block"

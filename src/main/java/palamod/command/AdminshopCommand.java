@@ -1,6 +1,6 @@
 package palamod.command;
 
-import palamod.procedures.Adminshop_openProcedure;
+import palamod.procedures.AdminshopopencommandProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -31,7 +31,7 @@ public class AdminshopCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					Adminshop_openProcedure.execute(world, x, y, z, entity);
+					AdminshopopencommandProcedure.execute(world, x, y, z, entity);
 					return 0;
 				}));
 	}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bab",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:packed_ice"
+    },
+    "b": {
+      "tag": "neoforge:obsidian"
+    }
+  },
+  "result": {
+    "id": "palamod:frozenobsidian",
+    "count": 1
+  }
+}

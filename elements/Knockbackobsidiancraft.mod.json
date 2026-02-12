@@ -1,0 +1,49 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "CUSTOM:Knockbackorb"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Knockbackobsidian"
+    },
+    "name": "knockbackobsidiancraft",
+    "namespace": "mod"
+  }
+}

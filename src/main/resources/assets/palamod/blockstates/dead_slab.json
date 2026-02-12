@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "palamod:block/dead_slab"
+    },
+    "type=top": {
+      "model": "palamod:block/dead_slab_top"
+    },
+    "type=double": {
+      "model": "palamod:block/dead_slab_full"
+    }
+  }
+}

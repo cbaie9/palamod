@@ -3,6 +3,7 @@ package palamod.block;
 import palamod.procedures.RenforcedobsidianOnBlockRightClickedProcedure;
 import palamod.procedures.GettextcraftableviajobsProcedure;
 import palamod.procedures.CompactedobsidianOnBlockRightClickedProcedure;
+import palamod.procedures.CompactedobsidianBlockDestroyedByExplosionProcedure;
 
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
@@ -55,14 +56,14 @@ public class CompactedobsidianBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 
 	@Override
 	public void wasExploded(Level world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
-		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		CompactedobsidianBlockDestroyedByExplosionProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

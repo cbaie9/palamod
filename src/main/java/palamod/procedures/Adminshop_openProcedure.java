@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.world.inventory.AdminshopmenuMenu;
 
+import palamod.init.PalamodModGameRules;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -19,24 +21,26 @@ public class Adminshop_openProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof ServerPlayer _ent) {
-			BlockPos _bpos = BlockPos.containing(x, y, z);
-			_ent.openMenu(new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Adminshopmenu");
-				}
+		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				_ent.openMenu(new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("Adminshopmenu");
+					}
 
-				@Override
-				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-					return false;
-				}
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
+					}
 
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new AdminshopmenuMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-				}
-			}, _bpos);
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new AdminshopmenuMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
 		}
 	}
 }

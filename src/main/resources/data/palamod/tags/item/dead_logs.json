@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:stripped_dead_log",
+    "palamod:dead_log",
+    "palamod:dead_wood",
+    "palamod:stripped_dead_wood"
+  ]
+}

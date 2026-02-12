@@ -39,7 +39,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Compacted obsidian",
+    "name": "Big obsidian",
     "specialInformation": {
       "fixedValue": [],
       "name": "Gettextcraftableviajobs"
@@ -147,7 +147,7 @@
       "name": "CompactedobsidianOnBlockRightClicked"
     },
     "onDestroyedByExplosion": {
-      "name": "CompactedobsidianOnBlockRightClicked"
+      "name": "CompactedobsidianBlockDestroyedByExplosion"
     },
     "generateFeature": false,
     "restrictionBiomes": [],
