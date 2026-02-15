@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "ostrya_craft_group",
   "category": "building",
   "pattern": [
     "aa",

@@ -1,0 +1,39 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "top": "minecraft:anvil_top",
+        "body": "minecraft:anvil"
+      }
+    },
+    "paladium": {
+      "name": "paladium",
+      "map": {
+        "top": "anvil_paladium_tool_top",
+        "body": "anvil_paladium_tool_base"
+      }
+    },
+    "money": {
+      "name": "money",
+      "map": {
+        "top": "anvil_money_top",
+        "body": "anvil_money_base"
+      }
+    },
+    "titane": {
+      "name": "titane",
+      "map": {
+        "top": "anvil_titane_tool_top",
+        "body": "anvil_titane_tool_base"
+      }
+    },
+    "amethyst": {
+      "name": "amethyst",
+      "map": {
+        "top": "anvil_amethyst_tool_top",
+        "body": "anvil_amethyst_tool_base"
+      }
+    }
+  }
+}

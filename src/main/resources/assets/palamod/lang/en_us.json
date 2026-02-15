@@ -1596,5 +1596,10 @@
   "palamod.procedure.gamerule_disable_money": "The Money system of the Palamod has been disabled, if it shouldn\u0027t be the case, please contact administrators",
   "palamod.procedure.gamerule_disable_jobs": "The Jobs system of the Palamod has been disabled, if it shouldn\u0027t be the case, please contact administrators",
   "palamod.procedure.gamerule_disable_adminshop": "The Adminshop system of the Palamod has been disabled due to the Money system being disabled, if the money system shouldn\u0027t be disabled, please contact administrators",
-  "key.categories.palamod": "Palamod Keybindings"
+  "key.categories.palamod": "Palamod Keybindings",
+  "block.palamod.amethystanvil": "Amethyst anvil",
+  "gamerule.palamoddebuglogs.description": "Show debug log from palamod",
+  "gamerule.palamoddebuglogs": "Palamod debug loggs",
+  "block.palamod.titaneanvil": "Titane anvil",
+  "block.palamod.paladiumanvil": "Titane anvil"
 }

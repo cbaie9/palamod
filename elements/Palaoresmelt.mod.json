@@ -4,9 +4,16 @@
   "definition": {
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
-    "cookingBookCategory": "MISC",
+    "group": "green_paladium_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:PaladiumGreenore"
+      },
+      {
+        "value": "CUSTOM:PaladiumGreeningot"
+      }
+    ],
+    "cookingBookCategory": "BLOCKS",
     "xpReward": 0.7,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",

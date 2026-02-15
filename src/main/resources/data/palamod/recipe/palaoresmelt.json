@@ -1,6 +1,7 @@
 {
   "type": "minecraft:smelting",
-  "category": "misc",
+  "group": "green_paladium_craft_group",
+  "category": "blocks",
   "experience": 0.7,
   "cookingtime": 200,
   "ingredient": {

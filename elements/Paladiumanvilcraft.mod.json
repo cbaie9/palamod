@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Paladiumanvil"
+    },
+    "name": "paladiumanvilcraft",
+    "namespace": "mod"
+  }
+}

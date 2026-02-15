@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "palamod:block/paladiumanvil"
+    },
+    "facing=east": {
+      "model": "palamod:block/paladiumanvil",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/paladiumanvil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/paladiumanvil",
+      "y": 270
+    }
+  }
+}

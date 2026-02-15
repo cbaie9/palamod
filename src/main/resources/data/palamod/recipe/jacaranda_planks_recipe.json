@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
+  "group": "jacaranda_craft_group",
+  "category": "building",
   "ingredients": [
     {
       "tag": "forge:jacaranda__log"

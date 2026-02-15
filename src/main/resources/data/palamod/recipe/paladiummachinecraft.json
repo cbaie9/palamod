@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "group": "paladium_craft_group",
+  "category": "equipment",
   "pattern": [
     "aaa",
     "aba",

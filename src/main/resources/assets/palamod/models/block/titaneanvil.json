@@ -1,0 +1,10 @@
+{
+  "parent": "palamod:custom/anvil_vanilla_model",
+  "textures": {
+    "all": "palamod:block/anvil_titane_tool_base",
+    "particle": "palamod:block/anvil_titane_tool_base",
+    "top": "palamod:block/anvil_titane_tool_top",
+    "body": "palamod:block/anvil_titane_tool_base"
+  },
+  "render_type": "solid"
+}

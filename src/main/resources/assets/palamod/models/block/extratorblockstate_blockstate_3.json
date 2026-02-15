@@ -3,7 +3,7 @@
   "textures": {
     "all": "palamod:block/blank",
     "particle": "palamod:block/exctrator",
-    "1": "palamod:block/beta_exc",
+    "1": "palamod:block/exctrator",
     "2": "palamod:block/seve"
   },
   "render_type": "cutout"

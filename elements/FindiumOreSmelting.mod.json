@@ -4,45 +4,20 @@
   "definition": {
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "findium_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:FindiumOre"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.7,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
-    ],
-    "recipeReturnStack": {
-      "value": ""
-    },
     "smeltingInputStack": {
       "value": "CUSTOM:FindiumOre"
     },

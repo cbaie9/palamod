@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smelting",
+  "group": "findium_craft_group",
   "category": "misc",
   "experience": 0.7,
   "cookingtime": 200,

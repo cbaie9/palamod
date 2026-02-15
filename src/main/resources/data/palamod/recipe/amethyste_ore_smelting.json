@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smelting",
+  "group": "amethyst_craft_group",
   "category": "misc",
   "experience": 2.8,
   "cookingtime": 200,

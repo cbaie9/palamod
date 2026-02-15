@@ -1595,5 +1595,10 @@
   "palamod.procedure.gamerule_disable_money": "",
   "palamod.procedure.gamerule_disable_jobs": "",
   "palamod.procedure.gamerule_disable_adminshop": "",
-  "key.categories.palamod": ""
+  "key.categories.palamod": "",
+  "block.palamod.amethystanvil": "Amethyst anvil",
+  "gamerule.palamoddebuglogs.description": "Show debug log from palamod",
+  "gamerule.palamoddebuglogs": "Palamod debug loggs",
+  "block.palamod.titaneanvil": "Amethyst anvil",
+  "block.palamod.paladiumanvil": "Titane anvil"
 }

@@ -1,5 +1,6 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModGameRules;
 import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
@@ -159,10 +160,12 @@ public class SpawncontrollertickProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			PalamodMod.LOGGER.info(("nb zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") + "\n" + "tier zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "nb spawner"
-					+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") + "\n" + "calc"
-					+ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "slime"
-					+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") + "\n" + "speed" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades")));
+			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOGS)) {
+				PalamodMod.LOGGER.info(("nb zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") + "\n" + "tier zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "nb spawner"
+						+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") + "\n" + "calc"
+						+ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "slime"
+						+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") + "\n" + "speed" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades")));
+			}
 		} else {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);

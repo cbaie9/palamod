@@ -303,6 +303,9 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> DEAD_BUTTON;
 	public static final DeferredBlock<Block> FROZENOBSIDIAN;
 	public static final DeferredBlock<Block> KNOCKBACKOBSIDIAN;
+	public static final DeferredBlock<Block> AMETHYSTANVIL;
+	public static final DeferredBlock<Block> TITANEANVIL;
+	public static final DeferredBlock<Block> PALADIUMANVIL;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -593,6 +596,9 @@ public class PalamodModBlocks {
 		DEAD_BUTTON = REGISTRY.register("dead_button", DeadButtonBlock::new);
 		FROZENOBSIDIAN = REGISTRY.register("frozenobsidian", FrozenobsidianBlock::new);
 		KNOCKBACKOBSIDIAN = REGISTRY.register("knockbackobsidian", KnockbackobsidianBlock::new);
+		AMETHYSTANVIL = REGISTRY.register("amethystanvil", AmethystanvilBlock::new);
+		TITANEANVIL = REGISTRY.register("titaneanvil", TitaneanvilBlock::new);
+		PALADIUMANVIL = REGISTRY.register("paladiumanvil", PaladiumanvilBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

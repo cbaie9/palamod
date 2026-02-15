@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "group": "judeecercis_craft_group",
+  "category": "building",
   "pattern": [
     "aa",
     "aa"

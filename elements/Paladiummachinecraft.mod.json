@@ -4,12 +4,19 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "paladium_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "CUSTOM:Paladiummachine"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "craftingBookCategory": "MISC",
+    "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
       {

@@ -4,12 +4,16 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 6,
-    "group": "",
-    "unlockingItems": [],
+    "group": "jacaranda_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Judeecercis_Slab"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "craftingBookCategory": "MISC",
+    "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
       {
