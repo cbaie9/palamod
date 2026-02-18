@@ -4,6 +4,7 @@ import palamod.procedures.Crusherluncherv2titaneProcedure;
 import palamod.procedures.Crusherluncherv2paladiumProcedure;
 import palamod.procedures.Crusherluncherv2endiumProcedure;
 import palamod.procedures.Crusherluncherv2amethystProcedure;
+import palamod.procedures.ChangecrushershowpctgProcedure;
 
 import palamod.PalamodMod;
 
@@ -66,6 +67,10 @@ public record CrusherguiButtonMessage(int buttonID, int x, int y, int z) impleme
 		if (buttonID == 3) {
 
 			Crusherluncherv2paladiumProcedure.execute(world, x, y, z);
+		}
+		if (buttonID == 4) {
+
+			ChangecrushershowpctgProcedure.execute(world, x, y, z);
 		}
 	}
 

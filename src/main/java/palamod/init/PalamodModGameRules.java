@@ -19,7 +19,7 @@ public class PalamodModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> COMMANDFEEDNOPERMACCESS;
 	public static GameRules.Key<GameRules.BooleanValue> DISABLEJOBSGAMERULE;
 	public static GameRules.Key<GameRules.BooleanValue> DISABLEMONEYGAMERULE;
-	public static GameRules.Key<GameRules.BooleanValue> PALAMODDEBUGLOGS;
+	public static GameRules.Key<GameRules.BooleanValue> PALAMODDEBUGLOG;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
@@ -31,6 +31,6 @@ public class PalamodModGameRules {
 		COMMANDFEEDNOPERMACCESS = GameRules.register("commandfeednopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 		DISABLEJOBSGAMERULE = GameRules.register("disablejobsgamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		DISABLEMONEYGAMERULE = GameRules.register("disablemoneygamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
-		PALAMODDEBUGLOGS = GameRules.register("palamoddebuglogs", GameRules.Category.UPDATES, GameRules.BooleanValue.create(false));
+		PALAMODDEBUGLOG = GameRules.register("palamoddebuglog", GameRules.Category.UPDATES, GameRules.BooleanValue.create(false));
 	}
 }

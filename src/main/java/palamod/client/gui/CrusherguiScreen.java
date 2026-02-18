@@ -32,6 +32,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 	private ImageButton imagebutton_button_white4;
 	private ImageButton imagebutton_button_white5;
 	private ImageButton imagebutton_button_white6;
+	private ImageButton imagebutton_crusher_btn_pctg_on;
 
 	public CrusherguiScreen(CrusherguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -72,6 +73,10 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endium_nugets_vfufu.png"), this.leftPos + 312, this.topPos + 51, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_ingot.png"), this.leftPos + 312, this.topPos + 20, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fuel_crusher.png"), this.leftPos + 7, this.topPos + 56, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/no_plant_crusher.png"), this.leftPos + 101, this.topPos + 19, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/no_plant_crusher.png"), this.leftPos + 219, this.topPos + 19, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/no_plant_crusher.png"), this.leftPos + 100, this.topPos + 51, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/no_plant_crusher.png"), this.leftPos + 220, this.topPos + 51, 0, 0, 92, 20, 92, 20);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_ame_full.png"), this.leftPos + 198, this.topPos + 124, Mth.clamp((int) Crushersubprocessv3baramethystProcedure.execute(world, x, y, z) * 100, 0, 1600), 0, 100, 10, 1700,
 				10);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titane_pgbar_full.png"), this.leftPos + 198, this.topPos + 141, 0, 0, 100, 10, 3300, 10);
@@ -99,15 +104,15 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_inventaire"), 14, 109, -1315861, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_fuel"), 27, 58, -3394816, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_fruits"), 26, 24, -3407668, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_v2004"), 299, 192, -12829636, false);
-		if (Crushertextad4Procedure.execute())
-			guiGraphics.drawString(this.font, CrushercustominfoameProcedure.execute(world, x, y, z), 123, 38, -12829636, false);
-		if (Crushertextad3Procedure.execute())
-			guiGraphics.drawString(this.font, CrushercustominfotitaneProcedure.execute(world, x, y, z), 124, 70, -12829636, false);
-		if (Crushertextad2Procedure.execute())
-			guiGraphics.drawString(this.font, CrushercustominfopaladiumProcedure.execute(world, x, y, z), 229, 38, -12829636, false);
-		if (CrushertextadProcedure.execute())
-			guiGraphics.drawString(this.font, CrushercustominfoendiumProcedure.execute(world, x, y, z), 245, 70, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crushergui.label_v2004"), 299, 192, -1, false);
+		if (Crushertextad4Procedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, CrushercustominfoameProcedure.execute(world, x, y, z), 101, 38, -1, false);
+		if (Crushertextad3Procedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, CrushercustominfotitaneProcedure.execute(world, x, y, z), 100, 72, -1, false);
+		if (Crushertextad2Procedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, CrushercustominfopaladiumProcedure.execute(world, x, y, z), 220, 38, -1, false);
+		if (CrushertextadProcedure.execute(world, x, y, z))
+			guiGraphics.drawString(this.font, CrushercustominfoendiumProcedure.execute(world, x, y, z), 221, 72, -1, false);
 	}
 
 	@Override
@@ -117,14 +122,17 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_white.png"), ResourceLocation.parse("palamod:textures/screens/button_gray.png")), e -> {
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
-					if (true) {
+					if (CrushershowlunchertitaneProcedure.execute(world, x, y, z)) {
 						PacketDistributor.sendToServer(new CrusherguiButtonMessage(0, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = CrusherguiScreen.this.x;
+				int y = CrusherguiScreen.this.y;
+				if (CrushershowlunchertitaneProcedure.execute(world, x, y, z))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white3);
@@ -132,14 +140,17 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_white.png"), ResourceLocation.parse("palamod:textures/screens/button_blue.png")), e -> {
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
-					if (true) {
+					if (CrushershowluncherendiumProcedure.execute(world, x, y, z)) {
 						PacketDistributor.sendToServer(new CrusherguiButtonMessage(1, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = CrusherguiScreen.this.x;
+				int y = CrusherguiScreen.this.y;
+				if (CrushershowluncherendiumProcedure.execute(world, x, y, z))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white4);
@@ -147,14 +158,17 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_white.png"), ResourceLocation.parse("palamod:textures/screens/button_purple.png")), e -> {
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
-					if (true) {
+					if (CrushershowluncheramethystProcedure.execute(world, x, y, z)) {
 						PacketDistributor.sendToServer(new CrusherguiButtonMessage(2, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = CrusherguiScreen.this.x;
+				int y = CrusherguiScreen.this.y;
+				if (CrushershowluncheramethystProcedure.execute(world, x, y, z))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white5);
@@ -162,9 +176,27 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_white.png"), ResourceLocation.parse("palamod:textures/screens/button_red.png")), e -> {
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
-					if (true) {
+					if (CrushershowluncherpaladiumProcedure.execute(world, x, y, z)) {
 						PacketDistributor.sendToServer(new CrusherguiButtonMessage(3, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				int x = CrusherguiScreen.this.x;
+				int y = CrusherguiScreen.this.y;
+				if (CrushershowluncherpaladiumProcedure.execute(world, x, y, z))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_button_white6);
+		imagebutton_crusher_btn_pctg_on = new ImageButton(this.leftPos + 139, this.topPos + 99, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/crusher_btn_pctg_on.png"), ResourceLocation.parse("palamod:textures/screens/crusher_btn_pctg_on_hover.png")), e -> {
+					int x = CrusherguiScreen.this.x;
+					int y = CrusherguiScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new CrusherguiButtonMessage(4, x, y, z));
+						CrusherguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
@@ -172,6 +204,6 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		this.addRenderableWidget(imagebutton_button_white6);
+		this.addRenderableWidget(imagebutton_crusher_btn_pctg_on);
 	}
 }

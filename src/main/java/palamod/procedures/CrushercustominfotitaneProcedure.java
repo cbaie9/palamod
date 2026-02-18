@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModGameRules;
+
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -42,7 +44,10 @@ public class CrushercustominfotitaneProcedure {
 				}
 			}
 		}
-		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_titane") + " / " + output;
+		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+			return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_titane") + " / " + output + " - " + (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_titane") / output) * 100 + "%";
+		}
+		return (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_titane") / output) * 100 + "%";
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

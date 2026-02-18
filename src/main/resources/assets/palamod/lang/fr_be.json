@@ -1596,9 +1596,7 @@
   "palamod.procedure.gamerule_disable_jobs": "",
   "palamod.procedure.gamerule_disable_adminshop": "",
   "key.categories.palamod": "",
-  "block.palamod.amethystanvil": "Amethyst anvil",
-  "gamerule.palamoddebuglogs.description": "Show debug log from palamod",
-  "gamerule.palamoddebuglogs": "Palamod debug loggs",
-  "block.palamod.titaneanvil": "Amethyst anvil",
-  "block.palamod.paladiumanvil": "Titane anvil"
+  "gui.palamod.jobsfarmercraftgui.button_debug": "debug",
+  "gamerule.palamoddebuglog.description": "Show Palamod debug logs, useful for debugging",
+  "gamerule.palamoddebuglog": "Palamod Debug log"
 }

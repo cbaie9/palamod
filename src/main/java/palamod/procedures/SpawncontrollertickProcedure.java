@@ -160,7 +160,7 @@ public class SpawncontrollertickProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOGS)) {
+			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 				PalamodMod.LOGGER.info(("nb zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") + "\n" + "tier zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "nb spawner"
 						+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") + "\n" + "calc"
 						+ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "slime"

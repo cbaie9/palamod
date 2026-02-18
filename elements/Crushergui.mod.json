@@ -249,10 +249,10 @@
         "data": {
           "name": "label_v2004",
           "text": {
-            "fixedValue": "v2.6.0"
+            "fixedValue": "v2.7.0"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "x": 345,
@@ -269,13 +269,13 @@
             "name": "Crushercustominfoame"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "Crushertextad4"
           },
-          "x": 169,
+          "x": 147,
           "y": 56,
           "locked": false
         }
@@ -289,14 +289,14 @@
             "name": "Crushercustominfotitane"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "Crushertextad3"
           },
-          "x": 170,
-          "y": 88,
+          "x": 146,
+          "y": 90,
           "locked": false
         }
       },
@@ -309,13 +309,13 @@
             "name": "Crushercustominfopaladium"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "Crushertextad2"
           },
-          "x": 275,
+          "x": 266,
           "y": 56,
           "locked": false
         }
@@ -329,14 +329,14 @@
             "name": "Crushercustominfoendium"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "Crushertextad"
           },
-          "x": 291,
-          "y": 88,
+          "x": 267,
+          "y": 90,
           "locked": false
         }
       },
@@ -348,6 +348,9 @@
           "hoveredImage": "button_gray.png",
           "onClick": {
             "name": "Crusherluncherv2titane"
+          },
+          "displayCondition": {
+            "name": "Crushershowlunchertitane"
           },
           "x": 146,
           "y": 69,
@@ -363,6 +366,9 @@
           "onClick": {
             "name": "Crusherluncherv2endium"
           },
+          "displayCondition": {
+            "name": "Crushershowluncherendium"
+          },
           "x": 265,
           "y": 69,
           "locked": false
@@ -377,6 +383,9 @@
           "onClick": {
             "name": "Crusherluncherv2amethyst"
           },
+          "displayCondition": {
+            "name": "Crushershowluncheramethyst"
+          },
           "x": 146,
           "y": 37,
           "locked": false
@@ -390,6 +399,9 @@
           "hoveredImage": "button_red.png",
           "onClick": {
             "name": "Crusherluncherv2paladium"
+          },
+          "displayCondition": {
+            "name": "Crushershowluncherpaladium"
           },
           "x": 265,
           "y": 37,
@@ -462,6 +474,60 @@
           },
           "x": 53,
           "y": 56,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_crusher_btn_pctg_on",
+          "image": "crusher_btn_pctg_on.png",
+          "hoveredImage": "crusher_btn_pctg_on_hover.png",
+          "onClick": {
+            "name": "Changecrushershowpctg"
+          },
+          "x": 185,
+          "y": 117,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "no_plant_crusher.png",
+          "use1Xscale": false,
+          "x": 147,
+          "y": 37,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "no_plant_crusher.png",
+          "use1Xscale": false,
+          "x": 265,
+          "y": 37,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "no_plant_crusher.png",
+          "use1Xscale": false,
+          "x": 146,
+          "y": 69,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "no_plant_crusher.png",
+          "use1Xscale": false,
+          "x": 266,
+          "y": 69,
           "locked": true
         }
       }

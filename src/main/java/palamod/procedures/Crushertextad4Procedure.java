@@ -2,13 +2,17 @@ package palamod.procedures;
 
 import net.neoforged.fml.loading.FMLPaths;
 
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.BlockPos;
+
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
 public class Crushertextad4Procedure {
-	public static boolean execute() {
+	public static boolean execute(LevelAccessor world, double x, double y, double z) {
 		File file = new File("");
 		double output = 0;
 		com.google.gson.JsonObject main_obj = new com.google.gson.JsonObject();
@@ -38,9 +42,16 @@ public class Crushertextad4Procedure {
 				}
 			}
 		}
-		if (32 != output) {
+		if (32 != output || getBlockNBTLogic(world, BlockPos.containing(x, y, z), "crusher_show_pctg")) {
 			return true;
 		}
+		return false;
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
 		return false;
 	}
 }
