@@ -15,6 +15,7 @@ public class CrushernbtsetupProcedure {
 			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putBoolean("crusher_setup", true);
 				_blockEntity.getPersistentData().putBoolean("crusher_show_pctg", false);
+				_blockEntity.getPersistentData().putBoolean("crusher_pro_mode", false);
 				_blockEntity.getPersistentData().putDouble("crusher_num_paladium", 0);
 				_blockEntity.getPersistentData().putDouble("crusher_num_endium", 0);
 				_blockEntity.getPersistentData().putDouble("crusher_num_titane", 0);

@@ -1,6 +1,7 @@
 package palamod.network;
 
 import palamod.procedures.MachineconnectpalahelpProcedure;
+import palamod.procedures.ConnectpalahelpcrushercraftProcedure;
 import palamod.procedures.ConnectephcrusherProcedure;
 import palamod.procedures.CloseguiProcedure;
 import palamod.procedures.BackpalahelpProcedure;
@@ -66,6 +67,10 @@ public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 3) {
 
 			BackpalahelpProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			ConnectpalahelpcrushercraftProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

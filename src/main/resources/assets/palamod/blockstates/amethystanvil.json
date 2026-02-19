@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=north": {
+    "": {
       "model": "palamod:block/amethystanvil"
-    },
-    "facing=east": {
-      "model": "palamod:block/amethystanvil",
-      "y": 90
-    },
-    "facing=south": {
-      "model": "palamod:block/amethystanvil",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "palamod:block/amethystanvil",
-      "y": 270
     }
   }
 }

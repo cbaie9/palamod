@@ -23,22 +23,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_beta_nochange_0004",
-          "text": {
-            "fixedValue": "r1.19.3"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 10,
-          "y": 206,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_paladium_crusher_wiki",
           "text": {
             "fixedValue": "Palahelp :  crusher "
@@ -244,13 +228,13 @@
         "data": {
           "name": "label_11_v1",
           "text": {
-            "fixedValue": "1/1 v2"
+            "fixedValue": "1/1 v2.1"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 387,
+          "x": 378,
           "y": 204,
           "locked": false
         }
@@ -367,6 +351,49 @@
             "name": "Backpalahelp"
           },
           "x": 352,
+          "y": 23,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_book_button",
+          "image": "book_button.png",
+          "hoveredImage": "book_button_hover.png",
+          "onClick": {
+            "name": "Connectpalahelpcrushercraft"
+          },
+          "x": 305,
+          "y": 23,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_see_craft_for_crusher",
+          "text": {
+            "fixedValue": "See Craft for Crusher"
+          },
+          "width": 20,
+          "height": 18,
+          "x": 305,
+          "y": 23,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_closetheguitrans",
+          "text": {
+            "fixedValue": "",
+            "name": "Closetheguitrans"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 399,
           "y": 23,
           "locked": false
         }

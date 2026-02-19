@@ -667,6 +667,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> DEAD_BUTTON;
 	public static final DeferredItem<Item> FROZENOBSIDIAN;
 	public static final DeferredItem<Item> KNOCKBACKOBSIDIAN;
+	public static final DeferredItem<Item> AMETHYSTANVIL;
+	public static final DeferredItem<Item> TITANEANVIL;
+	public static final DeferredItem<Item> PALADIUMANVIL;
+	public static final DeferredItem<Item> MONEYANVIL;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1298,6 +1302,10 @@ public class PalamodModItems {
 		DEAD_BUTTON = block(PalamodModBlocks.DEAD_BUTTON);
 		FROZENOBSIDIAN = block(PalamodModBlocks.FROZENOBSIDIAN);
 		KNOCKBACKOBSIDIAN = block(PalamodModBlocks.KNOCKBACKOBSIDIAN, new Item.Properties().fireResistant());
+		AMETHYSTANVIL = block(PalamodModBlocks.AMETHYSTANVIL);
+		TITANEANVIL = block(PalamodModBlocks.TITANEANVIL);
+		PALADIUMANVIL = block(PalamodModBlocks.PALADIUMANVIL);
+		MONEYANVIL = block(PalamodModBlocks.MONEYANVIL);
 	}
 
 	// Start of user code block custom items
