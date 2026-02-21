@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/wetlavasponge",
+  "random_sequence": "palamod:blocks/lava_sponge",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:wetlavasponge"
+          "name": "palamod:lava_sponge"
         }
       ]
     }

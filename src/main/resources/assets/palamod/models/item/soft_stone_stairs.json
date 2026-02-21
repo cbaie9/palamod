@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/softstoneslab",
+  "parent": "palamod:block/soft_stone_stairs",
   "display": {
     "thirdperson": {
       "rotation": [

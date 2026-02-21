@@ -46,7 +46,7 @@ public abstract class Paladiumarmorcustom1Item extends ArmorItem {
 				map.put(ArmorItem.Type.BODY, 8);
 			}), 55, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), () -> Ingredient.of(new ItemStack(PalamodModItems.PALADIUM_INGOT.get())),
 					List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:paladium_c"))), 3.5f, 0.15f);
-			registerHelper.register(ResourceLocation.parse("palamod:paladiumarmorcustom_1"), armorMaterial);
+			registerHelper.register(ResourceLocation.parse("palamod:paladium_armor_custom1"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}

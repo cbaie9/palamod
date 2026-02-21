@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/elevatorl_ight_blue",
+  "random_sequence": "palamod:blocks/elevator_light_blue",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:elevatorl_ight_blue"
+          "name": "palamod:elevator_light_blue"
         }
       ]
     }

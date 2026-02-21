@@ -43,7 +43,7 @@ public abstract class TravelarmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.HELMET, 1);
 				map.put(ArmorItem.Type.BODY, 1);
 			}), 20, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:travel2_"))), 0f, 0f);
-			registerHelper.register(ResourceLocation.parse("palamod:travelarmor"), armorMaterial);
+			registerHelper.register(ResourceLocation.parse("palamod:travel_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}

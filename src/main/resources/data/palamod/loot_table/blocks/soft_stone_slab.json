@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/softstonestairs",
+  "random_sequence": "palamod:blocks/soft_stone_slab",
   "pools": [
     {
       "rolls": 1.0,

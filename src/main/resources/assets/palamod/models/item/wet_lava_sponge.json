@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/softstonestairs",
+  "parent": "palamod:block/wet_lava_sponge",
   "display": {
     "thirdperson": {
       "rotation": [

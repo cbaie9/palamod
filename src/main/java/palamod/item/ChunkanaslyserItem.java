@@ -26,7 +26,7 @@ public class ChunkanaslyserItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.chunkanaslyser.description_0"));
+		list.add(Component.translatable("item.palamod.chunk_anaslyser.description_0"));
 	}
 
 	@Override

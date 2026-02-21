@@ -35,7 +35,7 @@ public abstract class PigarmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.BODY, 6);
 			}), 9, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_generic")), () -> Ingredient.of(new ItemStack(Items.PORKCHOP)), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:pig_armor"))),
 					0f, 0f);
-			registerHelper.register(ResourceLocation.parse("palamod:pigarmor"), armorMaterial);
+			registerHelper.register(ResourceLocation.parse("palamod:pig_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}
