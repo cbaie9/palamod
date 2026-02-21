@@ -10195,11 +10195,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_1",
+      "registry_name": "pickaxe_of_the_gods_lv1",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv1Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_1.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv1.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv1Item.java"
         ]
       }
     },
@@ -10208,10 +10208,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_2",
+      "registry_name": "pickaxe_of_the_gods_lv2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_2.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv2.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv2Item.java"
         ]
       }
@@ -10231,10 +10231,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_3",
+      "registry_name": "pickaxe_of_the_gods_lv3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_3.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv3.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv3Item.java"
         ]
       }
@@ -10244,11 +10244,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_4",
+      "registry_name": "pickaxe_of_the_gods_lv4",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/Pickaxeofthegodslv4Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_4.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv4.json"
         ]
       }
     },
@@ -10257,10 +10257,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_5",
+      "registry_name": "pickaxe_of_the_gods_lv5",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_5.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv5.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv5Item.java"
         ]
       }
@@ -10270,11 +10270,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_6",
+      "registry_name": "pickaxe_of_the_gods_lv6",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv6Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_6.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv6.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv6Item.java"
         ]
       }
     },
@@ -10283,11 +10283,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_7",
+      "registry_name": "pickaxe_of_the_gods_lv7",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/Pickaxeofthegodslv7Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_7.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv7.json"
         ]
       }
     },
@@ -10296,10 +10296,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_8",
+      "registry_name": "pickaxe_of_the_gods_lv8",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_8.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv8.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv8Item.java"
         ]
       }
@@ -10309,11 +10309,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_9",
+      "registry_name": "pickaxe_of_the_gods_lv9",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/Pickaxeofthegodslv9Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_9.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv9.json"
         ]
       }
     },
@@ -10322,11 +10322,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_10",
+      "registry_name": "pickaxe_of_the_gods_lv10",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv10Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_10.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv10.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv10Item.java"
         ]
       }
     },
@@ -10335,11 +10335,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_11",
+      "registry_name": "pickaxe_of_the_gods_lv11",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_11.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv11Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv11Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv11.json"
         ]
       }
     },
@@ -10348,11 +10348,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_12",
+      "registry_name": "pickaxe_of_the_gods_lv12",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/Pickaxeofthegodslv12Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_12.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv12.json"
         ]
       }
     },
@@ -10361,10 +10361,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_14",
+      "registry_name": "pickaxe_of_the_gods_lv14",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_14.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv14.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv14Item.java"
         ]
       }
@@ -10374,11 +10374,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_15",
+      "registry_name": "pickaxe_of_the_gods_lv15",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/Pickaxeofthegodslv15Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_15.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv15.json"
         ]
       }
     },
@@ -10387,10 +10387,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_16",
+      "registry_name": "pickaxe_of_the_gods_lv16",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_16.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv16.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv16Item.java"
         ]
       }
@@ -10400,10 +10400,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_17",
+      "registry_name": "pickaxe_of_the_gods_lv17",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_17.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv17.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv17Item.java"
         ]
       }
@@ -10413,11 +10413,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_18",
+      "registry_name": "pickaxe_of_the_gods_lv18",
       "metadata": {
         "files": [
           "src/main/java/palamod/item/Pickaxeofthegodslv18Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_18.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv18.json"
         ]
       }
     },
@@ -10426,11 +10426,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_19",
+      "registry_name": "pickaxe_of_the_gods_lv19",
       "metadata": {
         "files": [
-          "src/main/java/palamod/item/Pickaxeofthegodslv19Item.java",
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_19.json"
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv19.json",
+          "src/main/java/palamod/item/Pickaxeofthegodslv19Item.java"
         ]
       }
     },
@@ -10439,11 +10439,11 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_20",
+      "registry_name": "pickaxe_of_the_gods_lv20",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_20.json",
-          "src/main/java/palamod/item/Pickaxeofthegodslv20Item.java"
+          "src/main/java/palamod/item/Pickaxeofthegodslv20Item.java",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv20.json"
         ]
       }
     },
@@ -10452,10 +10452,10 @@
       "type": "tool",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickaxeofthegodslv_13",
+      "registry_name": "pickaxe_of_the_gods_lv13",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/pickaxeofthegodslv_13.json",
+          "src/main/resources/assets/palamod/models/item/pickaxe_of_the_gods_lv13.json",
           "src/main/java/palamod/item/Pickaxeofthegodslv13Item.java"
         ]
       }
@@ -46344,6 +46344,9 @@
       "Pocketenderchest"
     ],
     "CUSTOM:Pickaxeofgodstab": [
+      "Bigholeupgrade",
+      "Autosmeltupgradepotg",
+      "Creativepotg",
       "Pickaxeofthegodslv1",
       "Pickaxeofthegodslv2",
       "Pickaxeofthegodslv3",
@@ -46363,10 +46366,7 @@
       "Pickaxeofthegodslv18",
       "Pickaxeofthegodslv19",
       "Pickaxeofthegodslv20",
-      "Pickaxeofthegodslv13",
-      "Bigholeupgrade",
-      "Autosmeltupgradepotg",
-      "Creativepotg"
+      "Pickaxeofthegodslv13"
     ],
     "CUSTOM:Jobscreativetabs": [
       "Cobblebreaker",
@@ -46683,21 +46683,11 @@
       "gui.palamod.analyserresult.label_logs": "Logs",
       "block.palamod.erable_door": "Erable door",
       "gui.palamod.dynamicorelayer.label_findium_64_150": "Findium : -64 --) 150",
-      "item.palamod.pickaxeofthegodslv_13": "Pickaxe of the gods",
       "gui.palamod.jobsfarmercraftgui.tooltip_titane_builder_wand": "Titane builder wand",
-      "item.palamod.pickaxeofthegodslv_14": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_11": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_12": "Pickaxe of the gods",
       "gui.palamod.itemmenupalahelp.button_btons": "Sticks",
-      "item.palamod.pickaxeofthegodslv_10": "Pickaxe of the gods",
       "block.palamod.slimepad_purple": "Purple slimepad",
       "item.palamod.green_paladium_broadsword_head": "Green paladium broadsword head",
-      "item.palamod.pickaxeofthegodslv_19": "Pickaxe of the gods",
       "gui.palamod.grinderpalahelp_2gui.label_comment_crafter_le_grinder": "Comment crafter le grinder",
-      "item.palamod.pickaxeofthegodslv_17": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_18": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_15": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_16": "Pickaxe of the gods",
       "gui.palamod.analyserloading.label_please_wait": "Please wait",
       "subtitles.lucky_alarm": "Alarm",
       "gui.palamod.jobsfarmercraftgui.tooltip_wither_tnt": "Wither tnt",
@@ -46711,7 +46701,6 @@
       "block.palamod.slimepad_red": "Red slimepad",
       "item.palamod.pickaxe_head": "Paladium pickaxe head",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Paladium spike obsidian",
-      "item.palamod.pickaxeofthegodslv_20": "Pickaxe of the gods",
       "advancements.achmringendium.descr": "Repair something with endium ring",
       "item.palamod.titane_backpack": "Titane backpack",
       "block.palamod.green_paladium_slab": "Green paladium slab",
@@ -47212,20 +47201,11 @@
       "block.palamod.slime_obsidian": "Slime obsidian",
       "gui.palamod.orelayer.label_endium_64_128_customs_p": "Endium : -64 --) 128 ; customs palamod biomes",
       "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe": "Paladium seedplanter",
-      "item.palamod.pickaxeofthegodslv_8": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_9": "Pickaxe of the gods",
       "gui.palamod.guardiangui.label_degats": "Dégats",
       "gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p": "To prevent damage use LG power of put",
-      "item.palamod.pickaxeofthegodslv_4": "Pickaxe of the gods",
       "gui.palamod.grinderpalahelp_2gui.label_1_grinder_block_5_grinder_casin": "1 grinder block, 5 grinder casing, 20",
-      "item.palamod.pickaxeofthegodslv_5": "Pickaxe of the gods",
       "advancements.endiumnuggetdropfromplant.title": "You\u0027re lucky",
-      "item.palamod.pickaxeofthegodslv_6": "Pickaxe of the gods",
       "gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be": "Thing you want to sell ( must be in the adminshop",
-      "item.palamod.pickaxeofthegodslv_7": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_1": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_2": "Pickaxe of the gods",
-      "item.palamod.pickaxeofthegodslv_3": "Pickaxe of the gods",
       "block.palamod.ostrya_door": "Ostrya door",
       "gui.palamod.uploadergui.label_uploader": "Uploader",
       "block.palamod.titane_chest": "Titane chest",
@@ -48038,7 +48018,27 @@
       "block.palamod.titaneanvil": "Titane anvil",
       "block.palamod.paladiumanvil": "Titane anvil",
       "block.palamod.moneyanvil": "Money anvil",
-      "palamod.procedure.reload_craft_config": "The jobs craft was reloaded"
+      "palamod.procedure.reload_craft_config": "The jobs craft was reloaded",
+      "item.palamod.pickaxe_of_the_gods_lv1": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv2": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv3": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv4": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv5": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv6": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv7": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv8": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv9": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv10": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv11": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv12": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv14": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv15": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv16": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv17": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv18": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv19": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv20": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv13": "Pickaxe of the gods"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -48306,21 +48306,11 @@
       "gui.palamod.analyserresult.label_logs": "Historique",
       "block.palamod.erable_door": "Porte en érable",
       "gui.palamod.dynamicorelayer.label_findium_64_150": "Findium : -64 → 150",
-      "item.palamod.pickaxeofthegodslv_13": "Pioche des dieux",
       "gui.palamod.jobsfarmercraftgui.tooltip_titane_builder_wand": "Baguette du constructeur de Titane",
-      "item.palamod.pickaxeofthegodslv_14": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_11": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_12": "Pioche des dieux",
       "gui.palamod.itemmenupalahelp.button_btons": "Bâton",
-      "item.palamod.pickaxeofthegodslv_10": "Pioche des dieux",
       "block.palamod.slimepad_purple": "Slimepad violet",
       "item.palamod.green_paladium_broadsword_head": "Tête de broadsword en paladium vert",
-      "item.palamod.pickaxeofthegodslv_19": "Pioche des dieux",
       "gui.palamod.grinderpalahelp_2gui.label_comment_crafter_le_grinder": "Comment fabriquer le grinder",
-      "item.palamod.pickaxeofthegodslv_17": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_18": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_15": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_16": "Pioche des dieux",
       "gui.palamod.analyserloading.label_please_wait": "Veuille attendre",
       "subtitles.lucky_alarm": "Alarme",
       "gui.palamod.jobsfarmercraftgui.tooltip_wither_tnt": "TNT Wither ",
@@ -48334,7 +48324,6 @@
       "block.palamod.slimepad_red": "Slimepad rouge",
       "item.palamod.pickaxe_head": "Tête de pioche en paladium",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Obsidienne fourée de pic en paladium",
-      "item.palamod.pickaxeofthegodslv_20": "Pioche des dieux",
       "advancements.achmringendium.descr": "Répare quelque\u0027 chose avec un anneau de réparation en endium",
       "item.palamod.titane_backpack": "Sac à dos en Titane",
       "block.palamod.green_paladium_slab": "Dalle en paladium vert",
@@ -48834,20 +48823,11 @@
       "block.palamod.slime_obsidian": "Obsidienne de slime",
       "gui.palamod.orelayer.label_endium_64_128_customs_p": "Endium : -64 → 128 ; Biome du palamod seulement",
       "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe": "Planteur de graines en paladium",
-      "item.palamod.pickaxeofthegodslv_8": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_9": "Pioche des dieux",
       "gui.palamod.guardiangui.label_degats": "Dégats",
       "gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p": "Pour éviter de prendre des dégats, utilisé la pierre légendaire de puissance",
-      "item.palamod.pickaxeofthegodslv_4": "Pioche des dieux",
       "gui.palamod.grinderpalahelp_2gui.label_1_grinder_block_5_grinder_casin": "1 bloc de grinder, 5 cadre de grinder, 20",
-      "item.palamod.pickaxeofthegodslv_5": "Pioche des dieux",
       "advancements.endiumnuggetdropfromplant.title": "Tu es très chanceux",
-      "item.palamod.pickaxeofthegodslv_6": "Pioche des dieux",
       "gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be": "Choses que vous voulez vendre (doit être dans l\u0027adminshop)",
-      "item.palamod.pickaxeofthegodslv_7": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_1": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_2": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_3": "Pioche des dieux",
       "block.palamod.ostrya_door": "Porte en Ostrya",
       "gui.palamod.uploadergui.label_uploader": "Téléchargeur",
       "block.palamod.titane_chest": "Coffre en titane",
@@ -49663,7 +49643,27 @@
       "block.palamod.titaneanvil": "Amethyst anvil",
       "block.palamod.paladiumanvil": "Amethyst anvil",
       "block.palamod.moneyanvil": "Amethyst anvil",
-      "palamod.procedure.reload_craft_config": ""
+      "palamod.procedure.reload_craft_config": "",
+      "item.palamod.pickaxe_of_the_gods_lv1": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv2": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv3": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv4": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv5": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv6": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv7": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv8": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv9": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv10": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv11": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv12": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv14": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv15": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv16": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv17": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv18": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv19": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv20": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv13": "Pickaxe of the gods"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -49931,21 +49931,11 @@
       "gui.palamod.analyserresult.label_logs": "Historique",
       "block.palamod.erable_door": "Porte en érable",
       "gui.palamod.dynamicorelayer.label_findium_64_150": "Findium : -64 → 150",
-      "item.palamod.pickaxeofthegodslv_13": "Pioche des dieux",
       "gui.palamod.jobsfarmercraftgui.tooltip_titane_builder_wand": "Baguette du constructeur de Titane",
-      "item.palamod.pickaxeofthegodslv_14": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_11": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_12": "Pioche des dieux",
       "gui.palamod.itemmenupalahelp.button_btons": "Bâton",
-      "item.palamod.pickaxeofthegodslv_10": "Pioche des dieux",
       "block.palamod.slimepad_purple": "Slimepad violet",
       "item.palamod.green_paladium_broadsword_head": "Tête de broadsword en paladium vert",
-      "item.palamod.pickaxeofthegodslv_19": "Pioche des dieux",
       "gui.palamod.grinderpalahelp_2gui.label_comment_crafter_le_grinder": "Comment fabriquer le grinder",
-      "item.palamod.pickaxeofthegodslv_17": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_18": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_15": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_16": "Pioche des dieux",
       "gui.palamod.analyserloading.label_please_wait": "Veuille attendre",
       "subtitles.lucky_alarm": "Alarme",
       "gui.palamod.jobsfarmercraftgui.tooltip_wither_tnt": "TNT Wither ",
@@ -49959,7 +49949,6 @@
       "block.palamod.slimepad_red": "Slimepad rouge",
       "item.palamod.pickaxe_head": "Tête de pioche en paladium",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Obsidienne fourée de pic en paladium",
-      "item.palamod.pickaxeofthegodslv_20": "Pioche des dieux",
       "advancements.achmringendium.descr": "Répare quelque\u0027 chose avec un anneau de réparation en endium",
       "item.palamod.titane_backpack": "Sac à dos en Titane",
       "block.palamod.green_paladium_slab": "Dalle en paladium vert",
@@ -50459,20 +50448,11 @@
       "block.palamod.slime_obsidian": "Obsidienne de slime",
       "gui.palamod.orelayer.label_endium_64_128_customs_p": "Endium : -64 → 128 ; Biome du palamod seulement",
       "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe": "Planteur de graines en paladium",
-      "item.palamod.pickaxeofthegodslv_8": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_9": "Pioche des dieux",
       "gui.palamod.guardiangui.label_degats": "Dégats",
       "gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p": "Pour éviter de prendre des dégats, utilisé la pierre légendaire de puissance",
-      "item.palamod.pickaxeofthegodslv_4": "Pioche des dieux",
       "gui.palamod.grinderpalahelp_2gui.label_1_grinder_block_5_grinder_casin": "1 bloc de grinder, 5 cadre de grinder, 20",
-      "item.palamod.pickaxeofthegodslv_5": "Pioche des dieux",
       "advancements.endiumnuggetdropfromplant.title": "Tu es très chanceux",
-      "item.palamod.pickaxeofthegodslv_6": "Pioche des dieux",
       "gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be": "Choses que vous voulez vendre (doit être dans l\u0027adminshop)",
-      "item.palamod.pickaxeofthegodslv_7": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_1": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_2": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_3": "Pioche des dieux",
       "block.palamod.ostrya_door": "Porte en Ostrya",
       "gui.palamod.uploadergui.label_uploader": "Téléchargeur",
       "block.palamod.titane_chest": "Coffre en titane",
@@ -51288,7 +51268,27 @@
       "block.palamod.titaneanvil": "Amethyst anvil",
       "block.palamod.paladiumanvil": "Amethyst anvil",
       "block.palamod.moneyanvil": "Amethyst anvil",
-      "palamod.procedure.reload_craft_config": ""
+      "palamod.procedure.reload_craft_config": "",
+      "item.palamod.pickaxe_of_the_gods_lv1": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv2": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv3": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv4": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv5": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv6": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv7": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv8": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv9": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv10": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv11": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv12": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv14": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv15": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv16": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv17": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv18": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv19": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv20": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv13": "Pickaxe of the gods"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51556,21 +51556,11 @@
       "gui.palamod.analyserresult.label_logs": "Historique",
       "block.palamod.erable_door": "Porte en érable",
       "gui.palamod.dynamicorelayer.label_findium_64_150": "Findium : -64 → 150",
-      "item.palamod.pickaxeofthegodslv_13": "Pioche des dieux",
       "gui.palamod.jobsfarmercraftgui.tooltip_titane_builder_wand": "Baguette du constructeur de Titane",
-      "item.palamod.pickaxeofthegodslv_14": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_11": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_12": "Pioche des dieux",
       "gui.palamod.itemmenupalahelp.button_btons": "Bâton",
-      "item.palamod.pickaxeofthegodslv_10": "Pioche des dieux",
       "block.palamod.slimepad_purple": "Slimepad violet",
       "item.palamod.green_paladium_broadsword_head": "Tête de broadsword en paladium vert",
-      "item.palamod.pickaxeofthegodslv_19": "Pioche des dieux",
       "gui.palamod.grinderpalahelp_2gui.label_comment_crafter_le_grinder": "Comment fabriquer le grinder",
-      "item.palamod.pickaxeofthegodslv_17": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_18": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_15": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_16": "Pioche des dieux",
       "gui.palamod.analyserloading.label_please_wait": "Veuille attendre",
       "subtitles.lucky_alarm": "Alarme",
       "gui.palamod.jobsfarmercraftgui.tooltip_wither_tnt": "TNT Wither ",
@@ -51584,7 +51574,6 @@
       "block.palamod.slimepad_red": "Slimepad rouge",
       "item.palamod.pickaxe_head": "Tête de pioche en paladium",
       "gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian": "Obsidienne fourée de pic en paladium",
-      "item.palamod.pickaxeofthegodslv_20": "Pioche des dieux",
       "advancements.achmringendium.descr": "Répare quelque\u0027 chose avec un anneau de réparation en endium",
       "item.palamod.titane_backpack": "Sac à dos en Titane",
       "block.palamod.green_paladium_slab": "Dalle en paladium vert",
@@ -52084,20 +52073,11 @@
       "block.palamod.slime_obsidian": "Obsidienne de slime",
       "gui.palamod.orelayer.label_endium_64_128_customs_p": "Endium : -64 → 128 ; Biome du palamod seulement",
       "gui.palamod.jobsfarmercraftgui.tooltip_obsidian_pickaxe": "Planteur de graines en paladium",
-      "item.palamod.pickaxeofthegodslv_8": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_9": "Pioche des dieux",
       "gui.palamod.guardiangui.label_degats": "Dégats",
       "gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p": "Pour éviter de prendre des dégats, utilisé la pierre légendaire de puissance",
-      "item.palamod.pickaxeofthegodslv_4": "Pioche des dieux",
       "gui.palamod.grinderpalahelp_2gui.label_1_grinder_block_5_grinder_casin": "1 bloc de grinder, 5 cadre de grinder, 20",
-      "item.palamod.pickaxeofthegodslv_5": "Pioche des dieux",
       "advancements.endiumnuggetdropfromplant.title": "Tu es très chanceux",
-      "item.palamod.pickaxeofthegodslv_6": "Pioche des dieux",
       "gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be": "Choses que vous voulez vendre (doit être dans l\u0027adminshop)",
-      "item.palamod.pickaxeofthegodslv_7": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_1": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_2": "Pioche des dieux",
-      "item.palamod.pickaxeofthegodslv_3": "Pioche des dieux",
       "block.palamod.ostrya_door": "Porte en Ostrya",
       "gui.palamod.uploadergui.label_uploader": "Téléchargeur",
       "block.palamod.titane_chest": "Coffre en titane",
@@ -52913,7 +52893,27 @@
       "block.palamod.titaneanvil": "Amethyst anvil",
       "block.palamod.paladiumanvil": "Amethyst anvil",
       "block.palamod.moneyanvil": "Amethyst anvil",
-      "palamod.procedure.reload_craft_config": ""
+      "palamod.procedure.reload_craft_config": "",
+      "item.palamod.pickaxe_of_the_gods_lv1": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv2": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv3": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv4": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv5": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv6": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv7": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv8": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv9": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv10": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv11": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv12": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv14": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv15": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv16": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv17": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv18": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv19": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv20": "Pickaxe of the gods",
+      "item.palamod.pickaxe_of_the_gods_lv13": "Pickaxe of the gods"
     }
   },
   "metadata": {

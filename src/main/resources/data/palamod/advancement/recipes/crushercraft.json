@@ -11,7 +11,47 @@
       "conditions": {
         "items": [
           {
-            "items": "palamod:erable_wood"
+            "items": "palamod:paladium_crusher"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingredient_1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "palamod:paladium_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingredient_2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "palamod:findium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingredient_3": {
+      "conditions": {
+        "items": [
+          {
+            "items": "palamod:paladium_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ingredient_4": {
+      "conditions": {
+        "items": [
+          {
+            "items": "palamod:compressed_amethyst"
           }
         ]
       },
@@ -21,7 +61,11 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ingredient_0"
+      "has_ingredient_0",
+      "has_ingredient_1",
+      "has_ingredient_2",
+      "has_ingredient_3",
+      "has_ingredient_4"
     ]
   ],
   "rewards": {

@@ -7,13 +7,25 @@
     "group": "",
     "unlockingItems": [
       {
-        "value": "CUSTOM:Erable_Wood"
+        "value": "CUSTOM:Paladiumcrusher"
+      },
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Paladiumstick"
+      },
+      {
+        "value": "CUSTOM:Compressedamethyste"
       }
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "craftingBookCategory": "REDSTONE",
+    "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
       {

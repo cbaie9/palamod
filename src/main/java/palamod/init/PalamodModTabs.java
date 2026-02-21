@@ -526,30 +526,30 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
 			}).withTabsBefore(BASECLAIM.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_1.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_1.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_2.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_3.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_4.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_5.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_6.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_7.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_8.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_9.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_10.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_11.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_12.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_14.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_15.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_16.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_17.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_18.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_19.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_20.get());
-				tabData.accept(PalamodModItems.PICKAXEOFTHEGODSLV_13.get());
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV1.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PalamodModItems.BIG_HOLE_UPGRADE.get());
 				tabData.accept(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get());
 				tabData.accept(PalamodModItems.CREATIVEPOTG.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV1.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV2.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV3.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV4.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV5.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV6.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV7.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV8.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV9.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV10.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV11.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV12.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV14.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV15.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV16.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV17.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV18.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get());
+				tabData.accept(PalamodModItems.PICKAXE_OF_THE_GODS_LV13.get());
 			}).withTabsBefore(LUCKYBLOCKCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> JOBSCREATIVETABS = REGISTRY.register("jobscreativetabs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.jobscreativetabs")).icon(() -> new ItemStack(PalamodModItems.PALADIUM_HOE.get())).displayItems((parameters, tabData) -> {

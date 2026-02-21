@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "equipment",
   "pattern": [
     "aba",
     "cdc",

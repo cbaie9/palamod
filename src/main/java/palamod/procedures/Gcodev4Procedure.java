@@ -3304,8 +3304,8 @@ public class Gcodev4Procedure {
 					}
 				}
 			}
-			if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_19.get()
-					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_20.get())
+			if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get()
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get())
 					&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.BIG_HOLE_UPGRADE.get()
 					&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0
@@ -3384,10 +3384,10 @@ public class Gcodev4Procedure {
 					}
 				}
 			}
-			if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_17.get()
-					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_18.get()
-					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_19.get()
-					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_20.get())
+			if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV17.get()
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV18.get()
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get()
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get())
 					&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get() && !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0)) {
 				if (!world.isClientSide()) {

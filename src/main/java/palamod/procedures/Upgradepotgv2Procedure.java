@@ -46,7 +46,7 @@ public class Upgradepotgv2Procedure {
 					big_hole = main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack13 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_20.get()).copy();
+					ItemStack _setstack13 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get()).copy();
 					_setstack13.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack13);
 					if (_entity instanceof Player _player)
@@ -112,7 +112,7 @@ public class Upgradepotgv2Procedure {
 					big_hole = main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack30 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_19.get()).copy();
+					ItemStack _setstack30 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get()).copy();
 					_setstack30.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack30);
 					if (_entity instanceof Player _player)
@@ -171,7 +171,7 @@ public class Upgradepotgv2Procedure {
 					big_hole = main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack46 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_18.get()).copy();
+					ItemStack _setstack46 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV18.get()).copy();
 					_setstack46.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack46);
 					if (_entity instanceof Player _player)
@@ -230,7 +230,7 @@ public class Upgradepotgv2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))));
 				}
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack71 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_17.get()).copy();
+					ItemStack _setstack71 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV17.get()).copy();
 					_setstack71.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack71);
 					if (_entity instanceof Player _player)
@@ -286,7 +286,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 25242) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack92 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_16.get()).copy();
+					ItemStack _setstack92 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV16.get()).copy();
 					_setstack92.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack92);
 					if (_entity instanceof Player _player)
@@ -319,7 +319,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 14620) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack105 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_15.get()).copy();
+					ItemStack _setstack105 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV15.get()).copy();
 					_setstack105.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack105);
 					if (_entity instanceof Player _player)
@@ -347,7 +347,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 10000) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack116 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_14.get()).copy();
+					ItemStack _setstack116 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV14.get()).copy();
 					_setstack116.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack116);
 					if (_entity instanceof Player _player)
@@ -375,7 +375,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 7804) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack127 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_13.get()).copy();
+					ItemStack _setstack127 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV13.get()).copy();
 					_setstack127.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack127);
 					if (_entity instanceof Player _player)
@@ -402,7 +402,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 6895) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack136 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_12.get()).copy();
+					ItemStack _setstack136 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV12.get()).copy();
 					_setstack136.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack136);
 					if (_entity instanceof Player _player)
@@ -429,7 +429,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 5403) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack145 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_11.get()).copy();
+					ItemStack _setstack145 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV11.get()).copy();
 					_setstack145.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack145);
 					if (_entity instanceof Player _player)
@@ -443,7 +443,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 4326) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack152 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_10.get()).copy();
+					ItemStack _setstack152 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV10.get()).copy();
 					_setstack152.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack152);
 					if (_entity instanceof Player _player)
@@ -457,7 +457,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 3542) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack159 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_9.get()).copy();
+					ItemStack _setstack159 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV9.get()).copy();
 					_setstack159.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack159);
 					if (_entity instanceof Player _player)
@@ -471,7 +471,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 2138) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack166 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_8.get()).copy();
+					ItemStack _setstack166 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV8.get()).copy();
 					_setstack166.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack166);
 					if (_entity instanceof Player _player)
@@ -484,7 +484,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1589) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack171 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_7.get()).copy();
+					ItemStack _setstack171 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV7.get()).copy();
 					_setstack171.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack171);
 					if (_entity instanceof Player _player)
@@ -497,7 +497,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1370) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack176 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_6.get()).copy();
+					ItemStack _setstack176 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV6.get()).copy();
 					_setstack176.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack176);
 					if (_entity instanceof Player _player)
@@ -510,7 +510,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1172) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack181 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_5.get()).copy();
+					ItemStack _setstack181 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV5.get()).copy();
 					_setstack181.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack181);
 					if (_entity instanceof Player _player)
@@ -523,7 +523,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 757) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack186 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_4.get()).copy();
+					ItemStack _setstack186 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV4.get()).copy();
 					_setstack186.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack186);
 					if (_entity instanceof Player _player)
@@ -536,7 +536,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 250) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack191 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_3.get()).copy();
+					ItemStack _setstack191 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV3.get()).copy();
 					_setstack191.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack191);
 					if (_entity instanceof Player _player)
@@ -549,7 +549,7 @@ public class Upgradepotgv2Procedure {
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 100) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack196 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_2.get()).copy();
+					ItemStack _setstack196 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV2.get()).copy();
 					_setstack196.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack196);
 					if (_entity instanceof Player _player)

@@ -121,7 +121,7 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
 							&& (1 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack91 = new ItemStack(PalamodModItems.PICKAXEOFTHEGODSLV_1.get()).copy();
+							ItemStack _setstack91 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV1.get()).copy();
 							_setstack91.setCount(1);
 							_menu.getSlots().get(9).set(_setstack91);
 							_player.containerMenu.broadcastChanges();

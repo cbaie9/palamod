@@ -80,7 +80,7 @@ public class Pickaxeofthegodslv15Item extends TieredItem {
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.PICKAXEOFTHEGODSLV_15.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.PICKAXE_OF_THE_GODS_LV15.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override

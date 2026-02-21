@@ -10,9 +10,9 @@ import net.minecraft.core.registries.Registries;
 
 public class GetenchantpotgProcedure {
 	public static void execute(LevelAccessor world, ItemStack itemstack) {
-		if (PalamodModItems.PICKAXEOFTHEGODSLV_20.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_19.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_18.get() == itemstack.getItem()
-				|| PalamodModItems.PICKAXEOFTHEGODSLV_17.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_16.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_15.get() == itemstack.getItem()
-				|| PalamodModItems.PICKAXEOFTHEGODSLV_14.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_13.get() == itemstack.getItem()) {
+		if (PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV18.get() == itemstack.getItem()
+				|| PalamodModItems.PICKAXE_OF_THE_GODS_LV17.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV16.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV15.get() == itemstack.getItem()
+				|| PalamodModItems.PICKAXE_OF_THE_GODS_LV14.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV13.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) != 0) {
 				if (5 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))));
@@ -21,7 +21,7 @@ public class GetenchantpotgProcedure {
 			} else {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 5);
 			}
-		} else if (PalamodModItems.PICKAXEOFTHEGODSLV_12.get() == itemstack.getItem()) {
+		} else if (PalamodModItems.PICKAXE_OF_THE_GODS_LV12.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) != 0) {
 				if (4 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))));
@@ -30,7 +30,7 @@ public class GetenchantpotgProcedure {
 			} else {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 4);
 			}
-		} else if (PalamodModItems.PICKAXEOFTHEGODSLV_11.get() == itemstack.getItem()) {
+		} else if (PalamodModItems.PICKAXE_OF_THE_GODS_LV11.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) != 0) {
 				if (3 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))));
@@ -39,7 +39,7 @@ public class GetenchantpotgProcedure {
 			} else {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 3);
 			}
-		} else if (PalamodModItems.PICKAXEOFTHEGODSLV_10.get() == itemstack.getItem()) {
+		} else if (PalamodModItems.PICKAXE_OF_THE_GODS_LV10.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) != 0) {
 				if (2 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))));
@@ -48,7 +48,7 @@ public class GetenchantpotgProcedure {
 			} else {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 2);
 			}
-		} else if (PalamodModItems.PICKAXEOFTHEGODSLV_9.get() == itemstack.getItem()) {
+		} else if (PalamodModItems.PICKAXE_OF_THE_GODS_LV9.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY)) != 0) {
 				if (1 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY))));
@@ -58,7 +58,7 @@ public class GetenchantpotgProcedure {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY), 1);
 			}
 		}
-		if (PalamodModItems.PICKAXEOFTHEGODSLV_14.get() == itemstack.getItem()) {
+		if (PalamodModItems.PICKAXE_OF_THE_GODS_LV14.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) != 0) {
 				if (1 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))));
@@ -67,7 +67,7 @@ public class GetenchantpotgProcedure {
 			} else {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 1);
 			}
-		} else if (PalamodModItems.PICKAXEOFTHEGODSLV_15.get() == itemstack.getItem()) {
+		} else if (PalamodModItems.PICKAXE_OF_THE_GODS_LV15.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) != 0) {
 				if (2 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))));
@@ -76,8 +76,8 @@ public class GetenchantpotgProcedure {
 			} else {
 				itemstack.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE), 2);
 			}
-		} else if (PalamodModItems.PICKAXEOFTHEGODSLV_16.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_17.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_18.get() == itemstack.getItem()
-				|| PalamodModItems.PICKAXEOFTHEGODSLV_19.get() == itemstack.getItem() || PalamodModItems.PICKAXEOFTHEGODSLV_20.get() == itemstack.getItem()) {
+		} else if (PalamodModItems.PICKAXE_OF_THE_GODS_LV16.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV17.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV18.get() == itemstack.getItem()
+				|| PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get() == itemstack.getItem() || PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get() == itemstack.getItem()) {
 			if (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) != 0) {
 				if (3 != itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))) {
 					EnchantmentHelper.updateEnchantments(itemstack, mutableEnchantments -> mutableEnchantments.removeIf(enchantment -> enchantment.is(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))));
