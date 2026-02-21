@@ -40,7 +40,7 @@ public class AmethystefastswordItem extends SwordItem {
 
 		@Override
 		public Ingredient getRepairIngredient() {
-			return Ingredient.of(new ItemStack(PalamodModItems.AMETHYST.get()));
+			return Ingredient.of(new ItemStack(PalamodModItems.AMETHYST_INGOT.get()));
 		}
 	};
 

@@ -4,9 +4,9 @@
   "experience": 2,
   "cookingtime": 200,
   "ingredient": {
-    "item": "palamod:amethystrawore"
+    "item": "palamod:amethyst_raw_ore"
   },
   "result": {
-    "id": "palamod:amethyst"
+    "id": "palamod:amethyst_ingot"
   }
 }

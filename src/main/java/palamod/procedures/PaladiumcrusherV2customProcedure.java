@@ -272,7 +272,7 @@ public class PaladiumcrusherV2customProcedure {
 								&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.EGGPLANT.get()
 								&& getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") < main_obj.get("Crusher-amethyst-input").getAsDouble()
 								&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 64 - main_obj.get("Crusher-amethyst-output").getAsDouble()
-										|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
+										|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() || itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);

@@ -81,15 +81,15 @@ public class JobsminercraftmoulastoneProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST.get())) && (getAmountInGUISlot(entity, 7) == 0
-				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu34 ? _menu34.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST_INGOT.get())) && (getAmountInGUISlot(entity, 7) == 0
+				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu34 ? _menu34.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT.get()
 						&& getAmountInGUISlot(entity, 7) == 64)) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST_INGOT.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack39 = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+				ItemStack _setstack39 = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 				_setstack39.setCount(getAmountInGUISlot(entity, 7) + 1);
 				_menu.getSlots().get(7).set(_setstack39);
 				_player.containerMenu.broadcastChanges();

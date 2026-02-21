@@ -75,7 +75,7 @@ public class CreativepotgItem extends TieredItem {
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.CREATIVEPOTG.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.CREATIVE_POTG.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override
@@ -111,6 +111,6 @@ public class CreativepotgItem extends TieredItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.palamod.creativepotg.description_0"));
+		list.add(Component.translatable("item.palamod.creative_potg.description_0"));
 	}
 }

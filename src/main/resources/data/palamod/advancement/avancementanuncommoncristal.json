@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "palamod:amethyst"
+      "id": "palamod:amethyst_ingot"
     },
     "title": {
       "translate": "advancements.avancementanuncommoncristal.title"
@@ -21,7 +21,7 @@
         "items": [
           {
             "items": [
-              "palamod:amethyst"
+              "palamod:amethyst_ingot"
             ],
             "count": {
               "min": 1,

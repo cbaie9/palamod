@@ -28,7 +28,7 @@ public class PlaceemptyspawnerProcedure {
 		if (PalamodModItems.EMPTY_SPAWNER_ITEM.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
 			item = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy();
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack3 = new ItemStack(PalamodModItems.CUSTOMAIR.get()).copy();
+				ItemStack _setstack3 = new ItemStack(PalamodModItems.CUSTOM_AIR.get()).copy();
 				_setstack3.setCount(0);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack3);
 				if (_entity instanceof Player _player)
@@ -37,7 +37,7 @@ public class PlaceemptyspawnerProcedure {
 		} else if (PalamodModItems.EMPTY_SPAWNER_ITEM.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()) {
 			item = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack7 = new ItemStack(PalamodModItems.CUSTOMAIR.get()).copy();
+				ItemStack _setstack7 = new ItemStack(PalamodModItems.CUSTOM_AIR.get()).copy();
 				_setstack7.setCount(0);
 				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack7);
 				if (_entity instanceof Player _player)

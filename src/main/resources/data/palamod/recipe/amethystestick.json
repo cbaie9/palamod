@@ -4,10 +4,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "palamod:amethyst"
+      "item": "palamod:amethyst_ingot"
     },
     {
-      "item": "palamod:amethyst"
+      "item": "palamod:amethyst_ingot"
     }
   ],
   "result": {

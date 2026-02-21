@@ -1072,7 +1072,7 @@ public class Gcodev4Procedure {
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 				}
-			} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEADENDIUMSWORD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
+			} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < 64
 					|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) && 3 == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot")) {
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gstate_cl2") == 10) {
 					if (!world.isClientSide()) {
@@ -1087,7 +1087,7 @@ public class Gcodev4Procedure {
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.HEADENDIUMSWORD.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_SWORD.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -2271,7 +2271,7 @@ public class Gcodev4Procedure {
 				}
 			}
 		}
-		if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEADENDIUMSWORD.get()
+		if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get()
 				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_STICK.get() || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == Items.STICK)
 				&& 1 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
 			if (!world.isClientSide()) {
@@ -2749,7 +2749,7 @@ public class Gcodev4Procedure {
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMBROADSWORD.get()).copy();
+					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD.get()).copy();
 					_setstack.setCount(1);
 					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}

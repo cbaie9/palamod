@@ -26,7 +26,7 @@ public class XpbushonBlockEntity extends RandomizableContainerBlockEntity implem
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public XpbushonBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.XPBUSHON.get(), position, state);
+		super(PalamodModBlockEntities.XP_BUSH_ON.get(), position, state);
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class XpbushonBlockEntity extends RandomizableContainerBlockEntity implem
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("xpbushon");
+		return Component.literal("xp_bush_on");
 	}
 
 	@Override

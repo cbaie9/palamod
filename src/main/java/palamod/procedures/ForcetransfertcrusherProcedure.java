@@ -42,7 +42,7 @@ public class ForcetransfertcrusherProcedure {
 		} else if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "crusher_lock") && (getBlockNBTString(world, BlockPos.containing(x, y, z), "crusher_mode")).equals("amethyste")) {
 			if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num") / 16) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 					_setstack.setCount(20);
 					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}

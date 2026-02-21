@@ -46,7 +46,7 @@ public class DamagestickprocessProcedure {
 			}
 			{
 				final String _tagName = "name";
-				final String _tagValue = (new ItemStack(PalamodModItems.DAMAGESTICK.get()).getDisplayName().getString());
+				final String _tagValue = (new ItemStack(PalamodModItems.DAMAGE_STICK.get()).getDisplayName().getString());
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
 			}
 			{

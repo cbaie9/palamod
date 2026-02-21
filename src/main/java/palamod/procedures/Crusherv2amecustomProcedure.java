@@ -50,7 +50,7 @@ public class Crusherv2amecustomProcedure {
 					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= main_obj.get("Crusher-amethyst-input").getAsDouble()) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
 							_itemHandlerModifiable.setStackInSlot(2, _setstack);
 						}
@@ -70,7 +70,7 @@ public class Crusherv2amecustomProcedure {
 					} else {
 						if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") / main_obj.get("Crusher-amethyst-input").getAsDouble()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}

@@ -18,10 +18,10 @@
     "palamod:head_endium_pickaxe",
     "palamod:endium_broadsword_head",
     "palamod:endium_fastsword_head",
-    "palamod:headendiumsword",
+    "palamod:head_endium_sword",
     "palamod:endium_hammer",
     "palamod:head_endium_axe",
     "palamod:endium_armor_boots",
-    "palamod:endiumbroadsword"
+    "palamod:endium_broadsword"
   ]
 }

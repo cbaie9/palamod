@@ -110,15 +110,15 @@ public class JobsminercraftspongetntProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COMPRESSEDSPONGE.get()))
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COMPRESSED_SPONGE.get()))
 				&& (getAmountInGUISlot(entity, 3) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu50 ? _menu50.getSlots().get(3).getItem() : ItemStack.EMPTY)
-						.getItem() == PalamodModBlocks.COMPRESSEDSPONGE.get().asItem() && getAmountInGUISlot(entity, 3) < 64)) {
+						.getItem() == PalamodModBlocks.COMPRESSED_SPONGE.get().asItem() && getAmountInGUISlot(entity, 3) < 64)) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COMPRESSEDSPONGE.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COMPRESSED_SPONGE.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack55 = new ItemStack(PalamodModBlocks.COMPRESSEDSPONGE.get()).copy();
+				ItemStack _setstack55 = new ItemStack(PalamodModBlocks.COMPRESSED_SPONGE.get()).copy();
 				_setstack55.setCount(getAmountInGUISlot(entity, 3) + 1);
 				_menu.getSlots().get(3).set(_setstack55);
 				_player.containerMenu.broadcastChanges();
@@ -138,15 +138,15 @@ public class JobsminercraftspongetntProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COMPRESSEDSPONGE.get()))
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COMPRESSED_SPONGE.get()))
 				&& (getAmountInGUISlot(entity, 5) == 0 || (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu66 ? _menu66.getSlots().get(5).getItem() : ItemStack.EMPTY)
-						.getItem() == PalamodModBlocks.COMPRESSEDSPONGE.get().asItem() && getAmountInGUISlot(entity, 5) < 64)) {
+						.getItem() == PalamodModBlocks.COMPRESSED_SPONGE.get().asItem() && getAmountInGUISlot(entity, 5) < 64)) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COMPRESSEDSPONGE.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COMPRESSED_SPONGE.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack71 = new ItemStack(PalamodModBlocks.COMPRESSEDSPONGE.get()).copy();
+				ItemStack _setstack71 = new ItemStack(PalamodModBlocks.COMPRESSED_SPONGE.get()).copy();
 				_setstack71.setCount(getAmountInGUISlot(entity, 5) + 1);
 				_menu.getSlots().get(5).set(_setstack71);
 				_player.containerMenu.broadcastChanges();

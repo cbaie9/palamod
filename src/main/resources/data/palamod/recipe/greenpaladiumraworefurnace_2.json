@@ -4,7 +4,7 @@
   "experience": 1,
   "cookingtime": 100,
   "ingredient": {
-    "item": "palamod:greenpaladiumrawore"
+    "item": "palamod:green_paladium_raw_ore"
   },
   "result": {
     "id": "palamod:green_paladium_ingot"

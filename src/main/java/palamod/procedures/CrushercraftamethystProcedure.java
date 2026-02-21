@@ -18,7 +18,7 @@ public class CrushercraftamethystProcedure {
 			ItemStack _setstack1 = new ItemStack(PalamodModItems.GOLD_MIXEDCOAL.get()).copy();
 			_setstack1.setCount(1);
 			_menu.getSlots().get(1).set(_setstack1);
-			ItemStack _setstack2 = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+			ItemStack _setstack2 = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 			_setstack2.setCount(1);
 			_menu.getSlots().get(2).set(_setstack2);
 			_player.containerMenu.broadcastChanges();

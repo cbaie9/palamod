@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 public class FarmerjobsitemInventoryCapability extends ComponentItemHandler {
 	@SubscribeEvent
 	public static void onItemDropped(ItemTossEvent event) {
-		if (event.getEntity().getItem().getItem() == PalamodModItems.FARMERJOBSITEM.get()) {
+		if (event.getEntity().getItem().getItem() == PalamodModItems.JOBS_ITEM_FARMER.get()) {
 			Player player = event.getPlayer();
 			if (player.containerMenu instanceof JobsfarmercraftguiMenu)
 				player.closeContainer();
@@ -38,7 +38,7 @@ public class FarmerjobsitemInventoryCapability extends ComponentItemHandler {
 
 	@Override
 	public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-		return stack.getItem() != PalamodModItems.FARMERJOBSITEM.get();
+		return stack.getItem() != PalamodModItems.JOBS_ITEM_FARMER.get();
 	}
 
 	@Override

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "palamod:xpbush",
-    "palamod:xpbushon",
-    "palamod:xpbushlow"
+    "palamod:xp_bush",
+    "palamod:xp_bush_on",
+    "palamod:xp_bush_low"
   ]
 }

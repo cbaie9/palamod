@@ -50,11 +50,11 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu16 ? _menu16.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (getAmountInGUISlot(entity, 9) == 0
 									|| getAmountInGUISlot(entity, 9) < 64 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu20 ? _menu20.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.WITHEREDOBSIDIAN_0.get().asItem())
+											.getItem() == PalamodModBlocks.WITHERED_OBSIDIAN_0.get().asItem())
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu22 ? _menu22.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.WITHER_ROSE.asItem()
 							&& (75 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack25 = new ItemStack(PalamodModBlocks.WITHEREDOBSIDIAN_0.get()).copy();
+							ItemStack _setstack25 = new ItemStack(PalamodModBlocks.WITHERED_OBSIDIAN_0.get()).copy();
 							_setstack25.setCount(1);
 							_menu.getSlots().get(9).set(_setstack25);
 							_player.containerMenu.broadcastChanges();
@@ -63,27 +63,27 @@ public class GuijobsminercheckcraftProcedure {
 					}
 					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu26 ? _menu26.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT
 							.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu28 ? _menu28.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANEEXCAVATOR
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu28 ? _menu28.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANE_EXCAVATOR
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu30 ? _menu30.getSlots().get(2).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu32 ? _menu32.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANEEXCAVATOR
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu32 ? _menu32.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANE_EXCAVATOR
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu34 ? _menu34.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu36 ? _menu36.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANEEXCAVATOR
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu36 ? _menu36.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANE_EXCAVATOR
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu38 ? _menu38.getSlots().get(6).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu40 ? _menu40.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANEEXCAVATOR
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu40 ? _menu40.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANE_EXCAVATOR
 									.get()
 							&& (getAmountInGUISlot(entity, 9) == 0
 									|| getAmountInGUISlot(entity, 9) < 1 && (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu44 ? _menu44.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModItems.GREENPALADUMEXCATOR.get())
+											.getItem() == PalamodModItems.GREEN_PALADUM_EXCAVATOR.get())
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu46 ? _menu46.getSlots().get(8).getItem() : ItemStack.EMPTY)
 									.getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
 							&& (70 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack49 = new ItemStack(PalamodModItems.GREENPALADUMEXCATOR.get()).copy();
+							ItemStack _setstack49 = new ItemStack(PalamodModItems.GREEN_PALADUM_EXCAVATOR.get()).copy();
 							_setstack49.setCount(1);
 							_menu.getSlots().get(9).set(_setstack49);
 							_player.containerMenu.broadcastChanges();
@@ -128,11 +128,14 @@ public class GuijobsminercheckcraftProcedure {
 						}
 						is_a_craft = true;
 					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu92 ? _menu92.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu94 ? _menu94.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu92 ? _menu92.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu94 ? _menu94.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu96 ? _menu96.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Blocks.CHEST.asItem()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu98 ? _menu98.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu100 ? _menu100.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu98 ? _menu98.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu100 ? _menu100.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
 							&& getAmountInGUISlot(entity, 0) == 0 && getAmountInGUISlot(entity, 2) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu108 ? _menu108.getSlots().get(9).getItem() : ItemStack.EMPTY)
@@ -173,7 +176,7 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
 							&& (45 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack145 = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get()).copy();
+							ItemStack _setstack145 = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get()).copy();
 							_setstack145.setCount(1);
 							_menu.getSlots().get(9).set(_setstack145);
 							_player.containerMenu.broadcastChanges();
@@ -190,7 +193,7 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
 							&& (67 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack162 = new ItemStack(PalamodModItems.PALADIUMEXCAVATOR.get()).copy();
+							ItemStack _setstack162 = new ItemStack(PalamodModItems.PALADIUM_EXCAVATOR.get()).copy();
 							_setstack162.setCount(1);
 							_menu.getSlots().get(9).set(_setstack162);
 							_player.containerMenu.broadcastChanges();
@@ -208,7 +211,7 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
 							&& (79 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack179 = new ItemStack(PalamodModItems.GREENPALADUMEXCATOR.get()).copy();
+							ItemStack _setstack179 = new ItemStack(PalamodModItems.GREEN_PALADUM_EXCAVATOR.get()).copy();
 							_setstack179.setCount(1);
 							_menu.getSlots().get(9).set(_setstack179);
 							_player.containerMenu.broadcastChanges();
@@ -247,7 +250,7 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
 							&& (15 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack212 = new ItemStack(PalamodModItems.OBSIDIANPICKAXE.get()).copy();
+							ItemStack _setstack212 = new ItemStack(PalamodModItems.OBSIDIAN_PICKAXE.get()).copy();
 							_setstack212.setCount(1);
 							_menu.getSlots().get(9).set(_setstack212);
 							_player.containerMenu.broadcastChanges();
@@ -408,10 +411,10 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 7) == 0 && getAmountInGUISlot(entity, 8) == 0
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu379 ? _menu379.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.AMETHYS_TOBSIDIAN_SPIKE.get().asItem())
+											.getItem() == PalamodModBlocks.AMETHYST_OBSIDIAN_SPIKE.get().asItem())
 							&& (31 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack382 = new ItemStack(PalamodModBlocks.AMETHYS_TOBSIDIAN_SPIKE.get()).copy();
+							ItemStack _setstack382 = new ItemStack(PalamodModBlocks.AMETHYST_OBSIDIAN_SPIKE.get()).copy();
 							_setstack382.setCount(1);
 							_menu.getSlots().get(9).set(_setstack382);
 							_player.containerMenu.broadcastChanges();
@@ -425,10 +428,10 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 7) == 0 && getAmountInGUISlot(entity, 8) == 0
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu396 ? _menu396.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.AMETHYS_TOBSIDIAN_SPIKE.get().asItem())
+											.getItem() == PalamodModBlocks.AMETHYST_OBSIDIAN_SPIKE.get().asItem())
 							&& (32 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack399 = new ItemStack(PalamodModBlocks.AMETHYS_TOBSIDIAN_SPIKE.get()).copy();
+							ItemStack _setstack399 = new ItemStack(PalamodModBlocks.AMETHYST_OBSIDIAN_SPIKE.get()).copy();
 							_setstack399.setCount(1);
 							_menu.getSlots().get(9).set(_setstack399);
 							_player.containerMenu.broadcastChanges();
@@ -537,7 +540,8 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu492 ? _menu492.getSlots().get(6).getItem() : ItemStack.EMPTY).getItem() == Items.ENDER_PEARL
 							&& getAmountInGUISlot(entity, 3) == 0 && getAmountInGUISlot(entity, 5) == 0
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu496 ? _menu496.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Items.ENDER_PEARL
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu498 ? _menu498.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu498 ? _menu498.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu502 ? _menu502.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.DOLLARS_STONE.get())
@@ -626,17 +630,22 @@ public class GuijobsminercheckcraftProcedure {
 						}
 						is_a_craft = true;
 					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu571 ? _menu571.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu571 ? _menu571.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu573 ? _menu573.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModBlocks.COBBLEBREAKER
 									.get().asItem()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu575 ? _menu575.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu577 ? _menu577.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu575 ? _menu575.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu577 ? _menu577.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
 							&& getAmountInGUISlot(entity, 4) == 0
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu580 ? _menu580.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu582 ? _menu582.getSlots().get(6).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu580 ? _menu580.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu582 ? _menu582.getSlots().get(6).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu584 ? _menu584.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.SPEED_MODIFIER
 									.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu586 ? _menu586.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu586 ? _menu586.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
+									.get()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu590 ? _menu590.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.COBBLEBREAKER_AMETHYST_UPGRADE.get())
@@ -690,10 +699,10 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu633 ? _menu633.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu637 ? _menu637.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.ENDIUMTNT.get().asItem())
+											.getItem() == PalamodModBlocks.TNT_ENDIUM.get().asItem())
 							&& (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack640 = new ItemStack(PalamodModBlocks.ENDIUMTNT.get()).copy();
+							ItemStack _setstack640 = new ItemStack(PalamodModBlocks.TNT_ENDIUM.get()).copy();
 							_setstack640.setCount(4);
 							_menu.getSlots().get(9).set(_setstack640);
 							_player.containerMenu.broadcastChanges();
@@ -704,19 +713,19 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu643 ? _menu643.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu645 ? _menu645.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu647 ? _menu647.getSlots().get(3).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.COMPRESSEDSPONGE.get().asItem()
+									.getItem() == PalamodModBlocks.COMPRESSED_SPONGE.get().asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu649 ? _menu649.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Items.BUCKET
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu651 ? _menu651.getSlots().get(5).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModBlocks.COMPRESSEDSPONGE.get().asItem()
+									.getItem() == PalamodModBlocks.COMPRESSED_SPONGE.get().asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu653 ? _menu653.getSlots().get(6).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu655 ? _menu655.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu657 ? _menu657.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu661 ? _menu661.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.SPONGETNT.get().asItem())
+											.getItem() == PalamodModBlocks.TNT_SPONGE.get().asItem())
 							&& (74 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack664 = new ItemStack(PalamodModBlocks.SPONGETNT.get()).copy();
+							ItemStack _setstack664 = new ItemStack(PalamodModBlocks.TNT_SPONGE.get()).copy();
 							_setstack664.setCount(2);
 							_menu.getSlots().get(9).set(_setstack664);
 							_player.containerMenu.broadcastChanges();
@@ -729,17 +738,17 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu671 ? _menu671.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu673 ? _menu673.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.PALADIUM_CORE
 									.get()
-							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu675 ? _menu675.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModBlocks.COMPACTTNT
+							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu675 ? _menu675.getSlots().get(5).getItem() : ItemStack.EMPTY).getItem() == PalamodModBlocks.TNT_COMPACT
 									.get().asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu677 ? _menu677.getSlots().get(6).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu679 ? _menu679.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu681 ? _menu681.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu685 ? _menu685.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.WITHERTNT.get().asItem())
+											.getItem() == PalamodModBlocks.TNT_WITHER.get().asItem())
 							&& (48 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack688 = new ItemStack(PalamodModBlocks.WITHERTNT.get()).copy();
+							ItemStack _setstack688 = new ItemStack(PalamodModBlocks.TNT_WITHER.get()).copy();
 							_setstack688.setCount(1);
 							_menu.getSlots().get(9).set(_setstack688);
 							_player.containerMenu.broadcastChanges();
@@ -758,10 +767,10 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu705 ? _menu705.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu709 ? _menu709.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.COMPACTTNT.get().asItem())
+											.getItem() == PalamodModBlocks.TNT_COMPACT.get().asItem())
 							&& (25 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack712 = new ItemStack(PalamodModBlocks.MAGIC_TNT.get()).copy();
+							ItemStack _setstack712 = new ItemStack(PalamodModBlocks.TNT_MAGIC.get()).copy();
 							_setstack712.setCount(2);
 							_menu.getSlots().get(9).set(_setstack712);
 							_player.containerMenu.broadcastChanges();
@@ -780,10 +789,10 @@ public class GuijobsminercheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu729 ? _menu729.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Blocks.TNT.asItem()
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu733 ? _menu733.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.COMPACTTNT.get().asItem())
+											.getItem() == PalamodModBlocks.TNT_COMPACT.get().asItem())
 							&& (18 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack736 = new ItemStack(PalamodModBlocks.COMPACTTNT.get()).copy();
+							ItemStack _setstack736 = new ItemStack(PalamodModBlocks.TNT_COMPACT.get()).copy();
 							_setstack736.setCount(3);
 							_menu.getSlots().get(9).set(_setstack736);
 							_player.containerMenu.broadcastChanges();

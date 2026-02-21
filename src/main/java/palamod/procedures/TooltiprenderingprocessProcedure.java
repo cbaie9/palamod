@@ -34,7 +34,7 @@ public class TooltiprenderingprocessProcedure {
 		if (tooltip == null)
 			return;
 		String jobs = "";
-		if (itemstack.getItem() == PalamodModItems.XPBOTTLE.get()) {
+		if (itemstack.getItem() == PalamodModItems.XP_BOTTLE.get()) {
 			tooltip.add(1, Component.literal((Component.translatable("palamod.procedure.get_info_xpbottle1").getString())));
 			tooltip.add(2, Component.literal((Component.translatable("palamod.procedure.get_info_xpbottle2").getString() + " " + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"))));
 			if (0 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")) {

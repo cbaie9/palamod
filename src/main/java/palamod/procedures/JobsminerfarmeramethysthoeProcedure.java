@@ -25,29 +25,29 @@ public class JobsminerfarmeramethysthoeProcedure {
 			_vars.lvl_required = "Lvl required : 5";
 			_vars.markSyncDirty();
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST.get())) && (getAmountInGUISlot(entity, 1) == 0
-				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu2 ? _menu2.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST_INGOT.get())) && (getAmountInGUISlot(entity, 1) == 0
+				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu2 ? _menu2.getSlots().get(1).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT.get()
 						&& getAmountInGUISlot(entity, 1) < 64)) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST_INGOT.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack7 = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+				ItemStack _setstack7 = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 				_setstack7.setCount(getAmountInGUISlot(entity, 1) + 1);
 				_menu.getSlots().get(1).set(_setstack7);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST.get())) && (getAmountInGUISlot(entity, 0) == 0
-				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST.get()
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST_INGOT.get())) && (getAmountInGUISlot(entity, 0) == 0
+				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT.get()
 						&& getAmountInGUISlot(entity, 0) < 64)) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST_INGOT.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack15 = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+				ItemStack _setstack15 = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 				_setstack15.setCount(getAmountInGUISlot(entity, 0) + 1);
 				_menu.getSlots().get(0).set(_setstack15);
 				_player.containerMenu.broadcastChanges();

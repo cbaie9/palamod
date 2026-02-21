@@ -53,7 +53,7 @@ public class FlintandsteelopendimProcedure {
 			portalX = x + direction.getStepX();
 			portalY = y + direction.getStepY();
 			portalZ = z + direction.getStepZ();
-			if ((world.getBlockState(BlockPos.containing(portalX, portalY - 1, portalZ))).getBlock() == PalamodModBlocks.WITHEREDOBSIDIAN_13.get()) {
+			if ((world.getBlockState(BlockPos.containing(portalX, portalY - 1, portalZ))).getBlock() == PalamodModBlocks.WITHERED_OBSIDIAN_13.get()) {
 				if (world instanceof Level _level)
 					MinerdimensionPortalBlock.portalSpawn(_level, BlockPos.containing(portalX, portalY, portalZ));
 				if (world instanceof Level _level) {

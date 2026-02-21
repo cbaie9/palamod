@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "palamod:xpberry"
+            "items": "palamod:xp_berry"
           }
         ]
       },
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": "palamod:compressedxpberry"
+            "items": "palamod:compressed_xp_berry"
           }
         ]
       },

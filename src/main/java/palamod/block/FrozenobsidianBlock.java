@@ -24,7 +24,7 @@ public class FrozenobsidianBlock extends Block {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("block.palamod.frozenobsidian.description_0"));
+		list.add(Component.translatable("block.palamod.frozen_obsidian.description_0"));
 	}
 
 	@Override

@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "palamod:spawnerupgradespeed",
-    "palamod:spawnerupgradelooting",
-    "palamod:spawnerupgrademore",
-    "palamod:spawnerupgradeslime"
+    "palamod:spawner_upgrade_speed",
+    "palamod:spawner_upgrade_looting",
+    "palamod:spawner_upgrade_more",
+    "palamod:spawner_upgrade_slime"
   ]
 }

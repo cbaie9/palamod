@@ -28,7 +28,7 @@ public class ForgeprocessProcedure {
 		previousRecipe = getBlockNBTNumber(world, BlockPos.containing(x, y, z), "recipe");
 		if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.AMETHYST_ORE.get().asItem()
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.DEEPSLATE_AMETHYST_ORE.get().asItem())
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -44,7 +44,7 @@ public class ForgeprocessProcedure {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyste ore"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_SWORD.get()
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -128,7 +128,7 @@ public class ForgeprocessProcedure {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn green paladium ore"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_AXE.get()
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 61
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 61
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -144,7 +144,7 @@ public class ForgeprocessProcedure {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst axe"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_SHOVEL.get()
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -160,7 +160,7 @@ public class ForgeprocessProcedure {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst shovel"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_BROADSWORD.get()
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 60
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 60
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -192,7 +192,7 @@ public class ForgeprocessProcedure {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst fastsword"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_HAMMER.get()
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 58
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 58
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -208,7 +208,7 @@ public class ForgeprocessProcedure {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst hammer"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_STICK.get()
-				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
+				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -481,7 +481,7 @@ public class ForgeprocessProcedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -493,7 +493,7 @@ public class ForgeprocessProcedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -576,7 +576,7 @@ public class ForgeprocessProcedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -588,7 +588,7 @@ public class ForgeprocessProcedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 4);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -612,7 +612,7 @@ public class ForgeprocessProcedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 6);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -624,7 +624,7 @@ public class ForgeprocessProcedure {
 						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 2);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}

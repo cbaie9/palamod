@@ -21,10 +21,10 @@ import net.minecraft.core.BlockPos;
 public class Crusherv2ameProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= 16) {
-			if (PalamodModItems.AMETHYST.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 58 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
+			if (PalamodModItems.AMETHYST_INGOT.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 58 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
 					|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5);
 					_itemHandlerModifiable.setStackInSlot(2, _setstack);
 				}
@@ -44,10 +44,10 @@ public class Crusherv2ameProcedure {
 			}
 		} else {
 			if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") / 16) {
-				if (PalamodModItems.AMETHYST.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 58 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
+				if (PalamodModItems.AMETHYST_INGOT.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 58 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
 						|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST.get()).copy();
+						ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 5);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -66,7 +66,7 @@ public class Crusherv2ameProcedure {
 					}
 				}
 			} else {
-				if (PalamodModItems.AMETHYST.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 58 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
+				if (PalamodModItems.AMETHYST_INGOT.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 58 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
 						|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= 1) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {

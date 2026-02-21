@@ -33,7 +33,7 @@ public class PalahelpstickmodedamageProcedure {
 			ItemStack _setstack4 = new ItemStack(PalamodModBlocks.PALADIUM_SPIKE.get()).copy();
 			_setstack4.setCount(1);
 			_menu.getSlots().get(4).set(_setstack4);
-			ItemStack _setstack5 = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.JUMP_STICK.get()).copy();
 			_setstack5.setCount(1);
 			_menu.getSlots().get(5).set(_setstack5);
 			_menu.getSlots().get(7).set(ItemStack.EMPTY);

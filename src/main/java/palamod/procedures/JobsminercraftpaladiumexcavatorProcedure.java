@@ -37,49 +37,49 @@ public class JobsminercraftpaladiumexcavatorProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANEEXCAVATOR.get())) && getAmountInGUISlot(entity, 1) == 0) {
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get())) && getAmountInGUISlot(entity, 1) == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack10 = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get()).copy();
+				ItemStack _setstack10 = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get()).copy();
 				_setstack10.setCount(1);
 				_menu.getSlots().get(1).set(_setstack10);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANEEXCAVATOR.get())) && getAmountInGUISlot(entity, 3) == 0) {
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get())) && getAmountInGUISlot(entity, 3) == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack14 = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get()).copy();
+				ItemStack _setstack14 = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get()).copy();
 				_setstack14.setCount(1);
 				_menu.getSlots().get(3).set(_setstack14);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANEEXCAVATOR.get())) && getAmountInGUISlot(entity, 5) == 0) {
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get())) && getAmountInGUISlot(entity, 5) == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack18 = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get()).copy();
+				ItemStack _setstack18 = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get()).copy();
 				_setstack18.setCount(1);
 				_menu.getSlots().get(5).set(_setstack18);
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANEEXCAVATOR.get())) && getAmountInGUISlot(entity, 7) == 0) {
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get())) && getAmountInGUISlot(entity, 7) == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack22 = new ItemStack(PalamodModItems.TITANEEXCAVATOR.get()).copy();
+				ItemStack _setstack22 = new ItemStack(PalamodModItems.TITANE_EXCAVATOR.get()).copy();
 				_setstack22.setCount(1);
 				_menu.getSlots().get(7).set(_setstack22);
 				_player.containerMenu.broadcastChanges();

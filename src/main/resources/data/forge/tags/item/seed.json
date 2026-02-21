@@ -2,13 +2,13 @@
   "replace": false,
   "values": [
     "minecraft:pumpkin_seeds",
-    "palamod:kiwanoseed",
+    "palamod:kiwano_seed",
     "minecraft:beetroot_seeds",
     "minecraft:wheat_seeds",
     "minecraft:carrot",
     "minecraft:potato",
-    "palamod:chervilseed",
-    "palamod:orangeblueseed",
+    "palamod:chervil_seed",
+    "palamod:orangeblue_seed",
     "minecraft:melon_seeds"
   ]
 }

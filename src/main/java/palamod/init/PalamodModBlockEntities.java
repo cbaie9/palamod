@@ -25,8 +25,8 @@ public class PalamodModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, PalamodMod.MODID);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PaladiumcrusherBlockEntity>> PALADIUM_CRUSHER = register("paladium_crusher", PalamodModBlocks.PALADIUM_CRUSHER, PaladiumcrusherBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<NbtblockBlockEntity>> NBT_BLOCK = register("nbt_block", PalamodModBlocks.NBT_BLOCK, NbtblockBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushBlockEntity>> XPBUSH = register("xpbush", PalamodModBlocks.XPBUSH, XpbushBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushonBlockEntity>> XPBUSHON = register("xpbushon", PalamodModBlocks.XPBUSHON, XpbushonBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushBlockEntity>> XP_BUSH = register("xp_bush", PalamodModBlocks.XP_BUSH, XpbushBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushonBlockEntity>> XP_BUSH_ON = register("xp_bush_on", PalamodModBlocks.XP_BUSH_ON, XpbushonBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<Alchimet1BlockEntity>> ALCHIMET_1 = register("alchimet_1", PalamodModBlocks.ALCHIMET_1, Alchimet1BlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GrinderblockBlockEntity>> GRINDER_BLOCK = register("grinder_block", PalamodModBlocks.GRINDER_BLOCK, GrinderblockBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PaladiumfurnaceBlockEntity>> PALADIUM_FURNACE = register("paladium_furnace", PalamodModBlocks.PALADIUM_FURNACE, PaladiumfurnaceBlockEntity::new);
@@ -61,9 +61,9 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DrawbridgeBlockEntity>> DRAWBRIDGE = register("drawbridge", PalamodModBlocks.DRAWBRIDGE, DrawbridgeBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExctractorBlockEntity>> EXTRACTOR = register("extractor", PalamodModBlocks.EXTRACTOR, ExctractorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TotemfertilityBlockEntity>> TOTEMFERTILITY = register("totemfertility", PalamodModBlocks.TOTEMFERTILITY, TotemfertilityBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushlowBlockEntity>> XPBUSHLOW = register("xpbushlow", PalamodModBlocks.XPBUSHLOW, XpbushlowBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CobblebreakerserverBlockEntity>> COBBLEBREAKERSERVER = register("cobblebreakerserver", PalamodModBlocks.COBBLEBREAKERSERVER, CobblebreakerserverBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FlowertotemBlockEntity>> FLOWERTOTEM = register("flowertotem", PalamodModBlocks.FLOWERTOTEM, FlowertotemBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushlowBlockEntity>> XP_BUSH_LOW = register("xp_bush_low", PalamodModBlocks.XP_BUSH_LOW, XpbushlowBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CobblebreakerserverBlockEntity>> COBBLEBREAKER_SERVER = register("cobblebreaker_server", PalamodModBlocks.COBBLEBREAKER_SERVER, CobblebreakerserverBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FlowertotemBlockEntity>> FLOWER_TOTEM = register("flower_totem", PalamodModBlocks.FLOWER_TOTEM, FlowertotemBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SpawncontrollerBlockEntity>> SPAWN_CONTROLLER = register("spawn_controller", PalamodModBlocks.SPAWN_CONTROLLER, SpawncontrollerBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EmptyspawnerBlockEntity>> EMPTY_SPAWNER = register("empty_spawner", PalamodModBlocks.EMPTY_SPAWNER, EmptyspawnerBlockEntity::new);
 
@@ -77,8 +77,8 @@ public class PalamodModBlockEntities {
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PALADIUM_CRUSHER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, NBT_BLOCK.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSH.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSHON.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XP_BUSH.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XP_BUSH_ON.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ALCHIMET_1.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, GRINDER_BLOCK.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PALADIUM_FURNACE.get(), SidedInvWrapper::new);
@@ -112,9 +112,9 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DRAWBRIDGE.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXTRACTOR.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEMFERTILITY.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XPBUSHLOW.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, COBBLEBREAKERSERVER.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FLOWERTOTEM.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XP_BUSH_LOW.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, COBBLEBREAKER_SERVER.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FLOWER_TOTEM.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SPAWN_CONTROLLER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EMPTY_SPAWNER.get(), SidedInvWrapper::new);
 	}

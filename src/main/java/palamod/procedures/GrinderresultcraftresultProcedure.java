@@ -79,7 +79,7 @@ public class GrinderresultcraftresultProcedure {
 			} else if (mode == 2) {
 				output = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get()).copy();
 			} else if (mode == 3) {
-				output = new ItemStack(PalamodModItems.HEADENDIUMSWORD.get()).copy();
+				output = new ItemStack(PalamodModItems.HEAD_ENDIUM_SWORD.get()).copy();
 			}
 		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_PATTERN.get() && input_item_slot2.getItem() == PalamodModItems.SOCKET_PATTERN.get() && gnum_local >= 1) {
 			if (mode == 1) {
@@ -113,14 +113,14 @@ public class GrinderresultcraftresultProcedure {
 			output = new ItemStack(PalamodModItems.PALADIUMGREENSHOVEL.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
 			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()).copy();
-		} else if (input_item_slot1.getItem() == PalamodModItems.HEADENDIUMSWORD.get() && input_item_slot2.getItem() == Items.STICK && mode == 3 && gnum_local >= 1) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get() && input_item_slot2.getItem() == Items.STICK && mode == 3 && gnum_local >= 1) {
 			output = new ItemStack(PalamodModItems.ENDIUM_SWORD.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = new ItemStack(PalamodModItems.ENDIUM_PICKAXE.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = new ItemStack(PalamodModItems.ENDIUM_AXE.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_BROADSWORD_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
-			output = new ItemStack(PalamodModItems.ENDIUMBROADSWORD.get()).copy();
+			output = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.ENDIUM_HAMMER_HEAD.get() && input_item_slot2.getItem() == Items.STICK && gnum_local >= 1) {
 			output = new ItemStack(PalamodModItems.ENDIUM_HAMMER.get()).copy();
 		}

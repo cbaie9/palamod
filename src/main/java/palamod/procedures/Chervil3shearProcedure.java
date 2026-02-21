@@ -47,7 +47,7 @@ public class Chervil3shearProcedure {
 					world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.CHERVIL_1.get().defaultBlockState(), 3);
 					if (Math.random() < 0.2) {
 						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.CHERVILSEED.get()));
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.CHERVIL_SEED.get()));
 							entityToSpawn.setPickUpDelay(10);
 							_level.addFreshEntity(entityToSpawn);
 						}

@@ -32,7 +32,7 @@ public class GrinderresultinputnumProcedure {
 			output = 9;
 		} else if (input.getItem() == PalamodModBlocks.ENDIUM_BLOCK.get().asItem()) {
 			output = 81;
-		} else if (input.getItem() == PalamodModItems.ENDIUM_SWORD.get() || input.getItem() == PalamodModItems.ENDIUM_HOE.get() || input.getItem() == PalamodModItems.HEADENDIUMSWORD.get()) {
+		} else if (input.getItem() == PalamodModItems.ENDIUM_SWORD.get() || input.getItem() == PalamodModItems.ENDIUM_HOE.get() || input.getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get()) {
 			output = 18;
 		} else if (input.getItem() == PalamodModItems.ENDIUM_PICKAXE.get() || input.getItem() == PalamodModItems.ENDIUM_AXE.get() || input.getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get()
 				|| input.getItem() == PalamodModItems.HEAD_ENDIUM_AXE.get()) {

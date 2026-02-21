@@ -8,11 +8,11 @@
   ],
   "key": {
     "a": {
-      "item": "palamod:xpberry"
+      "item": "palamod:xp_berry"
     }
   },
   "result": {
-    "id": "palamod:compressedxpberry",
+    "id": "palamod:compressed_xp_berry",
     "count": 1
   }
 }

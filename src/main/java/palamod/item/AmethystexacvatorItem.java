@@ -52,7 +52,7 @@ public class AmethystexacvatorItem extends ShovelItem {
 
 		@Override
 		public Ingredient getRepairIngredient() {
-			return Ingredient.of(new ItemStack(PalamodModItems.AMETHYST.get()));
+			return Ingredient.of(new ItemStack(PalamodModItems.AMETHYST_INGOT.get()));
 		}
 	};
 

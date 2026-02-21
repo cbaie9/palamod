@@ -34,7 +34,7 @@ public abstract class AmethysteArmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 6);
 				map.put(ArmorItem.Type.HELMET, 5);
 				map.put(ArmorItem.Type.BODY, 6);
-			}), 30, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PalamodModItems.AMETHYST.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:amethyst_.png"))), 3f, 0.1f);
+			}), 30, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PalamodModItems.AMETHYST_INGOT.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:amethyst_.png"))), 3f, 0.1f);
 			registerHelper.register(ResourceLocation.parse("palamod:amethyst_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});

@@ -4,7 +4,7 @@
   "experience": 2,
   "cookingtime": 100,
   "ingredient": {
-    "item": "palamod:titanerawore"
+    "item": "palamod:titane_raw_ore"
   },
   "result": {
     "id": "palamod:titane_ingot"

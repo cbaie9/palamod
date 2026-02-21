@@ -30,7 +30,7 @@ public class FlowertotemBlockEntity extends RandomizableContainerBlockEntity imp
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(10, ItemStack.EMPTY);
 
 	public FlowertotemBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.FLOWERTOTEM.get(), position, state);
+		super(PalamodModBlockEntities.FLOWER_TOTEM.get(), position, state);
 	}
 
 	@Override
@@ -74,7 +74,7 @@ public class FlowertotemBlockEntity extends RandomizableContainerBlockEntity imp
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("flowertotem");
+		return Component.literal("flower_totem");
 	}
 
 	@Override

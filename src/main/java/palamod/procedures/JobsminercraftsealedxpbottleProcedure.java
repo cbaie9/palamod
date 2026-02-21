@@ -52,15 +52,15 @@ public class JobsminercraftsealedxpbottleProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.XPBOTTLE.get())) && (getAmountInGUISlot(entity, 4) == 0
-				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu18 ? _menu18.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()
+		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.XP_BOTTLE.get())) && (getAmountInGUISlot(entity, 4) == 0
+				|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu18 ? _menu18.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()
 						&& getAmountInGUISlot(entity, 4) < 64)) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.XPBOTTLE.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.XP_BOTTLE.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack23 = new ItemStack(PalamodModItems.XPBOTTLE.get()).copy();
+				ItemStack _setstack23 = new ItemStack(PalamodModItems.XP_BOTTLE.get()).copy();
 				_setstack23.setCount(getAmountInGUISlot(entity, 4) + 1);
 				_menu.getSlots().get(4).set(_setstack23);
 				_player.containerMenu.broadcastChanges();

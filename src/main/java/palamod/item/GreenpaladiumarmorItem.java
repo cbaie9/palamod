@@ -46,7 +46,7 @@ public abstract class GreenpaladiumarmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.BODY, 8);
 			}), 60, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("palamod:paladium_green_"))),
 					4f, 0.2f);
-			registerHelper.register(ResourceLocation.parse("palamod:greenpaladiumarmor"), armorMaterial);
+			registerHelper.register(ResourceLocation.parse("palamod:green_paladium_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}

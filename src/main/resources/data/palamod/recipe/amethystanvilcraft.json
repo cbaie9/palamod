@@ -11,11 +11,11 @@
       "item": "palamod:amethyst_block"
     },
     "b": {
-      "item": "palamod:amethyst"
+      "item": "palamod:amethyst_ingot"
     }
   },
   "result": {
-    "id": "palamod:amethystanvil",
+    "id": "palamod:amethyst_anvil",
     "count": 1
   }
 }

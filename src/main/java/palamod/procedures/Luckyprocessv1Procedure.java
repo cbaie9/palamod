@@ -607,18 +607,18 @@ public class Luckyprocessv1Procedure {
 			if (Random >= 156700 && Random <= 157200) {
 				PalamodModVariables.lucky_name = " Comment t'a eu \uFFFDa";
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack.setCount(12);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack176 = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack176 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack176.setCount(1);
 					_menu.getSlots().get(3).set(_setstack176);
-					ItemStack _setstack177 = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack177 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack177.setCount(1);
 					_menu.getSlots().get(4).set(_setstack177);
-					ItemStack _setstack178 = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack178 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack178.setCount(1);
 					_menu.getSlots().get(5).set(_setstack178);
 					_player.containerMenu.broadcastChanges();

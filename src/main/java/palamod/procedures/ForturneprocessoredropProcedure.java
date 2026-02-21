@@ -41,16 +41,16 @@ public class ForturneprocessoredropProcedure {
 		ItemStack drop = ItemStack.EMPTY;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_PALADIUM_ORE.get()
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get()) {
-			drop = new ItemStack(PalamodModItems.PALADIUMRAWORE.get()).copy();
+			drop = new ItemStack(PalamodModItems.PALADIUM_RAW_ORE.get()).copy();
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TITANE_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_TITANE_ORE.get()
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_TITANE_ORE.get()) {
-			drop = new ItemStack(PalamodModItems.TITANERAWORE.get()).copy();
+			drop = new ItemStack(PalamodModItems.TITANE_RAW_ORE.get()).copy();
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYST_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_AMETHYST_ORE.get()
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_AMETHYST_ORE.get()) {
-			drop = new ItemStack(PalamodModItems.AMETHYSTRAWORE.get()).copy();
+			drop = new ItemStack(PalamodModItems.AMETHYST_RAW_ORE.get()).copy();
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_GREEN_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get()
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_GREEN_PALADIUM_ORE.get()) {
-			drop = new ItemStack(PalamodModItems.GREENPALADIUMRAWORE.get()).copy();
+			drop = new ItemStack(PalamodModItems.GREEN_PALADIUM_RAW_ORE.get()).copy();
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.FINDIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_FINDIUM_ORE.get()
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_FINDIUM_ORE.get()) {
 			drop = new ItemStack(PalamodModItems.FINDIUM.get()).copy();

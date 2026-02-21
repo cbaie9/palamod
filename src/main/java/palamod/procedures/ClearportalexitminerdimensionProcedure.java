@@ -18,8 +18,8 @@ public class ClearportalexitminerdimensionProcedure {
 			for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
 				for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
 					// Execute the desired statements within the square/cube
-					if (Math.random() < 0.125 && (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PalamodModBlocks.WITHEREDOBSIDIAN_13.get()) {
-						world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PalamodModBlocks.WITHEREDOBSIDIAN_0.get().defaultBlockState(), 3);
+					if (Math.random() < 0.125 && (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PalamodModBlocks.WITHERED_OBSIDIAN_13.get()) {
+						world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PalamodModBlocks.WITHERED_OBSIDIAN_0.get().defaultBlockState(), 3);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x + xi, y + i, z + zi), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate.break")), SoundSource.BLOCKS, 1, 1);

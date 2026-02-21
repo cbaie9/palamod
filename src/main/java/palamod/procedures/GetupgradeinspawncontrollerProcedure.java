@@ -21,13 +21,13 @@ public class GetupgradeinspawncontrollerProcedure {
 		double more_upgrade = 0;
 		double looting = 0;
 		for (int index0 = 0; index0 < getBlockInventorySlotCount(world, BlockPos.containing(x, y, z)); index0++) {
-			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNERUPGRADESLIME.get()) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNER_UPGRADE_SLIME.get()) {
 				slime = slime + 1;
-			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNERUPGRADESPEED.get()) {
+			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNER_UPGRADE_SPEED.get()) {
 				speed = speed + 1;
-			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNERUPGRADEMORE.get()) {
+			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNER_UPGRADE_MORE.get()) {
 				more_upgrade = more_upgrade + 1;
-			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNERUPGRADELOOTING.get()) {
+			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNER_UPGRADE_LOOTING.get()) {
 				looting = looting + 1;
 			}
 			iloop = iloop + 1;

@@ -60,7 +60,7 @@ public class ObsidianpickaxeItem extends PickaxeItem {
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.OBSIDIANPICKAXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.OBSIDIAN_PICKAXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override

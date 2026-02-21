@@ -16,7 +16,7 @@ public class StockedbaseadminshopbuyProcedure {
 			num = 125;
 		} else if (itemstack.getItem() == PalamodModItems.TITANE_INGOT.get()) {
 			num = 110;
-		} else if (itemstack.getItem() == PalamodModItems.AMETHYST.get()) {
+		} else if (itemstack.getItem() == PalamodModItems.AMETHYST_INGOT.get()) {
 			num = 75;
 		} else if (itemstack.getItem() == Items.DIAMOND) {
 			num = 45;

@@ -26,7 +26,7 @@ public class UploaderprocessProcedure {
 				num = 120;
 			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_INGOT.get()) {
 				num = 100;
-			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST.get()) {
+			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get()) {
 				num = 70;
 			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Items.DIAMOND) {
 				num = 40;

@@ -22,7 +22,7 @@ public class XpbushongiveProcedure {
 			return;
 		{
 			BlockPos _bp = BlockPos.containing(x, y, z);
-			BlockState _bs = PalamodModBlocks.XPBUSH.get().defaultBlockState();
+			BlockState _bs = PalamodModBlocks.XP_BUSH.get().defaultBlockState();
 			BlockState _bso = world.getBlockState(_bp);
 			for (Property<?> _propertyOld : _bso.getProperties()) {
 				Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -50,7 +50,7 @@ public class XpbushongiveProcedure {
 			}
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(PalamodModItems.XPBERRY.get()).copy();
+			ItemStack _setstack = new ItemStack(PalamodModItems.XP_BERRY.get()).copy();
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}

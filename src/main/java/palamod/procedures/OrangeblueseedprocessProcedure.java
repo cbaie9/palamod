@@ -19,7 +19,7 @@ public class OrangeblueseedprocessProcedure {
 				&& ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR)) {
 			world.setBlock(BlockPos.containing(x, y + 1, z), PalamodModBlocks.ORANGEBLUE_0.get().defaultBlockState(), 3);
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.ORANGEBLUESEED.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}

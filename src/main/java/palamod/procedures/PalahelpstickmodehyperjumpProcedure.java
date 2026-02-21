@@ -19,13 +19,13 @@ public class PalahelpstickmodehyperjumpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-			ItemStack _setstack0 = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
+			ItemStack _setstack0 = new ItemStack(PalamodModItems.JUMP_STICK.get()).copy();
 			_setstack0.setCount(1);
 			_menu.getSlots().get(0).set(_setstack0);
 			ItemStack _setstack1 = new ItemStack(PalamodModItems.JUMP_ORB.get()).copy();
 			_setstack1.setCount(1);
 			_menu.getSlots().get(1).set(_setstack1);
-			ItemStack _setstack2 = new ItemStack(PalamodModItems.HEALSTICK.get()).copy();
+			ItemStack _setstack2 = new ItemStack(PalamodModItems.HEAL_STICK.get()).copy();
 			_setstack2.setCount(1);
 			_menu.getSlots().get(2).set(_setstack2);
 			ItemStack _setstack3 = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
@@ -34,7 +34,7 @@ public class PalahelpstickmodehyperjumpProcedure {
 			ItemStack _setstack4 = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
 			_setstack4.setCount(1);
 			_menu.getSlots().get(4).set(_setstack4);
-			ItemStack _setstack5 = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.JUMP_STICK.get()).copy();
 			_setstack5.setCount(1);
 			_menu.getSlots().get(5).set(_setstack5);
 			ItemStack _setstack6 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();

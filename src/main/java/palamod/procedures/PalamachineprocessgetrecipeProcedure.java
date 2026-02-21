@@ -27,10 +27,10 @@ public class PalamachineprocessgetrecipeProcedure {
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.HEALSTICK.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.HEAL_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.HEALSTICK.get()).copy();
+			output = new ItemStack(PalamodModItems.HEAL_STICK.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.COMPRESSED_AMETHYST.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.SPEED_ORB.get()
@@ -39,10 +39,10 @@ public class PalamachineprocessgetrecipeProcedure {
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.COMPRESSED_AMETHYST.get()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.SPEEDSTICK.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.SPEED_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.SPEEDSTICK.get()).copy();
+			output = new ItemStack(PalamodModItems.SPEED_STICK.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.PALADIUM_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.STRENGH_ORB.get()
@@ -51,10 +51,10 @@ public class PalamachineprocessgetrecipeProcedure {
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.STRENGHTSTICK.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.STRENGHT_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.STRENGHTSTICK.get()).copy();
+			output = new ItemStack(PalamodModItems.STRENGHT_STICK.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_STICK.get()
 				&& new ItemStack(
 						BuiltInRegistries.ITEM.get(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))))
@@ -70,22 +70,22 @@ public class PalamachineprocessgetrecipeProcedure {
 								BuiltInRegistries.ITEM.get(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))))
 								.is(ItemTags.create(ResourceLocation.parse("palamod:slimepad")))
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.JUMPSTICK.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.JUMP_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.TITANE_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.JUMPSTICK.get()).copy();
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEALSTICK.get()
+			output = new ItemStack(PalamodModItems.JUMP_STICK.get()).copy();
+		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEAL_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.STRENGHTSTICK.get()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.SPEEDSTICK.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.STRENGHT_STICK.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.SPEED_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.FINDIUM.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.STICKOFGODS.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.STICK_OF_GODS.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.STICKOFGODS.get()).copy();
+			output = new ItemStack(PalamodModItems.STICK_OF_GODS.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_SPIKE.get().asItem()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.TITANE_SWORD.get()
@@ -94,24 +94,24 @@ public class PalamachineprocessgetrecipeProcedure {
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.AMETHYST_BLOCK.get().asItem()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.AMETHYST_STICK.get()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.DAMAGESTICK.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.DAMAGE_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.AMETHYST_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.PALADIUM_SPIKE.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.DAMAGESTICK.get()).copy();
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.JUMPSTICK.get()
+			output = new ItemStack(PalamodModItems.DAMAGE_STICK.get()).copy();
+		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.JUMP_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.JUMP_ORB.get()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.JUMPSTICK.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.JUMP_STICK.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0
 				|| new ItemStack(
 						BuiltInRegistries.ITEM.get(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))))
 						.is(ItemTags.create(ResourceLocation.parse("palamod:slimepad")))
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_CORE.get()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
-								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.HYPERJUMPSTICK.get()
+								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.HYPERJUMP_STICK.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.PALADIUM_CORE.get()
-						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.HEALSTICK.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
-			output = new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).copy();
+						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.HEAL_STICK.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
+			output = new ItemStack(PalamodModItems.HYPERJUMP_STICK.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get()
 				&& (BuiltInRegistries.ITEM.get(
@@ -162,7 +162,7 @@ public class PalamachineprocessgetrecipeProcedure {
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModBlocks.PALADIUM_BLOCK.get().asItem()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.ENDIUM_NUGGET.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.COMPRESSED_PALADIUM.get()
-						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.COMPRESSEDENDIUM.get()
+						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.COMPRESSED_ENDIUM.get()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
 								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.ENDIUM_MEDIUM_RING.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.COMPRESSED_PALADIUM.get()
@@ -174,11 +174,11 @@ public class PalamachineprocessgetrecipeProcedure {
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.COMPRESSED_PALADIUM.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.ENDIUM_NUGGET.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0
 				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.COMPRESSED_PALADIUM.get()
-						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.COMPRESSEDENDIUM.get()
+						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.COMPRESSED_ENDIUM.get()
 						&& BuiltInRegistries.ITEM.get(ResourceLocation
 								.parse(((BuiltInRegistries.ITEM.getKey((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))) == PalamodModItems.ENDIUM_BIG_RING.get()
 						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).copy()).getItem() == PalamodModItems.COMPRESSED_PALADIUM.get()
-						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.COMPRESSEDENDIUM.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
+						&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.COMPRESSED_ENDIUM.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() == 0) {
 			output = new ItemStack(PalamodModItems.ENDIUM_BIG_RING.get()).copy();
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_INGOT.get()

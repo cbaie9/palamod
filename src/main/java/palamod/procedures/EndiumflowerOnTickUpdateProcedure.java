@@ -24,10 +24,10 @@ public class EndiumflowerOnTickUpdateProcedure {
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 				if (entityiterator instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel
 						&& _plr0.getAdvancements().getOrStartProgress(_plr0.server.getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone()) {
-					if (!(PalamodModBlocks.ENDIUMFLOWERON.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock())) {
+					if (!(PalamodModBlocks.ENDIUM_FLOWER_ON.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock())) {
 						{
 							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockState _bs = PalamodModBlocks.ENDIUMFLOWERON.get().defaultBlockState();
+							BlockState _bs = PalamodModBlocks.ENDIUM_FLOWER_ON.get().defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Property<?> _propertyOld : _bso.getProperties()) {
 								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -57,7 +57,7 @@ public class EndiumflowerOnTickUpdateProcedure {
 					} else {
 						{
 							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockState _bs = PalamodModBlocks.ENDIUMFLOWER.get().defaultBlockState();
+							BlockState _bs = PalamodModBlocks.ENDIUM_FLOWER.get().defaultBlockState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Property<?> _propertyOld : _bso.getProperties()) {
 								Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

@@ -11,11 +11,11 @@
       "item": "palamod:paladium_ingot"
     },
     "b": {
-      "item": "palamod:titaneexcavator"
+      "item": "palamod:titane_excavator"
     }
   },
   "result": {
-    "id": "palamod:paladiumexcavator",
+    "id": "palamod:paladium_excavator",
     "count": 1
   }
 }

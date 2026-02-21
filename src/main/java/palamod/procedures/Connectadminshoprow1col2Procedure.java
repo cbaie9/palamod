@@ -53,7 +53,7 @@ public class Connectadminshoprow1col2Procedure {
 		} else if (num_connect == 1) {
 			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(PalamodModItems.TITANE_INGOT.get()).toString()));
 		} else if (num_connect == 2) {
-			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(PalamodModItems.AMETHYST.get()).toString()));
+			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(PalamodModItems.AMETHYST_INGOT.get()).toString()));
 		} else if (num_connect == 3) {
 			entity.getPersistentData().putString("mode_adminshop", (BuiltInRegistries.ITEM.getKey(Items.DIAMOND).toString()));
 		} else if (num_connect == 4) {
