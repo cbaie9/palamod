@@ -26,7 +26,7 @@ public class TotemfertilityBlockEntity extends RandomizableContainerBlockEntity 
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public TotemfertilityBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.TOTEMFERTILITY.get(), position, state);
+		super(PalamodModBlockEntities.TOTEM_FERTILITY.get(), position, state);
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class TotemfertilityBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("totemfertility");
+		return Component.literal("totem_fertility");
 	}
 
 	@Override

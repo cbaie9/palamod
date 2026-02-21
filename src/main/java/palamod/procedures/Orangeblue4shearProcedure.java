@@ -42,7 +42,7 @@ public class Orangeblue4shearProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 100 <= lvl) {
+			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 20 <= lvl) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
 					world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.ORANGEBLUE_0.get().defaultBlockState(), 3);
 					if (world instanceof ServerLevel _level) {

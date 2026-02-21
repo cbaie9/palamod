@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/totemfertility",
+  "random_sequence": "palamod:blocks/totem_fertility",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:totemfertility"
+          "name": "palamod:totem_fertility"
         }
       ]
     }

@@ -42,7 +42,7 @@ public class Orangeblue4dropProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 100 <= lvl) {
+			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 20 <= lvl) {
 				if (Math.random() < 0.1) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()));

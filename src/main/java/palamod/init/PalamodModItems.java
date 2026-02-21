@@ -561,7 +561,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TITANE_BACKPACK;
 	public static final DeferredItem<Item> PALADUM_BACKPACK;
 	public static final DeferredItem<Item> ENDIUM_BACKPACK;
-	public static final DeferredItem<Item> TOTEMFERTILITY;
+	public static final DeferredItem<Item> TOTEM_FERTILITY;
 	public static final DeferredItem<Item> GODVILLAGER_SPAWN_EGG;
 	public static final DeferredItem<Item> XP_BUSH_LOW;
 	public static final DeferredItem<Item> CHEST_EXPLORER;
@@ -1196,7 +1196,7 @@ public class PalamodModItems {
 		TITANE_BACKPACK = REGISTRY.register("titane_backpack", TitanebackpackItem::new);
 		PALADUM_BACKPACK = REGISTRY.register("paladum_backpack", PaladumbackpackItem::new);
 		ENDIUM_BACKPACK = REGISTRY.register("endium_backpack", EndiumbackpackItem::new);
-		TOTEMFERTILITY = block(PalamodModBlocks.TOTEMFERTILITY);
+		TOTEM_FERTILITY = block(PalamodModBlocks.TOTEM_FERTILITY);
 		GODVILLAGER_SPAWN_EGG = REGISTRY.register("godvillager_spawn_egg", () -> new DeferredSpawnEggItem(PalamodModEntities.GODVILLAGER, -65536, -16711936, new Item.Properties()));
 		XP_BUSH_LOW = block(PalamodModBlocks.XP_BUSH_LOW);
 		CHEST_EXPLORER = REGISTRY.register("chest_explorer", ChestexplorerItem::new);

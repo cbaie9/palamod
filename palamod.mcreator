@@ -35041,15 +35041,15 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "totemfertility",
+      "registry_name": "totem_fertility",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/totemfertility.json",
-          "src/main/resources/assets/palamod/models/block/totemfertility.json",
+          "src/main/resources/assets/palamod/models/block/totem_fertility.json",
           "src/main/java/palamod/block/TotemfertilityBlock.java",
-          "src/main/resources/assets/palamod/blockstates/totemfertility.json",
           "src/main/java/palamod/block/entity/TotemfertilityBlockEntity.java",
-          "src/main/resources/assets/palamod/models/item/totemfertility.json"
+          "src/main/resources/assets/palamod/models/item/totem_fertility.json",
+          "src/main/resources/assets/palamod/blockstates/totem_fertility.json",
+          "src/main/resources/data/palamod/loot_table/blocks/totem_fertility.json"
         ]
       }
     },
@@ -43298,6 +43298,146 @@
           "src/main/java/palamod/procedures/ReloadcommandaddonProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Amethysthoecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethysthoecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/amethyst_hoe_craft.json",
+          "src/main/resources/data/palamod/advancement/recipes/amethysthoecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Titanehoecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanehoecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/titanehoecraft.json",
+          "src/main/resources/data/palamod/recipe/titanehoecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumhoecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumhoecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/paladiumhoecraft.json",
+          "src/main/resources/data/palamod/recipe/paladiumhoecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Greenpaladiumhoecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greenpaladiumhoecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/greenpaladiumhoecraft.json",
+          "src/main/resources/data/palamod/recipe/greenpaladiumhoecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Endiumhoecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumhoecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/endiumhoecraft.json",
+          "src/main/resources/data/palamod/recipe/endium_hoe_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystseedplantercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystseedplantercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/amethyst_seedplanter_craft.json",
+          "src/main/resources/data/palamod/advancement/recipes/amethystseedplantercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Titaneseedplantercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaneseedplantercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/titaneseedplantercraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/titaneseedplantercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumseedplantercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumseedplantercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiumseedplantercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Greenpaladiumseedplantercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "greenpaladiumseedplantercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/greenpaladiumseedplantercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Endiumseedplantercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumseedplantercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumseedplantercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Totemoffertiltycraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totemoffertiltycraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/totemoffertiltycraft.json",
+          "src/main/resources/data/palamod/recipe/totemoffertiltycraft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45385,6 +45525,7 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:Totemfertility",
       "~CUSTOM:DeadButton",
       "~CUSTOM:DeadPressurePlate",
       "~CUSTOM:DeadTrapdoor",
@@ -45398,7 +45539,6 @@
       "~CUSTOM:StrippedDeadLog",
       "~CUSTOM:DeadWood",
       "~CUSTOM:DeadLog",
-      "~CUSTOM:Totemfertility",
       "~CUSTOM:Typesettingtable",
       "~CUSTOM:Erabletrapdoor",
       "~CUSTOM:Jacarandadoor",
@@ -46058,7 +46198,6 @@
       "Titanebackpack",
       "Paladumbackpack",
       "Endiumbackpack",
-      "Totemfertility",
       "Paladiumhoppersouth",
       "Amethystexacvator",
       "Harpagophytum",
@@ -46133,7 +46272,8 @@
       "Paladiumgolem",
       "Unclaimfinder",
       "Unclaimfinderorange",
-      "Unclaimfinderred"
+      "Unclaimfinderred",
+      "Totemfertility"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -46398,7 +46538,6 @@
       "Titanebackpack",
       "Paladumbackpack",
       "Endiumbackpack",
-      "Totemfertility",
       "Godvillager",
       "Exctractor",
       "Brokenspawner",
@@ -46410,7 +46549,8 @@
       "Chestexplorer",
       "Flowertotem",
       "Glueballpatern",
-      "Titanehoe"
+      "Titanehoe",
+      "Totemfertility"
     ]
   },
   "language_map": {
@@ -46509,7 +46649,6 @@
       "gui.palamod.palamachinepalahelpgui.button_menu": "menu",
       "block.palamod.judeecercis_log": "Judeecercis Log",
       "item.palamod.disc_anti_fuze.desc": "Fuze III - Anti Anti fuze ",
-      "block.palamod.totemfertility": "Totem of fertility",
       "gui.palamod.jobsserver.label_alchimist": "Alchimist",
       "block.palamod.ostrya_wood_leaves": "Ostrya Leaves",
       "gui.palamod.adminpanelmenu.button_spawn_panel": "Spawn Panel",
@@ -48038,7 +48177,8 @@
       "item.palamod.unclaim_finder": "Unclaim finder",
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
-      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder"
+      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
+      "block.palamod.totem_fertility": "Totem of fertility"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -48132,7 +48272,6 @@
       "gui.palamod.palamachinepalahelpgui.button_menu": "Accueil",
       "block.palamod.judeecercis_log": "Bùche de judeecercis",
       "item.palamod.disc_anti_fuze.desc": "Fuze III - Antifuze",
-      "block.palamod.totemfertility": "Totem de fertilité",
       "gui.palamod.jobsserver.label_alchimist": "Alchimiste",
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
       "gui.palamod.adminpanelmenu.button_spawn_panel": "Panel du point d\u0027apparition",
@@ -49663,7 +49802,8 @@
       "item.palamod.unclaim_finder": "Unclaim finder",
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
-      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder"
+      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
+      "block.palamod.totem_fertility": "Totem of fertility"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -49757,7 +49897,6 @@
       "gui.palamod.palamachinepalahelpgui.button_menu": "Accueil",
       "block.palamod.judeecercis_log": "Bùche de judeecercis",
       "item.palamod.disc_anti_fuze.desc": "Fuze III - Antifuze",
-      "block.palamod.totemfertility": "Totem de fertilité",
       "gui.palamod.jobsserver.label_alchimist": "Alchimiste",
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
       "gui.palamod.adminpanelmenu.button_spawn_panel": "Panel du point d\u0027apparition",
@@ -51288,7 +51427,8 @@
       "item.palamod.unclaim_finder": "Unclaim finder",
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
-      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder"
+      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
+      "block.palamod.totem_fertility": "Totem of fertility"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51382,7 +51522,6 @@
       "gui.palamod.palamachinepalahelpgui.button_menu": "Accueil",
       "block.palamod.judeecercis_log": "Bùche de judeecercis",
       "item.palamod.disc_anti_fuze.desc": "Fuze III - Antifuze",
-      "block.palamod.totemfertility": "Totem de fertilité",
       "gui.palamod.jobsserver.label_alchimist": "Alchimiste",
       "block.palamod.ostrya_wood_leaves": "Feuille d\u0027ostrya",
       "gui.palamod.adminpanelmenu.button_spawn_panel": "Panel du point d\u0027apparition",
@@ -52913,7 +53052,8 @@
       "item.palamod.unclaim_finder": "Unclaim finder",
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
-      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder"
+      "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
+      "block.palamod.totem_fertility": "Totem of fertility"
     }
   },
   "metadata": {

@@ -1,0 +1,62 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "Blocks.SKULL#4"
+      },
+      {
+        "value": "CUSTOM:Totemfertility"
+      },
+      {
+        "value": "CUSTOM:Fertilseddirt"
+      },
+      {
+        "value": "Items.DYE#15"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "TAG:c:logs"
+      },
+      {
+        "value": "Blocks.SKULL#4"
+      },
+      {
+        "value": "TAG:c:logs"
+      },
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "TAG:c:logs"
+      },
+      {
+        "value": "CUSTOM:Compressedpaladium"
+      },
+      {
+        "value": "TAG:c:logs"
+      },
+      {
+        "value": "Items.DYE#15"
+      },
+      {
+        "value": "TAG:c:logs"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Totemfertility"
+    },
+    "name": "totemoffertiltycraft",
+    "namespace": "mod"
+  }
+}

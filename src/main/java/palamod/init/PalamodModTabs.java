@@ -226,7 +226,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.TITANE_BACKPACK.get());
 				tabData.accept(PalamodModItems.PALADUM_BACKPACK.get());
 				tabData.accept(PalamodModItems.ENDIUM_BACKPACK.get());
-				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_HOPPER.get().asItem());
 				tabData.accept(PalamodModItems.AMETHYST_EXCAVATOR.get());
 				tabData.accept(PalamodModBlocks.HARPAGOPHYTUM.get().asItem());
@@ -311,6 +310,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER.get());
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER_ORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER_RED.get());
+				tabData.accept(PalamodModBlocks.TOTEM_FERTILITY.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -582,7 +582,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.TITANE_BACKPACK.get());
 				tabData.accept(PalamodModItems.PALADUM_BACKPACK.get());
 				tabData.accept(PalamodModItems.ENDIUM_BACKPACK.get());
-				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModItems.GODVILLAGER_SPAWN_EGG.get());
 				tabData.accept(PalamodModBlocks.EXTRACTOR.get().asItem());
 				tabData.accept(PalamodModBlocks.BROKEN_SPAWNER.get().asItem());
@@ -595,6 +594,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.FLOWER_TOTEM.get().asItem());
 				tabData.accept(PalamodModItems.GLUEBALL_PATTERN.get());
 				tabData.accept(PalamodModItems.TITANE_HOE.get());
+				tabData.accept(PalamodModBlocks.TOTEM_FERTILITY.get().asItem());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

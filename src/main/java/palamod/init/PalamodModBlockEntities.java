@@ -60,7 +60,7 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TypesettingtableBlockEntity>> TYPESETTINGTABLE = register("typesettingtable", PalamodModBlocks.TYPESETTINGTABLE, TypesettingtableBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DrawbridgeBlockEntity>> DRAWBRIDGE = register("drawbridge", PalamodModBlocks.DRAWBRIDGE, DrawbridgeBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ExctractorBlockEntity>> EXTRACTOR = register("extractor", PalamodModBlocks.EXTRACTOR, ExctractorBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TotemfertilityBlockEntity>> TOTEMFERTILITY = register("totemfertility", PalamodModBlocks.TOTEMFERTILITY, TotemfertilityBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TotemfertilityBlockEntity>> TOTEM_FERTILITY = register("totem_fertility", PalamodModBlocks.TOTEM_FERTILITY, TotemfertilityBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<XpbushlowBlockEntity>> XP_BUSH_LOW = register("xp_bush_low", PalamodModBlocks.XP_BUSH_LOW, XpbushlowBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CobblebreakerserverBlockEntity>> COBBLEBREAKER_SERVER = register("cobblebreaker_server", PalamodModBlocks.COBBLEBREAKER_SERVER, CobblebreakerserverBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FlowertotemBlockEntity>> FLOWER_TOTEM = register("flower_totem", PalamodModBlocks.FLOWER_TOTEM, FlowertotemBlockEntity::new);
@@ -111,7 +111,7 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TYPESETTINGTABLE.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, DRAWBRIDGE.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EXTRACTOR.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEMFERTILITY.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TOTEM_FERTILITY.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, XP_BUSH_LOW.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, COBBLEBREAKER_SERVER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FLOWER_TOTEM.get(), SidedInvWrapper::new);

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "titane_craft_group",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_ingot"
+    },
+    "b": {
+      "item": "palamod:amethyst_seedplanter"
+    },
+    "c": {
+      "item": "palamod:titane_stick"
+    }
+  },
+  "result": {
+    "id": "palamod:titane_seedplanter",
+    "count": 1
+  }
+}

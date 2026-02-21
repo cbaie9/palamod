@@ -42,7 +42,7 @@ public class Eggplant3shearProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 40 <= lvl) {
+			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 7 <= lvl) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
 					world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.EGGPLANT_1.get().defaultBlockState(), 3);
 					if (Math.random() < 0.2) {

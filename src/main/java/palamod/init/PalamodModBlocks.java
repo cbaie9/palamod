@@ -227,7 +227,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SLIMEPAD_BLUE;
 	public static final DeferredBlock<Block> SLIMEPAD_ORANGE;
 	public static final DeferredBlock<Block> SLIMEPAD_PURPLE;
-	public static final DeferredBlock<Block> TOTEMFERTILITY;
+	public static final DeferredBlock<Block> TOTEM_FERTILITY;
 	public static final DeferredBlock<Block> XP_BUSH_LOW;
 	public static final DeferredBlock<Block> ROTATED_PALADIUM_HOPPER;
 	public static final DeferredBlock<Block> PALADIUM_HOPPER;
@@ -521,7 +521,7 @@ public class PalamodModBlocks {
 		SLIMEPAD_BLUE = REGISTRY.register("slimepad_blue", BlueslimepadBlock::new);
 		SLIMEPAD_ORANGE = REGISTRY.register("slimepad_orange", OrangeslimepadBlock::new);
 		SLIMEPAD_PURPLE = REGISTRY.register("slimepad_purple", PurpleslimepadBlock::new);
-		TOTEMFERTILITY = REGISTRY.register("totemfertility", TotemfertilityBlock::new);
+		TOTEM_FERTILITY = REGISTRY.register("totem_fertility", TotemfertilityBlock::new);
 		XP_BUSH_LOW = REGISTRY.register("xp_bush_low", XpbushlowBlock::new);
 		ROTATED_PALADIUM_HOPPER = REGISTRY.register("rotated_paladium_hopper", PaladiumhopperBlock::new);
 		PALADIUM_HOPPER = REGISTRY.register("paladium_hopper", PaladiumhoppersouthBlock::new);

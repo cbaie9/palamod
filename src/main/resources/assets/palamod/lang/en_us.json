@@ -93,7 +93,6 @@
   "gui.palamod.palamachinepalahelpgui.button_menu": "menu",
   "block.palamod.judeecercis_log": "Judeecercis Log",
   "item.palamod.disc_anti_fuze.desc": "Fuze III - Anti Anti fuze ",
-  "block.palamod.totemfertility": "Totem of fertility",
   "gui.palamod.jobsserver.label_alchimist": "Alchimist",
   "block.palamod.ostrya_wood_leaves": "Ostrya Leaves",
   "gui.palamod.adminpanelmenu.button_spawn_panel": "Spawn Panel",
@@ -1622,5 +1621,6 @@
   "item.palamod.unclaim_finder": "Unclaim finder",
   "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
   "item.palamod.unclaim_finder_red": "Red unclaim finder",
-  "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder"
+  "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
+  "block.palamod.totem_fertility": "Totem of fertility"
 }
