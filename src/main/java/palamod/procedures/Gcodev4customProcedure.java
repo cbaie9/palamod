@@ -1615,7 +1615,7 @@ public class Gcodev4customProcedure {
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENAXE.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}

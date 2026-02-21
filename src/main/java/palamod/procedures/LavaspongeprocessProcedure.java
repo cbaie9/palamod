@@ -36,7 +36,7 @@ public class LavaspongeprocessProcedure {
 							world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
 							{
 								BlockPos _bp = BlockPos.containing(x, y, z);
-								BlockState _bs = PalamodModBlocks.WETLAVASPONGE.get().defaultBlockState();
+								BlockState _bs = PalamodModBlocks.WET_LAVA_SPONGE.get().defaultBlockState();
 								BlockState _bso = world.getBlockState(_bp);
 								for (Property<?> _propertyOld : _bso.getProperties()) {
 									Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

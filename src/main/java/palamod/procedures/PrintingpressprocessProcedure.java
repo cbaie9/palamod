@@ -145,7 +145,7 @@ public class PrintingpressprocessProcedure {
 								_player.getInventory().setChanged();
 						}
 					}
-				} else if (PalamodModItems.PALADIUMINK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() && 64 > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
+				} else if (PalamodModItems.PALADIUM_INK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() && 64 > getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() <= 64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
 						remove_item = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
 						if (!world.isClientSide()) {
@@ -162,7 +162,7 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack57 = new ItemStack(PalamodModItems.PALADIUMINK.get()).copy();
+							ItemStack _setstack57 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
 							_setstack57.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
 							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack57);
 							if (_entity instanceof Player _player)
@@ -173,7 +173,7 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack68 = new ItemStack(PalamodModItems.PALADIUMINK.get()).copy();
+							ItemStack _setstack68 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
 							_setstack68.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
 							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack68);
 							if (_entity instanceof Player _player)
@@ -250,7 +250,7 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, new ItemStack(PalamodModItems.PALADIUMINK.get()));
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, new ItemStack(PalamodModItems.PALADIUM_INK.get()));
 							entityToSpawn.setPickUpDelay(10);
 							_level.addFreshEntity(entityToSpawn);
 						}

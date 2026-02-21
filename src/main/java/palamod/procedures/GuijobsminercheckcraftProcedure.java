@@ -200,12 +200,12 @@ public class GuijobsminercheckcraftProcedure {
 						}
 						is_a_craft = true;
 					}
-					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu163 ? _menu163.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.PALADIUMGREENSHOVEL
+					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu163 ? _menu163.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL
 							.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu165 ? _menu165.getSlots().get(1).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.PALADIUMGREENSHOVEL.get()
+									.getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu167 ? _menu167.getSlots().get(2).getItem() : ItemStack.EMPTY)
-									.getItem() == PalamodModItems.PALADIUMGREENSHOVEL.get()
+									.getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu169 ? _menu169.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu171 ? _menu171.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
@@ -326,10 +326,10 @@ public class GuijobsminercheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 0) == 0 && getAmountInGUISlot(entity, 2) == 0 && getAmountInGUISlot(entity, 5) == 0
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu293 ? _menu293.getSlots().get(9).getItem() : ItemStack.EMPTY)
-											.getItem() == PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem())
+											.getItem() == PalamodModBlocks.MEGA_BOOM_OBSIDIAN.get().asItem())
 							&& getAmountInGUISlot(entity, 7) == 0 && (23 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack297 = new ItemStack(PalamodModBlocks.MEGABOOMOBSIDIAN.get()).copy();
+							ItemStack _setstack297 = new ItemStack(PalamodModBlocks.MEGA_BOOM_OBSIDIAN.get()).copy();
 							_setstack297.setCount(1);
 							_menu.getSlots().get(9).set(_setstack297);
 							_player.containerMenu.broadcastChanges();

@@ -49,7 +49,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.TITANE_AXE.get());
 				tabData.accept(PalamodModItems.TITANE_SWORD.get());
 				tabData.accept(PalamodModItems.TITANE_SHOVEL.get());
-				tabData.accept(PalamodModItems.TITANEFASTSWORD.get());
 				tabData.accept(PalamodModItems.TITANE_ARMOR_HELMET.get());
 				tabData.accept(PalamodModItems.TITANE_ARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.TITANE_ARMOR_LEGGINGS.get());
@@ -66,7 +65,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.PALADIUM_AXE.get());
 				tabData.accept(PalamodModItems.PALADIUM_SWORD.get());
 				tabData.accept(PalamodModItems.PALADIUM_SHOVEL.get());
-				tabData.accept(PalamodModItems.PALADIUMFASTSWORD.get());
 				tabData.accept(PalamodModItems.PALADIUM_ARMOR_HELMET.get());
 				tabData.accept(PalamodModItems.PALADIUM_ARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.PALADIUM_ARMOR_LEGGINGS.get());
@@ -76,10 +74,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.DEEPSLATE_GREEN_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get().asItem());
-				tabData.accept(PalamodModItems.PALADIUMGREENPICKAXE.get());
-				tabData.accept(PalamodModItems.PALADIUMGREENAXE.get());
-				tabData.accept(PalamodModItems.PALADIUMGREENSWORD.get());
-				tabData.accept(PalamodModItems.PALADIUMGREENSHOVEL.get());
 				tabData.accept(PalamodModItems.ENDIUM_INGOT.get());
 				tabData.accept(PalamodModItems.ENDIUM_FRAGMENT.get());
 				tabData.accept(PalamodModItems.ENDIUM_POLLEN.get());
@@ -142,17 +136,12 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.FIRE_IMBUE_POTION.get());
 				tabData.accept(PalamodModItems.POISON_IMBUE_POTION.get());
 				tabData.accept(PalamodModItems.VOIDSTONE.get());
-				tabData.accept(PalamodModItems.TRAVELARMOR_HELMET.get());
-				tabData.accept(PalamodModItems.TRAVELARMOR_CHESTPLATE.get());
-				tabData.accept(PalamodModItems.TRAVELARMOR_LEGGINGS.get());
-				tabData.accept(PalamodModItems.TRAVELARMOR_BOOTS.get());
 				tabData.accept(PalamodModItems.SCUBA_HELMET.get());
 				tabData.accept(PalamodModItems.WING.get());
 				tabData.accept(PalamodModBlocks.ELEVATOR_WHITE.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_BLUE.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_GREEN.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_PINK.get().asItem());
-				tabData.accept(PalamodModBlocks.ELEVATORL_IGHT_BLUE.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_LIGHT_GREEN.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_BROWN.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_ORANGE.get().asItem());
@@ -161,9 +150,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ELEVATOR_LIGHT_GRAY.get().asItem());
 				tabData.accept(PalamodModBlocks.ELEVATOR_CYAN.get().asItem());
 				tabData.accept(PalamodModItems.MINAGE_VOIDSTONE.get());
-				tabData.accept(PalamodModItems.PALADIUMGOLEM_SPAWN_EGG.get());
 				tabData.accept(PalamodModBlocks.GUARDIAN_BLOCK.get().asItem());
-				tabData.accept(PalamodModItems.GREENPALADIUMBROADSWORD.get());
 				tabData.accept(PalamodModItems.MAGICAL_TOOL.get());
 				tabData.accept(PalamodModBlocks.STONY.get().asItem());
 				tabData.accept(PalamodModBlocks.CLOUD_BLOCK.get().asItem());
@@ -172,7 +159,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.RAINBOWARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.RAINBOWARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.RAINBOWARMOR_BOOTS.get());
-				tabData.accept(PalamodModItems.FLYPOTION.get());
 				tabData.accept(PalamodModBlocks.ENDIUM_LUCKY_BLOCK.get().asItem());
 				tabData.accept(PalamodModBlocks.ENDIUM_SLAB.get().asItem());
 				tabData.accept(PalamodModBlocks.ENDIUM_STAIRS.get().asItem());
@@ -213,17 +199,12 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.DOWNLOADER.get().asItem());
 				tabData.accept(PalamodModItems.CREATIVE_TRIXIUM_SWORD.get());
 				tabData.accept(PalamodModItems.POTATO_BACKPACK.get());
-				tabData.accept(PalamodModItems.GREENPALADIUMFASTSWORD.get());
-				tabData.accept(PalamodModItems.ENDIUMFASTSWORD.get());
-				tabData.accept(PalamodModItems.ENDIUMSHOVEL.get());
 				tabData.accept(PalamodModBlocks.CAVE_BLOCK.get().asItem());
 				tabData.accept(PalamodModBlocks.ONLINE_DETECTOR.get().asItem());
 				tabData.accept(PalamodModBlocks.PRINTINGPRESS.get().asItem());
 				tabData.accept(PalamodModItems.PLATE.get());
 				tabData.accept(PalamodModBlocks.TYPESETTINGTABLE.get().asItem());
 				tabData.accept(PalamodModBlocks.DRAWBRIDGE.get().asItem());
-				tabData.accept(PalamodModBlocks.LAVASPONGE.get().asItem());
-				tabData.accept(PalamodModBlocks.WETLAVASPONGE.get().asItem());
 				tabData.accept(PalamodModItems.FAKE_WATER_BUCKET.get());
 				tabData.accept(PalamodModItems.ANGELIC_WATER_BUCKET.get());
 				tabData.accept(PalamodModBlocks.SLIME_OBSIDIAN.get().asItem());
@@ -235,7 +216,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.MIXED_ENDIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.MIXED_ENDIUM_ARMOR_BOOTS.get());
 				tabData.accept(PalamodModBlocks.BOOM_OBSIDIAN.get().asItem());
-				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModItems.DISC_MII_CHALENGE.get());
 				tabData.accept(PalamodModItems.DISC_FUZEIII.get());
 				tabData.accept(PalamodModItems.DISC_ANTI_FUZE.get());
@@ -254,10 +234,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
 				tabData.accept(PalamodModItems.DANKAROCTEST_1_SPAWN_EGG.get());
 				tabData.accept(PalamodModBlocks.DANKABLOCK.get().asItem());
-				tabData.accept(PalamodModItems.PALADIUMINK.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
 				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
 				tabData.accept(PalamodModBlocks.SPAWN_CONTROLLER.get().asItem());
 				tabData.accept(PalamodModBlocks.EMPTY_SPAWNER.get().asItem());
@@ -311,6 +287,30 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.INVISIBLE_ARMOR_CHESTPLATE.get());
 				tabData.accept(PalamodModItems.INVISIBLE_ARMOR_LEGGINGS.get());
 				tabData.accept(PalamodModItems.INVISIBLE_ARMOR_BOOTS.get());
+				tabData.accept(PalamodModBlocks.ELEVATOR_LIGHT_BLUE.get().asItem());
+				tabData.accept(PalamodModItems.ENDIUM_FASTSWORD.get());
+				tabData.accept(PalamodModItems.ENDIUM_SHOVEL.get());
+				tabData.accept(PalamodModItems.FLY_POTION.get());
+				tabData.accept(PalamodModItems.PALADIUM_FASTSWORD.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_FASTSWORD.get());
+				tabData.accept(PalamodModItems.TITANE_FASTSWORD.get());
+				tabData.accept(PalamodModBlocks.LAVA_SPONGE.get().asItem());
+				tabData.accept(PalamodModBlocks.WET_LAVA_SPONGE.get().asItem());
+				tabData.accept(PalamodModBlocks.MEGA_BOOM_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModItems.TRAVEL_ARMOR_HELMET.get());
+				tabData.accept(PalamodModItems.TRAVEL_ARMOR_CHESTPLATE.get());
+				tabData.accept(PalamodModItems.TRAVEL_ARMOR_LEGGINGS.get());
+				tabData.accept(PalamodModItems.TRAVEL_ARMOR_BOOTS.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_PICKAXE.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_AXE.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_SWORD.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_SHOVEL.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_BROADSWORD.get());
+				tabData.accept(PalamodModItems.PALADIUM_INK.get());
+				tabData.accept(PalamodModItems.PALADIUM_GOLEM_SPAWN_EGG.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_ORANGE.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_RED.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -347,7 +347,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get());
 				tabData.accept(PalamodModItems.HEAD_ENDIUM_PICKAXE.get());
 				tabData.accept(PalamodModItems.HEAD_ENDIUM_AXE.get());
-				tabData.accept(PalamodModItems.GREENPALADIUMBROADSWORD.get());
 				tabData.accept(PalamodModItems.ONE_MORE_MODIFIER.get());
 				tabData.accept(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get());
 				tabData.accept(PalamodModItems.GREEN_PALADIUM_HAMMER.get());
@@ -365,12 +364,13 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.SWORD_PATTERN.get());
 				tabData.accept(PalamodModItems.SHOVEL_PATTERN.get());
 				tabData.accept(PalamodModItems.SOCKET_PATTERN.get());
-				tabData.accept(PalamodModItems.GLUEBALLPATTERN.get());
 				tabData.accept(PalamodModItems.KIWANO_SEED.get());
 				tabData.accept(PalamodModItems.ORANGEBLUE_SEED.get());
 				tabData.accept(PalamodModItems.CHERVIL_SEED.get());
 				tabData.accept(PalamodModItems.HEAD_ENDIUM_SWORD.get());
 				tabData.accept(PalamodModItems.ENDIUM_BROADSWORD.get());
+				tabData.accept(PalamodModItems.GLUEBALL_PATTERN.get());
+				tabData.accept(PalamodModItems.GREEN_PALADIUM_BROADSWORD.get());
 			}).withTabsBefore(PALAMOD.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DECORATIONCREATIVETAB = REGISTRY.register("decorationcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.decorationcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.OSTRYA_WOOD_PLANKS.get())).displayItems((parameters, tabData) -> {
@@ -415,8 +415,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ERABLE_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.JACARANDA_DOOR.get().asItem());
 				tabData.accept(PalamodModBlocks.SOFT_STONE.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTSTONESTAIRS.get().asItem());
-				tabData.accept(PalamodModBlocks.SOFTSTONESLAB.get().asItem());
 				tabData.accept(PalamodModBlocks.COBBLED_SOFT_STONE.get().asItem());
 				tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
 				tabData.accept(PalamodModBlocks.COBBLED_SOFT_STONE_SLAB.get().asItem());
@@ -425,6 +423,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_FLOWER.get().asItem());
 				tabData.accept(PalamodModBlocks.MINERAL_FLOWER.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFT_STONE_SLAB.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFT_STONE_STAIRS.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICK_OF_GODS.get())).displayItems((parameters, tabData) -> {
@@ -451,10 +451,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.SLIMEPAD_ORANGE.get().asItem());
 				tabData.accept(PalamodModBlocks.SLIMEPAD_PURPLE.get().asItem());
 				tabData.accept(PalamodModItems.SWITCHARROWITEM.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERBLUE.get());
 				tabData.accept(PalamodModItems.SPEED_STICK.get());
 				tabData.accept(PalamodModItems.JUMP_STICK.get());
 				tabData.accept(PalamodModItems.HYPERJUMP_STICK.get());
@@ -462,6 +458,10 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.STRENGHT_STICK.get());
 				tabData.accept(PalamodModItems.DAMAGE_STICK.get());
 				tabData.accept(PalamodModItems.STICK_OF_GODS.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_ORANGE.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_RED.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_BLUE.get());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {
@@ -488,11 +488,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.SLIME_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.POISON_OBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.BOOM_OBSIDIAN.get().asItem());
-				tabData.accept(PalamodModBlocks.MEGABOOMOBSIDIAN.get().asItem());
-				tabData.accept(PalamodModItems.UNCLAIMFINDER.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERORANGE.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERRED.get());
-				tabData.accept(PalamodModItems.UNCLAIMFINDERBLUE.get());
 				tabData.accept(PalamodModBlocks.RENFORCED_OBSIDIAN_STAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.OBSIDIAN_STAIRS.get().asItem());
 				tabData.accept(PalamodModBlocks.OBSIDIAN_SLAB.get().asItem());
@@ -504,6 +499,11 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.AMETHYST_ANVIL.get().asItem());
 				tabData.accept(PalamodModBlocks.TITANE_ANVIL.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_ANVIL.get().asItem());
+				tabData.accept(PalamodModBlocks.MEGA_BOOM_OBSIDIAN.get().asItem());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_ORANGE.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_RED.get());
+				tabData.accept(PalamodModItems.UNCLAIM_FINDER_BLUE.get());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {
@@ -521,9 +521,9 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.PALADIUM_PHONE.get());
 				tabData.accept(PalamodModBlocks.FAKE_PALADIUM_ORE.get().asItem());
 				tabData.accept(PalamodModItems.SPACE_FOOD.get());
-				tabData.accept(PalamodModItems.CHUNKANASLYSER.get());
 				tabData.accept(PalamodModBlocks.ALARM_ON.get().asItem());
 				tabData.accept(PalamodModItems.POCKETENDERCHEST.get());
+				tabData.accept(PalamodModItems.CHUNK_ANASLYSER.get());
 			}).withTabsBefore(BASECLAIM.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PICKAXEOFGODSTAB = REGISTRY.register("pickaxeofgodstab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pickaxeofgodstab")).icon(() -> new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV1.get())).displayItems((parameters, tabData) -> {
@@ -560,7 +560,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.COBBLEBREAKER_PALADIUM_UPGRADE.get());
 				tabData.accept(PalamodModBlocks.FERTILZED_DIRT.get().asItem());
 				tabData.accept(PalamodModItems.AMETHYST_HOE.get());
-				tabData.accept(PalamodModItems.TITANEHOE.get());
 				tabData.accept(PalamodModItems.PALADIUM_HOE.get());
 				tabData.accept(PalamodModItems.GREEN_PALADIUM_HOE.get());
 				tabData.accept(PalamodModItems.ENDIUM_HOE.get());
@@ -585,7 +584,6 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ENDIUM_BACKPACK.get());
 				tabData.accept(PalamodModBlocks.TOTEMFERTILITY.get().asItem());
 				tabData.accept(PalamodModItems.GODVILLAGER_SPAWN_EGG.get());
-				tabData.accept(PalamodModItems.GLUEBALLPATTERN.get());
 				tabData.accept(PalamodModBlocks.EXTRACTOR.get().asItem());
 				tabData.accept(PalamodModBlocks.BROKEN_SPAWNER.get().asItem());
 				tabData.accept(PalamodModItems.CAVERNE_HAMMER.get());
@@ -595,6 +593,8 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.XP_BOTTLE.get());
 				tabData.accept(PalamodModItems.CHEST_EXPLORER.get());
 				tabData.accept(PalamodModBlocks.FLOWER_TOTEM.get().asItem());
+				tabData.accept(PalamodModItems.GLUEBALL_PATTERN.get());
+				tabData.accept(PalamodModItems.TITANE_HOE.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent
@@ -616,10 +616,10 @@ public class PalamodModTabs {
 			tabData.accept(PalamodModBlocks.PALADIUM_FLOWER.get().asItem());
 			tabData.accept(PalamodModBlocks.DEAD_LEAVES.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
-			tabData.accept(PalamodModItems.PIGARMOR_HELMET.get());
-			tabData.accept(PalamodModItems.PIGARMOR_CHESTPLATE.get());
-			tabData.accept(PalamodModItems.PIGARMOR_LEGGINGS.get());
-			tabData.accept(PalamodModItems.PIGARMOR_BOOTS.get());
+			tabData.accept(PalamodModItems.PIG_ARMOR_HELMET.get());
+			tabData.accept(PalamodModItems.PIG_ARMOR_CHESTPLATE.get());
+			tabData.accept(PalamodModItems.PIG_ARMOR_LEGGINGS.get());
+			tabData.accept(PalamodModItems.PIG_ARMOR_BOOTS.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(PalamodModBlocks.DEAD_LOG.get().asItem());
 			tabData.accept(PalamodModBlocks.DEAD_WOOD.get().asItem());

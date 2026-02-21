@@ -37,7 +37,7 @@ public class PalamodModEntities {
 			EntityType.Builder.<BigdynamiteentityEntity>of(BigdynamiteentityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
 
 					.sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumgolemEntity>> PALADIUMGOLEM = register("paladiumgolem",
+	public static final DeferredHolder<EntityType<?>, EntityType<PaladiumgolemEntity>> PALADIUM_GOLEM = register("paladium_golem",
 			EntityType.Builder.<PaladiumgolemEntity>of(PaladiumgolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1.2f, 1.8f));
@@ -80,7 +80,7 @@ public class PalamodModEntities {
 
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerEntity(Capabilities.ItemHandler.ENTITY, PALADIUMGOLEM.get(), (living, context) -> living.getCombinedInventory());
+		event.registerEntity(Capabilities.ItemHandler.ENTITY, PALADIUM_GOLEM.get(), (living, context) -> living.getCombinedInventory());
 		event.registerEntity(Capabilities.ItemHandler.ENTITY, GODVILLAGER.get(), (living, context) -> living.getCombinedInventory());
 	}
 
@@ -104,7 +104,7 @@ public class PalamodModEntities {
 		event.put(PALADIUMDYNAMITE.get(), PaladiumdynamiteEntity.createAttributes().build());
 		event.put(ENDIUMDYNAMITE.get(), EndiumdynamiteEntity.createAttributes().build());
 		event.put(BIGDYNAMITEENTITY.get(), BigdynamiteentityEntity.createAttributes().build());
-		event.put(PALADIUMGOLEM.get(), PaladiumgolemEntity.createAttributes().build());
+		event.put(PALADIUM_GOLEM.get(), PaladiumgolemEntity.createAttributes().build());
 		event.put(PRIMEDSPONGETNT.get(), PrimedspongetntEntity.createAttributes().build());
 		event.put(PRIMEDWITHERTNT.get(), PrimedwithertntEntity.createAttributes().build());
 		event.put(PRIMEDMAGICTNT.get(), PrimedmagictntEntity.createAttributes().build());

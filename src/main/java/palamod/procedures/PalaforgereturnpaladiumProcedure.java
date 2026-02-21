@@ -15,7 +15,7 @@ public class PalaforgereturnpaladiumProcedure {
 		} else if (input.getItem() == PalamodModItems.PALADIUM_PICKAXE.get() || input.getItem() == PalamodModBlocks.PALADIUM_ORE.get().asItem() || input.getItem() == PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get().asItem()
 				|| input.getItem() == PalamodModItems.PALADIUM_AXE.get()) {
 			output = 2;
-		} else if (input.getItem() == PalamodModItems.PALADIUMBROADSWORD.get() || input.getItem() == PalamodModItems.PALADIUMFASTSWORD.get() || input.getItem() == PalamodModBlocks.PALADIUM_SLAB.get().asItem()
+		} else if (input.getItem() == PalamodModItems.PALADIUMBROADSWORD.get() || input.getItem() == PalamodModItems.PALADIUM_FASTSWORD.get() || input.getItem() == PalamodModBlocks.PALADIUM_SLAB.get().asItem()
 				|| input.getItem() == PalamodModBlocks.PALADIUM_SPIKE.get().asItem() || input.getItem() == PalamodModItems.PALADIUM_ARMOR_BOOTS.get()) {
 			output = 3;
 		} else if (input.getItem() == PalamodModItems.PALADIUM_ARMOR_HELMET.get()) {

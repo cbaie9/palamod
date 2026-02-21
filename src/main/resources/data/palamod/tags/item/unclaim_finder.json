@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "palamod:unclaimfinderorange",
-    "palamod:unclaimfinderred",
-    "palamod:unclaimfinderblue",
-    "palamod:unclaimfinder"
+    "palamod:unclaim_finder_orange",
+    "palamod:unclaim_finder_red",
+    "palamod:unclaim_finder_blue",
+    "palamod:unclaim_finder"
   ]
 }

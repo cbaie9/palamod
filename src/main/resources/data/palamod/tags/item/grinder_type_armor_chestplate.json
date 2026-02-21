@@ -3,16 +3,16 @@
   "values": [
     "palamod:paladium_armor_chestplate",
     "palamod:endium_armor_chestplate",
-    "palamod:paladiumarmorcustom_3_chestplate",
+    "palamod:paladium_armor_custom3_chestplate",
     "palamod:green_paladium_armor_chestplate",
-    "palamod:paladiumarmorcustom_7_chestplate",
-    "palamod:paladiumarmorcustom_2_chestplate",
-    "palamod:paladiumarmorcustom_8_chestplate",
-    "palamod:paladiumarmorcustom_5_chestplate",
-    "palamod:paladiumarmorcustom_4_chestplate",
-    "palamod:paladiumarmorcustom_1_chestplate",
-    "palamod:paladiumarmorcustom_9_chestplate",
-    "palamod:paladiumarmorcustom_6_chestplate",
-    "palamod:paladiumarmorcustom_10_chestplate"
+    "palamod:paladium_armor_custom7_chestplate",
+    "palamod:paladium_armor_custom2_chestplate",
+    "palamod:paladium_armor_custom8_chestplate",
+    "palamod:paladium_armor_custom5_chestplate",
+    "palamod:paladium_armor_custom4_chestplate",
+    "palamod:paladium_armor_custom1_chestplate",
+    "palamod:paladium_armor_custom9_chestplate",
+    "palamod:paladium_armor_custom6_chestplate",
+    "palamod:paladium_armor_custom10_chestplate"
   ]
 }

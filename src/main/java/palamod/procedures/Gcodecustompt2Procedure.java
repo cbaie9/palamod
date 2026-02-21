@@ -165,7 +165,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENPICKAXE.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -387,7 +387,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -535,7 +535,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMFASTSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_FASTSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -609,7 +609,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMFASTSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -683,7 +683,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMFASTSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -831,7 +831,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMBROADSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -1053,7 +1053,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSHOVEL.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -1127,7 +1127,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMSHOVEL.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}

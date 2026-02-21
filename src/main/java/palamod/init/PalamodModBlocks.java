@@ -128,7 +128,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> ELEVATOR_BLUE;
 	public static final DeferredBlock<Block> ELEVATOR_GREEN;
 	public static final DeferredBlock<Block> ELEVATOR_PINK;
-	public static final DeferredBlock<Block> ELEVATORL_IGHT_BLUE;
+	public static final DeferredBlock<Block> ELEVATOR_LIGHT_BLUE;
 	public static final DeferredBlock<Block> ELEVATOR_LIGHT_GREEN;
 	public static final DeferredBlock<Block> ELEVATOR_BROWN;
 	public static final DeferredBlock<Block> ELEVATOR_ORANGE;
@@ -195,8 +195,8 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> UNKNOWNBLOCK;
 	public static final DeferredBlock<Block> COMPRESSED_SPONGE;
 	public static final DeferredBlock<Block> TNT_SPONGE;
-	public static final DeferredBlock<Block> LAVASPONGE;
-	public static final DeferredBlock<Block> WETLAVASPONGE;
+	public static final DeferredBlock<Block> LAVA_SPONGE;
+	public static final DeferredBlock<Block> WET_LAVA_SPONGE;
 	public static final DeferredBlock<Block> TNT_WITHER;
 	public static final DeferredBlock<Block> TNT_MAGIC;
 	public static final DeferredBlock<Block> TNT_COMPACT;
@@ -211,7 +211,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> POISON_OBSIDIAN;
 	public static final DeferredBlock<Block> EXTRACTOR;
 	public static final DeferredBlock<Block> BOOM_OBSIDIAN;
-	public static final DeferredBlock<Block> MEGABOOMOBSIDIAN;
+	public static final DeferredBlock<Block> MEGA_BOOM_OBSIDIAN;
 	public static final DeferredBlock<Block> HARPAGOPHYTUM;
 	public static final DeferredBlock<Block> GLUEBALL_RED;
 	public static final DeferredBlock<Block> GREEN_GLUEBALL;
@@ -263,8 +263,8 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SOFTENED_FINDIUM_ORE;
 	public static final DeferredBlock<Block> SOFTENED_ENDIUM_NUGGET_ORE;
 	public static final DeferredBlock<Block> COBBLED_SOFT_STONE;
-	public static final DeferredBlock<Block> SOFTSTONESLAB;
-	public static final DeferredBlock<Block> SOFTSTONESTAIRS;
+	public static final DeferredBlock<Block> SOFT_STONE_SLAB;
+	public static final DeferredBlock<Block> SOFT_STONE_STAIRS;
 	public static final DeferredBlock<Block> COBBLED_SOFT_STONE_SLAB;
 	public static final DeferredBlock<Block> COBBLED_SOFT_STONE_STAIRS;
 	public static final DeferredBlock<Block> SOFTENED_COAL_ORE;
@@ -422,7 +422,7 @@ public class PalamodModBlocks {
 		ELEVATOR_BLUE = REGISTRY.register("elevator_blue", ElevatorblueBlock::new);
 		ELEVATOR_GREEN = REGISTRY.register("elevator_green", ElevatorgreenBlock::new);
 		ELEVATOR_PINK = REGISTRY.register("elevator_pink", ElevatorpinkBlock::new);
-		ELEVATORL_IGHT_BLUE = REGISTRY.register("elevatorl_ight_blue", ElevatorlightblueBlock::new);
+		ELEVATOR_LIGHT_BLUE = REGISTRY.register("elevator_light_blue", ElevatorlightblueBlock::new);
 		ELEVATOR_LIGHT_GREEN = REGISTRY.register("elevator_light_green", ElevatorlightgreenBlock::new);
 		ELEVATOR_BROWN = REGISTRY.register("elevator_brown", ElevatorbrownBlock::new);
 		ELEVATOR_ORANGE = REGISTRY.register("elevator_orange", ElevatororangeBlock::new);
@@ -489,8 +489,8 @@ public class PalamodModBlocks {
 		UNKNOWNBLOCK = REGISTRY.register("unknownblock", UnknownblockBlock::new);
 		COMPRESSED_SPONGE = REGISTRY.register("compressed_sponge", CompressedspongeBlock::new);
 		TNT_SPONGE = REGISTRY.register("tnt_sponge", SpongetntBlock::new);
-		LAVASPONGE = REGISTRY.register("lavasponge", LavaspongeBlock::new);
-		WETLAVASPONGE = REGISTRY.register("wetlavasponge", WetlavaspongeBlock::new);
+		LAVA_SPONGE = REGISTRY.register("lava_sponge", LavaspongeBlock::new);
+		WET_LAVA_SPONGE = REGISTRY.register("wet_lava_sponge", WetlavaspongeBlock::new);
 		TNT_WITHER = REGISTRY.register("tnt_wither", WithertntBlock::new);
 		TNT_MAGIC = REGISTRY.register("tnt_magic", MagictntBlock::new);
 		TNT_COMPACT = REGISTRY.register("tnt_compact", CompacttntBlock::new);
@@ -505,7 +505,7 @@ public class PalamodModBlocks {
 		POISON_OBSIDIAN = REGISTRY.register("poison_obsidian", PoisonobsidianBlock::new);
 		EXTRACTOR = REGISTRY.register("extractor", ExctractorBlock::new);
 		BOOM_OBSIDIAN = REGISTRY.register("boom_obsidian", BoomobsidianBlock::new);
-		MEGABOOMOBSIDIAN = REGISTRY.register("megaboomobsidian", MegaboomobsidianBlock::new);
+		MEGA_BOOM_OBSIDIAN = REGISTRY.register("mega_boom_obsidian", MegaboomobsidianBlock::new);
 		HARPAGOPHYTUM = REGISTRY.register("harpagophytum", HarpagophytumBlock::new);
 		GLUEBALL_RED = REGISTRY.register("glueball_red", RedglueballBlock::new);
 		GREEN_GLUEBALL = REGISTRY.register("green_glueball", GreenglueballBlock::new);
@@ -557,8 +557,8 @@ public class PalamodModBlocks {
 		SOFTENED_FINDIUM_ORE = REGISTRY.register("softened_findium_ore", SoftenedfindiumoreBlock::new);
 		SOFTENED_ENDIUM_NUGGET_ORE = REGISTRY.register("softened_endium_nugget_ore", SoftenedendiumnuggetoreBlock::new);
 		COBBLED_SOFT_STONE = REGISTRY.register("cobbled_soft_stone", CobbleledsoftstoneBlock::new);
-		SOFTSTONESLAB = REGISTRY.register("softstoneslab", SoftstoneslabBlock::new);
-		SOFTSTONESTAIRS = REGISTRY.register("softstonestairs", SoftstonestairsBlock::new);
+		SOFT_STONE_SLAB = REGISTRY.register("soft_stone_slab", SoftstoneslabBlock::new);
+		SOFT_STONE_STAIRS = REGISTRY.register("soft_stone_stairs", SoftstonestairsBlock::new);
 		COBBLED_SOFT_STONE_SLAB = REGISTRY.register("cobbled_soft_stone_slab", CobbledsoftstoneslabBlock::new);
 		COBBLED_SOFT_STONE_STAIRS = REGISTRY.register("cobbled_soft_stone_stairs", CobbledsoftstonestairsBlock::new);
 		SOFTENED_COAL_ORE = REGISTRY.register("softened_coal_ore", SoftcoaloreBlock::new);

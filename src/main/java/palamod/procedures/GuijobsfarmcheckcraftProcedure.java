@@ -498,7 +498,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
 							&& (20 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack419 = new ItemStack(PalamodModItems.TITANEHOE.get()).copy();
+							ItemStack _setstack419 = new ItemStack(PalamodModItems.TITANE_HOE.get()).copy();
 							_setstack419.setCount(1);
 							_menu.getSlots().get(9).set(_setstack419);
 							_player.containerMenu.broadcastChanges();

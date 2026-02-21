@@ -48,7 +48,7 @@
     "palamod:elevator_white",
     "palamod:slimepad_orange",
     "palamod:boom_obsidian",
-    "palamod:softstonestairs",
+    "palamod:soft_stone_stairs",
     "palamod:cobblebreaker_server",
     "palamod:titane_slab",
     "palamod:tresaure_false",
@@ -127,7 +127,7 @@
     "palamod:amethyst_chest",
     "palamod:obsidian_door",
     "palamod:trixium_block",
-    "palamod:megaboomobsidian",
+    "palamod:mega_boom_obsidian",
     "palamod:amethyst_block",
     "palamod:paladium_stairs",
     "palamod:cobbled_soft_stone",
@@ -173,8 +173,8 @@
     "palamod:green_paladium_slab",
     "palamod:paladium_obsidian_spike",
     "palamod:printingpress",
-    "palamod:elevatorl_ight_blue",
-    "palamod:softstoneslab",
+    "palamod:elevator_light_blue",
+    "palamod:soft_stone_slab",
     "palamod:lava_obsidian",
     "palamod:obsidian_trapdoor"
   ]

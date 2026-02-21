@@ -321,7 +321,7 @@ public class ForgeprocessProcedure {
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane broadsword"));
 			}
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANEFASTSWORD.get()
+		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_FASTSWORD.get()
 				&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.TITANE_STICK.get() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 62
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {

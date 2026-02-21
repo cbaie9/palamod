@@ -102,15 +102,15 @@ public class GrinderresultcraftresultProcedure {
 		} else if (input_item_slot1.getItem() == PalamodModItems.SHOVEL_HEAD.get() && (input_item_slot2.getItem() == PalamodModItems.PALADIUM_STICK.get() || input_item_slot2.getItem() == Items.STICK && mode == 1 && gnum_local >= 1)) {
 			output = new ItemStack(PalamodModItems.PALADIUM_SHOVEL.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
-			output = new ItemStack(PalamodModItems.GREENPALADIUMBROADSWORD.get()).copy();
+			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
-			output = new ItemStack(PalamodModItems.PALADIUMGREENSWORD.get()).copy();
+			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
-			output = new ItemStack(PalamodModItems.PALADIUMGREENPICKAXE.get()).copy();
+			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
-			output = new ItemStack(PalamodModItems.PALADIUMGREENAXE.get()).copy();
+			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
-			output = new ItemStack(PalamodModItems.PALADIUMGREENSHOVEL.get()).copy();
+			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && input_item_slot2.getItem() == Items.STICK && mode == 2 && gnum_local >= 1) {
 			output = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()).copy();
 		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get() && input_item_slot2.getItem() == Items.STICK && mode == 3 && gnum_local >= 1) {

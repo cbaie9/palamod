@@ -99,13 +99,13 @@ public class ArmorpalahelpguiThisGUIIsOpenedProcedure {
 			ItemStack _setstack28 = new ItemStack(PalamodModItems.SCUBA_HELMET.get()).copy();
 			_setstack28.setCount(1);
 			_menu.getSlots().get(28).set(_setstack28);
-			ItemStack _setstack29 = new ItemStack(PalamodModItems.TRAVELARMOR_CHESTPLATE.get()).copy();
+			ItemStack _setstack29 = new ItemStack(PalamodModItems.TRAVEL_ARMOR_CHESTPLATE.get()).copy();
 			_setstack29.setCount(1);
 			_menu.getSlots().get(29).set(_setstack29);
-			ItemStack _setstack30 = new ItemStack(PalamodModItems.TRAVELARMOR_LEGGINGS.get()).copy();
+			ItemStack _setstack30 = new ItemStack(PalamodModItems.TRAVEL_ARMOR_LEGGINGS.get()).copy();
 			_setstack30.setCount(1);
 			_menu.getSlots().get(30).set(_setstack30);
-			ItemStack _setstack31 = new ItemStack(PalamodModItems.TRAVELARMOR_BOOTS.get()).copy();
+			ItemStack _setstack31 = new ItemStack(PalamodModItems.TRAVEL_ARMOR_BOOTS.get()).copy();
 			_setstack31.setCount(1);
 			_menu.getSlots().get(31).set(_setstack31);
 			_player.containerMenu.broadcastChanges();
