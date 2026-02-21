@@ -43264,6 +43264,40 @@
           "src/main/java/palamod/CraftEventHandler.java"
         ]
       }
+    },
+    {
+      "name": "Reloadcommandaddon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "reloadcommandaddon",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "command",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ReloadcommandaddonProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48003,7 +48037,8 @@
       "block.palamod.amethystanvil": "Amethyst anvil",
       "block.palamod.titaneanvil": "Titane anvil",
       "block.palamod.paladiumanvil": "Titane anvil",
-      "block.palamod.moneyanvil": "Money anvil"
+      "block.palamod.moneyanvil": "Money anvil",
+      "palamod.procedure.reload_craft_config": "The jobs craft was reloaded"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -49627,7 +49662,8 @@
       "block.palamod.amethystanvil": "Amethyst anvil",
       "block.palamod.titaneanvil": "Amethyst anvil",
       "block.palamod.paladiumanvil": "Amethyst anvil",
-      "block.palamod.moneyanvil": "Amethyst anvil"
+      "block.palamod.moneyanvil": "Amethyst anvil",
+      "palamod.procedure.reload_craft_config": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51251,7 +51287,8 @@
       "block.palamod.amethystanvil": "Amethyst anvil",
       "block.palamod.titaneanvil": "Amethyst anvil",
       "block.palamod.paladiumanvil": "Amethyst anvil",
-      "block.palamod.moneyanvil": "Amethyst anvil"
+      "block.palamod.moneyanvil": "Amethyst anvil",
+      "palamod.procedure.reload_craft_config": ""
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52875,7 +52912,8 @@
       "block.palamod.amethystanvil": "Amethyst anvil",
       "block.palamod.titaneanvil": "Amethyst anvil",
       "block.palamod.paladiumanvil": "Amethyst anvil",
-      "block.palamod.moneyanvil": "Amethyst anvil"
+      "block.palamod.moneyanvil": "Amethyst anvil",
+      "palamod.procedure.reload_craft_config": ""
     }
   },
   "metadata": {

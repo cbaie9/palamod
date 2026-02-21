@@ -1621,5 +1621,6 @@
   "block.palamod.amethystanvil": "Amethyst anvil",
   "block.palamod.titaneanvil": "Titane anvil",
   "block.palamod.paladiumanvil": "Titane anvil",
-  "block.palamod.moneyanvil": "Money anvil"
+  "block.palamod.moneyanvil": "Money anvil",
+  "palamod.procedure.reload_craft_config": "The jobs craft was reloaded"
 }

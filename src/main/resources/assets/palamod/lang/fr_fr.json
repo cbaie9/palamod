@@ -1620,5 +1620,6 @@
   "block.palamod.amethystanvil": "Amethyst anvil",
   "block.palamod.titaneanvil": "Amethyst anvil",
   "block.palamod.paladiumanvil": "Amethyst anvil",
-  "block.palamod.moneyanvil": "Amethyst anvil"
+  "block.palamod.moneyanvil": "Amethyst anvil",
+  "palamod.procedure.reload_craft_config": ""
 }
