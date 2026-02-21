@@ -43192,6 +43192,78 @@
           "src/main/resources/data/palamod/advancement/recipes/paladiumanvilcraft.json"
         ]
       }
+    },
+    {
+      "name": "Crushercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cursher_craft.json",
+          "src/main/resources/data/palamod/advancement/recipes/crushercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Getleveljobs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getleveljobs",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "jobs_name",
+            "type": "string"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetleveljobsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "JobCraftRestrictionProcedure",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "job_craft_restriction_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/JobCraftRestrictionProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "JobCraftRestrictionManagerProcedure",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "job_craft_restriction_manager_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/JobCraftRestrictionManagerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "CraftEventHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "craft_event_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/CraftEventHandler.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -43883,6 +43955,7 @@
       "~CUSTOM:Moneyanvil",
       "~CUSTOM:Paladiumanvil",
       "~CUSTOM:Titaneanvil",
+      "~CUSTOM:Amethystanvil",
       "~CUSTOM:Softeneddiamondore",
       "~CUSTOM:Softenedgoldore",
       "~CUSTOM:Softenedfindiumore",
@@ -46025,7 +46098,8 @@
       "Frozenobsidian",
       "Knockbackobsidian",
       "Titaneanvil",
-      "Paladiumanvil"
+      "Paladiumanvil",
+      "Amethystanvil"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -46213,7 +46287,8 @@
       "Frozenobsidian",
       "Knockbackobsidian",
       "Titaneanvil",
-      "Paladiumanvil"
+      "Paladiumanvil",
+      "Amethystanvil"
     ],
     "CUSTOM:Luckyblockcreativetab": [
       "Legendarystonefortune",
@@ -52858,7 +52933,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.058.2.1",
+    "version": "1.20.060",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

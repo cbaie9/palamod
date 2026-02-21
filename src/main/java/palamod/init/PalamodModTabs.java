@@ -310,6 +310,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.KNOCKBACKOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.TITANEANVIL.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUMANVIL.get().asItem());
+				tabData.accept(PalamodModBlocks.AMETHYSTANVIL.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -502,6 +503,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.KNOCKBACKOBSIDIAN.get().asItem());
 				tabData.accept(PalamodModBlocks.TITANEANVIL.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUMANVIL.get().asItem());
+				tabData.accept(PalamodModBlocks.AMETHYSTANVIL.get().asItem());
 			}).withTabsBefore(PVPCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> LUCKYBLOCKCREATIVETAB = REGISTRY.register("luckyblockcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.luckyblockcreativetab")).icon(() -> new ItemStack(PalamodModBlocks.LUCKY_BLOCK.get())).displayItems((parameters, tabData) -> {

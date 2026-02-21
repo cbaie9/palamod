@@ -57,6 +57,7 @@ public class PalamodMod {
 		PalamodModFluids.REGISTRY.register(modEventBus);
 		PalamodModFluidTypes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
+		//PalamodModRecipeSerializers.REGISTRY.register(eventBus);
 		// End of user code block mod init
 	}
 
