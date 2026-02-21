@@ -3,6 +3,7 @@ package palamod.procedures;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
+import palamod.init.PalamodModGameRules;
 
 import java.io.File;
 import java.io.FileReader;
@@ -18,6 +19,9 @@ public class JobCraftRestrictionManagerProcedure {
 
         if (player == null || stack == null || stack.isEmpty())
             return true;
+        if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
+        	return true; // jobs désactivés, on autorise tout
+   		}
 
         try {
             // Fichier config automatique
