@@ -656,7 +656,6 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> STRIPPED_DEAD_LOG;
 	public static final DeferredItem<Item> STRIPPED_DEAD_WOOD;
 	public static final DeferredItem<Item> DEAD_PLANKS;
-	public static final DeferredItem<Item> DEAD_LEAVES;
 	public static final DeferredItem<Item> DEAD_STAIRS;
 	public static final DeferredItem<Item> DEAD_SLAB;
 	public static final DeferredItem<Item> DEAD_FENCE;
@@ -1291,7 +1290,6 @@ public class PalamodModItems {
 		STRIPPED_DEAD_LOG = block(PalamodModBlocks.STRIPPED_DEAD_LOG);
 		STRIPPED_DEAD_WOOD = block(PalamodModBlocks.STRIPPED_DEAD_WOOD);
 		DEAD_PLANKS = block(PalamodModBlocks.DEAD_PLANKS);
-		DEAD_LEAVES = block(PalamodModBlocks.DEAD_LEAVES);
 		DEAD_STAIRS = block(PalamodModBlocks.DEAD_STAIRS);
 		DEAD_SLAB = block(PalamodModBlocks.DEAD_SLAB);
 		DEAD_FENCE = block(PalamodModBlocks.DEAD_FENCE);

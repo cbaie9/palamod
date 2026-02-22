@@ -292,7 +292,6 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> STRIPPED_DEAD_LOG;
 	public static final DeferredBlock<Block> STRIPPED_DEAD_WOOD;
 	public static final DeferredBlock<Block> DEAD_PLANKS;
-	public static final DeferredBlock<Block> DEAD_LEAVES;
 	public static final DeferredBlock<Block> DEAD_STAIRS;
 	public static final DeferredBlock<Block> DEAD_SLAB;
 	public static final DeferredBlock<Block> DEAD_FENCE;
@@ -586,7 +585,6 @@ public class PalamodModBlocks {
 		STRIPPED_DEAD_LOG = REGISTRY.register("stripped_dead_log", StrippedDeadLogBlock::new);
 		STRIPPED_DEAD_WOOD = REGISTRY.register("stripped_dead_wood", StrippedDeadWoodBlock::new);
 		DEAD_PLANKS = REGISTRY.register("dead_planks", DeadPlanksBlock::new);
-		DEAD_LEAVES = REGISTRY.register("dead_leaves", DeadLeavesBlock::new);
 		DEAD_STAIRS = REGISTRY.register("dead_stairs", DeadStairsBlock::new);
 		DEAD_SLAB = REGISTRY.register("dead_slab", DeadSlabBlock::new);
 		DEAD_FENCE = REGISTRY.register("dead_fence", DeadFenceBlock::new);
