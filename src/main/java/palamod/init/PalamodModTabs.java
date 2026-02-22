@@ -614,7 +614,6 @@ public class PalamodModTabs {
 			tabData.accept(PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem());
 			tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
 			tabData.accept(PalamodModBlocks.PALADIUM_FLOWER.get().asItem());
-			tabData.accept(PalamodModBlocks.DEAD_LEAVES.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(PalamodModItems.PIG_ARMOR_HELMET.get());
 			tabData.accept(PalamodModItems.PIG_ARMOR_CHESTPLATE.get());

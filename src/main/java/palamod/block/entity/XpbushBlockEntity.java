@@ -85,7 +85,7 @@ public class XpbushBlockEntity extends RandomizableContainerBlockEntity implemen
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Xpbush");
+		return Component.literal("Xp bush");
 	}
 
 	@Override
