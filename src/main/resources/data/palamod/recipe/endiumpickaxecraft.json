@@ -4,16 +4,19 @@
   "category": "equipment",
   "pattern": [
     "aaa",
-    "aaa",
-    "aaa"
+    " b ",
+    " b "
   ],
   "key": {
     "a": {
-      "item": "palamod:endium_fragment"
+      "item": "palamod:endium_ingot"
+    },
+    "b": {
+      "tag": "neoforge:stick"
     }
   },
   "result": {
-    "id": "palamod:endium_nugget",
+    "id": "palamod:endium_pickaxe",
     "count": 1
   }
 }

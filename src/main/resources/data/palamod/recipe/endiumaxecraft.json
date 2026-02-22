@@ -3,17 +3,20 @@
   "group": "endium_craft_group",
   "category": "equipment",
   "pattern": [
-    "aaa",
-    "aaa",
-    "aaa"
+    "aa",
+    "ab",
+    " b"
   ],
   "key": {
     "a": {
-      "item": "palamod:endium_fragment"
+      "item": "palamod:endium_ingot"
+    },
+    "b": {
+      "tag": "neoforge:stick"
     }
   },
   "result": {
-    "id": "palamod:endium_nugget",
+    "id": "palamod:endium_axe",
     "count": 1
   }
 }

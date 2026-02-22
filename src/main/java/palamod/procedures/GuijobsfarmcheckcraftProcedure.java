@@ -89,7 +89,7 @@ public class GuijobsfarmcheckcraftProcedure {
 									.is(ItemTags.create(ResourceLocation.parse("minecraft:logs")))
 							&& getAmountInGUISlot(entity, 9) == 0 && (55 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-							ItemStack _setstack52 = new ItemStack(PalamodModBlocks.TOTEMFERTILITY.get()).copy();
+							ItemStack _setstack52 = new ItemStack(PalamodModBlocks.TOTEM_FERTILITY.get()).copy();
 							_setstack52.setCount(1);
 							_menu.getSlots().get(9).set(_setstack52);
 							_player.containerMenu.broadcastChanges();

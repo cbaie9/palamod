@@ -4,13 +4,16 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "endium_craft_group",
+    "group": "",
     "unlockingItems": [
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Amethyste"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "Blocks.CHEST"
+      },
+      {
+        "value": "CUSTOM:Voidstone"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -20,37 +23,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Amethyste"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Amethyste"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "TAG:neoforge:chest"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Amethyste"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Amethyste"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Endiumnugget"
+      "value": "CUSTOM:Voidstone"
     },
-    "name": "endiumnuggetcraft_2",
+    "name": "voidstonecraft",
     "namespace": "mod"
   }
 }

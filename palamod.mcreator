@@ -8965,7 +8965,8 @@
       "registry_name": "endiumingotcraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/recipe/endiumingotcraft.json"
+          "src/main/resources/data/palamod/recipe/endiumingotcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/endiumingotcraft.json"
         ]
       }
     },
@@ -23333,6 +23334,7 @@
       "registry_name": "endiumnuggetcraft_2",
       "metadata": {
         "files": [
+          "src/main/resources/data/palamod/advancement/recipes/endiumnuggetcraft_2.json",
           "src/main/resources/data/palamod/recipe/endiumnuggetcraft_2.json"
         ]
       }
@@ -29678,7 +29680,8 @@
       "registry_name": "endiumfragementcraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/recipe/endium_fragement_craft.json"
+          "src/main/resources/data/palamod/recipe/endium_fragement_craft.json",
+          "src/main/resources/data/palamod/advancement/recipes/endiumfragementcraft.json"
         ]
       }
     },
@@ -43438,6 +43441,236 @@
           "src/main/resources/data/palamod/recipe/totemoffertiltycraft.json"
         ]
       }
+    },
+    {
+      "name": "Endiumchestplatecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumchestplatecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumchestplatecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/endiumchestplatecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Endiumpickaxecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumpickaxecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumpickaxecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/endiumpickaxecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Endiumaxecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endiumaxecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endiumaxecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/endiumaxecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Minagevoidstonecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minagevoidstonecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/minagevoidstonecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/minagevoidstonecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystexcavatorcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystexcavatorcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/amethystexcavatorcraft.json",
+          "src/main/resources/data/palamod/recipe/amethystexcavatorcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Titaneexcavatorcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titaneexcavatorcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/titaneexcavatorcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/titaneexcavatorcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumexcavatorcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumexcavatorcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/paladiumexcavatorcraft.json",
+          "src/main/resources/data/palamod/recipe/paladiumexcavatorcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/cobblebreakercraft.json",
+          "src/main/resources/data/palamod/recipe/cobblebreakercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakeramethystupgradecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakeramethystupgradecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cobblebreakeramethystupgradecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/cobblebreakeramethystupgradecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakertitaneupgradecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakertitaneupgradecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cobblebreakertitaneupgradecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/cobblebreakertitaneupgradecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Cobblebreakerpaladiumupgradecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblebreakerpaladiumupgradecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/cobblebreakerpaladiumupgradecraft.json",
+          "src/main/resources/data/palamod/recipe/cobblebreakerpaladiumupgradecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Voidstonecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voidstonecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/voidstonecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/voidstonecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumhoppercraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumhoppercraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiumhoppercraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/paladiumhoppercraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumforgecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumforgecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/paladiumforgecraft.json",
+          "src/main/resources/data/palamod/recipe/paladiumforgecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Spawnerupgradespeedcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawnerupgradespeedcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/spawnerupgradespeedcraft.json",
+          "src/main/resources/data/palamod/recipe/spawnerupgradespeedcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "OpenCraftingTableProcedure",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "open_crafting_table_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/OpenCraftingTableProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Craft",
+      "type": "command",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "craft",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/CraftCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "CommandCraftNoPermAccess",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "command_craft_no_perm_access",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      }
     }
   ],
   "variable_elements": [
@@ -45525,7 +45758,6 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "BLOCKS:minecraft:mineable/axe": [
-      "~CUSTOM:Totemfertility",
       "~CUSTOM:DeadButton",
       "~CUSTOM:DeadPressurePlate",
       "~CUSTOM:DeadTrapdoor",
@@ -45539,6 +45771,7 @@
       "~CUSTOM:StrippedDeadLog",
       "~CUSTOM:DeadWood",
       "~CUSTOM:DeadLog",
+      "~CUSTOM:Totemfertility",
       "~CUSTOM:Typesettingtable",
       "~CUSTOM:Erabletrapdoor",
       "~CUSTOM:Jacarandadoor",
@@ -48178,7 +48411,11 @@
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
       "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
-      "block.palamod.totem_fertility": "Totem of fertility"
+      "block.palamod.totem_fertility": "Totem of fertility",
+      "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
+      "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
+      "gamerule.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -49803,7 +50040,11 @@
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
       "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
-      "block.palamod.totem_fertility": "Totem of fertility"
+      "block.palamod.totem_fertility": "Totem of fertility",
+      "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
+      "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
+      "gamerule.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51428,7 +51669,11 @@
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
       "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
-      "block.palamod.totem_fertility": "Totem of fertility"
+      "block.palamod.totem_fertility": "Totem of fertility",
+      "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
+      "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
+      "gamerule.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
     },
     "fr_ca": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53053,7 +53298,11 @@
       "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
       "item.palamod.unclaim_finder_red": "Red unclaim finder",
       "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
-      "block.palamod.totem_fertility": "Totem of fertility"
+      "block.palamod.totem_fertility": "Totem of fertility",
+      "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
+      "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
+      "gamerule.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
     }
   },
   "metadata": {
@@ -53111,7 +53360,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.060",
+    "version": "1.20.060 alpha 1",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

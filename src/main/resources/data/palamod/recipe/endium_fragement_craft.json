@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "mixed_endium",
+  "group": "endium_craft_group",
   "category": "equipment",
   "ingredients": [
     {

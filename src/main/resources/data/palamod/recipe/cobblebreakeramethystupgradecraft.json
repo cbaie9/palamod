@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cobblebreaker_upgrades",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "a a",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_ingot"
+    },
+    "b": {
+      "item": "palamod:cobblebreaker"
+    },
+    "c": {
+      "item": "palamod:speed_modifier"
+    }
+  },
+  "result": {
+    "id": "palamod:cobblebreaker_amethyst_upgrade",
+    "count": 1
+  }
+}

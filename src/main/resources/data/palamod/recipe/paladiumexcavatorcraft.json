@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "paladium_craft_group",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "b b",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:titane_excavator"
+    }
+  },
+  "result": {
+    "id": "palamod:paladium_excavator",
+    "count": 1
+  }
+}

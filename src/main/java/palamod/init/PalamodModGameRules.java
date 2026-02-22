@@ -20,6 +20,7 @@ public class PalamodModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> DISABLEJOBSGAMERULE;
 	public static GameRules.Key<GameRules.BooleanValue> DISABLEMONEYGAMERULE;
 	public static GameRules.Key<GameRules.BooleanValue> PALAMODDEBUGLOG;
+	public static GameRules.Key<GameRules.BooleanValue> COMMAND_CRAFT_NO_PERM_ACCESS;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
@@ -32,5 +33,6 @@ public class PalamodModGameRules {
 		DISABLEJOBSGAMERULE = GameRules.register("disablejobsgamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		DISABLEMONEYGAMERULE = GameRules.register("disablemoneygamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		PALAMODDEBUGLOG = GameRules.register("palamoddebuglog", GameRules.Category.UPDATES, GameRules.BooleanValue.create(false));
+		COMMAND_CRAFT_NO_PERM_ACCESS = GameRules.register("commandCraftNoPermAccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 	}
 }

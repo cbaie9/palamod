@@ -4,10 +4,13 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "endium_craft_group",
+    "group": "",
     "unlockingItems": [
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "Blocks.HOPPER"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -17,37 +20,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:PaladiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:PaladiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:PaladiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "Blocks.HOPPER"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:PaladiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:PaladiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:EndiumIngot"
+      "value": "CUSTOM:Paladiumhopper"
     },
-    "name": "endiumingotcraft",
+    "name": "paladiumhoppercraft",
     "namespace": "mod"
   }
 }

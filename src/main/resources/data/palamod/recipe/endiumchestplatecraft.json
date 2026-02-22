@@ -3,17 +3,17 @@
   "group": "endium_craft_group",
   "category": "equipment",
   "pattern": [
-    "aaa",
+    "a a",
     "aaa",
     "aaa"
   ],
   "key": {
     "a": {
-      "item": "palamod:endium_fragment"
+      "item": "palamod:endium_ingot"
     }
   },
   "result": {
-    "id": "palamod:endium_nugget",
+    "id": "palamod:endium_armor_chestplate",
     "count": 1
   }
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cobblebreaker_upgrades",
+  "category": "equipment",
+  "pattern": [
+    "a a",
+    "aba",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:titane_ingot"
+    },
+    "b": {
+      "item": "palamod:cobblebreaker_amethyst_upgrade"
+    }
+  },
+  "result": {
+    "id": "palamod:cobblebreaker_titane_upgrade",
+    "count": 1
+  }
+}

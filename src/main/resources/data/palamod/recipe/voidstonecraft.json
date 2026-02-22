@@ -1,19 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "endium_craft_group",
   "category": "equipment",
   "pattern": [
-    "aaa",
-    "aaa",
-    "aaa"
+    " a ",
+    "aba",
+    " a "
   ],
   "key": {
     "a": {
-      "item": "palamod:endium_fragment"
+      "item": "palamod:amethyst_ingot"
+    },
+    "b": {
+      "tag": "neoforge:chest"
     }
   },
   "result": {
-    "id": "palamod:endium_nugget",
+    "id": "palamod:voidstone",
     "count": 1
   }
 }

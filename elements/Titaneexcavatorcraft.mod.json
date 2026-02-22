@@ -4,13 +4,16 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "endium_craft_group",
+    "group": "titane_craft_group",
     "unlockingItems": [
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:TitaneShovel"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:Titanestick"
+      },
+      {
+        "value": "CUSTOM:Titaneexcavator"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -20,37 +23,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:TitaneShovel"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:TitaneShovel"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:TitaneShovel"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Titanestick"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:Titanestick"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Endiumnugget"
+      "value": "CUSTOM:Titaneexcavator"
     },
-    "name": "endiumnuggetcraft_2",
+    "name": "titaneexcavatorcraft",
     "namespace": "mod"
   }
 }

@@ -3,54 +3,63 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 9,
-    "group": "endium_craft_group",
+    "recipeRetstackSize": 1,
+    "group": "",
     "unlockingItems": [
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:Voidstone"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "Items.ENDER_PEARL"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:Titanechestv2"
+      },
+      {
+        "value": "CUSTOM:Minagevoidstone"
       }
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
     "craftingBookCategory": "EQUIPMENT",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "Items.ENDER_PEARL"
       },
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:TitaneIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:Voidstone"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:TitaneIngot"
       },
       {
         "value": ""
+      },
+      {
+        "value": "CUSTOM:Titanechestv2"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Endiumfragment"
+      "value": "CUSTOM:Minagevoidstone"
     },
-    "name": "endium_fragement_craft",
+    "name": "minagevoidstonecraft",
     "namespace": "mod"
   }
 }

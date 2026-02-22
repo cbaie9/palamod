@@ -1622,5 +1622,9 @@
   "item.palamod.unclaim_finder_orange": "Unclaim finder orange",
   "item.palamod.unclaim_finder_red": "Red unclaim finder",
   "item.palamod.unclaim_finder_blue": "Blue Unclaim Finder",
-  "block.palamod.totem_fertility": "Totem of fertility"
+  "block.palamod.totem_fertility": "Totem of fertility",
+  "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
+  "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
+  "gamerule.commandCraftNoPermAccess": "/craft access to Players",
+  "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
 }

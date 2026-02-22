@@ -7,10 +7,10 @@
     "group": "endium_craft_group",
     "unlockingItems": [
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumnugget"
+        "value": "CUSTOM:EndiumArmor.body"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -20,37 +20,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": ""
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       },
       {
-        "value": "CUSTOM:Endiumfragment"
+        "value": "CUSTOM:EndiumIngot"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Endiumnugget"
+      "value": "CUSTOM:EndiumArmor.body"
     },
-    "name": "endiumnuggetcraft_2",
+    "name": "endiumchestplatecraft",
     "namespace": "mod"
   }
 }
