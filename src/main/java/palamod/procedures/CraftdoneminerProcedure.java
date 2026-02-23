@@ -2,12 +2,11 @@ package palamod.procedures;
 
 import palamod.init.PalamodModMenus;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 public class CraftdoneminerProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
@@ -22,6 +21,5 @@ public class CraftdoneminerProcedure {
 			_menu.getSlots().get(8).remove(1);
 			_player.containerMenu.broadcastChanges();
 		}
-		GuijobsminercheckcraftProcedure.execute(world, entity);
 	}
 }

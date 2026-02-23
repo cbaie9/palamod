@@ -25,80 +25,27 @@ public class JobsminercraftpotgProcedure {
 			_vars.lvl_required = "Lvl required : 1";
 			_vars.markSyncDirty();
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get())) && getAmountInGUISlot(entity, 0) == 0) {
-			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get());
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack3 = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get()).copy();
-				_setstack3.setCount(1);
-				_menu.getSlots().get(0).set(_setstack3);
-				_player.containerMenu.broadcastChanges();
-			}
+		CraftdoneminerProcedure.execute(entity);
+		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
+			ItemStack _setstack0 = new ItemStack(PalamodModItems.AMETHYST_PICKAXE.get()).copy();
+			_setstack0.setCount(1);
+			_menu.getSlots().get(0).set(_setstack0);
+			ItemStack _setstack1 = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
+			_setstack1.setCount(1);
+			_menu.getSlots().get(1).set(_setstack1);
+			ItemStack _setstack2 = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
+			_setstack2.setCount(1);
+			_menu.getSlots().get(2).set(_setstack2);
+			ItemStack _setstack3 = new ItemStack(Items.STICK).copy();
+			_setstack3.setCount(1);
+			_menu.getSlots().get(7).set(_setstack3);
+			ItemStack _setstack4 = new ItemStack(Items.STICK).copy();
+			_setstack4.setCount(1);
+			_menu.getSlots().get(4).set(_setstack4);
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV1.get()).copy();
+			_setstack5.setCount(1);
+			_menu.getSlots().get(9).set(_setstack5);
+			_player.containerMenu.broadcastChanges();
 		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get())) && getAmountInGUISlot(entity, 1) == 0) {
-			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get());
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack7 = new ItemStack(PalamodModItems.PALADIUM_PICKAXE.get()).copy();
-				_setstack7.setCount(1);
-				_menu.getSlots().get(1).set(_setstack7);
-				_player.containerMenu.broadcastChanges();
-			}
-		}
-		if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.TITANE_PICKAXE.get())) && getAmountInGUISlot(entity, 2) == 0) {
-			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.TITANE_PICKAXE.get());
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack11 = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
-				_setstack11.setCount(1);
-				_menu.getSlots().get(2).set(_setstack11);
-				_player.containerMenu.broadcastChanges();
-			}
-		}
-		if (hasEntityInInventory(entity, new ItemStack(Items.STICK)) && getAmountInGUISlot(entity, 4) == 0) {
-			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(Items.STICK);
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-			}
-			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-				ItemStack _setstack15 = new ItemStack(Items.STICK).copy();
-				_setstack15.setCount(1);
-				_menu.getSlots().get(4).set(_setstack15);
-				_player.containerMenu.broadcastChanges();
-			}
-			if (hasEntityInInventory(entity, new ItemStack(Items.STICK)) && getAmountInGUISlot(entity, 7) == 0) {
-				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = new ItemStack(Items.STICK);
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-				}
-				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack19 = new ItemStack(Items.STICK).copy();
-					_setstack19.setCount(1);
-					_menu.getSlots().get(7).set(_setstack19);
-					_player.containerMenu.broadcastChanges();
-				}
-			}
-		}
-	}
-
-	private static boolean hasEntityInInventory(Entity entity, ItemStack itemstack) {
-		if (entity instanceof Player player)
-			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
-		return false;
-	}
-
-	private static int getAmountInGUISlot(Entity entity, int sltid) {
-		if (entity instanceof Player player && player.containerMenu instanceof PalamodModMenus.MenuAccessor menuAccessor) {
-			ItemStack stack = menuAccessor.getSlots().get(sltid).getItem();
-			if (stack != null)
-				return stack.getCount();
-		}
-		return 0;
 	}
 }

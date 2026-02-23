@@ -28844,8 +28844,7 @@
         "files": [
           "src/main/java/palamod/network/JobsminercraftguiButtonMessage.java",
           "src/main/java/palamod/world/inventory/JobsminercraftguiMenu.java",
-          "src/main/java/palamod/client/gui/JobsminercraftguiScreen.java",
-          "src/main/java/palamod/network/JobsminercraftguiSlotMessage.java"
+          "src/main/java/palamod/client/gui/JobsminercraftguiScreen.java"
         ]
       }
     },
@@ -30435,28 +30434,6 @@
       }
     },
     {
-      "name": "Guijobsminercheckcraft",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guijobsminercheckcraft",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/GuijobsminercheckcraftProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Kaboomobsidian",
       "type": "procedure",
       "compiles": true,
@@ -30597,10 +30574,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
