@@ -43627,6 +43627,19 @@
         "type": "logic",
         "files": []
       }
+    },
+    {
+      "name": "Softgoldsmeltingrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "softgoldsmeltingrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/soft_gold_smelting_recipe.json",
+          "src/main/resources/data/palamod/advancement/recipes/softgoldsmeltingrecipe.json"
+        ]
+      }
     }
   ],
   "variable_elements": [

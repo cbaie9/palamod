@@ -1,5 +1,7 @@
 package palamod.world.inventory;
 
+import palamod.procedures.CrushercraftamethystProcedure;
+
 import palamod.init.PalamodModMenus;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -7,7 +9,10 @@ import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
@@ -28,6 +33,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
+@EventBusSubscriber
 public class CrushercraftpalahelpguiMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
@@ -287,5 +293,17 @@ public class CrushercraftpalahelpguiMenu extends AbstractContainerMenu implement
 	@Override
 	public Map<String, Object> getMenuState() {
 		return menuState;
+	}
+
+	@SubscribeEvent
+	public static void onContainerOpen(PlayerContainerEvent.Open event) {
+		Player entity = event.getEntity();
+		if (event.getContainer() instanceof CrushercraftpalahelpguiMenu menu) {
+			Level world = menu.world;
+			double x = menu.x;
+			double y = menu.y;
+			double z = menu.z;
+			CrushercraftamethystProcedure.execute(entity);
+		}
 	}
 }
