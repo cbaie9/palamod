@@ -32888,7 +32888,6 @@
         "files": [
           "src/main/java/palamod/world/inventory/JobsfarmercraftguiMenu.java",
           "src/main/java/palamod/network/JobsfarmercraftguiButtonMessage.java",
-          "src/main/java/palamod/network/JobsfarmercraftguiSlotMessage.java",
           "src/main/java/palamod/client/gui/JobsfarmercraftguiScreen.java"
         ]
       }
@@ -49993,7 +49992,12 @@
       "block.palamod.rotated_paladium_hopper.description_0": "Seulement visuel - ne fonctionne pas",
       "block.palamod.paladium_hopper.description_0": "Uniquement Visual - Ne fonctionne pas",
       "gamerule.commandCraftNoPermAccess": "Accès aux joueurs du /craft",
-      "gamerule.commandCraftNoPermAccess.description": "Donner l\u0027accès à /craft aux joueurs sans permission"
+      "gamerule.commandCraftNoPermAccess.description": "Donner l\u0027accès à /craft aux joueurs sans permission",
+      "gui.palamod.grinderpalahelpgui.label_empty": "",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gui.palamod.golemtreec.golem_v_farmer1": "",
+      "gui.palamod.factionhomegui.label_empty": ""
     }
   },
   "metadata": {
@@ -50051,7 +50055,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.060 alpha 1",
+    "version": "1.20.060 alpha 2",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

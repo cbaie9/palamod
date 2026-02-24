@@ -3,11 +3,8 @@ package palamod.world.inventory;
 import palamod.procedures.JobscraftsetupProcedure;
 import palamod.procedures.DropitemcraftProcedure;
 
-import palamod.network.JobsfarmercraftguiSlotMessage;
-
 import palamod.init.PalamodModMenus;
 
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -105,15 +102,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(0, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(0, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 202, 37) {
@@ -122,15 +117,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(1, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(1, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 220, 37) {
@@ -139,15 +132,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(2, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(2, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 184, 55) {
@@ -156,15 +147,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(3, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(3, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 202, 55) {
@@ -173,15 +162,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(4, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(4, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 220, 55) {
@@ -190,15 +177,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(5, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(5, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 184, 73) {
@@ -207,15 +192,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(6, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(6, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 202, 73) {
@@ -224,15 +207,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(7, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(7, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 220, 73) {
@@ -241,15 +222,13 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void setChanged() {
-				super.setChanged();
-				slotChanged(8, 0, 0);
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(8, 1, stack.getCount());
+			public boolean mayPlace(ItemStack itemstack) {
+				return false;
 			}
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 262, 55) {
@@ -258,9 +237,8 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 			private int y = JobsfarmercraftguiMenu.this.y;
 
 			@Override
-			public void onTake(Player entity, ItemStack stack) {
-				super.onTake(entity, stack);
-				slotChanged(9, 1, stack.getCount());
+			public boolean mayPickup(Player entity) {
+				return false;
 			}
 
 			@Override
@@ -388,6 +366,24 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 0)
+						continue;
+					if (j == 1)
+						continue;
+					if (j == 2)
+						continue;
+					if (j == 3)
+						continue;
+					if (j == 4)
+						continue;
+					if (j == 5)
+						continue;
+					if (j == 6)
+						continue;
+					if (j == 7)
+						continue;
+					if (j == 8)
+						continue;
 					if (j == 9)
 						continue;
 					playerIn.drop(internal.getStackInSlot(j), false);
@@ -396,6 +392,24 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 0)
+						continue;
+					if (i == 1)
+						continue;
+					if (i == 2)
+						continue;
+					if (i == 3)
+						continue;
+					if (i == 4)
+						continue;
+					if (i == 5)
+						continue;
+					if (i == 6)
+						continue;
+					if (i == 7)
+						continue;
+					if (i == 8)
+						continue;
 					if (i == 9)
 						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
@@ -403,13 +417,6 @@ public class JobsfarmercraftguiMenu extends AbstractContainerMenu implements Pal
 						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
-		}
-	}
-
-	private void slotChanged(int slotid, int ctype, int meta) {
-		if (this.world != null && this.world.isClientSide()) {
-			PacketDistributor.sendToServer(new JobsfarmercraftguiSlotMessage(slotid, x, y, z, ctype, meta));
-			JobsfarmercraftguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 

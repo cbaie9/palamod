@@ -1619,5 +1619,10 @@
   "block.palamod.rotated_paladium_hopper.description_0": "Seulement visuel - ne fonctionne pas",
   "block.palamod.paladium_hopper.description_0": "Uniquement Visual - Ne fonctionne pas",
   "gamerule.commandCraftNoPermAccess": "Accès aux joueurs du /craft",
-  "gamerule.commandCraftNoPermAccess.description": "Donner l\u0027accès à /craft aux joueurs sans permission"
+  "gamerule.commandCraftNoPermAccess.description": "Donner l\u0027accès à /craft aux joueurs sans permission",
+  "gui.palamod.grinderpalahelpgui.label_empty": "",
+  "gui.palamod.authsafegui.code_check": "",
+  "gui.palamod.adminshopmenu.slider_suffix": "",
+  "gui.palamod.golemtreec.golem_v_farmer1": "",
+  "gui.palamod.factionhomegui.label_empty": ""
 }
