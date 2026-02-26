@@ -1,7 +1,7 @@
 package palamod.item;
 
-import palamod.procedures.GettextcraftableviajobsProcedure;
 import palamod.procedures.FullendiuminvisibleProcedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.init.PalamodModItems;
 
@@ -64,6 +64,19 @@ public abstract class EndiumArmorItem extends ArmorItem {
 		}
 
 		@Override
+		@OnlyIn(Dist.CLIENT)
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, list, flag);
+			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
+			if (hoverText != null) {
+				for (String line : hoverText.split("\n")) {
+					list.add(Component.literal(line));
+				}
+			}
+		}
+
+		@Override
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
@@ -82,7 +95,7 @@ public abstract class EndiumArmorItem extends ArmorItem {
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, list, flag);
 			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-			String hoverText = GettextcraftableviajobsProcedure.execute();
+			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 			if (hoverText != null) {
 				for (String line : hoverText.split("\n")) {
 					list.add(Component.literal(line));
@@ -102,6 +115,19 @@ public abstract class EndiumArmorItem extends ArmorItem {
 	public static class Leggings extends EndiumArmorItem {
 		public Leggings() {
 			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(400)).fireResistant());
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, list, flag);
+			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
+			if (hoverText != null) {
+				for (String line : hoverText.split("\n")) {
+					list.add(Component.literal(line));
+				}
+			}
 		}
 
 		@Override

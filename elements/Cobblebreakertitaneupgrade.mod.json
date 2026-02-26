@@ -33,7 +33,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "glowCondition": {
       "fixedValue": false

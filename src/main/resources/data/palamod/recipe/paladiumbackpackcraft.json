@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "dad"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:paladium_chest"
+    },
+    "c": {
+      "item": "minecraft:hopper"
+    },
+    "d": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "id": "palamod:paladum_backpack",
+    "count": 1
+  }
+}

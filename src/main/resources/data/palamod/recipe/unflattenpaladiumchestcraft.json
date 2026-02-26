@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:flatten_paladium_chest"
+    }
+  },
+  "result": {
+    "id": "palamod:paladium_chest",
+    "count": 1
+  }
+}

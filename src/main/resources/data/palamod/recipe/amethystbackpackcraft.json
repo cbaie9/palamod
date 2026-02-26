@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "dad"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_ingot"
+    },
+    "b": {
+      "item": "palamod:amethyst_chest"
+    },
+    "c": {
+      "item": "minecraft:hopper"
+    },
+    "d": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "id": "palamod:amethyst_backpack",
+    "count": 1
+  }
+}

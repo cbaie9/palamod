@@ -12,7 +12,7 @@
     "name": "Amethyste Excavator",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

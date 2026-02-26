@@ -12,7 +12,7 @@
     "name": "Amethyst seedplanter",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

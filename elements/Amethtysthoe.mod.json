@@ -12,7 +12,7 @@
     "name": "Amethyst hoe",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

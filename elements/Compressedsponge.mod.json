@@ -42,7 +42,7 @@
     "name": "Compressed sponge",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "hardness": 0.6499999999999999,
     "resistance": 10.0,

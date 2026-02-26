@@ -2,7 +2,7 @@ package palamod.item;
 
 import palamod.world.inventory.TrashguiMenu;
 
-import palamod.procedures.GettextcraftableviajobsProcedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 import palamod.procedures.ConnecttrashguiProcedure;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -52,7 +52,7 @@ public class VoidstoneItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = GettextcraftableviajobsProcedure.execute();
+		String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
 				list.add(Component.literal(line));

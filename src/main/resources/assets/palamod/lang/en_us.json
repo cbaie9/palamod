@@ -1370,7 +1370,7 @@
   "palamod.adminshop.preview_2": "sell",
   "palamod.item.withered_portal": "Upgrade the tier of the obsidian by placing paladium block next to it",
   "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension",
-  "palamod.item.craft_via_jobs": "Can be craft via the Palamod Jobs Interface",
+  "palamod.item.craft_via_jobs": "Craftable at ",
   "block.palamod.spawn_controller": "Spawn controller",
   "block.palamod.empty_spawner": "Empty spawner",
   "block.palamod.broken_spawner": "Broken spawner",
@@ -1625,5 +1625,6 @@
   "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
   "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
   "gamerule.commandCraftNoPermAccess": "/craft access to Players",
-  "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
+  "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
+  "palamod.procedure.jobs_level": "level %s"
 }

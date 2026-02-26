@@ -42,7 +42,7 @@
     "name": "Magic tnt",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "hardness": 0.75,
     "resistance": 10.0,

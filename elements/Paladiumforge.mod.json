@@ -42,7 +42,7 @@
     "name": "Paladium forge",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "hardness": 3.0,
     "resistance": 10.0,

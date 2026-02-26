@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "ded"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:paladium_ingot"
+    },
+    "b": {
+      "item": "palamod:paladium_chest"
+    },
+    "c": {
+      "item": "minecraft:hopper"
+    },
+    "d": {
+      "item": "minecraft:leather"
+    },
+    "e": {
+      "item": "palamod:endium_nugget"
+    }
+  },
+  "result": {
+    "id": "palamod:endium_backpack",
+    "count": 1
+  }
+}

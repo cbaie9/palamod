@@ -1,0 +1,59 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.GUNPOWDER"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "TAG:neoforge:obsidian"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Megaboomobsidian"
+    },
+    "name": "megaboomobsidiancraft",
+    "namespace": "mod"
+  }
+}

@@ -18,6 +18,9 @@
     "itemTexture": "totem",
     "particleTexture": "",
     "blockSetType": "OAK",
+    "pottedPlant": {
+      "value": ""
+    },
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -155,7 +158,8 @@
     "customProperties": [],
     "name": "Totem of fertility",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "hardness": 1.0,
     "resistance": 10.0,
@@ -200,6 +204,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": true,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -234,6 +241,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": true,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

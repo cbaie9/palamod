@@ -12,7 +12,7 @@
     "name": "Endium Pickaxe",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

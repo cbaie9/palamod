@@ -42,7 +42,7 @@
     "name": "Slime obsidian",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "hardness": 50.0,
     "resistance": 1200.0,

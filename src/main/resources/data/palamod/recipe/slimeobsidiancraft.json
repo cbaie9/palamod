@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "neoforge:obsidian"
+    },
+    "b": {
+      "tag": "palamod:slimepad"
+    }
+  },
+  "result": {
+    "id": "palamod:slime_obsidian",
+    "count": 2
+  }
+}

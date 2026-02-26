@@ -1624,5 +1624,6 @@
   "gui.palamod.authsafegui.code_check": "",
   "gui.palamod.adminshopmenu.slider_suffix": "",
   "gui.palamod.golemtreec.golem_v_farmer1": "",
-  "gui.palamod.factionhomegui.label_empty": ""
+  "gui.palamod.factionhomegui.label_empty": "",
+  "palamod.procedure.jobs_level": "niveau %s"
 }

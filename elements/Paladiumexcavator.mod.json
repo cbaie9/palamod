@@ -12,7 +12,7 @@
     "name": "Paladium Exavator",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

@@ -41311,10 +41311,15 @@
       "name": "Gettextcraftableviajobs",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "gettextcraftableviajobs",
       "metadata": {
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
         "return_type": "string",
         "files": [
           "src/main/java/palamod/procedures/GettextcraftableviajobsProcedure.java"
@@ -43640,6 +43645,271 @@
           "src/main/resources/data/palamod/advancement/recipes/softgoldsmeltingrecipe.json"
         ]
       }
+    },
+    {
+      "name": "Flattenamethystchest",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flattenamethystchest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/flattenamethystchest.json",
+          "src/main/resources/data/palamod/recipe/flattenamethystchest.json"
+        ]
+      }
+    },
+    {
+      "name": "Unflattenamethystchest",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unflattenamethystchest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/unflattenamethystchest.json"
+        ]
+      }
+    },
+    {
+      "name": "Flattentitanechestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flattentitanechestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/flattentitanechestcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/flattentitanechestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Unflattentitanechestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unflattentitanechestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/unflattentitanechestcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/unflattentitanechestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Flattenpaladiumchestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flattenpaladiumchestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/flattenpaladiumchestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Unflattenpaladiumchestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unflattenpaladiumchestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/unflattenpaladiumchestcraft.json",
+          "src/main/resources/data/palamod/recipe/unflattenpaladiumchestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Flattengreenpaladiumchestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flattengreenpaladiumchestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/flattengreenpaladiumchestcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/flattengreenpaladiumchestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Unflattengreenpaladiumchestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unflattengreenpaladiumchestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/unflattengreenpaladiumchestcraft.json",
+          "src/main/resources/data/palamod/recipe/unflattengreenpaladiumchestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Flattenendiumchestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flattenendiumchestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/flattenendiumchestcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/flattenendiumchestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Unflattenendiumchestcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unflattenendiumchestcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/unflattenendiumchestcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/unflattenendiumchestcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Slimeobsidiancraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimeobsidiancraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/slimeobsidiancraft.json",
+          "src/main/resources/data/palamod/recipe/slimeobsidiancraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Poisonobsidiancraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonobsidiancraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/poisonobsidiancraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Boomobsidiancraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomobsidiancraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/boomobsidiancraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethystbackpackcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethystbackpackcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/amethystbackpackcraft.json",
+          "src/main/resources/data/palamod/recipe/amethystbackpackcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Titanebackpackcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanebackpackcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/titanebackpackcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Paladiumbackpackcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladiumbackpackcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/paladiumbackpackcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Backpackendiumcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backpackendiumcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/backpackendiumcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Megaboomobsidiancraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megaboomobsidiancraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/megaboomobsidiancraft.json",
+          "src/main/resources/data/palamod/recipe/megaboomobsidiancraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Lll",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lll",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/LllProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "CraftableToolTipText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "craftable_tool_tip_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/CraftableToolTipTextProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45886,7 +46156,9 @@
       "CUSTOM:Greenpaladiumchestv2",
       "CUSTOM:Amethystchestv2",
       "CUSTOM:Endiumchestv2",
-      "CUSTOM:Titanechestv2"
+      "CUSTOM:Titanechestv2",
+      "Blocks.CHEST",
+      "Blocks.TRAPPED_CHEST"
     ],
     "ITEMS:mod:unclaim_finder": [
       "CUSTOM:Unclaimfinder",
@@ -48127,7 +48399,7 @@
       "palamod.adminshop.preview_2": "sell",
       "palamod.item.withered_portal": "Upgrade the tier of the obsidian by placing paladium block next to it",
       "palamod.item.withered_portal_place": "Make a portal with this obsidian to acess miner dimension",
-      "palamod.item.craft_via_jobs": "Can be craft via the Palamod Jobs Interface",
+      "palamod.item.craft_via_jobs": "Craftable at ",
       "block.palamod.spawn_controller": "Spawn controller",
       "block.palamod.empty_spawner": "Empty spawner",
       "block.palamod.broken_spawner": "Broken spawner",
@@ -48382,7 +48654,8 @@
       "block.palamod.rotated_paladium_hopper.description_0": "Only visual - Don\u0027t work",
       "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
       "gamerule.commandCraftNoPermAccess": "/craft access to Players",
-      "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission"
+      "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
+      "palamod.procedure.jobs_level": "level %s"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50010,7 +50283,8 @@
       "gui.palamod.authsafegui.code_check": "",
       "gui.palamod.adminshopmenu.slider_suffix": "",
       "gui.palamod.golemtreec.golem_v_farmer1": "",
-      "gui.palamod.factionhomegui.label_empty": ""
+      "gui.palamod.factionhomegui.label_empty": "",
+      "palamod.procedure.jobs_level": "niveau %s"
     }
   },
   "metadata": {

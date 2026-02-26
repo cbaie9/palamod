@@ -2,7 +2,7 @@ package palamod.block;
 
 import palamod.procedures.TntmagicflintProcedure;
 import palamod.procedures.SpawnmagictntProcedure;
-import palamod.procedures.GettextcraftableviajobsProcedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
@@ -40,7 +40,7 @@ public class MagictntBlock extends Block {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = GettextcraftableviajobsProcedure.execute();
+		String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
 				list.add(Component.literal(line));

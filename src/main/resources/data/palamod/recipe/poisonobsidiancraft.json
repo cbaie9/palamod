@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "neoforge:obsidian"
+    },
+    "b": {
+      "item": "palamod:poison_imbue_potion"
+    }
+  },
+  "result": {
+    "id": "palamod:poison_obsidian",
+    "count": 2
+  }
+}

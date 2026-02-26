@@ -33,14 +33,16 @@
     "leggingsName": "Endium Leggings",
     "bootsName": "Endium Boots",
     "helmetSpecialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "bodySpecialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "leggingsSpecialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "bootsSpecialInformation": {
       "fixedValue": []

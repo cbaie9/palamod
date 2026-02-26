@@ -11,7 +11,8 @@
     "guiTexture": "",
     "name": "Infernal knocker",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

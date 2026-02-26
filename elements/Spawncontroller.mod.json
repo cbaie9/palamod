@@ -41,7 +41,8 @@
     "customProperties": [],
     "name": "Spawn controller",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "hardness": 1.0,
     "resistance": 10.0,

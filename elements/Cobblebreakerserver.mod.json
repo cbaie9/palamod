@@ -41,8 +41,7 @@
     "customProperties": [],
     "name": "Cobblebreaker",
     "specialInformation": {
-      "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "fixedValue": []
     },
     "hardness": 2.0,
     "resistance": 10.0,

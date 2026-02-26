@@ -42,7 +42,7 @@
     "name": "Paladium crusher",
     "specialInformation": {
       "fixedValue": [],
-      "name": "Gettextcraftableviajobs"
+      "name": "CraftableToolTipText"
     },
     "hardness": 1.0,
     "resistance": 10.0,
