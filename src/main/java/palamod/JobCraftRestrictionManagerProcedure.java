@@ -255,7 +255,6 @@ public class JobCraftRestrictionManagerProcedure {
     StringBuilder result = new StringBuilder();
 
     for (String jobName : jobData.keySet()) {
-    	System.out.println(jobData.keySet());
 
         int requiredLevel = jobData.get(jobName).getAsInt();
 
