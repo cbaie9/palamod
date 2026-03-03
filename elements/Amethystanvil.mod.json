@@ -131,7 +131,8 @@
       "fixedValue": 7.0
     },
     "hasInventory": false,
-    "openGUIOnRightClick": false,
+    "guiBoundTo": "Palaerror0005",
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 99,
     "inventoryDropWhenDestroyed": true,

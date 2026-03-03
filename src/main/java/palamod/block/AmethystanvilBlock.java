@@ -1,10 +1,15 @@
 package palamod.block;
 
+import palamod.world.inventory.CustomAnvilMenu;
+
+import net.minecraft.world.inventory.ContainerLevelAccess;
+
 import net.neoforged.neoforge.common.util.DeferredSoundType;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -17,13 +22,24 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.util.FastColor;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+
+import io.netty.buffer.Unpooled;
 
 import com.mojang.serialization.MapCodec;
 
@@ -82,4 +98,34 @@ public class AmethystanvilBlock extends FallingBlock {
 	public BlockState mirror(BlockState state, Mirror mirrorIn) {
 		return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
 	}
+
+	@Override
+	public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                        Player player, BlockHitResult hit) {
+
+    if (!level.isClientSide && player instanceof ServerPlayer serverPlayer) {
+
+        MenuProvider provider = new MenuProvider() {
+
+            @Override
+            public Component getDisplayName() {
+                return Component.literal("Amethyst Anvil");
+            }
+
+            @Override
+            public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+                return new CustomAnvilMenu(
+                        id,
+                        inventory,
+                        ContainerLevelAccess.create(level, pos)
+                );
+            }
+        };
+
+        serverPlayer.openMenu(provider);
+    }
+
+    return InteractionResult.sidedSuccess(level.isClientSide);
+}
+	
 }

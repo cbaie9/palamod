@@ -43059,7 +43059,7 @@
       "name": "Amethystanvil",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "amethyst_anvil",
       "metadata": {
         "files": [
@@ -43111,11 +43111,11 @@
       "registry_name": "money_anvil",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/MoneyanvilBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/money_anvil.json",
           "src/main/resources/assets/palamod/blockstates/money_anvil.json",
+          "src/main/resources/data/palamod/loot_table/blocks/money_anvil.json",
           "src/main/resources/assets/palamod/models/block/money_anvil.json",
-          "src/main/resources/assets/palamod/models/item/money_anvil.json"
+          "src/main/resources/assets/palamod/models/item/money_anvil.json",
+          "src/main/java/palamod/block/MoneyanvilBlock.java"
         ]
       }
     },
@@ -43870,25 +43870,6 @@
         "files": [
           "src/main/resources/data/palamod/advancement/recipes/megaboomobsidiancraft.json",
           "src/main/resources/data/palamod/recipe/megaboomobsidiancraft.json"
-        ]
-      }
-    },
-    {
-      "name": "Lll",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lll",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ],
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/LllProcedure.java"
         ]
       }
     },
@@ -46481,6 +46462,12 @@
     ],
     "ITEMS:minecraft:logs_that_burn": [
       "TAG:mod:dead_logs"
+    ],
+    "BLOCKS:minecraft:anvil": [
+      "CUSTOM:Amethystanvil",
+      "CUSTOM:Titaneanvil",
+      "CUSTOM:Paladiumanvil",
+      "CUSTOM:Moneyanvil"
     ]
   },
   "tab_element_order": {
@@ -50289,15 +50276,15 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/init/PalamodModBiomes.java",
       "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
-      "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/init/PalamodModBiomes.java",
       "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/world/features/StructureFeature.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
       "src/main/java/palamod/init/PalamodModFluidTypes.java",
-      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
       "src/main/java/palamod/init/PalamodModMenus.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
@@ -50312,18 +50299,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
       "src/main/java/palamod/init/PalamodModEntities.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/palamod/init/PalamodModTabs.java",
+      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
       "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/palamod/init/PalamodModModels.java",
       "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/palamod.mixins.json",
       "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/palamod/init/PalamodModTabs.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/palamod.mixins.json"
+      "src/main/java/palamod/init/PalamodModModels.java",
+      "src/main/resources/assets/palamod/sounds.json"
     ]
   },
   "foldersRoot": {
