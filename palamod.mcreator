@@ -7339,9 +7339,9 @@
       "registry_name": "armorpalahelpgui",
       "metadata": {
         "files": [
+          "src/main/java/palamod/world/inventory/ArmorpalahelpguiMenu.java",
           "src/main/java/palamod/client/gui/ArmorpalahelpguiScreen.java",
-          "src/main/java/palamod/network/ArmorpalahelpguiButtonMessage.java",
-          "src/main/java/palamod/world/inventory/ArmorpalahelpguiMenu.java"
+          "src/main/java/palamod/network/ArmorpalahelpguiButtonMessage.java"
         ]
       }
     },
@@ -43075,7 +43075,7 @@
       "name": "Titaneanvil",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "titane_anvil",
       "metadata": {
         "files": [
@@ -43091,7 +43091,7 @@
       "name": "Paladiumanvil",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "paladium_anvil",
       "metadata": {
         "files": [
@@ -50329,7 +50329,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.060 alpha 2",
+    "version": "1.20.060",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

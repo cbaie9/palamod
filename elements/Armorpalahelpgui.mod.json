@@ -213,13 +213,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 0,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 49,
           "locked": false
@@ -232,13 +232,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 1,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 69,
           "locked": false
@@ -251,13 +251,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 2,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 89,
           "locked": false
@@ -276,7 +276,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 109,
           "locked": false
@@ -289,7 +289,7 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 4,
           "disablePickup": {
@@ -308,13 +308,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 5,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 69,
           "locked": false
@@ -327,13 +327,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 6,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 89,
           "locked": false
@@ -346,13 +346,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 7,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 109,
           "locked": false
@@ -365,13 +365,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 8,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 49,
           "locked": false
@@ -384,13 +384,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 9,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 69,
           "locked": false
@@ -403,13 +403,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 10,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 89,
           "locked": false
@@ -422,13 +422,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 11,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 109,
           "locked": false
@@ -441,13 +441,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 12,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 49,
           "locked": false
@@ -464,9 +464,9 @@
           },
           "id": 13,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 69,
           "locked": false
@@ -479,13 +479,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 14,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 89,
           "locked": false
@@ -502,9 +502,9 @@
           },
           "id": 15,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 109,
           "locked": false
@@ -517,13 +517,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 16,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 138,
           "locked": false
@@ -536,13 +536,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 17,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 158,
           "locked": false
@@ -555,13 +555,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 18,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 76,
           "y": 178,
           "locked": false
@@ -578,7 +578,7 @@
           },
           "id": 19,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
           "x": 76,
@@ -593,13 +593,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 20,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 138,
           "locked": false
@@ -612,13 +612,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 21,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 158,
           "locked": false
@@ -631,13 +631,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 22,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 178,
           "locked": false
@@ -650,13 +650,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 23,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 144,
           "y": 198,
           "locked": false
@@ -669,13 +669,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 24,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 138,
           "locked": false
@@ -688,13 +688,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 25,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 158,
           "locked": false
@@ -707,13 +707,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 26,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 178,
           "locked": false
@@ -726,13 +726,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 27,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 212,
           "y": 198,
           "locked": false
@@ -745,13 +745,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 28,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 138,
           "locked": false
@@ -764,13 +764,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 29,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 158,
           "locked": false
@@ -783,13 +783,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 30,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 178,
           "locked": false
@@ -802,13 +802,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": true
+            "fixedValue": false
           },
           "id": 31,
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 280,
           "y": 198,
           "locked": false
@@ -1687,9 +1687,6 @@
         }
       }
     ],
-    "onOpen": {
-      "name": "ArmorpalahelpguiThisGUIIsOpened"
-    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

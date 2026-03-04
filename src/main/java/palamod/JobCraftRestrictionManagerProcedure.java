@@ -249,7 +249,6 @@ public class JobCraftRestrictionManagerProcedure {
 
     if (!CACHE.containsKey(itemId))
         return "";
-	System.out.println((itemId));
     JsonObject jobData = CACHE.get(itemId);
 
     StringBuilder result = new StringBuilder();
