@@ -43891,6 +43891,44 @@
           "src/main/java/palamod/procedures/CraftableToolTipTextProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Paycommandprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paycommandprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PaycommandprocessProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48642,7 +48680,9 @@
       "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
       "gamerule.commandCraftNoPermAccess": "/craft access to Players",
       "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
-      "palamod.procedure.jobs_level": "level %s"
+      "palamod.procedure.jobs_level": "level %s",
+      "palamod.procedure.pay_not_enough_money": "You don\u0027t have enough money to pay that person",
+      "palamod.procedure.pay_entity_null": "The entity witch was selectionned does not exist, aborting /pay"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50265,26 +50305,20 @@
       "block.palamod.rotated_paladium_hopper.description_0": "Seulement visuel - ne fonctionne pas",
       "block.palamod.paladium_hopper.description_0": "Uniquement Visual - Ne fonctionne pas",
       "gamerule.commandCraftNoPermAccess": "Accès aux joueurs du /craft",
-      "gamerule.commandCraftNoPermAccess.description": "Donner l\u0027accès à /craft aux joueurs sans permission",
-      "gui.palamod.grinderpalahelpgui.label_empty": "",
-      "gui.palamod.authsafegui.code_check": "",
-      "gui.palamod.adminshopmenu.slider_suffix": "",
-      "gui.palamod.golemtreec.golem_v_farmer1": "",
-      "gui.palamod.factionhomegui.label_empty": "",
-      "palamod.procedure.jobs_level": "niveau %s"
+      "gamerule.commandCraftNoPermAccess.description": "Donner l\u0027accès à /craft aux joueurs sans permission"
     }
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
-      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
       "src/main/java/palamod/init/PalamodModFluidTypes.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
       "src/main/java/palamod/init/PalamodModMenus.java",
-      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
@@ -50299,18 +50333,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/java/palamod/init/PalamodModEntityRenderers.java",
-      "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/resources/palamod.mixins.json",
-      "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModTabs.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModModels.java",
-      "src/main/resources/assets/palamod/sounds.json"
+      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/PalamodMod.java",
+      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/palamod.mixins.json"
     ]
   },
   "foldersRoot": {
@@ -50329,7 +50363,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.060",
+    "version": "1.20.060.1",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

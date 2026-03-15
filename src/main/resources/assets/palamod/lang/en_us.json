@@ -1626,5 +1626,7 @@
   "block.palamod.paladium_hopper.description_0": "Only Visual - Don\u0027t work",
   "gamerule.commandCraftNoPermAccess": "/craft access to Players",
   "gamerule.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
-  "palamod.procedure.jobs_level": "level %s"
+  "palamod.procedure.jobs_level": "level %s",
+  "palamod.procedure.pay_not_enough_money": "You don\u0027t have enough money to pay that person",
+  "palamod.procedure.pay_entity_null": "The entity witch was selectionned does not exist, aborting /pay"
 }
