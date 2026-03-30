@@ -10,6 +10,13 @@ public class MoucepotgProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+<<<<<<< Updated upstream
+=======
+		double pickaxe_stone = 0;
+		ItemStack mainhand = ItemStack.EMPTY;
+		pickaxe_stone = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("Pickaxe_stone", 0);
+		mainhand = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy();
+>>>>>>> Stashed changes
 		if (entity.isShiftKeyDown()) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("Pickaxe_stone", 0) >= 150000) {
 				itemstack.set(DataComponents.CUSTOM_NAME, Component.literal("Fully upgraded - Level 20"));

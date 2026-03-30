@@ -9,7 +9,11 @@
   "key": {
     "a": "palamod:titane_ingot",
     "b": "palamod:paladium_ingot",
+<<<<<<< Updated upstream
     "c": "palamod:titanefastsword"
+=======
+    "c": "palamod:titane_fastsword"
+>>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:fastsword_pattern",

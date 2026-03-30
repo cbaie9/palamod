@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "amethyst_craft_group",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba",
+    "ccc"
+  ],
+  "key": {
+    "a": "palamod:amethyst_ingot",
+    "b": "palamod:compressed_amethyst",
+    "c": "palamod:amethyst_stick"
+  },
+  "result": {
+    "id": "palamod:amethyst_seedplanter",
+    "count": 1
+  }
+}

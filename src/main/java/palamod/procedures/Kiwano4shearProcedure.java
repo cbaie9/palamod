@@ -23,11 +23,29 @@ public class Kiwano4shearProcedure {
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}
+<<<<<<< Updated upstream
 			if (Math.random() < 0.2) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.KIWANOSEED.get()));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
+=======
+			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 17 <= lvl) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
+					world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.CHERVIL_1.get().defaultBlockState(), 3);
+					if (world instanceof ServerLevel _level) {
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.KIWANO.get()));
+						entityToSpawn.setPickUpDelay(10);
+						_level.addFreshEntity(entityToSpawn);
+					}
+					if (Math.random() < 0.2) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.KIWANO_SEED.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					}
+>>>>>>> Stashed changes
 				}
 			}
 		}

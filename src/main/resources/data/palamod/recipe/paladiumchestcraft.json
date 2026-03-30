@@ -9,7 +9,11 @@
   "key": {
     "a": "palamod:paladium_ingot",
     "b": "palamod:compressed_paladium",
+<<<<<<< Updated upstream
     "c": "palamod:flatten_titane_chest"
+=======
+    "c": "palamod:titane_chest"
+>>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:paladium_chest",

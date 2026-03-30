@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "paladium_craft_group",
+  "category": "equipment",
+  "pattern": [
+    "aa",
+    " b",
+    " b"
+  ],
+  "key": {
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "palamod:paladium_hoe",
+    "count": 1
+  }
+}

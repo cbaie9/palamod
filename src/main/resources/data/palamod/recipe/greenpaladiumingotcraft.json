@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": "palamod:paladium_green_block"
+  },
+  "result": {
+    "id": "palamod:green_paladium_ingot",
+    "count": 9
+  }
+}

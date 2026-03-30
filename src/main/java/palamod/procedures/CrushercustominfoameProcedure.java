@@ -4,6 +4,7 @@ import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import java.io.IOException;
@@ -42,7 +43,14 @@ public class CrushercustominfoameProcedure {
 				}
 			}
 		}
+<<<<<<< Updated upstream
 		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") + " / " + output;
+=======
+		if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+			return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") + " / " + output + " - " + (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") / output) * 100 + "%";
+		}
+		return (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_paladium") / output) * 100 + "%";
+>>>>>>> Stashed changes
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

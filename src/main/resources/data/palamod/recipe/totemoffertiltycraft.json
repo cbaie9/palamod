@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "cac",
+    "ada"
+  ],
+  "key": {
+    "a": "#c:logs",
+    "b": "minecraft:creeper_head",
+    "c": "palamod:compressed_paladium",
+    "d": "minecraft:bone_meal"
+  },
+  "result": {
+    "id": "palamod:totem_fertility",
+    "count": 1
+  }
+}

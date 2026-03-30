@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "endium_craft_group",
+  "category": "equipment",
+  "pattern": [
+    "aa",
+    "ab",
+    " b"
+  ],
+  "key": {
+    "a": "palamod:endium_ingot",
+    "b": "#neoforge:stick"
+  },
+  "result": {
+    "id": "palamod:endium_axe",
+    "count": 1
+  }
+}

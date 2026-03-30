@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "category": "redstone",
+  "pattern": [
+    "aa",
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": "palamod:dead_planks"
+  },
+  "result": {
+    "id": "palamod:dead_door",
+    "count": 3
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " b ",
+    "bbb"
+  ],
+  "key": {
+    "a": "palamod:titane_block",
+    "b": "palamod:titane_ingot"
+  },
+  "result": {
+    "id": "palamod:titane_anvil",
+    "count": 1
+  }
+}

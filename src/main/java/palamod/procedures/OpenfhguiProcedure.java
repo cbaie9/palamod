@@ -25,6 +25,7 @@ public class OpenfhguiProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+<<<<<<< Updated upstream
 		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -33,6 +34,17 @@ public class OpenfhguiProcedure {
 					public Component getDisplayName() {
 						return Component.literal("Factionhomegui");
 					}
+=======
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.COMMANDFACTIONNOPERMACCESS) || entity instanceof Player _playerCmd1 && _playerCmd1.hasPermissions(2)) {
+			if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_has_" + entity.getStringUUID()))) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("Factionhomegui");
+						}
+>>>>>>> Stashed changes
 
 					@Override
 					public boolean shouldTriggerClientSideContainerClosingOnOpen() {

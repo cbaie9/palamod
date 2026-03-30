@@ -21,24 +21,40 @@ public class InvisiblearmorArmor {
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/invisible_armor_layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.INVISIBLEARMOR_HELMET.get());
+=======
+		}, PalamodModItems.INVISIBLE_ARMOR_HELMET.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/invisible_armor_layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.INVISIBLEARMOR_CHESTPLATE.get());
+=======
+		}, PalamodModItems.INVISIBLE_ARMOR_CHESTPLATE.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/invisible_armor_layer_2.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.INVISIBLEARMOR_LEGGINGS.get());
+=======
+		}, PalamodModItems.INVISIBLE_ARMOR_LEGGINGS.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/invisible_armor_layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.INVISIBLEARMOR_BOOTS.get());
+=======
+		}, PalamodModItems.INVISIBLE_ARMOR_BOOTS.get());
+>>>>>>> Stashed changes
 	}
 }

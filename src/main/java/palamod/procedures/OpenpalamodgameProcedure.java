@@ -97,9 +97,20 @@ public class OpenpalamodgameProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"tellraw @p [\"\",{\"text\":\"--------------------------\\nPowered by\",\"color\":\"yellow\"},{\"text\":\" Palamod Renew\",\"color\":\"#2ED0FF\"},{\"text\":\"\\n\"},{\"text\":\"Based on\",\"color\":\"dark_red\"},{\"text\":\" Paladium\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------\",\"color\":\"yellow\"}]");
+<<<<<<< Updated upstream
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		}
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			jobs = ReadjobsclientProcedure.execute(world, entity);
+		} else if (IsgameserversideProcedure.execute()) {
+			jobs = ReadjobsserverProcedure.execute(entity);
+		}
+>>>>>>> Stashed changes
 		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
 		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
@@ -111,7 +122,11 @@ public class OpenpalamodgameProcedure {
 		clicker_ame = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
 				File.separator + "clicker_upgrade.json");
+<<<<<<< Updated upstream
 		if (!money.exists()) {
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR31 && _serverLevelGR31.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) && !money.exists()) {
+>>>>>>> Stashed changes
 			try {
 				money.getParentFile().mkdirs();
 				money.createNewFile();
@@ -130,7 +145,11 @@ public class OpenpalamodgameProcedure {
 				}
 			}
 		}
+<<<<<<< Updated upstream
 		if (!cache.exists()) {
+=======
+		if (!(!cache.exists() && !(world instanceof ServerLevel _serverLevelGR37 && _serverLevelGR37.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)))) {
+>>>>>>> Stashed changes
 			try {
 				cache.getParentFile().mkdirs();
 				cache.createNewFile();
@@ -150,7 +169,11 @@ public class OpenpalamodgameProcedure {
 				}
 			}
 		}
+<<<<<<< Updated upstream
 		if (!jobs.exists()) {
+=======
+		if (!jobs.exists() && !(world instanceof ServerLevel _serverLevelGR44 && _serverLevelGR44.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+>>>>>>> Stashed changes
 			try {
 				jobs.getParentFile().mkdirs();
 				jobs.createNewFile();

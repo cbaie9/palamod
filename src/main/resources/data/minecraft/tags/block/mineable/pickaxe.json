@@ -144,7 +144,12 @@
     "palamod:softened_gold_ore",
     "palamod:paladium_spike",
     "palamod:spike_gold",
+<<<<<<< Updated upstream
     "palamod:elevato_rred",
+=======
+    "palamod:elevator_red",
+    "palamod:amethystanvil_2",
+>>>>>>> Stashed changes
     "palamod:diamond_obsidian_spike",
     "palamod:paladium_green_ore",
     "palamod:deepslate_amethyst_ore",

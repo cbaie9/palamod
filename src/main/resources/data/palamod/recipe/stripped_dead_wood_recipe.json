@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "category": "building",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": "palamod:stripped_dead_log"
+  },
+  "result": {
+    "id": "palamod:stripped_dead_wood",
+    "count": 3
+  }
+}

@@ -2,7 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
+<<<<<<< Updated upstream
     "minecraft:obsidian",
+=======
+    "#neoforge:obsidian",
+>>>>>>> Stashed changes
     "palamod:amethyst_spike"
   ],
   "result": {

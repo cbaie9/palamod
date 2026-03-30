@@ -159,10 +159,47 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
+<<<<<<< Updated upstream
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.STONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLESTONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.GRANITE))
 						|| hasEntityInInventory(entity, new ItemStack(Blocks.DIORITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.ANDESITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.BLACKSTONE))
 						|| hasEntityInInventory(entity, new ItemStack(Blocks.BASALT)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE)) || hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))
 						|| hasEntityInInventory(entity, new ItemStack(Blocks.NETHERRACK))) {
+=======
+				if (hasEntityInInventory(entity, new ItemStack(Blocks.TUFF))) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(Blocks.TUFF);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.SOFT_STONE.get()))) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PalamodModBlocks.SOFT_STONE.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get()))) {
+					{
+						final String _tagName = "voidstone_count";
+						final double _tagValue = (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("voidstone_count", 0) + 1);
+						CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PalamodModBlocks.COBBLED_SOFT_STONE.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+				}
+				if ((itemstack.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("minecraft:mv_blocks")))) {
+>>>>>>> Stashed changes
 					continue;
 				} else {
 					break;

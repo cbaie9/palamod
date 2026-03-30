@@ -16,7 +16,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 public class EndiumshovelItem extends ShovelItem {
+<<<<<<< Updated upstream
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 4999, 36f, 0, 14, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:endiumshovel_repair_items")));
+=======
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 4999, 36f, 0, 14, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:endium_shovel_repair_items")));
+>>>>>>> Stashed changes
 
 	public EndiumshovelItem(Item.Properties properties) {
 		super(TOOL_MATERIAL, 4f, -3.5f, properties.fireResistant());

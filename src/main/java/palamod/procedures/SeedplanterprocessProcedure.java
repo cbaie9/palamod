@@ -304,7 +304,11 @@ public class SeedplanterprocessProcedure {
 										world.setBlock(_bp, _bs, 3);
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 7
+<<<<<<< Updated upstream
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.CHERVILSEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+=======
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.CHERVIL_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+>>>>>>> Stashed changes
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);
@@ -325,7 +329,11 @@ public class SeedplanterprocessProcedure {
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 8
+<<<<<<< Updated upstream
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.KIWANOSEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+=======
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.KIWANO_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+>>>>>>> Stashed changes
 									act = true;
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(PalamodModItems.KIWANOSEED.get());
@@ -346,7 +354,11 @@ public class SeedplanterprocessProcedure {
 										world.setBlock(_bp, _bs, 3);
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 9
+<<<<<<< Updated upstream
 										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.ORANGEBLUESEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+=======
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+>>>>>>> Stashed changes
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);

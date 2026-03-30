@@ -39,6 +39,7 @@ public class PalakitprocessProcedure {
 					}
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+<<<<<<< Updated upstream
 					if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos(0, 10, 0);
@@ -51,6 +52,9 @@ public class PalakitprocessProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
+=======
+					if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || entity instanceof Player _playerCmd5 && _playerCmd5.hasPermissions(2)) {
+>>>>>>> Stashed changes
 						main.addProperty("money", (main.get("money").getAsDouble() + 500));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
@@ -96,6 +100,7 @@ public class PalakitprocessProcedure {
 				}
 			}
 		} else {
+<<<<<<< Updated upstream
 			if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false) {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
@@ -134,6 +139,9 @@ public class PalakitprocessProcedure {
 				}
 				entity.getPersistentData().putBoolean("take_palakit", true);
 			} else if (entity instanceof Player _playerCmd33 && _playerCmd33.hasPermissions(3)) {
+=======
+			if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || entity instanceof Player _playerCmd19 && _playerCmd19.hasPermissions(2)) {
+>>>>>>> Stashed changes
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 					_setstack.setCount(1);

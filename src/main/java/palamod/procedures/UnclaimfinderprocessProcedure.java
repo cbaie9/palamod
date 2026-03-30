@@ -24,7 +24,11 @@ public class UnclaimfinderprocessProcedure {
 		double pourcentage = 0;
 		double radius = 0;
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0) {
+<<<<<<< Updated upstream
 			if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDER.get()) {
+=======
+			if (itemstack.getItem() == PalamodModItems.UNCLAIM_FINDER.get()) {
+>>>>>>> Stashed changes
 				radius = 8;
 			} else if (itemstack.getItem() == PalamodModItems.UNCLAIMFINDERORANGE.get()) {
 				radius = 16;

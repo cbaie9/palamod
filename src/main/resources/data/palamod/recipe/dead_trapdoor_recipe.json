@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "category": "redstone",
+  "pattern": [
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "palamod:dead_planks"
+  },
+  "result": {
+    "id": "palamod:dead_trapdoor",
+    "count": 2
+  }
+}

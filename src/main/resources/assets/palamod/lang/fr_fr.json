@@ -1964,6 +1964,7 @@
   "gui.palamod.authsafegui.code_check": "",
   "gui.palamod.golemtreec.golem_v_farmer1": "",
   "gui.palamod.factionhomegui.label_empty": "",
+<<<<<<< Updated upstream
   "gui.palamod.adminshoporeiron.label_empty": "",
   "item.palamod.pocketenderchest": "Pocket Enderchest",
   "item.palamod.cavernehammer": "Caverne hammer",
@@ -1977,6 +1978,9 @@
   "block.palamod.titaneinfusedobsidian": "Titane infused obsidian",
   "block.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
   "item.palamod.emptyspawneritem": "Empty spawner item",
+=======
+  "palamod.procedure.jobs_level": "niveau %s",
+>>>>>>> Stashed changes
   "item.palamod.paladium_ore": "Paladium Ore",
   "item.palamod.paladium_block": "Block of Paladium",
   "item.palamod.titane_ore": "Titane Ore",
@@ -2026,8 +2030,13 @@
   "item.palamod.jacaranda_sappling": "Jacaranda sappling",
   "item.palamod.findium_stairs": "Findium stairs",
   "item.palamod.findium_slab": "Findium slab",
+<<<<<<< Updated upstream
   "item.palamod.xpbush": "Xpbush",
   "item.palamod.xpbushon": "Xpbush",
+=======
+  "item.palamod.xp_bush": "Xp bush",
+  "item.palamod.xp_bush_on": "Xp bush",
+>>>>>>> Stashed changes
   "item.palamod.slimepad": "Slime pad",
   "item.palamod.paladium_green_ore": "Green Paladium Ore",
   "item.palamod.paladium_green_block": "Block of Green Paladium ",
@@ -2040,7 +2049,11 @@
   "item.palamod.obsidian_trapdoor": "Obsidian trapdoor",
   "item.palamod.renforced_obsidian": "hardened obsidian",
   "item.palamod.obsidian_door": "Obsidian door",
+<<<<<<< Updated upstream
   "item.palamod.compacted_obsidian": "Compacted obsidian",
+=======
+  "item.palamod.compacted_obsidian": "Big obsidian",
+>>>>>>> Stashed changes
   "item.palamod.fake_water_obsidian": "Fake water obsidian",
   "item.palamod.lava_obsidian": "Lava obsidian",
   "item.palamod.iron_spike": "Iron spike",
@@ -2087,11 +2100,19 @@
   "item.palamod.amethyst_stairs": "Amethyst stairs",
   "item.palamod.amethyst_slab": "Amethyst slab",
   "item.palamod.elevator_white": "Elevator",
+<<<<<<< Updated upstream
   "item.palamod.elevato_rred": "Elevator red",
   "item.palamod.elevator_blue": "Elevator blue",
   "item.palamod.elevator_green": "Elevator green",
   "item.palamod.elevator_pink": "Elevator pink",
   "item.palamod.elevatorl_ight_blue": "Elevator light blue",
+=======
+  "item.palamod.elevator_red": "Elevator red",
+  "item.palamod.elevator_blue": "Elevator blue",
+  "item.palamod.elevator_green": "Elevator green",
+  "item.palamod.elevator_pink": "Elevator pink",
+  "item.palamod.elevator_light_blue": "Elevator light blue",
+>>>>>>> Stashed changes
   "item.palamod.elevator_light_green": "Elevator light green",
   "item.palamod.elevator_brown": "Elevator brown",
   "item.palamod.elevator_orange": "Elevator orange",
@@ -2117,7 +2138,11 @@
   "item.palamod.erable_door": "Erable door",
   "item.palamod.jacaranda_door": "Jacaranda door",
   "item.palamod.hdv_block": "Hdvblock",
+<<<<<<< Updated upstream
   "item.palamod.erabletrapdoor": "Erabletrapdoor",
+=======
+  "item.palamod.erable_trapdoor": "Erable trapdoor",
+>>>>>>> Stashed changes
   "item.palamod.flatten_titane_chest": "Flat titane chest",
   "item.palamod.flatten_paladium_chest": "Flat paladium chest",
   "item.palamod.flatten_amethyst_chest": "Flat amethyst chest",
@@ -2146,7 +2171,11 @@
   "item.palamod.iron_obsidian_spike": "Iron spike obsidian",
   "item.palamod.golden_obsidian_spike": "Golden spike obsidian",
   "item.palamod.diamond_obsidian_spike": "Diamond spike obsidian",
+<<<<<<< Updated upstream
   "item.palamod.amethys_tobsidian_spike": "Amethyst spike obsidian",
+=======
+  "item.palamod.amethyst_obsidian_spike": "Amethyst spike obsidian",
+>>>>>>> Stashed changes
   "item.palamod.titane_obsidian_spike": "Titane spike obsidian",
   "item.palamod.paladium_obsidian_spike": "Spike spike obsidian",
   "item.palamod.online_detector": "Online detector",
@@ -2157,6 +2186,7 @@
   "item.palamod.typesettingtable": "Typesetting table",
   "item.palamod.drawbridge": "Drawbridge",
   "item.palamod.unknownblock": "Unknown",
+<<<<<<< Updated upstream
   "item.palamod.compressedsponge": "Compressed sponge",
   "item.palamod.spongetnt": "Sponge tnt",
   "item.palamod.lavasponge": "Lava sponge",
@@ -2168,12 +2198,29 @@
   "item.palamod.renforcedobsidianstairs": "hardened obsidian stairs",
   "item.palamod.obsidianstairs": "Obsidian stairs",
   "item.palamod.obsidianslab": "Obsidian slab",
+=======
+  "item.palamod.compressed_sponge": "Compressed sponge",
+  "item.palamod.tnt_sponge": "Sponge tnt",
+  "item.palamod.lava_sponge": "Lava sponge",
+  "item.palamod.wet_lava_sponge": "Wet lava sponge",
+  "item.palamod.tnt_wither": "Wither tnt",
+  "item.palamod.tnt_magic": "Magic tnt",
+  "item.palamod.tnt_compact": "Compact tnt",
+  "item.palamod.tnt_endium": "Endium tnt",
+  "item.palamod.renforced_obsidian_stairs": "hardened obsidian stairs",
+  "item.palamod.obsidian_stairs": "Obsidian stairs",
+  "item.palamod.obsidian_slab": "Obsidian slab",
+>>>>>>> Stashed changes
   "item.palamod.hardened_obsidian_slab": "Hardened obsidian slab",
   "item.palamod.slime_obsidian": "Slime obsidian",
   "item.palamod.poison_obsidian": "Poison obsidian",
   "item.palamod.extractor": "Extractor block",
   "item.palamod.boom_obsidian": "Boom obsidian",
+<<<<<<< Updated upstream
   "item.palamod.megaboomobsidian": "Mega boom obsidian",
+=======
+  "item.palamod.mega_boom_obsidian": "Mega boom obsidian",
+>>>>>>> Stashed changes
   "item.palamod.harpagophytum": "Harpagophytum",
   "item.palamod.glueball_red": "Red glueball",
   "item.palamod.green_glueball": "Green glueball",
@@ -2189,18 +2236,28 @@
   "item.palamod.slimepad_blue": "Blue slimepad",
   "item.palamod.slimepad_orange": "Orange slimepad",
   "item.palamod.slimepad_purple": "Purple slimepad",
+<<<<<<< Updated upstream
   "item.palamod.totemfertility": "Totem of fertility",
   "item.palamod.xpbushlow": "Xp bush",
+=======
+  "item.palamod.totem_fertility": "Totem of fertility",
+  "item.palamod.xp_bush_low": "Xp bush",
+>>>>>>> Stashed changes
   "item.palamod.rotated_paladium_hopper": "Paladium hopper",
   "item.palamod.paladium_hopper": "Paladium hopper",
   "item.palamod.trixiumslab": "Trixium slab",
   "item.palamod.trixiumstairs": "Trixium stairs",
+<<<<<<< Updated upstream
   "item.palamod.cobblebreakerserver": "Cobblebreaker",
+=======
+  "item.palamod.cobblebreaker_server": "Cobblebreaker",
+>>>>>>> Stashed changes
   "item.palamod.rotated_slimepad": "Slime pad",
   "item.palamod.rotated_red_slimepad": "Slime pad",
   "item.palamod.rotated_purple_slimepad": "Slime pad",
   "item.palamod.rotated_blue_slimepad": "Slime pad",
   "item.palamod.rotated_orange_slimepad": "Slime pad",
+<<<<<<< Updated upstream
   "item.palamod.witheredobsidian_0": "Withered obsidian",
   "item.palamod.witheredobsidian_1": "Withered obsidian",
   "item.palamod.witheredobsidian_2": "Withered obsidian",
@@ -2215,6 +2272,22 @@
   "item.palamod.witheredobsidian_11": "Withered obsidian",
   "item.palamod.witheredobsidian_12": "Withered obsidian",
   "item.palamod.witheredobsidian_13": "Withered obsidian",
+=======
+  "item.palamod.withered_obsidian_0": "Withered obsidian",
+  "item.palamod.withered_obsidian_1": "Withered obsidian",
+  "item.palamod.withered_obsidian_2": "Withered obsidian",
+  "item.palamod.withered_obsidian_3": "Withered obsidian",
+  "item.palamod.withered_obsidian_4": "Withered obsidian",
+  "item.palamod.withered_obsidian_5": "Withered obsidian",
+  "item.palamod.withered_obsidian_6": "Withered obsidian",
+  "item.palamod.withered_obsidian_7": "Withered obsidian",
+  "item.palamod.withered_obsidian_8": "Withered obsidian",
+  "item.palamod.withered_obsidian_9": "Withered obsidian",
+  "item.palamod.withered_obsidian_10": "Withered obsidian",
+  "item.palamod.withered_obsidian_11": "Withered obsidian",
+  "item.palamod.withered_obsidian_12": "Withered obsidian",
+  "item.palamod.withered_obsidian_13": "Withered obsidian",
+>>>>>>> Stashed changes
   "item.palamod.soft_stone": "Soft stone",
   "item.palamod.softened_amethyst_ore": "Softened Amethyste Ore",
   "item.palamod.softened_titane_ore": "Softened Titane Ore",
@@ -2224,16 +2297,24 @@
   "item.palamod.softened_findium_ore": "Softened Findium Ore",
   "item.palamod.softened_endium_nugget_ore": "Softened Endium nugget Ore",
   "item.palamod.cobbled_soft_stone": "Cobbleled soft stone",
+<<<<<<< Updated upstream
   "item.palamod.softstoneslab": "Soft Stone slab",
   "item.palamod.softstonestairs": "Soft Stone stairs",
   "item.palamod.cobbledsoftstoneslab": "Cobbleled Soft stone slab",
   "item.palamod.cobbledsoftstonestairs": "Cobbleled Soft stone stairs",
+=======
+  "item.palamod.soft_stone_slab": "Soft Stone slab",
+  "item.palamod.soft_stone_stairs": "Soft Stone stairs",
+  "item.palamod.cobbled_soft_stone_slab": "Cobbleled Soft stone slab",
+  "item.palamod.cobbled_soft_stone_stairs": "Cobbleled Soft stone stairs",
+>>>>>>> Stashed changes
   "item.palamod.softened_coal_ore": "Soft coal ore",
   "item.palamod.softened_iron_ore": "Soft iron ore",
   "item.palamod.softened_gold_ore": "Soft golden ore",
   "item.palamod.softened_diamond_ore": "Soft diamond ore",
   "item.palamod.softened_redstone_ore": "Soft redstone ore",
   "item.palamod.softened_lapis_lazulis_ore": "Soft lapis lazulis ore",
+<<<<<<< Updated upstream
   "item.palamod.flowertotem": "Flower totem",
   "item.palamod.mineralflower": "Mineral flower",
   "item.palamod.endiumflower": "Endium flower",
@@ -2249,4 +2330,37 @@
   "item.palamod.titaneinfusedobsidian": "Titane infused obsidian",
   "item.palamod.paladiuminfusedobsidian": "Paladium infused obsidian",
   "block.palamod.rotated_paladium_hopper.description_0": "Don\u0027t work, still in developpement"
+=======
+  "item.palamod.flower_totem": "Flower totem",
+  "item.palamod.mineral_flower": "Mineral flower",
+  "item.palamod.endium_flower": "Endium flower",
+  "item.palamod.endium_flower_on": "Endium flower",
+  "item.palamod.clathrusarcheri": "Clathrusarcheri",
+  "item.palamod.paladium_flower": "Paladium flower",
+  "item.palamod.dankablock": "Dankablock",
+  "item.palamod.broken_spawner": "Broken spawner",
+  "item.palamod.spawn_controller": "Spawn controller",
+  "item.palamod.empty_spawner": "Empty spawner",
+  "item.palamod.diamond_infused_obsidian": "Diamond infused obsidian",
+  "item.palamod.amethyst_infused_obsidian": "Amethyst infused obsidian",
+  "item.palamod.titane_infused_obsidian": "Titane infused obsidian",
+  "item.palamod.paladium_infused_obsidian": "Paladium infused obsidian",
+  "item.palamod.dead_log": "Dead Log",
+  "item.palamod.dead_wood": "Dead Wood",
+  "item.palamod.stripped_dead_log": "Stripped Dead Log",
+  "item.palamod.stripped_dead_wood": "Stripped Dead Wood",
+  "item.palamod.dead_planks": "Dead Planks",
+  "item.palamod.dead_stairs": "Dead Stairs",
+  "item.palamod.dead_slab": "Dead Slab",
+  "item.palamod.dead_fence": "Dead Fence",
+  "item.palamod.dead_fence_gate": "Dead Fence Gate",
+  "item.palamod.dead_door": "Dead Door",
+  "item.palamod.dead_trapdoor": "Dead Trapdoor",
+  "item.palamod.dead_pressure_plate": "Dead Pressure Plate",
+  "item.palamod.dead_button": "Dead Button",
+  "item.palamod.frozen_obsidian": "Frozen obsidian",
+  "item.palamod.knockback_obsidian": "Knockback obsidian",
+  "item.palamod.money_anvil": "Money anvil",
+  "item.palamod.amethystanvil_2": "Amethyst anvil 2"
+>>>>>>> Stashed changes
 }

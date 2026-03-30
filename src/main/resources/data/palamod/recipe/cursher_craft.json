@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aca"
+  ],
+  "key": {
+    "a": "palamod:paladium_core",
+    "b": "palamod:compressed_amethyst",
+    "c": "palamod:paladium_stick",
+    "d": "palamod:findium"
+  },
+  "result": {
+    "id": "palamod:paladium_crusher",
+    "count": 1
+  }
+}

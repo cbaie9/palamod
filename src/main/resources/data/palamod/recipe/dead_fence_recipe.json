@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": "palamod:dead_planks",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "palamod:dead_fence",
+    "count": 3
+  }
+}

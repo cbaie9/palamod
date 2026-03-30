@@ -10,7 +10,11 @@
     "a": "palamod:findium",
     "b": "minecraft:skeleton_skull",
     "c": "palamod:compressed_paladium",
+<<<<<<< Updated upstream
     "d": "palamod:brokenspawner",
+=======
+    "d": "palamod:broken_spawner",
+>>>>>>> Stashed changes
     "e": "palamod:guardian_stone",
     "f": "palamod:paladium_crusher"
   },

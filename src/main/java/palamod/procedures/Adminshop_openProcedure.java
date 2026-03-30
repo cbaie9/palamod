@@ -9,6 +9,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -19,6 +20,7 @@ public class Adminshop_openProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+<<<<<<< Updated upstream
 		if (entity instanceof ServerPlayer _ent) {
 			BlockPos _bpos = BlockPos.containing(x, y, z);
 			_ent.openMenu(new MenuProvider() {
@@ -26,6 +28,16 @@ public class Adminshop_openProcedure {
 				public Component getDisplayName() {
 					return Component.literal("Adminshopmenu");
 				}
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				_ent.openMenu(new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("Adminshopmenu");
+					}
+>>>>>>> Stashed changes
 
 				@Override
 				public boolean shouldTriggerClientSideContainerClosingOnOpen() {

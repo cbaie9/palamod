@@ -21,24 +21,40 @@ public class Paladiumarmorcustom6Armor {
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_custom_6_layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.PALADIUMARMORCUSTOM_6_HELMET.get());
+=======
+		}, PalamodModItems.PALADIUM_ARMOR_CUSTOM6_HELMET.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_custom_6_layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.PALADIUMARMORCUSTOM_6_CHESTPLATE.get());
+=======
+		}, PalamodModItems.PALADIUM_ARMOR_CUSTOM6_CHESTPLATE.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_custom_6_layer_2.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.PALADIUMARMORCUSTOM_6_LEGGINGS.get());
+=======
+		}, PalamodModItems.PALADIUM_ARMOR_CUSTOM6_LEGGINGS.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_custom_6_layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.PALADIUMARMORCUSTOM_6_BOOTS.get());
+=======
+		}, PalamodModItems.PALADIUM_ARMOR_CUSTOM6_BOOTS.get());
+>>>>>>> Stashed changes
 	}
 }

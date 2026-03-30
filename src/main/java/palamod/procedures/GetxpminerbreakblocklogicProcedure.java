@@ -48,7 +48,11 @@ public class GetxpminerbreakblocklogicProcedure {
 						}
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+<<<<<<< Updated upstream
 						if (BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse((main.get((9 == nloop ? "block_hammer_cache_" + nloop : "block")).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState()
+=======
+						if (BuiltInRegistries.BLOCK.getValue(ResourceLocation.parse((main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState()
+>>>>>>> Stashed changes
 								.is(BlockTags.create(ResourceLocation.parse("palamod:miner_dx_xp")))) {
 							output = true;
 							break;

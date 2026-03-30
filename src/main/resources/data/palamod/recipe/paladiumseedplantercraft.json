@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "ddd"
+  ],
+  "key": {
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:compressed_paladium",
+    "c": "palamod:titane_seedplanter",
+    "d": "palamod:paladium_stick"
+  },
+  "result": {
+    "id": "palamod:paladium_seedplanter",
+    "count": 1
+  }
+}

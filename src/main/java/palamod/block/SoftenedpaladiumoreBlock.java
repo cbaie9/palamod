@@ -16,7 +16,11 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedpaladiumoreBlock extends Block {
 	public SoftenedpaladiumoreBlock(BlockBehaviour.Properties properties) {
+<<<<<<< Updated upstream
 		super(properties.sound(SoundType.NETHER_GOLD_ORE).strength(3f, 5f).instrument(NoteBlockInstrument.BASEDRUM));
+=======
+		super(properties.sound(SoundType.NETHER_GOLD_ORE).strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+>>>>>>> Stashed changes
 	}
 
 	@Override

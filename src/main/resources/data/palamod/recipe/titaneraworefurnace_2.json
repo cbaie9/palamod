@@ -3,7 +3,11 @@
   "category": "misc",
   "experience": 2,
   "cookingtime": 100,
+<<<<<<< Updated upstream
   "ingredient": "palamod:titanerawore",
+=======
+  "ingredient": "palamod:titane_raw_ore",
+>>>>>>> Stashed changes
   "result": {
     "id": "palamod:titane_ingot"
   }

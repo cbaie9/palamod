@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:paladium_armor_custom8"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:paladium_armor_custom8"
+      }
+    ]
+  }
+}

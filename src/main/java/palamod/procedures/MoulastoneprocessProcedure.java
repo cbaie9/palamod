@@ -43,12 +43,24 @@ public class MoulastoneprocessProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("powered", false) == true) {
+<<<<<<< Updated upstream
 				for (int index0 = 0; index0 < 64; index0++) {
 					if (hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))) {
 						count = count + 0.15;
 						if (entity instanceof Player _player) {
 							ItemStack _stktoremove = new ItemStack(Blocks.DEEPSLATE);
 							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+=======
+				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
+					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
+						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
+						if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("palamod:cobblebreakable"))) || itemstackiterator.is(ItemTags.create(ResourceLocation.parse("c:stone")))) {
+							if (entity instanceof Player _player) {
+								ItemStack _stktoremove = itemstackiterator;
+								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), itemstackiterator.getCount(), _player.inventoryMenu.getCraftSlots());
+							}
+							count = count + 0.15;
+>>>>>>> Stashed changes
 						}
 					}
 					if (hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE))) {

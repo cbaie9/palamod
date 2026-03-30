@@ -4,8 +4,15 @@ import palamod.procedures.OpencobblebreakerProcedure;
 import palamod.procedures.CobblebreakersetupProcedure;
 import palamod.procedures.CobblebreakerprocessProcedure;
 
+import palamod.init.PalamodModBlocks;
+
 import palamod.block.entity.CobblebreakerBlockEntity;
 
+<<<<<<< Updated upstream
+=======
+import palamod.PalamodMod;
+
+>>>>>>> Stashed changes
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,6 +21,14 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
+<<<<<<< Updated upstream
+=======
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
+>>>>>>> Stashed changes
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
@@ -23,6 +38,13 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+<<<<<<< Updated upstream
+=======
+
+import java.util.function.Consumer;
+
+import io.netty.buffer.Unpooled;
+>>>>>>> Stashed changes
 
 public class CobblebreakerBlock extends Block implements EntityBlock {
 	public CobblebreakerBlock(BlockBehaviour.Properties properties) {
@@ -97,5 +119,23 @@ public class CobblebreakerBlock extends Block implements EntityBlock {
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;
+	}
+
+	public static class Item extends BlockItem {
+		public Item(Item.Properties properties) {
+			super(PalamodModBlocks.COBBLEBREAKER.get(), properties);
+		}
+
+		@Override
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
+			if (hoverText != null) {
+				for (String line : hoverText.split("\n")) {
+					componentConsumer.accept(Component.literal(line));
+				}
+			}
+		}
 	}
 }

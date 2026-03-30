@@ -27,8 +27,13 @@ import java.util.Map;
 
 public abstract class Paladiumarmorcustom5Item extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(260, Map.of(ArmorType.BOOTS, 7, ArmorType.LEGGINGS, 8, ArmorType.CHESTPLATE, 8, ArmorType.HELMET, 7, ArmorType.BODY, 8), 55,
+<<<<<<< Updated upstream
 			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 3.5f, 0.15f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:paladiumarmorcustom_5_repair_items")),
 			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:paladiumarmorcustom_5")));
+=======
+			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 3.5f, 0.15f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:paladium_armor_custom5_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:paladium_armor_custom5")));
+>>>>>>> Stashed changes
 
 	private Paladiumarmorcustom5Item(Item.Properties properties) {
 		super(properties);

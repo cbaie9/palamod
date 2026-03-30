@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " a ",
+    "bcb",
+    " d "
+  ],
+  "key": {
+    "a": "minecraft:ender_pearl",
+    "b": "palamod:titane_ingot",
+    "c": "palamod:voidstone",
+    "d": "palamod:titane_chest"
+  },
+  "result": {
+    "id": "palamod:minage_voidstone",
+    "count": 1
+  }
+}

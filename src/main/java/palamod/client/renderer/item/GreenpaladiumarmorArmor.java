@@ -21,24 +21,40 @@ public class GreenpaladiumarmorArmor {
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_green__layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.GREENPALADIUMARMOR_HELMET.get());
+=======
+		}, PalamodModItems.GREEN_PALADIUM_ARMOR_HELMET.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_green__layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.GREENPALADIUMARMOR_CHESTPLATE.get());
+=======
+		}, PalamodModItems.GREEN_PALADIUM_ARMOR_CHESTPLATE.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_green__layer_2.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.GREENPALADIUMARMOR_LEGGINGS.get());
+=======
+		}, PalamodModItems.GREEN_PALADIUM_ARMOR_LEGGINGS.get());
+>>>>>>> Stashed changes
 		event.registerItem(new IClientItemExtensions() {
 			@Override
 			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
 				return ResourceLocation.parse("palamod:textures/models/armor/paladium_green__layer_1.png");
 			}
+<<<<<<< Updated upstream
 		}, PalamodModItems.GREENPALADIUMARMOR_BOOTS.get());
+=======
+		}, PalamodModItems.GREEN_PALADIUM_ARMOR_BOOTS.get());
+>>>>>>> Stashed changes
 	}
 }

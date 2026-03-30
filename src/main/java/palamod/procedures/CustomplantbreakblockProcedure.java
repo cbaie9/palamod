@@ -45,6 +45,7 @@ public class CustomplantbreakblockProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double lvl = 0;
 		double lvlmin = 0;
+<<<<<<< Updated upstream
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		if (jobs.exists()) {
@@ -55,6 +56,26 @@ public class CustomplantbreakblockProcedure {
 					String line;
 					while ((line = bufferedReader.readLine()) != null) {
 						jsonstringbuilder.append(line);
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					File.separator + "jobs.json");
+			if (jobs.exists()) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						lvl = main.get("lvl_farmer").getAsDouble();
+					} catch (IOException e) {
+						e.printStackTrace();
+>>>>>>> Stashed changes
 					}
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
@@ -62,6 +83,7 @@ public class CustomplantbreakblockProcedure {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+<<<<<<< Updated upstream
 			}
 			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:eggplant")))) {
 				lvlmin = 40;
@@ -78,6 +100,25 @@ public class CustomplantbreakblockProcedure {
 				PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + (world instanceof ServerLevel _serverLevelGR16 && _serverLevelGR16.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE))));
 				if (event instanceof ICancellableEvent _cancellable) {
 					_cancellable.setCanceled(true);
+=======
+				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:eggplant")))) {
+					lvlmin = 40;
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:chervil")))) {
+					lvlmin = 60;
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:kiwano")))) {
+					lvlmin = 80;
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:orangeblue")))) {
+					lvlmin = 100;
+				} else {
+					lvlmin = -20;
+				}
+				if (world instanceof ServerLevel _serverLevelGR16 && _serverLevelGR16.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) && lvlmin > lvl) {
+					PalamodMod.LOGGER.debug(("Debug : lvmin - lvl : " + lvlmin + " - " + lvl + " | locked use : " + (world instanceof ServerLevel _serverLevelGR17 && _serverLevelGR17.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE))));
+					if (event instanceof ICancellableEvent _cancellable) {
+						_cancellable.setCanceled(true);
+					}
+					MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
+>>>>>>> Stashed changes
 				}
 				MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
 			}

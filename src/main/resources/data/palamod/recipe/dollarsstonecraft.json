@@ -10,7 +10,11 @@
     "a": "minecraft:ender_pearl",
     "b": "palamod:paladium_ingot",
     "c": "palamod:voidstone",
+<<<<<<< Updated upstream
     "d": "palamod:amethyst"
+=======
+    "d": "palamod:amethyst_ingot"
+>>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:dollars_stone",

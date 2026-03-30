@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "category": "building",
+  "ingredients": [
+    "#palapalamod:dead_logs"
+  ],
+  "result": {
+    "id": "palamod:dead_planks",
+    "count": 4
+  }
+}

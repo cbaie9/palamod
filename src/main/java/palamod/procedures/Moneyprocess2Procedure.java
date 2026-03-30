@@ -27,6 +27,7 @@ public class Moneyprocess2Procedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
+<<<<<<< Updated upstream
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		{
 			try {
@@ -35,6 +36,29 @@ public class Moneyprocess2Procedure {
 				String line;
 				while ((line = bufferedReader.readLine()) != null) {
 					jsonstringbuilder.append(line);
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (entity instanceof Player _player)
+						_player.closeContainer();
+					main.addProperty("money", (1000 + main.get("money").getAsDouble()));
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\" " + Component.translatable("palamod.procedure.money_item").getString()
+										+ "\",\"color\":\"gold\"}]"));
+				} catch (IOException e) {
+					e.printStackTrace();
+>>>>>>> Stashed changes
 				}
 				bufferedReader.close();
 				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);

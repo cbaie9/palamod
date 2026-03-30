@@ -283,6 +283,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> CLATHRUSARCHERI;
 	public static final DeferredBlock<Block> PALADIUMFLOWER;
 	public static final DeferredBlock<Block> DANKABLOCK;
+<<<<<<< Updated upstream
 	public static final DeferredBlock<Block> BROKENSPAWNER;
 	public static final DeferredBlock<Block> SPAWNCONTROLLER;
 	public static final DeferredBlock<Block> EMPTYSPAWNER;
@@ -290,6 +291,35 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> AMETHYSTINFUSEDOBSIDIAN;
 	public static final DeferredBlock<Block> TITANEINFUSEDOBSIDIAN;
 	public static final DeferredBlock<Block> PALADIUMINFUSEDOBSIDIAN;
+=======
+	public static final DeferredBlock<Block> BROKEN_SPAWNER;
+	public static final DeferredBlock<Block> SPAWN_CONTROLLER;
+	public static final DeferredBlock<Block> EMPTY_SPAWNER;
+	public static final DeferredBlock<Block> DIAMOND_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> AMETHYST_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> TITANE_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> PALADIUM_INFUSED_OBSIDIAN;
+	public static final DeferredBlock<Block> DEAD_LOG;
+	public static final DeferredBlock<Block> DEAD_WOOD;
+	public static final DeferredBlock<Block> STRIPPED_DEAD_LOG;
+	public static final DeferredBlock<Block> STRIPPED_DEAD_WOOD;
+	public static final DeferredBlock<Block> DEAD_PLANKS;
+	public static final DeferredBlock<Block> DEAD_STAIRS;
+	public static final DeferredBlock<Block> DEAD_SLAB;
+	public static final DeferredBlock<Block> DEAD_FENCE;
+	public static final DeferredBlock<Block> DEAD_FENCE_GATE;
+	public static final DeferredBlock<Block> DEAD_DOOR;
+	public static final DeferredBlock<Block> DEAD_TRAPDOOR;
+	public static final DeferredBlock<Block> DEAD_PRESSURE_PLATE;
+	public static final DeferredBlock<Block> DEAD_BUTTON;
+	public static final DeferredBlock<Block> FROZEN_OBSIDIAN;
+	public static final DeferredBlock<Block> KNOCKBACK_OBSIDIAN;
+	public static final DeferredBlock<Block> AMETHYST_ANVIL;
+	public static final DeferredBlock<Block> TITANE_ANVIL;
+	public static final DeferredBlock<Block> PALADIUM_ANVIL;
+	public static final DeferredBlock<Block> MONEY_ANVIL;
+	public static final DeferredBlock<Block> AMETHYSTANVIL_2;
+>>>>>>> Stashed changes
 	static {
 		PALADIUM_ORE = register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = register("paladium_block", PaladiumBlockBlock::new);
@@ -340,8 +370,13 @@ public class PalamodModBlocks {
 		JACARANDA_SAPPLING = register("jacaranda_sappling", JacarandasapplingBlock::new);
 		FINDIUM_STAIRS = register("findium_stairs", FindiumstairsBlock::new);
 		FINDIUM_SLAB = register("findium_slab", FindiumslabBlock::new);
+<<<<<<< Updated upstream
 		XPBUSH = register("xpbush", XpbushBlock::new);
 		XPBUSHON = register("xpbushon", XpbushonBlock::new);
+=======
+		XP_BUSH = register("xp_bush", XpbushBlock::new);
+		XP_BUSH_ON = register("xp_bush_on", XpbushonBlock::new);
+>>>>>>> Stashed changes
 		SLIMEPAD = register("slimepad", SlimepadBlock::new);
 		PALADIUM_GREEN_ORE = register("paladium_green_ore", PaladiumGreenoreBlock::new);
 		PALADIUM_GREEN_BLOCK = register("paladium_green_block", PaladiumGreenblockBlock::new);
@@ -401,11 +436,19 @@ public class PalamodModBlocks {
 		AMETHYST_STAIRS = register("amethyst_stairs", AmethyststairsBlock::new);
 		AMETHYST_SLAB = register("amethyst_slab", AmethystslabBlock::new);
 		ELEVATOR_WHITE = register("elevator_white", ElevatorwhiteBlock::new);
+<<<<<<< Updated upstream
 		ELEVATO_RRED = register("elevato_rred", ElevatorredBlock::new);
 		ELEVATOR_BLUE = register("elevator_blue", ElevatorblueBlock::new);
 		ELEVATOR_GREEN = register("elevator_green", ElevatorgreenBlock::new);
 		ELEVATOR_PINK = register("elevator_pink", ElevatorpinkBlock::new);
 		ELEVATORL_IGHT_BLUE = register("elevatorl_ight_blue", ElevatorlightblueBlock::new);
+=======
+		ELEVATOR_RED = register("elevator_red", ElevatorredBlock::new);
+		ELEVATOR_BLUE = register("elevator_blue", ElevatorblueBlock::new);
+		ELEVATOR_GREEN = register("elevator_green", ElevatorgreenBlock::new);
+		ELEVATOR_PINK = register("elevator_pink", ElevatorpinkBlock::new);
+		ELEVATOR_LIGHT_BLUE = register("elevator_light_blue", ElevatorlightblueBlock::new);
+>>>>>>> Stashed changes
 		ELEVATOR_LIGHT_GREEN = register("elevator_light_green", ElevatorlightgreenBlock::new);
 		ELEVATOR_BROWN = register("elevator_brown", ElevatorbrownBlock::new);
 		ELEVATOR_ORANGE = register("elevator_orange", ElevatororangeBlock::new);
@@ -431,7 +474,11 @@ public class PalamodModBlocks {
 		ERABLE_DOOR = register("erable_door", ErabledoorBlock::new);
 		JACARANDA_DOOR = register("jacaranda_door", JacarandadoorBlock::new);
 		HDV_BLOCK = register("hdv_block", HdvblockBlock::new);
+<<<<<<< Updated upstream
 		ERABLETRAPDOOR = register("erabletrapdoor", ErabletrapdoorBlock::new);
+=======
+		ERABLE_TRAPDOOR = register("erable_trapdoor", ErabletrapdoorBlock::new);
+>>>>>>> Stashed changes
 		FLATTEN_TITANE_CHEST = register("flatten_titane_chest", TitanechestBlock::new);
 		FLATTEN_PALADIUM_CHEST = register("flatten_paladium_chest", PaladiumchestBlock::new);
 		FLATTEN_AMETHYST_CHEST = register("flatten_amethyst_chest", AmethystchestBlock::new);
@@ -459,7 +506,11 @@ public class PalamodModBlocks {
 		IRON_OBSIDIAN_SPIKE = register("iron_obsidian_spike", IronobsidianspikeBlock::new);
 		GOLDEN_OBSIDIAN_SPIKE = register("golden_obsidian_spike", GoldenobsidianspikeBlock::new);
 		DIAMOND_OBSIDIAN_SPIKE = register("diamond_obsidian_spike", DiamondobsidianspikeBlock::new);
+<<<<<<< Updated upstream
 		AMETHYS_TOBSIDIAN_SPIKE = register("amethys_tobsidian_spike", AmethystobsidianspikeBlock::new);
+=======
+		AMETHYST_OBSIDIAN_SPIKE = register("amethyst_obsidian_spike", AmethystobsidianspikeBlock::new);
+>>>>>>> Stashed changes
 		TITANE_OBSIDIAN_SPIKE = register("titane_obsidian_spike", TitaneobsidianspikeBlock::new);
 		PALADIUM_OBSIDIAN_SPIKE = register("paladium_obsidian_spike", PaladiumobsidianspikeBlock::new);
 		ONLINE_DETECTOR = register("online_detector", OnlinedetectorBlock::new);
@@ -470,6 +521,7 @@ public class PalamodModBlocks {
 		TYPESETTINGTABLE = register("typesettingtable", TypesettingtableBlock::new);
 		DRAWBRIDGE = register("drawbridge", DrawbridgeBlock::new);
 		UNKNOWNBLOCK = register("unknownblock", UnknownblockBlock::new);
+<<<<<<< Updated upstream
 		COMPRESSEDSPONGE = register("compressedsponge", CompressedspongeBlock::new);
 		SPONGETNT = register("spongetnt", SpongetntBlock::new);
 		LAVASPONGE = register("lavasponge", LavaspongeBlock::new);
@@ -481,6 +533,19 @@ public class PalamodModBlocks {
 		RENFORCEDOBSIDIANSTAIRS = register("renforcedobsidianstairs", RenforcedobsidianstairsBlock::new);
 		OBSIDIANSTAIRS = register("obsidianstairs", ObsidianstairsBlock::new);
 		OBSIDIANSLAB = register("obsidianslab", ObsidianslabBlock::new);
+=======
+		COMPRESSED_SPONGE = register("compressed_sponge", CompressedspongeBlock::new);
+		TNT_SPONGE = register("tnt_sponge", SpongetntBlock::new);
+		LAVA_SPONGE = register("lava_sponge", LavaspongeBlock::new);
+		WET_LAVA_SPONGE = register("wet_lava_sponge", WetlavaspongeBlock::new);
+		TNT_WITHER = register("tnt_wither", WithertntBlock::new);
+		TNT_MAGIC = register("tnt_magic", MagictntBlock::new);
+		TNT_COMPACT = register("tnt_compact", CompacttntBlock::new);
+		TNT_ENDIUM = register("tnt_endium", EndiumtntBlock::new);
+		RENFORCED_OBSIDIAN_STAIRS = register("renforced_obsidian_stairs", RenforcedobsidianstairsBlock::new);
+		OBSIDIAN_STAIRS = register("obsidian_stairs", ObsidianstairsBlock::new);
+		OBSIDIAN_SLAB = register("obsidian_slab", ObsidianslabBlock::new);
+>>>>>>> Stashed changes
 		HARDENED_OBSIDIAN_SLAB = register("hardened_obsidian_slab", HardenedobsidianslabBlock::new);
 		FAKE_WATER = register("fake_water", FakewterBlock::new);
 		ANGELIC_WATER = register("angelic_water", AngelicwterBlock::new);
@@ -488,7 +553,11 @@ public class PalamodModBlocks {
 		POISON_OBSIDIAN = register("poison_obsidian", PoisonobsidianBlock::new);
 		EXTRACTOR = register("extractor", ExctractorBlock::new);
 		BOOM_OBSIDIAN = register("boom_obsidian", BoomobsidianBlock::new);
+<<<<<<< Updated upstream
 		MEGABOOMOBSIDIAN = register("megaboomobsidian", MegaboomobsidianBlock::new);
+=======
+		MEGA_BOOM_OBSIDIAN = register("mega_boom_obsidian", MegaboomobsidianBlock::new);
+>>>>>>> Stashed changes
 		HARPAGOPHYTUM = register("harpagophytum", HarpagophytumBlock::new);
 		GLUEBALL_RED = register("glueball_red", RedglueballBlock::new);
 		GREEN_GLUEBALL = register("green_glueball", GreenglueballBlock::new);
@@ -504,18 +573,28 @@ public class PalamodModBlocks {
 		SLIMEPAD_BLUE = register("slimepad_blue", BlueslimepadBlock::new);
 		SLIMEPAD_ORANGE = register("slimepad_orange", OrangeslimepadBlock::new);
 		SLIMEPAD_PURPLE = register("slimepad_purple", PurpleslimepadBlock::new);
+<<<<<<< Updated upstream
 		TOTEMFERTILITY = register("totemfertility", TotemfertilityBlock::new);
 		XPBUSHLOW = register("xpbushlow", XpbushlowBlock::new);
+=======
+		TOTEM_FERTILITY = register("totem_fertility", TotemfertilityBlock::new);
+		XP_BUSH_LOW = register("xp_bush_low", XpbushlowBlock::new);
+>>>>>>> Stashed changes
 		ROTATED_PALADIUM_HOPPER = register("rotated_paladium_hopper", PaladiumhopperBlock::new);
 		PALADIUM_HOPPER = register("paladium_hopper", PaladiumhoppersouthBlock::new);
 		TRIXIUMSLAB = register("trixiumslab", TrixiumslabBlock::new);
 		TRIXIUMSTAIRS = register("trixiumstairs", TrixiumstairsBlock::new);
+<<<<<<< Updated upstream
 		COBBLEBREAKERSERVER = register("cobblebreakerserver", CobblebreakerserverBlock::new);
+=======
+		COBBLEBREAKER_SERVER = register("cobblebreaker_server", CobblebreakerserverBlock::new);
+>>>>>>> Stashed changes
 		ROTATED_SLIMEPAD = register("rotated_slimepad", RotatedslimepadBlock::new);
 		ROTATED_RED_SLIMEPAD = register("rotated_red_slimepad", RotatedredslimepadBlock::new);
 		ROTATED_PURPLE_SLIMEPAD = register("rotated_purple_slimepad", RotatedpurpleslimepadBlock::new);
 		ROTATED_BLUE_SLIMEPAD = register("rotated_blue_slimepad", RotatedblueslimepadBlock::new);
 		ROTATED_ORANGE_SLIMEPAD = register("rotated_orange_slimepad", RotatedorangeslimepadBlock::new);
+<<<<<<< Updated upstream
 		WITHEREDOBSIDIAN_0 = register("witheredobsidian_0", Witheredobsidian0Block::new);
 		WITHEREDOBSIDIAN_1 = register("witheredobsidian_1", Witheredobsidian1Block::new);
 		WITHEREDOBSIDIAN_2 = register("witheredobsidian_2", Witheredobsidian2Block::new);
@@ -530,6 +609,22 @@ public class PalamodModBlocks {
 		WITHEREDOBSIDIAN_11 = register("witheredobsidian_11", Witheredobsidian11Block::new);
 		WITHEREDOBSIDIAN_12 = register("witheredobsidian_12", Witheredobsidian12Block::new);
 		WITHEREDOBSIDIAN_13 = register("witheredobsidian_13", Witheredobsidian13Block::new);
+=======
+		WITHERED_OBSIDIAN_0 = register("withered_obsidian_0", Witheredobsidian0Block::new);
+		WITHERED_OBSIDIAN_1 = register("withered_obsidian_1", Witheredobsidian1Block::new);
+		WITHERED_OBSIDIAN_2 = register("withered_obsidian_2", Witheredobsidian2Block::new);
+		WITHERED_OBSIDIAN_3 = register("withered_obsidian_3", Witheredobsidian3Block::new);
+		WITHERED_OBSIDIAN_4 = register("withered_obsidian_4", Witheredobsidian4Block::new);
+		WITHERED_OBSIDIAN_5 = register("withered_obsidian_5", Witheredobsidian5Block::new);
+		WITHERED_OBSIDIAN_6 = register("withered_obsidian_6", Witheredobsidian6Block::new);
+		WITHERED_OBSIDIAN_7 = register("withered_obsidian_7", Witheredobsidian7Block::new);
+		WITHERED_OBSIDIAN_8 = register("withered_obsidian_8", Witheredobsidian8Block::new);
+		WITHERED_OBSIDIAN_9 = register("withered_obsidian_9", Witheredobsidian9Block::new);
+		WITHERED_OBSIDIAN_10 = register("withered_obsidian_10", Witheredobsidian10Block::new);
+		WITHERED_OBSIDIAN_11 = register("withered_obsidian_11", Witheredobsidian11Block::new);
+		WITHERED_OBSIDIAN_12 = register("withered_obsidian_12", Witheredobsidian12Block::new);
+		WITHERED_OBSIDIAN_13 = register("withered_obsidian_13", Witheredobsidian13Block::new);
+>>>>>>> Stashed changes
 		MINERDIMENSION_PORTAL = register("minerdimension_portal", MinerdimensionPortalBlock::new);
 		SOFT_STONE = register("soft_stone", SoftstoneBlock::new);
 		SOFTENED_AMETHYST_ORE = register("softened_amethyst_ore", SoftenedamethystoreBlock::new);
@@ -540,16 +635,24 @@ public class PalamodModBlocks {
 		SOFTENED_FINDIUM_ORE = register("softened_findium_ore", SoftenedfindiumoreBlock::new);
 		SOFTENED_ENDIUM_NUGGET_ORE = register("softened_endium_nugget_ore", SoftenedendiumnuggetoreBlock::new);
 		COBBLED_SOFT_STONE = register("cobbled_soft_stone", CobbleledsoftstoneBlock::new);
+<<<<<<< Updated upstream
 		SOFTSTONESLAB = register("softstoneslab", SoftstoneslabBlock::new);
 		SOFTSTONESTAIRS = register("softstonestairs", SoftstonestairsBlock::new);
 		COBBLEDSOFTSTONESLAB = register("cobbledsoftstoneslab", CobbledsoftstoneslabBlock::new);
 		COBBLEDSOFTSTONESTAIRS = register("cobbledsoftstonestairs", CobbledsoftstonestairsBlock::new);
+=======
+		SOFT_STONE_SLAB = register("soft_stone_slab", SoftstoneslabBlock::new);
+		SOFT_STONE_STAIRS = register("soft_stone_stairs", SoftstonestairsBlock::new);
+		COBBLED_SOFT_STONE_SLAB = register("cobbled_soft_stone_slab", CobbledsoftstoneslabBlock::new);
+		COBBLED_SOFT_STONE_STAIRS = register("cobbled_soft_stone_stairs", CobbledsoftstonestairsBlock::new);
+>>>>>>> Stashed changes
 		SOFTENED_COAL_ORE = register("softened_coal_ore", SoftcoaloreBlock::new);
 		SOFTENED_IRON_ORE = register("softened_iron_ore", SoftenedironoreBlock::new);
 		SOFTENED_GOLD_ORE = register("softened_gold_ore", SoftenedgoldoreBlock::new);
 		SOFTENED_DIAMOND_ORE = register("softened_diamond_ore", SofteneddiamondoreBlock::new);
 		SOFTENED_REDSTONE_ORE = register("softened_redstone_ore", SoftenedredstoneoreBlock::new);
 		SOFTENED_LAPIS_LAZULIS_ORE = register("softened_lapis_lazulis_ore", SoftenedlapislazulisoreBlock::new);
+<<<<<<< Updated upstream
 		FLOWERTOTEM = register("flowertotem", FlowertotemBlock::new);
 		MINERALFLOWER = register("mineralflower", MineralflowerBlock::new);
 		ENDIUMFLOWER = register("endiumflower", EndiumflowerBlock::new);
@@ -564,6 +667,42 @@ public class PalamodModBlocks {
 		AMETHYSTINFUSEDOBSIDIAN = register("amethystinfusedobsidian", AmethystinfusedobsidianBlock::new);
 		TITANEINFUSEDOBSIDIAN = register("titaneinfusedobsidian", TitaneinfusedobsidianBlock::new);
 		PALADIUMINFUSEDOBSIDIAN = register("paladiuminfusedobsidian", PaladiuminfusedobsidianBlock::new);
+=======
+		FLOWER_TOTEM = register("flower_totem", FlowertotemBlock::new);
+		MINERAL_FLOWER = register("mineral_flower", MineralflowerBlock::new);
+		ENDIUM_FLOWER = register("endium_flower", EndiumflowerBlock::new);
+		ENDIUM_FLOWER_ON = register("endium_flower_on", EndiumfloweronBlock::new);
+		CLATHRUSARCHERI = register("clathrusarcheri", ClathrusarcheriBlock::new);
+		PALADIUM_FLOWER = register("paladium_flower", PaladiumflowerBlock::new);
+		DANKABLOCK = register("dankablock", DankablockBlock::new);
+		BROKEN_SPAWNER = register("broken_spawner", BrokenspawnerBlock::new);
+		SPAWN_CONTROLLER = register("spawn_controller", SpawncontrollerBlock::new);
+		EMPTY_SPAWNER = register("empty_spawner", EmptyspawnerBlock::new);
+		DIAMOND_INFUSED_OBSIDIAN = register("diamond_infused_obsidian", DiamondinfusedobsidianBlock::new);
+		AMETHYST_INFUSED_OBSIDIAN = register("amethyst_infused_obsidian", AmethystinfusedobsidianBlock::new);
+		TITANE_INFUSED_OBSIDIAN = register("titane_infused_obsidian", TitaneinfusedobsidianBlock::new);
+		PALADIUM_INFUSED_OBSIDIAN = register("paladium_infused_obsidian", PaladiuminfusedobsidianBlock::new);
+		DEAD_LOG = register("dead_log", DeadLogBlock::new);
+		DEAD_WOOD = register("dead_wood", DeadWoodBlock::new);
+		STRIPPED_DEAD_LOG = register("stripped_dead_log", StrippedDeadLogBlock::new);
+		STRIPPED_DEAD_WOOD = register("stripped_dead_wood", StrippedDeadWoodBlock::new);
+		DEAD_PLANKS = register("dead_planks", DeadPlanksBlock::new);
+		DEAD_STAIRS = register("dead_stairs", DeadStairsBlock::new);
+		DEAD_SLAB = register("dead_slab", DeadSlabBlock::new);
+		DEAD_FENCE = register("dead_fence", DeadFenceBlock::new);
+		DEAD_FENCE_GATE = register("dead_fence_gate", DeadFenceGateBlock::new);
+		DEAD_DOOR = register("dead_door", DeadDoorBlock::new);
+		DEAD_TRAPDOOR = register("dead_trapdoor", DeadTrapdoorBlock::new);
+		DEAD_PRESSURE_PLATE = register("dead_pressure_plate", DeadPressurePlateBlock::new);
+		DEAD_BUTTON = register("dead_button", DeadButtonBlock::new);
+		FROZEN_OBSIDIAN = register("frozen_obsidian", FrozenobsidianBlock::new);
+		KNOCKBACK_OBSIDIAN = register("knockback_obsidian", KnockbackobsidianBlock::new);
+		AMETHYST_ANVIL = register("amethyst_anvil", AmethystanvilBlock::new);
+		TITANE_ANVIL = register("titane_anvil", TitaneanvilBlock::new);
+		PALADIUM_ANVIL = register("paladium_anvil", PaladiumanvilBlock::new);
+		MONEY_ANVIL = register("money_anvil", MoneyanvilBlock::new);
+		AMETHYSTANVIL_2 = register("amethystanvil_2", Amethystanvil2Block::new);
+>>>>>>> Stashed changes
 	}
 
 	// Start of user code block custom blocks

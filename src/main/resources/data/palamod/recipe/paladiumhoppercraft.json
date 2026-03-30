@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:hopper"
+  },
+  "result": {
+    "id": "palamod:rotated_paladium_hopper",
+    "count": 1
+  }
+}

@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+<<<<<<< Updated upstream
     "palamod:amethyst"
+=======
+    "palamod:amethyst_ingot"
+>>>>>>> Stashed changes
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " b ",
+    "bbb"
+  ],
+  "key": {
+    "a": "palamod:paladium_block",
+    "b": "palamod:paladium_ingot"
+  },
+  "result": {
+    "id": "palamod:paladium_anvil",
+    "count": 1
+  }
+}

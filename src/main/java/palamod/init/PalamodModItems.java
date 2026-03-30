@@ -637,6 +637,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> UNCLAIMFINDERRED;
 	public static final DeferredItem<Item> UNCLAIMFINDERBLUE;
 	public static final DeferredItem<Item> POCKETENDERCHEST;
+<<<<<<< Updated upstream
 	public static final DeferredItem<Item> CAVERNEHAMMER;
 	public static final DeferredItem<Item> BROKENSPAWNER;
 	public static final DeferredItem<Item> SPAWNCONTROLLER;
@@ -646,6 +647,41 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TITANEINFUSEDOBSIDIAN;
 	public static final DeferredItem<Item> PALADIUMINFUSEDOBSIDIAN;
 	public static final DeferredItem<Item> EMPTYSPAWNERITEM;
+=======
+	public static final DeferredItem<Item> CAVERNE_HAMMER;
+	public static final DeferredItem<Item> BROKEN_SPAWNER;
+	public static final DeferredItem<Item> SPAWN_CONTROLLER;
+	public static final DeferredItem<Item> EMPTY_SPAWNER;
+	public static final DeferredItem<Item> DIAMOND_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> AMETHYST_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> TITANE_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> PALADIUM_INFUSED_OBSIDIAN;
+	public static final DeferredItem<Item> EMPTY_SPAWNER_ITEM;
+	public static final DeferredItem<Item> SPAWNER_UPGRADE_SLIME;
+	public static final DeferredItem<Item> SPAWNER_UPGRADE_SPEED;
+	public static final DeferredItem<Item> SPAWNER_UPGRADE_MORE;
+	public static final DeferredItem<Item> SPAWNER_UPGRADE_LOOTING;
+	public static final DeferredItem<Item> DEAD_LOG;
+	public static final DeferredItem<Item> DEAD_WOOD;
+	public static final DeferredItem<Item> STRIPPED_DEAD_LOG;
+	public static final DeferredItem<Item> STRIPPED_DEAD_WOOD;
+	public static final DeferredItem<Item> DEAD_PLANKS;
+	public static final DeferredItem<Item> DEAD_STAIRS;
+	public static final DeferredItem<Item> DEAD_SLAB;
+	public static final DeferredItem<Item> DEAD_FENCE;
+	public static final DeferredItem<Item> DEAD_FENCE_GATE;
+	public static final DeferredItem<Item> DEAD_DOOR;
+	public static final DeferredItem<Item> DEAD_TRAPDOOR;
+	public static final DeferredItem<Item> DEAD_PRESSURE_PLATE;
+	public static final DeferredItem<Item> DEAD_BUTTON;
+	public static final DeferredItem<Item> FROZEN_OBSIDIAN;
+	public static final DeferredItem<Item> KNOCKBACK_OBSIDIAN;
+	public static final DeferredItem<Item> AMETHYST_ANVIL;
+	public static final DeferredItem<Item> TITANE_ANVIL;
+	public static final DeferredItem<Item> PALADIUM_ANVIL;
+	public static final DeferredItem<Item> MONEY_ANVIL;
+	public static final DeferredItem<Item> AMETHYSTANVIL_2;
+>>>>>>> Stashed changes
 	static {
 		PALADIUM_INGOT = register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -669,7 +705,11 @@ public class PalamodModItems {
 		TITANE_ARMOR_CHESTPLATE = register("titane_armor_chestplate", TitaneArmorItem.Chestplate::new);
 		TITANE_ARMOR_LEGGINGS = register("titane_armor_leggings", TitaneArmorItem.Leggings::new);
 		TITANE_ARMOR_BOOTS = register("titane_armor_boots", TitaneArmorItem.Boots::new);
+<<<<<<< Updated upstream
 		AMETHYST = register("amethyst", AmethysteItem::new);
+=======
+		AMETHYST_INGOT = register("amethyst_ingot", AmethysteItem::new);
+>>>>>>> Stashed changes
 		AMETHYST_ORE = block(PalamodModBlocks.AMETHYST_ORE);
 		AMETHYST_BLOCK = block(PalamodModBlocks.AMETHYST_BLOCK);
 		AMETHYST_PICKAXE = register("amethyst_pickaxe", AmethystePickaxeItem::new);
@@ -680,7 +720,11 @@ public class PalamodModItems {
 		AMETHYST_ARMOR_CHESTPLATE = register("amethyst_armor_chestplate", AmethysteArmorItem.Chestplate::new);
 		AMETHYST_ARMOR_LEGGINGS = register("amethyst_armor_leggings", AmethysteArmorItem.Leggings::new);
 		AMETHYST_ARMOR_BOOTS = register("amethyst_armor_boots", AmethysteArmorItem.Boots::new);
+<<<<<<< Updated upstream
 		PALADIUM_CRUSHER = block(PalamodModBlocks.PALADIUM_CRUSHER);
+=======
+		PALADIUM_CRUSHER = register("paladium_crusher", PaladiumcrusherBlock.Item::new);
+>>>>>>> Stashed changes
 		PALADIUM_MIXED_CHARCOAL = register("paladium_mixed_charcoal", PalamixedcharoalItem::new);
 		EGGPLANT = register("eggplant", EggplantItem::new);
 		ORANGEBLUE = register("orangeblue", OrangeblueItem::new);
@@ -742,6 +786,7 @@ public class PalamodModItems {
 		JUDEECERCIS_SAPPLING = block(PalamodModBlocks.JUDEECERCIS_SAPPLING);
 		OSTRYA_SAPPLING = block(PalamodModBlocks.OSTRYA_SAPPLING);
 		JACARANDA_SAPPLING = block(PalamodModBlocks.JACARANDA_SAPPLING);
+<<<<<<< Updated upstream
 		KIWANOSEED = register("kiwanoseed", KiwanoseedItem::new);
 		ORANGEBLUESEED = register("orangeblueseed", OrangeblueseedItem::new);
 		CHERVILSEED = register("chervilseed", ChervilseedItem::new);
@@ -752,6 +797,18 @@ public class PalamodModItems {
 		XPBUSHON = block(PalamodModBlocks.XPBUSHON);
 		XPBERRY = register("xpberry", XpberryItem::new);
 		COMPRESSEDXPBERRY = register("compressedxpberry", CompressedxpberryItem::new);
+=======
+		KIWANO_SEED = register("kiwano_seed", KiwanoseedItem::new);
+		ORANGEBLUE_SEED = register("orangeblue_seed", OrangeblueseedItem::new);
+		CHERVIL_SEED = register("chervil_seed", ChervilseedItem::new);
+		EGGPLANT_SEED = register("eggplant_seed", EggplantseedItem::new);
+		FINDIUM_STAIRS = block(PalamodModBlocks.FINDIUM_STAIRS);
+		FINDIUM_SLAB = block(PalamodModBlocks.FINDIUM_SLAB);
+		XP_BUSH = block(PalamodModBlocks.XP_BUSH);
+		XP_BUSH_ON = block(PalamodModBlocks.XP_BUSH_ON);
+		XP_BERRY = register("xp_berry", XpberryItem::new);
+		COMPRESSED_XP_BERRY = register("compressed_xp_berry", CompressedxpberryItem::new);
+>>>>>>> Stashed changes
 		PALADIUM_CORE = register("paladium_core", PaladiumcoreItem::new);
 		SLIMEPAD = block(PalamodModBlocks.SLIMEPAD);
 		HEAL_ORB = register("heal_orb", HealorbItem::new);
@@ -763,6 +820,7 @@ public class PalamodModItems {
 		KNOCKBACK_MODIFIER = register("knockback_modifier", KnockbackmodifierItem::new);
 		FLAME_MODIFIER = register("flame_modifier", FlamemodifierItem::new);
 		FORTUNE_MODIFIER = register("fortune_modifier", ForturnemodifierItem::new);
+<<<<<<< Updated upstream
 		SPEEDSTICK = register("speedstick", SpeedstickItem::new);
 		JUMPSTICK = register("jumpstick", JumpstickItem::new);
 		HYPERJUMPSTICK = register("hyperjumpstick", HyperjumpstickItem::new);
@@ -774,6 +832,19 @@ public class PalamodModItems {
 		PALADIUMGREENAXE = register("paladiumgreenaxe", PaladiumgreenaxeItem::new);
 		PALADIUMGREENSWORD = register("paladiumgreensword", PaladiumgreenswordItem::new);
 		PALADIUMGREENSHOVEL = register("paladiumgreenshovel", PaladiumgreenshovelItem::new);
+=======
+		SPEED_STICK = register("speed_stick", SpeedstickItem::new);
+		JUMP_STICK = register("jump_stick", JumpstickItem::new);
+		HYPERJUMP_STICK = register("hyperjump_stick", HyperjumpstickItem::new);
+		HEAL_STICK = register("heal_stick", HealstickItem::new);
+		STRENGHT_STICK = register("strenght_stick", StrenghtstickItem::new);
+		DAMAGE_STICK = register("damage_stick", DamagestickItem::new);
+		STICK_OF_GODS = register("stick_of_gods", StickofgodsItem::new);
+		GREEN_PALADIUM_PICKAXE = register("green_paladium_pickaxe", PaladiumgreenpickaxeItem::new);
+		GREEN_PALADIUM_AXE = register("green_paladium_axe", PaladiumgreenaxeItem::new);
+		GREEN_PALADIUM_SWORD = register("green_paladium_sword", PaladiumgreenswordItem::new);
+		GREEN_PALADIUM_SHOVEL = register("green_paladium_shovel", PaladiumgreenshovelItem::new);
+>>>>>>> Stashed changes
 		GREEN_PALADIUM_INGOT = register("green_paladium_ingot", PaladiumGreeningotItem::new);
 		PALADIUM_GREEN_ORE = block(PalamodModBlocks.PALADIUM_GREEN_ORE);
 		PALADIUM_GREEN_BLOCK = block(PalamodModBlocks.PALADIUM_GREEN_BLOCK);
@@ -809,9 +880,9 @@ public class PalamodModItems {
 		OBSIDIAN_TRAPDOOR = block(PalamodModBlocks.OBSIDIAN_TRAPDOOR);
 		RENFORCED_OBSIDIAN = block(PalamodModBlocks.RENFORCED_OBSIDIAN);
 		OBSIDIAN_DOOR = doubleBlock(PalamodModBlocks.OBSIDIAN_DOOR);
-		COMPACTED_OBSIDIAN = block(PalamodModBlocks.COMPACTED_OBSIDIAN);
-		FAKE_WATER_OBSIDIAN = block(PalamodModBlocks.FAKE_WATER_OBSIDIAN);
-		LAVA_OBSIDIAN = block(PalamodModBlocks.LAVA_OBSIDIAN);
+		COMPACTED_OBSIDIAN = register("compacted_obsidian", CompactedobsidianBlock.Item::new);
+		FAKE_WATER_OBSIDIAN = register("fake_water_obsidian", FakewaterobsidianBlock.Item::new);
+		LAVA_OBSIDIAN = register("lava_obsidian", LavaobsidianBlock.Item::new);
 		IRON_SPIKE = block(PalamodModBlocks.IRON_SPIKE);
 		SPIKE_GOLD = block(PalamodModBlocks.SPIKE_GOLD);
 		DIAMOND_SPIKE = block(PalamodModBlocks.DIAMOND_SPIKE);
@@ -821,13 +892,22 @@ public class PalamodModItems {
 		GOLD_MIXEDCOAL = register("gold_mixedcoal", GoldmixedcoalItem::new);
 		AMETHYST_MIXEDCOAL = register("amethyst_mixedcoal", AmethystmixedcoalItem::new);
 		TITANE_MIXED_COAL = register("titane_mixed_coal", TitanemixedcoalItem::new);
+<<<<<<< Updated upstream
 		PALADIUM_FORGE = block(PalamodModBlocks.PALADIUM_FORGE);
 		TITANEFASTSWORD = register("titanefastsword", TitanefastswordItem::new);
+=======
+		PALADIUM_FORGE = register("paladium_forge", PaladiumforgeBlock.Item::new);
+		TITANE_FASTSWORD = register("titane_fastsword", TitanefastswordItem::new);
+>>>>>>> Stashed changes
 		TITANE_SLAB = block(PalamodModBlocks.TITANE_SLAB);
 		TITANE_STAIRS = block(PalamodModBlocks.TITANE_STAIRS);
 		LOADBLOCK_1T = block(PalamodModBlocks.LOADBLOCK_1T);
 		SOCKET_PATTERN = register("socket_pattern", SocketpaternItem::new);
+<<<<<<< Updated upstream
 		PALADIUMFASTSWORD = register("paladiumfastsword", PaladiumfastswordItem::new);
+=======
+		PALADIUM_FASTSWORD = register("paladium_fastsword", PaladiumfastswordItem::new);
+>>>>>>> Stashed changes
 		SMELT_MODIFIER = register("smelt_modifier", SmeltmodifierItem::new);
 		ENDIUM_HAMMER = register("endium_hammer", EndiumhammerItem::new);
 		TCV_2 = block(PalamodModBlocks.TCV_2);
@@ -853,10 +933,17 @@ public class PalamodModItems {
 		KIWANO_1 = block(PalamodModBlocks.KIWANO_1);
 		KIWANO_0 = block(PalamodModBlocks.KIWANO_0);
 		WITHER_SHARD = register("wither_shard", WithershardItem::new);
+<<<<<<< Updated upstream
 		GREENPALADIUMARMOR_HELMET = register("greenpaladiumarmor_helmet", GreenpaladiumarmorItem.Helmet::new);
 		GREENPALADIUMARMOR_CHESTPLATE = register("greenpaladiumarmor_chestplate", GreenpaladiumarmorItem.Chestplate::new);
 		GREENPALADIUMARMOR_LEGGINGS = register("greenpaladiumarmor_leggings", GreenpaladiumarmorItem.Leggings::new);
 		GREENPALADIUMARMOR_BOOTS = register("greenpaladiumarmor_boots", GreenpaladiumarmorItem.Boots::new);
+=======
+		GREEN_PALADIUM_ARMOR_HELMET = register("green_paladium_armor_helmet", GreenpaladiumarmorItem.Helmet::new);
+		GREEN_PALADIUM_ARMOR_CHESTPLATE = register("green_paladium_armor_chestplate", GreenpaladiumarmorItem.Chestplate::new);
+		GREEN_PALADIUM_ARMOR_LEGGINGS = register("green_paladium_armor_leggings", GreenpaladiumarmorItem.Leggings::new);
+		GREEN_PALADIUM_ARMOR_BOOTS = register("green_paladium_armor_boots", GreenpaladiumarmorItem.Boots::new);
+>>>>>>> Stashed changes
 		LUCKY_BETA = register("lucky_beta", LuckybetaItem::new);
 		WEIGHTED_BOOTS = register("weighted_boots", WeightedItem.Boots::new);
 		TRESAURE_FALSE = block(PalamodModBlocks.TRESAURE_FALSE);
@@ -888,6 +975,7 @@ public class PalamodModItems {
 		FIRE_IMBUE_POTION = register("fire_imbue_potion", FireimbuepotionItem::new);
 		POISON_IMBUE_POTION = register("poison_imbue_potion", PoisonimbuepotionItem::new);
 		PALADIUM_APPLE = register("paladium_apple", PaladiumappleItem::new);
+<<<<<<< Updated upstream
 		PICKAXEOFTHEGODSLV_1 = register("pickaxeofthegodslv_1", Pickaxeofthegodslv1Item::new);
 		PICKAXEOFTHEGODSLV_2 = register("pickaxeofthegodslv_2", Pickaxeofthegodslv2Item::new);
 		PICKAXEOFTHEGODSLV_3 = register("pickaxeofthegodslv_3", Pickaxeofthegodslv3Item::new);
@@ -937,6 +1025,57 @@ public class PalamodModItems {
 		ELEVATOR_LIGHT_GRAY = block(PalamodModBlocks.ELEVATOR_LIGHT_GRAY);
 		ELEVATOR_CYAN = block(PalamodModBlocks.ELEVATOR_CYAN);
 		PALADIUMGOLEM_SPAWN_EGG = register("paladiumgolem_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.PALADIUMGOLEM.get(), properties));
+=======
+		PICKAXE_OF_THE_GODS_LV1 = register("pickaxe_of_the_gods_lv1", Pickaxeofthegodslv1Item::new);
+		PICKAXE_OF_THE_GODS_LV2 = register("pickaxe_of_the_gods_lv2", Pickaxeofthegodslv2Item::new);
+		PICKAXE_OF_THE_GODS_LV3 = register("pickaxe_of_the_gods_lv3", Pickaxeofthegodslv3Item::new);
+		PICKAXE_OF_THE_GODS_LV4 = register("pickaxe_of_the_gods_lv4", Pickaxeofthegodslv4Item::new);
+		PICKAXE_OF_THE_GODS_LV5 = register("pickaxe_of_the_gods_lv5", Pickaxeofthegodslv5Item::new);
+		PICKAXE_OF_THE_GODS_LV6 = register("pickaxe_of_the_gods_lv6", Pickaxeofthegodslv6Item::new);
+		PICKAXE_OF_THE_GODS_LV7 = register("pickaxe_of_the_gods_lv7", Pickaxeofthegodslv7Item::new);
+		PICKAXE_OF_THE_GODS_LV8 = register("pickaxe_of_the_gods_lv8", Pickaxeofthegodslv8Item::new);
+		PICKAXE_OF_THE_GODS_LV9 = register("pickaxe_of_the_gods_lv9", Pickaxeofthegodslv9Item::new);
+		PICKAXE_OF_THE_GODS_LV10 = register("pickaxe_of_the_gods_lv10", Pickaxeofthegodslv10Item::new);
+		PICKAXE_OF_THE_GODS_LV11 = register("pickaxe_of_the_gods_lv11", Pickaxeofthegodslv11Item::new);
+		PICKAXE_OF_THE_GODS_LV12 = register("pickaxe_of_the_gods_lv12", Pickaxeofthegodslv12Item::new);
+		PICKAXE_OF_THE_GODS_LV14 = register("pickaxe_of_the_gods_lv14", Pickaxeofthegodslv14Item::new);
+		PICKAXE_OF_THE_GODS_LV15 = register("pickaxe_of_the_gods_lv15", Pickaxeofthegodslv15Item::new);
+		PICKAXE_OF_THE_GODS_LV16 = register("pickaxe_of_the_gods_lv16", Pickaxeofthegodslv16Item::new);
+		PICKAXE_OF_THE_GODS_LV17 = register("pickaxe_of_the_gods_lv17", Pickaxeofthegodslv17Item::new);
+		PICKAXE_OF_THE_GODS_LV18 = register("pickaxe_of_the_gods_lv18", Pickaxeofthegodslv18Item::new);
+		PICKAXE_OF_THE_GODS_LV19 = register("pickaxe_of_the_gods_lv19", Pickaxeofthegodslv19Item::new);
+		PICKAXE_OF_THE_GODS_LV20 = register("pickaxe_of_the_gods_lv20", Pickaxeofthegodslv20Item::new);
+		PICKAXE_OF_THE_GODS_LV13 = register("pickaxe_of_the_gods_lv13", Pickaxeofthegodslv13Item::new);
+		AMETHYST_EXCAVATOR = register("amethyst_excavator", AmethystexacvatorItem::new);
+		TITANE_EXCAVATOR = register("titane_excavator", TitaneexcavatorItem::new);
+		PALADIUM_EXCAVATOR = register("paladium_excavator", PaladiumexcavatorItem::new);
+		BIG_HOLE_UPGRADE = register("big_hole_upgrade", BigholeupgradeItem::new);
+		VOIDSTONE = register("voidstone", VoidstoneItem::new);
+		AUTO_SMELT_UPGRADE_POTG = register("auto_smelt_upgrade_potg", AutosmeltupgradepotgItem::new);
+		INFERNAL_KNOCKER = register("infernal_knocker", InfernalknockerItem::new);
+		TRAVEL_ARMOR_HELMET = register("travel_armor_helmet", TravelarmorItem.Helmet::new);
+		TRAVEL_ARMOR_CHESTPLATE = register("travel_armor_chestplate", TravelarmorItem.Chestplate::new);
+		TRAVEL_ARMOR_LEGGINGS = register("travel_armor_leggings", TravelarmorItem.Leggings::new);
+		TRAVEL_ARMOR_BOOTS = register("travel_armor_boots", TravelarmorItem.Boots::new);
+		SCUBA_HELMET = register("scuba_helmet", ScubaItem.Helmet::new);
+		WING = register("wing", WingItem::new);
+		ELEVATOR_WHITE = register("elevator_white", ElevatorwhiteBlock.Item::new);
+		ELEVATOR_RED = register("elevator_red", ElevatorredBlock.Item::new);
+		ELEVATOR_BLUE = register("elevator_blue", ElevatorblueBlock.Item::new);
+		ELEVATOR_GREEN = register("elevator_green", ElevatorgreenBlock.Item::new);
+		ELEVATOR_PINK = register("elevator_pink", ElevatorpinkBlock.Item::new);
+		ELEVATOR_LIGHT_BLUE = register("elevator_light_blue", ElevatorlightblueBlock.Item::new);
+		ELEVATOR_LIGHT_GREEN = register("elevator_light_green", ElevatorlightgreenBlock.Item::new);
+		ELEVATOR_BROWN = register("elevator_brown", ElevatorbrownBlock.Item::new);
+		ELEVATOR_ORANGE = register("elevator_orange", ElevatororangeBlock.Item::new);
+		MINAGE_VOIDSTONE = register("minage_voidstone", MinagevoidstoneItem::new);
+		CREATIVE_POTG = register("creative_potg", CreativepotgItem::new);
+		ELEVATOR_PURPLE = register("elevator_purple", ElevatorpurpleBlock.Item::new);
+		ELEVATOR_GRAY = register("elevator_gray", ElevatorgrayBlock.Item::new);
+		ELEVATOR_LIGHT_GRAY = register("elevator_light_gray", ElevatorlightgrayBlock.Item::new);
+		ELEVATOR_CYAN = register("elevator_cyan", ElevatorcyanBlock.Item::new);
+		PALADIUM_GOLEM_SPAWN_EGG = register("paladium_golem_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.PALADIUM_GOLEM.get(), properties));
+>>>>>>> Stashed changes
 		GUARDIAN_STONE = register("guardian_stone", GuardianstoneItem::new);
 		GUARDIAN_BLOCK = register("guardian_block", GuardianblockBlock.Item::new);
 		GREEN_PALADIUM_BROADSWORD_HEAD = register("green_paladium_broadsword_head", HeadgreenbroadswordItem::new);
@@ -944,6 +1083,7 @@ public class PalamodModItems {
 		GREEN_PALADIUM_PICKAXE_HEAD = register("green_paladium_pickaxe_head", HeadgreenpickaxeItem::new);
 		GREEN_PALADIUM_AXE_HEAD = register("green_paladium_axe_head", HeadgreenaxeItem::new);
 		GREEN_PALADIUM_SHOVEL_HEAD = register("green_paladium_shovel_head", HeadgreenshovelItem::new);
+<<<<<<< Updated upstream
 		HEADENDIUMSWORD = register("headendiumsword", HeadendiumswordItem::new);
 		HEAD_ENDIUM_PICKAXE = register("head_endium_pickaxe", HeadendiumpickaxeItem::new);
 		HEAD_ENDIUM_AXE = register("head_endium_axe", HeadendiumaxeItem::new);
@@ -951,6 +1091,15 @@ public class PalamodModItems {
 		ONE_MORE_MODIFIER = register("one_more_modifier", OnemoremodifierItem::new);
 		ENDIUM_BROADSWORD_HEAD = register("endium_broadsword_head", EndiumbroadswordheadItem::new);
 		ENDIUMBROADSWORD = register("endiumbroadsword", EndiumbroadswordItem::new);
+=======
+		HEAD_ENDIUM_SWORD = register("head_endium_sword", HeadendiumswordItem::new);
+		HEAD_ENDIUM_PICKAXE = register("head_endium_pickaxe", HeadendiumpickaxeItem::new);
+		HEAD_ENDIUM_AXE = register("head_endium_axe", HeadendiumaxeItem::new);
+		GREEN_PALADIUM_BROADSWORD = register("green_paladium_broadsword", GreenpaladiumbroadswordItem::new);
+		ONE_MORE_MODIFIER = register("one_more_modifier", OnemoremodifierItem::new);
+		ENDIUM_BROADSWORD_HEAD = register("endium_broadsword_head", EndiumbroadswordheadItem::new);
+		ENDIUM_BROADSWORD = register("endium_broadsword", EndiumbroadswordItem::new);
+>>>>>>> Stashed changes
 		GREEN_PALADIUM_HAMMER = register("green_paladium_hammer", GreenpaladiumhammerItem::new);
 		GREEN_PALADIUM_HAMMER_HEAD = register("green_paladium_hammer_head", GreenpaladiumhammerheadItem::new);
 		ENDIUM_HAMMER_HEAD = register("endium_hammer_head", EndiumhammerheadItem::new);
@@ -961,14 +1110,22 @@ public class PalamodModItems {
 		FACTION_BLOCK = block(PalamodModBlocks.FACTION_BLOCK);
 		BLACK_LUCKY_BLOCK = register("black_lucky_block", BlackluckyblockBlock.Item::new);
 		ENFYUPOTION = register("enfyupotion", EnfyupotionItem::new);
+<<<<<<< Updated upstream
 		INVISIBLEARMOR_HELMET = register("invisiblearmor_helmet", InvisiblearmorItem.Helmet::new);
 		INVISIBLEARMOR_CHESTPLATE = register("invisiblearmor_chestplate", InvisiblearmorItem.Chestplate::new);
 		INVISIBLEARMOR_LEGGINGS = register("invisiblearmor_leggings", InvisiblearmorItem.Leggings::new);
 		INVISIBLEARMOR_BOOTS = register("invisiblearmor_boots", InvisiblearmorItem.Boots::new);
+=======
+		INVISIBLE_ARMOR_HELMET = register("invisible_armor_helmet", InvisiblearmorItem.Helmet::new);
+		INVISIBLE_ARMOR_CHESTPLATE = register("invisible_armor_chestplate", InvisiblearmorItem.Chestplate::new);
+		INVISIBLE_ARMOR_LEGGINGS = register("invisible_armor_leggings", InvisiblearmorItem.Leggings::new);
+		INVISIBLE_ARMOR_BOOTS = register("invisible_armor_boots", InvisiblearmorItem.Boots::new);
+>>>>>>> Stashed changes
 		RAINBOWARMOR_HELMET = register("rainbowarmor_helmet", RanbowarmorItem.Helmet::new);
 		RAINBOWARMOR_CHESTPLATE = register("rainbowarmor_chestplate", RanbowarmorItem.Chestplate::new);
 		RAINBOWARMOR_LEGGINGS = register("rainbowarmor_leggings", RanbowarmorItem.Leggings::new);
 		RAINBOWARMOR_BOOTS = register("rainbowarmor_boots", RanbowarmorItem.Boots::new);
+<<<<<<< Updated upstream
 		PALADIUMARMORCUSTOM_1_HELMET = register("paladiumarmorcustom_1_helmet", Paladiumarmorcustom1Item.Helmet::new);
 		PALADIUMARMORCUSTOM_1_CHESTPLATE = register("paladiumarmorcustom_1_chestplate", Paladiumarmorcustom1Item.Chestplate::new);
 		PALADIUMARMORCUSTOM_1_LEGGINGS = register("paladiumarmorcustom_1_leggings", Paladiumarmorcustom1Item.Leggings::new);
@@ -985,6 +1142,24 @@ public class PalamodModItems {
 		SPACE_FOOD = register("space_food", SpacefoodItem::new);
 		JUDEECERCIS_DOOR = doubleBlock(PalamodModBlocks.JUDEECERCIS_DOOR);
 		CHUNKANASLYSER = register("chunkanaslyser", ChunkanaslyserItem::new);
+=======
+		PALADIUM_ARMOR_CUSTOM1_HELMET = register("paladium_armor_custom1_helmet", Paladiumarmorcustom1Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM1_CHESTPLATE = register("paladium_armor_custom1_chestplate", Paladiumarmorcustom1Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM1_LEGGINGS = register("paladium_armor_custom1_leggings", Paladiumarmorcustom1Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM1_BOOTS = register("paladium_armor_custom1_boots", Paladiumarmorcustom1Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM2_HELMET = register("paladium_armor_custom2_helmet", Paladiumarmorcustom2Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM2_CHESTPLATE = register("paladium_armor_custom2_chestplate", Paladiumarmorcustom2Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM2_LEGGINGS = register("paladium_armor_custom2_leggings", Paladiumarmorcustom2Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM2_BOOTS = register("paladium_armor_custom2_boots", Paladiumarmorcustom2Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM3_HELMET = register("paladium_armor_custom3_helmet", Paladiumarmorcustom3Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM3_CHESTPLATE = register("paladium_armor_custom3_chestplate", Paladiumarmorcustom3Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM3_LEGGINGS = register("paladium_armor_custom3_leggings", Paladiumarmorcustom3Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM3_BOOTS = register("paladium_armor_custom3_boots", Paladiumarmorcustom3Item.Boots::new);
+		FLY_POTION = register("fly_potion", FlypotionItem::new);
+		SPACE_FOOD = register("space_food", SpacefoodItem::new);
+		JUDEECERCIS_DOOR = doubleBlock(PalamodModBlocks.JUDEECERCIS_DOOR);
+		CHUNK_ANASLYSER = register("chunk_anaslyser", ChunkanaslyserItem::new);
+>>>>>>> Stashed changes
 		ENDIUM_LUCKY_BLOCK = block(PalamodModBlocks.ENDIUM_LUCKY_BLOCK);
 		ENDIUM_NUGGET_ORE = block(PalamodModBlocks.ENDIUM_NUGGET_ORE);
 		ENDIUM_SLAB = block(PalamodModBlocks.ENDIUM_SLAB);
@@ -1003,7 +1178,11 @@ public class PalamodModItems {
 		ERABLE_DOOR = doubleBlock(PalamodModBlocks.ERABLE_DOOR);
 		JACARANDA_DOOR = doubleBlock(PalamodModBlocks.JACARANDA_DOOR);
 		HDV_BLOCK = block(PalamodModBlocks.HDV_BLOCK);
+<<<<<<< Updated upstream
 		ERABLETRAPDOOR = block(PalamodModBlocks.ERABLETRAPDOOR);
+=======
+		ERABLE_TRAPDOOR = block(PalamodModBlocks.ERABLE_TRAPDOOR);
+>>>>>>> Stashed changes
 		MONEY_ITEM = register("money_item", MoneyitemItem::new);
 		PALADIUM_PARTICLE = register("paladium_particle", PaladiumparticleItem::new);
 		FLATTEN_TITANE_CHEST = block(PalamodModBlocks.FLATTEN_TITANE_CHEST);
@@ -1016,7 +1195,11 @@ public class PalamodModItems {
 		PESYBLPOTION = register("pesyblpotion", PesyblpotionItem::new);
 		GREEN_PALADIUM_PARTICLE = register("green_paladium_particle", GreenpaladiumparticleItem::new);
 		COMPRESSED_GREEN_PALADUM = register("compressed_green_paladum", CompressedgreenpaladumItem::new);
+<<<<<<< Updated upstream
 		GREENPALADUMEXCATOR = register("greenpaladumexcator", GreenpaladumexcatorItem::new);
+=======
+		GREEN_PALADUM_EXCAVATOR = register("green_paladum_excavator", GreenpaladumexcatorItem::new);
+>>>>>>> Stashed changes
 		CREATIVE_HAMMER = register("creative_hammer", CreativehammerItem::new);
 		FLATTEN_GREEN_PALADIUM_CHEST = block(PalamodModBlocks.FLATTEN_GREEN_PALADIUM_CHEST);
 		FLATTEN_ENDIUM_CHEST = block(PalamodModBlocks.FLATTEN_ENDIUM_CHEST);
@@ -1043,12 +1226,21 @@ public class PalamodModItems {
 		DIAMOND_PARTICLE = register("diamond_particle", DiamondparticleItem::new);
 		GOLD_PARTICLE = register("gold_particle", GoldparticleItem::new);
 		IRON_PARTICLE = register("iron_particle", IronparticleItem::new);
+<<<<<<< Updated upstream
 		GREENPALADIUMFASTSWORD = register("greenpaladiumfastsword", GreenpaladiumfastswordItem::new);
 		GREEN_PALADIUM_FASTSWORD_HEAD = register("green_paladium_fastsword_head", GreenpaladiumfastswordheadItem::new);
 		ENDIUMFASTSWORD = register("endiumfastsword", EndiumfastswordItem::new);
 		ENDIUM_FASTSWORD_HEAD = register("endium_fastsword_head", EndiumfastswordheadItem::new);
 		ENDIUM_SHOVEL_HEAD = register("endium_shovel_head", EndiumshovelheadItem::new);
 		ENDIUMSHOVEL = register("endiumshovel", EndiumshovelItem::new);
+=======
+		GREEN_PALADIUM_FASTSWORD = register("green_paladium_fastsword", GreenpaladiumfastswordItem::new);
+		GREEN_PALADIUM_FASTSWORD_HEAD = register("green_paladium_fastsword_head", GreenpaladiumfastswordheadItem::new);
+		ENDIUM_FASTSWORD = register("endium_fastsword", EndiumfastswordItem::new);
+		ENDIUM_FASTSWORD_HEAD = register("endium_fastsword_head", EndiumfastswordheadItem::new);
+		ENDIUM_SHOVEL_HEAD = register("endium_shovel_head", EndiumshovelheadItem::new);
+		ENDIUM_SHOVEL = register("endium_shovel", EndiumshovelItem::new);
+>>>>>>> Stashed changes
 		CAVE_BLOCK = block(PalamodModBlocks.CAVE_BLOCK);
 		ENDIUM_FRAGMENT = register("endium_fragment", EndiumfragmentItem::new);
 		FLAT_CHEST_UPGRADE = register("flat_chest_upgrade", FlatchestupgradeItem::new);
@@ -1067,15 +1259,24 @@ public class PalamodModItems {
 		PALADIUM_OBSIDIAN_SPIKE = block(PalamodModBlocks.PALADIUM_OBSIDIAN_SPIKE);
 		ONLINE_DETECTOR = block(PalamodModBlocks.ONLINE_DETECTOR);
 		ONLINE_DETECTOR_ON = block(PalamodModBlocks.ONLINE_DETECTOR_ON);
+<<<<<<< Updated upstream
 		COBBLEBREAKER = block(PalamodModBlocks.COBBLEBREAKER);
 		OBSIDIANPICKAXE = register("obsidianpickaxe", ObsidianpickaxeItem::new);
+=======
+		COBBLEBREAKER = register("cobblebreaker", CobblebreakerBlock.Item::new);
+		OBSIDIAN_PICKAXE = register("obsidian_pickaxe", ObsidianpickaxeItem::new);
+>>>>>>> Stashed changes
 		DOLLARS_STONE = register("dollars_stone", MoulastoneItem::new);
 		COBBLEBREAKER_AMETHYST_UPGRADE = register("cobblebreaker_amethyst_upgrade", CobblebreakeramethystupgradeItem::new);
 		COBBLEBREAKER_TITANE_UPGRADE = register("cobblebreaker_titane_upgrade", CobblebreakertitaneupgradeItem::new);
 		COBBLEBREAKER_PALADIUM_UPGRADE = register("cobblebreaker_paladium_upgrade", CobblebreakerpaladiumupgradeItem::new);
 		FERTILZED_DIRT = block(PalamodModBlocks.FERTILZED_DIRT);
 		AMETHYST_HOE = register("amethyst_hoe", AmethtysthoeItem::new);
+<<<<<<< Updated upstream
 		TITANEHOE = register("titanehoe", TitanehoeItem::new);
+=======
+		TITANE_HOE = register("titane_hoe", TitanehoeItem::new);
+>>>>>>> Stashed changes
 		PALADIUM_HOE = register("paladium_hoe", PaladiumhoeItem::new);
 		GREEN_PALADIUM_HOE = register("green_paladium_hoe", GreenpaladiumhoeItem::new);
 		ENDIUM_HOE = register("endium_hoe", EndiumhoeItem::new);
@@ -1088,6 +1289,7 @@ public class PalamodModItems {
 		PLATE = register("plate", PlateItem::new);
 		TYPESETTINGTABLE = register("typesettingtable", TypesettingtableBlock.Item::new);
 		DRAWBRIDGE = register("drawbridge", DrawbridgeBlock.Item::new);
+<<<<<<< Updated upstream
 		PALADIUMARMORCUSTOM_4_HELMET = register("paladiumarmorcustom_4_helmet", Paladiumarmorcustom4Item.Helmet::new);
 		PALADIUMARMORCUSTOM_4_CHESTPLATE = register("paladiumarmorcustom_4_chestplate", Paladiumarmorcustom4Item.Chestplate::new);
 		PALADIUMARMORCUSTOM_4_LEGGINGS = register("paladiumarmorcustom_4_leggings", Paladiumarmorcustom4Item.Leggings::new);
@@ -1133,15 +1335,68 @@ public class PalamodModItems {
 		ANGELIC_WATER_BUCKET = register("angelic_water_bucket", AngelicwterItem::new);
 		SLIME_OBSIDIAN = block(PalamodModBlocks.SLIME_OBSIDIAN);
 		POISON_OBSIDIAN = block(PalamodModBlocks.POISON_OBSIDIAN);
+=======
+		PALADIUM_ARMOR_CUSTOM4_HELMET = register("paladium_armor_custom4_helmet", Paladiumarmorcustom4Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM4_CHESTPLATE = register("paladium_armor_custom4_chestplate", Paladiumarmorcustom4Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM4_LEGGINGS = register("paladium_armor_custom4_leggings", Paladiumarmorcustom4Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM4_BOOTS = register("paladium_armor_custom4_boots", Paladiumarmorcustom4Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM5_HELMET = register("paladium_armor_custom5_helmet", Paladiumarmorcustom5Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM5_CHESTPLATE = register("paladium_armor_custom5_chestplate", Paladiumarmorcustom5Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM5_LEGGINGS = register("paladium_armor_custom5_leggings", Paladiumarmorcustom5Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM5_BOOTS = register("paladium_armor_custom5_boots", Paladiumarmorcustom5Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM6_HELMET = register("paladium_armor_custom6_helmet", Paladiumarmorcustom6Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM6_CHESTPLATE = register("paladium_armor_custom6_chestplate", Paladiumarmorcustom6Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM6_LEGGINGS = register("paladium_armor_custom6_leggings", Paladiumarmorcustom6Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM6_BOOTS = register("paladium_armor_custom6_boots", Paladiumarmorcustom6Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM7_HELMET = register("paladium_armor_custom7_helmet", Paladiumarmorcustom7Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM7_CHESTPLATE = register("paladium_armor_custom7_chestplate", Paladiumarmorcustom7Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM7_LEGGINGS = register("paladium_armor_custom7_leggings", Paladiumarmorcustom7Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM7_BOOTS = register("paladium_armor_custom7_boots", Paladiumarmorcustom7Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM8_HELMET = register("paladium_armor_custom8_helmet", Paladiumarmorcustom8Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM8_CHESTPLATE = register("paladium_armor_custom8_chestplate", Paladiumarmorcustom8Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM8_LEGGINGS = register("paladium_armor_custom8_leggings", Paladiumarmorcustom8Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM8_BOOTS = register("paladium_armor_custom8_boots", Paladiumarmorcustom8Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM9_HELMET = register("paladium_armor_custom9_helmet", Paladiumarmorcustom9Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM9_CHESTPLATE = register("paladium_armor_custom9_chestplate", Paladiumarmorcustom9Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM9_LEGGINGS = register("paladium_armor_custom9_leggings", Paladiumarmorcustom9Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM9_BOOTS = register("paladium_armor_custom9_boots", Paladiumarmorcustom9Item.Boots::new);
+		PALADIUM_ARMOR_CUSTOM10_HELMET = register("paladium_armor_custom10_helmet", Paladiumarmorcustom10Item.Helmet::new);
+		PALADIUM_ARMOR_CUSTOM10_CHESTPLATE = register("paladium_armor_custom10_chestplate", Paladiumarmorcustom10Item.Chestplate::new);
+		PALADIUM_ARMOR_CUSTOM10_LEGGINGS = register("paladium_armor_custom10_leggings", Paladiumarmorcustom10Item.Leggings::new);
+		PALADIUM_ARMOR_CUSTOM10_BOOTS = register("paladium_armor_custom10_boots", Paladiumarmorcustom10Item.Boots::new);
+		UNKNOWNBLOCK = block(PalamodModBlocks.UNKNOWNBLOCK);
+		COMPRESSED_SPONGE = register("compressed_sponge", CompressedspongeBlock.Item::new);
+		TNT_SPONGE = register("tnt_sponge", SpongetntBlock.Item::new);
+		LAVA_SPONGE = block(PalamodModBlocks.LAVA_SPONGE);
+		WET_LAVA_SPONGE = block(PalamodModBlocks.WET_LAVA_SPONGE);
+		TNT_WITHER = register("tnt_wither", WithertntBlock.Item::new);
+		TNT_MAGIC = register("tnt_magic", MagictntBlock.Item::new);
+		TNT_COMPACT = register("tnt_compact", CompacttntBlock.Item::new);
+		TNT_ENDIUM = register("tnt_endium", EndiumtntBlock.Item::new);
+		RENFORCED_OBSIDIAN_STAIRS = block(PalamodModBlocks.RENFORCED_OBSIDIAN_STAIRS);
+		OBSIDIAN_STAIRS = block(PalamodModBlocks.OBSIDIAN_STAIRS);
+		OBSIDIAN_SLAB = block(PalamodModBlocks.OBSIDIAN_SLAB);
+		HARDENED_OBSIDIAN_SLAB = block(PalamodModBlocks.HARDENED_OBSIDIAN_SLAB);
+		FAKE_WATER_BUCKET = register("fake_water_bucket", FakewterItem::new);
+		ANGELIC_WATER_BUCKET = register("angelic_water_bucket", AngelicwterItem::new);
+		SLIME_OBSIDIAN = register("slime_obsidian", SlimeobsidianBlock.Item::new);
+		POISON_OBSIDIAN = register("poison_obsidian", PoisonobsidianBlock.Item::new);
+>>>>>>> Stashed changes
 		SEALEDXPBOTTLE = register("sealedxpbottle", SealedxpbottleItem::new);
 		MIXED_ENDIUM_INGOT = register("mixed_endium_ingot", MixedendiumingotItem::new);
 		MIXED_ENDIUM_ARMOR_HELMET = register("mixed_endium_armor_helmet", MixedendiumarmorItem.Helmet::new);
 		MIXED_ENDIUM_ARMOR_CHESTPLATE = register("mixed_endium_armor_chestplate", MixedendiumarmorItem.Chestplate::new);
 		MIXED_ENDIUM_ARMOR_LEGGINGS = register("mixed_endium_armor_leggings", MixedendiumarmorItem.Leggings::new);
 		MIXED_ENDIUM_ARMOR_BOOTS = register("mixed_endium_armor_boots", MixedendiumarmorItem.Boots::new);
+<<<<<<< Updated upstream
 		DOUBLEEXPPOTION = register("doubleexppotion", DoubleexppotionItem::new);
 		X_10XPPOTION = register("x_10xppotion", X10xppotionItem::new);
 		XPBOTTLE = register("xpbottle", XpbottleItem::new);
+=======
+		DOUBLE_EXP_POTION = register("double_exp_potion", DoubleexppotionItem::new);
+		X10_XP_POTION = register("x10_xp_potion", X10xppotionItem::new);
+		XP_BOTTLE = register("xp_bottle", XpbottleItem::new);
+>>>>>>> Stashed changes
 		EXTRACTOR = block(PalamodModBlocks.EXTRACTOR);
 		BOOM_OBSIDIAN = block(PalamodModBlocks.BOOM_OBSIDIAN);
 		MEGABOOMOBSIDIAN = block(PalamodModBlocks.MEGABOOMOBSIDIAN);
@@ -1156,7 +1411,11 @@ public class PalamodModItems {
 		GLUEBALL_CYAN = block(PalamodModBlocks.GLUEBALL_CYAN);
 		GLUEBALL_ORANGE = block(PalamodModBlocks.GLUEBALL_ORANGE);
 		GLUEBALL_GRAY = block(PalamodModBlocks.GLUEBALL_GRAY);
+<<<<<<< Updated upstream
 		GLUEBALLPATTERN = register("glueballpattern", GlueballpaternItem::new);
+=======
+		GLUEBALL_PATTERN = register("glueball_pattern", GlueballpaternItem::new);
+>>>>>>> Stashed changes
 		DISC_MII_CHALENGE = register("disc_mii_chalenge", MiichalengeItem::new);
 		DISC_FUZEIII = register("disc_fuzeiii", FuzediscItem::new);
 		DISC_ANTI_FUZE = register("disc_anti_fuze", AntifuzediscItem::new);
@@ -1171,6 +1430,7 @@ public class PalamodModItems {
 		TITANE_BACKPACK = register("titane_backpack", TitanebackpackItem::new);
 		PALADUM_BACKPACK = register("paladum_backpack", PaladumbackpackItem::new);
 		ENDIUM_BACKPACK = register("endium_backpack", EndiumbackpackItem::new);
+<<<<<<< Updated upstream
 		TOTEMFERTILITY = block(PalamodModBlocks.TOTEMFERTILITY);
 		GODVILLAGER_SPAWN_EGG = register("godvillager_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.GODVILLAGER.get(), properties));
 		XPBUSHLOW = block(PalamodModBlocks.XPBUSHLOW);
@@ -1181,6 +1441,18 @@ public class PalamodModItems {
 		GREENPALADIUMRAWORE = register("greenpaladiumrawore", GreenpaladiumraworeItem::new);
 		ROTATED_PALADIUM_HOPPER = register("rotated_paladium_hopper", PaladiumhopperBlock.Item::new);
 		PALADIUM_HOPPER = block(PalamodModBlocks.PALADIUM_HOPPER);
+=======
+		TOTEM_FERTILITY = register("totem_fertility", TotemfertilityBlock.Item::new);
+		GODVILLAGER_SPAWN_EGG = register("godvillager_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.GODVILLAGER.get(), properties));
+		XP_BUSH_LOW = block(PalamodModBlocks.XP_BUSH_LOW);
+		CHEST_EXPLORER = register("chest_explorer", ChestexplorerItem::new);
+		PALADIUM_RAW_ORE = register("paladium_raw_ore", PaladiumraworeItem::new);
+		TITANE_RAW_ORE = register("titane_raw_ore", TitaneraworeItem::new);
+		AMETHYST_RAW_ORE = register("amethyst_raw_ore", AmethystraworeItem::new);
+		GREEN_PALADIUM_RAW_ORE = register("green_paladium_raw_ore", GreenpaladiumraworeItem::new);
+		ROTATED_PALADIUM_HOPPER = register("rotated_paladium_hopper", PaladiumhopperBlock.Item::new);
+		PALADIUM_HOPPER = register("paladium_hopper", PaladiumhoppersouthBlock.Item::new);
+>>>>>>> Stashed changes
 		TRIXIUMSLAB = block(PalamodModBlocks.TRIXIUMSLAB);
 		TRIXIUMSTAIRS = block(PalamodModBlocks.TRIXIUMSTAIRS);
 		COBBLEBREAKERSERVER = block(PalamodModBlocks.COBBLEBREAKERSERVER);
@@ -1189,6 +1461,7 @@ public class PalamodModItems {
 		ROTATED_PURPLE_SLIMEPAD = block(PalamodModBlocks.ROTATED_PURPLE_SLIMEPAD);
 		ROTATED_BLUE_SLIMEPAD = block(PalamodModBlocks.ROTATED_BLUE_SLIMEPAD);
 		ROTATED_ORANGE_SLIMEPAD = block(PalamodModBlocks.ROTATED_ORANGE_SLIMEPAD);
+<<<<<<< Updated upstream
 		WITHEREDOBSIDIAN_0 = block(PalamodModBlocks.WITHEREDOBSIDIAN_0);
 		WITHEREDOBSIDIAN_1 = block(PalamodModBlocks.WITHEREDOBSIDIAN_1);
 		WITHEREDOBSIDIAN_2 = block(PalamodModBlocks.WITHEREDOBSIDIAN_2);
@@ -1203,6 +1476,22 @@ public class PalamodModItems {
 		WITHEREDOBSIDIAN_11 = block(PalamodModBlocks.WITHEREDOBSIDIAN_11);
 		WITHEREDOBSIDIAN_12 = block(PalamodModBlocks.WITHEREDOBSIDIAN_12);
 		WITHEREDOBSIDIAN_13 = block(PalamodModBlocks.WITHEREDOBSIDIAN_13);
+=======
+		WITHERED_OBSIDIAN_0 = block(PalamodModBlocks.WITHERED_OBSIDIAN_0);
+		WITHERED_OBSIDIAN_1 = register("withered_obsidian_1", Witheredobsidian1Block.Item::new);
+		WITHERED_OBSIDIAN_2 = register("withered_obsidian_2", Witheredobsidian2Block.Item::new);
+		WITHERED_OBSIDIAN_3 = register("withered_obsidian_3", Witheredobsidian3Block.Item::new);
+		WITHERED_OBSIDIAN_4 = register("withered_obsidian_4", Witheredobsidian4Block.Item::new);
+		WITHERED_OBSIDIAN_5 = register("withered_obsidian_5", Witheredobsidian5Block.Item::new);
+		WITHERED_OBSIDIAN_6 = register("withered_obsidian_6", Witheredobsidian6Block.Item::new);
+		WITHERED_OBSIDIAN_7 = register("withered_obsidian_7", Witheredobsidian7Block.Item::new);
+		WITHERED_OBSIDIAN_8 = register("withered_obsidian_8", Witheredobsidian8Block.Item::new);
+		WITHERED_OBSIDIAN_9 = register("withered_obsidian_9", Witheredobsidian9Block.Item::new);
+		WITHERED_OBSIDIAN_10 = register("withered_obsidian_10", Witheredobsidian10Block.Item::new);
+		WITHERED_OBSIDIAN_11 = register("withered_obsidian_11", Witheredobsidian11Block.Item::new);
+		WITHERED_OBSIDIAN_12 = register("withered_obsidian_12", Witheredobsidian12Block.Item::new);
+		WITHERED_OBSIDIAN_13 = register("withered_obsidian_13", Witheredobsidian13Block.Item::new);
+>>>>>>> Stashed changes
 		MINE_CLEARER = register("mine_clearer", MineclearerItem::new);
 		SOFT_STONE = block(PalamodModBlocks.SOFT_STONE);
 		SOFTENED_AMETHYST_ORE = block(PalamodModBlocks.SOFTENED_AMETHYST_ORE);
@@ -1212,11 +1501,19 @@ public class PalamodModItems {
 		SOFTENED_GREEN_PALADIUM_ORE = block(PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE);
 		SOFTENED_FINDIUM_ORE = block(PalamodModBlocks.SOFTENED_FINDIUM_ORE);
 		SOFTENED_ENDIUM_NUGGET_ORE = block(PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE);
+<<<<<<< Updated upstream
 		MINERJOBSITEM = register("minerjobsitem", MinerjobsitemItem::new);
 		FARMERJOBSITEM = register("farmerjobsitem", FarmerjobsitemItem::new);
 		HUNTERJOBSITEM = register("hunterjobsitem", HunterjobsitemItem::new);
 		ALCHIMISTJOBSITEM = register("alchimistjobsitem", AlchimistjobsitemItem::new);
 		CUSTOMAIR = register("customair", CustomairItem::new);
+=======
+		JOBS_ITEM_MINER = register("jobs_item_miner", MinerjobsitemItem::new);
+		JOBS_ITEM_FARMER = register("jobs_item_farmer", FarmerjobsitemItem::new);
+		JOBS_ITEM_HUNTER = register("jobs_item_hunter", HunterjobsitemItem::new);
+		JOBS_ITEM_ALCHIMIST = register("jobs_item_alchimist", AlchimistjobsitemItem::new);
+		CUSTOM_AIR = register("custom_air", CustomairItem::new);
+>>>>>>> Stashed changes
 		COBBLED_SOFT_STONE = block(PalamodModBlocks.COBBLED_SOFT_STONE);
 		SOFTSTONESLAB = block(PalamodModBlocks.SOFTSTONESLAB);
 		SOFTSTONESTAIRS = block(PalamodModBlocks.SOFTSTONESTAIRS);
@@ -1228,6 +1525,7 @@ public class PalamodModItems {
 		SOFTENED_DIAMOND_ORE = block(PalamodModBlocks.SOFTENED_DIAMOND_ORE);
 		SOFTENED_REDSTONE_ORE = block(PalamodModBlocks.SOFTENED_REDSTONE_ORE);
 		SOFTENED_LAPIS_LAZULIS_ORE = block(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE);
+<<<<<<< Updated upstream
 		PIGARMOR_HELMET = register("pigarmor_helmet", PigarmorItem.Helmet::new);
 		PIGARMOR_CHESTPLATE = register("pigarmor_chestplate", PigarmorItem.Chestplate::new);
 		PIGARMOR_LEGGINGS = register("pigarmor_leggings", PigarmorItem.Leggings::new);
@@ -1257,12 +1555,68 @@ public class PalamodModItems {
 		TITANEINFUSEDOBSIDIAN = block(PalamodModBlocks.TITANEINFUSEDOBSIDIAN);
 		PALADIUMINFUSEDOBSIDIAN = block(PalamodModBlocks.PALADIUMINFUSEDOBSIDIAN);
 		EMPTYSPAWNERITEM = register("emptyspawneritem", EmptyspawneritemItem::new);
+=======
+		PIG_ARMOR_HELMET = register("pig_armor_helmet", PigarmorItem.Helmet::new);
+		PIG_ARMOR_CHESTPLATE = register("pig_armor_chestplate", PigarmorItem.Chestplate::new);
+		PIG_ARMOR_LEGGINGS = register("pig_armor_leggings", PigarmorItem.Leggings::new);
+		PIG_ARMOR_BOOTS = register("pig_armor_boots", PigarmorItem.Boots::new);
+		COMPRESSED_ENDIUM = register("compressed_endium", CompressedendiumItem::new);
+		EXTRACTOR_ITEM = register("extractor_item", ExtractorItem::new);
+		FLOWER_TOTEM = block(PalamodModBlocks.FLOWER_TOTEM);
+		MINERAL_FLOWER = block(PalamodModBlocks.MINERAL_FLOWER);
+		ENDIUM_FLOWER = block(PalamodModBlocks.ENDIUM_FLOWER);
+		ENDIUM_FLOWER_ON = block(PalamodModBlocks.ENDIUM_FLOWER_ON);
+		CLATHRUSARCHERI = block(PalamodModBlocks.CLATHRUSARCHERI);
+		PALADIUM_FLOWER = block(PalamodModBlocks.PALADIUM_FLOWER);
+		DANKAROCTEST_1_SPAWN_EGG = register("dankaroctest_1_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.DANKAROCTEST_1.get(), properties));
+		DANKABLOCK = block(PalamodModBlocks.DANKABLOCK);
+		PALADIUM_INK = register("paladium_ink", PaladiuminkItem::new);
+		UNCLAIM_FINDER = register("unclaim_finder", UnclaimfinderItem::new);
+		UNCLAIM_FINDER_ORANGE = register("unclaim_finder_orange", UnclaimfinderorangeItem::new);
+		UNCLAIM_FINDER_RED = register("unclaim_finder_red", UnclaimfinderredItem::new);
+		UNCLAIM_FINDER_BLUE = register("unclaim_finder_blue", UnclaimfinderblueItem::new);
+		POCKETENDERCHEST = register("pocketenderchest", PocketenderchestItem::new);
+		CAVERNE_HAMMER = register("caverne_hammer", CavernehammerItem::new);
+		BROKEN_SPAWNER = register("broken_spawner", properties -> new BrokenspawnerBlock.Item(properties.stacksTo(1)));
+		SPAWN_CONTROLLER = register("spawn_controller", SpawncontrollerBlock.Item::new);
+		EMPTY_SPAWNER = block(PalamodModBlocks.EMPTY_SPAWNER);
+		DIAMOND_INFUSED_OBSIDIAN = block(PalamodModBlocks.DIAMOND_INFUSED_OBSIDIAN);
+		AMETHYST_INFUSED_OBSIDIAN = block(PalamodModBlocks.AMETHYST_INFUSED_OBSIDIAN);
+		TITANE_INFUSED_OBSIDIAN = block(PalamodModBlocks.TITANE_INFUSED_OBSIDIAN);
+		PALADIUM_INFUSED_OBSIDIAN = block(PalamodModBlocks.PALADIUM_INFUSED_OBSIDIAN);
+		EMPTY_SPAWNER_ITEM = register("empty_spawner_item", EmptyspawneritemItem::new);
+		SPAWNER_UPGRADE_SLIME = register("spawner_upgrade_slime", SpawnerupgradeslimeItem::new);
+		SPAWNER_UPGRADE_SPEED = register("spawner_upgrade_speed", SpawnerupgradespeedItem::new);
+		SPAWNER_UPGRADE_MORE = register("spawner_upgrade_more", SpawnerupgrademoreItem::new);
+		SPAWNER_UPGRADE_LOOTING = register("spawner_upgrade_looting", SpawnerupgradelootingItem::new);
+		DEAD_LOG = block(PalamodModBlocks.DEAD_LOG);
+		DEAD_WOOD = block(PalamodModBlocks.DEAD_WOOD);
+		STRIPPED_DEAD_LOG = block(PalamodModBlocks.STRIPPED_DEAD_LOG);
+		STRIPPED_DEAD_WOOD = block(PalamodModBlocks.STRIPPED_DEAD_WOOD);
+		DEAD_PLANKS = block(PalamodModBlocks.DEAD_PLANKS);
+		DEAD_STAIRS = block(PalamodModBlocks.DEAD_STAIRS);
+		DEAD_SLAB = block(PalamodModBlocks.DEAD_SLAB);
+		DEAD_FENCE = block(PalamodModBlocks.DEAD_FENCE);
+		DEAD_FENCE_GATE = block(PalamodModBlocks.DEAD_FENCE_GATE);
+		DEAD_DOOR = doubleBlock(PalamodModBlocks.DEAD_DOOR);
+		DEAD_TRAPDOOR = block(PalamodModBlocks.DEAD_TRAPDOOR);
+		DEAD_PRESSURE_PLATE = block(PalamodModBlocks.DEAD_PRESSURE_PLATE);
+		DEAD_BUTTON = block(PalamodModBlocks.DEAD_BUTTON);
+		FROZEN_OBSIDIAN = register("frozen_obsidian", FrozenobsidianBlock.Item::new);
+		KNOCKBACK_OBSIDIAN = register("knockback_obsidian", properties -> new KnockbackobsidianBlock.Item(properties.fireResistant()));
+		AMETHYST_ANVIL = block(PalamodModBlocks.AMETHYST_ANVIL);
+		TITANE_ANVIL = block(PalamodModBlocks.TITANE_ANVIL);
+		PALADIUM_ANVIL = block(PalamodModBlocks.PALADIUM_ANVIL);
+		MONEY_ANVIL = block(PalamodModBlocks.MONEY_ANVIL);
+		AMETHYSTANVIL_2 = block(PalamodModBlocks.AMETHYSTANVIL_2);
+>>>>>>> Stashed changes
 	}
 
 	// Start of user code block custom items
 	// End of user code block custom items
 	private static <I extends Item> DeferredItem<I> register(String name, Function<Item.Properties, ? extends I> supplier) {
 		return REGISTRY.registerItem(name, supplier, new Item.Properties());
+<<<<<<< Updated upstream
 	}
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
@@ -1291,13 +1645,48 @@ public class PalamodModItems {
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), ANGELIC_WATER_BUCKET.get());
 	}
 
+=======
+	}
+
+	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
+		return block(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.registerItem(block.getId().getPath(), prop -> new BlockItem(block.get(), prop), properties);
+	}
+
+	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block) {
+		return doubleBlock(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.registerItem(block.getId().getPath(), prop -> new DoubleHighBlockItem(block.get(), prop), properties);
+	}
+
+	@SubscribeEvent
+	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PaladiumphoneInventoryCapability(stack), PALADIUM_PHONE.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidstoneInventoryCapability(stack), VOIDSTONE.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new MinerjobsitemInventoryCapability(stack), JOBS_ITEM_MINER.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new FarmerjobsitemInventoryCapability(stack), JOBS_ITEM_FARMER.get());
+		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), FAKE_WATER_BUCKET.get());
+		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), ANGELIC_WATER_BUCKET.get());
+	}
+
+>>>>>>> Stashed changes
 	@EventBusSubscriber(Dist.CLIENT)
 	public static class ItemsClientSideHandler {
 		@SubscribeEvent
 		public static void registerItemModelProperties(RegisterRangeSelectItemModelPropertyEvent event) {
+<<<<<<< Updated upstream
 			event.register(ResourceLocation.parse("palamod:xpbottle/xp"), XpbottleItem.XpProperty.MAP_CODEC);
 			event.register(ResourceLocation.parse("palamod:xpbottle/jobs_type"), XpbottleItem.JobsTypeProperty.MAP_CODEC);
 			event.register(ResourceLocation.parse("palamod:emptyspawneritem/souls"), EmptyspawneritemItem.SoulsProperty.MAP_CODEC);
+=======
+			event.register(ResourceLocation.parse("palamod:xp_bottle/xp"), XpbottleItem.XpProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("palamod:xp_bottle/jobs_type"), XpbottleItem.JobsTypeProperty.MAP_CODEC);
+>>>>>>> Stashed changes
 		}
 	}
 }

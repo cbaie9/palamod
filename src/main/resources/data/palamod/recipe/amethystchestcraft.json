@@ -7,7 +7,11 @@
     "aba"
   ],
   "key": {
+<<<<<<< Updated upstream
     "a": "palamod:amethyst",
+=======
+    "a": "palamod:amethyst_ingot",
+>>>>>>> Stashed changes
     "b": "palamod:compressed_amethyst",
     "c": "minecraft:chest"
   },

@@ -21,6 +21,12 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+<<<<<<< Updated upstream
+=======
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
+>>>>>>> Stashed changes
 public class CrusherpalahelpguiScreen extends AbstractContainerScreen<CrusherpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
@@ -51,7 +57,24 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+<<<<<<< Updated upstream
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+=======
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 301 && mouseX < leftPos + 321 && mouseY > topPos + 3 && mouseY < topPos + 21) {
+			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 395 && mouseX < leftPos + 411 && mouseY > topPos + 3 && mouseY < topPos + 19) {
+			String hoverText = ClosetheguitransProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
+>>>>>>> Stashed changes
 	}
 
 	@Override
@@ -155,5 +178,23 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
+<<<<<<< Updated upstream
+=======
+		imagebutton_book_button = new ImageButton(this.leftPos + 301, this.topPos + 3, 20, 18,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/book_button.png"), ResourceLocation.parse("palamod:textures/screens/book_button_hover.png")), e -> {
+					int x = CrusherpalahelpguiScreen.this.x;
+					int y = CrusherpalahelpguiScreen.this.y;
+					if (true) {
+						ClientPacketDistributor.sendToServer(new CrusherpalahelpguiButtonMessage(4, x, y, z));
+						CrusherpalahelpguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_book_button);
+>>>>>>> Stashed changes
 	}
 }

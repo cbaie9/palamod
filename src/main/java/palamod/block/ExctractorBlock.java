@@ -13,6 +13,10 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+<<<<<<< Updated upstream
+=======
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+>>>>>>> Stashed changes
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -36,8 +40,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class ExctractorBlock extends Block implements EntityBlock {
+<<<<<<< Updated upstream
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 11);
 	public static final EnumProperty<Direction> FACING = DirectionalBlock.FACING;
+=======
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 9);
+	public static final EnumProperty<Direction> FACING = DirectionalBlock.FACING;
+	public static final BooleanProperty FIOLE = BooleanProperty.create("fiole");
+	public static final IntegerProperty EXTRACTED_SAP = IntegerProperty.create("extracted_sap", 0, 15);
+>>>>>>> Stashed changes
 
 	public ExctractorBlock(BlockBehaviour.Properties properties) {
 		super(properties.mapColor(MapColor.COLOR_MAGENTA).strength(1f, 10f).lightLevel(s -> (new Object() {

@@ -26,7 +26,11 @@ public class EndiumflowerOnTickUpdateProcedure {
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 				if (entityiterator instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel _serverLevel0
 						&& _plr0.getAdvancements().getOrStartProgress(_serverLevel0.getServer().getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone()) {
+<<<<<<< Updated upstream
 					if (!(PalamodModBlocks.ENDIUMFLOWERON.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock())) {
+=======
+					if (!(PalamodModBlocks.ENDIUM_FLOWER_ON.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock())) {
+>>>>>>> Stashed changes
 						{
 							BlockPos _bp = BlockPos.containing(x, y, z);
 							BlockState _bs = PalamodModBlocks.ENDIUMFLOWERON.get().defaultBlockState();

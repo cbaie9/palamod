@@ -25,10 +25,31 @@ public class Eggplant3shearProcedure {
 					_level.addFreshEntity(entityToSpawn);
 				}
 			}
+<<<<<<< Updated upstream
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.EGGPLANT.get()));
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
+=======
+			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 7 <= lvl) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
+					world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.EGGPLANT_1.get().defaultBlockState(), 3);
+					if (Math.random() < 0.2) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.EGGPLANT_SEED.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					}
+					if (world instanceof ServerLevel _level) {
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.EGGPLANT.get()));
+						entityToSpawn.setPickUpDelay(10);
+						_level.addFreshEntity(entityToSpawn);
+					}
+				}
+			} else {
+				MsgdonthavetherequiredlvlProcedure.execute(world, x, y, z, entity);
+>>>>>>> Stashed changes
 			}
 		}
 	}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": "#neoforge:cobblestone",
+    "b": "palamod:voidstone",
+    "c": "palamod:fortune_modifier"
+  },
+  "result": {
+    "id": "palamod:cobblebreaker",
+    "count": 1
+  }
+}

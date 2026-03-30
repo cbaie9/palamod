@@ -2,7 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
+<<<<<<< Updated upstream
     "palamod:amethyst"
+=======
+    "palamod:amethyst_ingot"
+>>>>>>> Stashed changes
   ],
   "result": {
     "id": "palamod:amethyst_particle",

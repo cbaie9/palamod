@@ -7,7 +7,11 @@
     "aaa"
   ],
   "key": {
+<<<<<<< Updated upstream
     "a": "palamod:amethyst"
+=======
+    "a": "palamod:amethyst_ingot"
+>>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:amethyst_block",

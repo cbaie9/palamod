@@ -34,7 +34,11 @@ public class CompressedxpberryItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+<<<<<<< Updated upstream
 		componentConsumer.accept(Component.translatable("item.palamod.compressedxpberry.description_0"));
+=======
+		componentConsumer.accept(Component.translatable("item.palamod.compressed_xp_berry.description_0"));
+>>>>>>> Stashed changes
 	}
 
 	@Override

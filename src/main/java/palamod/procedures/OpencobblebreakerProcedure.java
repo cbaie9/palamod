@@ -47,6 +47,7 @@ public class OpencobblebreakerProcedure {
 					BlockEntity _be = world.getBlockEntity(_bp);
 					CompoundTag _bnbt = null;
 					if (_be != null) {
+<<<<<<< Updated upstream
 						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
 						_be.setRemoved();
 					}
@@ -58,6 +59,11 @@ public class OpencobblebreakerProcedure {
 								_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 							} catch (Exception ignored) {
 							}
+=======
+						try {
+							_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
+						} catch (Exception ignored) {
+>>>>>>> Stashed changes
 						}
 					}
 				}

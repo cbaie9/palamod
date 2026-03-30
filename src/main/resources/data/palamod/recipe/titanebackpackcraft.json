@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "dad"
+  ],
+  "key": {
+    "a": "palamod:titane_ingot",
+    "b": "palamod:titane_chest",
+    "c": "minecraft:hopper",
+    "d": "minecraft:leather"
+  },
+  "result": {
+    "id": "palamod:titane_backpack",
+    "count": 1
+  }
+}

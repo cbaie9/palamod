@@ -5,6 +5,8 @@ import palamod.procedures.MoucepotgProcedure;
 
 import palamod.init.PalamodModItems;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.common.ItemAbilities;
@@ -40,7 +42,11 @@ import java.util.function.Consumer;
 
 @EventBusSubscriber
 public class Pickaxeofthegodslv1Item extends Item {
+<<<<<<< Updated upstream
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 2f, 0, 15, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pickaxeofthegodslv_1_repair_items")));
+=======
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 2f, 0, 15, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pickaxe_of_the_gods_lv1_repair_items")));
+>>>>>>> Stashed changes
 
 	public Pickaxeofthegodslv1Item(Item.Properties properties) {
 		super(TOOL_MATERIAL.applyToolProperties(properties, BlockTags.MINEABLE_WITH_PICKAXE, 3f, -3f, 0)
@@ -83,13 +89,27 @@ public class Pickaxeofthegodslv1Item extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+<<<<<<< Updated upstream
 		componentConsumer.accept(Component.translatable("item.palamod.pickaxeofthegodslv_1.description_0"));
+=======
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+		String hoverText = TitlepogProcedure.execute(entity);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				componentConsumer.accept(Component.literal(line));
+			}
+		}
+>>>>>>> Stashed changes
 	}
 
 	@Override
 	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
 		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		if (equipmentSlot == EquipmentSlot.MAINHAND)
+<<<<<<< Updated upstream
 			MoucepotgProcedure.execute(entity, itemstack);
+=======
+			MoucepotgProcedure.execute(entity);
+>>>>>>> Stashed changes
 	}
 }

@@ -60,7 +60,11 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
+<<<<<<< Updated upstream
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
+=======
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 1);
+>>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("zombie") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("zombie"))) {
@@ -71,7 +75,11 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
+<<<<<<< Updated upstream
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
+=======
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 1);
+>>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("skeleton") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("creeper"))) {
@@ -82,7 +90,11 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
+<<<<<<< Updated upstream
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
+=======
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 1);
+>>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("creeper") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("creeper"))) {
@@ -93,7 +105,11 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
+<<<<<<< Updated upstream
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
+=======
+					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 0);
+>>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}

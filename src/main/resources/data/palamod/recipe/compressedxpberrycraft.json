@@ -7,7 +7,11 @@
     "aaa"
   ],
   "key": {
+<<<<<<< Updated upstream
     "a": "palamod:xpberry"
+=======
+    "a": "palamod:xp_berry"
+>>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:compressedxpberry",

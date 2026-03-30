@@ -1,9 +1,30 @@
 package palamod.block;
 
+<<<<<<< Updated upstream
+=======
+import palamod.procedures.CraftableToolTipTextProcedure;
+
+import palamod.init.PalamodModBlocks;
+
+import palamod.PalamodMod;
+
+>>>>>>> Stashed changes
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
+<<<<<<< Updated upstream
+=======
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
+
+import java.util.function.Consumer;
+>>>>>>> Stashed changes
 
 public class CompressedspongeBlock extends Block {
 	public CompressedspongeBlock(BlockBehaviour.Properties properties) {
@@ -14,4 +35,25 @@ public class CompressedspongeBlock extends Block {
 	public int getLightBlock(BlockState state) {
 		return 15;
 	}
+<<<<<<< Updated upstream
+=======
+
+	public static class Item extends BlockItem {
+		public Item(Item.Properties properties) {
+			super(PalamodModBlocks.COMPRESSED_SPONGE.get(), properties);
+		}
+
+		@Override
+		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
+			if (hoverText != null) {
+				for (String line : hoverText.split("\n")) {
+					componentConsumer.accept(Component.literal(line));
+				}
+			}
+		}
+	}
+>>>>>>> Stashed changes
 }

@@ -8,7 +8,11 @@
   ],
   "key": {
     "a": "palamod:paladium_ingot",
+<<<<<<< Updated upstream
     "b": "palamod:titaneexcavator"
+=======
+    "b": "palamod:titane_excavator"
+>>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:paladiumexcavator",

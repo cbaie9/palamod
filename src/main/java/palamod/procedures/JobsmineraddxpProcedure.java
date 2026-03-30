@@ -5,6 +5,11 @@ import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+<<<<<<< Updated upstream
+=======
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+>>>>>>> Stashed changes
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.client.Minecraft;
 
@@ -24,6 +29,7 @@ public class JobsmineraddxpProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double xp = 0;
+<<<<<<< Updated upstream
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
 				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
 		if (jobs.exists()) {
@@ -34,6 +40,35 @@ public class JobsmineraddxpProcedure {
 					String line;
 					while ((line = bufferedReader.readLine()) != null) {
 						jsonstringbuilder.append(line);
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+			jobs = GetjobsfileProcedure.execute(entity);
+			if (jobs.exists()) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						xp = main.get("xp_miner").getAsDouble();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				main.addProperty("xp_miner", (xp + DoubleArgumentType.getDouble(arguments, "num")));
+				{
+					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
+					try {
+						FileWriter fileWriter = new FileWriter(jobs);
+						fileWriter.write(mainGSONBuilderVariable.toJson(main));
+						fileWriter.close();
+					} catch (IOException exception) {
+						exception.printStackTrace();
+>>>>>>> Stashed changes
 					}
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);

@@ -4,7 +4,15 @@ import palamod.world.inventory.TrashguiMenu;
 
 import palamod.procedures.ConnecttrashguiProcedure;
 
+<<<<<<< Updated upstream
 import net.minecraft.world.level.Level;
+=======
+import palamod.PalamodMod;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.TooltipFlag;
+>>>>>>> Stashed changes
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
@@ -18,6 +26,11 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+<<<<<<< Updated upstream
+=======
+
+import java.util.function.Consumer;
+>>>>>>> Stashed changes
 
 import io.netty.buffer.Unpooled;
 
@@ -32,6 +45,21 @@ public class VoidstoneItem extends Item {
 	}
 
 	@Override
+<<<<<<< Updated upstream
+=======
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+		String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				componentConsumer.accept(Component.literal(line));
+			}
+		}
+	}
+
+	@Override
+>>>>>>> Stashed changes
 	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
 		InteractionResult ar = super.use(world, entity, hand);
 		if (entity instanceof ServerPlayer serverPlayer) {

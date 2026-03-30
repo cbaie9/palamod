@@ -39,6 +39,7 @@ public class MoneyaddprocessProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
+<<<<<<< Updated upstream
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 		if (entity instanceof Player _playerCmd4 && _playerCmd4.hasPermissions(4)) {
 			{
@@ -48,6 +49,24 @@ public class MoneyaddprocessProcedure {
 					String line;
 					while ((line = bufferedReader.readLine()) != null) {
 						jsonstringbuilder.append(line);
+=======
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
+			if (entity instanceof Player _playerCmd5 && _playerCmd5.hasPermissions(4)) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						money_main.addProperty("money", (money_main.get("money").getAsDouble() + DoubleArgumentType.getDouble(arguments, "money")));
+					} catch (IOException e) {
+						e.printStackTrace();
+>>>>>>> Stashed changes
 					}
 					bufferedReader.close();
 					money_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);

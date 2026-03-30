@@ -40,7 +40,11 @@ public class Chervil3dropProcedure {
 					e.printStackTrace();
 				}
 			}
+<<<<<<< Updated upstream
 			if (!(world instanceof ServerLevel _serverLevelGR6 && _serverLevelGR6.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 60 <= lvl) {
+=======
+			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 14 <= lvl) {
+>>>>>>> Stashed changes
 				if (Math.random() < 0.2) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.CHERVILSEED.get()));

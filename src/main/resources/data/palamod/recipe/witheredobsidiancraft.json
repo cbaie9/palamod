@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": "minecraft:wither_rose",
+    "b": "#neoforge:obsidian"
+  },
+  "result": {
+    "id": "palamod:withered_obsidian_0",
+    "count": 1
+  }
+}

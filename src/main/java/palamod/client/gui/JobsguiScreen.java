@@ -59,8 +59,15 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
+<<<<<<< Updated upstream
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png"), this.leftPos + 10, this.topPos + 149,
 				Mth.clamp((int) LastunlockedgetspriteProcedure.execute(world, entity) * 16, 0, 400), 0, 16, 16, 416, 16);
+=======
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png"), this.leftPos + 10, this.topPos + 149,
+					Mth.clamp((int) LastunlockedgetspriteProcedure.execute(entity) * 16, 0, 400), 0, 16, 16, 416, 16);
+		}
+>>>>>>> Stashed changes
 	}
 
 	@Override

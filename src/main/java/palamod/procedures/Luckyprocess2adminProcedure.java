@@ -384,7 +384,11 @@ public class Luckyprocess2adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level) {
+<<<<<<< Updated upstream
 				Entity entityToSpawn = PalamodModEntities.PALADIUMGOLEM.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
+=======
+				Entity entityToSpawn = PalamodModEntities.PALADIUM_GOLEM.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
+>>>>>>> Stashed changes
 				if (entityToSpawn != null) {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}

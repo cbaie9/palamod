@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "aaa"
+  ],
+  "key": {
+    "a": "minecraft:obsidian",
+    "b": "palamod:compressed_paladium",
+    "c": "minecraft:sugar"
+  },
+  "result": {
+    "id": "palamod:spawner_upgrade_speed",
+    "count": 1
+  }
+}

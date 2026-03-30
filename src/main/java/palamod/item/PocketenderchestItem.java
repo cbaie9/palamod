@@ -8,10 +8,15 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+<<<<<<< Updated upstream
 import net.minecraft.world.InteractionResult;
+=======
+>>>>>>> Stashed changes
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 
 public class PocketenderchestItem extends Item {
+<<<<<<< Updated upstream
     public PocketenderchestItem(Item.Properties properties) {
         super(properties.rarity(Rarity.EPIC).stacksTo(1));
     }
@@ -26,5 +31,27 @@ public class PocketenderchestItem extends Item {
         InteractionResult ar = super.use(world, entity, hand);
         PocketenderchestopenProcedure.execute(world, entity); // Correction ici
         return ar;
+=======
+
+    public PocketenderchestItem(Item.Properties properties) {
+        super(properties.stacksTo(1).rarity(Rarity.EPIC));
+    }
+
+    @Override
+    public boolean isCorrectToolForDrops(ItemStack itemstack, BlockState state) {
+        return true;
+    }
+
+    @Override
+    public InteractionResult use(Level world, Player player, InteractionHand hand) {
+
+        if (world.isClientSide) {
+            return InteractionResult.SUCCESS;
+        }
+
+        PocketenderchestopenProcedure.execute(player);
+
+        return InteractionResult.CONSUME;
+>>>>>>> Stashed changes
     }
 }

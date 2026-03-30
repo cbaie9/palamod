@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": "palamod:flatten_amethyst_chest"
+  },
+  "result": {
+    "id": "palamod:amethyst_chest",
+    "count": 1
+  }
+}
