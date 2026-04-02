@@ -71,11 +71,11 @@ public class IssetupflowertotemokProcedure {
 					|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.DANDELION) {
 				dandelion_var = true;
 			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.MINERALFLOWER.get() || (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock() == PalamodModBlocks.MINERALFLOWER.get()
-					|| (world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock() == PalamodModBlocks.MINERALFLOWER.get() || (world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).getBlock() == PalamodModBlocks.MINERALFLOWER.get()
-					|| (world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).getBlock() == PalamodModBlocks.MINERALFLOWER.get() || (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == PalamodModBlocks.MINERALFLOWER.get()
-					|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == PalamodModBlocks.MINERALFLOWER.get() || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == PalamodModBlocks.MINERALFLOWER.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == PalamodModBlocks.MINERALFLOWER.get()) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get() || (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get()
+					|| (world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get() || (world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get()
+					|| (world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get() || (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get()
+					|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get() || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == PalamodModBlocks.MINERAL_FLOWER.get()) {
 				mineral_flower_var = true;
 			}
 		}

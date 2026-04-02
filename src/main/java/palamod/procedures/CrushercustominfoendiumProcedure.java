@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModGameRules;
+
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -43,14 +45,10 @@ public class CrushercustominfoendiumProcedure {
 				}
 			}
 		}
-<<<<<<< Updated upstream
-		return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") + " / " + output;
-=======
 		if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") + " / " + output + " - " + (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") / output) * 100 + "%";
 		}
 		return (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") / output) * 100 + "%";
->>>>>>> Stashed changes
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

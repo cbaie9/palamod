@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 public class MinerjobsitemInventoryCapability extends ComponentItemHandler {
 	@SubscribeEvent
 	public static void onItemDropped(ItemTossEvent event) {
-		if (event.getEntity().getItem().getItem() == PalamodModItems.MINERJOBSITEM.get()) {
+		if (event.getEntity().getItem().getItem() == PalamodModItems.JOBS_ITEM_MINER.get()) {
 			Player player = event.getPlayer();
 			if (player.containerMenu instanceof JobsminercraftguiMenu)
 				player.closeContainer();
@@ -38,7 +38,7 @@ public class MinerjobsitemInventoryCapability extends ComponentItemHandler {
 
 	@Override
 	public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-		return stack.getItem() != PalamodModItems.MINERJOBSITEM.get();
+		return stack.getItem() != PalamodModItems.JOBS_ITEM_MINER.get();
 	}
 
 	@Override

@@ -38,8 +38,13 @@ public class SpawnCommandProcedure {
 		File home = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		boolean dim_check = false;
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\home\\global\\"), File.separator + "spawn.json");
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\global\\"),
+					File.separator + "spawn.json");
+		} else if (IsgameserversideProcedure.execute()) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/spawn/"), File.separator + "spawn.json");
+		}
 		if (home.exists()) {
 			{
 				try {

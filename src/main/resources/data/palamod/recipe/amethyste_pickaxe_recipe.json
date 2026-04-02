@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "amethyst_craft_group",
   "category": "equipment",
   "pattern": [
     "aaa",
@@ -7,11 +8,7 @@
     " b "
   ],
   "key": {
-<<<<<<< Updated upstream
-    "a": "palamod:amethyst",
-=======
     "a": "palamod:amethyst_ingot",
->>>>>>> Stashed changes
     "b": "minecraft:stick"
   },
   "result": {

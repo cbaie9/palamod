@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:green_paladium_axe",
+    "palamod:green_paladium_armor_chestplate",
+    "palamod:green_paladium_armor_leggings",
+    "palamod:green_paladium_armor_boots",
+    "palamod:green_paladium_fastsword",
+    "palamod:green_paladium_broadsword_head",
+    "palamod:green_paladium_armor_helmet",
+    "palamod:green_paladium_shovel_head",
+    "palamod:green_paladum_excavator",
+    "palamod:green_paladium_hammer_head",
+    "palamod:green_paladium_shovel",
+    "palamod:paladium_green_block",
+    "palamod:green_paladium_pickaxe",
+    "palamod:green_paladium_hammer",
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_sword_head",
+    "palamod:green_paladium_slab",
+    "palamod:green_paladium_sword",
+    "palamod:green_paladium_axe_head",
+    "palamod:paladium_green_ore",
+    "palamod:green_paladium_fastsword_head",
+    "palamod:green_paladium_stairs",
+    "palamod:green_paladium_pickaxe_head"
+  ]
+}

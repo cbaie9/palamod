@@ -4,8 +4,15 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "titane_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:Titanebroadsword"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

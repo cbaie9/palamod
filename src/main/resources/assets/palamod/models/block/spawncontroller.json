@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "palamod:block/spawn_controller",
-    "particle": "palamod:block/spawn_controller"
-  },
-  "render_type": "solid"
-}

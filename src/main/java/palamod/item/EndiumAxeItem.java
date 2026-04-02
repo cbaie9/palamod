@@ -1,5 +1,6 @@
 package palamod.item;
 
+import palamod.procedures.CraftableToolTipTextProcedure;
 import palamod.procedures.AxebreakblockProcedure;
 
 import palamod.init.PalamodModItems;
@@ -12,31 +13,23 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
->>>>>>> Stashed changes
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
-<<<<<<< Updated upstream
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.BlockPos;
-=======
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 @EventBusSubscriber
 public class EndiumAxeItem extends AxeItem {
@@ -57,8 +50,6 @@ public class EndiumAxeItem extends AxeItem {
 		AxebreakblockProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		return retval;
 	}
-<<<<<<< Updated upstream
-=======
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
@@ -71,5 +62,4 @@ public class EndiumAxeItem extends AxeItem {
 			}
 		}
 	}
->>>>>>> Stashed changes
 }

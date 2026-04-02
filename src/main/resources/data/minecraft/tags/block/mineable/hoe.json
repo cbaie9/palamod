@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "palamod:spongetnt",
-    "palamod:withertnt",
-    "palamod:wetlavasponge",
-    "palamod:magic_tnt",
-    "palamod:lavasponge",
-    "palamod:compacttnt",
-    "palamod:endiumtnt",
-    "palamod:compressedsponge"
+    "palamod:tnt_sponge",
+    "palamod:tnt_wither",
+    "palamod:wet_lava_sponge",
+    "palamod:tnt_magic",
+    "palamod:lava_sponge",
+    "palamod:tnt_compact",
+    "palamod:tnt_endium",
+    "palamod:compressed_sponge"
   ]
 }

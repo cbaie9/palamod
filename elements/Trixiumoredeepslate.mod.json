@@ -18,6 +18,9 @@
     "itemTexture": "",
     "particleTexture": "",
     "blockSetType": "OAK",
+    "pottedPlant": {
+      "value": ""
+    },
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -80,6 +83,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -114,6 +120,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -133,7 +142,16 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#is_overworld"
+        "value": "deep_cold_ocean"
+      },
+      {
+        "value": "deep_frozen_ocean"
+      },
+      {
+        "value": "deep_lukewarm_ocean"
+      },
+      {
+        "value": "deep_ocean"
       }
     ],
     "blocksToReplace": [
@@ -148,8 +166,8 @@
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 5,
-    "frequencyOnChunk": 4,
+    "frequencyPerChunks": 3,
+    "frequencyOnChunk": 1,
     "minGenerateHeight": -64,
     "maxGenerateHeight": 0
   }

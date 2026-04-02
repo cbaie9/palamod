@@ -8,15 +8,11 @@
   ],
   "key": {
     "a": "palamod:titane_ingot",
-<<<<<<< Updated upstream
-    "b": "palamod:amethystinfusedobsidian",
-=======
     "b": "palamod:amethyst_infused_obsidian",
->>>>>>> Stashed changes
     "c": "palamod:paladium_block"
   },
   "result": {
-    "id": "palamod:titaneinfusedobsidian",
+    "id": "palamod:titane_infused_obsidian",
     "count": 2
   }
 }

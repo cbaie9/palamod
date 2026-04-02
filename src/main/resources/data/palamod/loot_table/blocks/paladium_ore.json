@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:paladiumrawore"
+          "name": "palamod:paladium_raw_ore"
         }
       ]
     }

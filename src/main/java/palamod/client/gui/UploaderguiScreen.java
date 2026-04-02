@@ -41,8 +41,8 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 220;
+		this.imageHeight = 180;
 	}
 
 	@Override
@@ -55,38 +55,22 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-<<<<<<< Updated upstream
-		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 61 && mouseY < topPos + 79) {
-			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
-			customTooltipShown = true;
-		}
-		if (mouseX > leftPos + 76 && mouseX < leftPos + 94 && mouseY > topPos + 27 && mouseY < topPos + 45) {
-=======
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 117 && mouseY > topPos + 34 && mouseY < topPos + 52) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 117 && mouseY > topPos + 68 && mouseY < topPos + 86) {
->>>>>>> Stashed changes
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 152 && mouseX < leftPos + 168 && mouseY > topPos + 4 && mouseY < topPos + 20) {
+		if (mouseX > leftPos + 200 && mouseX < leftPos + 216 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
-<<<<<<< Updated upstream
-		if (mouseX > leftPos + 61 && mouseX < leftPos + 107 && mouseY > topPos + 5 && mouseY < topPos + 18) {
-			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_gui_interface_need_an_upgra"), mouseX, mouseY);
-			customTooltipShown = true;
-		}
-		if (mouseX > leftPos + 132 && mouseX < leftPos + 148 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-=======
 		if (mouseX > leftPos + 181 && mouseX < leftPos + 197 && mouseY > topPos + 4 && mouseY < topPos + 20) {
->>>>>>> Stashed changes
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
@@ -96,12 +80,6 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-<<<<<<< Updated upstream
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_treec_sep_nt1.png"), this.leftPos + 77, this.topPos + 45, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-=======
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 220, 180, 220, 180);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 28, this.topPos + 72, 0, 0, 50, 16, 50, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 43, this.topPos + 72, 0, 0, 50, 16, 50, 16);
@@ -109,7 +87,6 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 141, this.topPos + 71, 0, 0, 50, 16, 50, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 85, this.topPos + 6, 0, 0, 50, 16, 50, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 86, this.topPos + 6, 0, 0, 50, 16, 50, 16);
->>>>>>> Stashed changes
 	}
 
 	@Override
@@ -123,15 +100,15 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploadergui.label_uploader"), 64, 7, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 3, 71, -12829636, false);
-		guiGraphics.drawString(this.font, UploaderdebugProcedure.execute(world, x, y, z), 95, 70, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploadergui.label_uploader"), 89, 8, -1, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 30, 76, -1, false);
+		guiGraphics.drawString(this.font, UploaderdebugProcedure.execute(world, x, y, z), 133, 73, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_cross_no_button = new ImageButton(this.leftPos + 152, this.topPos + 4, 16, 16,
+		imagebutton_cross_no_button = new ImageButton(this.leftPos + 200, this.topPos + 4, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					int x = UploaderguiScreen.this.x;
 					int y = UploaderguiScreen.this.y;
@@ -146,7 +123,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
-		imagebutton_help_img = new ImageButton(this.leftPos + 132, this.topPos + 4, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/help_img.png"), ResourceLocation.parse("palamod:textures/screens/help_hover.png")), e -> {
+		imagebutton_help_img = new ImageButton(this.leftPos + 181, this.topPos + 4, 16, 16, new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/help_img.png"), ResourceLocation.parse("palamod:textures/screens/help_hover.png")), e -> {
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

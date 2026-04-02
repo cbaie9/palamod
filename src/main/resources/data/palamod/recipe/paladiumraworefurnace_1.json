@@ -3,11 +3,7 @@
   "category": "misc",
   "experience": 2,
   "cookingtime": 200,
-<<<<<<< Updated upstream
-  "ingredient": "palamod:paladiumrawore",
-=======
   "ingredient": "palamod:paladium_raw_ore",
->>>>>>> Stashed changes
   "result": {
     "id": "palamod:paladium_ingot"
   }

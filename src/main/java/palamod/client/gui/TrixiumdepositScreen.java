@@ -79,7 +79,7 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.trixiumdeposit.label_trixium_deposit_menu"), 35, 7, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(entity), 5, 71, -12829636, false);
+		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 5, 71, -12829636, false);
 	}
 
 	@Override

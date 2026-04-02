@@ -42,7 +42,7 @@ public class KitCommand {
 						index++;
 					}
 
-					PalakitprocessProcedure.execute(world, entity);
+					PalakitprocessProcedure.execute(entity);
 					return 0;
 				})).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -63,7 +63,7 @@ public class KitCommand {
 						index++;
 					}
 
-					PalakitprocessProcedure.execute(world, entity);
+					PalakitprocessProcedure.execute(entity);
 					return 0;
 				}));
 	}

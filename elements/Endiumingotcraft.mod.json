@@ -4,8 +4,12 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "endium_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Endiumnugget"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

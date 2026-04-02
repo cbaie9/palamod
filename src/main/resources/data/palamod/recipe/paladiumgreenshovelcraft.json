@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "green_paladium_craft_group",
   "category": "equipment",
   "ingredients": [
     "palamod:green_paladium_ingot",
@@ -7,7 +8,7 @@
     "minecraft:stick"
   ],
   "result": {
-    "id": "palamod:paladiumgreenshovel",
+    "id": "palamod:green_paladium_shovel",
     "count": 1
   }
 }

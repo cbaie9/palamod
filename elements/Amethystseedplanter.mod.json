@@ -8,9 +8,11 @@
     "texture": "seedplanter_",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Amethyst seedplanter",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

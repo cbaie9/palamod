@@ -2,11 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-<<<<<<< Updated upstream
-    "palamod:elevato_rred",
-=======
     "palamod:elevator_red",
->>>>>>> Stashed changes
     "minecraft:white_dye"
   ],
   "result": {

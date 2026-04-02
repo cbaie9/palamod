@@ -2,7 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -13,7 +12,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -42,9 +40,7 @@ public class XpbottleprocessProcedure {
 			} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0) == 4) {
 				jobs_text = "alchi";
 			}
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
-					File.separator + "jobs.json");
+			jobs = GetjobsfileProcedure.execute(entity);
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 			if (jobs.exists() && money.exists()) {
 				{
@@ -72,11 +68,7 @@ public class XpbottleprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
 									+ (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("xp_jobs", 0) * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_text)).getAsDouble())
-<<<<<<< Updated upstream
-									+ Component.translatable("palamod.procedure.jobswin3").getString() + " " + new ItemStack(PalamodModItems.XPBOTTLE.get()).getDisplayName().getString())), true);
-=======
 									+ Component.translatable("palamod.procedure.jobswin3").getString() + " " + new ItemStack(PalamodModItems.XP_BOTTLE.get()).getDisplayName().getString())), true);
->>>>>>> Stashed changes
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

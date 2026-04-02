@@ -4,8 +4,12 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
-    "group": "",
-    "unlockingItems": [],
+    "group": "ostrya_craft_group",
+    "unlockingItems": [
+      {
+        "value": "TAG:forge:ostrya_wood_log"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

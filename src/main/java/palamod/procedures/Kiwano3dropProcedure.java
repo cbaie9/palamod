@@ -3,8 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -23,7 +21,7 @@ public class Kiwano3dropProcedure {
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {
@@ -40,14 +38,10 @@ public class Kiwano3dropProcedure {
 					e.printStackTrace();
 				}
 			}
-<<<<<<< Updated upstream
-			if (!(world instanceof ServerLevel _serverLevelGR6 && _serverLevelGR6.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) && 60 <= lvl) {
-=======
 			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 17 <= lvl) {
->>>>>>> Stashed changes
 				if (Math.random() < 0.2) {
 					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.KIWANOSEED.get()));
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.KIWANO_SEED.get()));
 						entityToSpawn.setPickUpDelay(10);
 						_level.addFreshEntity(entityToSpawn);
 					}

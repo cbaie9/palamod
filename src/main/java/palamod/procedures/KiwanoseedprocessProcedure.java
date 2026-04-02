@@ -18,7 +18,7 @@ public class KiwanoseedprocessProcedure {
 				&& ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR)) {
 			world.setBlock(BlockPos.containing(x, y + 1, z), PalamodModBlocks.KIWANO_0.get().defaultBlockState(), 3);
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.KIWANOSEED.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.KIWANO_SEED.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}

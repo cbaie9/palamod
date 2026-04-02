@@ -22,7 +22,9 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
@@ -255,6 +257,11 @@ public class CobblebreakerguiMenu extends AbstractContainerMenu implements Palam
 			private final int slot = 8;
 			private int x = CobblebreakerguiMenu.this.x;
 			private int y = CobblebreakerguiMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return stack.is(ItemTags.create(ResourceLocation.parse("palamod:cobblebreaker_upgrades")));
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

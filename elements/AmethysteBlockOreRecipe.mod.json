@@ -4,8 +4,15 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 9,
-    "group": "",
-    "unlockingItems": [],
+    "group": "amethyst_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:AmethysteBlock"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

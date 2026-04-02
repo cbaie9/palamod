@@ -8,9 +8,11 @@
     "texture": "seedplanter_titane",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Titane seedplanter",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {

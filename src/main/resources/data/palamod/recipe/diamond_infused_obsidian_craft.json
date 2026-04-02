@@ -8,15 +8,11 @@
   ],
   "key": {
     "a": "minecraft:diamond",
-<<<<<<< Updated upstream
-    "b": "minecraft:obsidian",
-=======
     "b": "#neoforge:obsidian",
->>>>>>> Stashed changes
     "c": "palamod:paladium_block"
   },
   "result": {
-    "id": "palamod:diamondinfusedobsidian",
+    "id": "palamod:diamond_infused_obsidian",
     "count": 4
   }
 }

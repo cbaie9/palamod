@@ -1,7 +1,5 @@
 package palamod.world.inventory;
 
-import palamod.procedures.ArmorpalahelpguiThisGUIIsOpenedProcedure;
-
 import palamod.init.PalamodModMenus;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -9,10 +7,7 @@ import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
@@ -33,7 +28,6 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-@EventBusSubscriber
 public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
@@ -104,11 +98,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 13, 50) {
 			private final int slot = 1;
@@ -119,11 +108,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 13, 70) {
 			private final int slot = 2;
@@ -132,11 +116,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -164,11 +143,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 81, 50) {
 			private final int slot = 5;
@@ -177,11 +151,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -194,11 +163,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 81, 90) {
 			private final int slot = 7;
@@ -207,11 +171,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -224,11 +183,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 149, 50) {
 			private final int slot = 9;
@@ -237,11 +191,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -254,11 +203,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 149, 90) {
 			private final int slot = 11;
@@ -267,11 +211,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -284,16 +223,16 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 217, 50) {
 			private final int slot = 13;
 			private int x = ArmorpalahelpguiMenu.this.x;
 			private int y = ArmorpalahelpguiMenu.this.y;
+
+			@Override
+			public boolean mayPickup(Player entity) {
+				return false;
+			}
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 217, 70) {
 			private final int slot = 14;
@@ -304,16 +243,16 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 217, 90) {
 			private final int slot = 15;
 			private int x = ArmorpalahelpguiMenu.this.x;
 			private int y = ArmorpalahelpguiMenu.this.y;
+
+			@Override
+			public boolean mayPickup(Player entity) {
+				return false;
+			}
 		}));
 		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 13, 119) {
 			private final int slot = 16;
@@ -322,11 +261,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -339,11 +273,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 13, 159) {
 			private final int slot = 18;
@@ -354,16 +283,16 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 13, 179) {
 			private final int slot = 19;
 			private int x = ArmorpalahelpguiMenu.this.x;
 			private int y = ArmorpalahelpguiMenu.this.y;
+
+			@Override
+			public boolean mayPickup(Player entity) {
+				return false;
+			}
 		}));
 		this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 81, 119) {
 			private final int slot = 20;
@@ -372,11 +301,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -389,11 +313,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 81, 159) {
 			private final int slot = 22;
@@ -402,11 +321,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -419,11 +333,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 149, 119) {
 			private final int slot = 24;
@@ -432,11 +341,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -449,11 +353,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 149, 159) {
 			private final int slot = 26;
@@ -462,11 +361,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -479,11 +373,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 217, 119) {
 			private final int slot = 28;
@@ -492,11 +381,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -509,11 +393,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 217, 159) {
 			private final int slot = 30;
@@ -524,11 +403,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 			public boolean mayPickup(Player entity) {
 				return false;
 			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
-				return false;
-			}
 		}));
 		this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 217, 179) {
 			private final int slot = 31;
@@ -537,11 +411,6 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 
 			@Override
 			public boolean mayPickup(Player entity) {
-				return false;
-			}
-
-			@Override
-			public boolean mayPlace(ItemStack itemstack) {
 				return false;
 			}
 		}));
@@ -664,12 +533,132 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 0)
+						continue;
+					if (j == 1)
+						continue;
+					if (j == 2)
+						continue;
+					if (j == 3)
+						continue;
+					if (j == 5)
+						continue;
+					if (j == 6)
+						continue;
+					if (j == 7)
+						continue;
+					if (j == 8)
+						continue;
+					if (j == 9)
+						continue;
+					if (j == 10)
+						continue;
+					if (j == 11)
+						continue;
+					if (j == 12)
+						continue;
+					if (j == 13)
+						continue;
+					if (j == 14)
+						continue;
+					if (j == 15)
+						continue;
+					if (j == 16)
+						continue;
+					if (j == 17)
+						continue;
+					if (j == 18)
+						continue;
+					if (j == 20)
+						continue;
+					if (j == 21)
+						continue;
+					if (j == 22)
+						continue;
+					if (j == 23)
+						continue;
+					if (j == 24)
+						continue;
+					if (j == 25)
+						continue;
+					if (j == 26)
+						continue;
+					if (j == 27)
+						continue;
+					if (j == 28)
+						continue;
+					if (j == 29)
+						continue;
+					if (j == 30)
+						continue;
+					if (j == 31)
+						continue;
 					playerIn.drop(internal.getStackInSlot(j), false);
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 0)
+						continue;
+					if (i == 1)
+						continue;
+					if (i == 2)
+						continue;
+					if (i == 3)
+						continue;
+					if (i == 5)
+						continue;
+					if (i == 6)
+						continue;
+					if (i == 7)
+						continue;
+					if (i == 8)
+						continue;
+					if (i == 9)
+						continue;
+					if (i == 10)
+						continue;
+					if (i == 11)
+						continue;
+					if (i == 12)
+						continue;
+					if (i == 13)
+						continue;
+					if (i == 14)
+						continue;
+					if (i == 15)
+						continue;
+					if (i == 16)
+						continue;
+					if (i == 17)
+						continue;
+					if (i == 18)
+						continue;
+					if (i == 20)
+						continue;
+					if (i == 21)
+						continue;
+					if (i == 22)
+						continue;
+					if (i == 23)
+						continue;
+					if (i == 24)
+						continue;
+					if (i == 25)
+						continue;
+					if (i == 26)
+						continue;
+					if (i == 27)
+						continue;
+					if (i == 28)
+						continue;
+					if (i == 29)
+						continue;
+					if (i == 30)
+						continue;
+					if (i == 31)
+						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(i, ItemStack.EMPTY);
@@ -686,17 +675,5 @@ public class ArmorpalahelpguiMenu extends AbstractContainerMenu implements Palam
 	@Override
 	public Map<String, Object> getMenuState() {
 		return menuState;
-	}
-
-	@SubscribeEvent
-	public static void onContainerOpen(PlayerContainerEvent.Open event) {
-		Player entity = event.getEntity();
-		if (event.getContainer() instanceof ArmorpalahelpguiMenu menu) {
-			Level world = menu.world;
-			double x = menu.x;
-			double y = menu.y;
-			double z = menu.z;
-			ArmorpalahelpguiThisGUIIsOpenedProcedure.execute(entity);
-		}
 	}
 }

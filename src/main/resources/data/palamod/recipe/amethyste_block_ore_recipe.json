@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "amethyst_craft_group",
   "category": "misc",
   "ingredients": [
     "palamod:amethyst_block"
   ],
   "result": {
-    "id": "palamod:amethyst",
+    "id": "palamod:amethyst_ingot",
     "count": 9
   }
 }

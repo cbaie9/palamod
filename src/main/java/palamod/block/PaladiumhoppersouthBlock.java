@@ -2,11 +2,8 @@ package palamod.block;
 
 import palamod.procedures.PalahopperswapprocessProcedure;
 
-<<<<<<< Updated upstream
-=======
 import palamod.init.PalamodModBlocks;
 
->>>>>>> Stashed changes
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -21,11 +18,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
-<<<<<<< Updated upstream
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
@@ -37,7 +29,6 @@ import net.minecraft.core.BlockPos;
 
 import java.util.function.Consumer;
 
->>>>>>> Stashed changes
 public class PaladiumhoppersouthBlock extends Block {
 	public static final EnumProperty<Direction> FACING = DirectionalBlock.FACING;
 

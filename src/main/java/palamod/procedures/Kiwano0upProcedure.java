@@ -10,6 +10,8 @@ public class Kiwano0upProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (Math.random() < 0.01 && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.FARMLAND) {
 			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.KIWANO_1.get().defaultBlockState(), 3);
+		} else if (Math.random() < 0.02 && (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.FERTILZED_DIRT.get()) {
+			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.KIWANO_1.get().defaultBlockState(), 3);
 		}
 	}
 }

@@ -3,24 +3,24 @@
   "values": [
     "palamod:endium_medium_ring",
     "palamod:small_ring",
-    "palamod:unclaimfinderblue",
+    "palamod:unclaim_finder_blue",
     "palamod:green_paladium_small_ring",
-    "palamod:compressedxpberry",
+    "palamod:compressed_xp_berry",
     "palamod:flat_chest_upgrade",
     "palamod:green_paladium_medium_ring",
     "palamod:endium_big_ring",
     "palamod:pesyblpotion",
     "palamod:endium_small_ring",
-    "palamod:cavernehammer",
-    "palamod:unclaimfinderorange",
-    "palamod:unclaimfinderred",
-    "palamod:unclaimfinder",
+    "palamod:caverne_hammer",
+    "palamod:unclaim_finder_orange",
+    "palamod:unclaim_finder_red",
+    "palamod:unclaim_finder",
     "palamod:extractor_item",
-    "palamod:xpbottle",
+    "palamod:xp_bottle",
     "palamod:paladium_phone",
     "palamod:green_paladium_big_ring",
     "palamod:big_ring",
     "palamod:medium_ring",
-    "palamod:xpberry"
+    "palamod:xp_berry"
   ]
 }

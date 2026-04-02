@@ -44,11 +44,11 @@ public class SpawnerupbreakblockProcedure {
 		String data = "";
 		ItemStack spawner_item = ItemStack.EMPTY;
 		boolean passsetup = false;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.CAVERNEHAMMER.get() && Blocks.SPAWNER == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModBlocks.EMPTYSPAWNER.get().asItem()) {
-				spawner_item = new ItemStack(PalamodModItems.EMPTYSPAWNERITEM.get()).copy();
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.CAVERNE_HAMMER.get() && Blocks.SPAWNER == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModBlocks.EMPTY_SPAWNER.get().asItem()) {
+				spawner_item = new ItemStack(PalamodModItems.EMPTY_SPAWNER_ITEM.get()).copy();
 				passsetup = true;
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.EMPTYSPAWNERITEM.get()) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.EMPTY_SPAWNER_ITEM.get()) {
 				spawner_item = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy();
 			}
 			data = executeCommandGetResult(world, new Vec3(x, y, z), "data get block ~ ~ ~ SpawnData.entity");
@@ -60,11 +60,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-<<<<<<< Updated upstream
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
-=======
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 1);
->>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("zombie") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("zombie"))) {
@@ -75,11 +71,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-<<<<<<< Updated upstream
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
-=======
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 1);
->>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("skeleton") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("creeper"))) {
@@ -90,11 +82,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-<<<<<<< Updated upstream
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
-=======
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 1);
->>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			} else if (data.contains("creeper") && (passsetup || (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("spawner_type", "")).equals("creeper"))) {
@@ -105,11 +93,7 @@ public class SpawnerupbreakblockProcedure {
 				}
 				{
 					final String _tagName = "soul";
-<<<<<<< Updated upstream
-					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("souls", 0) + 0);
-=======
 					final double _tagValue = (spawner_item.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("soul", 0) + 0);
->>>>>>> Stashed changes
 					CustomData.update(DataComponents.CUSTOM_DATA, spawner_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 			}

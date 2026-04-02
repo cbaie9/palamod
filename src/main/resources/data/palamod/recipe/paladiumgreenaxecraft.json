@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "green_paladium_craft_group",
   "category": "equipment",
   "ingredients": [
     "palamod:green_paladium_ingot",
@@ -9,7 +10,7 @@
     "minecraft:stick"
   ],
   "result": {
-    "id": "palamod:paladiumgreenaxe",
+    "id": "palamod:green_paladium_axe",
     "count": 1
   }
 }

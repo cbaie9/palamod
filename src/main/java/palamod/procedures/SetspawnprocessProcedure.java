@@ -25,8 +25,13 @@ public class SetspawnprocessProcedure {
 			return;
 		File home = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\home\\global\\"), File.separator + "spawn.json");
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\global\\"),
+					File.separator + "spawn.json");
+		} else if (IsgameserversideProcedure.execute()) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/spawn/"), File.separator + "spawn.json");
+		}
 		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.VOID_AIR
 				|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CAVE_AIR)
 				&& ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.VOID_AIR

@@ -1,13 +1,12 @@
 package palamod.block;
 
-<<<<<<< Updated upstream
-=======
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
->>>>>>> Stashed changes
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -18,10 +17,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Jacaranda_WoodBlock extends Block {
-<<<<<<< Updated upstream
-	public Jacaranda_WoodBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
-=======
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 15);
 
 	public Jacaranda_WoodBlock(BlockBehaviour.Properties properties) {
@@ -60,12 +55,22 @@ public class Jacaranda_WoodBlock extends Block {
 				return 0;
 			}
 		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape().ignitedByLava().instrument(NoteBlockInstrument.BASS));
->>>>>>> Stashed changes
 	}
 
 	@Override
 	public int getLightBlock(BlockState state) {
 		return 15;
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(0, 0, 0, 16, 16, 16);
+	}
+
+	@Override
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
+		builder.add(BLOCKSTATE);
 	}
 
 	@Override

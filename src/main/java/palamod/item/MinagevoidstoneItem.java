@@ -2,10 +2,6 @@ package palamod.item;
 
 import palamod.procedures.VoidstonetextconfProcedure;
 import palamod.procedures.MvprocessProcedure;
-<<<<<<< Updated upstream
-
-import net.minecraft.world.level.Level;
-=======
 import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.PalamodMod;
@@ -13,7 +9,6 @@ import palamod.PalamodMod;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
->>>>>>> Stashed changes
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -23,16 +18,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
-<<<<<<< Updated upstream
-
-import javax.annotation.Nullable;
-=======
 import net.minecraft.network.chat.Component;
 
 import javax.annotation.Nullable;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class MinagevoidstoneItem extends Item {
 	public MinagevoidstoneItem(Item.Properties properties) {
@@ -45,8 +35,6 @@ public class MinagevoidstoneItem extends Item {
 	}
 
 	@Override
-<<<<<<< Updated upstream
-=======
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
@@ -59,7 +47,6 @@ public class MinagevoidstoneItem extends Item {
 	}
 
 	@Override
->>>>>>> Stashed changes
 	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
 		InteractionResult ar = super.use(world, entity, hand);
 		VoidstonetextconfProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));

@@ -1,6 +1,8 @@
 package palamod.block;
 
-import palamod.procedures.OpencobblebreakerProcedure;
+import palamod.world.inventory.CobblebreakerguiMenu;
+
+import palamod.procedures.CraftableToolTipTextProcedure;
 import palamod.procedures.CobblebreakersetupProcedure;
 import palamod.procedures.CobblebreakerprocessProcedure;
 
@@ -8,11 +10,8 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.block.entity.CobblebreakerBlockEntity;
 
-<<<<<<< Updated upstream
-=======
 import palamod.PalamodMod;
 
->>>>>>> Stashed changes
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,30 +20,28 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
->>>>>>> Stashed changes
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
-<<<<<<< Updated upstream
-=======
 
 import java.util.function.Consumer;
 
 import io.netty.buffer.Unpooled;
->>>>>>> Stashed changes
 
 public class CobblebreakerBlock extends Block implements EntityBlock {
 	public CobblebreakerBlock(BlockBehaviour.Properties properties) {
@@ -73,14 +70,19 @@ public class CobblebreakerBlock extends Block implements EntityBlock {
 	@Override
 	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
 		super.useWithoutItem(blockstate, world, pos, entity, hit);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		double hitX = hit.getLocation().x;
-		double hitY = hit.getLocation().y;
-		double hitZ = hit.getLocation().z;
-		Direction direction = hit.getDirection();
-		OpencobblebreakerProcedure.execute(world, x, y, z, entity);
+		if (entity instanceof ServerPlayer player) {
+			player.openMenu(new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return Component.literal("Cobblebreaker");
+				}
+
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new CobblebreakerguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+				}
+			}, pos);
+		}
 		return InteractionResult.SUCCESS;
 	}
 

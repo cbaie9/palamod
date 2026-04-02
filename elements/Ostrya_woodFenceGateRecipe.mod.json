@@ -4,8 +4,15 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "ostrya_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Ostrya_woodFenceGate"
+      },
+      {
+        "value": "CUSTOM:Ostrya_woodPlanks"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModGameRules;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -17,13 +19,6 @@ public class FeedprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-<<<<<<< Updated upstream
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 900, 1, false, false));
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"tellraw @p [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"You has been feed\",\"color\":\"gold\"}]");
-=======
 		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.COMMANDFEEDNOPERMACCESS) || entity instanceof Player _playerCmd1 && _playerCmd1.hasPermissions(2)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 900, 1, false, false));
@@ -36,6 +31,5 @@ public class FeedprocessProcedure {
 						("tellraw @p [\"\",{\"text\":\"[ Palamod : \",\"color\":\"dark_red\"},{\"text\":\"/furnace\",\"color\":\"gold\"},{\"text\":\" ] :\",\"color\":\"dark_red\"},{\"text\":\" " + ""
 								+ Component.translatable("palamod.procedure.noperm").getString() + "\",\"color\":\"gold\"}]"));
 		}
->>>>>>> Stashed changes
 	}
 }

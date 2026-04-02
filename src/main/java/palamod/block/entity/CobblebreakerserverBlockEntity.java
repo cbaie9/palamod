@@ -32,7 +32,7 @@ public class CobblebreakerserverBlockEntity extends RandomizableContainerBlockEn
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public CobblebreakerserverBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.COBBLEBREAKERSERVER.get(), position, state);
+		super(PalamodModBlockEntities.COBBLEBREAKER_SERVER.get(), position, state);
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class CobblebreakerserverBlockEntity extends RandomizableContainerBlockEn
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("cobblebreakerserver");
+		return Component.literal("cobblebreaker_server");
 	}
 
 	@Override

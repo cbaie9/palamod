@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "amethyst_craft_group",
   "category": "equipment",
   "pattern": [
     "a a",
@@ -7,11 +8,7 @@
     "aaa"
   ],
   "key": {
-<<<<<<< Updated upstream
-    "a": "palamod:amethyst"
-=======
     "a": "palamod:amethyst_ingot"
->>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:amethyst_armor_chestplate",

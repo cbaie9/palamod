@@ -36,7 +36,7 @@ public class StickofgodsprocessProcedure {
 			}
 			{
 				final String _tagName = "name";
-				final String _tagValue = (new ItemStack(PalamodModItems.STICKOFGODS.get()).getDisplayName().getString());
+				final String _tagValue = (new ItemStack(PalamodModItems.STICK_OF_GODS.get()).getDisplayName().getString());
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
 			}
 			{

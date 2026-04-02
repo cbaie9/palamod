@@ -1,10 +1,6 @@
 package palamod.item;
 
 import palamod.procedures.MagicaltoolsprocessProcedure;
-<<<<<<< Updated upstream
-
-import net.minecraft.world.item.context.UseOnContext;
-=======
 import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.PalamodMod;
@@ -12,17 +8,14 @@ import palamod.PalamodMod;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
->>>>>>> Stashed changes
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.network.chat.Component;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class MagicaltoolItem extends Item {
 	public MagicaltoolItem(Item.Properties properties) {
@@ -32,8 +25,6 @@ public class MagicaltoolItem extends Item {
 	@Override
 	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
 		return ItemUseAnimation.EAT;
-<<<<<<< Updated upstream
-=======
 	}
 
 	@Override
@@ -46,7 +37,6 @@ public class MagicaltoolItem extends Item {
 				componentConsumer.accept(Component.literal(line));
 			}
 		}
->>>>>>> Stashed changes
 	}
 
 	@Override

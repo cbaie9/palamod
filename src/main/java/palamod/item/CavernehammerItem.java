@@ -1,8 +1,5 @@
 package palamod.item;
 
-<<<<<<< Updated upstream
-import net.minecraft.world.item.Item;
-=======
 import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.PalamodMod;
@@ -16,13 +13,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class CavernehammerItem extends Item {
 	public CavernehammerItem(Item.Properties properties) {
 		super(properties.durability(256));
-<<<<<<< Updated upstream
-=======
 	}
 
 	@Override
@@ -40,6 +34,5 @@ public class CavernehammerItem extends Item {
 				componentConsumer.accept(Component.literal(line));
 			}
 		}
->>>>>>> Stashed changes
 	}
 }

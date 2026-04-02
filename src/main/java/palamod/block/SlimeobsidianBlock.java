@@ -1,14 +1,11 @@
 package palamod.block;
 
 import palamod.procedures.SlimeobsidianprocessProcedure;
-<<<<<<< Updated upstream
-=======
 import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
->>>>>>> Stashed changes
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -21,11 +18,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
-<<<<<<< Updated upstream
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
@@ -38,7 +30,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class SlimeobsidianBlock extends Block {
 	public SlimeobsidianBlock(BlockBehaviour.Properties properties) {

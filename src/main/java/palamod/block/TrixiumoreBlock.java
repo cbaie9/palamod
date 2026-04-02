@@ -7,11 +7,7 @@ import net.minecraft.world.level.block.Block;
 
 public class TrixiumoreBlock extends Block {
 	public TrixiumoreBlock(BlockBehaviour.Properties properties) {
-<<<<<<< Updated upstream
-		super(properties.strength(1.3f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
-=======
 		super(properties.strength(1.3f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
->>>>>>> Stashed changes
 	}
 
 	@Override

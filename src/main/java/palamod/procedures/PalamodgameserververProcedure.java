@@ -13,9 +13,9 @@ public class PalamodgameserververProcedure {
 		double build = 0;
 		double devloppement_stade = 0;
 		double patch_addon_ver = 0;
-		minecraft_version = "1.20.1";
+		minecraft_version = "g";
 		beta_num = 1.2;
-		build = Math.round(10);
+		build = Math.round(53);
 		patch_addon_ver = 0;
 		devloppement_stade = 1;
 		update_name = "Cat-fac";

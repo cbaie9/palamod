@@ -1,22 +1,17 @@
 package palamod.item;
 
 import palamod.procedures.FullendiuminvisibleProcedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 
-<<<<<<< Updated upstream
-=======
 import palamod.PalamodMod;
 
->>>>>>> Stashed changes
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.ArmorMaterial;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
->>>>>>> Stashed changes
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
@@ -26,18 +21,12 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.network.chat.Component;
->>>>>>> Stashed changes
 import net.minecraft.core.registries.Registries;
 
 import javax.annotation.Nullable;
 
-<<<<<<< Updated upstream
-=======
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 import java.util.Map;
 
 public abstract class EndiumArmorItem extends Item {
@@ -55,8 +44,6 @@ public abstract class EndiumArmorItem extends Item {
 		}
 
 		@Override
-<<<<<<< Updated upstream
-=======
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
 			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
@@ -69,7 +56,6 @@ public abstract class EndiumArmorItem extends Item {
 		}
 
 		@Override
->>>>>>> Stashed changes
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
 			super.inventoryTick(itemstack, world, entity, equipmentSlot);
 			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
@@ -84,8 +70,6 @@ public abstract class EndiumArmorItem extends Item {
 		}
 
 		@Override
-<<<<<<< Updated upstream
-=======
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
 			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
@@ -98,7 +82,6 @@ public abstract class EndiumArmorItem extends Item {
 		}
 
 		@Override
->>>>>>> Stashed changes
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
 			super.inventoryTick(itemstack, world, entity, equipmentSlot);
 			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {
@@ -113,8 +96,6 @@ public abstract class EndiumArmorItem extends Item {
 		}
 
 		@Override
-<<<<<<< Updated upstream
-=======
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
 			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
@@ -127,7 +108,6 @@ public abstract class EndiumArmorItem extends Item {
 		}
 
 		@Override
->>>>>>> Stashed changes
 		public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
 			super.inventoryTick(itemstack, world, entity, equipmentSlot);
 			if (entity instanceof Player player && (equipmentSlot != null && equipmentSlot.getType() == EquipmentSlot.Type.HUMANOID_ARMOR)) {

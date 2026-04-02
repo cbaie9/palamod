@@ -4,12 +4,25 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "grinder_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:TitaneBlock"
+      },
+      {
+        "value": "CUSTOM:Blockpatern"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "craftingBookCategory": "MISC",
+    "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
       {

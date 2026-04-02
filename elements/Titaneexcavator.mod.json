@@ -8,9 +8,11 @@
     "texture": "titane_excavator",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Titane Exavator",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 22,
     "damageVsEntity": 3.0,
     "usageCount": 3999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:TitaneIngot"

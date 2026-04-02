@@ -54,23 +54,87 @@ public record AdminshopmenuButtonMessage(int buttonID, int x, int y, int z) impl
 		}
 		if (buttonID == 1) {
 
-			ConnectadhoreProcedure.execute(world, x, y, z, entity);
+			Connectadminshoprow1Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			AdminshopblockconnectProcedure.execute(world, x, y, z, entity);
+			Connectadminshoprow2col1Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			ConnectadminshopplantProcedure.execute(world, x, y, z, entity);
+			Connectadminshoprow3col1Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			ConnectadminshopmobsProcedure.execute(world, x, y, z, entity);
+			Connectadminshoprow1col2Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			ConnectadminshoputilitiesProcedure.execute(world, x, y, z, entity);
+			Connectadminshoprow2col2Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 6) {
+
+			Connectadminshoprow3col2Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 7) {
+
+			Connectadminshoprow1col3Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 8) {
+
+			Connectadminshoprow2col3Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 9) {
+
+			Connectadminshoprow3col3Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 10) {
+
+			Connectadminshoprow1col4Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 11) {
+
+			Connectadminshoprow2col4Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 12) {
+
+			Connectadminshoprow3col4Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 13) {
+
+			Connectadminshoprow1col5Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 14) {
+
+			Connectadminshoprow2col5Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 15) {
+
+			Connectadminshoprow3col5Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 16) {
+
+			Connectadminshoprow1col6Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 17) {
+
+			Connectadminshoprow2col6Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 18) {
+
+			Connectadminshoprow3col6Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 19) {
+
+			Connectadminshoprow1col7Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 20) {
+
+			Connectadminshoprow2col7Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 21) {
+
+			Connectadminshoprow3col7Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "jacaranda_craft_group",
   "category": "misc",
   "pattern": [
     "a",

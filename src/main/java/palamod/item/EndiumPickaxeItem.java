@@ -1,6 +1,8 @@
 package palamod.item;
 
+import palamod.procedures.Paladiumpickaxehaste3Procedure;
 import palamod.procedures.HammernormalProcedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.init.PalamodModItems;
 
@@ -12,23 +14,12 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
->>>>>>> Stashed changes
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
-<<<<<<< Updated upstream
-import net.minecraft.tags.TagKey;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.BlockPos;
-=======
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
@@ -43,7 +34,6 @@ import net.minecraft.core.BlockPos;
 import javax.annotation.Nullable;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 @EventBusSubscriber
 public class EndiumPickaxeItem extends Item {
@@ -64,8 +54,6 @@ public class EndiumPickaxeItem extends Item {
 		HammernormalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
-<<<<<<< Updated upstream
-=======
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
@@ -85,5 +73,4 @@ public class EndiumPickaxeItem extends Item {
 		if (equipmentSlot == EquipmentSlot.MAINHAND)
 			Paladiumpickaxehaste3Procedure.execute(entity);
 	}
->>>>>>> Stashed changes
 }

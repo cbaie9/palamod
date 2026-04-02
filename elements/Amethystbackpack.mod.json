@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "amethyst_backpack",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],

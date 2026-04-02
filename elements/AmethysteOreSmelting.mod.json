@@ -4,45 +4,20 @@
   "definition": {
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "amethyst_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:AmethysteOre"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 2.8,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
-    ],
-    "recipeReturnStack": {
-      "value": ""
-    },
     "smeltingInputStack": {
       "value": "CUSTOM:AmethysteOre"
     },

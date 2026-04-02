@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "palamod:speed",
-    "palamod:hammer_fortune",
-    "palamod:smelt",
-    "palamod:botteled"
+    "palamod:smelt"
   ]
 }

@@ -238,7 +238,7 @@ public class PaladiumcrusherV2Procedure {
 		}
 		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.GOLD_MIXEDCOAL.get()
 				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.EGGPLANT.get() && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") < 16
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 59 || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST.get()
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 59 || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() == PalamodModItems.AMETHYST_INGOT.get()
 						|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0)) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);

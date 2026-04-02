@@ -28,7 +28,7 @@ public class XpbushlowBlockEntity extends RandomizableContainerBlockEntity imple
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public XpbushlowBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.XPBUSHLOW.get(), position, state);
+		super(PalamodModBlockEntities.XP_BUSH_LOW.get(), position, state);
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class XpbushlowBlockEntity extends RandomizableContainerBlockEntity imple
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("xpbushlow");
+		return Component.literal("xp_bush_low");
 	}
 
 	@Override

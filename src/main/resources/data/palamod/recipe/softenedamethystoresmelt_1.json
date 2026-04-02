@@ -5,6 +5,6 @@
   "cookingtime": 200,
   "ingredient": "palamod:softened_amethyst_ore",
   "result": {
-    "id": "palamod:amethyst"
+    "id": "palamod:amethyst_ingot"
   }
 }

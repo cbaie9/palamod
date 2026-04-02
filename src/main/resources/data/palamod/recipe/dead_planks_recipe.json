@@ -3,7 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    "#palapalamod:dead_logs"
+    "#palamod:dead_logs"
   ],
   "result": {
     "id": "palamod:dead_planks",

@@ -173,19 +173,19 @@ public class Luckyprocessv1Procedure {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("Vous avez eu un event non impl\uFFFDment\uFFFD ( Analyste ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"), true);
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack42 = new ItemStack(PalamodModItems.CHUNKANASLYSER.get()).copy();
+					ItemStack _setstack42 = new ItemStack(PalamodModItems.CHUNK_ANASLYSER.get()).copy();
 					_setstack42.setCount(1);
 					_menu.getSlots().get(3).set(_setstack42);
-					ItemStack _setstack43 = new ItemStack(PalamodModItems.CHUNKANASLYSER.get()).copy();
+					ItemStack _setstack43 = new ItemStack(PalamodModItems.CHUNK_ANASLYSER.get()).copy();
 					_setstack43.setCount(1);
 					_menu.getSlots().get(4).set(_setstack43);
-					ItemStack _setstack44 = new ItemStack(PalamodModItems.CHUNKANASLYSER.get()).copy();
+					ItemStack _setstack44 = new ItemStack(PalamodModItems.CHUNK_ANASLYSER.get()).copy();
 					_setstack44.setCount(1);
 					_menu.getSlots().get(5).set(_setstack44);
 					_player.containerMenu.broadcastChanges();
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.CHUNKANASLYSER.get()).copy();
+					ItemStack _setstack = new ItemStack(PalamodModItems.CHUNK_ANASLYSER.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
@@ -607,18 +607,18 @@ public class Luckyprocessv1Procedure {
 			if (Random >= 156700 && Random <= 157200) {
 				PalamodModVariables.lucky_name = " Comment t'a eu \uFFFDa";
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack.setCount(12);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
-					ItemStack _setstack176 = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack176 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack176.setCount(1);
 					_menu.getSlots().get(3).set(_setstack176);
-					ItemStack _setstack177 = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack177 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack177.setCount(1);
 					_menu.getSlots().get(4).set(_setstack177);
-					ItemStack _setstack178 = new ItemStack(PalamodModItems.ORANGEBLUESEED.get()).copy();
+					ItemStack _setstack178 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 					_setstack178.setCount(1);
 					_menu.getSlots().get(5).set(_setstack178);
 					_player.containerMenu.broadcastChanges();

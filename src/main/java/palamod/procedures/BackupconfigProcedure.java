@@ -25,14 +25,10 @@ public class BackupconfigProcedure {
 		double lvl = 0;
 		File jobs = new File("");
 		if (entity instanceof Player _playerCmd0 && _playerCmd0.hasPermissions(4)) {
-<<<<<<< Updated upstream
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\serverconfig\\palamod\\"));
-=======
 			jobs = GetjobsfileProcedure.execute(entity);
->>>>>>> Stashed changes
 			if (jobs.exists() && jobs.isDirectory()) {
 				try {
-					FileOutputStream _fos = new FileOutputStream((FMLPaths.GAMEDIR.get().toString() + "\\backup\\palamod\\config\\backup-" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + ".zip"));
+					FileOutputStream _fos = new FileOutputStream(("backup_.zip" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + "_.zip"));
 					ZipOutputStream _zipOut = new ZipOutputStream(_fos);
 					new Object() {
 						public static void zipFile(File fileToZip, String fileName, ZipOutputStream zipOut) throws IOException {

@@ -16,11 +16,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedamethystoreBlock extends Block {
 	public SoftenedamethystoreBlock(BlockBehaviour.Properties properties) {
-<<<<<<< Updated upstream
-		super(properties.sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).instrument(NoteBlockInstrument.BASEDRUM));
-=======
 		super(properties.sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
->>>>>>> Stashed changes
 	}
 
 	@Override

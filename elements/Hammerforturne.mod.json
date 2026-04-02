@@ -4,7 +4,7 @@
   "definition": {
     "name": "Fortune",
     "supportedSlots": "any",
-    "weight": 10,
+    "weight": 1,
     "anvilCost": 1,
     "maxLevel": 3,
     "damageModifier": 0,
@@ -23,9 +23,9 @@
         "value": "CUSTOM:Creativehammer"
       }
     ],
-    "isTreasureEnchantment": false,
-    "isCurse": false,
-    "canGenerateInLootTables": true,
-    "canVillagerTrade": true
+    "isTreasureEnchantment": true,
+    "isCurse": true,
+    "canGenerateInLootTables": false,
+    "canVillagerTrade": false
   }
 }

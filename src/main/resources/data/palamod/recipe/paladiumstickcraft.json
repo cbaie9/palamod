@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "paladium_craft_group",
   "category": "misc",
   "ingredients": [
     "palamod:paladium_ingot",

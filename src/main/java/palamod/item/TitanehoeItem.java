@@ -1,13 +1,8 @@
 package palamod.item;
 
+import palamod.procedures.CraftableToolTipTextProcedure;
 import palamod.procedures.BighoeprocessProcedure;
 
-<<<<<<< Updated upstream
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.ToolMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.HoeItem;
-=======
 import palamod.PalamodMod;
 
 import net.minecraft.world.item.context.UseOnContext;
@@ -18,20 +13,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.entity.Entity;
->>>>>>> Stashed changes
 import net.minecraft.world.InteractionResult;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
-<<<<<<< Updated upstream
-import net.minecraft.core.registries.Registries;
-
-public class TitanehoeItem extends HoeItem {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 4000, 4f, 0, 2, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:titanehoe_repair_items")));
-
-	public TitanehoeItem(Item.Properties properties) {
-		super(TOOL_MATERIAL, 3f, -3f, properties);
-=======
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
@@ -54,7 +39,6 @@ public class TitanehoeItem extends HoeItem {
 				componentConsumer.accept(Component.literal(line));
 			}
 		}
->>>>>>> Stashed changes
 	}
 
 	@Override

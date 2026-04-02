@@ -73,6 +73,9 @@
           "name": "imagebutton_help_button",
           "image": "button_helpjobs_v1.png",
           "hoveredImage": "button_helpjobs_poi_v1.png",
+          "displayCondition": {
+            "name": "Returnfalse"
+          },
           "x": 140,
           "y": 133,
           "locked": false

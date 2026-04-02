@@ -1,0 +1,10 @@
+{
+  "parent": "palamod:custom/anvil_vanilla_model",
+  "textures": {
+    "all": "palamod:block/anvil_money_base",
+    "particle": "palamod:block/anvil_money_base",
+    "top": "palamod:block/anvil_money_top",
+    "body": "palamod:block/anvil_money_base"
+  },
+  "render_type": "solid"
+}

@@ -1,5 +1,7 @@
 package palamod.item;
 
+import palamod.procedures.PotgenchantProcedure;
+
 import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
@@ -32,11 +34,7 @@ import java.util.function.Consumer;
 
 @EventBusSubscriber
 public class CreativepotgItem extends Item {
-<<<<<<< Updated upstream
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 11050f, 0, 1000, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:creativepotg_repair_items")));
-=======
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 11050f, 0, 1000, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:creative_potg_repair_items")));
->>>>>>> Stashed changes
 
 	public CreativepotgItem(Item.Properties properties) {
 		super(TOOL_MATERIAL.applyToolProperties(properties, BlockTags.MINEABLE_WITH_PICKAXE, 5.5f, -2.5f, 0)
@@ -46,7 +44,7 @@ public class CreativepotgItem extends Item {
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.CREATIVEPOTG.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.CREATIVE_POTG.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override
@@ -67,6 +65,7 @@ public class CreativepotgItem extends Item {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		itemstack.hurtAndBreak(1, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
+		PotgenchantProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return true;
 	}
 
@@ -78,10 +77,6 @@ public class CreativepotgItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-<<<<<<< Updated upstream
-		componentConsumer.accept(Component.translatable("item.palamod.creativepotg.description_0"));
-=======
 		componentConsumer.accept(Component.translatable("item.palamod.creative_potg.description_0"));
->>>>>>> Stashed changes
 	}
 }

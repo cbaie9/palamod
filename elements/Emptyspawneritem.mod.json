@@ -2,15 +2,11 @@
   "_fv": 79,
   "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "empty_broken_mob_spawner",
-    "customModelName": "Normal",
+    "customModelName": "empty_spawner_item:default",
     "guiTexture": "",
-    "customProperties": {
-      "souls": {
-        "name": "Getcustomunix"
-      }
-    },
+    "customProperties": {},
     "states": [],
     "animations": [],
     "name": "Empty spawner item",
@@ -39,13 +35,17 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Gettooptipcavernhammer"
     },
     "glowCondition": {
       "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
+    "onRightClickedOnBlock": {
+      "name": "Placeemptyspawner"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

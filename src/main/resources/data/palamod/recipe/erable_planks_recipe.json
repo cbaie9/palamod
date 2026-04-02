@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "erable_craft_group",
   "category": "building",
   "ingredients": [
     "#forge:erable__log"

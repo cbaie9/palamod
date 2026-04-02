@@ -1,5 +1,6 @@
 {
   "type": "minecraft:smelting",
+  "group": "titane_craft_group",
   "category": "misc",
   "experience": 3.5,
   "cookingtime": 200,

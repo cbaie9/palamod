@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:shovel_pattern",
+    "palamod:axe_patern",
+    "palamod:socket_pattern",
+    "palamod:block_pattern",
+    "palamod:pickaxe_pattern",
+    "palamod:broadsword_pattern",
+    "palamod:fastsword_pattern",
+    "palamod:ingot_pattern",
+    "palamod:sword_pattern",
+    "palamod:hammer_pattern"
+  ]
+}

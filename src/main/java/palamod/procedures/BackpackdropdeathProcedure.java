@@ -33,7 +33,7 @@ public class BackpackdropdeathProcedure {
             return;
         
         String[] paths = new String[5];
-        if (IsgameclientsideProcedure.execute()) {
+        if (!IsgameserversideProcedure.execute()) {
             String worldName = world.isClientSide() ? 
                 Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : 
                 ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName();

@@ -2,11 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -24,7 +22,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -51,10 +48,8 @@ public class CobblebreakergivexpamethystProcedure {
 				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
 			}
 		}
-		if (IsgameclientsideProcedure.execute()) {
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
-					File.separator + "jobs.json");
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			jobs = GetjobsfileProcedure.execute(entity);
 			if (jobs.exists()) {
 				{
 					try {
@@ -75,11 +70,7 @@ public class CobblebreakergivexpamethystProcedure {
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0)
 											|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0))
-<<<<<<< Updated upstream
-									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XPBOTTLE.get()) {
-=======
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
->>>>>>> Stashed changes
 								{
 									final String _tagName = "xp_jobs";
 									final double _tagValue = (8 * main.get("multi_exp").getAsDouble()

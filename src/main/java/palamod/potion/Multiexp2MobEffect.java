@@ -13,6 +13,6 @@ public class Multiexp2MobEffect extends MobEffect {
 
 	@Override
 	public void onEffectStarted(LivingEntity entity, int amplifier) {
-		Addmultixp2fileProcedure.execute(entity.level(), entity);
+		Addmultixp2fileProcedure.execute(entity);
 	}
 }

@@ -27,7 +27,7 @@ public class XpbushprocessProcedure {
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "xp_bush_grown_count") >= 512) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = PalamodModBlocks.XPBUSHON.get().defaultBlockState();
+				BlockState _bs = PalamodModBlocks.XP_BUSH_ON.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Property<?> _propertyOld : _bso.getProperties()) {
 					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -57,7 +57,7 @@ public class XpbushprocessProcedure {
 		} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "xp_bush_grown_count") >= 256) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockState _bs = PalamodModBlocks.XPBUSH.get().defaultBlockState();
+				BlockState _bs = PalamodModBlocks.XP_BUSH.get().defaultBlockState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Property<?> _propertyOld : _bso.getProperties()) {
 					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

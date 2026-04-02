@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": "palamod:cobbled_soft_stone",
   "result": {
-    "id": "palamod:cobbledsoftstoneslab",
+    "id": "palamod:cobbled_soft_stone_slab",
     "count": 2
   }
 }

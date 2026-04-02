@@ -117,7 +117,7 @@ public class ObsidianspikeprocessProcedure {
 					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYS_TOBSIDIAN_SPIKE.get()) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYST_OBSIDIAN_SPIKE.get()) {
 			{
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockState _bs = PalamodModBlocks.AMETHYST_SPIKE.get().defaultBlockState();

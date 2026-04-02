@@ -34,7 +34,7 @@ public class PalahelpstickmodestrenghtProcedure {
 			ItemStack _setstack4 = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
 			_setstack4.setCount(1);
 			_menu.getSlots().get(4).set(_setstack4);
-			ItemStack _setstack5 = new ItemStack(PalamodModItems.STRENGHTSTICK.get()).copy();
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.STRENGHT_STICK.get()).copy();
 			_setstack5.setCount(1);
 			_menu.getSlots().get(5).set(_setstack5);
 			ItemStack _setstack6 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();

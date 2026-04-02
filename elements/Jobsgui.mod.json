@@ -260,6 +260,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "Isgameclientside"
+          },
           "x": 47,
           "y": 154,
           "locked": false
@@ -270,6 +273,9 @@
         "data": {
           "sprite": "sprite_last_unlocked_miner.png",
           "spritesCount": 25,
+          "displayCondition": {
+            "name": "Isgameclientside"
+          },
           "spriteIndex": {
             "fixedValue": 0.0,
             "name": "Lastunlockedgetsprite"

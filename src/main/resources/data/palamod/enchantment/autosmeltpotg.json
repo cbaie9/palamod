@@ -3,14 +3,14 @@
     "translate": "enchantment.palamod.autosmeltpotg"
   },
   "supported_items": [
-    "palamod:pickaxeofthegodslv_18",
-    "palamod:pickaxeofthegodslv_19",
-    "palamod:pickaxeofthegodslv_17",
-    "palamod:pickaxeofthegodslv_20",
-    "palamod:creativepotg"
+    "palamod:pickaxe_of_the_gods_lv18",
+    "palamod:pickaxe_of_the_gods_lv19",
+    "palamod:pickaxe_of_the_gods_lv17",
+    "palamod:pickaxe_of_the_gods_lv20",
+    "palamod:creative_potg"
   ],
   "weight": 1,
-  "max_level": 3,
+  "max_level": 1,
   "min_cost": {
     "base": 1,
     "per_level_above_first": 10

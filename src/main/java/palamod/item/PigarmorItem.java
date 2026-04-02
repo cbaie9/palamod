@@ -15,13 +15,8 @@ import java.util.Map;
 
 public abstract class PigarmorItem extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(15, Map.of(ArmorType.BOOTS, 2, ArmorType.LEGGINGS, 5, ArmorType.CHESTPLATE, 6, ArmorType.HELMET, 2, ArmorType.BODY, 6), 9,
-<<<<<<< Updated upstream
-			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_generic")), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pigarmor_repair_items")),
-			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:pigarmor")));
-=======
 			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_generic")), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pig_armor_repair_items")),
 			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:pig_armor")));
->>>>>>> Stashed changes
 
 	private PigarmorItem(Item.Properties properties) {
 		super(properties);

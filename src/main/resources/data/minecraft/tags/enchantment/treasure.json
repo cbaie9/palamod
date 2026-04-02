@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-    "palamod:onemoreupgradeenchant"
+    "palamod:autosmeltpotg",
+    "palamod:speed",
+    "palamod:hammer_fortune",
+    "palamod:onemoreupgradeenchant",
+    "palamod:nomodifier",
+    "palamod:botteled",
+    "palamod:chargedenchant",
+    "palamod:bighole"
   ]
 }

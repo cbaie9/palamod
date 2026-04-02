@@ -8,11 +8,7 @@
   ],
   "key": {
     "a": "minecraft:diamond_sword",
-<<<<<<< Updated upstream
-    "b": "palamod:amethyst"
-=======
     "b": "palamod:amethyst_ingot"
->>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:amethyst_spike",

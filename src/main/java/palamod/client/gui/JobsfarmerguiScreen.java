@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsfarmerguiMenu;
 
+import palamod.procedures.ReturnfalseProcedure;
 import palamod.procedures.JobsfarmergetxpprogressbarProcedure;
 import palamod.procedures.GetxpfarmertextProcedure;
 import palamod.procedures.GetxpfarmerProcedure;
@@ -58,7 +59,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36) {
-			String hoverText = GetxpfarmertextProcedure.execute(world, entity);
+			String hoverText = GetxpfarmertextProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
@@ -73,13 +74,8 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/jobsminergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 80, 176, 80);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-<<<<<<< Updated upstream
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26,
-				Mth.clamp((int) JobsfarmergetxpprogressbarProcedure.execute(world, entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
-=======
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsfarmergetxpprogressbarProcedure.execute(entity) * 145, 0, 14355), 0,
 				145, 10, 14500, 10);
->>>>>>> Stashed changes
 	}
 
 	@Override
@@ -94,7 +90,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsfarmergui.label_jobs_miner"), 9, 7, -1, false);
-		guiGraphics.drawString(this.font, GetxpfarmerProcedure.execute(world, entity), 13, 38, -1, false);
+		guiGraphics.drawString(this.font, GetxpfarmerProcedure.execute(entity), 13, 38, -1, false);
 	}
 
 	@Override
@@ -120,14 +116,10 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-<<<<<<< Updated upstream
-				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-=======
 				int x = JobsfarmerguiScreen.this.x;
 				int y = JobsfarmerguiScreen.this.y;
 				if (ReturnfalseProcedure.execute())
 					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
->>>>>>> Stashed changes
 			}
 		};
 		this.addRenderableWidget(imagebutton_help_button);

@@ -167,7 +167,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "palamod:jumpstick",
+          "name": "palamod:jump_stick",
           "weight": 30,
           "functions": [
             {

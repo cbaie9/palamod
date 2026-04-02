@@ -2,24 +2,19 @@
   "replace": false,
   "values": [
     "palamod:extractor",
-<<<<<<< Updated upstream
-    "palamod:titane_spike",
-=======
     "palamod:findium_ore",
     "palamod:titane_spike",
     "palamod:softened_trixium_ore",
     "palamod:softened_amethyst_ore",
->>>>>>> Stashed changes
     "palamod:amethyst_stairs",
     "palamod:findium_block",
     "palamod:paladium_green_block",
+    "palamod:money_anvil",
     "palamod:paladium_forge",
-<<<<<<< Updated upstream
-=======
     "palamod:trixium_ore",
->>>>>>> Stashed changes
     "palamod:softened_findium_ore",
     "palamod:amethyst_block",
+    "palamod:amethyst_ore",
     "palamod:softened_gold_ore",
     "palamod:deepslate_findium_ore",
     "palamod:paladium_spike",

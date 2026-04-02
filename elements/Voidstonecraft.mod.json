@@ -1,0 +1,59 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "Blocks.CHEST"
+      },
+      {
+        "value": "CUSTOM:Voidstone"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": "TAG:c:chests"
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Amethyste"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Voidstone"
+    },
+    "name": "voidstonecraft",
+    "namespace": "mod"
+  }
+}

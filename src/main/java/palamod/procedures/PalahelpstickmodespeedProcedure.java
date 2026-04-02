@@ -34,7 +34,7 @@ public class PalahelpstickmodespeedProcedure {
 			ItemStack _setstack4 = new ItemStack(PalamodModItems.COMPRESSED_TITANE.get()).copy();
 			_setstack4.setCount(1);
 			_menu.getSlots().get(4).set(_setstack4);
-			ItemStack _setstack5 = new ItemStack(PalamodModItems.SPEEDSTICK.get()).copy();
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.SPEED_STICK.get()).copy();
 			_setstack5.setCount(1);
 			_menu.getSlots().get(5).set(_setstack5);
 			ItemStack _setstack6 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();

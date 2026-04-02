@@ -1,14 +1,9 @@
 package palamod.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
 public class Grindertrans0Procedure {
-	public static String execute(Entity entity) {
-		if (entity == null)
-			return "";
-		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
-			return "Inventaire";
-		}
-		return "Inventory";
+	public static String execute() {
+		return Component.translatable("container.inventory").getString();
 	}
 }

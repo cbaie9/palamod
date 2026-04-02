@@ -18,11 +18,14 @@
     "itemTexture": "",
     "particleTexture": "",
     "blockSetType": "OAK",
+    "pottedPlant": {
+      "value": ""
+    },
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -38,7 +41,8 @@
     "customProperties": [],
     "name": "Spawn controller",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "hardness": 1.0,
     "resistance": 10.0,
@@ -48,7 +52,11 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
@@ -62,7 +70,7 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -76,6 +84,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -113,14 +124,25 @@
     "vibrationSensitivityRadius": {
       "fixedValue": 7.0
     },
-    "hasInventory": false,
-    "openGUIOnRightClick": false,
-    "inventorySize": 9,
-    "inventoryStackSize": 99,
+    "hasInventory": true,
+    "guiBoundTo": "Spawncontrollergui",
+    "openGUIOnRightClick": true,
+    "inventorySize": 4,
+    "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
+    "inventoryComparatorPower": false,
+    "inventoryOutSlotIDs": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inventoryInSlotIDs": [
+      0,
+      1,
+      2,
+      3
+    ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -129,6 +151,15 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "Debugcheckstructurespawnercontroller"
+    },
+    "onBlockAdded": {
+      "name": "Spawncontrollertick"
+    },
+    "onTickUpdate": {
+      "name": "Spawncontrollertick"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

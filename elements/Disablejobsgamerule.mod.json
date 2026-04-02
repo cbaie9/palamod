@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Disable jobs",
+    "description": "Disable Palamod Jobs system and it's componants ( Notice : this gamerule will overright the gamerule Locked Use and Locked Craft to let players have access to item without Jobs system )",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

@@ -19,6 +19,9 @@
     "particleTexture": "",
     "blockBase": "TrapDoor",
     "blockSetType": "OAK",
+    "pottedPlant": {
+      "value": ""
+    },
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -37,7 +40,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Erabletrapdoor",
+    "name": "Erable trapdoor",
     "specialInformation": {
       "fixedValue": []
     },
@@ -81,6 +84,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": true,
     "flammability": 20,
     "fireSpreadSpeed": 0,
@@ -115,6 +121,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

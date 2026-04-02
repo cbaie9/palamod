@@ -3,12 +3,8 @@
   "category": "misc",
   "experience": 2,
   "cookingtime": 200,
-<<<<<<< Updated upstream
-  "ingredient": "palamod:amethystrawore",
-=======
   "ingredient": "palamod:amethyst_raw_ore",
->>>>>>> Stashed changes
   "result": {
-    "id": "palamod:amethyst"
+    "id": "palamod:amethyst_ingot"
   }
 }

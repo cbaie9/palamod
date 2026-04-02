@@ -56,7 +56,7 @@ public class GrinderresultcraftgnumProcedure {
 			output = 1;
 		} else if (input_item_slot1.getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get() && input_item_slot1.getItem() == Items.STICK) {
 			output = 1;
-		} else if (input_item_slot1.getItem() == PalamodModItems.HEADENDIUMSWORD.get() && input_item_slot1.getItem() == Items.STICK) {
+		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get() && input_item_slot1.getItem() == Items.STICK) {
 			output = 1;
 		} else if (input_item_slot1.getItem() == PalamodModItems.HEAD_ENDIUM_PICKAXE.get() && input_item_slot1.getItem() == Items.STICK) {
 			output = 1;

@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "birch_forest",
+    "dark_forest",
+    "warped_forest",
+    "flower_forest",
+    "forest"
+  ],
+  "features": "palamod:mineral_flower",
+  "step": "vegetal_decoration"
+}

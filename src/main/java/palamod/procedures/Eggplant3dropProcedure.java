@@ -3,8 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -24,7 +22,7 @@ public class Eggplant3dropProcedure {
 		File jobs = new File("");
 		double lvl = 0;
 		double xp = 0;
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {
@@ -41,11 +39,7 @@ public class Eggplant3dropProcedure {
 					e.printStackTrace();
 				}
 			}
-<<<<<<< Updated upstream
-			if (!(world instanceof ServerLevel _serverLevelGR6 && _serverLevelGR6.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 40 <= lvl) {
-=======
 			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 7 <= lvl) {
->>>>>>> Stashed changes
 				if (Math.random() < 0.2) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.EGGPLANT_SEED.get()));

@@ -239,19 +239,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 0,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 247,
           "y": 51,
           "locked": false
@@ -264,19 +258,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 1,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 265,
           "y": 51,
           "locked": false
@@ -289,19 +277,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 2,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 283,
           "y": 51,
           "locked": false
@@ -314,19 +296,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 3,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 247,
           "y": 69,
           "locked": false
@@ -339,19 +315,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 4,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 265,
           "y": 69,
           "locked": false
@@ -364,19 +334,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 5,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 283,
           "y": 69,
           "locked": false
@@ -389,19 +353,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 6,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 247,
           "y": 87,
           "locked": false
@@ -414,19 +372,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 7,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 265,
           "y": 87,
           "locked": false
@@ -439,19 +391,13 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "id": 8,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Guijobsfarmcheckcraft"
-          },
-          "onTakenFromSlot": {
-            "name": "Guijobsfarmcheckcraft"
-          },
+          "dropItemsWhenNotBound": false,
           "x": 283,
           "y": 87,
           "locked": false
@@ -1236,12 +1182,9 @@
         "data": {
           "id": 9,
           "disablePickup": {
-            "fixedValue": false
+            "fixedValue": true
           },
           "dropItemsWhenNotBound": false,
-          "onTakenFromSlot": {
-            "name": "Craftdonefarmer"
-          },
           "x": 325,
           "y": 69,
           "locked": false

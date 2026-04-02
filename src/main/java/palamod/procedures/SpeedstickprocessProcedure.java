@@ -30,7 +30,7 @@ public class SpeedstickprocessProcedure {
 			}
 			{
 				final String _tagName = "name";
-				final String _tagValue = (new ItemStack(PalamodModItems.SPEEDSTICK.get()).getDisplayName().getString());
+				final String _tagValue = (new ItemStack(PalamodModItems.SPEED_STICK.get()).getDisplayName().getString());
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
 			}
 			{

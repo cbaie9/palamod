@@ -3,11 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:glass",
-<<<<<<< Updated upstream
-    "palamod:paladiumexcavator",
-=======
     "palamod:paladium_excavator",
->>>>>>> Stashed changes
     "minecraft:glass",
     "minecraft:glass",
     "palamod:paladium_core",

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:amethyst_anvil",
+    "palamod:titane_anvil",
+    "palamod:paladium_anvil",
+    "palamod:money_anvil"
+  ]
+}

@@ -8,9 +8,11 @@
     "texture": "endium_radius_hoe",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Endium hoe",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 2,
     "damageVsEntity": 4.0,
     "usageCount": 10000,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Endiumnugget"

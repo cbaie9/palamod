@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "ostrya_craft_group",
   "category": "building",
   "ingredients": [
     "#forge:ostrya_wood_log"

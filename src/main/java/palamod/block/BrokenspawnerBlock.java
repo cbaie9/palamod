@@ -36,21 +36,13 @@ public class BrokenspawnerBlock extends Block {
 
 	public static class Item extends BlockItem {
 		public Item(Item.Properties properties) {
-<<<<<<< Updated upstream
-			super(PalamodModBlocks.BROKENSPAWNER.get(), properties);
-=======
 			super(PalamodModBlocks.BROKEN_SPAWNER.get(), properties);
->>>>>>> Stashed changes
 		}
 
 		@Override
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-<<<<<<< Updated upstream
-			componentConsumer.accept(Component.translatable("block.palamod.brokenspawner.description_0"));
-=======
 			componentConsumer.accept(Component.translatable("block.palamod.broken_spawner.description_0"));
->>>>>>> Stashed changes
 		}
 	}
 }

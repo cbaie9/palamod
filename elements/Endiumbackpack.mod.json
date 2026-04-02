@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "endium_backpack",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],

@@ -19,7 +19,7 @@ public class PalamodModEntityRenderers {
 		event.registerEntityRenderer(PalamodModEntities.PALADIUMDYNAMITE.get(), PaladiumdynamiteRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.ENDIUMDYNAMITE.get(), EndiumdynamiteRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.BIGDYNAMITEENTITY.get(), BigdynamiteentityRenderer::new);
-		event.registerEntityRenderer(PalamodModEntities.PALADIUMGOLEM.get(), PaladiumgolemRenderer::new);
+		event.registerEntityRenderer(PalamodModEntities.PALADIUM_GOLEM.get(), PaladiumgolemRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDSPONGETNT.get(), PrimedspongetntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDWITHERTNT.get(), PrimedwithertntRenderer::new);
 		event.registerEntityRenderer(PalamodModEntities.PRIMEDMAGICTNT.get(), PrimedmagictntRenderer::new);

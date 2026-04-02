@@ -8,11 +8,7 @@
   ],
   "key": {
     "a": "palamod:amethyst_block",
-<<<<<<< Updated upstream
-    "b": "palamod:amethyst"
-=======
     "b": "palamod:amethyst_ingot"
->>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:compressed_amethyst",

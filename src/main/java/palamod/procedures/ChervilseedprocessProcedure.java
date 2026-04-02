@@ -19,7 +19,7 @@ public class ChervilseedprocessProcedure {
 				&& ((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.CAVE_AIR || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.AIR)) {
 			world.setBlock(BlockPos.containing(x, y + 1, z), PalamodModBlocks.CHERVIL_0.get().defaultBlockState(), 3);
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PalamodModItems.CHERVILSEED.get());
+				ItemStack _stktoremove = new ItemStack(PalamodModItems.CHERVIL_SEED.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}

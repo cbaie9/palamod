@@ -1,168 +1,130 @@
 package palamod.procedures;
 
 import palamod.init.PalamodModItems;
-import palamod.init.PalamodModBlocks;
-
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.common.extensions.ILevelExtension;
-import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.BlockPos;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 
 public class StockedbaseadminshopbuyProcedure {
-	public static double execute(LevelAccessor world, double x, double y, double z) {
+	public static double execute(ItemStack itemstack) {
 		double num = 0;
 		double slotnum = 0;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DOWNLOADER.get()) {
-			slotnum = 3;
-		} else {
-			slotnum = 0;
-		}
-		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == PalamodModItems.PALADIUM_INGOT.get()) {
+		if (itemstack.getItem() == PalamodModItems.PALADIUM_INGOT.get()) {
 			num = 125;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == PalamodModItems.TITANE_INGOT.get()) {
+		} else if (itemstack.getItem() == PalamodModItems.TITANE_INGOT.get()) {
 			num = 110;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == PalamodModItems.AMETHYST.get()) {
+		} else if (itemstack.getItem() == PalamodModItems.AMETHYST_INGOT.get()) {
 			num = 75;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.DIAMOND) {
+		} else if (itemstack.getItem() == Items.DIAMOND) {
 			num = 45;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.COAL || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.CHARCOAL) {
+		} else if (itemstack.getItem() == Items.COAL || itemstack.getItem() == Items.CHARCOAL) {
 			num = 5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.GOLD_INGOT) {
+		} else if (itemstack.getItem() == Items.GOLD_INGOT) {
 			num = 35;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.IRON_INGOT) {
+		} else if (itemstack.getItem() == Items.IRON_INGOT) {
 			num = 20;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == PalamodModItems.FINDIUM.get()) {
+		} else if (itemstack.getItem() == PalamodModItems.FINDIUM.get()) {
 			num = 90;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.DIRT.asItem()
-				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.NETHERRACK.asItem()
-				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.STONE.asItem()) {
+		} else if (itemstack.getItem() == Blocks.DIRT.asItem() || itemstack.getItem() == Blocks.NETHERRACK.asItem() || itemstack.getItem() == Blocks.STONE.asItem()) {
 			num = 10;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.GRASS_BLOCK.asItem()) {
+		} else if (itemstack.getItem() == Blocks.GRASS_BLOCK.asItem()) {
 			num = 15;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.SAND.asItem()) {
+		} else if (itemstack.getItem() == Blocks.SAND.asItem()) {
 			num = 17.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.GRAVEL.asItem()) {
+		} else if (itemstack.getItem() == Blocks.GRAVEL.asItem()) {
 			num = 20;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.SOUL_SAND.asItem()
-				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.OAK_LOG.asItem()
-				|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.SOUL_SOIL.asItem()) {
+		} else if (itemstack.getItem() == Blocks.SOUL_SAND.asItem() || itemstack.getItem() == Blocks.OAK_LOG.asItem() || itemstack.getItem() == Blocks.SOUL_SOIL.asItem()) {
 			num = 5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.BLACKSTONE.asItem()) {
+		} else if (itemstack.getItem() == Blocks.BLACKSTONE.asItem()) {
 			num = 45;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.GLOWSTONE.asItem()) {
+		} else if (itemstack.getItem() == Blocks.GLOWSTONE.asItem()) {
 			num = 10;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.RED_MUSHROOM.asItem()) {
+		} else if (itemstack.getItem() == Blocks.RED_MUSHROOM.asItem()) {
 			num = 5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.STRING) {
+		} else if (itemstack.getItem() == Items.STRING) {
 			num = 2.25;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.CACTUS.asItem()) {
+		} else if (itemstack.getItem() == Blocks.CACTUS.asItem()) {
 			num = 6;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.POTATO) {
+		} else if (itemstack.getItem() == Items.POTATO) {
 			num = 4.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.EGG) {
+		} else if (itemstack.getItem() == Items.EGG) {
 			num = 10;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.REDSTONE) {
+		} else if (itemstack.getItem() == Items.REDSTONE) {
 			num = 6;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.WITHER_SKELETON_SKULL) {
+		} else if (itemstack.getItem() == Items.WITHER_SKELETON_SKULL) {
 			num = 50000;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.SLIME_BALL) {
+		} else if (itemstack.getItem() == Items.SLIME_BALL) {
 			num = 8;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.BROWN_MUSHROOM.asItem()) {
+		} else if (itemstack.getItem() == Blocks.BROWN_MUSHROOM.asItem()) {
 			num = 5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.WARPED_FUNGUS.asItem()) {
+		} else if (itemstack.getItem() == Blocks.WARPED_FUNGUS.asItem()) {
 			num = 7.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.CRIMSON_FUNGUS.asItem()) {
+		} else if (itemstack.getItem() == Blocks.CRIMSON_FUNGUS.asItem()) {
 			num = 7.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.WHITE_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.ORANGE_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.MAGENTA_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.LIGHT_BLUE_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.YELLOW_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.LIME_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.PINK_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.GRAY_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.LIGHT_GRAY_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.CYAN_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.PURPLE_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.BLUE_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.BROWN_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.GREEN_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.RED_WOOL.asItem()
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.BLACK_WOOL.asItem()) {
+		} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("minecraft:wool")))) {
 			num = 7.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.OBSIDIAN.asItem()) {
+		} else if (itemstack.getItem() == Blocks.OBSIDIAN.asItem()) {
 			num = 10;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.APPLE) {
+		} else if (itemstack.getItem() == Items.APPLE) {
 			num = 7.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.FERMENTED_SPIDER_EYE) {
+		} else if (itemstack.getItem() == Items.FERMENTED_SPIDER_EYE) {
 			num = 7.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.QUARTZ) {
+		} else if (itemstack.getItem() == Items.QUARTZ) {
 			num = 8;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.GHAST_TEAR) {
+		} else if (itemstack.getItem() == Items.GHAST_TEAR) {
 			num = 25;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.WHEAT_SEEDS) {
-			num = 0.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.AMETHYST_SHARD) {
+		} else if (itemstack.getItem() == Items.WHEAT) {
+			num = 3;
+		} else if (itemstack.getItem() == Items.AMETHYST_SHARD) {
 			num = 7;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.FLINT) {
+		} else if (itemstack.getItem() == Items.FLINT) {
 			num = 5.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.FEATHER) {
+		} else if (itemstack.getItem() == Items.FEATHER) {
 			num = 13.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.LEATHER) {
+		} else if (itemstack.getItem() == Items.LEATHER) {
 			num = 20;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.INK_SAC) {
+		} else if (itemstack.getItem() == Items.INK_SAC) {
 			num = 12.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.GLOW_INK_SAC) {
+		} else if (itemstack.getItem() == Items.GLOW_INK_SAC) {
 			num = 14.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.NETHER_WART) {
+		} else if (itemstack.getItem() == Items.NETHER_WART) {
 			num = 6.25;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.CARROT) {
+		} else if (itemstack.getItem() == Items.CARROT) {
 			num = 5.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.HONEYCOMB) {
+		} else if (itemstack.getItem() == Items.HONEYCOMB) {
 			num = 16;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.BLAZE_ROD) {
+		} else if (itemstack.getItem() == Items.BLAZE_ROD) {
 			num = 25;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.BONE) {
+		} else if (itemstack.getItem() == Items.BONE) {
 			num = 6.75;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.ENDER_PEARL) {
+		} else if (itemstack.getItem() == Items.ENDER_PEARL) {
 			num = 10.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.MELON_SLICE) {
+		} else if (itemstack.getItem() == Items.MELON_SLICE) {
 			num = 5.8;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.COOKED_BEEF) {
+		} else if (itemstack.getItem() == Items.COOKED_BEEF) {
 			num = 5.75;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.GUNPOWDER) {
+		} else if (itemstack.getItem() == Items.GUNPOWDER) {
 			num = 6.75;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.GLOWSTONE_DUST) {
+		} else if (itemstack.getItem() == Items.GLOWSTONE_DUST) {
 			num = 18.75;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Blocks.SUGAR_CANE.asItem()) {
+		} else if (itemstack.getItem() == Blocks.SUGAR_CANE.asItem()) {
 			num = 8;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.SPIDER_EYE) {
+		} else if (itemstack.getItem() == Items.SPIDER_EYE) {
 			num = 3.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.EMERALD) {
+		} else if (itemstack.getItem() == Items.EMERALD) {
 			num = 55;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.ROTTEN_FLESH) {
+		} else if (itemstack.getItem() == Items.ROTTEN_FLESH) {
 			num = 1;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.REDSTONE) {
+		} else if (itemstack.getItem() == Items.REDSTONE) {
 			num = 2.5;
-		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) slotnum).copy()).getItem() == Items.COCOA_BEANS) {
+		} else if (itemstack.getItem() == Items.COCOA_BEANS) {
 			num = 75;
 		} else {
 			num = 0;
 		}
 		return num;
-	}
-
-	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
-		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
-		}
-		return ItemStack.EMPTY;
 	}
 }

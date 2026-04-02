@@ -3,27 +3,26 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 177,
-    "height": 166,
+    "width": 300,
+    "height": 200,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
-        "type": "label",
+        "type": "tooltip",
         "data": {
-          "name": "label_adminshop",
+          "name": "tooltip_close_the_gui",
           "text": {
-            "fixedValue": "Adminshop"
+            "fixedValue": "Close the gui",
+            "name": "Closetheguitrans"
           },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 185,
-          "y": 44,
-          "locked": false
+          "width": 16,
+          "height": 16,
+          "x": 344,
+          "y": 37,
+          "locked": true
         }
       },
       {
@@ -35,103 +34,623 @@
           "onClick": {
             "name": "Closegui"
           },
-          "x": 279,
-          "y": 42,
+          "x": 344,
+          "y": 37,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Adminshopcol1adminshopgetsprite"
+          },
+          "x": 84,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 1.0,
+            "name": "Adminshopcol2adminshopgetsprite"
+          },
+          "x": 120,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 2.0,
+            "name": "Adminshopcol3adminshopgetsprite"
+          },
+          "x": 156,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 3.0,
+            "name": "Adminshopcol4adminshopgetsprite"
+          },
+          "x": 192,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 4.0,
+            "name": "Adminshopcol5adminshopgetsprite"
+          },
+          "x": 228,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 5.0,
+            "name": "Adminshopcol6adminshopgetsprite"
+          },
+          "x": 264,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row1_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 6.0,
+            "name": "Adminshopcol7adminshopgetsprite"
+          },
+          "x": 300,
+          "y": 62,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Adminshopcol1adminshopgetsprite"
+          },
+          "x": 84,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 1.0,
+            "name": "Adminshopcol2adminshopgetsprite"
+          },
+          "x": 120,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 2.0,
+            "name": "Adminshopcol3adminshopgetsprite"
+          },
+          "x": 156,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 3.0,
+            "name": "Adminshopcol4adminshopgetsprite"
+          },
+          "x": 192,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 4.0,
+            "name": "Adminshopcol5adminshopgetsprite"
+          },
+          "x": 228,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 5.0,
+            "name": "Adminshopcol6adminshopgetsprite"
+          },
+          "x": 264,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row2_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 6.0,
+            "name": "Adminshopcol7adminshopgetsprite"
+          },
+          "x": 300,
+          "y": 110,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "Adminshopcol1adminshopgetsprite"
+          },
+          "x": 84,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 1.0,
+            "name": "Adminshopcol2adminshopgetsprite"
+          },
+          "x": 120,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 2.0,
+            "name": "Adminshopcol3adminshopgetsprite"
+          },
+          "x": 156,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 3.0,
+            "name": "Adminshopcol4adminshopgetsprite"
+          },
+          "x": 192,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 4.0,
+            "name": "Adminshopcol5adminshopgetsprite"
+          },
+          "x": 228,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 5.0,
+            "name": "Adminshopcol6adminshopgetsprite"
+          },
+          "x": 264,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_row3_v1.png",
+          "spritesCount": 17,
+          "spriteIndex": {
+            "fixedValue": 6.0,
+            "name": "Adminshopcol7adminshopgetsprite"
+          },
+          "x": 300,
+          "y": 158,
+          "locked": true
+        }
+      },
+      {
+        "type": "slider",
+        "data": {
+          "name": "slider",
+          "min": 0.0,
+          "max": 10.0,
+          "value": 0.0,
+          "step": 1.0,
+          "prefix": "Adminshop page : ",
+          "suffix": "",
+          "width": 275,
+          "height": 20,
+          "x": 77,
+          "y": 188,
           "locked": true
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_admin_btte_ore",
-          "image": "adminshop_ore_icon.png",
-          "hoveredImage": "adminshop_ore_icon_hover.png",
+          "name": "imagebutton_adminshop_new_placeholder",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
           "onClick": {
-            "name": "Connectadhore"
+            "name": "Connectadminshoprow1"
           },
-          "x": 185,
-          "y": 98,
-          "locked": false
+          "x": 80,
+          "y": 58,
+          "locked": true
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_btte_block",
-          "image": "adminshop_block_icon.png",
-          "hoveredImage": "adminshop_block_icon_hover.png",
+          "name": "imagebutton_adminshop_new_placeholder1",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
           "onClick": {
-            "name": "Adminshopblockconnect"
+            "name": "Connectadminshoprow2col1"
           },
-          "x": 185,
-          "y": 69,
-          "locked": false
+          "x": 80,
+          "y": 106,
+          "locked": true
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_btte_plant",
-          "image": "adminshop_plant_icon.png",
-          "hoveredImage": "adminshop_plant_icon_hover.png",
+          "name": "imagebutton_adminshop_new_placeholder2",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
           "onClick": {
-            "name": "Connectadminshopplant"
+            "name": "Connectadminshoprow3col1"
           },
-          "x": 185,
-          "y": 124,
-          "locked": false
+          "x": 80,
+          "y": 154,
+          "locked": true
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_btte_mobs",
-          "image": "adminshop_mobs_icon.png",
-          "hoveredImage": "adminshop_mobs_icon_hover.png",
+          "name": "imagebutton_adminshop_new_placeholder3",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
           "onClick": {
-            "name": "Connectadminshopmobs"
+            "name": "Connectadminshoprow1col2"
           },
-          "x": 186,
-          "y": 151,
-          "locked": false
+          "x": 116,
+          "y": 58,
+          "locked": true
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_btte_utilities",
-          "image": "adminshop_item_icon.png",
-          "hoveredImage": "adminshop_item_icon_hover.png",
+          "name": "imagebutton_adminshop_new_placeholder4",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
           "onClick": {
-            "name": "Connectadminshoputilities"
+            "name": "Connectadminshoprow2col2"
           },
-          "x": 186,
-          "y": 178,
-          "locked": false
+          "x": 116,
+          "y": 106,
+          "locked": true
         }
       },
       {
-        "type": "tooltip",
+        "type": "imagebutton",
         "data": {
-          "name": "tooltip_close_the_gui",
-          "text": {
-            "fixedValue": "Close the gui",
-            "name": "Closetheguitrans"
+          "name": "imagebutton_adminshop_new_placeholder5",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow3col2"
           },
-          "width": 16,
-          "height": 16,
-          "x": 279,
-          "y": 42,
+          "x": 116,
+          "y": 154,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder6",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow1col3"
+          },
+          "x": 152,
+          "y": 58,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder7",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow2col3"
+          },
+          "x": 152,
+          "y": 106,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder8",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow3col3"
+          },
+          "x": 152,
+          "y": 154,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder9",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow1col4"
+          },
+          "x": 188,
+          "y": 58,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder10",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow2col4"
+          },
+          "x": 188,
+          "y": 106,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder11",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow3col4"
+          },
+          "x": 188,
+          "y": 154,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder12",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow1col5"
+          },
+          "x": 224,
+          "y": 58,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder13",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow2col5"
+          },
+          "x": 224,
+          "y": 106,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder14",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow3col5"
+          },
+          "x": 224,
+          "y": 154,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder15",
+          "image": "adminshop_btn_hover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow1col6"
+          },
+          "x": 260,
+          "y": 58,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder16",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow2col6"
+          },
+          "x": 260,
+          "y": 106,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder17",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow3col6"
+          },
+          "x": 260,
+          "y": 154,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder18",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow1col7"
+          },
+          "x": 296,
+          "y": 58,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder19",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow2col7"
+          },
+          "x": 296,
+          "y": 106,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adminshop_new_placeholder20",
+          "image": "adminshop_btn_pashover.png",
+          "hoveredImage": "adminshop_btn_hover.png",
+          "onClick": {
+            "name": "Connectadminshoprow3col7"
+          },
+          "x": 296,
+          "y": 154,
           "locked": true
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "gui176_166.png",
+          "image": "adminshopmenu.png",
           "use1Xscale": false,
-          "x": 125,
-          "y": 37,
+          "x": 64,
+          "y": 20,
           "locked": true
         }
       }

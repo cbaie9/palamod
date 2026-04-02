@@ -1,8 +1,5 @@
 package palamod.item;
 
-<<<<<<< Updated upstream
-import net.minecraft.world.item.Item;
-=======
 import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.PalamodMod;
@@ -15,13 +12,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class CobblebreakerpaladiumupgradeItem extends Item {
 	public CobblebreakerpaladiumupgradeItem(Item.Properties properties) {
 		super(properties.stacksTo(1));
-<<<<<<< Updated upstream
-=======
 	}
 
 	@Override
@@ -34,6 +28,5 @@ public class CobblebreakerpaladiumupgradeItem extends Item {
 				componentConsumer.accept(Component.literal(line));
 			}
 		}
->>>>>>> Stashed changes
 	}
 }

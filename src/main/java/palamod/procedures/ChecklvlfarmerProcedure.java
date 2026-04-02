@@ -36,15 +36,17 @@ public class ChecklvlfarmerProcedure {
 		if (entity == null)
 			return;
 		double money_add = 0;
-		File cache = new File("");
 		File money = new File("");
 		File jobs = new File("");
 		boolean money_getadd = false;
 		com.google.gson.JsonObject main_jobs = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			jobs = ReadjobsclientProcedure.execute(world, entity);
+		} else if (IsgameserversideProcedure.execute()) {
+			jobs = ReadjobsserverProcedure.execute(entity);
+		}
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + ("cache_" + entity.getUUID().toString() + ".json"));
 		if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
 			{
 				try {
@@ -59,7 +61,7 @@ public class ChecklvlfarmerProcedure {
 					if (main_jobs.get("next_level_farmer").getAsDouble() <= main_jobs.get("xp_farmer").getAsDouble()) {
 						main_jobs.addProperty("lvl_farmer", (1 + main_jobs.get("lvl_farmer").getAsDouble()));
 						main_jobs.addProperty("xp_farmer", (main_jobs.get("xp_miner").getAsDouble() - main_jobs.get("next_level_farmer").getAsDouble()));
-						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(world, entity));
+						main_jobs.addProperty("next_level_farmer", GetnextlevelxpfarmerProcedure.execute(entity));
 						main_jobs.addProperty("last_unlocked_lvl", main_jobs.get("lvl_farmer").getAsDouble());
 						main_jobs.addProperty("last_unlocked_type", 2);
 						if (entity instanceof Player _player) {

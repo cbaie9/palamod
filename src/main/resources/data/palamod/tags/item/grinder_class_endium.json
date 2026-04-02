@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:endium_axe",
+    "palamod:endium_armor_helmet",
+    "palamod:endium_armor_chestplate",
+    "palamod:endium_pickaxe",
+    "palamod:endium_stairs",
+    "palamod:endium_nugget",
+    "palamod:endium_shovel",
+    "palamod:endium_shovel_head",
+    "palamod:endium_armor_leggings",
+    "palamod:endium_slab",
+    "palamod:endium_fastsword",
+    "palamod:endium_sword",
+    "palamod:endium_ingot",
+    "palamod:endium_block",
+    "palamod:head_endium_pickaxe",
+    "palamod:endium_broadsword_head",
+    "palamod:endium_fastsword_head",
+    "palamod:head_endium_sword",
+    "palamod:endium_hammer",
+    "palamod:head_endium_axe",
+    "palamod:endium_armor_boots",
+    "palamod:endium_broadsword"
+  ]
+}

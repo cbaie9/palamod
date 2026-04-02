@@ -15,7 +15,7 @@ public class PalaforgereturntitaneProcedure {
 		} else if (input.getItem() == PalamodModItems.TITANE_PICKAXE.get() || input.getItem() == PalamodModBlocks.TITANE_ORE.get().asItem() || input.getItem() == PalamodModBlocks.DEEPSLATE_TITANE_ORE.get().asItem()
 				|| input.getItem() == PalamodModItems.TITANE_AXE.get()) {
 			output = 2;
-		} else if (input.getItem() == PalamodModItems.TITANEBROADSWORD.get() || input.getItem() == PalamodModItems.TITANEFASTSWORD.get() || input.getItem() == PalamodModBlocks.TITANE_SLAB.get().asItem()
+		} else if (input.getItem() == PalamodModItems.TITANEBROADSWORD.get() || input.getItem() == PalamodModItems.TITANE_FASTSWORD.get() || input.getItem() == PalamodModBlocks.TITANE_SLAB.get().asItem()
 				|| input.getItem() == PalamodModBlocks.TITANE_SPIKE.get().asItem() || input.getItem() == PalamodModItems.TITANE_ARMOR_BOOTS.get()) {
 			output = 3;
 		} else if (input.getItem() == PalamodModItems.TITANE_ARMOR_HELMET.get()) {

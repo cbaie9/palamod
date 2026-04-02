@@ -103,7 +103,7 @@ public class PhonecodeProcedure {
 				|| ((entity instanceof Player _entity36 && _entity36.containerMenu instanceof PalamodModMenus.MenuAccessor _menu36) ? _menu36.getMenuState(0, "cheat_code_secret", "") : "").contains("hat")
 				|| ((entity instanceof Player _entity37 && _entity37.containerMenu instanceof PalamodModMenus.MenuAccessor _menu37) ? _menu37.getMenuState(0, "cheat_code_secret", "") : "").contains("HAT")) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMARMORCUSTOM_2_HELMET.get()).copy();
+				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_CUSTOM2_HELMET.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

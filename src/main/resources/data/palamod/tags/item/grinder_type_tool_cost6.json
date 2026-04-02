@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:paladium_hammer",
+    "palamod:hammer_head",
+    "palamod:paladium_stairs",
+    "palamod:green_paladium_hammer_head",
+    "palamod:green_paladium_hammer",
+    "palamod:green_paladium_stairs"
+  ]
+}

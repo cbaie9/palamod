@@ -5,8 +5,11 @@ import palamod.init.PalamodModBlocks;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
@@ -159,12 +162,6 @@ public class MvprocessProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				}
-<<<<<<< Updated upstream
-				if (hasEntityInInventory(entity, new ItemStack(Blocks.STONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLESTONE)) || hasEntityInInventory(entity, new ItemStack(Blocks.GRANITE))
-						|| hasEntityInInventory(entity, new ItemStack(Blocks.DIORITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.ANDESITE)) || hasEntityInInventory(entity, new ItemStack(Blocks.BLACKSTONE))
-						|| hasEntityInInventory(entity, new ItemStack(Blocks.BASALT)) || hasEntityInInventory(entity, new ItemStack(Blocks.COBBLED_DEEPSLATE)) || hasEntityInInventory(entity, new ItemStack(Blocks.DEEPSLATE))
-						|| hasEntityInInventory(entity, new ItemStack(Blocks.NETHERRACK))) {
-=======
 				if (hasEntityInInventory(entity, new ItemStack(Blocks.TUFF))) {
 					{
 						final String _tagName = "voidstone_count";
@@ -199,7 +196,6 @@ public class MvprocessProcedure {
 					}
 				}
 				if ((itemstack.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("minecraft:mv_blocks")))) {
->>>>>>> Stashed changes
 					continue;
 				} else {
 					break;

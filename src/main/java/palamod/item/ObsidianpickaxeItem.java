@@ -20,11 +20,7 @@ import net.minecraft.core.component.DataComponents;
 
 @EventBusSubscriber
 public class ObsidianpickaxeItem extends Item {
-<<<<<<< Updated upstream
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 0, 4f, 0, 2, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:obsidianpickaxe_repair_items")));
-=======
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 0, 4f, 0, 2, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:obsidian_pickaxe_repair_items")));
->>>>>>> Stashed changes
 
 	public ObsidianpickaxeItem(Item.Properties properties) {
 		super(properties.pickaxe(TOOL_MATERIAL, 3f, -3f));
@@ -32,7 +28,7 @@ public class ObsidianpickaxeItem extends Item {
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.OBSIDIANPICKAXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.OBSIDIAN_PICKAXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override

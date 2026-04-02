@@ -86,7 +86,7 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Grindertrans1Procedure.execute(world, x, y, z), 144, 70, -4671036, false);
+		guiGraphics.drawString(this.font, Grindertrans1Procedure.execute(world, x, y, z), 144, 70, -1, false);
 	}
 
 	@Override

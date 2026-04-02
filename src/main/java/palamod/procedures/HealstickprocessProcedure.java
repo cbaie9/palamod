@@ -30,7 +30,7 @@ public class HealstickprocessProcedure {
 			}
 			{
 				final String _tagName = "name";
-				final String _tagValue = (new ItemStack(PalamodModItems.HEALSTICK.get()).getDisplayName().getString());
+				final String _tagValue = (new ItemStack(PalamodModItems.HEAL_STICK.get()).getDisplayName().getString());
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
 			}
 			{

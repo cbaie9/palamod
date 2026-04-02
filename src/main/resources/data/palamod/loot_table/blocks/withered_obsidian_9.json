@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "palamod:blocks/withered_obsidian_9",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "palamod:withered_obsidian_0"
+        }
+      ]
+    }
+  ]
+}

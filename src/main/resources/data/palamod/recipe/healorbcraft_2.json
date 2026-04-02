@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "group": "obrs_craft_group",
+  "category": "equipment",
   "pattern": [
     " a ",
     "aba",

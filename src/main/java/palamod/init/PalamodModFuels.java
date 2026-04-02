@@ -78,7 +78,7 @@ public class PalamodModFuels {
 			event.setBurnTime(24000);
 		else if (itemstack.getItem() == PalamodModItems.PALADIUM_MIXED_CHARCOAL.get())
 			event.setBurnTime(32000);
-		else if (itemstack.getItem() == PalamodModBlocks.WETLAVASPONGE.get().asItem())
+		else if (itemstack.getItem() == PalamodModBlocks.WET_LAVA_SPONGE.get().asItem())
 			event.setBurnTime(32000);
 	}
 }

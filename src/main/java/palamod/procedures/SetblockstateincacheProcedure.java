@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModGameRules;
+
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -44,17 +46,13 @@ public class SetblockstateincacheProcedure {
 		double j = 0;
 		double nloop = 0;
 		BlockState block_to_set = Blocks.AIR.defaultBlockState();
-<<<<<<< Updated upstream
-		if (IsgameclientsideProcedure.execute()) {
-=======
 		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
->>>>>>> Stashed changes
 			cache = ReadcacheProcedure.execute(entity);
 			if (cache.exists()) {
 				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
 					main_chs.addProperty("last_block_state",
-							((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip4
-									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip4)
+							((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip5
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip5)
 									: -1));
 				}
 				main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
@@ -75,7 +73,7 @@ public class SetblockstateincacheProcedure {
 							continue;
 						}
 						if (block_to_set.is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
-							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip19 ? block_to_set.getValue(_getip19) : -1));
+							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip20 ? block_to_set.getValue(_getip20) : -1));
 						}
 						main_chs.addProperty(("block_hammer_cache_" + nloop), (BuiltInRegistries.BLOCK.getKey(block_to_set.getBlock()).toString()));
 						j = j + 1;

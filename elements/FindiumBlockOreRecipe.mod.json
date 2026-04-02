@@ -5,7 +5,14 @@
     "recipeType": "Crafting",
     "recipeRetstackSize": 9,
     "group": "",
-    "unlockingItems": [],
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

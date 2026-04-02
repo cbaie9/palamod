@@ -15,11 +15,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedendiumnuggetoreBlock extends Block {
 	public SoftenedendiumnuggetoreBlock(BlockBehaviour.Properties properties) {
-<<<<<<< Updated upstream
-		super(properties.strength(3f, 5f).instrument(NoteBlockInstrument.BASEDRUM));
-=======
 		super(properties.strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
->>>>>>> Stashed changes
 	}
 
 	@Override

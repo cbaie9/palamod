@@ -8,9 +8,11 @@
     "texture": "amethyste_exca",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Amethyste Exavator",
+    "guiTexture": "",
+    "name": "Amethyste Excavator",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 20,
     "damageVsEntity": 3.0,
     "usageCount": 2999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Amethyste"

@@ -7,11 +7,7 @@
     " b "
   ],
   "key": {
-<<<<<<< Updated upstream
-    "a": "palamod:amethyst",
-=======
     "a": "palamod:amethyst_ingot",
->>>>>>> Stashed changes
     "b": "minecraft:stick"
   },
   "result": {

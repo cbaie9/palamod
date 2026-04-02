@@ -2,16 +2,12 @@ package palamod.block;
 
 import palamod.procedures.UpdateblockProcedure;
 import palamod.procedures.SpawnprimedtntProcedure;
-<<<<<<< Updated upstream
-
-=======
 import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
->>>>>>> Stashed changes
 import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,8 +15,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
@@ -28,16 +22,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
->>>>>>> Stashed changes
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
-<<<<<<< Updated upstream
-=======
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class SpongetntBlock extends Block {
 	public SpongetntBlock(BlockBehaviour.Properties properties) {

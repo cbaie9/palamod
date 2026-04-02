@@ -2,13 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -23,8 +19,7 @@ public class GetxpalchibreakblockProcedure {
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+		jobs = GetjobsfileProcedure.execute(entity);
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

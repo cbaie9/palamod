@@ -7,17 +7,12 @@
     "aba"
   ],
   "key": {
-<<<<<<< Updated upstream
-    "a": "palamod:amethyst",
-    "b": "palamod:diamondinfusedobsidian",
-=======
     "a": "palamod:amethyst_ingot",
     "b": "palamod:diamond_infused_obsidian",
->>>>>>> Stashed changes
     "c": "palamod:paladium_block"
   },
   "result": {
-    "id": "palamod:amethystinfusedobsidian",
+    "id": "palamod:amethyst_infused_obsidian",
     "count": 4
   }
 }

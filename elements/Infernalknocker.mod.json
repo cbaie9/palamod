@@ -8,9 +8,11 @@
     "texture": "infernal_knocker",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Infernalknocker",
+    "guiTexture": "",
+    "name": "Infernal knocker",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 1,
     "damageVsEntity": 4.0,
     "usageCount": 59,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "blockDropsTier": "STONE",

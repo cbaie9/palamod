@@ -3,7 +3,6 @@ package palamod.command;
 import palamod.procedures.ToolresetallProcedure;
 import palamod.procedures.Luckyprocess1adminProcedure;
 import palamod.procedures.ClearoreProcedure;
-import palamod.procedures.AdminshoppricesetupProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -24,22 +23,9 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class PalatoolsCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("palatools").requires(s -> s.hasPermission(4)).then(Commands.literal("adminshop")
-				.then(Commands.literal("price").then(Commands.literal("set").then(Commands.literal("paladium")).then(Commands.literal("paladium"))).then(Commands.literal("reset").then(Commands.literal("all").executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
-
-					AdminshoppricesetupProcedure.execute(world);
-					return 0;
-				}))))).then(Commands.literal("Clear").executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("palatools").requires(s -> s.hasPermission(4))
+				.then(Commands.literal("adminshop").then(Commands.literal("price").then(Commands.literal("set").then(Commands.literal("paladium")).then(Commands.literal("paladium"))).then(Commands.literal("reset").then(Commands.literal("all")))))
+				.then(Commands.literal("Clear").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

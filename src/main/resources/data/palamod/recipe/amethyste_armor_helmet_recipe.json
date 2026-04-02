@@ -1,16 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "amethyst_craft_group",
   "category": "redstone",
   "pattern": [
     "aaa",
     "a a"
   ],
   "key": {
-<<<<<<< Updated upstream
-    "a": "palamod:amethyst"
-=======
     "a": "palamod:amethyst_ingot"
->>>>>>> Stashed changes
   },
   "result": {
     "id": "palamod:amethyst_armor_helmet",

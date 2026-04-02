@@ -8,6 +8,7 @@
     "texture": "paladium_pickaxe",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Paladium Pickaxe",
     "specialInformation": {
       "fixedValue": []
@@ -22,6 +23,9 @@
     "enchantability": 10,
     "damageVsEntity": 6.5,
     "usageCount": 4999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:PaladiumIngot"
@@ -31,6 +35,9 @@
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "Paladiumpickaxehaste3"
+    }
   }
 }

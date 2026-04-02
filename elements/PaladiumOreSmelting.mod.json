@@ -4,8 +4,15 @@
   "definition": {
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "paladium_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:PaladiumOre"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.7,
     "cookingTime": 200,

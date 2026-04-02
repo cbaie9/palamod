@@ -23,11 +23,7 @@ public class ChunkanaslyserItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-<<<<<<< Updated upstream
-		componentConsumer.accept(Component.translatable("item.palamod.chunkanaslyser.description_0"));
-=======
 		componentConsumer.accept(Component.translatable("item.palamod.chunk_anaslyser.description_0"));
->>>>>>> Stashed changes
 	}
 
 	@Override

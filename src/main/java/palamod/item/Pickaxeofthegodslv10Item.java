@@ -1,6 +1,7 @@
 package palamod.item;
 
 import palamod.procedures.Upgradepotgv2Procedure;
+import palamod.procedures.TitlepogProcedure;
 import palamod.procedures.MoucepotgProcedure;
 import palamod.procedures.GetenchantpotgProcedure;
 
@@ -43,11 +44,7 @@ import java.util.function.Consumer;
 
 @EventBusSubscriber
 public class Pickaxeofthegodslv10Item extends Item {
-<<<<<<< Updated upstream
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 30f, 0, 10, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pickaxeofthegodslv_10_repair_items")));
-=======
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 30f, 0, 10, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:pickaxe_of_the_gods_lv10_repair_items")));
->>>>>>> Stashed changes
 
 	public Pickaxeofthegodslv10Item(Item.Properties properties) {
 		super(TOOL_MATERIAL.applyToolProperties(properties, BlockTags.MINEABLE_WITH_PICKAXE, 5.5f, -2.5f, 0)
@@ -57,7 +54,7 @@ public class Pickaxeofthegodslv10Item extends Item {
 
 	@SubscribeEvent
 	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.PICKAXEOFTHEGODSLV_10.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.PICKAXE_OF_THE_GODS_LV10.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override
@@ -90,9 +87,6 @@ public class Pickaxeofthegodslv10Item extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-<<<<<<< Updated upstream
-		componentConsumer.accept(Component.translatable("item.palamod.pickaxeofthegodslv_10.description_0"));
-=======
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
 		String hoverText = TitlepogProcedure.execute(entity);
 		if (hoverText != null) {
@@ -100,18 +94,13 @@ public class Pickaxeofthegodslv10Item extends Item {
 				componentConsumer.accept(Component.literal(line));
 			}
 		}
->>>>>>> Stashed changes
 	}
 
 	@Override
 	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
 		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		if (equipmentSlot == EquipmentSlot.MAINHAND)
-<<<<<<< Updated upstream
-			MoucepotgProcedure.execute(entity, itemstack);
-=======
 			MoucepotgProcedure.execute(entity);
->>>>>>> Stashed changes
 		GetenchantpotgProcedure.execute(world, itemstack);
 	}
 }

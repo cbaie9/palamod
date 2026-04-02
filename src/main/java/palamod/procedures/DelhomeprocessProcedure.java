@@ -29,8 +29,13 @@ public class DelhomeprocessProcedure {
 		double id = 0;
 		File home = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\home\\" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()),
+					File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		} else if (IsgameserversideProcedure.execute()) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		}
 		if (home.exists()) {
 			{
 				try {

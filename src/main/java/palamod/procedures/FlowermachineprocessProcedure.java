@@ -73,38 +73,38 @@ public class FlowermachineprocessProcedure {
 								continue;
 							}
 						} else if (random_num == 2) {
-							if (flower1itelm.getItem() == PalamodModBlocks.ENDIUMFLOWER.get().asItem()) {
+							if (flower1itelm.getItem() == PalamodModBlocks.ENDIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower2item.getItem() == PalamodModBlocks.ENDIUMFLOWER.get().asItem()) {
+							if (flower2item.getItem() == PalamodModBlocks.ENDIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower3item.getItem() == PalamodModBlocks.ENDIUMFLOWER.get().asItem()) {
+							if (flower3item.getItem() == PalamodModBlocks.ENDIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower3item.getItem() == PalamodModBlocks.ENDIUMFLOWER.get().asItem()) {
+							if (flower3item.getItem() == PalamodModBlocks.ENDIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
 							if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + checkminus < 64) {
-								random = new ItemStack(PalamodModBlocks.ENDIUMFLOWER.get()).copy();
+								random = new ItemStack(PalamodModBlocks.ENDIUM_FLOWER.get()).copy();
 							} else {
 								continue;
 							}
 						} else if (random_num == 3) {
-							if (flower1itelm.getItem() == PalamodModBlocks.PALADIUMFLOWER.get().asItem()) {
+							if (flower1itelm.getItem() == PalamodModBlocks.PALADIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower2item.getItem() == PalamodModBlocks.PALADIUMFLOWER.get().asItem()) {
+							if (flower2item.getItem() == PalamodModBlocks.PALADIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower3item.getItem() == PalamodModBlocks.PALADIUMFLOWER.get().asItem()) {
+							if (flower3item.getItem() == PalamodModBlocks.PALADIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower3item.getItem() == PalamodModBlocks.PALADIUMFLOWER.get().asItem()) {
+							if (flower3item.getItem() == PalamodModBlocks.PALADIUM_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
 							if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + checkminus < 64) {
-								random = new ItemStack(PalamodModBlocks.PALADIUMFLOWER.get()).copy();
+								random = new ItemStack(PalamodModBlocks.PALADIUM_FLOWER.get()).copy();
 							} else {
 								continue;
 							}
@@ -145,20 +145,20 @@ public class FlowermachineprocessProcedure {
 								continue;
 							}
 						} else if (random_num == 6) {
-							if (flower1itelm.getItem() == PalamodModBlocks.MINERALFLOWER.get().asItem()) {
+							if (flower1itelm.getItem() == PalamodModBlocks.MINERAL_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower2item.getItem() == PalamodModBlocks.MINERALFLOWER.get().asItem()) {
+							if (flower2item.getItem() == PalamodModBlocks.MINERAL_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower3item.getItem() == PalamodModBlocks.MINERALFLOWER.get().asItem()) {
+							if (flower3item.getItem() == PalamodModBlocks.MINERAL_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
-							if (flower3item.getItem() == PalamodModBlocks.MINERALFLOWER.get().asItem()) {
+							if (flower3item.getItem() == PalamodModBlocks.MINERAL_FLOWER.get().asItem()) {
 								checkminus = checkminus + 1;
 							}
 							if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + checkminus < 64) {
-								random = new ItemStack(PalamodModBlocks.MINERALFLOWER.get()).copy();
+								random = new ItemStack(PalamodModBlocks.MINERAL_FLOWER.get()).copy();
 							} else {
 								continue;
 							}
@@ -247,15 +247,15 @@ public class FlowermachineprocessProcedure {
 								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(1, _setstack);
 							}
-						} else if (set.getItem() == PalamodModBlocks.ENDIUMFLOWER.get().asItem()) {
+						} else if (set.getItem() == PalamodModBlocks.ENDIUM_FLOWER.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUMFLOWER.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_FLOWER.get()).copy();
 								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-						} else if (set.getItem() == PalamodModBlocks.PALADIUMFLOWER.get().asItem()) {
+						} else if (set.getItem() == PalamodModBlocks.PALADIUM_FLOWER.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUMFLOWER.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_FLOWER.get()).copy();
 								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(3, _setstack);
 							}
@@ -271,9 +271,9 @@ public class FlowermachineprocessProcedure {
 								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(5, _setstack);
 							}
-						} else if (set.getItem() == PalamodModBlocks.MINERALFLOWER.get().asItem()) {
+						} else if (set.getItem() == PalamodModBlocks.MINERAL_FLOWER.get().asItem()) {
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.MINERALFLOWER.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModBlocks.MINERAL_FLOWER.get()).copy();
 								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1);
 								_itemHandlerModifiable.setStackInSlot(6, _setstack);
 							}

@@ -1,6 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.AdminshoptadbanProcedure;
+import palamod.procedures.Adminshop_openProcedure;
 
 import palamod.PalamodMod;
 
@@ -52,7 +52,7 @@ public record AdminshopkeyblindingMessage(int eventType, int pressedms) implemen
 			return;
 		if (type == 0) {
 
-			AdminshoptadbanProcedure.execute(world, x, y, z, entity);
+			Adminshop_openProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

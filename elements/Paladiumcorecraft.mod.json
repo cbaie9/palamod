@@ -4,8 +4,18 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
-    "unlockingItems": [],
+    "group": "paladium_craft_group",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Paladiumcore"
+      },
+      {
+        "value": "CUSTOM:TitaneIngot"
+      },
+      {
+        "value": "CUSTOM:PaladiumIngot"
+      }
+    ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,

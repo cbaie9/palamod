@@ -3,11 +3,11 @@
     "translate": "enchantment.palamod.bighole"
   },
   "supported_items": [
-    "palamod:pickaxeofthegodslv_18",
-    "palamod:pickaxeofthegodslv_19",
-    "palamod:pickaxeofthegodslv_20",
-    "palamod:pickaxeofthegodslv_17",
-    "palamod:creativepotg"
+    "palamod:pickaxe_of_the_gods_lv18",
+    "palamod:pickaxe_of_the_gods_lv19",
+    "palamod:pickaxe_of_the_gods_lv20",
+    "palamod:pickaxe_of_the_gods_lv17",
+    "palamod:creative_potg"
   ],
   "weight": 1,
   "max_level": 2,

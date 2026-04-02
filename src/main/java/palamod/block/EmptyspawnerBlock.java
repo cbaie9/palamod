@@ -1,16 +1,23 @@
 package palamod.block;
 
+import palamod.procedures.GetspawnerbackitemProcedure;
+import palamod.procedures.GetinfoPlaceemptyspawneretProcedure;
+import palamod.procedures.CachespawnerProcedure;
+
+import palamod.block.entity.EmptyspawnerBlockEntity;
+
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
-<<<<<<< Updated upstream
-
-public class EmptyspawnerBlock extends Block {
-	public EmptyspawnerBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
-=======
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -25,15 +32,12 @@ import net.minecraft.core.BlockPos;
 public class EmptyspawnerBlock extends Block implements EntityBlock {
 	public EmptyspawnerBlock(BlockBehaviour.Properties properties) {
 		super(properties.sound(SoundType.METAL).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
->>>>>>> Stashed changes
 	}
 
 	@Override
 	public int getLightBlock(BlockState state) {
 		return 15;
 	}
-<<<<<<< Updated upstream
-=======
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
@@ -103,5 +107,4 @@ public class EmptyspawnerBlock extends Block implements EntityBlock {
 		else
 			return 0;
 	}
->>>>>>> Stashed changes
 }

@@ -7,15 +7,11 @@
     " a "
   ],
   "key": {
-<<<<<<< Updated upstream
-    "a": "palamod:amethyst",
-=======
     "a": "palamod:amethyst_ingot",
->>>>>>> Stashed changes
     "b": "palamod:gold_mixedcoal"
   },
   "result": {
     "id": "palamod:amethyst_mixedcoal",
-    "count": 1
+    "count": 8
   }
 }

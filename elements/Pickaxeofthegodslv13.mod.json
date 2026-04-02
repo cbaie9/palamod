@@ -8,11 +8,13 @@
     "texture": "potg_of_13",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Pickaxe of the gods",
     "specialInformation": {
       "fixedValue": [
         "Level 13"
-      ]
+      ],
+      "name": "Titlepog"
     },
     "creativeTabs": [
       {

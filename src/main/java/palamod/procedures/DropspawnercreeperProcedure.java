@@ -51,7 +51,7 @@ public class DropspawnercreeperProcedure {
 									world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
 									if (Math.random() < 2d / 6) {
 										if (world instanceof ServerLevel _level) {
-											ItemEntity entityToSpawn = new ItemEntity(_level, x + xi, (0.25 + y + i), z + zi, new ItemStack(PalamodModBlocks.BROKENSPAWNER.get()));
+											ItemEntity entityToSpawn = new ItemEntity(_level, x + xi, (0.25 + y + i), z + zi, new ItemStack(PalamodModBlocks.BROKEN_SPAWNER.get()));
 											entityToSpawn.setPickUpDelay(10);
 											entityToSpawn.setUnlimitedLifetime();
 											_level.addFreshEntity(entityToSpawn);

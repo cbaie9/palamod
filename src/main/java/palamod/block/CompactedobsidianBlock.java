@@ -1,15 +1,13 @@
 package palamod.block;
 
 import palamod.procedures.RenforcedobsidianOnBlockRightClickedProcedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 import palamod.procedures.CompactedobsidianOnBlockRightClickedProcedure;
-<<<<<<< Updated upstream
-=======
 import palamod.procedures.CompactedobsidianBlockDestroyedByExplosionProcedure;
 
 import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
->>>>>>> Stashed changes
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.material.FluidState;
@@ -19,27 +17,20 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
->>>>>>> Stashed changes
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.server.level.ServerLevel;
-<<<<<<< Updated upstream
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-=======
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 public class CompactedobsidianBlock extends Block {
 	public CompactedobsidianBlock(BlockBehaviour.Properties properties) {
@@ -54,14 +45,14 @@ public class CompactedobsidianBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 
 	@Override
 	public void wasExploded(ServerLevel world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
-		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		CompactedobsidianBlockDestroyedByExplosionProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

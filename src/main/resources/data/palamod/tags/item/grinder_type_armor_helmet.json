@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:paladium_armor_helmet",
+    "palamod:endium_armor_helmet",
+    "palamod:paladium_armor_custom10_helmet",
+    "palamod:paladium_armor_custom5_helmet",
+    "palamod:paladium_armor_custom6_helmet",
+    "palamod:paladium_armor_custom7_helmet",
+    "palamod:green_paladium_armor_helmet",
+    "palamod:paladium_armor_custom2_helmet",
+    "palamod:paladium_armor_custom1_helmet",
+    "palamod:paladium_armor_custom3_helmet",
+    "palamod:paladium_armor_custom8_helmet",
+    "palamod:paladium_armor_custom9_helmet",
+    "palamod:paladium_armor_custom4_helmet"
+  ]
+}

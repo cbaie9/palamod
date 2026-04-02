@@ -1,0 +1,62 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Paladiumforge"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      },
+      {
+        "value": "CUSTOM:Paladiumfurnace"
+      },
+      {
+        "value": "Blocks.BRICK_BLOCK"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Paladiumforge"
+    },
+    "name": "paladiumforgecraft",
+    "namespace": "mod"
+  }
+}

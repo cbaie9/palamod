@@ -27,13 +27,8 @@ import java.util.Map;
 
 public abstract class TravelarmorItem extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(15, Map.of(ArmorType.BOOTS, 1, ArmorType.LEGGINGS, 3, ArmorType.CHESTPLATE, 1, ArmorType.HELMET, 1, ArmorType.BODY, 1), 20,
-<<<<<<< Updated upstream
-			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:travelarmor_repair_items")),
-			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:travelarmor")));
-=======
 			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 0f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:travel_armor_repair_items")),
 			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:travel_armor")));
->>>>>>> Stashed changes
 
 	private TravelarmorItem(Item.Properties properties) {
 		super(properties);

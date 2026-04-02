@@ -166,7 +166,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENPICKAXE.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -388,7 +388,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -421,7 +421,7 @@ public class Gcodecustompt2Procedure {
 							}
 						}
 					}
-					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEADENDIUMSWORD.get()
+					if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0 && (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.HEAD_ENDIUM_SWORD.get()
 							&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == PalamodModItems.PALADIUM_STICK.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).getItem() == Items.STICK)
 							&& 1 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "gnum")) {
@@ -536,7 +536,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMFASTSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_FASTSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -610,7 +610,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMFASTSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -684,7 +684,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMFASTSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -832,7 +832,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.GREENPALADIUMBROADSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -906,7 +906,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMBROADSWORD.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -1054,7 +1054,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUMGREENSHOVEL.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -1128,7 +1128,7 @@ public class Gcodecustompt2Procedure {
 								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 							}
 							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUMSHOVEL.get()).copy();
+								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL.get()).copy();
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
@@ -1393,8 +1393,8 @@ public class Gcodecustompt2Procedure {
 							}
 						}
 					}
-					if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_19.get()
-							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_20.get())
+					if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get()
+							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get())
 							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.BIG_HOLE_UPGRADE.get() && !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0)) {
 						if (!world.isClientSide()) {
@@ -1468,10 +1468,10 @@ public class Gcodecustompt2Procedure {
 							}
 						}
 					}
-					if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_17.get()
-							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_18.get()
-							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_19.get()
-							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXEOFTHEGODSLV_20.get())
+					if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV17.get()
+							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV18.get()
+							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV19.get()
+							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PICKAXE_OF_THE_GODS_LV20.get())
 							&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get() && !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0)) {
 						if (!world.isClientSide()) {

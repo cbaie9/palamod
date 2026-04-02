@@ -14,11 +14,25 @@ public class PalamodModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> LOGSALL;
 	public static GameRules.Key<GameRules.BooleanValue> LOCKEDCRAFT;
 	public static GameRules.Key<GameRules.BooleanValue> LOCKEDUSE;
+	public static GameRules.Key<GameRules.BooleanValue> COMMANDFURNACENOPERMACCESS;
+	public static GameRules.Key<GameRules.BooleanValue> COMMANDFACTIONNOPERMACCESS;
+	public static GameRules.Key<GameRules.BooleanValue> COMMANDFEEDNOPERMACCESS;
+	public static GameRules.Key<GameRules.BooleanValue> DISABLEJOBSGAMERULE;
+	public static GameRules.Key<GameRules.BooleanValue> DISABLEMONEYGAMERULE;
+	public static GameRules.Key<GameRules.BooleanValue> PALAMODDEBUGLOG;
+	public static GameRules.Key<GameRules.BooleanValue> COMMAND_CRAFT_NO_PERM_ACCESS;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
 		LOGSALL = GameRules.register("logsall", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		LOCKEDCRAFT = GameRules.register("lockedcraft", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 		LOCKEDUSE = GameRules.register("lockeduse", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+		COMMANDFURNACENOPERMACCESS = GameRules.register("commandfurnacenopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+		COMMANDFACTIONNOPERMACCESS = GameRules.register("commandfactionnopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
+		COMMANDFEEDNOPERMACCESS = GameRules.register("commandfeednopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
+		DISABLEJOBSGAMERULE = GameRules.register("disablejobsgamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
+		DISABLEMONEYGAMERULE = GameRules.register("disablemoneygamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
+		PALAMODDEBUGLOG = GameRules.register("palamoddebuglog", GameRules.Category.UPDATES, GameRules.BooleanValue.create(false));
+		COMMAND_CRAFT_NO_PERM_ACCESS = GameRules.register("commandCraftNoPermAccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
 	}
 }

@@ -4,16 +4,14 @@ import palamod.world.inventory.CrusherguiMenu;
 
 import palamod.procedures.CrushernbtsetupProcedure;
 import palamod.procedures.Crusherluncherv2Procedure;
+import palamod.procedures.CraftableToolTipTextProcedure;
 
 import palamod.init.PalamodModBlocks;
 
 import palamod.block.entity.PaladiumcrusherBlockEntity;
 
-<<<<<<< Updated upstream
-=======
 import palamod.PalamodMod;
 
->>>>>>> Stashed changes
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -28,17 +26,15 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.context.BlockPlaceContext;
-<<<<<<< Updated upstream
-=======
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
->>>>>>> Stashed changes
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
@@ -49,11 +45,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-<<<<<<< Updated upstream
-=======
 
 import java.util.function.Consumer;
->>>>>>> Stashed changes
 
 import io.netty.buffer.Unpooled;
 

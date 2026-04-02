@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 4,
+    "group": "wooden_stairs",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:DeadPlanks"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DeadStairs"
+    },
+    "name": "dead_stairs_recipe",
+    "namespace": "mod"
+  }
+}

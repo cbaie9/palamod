@@ -16,11 +16,7 @@ import net.minecraft.core.BlockPos;
 
 public class SoftenedtitaneoreBlock extends Block {
 	public SoftenedtitaneoreBlock(BlockBehaviour.Properties properties) {
-<<<<<<< Updated upstream
-		super(properties.sound(SoundType.NETHER_GOLD_ORE).strength(5.05f, 18.1194915919f).instrument(NoteBlockInstrument.BASEDRUM));
-=======
 		super(properties.sound(SoundType.NETHER_GOLD_ORE).strength(5.05f, 18.1194915919f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
->>>>>>> Stashed changes
 	}
 
 	@Override

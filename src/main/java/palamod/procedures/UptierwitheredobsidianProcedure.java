@@ -31,10 +31,10 @@ public class UptierwitheredobsidianProcedure {
 			world.setBlock(BlockPos.containing(x, y, z - 1), Blocks.AIR.defaultBlockState(), 3);
 		}
 		if (uptier) {
-			if (PalamodModBlocks.WITHEREDOBSIDIAN_0.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			if (PalamodModBlocks.WITHERED_OBSIDIAN_0.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_1.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_1.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -46,10 +46,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_1.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_1.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_2.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_2.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -61,10 +61,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_2.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_2.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_3.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -76,10 +76,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_3.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_3.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_4.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_4.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -91,10 +91,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_4.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_4.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_5.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_5.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -106,10 +106,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_5.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_5.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_6.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_6.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -121,10 +121,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_6.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_6.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_7.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_7.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -136,10 +136,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_7.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_7.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_8.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_8.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -151,10 +151,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_8.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_8.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_9.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_9.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -166,10 +166,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_9.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_9.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_10.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_10.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -181,10 +181,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_10.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_10.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_11.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_11.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -196,10 +196,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_11.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_11.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_12.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_12.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
@@ -211,10 +211,10 @@ public class UptierwitheredobsidianProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (PalamodModBlocks.WITHEREDOBSIDIAN_12.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+			} else if (PalamodModBlocks.WITHERED_OBSIDIAN_12.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 				{
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.WITHEREDOBSIDIAN_13.get().defaultBlockState();
+					BlockState _bs = PalamodModBlocks.WITHERED_OBSIDIAN_13.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Property<?> _propertyOld : _bso.getProperties()) {
 						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());

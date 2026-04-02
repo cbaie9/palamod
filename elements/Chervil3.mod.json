@@ -77,7 +77,7 @@
     },
     "useLootTableForDrops": false,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Chervilseed"
     },
     "dropAmount": 1,
     "xpAmountMin": 0,
@@ -92,6 +92,9 @@
     },
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 100,
     "fireSpreadSpeed": 60,

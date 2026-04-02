@@ -6,7 +6,7 @@
     "supportedSlots": "any",
     "weight": 1,
     "anvilCost": 8,
-    "maxLevel": 3,
+    "maxLevel": 1,
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
@@ -26,8 +26,8 @@
         "value": "CUSTOM:Creativepotg"
       }
     ],
-    "isTreasureEnchantment": false,
-    "isCurse": false,
+    "isTreasureEnchantment": true,
+    "isCurse": true,
     "canGenerateInLootTables": false,
     "canVillagerTrade": false
   }

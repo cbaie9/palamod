@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 2,
+    "group": "wooden_trapdoor",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:DeadPlanks"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "REDSTONE",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": "CUSTOM:DeadPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DeadTrapdoor"
+    },
+    "name": "dead_trapdoor_recipe",
+    "namespace": "mod"
+  }
+}

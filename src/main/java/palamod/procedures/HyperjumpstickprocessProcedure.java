@@ -30,7 +30,7 @@ public class HyperjumpstickprocessProcedure {
 			}
 			{
 				final String _tagName = "name";
-				final String _tagValue = (new ItemStack(PalamodModItems.HYPERJUMPSTICK.get()).getDisplayName().getString());
+				final String _tagValue = (new ItemStack(PalamodModItems.HYPERJUMP_STICK.get()).getDisplayName().getString());
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putString(_tagName, _tagValue));
 			}
 			{

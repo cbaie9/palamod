@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "green_paladium_craft_group",
   "category": "equipment",
   "pattern": [
     "aaa",
@@ -11,7 +12,7 @@
     "b": "minecraft:stick"
   },
   "result": {
-    "id": "palamod:paladiumgreenpickaxe",
+    "id": "palamod:green_paladium_pickaxe",
     "count": 1
   }
 }

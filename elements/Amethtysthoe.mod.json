@@ -8,9 +8,11 @@
     "texture": "amethyst_hoe",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Amethyst hoe",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "CraftableToolTipText"
     },
     "creativeTabs": [
       {
@@ -22,6 +24,9 @@
     "enchantability": 2,
     "damageVsEntity": 4.0,
     "usageCount": 3000,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:Amethyste"

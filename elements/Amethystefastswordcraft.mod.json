@@ -4,7 +4,7 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "",
+    "group": "amethyst_craft_group",
     "unlockingItems": [],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,

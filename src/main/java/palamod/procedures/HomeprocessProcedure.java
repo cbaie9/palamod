@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
@@ -42,8 +44,14 @@ public class HomeprocessProcedure {
 		File home = new File("");
 		File jobs = new File("");
 		boolean dim_check = false;
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\home\\" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		if (IsgameserversideProcedure.execute()) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		} else if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()),
+					File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		}
+		PalamodMod.LOGGER.info("Message3");
 		if (home.exists()) {
 			{
 				try {
@@ -56,7 +64,9 @@ public class HomeprocessProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (main.has("deleted")) {
-						if (main.has("home_x") && main.has("home_y") && !main.get("deleted").getAsBoolean() && main.has("home_z")) {
+						PalamodMod.LOGGER.info("Message");
+						if (main.has("home_x") && main.has("home_y") && main.has("dim_id") && !main.get("deleted").getAsBoolean() && main.has("home_z")) {
+							PalamodMod.LOGGER.info("Message2");
 							if (!(main.get("dim_id").getAsString()).equals("" + entity.level().dimension())) {
 								if (("" + Level.OVERWORLD).equals(main.get("dim_id").getAsString())) {
 									if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _serverLevel) {
@@ -115,9 +125,9 @@ public class HomeprocessProcedure {
 							if (dim_check) {
 								{
 									Entity _ent = entity;
-									_ent.teleportTo(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble());
+									_ent.teleportTo(main.get("home_x").getAsDouble(), main.get("home_y").getAsDouble(), main.get("home_z").getAsDouble());
 									if (_ent instanceof ServerPlayer _serverPlayer)
-										_serverPlayer.connection.teleport(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+										_serverPlayer.connection.teleport(main.get("home_x").getAsDouble(), main.get("home_y").getAsDouble(), main.get("home_z").getAsDouble(), _ent.getYRot(), _ent.getXRot());
 								}
 								if (world instanceof ServerLevel _level)
 									_level.getServer().getCommands().performPrefixedCommand(

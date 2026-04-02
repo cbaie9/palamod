@@ -1,0 +1,31 @@
+{
+  "_fv": 79,
+  "_type": "enchantment",
+  "definition": {
+    "name": "No modifier",
+    "supportedSlots": "any",
+    "weight": 1,
+    "anvilCost": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "CUSTOM:Creativehammer"
+      },
+      {
+        "value": "CUSTOM:Greenpaladiumhammer"
+      },
+      {
+        "value": "CUSTOM:Paladiumhammer"
+      },
+      {
+        "value": "CUSTOM:Endiumhammer"
+      }
+    ],
+    "isTreasureEnchantment": true,
+    "isCurse": true,
+    "canGenerateInLootTables": false,
+    "canVillagerTrade": false
+  }
+}

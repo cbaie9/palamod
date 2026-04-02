@@ -1,4 +1,5 @@
 # Enter the function code here
+# Enter the function code here
 kill @e[type=experience_orb]
 kill @e[type=egg]
 kill @e[type=leash_knot]
@@ -32,4 +33,4 @@ kill @e[type=spawner_minecart]
 kill @e[type=hopper_minecart]
 kill @e[type=ender_pearl]
 kill @e[type=eye_of_ender]
-
+# v1.21.8 v2repaste
