@@ -63,6 +63,8 @@ public class ChecklvlalchimistProcedure {
 						main_jobs.addProperty("lvl_miner", (1 + main_jobs.get("lvl_alchi").getAsDouble()));
 						main_jobs.addProperty("xp_alchi", (main_jobs.get("xp_alchi").getAsDouble() - main_jobs.get("next_level_alchi").getAsDouble()));
 						main_jobs.addProperty("next_level_alchi", GetnextlevelxpalchiProcedure.execute(entity));
+						main_jobs.addProperty("last_unlocked_type", 4);
+						main_jobs.addProperty("last_unlocked_lvl", main_jobs.get("lvl_alchi").getAsDouble());
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 							_setstack.setCount((int) (1 + Math.floor(main_jobs.get("lvl_alchi").getAsDouble() / 2)));

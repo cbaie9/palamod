@@ -163,7 +163,7 @@ public class OpenpalamodgameProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
-			jobs_main.addProperty("multi_exp", 1);
+			jobs_main.addProperty("multi_exp", ((world.getLevelData().getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER)) / 100d));
 			jobs_main.addProperty("next_level_miner", 50);
 			jobs_main.addProperty("next_level_farmer", 480);
 			jobs_main.addProperty("next_level_hunter", 480);

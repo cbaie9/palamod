@@ -64,6 +64,7 @@ public class JobsminerbreakblockProcedure {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 			cache = ReadcacheProcedure.execute(entity);
+			RecalcJobsXpBaseMultiplierProcedure.execute(world, entity);
 			if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
 				{
 					try {

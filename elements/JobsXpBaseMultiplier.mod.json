@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Jobs Xp Base Mutlitplier",
+    "description": "Change the base Xp multiplier, the value is in % and the default value is 100 ( % )",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 100
+  }
+}
