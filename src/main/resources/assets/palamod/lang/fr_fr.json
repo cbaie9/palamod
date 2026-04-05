@@ -1625,5 +1625,6 @@
   "gamerule.jobsLevelBase.description": "the normal \u0027maximun\u0027 for unlocking item is 20, putting true will revert to old system who is 100",
   "gamerule.jobsLevelBase": "Jobs Level Base",
   "gamerule.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
-  "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier"
+  "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier",
+  "item.palamod.flask": "Flask"
 }

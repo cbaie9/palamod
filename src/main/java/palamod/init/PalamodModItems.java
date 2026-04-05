@@ -5,6 +5,7 @@ package palamod.init;
 
 import palamod.procedures.GetxpfrombottleProcedure;
 import palamod.procedures.GetjobsfrombottleProcedure;
+import palamod.procedures.FlaskPropertyValueProviderProcedure;
 
 import palamod.item.inventory.VoidstoneInventoryCapability;
 import palamod.item.inventory.PaladiumphoneInventoryCapability;
@@ -670,6 +671,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TITANE_ANVIL;
 	public static final DeferredItem<Item> PALADIUM_ANVIL;
 	public static final DeferredItem<Item> MONEY_ANVIL;
+	public static final DeferredItem<Item> FLASK;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1304,6 +1306,7 @@ public class PalamodModItems {
 		TITANE_ANVIL = block(PalamodModBlocks.TITANE_ANVIL);
 		PALADIUM_ANVIL = block(PalamodModBlocks.PALADIUM_ANVIL);
 		MONEY_ANVIL = block(PalamodModBlocks.MONEY_ANVIL);
+		FLASK = REGISTRY.register("flask", FlaskItem::new);
 	}
 
 	// Start of user code block custom items
@@ -1342,6 +1345,7 @@ public class PalamodModItems {
 			event.enqueueWork(() -> {
 				ItemProperties.register(XP_BOTTLE.get(), ResourceLocation.parse("palamod:xp_bottle_xp"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetxpfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(XP_BOTTLE.get(), ResourceLocation.parse("palamod:xp_bottle_jobs_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetjobsfrombottleProcedure.execute(itemStackToRender));
+				ItemProperties.register(FLASK.get(), ResourceLocation.parse("palamod:flask_seve"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) FlaskPropertyValueProviderProcedure.execute(itemStackToRender));
 			});
 		}
 	}
