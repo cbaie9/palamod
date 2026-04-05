@@ -5,6 +5,7 @@ package palamod.init;
 
 import palamod.procedures.GetxpfrombottleProcedure;
 import palamod.procedures.GetjobsfrombottleProcedure;
+import palamod.procedures.FlaskPropertyValueProvider_type_of_woodProcedure;
 import palamod.procedures.FlaskPropertyValueProviderProcedure;
 
 import palamod.item.inventory.VoidstoneInventoryCapability;
@@ -1346,6 +1347,7 @@ public class PalamodModItems {
 				ItemProperties.register(XP_BOTTLE.get(), ResourceLocation.parse("palamod:xp_bottle_xp"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetxpfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(XP_BOTTLE.get(), ResourceLocation.parse("palamod:xp_bottle_jobs_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetjobsfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(FLASK.get(), ResourceLocation.parse("palamod:flask_seve"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) FlaskPropertyValueProviderProcedure.execute(itemStackToRender));
+				ItemProperties.register(FLASK.get(), ResourceLocation.parse("palamod:flask_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) FlaskPropertyValueProvider_type_of_woodProcedure.execute(itemStackToRender));
 			});
 		}
 	}

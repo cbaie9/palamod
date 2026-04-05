@@ -1626,5 +1626,16 @@
   "gamerule.jobsLevelBase": "Jobs Level Base",
   "gamerule.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
   "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier",
-  "item.palamod.flask": "Flask"
+  "item.palamod.flask": "Flask",
+  "gui.palamod.grinderpalahelpgui.label_empty": "",
+  "gui.palamod.authsafegui.code_check": "",
+  "gui.palamod.adminshopmenu.slider_suffix": "",
+  "gui.palamod.golemtreec.golem_v_farmer1": "",
+  "gui.palamod.factionhomegui.label_empty": "",
+  "palamod.tooltip.flask_amount": "",
+  "palamod.tooltip.flask_type": "",
+  "palamod.tooltip.flask_erable": "",
+  "palamod.tooltip.flask_ostrya": "",
+  "palamod.tooltip.flask_judeecercis": "",
+  "palamod.tooltip.flask_jacaranda": ""
 }

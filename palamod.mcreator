@@ -7339,9 +7339,9 @@
       "registry_name": "armorpalahelpgui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/world/inventory/ArmorpalahelpguiMenu.java",
           "src/main/java/palamod/client/gui/ArmorpalahelpguiScreen.java",
-          "src/main/java/palamod/network/ArmorpalahelpguiButtonMessage.java"
+          "src/main/java/palamod/network/ArmorpalahelpguiButtonMessage.java",
+          "src/main/java/palamod/world/inventory/ArmorpalahelpguiMenu.java"
         ]
       }
     },
@@ -43123,11 +43123,11 @@
       "registry_name": "money_anvil",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/money_anvil.json",
+          "src/main/java/palamod/block/MoneyanvilBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/money_anvil.json",
+          "src/main/resources/assets/palamod/blockstates/money_anvil.json",
           "src/main/resources/assets/palamod/models/block/money_anvil.json",
-          "src/main/resources/assets/palamod/models/item/money_anvil.json",
-          "src/main/java/palamod/block/MoneyanvilBlock.java"
+          "src/main/resources/assets/palamod/models/item/money_anvil.json"
         ]
       }
     },
@@ -44100,6 +44100,25 @@
           "src/main/java/palamod/procedures/ExtractorprocesstickProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Tooptipflaskrender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tooptipflaskrender",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/TooptipflaskrenderProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -44788,9 +44807,6 @@
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:Moneyanvil",
-      "~CUSTOM:Paladiumanvil",
-      "~CUSTOM:Titaneanvil",
-      "~CUSTOM:Amethystanvil",
       "~CUSTOM:Softeneddiamondore",
       "~CUSTOM:Softenedgoldore",
       "~CUSTOM:Softenedfindiumore",
@@ -45822,9 +45838,6 @@
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:Moneyanvil",
-      "~CUSTOM:Paladiumanvil",
-      "~CUSTOM:Titaneanvil",
-      "~CUSTOM:Amethystanvil",
       "~CUSTOM:Knockbackobsidian",
       "~CUSTOM:Frozenobsidian",
       "~CUSTOM:Paladiuminfusedobsidian",
@@ -48874,7 +48887,13 @@
       "gamerule.jobsLevelBase": "Jobs Level Base",
       "gamerule.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
       "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier",
-      "item.palamod.flask": "Flask"
+      "item.palamod.flask": "Flask",
+      "palamod.tooltip.flask_amount": "Amount",
+      "palamod.tooltip.flask_type": "Type",
+      "palamod.tooltip.flask_erable": "Erable",
+      "palamod.tooltip.flask_ostrya": "Ostrya",
+      "palamod.tooltip.flask_judeecercis": "Judeecercis",
+      "palamod.tooltip.flask_jacaranda": "Jacaranda"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50504,7 +50523,18 @@
       "gamerule.jobsLevelBase": "Jobs Level Base",
       "gamerule.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
       "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier",
-      "item.palamod.flask": "Flask"
+      "item.palamod.flask": "Flask",
+      "gui.palamod.grinderpalahelpgui.label_empty": "",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gui.palamod.golemtreec.golem_v_farmer1": "",
+      "gui.palamod.factionhomegui.label_empty": "",
+      "palamod.tooltip.flask_amount": "",
+      "palamod.tooltip.flask_type": "",
+      "palamod.tooltip.flask_erable": "",
+      "palamod.tooltip.flask_ostrya": "",
+      "palamod.tooltip.flask_judeecercis": "",
+      "palamod.tooltip.flask_jacaranda": ""
     }
   },
   "metadata": {
@@ -50562,7 +50592,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.061",
+    "version": "1.20.062",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

@@ -64,10 +64,10 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 1, 0, 0, 176, 166, 176, 166);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/forest32.png"), this.leftPos + 32, this.topPos + 56, 0, 0, 32, 16, 32, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/desert16.png"), this.leftPos + 8, this.topPos + 24, 0, 0, -1, -1, -1, -1);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fish32.png"), this.leftPos + 24, this.topPos + 24, 0, 0, -1, -1, -1, -1);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/lake32.png"), this.leftPos + 8, this.topPos + 56, 0, 0, -1, -1, -1, -1);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/nether32.png"), this.leftPos + 8, this.topPos + 87, 0, 0, -1, -1, -1, -1);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/desert16.png"), this.leftPos + 8, this.topPos + 24, 0, 0, 17, 16, 17, 16);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/fish32.png"), this.leftPos + 24, this.topPos + 24, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/lake32.png"), this.leftPos + 8, this.topPos + 56, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/nether32.png"), this.leftPos + 8, this.topPos + 87, 0, 0, 32, 16, 32, 16);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/plains16.png"), this.leftPos + 8, this.topPos + 40, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);

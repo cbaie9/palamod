@@ -9,6 +9,9 @@
     "customProperties": {
       "seve": {
         "name": "FlaskPropertyValueProvider"
+      },
+      "type": {
+        "name": "FlaskPropertyValueProvider_type_of_wood"
       }
     },
     "states": [
@@ -136,7 +139,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "Tooptipflaskrender"
     },
     "glowCondition": {
       "fixedValue": false
