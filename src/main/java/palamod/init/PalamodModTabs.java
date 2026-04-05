@@ -312,6 +312,12 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER_RED.get());
 				tabData.accept(PalamodModBlocks.TOTEM_FERTILITY.get().asItem());
 				tabData.accept(PalamodModItems.FLASK.get());
+				tabData.accept(PalamodModBlocks.SOFTENED_COAL_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_IRON_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_GOLD_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_DIAMOND_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_REDSTONE_ORE.get().asItem());
+				tabData.accept(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -604,23 +610,17 @@ public class PalamodModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(PalamodModItems.INTERNET_CARD.get());
 			tabData.accept(PalamodModItems.DANKAROCTEST_1_SPAWN_EGG.get());
-		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-			tabData.accept(PalamodModBlocks.SOFTENED_COAL_ORE.get().asItem());
-			tabData.accept(PalamodModBlocks.SOFTENED_IRON_ORE.get().asItem());
-			tabData.accept(PalamodModBlocks.SOFTENED_GOLD_ORE.get().asItem());
-			tabData.accept(PalamodModBlocks.SOFTENED_DIAMOND_ORE.get().asItem());
-			tabData.accept(PalamodModBlocks.SOFTENED_REDSTONE_ORE.get().asItem());
-			tabData.accept(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get().asItem());
-			tabData.accept(PalamodModBlocks.MINERAL_FLOWER.get().asItem());
-			tabData.accept(PalamodModBlocks.ENDIUM_FLOWER.get().asItem());
-			tabData.accept(PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem());
-			tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
-			tabData.accept(PalamodModBlocks.PALADIUM_FLOWER.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(PalamodModItems.PIG_ARMOR_HELMET.get());
 			tabData.accept(PalamodModItems.PIG_ARMOR_CHESTPLATE.get());
 			tabData.accept(PalamodModItems.PIG_ARMOR_LEGGINGS.get());
 			tabData.accept(PalamodModItems.PIG_ARMOR_BOOTS.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+			tabData.accept(PalamodModBlocks.MINERAL_FLOWER.get().asItem());
+			tabData.accept(PalamodModBlocks.ENDIUM_FLOWER.get().asItem());
+			tabData.accept(PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem());
+			tabData.accept(PalamodModBlocks.CLATHRUSARCHERI.get().asItem());
+			tabData.accept(PalamodModBlocks.PALADIUM_FLOWER.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(PalamodModBlocks.DEAD_LOG.get().asItem());
 			tabData.accept(PalamodModBlocks.DEAD_WOOD.get().asItem());

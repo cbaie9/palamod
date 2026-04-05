@@ -44066,6 +44066,40 @@
           "src/main/java/palamod/procedures/FlaskPropertyValueProvider_type_of_woodProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Extractorprocesstick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extractorprocesstick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ExtractorprocesstickProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46643,6 +46677,12 @@
       "CUSTOM:Titaneanvil",
       "CUSTOM:Paladiumanvil",
       "CUSTOM:Moneyanvil"
+    ],
+    "BLOCKS:mod:can_be_extracted": [
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:DeadLog"
     ]
   },
   "tab_element_order": {
@@ -46909,7 +46949,13 @@
       "Unclaimfinderorange",
       "Unclaimfinderred",
       "Totemfertility",
-      "Flask"
+      "Flask",
+      "Softcoalore",
+      "Softenedironore",
+      "Softenedgoldore",
+      "Softeneddiamondore",
+      "Softenedredstoneore",
+      "Softenedlapislazulisore"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",

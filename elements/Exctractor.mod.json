@@ -154,7 +154,7 @@
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
     "lightOpacity": 0,
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -230,6 +230,9 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "Extratorblockstateprocess"
+    },
+    "onTickUpdate": {
+      "name": "Extractorprocesstick"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

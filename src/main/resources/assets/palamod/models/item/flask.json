@@ -12,31 +12,31 @@
     },
     {
       "predicate": {
-        "palamod:flask_seve": 2
+        "palamod:flask_seve": 3
       },
       "model": "palamod:item/flask_1"
     },
     {
       "predicate": {
-        "palamod:flask_seve": 3
+        "palamod:flask_seve": 6
       },
       "model": "palamod:item/flask_2"
     },
     {
       "predicate": {
-        "palamod:flask_seve": 4
+        "palamod:flask_seve": 9
       },
       "model": "palamod:item/flask_3"
     },
     {
       "predicate": {
-        "palamod:flask_seve": 5
+        "palamod:flask_seve": 12
       },
       "model": "palamod:item/flask_4"
     },
     {
       "predicate": {
-        "palamod:flask_seve": 6
+        "palamod:flask_seve": 15
       },
       "model": "palamod:item/flask_5"
     }
