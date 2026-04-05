@@ -7,6 +7,6 @@
     "description": "Change the base Xp multiplier, the value is in % and the default value is 100 ( % )",
     "category": "PLAYER",
     "defaultValueLogic": false,
-    "defaultValueNumber": 100
+    "defaultValueNumber": 300
   }
 }
