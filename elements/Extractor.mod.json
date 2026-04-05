@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "frag_am",
     "customModelName": "exctrator_v2:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -34,6 +35,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedOnBlock": {
+      "name": "Extratorblockstateprocess"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

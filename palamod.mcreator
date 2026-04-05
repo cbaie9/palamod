@@ -42535,6 +42535,10 @@
             "type": "blockstate"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -43991,6 +43995,110 @@
       "metadata": {
         "type": "number",
         "files": []
+      }
+    },
+    {
+      "name": "FlaskPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flask_property_value_provider",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/FlaskPropertyValueProviderProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Flask",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flask",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/flask_0.json",
+          "src/main/resources/assets/palamod/models/item/flask.json",
+          "src/main/java/palamod/item/FlaskItem.java",
+          "src/main/resources/assets/palamod/models/item/flask_3.json",
+          "src/main/resources/assets/palamod/models/item/flask_4.json",
+          "src/main/resources/assets/palamod/models/item/flask_1.json",
+          "src/main/resources/assets/palamod/models/item/flask_5.json",
+          "src/main/resources/assets/palamod/models/item/flask_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Flaskcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaskcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/flaskcraft.json",
+          "src/main/resources/data/palamod/recipe/flask_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "FlaskPropertyValueProvider_type_of_wood",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flask_property_value_provider_type_of_wood",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/FlaskPropertyValueProvider_type_of_woodProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Extractorprocesstick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extractorprocesstick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ExtractorprocesstickProcedure.java"
+        ]
       }
     }
   ],
@@ -46569,6 +46677,12 @@
       "CUSTOM:Titaneanvil",
       "CUSTOM:Paladiumanvil",
       "CUSTOM:Moneyanvil"
+    ],
+    "BLOCKS:mod:can_be_extracted": [
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:DeadLog"
     ]
   },
   "tab_element_order": {
@@ -46834,7 +46948,14 @@
       "Unclaimfinder",
       "Unclaimfinderorange",
       "Unclaimfinderred",
-      "Totemfertility"
+      "Totemfertility",
+      "Flask",
+      "Softcoalore",
+      "Softenedironore",
+      "Softenedgoldore",
+      "Softeneddiamondore",
+      "Softenedredstoneore",
+      "Softenedlapislazulisore"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -47111,7 +47232,8 @@
       "Flowertotem",
       "Glueballpatern",
       "Titanehoe",
-      "Totemfertility"
+      "Totemfertility",
+      "Flask"
     ]
   },
   "language_map": {
@@ -48751,7 +48873,8 @@
       "gamerule.jobsLevelBase.description": "the normal \u0027maximun\u0027 for unlocking item is 20, putting true will revert to old system who is 100",
       "gamerule.jobsLevelBase": "Jobs Level Base",
       "gamerule.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
-      "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier"
+      "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier",
+      "item.palamod.flask": "Flask"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50380,7 +50503,8 @@
       "gamerule.jobsLevelBase.description": "the normal \u0027maximun\u0027 for unlocking item is 20, putting true will revert to old system who is 100",
       "gamerule.jobsLevelBase": "Jobs Level Base",
       "gamerule.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
-      "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier"
+      "gamerule.baseJobLevelMultiplier": "Base Job Level Mutliplier",
+      "item.palamod.flask": "Flask"
     }
   },
   "metadata": {

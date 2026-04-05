@@ -53,7 +53,7 @@
     "immuneToFire": false,
     "creativeTabs": [
       {
-        "value": "DECORATIONS"
+        "value": "CUSTOM:Palamod"
       }
     ],
     "destroyTool": "pickaxe",

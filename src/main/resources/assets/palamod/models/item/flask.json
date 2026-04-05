@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "palamod:item/flask0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "palamod:flask_seve": 1
+      },
+      "model": "palamod:item/flask_0"
+    },
+    {
+      "predicate": {
+        "palamod:flask_seve": 3
+      },
+      "model": "palamod:item/flask_1"
+    },
+    {
+      "predicate": {
+        "palamod:flask_seve": 6
+      },
+      "model": "palamod:item/flask_2"
+    },
+    {
+      "predicate": {
+        "palamod:flask_seve": 9
+      },
+      "model": "palamod:item/flask_3"
+    },
+    {
+      "predicate": {
+        "palamod:flask_seve": 12
+      },
+      "model": "palamod:item/flask_4"
+    },
+    {
+      "predicate": {
+        "palamod:flask_seve": 15
+      },
+      "model": "palamod:item/flask_5"
+    }
+  ]
+}
