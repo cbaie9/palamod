@@ -1,0 +1,100 @@
+{
+  "_fv": 79,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Amethysttank",
+    "blockstateList": [
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l2_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l4_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l6_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l8_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l10_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l12_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l14_jacaranda",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

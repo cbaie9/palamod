@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/tank1.21.1",
+  "textures": {
+    "all": "palamod:block/amethyst_block",
+    "particle": "palamod:block/amethyst_block",
+    "top-giga": "palamod:block/empty_texture",
+    "side": "palamod:block/empty_texture",
+    "cadre": "palamod:block/cadre"
+  },
+  "render_type": "cutout"
+}

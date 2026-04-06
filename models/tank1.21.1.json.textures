@@ -1,0 +1,68 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "top-giga": "empty_texture",
+        "side": "empty_texture",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l2_jacaranda": {
+      "name": "ame_l2_jacaranda",
+      "map": {
+        "top-giga": "l2_jacaranda",
+        "side": "fluid_2_jacaranda",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l4_jacaranda": {
+      "name": "ame_l4_jacaranda",
+      "map": {
+        "top-giga": "l4_jacaranda",
+        "side": "fluid_4_jacaranda",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l6_jacaranda": {
+      "name": "ame_l6_jacaranda",
+      "map": {
+        "top-giga": "l6_jacaranda",
+        "side": "fluid_6_jacaranda",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l8_jacaranda": {
+      "name": "ame_l8_jacaranda",
+      "map": {
+        "top-giga": "l8_jacaranda",
+        "side": "fluid_8_jacaranda",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l10_jacaranda": {
+      "name": "ame_l10_jacaranda",
+      "map": {
+        "top-giga": "l10_jacaranda",
+        "side": "fluid_10_jacaranda",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l12_jacaranda": {
+      "name": "ame_l12_jacaranda",
+      "map": {
+        "top-giga": "l12_jacaranda",
+        "side": "fluid_12_jacaranda",
+        "cadre": "cadre"
+      }
+    },
+    "ame_l14_jacaranda": {
+      "name": "ame_l14_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "cadre"
+      }
+    }
+  }
+}

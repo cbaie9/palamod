@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "palamod:block/amethysttank"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_2"
+    },
+    "blockstate=4": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_3"
+    },
+    "blockstate=5": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_4"
+    },
+    "blockstate=6": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_5"
+    },
+    "blockstate=7": {
+      "model": "palamod:block/amethysttankblockstate_blockstate_6"
+    }
+  }
+}
