@@ -66,6 +66,7 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FlowertotemBlockEntity>> FLOWER_TOTEM = register("flower_totem", PalamodModBlocks.FLOWER_TOTEM, FlowertotemBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SpawncontrollerBlockEntity>> SPAWN_CONTROLLER = register("spawn_controller", PalamodModBlocks.SPAWN_CONTROLLER, SpawncontrollerBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EmptyspawnerBlockEntity>> EMPTY_SPAWNER = register("empty_spawner", PalamodModBlocks.EMPTY_SPAWNER, EmptyspawnerBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AmethysttankBlockEntity>> AMETHYSTTANK = register("amethysttank", PalamodModBlocks.AMETHYSTTANK, AmethysttankBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -117,5 +118,6 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FLOWER_TOTEM.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SPAWN_CONTROLLER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EMPTY_SPAWNER.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AMETHYSTTANK.get(), SidedInvWrapper::new);
 	}
 }

@@ -23,7 +23,7 @@ import net.minecraft.world.Containers;
 import net.minecraft.core.BlockPos;
 
 public class AmethysttankBlock extends Block implements EntityBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 7);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 28);
 
 	public AmethysttankBlock() {
 		super(BlockBehaviour.Properties.of().strength(1f, 10f).lightLevel(s -> (new Object() {
@@ -41,6 +41,48 @@ public class AmethysttankBlock extends Block implements EntityBlock {
 				if (s.getValue(BLOCKSTATE) == 6)
 					return 0;
 				if (s.getValue(BLOCKSTATE) == 7)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 8)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 9)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 10)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 11)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 12)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 13)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 14)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 15)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 16)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 17)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 18)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 19)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 20)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 21)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 22)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 23)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 24)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 25)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 26)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 27)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 28)
 					return 0;
 				return 0;
 			}

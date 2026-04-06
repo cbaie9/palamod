@@ -5,7 +5,7 @@
       "map": {
         "top-giga": "empty_texture",
         "side": "empty_texture",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l2_jacaranda": {
@@ -13,7 +13,7 @@
       "map": {
         "top-giga": "l2_jacaranda",
         "side": "fluid_2_jacaranda",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l4_jacaranda": {
@@ -21,7 +21,7 @@
       "map": {
         "top-giga": "l4_jacaranda",
         "side": "fluid_4_jacaranda",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l6_jacaranda": {
@@ -29,7 +29,7 @@
       "map": {
         "top-giga": "l6_jacaranda",
         "side": "fluid_6_jacaranda",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l8_jacaranda": {
@@ -37,7 +37,7 @@
       "map": {
         "top-giga": "l8_jacaranda",
         "side": "fluid_8_jacaranda",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l10_jacaranda": {
@@ -45,7 +45,7 @@
       "map": {
         "top-giga": "l10_jacaranda",
         "side": "fluid_10_jacaranda",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l12_jacaranda": {
@@ -53,7 +53,7 @@
       "map": {
         "top-giga": "l12_jacaranda",
         "side": "fluid_12_jacaranda",
-        "cadre": "cadre"
+        "cadre": "amethyste_tank"
       }
     },
     "ame_l14_jacaranda": {
@@ -61,6 +61,174 @@
       "map": {
         "top-giga": "l14_jacaranda",
         "side": "fluid_14_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_erable": {
+      "name": "ame_l2_erable",
+      "map": {
+        "top-giga": "l2_erable",
+        "side": "fluid_2_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_erable": {
+      "name": "ame_l4_erable",
+      "map": {
+        "top-giga": "l4_erable",
+        "side": "fluid_4_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_erable": {
+      "name": "ame_l6_erable",
+      "map": {
+        "top-giga": "l6_erable",
+        "side": "fluid_6_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_erable": {
+      "name": "ame_l8_erable",
+      "map": {
+        "top-giga": "l8_erable",
+        "side": "fluid_8_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_erable": {
+      "name": "ame_l10_erable",
+      "map": {
+        "top-giga": "l10_erable",
+        "side": "fluid_10_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_erable": {
+      "name": "ame_l12_erable",
+      "map": {
+        "top-giga": "l12_erable",
+        "side": "fluid_12_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_erable": {
+      "name": "ame_l14_erable",
+      "map": {
+        "top-giga": "l14_erable",
+        "side": "fluid_14_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_judeecercis": {
+      "name": "ame_l2_judeecercis",
+      "map": {
+        "top-giga": "l2_judeecercis",
+        "side": "fluid_2_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_judeecercis": {
+      "name": "ame_l4_judeecercis",
+      "map": {
+        "top-giga": "l4_judeecercis",
+        "side": "fluid_4_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_judeecercis": {
+      "name": "ame_l6_judeecercis",
+      "map": {
+        "top-giga": "l6_judeecercis",
+        "side": "fluid_6_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_judeecercis": {
+      "name": "ame_l8_judeecercis",
+      "map": {
+        "top-giga": "l8_judeecercis",
+        "side": "fluid_8_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_judeecercis": {
+      "name": "ame_l12_judeecercis",
+      "map": {
+        "top-giga": "l12_judeecercis",
+        "side": "fluid_12_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_judeecercis": {
+      "name": "ame_l14_judeecercis",
+      "map": {
+        "top-giga": "l14_judeecercis",
+        "side": "fluid_14_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_ostrya": {
+      "name": "ame_l2_ostrya",
+      "map": {
+        "top-giga": "l2_ostrya",
+        "side": "fluid_2_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_ostrya": {
+      "name": "ame_l4_ostrya",
+      "map": {
+        "top-giga": "l4_ostrya",
+        "side": "fluid_4_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_ostrya": {
+      "name": "ame_l6_ostrya",
+      "map": {
+        "top-giga": "l6_ostrya",
+        "side": "fluid_6_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_ostrya": {
+      "name": "ame_l8_ostrya",
+      "map": {
+        "top-giga": "l8_ostrya",
+        "side": "fluid_8_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_ostrya": {
+      "name": "ame_l10_ostrya",
+      "map": {
+        "top-giga": "l10_ostrya",
+        "side": "fluid_10_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_ostrya": {
+      "name": "ame_l12_ostrya",
+      "map": {
+        "top-giga": "l12_ostrya",
+        "side": "fluid_12_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_ostrya": {
+      "name": "ame_l14_ostrya",
+      "map": {
+        "top-giga": "l14_ostrya",
+        "side": "fluid_14_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_judeecercis": {
+      "name": "ame_l10_judeecercis",
+      "map": {
+        "top-giga": "l10_judeecercis",
+        "side": "fluid_10_judeecercis",
         "cadre": "cadre"
       }
     }

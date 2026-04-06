@@ -44119,6 +44119,62 @@
           "src/main/java/palamod/procedures/TooptipflaskrenderProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Amethysttank",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethysttank",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
+          "src/main/resources/assets/palamod/blockstates/amethysttank.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
+          "src/main/resources/assets/palamod/models/item/amethysttank.json",
+          "src/main/java/palamod/block/AmethysttankBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Amethysttankblockstate",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethysttankblockstate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_0.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_9.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_22.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_11.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_16.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_19.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_3.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_6.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_27.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_8.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_5.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_23.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_20.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_2.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_12.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_15.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_18.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_26.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_1.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_21.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_24.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_10.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_13.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_14.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_17.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_25.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_4.json",
+          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_7.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -44643,6 +44699,7 @@
       "Blocks.COBBLESTONE"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Amethysttank",
       "~CUSTOM:Emptyspawner",
       "~CUSTOM:Spawncontroller",
       "~CUSTOM:Softenedlapislazulisore",
@@ -45837,6 +45894,7 @@
       "CUSTOM:Bigringgreenpaladium"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Amethysttank",
       "~CUSTOM:Moneyanvil",
       "~CUSTOM:Knockbackobsidian",
       "~CUSTOM:Frozenobsidian",
@@ -48893,7 +48951,8 @@
       "palamod.tooltip.flask_erable": "Erable",
       "palamod.tooltip.flask_ostrya": "Ostrya",
       "palamod.tooltip.flask_judeecercis": "Judeecercis",
-      "palamod.tooltip.flask_jacaranda": "Jacaranda"
+      "palamod.tooltip.flask_jacaranda": "Jacaranda",
+      "block.palamod.amethysttank": "Amethyst tank"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50534,7 +50593,8 @@
       "palamod.tooltip.flask_erable": "",
       "palamod.tooltip.flask_ostrya": "",
       "palamod.tooltip.flask_judeecercis": "",
-      "palamod.tooltip.flask_jacaranda": ""
+      "palamod.tooltip.flask_jacaranda": "",
+      "block.palamod.amethysttank": "Amethyst tank"
     }
   },
   "metadata": {
