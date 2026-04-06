@@ -5,7 +5,7 @@
     "particle": "palamod:block/amethyst_block",
     "top-giga": "palamod:block/empty_texture",
     "side": "palamod:block/empty_texture",
-    "cadre": "palamod:block/cadre"
+    "cadre": "palamod:block/amethyste_tank"
   },
   "render_type": "cutout"
 }

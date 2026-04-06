@@ -5,7 +5,7 @@
     "particle": "palamod:block/amethyst_block",
     "top-giga": "palamod:block/l10_jacaranda",
     "side": "palamod:block/fluid_10_jacaranda",
-    "cadre": "palamod:block/cadre"
+    "cadre": "palamod:block/amethyste_tank"
   },
   "render_type": "cutout"
 }
