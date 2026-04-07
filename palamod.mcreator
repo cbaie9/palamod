@@ -44175,6 +44175,86 @@
           "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_7.json"
         ]
       }
+    },
+    {
+      "name": "ReadMoneyFile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "read_money_file",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "file",
+        "files": [
+          "src/main/java/palamod/procedures/ReadMoneyFileProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetXpcraftjobs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_xpcraftjobs",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "item_craft",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetXpcraftjobsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "CraftGiveXpJobs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_give_xp_jobs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "item_craft",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CraftGiveXpJobsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45837,7 +45917,20 @@
       "CUSTOM:Findiumoredeepslate",
       "CUSTOM:Trixiumore",
       "CUSTOM:Amethystoredeepslate",
-      "CUSTOM:Fakepaladiumore"
+      "CUSTOM:Fakepaladiumore",
+      "CUSTOM:Softenedamethystore",
+      "CUSTOM:Softenedtitaneore",
+      "CUSTOM:Softenedpaladiumore",
+      "CUSTOM:Softenedgreenpaladiumore",
+      "CUSTOM:Softenedtrixiumore",
+      "CUSTOM:Softenedfindiumore",
+      "CUSTOM:Softenedendiumnuggetore",
+      "CUSTOM:Softcoalore",
+      "CUSTOM:Softenedironore",
+      "CUSTOM:Softenedgoldore",
+      "CUSTOM:Softeneddiamondore",
+      "CUSTOM:Softenedredstoneore",
+      "CUSTOM:Softenedlapislazulisore"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:Smelt"
@@ -46757,7 +46850,44 @@
     ],
     "ITEMS:c:glass": [
       "TAG:neoforge:glass"
-    ]
+    ],
+    "ITEMS:mod:glueball": [
+      "CUSTOM:Redglueball",
+      "CUSTOM:Greenglueball",
+      "CUSTOM:Lightgreenglueball",
+      "CUSTOM:Darkgreenglueball",
+      "CUSTOM:Blueglueball",
+      "CUSTOM:Purpleglueball",
+      "CUSTOM:Yellowglueball",
+      "CUSTOM:Cyanglueball",
+      "CUSTOM:Orangeglueball",
+      "CUSTOM:Grayglueball"
+    ],
+    "ITEMS:mod:glueball_tier_one": [
+      "CUSTOM:Blueglueball",
+      "CUSTOM:Redglueball",
+      "CUSTOM:Greenglueball"
+    ],
+    "ITEMS:mod:glueball_tier_two": [
+      "CUSTOM:Lightgreenglueball",
+      "CUSTOM:Darkgreenglueball",
+      "CUSTOM:Purpleglueball",
+      "CUSTOM:Yellowglueball",
+      "CUSTOM:Cyanglueball",
+      "CUSTOM:Orangeglueball",
+      "CUSTOM:Grayglueball"
+    ],
+    "ITEMS:mod:alchimist_jobs": [
+      "CUSTOM:Exctractor",
+      "CUSTOM:Extractor",
+      "CUSTOM:Flask"
+    ],
+    "ITEMS:mod:farmer_jobs": [
+      "Items.BREAD",
+      "Items.PUMPKIN_PIE"
+    ],
+    "ITEMS:mod:miner_jobs": [],
+    "ITEMS:mod:hunter_jobs": []
   },
   "tab_element_order": {
     "CUSTOM:Palamod": [

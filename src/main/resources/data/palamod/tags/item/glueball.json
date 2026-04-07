@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:glueball_red",
+    "palamod:glueball_yellow",
+    "palamod:glueball_orange",
+    "palamod:glueball_cyan",
+    "palamod:glueball_gray",
+    "palamod:green_glueball",
+    "palamod:glueball_dark_green",
+    "palamod:glueball_blue",
+    "palamod:glueball_light_green",
+    "palamod:glueball_purple"
+  ]
+}
