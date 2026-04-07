@@ -46754,6 +46754,9 @@
       "CUSTOM:Jacaranda_Log",
       "CUSTOM:Judeecercis_Log",
       "CUSTOM:DeadLog"
+    ],
+    "ITEMS:c:glass": [
+      "TAG:neoforge:glass"
     ]
   },
   "tab_element_order": {
