@@ -16,7 +16,7 @@ public class LastunlockedminerProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		jobs = GetjobsfileProcedure.execute(entity);
-		if (jobs.exists()) {
+		if (jobs.exists() || IsgameserversideProcedure.execute()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

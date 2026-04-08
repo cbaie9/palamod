@@ -3,6 +3,8 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
+import palamod.PalamodMod;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.Items;
@@ -35,6 +37,7 @@ public class GetXpcraftjobsProcedure {
 		double lvl_alchi = 0;
 		item = item_craft.copy();
 		jobs = GetjobsfileProcedure.execute(entity);
+		cache = ReadcacheProcedure.execute(entity);
 		if (cache.exists() && jobs.exists()) {
 			{
 				try {
@@ -68,6 +71,7 @@ public class GetXpcraftjobsProcedure {
 				output = 4;
 			}
 		}
+		PalamodMod.LOGGER.info(("[Palamod] [GetXpCraftJobs] return : " + output + " | " + item));
 		return output;
 	}
 }

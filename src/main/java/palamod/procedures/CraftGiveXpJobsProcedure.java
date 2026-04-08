@@ -1,7 +1,5 @@
 package palamod.procedures;
 
-import palamod.network.PalamodModVariables;
-
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
@@ -15,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -23,7 +20,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.BlockPos;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
@@ -34,7 +30,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class CraftGiveXpJobsProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack item_craft) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack item_craft) {
 		if (entity == null)
 			return;
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
@@ -48,11 +44,10 @@ public class CraftGiveXpJobsProcedure {
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			money = ReadMoneyFileProcedure.execute(entity);
-			RecalcJobsXpBaseMultiplierProcedure.execute(world, entity);
 			if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
 				{
 					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(PalamodModVariables.server_path_cache));
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
 						StringBuilder jsonstringbuilder = new StringBuilder();
 						String line;
 						while ((line = bufferedReader.readLine()) != null) {
@@ -72,7 +67,7 @@ public class CraftGiveXpJobsProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 							main.addProperty("xpstreak_alchi", 0);
 						}
-						xp_receive = GetXpcraftjobsProcedure.execute(entity, item_craft);
+						xp_receive = GetXpcraftjobsProcedure.execute(entity, item);
 						if (0 < xp_receive) {
 							if (item.is(ItemTags.create(ResourceLocation.parse("palamod:farmer_jobs")))) {
 								jobs_string = "farmer";
@@ -90,6 +85,7 @@ public class CraftGiveXpJobsProcedure {
 								jobs_string = "alchi";
 								PalamodMod.LOGGER.error(("[ Palamod ][ from craftgivejobs.java] : error -> Craft with approved xp amount but no attribued jobs | item :  '" + item + "' , fallback to alchimist"));
 							}
+							PalamodMod.LOGGER.debug(jobs_string);
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
@@ -112,16 +108,9 @@ public class CraftGiveXpJobsProcedure {
 							main.addProperty(("xpstreak_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
 							main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(
-										Component
-												.literal(
-														(Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble())
-																+ Component.translatable("palamod.procedure.jobswin2").getString() + " "
-																+ Component
-																		.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:",
-																				(world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft.")))
-																		.getString())),
-										true);
+								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
+										+ (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable("palamod.procedure.jobswin2craft").getString() + " "
+										+ Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())), true);
 						}
 					} catch (IOException e) {
 						e.printStackTrace();
@@ -137,7 +126,6 @@ public class CraftGiveXpJobsProcedure {
 						exception.printStackTrace();
 					}
 				}
-				ChecklvlminerProcedure.execute(world, x, y, z, entity);
 			}
 		}
 	}

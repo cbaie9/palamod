@@ -1638,5 +1638,7 @@
   "palamod.tooltip.flask_ostrya": "",
   "palamod.tooltip.flask_judeecercis": "",
   "palamod.tooltip.flask_jacaranda": "",
-  "block.palamod.amethysttank": "Amethyst tank"
+  "block.palamod.amethysttank": "Amethyst tank",
+  "palamod.procedure.jobswin2craft": "",
+  "palamod.procedure.jobswin2smelt": ""
 }

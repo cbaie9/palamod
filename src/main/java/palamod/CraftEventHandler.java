@@ -7,10 +7,12 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.CraftingMenu;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
 import palamod.procedures.JobCraftRestrictionManagerProcedure;
+import palamod.procedures.CraftGiveXpJobsProcedure;
 
 @EventBusSubscriber
 public class CraftEventHandler {
@@ -29,6 +31,13 @@ public class CraftEventHandler {
                 player,
                 result
         );
+        if (allowed && !player.level().isClientSide()){
+        	CraftGiveXpJobsProcedure.execute( /// xp craft via crafting table 
+			player.level(), // ✅ world en premier
+	        player,         // ✅ entity ensuite
+	        result
+			);
+        }
 
         if (!allowed) {
 
