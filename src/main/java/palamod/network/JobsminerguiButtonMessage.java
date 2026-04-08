@@ -53,7 +53,7 @@ public record JobsminerguiButtonMessage(int buttonID, int x, int y, int z) imple
 
 			ConnectminercraftProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 1) {
 
 			CloseguiProcedure.execute(entity);
 		}

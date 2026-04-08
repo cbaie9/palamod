@@ -92,6 +92,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 		guiGraphics.drawString(this.font, GetlevelalchiProcedure.execute(entity), 272, 99, -1, false);
 		if (IsgameclientsideProcedure.execute(world, x, y, z))
 			guiGraphics.drawString(this.font, LastunlockedminerProcedure.execute(entity), 8, 134, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_beta"), 8, 5, -3407872, false);
 	}
 
 	@Override
@@ -129,6 +130,12 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs);
 		imagebutton_screen_beta2_template_jobs1 = new ImageButton(this.leftPos + 201, this.topPos + 57, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_hunter2.png")), e -> {
+					int x = JobsguiScreen.this.x;
+					int y = JobsguiScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new JobsguiButtonMessage(2, x, y, z));
+						JobsguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -138,6 +145,12 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs1);
 		imagebutton_screen_beta2_template_jobs2 = new ImageButton(this.leftPos + 272, this.topPos + 57, 40, 40,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi.png"), ResourceLocation.parse("palamod:textures/screens/screen_beta3_jobs_alchi2.png")), e -> {
+					int x = JobsguiScreen.this.x;
+					int y = JobsguiScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new JobsguiButtonMessage(3, x, y, z));
+						JobsguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

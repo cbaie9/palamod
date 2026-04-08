@@ -25,7 +25,7 @@
         "data": {
           "name": "label_jobs_miner",
           "text": {
-            "fixedValue": "Jobs : farmer"
+            "fixedValue": "Jobs : hunter"
           },
           "color": {
             "value": -1,
@@ -42,9 +42,6 @@
           "name": "imagebutton_button_gray",
           "image": "craft_button_v2.png",
           "hoveredImage": "craft_button_hover_v3.png",
-          "onClick": {
-            "name": "Connectfarmercraftgui"
-          },
           "x": 230,
           "y": 133,
           "locked": false
@@ -56,7 +53,7 @@
           "name": "label_0_100",
           "text": {
             "fixedValue": "98 / 100",
-            "name": "Getxpfarmer"
+            "name": "Getxphunter"
           },
           "color": {
             "value": -1,
@@ -73,7 +70,7 @@
           "name": "tooltip_98100_0",
           "text": {
             "fixedValue": "98/100 | 98%  of the level1",
-            "name": "Getxpfarmertext"
+            "name": "Getxphuntertext"
           },
           "width": 145,
           "height": 10,
@@ -123,7 +120,7 @@
           "spritesCount": 100,
           "spriteIndex": {
             "fixedValue": 0.0,
-            "name": "Jobsfarmergetxpprogressbar"
+            "name": "Jobshuntergetxpprogressbar"
           },
           "x": 140,
           "y": 106,
@@ -136,7 +133,7 @@
           "name": "label_proc_getlevelfarmer",
           "text": {
             "fixedValue": "",
-            "name": "Getlevelfarmer"
+            "name": "Getlevelhunter"
           },
           "color": {
             "value": -1,

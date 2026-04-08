@@ -1,13 +1,13 @@
 package palamod.client.gui;
 
-import palamod.world.inventory.JobsfarmerguiMenu;
+import palamod.world.inventory.JobshunterguiMenu;
 
-import palamod.procedures.JobsfarmergetxpprogressbarProcedure;
-import palamod.procedures.GetxpfarmertextProcedure;
-import palamod.procedures.GetxpfarmerProcedure;
-import palamod.procedures.GetlevelfarmerProcedure;
+import palamod.procedures.JobshuntergetxpprogressbarProcedure;
+import palamod.procedures.GetxphuntertextProcedure;
+import palamod.procedures.GetxphunterProcedure;
+import palamod.procedures.GetlevelhunterProcedure;
 
-import palamod.network.JobsfarmerguiButtonMessage;
+import palamod.network.JobshunterguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
@@ -29,7 +29,7 @@ import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMenu> implements PalamodModScreens.ScreenAccessor {
+public class JobshunterguiScreen extends AbstractContainerScreen<JobshunterguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -37,7 +37,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 	private ImageButton imagebutton_button_gray;
 	private ImageButton imagebutton_cross_no_button;
 
-	public JobsfarmerguiScreen(JobsfarmerguiMenu container, Inventory inventory, Component text) {
+	public JobshunterguiScreen(JobshunterguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -59,7 +59,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36) {
-			String hoverText = GetxpfarmertextProcedure.execute(entity);
+			String hoverText = GetxphuntertextProcedure.execute(entity);
 			if (hoverText != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
@@ -77,7 +77,7 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsminergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 80, 176, 80);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsfarmergetxpprogressbarProcedure.execute(entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
+		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobshuntergetxpprogressbarProcedure.execute(entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
 		RenderSystem.disableBlend();
 	}
 
@@ -92,9 +92,9 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsfarmergui.label_jobs_miner"), 9, 7, -1, false);
-		guiGraphics.drawString(this.font, GetxpfarmerProcedure.execute(entity), 13, 38, -1, false);
-		guiGraphics.drawString(this.font, GetlevelfarmerProcedure.execute(entity), 5, 63, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobshuntergui.label_jobs_miner"), 9, 7, -1, false);
+		guiGraphics.drawString(this.font, GetxphunterProcedure.execute(entity), 13, 38, -1, false);
+		guiGraphics.drawString(this.font, GetlevelhunterProcedure.execute(entity), 5, 63, -1, false);
 	}
 
 	@Override
@@ -102,12 +102,6 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		super.init();
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_hover_v3.png")), e -> {
-					int x = JobsfarmerguiScreen.this.x;
-					int y = JobsfarmerguiScreen.this.y;
-					if (true) {
-						PacketDistributor.sendToServer(new JobsfarmerguiButtonMessage(0, x, y, z));
-						JobsfarmerguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
-					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -117,11 +111,11 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		this.addRenderableWidget(imagebutton_button_gray);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
-					int x = JobsfarmerguiScreen.this.x;
-					int y = JobsfarmerguiScreen.this.y;
+					int x = JobshunterguiScreen.this.x;
+					int y = JobshunterguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsfarmerguiButtonMessage(1, x, y, z));
-						JobsfarmerguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new JobshunterguiButtonMessage(1, x, y, z));
+						JobshunterguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override

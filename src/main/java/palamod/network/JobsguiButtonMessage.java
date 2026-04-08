@@ -2,6 +2,8 @@ package palamod.network;
 
 import palamod.procedures.ConnectjobsminerguiProcedure;
 import palamod.procedures.ConnectfarmerguiProcedure;
+import palamod.procedures.ConnectJobsHunterGuiProcedure;
+import palamod.procedures.ConnectJobsAlchimistGuiProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -57,6 +59,14 @@ public record JobsguiButtonMessage(int buttonID, int x, int y, int z) implements
 		if (buttonID == 1) {
 
 			ConnectjobsminerguiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			ConnectJobsHunterGuiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 3) {
+
+			ConnectJobsAlchimistGuiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 

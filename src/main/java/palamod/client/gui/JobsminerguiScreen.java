@@ -2,10 +2,10 @@ package palamod.client.gui;
 
 import palamod.world.inventory.JobsminerguiMenu;
 
-import palamod.procedures.ReturnfalseProcedure;
 import palamod.procedures.JobsminergetxpprogressbarProcedure;
 import palamod.procedures.GetxpminertextProcedure;
 import palamod.procedures.GetxpminerProcedure;
+import palamod.procedures.GetlevelminerProcedure;
 
 import palamod.network.JobsminerguiButtonMessage;
 
@@ -35,7 +35,6 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private ImageButton imagebutton_button_gray;
-	private ImageButton imagebutton_help_button;
 	private ImageButton imagebutton_cross_no_button;
 
 	public JobsminerguiScreen(JobsminerguiMenu container, Inventory inventory, Component text) {
@@ -95,6 +94,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminergui.label_jobs_miner"), 9, 7, -1, false);
 		guiGraphics.drawString(this.font, GetxpminerProcedure.execute(entity), 13, 38, -1, false);
+		guiGraphics.drawString(this.font, GetlevelminerProcedure.execute(entity), 5, 63, -1, false);
 	}
 
 	@Override
@@ -115,25 +115,13 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_gray);
-		imagebutton_help_button = new ImageButton(this.leftPos + 14, this.topPos + 53, 48, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/button_helpjobs_v1.png"), ResourceLocation.parse("palamod:textures/screens/button_helpjobs_poi_v1.png")), e -> {
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				int x = JobsminerguiScreen.this.x;
-				int y = JobsminerguiScreen.this.y;
-				if (ReturnfalseProcedure.execute())
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		this.addRenderableWidget(imagebutton_help_button);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 5, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					int x = JobsminerguiScreen.this.x;
 					int y = JobsminerguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsminerguiButtonMessage(2, x, y, z));
-						JobsminerguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.sendToServer(new JobsminerguiButtonMessage(1, x, y, z));
+						JobsminerguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override

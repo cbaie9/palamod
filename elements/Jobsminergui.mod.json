@@ -68,20 +68,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_help_button",
-          "image": "button_helpjobs_v1.png",
-          "hoveredImage": "button_helpjobs_poi_v1.png",
-          "displayCondition": {
-            "name": "Returnfalse"
-          },
-          "x": 140,
-          "y": 133,
-          "locked": false
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_98100_0",
@@ -141,6 +127,23 @@
           },
           "x": 140,
           "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelminer",
+          "text": {
+            "fixedValue": "",
+            "name": "Getlevelminer"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 143,
           "locked": false
         }
       }

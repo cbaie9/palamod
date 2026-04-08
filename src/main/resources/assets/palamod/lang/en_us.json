@@ -1644,5 +1644,8 @@
   "palamod.tooltip.flask_jacaranda": "Jacaranda",
   "block.palamod.amethysttank": "Amethyst tank",
   "palamod.procedure.jobswin2craft": "xp for crafting",
-  "palamod.procedure.jobswin2smelt": "xp for smelting"
+  "palamod.procedure.jobswin2smelt": "xp for smelting",
+  "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : hunter",
+  "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
+  "gui.palamod.jobsgui.label_beta": "Beta"
 }

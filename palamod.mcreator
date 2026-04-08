@@ -26137,9 +26137,9 @@
       "registry_name": "jobsgui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/network/JobsguiButtonMessage.java",
           "src/main/java/palamod/world/inventory/JobsguiMenu.java",
-          "src/main/java/palamod/client/gui/JobsguiScreen.java"
+          "src/main/java/palamod/client/gui/JobsguiScreen.java",
+          "src/main/java/palamod/network/JobsguiButtonMessage.java"
         ]
       }
     },
@@ -28749,8 +28749,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/client/gui/JobsminerguiScreen.java",
-          "src/main/java/palamod/world/inventory/JobsminerguiMenu.java",
-          "src/main/java/palamod/network/JobsminerguiButtonMessage.java"
+          "src/main/java/palamod/network/JobsminerguiButtonMessage.java",
+          "src/main/java/palamod/world/inventory/JobsminerguiMenu.java"
         ]
       }
     },
@@ -34526,9 +34526,9 @@
       "registry_name": "jobsfarmergui",
       "metadata": {
         "files": [
+          "src/main/java/palamod/network/JobsfarmerguiButtonMessage.java",
           "src/main/java/palamod/world/inventory/JobsfarmerguiMenu.java",
-          "src/main/java/palamod/client/gui/JobsfarmerguiScreen.java",
-          "src/main/java/palamod/network/JobsfarmerguiButtonMessage.java"
+          "src/main/java/palamod/client/gui/JobsfarmerguiScreen.java"
         ]
       }
     },
@@ -44265,6 +44265,216 @@
           "src/main/java/palamod/procedures/JobsfilecreateautorepairProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Jobshuntergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobshuntergui",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/world/inventory/JobshunterguiMenu.java",
+          "src/main/java/palamod/client/gui/JobshunterguiScreen.java",
+          "src/main/java/palamod/network/JobshunterguiButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "Getxphunter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxphunter",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetxphunterProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Getxpalchi",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxpalchi",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetxpalchiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Getxphuntertext",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxphuntertext",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetxphuntertextProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Getxpalchitext",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getxpalchitext",
+      "metadata": {
+        "return_type": "string",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetxpalchitextProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobshuntergetxpprogressbar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobshuntergetxpprogressbar",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/JobshuntergetxpprogressbarProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsalchigetxpprogressbar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsalchigetxpprogressbar",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/JobsalchigetxpprogressbarProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Jobsalchigui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jobsalchigui",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/world/inventory/JobsalchiguiMenu.java",
+          "src/main/java/palamod/network/JobsalchiguiButtonMessage.java",
+          "src/main/java/palamod/client/gui/JobsalchiguiScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "ConnectJobsAlchimistGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connect_jobs_alchimist_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ConnectJobsAlchimistGuiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ConnectJobsHunterGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connect_jobs_hunter_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ConnectJobsHunterGuiProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49097,7 +49307,10 @@
       "palamod.tooltip.flask_jacaranda": "Jacaranda",
       "block.palamod.amethysttank": "Amethyst tank",
       "palamod.procedure.jobswin2craft": "xp for crafting",
-      "palamod.procedure.jobswin2smelt": "xp for smelting"
+      "palamod.procedure.jobswin2smelt": "xp for smelting",
+      "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : hunter",
+      "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
+      "gui.palamod.jobsgui.label_beta": "Beta"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -50741,20 +50954,23 @@
       "palamod.tooltip.flask_jacaranda": "",
       "block.palamod.amethysttank": "Amethyst tank",
       "palamod.procedure.jobswin2craft": "",
-      "palamod.procedure.jobswin2smelt": ""
+      "palamod.procedure.jobswin2smelt": "",
+      "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : farmer",
+      "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : hunter",
+      "gui.palamod.jobsgui.label_beta": "Beta"
     }
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
-      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
       "src/main/java/palamod/init/PalamodModFluidTypes.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
       "src/main/java/palamod/init/PalamodModMenus.java",
-      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
@@ -50769,18 +50985,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/java/palamod/init/PalamodModEntityRenderers.java",
-      "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/resources/palamod.mixins.json",
-      "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModTabs.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModModels.java",
-      "src/main/resources/assets/palamod/sounds.json"
+      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/PalamodMod.java",
+      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/palamod.mixins.json"
     ]
   },
   "foldersRoot": {

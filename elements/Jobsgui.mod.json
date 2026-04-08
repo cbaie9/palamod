@@ -44,6 +44,9 @@
           "name": "imagebutton_screen_beta2_template_jobs1",
           "image": "screen_beta3_jobs_hunter.png",
           "hoveredImage": "screen_beta3_jobs_hunter2.png",
+          "onClick": {
+            "name": "ConnectJobsHunterGui"
+          },
           "x": 240,
           "y": 77,
           "locked": true
@@ -55,6 +58,9 @@
           "name": "imagebutton_screen_beta2_template_jobs2",
           "image": "screen_beta3_jobs_alchi.png",
           "hoveredImage": "screen_beta3_jobs_alchi2.png",
+          "onClick": {
+            "name": "ConnectJobsAlchimistGui"
+          },
           "x": 311,
           "y": 77,
           "locked": true
@@ -282,6 +288,22 @@
           },
           "x": 49,
           "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_beta",
+          "text": {
+            "fixedValue": "Beta"
+          },
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "x": 47,
+          "y": 25,
           "locked": false
         }
       }

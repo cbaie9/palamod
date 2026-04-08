@@ -102,6 +102,8 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.NEW_ADMINSHOPGUI.get(), NewAdminshopguiScreen::new);
 		event.register(PalamodModMenus.SPAWNCONTROLLERGUI.get(), SpawncontrollerguiScreen::new);
 		event.register(PalamodModMenus.CRUSHERCRAFTPALAHELPGUI.get(), CrushercraftpalahelpguiScreen::new);
+		event.register(PalamodModMenus.JOBSHUNTERGUI.get(), JobshunterguiScreen::new);
+		event.register(PalamodModMenus.JOBSALCHIGUI.get(), JobsalchiguiScreen::new);
 	}
 
 	public interface ScreenAccessor {
