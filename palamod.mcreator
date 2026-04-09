@@ -44235,6 +44235,10 @@
             "type": "itemstack"
           },
           {
+            "name": "recipe",
+            "type": "string"
+          },
+          {
             "name": "world",
             "type": "world"
           }

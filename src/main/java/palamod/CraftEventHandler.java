@@ -35,7 +35,8 @@ public class CraftEventHandler {
         	CraftGiveXpJobsProcedure.execute( /// xp craft via crafting table 
 			player.level(), // ✅ world en premier
 	        player,         // ✅ entity ensuite
-	        result
+	        result,
+	        "craft"
 			);
         }
 
