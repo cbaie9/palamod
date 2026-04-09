@@ -44211,6 +44211,10 @@
           {
             "name": "item_craft",
             "type": "itemstack"
+          },
+          {
+            "name": "recipe",
+            "type": "string"
           }
         ],
         "files": [
@@ -44477,6 +44481,18 @@
         ],
         "files": [
           "src/main/java/palamod/procedures/ConnectJobsHunterGuiProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SmeltXpHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "smelt_xp_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/SmeltXpHandler.java"
         ]
       }
     }
@@ -45400,10 +45416,6 @@
       "Blocks.CRYING_OBSIDIAN",
       "CUSTOM:Renforcedobsidian"
     ],
-    "BLOCKS:minecraft:findium_ore": [
-      "CUSTOM:FindiumOre",
-      "CUSTOM:Findiumoredeepslate"
-    ],
     "ITEMS:forge:fuelblaze": [
       "Items.BLAZE_ROD",
       "Items.BLAZE_POWDER"
@@ -45635,7 +45647,8 @@
     ],
     "BLOCKS:neoforge:amethyst_ore": [
       "CUSTOM:AmethysteOre",
-      "CUSTOM:Amethystoredeepslate"
+      "CUSTOM:Amethystoredeepslate",
+      "CUSTOM:Softenedamethystore"
     ],
     "BLOCKS:forge:unbreakable": [
       "Blocks.BEDROCK",
@@ -45806,7 +45819,8 @@
     ],
     "BLOCKS:neoforge:titane_ore": [
       "CUSTOM:TitaneOre",
-      "CUSTOM:Titaneoredeepslate"
+      "CUSTOM:Titaneoredeepslate",
+      "CUSTOM:Softenedtitaneore"
     ],
     "BIOMES:minecraft:has_structure/bastion_remnant": [
       "~CUSTOM:Alternateplaines"
@@ -46403,7 +46417,8 @@
     ],
     "BLOCKS:neoforge:green_paladium_ore": [
       "CUSTOM:PaladiumGreenore",
-      "CUSTOM:Paladiumgreenoredeepslate"
+      "CUSTOM:Paladiumgreenoredeepslate",
+      "CUSTOM:Softenedgreenpaladiumore"
     ],
     "ITEMS:mod:paladium_ring_medium": [
       "CUSTOM:Mediumring"
@@ -46654,7 +46669,8 @@
     ],
     "BLOCKS:neoforge:paladium_ore": [
       "CUSTOM:PaladiumOre",
-      "CUSTOM:Paladiumoredeepslate"
+      "CUSTOM:Paladiumoredeepslate",
+      "CUSTOM:Softenedpaladiumore"
     ],
     "BLOCKS:mod:opic": [
       "CUSTOM:Spikeobsidianwood",
@@ -47110,8 +47126,57 @@
       "Items.BREAD",
       "Items.PUMPKIN_PIE"
     ],
-    "ITEMS:mod:miner_jobs": [],
-    "ITEMS:mod:hunter_jobs": []
+    "ITEMS:mod:miner_jobs": [
+      "Items.IRON_INGOT",
+      "Items.GOLD_INGOT",
+      "CUSTOM:Amethyste",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumGreeningot"
+    ],
+    "ITEMS:mod:hunter_jobs": [
+      "TAG:mod:smeltable_corpse_xp",
+      "TAG:mod:smeltable_corpse_fish"
+    ],
+    "BLOCKS:minecraft:dirt": [],
+    "BLOCKS:minecraft:sand": [],
+    "BLOCKS:minecraft:beacon_base_blocks": [
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:EndiumBlock"
+    ],
+    "BIOMES:minecraft:is_overworld": [],
+    "BLOCKS:minecraft:findium_ore": [
+      "CUSTOM:FindiumOre",
+      "CUSTOM:Findiumoredeepslate",
+      "CUSTOM:Softenedfindiumore"
+    ],
+    "BLOCKS:neoforge:iron_ore": [
+      "CUSTOM:Softenedironore",
+      "Blocks.DEEPSLATE_IRON_ORE",
+      "Blocks.IRON_ORE"
+    ],
+    "BLOCKS:neoforge:gold_ore": [
+      "Blocks.GOLD_ORE",
+      "Blocks.DEEPSLATE_GOLD_ORE",
+      "CUSTOM:Softenedgoldore"
+    ],
+    "ITEMS:neoforge:diamond_ore": [
+      "Blocks.DIAMOND_ORE",
+      "Blocks.DEEPSLATE_DIAMOND_ORE",
+      "CUSTOM:Softeneddiamondore"
+    ],
+    "ITEMS:mod:smeltable_corpse_xp": [
+      "Items.COOKED_PORKCHOP",
+      "Items.COOKED_BEEF",
+      "Items.COOKED_CHICKEN",
+      "Items.COOKED_MUTTON"
+    ],
+    "ITEMS:mod:smeltable_corpse_fish": [
+      "Items.COOKED_FISH#0",
+      "Items.COOKED_FISH#1"
+    ]
   },
   "tab_element_order": {
     "CUSTOM:Palamod": [

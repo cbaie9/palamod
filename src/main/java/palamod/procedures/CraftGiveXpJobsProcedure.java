@@ -70,7 +70,7 @@ public class CraftGiveXpJobsProcedure {
 							if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 								main.addProperty("xpstreak_alchi", 0);
 							}
-							xp_receive = GetXpcraftjobsProcedure.execute(entity, item);
+							xp_receive = GetXpcraftjobsProcedure.execute(entity, item, type_of_recipe);
 							if (0 < xp_receive) {
 								if (item.is(ItemTags.create(ResourceLocation.parse("palamod:farmer_jobs")))) {
 									jobs_string = "farmer";
@@ -96,7 +96,7 @@ public class CraftGiveXpJobsProcedure {
 										&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
 									{
 										final String _tagName = "xp_jobs";
-										final double _tagValue = (xp_receive * main.get("multi_exp").getAsDouble()
+										final double _tagValue = (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount()
 												+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
 										CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 									}
@@ -106,16 +106,14 @@ public class CraftGiveXpJobsProcedure {
 										CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 									}
 								} else {
-									main.addProperty(("xp_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xp_" + jobs_string)).getAsDouble()));
+									main.addProperty(("xp_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xp_" + jobs_string)).getAsDouble()));
 								}
-								main.addProperty(("xpstreak_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
+								main.addProperty(("xpstreak_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
 								main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
 								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(
-											Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble())
-													+ Component.translatable("palamod.procedure.jobswin2craft").getString() + " "
-													+ Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())),
-											true);
+									_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
+											+ (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable("palamod.procedure.jobswin2craft").getString() + " "
+											+ Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())), true);
 							}
 						} catch (IOException e) {
 							e.printStackTrace();

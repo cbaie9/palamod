@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:deepslate_diamond_ore",
+    "minecraft:diamond_ore",
+    "palamod:softened_diamond_ore"
+  ]
+}
