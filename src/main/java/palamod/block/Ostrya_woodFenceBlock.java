@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodFenceBlock extends FenceBlock {
 	public Ostrya_woodFenceBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

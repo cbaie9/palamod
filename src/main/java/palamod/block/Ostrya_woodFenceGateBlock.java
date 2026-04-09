@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodFenceGateBlock extends FenceGateBlock {
 	public Ostrya_woodFenceGateBlock() {
-		super(WoodType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
+		super(WoodType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

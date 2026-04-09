@@ -28,7 +28,7 @@ public class Judeecercis_LogBlock extends Block {
 	public static final IntegerProperty SAP = IntegerProperty.create("sap", 0, 96);
 
 	public Judeecercis_LogBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(SAP, 96));
 	}
 

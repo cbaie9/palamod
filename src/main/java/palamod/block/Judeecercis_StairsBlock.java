@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Judeecercis_StairsBlock extends StairBlock {
 	public Judeecercis_StairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(3f, 2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(3f, 2f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

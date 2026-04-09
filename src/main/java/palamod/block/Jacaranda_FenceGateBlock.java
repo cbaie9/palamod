@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Jacaranda_FenceGateBlock extends FenceGateBlock {
 	public Jacaranda_FenceGateBlock() {
-		super(WoodType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
+		super(WoodType.OAK, BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS).forceSolidOn());
 	}
 
 	@Override

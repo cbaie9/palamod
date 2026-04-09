@@ -55,7 +55,7 @@ public class Erable_WoodBlock extends Block {
 					return 0;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		}.getLightLevel())).dynamicShape().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
