@@ -1,5 +1,7 @@
 package palamod.block;
 
+import palamod.procedures.TanksetupProcedure;
+
 import palamod.block.entity.AmethysttankBlockEntity;
 
 import org.checkerframework.checker.units.qual.s;
@@ -113,6 +115,12 @@ public class AmethysttankBlock extends Block implements EntityBlock {
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(BLOCKSTATE);
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		TanksetupProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

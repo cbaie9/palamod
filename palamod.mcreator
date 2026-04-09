@@ -44128,12 +44128,12 @@
       "registry_name": "amethysttank",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/amethysttank.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
-          "src/main/java/palamod/block/AmethysttankBlock.java",
-          "src/main/resources/assets/palamod/models/block/amethysttank.json",
           "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
-          "src/main/resources/assets/palamod/blockstates/amethysttank.json"
+          "src/main/resources/assets/palamod/blockstates/amethysttank.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
+          "src/main/resources/assets/palamod/models/item/amethysttank.json",
+          "src/main/java/palamod/block/AmethysttankBlock.java"
         ]
       }
     },
@@ -44493,6 +44493,74 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/SmeltXpHandler.java"
+        ]
+      }
+    },
+    {
+      "name": "Tanksetup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tanksetup",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TanksetupProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tankproccess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankproccess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TankproccessProcedure.java"
         ]
       }
     }
@@ -47138,15 +47206,12 @@
       "TAG:mod:smeltable_corpse_xp",
       "TAG:mod:smeltable_corpse_fish"
     ],
-    "BLOCKS:minecraft:dirt": [],
-    "BLOCKS:minecraft:sand": [],
     "BLOCKS:minecraft:beacon_base_blocks": [
       "CUSTOM:PaladiumBlock",
       "CUSTOM:TitaneBlock",
       "CUSTOM:AmethysteBlock",
       "CUSTOM:EndiumBlock"
     ],
-    "BIOMES:minecraft:is_overworld": [],
     "BLOCKS:minecraft:findium_ore": [
       "CUSTOM:FindiumOre",
       "CUSTOM:Findiumoredeepslate",
