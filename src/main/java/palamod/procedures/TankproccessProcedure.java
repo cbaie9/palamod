@@ -23,6 +23,18 @@ public class TankproccessProcedure {
 			return;
 		double max_stock = 0;
 		double decalc_blockstate = 0;
+		String seve_string = "";
+		if (1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type_of_seve")) {
+			seve_string = "ostrya";
+		} else if (2 == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type_of_seve")) {
+			seve_string = "judeecercis";
+		} else if (3 == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type_of_seve")) {
+			seve_string = "jacaranda";
+		} else if (4 == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type_of_seve")) {
+			seve_string = "erable";
+		} else {
+			seve_string = "NTOSI_error";
+		}
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYSTTANK.get()) {/*amethyst*/
 			max_stock = 60;
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYSTTANK.get()) {/*gold*/
@@ -33,60 +45,109 @@ public class TankproccessProcedure {
 			max_stock = 135;
 		}
 		if (PalamodModItems.FLASK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
-			if (true) {
-				if (max_stock >= ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip11
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip11)
-						: -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve")) {
-					{
-						int _value = (int) (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip15
-								? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip15)
-								: -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve"));
-						BlockPos _pos = BlockPos.containing(x, y, z);
-						BlockState _bs = world.getBlockState(_pos);
-						if (_bs.getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+			if (0 < (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve")) {
+				if ((seve_string).equals(
+						(world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep21 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getep21).toString() : "")
+						|| ("None").equals((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep23
+								? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getep23).toString()
+								: "")) {
+					if (max_stock >= ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip25
+							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip25)
+							: -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve")) {
+						{
+							int _value = (int) (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip29
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip29)
+									: -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve"));
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							BlockState _bs = world.getBlockState(_pos);
+							if (_bs.getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+						}
+						{
+							final String _tagName = "seve";
+							final double _tagValue = 0;
+							CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+						}
+						{
+							String _value = seve_string;
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							BlockState _bs = world.getBlockState(_pos);
+							if (_bs.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _enumProp && _enumProp.getValue(_value).isPresent())
+								world.setBlock(_pos, _bs.setValue(_enumProp, (Enum) _enumProp.getValue(_value).get()), 3);
+						}
+					} else {
+						{
+							int _value = (int) max_stock;
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							BlockState _bs = world.getBlockState(_pos);
+							if (_bs.getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+						}
+						{
+							final String _tagName = "seve";
+							final double _tagValue = ((((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip38
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip38)
+									: -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve")) - max_stock);
+							CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+						}
 					}
-					{
-						final String _tagName = "seve";
-						final double _tagValue = 0;
-						CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
-					}
-				} else {
-					{
-						int _value = (int) max_stock;
-						BlockPos _pos = BlockPos.containing(x, y, z);
-						BlockState _bs = world.getBlockState(_pos);
-						if (_bs.getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-					}
-					{
-						final String _tagName = "seve";
-						final double _tagValue = ((((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip23
-								? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip23)
-								: -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve")) - max_stock);
-						CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+				}
+			} else {
+				if (0 < ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip44 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip44) : -1)) {
+					if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip46
+							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip46)
+							: -1) <= 15) {
+						{
+							final String _tagName = "seve";
+							final double _tagValue = ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip48
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip48)
+									: -1);
+							CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+						}
+						{
+							int _value = 0;
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							BlockState _bs = world.getBlockState(_pos);
+							if (_bs.getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+						}
+					} else {
+						{
+							final String _tagName = "seve";
+							final double _tagValue = 15;
+							CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
+						}
+						{
+							int _value = ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip55
+									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip55)
+									: -1) - 15;
+							BlockPos _pos = BlockPos.containing(x, y, z);
+							BlockState _bs = world.getBlockState(_pos);
+							if (_bs.getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+								world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+						}
 					}
 				}
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal((BuiltInRegistries.ITEM.getKey((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())).getItem()).toString() + " - "
-						+ ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip32 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip32) : -1)
-						+ "/" + max_stock + " | Type : " + (blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep34 ? blockstate.getValue(_getep34).toString() : ""))), false);
+						+ ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip61 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip61) : -1)
+						+ "/" + max_stock + " | Type : " + (blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep63 ? blockstate.getValue(_getep63).toString() : ""))), false);
 		} /*reload blockstate*/
-		if (("jacaranda").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep37 ? blockstate.getValue(_getep37).toString() : "")) {
+		if (("jacaranda").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep66 ? blockstate.getValue(_getep66).toString() : "")) {
 			decalc_blockstate = 1;
-		} else if (("erable").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep39 ? blockstate.getValue(_getep39).toString() : "")) {
+		} else if (("erable").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep68 ? blockstate.getValue(_getep68).toString() : "")) {
 			decalc_blockstate = 8;
-		} else if (("judeecercis").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep41 ? blockstate.getValue(_getep41).toString() : "")) {
+		} else if (("judeecercis").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep70 ? blockstate.getValue(_getep70).toString() : "")) {
 			decalc_blockstate = 15;
-		} else if (("ostrya").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep43 ? blockstate.getValue(_getep43).toString() : "")) {
+		} else if (("ostrya").equals(blockstate.getBlock().getStateDefinition().getProperty("type") instanceof EnumProperty _getep72 ? blockstate.getValue(_getep72).toString() : "")) {
 			decalc_blockstate = 22;
 		}
-		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip45 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip45) : -1) > 0) {
+		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip74 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip74) : -1) > 0) {
 			{
-				int _value = (int) ((((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip47
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip47)
+				int _value = (int) ((((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("stock") instanceof IntegerProperty _getip76
+						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip76)
 						: -1) / max_stock) * 7 + decalc_blockstate);
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				BlockState _bs = world.getBlockState(_pos);
