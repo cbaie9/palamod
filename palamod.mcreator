@@ -1326,11 +1326,11 @@
       "registry_name": "ostrya_wood_wood",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/blockstates/ostrya_wood_wood.json",
           "src/main/resources/assets/palamod/models/item/ostrya_wood_wood.json",
           "src/main/resources/assets/palamod/models/block/ostrya_wood_wood.json",
-          "src/main/java/palamod/block/Ostrya_woodWoodBlock.java",
-          "src/main/resources/assets/palamod/blockstates/ostrya_wood_wood.json",
-          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_wood.json"
+          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_wood.json",
+          "src/main/java/palamod/block/Ostrya_woodWoodBlock.java"
         ]
       }
     },
@@ -1358,11 +1358,11 @@
       "registry_name": "ostrya_wood_planks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/ostrya_wood_planks.json",
-          "src/main/java/palamod/block/Ostrya_woodPlanksBlock.java",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_planks.json",
           "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_planks.json",
-          "src/main/resources/assets/palamod/models/item/ostrya_wood_planks.json"
+          "src/main/resources/assets/palamod/models/item/ostrya_wood_planks.json",
+          "src/main/java/palamod/block/Ostrya_woodPlanksBlock.java",
+          "src/main/resources/assets/palamod/blockstates/ostrya_wood_planks.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_planks.json"
         ]
       }
     },
@@ -1391,12 +1391,12 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/palamod/models/block/ostrya_wood_stairs.json",
+          "src/main/java/palamod/block/Ostrya_woodStairsBlock.java",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_stairs_outer.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_stairs_inner.json",
           "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_stairs.json",
           "src/main/resources/assets/palamod/models/item/ostrya_wood_stairs.json",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_stairs_inner.json",
-          "src/main/resources/assets/palamod/blockstates/ostrya_wood_stairs.json",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_stairs_outer.json",
-          "src/main/java/palamod/block/Ostrya_woodStairsBlock.java"
+          "src/main/resources/assets/palamod/blockstates/ostrya_wood_stairs.json"
         ]
       }
     },
@@ -1408,13 +1408,13 @@
       "registry_name": "ostrya_wood_slab",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_slab.json",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_slab_top.json",
-          "src/main/resources/assets/palamod/models/item/ostrya_wood_slab.json",
-          "src/main/resources/assets/palamod/blockstates/ostrya_wood_slab.json",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_slab_full.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_slab.json",
           "src/main/java/palamod/block/Ostrya_woodSlabBlock.java",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_slab.json"
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_slab_full.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_slab_top.json",
+          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_slab.json",
+          "src/main/resources/assets/palamod/models/item/ostrya_wood_slab.json",
+          "src/main/resources/assets/palamod/blockstates/ostrya_wood_slab.json"
         ]
       }
     },
@@ -1426,13 +1426,13 @@
       "registry_name": "ostrya_wood_fence",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence.json",
-          "src/main/resources/assets/palamod/blockstates/ostrya_wood_fence.json",
-          "src/main/resources/assets/palamod/models/item/ostrya_wood_fence.json",
           "src/main/java/palamod/block/Ostrya_woodFenceBlock.java",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_post.json",
+          "src/main/resources/assets/palamod/models/item/ostrya_wood_fence.json",
+          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_fence.json",
           "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_inventory.json",
-          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_fence.json"
+          "src/main/resources/assets/palamod/blockstates/ostrya_wood_fence.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_post.json"
         ]
       }
     },
@@ -1444,14 +1444,14 @@
       "registry_name": "ostrya_wood_fence_gate",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/Ostrya_woodFenceGateBlock.java",
+          "src/main/resources/assets/palamod/blockstates/ostrya_wood_fence_gate.json",
           "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_gate_open.json",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_gate_wall_open.json",
-          "src/main/resources/assets/palamod/models/item/ostrya_wood_fence_gate.json",
-          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_fence_gate.json",
-          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_gate.json",
+          "src/main/java/palamod/block/Ostrya_woodFenceGateBlock.java",
           "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_gate_wall.json",
-          "src/main/resources/assets/palamod/blockstates/ostrya_wood_fence_gate.json"
+          "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_fence_gate.json",
+          "src/main/resources/assets/palamod/models/item/ostrya_wood_fence_gate.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_gate.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_fence_gate_wall_open.json"
         ]
       }
     },
@@ -1554,11 +1554,11 @@
       "registry_name": "jacaranda_wood",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/item/jacaranda_wood.json",
           "src/main/java/palamod/block/Jacaranda_WoodBlock.java",
           "src/main/resources/assets/palamod/models/block/jacaranda_wood.json",
-          "src/main/resources/assets/palamod/models/item/jacaranda_wood.json",
-          "src/main/resources/assets/palamod/blockstates/jacaranda_wood.json",
-          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_wood.json"
+          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_wood.json",
+          "src/main/resources/assets/palamod/blockstates/jacaranda_wood.json"
         ]
       }
     },
@@ -1570,8 +1570,8 @@
       "registry_name": "jacaranda_log",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_log.json",
           "src/main/resources/assets/palamod/blockstates/jacaranda_log.json",
+          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_log.json",
           "src/main/resources/assets/palamod/models/block/jacaranda_log.json",
           "src/main/java/palamod/block/Jacaranda_LogBlock.java",
           "src/main/resources/assets/palamod/models/item/jacaranda_log.json"
@@ -1586,9 +1586,9 @@
       "registry_name": "jacaranda_planks",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/item/jacaranda_planks.json",
           "src/main/resources/assets/palamod/blockstates/jacaranda_planks.json",
           "src/main/resources/assets/palamod/models/block/jacaranda_planks.json",
-          "src/main/resources/assets/palamod/models/item/jacaranda_planks.json",
           "src/main/java/palamod/block/Jacaranda_PlanksBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/jacaranda_planks.json"
         ]
@@ -1618,13 +1618,13 @@
       "registry_name": "jacaranda_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/jacaranda_stairs_outer.json",
           "src/main/java/palamod/block/Jacaranda_StairsBlock.java",
           "src/main/resources/assets/palamod/models/block/jacaranda_stairs.json",
           "src/main/resources/data/palamod/loot_table/blocks/jacaranda_stairs.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_stairs_inner.json",
           "src/main/resources/assets/palamod/models/item/jacaranda_stairs.json",
-          "src/main/resources/assets/palamod/blockstates/jacaranda_stairs.json"
+          "src/main/resources/assets/palamod/models/block/jacaranda_stairs_inner.json",
+          "src/main/resources/assets/palamod/blockstates/jacaranda_stairs.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_stairs_outer.json"
         ]
       }
     },
@@ -1636,12 +1636,12 @@
       "registry_name": "jacaranda_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/jacaranda_slab_full.json",
           "src/main/java/palamod/block/Jacaranda_SlabBlock.java",
-          "src/main/resources/assets/palamod/models/item/jacaranda_slab.json",
+          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_slab.json",
           "src/main/resources/assets/palamod/blockstates/jacaranda_slab.json",
           "src/main/resources/assets/palamod/models/block/jacaranda_slab.json",
-          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_slab.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_slab_full.json",
+          "src/main/resources/assets/palamod/models/item/jacaranda_slab.json",
           "src/main/resources/assets/palamod/models/block/jacaranda_slab_top.json"
         ]
       }
@@ -1654,13 +1654,13 @@
       "registry_name": "jacaranda_fence",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/jacaranda_fence_post.json",
+          "src/main/resources/assets/palamod/blockstates/jacaranda_fence.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_fence.json",
           "src/main/resources/assets/palamod/models/block/jacaranda_fence_inventory.json",
           "src/main/java/palamod/block/Jacaranda_FenceBlock.java",
-          "src/main/resources/assets/palamod/models/block/jacaranda_fence_post.json",
-          "src/main/resources/assets/palamod/models/item/jacaranda_fence.json",
           "src/main/resources/data/palamod/loot_table/blocks/jacaranda_fence.json",
-          "src/main/resources/assets/palamod/blockstates/jacaranda_fence.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_fence.json"
+          "src/main/resources/assets/palamod/models/item/jacaranda_fence.json"
         ]
       }
     },
@@ -1672,14 +1672,14 @@
       "registry_name": "jacaranda_fence_gate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/jacaranda_fence_gate.json",
-          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_fence_gate.json",
           "src/main/java/palamod/block/Jacaranda_FenceGateBlock.java",
-          "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate_open.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate.json",
           "src/main/resources/assets/palamod/models/item/jacaranda_fence_gate.json",
           "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate_wall.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate_wall_open.json"
+          "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate_wall_open.json",
+          "src/main/resources/assets/palamod/blockstates/jacaranda_fence_gate.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate_open.json",
+          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_fence_gate.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_fence_gate.json"
         ]
       }
     },
@@ -1848,8 +1848,8 @@
           "src/main/resources/assets/palamod/models/item/judeecercis_wood.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_wood.json",
           "src/main/resources/data/palamod/loot_table/blocks/judeecercis_wood.json",
-          "src/main/resources/assets/palamod/blockstates/judeecercis_wood.json",
-          "src/main/java/palamod/block/Judeecercis_WoodBlock.java"
+          "src/main/java/palamod/block/Judeecercis_WoodBlock.java",
+          "src/main/resources/assets/palamod/blockstates/judeecercis_wood.json"
         ]
       }
     },
@@ -1861,11 +1861,11 @@
       "registry_name": "judeecercis_log",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/Judeecercis_LogBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_log.json",
-          "src/main/resources/assets/palamod/blockstates/judeecercis_log.json",
           "src/main/resources/assets/palamod/models/item/judeecercis_log.json",
-          "src/main/resources/assets/palamod/models/block/judeecercis_log.json"
+          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_log.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log.json",
+          "src/main/resources/assets/palamod/blockstates/judeecercis_log.json",
+          "src/main/java/palamod/block/Judeecercis_LogBlock.java"
         ]
       }
     },
@@ -1877,10 +1877,10 @@
       "registry_name": "judeecercis_planks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/judeecercis_planks.json",
           "src/main/resources/data/palamod/loot_table/blocks/judeecercis_planks.json",
           "src/main/resources/assets/palamod/models/item/judeecercis_planks.json",
           "src/main/java/palamod/block/Judeecercis_PlanksBlock.java",
+          "src/main/resources/assets/palamod/blockstates/judeecercis_planks.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_planks.json"
         ]
       }
@@ -1909,10 +1909,10 @@
       "registry_name": "judeecercis_stairs",
       "metadata": {
         "files": [
+          "src/main/java/palamod/block/Judeecercis_StairsBlock.java",
           "src/main/resources/assets/palamod/models/block/judeecercis_stairs.json",
           "src/main/resources/assets/palamod/blockstates/judeecercis_stairs.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_stairs_inner.json",
-          "src/main/java/palamod/block/Judeecercis_StairsBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/judeecercis_stairs.json",
           "src/main/resources/assets/palamod/models/item/judeecercis_stairs.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_stairs_outer.json"
@@ -1927,13 +1927,13 @@
       "registry_name": "judeecercis_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/judeecercis_slab.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_slab_full.json",
-          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_slab.json",
+          "src/main/resources/assets/palamod/models/item/judeecercis_slab.json",
           "src/main/resources/assets/palamod/blockstates/judeecercis_slab.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_slab.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_slab_top.json",
           "src/main/java/palamod/block/Judeecercis_SlabBlock.java",
-          "src/main/resources/assets/palamod/models/block/judeecercis_slab_top.json"
+          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_slab.json"
         ]
       }
     },
@@ -1945,13 +1945,13 @@
       "registry_name": "judeecercis_fence",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_fence.json",
-          "src/main/resources/assets/palamod/models/block/judeecercis_fence_inventory.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_fence.json",
-          "src/main/resources/assets/palamod/models/item/judeecercis_fence.json",
           "src/main/java/palamod/block/Judeecercis_FenceBlock.java",
           "src/main/resources/assets/palamod/blockstates/judeecercis_fence.json",
-          "src/main/resources/assets/palamod/models/block/judeecercis_fence_post.json"
+          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_fence.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_fence_post.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_fence_inventory.json",
+          "src/main/resources/assets/palamod/models/item/judeecercis_fence.json"
         ]
       }
     },
@@ -1963,14 +1963,14 @@
       "registry_name": "judeecercis_fence_gate",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/item/judeecercis_fence_gate.json",
           "src/main/java/palamod/block/Judeecercis_FenceGateBlock.java",
           "src/main/resources/assets/palamod/models/block/judeecercis_fence_gate.json",
-          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_fence_gate.json",
-          "src/main/resources/assets/palamod/models/block/judeecercis_fence_gate_wall_open.json",
-          "src/main/resources/assets/palamod/blockstates/judeecercis_fence_gate.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_fence_gate_wall.json",
-          "src/main/resources/assets/palamod/models/item/judeecercis_fence_gate.json",
-          "src/main/resources/assets/palamod/models/block/judeecercis_fence_gate_open.json"
+          "src/main/resources/assets/palamod/models/block/judeecercis_fence_gate_wall_open.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_fence_gate_open.json",
+          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_fence_gate.json",
+          "src/main/resources/assets/palamod/blockstates/judeecercis_fence_gate.json"
         ]
       }
     },
@@ -2073,11 +2073,11 @@
       "registry_name": "erable_wood",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/Erable_WoodBlock.java",
-          "src/main/resources/assets/palamod/blockstates/erable_wood.json",
-          "src/main/resources/data/palamod/loot_table/blocks/erable_wood.json",
           "src/main/resources/assets/palamod/models/block/erable_wood.json",
-          "src/main/resources/assets/palamod/models/item/erable_wood.json"
+          "src/main/resources/assets/palamod/blockstates/erable_wood.json",
+          "src/main/resources/assets/palamod/models/item/erable_wood.json",
+          "src/main/java/palamod/block/Erable_WoodBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/erable_wood.json"
         ]
       }
     },
@@ -2089,11 +2089,11 @@
       "registry_name": "erable_log",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/Erable_LogBlock.java",
-          "src/main/resources/assets/palamod/models/item/erable_log.json",
-          "src/main/resources/assets/palamod/models/block/erable_log.json",
           "src/main/resources/data/palamod/loot_table/blocks/erable_log.json",
-          "src/main/resources/assets/palamod/blockstates/erable_log.json"
+          "src/main/resources/assets/palamod/models/item/erable_log.json",
+          "src/main/resources/assets/palamod/blockstates/erable_log.json",
+          "src/main/resources/assets/palamod/models/block/erable_log.json",
+          "src/main/java/palamod/block/Erable_LogBlock.java"
         ]
       }
     },
@@ -2105,11 +2105,11 @@
       "registry_name": "erable_planks",
       "metadata": {
         "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/erable_planks.json",
+          "src/main/resources/assets/palamod/blockstates/erable_planks.json",
           "src/main/java/palamod/block/Erable_PlanksBlock.java",
           "src/main/resources/assets/palamod/models/item/erable_planks.json",
-          "src/main/resources/assets/palamod/blockstates/erable_planks.json",
-          "src/main/resources/assets/palamod/models/block/erable_planks.json",
-          "src/main/resources/data/palamod/loot_table/blocks/erable_planks.json"
+          "src/main/resources/assets/palamod/models/block/erable_planks.json"
         ]
       }
     },
@@ -2137,13 +2137,13 @@
       "registry_name": "erable_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/erable_stairs.json",
           "src/main/resources/assets/palamod/models/block/erable_stairs.json",
-          "src/main/resources/assets/palamod/blockstates/erable_stairs.json",
-          "src/main/resources/assets/palamod/models/block/erable_stairs_inner.json",
+          "src/main/resources/assets/palamod/models/block/erable_stairs_outer.json",
           "src/main/java/palamod/block/Erable_StairsBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/erable_stairs.json",
-          "src/main/resources/assets/palamod/models/block/erable_stairs_outer.json"
+          "src/main/resources/assets/palamod/models/block/erable_stairs_inner.json",
+          "src/main/resources/assets/palamod/blockstates/erable_stairs.json",
+          "src/main/resources/assets/palamod/models/item/erable_stairs.json"
         ]
       }
     },
@@ -2155,11 +2155,11 @@
       "registry_name": "erable_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/erable_slab.json",
-          "src/main/resources/data/palamod/loot_table/blocks/erable_slab.json",
-          "src/main/resources/assets/palamod/models/block/erable_slab.json",
           "src/main/resources/assets/palamod/models/block/erable_slab_full.json",
+          "src/main/resources/assets/palamod/models/block/erable_slab.json",
+          "src/main/resources/assets/palamod/models/item/erable_slab.json",
           "src/main/java/palamod/block/Erable_SlabBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/erable_slab.json",
           "src/main/resources/assets/palamod/blockstates/erable_slab.json",
           "src/main/resources/assets/palamod/models/block/erable_slab_top.json"
         ]
@@ -2173,13 +2173,13 @@
       "registry_name": "erable_fence",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/Erable_FenceBlock.java",
+          "src/main/resources/assets/palamod/models/item/erable_fence.json",
+          "src/main/resources/assets/palamod/models/block/erable_fence_inventory.json",
           "src/main/resources/assets/palamod/models/block/erable_fence.json",
-          "src/main/resources/assets/palamod/blockstates/erable_fence.json",
           "src/main/resources/data/palamod/loot_table/blocks/erable_fence.json",
           "src/main/resources/assets/palamod/models/block/erable_fence_post.json",
-          "src/main/resources/assets/palamod/models/block/erable_fence_inventory.json",
-          "src/main/resources/assets/palamod/models/item/erable_fence.json"
+          "src/main/java/palamod/block/Erable_FenceBlock.java",
+          "src/main/resources/assets/palamod/blockstates/erable_fence.json"
         ]
       }
     },
@@ -2191,14 +2191,14 @@
       "registry_name": "erable_fence_gate",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/erable_fence_gate.json",
-          "src/main/java/palamod/block/Erable_FenceGateBlock.java",
-          "src/main/resources/assets/palamod/models/item/erable_fence_gate.json",
-          "src/main/resources/assets/palamod/models/block/erable_fence_gate_wall_open.json",
-          "src/main/resources/assets/palamod/models/block/erable_fence_gate_wall.json",
           "src/main/resources/assets/palamod/models/block/erable_fence_gate_open.json",
+          "src/main/resources/assets/palamod/models/block/erable_fence_gate_wall_open.json",
+          "src/main/resources/assets/palamod/models/item/erable_fence_gate.json",
+          "src/main/resources/assets/palamod/models/block/erable_fence_gate_wall.json",
+          "src/main/java/palamod/block/Erable_FenceGateBlock.java",
           "src/main/resources/assets/palamod/models/block/erable_fence_gate.json",
-          "src/main/resources/data/palamod/loot_table/blocks/erable_fence_gate.json"
+          "src/main/resources/data/palamod/loot_table/blocks/erable_fence_gate.json",
+          "src/main/resources/assets/palamod/blockstates/erable_fence_gate.json"
         ]
       }
     },
@@ -14679,18 +14679,18 @@
       "registry_name": "jacaranda_door",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/item/jacaranda_door.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_right.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_left.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_left_open.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_right_open.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_right_open.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_left_open.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_right.json",
+          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_door.json",
           "src/main/java/palamod/block/JacarandadoorBlock.java",
           "src/main/resources/assets/palamod/blockstates/jacaranda_door.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_right_open.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_left.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_right_open.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_right.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_left_open.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_top_left.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_right.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_left_open.json",
-          "src/main/resources/data/palamod/loot_table/blocks/jacaranda_door.json",
-          "src/main/resources/assets/palamod/models/item/jacaranda_door.json"
+          "src/main/resources/assets/palamod/models/block/jacaranda_door_bottom_left.json"
         ]
       }
     },
@@ -26137,9 +26137,9 @@
       "registry_name": "jobsgui",
       "metadata": {
         "files": [
+          "src/main/java/palamod/network/JobsguiButtonMessage.java",
           "src/main/java/palamod/world/inventory/JobsguiMenu.java",
-          "src/main/java/palamod/client/gui/JobsguiScreen.java",
-          "src/main/java/palamod/network/JobsguiButtonMessage.java"
+          "src/main/java/palamod/client/gui/JobsguiScreen.java"
         ]
       }
     },
@@ -28749,8 +28749,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/client/gui/JobsminerguiScreen.java",
-          "src/main/java/palamod/network/JobsminerguiButtonMessage.java",
-          "src/main/java/palamod/world/inventory/JobsminerguiMenu.java"
+          "src/main/java/palamod/world/inventory/JobsminerguiMenu.java",
+          "src/main/java/palamod/network/JobsminerguiButtonMessage.java"
         ]
       }
     },
@@ -34526,9 +34526,9 @@
       "registry_name": "jobsfarmergui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/network/JobsfarmerguiButtonMessage.java",
           "src/main/java/palamod/world/inventory/JobsfarmerguiMenu.java",
-          "src/main/java/palamod/client/gui/JobsfarmerguiScreen.java"
+          "src/main/java/palamod/client/gui/JobsfarmerguiScreen.java",
+          "src/main/java/palamod/network/JobsfarmerguiButtonMessage.java"
         ]
       }
     },
@@ -44128,12 +44128,12 @@
       "registry_name": "amethysttank",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
-          "src/main/resources/assets/palamod/blockstates/amethysttank.json",
-          "src/main/resources/assets/palamod/models/block/amethysttank.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
           "src/main/resources/assets/palamod/models/item/amethysttank.json",
-          "src/main/java/palamod/block/AmethysttankBlock.java"
+          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
+          "src/main/java/palamod/block/AmethysttankBlock.java",
+          "src/main/resources/assets/palamod/models/block/amethysttank.json",
+          "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
+          "src/main/resources/assets/palamod/blockstates/amethysttank.json"
         ]
       }
     },
@@ -44282,9 +44282,9 @@
       "registry_name": "jobshuntergui",
       "metadata": {
         "files": [
-          "src/main/java/palamod/world/inventory/JobshunterguiMenu.java",
+          "src/main/java/palamod/network/JobshunterguiButtonMessage.java",
           "src/main/java/palamod/client/gui/JobshunterguiScreen.java",
-          "src/main/java/palamod/network/JobshunterguiButtonMessage.java"
+          "src/main/java/palamod/world/inventory/JobshunterguiMenu.java"
         ]
       }
     },
@@ -44503,41 +44503,20 @@
       "locked_code": false,
       "registry_name": "tanksetup",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
+        "dependencies": [],
         "files": [
           "src/main/java/palamod/procedures/TanksetupProcedure.java"
         ]
       }
     },
     {
-      "name": "Tankproccess",
+      "name": "Tankprocess",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tankproccess",
+      "registry_name": "tankprocess",
       "metadata": {
         "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
           {
             "name": "entity",
             "type": "entity"
@@ -44560,7 +44539,7 @@
           }
         ],
         "files": [
-          "src/main/java/palamod/procedures/TankproccessProcedure.java"
+          "src/main/java/palamod/procedures/TankprocessProcedure.java"
         ]
       }
     }
@@ -51096,15 +51075,15 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/init/PalamodModBiomes.java",
       "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
-      "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/init/PalamodModBiomes.java",
       "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/world/features/StructureFeature.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
       "src/main/java/palamod/init/PalamodModFluidTypes.java",
-      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
       "src/main/java/palamod/init/PalamodModMenus.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
@@ -51119,18 +51098,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
       "src/main/java/palamod/init/PalamodModEntities.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/palamod/init/PalamodModTabs.java",
+      "src/main/java/palamod/init/PalamodModEntityRenderers.java",
       "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/palamod/init/PalamodModModels.java",
       "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/resources/palamod.mixins.json",
       "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/palamod/init/PalamodModTabs.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/palamod.mixins.json"
+      "src/main/java/palamod/init/PalamodModModels.java",
+      "src/main/resources/assets/palamod/sounds.json"
     ]
   },
   "foldersRoot": {
