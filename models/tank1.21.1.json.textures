@@ -463,6 +463,230 @@
         "side": "fluid_14_jacaranda",
         "cadre": "gold_tank"
       }
+    },
+    "titane_l2_jacaranda": {
+      "name": "titane_l2_jacaranda",
+      "map": {
+        "top-giga": "l2_jacaranda",
+        "side": "fluid_2_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_jacaranda": {
+      "name": "titane_l4_jacaranda",
+      "map": {
+        "top-giga": "l4_jacaranda",
+        "side": "fluid_4_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_basic": {
+      "name": "titane_basic",
+      "map": {
+        "top-giga": "",
+        "side": "",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_jacaranda": {
+      "name": "titane_l6_jacaranda",
+      "map": {
+        "top-giga": "l6_jacaranda",
+        "side": "fluid_6_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_jacaranda": {
+      "name": "titane_l8_jacaranda",
+      "map": {
+        "top-giga": "l8_jacaranda",
+        "side": "fluid_8_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l10_jacaranda": {
+      "name": "titane_l10_jacaranda",
+      "map": {
+        "top-giga": "l10_jacaranda",
+        "side": "fluid_10_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_jacaranda": {
+      "name": "titane_l14_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l2_judeecercis": {
+      "name": "titane_l2_judeecercis",
+      "map": {
+        "top-giga": "l2_judeecercis",
+        "side": "fluid_2_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_judeecercis": {
+      "name": "titane_l4_judeecercis",
+      "map": {
+        "top-giga": "l4_judeecercis",
+        "side": "fluid_4_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_judeecercis": {
+      "name": "titane_l8_judeecercis",
+      "map": {
+        "top-giga": "l8_judeecercis",
+        "side": "fluid_8_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l10_judeecercis": {
+      "name": "titane_l10_judeecercis",
+      "map": {
+        "top-giga": "l10_judeecercis",
+        "side": "fluid_10_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_judeecercis": {
+      "name": "titane_l14_judeecercis",
+      "map": {
+        "top-giga": "l14_judeecercis",
+        "side": "fluid_14_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_jacaranda": {
+      "name": "titane_l12_jacaranda",
+      "map": {
+        "top-giga": "l12_jacaranda",
+        "side": "fluid_12_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_judeecercis": {
+      "name": "titane_l6_judeecercis",
+      "map": {
+        "top-giga": "l6_judeecercis",
+        "side": "fluid_6_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_judeecercis": {
+      "name": "titane_l12_judeecercis",
+      "map": {
+        "top-giga": "l12_judeecercis",
+        "side": "fluid_12_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l2_erable": {
+      "name": "titane_l2_erable",
+      "map": {
+        "top-giga": "l2_erable",
+        "side": "fluid_2_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_erable": {
+      "name": "titane_l4_erable",
+      "map": {
+        "top-giga": "l4_erable",
+        "side": "fluid_4_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_erable": {
+      "name": "titane_l6_erable",
+      "map": {
+        "top-giga": "l6_erable",
+        "side": "fluid_6_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_erable": {
+      "name": "titane_l8_erable",
+      "map": {
+        "top-giga": "l8_erable",
+        "side": "fluid_8_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_erable": {
+      "name": "titane_l12_erable",
+      "map": {
+        "top-giga": "l12_erable",
+        "side": "fluid_12_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_erable": {
+      "name": "titane_l14_erable",
+      "map": {
+        "top-giga": "l14_erable",
+        "side": "fluid_14_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l2_ostrya": {
+      "name": "titane_l2_ostrya",
+      "map": {
+        "top-giga": "l2_ostrya",
+        "side": "fluid_2_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_ostrya": {
+      "name": "titane_l4_ostrya",
+      "map": {
+        "top-giga": "l4_ostrya",
+        "side": "fluid_4_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_ostrya": {
+      "name": "titane_l6_ostrya",
+      "map": {
+        "top-giga": "l6_ostrya",
+        "side": "fluid_6_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l10_ostrya": {
+      "name": "titane_l10_ostrya",
+      "map": {
+        "top-giga": "l10_ostrya",
+        "side": "fluid_10_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_ostrya": {
+      "name": "titane_l12_ostrya",
+      "map": {
+        "top-giga": "l12_ostrya",
+        "side": "fluid_12_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_ostrya": {
+      "name": "titane_l14_ostrya",
+      "map": {
+        "top-giga": "l14_ostrya",
+        "side": "fluid_14_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_ostrya": {
+      "name": "titane_l8_ostrya",
+      "map": {
+        "top-giga": "l8_ostrya",
+        "side": "fluid_8_ostrya",
+        "cadre": "titane_tank"
+      }
     }
   }
 }

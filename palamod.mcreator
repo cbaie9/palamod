@@ -44622,6 +44622,74 @@
           "src/main/resources/data/palamod/recipe/amethysttankcraft.json"
         ]
       }
+    },
+    {
+      "name": "Titanetank",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanetank",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/blockstates/titanetank.json",
+          "src/main/resources/assets/palamod/models/block/titanetank.json",
+          "src/main/resources/assets/palamod/models/item/titanetank.json",
+          "src/main/java/palamod/block/TitanetankBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/titanetank.json",
+          "src/main/java/palamod/block/entity/TitanetankBlockEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Titanetankblockstate",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanetankblockstate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_19.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_10.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_8.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_6.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_25.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_3.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_0.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_7.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_13.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_27.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_24.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_16.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_21.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_1.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_26.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_23.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_4.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_15.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_12.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_20.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_11.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_17.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_9.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_14.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_22.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_5.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_18.json",
+          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Titanetankcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titanetankcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/titanetankcraft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45334,6 +45402,7 @@
       "~CUSTOM:AmethysteOre"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:Titanetank",
       "~CUSTOM:Knockbackobsidian",
       "~CUSTOM:Frozenobsidian",
       "~CUSTOM:Paladiuminfusedobsidian",
@@ -46353,6 +46422,7 @@
       "CUSTOM:Bigringgreenpaladium"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Titanetank",
       "~CUSTOM:Goldentank",
       "~CUSTOM:Amethysttank",
       "~CUSTOM:Moneyanvil",
@@ -49506,7 +49576,8 @@
       "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : hunter",
       "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
       "gui.palamod.jobsgui.label_beta": "Beta",
-      "block.palamod.goldentank": "Golden tank"
+      "block.palamod.goldentank": "Golden tank",
+      "block.palamod.titanetank": "Titane tank"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51154,7 +51225,8 @@
       "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : farmer",
       "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : hunter",
       "gui.palamod.jobsgui.label_beta": "Beta",
-      "block.palamod.goldentank": "Amethyst tank"
+      "block.palamod.goldentank": "Amethyst tank",
+      "block.palamod.titanetank": "Golden tank"
     }
   },
   "metadata": {
