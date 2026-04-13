@@ -674,6 +674,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> MONEY_ANVIL;
 	public static final DeferredItem<Item> FLASK;
 	public static final DeferredItem<Item> AMETHYSTTANK;
+	public static final DeferredItem<Item> GOLDENTANK;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1310,6 +1311,7 @@ public class PalamodModItems {
 		MONEY_ANVIL = block(PalamodModBlocks.MONEY_ANVIL);
 		FLASK = REGISTRY.register("flask", FlaskItem::new);
 		AMETHYSTTANK = block(PalamodModBlocks.AMETHYSTTANK);
+		GOLDENTANK = block(PalamodModBlocks.GOLDENTANK);
 	}
 
 	// Start of user code block custom items

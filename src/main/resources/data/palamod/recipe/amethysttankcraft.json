@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "b b",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:amethyst_ingot"
+    },
+    "b": {
+      "tag": "c:glass_blocks/cheap"
+    }
+  },
+  "result": {
+    "id": "palamod:amethysttank",
+    "count": 1
+  }
+}

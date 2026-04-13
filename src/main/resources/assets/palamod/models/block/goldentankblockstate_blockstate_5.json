@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/tank1.21.1",
+  "textures": {
+    "all": "palamod:block/gold_tank",
+    "particle": "minecraft:block/gold_block",
+    "top-giga": "palamod:block/l12_jacaranda",
+    "side": "palamod:block/fluid_12_jacaranda",
+    "cadre": "palamod:block/amethyste_tank"
+  },
+  "render_type": "cutout"
+}

@@ -1643,5 +1643,6 @@
   "palamod.procedure.jobswin2smelt": "",
   "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : farmer",
   "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : hunter",
-  "gui.palamod.jobsgui.label_beta": "Beta"
+  "gui.palamod.jobsgui.label_beta": "Beta",
+  "block.palamod.goldentank": "Amethyst tank"
 }

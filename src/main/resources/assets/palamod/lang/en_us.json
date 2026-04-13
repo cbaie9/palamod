@@ -1647,5 +1647,6 @@
   "palamod.procedure.jobswin2smelt": "xp for smelting",
   "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : hunter",
   "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
-  "gui.palamod.jobsgui.label_beta": "Beta"
+  "gui.palamod.jobsgui.label_beta": "Beta",
+  "block.palamod.goldentank": "Golden tank"
 }

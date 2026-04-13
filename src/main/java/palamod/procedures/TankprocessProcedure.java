@@ -58,7 +58,7 @@ public class TankprocessProcedure {
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYSTTANK.get()) {/*amethyst*/
 			max_stock = 60;
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYSTTANK.get()) {/*gold*/
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.GOLDENTANK.get()) {/*gold*/
 			max_stock = 35;
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYSTTANK.get()) {/*titane*/
 			max_stock = 95;

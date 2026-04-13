@@ -44542,6 +44542,86 @@
           "src/main/java/palamod/procedures/TankprocessProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Goldentank",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldentank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/goldentank.json",
+          "src/main/java/palamod/block/GoldentankBlock.java",
+          "src/main/java/palamod/block/entity/GoldentankBlockEntity.java",
+          "src/main/resources/assets/palamod/models/item/goldentank.json",
+          "src/main/resources/assets/palamod/blockstates/goldentank.json",
+          "src/main/resources/assets/palamod/models/block/goldentank.json"
+        ]
+      }
+    },
+    {
+      "name": "Goldentankblockstate",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldentankblockstate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_18.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_7.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_21.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_27.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_16.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_24.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_5.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_8.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_10.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_13.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_1.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_4.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_17.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_25.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_0.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_11.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_22.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_3.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_14.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_6.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_19.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_23.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_20.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_26.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_2.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_15.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_9.json",
+          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_12.json"
+        ]
+      }
+    },
+    {
+      "name": "Goldentankcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goldentankcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/goldentankcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Amethysttankcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethysttankcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/amethysttankcraft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45066,6 +45146,7 @@
       "Blocks.COBBLESTONE"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Goldentank",
       "~CUSTOM:Amethysttank",
       "~CUSTOM:Emptyspawner",
       "~CUSTOM:Spawncontroller",
@@ -46272,6 +46353,7 @@
       "CUSTOM:Bigringgreenpaladium"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Goldentank",
       "~CUSTOM:Amethysttank",
       "~CUSTOM:Moneyanvil",
       "~CUSTOM:Knockbackobsidian",
@@ -49423,7 +49505,8 @@
       "palamod.procedure.jobswin2smelt": "xp for smelting",
       "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : hunter",
       "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
-      "gui.palamod.jobsgui.label_beta": "Beta"
+      "gui.palamod.jobsgui.label_beta": "Beta",
+      "block.palamod.goldentank": "Golden tank"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51070,20 +51153,21 @@
       "palamod.procedure.jobswin2smelt": "",
       "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : farmer",
       "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : hunter",
-      "gui.palamod.jobsgui.label_beta": "Beta"
+      "gui.palamod.jobsgui.label_beta": "Beta",
+      "block.palamod.goldentank": "Amethyst tank"
     }
   },
   "metadata": {
     "files": [
-      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
-      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/world/features/StructureFeature.java",
+      "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
       "src/main/java/palamod/init/PalamodModFluidTypes.java",
+      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/network/MenuStateUpdateMessage.java",
       "src/main/java/palamod/init/PalamodModMenus.java",
-      "src/main/java/palamod/init/PalamodModScreens.java",
       "src/main/java/palamod/init/PalamodModGameRules.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
@@ -51098,18 +51182,18 @@
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
-      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/java/palamod/init/PalamodModEntityRenderers.java",
-      "src/main/java/palamod/init/PalamodModSounds.java",
-      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/init/PalamodModEntities.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/resources/palamod.mixins.json",
-      "src/main/java/palamod/PalamodMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModTabs.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/palamod/init/PalamodModSounds.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/palamod/init/PalamodModModels.java",
-      "src/main/resources/assets/palamod/sounds.json"
+      "src/main/java/palamod/network/PalamodModVariables.java",
+      "src/main/java/palamod/PalamodMod.java",
+      "src/main/resources/assets/palamod/sounds.json",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/palamod.mixins.json"
     ]
   },
   "foldersRoot": {
