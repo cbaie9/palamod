@@ -3,7 +3,7 @@
   "textures": {
     "all": "palamod:block/gold_tank",
     "particle": "minecraft:block/gold_block",
-    "top-giga": "palamod:block/l12_judeecercis",
+    "top-giga": "palamod:block/l2_judeecercis",
     "side": "palamod:block/fluid_2_judeecercis",
     "cadre": "palamod:block/gold_tank"
   },

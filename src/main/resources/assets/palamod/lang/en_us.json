@@ -1649,5 +1649,6 @@
   "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
   "gui.palamod.jobsgui.label_beta": "Beta",
   "block.palamod.goldentank": "Golden tank",
-  "block.palamod.titanetank": "Titane tank"
+  "block.palamod.titanetank": "Titane tank",
+  "block.palamod.paladium_tank": "Paladium tank"
 }

@@ -1,11 +1,11 @@
 {
   "parent": "palamod:custom/tank1.21.1",
   "textures": {
-    "all": "palamod:block/gold_tank",
-    "particle": "minecraft:block/gold_block",
+    "all": "palamod:block/paladium_tank",
+    "particle": "palamod:block/paladium_block",
     "top-giga": "palamod:block/l14_jacaranda",
     "side": "palamod:block/fluid_14_jacaranda",
-    "cadre": "palamod:block/gold_tank"
+    "cadre": "palamod:block/paladium_tank"
   },
   "render_type": "cutout"
 }

@@ -2,14 +2,14 @@
   "_fv": 79,
   "_type": "block",
   "definition": {
-    "texture": "amethyst_block",
+    "texture": "paladium_block",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "tank1.21.1:default",
+    "customModelName": "tank1.21.1:pala_basic",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -39,7 +39,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Amethyst tank",
+    "name": "Paladium tank",
     "specialInformation": {
       "fixedValue": []
     },
@@ -119,7 +119,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "STONE",
+    "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],

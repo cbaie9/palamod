@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/tank1.21.1",
+  "textures": {
+    "all": "palamod:block/paladium_tank",
+    "particle": "palamod:block/paladium_block",
+    "top-giga": "palamod:block/l2_judeecercis",
+    "side": "palamod:block/l2_judeecercis",
+    "cadre": "palamod:block/paladium_tank"
+  },
+  "render_type": "cutout"
+}

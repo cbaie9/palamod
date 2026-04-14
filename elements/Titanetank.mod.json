@@ -51,7 +51,14 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Jobscreativetabs"
+      },
+      {
+        "value": "CUSTOM:Palamod"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""

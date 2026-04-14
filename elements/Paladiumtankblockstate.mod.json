@@ -2,10 +2,10 @@
   "_fv": 79,
   "_type": "blockstates",
   "definition": {
-    "block": "Titanetank",
+    "block": "PaladiumTank",
     "blockstateList": [
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -13,12 +13,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l2_jacaranda",
+        "customModelName": "tank1.21.1:pala_l2_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -26,12 +26,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l4_jacaranda",
+        "customModelName": "tank1.21.1:pala_l4_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -39,12 +39,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l6_jacaranda",
+        "customModelName": "tank1.21.1:pala_l6_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -52,12 +52,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l8_jacaranda",
+        "customModelName": "tank1.21.1:pala_l6_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -65,12 +65,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l10_jacaranda",
+        "customModelName": "tank1.21.1:pala_l8_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -78,12 +78,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l12_jacaranda",
+        "customModelName": "tank1.21.1:pala_l10_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -91,12 +91,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l14_jacaranda",
+        "customModelName": "tank1.21.1:pala_l12_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -104,12 +104,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l2_erable",
+        "customModelName": "tank1.21.1:pala_l14_jacaranda",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -117,12 +117,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l4_erable",
+        "customModelName": "tank1.21.1:pala_l2_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -130,12 +130,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l6_erable",
+        "customModelName": "tank1.21.1:pala_l4_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -143,12 +143,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l8_erable",
+        "customModelName": "tank1.21.1:pala_l6_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -156,12 +156,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l10_erable",
+        "customModelName": "tank1.21.1:pala_l8_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -169,12 +169,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l12_erable",
+        "customModelName": "tank1.21.1:pala_l10_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -182,12 +182,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l14_erable",
+        "customModelName": "tank1.21.1:pala_l12_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -195,12 +195,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l2_judeecercis",
+        "customModelName": "tank1.21.1:pala_l14_erable",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -208,12 +208,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l4_judeecercis",
+        "customModelName": "tank1.21.1:pala_l2_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -221,12 +221,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l6_judeecercis",
+        "customModelName": "tank1.21.1:pala_l4_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -234,12 +234,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l8_judeecercis",
+        "customModelName": "tank1.21.1:pala_l6_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -247,12 +247,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l10_judeecercis",
+        "customModelName": "tank1.21.1:pala_l8_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -260,12 +260,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l12_judeecercis",
+        "customModelName": "tank1.21.1:pala_l10_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -273,12 +273,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l14_judeecercis",
+        "customModelName": "tank1.21.1:pala_l12_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -286,12 +286,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l2_ostrya",
+        "customModelName": "tank1.21.1:pala_l14_judeecercis",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -299,12 +299,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l4_ostrya",
+        "customModelName": "tank1.21.1:pala_l2_ostrya",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -312,12 +312,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l6_ostrya",
+        "customModelName": "tank1.21.1:pala_l4_ostrya",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -325,12 +325,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l8_ostrya",
+        "customModelName": "tank1.21.1:pala_l6_ostrya",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -338,12 +338,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l10_ostrya",
+        "customModelName": "tank1.21.1:pala_l8_ostrya",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -351,12 +351,12 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l12_ostrya",
+        "customModelName": "tank1.21.1:pala_l10_ostrya",
         "luminance": 0,
         "boundingBoxes": []
       },
       {
-        "texture": "titane_tank",
+        "texture": "paladium_tank",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -364,7 +364,20 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "tank1.21.1:titane_l14_ostrya",
+        "customModelName": "tank1.21.1:pala_l12_ostrya",
+        "luminance": 0,
+        "boundingBoxes": []
+      },
+      {
+        "texture": "paladium_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:pala_l14_ostrya",
         "luminance": 0,
         "boundingBoxes": []
       }

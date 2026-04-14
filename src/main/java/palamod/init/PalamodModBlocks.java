@@ -309,6 +309,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> AMETHYSTTANK;
 	public static final DeferredBlock<Block> GOLDENTANK;
 	public static final DeferredBlock<Block> TITANETANK;
+	public static final DeferredBlock<Block> PALADIUM_TANK;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -605,6 +606,7 @@ public class PalamodModBlocks {
 		AMETHYSTTANK = REGISTRY.register("amethysttank", AmethysttankBlock::new);
 		GOLDENTANK = REGISTRY.register("goldentank", GoldentankBlock::new);
 		TITANETANK = REGISTRY.register("titanetank", TitanetankBlock::new);
+		PALADIUM_TANK = REGISTRY.register("paladium_tank", PaladiumTankBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
