@@ -44759,6 +44759,51 @@
           "src/main/resources/data/palamod/recipe/paladiumtankcraft.json"
         ]
       }
+    },
+    {
+      "name": "GetXpcraftjobsentity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_xpcraftjobsentity",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GetXpcraftjobsentityProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "CraftGiveXpJobskillEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_give_xp_jobskill_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CraftGiveXpJobskillEntityProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

@@ -30,7 +30,7 @@ public class GetXpcraftjobsProcedure {
 		double lvl_alchi = 0;
 		item = item_craft.copy();
 		jobs = GetjobsfileProcedure.execute(entity);
-		if (jobs.exists() && jobs.exists()) {
+		if (jobs.exists()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
