@@ -44772,6 +44772,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
           }
         ],
         "files": [
@@ -47488,6 +47492,25 @@
     "ITEMS:mod:smeltable_corpse_fish": [
       "Items.COOKED_FISH#0",
       "Items.COOKED_FISH#1"
+    ],
+    "ENTITIES:mod:hunter_jobs_entity": [
+      "EntityPig",
+      "EntityCow",
+      "EntityChicken",
+      "EntityGlowSquid",
+      "EntitySquid",
+      "EntityRabbit",
+      "EntitySheep",
+      "EntityCreeper",
+      "EntitySnowman",
+      "EntityWither",
+      "EntityZombie",
+      "EntitySkeleton",
+      "EntitySpider",
+      "EntityCaveSpider",
+      "EntityBlaze",
+      "EntityWitch",
+      "EntityHorse"
     ]
   },
   "tab_element_order": {
@@ -49702,7 +49725,8 @@
       "gui.palamod.jobsgui.label_beta": "Beta",
       "block.palamod.goldentank": "Golden tank",
       "block.palamod.titanetank": "Titane tank",
-      "block.palamod.paladium_tank": "Paladium tank"
+      "block.palamod.paladium_tank": "Paladium tank",
+      "palamod.procedure.jobswin2kill": "xp for killing"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51352,7 +51376,8 @@
       "gui.palamod.jobsgui.label_beta": "Beta",
       "block.palamod.goldentank": "Amethyst tank",
       "block.palamod.titanetank": "Golden tank",
-      "block.palamod.paladium_tank": "Titane tank"
+      "block.palamod.paladium_tank": "Titane tank",
+      "palamod.procedure.jobswin2kill": ""
     }
   },
   "metadata": {

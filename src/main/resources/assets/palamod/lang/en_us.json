@@ -1650,5 +1650,6 @@
   "gui.palamod.jobsgui.label_beta": "Beta",
   "block.palamod.goldentank": "Golden tank",
   "block.palamod.titanetank": "Titane tank",
-  "block.palamod.paladium_tank": "Paladium tank"
+  "block.palamod.paladium_tank": "Paladium tank",
+  "palamod.procedure.jobswin2kill": "xp for killing"
 }

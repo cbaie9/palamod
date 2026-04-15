@@ -1646,5 +1646,6 @@
   "gui.palamod.jobsgui.label_beta": "Beta",
   "block.palamod.goldentank": "Amethyst tank",
   "block.palamod.titanetank": "Golden tank",
-  "block.palamod.paladium_tank": "Titane tank"
+  "block.palamod.paladium_tank": "Titane tank",
+  "palamod.procedure.jobswin2kill": ""
 }

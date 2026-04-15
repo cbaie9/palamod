@@ -4,6 +4,7 @@ import palamod.PalamodMod;
 
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.GlowSquid;
 import net.minecraft.world.entity.Entity;
@@ -15,8 +16,8 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetXpcraftjobsentityProcedure {
-	public static double execute(Entity entity) {
-		if (entity == null)
+	public static double execute(Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
@@ -25,7 +26,7 @@ public class GetXpcraftjobsentityProcedure {
 		double lvl_farmer = 0;
 		double lvl_hunter = 0;
 		double lvl_alchi = 0;
-		jobs = GetjobsfileProcedure.execute(entity);
+		jobs = GetjobsfileProcedure.execute(sourceentity);
 		if (jobs.exists()) {
 			{
 				try {
@@ -45,7 +46,8 @@ public class GetXpcraftjobsentityProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (entity instanceof Cow || entity instanceof Chicken || entity instanceof Sheep || entity instanceof Pig || entity instanceof Rabbit || entity instanceof GlowSquid || entity instanceof Squid) {
+			PalamodMod.LOGGER.info(((entity instanceof Pig) + " " + BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString()));
+			if (entity instanceof Cow || entity instanceof Chicken || entity instanceof Sheep || entity instanceof Pig || entity instanceof Rabbit || entity instanceof GlowSquid || entity instanceof Horse || entity instanceof Squid) {
 				output = 14;
 			} else if (entity instanceof Creeper) {
 				output = 40;
