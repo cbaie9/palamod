@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "cave_spider",
+    "cow",
+    "pig",
+    "skeleton",
+    "glow_squid",
+    "squid",
+    "blaze",
+    "snow_golem",
+    "horse",
+    "chicken",
+    "creeper",
+    "zombie",
+    "rabbit",
+    "sheep",
+    "wither",
+    "witch",
+    "spider"
+  ]
+}

@@ -60,12 +60,10 @@ public class CraftGiveXpJobskillEntityProcedure {
 		String jobs_string = "";
 		String type_of_recipe = "";
 		Entity entity_xp = null;
-		PalamodMod.LOGGER.info(("kill entity" + entity + "source" + sourceentity));
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
-			jobs = ReadjobsserverProcedure.execute(entity);
-			money = ReadMoneyFileProcedure.execute(entity);
+			jobs = ReadjobsserverProcedure.execute(sourceentity);
+			money = ReadMoneyFileProcedure.execute(sourceentity);
 			if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists() && (sourceentity instanceof Player || sourceentity instanceof ServerPlayer)) {
-				PalamodMod.LOGGER.info("M1");
 				{
 					try {
 						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
@@ -88,19 +86,18 @@ public class CraftGiveXpJobskillEntityProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 							main.addProperty("xpstreak_alchi", 0);
 						}
-						xp_receive = GetXpcraftjobsentityProcedure.execute(entity);
-						PalamodMod.LOGGER.info(("M2    " + xp_receive));
+						xp_receive = GetXpcraftjobsentityProcedure.execute(entity, sourceentity);
 						if (0 < xp_receive) {
 							if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:farmer_jobs")))) {
 								jobs_string = "farmer";
-								jobs_type_xpbottle = 2;
+								jobs_type_xpbottle = 2;/*No craft are in the palamod in paladium here, futurproofing*/
 							} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:alchimist_jobs")))) {
 								jobs_string = "alchi";
-								jobs_type_xpbottle = 4;
+								jobs_type_xpbottle = 4;/*No craft are in the palamod in paladium here, futurproofing*/
 							} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:miner_jobs")))) {/*No craft are in the palamod in paladium here, futurproofing*/
 								jobs_string = "miner";
 								jobs_type_xpbottle = 1;
-							} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:hunter_jobs")))) {/*No craft are in the palamod in paladium here, futurproofing*/
+							} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:hunter_jobs_entity")))) {/*hunter*/
 								jobs_string = "hunter";
 								PalamodMod.LOGGER.info("M2");
 								jobs_type_xpbottle = 3;
@@ -111,13 +108,11 @@ public class CraftGiveXpJobskillEntityProcedure {
 										+ "' , fallback to alchimist"));
 							}
 							PalamodMod.LOGGER.debug(jobs_string);
-							PalamodMod.LOGGER.info("M3");
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
 											|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type"))
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
-								PalamodMod.LOGGER.info("M3");
 								{
 									final String _tagName = "xp_jobs";
 									final double _tagValue = (xp_receive * main.get("multi_exp").getAsDouble()
@@ -132,12 +127,11 @@ public class CraftGiveXpJobskillEntityProcedure {
 							} else {
 								main.addProperty(("xp_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xp_" + jobs_string)).getAsDouble()));
 							}
-							PalamodMod.LOGGER.info("M4");
 							main.addProperty(("xpstreak_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
 							main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
-							if (entity instanceof Player _player && !_player.level().isClientSide())
+							if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
-										+ (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable("palamod.procedure.jobswin2craft").getString() + " "
+										+ (xp_receive * main.get("multi_exp").getAsDouble() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable("palamod.procedure.jobswin2kill").getString() + " "
 										+ Component.translatable(((BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString()).replace("minecraft:", ("" + entity).contains("palamod") ? "entity.palamod." : "entity.minecraft."))).getString())),
 										true);
 						}
