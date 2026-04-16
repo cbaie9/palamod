@@ -1651,5 +1651,9 @@
   "block.palamod.goldentank": "Golden tank",
   "block.palamod.titanetank": "Titane tank",
   "block.palamod.paladium_tank": "Paladium tank",
-  "palamod.procedure.jobswin2kill": "xp for killing"
+  "palamod.procedure.jobswin2kill": "xp for killing",
+  "block.palamod.shinyjudeecerciswood": "Shiny judeecercis wood",
+  "block.palamod.shinyjacarandawood": "Shiny jacaranda wood",
+  "block.palamod.shinyerablewood": "Shiny erable wood",
+  "block.palamod.shinyostryawood": "Shiny ostrya wood"
 }

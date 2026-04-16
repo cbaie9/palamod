@@ -44808,6 +44808,70 @@
           "src/main/java/palamod/procedures/CraftGiveXpJobskillEntityProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Shinyjudeecerciswood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shinyjudeecerciswood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/shinyjudeecerciswood.json",
+          "src/main/resources/assets/palamod/blockstates/shinyjudeecerciswood.json",
+          "src/main/java/palamod/block/ShinyjudeecerciswoodBlock.java",
+          "src/main/resources/data/palamod/loot_table/blocks/shinyjudeecerciswood.json",
+          "src/main/resources/assets/palamod/models/item/shinyjudeecerciswood.json"
+        ]
+      }
+    },
+    {
+      "name": "Shinyjacarandawood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shinyjacarandawood",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/shinyjacarandawood.json",
+          "src/main/java/palamod/block/ShinyjacarandawoodBlock.java",
+          "src/main/resources/assets/palamod/models/block/shinyjacarandawood.json",
+          "src/main/resources/assets/palamod/blockstates/shinyjacarandawood.json",
+          "src/main/resources/assets/palamod/models/item/shinyjacarandawood.json"
+        ]
+      }
+    },
+    {
+      "name": "Shinyerablewood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shinyerablewood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/shinyerablewood.json",
+          "src/main/java/palamod/block/ShinyerablewoodBlock.java",
+          "src/main/resources/assets/palamod/models/block/shinyerablewood.json",
+          "src/main/resources/assets/palamod/blockstates/shinyerablewood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shinyerablewood.json"
+        ]
+      }
+    },
+    {
+      "name": "Shinyostryawood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shinyostryawood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/shinyostryawood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shinyostryawood.json",
+          "src/main/resources/assets/palamod/blockstates/shinyostryawood.json",
+          "src/main/java/palamod/block/ShinyostryawoodBlock.java",
+          "src/main/resources/assets/palamod/models/item/shinyostryawood.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46908,6 +46972,9 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:Shinyerablewood",
+      "~CUSTOM:Shinyostryawood",
+      "~CUSTOM:Shinyjudeecerciswood",
       "~CUSTOM:DeadButton",
       "~CUSTOM:DeadPressurePlate",
       "~CUSTOM:DeadTrapdoor",
@@ -49726,7 +49793,11 @@
       "block.palamod.goldentank": "Golden tank",
       "block.palamod.titanetank": "Titane tank",
       "block.palamod.paladium_tank": "Paladium tank",
-      "palamod.procedure.jobswin2kill": "xp for killing"
+      "palamod.procedure.jobswin2kill": "xp for killing",
+      "block.palamod.shinyjudeecerciswood": "Shiny judeecercis wood",
+      "block.palamod.shinyjacarandawood": "Shiny jacaranda wood",
+      "block.palamod.shinyerablewood": "Shiny erable wood",
+      "block.palamod.shinyostryawood": "Shiny ostrya wood"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51377,7 +51448,11 @@
       "block.palamod.goldentank": "Amethyst tank",
       "block.palamod.titanetank": "Golden tank",
       "block.palamod.paladium_tank": "Titane tank",
-      "palamod.procedure.jobswin2kill": ""
+      "palamod.procedure.jobswin2kill": "",
+      "block.palamod.shinyjudeecerciswood": "Shinyjudeecerciswood",
+      "block.palamod.shinyjacarandawood": "Shiny jacaranda wood",
+      "block.palamod.shinyerablewood": "Shiny erable wood",
+      "block.palamod.shinyostryawood": "Shiny ostrya wood"
     }
   },
   "metadata": {

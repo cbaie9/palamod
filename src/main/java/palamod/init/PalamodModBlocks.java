@@ -310,6 +310,10 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> GOLDENTANK;
 	public static final DeferredBlock<Block> TITANETANK;
 	public static final DeferredBlock<Block> PALADIUM_TANK;
+	public static final DeferredBlock<Block> SHINYJUDEECERCISWOOD;
+	public static final DeferredBlock<Block> SHINYJACARANDAWOOD;
+	public static final DeferredBlock<Block> SHINYERABLEWOOD;
+	public static final DeferredBlock<Block> SHINYOSTRYAWOOD;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -607,6 +611,10 @@ public class PalamodModBlocks {
 		GOLDENTANK = REGISTRY.register("goldentank", GoldentankBlock::new);
 		TITANETANK = REGISTRY.register("titanetank", TitanetankBlock::new);
 		PALADIUM_TANK = REGISTRY.register("paladium_tank", PaladiumTankBlock::new);
+		SHINYJUDEECERCISWOOD = REGISTRY.register("shinyjudeecerciswood", ShinyjudeecerciswoodBlock::new);
+		SHINYJACARANDAWOOD = REGISTRY.register("shinyjacarandawood", ShinyjacarandawoodBlock::new);
+		SHINYERABLEWOOD = REGISTRY.register("shinyerablewood", ShinyerablewoodBlock::new);
+		SHINYOSTRYAWOOD = REGISTRY.register("shinyostryawood", ShinyostryawoodBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

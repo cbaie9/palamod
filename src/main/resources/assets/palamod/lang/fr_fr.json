@@ -1647,5 +1647,9 @@
   "block.palamod.goldentank": "Amethyst tank",
   "block.palamod.titanetank": "Golden tank",
   "block.palamod.paladium_tank": "Titane tank",
-  "palamod.procedure.jobswin2kill": ""
+  "palamod.procedure.jobswin2kill": "",
+  "block.palamod.shinyjudeecerciswood": "Shinyjudeecerciswood",
+  "block.palamod.shinyjacarandawood": "Shiny jacaranda wood",
+  "block.palamod.shinyerablewood": "Shiny erable wood",
+  "block.palamod.shinyostryawood": "Shiny ostrya wood"
 }
