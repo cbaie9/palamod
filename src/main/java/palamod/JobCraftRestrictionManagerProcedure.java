@@ -33,133 +33,148 @@ public class JobCraftRestrictionManagerProcedure {
                 CONFIG_FILE.getParentFile().mkdirs();
                 String defaultJson = """
 {
-  "palamod:paladium_crusher": {
-    "farmer": 8
-  },
-   "palamod:endium_pickaxe": {
-    "miner": 20
-  },
-   "palamod:pickaxe_of_the_gods_lv1": {
-    "miner": 1
-  },
-  "palamod:amethyst_excavator": {
-    "miner": 3
-  },
-  "palamod:titane_excavator": {
-    "miner": 11
-  },
-  "palamod:paladium_excavator": {
-    "miner": 15
-  },
-  "palamod:green_paladium_excavator": {
-    "miner": 17
-  },
-  "palamod:voidstone": {
-    "miner": 2
-  },
-  "palamod:cobblebreaker_amethyst_upgrade": {
-    "miner": 10
-  },
-  "palamod:cobblebreaker_titane_upgrade": {
-    "miner": 13
-  },
-  "palamod:cobblebreaker_paladium_upgrade": {
-    "miner": 16
-  },
-  "palamod:minage_voidstone": {
-    "miner": 6
-  },
-  "palamod:dollars_stone": {
-    "miner": 8
-  },
-  "palamod:spawner_upgrades_speed": {
-    "miner": 17
-  },
-  "palamod:paladium_hopper": {
-    "miner": 6
-  },
-  "palamod:paladium_forge": {
-    "miner": 14
-  },
-  "palamod:amethyst_hoe": {
-    "farmer": 2
-  },
-  "palamod:titane_hoe": {
-    "farmer": 5
-  },
-  "palamod:paladium_hoe": {
-    "farmer": 12
-  },
-  "palamod:green_paladium_hoe": {
-    "farmer": 16
-  },
-  "palamod:endium_hoe": {
-    "farmer": 20
-  },
-  "palamod:amethyst_seedplanter": {
-    "farmer": 3
-  },
-  "palamod:titane_seedplanter": {
-    "farmer": 6
-  },
-  "palamod:paladium_seedplanter": {
-    "farmer": 15
-  },
-  "palamod:green_paladium_seedplanter": {
-    "farmer": 18
-  },
-  "palamod:endium_seedplanter": {
-    "farmer": 20
-  },
-  "palamod:totem_fertility": {
-    "farmer": 13
-  },
-  "palamod:endium_axe": {
-    "farmer": 20
-  },
-  "palamod:endium_armor_chestplate": {
-    "farmer": 20
-  },
-  "palamod:endium_armor_helmet": {
-    "hunter": 20
-  },
-  "palamod:endium_armor_leggings": {
-    "alchi": 20
-  },
-  "palamod:endium_armor_boots": {
-    "alchi": 20
-  },
-  "palamod:diamond_infused_obsidian": {
-    "hunter": 8
-  },
-  "palamod:amethyst_infused_obsidian": {
-    "hunter": 12
-  },
-  "palamod:titane_infused_obsidian": {
-    "hunter": 16
-  },
-  "palamod:paladium_infused_obsidian": {
-    "hunter": 20
-  },
-  "palamod:caverne_hammer": {
-    "hunter": 5
-  },
-  "palamod:infernal_knocker": {
-    "hunter": 9
-  },
-  "palamod:spawner_upgrade_looting": {
-    "hunter": 15
+    "palamod:paladium_crusher": {
+      "farmer": 8
+    },
+     "palamod:endium_pickaxe": {
+      "miner": 20
+    },
+     "palamod:pickaxe_of_the_gods_lv1": {
+      "miner": 1
+    },
+    "palamod:amethyst_excavator": {
+      "miner": 3
+    },
+    "palamod:titane_excavator": {
+      "miner": 11
+    },
+    "palamod:paladium_excavator": {
+      "miner": 15
+    },
+    "palamod:green_paladium_excavator": {
+      "miner": 17
+    },
+    "palamod:voidstone": {
+      "miner": 2
+    },
+    "palamod:cobblebreaker_amethyst_upgrade": {
+      "miner": 10
+    },
+    "palamod:cobblebreaker_titane_upgrade": {
+      "miner": 13
+    },
+    "palamod:cobblebreaker_paladium_upgrade": {
+      "miner": 16
+    },
+    "palamod:minage_voidstone": {
+      "miner": 6
+    },
+    "palamod:dollars_stone": {
+      "miner": 8
+    },
+    "palamod:spawner_upgrades_speed": {
+      "miner": 17
+    },
+    "palamod:paladium_hopper": {
+      "miner": 6
+    },
+    "palamod:paladium_forge": {
+      "miner": 14
+    },
+    "palamod:amethyst_hoe": {
+      "farmer": 2
+    },
+    "palamod:titane_hoe": {
+      "farmer": 5
+    },
+    "palamod:paladium_hoe": {
+      "farmer": 12
+    },
+    "palamod:green_paladium_hoe": {
+      "farmer": 16
+    },
+    "palamod:endium_hoe": {
+      "farmer": 20
+    },
+    "palamod:amethyst_seedplanter": {
+      "farmer": 3
+    },
+    "palamod:titane_seedplanter": {
+      "farmer": 6
+    },
+    "palamod:paladium_seedplanter": {
+      "farmer": 15
+    },
+    "palamod:green_paladium_seedplanter": {
+      "farmer": 18
+    },
+    "palamod:endium_seedplanter": {
+      "farmer": 20
+    },
+    "palamod:totem_fertility": {
+      "farmer": 13
+    },
+    "palamod:endium_axe": {
+      "farmer": 20
+    },
+    "palamod:endium_armor_chestplate": {
+      "farmer": 20
+    },
+    "palamod:endium_armor_helmet": {
+      "hunter": 20
+    },
+    "palamod:endium_armor_leggings": {
+      "alchi": 20
+    },
+    "palamod:endium_armor_boots": {
+      "alchi": 20
+    },
+    "palamod:diamond_infused_obsidian": {
+      "hunter": 8
+    },
+    "palamod:amethyst_infused_obsidian": {
+      "hunter": 12
+    },
+    "palamod:titane_infused_obsidian": {
+      "hunter": 16
+    },
+    "palamod:paladium_infused_obsidian": {
+      "hunter": 20
+    },
+    "palamod:caverne_hammer": {
+      "hunter": 5
+    },
+    "palamod:infernal_knocker": {
+      "hunter": 9
+    },
+    "palamod:spawner_upgrade_looting": {
+      "hunter": 15
+    },
+    "palamod:golden_tank":{
+        "alchi" : 2 
+    },
+    "palamod:amethyst_tank":{
+        "alchi" : 7 
+    } ,
+    "palamod:titane_tank":{
+        "alchi" : 10 
+    } ,
+    "palamod:paladium_tank":{
+        "alchi" : 16 
+    } 
+  
+  
+   
+  
+  
+  
+  
+  
+    
+  
+  
+    
   }
-
-
-
-
-
-  
-
-
-  
-}
 """;
                 Files.write(CONFIG_FILE.toPath(), defaultJson.getBytes());
             }
