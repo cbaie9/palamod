@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/shinyostryawood",
+  "random_sequence": "palamod:blocks/shiny_ostrya_wood",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:shinyostryawood"
+          "name": "palamod:shiny_ostrya_wood"
         }
       ]
     }

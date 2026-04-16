@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/shinyjudeecerciswood",
+  "random_sequence": "palamod:blocks/titane_tank",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:shinyjudeecerciswood"
+          "name": "palamod:titane_tank"
         }
       ]
     }

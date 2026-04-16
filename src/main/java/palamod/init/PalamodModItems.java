@@ -673,14 +673,14 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PALADIUM_ANVIL;
 	public static final DeferredItem<Item> MONEY_ANVIL;
 	public static final DeferredItem<Item> FLASK;
-	public static final DeferredItem<Item> AMETHYSTTANK;
-	public static final DeferredItem<Item> GOLDENTANK;
-	public static final DeferredItem<Item> TITANETANK;
+	public static final DeferredItem<Item> AMETHYST_TANK;
+	public static final DeferredItem<Item> GOLDEN_TANK;
+	public static final DeferredItem<Item> TITANE_TANK;
 	public static final DeferredItem<Item> PALADIUM_TANK;
-	public static final DeferredItem<Item> SHINYJUDEECERCISWOOD;
-	public static final DeferredItem<Item> SHINYJACARANDAWOOD;
-	public static final DeferredItem<Item> SHINYERABLEWOOD;
-	public static final DeferredItem<Item> SHINYOSTRYAWOOD;
+	public static final DeferredItem<Item> SHINY_JUDEECERCIS_WOOD;
+	public static final DeferredItem<Item> SHINY_JACARANDA_WOOD;
+	public static final DeferredItem<Item> SHINY_ERABLE_WOOD;
+	public static final DeferredItem<Item> SHINY_OSTRYA_WOOD;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1316,14 +1316,14 @@ public class PalamodModItems {
 		PALADIUM_ANVIL = block(PalamodModBlocks.PALADIUM_ANVIL);
 		MONEY_ANVIL = block(PalamodModBlocks.MONEY_ANVIL);
 		FLASK = REGISTRY.register("flask", FlaskItem::new);
-		AMETHYSTTANK = block(PalamodModBlocks.AMETHYSTTANK);
-		GOLDENTANK = block(PalamodModBlocks.GOLDENTANK);
-		TITANETANK = block(PalamodModBlocks.TITANETANK);
+		AMETHYST_TANK = block(PalamodModBlocks.AMETHYST_TANK);
+		GOLDEN_TANK = block(PalamodModBlocks.GOLDEN_TANK);
+		TITANE_TANK = block(PalamodModBlocks.TITANE_TANK);
 		PALADIUM_TANK = block(PalamodModBlocks.PALADIUM_TANK);
-		SHINYJUDEECERCISWOOD = block(PalamodModBlocks.SHINYJUDEECERCISWOOD);
-		SHINYJACARANDAWOOD = block(PalamodModBlocks.SHINYJACARANDAWOOD);
-		SHINYERABLEWOOD = block(PalamodModBlocks.SHINYERABLEWOOD);
-		SHINYOSTRYAWOOD = block(PalamodModBlocks.SHINYOSTRYAWOOD);
+		SHINY_JUDEECERCIS_WOOD = block(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD);
+		SHINY_JACARANDA_WOOD = block(PalamodModBlocks.SHINY_JACARANDA_WOOD);
+		SHINY_ERABLE_WOOD = block(PalamodModBlocks.SHINY_ERABLE_WOOD);
+		SHINY_OSTRYA_WOOD = block(PalamodModBlocks.SHINY_OSTRYA_WOOD);
 	}
 
 	// Start of user code block custom items

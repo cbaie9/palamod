@@ -1,7 +1,7 @@
 {
   "variants": {
     "blockstate=0": {
-      "model": "palamod:block/goldentank"
+      "model": "palamod:block/golden_tank"
     },
     "blockstate=1": {
       "model": "palamod:block/goldentankblockstate_blockstate_0"

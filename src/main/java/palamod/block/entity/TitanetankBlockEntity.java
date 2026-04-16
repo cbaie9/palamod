@@ -26,7 +26,7 @@ public class TitanetankBlockEntity extends RandomizableContainerBlockEntity impl
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public TitanetankBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.TITANETANK.get(), position, state);
+		super(PalamodModBlockEntities.TITANE_TANK.get(), position, state);
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class TitanetankBlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("titanetank");
+		return Component.literal("titane_tank");
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 {
-  "parent": "palamod:block/amethysttank",
+  "parent": "palamod:block/golden_tank",
   "display": {
     "thirdperson": {
       "rotation": [

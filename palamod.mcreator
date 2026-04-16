@@ -44125,15 +44125,15 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "amethysttank",
+      "registry_name": "amethyst_tank",
       "metadata": {
         "files": [
           "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
-          "src/main/resources/assets/palamod/blockstates/amethysttank.json",
-          "src/main/resources/assets/palamod/models/block/amethysttank.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
-          "src/main/resources/assets/palamod/models/item/amethysttank.json",
-          "src/main/java/palamod/block/AmethysttankBlock.java"
+          "src/main/resources/assets/palamod/blockstates/amethyst_tank.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethyst_tank.json",
+          "src/main/resources/assets/palamod/models/block/amethyst_tank.json",
+          "src/main/java/palamod/block/AmethysttankBlock.java",
+          "src/main/resources/assets/palamod/models/item/amethyst_tank.json"
         ]
       }
     },
@@ -44548,15 +44548,15 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "goldentank",
+      "registry_name": "golden_tank",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/goldentank.json",
+          "src/main/resources/data/palamod/loot_table/blocks/golden_tank.json",
+          "src/main/resources/assets/palamod/models/block/golden_tank.json",
           "src/main/java/palamod/block/GoldentankBlock.java",
           "src/main/java/palamod/block/entity/GoldentankBlockEntity.java",
-          "src/main/resources/assets/palamod/models/item/goldentank.json",
-          "src/main/resources/assets/palamod/blockstates/goldentank.json",
-          "src/main/resources/assets/palamod/models/block/goldentank.json"
+          "src/main/resources/assets/palamod/blockstates/golden_tank.json",
+          "src/main/resources/assets/palamod/models/item/golden_tank.json"
         ]
       }
     },
@@ -44628,14 +44628,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "titanetank",
+      "registry_name": "titane_tank",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/titanetank.json",
-          "src/main/resources/assets/palamod/models/block/titanetank.json",
-          "src/main/resources/assets/palamod/models/item/titanetank.json",
+          "src/main/resources/assets/palamod/models/block/titane_tank.json",
+          "src/main/resources/data/palamod/loot_table/blocks/titane_tank.json",
           "src/main/java/palamod/block/TitanetankBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/titanetank.json",
+          "src/main/resources/assets/palamod/models/item/titane_tank.json",
+          "src/main/resources/assets/palamod/blockstates/titane_tank.json",
           "src/main/java/palamod/block/entity/TitanetankBlockEntity.java"
         ]
       }
@@ -44814,14 +44814,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shinyjudeecerciswood",
+      "registry_name": "shiny_judeecercis_wood",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/shinyjudeecerciswood.json",
-          "src/main/resources/assets/palamod/blockstates/shinyjudeecerciswood.json",
+          "src/main/resources/assets/palamod/blockstates/shiny_judeecercis_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_judeecercis_wood.json",
+          "src/main/resources/assets/palamod/models/block/shiny_judeecercis_wood.json",
           "src/main/java/palamod/block/ShinyjudeecerciswoodBlock.java",
-          "src/main/resources/data/palamod/loot_table/blocks/shinyjudeecerciswood.json",
-          "src/main/resources/assets/palamod/models/item/shinyjudeecerciswood.json"
+          "src/main/resources/assets/palamod/models/item/shiny_judeecercis_wood.json"
         ]
       }
     },
@@ -44830,14 +44830,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shinyjacarandawood",
+      "registry_name": "shiny_jacaranda_wood",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/shinyjacarandawood.json",
+          "src/main/resources/assets/palamod/models/block/shiny_jacaranda_wood.json",
+          "src/main/resources/assets/palamod/blockstates/shiny_jacaranda_wood.json",
           "src/main/java/palamod/block/ShinyjacarandawoodBlock.java",
-          "src/main/resources/assets/palamod/models/block/shinyjacarandawood.json",
-          "src/main/resources/assets/palamod/blockstates/shinyjacarandawood.json",
-          "src/main/resources/assets/palamod/models/item/shinyjacarandawood.json"
+          "src/main/resources/assets/palamod/models/item/shiny_jacaranda_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_jacaranda_wood.json"
         ]
       }
     },
@@ -44846,14 +44846,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shinyerablewood",
+      "registry_name": "shiny_erable_wood",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/shinyerablewood.json",
           "src/main/java/palamod/block/ShinyerablewoodBlock.java",
-          "src/main/resources/assets/palamod/models/block/shinyerablewood.json",
-          "src/main/resources/assets/palamod/blockstates/shinyerablewood.json",
-          "src/main/resources/data/palamod/loot_table/blocks/shinyerablewood.json"
+          "src/main/resources/assets/palamod/models/item/shiny_erable_wood.json",
+          "src/main/resources/assets/palamod/models/block/shiny_erable_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_erable_wood.json",
+          "src/main/resources/assets/palamod/blockstates/shiny_erable_wood.json"
         ]
       }
     },
@@ -44862,14 +44862,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "shinyostryawood",
+      "registry_name": "shiny_ostrya_wood",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/block/shinyostryawood.json",
-          "src/main/resources/data/palamod/loot_table/blocks/shinyostryawood.json",
-          "src/main/resources/assets/palamod/blockstates/shinyostryawood.json",
+          "src/main/resources/assets/palamod/blockstates/shiny_ostrya_wood.json",
+          "src/main/resources/assets/palamod/models/item/shiny_ostrya_wood.json",
           "src/main/java/palamod/block/ShinyostryawoodBlock.java",
-          "src/main/resources/assets/palamod/models/item/shinyostryawood.json"
+          "src/main/resources/assets/palamod/models/block/shiny_ostrya_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_ostrya_wood.json"
         ]
       }
     }
@@ -46972,8 +46972,8 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "BLOCKS:minecraft:mineable/axe": [
-      "~CUSTOM:Shinyerablewood",
       "~CUSTOM:Shinyostryawood",
+      "~CUSTOM:Shinyerablewood",
       "~CUSTOM:Shinyjudeecerciswood",
       "~CUSTOM:DeadButton",
       "~CUSTOM:DeadPressurePlate",
@@ -47851,10 +47851,10 @@
       "Softeneddiamondore",
       "Softenedredstoneore",
       "Softenedlapislazulisore",
+      "PaladiumTank",
       "Amethysttank",
       "Goldentank",
-      "Titanetank",
-      "PaladiumTank"
+      "Titanetank"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48133,10 +48133,10 @@
       "Titanehoe",
       "Totemfertility",
       "Flask",
+      "PaladiumTank",
       "Amethysttank",
       "Goldentank",
-      "Titanetank",
-      "PaladiumTank"
+      "Titanetank"
     ]
   },
   "language_map": {
@@ -49784,20 +49784,20 @@
       "palamod.tooltip.flask_ostrya": "Ostrya",
       "palamod.tooltip.flask_judeecercis": "Judeecercis",
       "palamod.tooltip.flask_jacaranda": "Jacaranda",
-      "block.palamod.amethysttank": "Amethyst tank",
       "palamod.procedure.jobswin2craft": "xp for crafting",
       "palamod.procedure.jobswin2smelt": "xp for smelting",
       "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : hunter",
       "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : Alchimist",
       "gui.palamod.jobsgui.label_beta": "Beta",
-      "block.palamod.goldentank": "Golden tank",
-      "block.palamod.titanetank": "Titane tank",
       "block.palamod.paladium_tank": "Paladium tank",
       "palamod.procedure.jobswin2kill": "xp for killing",
-      "block.palamod.shinyjudeecerciswood": "Shiny judeecercis wood",
-      "block.palamod.shinyjacarandawood": "Shiny jacaranda wood",
-      "block.palamod.shinyerablewood": "Shiny erable wood",
-      "block.palamod.shinyostryawood": "Shiny ostrya wood"
+      "block.palamod.amethyst_tank": "Amethyst tank",
+      "block.palamod.golden_tank": "Golden tank",
+      "block.palamod.titane_tank": "Titane tank",
+      "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood",
+      "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+      "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+      "block.palamod.shiny_erable_wood": "Shiny erable wood"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51439,20 +51439,20 @@
       "palamod.tooltip.flask_ostrya": "",
       "palamod.tooltip.flask_judeecercis": "",
       "palamod.tooltip.flask_jacaranda": "",
-      "block.palamod.amethysttank": "Amethyst tank",
       "palamod.procedure.jobswin2craft": "",
       "palamod.procedure.jobswin2smelt": "",
       "gui.palamod.jobshuntergui.label_jobs_miner": "Jobs : farmer",
       "gui.palamod.jobsalchigui.label_jobs_miner": "Jobs : hunter",
       "gui.palamod.jobsgui.label_beta": "Beta",
-      "block.palamod.goldentank": "Amethyst tank",
-      "block.palamod.titanetank": "Golden tank",
       "block.palamod.paladium_tank": "Titane tank",
       "palamod.procedure.jobswin2kill": "",
-      "block.palamod.shinyjudeecerciswood": "Shinyjudeecerciswood",
-      "block.palamod.shinyjacarandawood": "Shiny jacaranda wood",
-      "block.palamod.shinyerablewood": "Shiny erable wood",
-      "block.palamod.shinyostryawood": "Shiny ostrya wood"
+      "block.palamod.amethyst_tank": "Amethyst tank",
+      "block.palamod.golden_tank": "Golden tank",
+      "block.palamod.titane_tank": "Titane tank",
+      "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood",
+      "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+      "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+      "block.palamod.shiny_erable_wood": "Shiny erable wood"
     }
   },
   "metadata": {

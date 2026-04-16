@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/shinyerablewood",
+  "random_sequence": "palamod:blocks/shiny_judeecercis_wood",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:shinyerablewood"
+          "name": "palamod:shiny_judeecercis_wood"
         }
       ]
     }

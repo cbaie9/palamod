@@ -1,7 +1,7 @@
 {
   "variants": {
     "blockstate=0": {
-      "model": "palamod:block/amethysttank"
+      "model": "palamod:block/amethyst_tank"
     },
     "blockstate=1": {
       "model": "palamod:block/amethysttankblockstate_blockstate_0"

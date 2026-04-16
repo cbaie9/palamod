@@ -1,7 +1,7 @@
 {
   "variants": {
     "blockstate=0": {
-      "model": "palamod:block/titanetank"
+      "model": "palamod:block/titane_tank"
     },
     "blockstate=1": {
       "model": "palamod:block/titanetankblockstate_blockstate_0"

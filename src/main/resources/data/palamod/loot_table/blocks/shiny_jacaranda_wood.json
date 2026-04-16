@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/titanetank",
+  "random_sequence": "palamod:blocks/shiny_jacaranda_wood",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "palamod:titanetank"
+          "name": "palamod:shiny_jacaranda_wood"
         }
       ]
     }
