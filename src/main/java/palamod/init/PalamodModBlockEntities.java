@@ -66,9 +66,9 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FlowertotemBlockEntity>> FLOWER_TOTEM = register("flower_totem", PalamodModBlocks.FLOWER_TOTEM, FlowertotemBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SpawncontrollerBlockEntity>> SPAWN_CONTROLLER = register("spawn_controller", PalamodModBlocks.SPAWN_CONTROLLER, SpawncontrollerBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EmptyspawnerBlockEntity>> EMPTY_SPAWNER = register("empty_spawner", PalamodModBlocks.EMPTY_SPAWNER, EmptyspawnerBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AmethysttankBlockEntity>> AMETHYST_TANK = register("amethyst_tank", PalamodModBlocks.AMETHYST_TANK, AmethysttankBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GoldentankBlockEntity>> GOLDEN_TANK = register("golden_tank", PalamodModBlocks.GOLDEN_TANK, GoldentankBlockEntity::new);
-	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TitanetankBlockEntity>> TITANE_TANK = register("titane_tank", PalamodModBlocks.TITANE_TANK, TitanetankBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AmethysttankBlockEntity>> AMETHYSTTANK = register("amethysttank", PalamodModBlocks.AMETHYSTTANK, AmethysttankBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GoldentankBlockEntity>> GOLDENTANK = register("goldentank", PalamodModBlocks.GOLDENTANK, GoldentankBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TitanetankBlockEntity>> TITANETANK = register("titanetank", PalamodModBlocks.TITANETANK, TitanetankBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PaladiumTankBlockEntity>> PALADIUM_TANK = register("paladium_tank", PalamodModBlocks.PALADIUM_TANK, PaladiumTankBlockEntity::new);
 
 	// Start of user code block custom block entities
@@ -121,9 +121,9 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, FLOWER_TOTEM.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SPAWN_CONTROLLER.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, EMPTY_SPAWNER.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AMETHYST_TANK.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, GOLDEN_TANK.get(), SidedInvWrapper::new);
-		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TITANE_TANK.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, AMETHYSTTANK.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, GOLDENTANK.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TITANETANK.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PALADIUM_TANK.get(), SidedInvWrapper::new);
 	}
 }

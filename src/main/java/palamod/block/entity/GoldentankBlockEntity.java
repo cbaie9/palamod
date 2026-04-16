@@ -26,7 +26,7 @@ public class GoldentankBlockEntity extends RandomizableContainerBlockEntity impl
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public GoldentankBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.GOLDEN_TANK.get(), position, state);
+		super(PalamodModBlockEntities.GOLDENTANK.get(), position, state);
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class GoldentankBlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("golden_tank");
+		return Component.literal("goldentank");
 	}
 
 	@Override

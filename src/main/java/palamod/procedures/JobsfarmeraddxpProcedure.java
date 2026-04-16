@@ -5,6 +5,7 @@ import palamod.init.PalamodModGameRules;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
 import java.io.IOException;
@@ -13,17 +14,16 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 public class JobsfarmeraddxpProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments) {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
-			jobs = GetjobsfileProcedure.execute(entity);
+			jobs = GetjobsfileProcedure.execute(commandParameterEntity(arguments, "player"));
 			if (jobs.exists()) {
 				{
 					try {
@@ -53,6 +53,15 @@ public class JobsfarmeraddxpProcedure {
 			}
 		} else {
 			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_jobs").getString());
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

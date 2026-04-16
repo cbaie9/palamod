@@ -1,0 +1,91 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "palamod:block/titanetank"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/titanetankblockstate_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "palamod:block/titanetankblockstate_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "palamod:block/titanetankblockstate_blockstate_2"
+    },
+    "blockstate=4": {
+      "model": "palamod:block/titanetankblockstate_blockstate_3"
+    },
+    "blockstate=5": {
+      "model": "palamod:block/titanetankblockstate_blockstate_4"
+    },
+    "blockstate=6": {
+      "model": "palamod:block/titanetankblockstate_blockstate_5"
+    },
+    "blockstate=7": {
+      "model": "palamod:block/titanetankblockstate_blockstate_6"
+    },
+    "blockstate=8": {
+      "model": "palamod:block/titanetankblockstate_blockstate_7"
+    },
+    "blockstate=9": {
+      "model": "palamod:block/titanetankblockstate_blockstate_8"
+    },
+    "blockstate=10": {
+      "model": "palamod:block/titanetankblockstate_blockstate_9"
+    },
+    "blockstate=11": {
+      "model": "palamod:block/titanetankblockstate_blockstate_10"
+    },
+    "blockstate=12": {
+      "model": "palamod:block/titanetankblockstate_blockstate_11"
+    },
+    "blockstate=13": {
+      "model": "palamod:block/titanetankblockstate_blockstate_12"
+    },
+    "blockstate=14": {
+      "model": "palamod:block/titanetankblockstate_blockstate_13"
+    },
+    "blockstate=15": {
+      "model": "palamod:block/titanetankblockstate_blockstate_14"
+    },
+    "blockstate=16": {
+      "model": "palamod:block/titanetankblockstate_blockstate_15"
+    },
+    "blockstate=17": {
+      "model": "palamod:block/titanetankblockstate_blockstate_16"
+    },
+    "blockstate=18": {
+      "model": "palamod:block/titanetankblockstate_blockstate_17"
+    },
+    "blockstate=19": {
+      "model": "palamod:block/titanetankblockstate_blockstate_18"
+    },
+    "blockstate=20": {
+      "model": "palamod:block/titanetankblockstate_blockstate_19"
+    },
+    "blockstate=21": {
+      "model": "palamod:block/titanetankblockstate_blockstate_20"
+    },
+    "blockstate=22": {
+      "model": "palamod:block/titanetankblockstate_blockstate_21"
+    },
+    "blockstate=23": {
+      "model": "palamod:block/titanetankblockstate_blockstate_22"
+    },
+    "blockstate=24": {
+      "model": "palamod:block/titanetankblockstate_blockstate_23"
+    },
+    "blockstate=25": {
+      "model": "palamod:block/titanetankblockstate_blockstate_24"
+    },
+    "blockstate=26": {
+      "model": "palamod:block/titanetankblockstate_blockstate_25"
+    },
+    "blockstate=27": {
+      "model": "palamod:block/titanetankblockstate_blockstate_26"
+    },
+    "blockstate=28": {
+      "model": "palamod:block/titanetankblockstate_blockstate_27"
+    }
+  }
+}

@@ -306,14 +306,10 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> TITANE_ANVIL;
 	public static final DeferredBlock<Block> PALADIUM_ANVIL;
 	public static final DeferredBlock<Block> MONEY_ANVIL;
-	public static final DeferredBlock<Block> AMETHYST_TANK;
-	public static final DeferredBlock<Block> GOLDEN_TANK;
-	public static final DeferredBlock<Block> TITANE_TANK;
+	public static final DeferredBlock<Block> AMETHYSTTANK;
+	public static final DeferredBlock<Block> GOLDENTANK;
+	public static final DeferredBlock<Block> TITANETANK;
 	public static final DeferredBlock<Block> PALADIUM_TANK;
-	public static final DeferredBlock<Block> SHINY_JUDEECERCIS_WOOD;
-	public static final DeferredBlock<Block> SHINY_JACARANDA_WOOD;
-	public static final DeferredBlock<Block> SHINY_ERABLE_WOOD;
-	public static final DeferredBlock<Block> SHINY_OSTRYA_WOOD;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -607,14 +603,10 @@ public class PalamodModBlocks {
 		TITANE_ANVIL = REGISTRY.register("titane_anvil", TitaneanvilBlock::new);
 		PALADIUM_ANVIL = REGISTRY.register("paladium_anvil", PaladiumanvilBlock::new);
 		MONEY_ANVIL = REGISTRY.register("money_anvil", MoneyanvilBlock::new);
-		AMETHYST_TANK = REGISTRY.register("amethyst_tank", AmethysttankBlock::new);
-		GOLDEN_TANK = REGISTRY.register("golden_tank", GoldentankBlock::new);
-		TITANE_TANK = REGISTRY.register("titane_tank", TitanetankBlock::new);
+		AMETHYSTTANK = REGISTRY.register("amethysttank", AmethysttankBlock::new);
+		GOLDENTANK = REGISTRY.register("goldentank", GoldentankBlock::new);
+		TITANETANK = REGISTRY.register("titanetank", TitanetankBlock::new);
 		PALADIUM_TANK = REGISTRY.register("paladium_tank", PaladiumTankBlock::new);
-		SHINY_JUDEECERCIS_WOOD = REGISTRY.register("shiny_judeecercis_wood", ShinyjudeecerciswoodBlock::new);
-		SHINY_JACARANDA_WOOD = REGISTRY.register("shiny_jacaranda_wood", ShinyjacarandawoodBlock::new);
-		SHINY_ERABLE_WOOD = REGISTRY.register("shiny_erable_wood", ShinyerablewoodBlock::new);
-		SHINY_OSTRYA_WOOD = REGISTRY.register("shiny_ostrya_wood", ShinyostryawoodBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

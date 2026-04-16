@@ -56,11 +56,11 @@ public class TankprocessProcedure {
 		} else {
 			seve_string = "NTOSI_error";
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYST_TANK.get()) {/*amethyst*/
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYSTTANK.get()) {/*amethyst*/
 			max_stock = 60;
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.GOLDEN_TANK.get()) {/*gold*/
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.GOLDENTANK.get()) {/*gold*/
 			max_stock = 35;
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TITANE_TANK.get()) {/*titane*/
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TITANETANK.get()) {/*titane*/
 			max_stock = 95;
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_TANK.get()) {/*paladium*/
 			max_stock = 135;

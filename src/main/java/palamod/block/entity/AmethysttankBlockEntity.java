@@ -26,7 +26,7 @@ public class AmethysttankBlockEntity extends RandomizableContainerBlockEntity im
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
 
 	public AmethysttankBlockEntity(BlockPos position, BlockState state) {
-		super(PalamodModBlockEntities.AMETHYST_TANK.get(), position, state);
+		super(PalamodModBlockEntities.AMETHYSTTANK.get(), position, state);
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class AmethysttankBlockEntity extends RandomizableContainerBlockEntity im
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("amethyst_tank");
+		return Component.literal("amethysttank");
 	}
 
 	@Override
