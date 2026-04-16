@@ -31030,10 +31030,6 @@
             "type": "cmdcontext"
           },
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -31104,10 +31100,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "x",
@@ -31182,10 +31174,6 @@
             "type": "cmdcontext"
           },
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -31256,10 +31244,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "x",
@@ -31334,10 +31318,6 @@
             "type": "cmdcontext"
           },
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -31408,10 +31388,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "x",
@@ -31486,10 +31462,6 @@
             "type": "cmdcontext"
           },
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -31560,10 +31532,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "x",
