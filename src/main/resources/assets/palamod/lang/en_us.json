@@ -1652,5 +1652,8 @@
   "block.palamod.titanetank": "Titane tank",
   "block.palamod.paladium_tank": "Paladium tank",
   "palamod.procedure.jobswin2kill": "xp for killing",
-  "palamod.procedure.jobswin2lg_jobs": "xp by using legendary stone of jobs"
+  "palamod.procedure.jobswin2lg_jobs": "xp by using legendary stone of jobs",
+  "block.palamod.cauldron": "Cauldron",
+  "block.palamod.cauldron_core": "Cauldron Core",
+  "item.palamod.lightning_potion": "Lightning potion"
 }

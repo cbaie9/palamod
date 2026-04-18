@@ -44744,6 +44744,150 @@
           "src/main/java/palamod/procedures/CraftGiveXpJobskillEntityProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Cauldron",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldron",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/CauldronBlock.java",
+          "src/main/resources/assets/palamod/blockstates/cauldron.json",
+          "src/main/resources/assets/palamod/models/item/cauldron.json",
+          "src/main/resources/assets/palamod/models/block/cauldron.json",
+          "src/main/resources/data/palamod/loot_table/blocks/cauldron.json"
+        ]
+      }
+    },
+    {
+      "name": "CauldronCore",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldron_core",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/entity/CauldronCoreBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/cauldron_core.json",
+          "src/main/resources/data/palamod/loot_table/blocks/cauldron_core.json",
+          "src/main/resources/assets/palamod/blockstates/cauldron_core.json",
+          "src/main/java/palamod/block/CauldronCoreBlock.java",
+          "src/main/resources/assets/palamod/models/item/cauldron_core.json"
+        ]
+      }
+    },
+    {
+      "name": "Cauldronsupportblockstate",
+      "type": "blockstates",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldronsupportblockstate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/cauldronsupportblockstate_blockstate_0.json"
+        ]
+      }
+    },
+    {
+      "name": "Lightningpotion",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_potion",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/lightning_potion.json",
+          "src/main/java/palamod/item/LightningpotionItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Lightningpotionprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightningpotionprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LightningpotionprocessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cauldroncraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldroncraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cauldroncraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/cauldroncraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Cauldroncorecraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldroncorecraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/cauldroncorecraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/cauldroncorecraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Cauldronsetupprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldronsetupprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CauldronsetupprocessProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45433,6 +45577,8 @@
       "CUSTOM:Bigring"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:CauldronCore",
+      "~CUSTOM:Cauldron",
       "~CUSTOM:Moneyanvil",
       "~CUSTOM:Softeneddiamondore",
       "~CUSTOM:Softenedgoldore",
@@ -46477,6 +46623,8 @@
       "CUSTOM:Bigringgreenpaladium"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:CauldronCore",
+      "~CUSTOM:Cauldron",
       "~CUSTOM:PaladiumTank",
       "~CUSTOM:Titanetank",
       "~CUSTOM:Goldentank",
@@ -47723,7 +47871,10 @@
       "Amethysttank",
       "Goldentank",
       "Titanetank",
-      "PaladiumTank"
+      "PaladiumTank",
+      "Cauldron",
+      "CauldronCore",
+      "Lightningpotion"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48005,7 +48156,10 @@
       "Amethysttank",
       "Goldentank",
       "Titanetank",
-      "PaladiumTank"
+      "PaladiumTank",
+      "Cauldron",
+      "CauldronCore",
+      "Lightningpotion"
     ]
   },
   "language_map": {
@@ -49663,7 +49817,10 @@
       "block.palamod.titanetank": "Titane tank",
       "block.palamod.paladium_tank": "Paladium tank",
       "palamod.procedure.jobswin2kill": "xp for killing",
-      "palamod.procedure.jobswin2lg_jobs": "xp by using legendary stone of jobs"
+      "palamod.procedure.jobswin2lg_jobs": "xp by using legendary stone of jobs",
+      "block.palamod.cauldron": "Cauldron",
+      "block.palamod.cauldron_core": "Cauldron Core",
+      "item.palamod.lightning_potion": "Lightning potion"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51313,7 +51470,15 @@
       "block.palamod.titanetank": "Réservoir en Titane",
       "block.palamod.paladium_tank": "Réservoir en Paladium",
       "palamod.procedure.jobswin2kill": "d\u0027expérience pour la chasse",
-      "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier"
+      "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier",
+      "block.palamod.cauldron": "Cauldron",
+      "block.palamod.cauldron_core": "Cauldron Core",
+      "item.palamod.lightning_potion": "Lightning potion",
+      "gui.palamod.grinderpalahelpgui.label_empty": "",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gui.palamod.golemtreec.golem_v_farmer1": "",
+      "gui.palamod.factionhomegui.label_empty": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52963,7 +53128,15 @@
       "block.palamod.titanetank": "Réservoir en Titane",
       "block.palamod.paladium_tank": "Réservoir en Paladium",
       "palamod.procedure.jobswin2kill": "d\u0027expérience pour la chasse",
-      "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier"
+      "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier",
+      "block.palamod.cauldron": "Cauldron",
+      "block.palamod.cauldron_core": "Cauldron Core",
+      "item.palamod.lightning_potion": "Lightning potion",
+      "gui.palamod.grinderpalahelpgui.label_empty": "",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gui.palamod.golemtreec.golem_v_farmer1": "",
+      "gui.palamod.factionhomegui.label_empty": ""
     }
   },
   "metadata": {
@@ -53021,7 +53194,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.062",
+    "version": "1.20.063",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

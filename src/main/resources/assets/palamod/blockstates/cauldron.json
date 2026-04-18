@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "palamod:block/cauldron"
+    },
+    "blockstate=1": {
+      "model": "palamod:block/cauldronsupportblockstate_blockstate_0"
+    }
+  }
+}

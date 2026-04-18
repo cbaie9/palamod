@@ -70,6 +70,7 @@ public class PalamodModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GoldentankBlockEntity>> GOLDENTANK = register("goldentank", PalamodModBlocks.GOLDENTANK, GoldentankBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TitanetankBlockEntity>> TITANETANK = register("titanetank", PalamodModBlocks.TITANETANK, TitanetankBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PaladiumTankBlockEntity>> PALADIUM_TANK = register("paladium_tank", PalamodModBlocks.PALADIUM_TANK, PaladiumTankBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CauldronCoreBlockEntity>> CAULDRON_CORE = register("cauldron_core", PalamodModBlocks.CAULDRON_CORE, CauldronCoreBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -125,5 +126,6 @@ public class PalamodModBlockEntities {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, GOLDENTANK.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TITANETANK.get(), SidedInvWrapper::new);
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PALADIUM_TANK.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CAULDRON_CORE.get(), SidedInvWrapper::new);
 	}
 }

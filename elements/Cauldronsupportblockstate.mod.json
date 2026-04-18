@@ -1,0 +1,22 @@
+{
+  "_fv": 79,
+  "_type": "blockstates",
+  "definition": {
+    "block": "Cauldron",
+    "blockstateList": [
+      {
+        "texture": "cauldron_side",
+        "textureTop": "cauldron_tanksupport",
+        "textureLeft": "cauldron_side",
+        "textureFront": "cauldron_side",
+        "textureRight": "cauldron_side",
+        "textureBack": "cauldron_side",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

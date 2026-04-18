@@ -677,6 +677,9 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> GOLDENTANK;
 	public static final DeferredItem<Item> TITANETANK;
 	public static final DeferredItem<Item> PALADIUM_TANK;
+	public static final DeferredItem<Item> CAULDRON;
+	public static final DeferredItem<Item> CAULDRON_CORE;
+	public static final DeferredItem<Item> LIGHTNING_POTION;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1316,6 +1319,9 @@ public class PalamodModItems {
 		GOLDENTANK = block(PalamodModBlocks.GOLDENTANK);
 		TITANETANK = block(PalamodModBlocks.TITANETANK);
 		PALADIUM_TANK = block(PalamodModBlocks.PALADIUM_TANK);
+		CAULDRON = block(PalamodModBlocks.CAULDRON);
+		CAULDRON_CORE = block(PalamodModBlocks.CAULDRON_CORE);
+		LIGHTNING_POTION = REGISTRY.register("lightning_potion", LightningpotionItem::new);
 	}
 
 	// Start of user code block custom items

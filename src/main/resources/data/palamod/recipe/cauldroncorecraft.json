@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:lightning_potion"
+    },
+    "b": {
+      "item": "palamod:paladium_ingot"
+    }
+  },
+  "result": {
+    "id": "palamod:cauldron_core",
+    "count": 1
+  }
+}

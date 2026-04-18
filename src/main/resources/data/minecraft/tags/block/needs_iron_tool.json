@@ -11,6 +11,7 @@
     "palamod:paladium_green_block",
     "palamod:money_anvil",
     "palamod:paladium_forge",
+    "palamod:cauldron_core",
     "palamod:trixium_ore",
     "palamod:softened_findium_ore",
     "palamod:amethyst_block",
@@ -21,6 +22,7 @@
     "palamod:spike_gold",
     "palamod:softened_diamond_ore",
     "palamod:amethyst_slab",
-    "palamod:iron_spike"
+    "palamod:iron_spike",
+    "palamod:cauldron"
   ]
 }

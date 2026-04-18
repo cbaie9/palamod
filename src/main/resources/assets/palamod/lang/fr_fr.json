@@ -1646,5 +1646,13 @@
   "block.palamod.titanetank": "Réservoir en Titane",
   "block.palamod.paladium_tank": "Réservoir en Paladium",
   "palamod.procedure.jobswin2kill": "d\u0027expérience pour la chasse",
-  "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier"
+  "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier",
+  "block.palamod.cauldron": "Cauldron",
+  "block.palamod.cauldron_core": "Cauldron Core",
+  "item.palamod.lightning_potion": "Lightning potion",
+  "gui.palamod.grinderpalahelpgui.label_empty": "",
+  "gui.palamod.authsafegui.code_check": "",
+  "gui.palamod.adminshopmenu.slider_suffix": "",
+  "gui.palamod.golemtreec.golem_v_farmer1": "",
+  "gui.palamod.factionhomegui.label_empty": ""
 }
