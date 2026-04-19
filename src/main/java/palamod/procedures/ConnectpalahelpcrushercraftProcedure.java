@@ -20,7 +20,7 @@ public class ConnectpalahelpcrushercraftProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof ServerPlayer _ent) {
-			BlockPos _bpos = BlockPos.containing(x, y, z);
+			BlockPos _bpos = BlockPos.containing(x, y + 27, z);
 			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
