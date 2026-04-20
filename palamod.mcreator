@@ -44888,6 +44888,66 @@
           "src/main/java/palamod/procedures/CauldronsetupprocessProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Palalaglunchsilent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palalaglunchsilent",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalalaglunchsilentProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Palalaglunchsilentitem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palalaglunchsilentitem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalalaglunchsilentitemProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
