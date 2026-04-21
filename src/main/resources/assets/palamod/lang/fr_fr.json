@@ -1654,5 +1654,9 @@
   "gui.palamod.authsafegui.code_check": "",
   "gui.palamod.adminshopmenu.slider_suffix": "",
   "gui.palamod.golemtreec.golem_v_farmer1": "",
-  "gui.palamod.factionhomegui.label_empty": ""
+  "gui.palamod.factionhomegui.label_empty": "",
+  "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+  "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+  "block.palamod.shiny_erable_wood": "Shiny Erable wood",
+  "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood"
 }

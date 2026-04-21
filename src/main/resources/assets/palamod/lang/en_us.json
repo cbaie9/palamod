@@ -1655,5 +1655,9 @@
   "palamod.procedure.jobswin2lg_jobs": "xp by using legendary stone of jobs",
   "block.palamod.cauldron": "Cauldron",
   "block.palamod.cauldron_core": "Cauldron Core",
-  "item.palamod.lightning_potion": "Lightning potion"
+  "item.palamod.lightning_potion": "Lightning potion",
+  "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+  "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+  "block.palamod.shiny_erable_wood": "Shiny Erable wood",
+  "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood"
 }

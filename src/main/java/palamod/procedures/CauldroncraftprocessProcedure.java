@@ -103,17 +103,21 @@ public class CauldroncraftprocessProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"kill @e[type=minecraft:item,distance=..5]");
 					res = true;
+				} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:cauldron_craft")))) {
+					res = true;
 				}
 			}
+			if (res) {
+				PalamodMod.queueServerWork(3, () -> {
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"kill @e[type=minecraft:item,distance=..5]");
+					PalamodMod.queueServerWork(1, () -> {
+						CauldroncraftresultProcedure.execute(world, x, y, z, entity, itemstack);
+					});
+				});
+			}
 		}
-		PalamodMod.queueServerWork(3, () -> {
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"kill @e[type=minecraft:item,distance=..5]");
-			PalamodMod.queueServerWork(1, () -> {
-				CauldroncraftresultProcedure.execute(world, x, y, z, itemstack);
-			});
-		});
 	}
 
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {

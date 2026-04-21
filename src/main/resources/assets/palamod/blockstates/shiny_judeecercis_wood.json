@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "palamod:block/shiny_judeecercis_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "palamod:block/shiny_judeecercis_wood"
+    },
+    "axis=z": {
+      "model": "palamod:block/shiny_judeecercis_wood",
+      "x": 90
     }
   }
 }

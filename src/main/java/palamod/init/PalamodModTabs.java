@@ -325,6 +325,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.CAULDRON.get().asItem());
 				tabData.accept(PalamodModBlocks.CAULDRON_CORE.get().asItem());
 				tabData.accept(PalamodModItems.LIGHTNING_POTION.get());
+				tabData.accept(PalamodModBlocks.SHINY_ERABLE_WOOD.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -617,6 +618,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.CAULDRON.get().asItem());
 				tabData.accept(PalamodModBlocks.CAULDRON_CORE.get().asItem());
 				tabData.accept(PalamodModItems.LIGHTNING_POTION.get());
+				tabData.accept(PalamodModBlocks.SHINY_ERABLE_WOOD.get().asItem());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

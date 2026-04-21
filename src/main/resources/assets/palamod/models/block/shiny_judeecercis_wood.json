@@ -1,8 +1,13 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "palamod:block/shiny_judeecercis_block",
-    "particle": "palamod:block/shiny_judeecercis_block"
+    "down": "palamod:block/judeecercis_top",
+    "up": "palamod:block/judeecercis_top",
+    "north": "palamod:block/shiny_judeecercis_block",
+    "east": "palamod:block/shiny_judeecercis_block",
+    "south": "palamod:block/shiny_judeecercis_block",
+    "west": "palamod:block/shiny_judeecercis_block",
+    "particle": "palamod:block/judeecercis_top"
   },
   "render_type": "solid"
 }

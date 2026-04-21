@@ -2,15 +2,15 @@
   "_fv": 79,
   "_type": "block",
   "definition": {
-    "texture": "shiny_erable_block",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 11,
-    "customModelName": "Single texture",
-    "rotationMode": 0,
+    "texture": "erable_top",
+    "textureTop": "erable_top",
+    "textureLeft": "shiny_erable_block",
+    "textureFront": "shiny_erable_block",
+    "textureRight": "shiny_erable_block",
+    "textureBack": "shiny_erable_block",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 5,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -39,7 +39,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Shiny erable wood",
+    "name": "Shiny Erable wood",
     "specialInformation": {
       "fixedValue": []
     },
@@ -51,7 +51,14 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Palamod"
+      },
+      {
+        "value": "CUSTOM:Jobscreativetabs"
+      }
+    ],
     "destroyTool": "axe",
     "customDrop": {
       "value": ""
@@ -112,7 +119,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "NONE",
+    "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],

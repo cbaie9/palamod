@@ -8,6 +8,10 @@
     {
       "id": "#palamod:vanilla_flowers",
       "required": false
+    },
+    {
+      "id": "#palamod:shiny_wood",
+      "required": false
     }
   ]
 }

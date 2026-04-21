@@ -45060,6 +45060,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "itemstack",
             "type": "itemstack"
           },
@@ -45082,6 +45086,70 @@
         ],
         "files": [
           "src/main/java/palamod/procedures/CauldroncraftresultProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Shinyjacarandawood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiny_jacaranda_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/shiny_jacaranda_wood.json",
+          "src/main/resources/assets/palamod/blockstates/shiny_jacaranda_wood.json",
+          "src/main/java/palamod/block/ShinyjacarandawoodBlock.java",
+          "src/main/resources/assets/palamod/models/item/shiny_jacaranda_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_jacaranda_wood.json"
+        ]
+      }
+    },
+    {
+      "name": "Shinyjudeecerciswood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiny_judeecercis_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/blockstates/shiny_judeecercis_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_judeecercis_wood.json",
+          "src/main/resources/assets/palamod/models/block/shiny_judeecercis_wood.json",
+          "src/main/java/palamod/block/ShinyjudeecerciswoodBlock.java",
+          "src/main/resources/assets/palamod/models/item/shiny_judeecercis_wood.json"
+        ]
+      }
+    },
+    {
+      "name": "ShinyErablewood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiny_erable_wood",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/ShinyErablewoodBlock.java",
+          "src/main/resources/assets/palamod/models/item/shiny_erable_wood.json",
+          "src/main/resources/assets/palamod/models/block/shiny_erable_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_erable_wood.json",
+          "src/main/resources/assets/palamod/blockstates/shiny_erable_wood.json"
+        ]
+      }
+    },
+    {
+      "name": "ShinyOstryaWood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shiny_ostrya_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/blockstates/shiny_ostrya_wood.json",
+          "src/main/resources/assets/palamod/models/item/shiny_ostrya_wood.json",
+          "src/main/java/palamod/block/ShinyOstryaWoodBlock.java",
+          "src/main/resources/assets/palamod/models/block/shiny_ostrya_wood.json",
+          "src/main/resources/data/palamod/loot_table/blocks/shiny_ostrya_wood.json"
         ]
       }
     }
@@ -45608,6 +45676,7 @@
       "Blocks.COBBLESTONE"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:Shinyjacarandawood",
       "~CUSTOM:Goldentank",
       "~CUSTOM:Amethysttank",
       "~CUSTOM:Emptyspawner",
@@ -47188,6 +47257,10 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:ShinyOstryaWood",
+      "~CUSTOM:ShinyErablewood",
+      "~CUSTOM:Shinyjudeecerciswood",
+      "~CUSTOM:Shinyjacarandawood",
       "~CUSTOM:DeadButton",
       "~CUSTOM:DeadPressurePlate",
       "~CUSTOM:DeadTrapdoor",
@@ -47801,7 +47874,8 @@
     ],
     "ITEMS:mod:cauldron_craft": [
       "TAG:mod:modded_flowers",
-      "TAG:mod:vanilla_flowers"
+      "TAG:mod:vanilla_flowers",
+      "TAG:mod:shiny_wood"
     ],
     "ITEMS:mod:vanilla_flowers": [
       "Blocks.YELLOW_FLOWER",
@@ -47816,6 +47890,12 @@
       "Blocks.RED_FLOWER#8",
       "Blocks.CORNFLOWER",
       "Blocks.TORCHFLOWER"
+    ],
+    "ITEMS:mod:shiny_wood": [
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Jacaranda_Log",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Erable_Log"
     ]
   },
   "tab_element_order": {
@@ -48095,7 +48175,8 @@
       "PaladiumTank",
       "Cauldron",
       "CauldronCore",
-      "Lightningpotion"
+      "Lightningpotion",
+      "ShinyErablewood"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48380,7 +48461,8 @@
       "PaladiumTank",
       "Cauldron",
       "CauldronCore",
-      "Lightningpotion"
+      "Lightningpotion",
+      "ShinyErablewood"
     ]
   },
   "language_map": {
@@ -50041,7 +50123,11 @@
       "palamod.procedure.jobswin2lg_jobs": "xp by using legendary stone of jobs",
       "block.palamod.cauldron": "Cauldron",
       "block.palamod.cauldron_core": "Cauldron Core",
-      "item.palamod.lightning_potion": "Lightning potion"
+      "item.palamod.lightning_potion": "Lightning potion",
+      "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+      "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+      "block.palamod.shiny_erable_wood": "Shiny Erable wood",
+      "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51699,7 +51785,11 @@
       "gui.palamod.authsafegui.code_check": "",
       "gui.palamod.adminshopmenu.slider_suffix": "",
       "gui.palamod.golemtreec.golem_v_farmer1": "",
-      "gui.palamod.factionhomegui.label_empty": ""
+      "gui.palamod.factionhomegui.label_empty": "",
+      "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+      "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+      "block.palamod.shiny_erable_wood": "Shiny Erable wood",
+      "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53357,7 +53447,11 @@
       "gui.palamod.authsafegui.code_check": "",
       "gui.palamod.adminshopmenu.slider_suffix": "",
       "gui.palamod.golemtreec.golem_v_farmer1": "",
-      "gui.palamod.factionhomegui.label_empty": ""
+      "gui.palamod.factionhomegui.label_empty": "",
+      "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
+      "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
+      "block.palamod.shiny_erable_wood": "Shiny Erable wood",
+      "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood"
     }
   },
   "metadata": {

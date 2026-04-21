@@ -1,8 +1,13 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "palamod:block/shiny_ostrya_block",
-    "particle": "palamod:block/shiny_ostrya_block"
+    "down": "palamod:block/ostrya_top",
+    "up": "palamod:block/ostrya_top",
+    "north": "palamod:block/shiny_ostrya_block",
+    "east": "palamod:block/shiny_ostrya_block",
+    "south": "palamod:block/shiny_ostrya_block",
+    "west": "palamod:block/shiny_ostrya_block",
+    "particle": "palamod:block/ostrya_top"
   },
   "render_type": "solid"
 }

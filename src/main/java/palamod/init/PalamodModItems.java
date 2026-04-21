@@ -680,6 +680,10 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> CAULDRON;
 	public static final DeferredItem<Item> CAULDRON_CORE;
 	public static final DeferredItem<Item> LIGHTNING_POTION;
+	public static final DeferredItem<Item> SHINY_JACARANDA_WOOD;
+	public static final DeferredItem<Item> SHINY_JUDEECERCIS_WOOD;
+	public static final DeferredItem<Item> SHINY_ERABLE_WOOD;
+	public static final DeferredItem<Item> SHINY_OSTRYA_WOOD;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1322,6 +1326,10 @@ public class PalamodModItems {
 		CAULDRON = block(PalamodModBlocks.CAULDRON);
 		CAULDRON_CORE = block(PalamodModBlocks.CAULDRON_CORE);
 		LIGHTNING_POTION = REGISTRY.register("lightning_potion", LightningpotionItem::new);
+		SHINY_JACARANDA_WOOD = block(PalamodModBlocks.SHINY_JACARANDA_WOOD);
+		SHINY_JUDEECERCIS_WOOD = block(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD);
+		SHINY_ERABLE_WOOD = block(PalamodModBlocks.SHINY_ERABLE_WOOD);
+		SHINY_OSTRYA_WOOD = block(PalamodModBlocks.SHINY_OSTRYA_WOOD);
 	}
 
 	// Start of user code block custom items
