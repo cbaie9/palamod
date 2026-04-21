@@ -142,6 +142,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "Cauldronbreak"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Cauldronbreak"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

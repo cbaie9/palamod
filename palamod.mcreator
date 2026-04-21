@@ -44948,6 +44948,142 @@
           "src/main/java/palamod/procedures/PalalaglunchsilentitemProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Cauldronmanagerprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldronmanagerprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "type",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CauldronmanagerprocessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cauldronbreak",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldronbreak",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CauldronbreakProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cauldroncraftprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldroncraftprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CauldroncraftprocessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cauldroncraftresult",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldroncraftresult",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CauldroncraftresultProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -47655,6 +47791,31 @@
       "EntityBlaze",
       "EntityWitch",
       "EntityHorse"
+    ],
+    "ITEMS:mod:modded_flowers": [
+      "CUSTOM:Mineralflower",
+      "CUSTOM:Endiumflower",
+      "CUSTOM:Paladiumflower",
+      "CUSTOM:Endiumfloweron",
+      "CUSTOM:Harpagophytum"
+    ],
+    "ITEMS:mod:cauldron_craft": [
+      "TAG:mod:modded_flowers",
+      "TAG:mod:vanilla_flowers"
+    ],
+    "ITEMS:mod:vanilla_flowers": [
+      "Blocks.YELLOW_FLOWER",
+      "Blocks.RED_FLOWER#0",
+      "Blocks.RED_FLOWER#1",
+      "Blocks.RED_FLOWER#2",
+      "Blocks.RED_FLOWER#3",
+      "Blocks.RED_FLOWER#4",
+      "Blocks.RED_FLOWER#5",
+      "Blocks.RED_FLOWER#6",
+      "Blocks.RED_FLOWER#7",
+      "Blocks.RED_FLOWER#8",
+      "Blocks.CORNFLOWER",
+      "Blocks.TORCHFLOWER"
     ]
   },
   "tab_element_order": {

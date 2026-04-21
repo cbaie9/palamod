@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#palamod:modded_flowers",
+      "required": false
+    },
+    {
+      "id": "#palamod:vanilla_flowers",
+      "required": false
+    }
+  ]
+}
