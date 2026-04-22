@@ -20,7 +20,7 @@ public class JobCraftRestrictionProcedure {
     public static boolean canCraft(LevelAccessor world, double x, double y, double z, Player player, String requiredJob, int requiredLevel) {
         if (player == null || requiredJob == null) return false;
 
-        double playerLevel = GetleveljobsProcedure.execute(player, requiredJob);
+        double playerLevel = GetleveljobsProcedure.execute(world,player, requiredJob);
 
         if (playerLevel < requiredLevel) {
             // Envoie un message d'avertissement au joueur

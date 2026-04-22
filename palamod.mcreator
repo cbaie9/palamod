@@ -42888,6 +42888,10 @@
           {
             "name": "jobs_name",
             "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -44763,6 +44767,10 @@
           },
           {
             "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "itemstack_transfert",
             "type": "itemstack"
           },
           {
@@ -47594,6 +47602,12 @@
       "CUSTOM:Jacaranda_Log",
       "CUSTOM:Judeecercis_Log",
       "CUSTOM:Erable_Log"
+    ],
+    "BLOCKS:mod:tanks": [
+      "CUSTOM:Amethysttank",
+      "CUSTOM:Goldentank",
+      "CUSTOM:Titanetank",
+      "CUSTOM:PaladiumTank"
     ]
   },
   "tab_element_order": {

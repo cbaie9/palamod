@@ -22,7 +22,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 
 public class CauldroncraftresultProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack, ItemStack itemstack_transfert) {
 		if (entity == null)
 			return;
 		ItemStack output = ItemStack.EMPTY;
@@ -174,6 +174,17 @@ public class CauldroncraftresultProcedure {
 					_setstack.setCount((int) (nb_items - cmp_respawn));
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
+			}
+		} else if (PalamodModItems.GLUEBALL_PATTERN.get() == itemstack.getItem()) {
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(PalamodModItems.GLUEBALL_PATTERN.get()).copy();
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+			if (world instanceof ServerLevel _level) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, itemstack_transfert);
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
 			}
 		}
 		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {

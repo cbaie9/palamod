@@ -5,6 +5,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.network.chat.Component;
 
+
 import palamod.init.PalamodModGameRules;
 import net.minecraft.core.registries.BuiltInRegistries;
 
@@ -222,7 +223,7 @@ public class JobCraftRestrictionManagerProcedure {
         for (String jobName : jobData.keySet()) {
 
             int requiredLevel = jobData.get(jobName).getAsInt();
-            double playerLevel = GetleveljobsProcedure.execute(player, jobName);
+            double playerLevel = GetleveljobsProcedure.execute(world,player, jobName);
 
             if (playerLevel < requiredLevel) {
 
