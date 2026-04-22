@@ -30,6 +30,10 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 	private boolean menuStateUpdateActive = false;
 	private Button button_empty;
 	private ImageButton imagebutton_cross_no_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/trixiumdeposit.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/trixium.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
 
 	public TrixiumdepositScreen(TrixiumdepositMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -65,10 +69,10 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/trixiumdeposit.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/trixium.png"), this.leftPos + 80, this.topPos + 42, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 80, this.topPos + 42, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_2, this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

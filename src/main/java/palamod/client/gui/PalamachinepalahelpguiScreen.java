@@ -32,6 +32,7 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 	private boolean menuStateUpdateActive = false;
 	private Button button_back;
 	private Button button_menu;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/palamachinepalahelpgui.png");
 
 	public PalamachinepalahelpguiScreen(PalamachinepalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -50,8 +51,6 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/palamachinepalahelpgui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -63,7 +62,7 @@ public class PalamachinepalahelpguiScreen extends AbstractContainerScreen<Palama
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
 	}
 

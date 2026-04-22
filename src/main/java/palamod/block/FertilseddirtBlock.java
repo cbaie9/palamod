@@ -21,28 +21,20 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class FertilseddirtBlock extends Block {
+	private static final VoxelShape SHAPE = box(0, 0, 0, 16, 15, 16);
+
 	public FertilseddirtBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return SHAPE;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(0, 0, 0, 16, 15, 16);
 	}
 
 	@Override

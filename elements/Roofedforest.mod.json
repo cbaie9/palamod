@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "biome",
   "definition": {
     "name": "Roofed forest",
@@ -58,6 +58,10 @@
     "genWeirdness": {
       "min": 0.4336056483494088,
       "max": 0.8336056483494088
+    },
+    "genDepth": {
+      "min": 0.2,
+      "max": 0.9
     },
     "treesPerChunk": 5,
     "vanillaTreeType": "Mega spruce trees",

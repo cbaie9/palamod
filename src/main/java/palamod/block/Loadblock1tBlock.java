@@ -9,10 +9,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
 
 public class Loadblock1tBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
@@ -20,11 +18,6 @@ public class Loadblock1tBlock extends Block {
 	public Loadblock1tBlock() {
 		super(BlockBehaviour.Properties.of().strength(2f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

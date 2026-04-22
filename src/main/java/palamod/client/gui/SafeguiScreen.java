@@ -19,6 +19,7 @@ public class SafeguiScreen extends AbstractContainerScreen<SafeguiMenu> implemen
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/safegui.png");
 
 	public SafeguiScreen(SafeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,7 +49,7 @@ public class SafeguiScreen extends AbstractContainerScreen<SafeguiMenu> implemen
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/safegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		RenderSystem.disableBlend();
 	}
 

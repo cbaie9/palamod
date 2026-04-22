@@ -28,6 +28,7 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 	private boolean menuStateUpdateActive = false;
 	private EditBox code_check;
 	private Button button_open;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/authsafegui.png");
 
 	public AuthsafeguiScreen(AuthsafeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -62,7 +63,7 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/authsafegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
 		RenderSystem.disableBlend();
 	}
 

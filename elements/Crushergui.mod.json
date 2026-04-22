@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -31,6 +31,7 @@
             "value": -3407821,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 167,
           "y": 21,
           "locked": true
@@ -69,6 +70,7 @@
             "value": -1315861,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 60,
           "y": 127,
           "locked": true
@@ -123,6 +125,7 @@
             "value": -3394816,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 73,
           "y": 76,
           "locked": true
@@ -139,6 +142,7 @@
             "value": -3407668,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 72,
           "y": 42,
           "locked": true
@@ -255,6 +259,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 345,
           "y": 210,
           "locked": false
@@ -272,6 +277,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Crushertextad4"
           },
@@ -292,6 +298,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Crushertextad3"
           },
@@ -312,6 +319,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Crushertextad2"
           },
@@ -332,6 +340,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Crushertextad"
           },

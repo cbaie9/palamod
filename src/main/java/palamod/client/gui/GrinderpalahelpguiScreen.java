@@ -32,6 +32,12 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_example_gui_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/grinderpalahelpgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
 
 	public GrinderpalahelpguiScreen(GrinderpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -61,12 +67,12 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinderpalahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 330, 185, 330, 185);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png"), this.leftPos + 3, this.topPos + 4, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 330, 185, 330, 185);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_2, this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 3, this.topPos + 4, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_5, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

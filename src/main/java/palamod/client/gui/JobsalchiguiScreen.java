@@ -36,6 +36,10 @@ public class JobsalchiguiScreen extends AbstractContainerScreen<JobsalchiguiMenu
 	private boolean menuStateUpdateActive = false;
 	private ImageButton imagebutton_button_gray;
 	private ImageButton imagebutton_cross_no_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/jobsminergui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png");
 
 	public JobsalchiguiScreen(JobsalchiguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -74,10 +78,10 @@ public class JobsalchiguiScreen extends AbstractContainerScreen<JobsalchiguiMenu
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsminergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 80, 176, 80);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsalchigetxpprogressbarProcedure.execute(entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 80, 176, 80);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(SPRITE_0, this.leftPos + 14, this.topPos + 26, Mth.clamp((int) JobsalchigetxpprogressbarProcedure.execute(entity) * 145, 0, 14355), 0, 145, 10, 14500, 10);
 		RenderSystem.disableBlend();
 	}
 

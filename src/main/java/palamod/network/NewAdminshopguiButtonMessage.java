@@ -20,11 +20,10 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record NewAdminshopguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-
 	public static final Type<NewAdminshopguiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "new_adminshopgui_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, NewAdminshopguiButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, NewAdminshopguiButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
@@ -32,6 +31,7 @@ public record NewAdminshopguiButtonMessage(int buttonID, int x, int y, int z) im
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}, (RegistryFriendlyByteBuf buffer) -> new NewAdminshopguiButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+
 	@Override
 	public Type<NewAdminshopguiButtonMessage> type() {
 		return TYPE;
@@ -49,7 +49,7 @@ public record NewAdminshopguiButtonMessage(int buttonID, int x, int y, int z) im
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(new BlockPos(x, y, z)))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (buttonID == 0) {
 

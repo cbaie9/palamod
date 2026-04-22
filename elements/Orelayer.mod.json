@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "overlay",
   "definition": {
     "priority": "LOW",
@@ -15,6 +15,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 2,
           "y": 44,
@@ -32,6 +33,7 @@
             "value": -3407872,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 3,
           "y": 89,
@@ -49,6 +51,7 @@
             "value": -16777114,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 2,
           "y": 54,
@@ -66,6 +69,7 @@
             "value": -13395712,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 3,
           "y": 65,
@@ -83,6 +87,7 @@
             "value": -10066330,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 3,
           "y": 100,
@@ -100,6 +105,7 @@
             "value": -6750055,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 3,
           "y": 111,
@@ -117,6 +123,7 @@
             "value": -13312,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 3,
           "y": 75,
@@ -134,6 +141,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 2,
           "y": 122,

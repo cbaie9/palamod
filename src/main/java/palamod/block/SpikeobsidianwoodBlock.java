@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.Direction;
@@ -31,11 +30,6 @@ public class SpikeobsidianwoodBlock extends Block {
 	@Override
 	public boolean skipRendering(BlockState state, BlockState adjacentBlockState, Direction side) {
 		return adjacentBlockState.getBlock() == this ? true : super.skipRendering(state, adjacentBlockState, side);
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

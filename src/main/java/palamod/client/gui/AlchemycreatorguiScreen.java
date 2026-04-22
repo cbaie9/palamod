@@ -19,6 +19,8 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/alchemycreatorgui.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/alchemy_arrow.png");
 
 	public AlchemycreatorguiScreen(AlchemycreatorguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -37,8 +39,6 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/alchemycreatorgui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -50,8 +50,8 @@ public class AlchemycreatorguiScreen extends AbstractContainerScreen<Alchemycrea
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/alchemy_arrow.png"), this.leftPos + 122, this.topPos + 25, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 122, this.topPos + 25, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

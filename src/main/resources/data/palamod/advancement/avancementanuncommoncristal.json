@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "palamod:amethyst_ingot"
-            ],
+            "items": "palamod:amethyst_ingot",
             "count": {
               "min": 1,
               "max": 64

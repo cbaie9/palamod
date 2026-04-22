@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
@@ -17,11 +16,6 @@ import net.minecraft.core.BlockPos;
 public class CauldronCoreBlock extends Block implements EntityBlock {
 	public CauldronCoreBlock() {
 		super(BlockBehaviour.Properties.of().strength(1f, 10f).requiresCorrectToolForDrops());
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

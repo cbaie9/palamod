@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text_join\"><mutation items=\"3\"></mutation><value name=\"ADD0\"><block type=\"get_localized_text\"><value name=\"key\"><block type=\"text\"><field name=\"TEXT\">palamod.adminshop.getpricebuy</field></block></value></block></value><value name=\"ADD1\"><block type=\"text\"><field name=\"TEXT\"> </field></block></value><value name=\"ADD2\"><block type=\"procedure_retval_number\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"1\"></mutation><field name=\"procedure\">Stockedbaseadminshopbuy</field><field name=\"name0\">itemstack</field><value name=\"arg0\"><block type=\"procedure_retval_itemstack\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"procedure\">Adminshopgetitem</field></block></value></block></value></block></value></block></next></block></xml>",

@@ -48,11 +48,6 @@ public class Witheredobsidian11Block extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
-	}
-
-	@Override
 	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
 		return PathType.DAMAGE_OTHER;
 	}

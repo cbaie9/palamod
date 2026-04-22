@@ -22,6 +22,16 @@ public class CobbleakerserverScreen extends AbstractContainerScreen<Cobbleakerse
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/cobblebreakergui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/particle_iron.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/particle_gold.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/particle_diamond.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/particle_amethyst.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/particle_titane.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/particle_paladium.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/green_paladium_particle.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/upgrade_cobblebreaker.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/arrow_down_sprite16.png");
 
 	public CobbleakerserverScreen(CobbleakerserverMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -51,17 +61,16 @@ public class CobbleakerserverScreen extends AbstractContainerScreen<Cobbleakerse
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/cobblebreakergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_iron.png"), this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_gold.png"), this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_diamond.png"), this.leftPos + 60, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_amethyst.png"), this.leftPos + 81, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_titane.png"), this.leftPos + 102, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/particle_paladium.png"), this.leftPos + 123, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/green_paladium_particle.png"), this.leftPos + 144, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/upgrade_cobblebreaker.png"), this.leftPos + 148, this.topPos + 14, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_down_sprite16.png"), this.leftPos + 82, this.topPos + 25, Mth.clamp((int) CobblebreakerarrowreturnspriteProcedure.execute(world, x, y, z) * 14, 0, 266), 0, 14, 16, 280,
-				16);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 60, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 81, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_5, this.leftPos + 102, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 123, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_7, this.leftPos + 144, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_8, this.leftPos + 148, this.topPos + 14, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(SPRITE_0, this.leftPos + 82, this.topPos + 25, Mth.clamp((int) CobblebreakerarrowreturnspriteProcedure.execute(world, x, y, z) * 14, 0, 266), 0, 14, 16, 280, 16);
 		RenderSystem.disableBlend();
 	}
 

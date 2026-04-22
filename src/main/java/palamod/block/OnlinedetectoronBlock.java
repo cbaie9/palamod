@@ -37,11 +37,6 @@ public class OnlinedetectoronBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
-	}
-
-	@Override
 	public boolean isSignalSource(BlockState state) {
 		return true;
 	}

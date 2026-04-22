@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "tool",
   "definition": {
     "toolType": "Special",
@@ -10,6 +10,7 @@
     "blockingModelName": "Normal blocking",
     "guiTexture": "",
     "name": "Green paladium seedplanter",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": [],
       "name": "CraftableToolTipText"
@@ -31,6 +32,7 @@
     "immuneToFire": false,
     "blockDropsTier": "STONE",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedOnBlock": {

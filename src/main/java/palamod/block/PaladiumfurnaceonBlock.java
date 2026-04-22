@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
@@ -58,11 +57,6 @@ public class PaladiumfurnaceonBlock extends Block implements EntityBlock {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("block.palamod.paladium_furnace_on.description_0"));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

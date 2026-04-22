@@ -1,91 +1,91 @@
 {
   "variants": {
-    "blockstate=0": {
-      "model": "palamod:block/goldentank"
-    },
     "blockstate=1": {
-      "model": "palamod:block/goldentankblockstate_blockstate_0"
+      "model": "palamod:block/goldentank_0"
     },
     "blockstate=2": {
-      "model": "palamod:block/goldentankblockstate_blockstate_1"
+      "model": "palamod:block/goldentank_1"
     },
     "blockstate=3": {
-      "model": "palamod:block/goldentankblockstate_blockstate_2"
+      "model": "palamod:block/goldentank_2"
     },
     "blockstate=4": {
-      "model": "palamod:block/goldentankblockstate_blockstate_3"
+      "model": "palamod:block/goldentank_3"
     },
     "blockstate=5": {
-      "model": "palamod:block/goldentankblockstate_blockstate_4"
+      "model": "palamod:block/goldentank_4"
     },
     "blockstate=6": {
-      "model": "palamod:block/goldentankblockstate_blockstate_5"
+      "model": "palamod:block/goldentank_5"
     },
     "blockstate=7": {
-      "model": "palamod:block/goldentankblockstate_blockstate_6"
+      "model": "palamod:block/goldentank_6"
     },
     "blockstate=8": {
-      "model": "palamod:block/goldentankblockstate_blockstate_7"
+      "model": "palamod:block/goldentank_7"
     },
     "blockstate=9": {
-      "model": "palamod:block/goldentankblockstate_blockstate_8"
+      "model": "palamod:block/goldentank_8"
     },
     "blockstate=10": {
-      "model": "palamod:block/goldentankblockstate_blockstate_9"
+      "model": "palamod:block/goldentank_9"
     },
     "blockstate=11": {
-      "model": "palamod:block/goldentankblockstate_blockstate_10"
+      "model": "palamod:block/goldentank_10"
     },
     "blockstate=12": {
-      "model": "palamod:block/goldentankblockstate_blockstate_11"
+      "model": "palamod:block/goldentank_11"
     },
     "blockstate=13": {
-      "model": "palamod:block/goldentankblockstate_blockstate_12"
+      "model": "palamod:block/goldentank_12"
     },
     "blockstate=14": {
-      "model": "palamod:block/goldentankblockstate_blockstate_13"
+      "model": "palamod:block/goldentank_13"
     },
     "blockstate=15": {
-      "model": "palamod:block/goldentankblockstate_blockstate_14"
+      "model": "palamod:block/goldentank_14"
     },
     "blockstate=16": {
-      "model": "palamod:block/goldentankblockstate_blockstate_15"
+      "model": "palamod:block/goldentank_15"
     },
     "blockstate=17": {
-      "model": "palamod:block/goldentankblockstate_blockstate_16"
+      "model": "palamod:block/goldentank_16"
     },
     "blockstate=18": {
-      "model": "palamod:block/goldentankblockstate_blockstate_17"
+      "model": "palamod:block/goldentank_17"
     },
     "blockstate=19": {
-      "model": "palamod:block/goldentankblockstate_blockstate_18"
+      "model": "palamod:block/goldentank_18"
     },
     "blockstate=20": {
-      "model": "palamod:block/goldentankblockstate_blockstate_19"
+      "model": "palamod:block/goldentank_19"
     },
     "blockstate=21": {
-      "model": "palamod:block/goldentankblockstate_blockstate_20"
+      "model": "palamod:block/goldentank_20"
     },
     "blockstate=22": {
-      "model": "palamod:block/goldentankblockstate_blockstate_21"
+      "model": "palamod:block/goldentank_21"
     },
     "blockstate=23": {
-      "model": "palamod:block/goldentankblockstate_blockstate_22"
+      "model": "palamod:block/goldentank_22"
     },
     "blockstate=24": {
-      "model": "palamod:block/goldentankblockstate_blockstate_23"
+      "model": "palamod:block/goldentank_23"
     },
     "blockstate=25": {
-      "model": "palamod:block/goldentankblockstate_blockstate_24"
+      "model": "palamod:block/goldentank_24"
     },
     "blockstate=26": {
-      "model": "palamod:block/goldentankblockstate_blockstate_25"
+      "model": "palamod:block/goldentank_25"
     },
     "blockstate=27": {
-      "model": "palamod:block/goldentankblockstate_blockstate_26"
+      "model": "palamod:block/goldentank_26"
     },
     "blockstate=28": {
-      "model": "palamod:block/goldentankblockstate_blockstate_27"
+      "model": "palamod:block/goldentank_27"
+    },
+    "blockstate=0": {
+      "model": "palamod:block/goldentank"
     }
   }
 }

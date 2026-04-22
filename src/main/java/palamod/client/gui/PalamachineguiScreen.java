@@ -23,6 +23,8 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/palamachinegui.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/circle_sprite_palamachine.png");
 
 	public PalamachineguiScreen(PalamachineguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -52,9 +54,8 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palamachinegui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 176, 176, 176);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/circle_sprite_palamachine.png"), this.leftPos + 48, this.topPos + 5, Mth.clamp((int) GetspritepalamachinecircleProcedure.execute(world, x, y, z) * 80, 0, 1040), 0, 80, 80,
-				1120, 80);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 176, 176, 176);
+		guiGraphics.blit(SPRITE_0, this.leftPos + 48, this.topPos + 5, Mth.clamp((int) GetspritepalamachinecircleProcedure.execute(world, x, y, z) * 80, 0, 1040), 0, 80, 80, 1120, 80);
 		RenderSystem.disableBlend();
 	}
 

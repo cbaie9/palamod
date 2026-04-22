@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
@@ -18,11 +17,6 @@ import net.minecraft.core.BlockPos;
 public class HdvblockBlock extends Block implements EntityBlock {
 	public HdvblockBlock() {
 		super(BlockBehaviour.Properties.of().strength(-1, 3600000).instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

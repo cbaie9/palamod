@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "block",
   "definition": {
     "texture": "amethyst_block",
@@ -14,6 +14,680 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "states": [
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l2_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 1
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l4_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 2
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l6_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 3
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l8_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 4
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l10_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 5
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l12_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 6
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l14_jacaranda",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 7
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l2_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 8
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l4_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 9
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l6_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 10
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l8_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 11
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l10_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 12
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l12_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 13
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l14_erable",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 14
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l2_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 15
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l4_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 16
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l6_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 17
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l8_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 18
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l10_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 19
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l12_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 20
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l14_judeecercis",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 21
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l2_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 22
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l4_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 23
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l6_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 24
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l8_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 25
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l10_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 26
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l12_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 27
+          }
+        ]
+      },
+      {
+        "texture": "amethyste_tank",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "tank1.21.1:ame_l14_ostrya",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 28,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 28
+          }
+        ]
+      }
+    ],
     "animations": [],
     "itemTexture": "",
     "particleTexture": "",
@@ -21,6 +695,7 @@
     "pottedPlant": {
       "value": ""
     },
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
@@ -38,7 +713,15 @@
         "subtract": false
       }
     ],
-    "customProperties": [],
+    "customProperties": [
+      {
+        "min": 0,
+        "max": 28,
+        "name": "CUSTOM:blockstate",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "name": "Amethyst tank",
     "specialInformation": {
       "fixedValue": []
@@ -71,6 +754,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
+    "hasCustomOpacity": true,
     "lightOpacity": 0,
     "tickRate": 0,
     "tickRandomly": false,
@@ -117,7 +801,9 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": {
+      "fixedValue": 0.0
+    },
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,

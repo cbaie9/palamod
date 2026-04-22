@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "block",
   "definition": {
     "texture": "ostrya_top",
@@ -14,6 +14,368 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "states": [
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap1",
+        "textureFront": "ostrya_sap1",
+        "textureRight": "ostrya_sap1",
+        "textureBack": "ostrya_sap1",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 1
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap2",
+        "textureFront": "ostrya_sap2",
+        "textureRight": "ostrya_sap2",
+        "textureBack": "ostrya_sap2",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 2
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap3",
+        "textureFront": "ostrya_sap3",
+        "textureRight": "ostrya_sap3",
+        "textureBack": "ostrya_sap3",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 3
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap3",
+        "textureFront": "ostrya_sap3",
+        "textureRight": "ostrya_sap3",
+        "textureBack": "ostrya_sap3",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 4
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap5",
+        "textureFront": "ostrya_sap5",
+        "textureRight": "ostrya_sap5",
+        "textureBack": "ostrya_sap5",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 5
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap6",
+        "textureFront": "ostrya_sap6",
+        "textureRight": "ostrya_sap6",
+        "textureBack": "ostrya_sap6",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 6
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap7",
+        "textureFront": "ostrya_sap7",
+        "textureRight": "ostrya_sap7",
+        "textureBack": "ostrya_sap7",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 7
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap8",
+        "textureFront": "ostrya_sap8",
+        "textureRight": "ostrya_sap8",
+        "textureBack": "ostrya_sap8",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 8
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap9",
+        "textureFront": "ostrya_sap9",
+        "textureRight": "ostrya_sap9",
+        "textureBack": "ostrya_sap9",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 9
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap10",
+        "textureFront": "ostrya_sap10",
+        "textureRight": "ostrya_sap10",
+        "textureBack": "ostrya_sap10",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 10
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap11",
+        "textureFront": "ostrya_sap11",
+        "textureRight": "ostrya_sap11",
+        "textureBack": "ostrya_sap11",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 11
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap12",
+        "textureFront": "ostrya_sap12",
+        "textureRight": "ostrya_sap12",
+        "textureBack": "ostrya_sap12",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 12
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap13",
+        "textureFront": "ostrya_sap13",
+        "textureRight": "ostrya_sap13",
+        "textureBack": "ostrya_sap13",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 13
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap14",
+        "textureFront": "ostrya_sap14",
+        "textureRight": "ostrya_sap14",
+        "textureBack": "ostrya_sap14",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 14
+          }
+        ]
+      },
+      {
+        "texture": "ostrya_top",
+        "textureTop": "dead_wood_top",
+        "textureLeft": "ostrya_sap15",
+        "textureFront": "ostrya_sap15",
+        "textureRight": "ostrya_sap15",
+        "textureBack": "ostrya_sap15",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 15,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 15
+          }
+        ]
+      }
+    ],
     "animations": [],
     "itemTexture": "",
     "particleTexture": "",
@@ -21,6 +383,7 @@
     "pottedPlant": {
       "value": ""
     },
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -45,6 +408,13 @@
         "name": "CUSTOM:sap",
         "type": "integer",
         "value": 96
+      },
+      {
+        "min": 0,
+        "max": 15,
+        "name": "CUSTOM:blockstate",
+        "type": "integer",
+        "value": 0
       }
     ],
     "name": "Ostrya Log",
@@ -76,6 +446,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": true,
     "canRedstoneConnect": false,
+    "hasCustomOpacity": false,
     "lightOpacity": 15,
     "tickRate": 1,
     "tickRandomly": false,
@@ -122,7 +493,9 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": {
+      "fixedValue": 0.0
+    },
     "unbreakable": false,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,

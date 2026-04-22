@@ -89,10 +89,19 @@ public class BlueslimepadswapProcedure {
 	}
 
 	private static Direction getDirectionFromBlockState(BlockState blockState) {
-		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		Property<?> prop = getPropertyByName(blockState, "facing");
 		if (prop instanceof DirectionProperty dp)
 			return blockState.getValue(dp);
-		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		prop = getPropertyByName(blockState, "axis");
 		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
+	}
+
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
 	}
 }

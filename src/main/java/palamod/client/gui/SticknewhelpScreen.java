@@ -41,6 +41,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 	private ImageButton imagebutton_damage_stick;
 	private ImageButton imagebutton_strenghtstick;
 	private ImageButton imagebutton_stickofgod;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/sticknewhelp.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/arrow_new.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
 
 	public SticknewhelpScreen(SticknewhelpMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -79,13 +86,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sticknewhelp.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 400, 225, 400, 225);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 300, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_new.png"), this.leftPos + 331, this.topPos + 144, 0, 0, 24, 10, 24, 10);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 400, 225, 400, 225);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 300, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_5, this.leftPos + 331, this.topPos + 144, 0, 0, 24, 10, 24, 10);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

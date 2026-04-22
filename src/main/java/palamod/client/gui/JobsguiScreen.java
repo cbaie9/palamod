@@ -33,6 +33,8 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 	private ImageButton imagebutton_screen_beta2_template_jobs1;
 	private ImageButton imagebutton_screen_beta2_template_jobs2;
 	private ImageButton imagebutton_cross_no_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/jobsgui.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png");
 
 	public JobsguiScreen(JobsguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -62,9 +64,9 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jobsgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
 		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/sprite_last_unlocked_miner.png"), this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(entity) * 16, 0, 400), 0, 16, 16, 416, 16);
+			guiGraphics.blit(SPRITE_0, this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(entity) * 16, 0, 400), 0, 16, 16, 416, 16);
 		}
 		RenderSystem.disableBlend();
 	}

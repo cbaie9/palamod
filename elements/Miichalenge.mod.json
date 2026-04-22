@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -23,15 +23,20 @@
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "isPiglinCurrency": false,
+    "repairItems": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "attackSpeed": 1.6,
     "specialInformation": {
       "fixedValue": []
     },
     "glowCondition": {
       "fixedValue": true
+    },
+    "openGUIOnRightClick": {
+      "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -52,6 +57,7 @@
     "musicDiscDescription": "Koro - Mii chalenge - 2020",
     "musicDiscLengthInTicks": 1100,
     "musicDiscAnalogOutput": 7,
-    "providedBannerPatterns": []
+    "providedBannerPatterns": [],
+    "attributeModifiers": []
   }
 }

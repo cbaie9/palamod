@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -77,6 +77,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 199,
           "y": 25,
           "locked": true
@@ -93,6 +94,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 47,
           "y": 140,
           "locked": false
@@ -109,6 +111,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 87,
           "y": 65,
           "locked": true
@@ -125,6 +128,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 162,
           "y": 65,
           "locked": true
@@ -141,6 +145,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 246,
           "y": 65,
           "locked": true
@@ -157,6 +162,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 308,
           "y": 65,
           "locked": true
@@ -198,6 +204,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 83,
           "y": 119,
           "locked": true
@@ -215,6 +222,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 158,
           "y": 119,
           "locked": true
@@ -232,6 +240,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 240,
           "y": 119,
           "locked": true
@@ -249,6 +258,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 311,
           "y": 119,
           "locked": true
@@ -266,6 +276,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Isgameclientside"
           },
@@ -302,6 +313,7 @@
             "value": -3407872,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 47,
           "y": 25,
           "locked": false

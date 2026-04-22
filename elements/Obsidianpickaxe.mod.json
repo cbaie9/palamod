@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -9,6 +9,7 @@
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Obsidian pickaxe",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
     },
@@ -26,6 +27,7 @@
     "immuneToFire": false,
     "blockDropsTier": "STONE",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedOnBlock": {

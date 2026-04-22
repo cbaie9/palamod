@@ -25636,6 +25636,9 @@
           "src/main/resources/assets/palamod/models/item/typesettingtable.json",
           "src/main/resources/data/palamod/loot_table/blocks/typesettingtable.json",
           "src/main/resources/assets/palamod/blockstates/typesettingtable.json",
+          "src/main/resources/assets/palamod/models/block/typesettingtable_2.json",
+          "src/main/resources/assets/palamod/models/block/typesettingtable_1.json",
+          "src/main/resources/assets/palamod/models/block/typesettingtable_0.json",
           "src/main/java/palamod/block/entity/TypesettingtableBlockEntity.java",
           "src/main/resources/assets/palamod/models/block/typesettingtable.json",
           "src/main/java/palamod/block/TypesettingtableBlock.java"
@@ -30401,32 +30404,21 @@
       "registry_name": "extractor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/extractor_0.json",
+          "src/main/resources/assets/palamod/models/block/extractor_6.json",
           "src/main/java/palamod/block/entity/ExctractorBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/extractor_3.json",
+          "src/main/resources/assets/palamod/models/block/extractor_4.json",
+          "src/main/resources/assets/palamod/models/block/extractor_1.json",
           "src/main/java/palamod/block/ExctractorBlock.java",
+          "src/main/resources/assets/palamod/models/block/extractor_8.json",
           "src/main/resources/assets/palamod/blockstates/extractor.json",
+          "src/main/resources/assets/palamod/models/block/extractor_2.json",
           "src/main/resources/data/palamod/loot_table/blocks/extractor.json",
+          "src/main/resources/assets/palamod/models/block/extractor_7.json",
           "src/main/resources/assets/palamod/models/block/extractor.json",
-          "src/main/resources/assets/palamod/models/item/extractor.json"
-        ]
-      }
-    },
-    {
-      "name": "Extratorblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "extratorblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/extratorblockstate_blockstate_8.json"
+          "src/main/resources/assets/palamod/models/item/extractor.json",
+          "src/main/resources/assets/palamod/models/block/extractor_5.json"
         ]
       }
     },
@@ -31521,54 +31513,6 @@
       }
     },
     {
-      "name": "Xppaladiumore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xppaladiumore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xppaladiumore_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xptitaneore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xptitaneore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xptitaneore_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpdeepslatepaladiumore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpdeepslatepaladiumore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpdeepslatepaladiumore_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpdeepslatetitaneore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpdeepslatetitaneore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpdeepslatetitaneore_blockstate_0.json"
-        ]
-      }
-    },
-    {
       "name": "Jobsminerplacetag",
       "type": "procedure",
       "compiles": true,
@@ -31595,78 +31539,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
-    },
-    {
-      "name": "Xpamesthystore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpamesthystore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpamesthystore_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpdeepslateamethystore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpdeepslateamethystore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpdeepslateamethystore_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpdeepslategreenpaladium",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpdeepslategreenpaladium",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpdeepslategreenpaladium_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpgreenpaladium",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpgreenpaladium",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpgreenpaladium_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpfindiumore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpfindiumore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpfindiumore_blockstate_0.json"
-        ]
-      }
-    },
-    {
-      "name": "Xpdeepslatefindiumore",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xpdeepslatefindiumore",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/xpdeepslatefindiumore_blockstate_0.json"
         ]
       }
     },
@@ -39323,20 +39195,6 @@
       }
     },
     {
-      "name": "Typesettingtableblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "typesettingtableblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/typesettingtableblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/typesettingtableblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/typesettingtableblockstate_blockstate_2.json"
-        ]
-      }
-    },
-    {
       "name": "Typesettingtablestorage",
       "type": "gui",
       "compiles": true,
@@ -41807,110 +41665,6 @@
       }
     },
     {
-      "name": "Ostryawoodblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ostryawoodblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/ostryawoodblockstate_blockstate_1.json"
-        ]
-      }
-    },
-    {
-      "name": "Judeecercisblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "judeecercisblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/judeecercisblockstate_blockstate_14.json"
-        ]
-      }
-    },
-    {
-      "name": "Jacarandablockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jacarandablockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/jacarandablockstate_blockstate_11.json"
-        ]
-      }
-    },
-    {
-      "name": "Erableblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "erableblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/erableblockstate_blockstate_4.json"
-        ]
-      }
-    },
-    {
       "name": "DeadLog",
       "type": "block",
       "compiles": true,
@@ -44064,51 +43818,40 @@
       "registry_name": "amethysttank",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
-          "src/main/resources/assets/palamod/blockstates/amethysttank.json",
           "src/main/resources/assets/palamod/models/block/amethysttank.json",
-          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_8.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_15.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_18.json",
           "src/main/resources/assets/palamod/models/item/amethysttank.json",
-          "src/main/java/palamod/block/AmethysttankBlock.java"
-        ]
-      }
-    },
-    {
-      "name": "Amethysttankblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amethysttankblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_22.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_16.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_19.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_27.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_23.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_20.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_15.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_18.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_26.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_21.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_24.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_17.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_25.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/amethysttankblockstate_blockstate_7.json"
+          "src/main/resources/assets/palamod/models/block/amethysttank_12.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_20.json",
+          "src/main/java/palamod/block/entity/AmethysttankBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/amethysttank_16.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_13.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_10.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_19.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_27.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_21.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_2.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_24.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_5.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_22.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_25.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_14.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_11.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethysttank.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_9.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_17.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_3.json",
+          "src/main/java/palamod/block/AmethysttankBlock.java",
+          "src/main/resources/assets/palamod/models/block/amethysttank_6.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_1.json",
+          "src/main/resources/assets/palamod/blockstates/amethysttank.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_7.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_4.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_23.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_0.json",
+          "src/main/resources/assets/palamod/models/block/amethysttank_26.json"
         ]
       }
     },
@@ -44487,51 +44230,40 @@
       "registry_name": "goldentank",
       "metadata": {
         "files": [
-          "src/main/resources/data/palamod/loot_table/blocks/goldentank.json",
-          "src/main/java/palamod/block/GoldentankBlock.java",
-          "src/main/java/palamod/block/entity/GoldentankBlockEntity.java",
           "src/main/resources/assets/palamod/models/item/goldentank.json",
+          "src/main/resources/assets/palamod/models/block/goldentank.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_14.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_5.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_19.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_2.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_7.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_25.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_17.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_22.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_1.json",
+          "src/main/java/palamod/block/GoldentankBlock.java",
+          "src/main/resources/assets/palamod/models/block/goldentank_11.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_4.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_8.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_23.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_26.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_12.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_6.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_9.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_18.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_15.json",
+          "src/main/java/palamod/block/entity/GoldentankBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/goldentank_0.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_20.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_10.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_24.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_27.json",
+          "src/main/resources/data/palamod/loot_table/blocks/goldentank.json",
           "src/main/resources/assets/palamod/blockstates/goldentank.json",
-          "src/main/resources/assets/palamod/models/block/goldentank.json"
-        ]
-      }
-    },
-    {
-      "name": "Goldentankblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goldentankblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_18.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_21.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_27.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_16.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_24.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_17.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_25.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_22.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_19.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_23.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_20.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_26.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_15.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/goldentankblockstate_blockstate_12.json"
+          "src/main/resources/assets/palamod/models/block/goldentank_16.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_21.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_3.json",
+          "src/main/resources/assets/palamod/models/block/goldentank_13.json"
         ]
       }
     },
@@ -44567,51 +44299,40 @@
       "registry_name": "titanetank",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/blockstates/titanetank.json",
           "src/main/resources/assets/palamod/models/block/titanetank.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_0.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_3.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_13.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_16.json",
           "src/main/resources/assets/palamod/models/item/titanetank.json",
-          "src/main/java/palamod/block/TitanetankBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/titanetank.json",
-          "src/main/java/palamod/block/entity/TitanetankBlockEntity.java"
-        ]
-      }
-    },
-    {
-      "name": "Titanetankblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titanetankblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_19.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_25.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_0.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_27.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_24.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_16.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_21.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_26.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_23.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_15.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_20.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_17.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_22.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_18.json",
-          "src/main/resources/assets/palamod/models/block/titanetankblockstate_blockstate_2.json"
+          "src/main/resources/assets/palamod/models/block/titanetank_21.json",
+          "src/main/java/palamod/block/entity/TitanetankBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/titanetank_10.json",
+          "src/main/resources/assets/palamod/blockstates/titanetank.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_8.json",
+          "src/main/java/palamod/block/TitanetankBlock.java",
+          "src/main/resources/assets/palamod/models/block/titanetank_24.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_4.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_19.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_1.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_27.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_20.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_26.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_12.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_7.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_2.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_5.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_15.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_18.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_23.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_22.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_25.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_17.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_6.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_11.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_14.json",
+          "src/main/resources/assets/palamod/models/block/titanetank_9.json"
         ]
       }
     },
@@ -44635,52 +44356,41 @@
       "registry_name": "paladium_tank",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/paladium_tank_21.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_1.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_4.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_18.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_10.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_12.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_15.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_23.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_7.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_26.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_3.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_6.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_9.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_0.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_22.json",
+          "src/main/java/palamod/block/entity/PaladiumTankBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_14.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_28.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_11.json",
           "src/main/java/palamod/block/PaladiumTankBlock.java",
           "src/main/resources/assets/palamod/models/item/paladium_tank.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_17.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_25.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_5.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_8.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_2.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_16.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_20.json",
           "src/main/resources/assets/palamod/blockstates/paladium_tank.json",
-          "src/main/java/palamod/block/entity/PaladiumTankBlockEntity.java",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_13.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_24.json",
           "src/main/resources/data/palamod/loot_table/blocks/paladium_tank.json",
-          "src/main/resources/assets/palamod/models/block/paladium_tank.json"
-        ]
-      }
-    },
-    {
-      "name": "Paladiumtankblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladiumtankblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_1.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_12.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_7.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_27.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_4.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_16.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_19.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_2.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_24.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_10.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_21.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_8.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_5.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_13.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_14.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_28.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_3.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_11.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_6.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_22.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_17.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_25.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_9.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_20.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_26.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_15.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_23.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_18.json",
-          "src/main/resources/assets/palamod/models/block/paladiumtankblockstate_blockstate_0.json"
+          "src/main/resources/assets/palamod/models/block/paladium_tank_27.json",
+          "src/main/resources/assets/palamod/models/block/paladium_tank_19.json"
         ]
       }
     },
@@ -44775,18 +44485,6 @@
           "src/main/resources/assets/palamod/blockstates/cauldron_core.json",
           "src/main/java/palamod/block/CauldronCoreBlock.java",
           "src/main/resources/assets/palamod/models/item/cauldron_core.json"
-        ]
-      }
-    },
-    {
-      "name": "Cauldronsupportblockstate",
-      "type": "blockstates",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cauldronsupportblockstate",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/palamod/models/block/cauldronsupportblockstate_blockstate_0.json"
         ]
       }
     },
@@ -53525,5 +53223,5 @@
     "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games ",
     "modElementsPackage": "palamod"
   },
-  "mcreatorVersion": 202500345720
+  "mcreatorVersion": 202600114619
 }

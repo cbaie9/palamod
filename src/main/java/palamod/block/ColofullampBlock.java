@@ -8,17 +8,11 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.core.BlockPos;
 
 public class ColofullampBlock extends Block {
 	public ColofullampBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

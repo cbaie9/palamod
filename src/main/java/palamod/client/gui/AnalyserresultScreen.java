@@ -21,6 +21,20 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/analyserresult.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/end_stone.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/clay.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/paladium_ore.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/planks_oak.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/cobblestone.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/chest_ico32.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/dirt.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/erable_log.png");
+	private static final ResourceLocation IMAGE_9 = ResourceLocation.parse("palamod:textures/screens/wool_colored_white.png");
+	private static final ResourceLocation IMAGE_10 = ResourceLocation.parse("palamod:textures/screens/bedrock.png");
+	private static final ResourceLocation IMAGE_11 = ResourceLocation.parse("palamod:textures/screens/air_scre.png");
+	private static final ResourceLocation IMAGE_12 = ResourceLocation.parse("palamod:textures/screens/shulker_screen.png");
+	private static final ResourceLocation IMAGE_13 = ResourceLocation.parse("palamod:textures/screens/stone32.png");
 
 	public AnalyserresultScreen(AnalyserresultMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -50,20 +64,20 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/analyserresult.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 400, 220, 400, 220);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/end_stone.png"), this.leftPos + 6, this.topPos + 7, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/clay.png"), this.leftPos + 118, this.topPos + 6, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/paladium_ore.png"), this.leftPos + 5, this.topPos + 39, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/planks_oak.png"), this.leftPos + 5, this.topPos + 71, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/cobblestone.png"), this.leftPos + 5, this.topPos + 102, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/chest_ico32.png"), this.leftPos + 3, this.topPos + 135, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/dirt.png"), this.leftPos + 5, this.topPos + 166, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/erable_log.png"), this.leftPos + 118, this.topPos + 38, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/wool_colored_white.png"), this.leftPos + 118, this.topPos + 70, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/bedrock.png"), this.leftPos + 118, this.topPos + 101, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/air_scre.png"), this.leftPos + 118, this.topPos + 133, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/shulker_screen.png"), this.leftPos + 118, this.topPos + 165, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/stone32.png"), this.leftPos + 231, this.topPos + 9, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 400, 220, 400, 220);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 6, this.topPos + 7, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 118, this.topPos + 6, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 5, this.topPos + 39, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 5, this.topPos + 71, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_5, this.leftPos + 5, this.topPos + 102, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 3, this.topPos + 135, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_7, this.leftPos + 5, this.topPos + 166, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_8, this.leftPos + 118, this.topPos + 38, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_9, this.leftPos + 118, this.topPos + 70, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_10, this.leftPos + 118, this.topPos + 101, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_11, this.leftPos + 118, this.topPos + 133, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_12, this.leftPos + 118, this.topPos + 165, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_13, this.leftPos + 231, this.topPos + 9, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

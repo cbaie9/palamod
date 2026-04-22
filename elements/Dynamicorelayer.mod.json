@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
@@ -15,6 +15,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamiccheckendiumfullver"
           },
@@ -35,6 +36,7 @@
             "value": -3407872,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamiccechkpaladium"
           },
@@ -55,6 +57,7 @@
             "value": -16777114,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamiccheckendiumfullver"
           },
@@ -75,6 +78,7 @@
             "value": -13395712,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 3,
           "y": 65,
@@ -92,6 +96,7 @@
             "value": -10066330,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamicchecktitane"
           },
@@ -112,6 +117,7 @@
             "value": -6750055,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamiccheckamethyst"
           },
@@ -132,6 +138,7 @@
             "value": -13312,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "anchorPoint": "CENTER",
           "x": 2,
           "y": 76,
@@ -149,6 +156,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamicchecksector5"
           },
@@ -169,6 +177,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamicchecksector4"
           },
@@ -189,6 +198,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamicchecksector3"
           },
@@ -209,6 +219,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamiccheckendiumfullverenver"
           },
@@ -229,6 +240,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamicchecksector1"
           },
@@ -249,6 +261,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Dynamicchecksector2"
           },

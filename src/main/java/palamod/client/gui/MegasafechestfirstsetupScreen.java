@@ -30,6 +30,7 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	private EditBox safe_code;
 	private Checkbox safe_link;
 	private Button button_save;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/megasafechestfirstsetup.png");
 
 	public MegasafechestfirstsetupScreen(MegasafechestfirstsetupMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -70,7 +71,7 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/megasafechestfirstsetup.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		RenderSystem.disableBlend();
 	}
 

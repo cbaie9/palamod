@@ -9,12 +9,14 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class EndiumdynamiteRenderer extends MobRenderer<EndiumdynamiteEntity, Modeldynamite_model<EndiumdynamiteEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/endium_dyna_t4.png");
+
 	public EndiumdynamiteRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modeldynamite_model<EndiumdynamiteEntity>(context.bakeLayer(Modeldynamite_model.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(EndiumdynamiteEntity entity) {
-		return ResourceLocation.parse("palamod:textures/entities/endium_dyna_t4.png");
+		return entityTexture;
 	}
 }

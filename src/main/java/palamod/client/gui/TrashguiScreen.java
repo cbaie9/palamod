@@ -31,6 +31,9 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> implem
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private ImageButton imagebutton_cross_no_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/trashgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
 
 	public TrashguiScreen(TrashguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -69,9 +72,9 @@ public class TrashguiScreen extends AbstractContainerScreen<TrashguiMenu> implem
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/trashgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 76, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

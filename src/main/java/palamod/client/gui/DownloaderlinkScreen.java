@@ -26,6 +26,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 	private boolean menuStateUpdateActive = false;
 	private Button button_no;
 	private Button button_process;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/gui176_166.png");
 
 	public DownloaderlinkScreen(DownloaderlinkMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -55,7 +56,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		RenderSystem.disableBlend();
 	}
 

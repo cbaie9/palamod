@@ -30,6 +30,9 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implem
 	private boolean menuStateUpdateActive = false;
 	private Button button_open;
 	private ImageButton imagebutton_cross_no_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/luckygui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
 
 	public LuckyguiScreen(LuckyguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -59,9 +62,9 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implem
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/luckygui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 180, 176, 180);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 180, 176, 180);
+		guiGraphics.blit(IMAGE_1, this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 75, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

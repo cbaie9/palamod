@@ -2,12 +2,8 @@ package palamod.block;
 
 import palamod.procedures.SetsapblockstatevisualProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.common.util.TriState;
 
-import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -28,61 +24,13 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodLogBlock extends Block {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 15);
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 	public static final IntegerProperty SAP = IntegerProperty.create("sap", 0, 96);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 15);
 
 	public Ostrya_woodLogBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).lightLevel(s -> (new Object() {
-			public int getLightLevel() {
-				if (s.getValue(BLOCKSTATE) == 1)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 2)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 3)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 4)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 5)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 6)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 7)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 8)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 9)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 10)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 11)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 12)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 13)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 14)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 15)
-					return 0;
-				return 0;
-			}
-		}.getLightLevel())).requiresCorrectToolForDrops().dynamicShape().ignitedByLava().instrument(NoteBlockInstrument.BASS));
-		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(SAP, 96));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(AXIS)) {
-			case X -> box(0, 0, 0, 16, 16, 16);
-			case Y -> box(0, 0, 0, 16, 16, 16);
-			case Z -> box(0, 0, 0, 16, 16, 16);
-		};
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(SAP, 96).setValue(BLOCKSTATE, 0));
 	}
 
 	@Override
@@ -93,7 +41,7 @@ public class Ostrya_woodLogBlock extends Block {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis()).setValue(SAP, 96);
+		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis()).setValue(SAP, 96).setValue(BLOCKSTATE, 0);
 	}
 
 	@Override
