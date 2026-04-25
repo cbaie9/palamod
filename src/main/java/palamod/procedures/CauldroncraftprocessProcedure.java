@@ -115,31 +115,39 @@ public class CauldroncraftprocessProcedure {
 								"kill @e[type=minecraft:item,distance=..5]");
 					res = true;
 				} else if (itemstack.getItem() == PalamodModItems.GLUEBALL_PATTERN.get()) {
+					PalamodMod.LOGGER.info("Starting glueball craft, acquering tank 1 and 2");
 					no_clear = true;
 					res = true;
-					if ((world.getBlockState(BlockPos.containing(x_core - 3, y_core, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))) {
-						if (getBlockNBTLogic(world, BlockPos.containing(x_core - 3, y_core, z_core), "setup")) {
-							if (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core - 3, y_core, z_core), "stock")) {
-								if (("ostrya").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core, z_core), "type")) || ("judeecercis").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core, z_core), "type"))
-										|| ("jacaranda").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core, z_core), "type"))
-										|| ("erable").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core, z_core), "type"))) {
-									tank1_type = getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core, z_core), "type");
+					PalamodMod.LOGGER.info(("TANK" + (world.getBlockState(BlockPos.containing(x_core - 3, y_core + 1, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))
+							+ getBlockNBTLogic(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "setup") + (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "stock"))));
+					if ((world.getBlockState(BlockPos.containing(x_core - 3, y_core + 1, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "setup")) {
+							if (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "stock")) {
+								if (("ostrya").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type"))
+										|| ("judeecercis").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type"))
+										|| ("jacaranda").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type"))
+										|| ("erable").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type"))) {
+									tank1_type = getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type");
+									PalamodMod.LOGGER.info(("tank1 acr , type : " + tank1_type));
 								}
 							}
 						}
 					}
-					if ((world.getBlockState(BlockPos.containing(x_core + 3, y_core, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))) {
-						if (getBlockNBTLogic(world, BlockPos.containing(x_core + 3, y_core, z_core), "setup")) {
-							if (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core + 3, y_core, z_core), "stock")) {
-								if (("ostrya").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core, z_core), "type")) || ("judeecercis").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core, z_core), "type"))
-										|| ("jacaranda").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core, z_core), "type"))
-										|| ("erable").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core, z_core), "type"))) {
-									tank2_type = getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core, z_core), "type");
+					if ((world.getBlockState(BlockPos.containing(x_core + 3, y_core + 1, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))) {
+						if (getBlockNBTLogic(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "setup")) {
+							if (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "stock")) {
+								if (("ostrya").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "type"))
+										|| ("judeecercis").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "type"))
+										|| ("jacaranda").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "type"))
+										|| ("erable").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "type"))) {
+									tank2_type = getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type");
+									PalamodMod.LOGGER.info(("tank2 acr , type : " + tank2_type));
 								}
 							}
 						}
 					}
 					jobs_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
+					PalamodMod.LOGGER.info(("jobs acr for player : " + entity.getDisplayName().getString() + ", level alchi : " + jobs_alchi));
 					if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)) {
 						jobs_alchi = 9999;
 					}
