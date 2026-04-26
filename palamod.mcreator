@@ -1342,11 +1342,26 @@
       "registry_name": "ostrya_wood_log",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_5.json",
           "src/main/resources/data/palamod/loot_table/blocks/ostrya_wood_log.json",
           "src/main/resources/assets/palamod/models/block/ostrya_wood_log.json",
-          "src/main/java/palamod/block/Ostrya_woodLogBlock.java",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_4.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_8.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_1.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_6.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_12.json",
           "src/main/resources/assets/palamod/blockstates/ostrya_wood_log.json",
-          "src/main/resources/assets/palamod/models/item/ostrya_wood_log.json"
+          "src/main/resources/assets/palamod/models/item/ostrya_wood_log.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_3.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_0.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_14.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_10.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_9.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_7.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_13.json",
+          "src/main/java/palamod/block/Ostrya_woodLogBlock.java",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_2.json",
+          "src/main/resources/assets/palamod/models/block/ostrya_wood_log_11.json"
         ]
       }
     },
@@ -1570,11 +1585,26 @@
       "registry_name": "jacaranda_log",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_8.json",
           "src/main/resources/assets/palamod/blockstates/jacaranda_log.json",
           "src/main/resources/data/palamod/loot_table/blocks/jacaranda_log.json",
-          "src/main/resources/assets/palamod/models/block/jacaranda_log.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_7.json",
           "src/main/java/palamod/block/Jacaranda_LogBlock.java",
-          "src/main/resources/assets/palamod/models/item/jacaranda_log.json"
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_11.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_2.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_5.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_14.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_6.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_0.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_3.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_12.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log.json",
+          "src/main/resources/assets/palamod/models/item/jacaranda_log.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_4.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_13.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_9.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_1.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_log_10.json"
         ]
       }
     },
@@ -1862,10 +1892,25 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/palamod/models/item/judeecercis_log.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_12.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_9.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_5.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_8.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_13.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_3.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_6.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_10.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_7.json",
           "src/main/resources/data/palamod/loot_table/blocks/judeecercis_log.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_0.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_log.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_4.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_1.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_11.json",
           "src/main/resources/assets/palamod/blockstates/judeecercis_log.json",
-          "src/main/java/palamod/block/Judeecercis_LogBlock.java"
+          "src/main/java/palamod/block/Judeecercis_LogBlock.java",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_14.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_log_2.json"
         ]
       }
     },
@@ -2089,11 +2134,26 @@
       "registry_name": "erable_log",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/erable_log_3.json",
           "src/main/resources/data/palamod/loot_table/blocks/erable_log.json",
-          "src/main/resources/assets/palamod/models/item/erable_log.json",
           "src/main/resources/assets/palamod/blockstates/erable_log.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_0.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_4.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_7.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_2.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_12.json",
+          "src/main/java/palamod/block/Erable_LogBlock.java",
+          "src/main/resources/assets/palamod/models/block/erable_log_5.json",
+          "src/main/resources/assets/palamod/models/item/erable_log.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_8.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_10.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_14.json",
           "src/main/resources/assets/palamod/models/block/erable_log.json",
-          "src/main/java/palamod/block/Erable_LogBlock.java"
+          "src/main/resources/assets/palamod/models/block/erable_log_1.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_11.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_13.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_9.json",
+          "src/main/resources/assets/palamod/models/block/erable_log_6.json"
         ]
       }
     },
@@ -44468,6 +44528,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/palamod/blockstates/cauldron.json",
+          "src/main/resources/assets/palamod/models/block/cauldron_0.json",
           "src/main/resources/assets/palamod/models/block/cauldron.json",
           "src/main/java/palamod/block/CauldronBlock.java",
           "src/main/resources/data/palamod/loot_table/blocks/cauldron.json",
