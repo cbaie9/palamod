@@ -40,10 +40,16 @@ import io.netty.buffer.Unpooled;
 
 public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, EntityBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	private static final VoxelShape SHAPE = Shapes.or(box(0, 0, 0, 16, 11, 16), box(0, 11, 0, 4, 14, 6));
 
 	public Alchimet1Block() {
 		super(BlockBehaviour.Properties.of().strength(2f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return SHAPE;
 	}
 
 	@Override
@@ -53,17 +59,12 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+		return propagatesSkylightDown(state, worldIn, pos) ? 0 : 1;
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return Shapes.or(box(0, 0, 0, 16, 11, 16), box(0, 11, 0, 4, 14, 6));
 	}
 
 	@Override

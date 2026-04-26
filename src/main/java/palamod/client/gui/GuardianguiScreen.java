@@ -26,6 +26,8 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_arbre_de_competance;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/guardiangui.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/golem_blackground.png");
 
 	public GuardianguiScreen(GuardianguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,8 +46,6 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/guardiangui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -60,8 +60,8 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/golem_blackground.png"), this.leftPos + 21, this.topPos + 6, 0, 0, 64, 128, 64, 128);
+		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 21, this.topPos + 6, 0, 0, 64, 128, 64, 128);
 		RenderSystem.disableBlend();
 	}
 

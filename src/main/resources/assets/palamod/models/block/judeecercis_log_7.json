@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/judeecercis_top",
+    "up": "palamod:block/dead_wood_top",
+    "north": "palamod:block/judeecercis_sap8",
+    "east": "palamod:block/judeecercis_sap8",
+    "south": "palamod:block/judeecercis_sap8",
+    "west": "palamod:block/judeecercis_sap8",
+    "particle": "palamod:block/judeecercis_top"
+  },
+  "render_type": "solid"
+}

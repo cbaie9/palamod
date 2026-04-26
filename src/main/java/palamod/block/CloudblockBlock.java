@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
@@ -22,11 +21,6 @@ import net.minecraft.core.BlockPos;
 public class CloudblockBlock extends Block implements EntityBlock {
 	public CloudblockBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.SNOW).strength(1f, 10f).ignitedByLava());
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

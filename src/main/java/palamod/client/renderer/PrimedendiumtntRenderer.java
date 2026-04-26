@@ -9,12 +9,14 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PrimedendiumtntRenderer extends MobRenderer<PrimedendiumtntEntity, Modelprimed_tnt_sponge_v4<PrimedendiumtntEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/endium_tntmodel.png");
+
 	public PrimedendiumtntRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelprimed_tnt_sponge_v4<PrimedendiumtntEntity>(context.bakeLayer(Modelprimed_tnt_sponge_v4.LAYER_LOCATION)), 0f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedendiumtntEntity entity) {
-		return ResourceLocation.parse("palamod:textures/entities/endium_tntmodel.png");
+		return entityTexture;
 	}
 }

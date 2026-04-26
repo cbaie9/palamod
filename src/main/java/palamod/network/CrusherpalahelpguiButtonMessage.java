@@ -21,11 +21,10 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-
 	public static final Type<CrusherpalahelpguiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "crusherpalahelpgui_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, CrusherpalahelpguiButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, CrusherpalahelpguiButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
@@ -33,6 +32,7 @@ public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}, (RegistryFriendlyByteBuf buffer) -> new CrusherpalahelpguiButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+
 	@Override
 	public Type<CrusherpalahelpguiButtonMessage> type() {
 		return TYPE;
@@ -50,7 +50,7 @@ public record CrusherpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(new BlockPos(x, y, z)))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (buttonID == 0) {
 

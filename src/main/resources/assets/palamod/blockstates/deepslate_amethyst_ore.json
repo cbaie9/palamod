@@ -1,10 +1,10 @@
 {
   "variants": {
+    "blockstate=1": {
+      "model": "palamod:block/deepslate_amethyst_ore_0"
+    },
     "blockstate=0": {
       "model": "palamod:block/deepslate_amethyst_ore"
-    },
-    "blockstate=1": {
-      "model": "palamod:block/xpdeepslateamethystore_blockstate_0"
     }
   }
 }

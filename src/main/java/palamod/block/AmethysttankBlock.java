@@ -5,8 +5,6 @@ import palamod.procedures.TankprocessProcedure;
 
 import palamod.block.entity.AmethysttankBlockEntity;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -21,6 +19,7 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
@@ -33,67 +32,8 @@ public class AmethysttankBlock extends Block implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 28);
 
 	public AmethysttankBlock() {
-		super(BlockBehaviour.Properties.of().strength(1f, 10f).lightLevel(s -> (new Object() {
-			public int getLightLevel() {
-				if (s.getValue(BLOCKSTATE) == 1)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 2)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 3)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 4)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 5)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 6)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 7)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 8)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 9)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 10)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 11)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 12)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 13)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 14)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 15)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 16)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 17)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 18)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 19)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 20)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 21)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 22)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 23)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 24)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 25)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 26)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 27)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 28)
-					return 0;
-				return 0;
-			}
-		}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape().instrument(NoteBlockInstrument.IRON_XYLOPHONE));
+		super(BlockBehaviour.Properties.of().strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.IRON_XYLOPHONE));
+		this.registerDefaultState(this.stateDefinition.any().setValue(BLOCKSTATE, 0));
 	}
 
 	@Override
@@ -112,14 +52,14 @@ public class AmethysttankBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(0, 0, 0, 16, 16, 16);
-	}
-
-	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(BLOCKSTATE);
+	}
+
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		return super.getStateForPlacement(context).setValue(BLOCKSTATE, 0);
 	}
 
 	@Override

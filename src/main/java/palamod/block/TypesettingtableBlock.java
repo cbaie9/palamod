@@ -4,8 +4,6 @@ import palamod.procedures.TypesettingstableprocessProcedure;
 
 import palamod.block.entity.TypesettingtableBlockEntity;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
@@ -24,6 +22,7 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -39,19 +38,16 @@ import java.util.List;
 
 public class TypesettingtableBlock extends Block implements EntityBlock {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 3);
+	private static final VoxelShape SHAPE = box(0, 0, 0, 16, 15, 16);
 
 	public TypesettingtableBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).lightLevel(s -> (new Object() {
-			public int getLightLevel() {
-				if (s.getValue(BLOCKSTATE) == 1)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 2)
-					return 0;
-				if (s.getValue(BLOCKSTATE) == 3)
-					return 0;
-				return 0;
-			}
-		}.getLightLevel())).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).dynamicShape().instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
+		this.registerDefaultState(this.stateDefinition.any().setValue(BLOCKSTATE, 0));
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return SHAPE;
 	}
 
 	@Override
@@ -62,29 +58,19 @@ public class TypesettingtableBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
-	}
-
-	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(0, 0, 0, 16, 15, 16);
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
 		builder.add(BLOCKSTATE);
+	}
+
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		return super.getStateForPlacement(context).setValue(BLOCKSTATE, 0);
 	}
 
 	@Override

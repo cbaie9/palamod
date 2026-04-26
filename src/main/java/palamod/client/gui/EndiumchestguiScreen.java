@@ -19,6 +19,9 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/endiumchestgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/ring_endium.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/ring_endium.png");
 
 	public EndiumchestguiScreen(EndiumchestguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,9 +51,9 @@ public class EndiumchestguiScreen extends AbstractContainerScreen<Endiumchestgui
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/endiumchestgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 244, 140, 244, 140);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_endium.png"), this.leftPos + 212, this.topPos + 78, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_endium.png"), this.leftPos + 212, this.topPos + 96, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 244, 140, 244, 140);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 212, this.topPos + 78, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 212, this.topPos + 96, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

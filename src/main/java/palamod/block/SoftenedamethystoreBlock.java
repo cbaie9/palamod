@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,11 +17,6 @@ import net.minecraft.core.BlockPos;
 public class SoftenedamethystoreBlock extends Block {
 	public SoftenedamethystoreBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

@@ -29,6 +29,23 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 	private ImageButton imagebutton_arrow_right01;
 	private ImageButton imagebutton_arrow_up01;
 	private ImageButton imagebutton_arrow_left01;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/drawbrigegui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_9 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_10 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_11 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_12 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_13 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_14 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_15 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
+	private static final ResourceLocation IMAGE_16 = ResourceLocation.parse("palamod:textures/screens/big_slot.png");
 
 	public DrawbrigeguiScreen(DrawbrigeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -58,23 +75,23 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/drawbrigegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 280, 160, 280, 160);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 41, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 15, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 15, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 93, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 67, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 41, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 67, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 93, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 119, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 119, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 145, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 145, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 171, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 171, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 197, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/big_slot.png"), this.leftPos + 197, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 280, 160, 280, 160);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 41, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 15, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 15, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 93, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_5, this.leftPos + 67, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 41, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_7, this.leftPos + 67, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_8, this.leftPos + 93, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_9, this.leftPos + 119, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_10, this.leftPos + 119, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_11, this.leftPos + 145, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_12, this.leftPos + 145, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_13, this.leftPos + 171, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_14, this.leftPos + 171, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_15, this.leftPos + 197, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(IMAGE_16, this.leftPos + 197, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 		RenderSystem.disableBlend();
 	}
 

@@ -23,7 +23,7 @@ import net.minecraft.core.BlockPos;
 
 public class JudeecercissapplingBlock extends Block {
 	public JudeecercissapplingBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(0f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(0f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

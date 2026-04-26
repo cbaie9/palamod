@@ -19,6 +19,7 @@ public class BackpacktitaneScreen extends AbstractContainerScreen<Backpacktitane
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/backpacktitane.png");
 
 	public BackpacktitaneScreen(BackpacktitaneMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,7 +49,7 @@ public class BackpacktitaneScreen extends AbstractContainerScreen<Backpacktitane
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/backpacktitane.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 168, 176, 168);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 168, 176, 168);
 		RenderSystem.disableBlend();
 	}
 

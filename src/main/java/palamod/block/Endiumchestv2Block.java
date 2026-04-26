@@ -38,37 +38,36 @@ import net.minecraft.core.BlockPos;
 
 import io.netty.buffer.Unpooled;
 
+import com.google.common.collect.ImmutableMap;
+
 public class Endiumchestv2Block extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public Endiumchestv2Block() {
 		super(BlockBehaviour.Properties.of().strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
-	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return true;
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				default -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 15, 9, 11, 16));
+				case NORTH -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 0, 9, 11, 1));
+				case EAST -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(15, 7, 7, 16, 11, 9));
+				case WEST -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(0, 7, 7, 1, 11, 9));
+			};
+		});
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 0;
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.get(state);
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 15, 9, 11, 16));
-			case NORTH -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 0, 9, 11, 1));
-			case EAST -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(15, 7, 7, 16, 11, 9));
-			case WEST -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(0, 7, 7, 1, 11, 9));
-		};
 	}
 
 	@Override

@@ -48,7 +48,6 @@ public class Legendarystonejobs_processProcedure {
 				} else {
 					jobs_string = "alchi";
 				}
-				rd_amount = main.get("multi_exp").getAsDouble() * Mth.nextInt(RandomSource.create(), 1, 20) * 300;
 				{
 					try {
 						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
@@ -59,8 +58,9 @@ public class Legendarystonejobs_processProcedure {
 						}
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
-							main.addProperty("xpstreak_miner", 0);
+						rd_amount = main.get("multi_exp").getAsDouble() * Mth.nextInt(RandomSource.create(), 1, 20) * 300;
+						if (world.dayTime() > main.get(("xpstreak_time_" + jobs_string)).getAsDouble()) {
+							main.addProperty(("xpstreak_" + jobs_string), 0);
 						}
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
@@ -78,16 +78,13 @@ public class Legendarystonejobs_processProcedure {
 								CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 							}
 						} else {
-							main.addProperty("xp_miner", (rd_amount * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
+							main.addProperty(("xp_" + jobs_string), (rd_amount * main.get("multi_exp").getAsDouble() + main.get(("xp_" + jobs_string)).getAsDouble()));
 						}
-						main.addProperty(("xp_" + jobs_string), (main.get(("xp_" + jobs_string)).getAsDouble() + rd_amount));
-						main.addProperty("xpstreak_miner", (rd_amount + main.get("xpstreak_miner").getAsDouble()));
-						main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
+						main.addProperty(("xpstreak_" + jobs_string), (rd_amount + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
+						main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(
-									Component.literal(
-											(Component.translatable("palamod.procedure.jobswin1").getString() + "" + (rd_amount + main.get("xpstreak_miner").getAsDouble()) + Component.translatable("palamod.procedure.jobswin2lg_jobs").getString())),
-									false);
+							_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (rd_amount + main.get(("xpstreak_" + jobs_string)).getAsDouble())
+									+ Component.translatable("palamod.procedure.jobswin2lg_jobs").getString())), true);
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

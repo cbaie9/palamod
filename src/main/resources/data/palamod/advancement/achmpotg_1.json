@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "palamod:pickaxe_of_the_gods_lv1"
-            ],
+            "items": "palamod:pickaxe_of_the_gods_lv1",
             "count": {
               "min": 1,
               "max": 1

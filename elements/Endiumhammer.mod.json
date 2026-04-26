@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -9,6 +9,7 @@
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Endium hammer",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
     },
@@ -29,6 +30,7 @@
     "immuneToFire": true,
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInInventoryTick": {

@@ -19,11 +19,10 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record FluidpalahelpButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-
 	public static final Type<FluidpalahelpButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "fluidpalahelp_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, FluidpalahelpButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, FluidpalahelpButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
@@ -31,6 +30,7 @@ public record FluidpalahelpButtonMessage(int buttonID, int x, int y, int z) impl
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}, (RegistryFriendlyByteBuf buffer) -> new FluidpalahelpButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+
 	@Override
 	public Type<FluidpalahelpButtonMessage> type() {
 		return TYPE;
@@ -48,7 +48,7 @@ public record FluidpalahelpButtonMessage(int buttonID, int x, int y, int z) impl
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(new BlockPos(x, y, z)))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (buttonID == 0) {
 

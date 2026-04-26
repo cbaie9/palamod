@@ -21,7 +21,7 @@ public class ExtractorprocesstickProcedure {
 		boolean pass_block = false;
 		double x_bloc = 0;
 		double z_bloc = 0;
-		if (blockstate.getBlock().getStateDefinition().getProperty("fiole") instanceof BooleanProperty _getbp1 && blockstate.getValue(_getbp1)) {
+		if (getPropertyByName(blockstate, "fiole") instanceof BooleanProperty _getbp1 && blockstate.getValue(_getbp1)) {
 			x_bloc = x;
 			z_bloc = z;
 			if (Direction.NORTH == (getDirectionFromBlockState(blockstate))) {/*north =z+1*/
@@ -45,7 +45,7 @@ public class ExtractorprocesstickProcedure {
 					x_bloc = x - 1;
 				}
 			}
-			if (pass_block && 15 > (blockstate.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _getip23 ? blockstate.getValue(_getip23) : -1)) {
+			if (pass_block && 15 > (getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip23 ? blockstate.getValue(_getip23) : -1)) {
 				if (5 < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer")) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -58,16 +58,15 @@ public class ExtractorprocesstickProcedure {
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 					{
-						int _value = ((world.getBlockState(BlockPos.containing(x_bloc, y, z_bloc))).getBlock().getStateDefinition().getProperty("sap") instanceof IntegerProperty _getip27
-								? (world.getBlockState(BlockPos.containing(x_bloc, y, z_bloc))).getValue(_getip27)
-								: -1) - 1;
+						int _value = (getPropertyByName((world.getBlockState(BlockPos.containing(x_bloc, y, z_bloc))), "sap") instanceof IntegerProperty _getip27 ? (world.getBlockState(BlockPos.containing(x_bloc, y, z_bloc))).getValue(_getip27) : -1)
+								- 1;
 						BlockPos _pos = BlockPos.containing(x_bloc, y, z_bloc);
 						BlockState _bs = world.getBlockState(_pos);
 						if (_bs.getBlock().getStateDefinition().getProperty("sap") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 							world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 					}
 					{
-						int _value = (blockstate.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _getip30 ? blockstate.getValue(_getip30) : -1) + 1;
+						int _value = (getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip30 ? blockstate.getValue(_getip30) : -1) + 1;
 						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						if (_bs.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -119,7 +118,7 @@ public class ExtractorprocesstickProcedure {
 						}
 					}
 					{
-						int _value = (int) (1 + Math.round(((blockstate.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _getip45 ? blockstate.getValue(_getip45) : -1) / 15d) * 12));
+						int _value = (int) (1 + Math.round(((getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip45 ? blockstate.getValue(_getip45) : -1) / 15d) * 12));
 						BlockPos _pos = BlockPos.containing(x, y, z);
 						BlockState _bs = world.getBlockState(_pos);
 						if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -141,11 +140,20 @@ public class ExtractorprocesstickProcedure {
 		}
 	}
 
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
+	}
+
 	private static Direction getDirectionFromBlockState(BlockState blockState) {
-		Property<?> prop = blockState.getBlock().getStateDefinition().getProperty("facing");
+		Property<?> prop = getPropertyByName(blockState, "facing");
 		if (prop instanceof DirectionProperty dp)
 			return blockState.getValue(dp);
-		prop = blockState.getBlock().getStateDefinition().getProperty("axis");
+		prop = getPropertyByName(blockState, "axis");
 		return prop instanceof EnumProperty ep && ep.getPossibleValues().toArray()[0] instanceof Direction.Axis ? Direction.fromAxisAndDirection((Direction.Axis) blockState.getValue(ep), Direction.AxisDirection.POSITIVE) : Direction.NORTH;
 	}
 

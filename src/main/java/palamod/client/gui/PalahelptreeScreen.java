@@ -30,6 +30,14 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_cross_no_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/palahelptree.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/erable_log.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/jacaranda_log.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/judeecercis_log.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/ostrya_log.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
 
 	public PalahelptreeScreen(PalahelptreeMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -59,14 +67,14 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/palahelptree.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 220, 166, 220, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/erable_log.png"), this.leftPos + 10, this.topPos + 102, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/jacaranda_log.png"), this.leftPos + 10, this.topPos + 34, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/judeecercis_log.png"), this.leftPos + 10, this.topPos + 67, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ostrya_log.png"), this.leftPos + 10, this.topPos + 133, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 77, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 119, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 220, 166, 220, 166);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 10, this.topPos + 102, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 10, this.topPos + 34, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 10, this.topPos + 67, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 10, this.topPos + 133, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_5, this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 77, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_7, this.leftPos + 119, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

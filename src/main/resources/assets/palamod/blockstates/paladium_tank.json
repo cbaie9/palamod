@@ -1,94 +1,94 @@
 {
   "variants": {
-    "blockstate=0": {
-      "model": "palamod:block/paladium_tank"
-    },
     "blockstate=1": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_0"
+      "model": "palamod:block/paladium_tank_0"
     },
     "blockstate=2": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_1"
+      "model": "palamod:block/paladium_tank_1"
     },
     "blockstate=3": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_2"
+      "model": "palamod:block/paladium_tank_2"
     },
     "blockstate=4": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_3"
+      "model": "palamod:block/paladium_tank_3"
     },
     "blockstate=5": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_4"
+      "model": "palamod:block/paladium_tank_4"
     },
     "blockstate=6": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_5"
+      "model": "palamod:block/paladium_tank_5"
     },
     "blockstate=7": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_6"
+      "model": "palamod:block/paladium_tank_6"
     },
     "blockstate=8": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_7"
+      "model": "palamod:block/paladium_tank_7"
     },
     "blockstate=9": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_8"
+      "model": "palamod:block/paladium_tank_8"
     },
     "blockstate=10": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_9"
+      "model": "palamod:block/paladium_tank_9"
     },
     "blockstate=11": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_10"
+      "model": "palamod:block/paladium_tank_10"
     },
     "blockstate=12": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_11"
+      "model": "palamod:block/paladium_tank_11"
     },
     "blockstate=13": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_12"
+      "model": "palamod:block/paladium_tank_12"
     },
     "blockstate=14": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_13"
+      "model": "palamod:block/paladium_tank_13"
     },
     "blockstate=15": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_14"
+      "model": "palamod:block/paladium_tank_14"
     },
     "blockstate=16": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_15"
+      "model": "palamod:block/paladium_tank_15"
     },
     "blockstate=17": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_16"
+      "model": "palamod:block/paladium_tank_16"
     },
     "blockstate=18": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_17"
+      "model": "palamod:block/paladium_tank_17"
     },
     "blockstate=19": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_18"
+      "model": "palamod:block/paladium_tank_18"
     },
     "blockstate=20": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_19"
+      "model": "palamod:block/paladium_tank_19"
     },
     "blockstate=21": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_20"
+      "model": "palamod:block/paladium_tank_20"
     },
     "blockstate=22": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_21"
+      "model": "palamod:block/paladium_tank_21"
     },
     "blockstate=23": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_22"
+      "model": "palamod:block/paladium_tank_22"
     },
     "blockstate=24": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_23"
+      "model": "palamod:block/paladium_tank_23"
     },
     "blockstate=25": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_24"
+      "model": "palamod:block/paladium_tank_24"
     },
     "blockstate=26": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_25"
+      "model": "palamod:block/paladium_tank_25"
     },
     "blockstate=27": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_26"
+      "model": "palamod:block/paladium_tank_26"
     },
     "blockstate=28": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_27"
+      "model": "palamod:block/paladium_tank_27"
     },
     "blockstate=29": {
-      "model": "palamod:block/paladiumtankblockstate_blockstate_28"
+      "model": "palamod:block/paladium_tank_28"
+    },
+    "blockstate=0": {
+      "model": "palamod:block/paladium_tank"
     }
   }
 }

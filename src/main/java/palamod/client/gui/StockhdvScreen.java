@@ -22,6 +22,7 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> implem
 	private boolean menuStateUpdateActive = false;
 	private Button button_return_to_admin_panel;
 	private Button button_quit_admin_panel;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/stockhdv.png");
 
 	public StockhdvScreen(StockhdvMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -51,7 +52,7 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> implem
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/stockhdv.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 425, 240, 425, 240);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 425, 240, 425, 240);
 		RenderSystem.disableBlend();
 	}
 

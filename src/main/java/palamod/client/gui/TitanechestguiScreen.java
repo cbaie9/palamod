@@ -19,6 +19,10 @@ public class TitanechestguiScreen extends AbstractContainerScreen<Titanechestgui
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/titanechestgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/ring_to_set.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/ring_gui.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/ring_gui.png");
 
 	public TitanechestguiScreen(TitanechestguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,10 +52,10 @@ public class TitanechestguiScreen extends AbstractContainerScreen<Titanechestgui
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/titanechestgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 306, 225, 306, 225);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_to_set.png"), this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_gui.png"), this.leftPos + 260, this.topPos + 163, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/ring_gui.png"), this.leftPos + 260, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 306, 225, 306, 225);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 260, this.topPos + 163, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 260, this.topPos + 181, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "block",
   "definition": {
     "texture": "paladium_furnace_side",
@@ -14,10 +14,12 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "states": [],
     "animations": [],
     "itemTexture": "",
     "particleTexture": "",
     "blockSetType": "OAK",
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -36,7 +38,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Paladium furnace",
+    "name": "Paladium furnace (old)",
     "specialInformation": {
       "fixedValue": [
         "A L P H A"
@@ -63,6 +65,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
+    "hasCustomOpacity": false,
     "lightOpacity": 15,
     "tickRate": 20,
     "tickRandomly": false,
@@ -78,6 +81,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -106,12 +112,17 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": {
+      "fixedValue": 0.0
+    },
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": true,
     "guiBoundTo": "Paladumfurnace",
     "openGUIOnRightClick": true,

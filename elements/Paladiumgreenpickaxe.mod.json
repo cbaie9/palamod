@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -9,6 +9,7 @@
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Green Paladium Pickaxe",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": [
         "green"
@@ -32,6 +33,7 @@
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "biome",
   "definition": {
     "name": "Forest ender",
@@ -58,6 +58,10 @@
     "genWeirdness": {
       "min": -1.0780185268233684,
       "max": 0.5
+    },
+    "genDepth": {
+      "min": 0.2,
+      "max": 0.9
     },
     "treesPerChunk": 1,
     "vanillaTreeType": "Mega spruce trees",

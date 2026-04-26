@@ -28,6 +28,11 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_cross_no_button;
 	private ImageButton imagebutton_home_pixel_adminshop;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/xpbushpalahelpgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/xp_berry.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/berry_xp_bush_fancy.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
 
 	public XpbushpalahelpguiScreen(XpbushpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -57,11 +62,11 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/xpbushpalahelpgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 200, 166, 200, 166);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/xp_berry.png"), this.leftPos + 4, this.topPos + 80, 0, 0, 32, 32, 32, 32);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/berry_xp_bush_fancy.png"), this.leftPos + 6, this.topPos + 124, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 200, 166, 200, 166);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 4, this.topPos + 80, 0, 0, 32, 32, 32, 32);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 6, this.topPos + 124, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_3, this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		RenderSystem.disableBlend();
 	}
 

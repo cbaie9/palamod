@@ -21,6 +21,8 @@ public class GodvillagerguiScreen extends AbstractContainerScreen<Godvillagergui
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/godvillagergui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/arrow_1red_new.png");
 
 	public GodvillagerguiScreen(GodvillagerguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -50,8 +52,8 @@ public class GodvillagerguiScreen extends AbstractContainerScreen<Godvillagergui
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/godvillagergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 200, 170, 200, 170);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/arrow_1red_new.png"), this.leftPos + 75, this.topPos + 47, 0, 0, 48, 20, 48, 20);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 200, 170, 200, 170);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 75, this.topPos + 47, 0, 0, 48, 20, 48, 20);
 		RenderSystem.disableBlend();
 	}
 

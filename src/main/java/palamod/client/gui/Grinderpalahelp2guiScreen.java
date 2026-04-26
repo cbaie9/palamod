@@ -31,6 +31,16 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_example_gui_button;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/grinderpalahelp_2gui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/grinder_block_front.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/1.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/2.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/1.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
+	private static final ResourceLocation IMAGE_9 = ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png");
 
 	public Grinderpalahelp2guiScreen(Grinderpalahelp2guiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -60,16 +70,16 @@ public class Grinderpalahelp2guiScreen extends AbstractContainerScreen<Grinderpa
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinderpalahelp_2gui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 330, 200, 330, 200);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_block_front.png"), this.leftPos + 68, this.topPos + 3, 0, 0, -1, -1, -1, -1);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/1.png"), this.leftPos + 16, this.topPos + 144, 0, 0, 45, 46, 45, 46);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/2.png"), this.leftPos + 95, this.topPos + 145, 0, 0, 46, 46, 46, 46);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/1.png"), this.leftPos + 191, this.topPos + 145, 0, 0, 45, 46, 45, 46);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png"), this.leftPos + 7, this.topPos + 5, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 330, 200, 330, 200);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 68, this.topPos + 3, 0, 0, -1, -1, -1, -1);
+		guiGraphics.blit(IMAGE_2, this.leftPos + 16, this.topPos + 144, 0, 0, 45, 46, 45, 46);
+		guiGraphics.blit(IMAGE_3, this.leftPos + 95, this.topPos + 145, 0, 0, 46, 46, 46, 46);
+		guiGraphics.blit(IMAGE_4, this.leftPos + 191, this.topPos + 145, 0, 0, 45, 46, 45, 46);
+		guiGraphics.blit(IMAGE_5, this.leftPos + -1, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_7, this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_8, this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_9, this.leftPos + 7, this.topPos + 5, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

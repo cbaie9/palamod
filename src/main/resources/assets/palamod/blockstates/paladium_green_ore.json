@@ -1,10 +1,10 @@
 {
   "variants": {
+    "blockstate=1": {
+      "model": "palamod:block/paladium_green_ore_0"
+    },
     "blockstate=0": {
       "model": "palamod:block/paladium_green_ore"
-    },
-    "blockstate=1": {
-      "model": "palamod:block/xpgreenpaladium_blockstate_0"
     }
   }
 }

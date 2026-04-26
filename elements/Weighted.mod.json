@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "armor",
   "definition": {
     "enableHelmet": false,
@@ -56,6 +56,10 @@
     "leggingsItemCustomModelName": "Normal",
     "bootsItemRenderType": 0,
     "bootsItemCustomModelName": "Normal",
+    "helmetTranslucency": false,
+    "bodyTranslucency": false,
+    "leggingsTranslucency": false,
+    "bootsTranslucency": false,
     "helmetImmuneToFire": false,
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
@@ -71,6 +75,7 @@
     "equipSound": {
       "value": ""
     },
-    "repairItems": []
+    "repairItems": [],
+    "rarity": "COMMON"
   }
 }

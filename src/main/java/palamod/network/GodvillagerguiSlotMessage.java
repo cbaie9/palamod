@@ -18,11 +18,10 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record GodvillagerguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
-
 	public static final Type<GodvillagerguiSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "godvillagergui_slots"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, GodvillagerguiSlotMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, GodvillagerguiSlotMessage message) -> {
 		buffer.writeInt(message.slotID);
@@ -32,6 +31,7 @@ public record GodvillagerguiSlotMessage(int slotID, int x, int y, int z, int cha
 		buffer.writeInt(message.changeType);
 		buffer.writeInt(message.meta);
 	}, (RegistryFriendlyByteBuf buffer) -> new GodvillagerguiSlotMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+
 	@Override
 	public Type<GodvillagerguiSlotMessage> type() {
 		return TYPE;
@@ -49,7 +49,7 @@ public record GodvillagerguiSlotMessage(int slotID, int x, int y, int z, int cha
 	public static void handleSlotAction(Player entity, int slot, int changeType, int meta, int x, int y, int z) {
 		Level world = entity.level();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(new BlockPos(x, y, z)))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (slot == 0 && changeType == 0) {
 

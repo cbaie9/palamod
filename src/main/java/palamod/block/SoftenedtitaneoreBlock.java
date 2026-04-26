@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,11 +17,6 @@ import net.minecraft.core.BlockPos;
 public class SoftenedtitaneoreBlock extends Block {
 	public SoftenedtitaneoreBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.NETHER_GOLD_ORE).strength(5.05f, 18.1194915919f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 15;
 	}
 
 	@Override

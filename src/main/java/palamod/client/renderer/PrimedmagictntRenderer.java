@@ -9,12 +9,14 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PrimedmagictntRenderer extends MobRenderer<PrimedmagictntEntity, Modelprimed_tnt_sponge_v4<PrimedmagictntEntity>> {
+	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/magic_tntmodel.png");
+
 	public PrimedmagictntRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelprimed_tnt_sponge_v4<PrimedmagictntEntity>(context.bakeLayer(Modelprimed_tnt_sponge_v4.LAYER_LOCATION)), 0f);
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(PrimedmagictntEntity entity) {
-		return ResourceLocation.parse("palamod:textures/entities/magic_tntmodel.png");
+		return entityTexture;
 	}
 }

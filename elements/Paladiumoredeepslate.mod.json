@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "block",
   "definition": {
     "texture": "paladium_ore_deepslate",
@@ -14,6 +14,32 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "states": [
+      {
+        "texture": "paladium_ore_deepslate",
+        "textureTop": "paladium_ore_deepslate",
+        "textureLeft": "paladium_ore_deepslate",
+        "textureFront": "paladium_ore_deepslate",
+        "textureRight": "paladium_ore_deepslate",
+        "textureBack": "paladium_ore_deepslate",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 1,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 1
+          }
+        ]
+      }
+    ],
     "animations": [],
     "itemTexture": "",
     "particleTexture": "",
@@ -21,6 +47,7 @@
     "pottedPlant": {
       "value": ""
     },
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -38,7 +65,15 @@
         "subtract": false
       }
     ],
-    "customProperties": [],
+    "customProperties": [
+      {
+        "min": 0,
+        "max": 1,
+        "name": "CUSTOM:blockstate",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "name": "Paladium Ore",
     "specialInformation": {
       "fixedValue": []
@@ -68,6 +103,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
+    "hasCustomOpacity": false,
     "lightOpacity": 15,
     "tickRate": 10,
     "tickRandomly": false,
@@ -114,7 +150,9 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": {
+      "fixedValue": 0.0
+    },
     "unbreakable": false,
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,

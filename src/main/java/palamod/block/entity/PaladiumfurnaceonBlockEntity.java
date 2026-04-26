@@ -89,7 +89,7 @@ public class PaladiumfurnaceonBlockEntity extends RandomizableContainerBlockEnti
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Paladium furnace");
+		return Component.literal("Paladium furnace (old)");
 	}
 
 	@Override

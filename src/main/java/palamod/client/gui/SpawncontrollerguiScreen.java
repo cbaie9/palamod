@@ -22,6 +22,9 @@ public class SpawncontrollerguiScreen extends AbstractContainerScreen<Spawncontr
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/spawncontrollergui.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/lock_slot.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/lock_slot.png");
 
 	public SpawncontrollerguiScreen(SpawncontrollerguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -40,8 +43,6 @@ public class SpawncontrollerguiScreen extends AbstractContainerScreen<Spawncontr
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/spawncontrollergui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -53,12 +54,12 @@ public class SpawncontrollerguiScreen extends AbstractContainerScreen<Spawncontr
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (SpawnerupgrademorechecknotProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/lock_slot.png"), this.leftPos + 62, this.topPos + 46, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(IMAGE_0, this.leftPos + 62, this.topPos + 46, 0, 0, 16, 16, 16, 16);
 		}
 		if (SpawnerupgrademorechecknotProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/lock_slot.png"), this.leftPos + 80, this.topPos + 46, 0, 0, 16, 16, 16, 16);
+			guiGraphics.blit(IMAGE_1, this.leftPos + 80, this.topPos + 46, 0, 0, 16, 16, 16, 16);
 		}
 		RenderSystem.disableBlend();
 	}

@@ -7,6 +7,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
@@ -50,9 +51,7 @@ public class SetblockstateincacheProcedure {
 			if (cache.exists()) {
 				if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
 					main_chs.addProperty("last_block_state",
-							((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip5
-									? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip5)
-									: -1));
+							(getPropertyByName((world.getBlockState(BlockPos.containing(x, y, z))), "blockstate") instanceof IntegerProperty _getip5 ? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip5) : -1));
 				}
 				main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
 				i = -1;
@@ -72,7 +71,7 @@ public class SetblockstateincacheProcedure {
 							continue;
 						}
 						if (block_to_set.is(BlockTags.create(ResourceLocation.parse("palamod:got_blockstate")))) {
-							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (block_to_set.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip20 ? block_to_set.getValue(_getip20) : -1));
+							main_chs.addProperty(("blockstate_hammer_cache_" + nloop), (getPropertyByName(block_to_set, "blockstate") instanceof IntegerProperty _getip20 ? block_to_set.getValue(_getip20) : -1));
 						}
 						main_chs.addProperty(("block_hammer_cache_" + nloop), (BuiltInRegistries.BLOCK.getKey(block_to_set.getBlock()).toString()));
 						j = j + 1;
@@ -100,5 +99,14 @@ public class SetblockstateincacheProcedure {
 				SetblockstateincacheProcedure.execute(world, x, y, z, entity);
 			}
 		}
+	}
+
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
 	}
 }

@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,12 +24,12 @@ public class ExtratorblockstateprocessProcedure {
 		if (entity == null)
 			return;
 		ItemStack output_item = ItemStack.EMPTY;
-		if (blockstate.getBlock().getStateDefinition().getProperty("fiole") instanceof BooleanProperty _getbp1 && blockstate.getValue(_getbp1)) {
+		if (getPropertyByName(blockstate, "fiole") instanceof BooleanProperty _getbp1 && blockstate.getValue(_getbp1)) {
 			if (entity.isShiftKeyDown()) {
 				output_item = new ItemStack(PalamodModItems.FLASK.get()).copy();
 				{
 					final String _tagName = "seve";
-					final double _tagValue = (blockstate.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _getip4 ? blockstate.getValue(_getip4) : -1);
+					final double _tagValue = (getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip4 ? blockstate.getValue(_getip4) : -1);
 					CustomData.update(DataComponents.CUSTOM_DATA, output_item, tag -> tag.putDouble(_tagName, _tagValue));
 				}
 				{
@@ -63,7 +64,7 @@ public class ExtratorblockstateprocessProcedure {
 				}
 			} else {
 				{
-					int _value = (int) (1 + Math.round(((blockstate.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _getip13 ? blockstate.getValue(_getip13) : -1) / 15d) * 12));
+					int _value = (int) (1 + Math.round(((getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip13 ? blockstate.getValue(_getip13) : -1) / 15d) * 12));
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -71,7 +72,7 @@ public class ExtratorblockstateprocessProcedure {
 				}
 			}
 		} else {
-			if (!((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip16 ? blockstate.getValue(_getip16) : -1) == 0)) {
+			if (!((getPropertyByName(blockstate, "blockstate") instanceof IntegerProperty _getip16 ? blockstate.getValue(_getip16) : -1) == 0)) {
 				{
 					int _value = 0;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -110,7 +111,7 @@ public class ExtratorblockstateprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_booleanProp, true), 3);
 				}
 				{
-					int _value = (int) (1 + Math.round(((blockstate.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _getip29 ? blockstate.getValue(_getip29) : -1) / 16d) * 12));
+					int _value = (int) (1 + Math.round(((getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip29 ? blockstate.getValue(_getip29) : -1) / 16d) * 12));
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -118,6 +119,15 @@ public class ExtratorblockstateprocessProcedure {
 				}
 			}
 		}
+	}
+
+	private static Property<?> getPropertyByName(BlockState state, String name) {
+		for (Property<?> property : state.getProperties()) {
+			if (property.getName().equals(name)) {
+				return property;
+			}
+		}
+		return null;
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

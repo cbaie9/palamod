@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:titanetank",
+    "palamod:amethysttank",
+    "palamod:paladium_tank",
+    "palamod:goldentank"
+  ]
+}

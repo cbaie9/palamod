@@ -28,6 +28,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 	private Button button_spawn_panel;
 	private Button button_trixium_panel;
 	private Button button_jobs_panel;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/gui176_166.png");
 
 	public AdminpanelmenuScreen(AdminpanelmenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -57,7 +58,7 @@ public class AdminpanelmenuScreen extends AbstractContainerScreen<Adminpanelmenu
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		RenderSystem.disableBlend();
 	}
 

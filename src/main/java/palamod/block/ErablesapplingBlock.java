@@ -23,7 +23,7 @@ import net.minecraft.core.BlockPos;
 
 public class ErablesapplingBlock extends Block {
 	public ErablesapplingBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(0f, 1f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.GRASS).strength(0f, 1f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
