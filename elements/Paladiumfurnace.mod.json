@@ -14,7 +14,40 @@
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "states": [],
+    "states": [
+      {
+        "texture": "paladium_furnace_side",
+        "textureTop": "paladium_furnace_side",
+        "textureLeft": "paladium_furnace_side",
+        "textureFront": "paladium_furnace_front_on",
+        "textureRight": "paladium_furnace_side",
+        "textureBack": "paladium_furnace_side",
+        "renderType": 10,
+        "customModelName": "Normal",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [
+          {
+            "mx": 0.0,
+            "my": 0.0,
+            "mz": 0.0,
+            "Mx": 16.0,
+            "My": 16.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ],
+        "stateMap": [
+          {
+            "property": {
+              "name": "CUSTOM:powered",
+              "type": "logic"
+            },
+            "value": true
+          }
+        ]
+      }
+    ],
     "animations": [],
     "itemTexture": "",
     "particleTexture": "",
@@ -37,7 +70,13 @@
         "subtract": false
       }
     ],
-    "customProperties": [],
+    "customProperties": [
+      {
+        "name": "CUSTOM:powered",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "name": "Paladium furnace",
     "specialInformation": {
       "fixedValue": []
@@ -69,7 +108,7 @@
     "canRedstoneConnect": false,
     "hasCustomOpacity": false,
     "lightOpacity": 15,
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -83,6 +122,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -119,6 +161,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": true,
     "guiBoundTo": "Paladumfurnace",
     "openGUIOnRightClick": true,

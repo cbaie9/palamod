@@ -38,7 +38,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Paladium furnace",
+    "name": "Paladium furnace (old)",
     "specialInformation": {
       "fixedValue": [
         "A L P H A"
@@ -81,6 +81,9 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -117,6 +120,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": true,
     "guiBoundTo": "Paladumfurnace",
     "openGUIOnRightClick": true,

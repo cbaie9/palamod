@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 
 public class ReturntimerspritepaladiumfurnaceProcedure {
 	public static double execute(LevelAccessor world, double x, double y, double z) {
-		return Math.floor((getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") / 100) * 24);
+		return Math.floor((getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") / 24) * 24);
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

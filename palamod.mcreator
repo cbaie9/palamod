@@ -4856,6 +4856,7 @@
           "src/main/java/palamod/block/PaladiumfurnaceBlock.java",
           "src/main/resources/assets/palamod/blockstates/paladium_furnace.json",
           "src/main/resources/data/palamod/loot_table/blocks/paladium_furnace.json",
+          "src/main/resources/assets/palamod/models/block/paladium_furnace_0.json",
           "src/main/java/palamod/block/entity/PaladiumfurnaceBlockEntity.java",
           "src/main/resources/assets/palamod/models/item/paladium_furnace.json",
           "src/main/resources/assets/palamod/models/block/paladium_furnace.json"
@@ -48540,7 +48541,7 @@
       "item.palamod.medium_ring": "Medium ring",
       "advancements.yourestucknow.title": "You\u0027re stuck now",
       "gui.palamod.palahelpgui_1.label_soon": "Soon",
-      "block.palamod.paladium_furnace_on": "Paladium furnace",
+      "block.palamod.paladium_furnace_on": "Paladium furnace (old)",
       "gui.palamod.palahelpore.label_findium": "Findium :",
       "block.palamod.judeecercis_fence_gate": "Judeecercis Fence Gate",
       "effect.palamod.multiexp_2": "Double experience boost",

@@ -3,12 +3,15 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -33,10 +36,41 @@ public class PaladiumfurnaceprocessProcedure {
 		double fuelpower = 0;
 		double previousRecipe = 0;
 		double coef_timer = 0;
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_FURNACE_ON.get()) {
+			{
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockState _bs = PalamodModBlocks.PALADIUM_FURNACE.get().defaultBlockState();
+				BlockState _bso = world.getBlockState(_bp);
+				for (Property<?> _propertyOld : _bso.getProperties()) {
+					Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+					if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
+						try {
+							_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
+						} catch (Exception e) {
+						}
+				}
+				BlockEntity _be = world.getBlockEntity(_bp);
+				CompoundTag _bnbt = null;
+				if (_be != null) {
+					_bnbt = _be.saveWithFullMetadata(world.registryAccess());
+					_be.setRemoved();
+				}
+				world.setBlock(_bp, _bs, 3);
+				if (_bnbt != null) {
+					_be = world.getBlockEntity(_bp);
+					if (_be != null) {
+						try {
+							_be.loadWithComponents(_bnbt, world.registryAccess());
+						} catch (Exception ignored) {
+						}
+					}
+				}
+			}
+		}
 		fuel = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).copy();
 		input = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
-		if ((fuel.getBurnTime(null) > 0 || getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof Level _level4
-				&& _level4.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level4).isPresent()) {
+		if ((fuel.getBurnTime(null) > 0 || getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof Level _level7
+				&& _level7.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level7).isPresent()) {
 			if ((world instanceof Level _lvlSmeltResult
 					? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
 					: ItemStack.EMPTY).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
@@ -69,7 +103,7 @@ public class PaladiumfurnaceprocessProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") >= 50) {
+				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") >= 24) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = (world instanceof Level _lvlSmeltResult
 								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
@@ -98,68 +132,18 @@ public class PaladiumfurnaceprocessProcedure {
 			}
 		}
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) {
-			if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_FURNACE_ON.get())) {
-				{
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.PALADIUM_FURNACE_ON.get().defaultBlockState();
-					BlockState _bso = world.getBlockState(_bp);
-					for (Property<?> _propertyOld : _bso.getProperties()) {
-						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
-						if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
-							try {
-								_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
-							} catch (Exception e) {
-							}
-					}
-					BlockEntity _be = world.getBlockEntity(_bp);
-					CompoundTag _bnbt = null;
-					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
-						_be.setRemoved();
-					}
-					world.setBlock(_bp, _bs, 3);
-					if (_bnbt != null) {
-						_be = world.getBlockEntity(_bp);
-						if (_be != null) {
-							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
-							} catch (Exception ignored) {
-							}
-						}
-					}
-				}
+			{
+				BlockPos _pos = BlockPos.containing(x, y, z);
+				BlockState _bs = world.getBlockState(_pos);
+				if (_bs.getBlock().getStateDefinition().getProperty("powered") instanceof BooleanProperty _booleanProp)
+					world.setBlock(_pos, _bs.setValue(_booleanProp, true), 3);
 			}
 		} else {
-			if (!((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_FURNACE.get())) {
-				{
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockState _bs = PalamodModBlocks.PALADIUM_FURNACE.get().defaultBlockState();
-					BlockState _bso = world.getBlockState(_bp);
-					for (Property<?> _propertyOld : _bso.getProperties()) {
-						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
-						if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
-							try {
-								_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
-							} catch (Exception e) {
-							}
-					}
-					BlockEntity _be = world.getBlockEntity(_bp);
-					CompoundTag _bnbt = null;
-					if (_be != null) {
-						_bnbt = _be.saveWithFullMetadata(world.registryAccess());
-						_be.setRemoved();
-					}
-					world.setBlock(_bp, _bs, 3);
-					if (_bnbt != null) {
-						_be = world.getBlockEntity(_bp);
-						if (_be != null) {
-							try {
-								_be.loadWithComponents(_bnbt, world.registryAccess());
-							} catch (Exception ignored) {
-							}
-						}
-					}
-				}
+			{
+				BlockPos _pos = BlockPos.containing(x, y, z);
+				BlockState _bs = world.getBlockState(_pos);
+				if (_bs.getBlock().getStateDefinition().getProperty("powered") instanceof BooleanProperty _booleanProp)
+					world.setBlock(_pos, _bs.setValue(_booleanProp, false), 3);
 			}
 		}
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) {
@@ -202,17 +186,41 @@ public class PaladiumfurnaceprocessProcedure {
 						coef_timer = 16;
 					}
 				} else {
-					coef_timer = 2;
+					coef_timer = 1;
 				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putDouble("timer", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") + coef_timer));
+				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer_coef") >= 16 - coef_timer) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") + 1));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					PalamodMod.LOGGER.info(("" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer")));
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_coef", 0);
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				} else {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("timer_coef", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer_coef") + 1));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 			}
 		}

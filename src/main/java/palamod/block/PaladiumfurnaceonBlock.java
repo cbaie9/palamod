@@ -98,7 +98,7 @@ public class PaladiumfurnaceonBlock extends Block implements EntityBlock {
 			player.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Paladium furnace");
+					return Component.literal("Paladium furnace (old)");
 				}
 
 				@Override
