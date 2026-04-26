@@ -7,5 +7,5 @@
     "side": "palamod:block/fluid_4_erable",
     "cadre": "palamod:block/paladium_tank"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

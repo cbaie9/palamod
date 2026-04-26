@@ -7,5 +7,5 @@
     "side": "palamod:block/l2_judeecercis",
     "cadre": "palamod:block/paladium_tank"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

@@ -318,14 +318,14 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.SOFTENED_DIAMOND_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.SOFTENED_REDSTONE_ORE.get().asItem());
 				tabData.accept(PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get().asItem());
-				tabData.accept(PalamodModBlocks.AMETHYSTTANK.get().asItem());
-				tabData.accept(PalamodModBlocks.GOLDENTANK.get().asItem());
-				tabData.accept(PalamodModBlocks.TITANETANK.get().asItem());
-				tabData.accept(PalamodModBlocks.PALADIUM_TANK.get().asItem());
 				tabData.accept(PalamodModBlocks.CAULDRON.get().asItem());
 				tabData.accept(PalamodModBlocks.CAULDRON_CORE.get().asItem());
 				tabData.accept(PalamodModItems.LIGHTNING_POTION.get());
 				tabData.accept(PalamodModBlocks.SHINY_ERABLE_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.AMETHYST_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.GOLDEN_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.TITANE_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUM_TANK.get().asItem());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -611,14 +611,14 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.TITANE_HOE.get());
 				tabData.accept(PalamodModBlocks.TOTEM_FERTILITY.get().asItem());
 				tabData.accept(PalamodModItems.FLASK.get());
-				tabData.accept(PalamodModBlocks.AMETHYSTTANK.get().asItem());
-				tabData.accept(PalamodModBlocks.GOLDENTANK.get().asItem());
-				tabData.accept(PalamodModBlocks.TITANETANK.get().asItem());
-				tabData.accept(PalamodModBlocks.PALADIUM_TANK.get().asItem());
 				tabData.accept(PalamodModBlocks.CAULDRON.get().asItem());
 				tabData.accept(PalamodModBlocks.CAULDRON_CORE.get().asItem());
 				tabData.accept(PalamodModItems.LIGHTNING_POTION.get());
 				tabData.accept(PalamodModBlocks.SHINY_ERABLE_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.AMETHYST_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.GOLDEN_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.TITANE_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUM_TANK.get().asItem());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

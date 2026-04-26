@@ -673,9 +673,9 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PALADIUM_ANVIL;
 	public static final DeferredItem<Item> MONEY_ANVIL;
 	public static final DeferredItem<Item> FLASK;
-	public static final DeferredItem<Item> AMETHYSTTANK;
-	public static final DeferredItem<Item> GOLDENTANK;
-	public static final DeferredItem<Item> TITANETANK;
+	public static final DeferredItem<Item> AMETHYST_TANK;
+	public static final DeferredItem<Item> GOLDEN_TANK;
+	public static final DeferredItem<Item> TITANE_TANK;
 	public static final DeferredItem<Item> PALADIUM_TANK;
 	public static final DeferredItem<Item> CAULDRON;
 	public static final DeferredItem<Item> CAULDRON_CORE;
@@ -1319,9 +1319,9 @@ public class PalamodModItems {
 		PALADIUM_ANVIL = block(PalamodModBlocks.PALADIUM_ANVIL);
 		MONEY_ANVIL = block(PalamodModBlocks.MONEY_ANVIL);
 		FLASK = REGISTRY.register("flask", FlaskItem::new);
-		AMETHYSTTANK = block(PalamodModBlocks.AMETHYSTTANK);
-		GOLDENTANK = block(PalamodModBlocks.GOLDENTANK);
-		TITANETANK = block(PalamodModBlocks.TITANETANK);
+		AMETHYST_TANK = block(PalamodModBlocks.AMETHYST_TANK);
+		GOLDEN_TANK = block(PalamodModBlocks.GOLDEN_TANK);
+		TITANE_TANK = block(PalamodModBlocks.TITANE_TANK);
 		PALADIUM_TANK = block(PalamodModBlocks.PALADIUM_TANK);
 		CAULDRON = block(PalamodModBlocks.CAULDRON);
 		CAULDRON_CORE = block(PalamodModBlocks.CAULDRON_CORE);

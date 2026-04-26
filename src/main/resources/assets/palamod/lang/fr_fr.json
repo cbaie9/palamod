@@ -1636,15 +1636,11 @@
   "palamod.tooltip.flask_ostrya": "Ostrya",
   "palamod.tooltip.flask_judeecercis": "Judeecercis",
   "palamod.tooltip.flask_jacaranda": "Jacaranda",
-  "block.palamod.amethysttank": "Réservoir en améthyste",
   "palamod.procedure.jobswin2craft": "d\u0027expérience pour la fabrication",
   "palamod.procedure.jobswin2smelt": "d\u0027expérience pour la cuisson",
   "gui.palamod.jobshuntergui.label_jobs_miner": "Métier : Chasseur",
   "gui.palamod.jobsalchigui.label_jobs_miner": "Métier : Alchimiste",
   "gui.palamod.jobsgui.label_beta": "Bêta",
-  "block.palamod.goldentank": "Réservoir doré",
-  "block.palamod.titanetank": "Réservoir en Titane",
-  "block.palamod.paladium_tank": "Réservoir en Paladium",
   "palamod.procedure.jobswin2kill": "d\u0027expérience pour la chasse",
   "palamod.procedure.jobswin2lg_jobs": "d\u0027expérience pour l\u0027utilisation de la pierre légendaire de métier",
   "block.palamod.cauldron": "Cauldron",
@@ -1658,5 +1654,9 @@
   "block.palamod.shiny_jacaranda_wood": "Shiny jacaranda wood",
   "block.palamod.shiny_judeecercis_wood": "Shiny judeecercis wood",
   "block.palamod.shiny_erable_wood": "Shiny Erable wood",
-  "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood"
+  "block.palamod.shiny_ostrya_wood": "Shiny ostrya wood",
+  "block.palamod.amethyst_tank": "Amethyst tank",
+  "block.palamod.golden_tank": "Golden tank",
+  "block.palamod.titane_tank": "Titane tank",
+  "block.palamod.paladium_tank": "Paladium tank"
 }

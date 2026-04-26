@@ -7,5 +7,5 @@
     "side": "palamod:block/empty_texture",
     "cadre": "palamod:block/titane_tank"
   },
-  "render_type": "cutout"
+  "render_type": "translucent"
 }

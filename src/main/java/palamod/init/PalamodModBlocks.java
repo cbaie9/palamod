@@ -306,9 +306,9 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> TITANE_ANVIL;
 	public static final DeferredBlock<Block> PALADIUM_ANVIL;
 	public static final DeferredBlock<Block> MONEY_ANVIL;
-	public static final DeferredBlock<Block> AMETHYSTTANK;
-	public static final DeferredBlock<Block> GOLDENTANK;
-	public static final DeferredBlock<Block> TITANETANK;
+	public static final DeferredBlock<Block> AMETHYST_TANK;
+	public static final DeferredBlock<Block> GOLDEN_TANK;
+	public static final DeferredBlock<Block> TITANE_TANK;
 	public static final DeferredBlock<Block> PALADIUM_TANK;
 	public static final DeferredBlock<Block> CAULDRON;
 	public static final DeferredBlock<Block> CAULDRON_CORE;
@@ -609,9 +609,9 @@ public class PalamodModBlocks {
 		TITANE_ANVIL = REGISTRY.register("titane_anvil", TitaneanvilBlock::new);
 		PALADIUM_ANVIL = REGISTRY.register("paladium_anvil", PaladiumanvilBlock::new);
 		MONEY_ANVIL = REGISTRY.register("money_anvil", MoneyanvilBlock::new);
-		AMETHYSTTANK = REGISTRY.register("amethysttank", AmethysttankBlock::new);
-		GOLDENTANK = REGISTRY.register("goldentank", GoldentankBlock::new);
-		TITANETANK = REGISTRY.register("titanetank", TitanetankBlock::new);
+		AMETHYST_TANK = REGISTRY.register("amethyst_tank", AmethysttankBlock::new);
+		GOLDEN_TANK = REGISTRY.register("golden_tank", GoldentankBlock::new);
+		TITANE_TANK = REGISTRY.register("titane_tank", TitanetankBlock::new);
 		PALADIUM_TANK = REGISTRY.register("paladium_tank", PaladiumTankBlock::new);
 		CAULDRON = REGISTRY.register("cauldron", CauldronBlock::new);
 		CAULDRON_CORE = REGISTRY.register("cauldron_core", CauldronCoreBlock::new);
