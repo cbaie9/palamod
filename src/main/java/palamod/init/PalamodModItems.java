@@ -31,6 +31,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
@@ -686,6 +687,16 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> SHINY_ERABLE_WOOD;
 	public static final DeferredItem<Item> SHINY_OSTRYA_WOOD;
 	public static final DeferredItem<Item> TANKITEM;
+	public static final DeferredItem<Item> AMETHYST_PORTAL_KEY;
+	public static final DeferredItem<Item> TITANE_PORTAL_KEY;
+	public static final DeferredItem<Item> PALADIUM_PORTAL_KEY;
+	public static final DeferredItem<Item> ENDIUM_PORTAL_KEY;
+	public static final DeferredItem<Item> AMETHYST_PORTALBLOCK;
+	public static final DeferredItem<Item> TITANE_PORTAL_BLOCK;
+	public static final DeferredItem<Item> PALADIUM_PORTAL_BLOCK;
+	public static final DeferredItem<Item> ENDIUM_PORTAL_BLOCK;
+	public static final DeferredItem<Item> ENDIUM_HEART;
+	public static final DeferredItem<Item> ENDIUM_PORTAL_ANGLE_BLOCK;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1333,6 +1344,16 @@ public class PalamodModItems {
 		SHINY_ERABLE_WOOD = block(PalamodModBlocks.SHINY_ERABLE_WOOD);
 		SHINY_OSTRYA_WOOD = block(PalamodModBlocks.SHINY_OSTRYA_WOOD);
 		TANKITEM = REGISTRY.register("tankitem", TankitemItem::new);
+		AMETHYST_PORTAL_KEY = REGISTRY.register("amethyst_portal_key", AmethystportalkeyItem::new);
+		TITANE_PORTAL_KEY = REGISTRY.register("titane_portal_key", TitanePortalKeyItem::new);
+		PALADIUM_PORTAL_KEY = REGISTRY.register("paladium_portal_key", PaladiumPortalKeyItem::new);
+		ENDIUM_PORTAL_KEY = REGISTRY.register("endium_portal_key", EndiumPortalKeyItem::new);
+		AMETHYST_PORTALBLOCK = block(PalamodModBlocks.AMETHYST_PORTALBLOCK);
+		TITANE_PORTAL_BLOCK = block(PalamodModBlocks.TITANE_PORTAL_BLOCK);
+		PALADIUM_PORTAL_BLOCK = block(PalamodModBlocks.PALADIUM_PORTAL_BLOCK);
+		ENDIUM_PORTAL_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_BLOCK, new Item.Properties().rarity(Rarity.RARE));
+		ENDIUM_HEART = REGISTRY.register("endium_heart", EndiumheartItem::new);
+		ENDIUM_PORTAL_ANGLE_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK, new Item.Properties().rarity(Rarity.RARE));
 	}
 
 	// Start of user code block custom items

@@ -1,6 +1,9 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "flower_forest",
+  "biomes": [
+    "flower_forest",
+    "plains"
+  ],
   "features": "palamod:endium_flower",
   "step": "vegetal_decoration"
 }

@@ -1,0 +1,56 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Endiumflower"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumflower"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumflower"
+      },
+      {
+        "value": "CUSTOM:PaladiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumflower"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumflower"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Endiumheart"
+    },
+    "name": "endium_heart_craft",
+    "namespace": "mod"
+  }
+}

@@ -45080,6 +45080,319 @@
           "src/main/java/palamod/procedures/TankitemtooltipProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Amethystportalkey",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_portal_key",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/amethyst_portal_key.json",
+          "src/main/java/palamod/item/AmethystportalkeyItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TitanePortalKey",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titane_portal_key",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/TitanePortalKeyItem.java",
+          "src/main/resources/assets/palamod/models/item/titane_portal_key.json"
+        ]
+      }
+    },
+    {
+      "name": "PaladiumPortalKey",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladium_portal_key",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/paladium_portal_key.json",
+          "src/main/java/palamod/item/PaladiumPortalKeyItem.java"
+        ]
+      }
+    },
+    {
+      "name": "EndiumPortalKey",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_portal_key",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/EndiumPortalKeyItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_portal_key.json"
+        ]
+      }
+    },
+    {
+      "name": "AmethystPortalblock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_portalblock",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/AmethystPortalblockBlock.java",
+          "src/main/resources/assets/palamod/models/block/amethyst_portalblock.json",
+          "src/main/resources/assets/palamod/blockstates/amethyst_portalblock.json",
+          "src/main/resources/assets/palamod/models/item/amethyst_portalblock.json",
+          "src/main/resources/data/palamod/loot_table/blocks/amethyst_portalblock.json"
+        ]
+      }
+    },
+    {
+      "name": "TitanePortalBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titane_portal_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/blockstates/titane_portal_block.json",
+          "src/main/resources/data/palamod/loot_table/blocks/titane_portal_block.json",
+          "src/main/resources/assets/palamod/models/block/titane_portal_block.json",
+          "src/main/java/palamod/block/TitanePortalBlockBlock.java",
+          "src/main/resources/assets/palamod/models/item/titane_portal_block.json"
+        ]
+      }
+    },
+    {
+      "name": "PaladiumPortalBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladium_portal_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/paladium_portal_block.json",
+          "src/main/resources/assets/palamod/blockstates/paladium_portal_block.json",
+          "src/main/resources/assets/palamod/models/item/paladium_portal_block.json",
+          "src/main/java/palamod/block/PaladiumPortalBlockBlock.java",
+          "src/main/resources/assets/palamod/models/block/paladium_portal_block.json"
+        ]
+      }
+    },
+    {
+      "name": "EndiumPortalBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_portal_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/loot_table/blocks/endium_portal_block.json",
+          "src/main/resources/assets/palamod/models/item/endium_portal_block.json",
+          "src/main/java/palamod/block/EndiumPortalBlockBlock.java",
+          "src/main/resources/assets/palamod/blockstates/endium_portal_block.json",
+          "src/main/resources/assets/palamod/models/block/endium_portal_block.json"
+        ]
+      }
+    },
+    {
+      "name": "AmethystPortalBlockCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_portal_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/amethyst_portal_block_craft.json",
+          "src/main/resources/data/palamod/recipe/amethyst_portal_block_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "TitanePortalBlockCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titane_portal_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/titane_portal_block_craft.json",
+          "src/main/resources/data/palamod/recipe/titane_portal_block_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "PaladiumPortalBlockCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladium_portal_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/paladium_portal_block_craft.json",
+          "src/main/resources/data/palamod/recipe/paladium_portal_block_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "Endiumheart",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_heart",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/EndiumheartItem.java",
+          "src/main/resources/assets/palamod/models/item/endium_heart.json"
+        ]
+      }
+    },
+    {
+      "name": "EndiumHeartCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_heart_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/endium_heart_craft.json",
+          "src/main/resources/data/palamod/recipe/endium_heart_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "EndiumPortalBlockCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_portal_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endium_portal_block_craft.json",
+          "src/main/resources/data/palamod/advancement/recipes/endium_portal_block_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "EndiumPortalAngleBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_portal_angle_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/endium_portal_angle_block.json",
+          "src/main/resources/data/palamod/loot_table/blocks/endium_portal_angle_block.json",
+          "src/main/resources/assets/palamod/blockstates/endium_portal_angle_block.json",
+          "src/main/java/palamod/block/EndiumPortalAngleBlockBlock.java",
+          "src/main/resources/assets/palamod/models/item/endium_portal_angle_block.json"
+        ]
+      }
+    },
+    {
+      "name": "AmethystPortalKeyCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_portal_key_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/amethyst_portal_key_craft.json",
+          "src/main/resources/data/palamod/recipe/amethyst_portal_key_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "TitanePortalKeyCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "titane_portal_key_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/titane_portal_key_craft.json",
+          "src/main/resources/data/palamod/recipe/titane_portal_key_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "PaladiumPortalKeyCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladium_portal_key_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/paladium_portal_key_craft.json",
+          "src/main/resources/data/palamod/recipe/paladium_portal_key_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "EndiumPortalKeyCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_portal_key_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/endium_portal_key_craft.json",
+          "src/main/resources/data/palamod/recipe/endium_portal_key_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "EndiumPortalAngleBlockCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endium_portal_angle_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/endium_portal_angle_block_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "Checkportalstructure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "checkportalstructure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "angle_block_dep",
+            "type": "blockstate"
+          },
+          {
+            "name": "shiny_wood_dep",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/CheckportalstructureProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -45795,6 +46108,7 @@
       "~CUSTOM:AmethysteOre"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:EndiumPortalAngleBlock",
       "~CUSTOM:PaladiumTank",
       "~CUSTOM:Titanetank",
       "~CUSTOM:Knockbackobsidian",
@@ -46816,6 +47130,7 @@
       "CUSTOM:Bigringgreenpaladium"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:EndiumPortalAngleBlock",
       "~CUSTOM:CauldronCore",
       "~CUSTOM:Cauldron",
       "~CUSTOM:PaladiumTank",
@@ -47185,6 +47500,10 @@
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:EndiumPortalBlock",
+      "~CUSTOM:PaladiumPortalBlock",
+      "~CUSTOM:TitanePortalBlock",
+      "~CUSTOM:AmethystPortalblock",
       "~CUSTOM:ShinyOstryaWood",
       "~CUSTOM:ShinyErablewood",
       "~CUSTOM:Shinyjudeecerciswood",
@@ -48114,7 +48433,20 @@
       "Amethysttank",
       "Goldentank",
       "Titanetank",
-      "PaladiumTank"
+      "PaladiumTank",
+      "Shinyjacarandawood",
+      "Shinyjudeecerciswood",
+      "ShinyOstryaWood",
+      "TitanePortalKey",
+      "PaladiumPortalKey",
+      "EndiumPortalKey",
+      "AmethystPortalblock",
+      "TitanePortalBlock",
+      "PaladiumPortalBlock",
+      "EndiumPortalBlock",
+      "EndiumPortalAngleBlock",
+      "Endiumheart",
+      "Amethystportalkey"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -48226,7 +48558,18 @@
       "Paladiumflower",
       "Mineralflower",
       "Softstoneslab",
-      "Softstonestairs"
+      "Softstonestairs",
+      "Shinyjacarandawood",
+      "Shinyjudeecerciswood",
+      "ShinyErablewood",
+      "ShinyOstryaWood",
+      "TitanePortalKey",
+      "PaladiumPortalKey",
+      "EndiumPortalKey",
+      "AmethystPortalblock",
+      "TitanePortalBlock",
+      "PaladiumPortalBlock",
+      "EndiumPortalBlock"
     ],
     "CUSTOM:Pvpcreativetab": [
       "Slimepad",
@@ -48400,7 +48743,20 @@
       "Amethysttank",
       "Goldentank",
       "Titanetank",
-      "PaladiumTank"
+      "PaladiumTank",
+      "Shinyjacarandawood",
+      "Shinyjudeecerciswood",
+      "ShinyOstryaWood",
+      "TitanePortalKey",
+      "PaladiumPortalKey",
+      "EndiumPortalKey",
+      "AmethystPortalblock",
+      "TitanePortalBlock",
+      "PaladiumPortalBlock",
+      "EndiumPortalBlock",
+      "EndiumPortalAngleBlock",
+      "Endiumheart",
+      "Amethystportalkey"
     ]
   },
   "language_map": {
@@ -50069,7 +50425,17 @@
       "item.palamod.tankitem": "Tank",
       "palamod.item.tank_item_l2": "Type : %2",
       "palamod.item.tank_item_l3": "Seve : %3 / %4",
-      "palamod.item.tank_item.place": "Please place the tank at the ground"
+      "palamod.item.tank_item.place": "Please place the tank at the ground",
+      "item.palamod.titane_portal_key": "Titane Portal Key",
+      "item.palamod.paladium_portal_key": "Paladium Portal Key",
+      "item.palamod.endium_portal_key": "Endium Portal Key",
+      "block.palamod.amethyst_portalblock": "Amethyst Portal block",
+      "block.palamod.titane_portal_block": "Titane Portal Block",
+      "block.palamod.paladium_portal_block": "Paladium Portal Block",
+      "block.palamod.endium_portal_block": "Endium Portal Block",
+      "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
+      "item.palamod.endium_heart": "Endium heart",
+      "item.palamod.amethyst_portal_key": "Amethyst portal key"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51735,7 +52101,17 @@
       "item.palamod.tankitem": "Tank",
       "palamod.item.tank_item_l2": "",
       "palamod.item.tank_item_l3": "",
-      "palamod.item.tank_item.place": ""
+      "palamod.item.tank_item.place": "",
+      "item.palamod.titane_portal_key": "Titane Portal Key",
+      "item.palamod.paladium_portal_key": "Paladium Portal Key",
+      "item.palamod.endium_portal_key": "Endium Portal Key",
+      "block.palamod.amethyst_portalblock": "Amethyst Portal block",
+      "block.palamod.titane_portal_block": "Titane Portal Block",
+      "block.palamod.paladium_portal_block": "Paladium Portal Block",
+      "block.palamod.endium_portal_block": "Endium Portal Block",
+      "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
+      "item.palamod.endium_heart": "Endium heart",
+      "item.palamod.amethyst_portal_key": "Amethyst portal key"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53401,7 +53777,17 @@
       "item.palamod.tankitem": "Tank",
       "palamod.item.tank_item_l2": "",
       "palamod.item.tank_item_l3": "",
-      "palamod.item.tank_item.place": ""
+      "palamod.item.tank_item.place": "",
+      "item.palamod.titane_portal_key": "Titane Portal Key",
+      "item.palamod.paladium_portal_key": "Paladium Portal Key",
+      "item.palamod.endium_portal_key": "Endium Portal Key",
+      "block.palamod.amethyst_portalblock": "Amethyst Portal block",
+      "block.palamod.titane_portal_block": "Titane Portal Block",
+      "block.palamod.paladium_portal_block": "Paladium Portal Block",
+      "block.palamod.endium_portal_block": "Endium Portal Block",
+      "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
+      "item.palamod.endium_heart": "Endium heart",
+      "item.palamod.amethyst_portal_key": "Amethyst portal key"
     }
   },
   "metadata": {

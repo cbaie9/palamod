@@ -1662,5 +1662,15 @@
   "item.palamod.tankitem": "Tank",
   "palamod.item.tank_item_l2": "",
   "palamod.item.tank_item_l3": "",
-  "palamod.item.tank_item.place": ""
+  "palamod.item.tank_item.place": "",
+  "item.palamod.titane_portal_key": "Titane Portal Key",
+  "item.palamod.paladium_portal_key": "Paladium Portal Key",
+  "item.palamod.endium_portal_key": "Endium Portal Key",
+  "block.palamod.amethyst_portalblock": "Amethyst Portal block",
+  "block.palamod.titane_portal_block": "Titane Portal Block",
+  "block.palamod.paladium_portal_block": "Paladium Portal Block",
+  "block.palamod.endium_portal_block": "Endium Portal Block",
+  "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
+  "item.palamod.endium_heart": "Endium heart",
+  "item.palamod.amethyst_portal_key": "Amethyst portal key"
 }

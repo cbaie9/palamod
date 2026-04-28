@@ -326,6 +326,19 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.GOLDEN_TANK.get().asItem());
 				tabData.accept(PalamodModBlocks.TITANE_TANK.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_JACARANDA_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_OSTRYA_WOOD.get().asItem());
+				tabData.accept(PalamodModItems.TITANE_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.PALADIUM_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.ENDIUM_PORTAL_KEY.get());
+				tabData.accept(PalamodModBlocks.AMETHYST_PORTALBLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.TITANE_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUM_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUM_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK.get().asItem());
+				tabData.accept(PalamodModItems.ENDIUM_HEART.get());
+				tabData.accept(PalamodModItems.AMETHYST_PORTAL_KEY.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -440,6 +453,17 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.MINERAL_FLOWER.get().asItem());
 				tabData.accept(PalamodModBlocks.SOFT_STONE_SLAB.get().asItem());
 				tabData.accept(PalamodModBlocks.SOFT_STONE_STAIRS.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_JACARANDA_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_ERABLE_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_OSTRYA_WOOD.get().asItem());
+				tabData.accept(PalamodModItems.TITANE_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.PALADIUM_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.ENDIUM_PORTAL_KEY.get());
+				tabData.accept(PalamodModBlocks.AMETHYST_PORTALBLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.TITANE_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUM_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUM_PORTAL_BLOCK.get().asItem());
 			}).withTabsBefore(GRINDERCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PVPCREATIVETAB = REGISTRY.register("pvpcreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.pvpcreativetab")).icon(() -> new ItemStack(PalamodModItems.STICK_OF_GODS.get())).displayItems((parameters, tabData) -> {
@@ -619,6 +643,19 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.GOLDEN_TANK.get().asItem());
 				tabData.accept(PalamodModBlocks.TITANE_TANK.get().asItem());
 				tabData.accept(PalamodModBlocks.PALADIUM_TANK.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_JACARANDA_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD.get().asItem());
+				tabData.accept(PalamodModBlocks.SHINY_OSTRYA_WOOD.get().asItem());
+				tabData.accept(PalamodModItems.TITANE_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.PALADIUM_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.ENDIUM_PORTAL_KEY.get());
+				tabData.accept(PalamodModBlocks.AMETHYST_PORTALBLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.TITANE_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.PALADIUM_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUM_PORTAL_BLOCK.get().asItem());
+				tabData.accept(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK.get().asItem());
+				tabData.accept(PalamodModItems.ENDIUM_HEART.get());
+				tabData.accept(PalamodModItems.AMETHYST_PORTAL_KEY.get());
 			}).withTabsBefore(PICKAXEOFGODSTAB.getId()).build());
 
 	@SubscribeEvent

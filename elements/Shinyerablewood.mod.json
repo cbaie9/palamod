@@ -19,9 +19,6 @@
     "itemTexture": "",
     "particleTexture": "",
     "blockSetType": "OAK",
-    "pottedPlant": {
-      "value": ""
-    },
     "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
@@ -59,6 +56,9 @@
       },
       {
         "value": "CUSTOM:Jobscreativetabs"
+      },
+      {
+        "value": "CUSTOM:Decorationcreativetab"
       }
     ],
     "destroyTool": "axe",

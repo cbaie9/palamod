@@ -316,6 +316,11 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> SHINY_JUDEECERCIS_WOOD;
 	public static final DeferredBlock<Block> SHINY_ERABLE_WOOD;
 	public static final DeferredBlock<Block> SHINY_OSTRYA_WOOD;
+	public static final DeferredBlock<Block> AMETHYST_PORTALBLOCK;
+	public static final DeferredBlock<Block> TITANE_PORTAL_BLOCK;
+	public static final DeferredBlock<Block> PALADIUM_PORTAL_BLOCK;
+	public static final DeferredBlock<Block> ENDIUM_PORTAL_BLOCK;
+	public static final DeferredBlock<Block> ENDIUM_PORTAL_ANGLE_BLOCK;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -619,6 +624,11 @@ public class PalamodModBlocks {
 		SHINY_JUDEECERCIS_WOOD = REGISTRY.register("shiny_judeecercis_wood", ShinyjudeecerciswoodBlock::new);
 		SHINY_ERABLE_WOOD = REGISTRY.register("shiny_erable_wood", ShinyErablewoodBlock::new);
 		SHINY_OSTRYA_WOOD = REGISTRY.register("shiny_ostrya_wood", ShinyOstryaWoodBlock::new);
+		AMETHYST_PORTALBLOCK = REGISTRY.register("amethyst_portalblock", AmethystPortalblockBlock::new);
+		TITANE_PORTAL_BLOCK = REGISTRY.register("titane_portal_block", TitanePortalBlockBlock::new);
+		PALADIUM_PORTAL_BLOCK = REGISTRY.register("paladium_portal_block", PaladiumPortalBlockBlock::new);
+		ENDIUM_PORTAL_BLOCK = REGISTRY.register("endium_portal_block", EndiumPortalBlockBlock::new);
+		ENDIUM_PORTAL_ANGLE_BLOCK = REGISTRY.register("endium_portal_angle_block", EndiumPortalAngleBlockBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

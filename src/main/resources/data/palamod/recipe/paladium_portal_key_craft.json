@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:lightning_potion"
+    },
+    "b": {
+      "item": "palamod:paladium_stick"
+    },
+    "c": {
+      "item": "palamod:paladium_sword"
+    },
+    "d": {
+      "item": "palamod:compressed_paladium"
+    }
+  },
+  "result": {
+    "id": "palamod:paladium_portal_key",
+    "count": 1
+  }
+}
