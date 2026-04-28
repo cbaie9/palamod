@@ -831,6 +831,12 @@
     "onBlockAdded": {
       "name": "Tanksetup"
     },
+    "onDestroyedByPlayer": {
+      "name": "Tankbreaktransfert"
+    },
+    "onStartToDestroy": {
+      "name": "Tankbreakpreloaddata"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

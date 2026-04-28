@@ -3,6 +3,7 @@
  */
 package palamod.init;
 
+import palamod.procedures.TankitemPropertyValueProviderProcedure;
 import palamod.procedures.GetxpfrombottleProcedure;
 import palamod.procedures.GetjobsfrombottleProcedure;
 import palamod.procedures.FlaskPropertyValueProvider_type_of_woodProcedure;
@@ -684,6 +685,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> SHINY_JUDEECERCIS_WOOD;
 	public static final DeferredItem<Item> SHINY_ERABLE_WOOD;
 	public static final DeferredItem<Item> SHINY_OSTRYA_WOOD;
+	public static final DeferredItem<Item> TANKITEM;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1330,6 +1332,7 @@ public class PalamodModItems {
 		SHINY_JUDEECERCIS_WOOD = block(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD);
 		SHINY_ERABLE_WOOD = block(PalamodModBlocks.SHINY_ERABLE_WOOD);
 		SHINY_OSTRYA_WOOD = block(PalamodModBlocks.SHINY_OSTRYA_WOOD);
+		TANKITEM = REGISTRY.register("tankitem", TankitemItem::new);
 	}
 
 	// Start of user code block custom items
@@ -1370,6 +1373,7 @@ public class PalamodModItems {
 				ItemProperties.register(XP_BOTTLE.get(), ResourceLocation.parse("palamod:xp_bottle_jobs_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetjobsfrombottleProcedure.execute(itemStackToRender));
 				ItemProperties.register(FLASK.get(), ResourceLocation.parse("palamod:flask_seve"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) FlaskPropertyValueProviderProcedure.execute(itemStackToRender));
 				ItemProperties.register(FLASK.get(), ResourceLocation.parse("palamod:flask_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) FlaskPropertyValueProvider_type_of_woodProcedure.execute(itemStackToRender));
+				ItemProperties.register(TANKITEM.get(), ResourceLocation.parse("palamod:tankitem_tank_type"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) TankitemPropertyValueProviderProcedure.execute(itemStackToRender));
 			});
 		}
 	}

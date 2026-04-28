@@ -724,7 +724,7 @@
       "fixedValue": []
     },
     "hardness": 1.0,
-    "resistance": 10.0,
+    "resistance": 500.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "hasBlockItem": true,
@@ -830,6 +830,12 @@
     },
     "onBlockAdded": {
       "name": "Tanksetup"
+    },
+    "onDestroyedByPlayer": {
+      "name": "Tankbreaktransfert"
+    },
+    "onStartToDestroy": {
+      "name": "Tankbreakpreloaddata"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

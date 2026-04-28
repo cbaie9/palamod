@@ -2,6 +2,8 @@ package palamod.block;
 
 import palamod.procedures.TanksetupProcedure;
 import palamod.procedures.TankprocessProcedure;
+import palamod.procedures.TankbreaktransfertProcedure;
+import palamod.procedures.TankbreakpreloaddataProcedure;
 
 import palamod.block.entity.TitanetankBlockEntity;
 
@@ -9,6 +11,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -66,6 +69,19 @@ public class TitanetankBlock extends Block implements EntityBlock {
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		TanksetupProcedure.execute();
+	}
+
+	@Override
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+		TankbreaktransfertProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+		return retval;
+	}
+
+	@Override
+	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
+		super.attack(blockstate, world, pos, entity);
+		TankbreakpreloaddataProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

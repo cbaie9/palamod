@@ -1659,5 +1659,9 @@
   "block.palamod.amethyst_tank": "Amethyst tank",
   "block.palamod.golden_tank": "Golden tank",
   "block.palamod.titane_tank": "Titane tank",
-  "block.palamod.paladium_tank": "Paladium tank"
+  "block.palamod.paladium_tank": "Paladium tank",
+  "item.palamod.tankitem": "Tank",
+  "palamod.item.tank_item_l2": "Type : %2",
+  "palamod.item.tank_item_l3": "Seve : %3 / %4",
+  "palamod.item.tank_item.place": "Please place the tank at the ground"
 }

@@ -1658,5 +1658,9 @@
   "block.palamod.amethyst_tank": "Amethyst tank",
   "block.palamod.golden_tank": "Golden tank",
   "block.palamod.titane_tank": "Titane tank",
-  "block.palamod.paladium_tank": "Paladium tank"
+  "block.palamod.paladium_tank": "Paladium tank",
+  "item.palamod.tankitem": "Tank",
+  "palamod.item.tank_item_l2": "",
+  "palamod.item.tank_item_l3": "",
+  "palamod.item.tank_item.place": ""
 }

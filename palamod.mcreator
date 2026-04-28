@@ -44920,6 +44920,166 @@
           "src/main/resources/assets/palamod/blockstates/shiny_ostrya_wood.json"
         ]
       }
+    },
+    {
+      "name": "TankitemPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankitem_property_value_provider",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/TankitemPropertyValueProviderProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tankitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankitem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/tankitem_2.json",
+          "src/main/java/palamod/item/TankitemItem.java",
+          "src/main/resources/assets/palamod/models/item/tankitem_1.json",
+          "src/main/resources/assets/palamod/models/item/tankitem_0.json",
+          "src/main/resources/assets/palamod/models/item/tankitem_3.json",
+          "src/main/resources/assets/palamod/models/item/tankitem.json"
+        ]
+      }
+    },
+    {
+      "name": "Tankbreaktransfert",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankbreaktransfert",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TankbreaktransfertProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TankItemPlace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tank_item_place",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TankItemPlaceProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tankbreakpreloaddata",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankbreakpreloaddata",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TankbreakpreloaddataProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tankitemtooltip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tankitemtooltip",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/TankitemtooltipProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -47671,7 +47831,10 @@
       "CUSTOM:Goldentank",
       "CUSTOM:Titanetank",
       "CUSTOM:PaladiumTank"
-    ]
+    ],
+    "BLOCKS:minecraft:dirt": [],
+    "BLOCKS:minecraft:sand": [],
+    "BIOMES:minecraft:is_overworld": []
   },
   "tab_element_order": {
     "CUSTOM:Palamod": [
@@ -49902,7 +50065,11 @@
       "block.palamod.amethyst_tank": "Amethyst tank",
       "block.palamod.golden_tank": "Golden tank",
       "block.palamod.titane_tank": "Titane tank",
-      "block.palamod.paladium_tank": "Paladium tank"
+      "block.palamod.paladium_tank": "Paladium tank",
+      "item.palamod.tankitem": "Tank",
+      "palamod.item.tank_item_l2": "Type : %2",
+      "palamod.item.tank_item_l3": "Seve : %3 / %4",
+      "palamod.item.tank_item.place": "Please place the tank at the ground"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -51564,7 +51731,11 @@
       "block.palamod.amethyst_tank": "Amethyst tank",
       "block.palamod.golden_tank": "Golden tank",
       "block.palamod.titane_tank": "Titane tank",
-      "block.palamod.paladium_tank": "Paladium tank"
+      "block.palamod.paladium_tank": "Paladium tank",
+      "item.palamod.tankitem": "Tank",
+      "palamod.item.tank_item_l2": "",
+      "palamod.item.tank_item_l3": "",
+      "palamod.item.tank_item.place": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53226,7 +53397,11 @@
       "block.palamod.amethyst_tank": "Amethyst tank",
       "block.palamod.golden_tank": "Golden tank",
       "block.palamod.titane_tank": "Titane tank",
-      "block.palamod.paladium_tank": "Paladium tank"
+      "block.palamod.paladium_tank": "Paladium tank",
+      "item.palamod.tankitem": "Tank",
+      "palamod.item.tank_item_l2": "",
+      "palamod.item.tank_item_l3": "",
+      "palamod.item.tank_item.place": ""
     }
   },
   "metadata": {
@@ -53284,7 +53459,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.063",
+    "version": "1.20.064",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
