@@ -45145,6 +45145,7 @@
           "src/main/resources/assets/palamod/models/block/amethyst_portalblock.json",
           "src/main/resources/assets/palamod/blockstates/amethyst_portalblock.json",
           "src/main/resources/assets/palamod/models/item/amethyst_portalblock.json",
+          "src/main/java/palamod/block/entity/AmethystPortalblockBlockEntity.java",
           "src/main/resources/data/palamod/loot_table/blocks/amethyst_portalblock.json"
         ]
       }
@@ -45157,6 +45158,7 @@
       "registry_name": "titane_portal_block",
       "metadata": {
         "files": [
+          "src/main/java/palamod/block/entity/TitanePortalBlockBlockEntity.java",
           "src/main/resources/assets/palamod/blockstates/titane_portal_block.json",
           "src/main/resources/data/palamod/loot_table/blocks/titane_portal_block.json",
           "src/main/resources/assets/palamod/models/block/titane_portal_block.json",
@@ -45177,6 +45179,7 @@
           "src/main/resources/assets/palamod/blockstates/paladium_portal_block.json",
           "src/main/resources/assets/palamod/models/item/paladium_portal_block.json",
           "src/main/java/palamod/block/PaladiumPortalBlockBlock.java",
+          "src/main/java/palamod/block/entity/PaladiumPortalBlockBlockEntity.java",
           "src/main/resources/assets/palamod/models/block/paladium_portal_block.json"
         ]
       }
@@ -45191,6 +45194,7 @@
         "files": [
           "src/main/resources/data/palamod/loot_table/blocks/endium_portal_block.json",
           "src/main/resources/assets/palamod/models/item/endium_portal_block.json",
+          "src/main/java/palamod/block/entity/EndiumPortalBlockBlockEntity.java",
           "src/main/java/palamod/block/EndiumPortalBlockBlock.java",
           "src/main/resources/assets/palamod/blockstates/endium_portal_block.json",
           "src/main/resources/assets/palamod/models/block/endium_portal_block.json"
@@ -45391,6 +45395,116 @@
         "return_type": "logic",
         "files": [
           "src/main/java/palamod/procedures/CheckportalstructureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Debugportal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debugportal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/DebugportalProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Portalprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portalprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PortalprocessProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Portalblock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_block",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/block/PortalblockBlock.java",
+          "src/main/resources/assets/palamod/models/block/portal_block.json",
+          "src/main/resources/data/palamod/loot_table/blocks/portal_block.json",
+          "src/main/resources/assets/palamod/models/item/portal_block.json",
+          "src/main/resources/assets/palamod/blockstates/portal_block.json"
+        ]
+      }
+    },
+    {
+      "name": "Portalblockbreakviaportal",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portalblockbreakviaportal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PortalblockbreakviaportalProcedure.java"
         ]
       }
     }
@@ -50435,7 +50549,8 @@
       "block.palamod.endium_portal_block": "Endium Portal Block",
       "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.endium_heart": "Endium heart",
-      "item.palamod.amethyst_portal_key": "Amethyst portal key"
+      "item.palamod.amethyst_portal_key": "Amethyst portal key",
+      "block.palamod.portal_block": "Portal block"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52111,7 +52226,8 @@
       "block.palamod.endium_portal_block": "Endium Portal Block",
       "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.endium_heart": "Endium heart",
-      "item.palamod.amethyst_portal_key": "Amethyst portal key"
+      "item.palamod.amethyst_portal_key": "Amethyst portal key",
+      "block.palamod.portal_block": "Portal block"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53787,7 +53903,8 @@
       "block.palamod.endium_portal_block": "Endium Portal Block",
       "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.endium_heart": "Endium heart",
-      "item.palamod.amethyst_portal_key": "Amethyst portal key"
+      "item.palamod.amethyst_portal_key": "Amethyst portal key",
+      "block.palamod.portal_block": "Portal block"
     }
   },
   "metadata": {

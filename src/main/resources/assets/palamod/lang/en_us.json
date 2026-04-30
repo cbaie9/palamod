@@ -1673,5 +1673,6 @@
   "block.palamod.endium_portal_block": "Endium Portal Block",
   "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
   "item.palamod.endium_heart": "Endium heart",
-  "item.palamod.amethyst_portal_key": "Amethyst portal key"
+  "item.palamod.amethyst_portal_key": "Amethyst portal key",
+  "block.palamod.portal_block": "Portal block"
 }

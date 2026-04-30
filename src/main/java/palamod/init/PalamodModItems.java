@@ -697,6 +697,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ENDIUM_PORTAL_BLOCK;
 	public static final DeferredItem<Item> ENDIUM_HEART;
 	public static final DeferredItem<Item> ENDIUM_PORTAL_ANGLE_BLOCK;
+	public static final DeferredItem<Item> PORTAL_BLOCK;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1354,6 +1355,7 @@ public class PalamodModItems {
 		ENDIUM_PORTAL_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_BLOCK, new Item.Properties().rarity(Rarity.RARE));
 		ENDIUM_HEART = REGISTRY.register("endium_heart", EndiumheartItem::new);
 		ENDIUM_PORTAL_ANGLE_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK, new Item.Properties().rarity(Rarity.RARE));
+		PORTAL_BLOCK = block(PalamodModBlocks.PORTAL_BLOCK, new Item.Properties().stacksTo(1));
 	}
 
 	// Start of user code block custom items
