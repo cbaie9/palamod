@@ -147,6 +147,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "Portalblockbreakviaportal"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Portalblockbreakviaportal"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

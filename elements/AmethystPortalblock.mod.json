@@ -150,6 +150,12 @@
     "onRightClicked": {
       "name": "Portalprocess"
     },
+    "onDestroyedByPlayer": {
+      "name": "Portalblockbreak"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Portalblockbreak"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

@@ -45507,6 +45507,36 @@
           "src/main/java/palamod/procedures/PortalblockbreakviaportalProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Portalblockbreak",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portalblockbreak",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PortalblockbreakProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

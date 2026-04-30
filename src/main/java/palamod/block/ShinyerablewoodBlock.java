@@ -1,5 +1,8 @@
 package palamod.block;
 
+import palamod.procedures.PortalblockbreakviaportalProcedure;
+
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -9,8 +12,12 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 public class ShinyErablewoodBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
@@ -34,5 +41,18 @@ public class ShinyErablewoodBlock extends Block {
 	@Override
 	public BlockState rotate(BlockState state, Rotation rot) {
 		return RotatedPillarBlock.rotatePillar(state, rot);
+	}
+
+	@Override
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		return retval;
+	}
+
+	@Override
+	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+		super.wasExploded(world, pos, e);
+		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 }
