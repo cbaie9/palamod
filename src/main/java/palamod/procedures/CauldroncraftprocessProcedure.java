@@ -438,6 +438,17 @@ public class CauldroncraftprocessProcedure {
 							}
 						}
 					}
+				} else if (PalamodModBlocks.ENDIUM_FLOWER.get().asItem() == itemstack.getItem() || PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem() == itemstack.getItem()) {
+					jobs_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
+					if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)) {
+						jobs_alchi = 9999;
+					}
+					if (jobs_alchi >= 20) {
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"kill @e[type=minecraft:item,distance=..5]");
+						res = true;
+					}
 				} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:cauldron_craft")))) {
 					res = true;
 				}

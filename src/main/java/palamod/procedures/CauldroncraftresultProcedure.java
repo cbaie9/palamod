@@ -181,6 +181,49 @@ public class CauldroncraftresultProcedure {
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}
+		} else if (PalamodModBlocks.ENDIUM_FLOWER.get().asItem() == itemstack.getItem() || PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem() == itemstack.getItem()) {
+			for (int index6 = 0; index6 < (int) nb_items; index6++) {
+				if (world instanceof ServerLevel _level) {
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ENDIUM_POLLEN.get()));
+					entityToSpawn.setPickUpDelay(10);
+					_level.addFreshEntity(entityToSpawn);
+				}
+				if (Math.random() < 0.25) {
+					random = Mth.nextInt(RandomSource.create(), 1, 4);
+					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+						PalamodMod.LOGGER.info("drop");
+					}
+					if (1 == random) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.MINERAL_FLOWER.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+						continue;
+					} else if (2 == random) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, new ItemStack(PalamodModBlocks.HARPAGOPHYTUM.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+						continue;
+					} else if (3 == random) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_FLOWER.get()));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+						continue;
+					}
+				}
+				if (Math.random() < 0.00390625) {
+					if (world instanceof ServerLevel _level) {
+						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()));
+						entityToSpawn.setPickUpDelay(10);
+						_level.addFreshEntity(entityToSpawn);
+					}
+				}
+			}
 		}
 		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			PalamodMod.LOGGER.info("END DROP RESULT");

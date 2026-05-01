@@ -7,6 +7,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class PortalblockbreakProcedure {
@@ -87,6 +90,22 @@ public class PortalblockbreakProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
+			if (world instanceof ServerLevel _level) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x_core, (y_core + 0.25), z_core, (getBlockNBTItemStack(world, BlockPos.containing(x_core, y_core, z_core), "key")));
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null) {
+					_blockEntity.getPersistentData().put("key", new ItemStack(Blocks.AIR).saveOptional(world.registryAccess()));
+					_blockEntity.getPersistentData().putString("position", "None");
+				}
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
 		}
 	}
 
@@ -95,5 +114,12 @@ public class PortalblockbreakProcedure {
 		if (blockEntity != null)
 			return blockEntity.getPersistentData().getString(tag);
 		return "";
+	}
+
+	private static ItemStack getBlockNBTItemStack(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return ItemStack.parseOptional(world.registryAccess(), blockEntity.getPersistentData().getCompound(tag));
+		return ItemStack.EMPTY;
 	}
 }

@@ -48,8 +48,10 @@ public class CauldronsetupprocessProcedure {
 		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			PalamodMod.LOGGER.debug(("------------------------" + "\n" + "Chaudron" + "\n"));
 		}
-		if ((entity instanceof ServerPlayer || entity instanceof Player) && PalamodModItems.ANGELIC_WATER_BUCKET.get() == itemstack.getItem()) {
-			CauldronmanagerprocessProcedure.execute(world, x, y, z, "setup");
+		if (entity instanceof ServerPlayer || entity instanceof Player) {
+			if (PalamodModItems.ANGELIC_WATER_BUCKET.get() == itemstack.getItem()) {
+				CauldronmanagerprocessProcedure.execute(world, x, y, z, "setup");
+			}
 		}
 	}
 }

@@ -41,7 +41,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:TitaneIngot"
+      "value": "CUSTOM:TitaneBlock"
     },
     "name": "titaneingotcraft",
     "namespace": "mod"

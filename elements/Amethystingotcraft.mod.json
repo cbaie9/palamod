@@ -3,7 +3,7 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 1,
+    "recipeRetstackSize": 2,
     "group": "",
     "unlockingItems": [],
     "cookingBookCategory": "MISC",
@@ -41,7 +41,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Amethyste"
+      "value": "CUSTOM:AmethysteBlock"
     },
     "name": "amethystingotcraft",
     "namespace": "mod"

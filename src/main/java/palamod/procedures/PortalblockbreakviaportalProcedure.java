@@ -6,10 +6,8 @@ import palamod.init.PalamodModBlocks;
 import palamod.PalamodMod;
 
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
 public class PortalblockbreakviaportalProcedure {
@@ -69,65 +67,5 @@ public class PortalblockbreakviaportalProcedure {
 				}
 			}
 		}
-		if (pass && !CheckportalstructureProcedure.execute(world, z_core, y_core, x_core, angle_block, shiny_wood)) {
-			if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("west")) {
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core - 1), false);
-			} else if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("east")) {
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 2, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 2, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 2, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core - 3, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 3, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core - 3, y_core, z_core - 1), false);
-			} else if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("north")) {
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 2), false);
-				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core - 2), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core - 2), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 3), false);
-				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core - 3), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core - 3), false);
-			} else if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("south")) {
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core + 2), false);
-				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core + 2), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core + 2), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core + 3), false);
-				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core + 3), false);
-				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core + 3), false);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x_core, y_core, z_core);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putBoolean("portal_powered", false);
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
-	}
-
-	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
-		BlockEntity blockEntity = world.getBlockEntity(pos);
-		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
-		return "";
 	}
 }

@@ -45537,6 +45537,44 @@
           "src/main/java/palamod/procedures/PortalblockbreakProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Portaldropprocess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portaldropprocess",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PortaldropprocessProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -50580,7 +50618,8 @@
       "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.endium_heart": "Endium heart",
       "item.palamod.amethyst_portal_key": "Amethyst portal key",
-      "block.palamod.portal_block": "Portal block"
+      "block.palamod.portal_block": "Portal block",
+      "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52257,7 +52296,8 @@
       "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.endium_heart": "Endium heart",
       "item.palamod.amethyst_portal_key": "Amethyst portal key",
-      "block.palamod.portal_block": "Portal block"
+      "block.palamod.portal_block": "Portal block",
+      "palamod.portal.need_pollen": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53934,7 +53974,8 @@
       "block.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.endium_heart": "Endium heart",
       "item.palamod.amethyst_portal_key": "Amethyst portal key",
-      "block.palamod.portal_block": "Portal block"
+      "block.palamod.portal_block": "Portal block",
+      "palamod.portal.need_pollen": ""
     }
   },
   "metadata": {
