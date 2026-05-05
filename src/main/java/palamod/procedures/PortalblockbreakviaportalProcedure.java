@@ -76,18 +76,8 @@ public class PortalblockbreakviaportalProcedure {
 				}
 			}
 		}
-		if (pass && !CheckportalstructureProcedure.execute(world, z_core, y_core, x_core, angle_block, shiny_wood)) {
+		if (pass && getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "portal_powered") && !CheckportalstructureProcedure.execute(world, z_core, y_core, x_core, angle_block, shiny_wood)) {
 			if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("west")) {
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core - 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core + 1), false);
-				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core), false);
-				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core - 1), false);
-			} else if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("east")) {
 				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core + 1), false);
 				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core), false);
 				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core - 1), false);
@@ -97,6 +87,16 @@ public class PortalblockbreakviaportalProcedure {
 				world.destroyBlock(BlockPos.containing(x_core - 3, y_core, z_core + 1), false);
 				world.destroyBlock(BlockPos.containing(x_core - 3, y_core, z_core), false);
 				world.destroyBlock(BlockPos.containing(x_core - 3, y_core, z_core - 1), false);
+			} else if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("east")) {
+				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core + 1), false);
+				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core), false);
+				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 1), false);
+				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core + 1), false);
+				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core - 1), false);
+				world.destroyBlock(BlockPos.containing(x_core + 2, y_core, z_core), false);
+				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core + 1), false);
+				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core), false);
+				world.destroyBlock(BlockPos.containing(x_core + 3, y_core, z_core - 1), false);
 			} else if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("north")) {
 				world.destroyBlock(BlockPos.containing(x_core + 1, y_core, z_core - 1), false);
 				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core - 1), false);
@@ -156,6 +156,13 @@ public class PortalblockbreakviaportalProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
+		return false;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {

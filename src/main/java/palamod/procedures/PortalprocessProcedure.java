@@ -81,16 +81,6 @@ public class PortalprocessProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "position")).equals("west")) {
-				world.setBlock(BlockPos.containing(x + 1, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 1, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 1, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 2, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 2, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 2, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 3, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 3, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-				world.setBlock(BlockPos.containing(x + 3, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
-			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "position")).equals("east")) {
 				world.setBlock(BlockPos.containing(x - 1, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
 				world.setBlock(BlockPos.containing(x - 1, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
 				world.setBlock(BlockPos.containing(x - 1, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
@@ -100,6 +90,16 @@ public class PortalprocessProcedure {
 				world.setBlock(BlockPos.containing(x - 3, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
 				world.setBlock(BlockPos.containing(x - 3, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
 				world.setBlock(BlockPos.containing(x - 3, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "position")).equals("east")) {
+				world.setBlock(BlockPos.containing(x + 1, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 1, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 1, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 2, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 2, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 2, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 3, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 3, y, z), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(BlockPos.containing(x + 3, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
 			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "position")).equals("north")) {
 				world.setBlock(BlockPos.containing(x + 1, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
 				world.setBlock(BlockPos.containing(x, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
