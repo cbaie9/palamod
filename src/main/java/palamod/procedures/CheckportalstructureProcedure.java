@@ -1,10 +1,14 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModBlocks;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 public class CheckportalstructureProcedure {
@@ -13,81 +17,91 @@ public class CheckportalstructureProcedure {
 		BlockState shiny_wood = Blocks.AIR.defaultBlockState();
 		angle_block = angle_block_dep;
 		shiny_wood = shiny_wood_dep;
-		if ((world.getBlockState(BlockPos.containing(x, y, z + 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x, y, z - 2))).getBlock() == angle_block.getBlock()
-				&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
-			if ((world.getBlockState(BlockPos.containing(x - 1, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 3, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 1, y, z - 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 3, y, z - 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 4, y, z - 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x - 4, y, z + 2))).getBlock() == angle_block.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 4, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 4, y, z + 1))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 4, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putString("position", "west");
+		if ((!getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered") || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == PalamodModBlocks.KEY_PORTAL_BLOCK.get())
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:portal_blocks")))) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z + 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x, y, z - 2))).getBlock() == angle_block.getBlock()
+					&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
+				if ((world.getBlockState(BlockPos.containing(x - 1, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 3, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 1, y, z - 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 3, y, z - 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 4, y, z - 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x - 4, y, z + 2))).getBlock() == angle_block.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 4, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 4, y, z + 1))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 4, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putString("position", "west");
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				return true;
-			} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 3, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z - 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 3, y, z - 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 4, y, z - 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x + 4, y, z + 2))).getBlock() == angle_block.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 4, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 4, y, z + 1))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 4, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putString("position", "east");
+					return true;
+				} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 3, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z - 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 3, y, z - 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 4, y, z - 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x + 4, y, z + 2))).getBlock() == angle_block.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 4, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 4, y, z + 1))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 4, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putString("position", "east");
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					return true;
 				}
-				return true;
-			}
-		} else if ((world.getBlockState(BlockPos.containing(x + 2, y, z))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z))).getBlock() == angle_block.getBlock()
-				&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == shiny_wood.getBlock()) {
-			if ((world.getBlockState(BlockPos.containing(x + 2, y, z - 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z - 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 2, y, z - 3))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z - 1))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z - 3))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 2, y, z - 4))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z - 4))).getBlock() == angle_block.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x, y, z - 4))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z - 4))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 1, y, z - 4))).getBlock() == shiny_wood.getBlock()) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putString("position", "north");
+			} else if ((world.getBlockState(BlockPos.containing(x + 2, y, z))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z))).getBlock() == angle_block.getBlock()
+					&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == shiny_wood.getBlock()) {
+				if ((world.getBlockState(BlockPos.containing(x + 2, y, z - 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z - 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 2, y, z - 3))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z - 1))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z - 3))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 2, y, z - 4))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z - 4))).getBlock() == angle_block.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x, y, z - 4))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z - 4))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 1, y, z - 4))).getBlock() == shiny_wood.getBlock()) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putString("position", "north");
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				return true;
-			} else if ((world.getBlockState(BlockPos.containing(x + 2, y, z + 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x + 2, y, z + 3))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 1))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 2, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 3))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 2, y, z + 4))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 4))).getBlock() == angle_block.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x, y, z + 4))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z + 4))).getBlock() == shiny_wood.getBlock()
-					&& (world.getBlockState(BlockPos.containing(x - 1, y, z + 4))).getBlock() == shiny_wood.getBlock()) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putString("position", "south");
+					return true;
+				} else if ((world.getBlockState(BlockPos.containing(x + 2, y, z + 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x + 2, y, z + 3))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 1))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 2, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 3))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 2, y, z + 4))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 4))).getBlock() == angle_block.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x, y, z + 4))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z + 4))).getBlock() == shiny_wood.getBlock()
+						&& (world.getBlockState(BlockPos.containing(x - 1, y, z + 4))).getBlock() == shiny_wood.getBlock()) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putString("position", "south");
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					return true;
 				}
-				return true;
 			}
 		}
+		return false;
+	}
+
+	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getBoolean(tag);
 		return false;
 	}
 }

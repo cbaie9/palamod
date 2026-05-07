@@ -322,6 +322,7 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> ENDIUM_PORTAL_BLOCK;
 	public static final DeferredBlock<Block> ENDIUM_PORTAL_ANGLE_BLOCK;
 	public static final DeferredBlock<Block> PORTAL_BLOCK;
+	public static final DeferredBlock<Block> KEY_PORTAL_BLOCK;
 	static {
 		PALADIUM_ORE = REGISTRY.register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = REGISTRY.register("paladium_block", PaladiumBlockBlock::new);
@@ -631,6 +632,7 @@ public class PalamodModBlocks {
 		ENDIUM_PORTAL_BLOCK = REGISTRY.register("endium_portal_block", EndiumPortalBlockBlock::new);
 		ENDIUM_PORTAL_ANGLE_BLOCK = REGISTRY.register("endium_portal_angle_block", EndiumPortalAngleBlockBlock::new);
 		PORTAL_BLOCK = REGISTRY.register("portal_block", PortalblockBlock::new);
+		KEY_PORTAL_BLOCK = REGISTRY.register("key_portal_block", KeyportalblockBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

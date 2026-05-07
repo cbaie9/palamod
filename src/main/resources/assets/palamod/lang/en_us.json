@@ -1675,5 +1675,6 @@
   "item.palamod.endium_heart": "Endium heart",
   "item.palamod.amethyst_portal_key": "Amethyst portal key",
   "block.palamod.portal_block": "Portal block",
-  "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget"
+  "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget",
+  "block.palamod.key_portal_block": "Key portal block"
 }

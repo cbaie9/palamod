@@ -1,0 +1,466 @@
+{
+  "_fv": 85,
+  "_type": "block",
+  "definition": {
+    "texture": "amethyste_portal_key",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "paladium_key:default",
+    "rotationMode": 1,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "states": [
+      {
+        "texture": "amethyste_portal_key",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "paladium_key:amethyst",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [
+          {
+            "mx": 0.0,
+            "my": 0.0,
+            "mz": 0.0,
+            "Mx": 16.0,
+            "My": 16.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 5,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 1
+          }
+        ]
+      },
+      {
+        "texture": "titane_portal_key",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "paladium_key:titane",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [
+          {
+            "mx": 0.0,
+            "my": 0.0,
+            "mz": 0.0,
+            "Mx": 16.0,
+            "My": 16.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 5,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 2
+          }
+        ]
+      },
+      {
+        "texture": "paladium_portal_key",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "paladium_key:paladium",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [
+          {
+            "mx": 0.0,
+            "my": 0.0,
+            "mz": 0.0,
+            "Mx": 16.0,
+            "My": 16.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 5,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 3
+          }
+        ]
+      },
+      {
+        "texture": "endium_portal_key",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "renderType": 2,
+        "customModelName": "paladium_key:endium",
+        "particleTexture": "",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [
+          {
+            "mx": 0.0,
+            "my": 0.0,
+            "mz": 0.0,
+            "Mx": 16.0,
+            "My": 16.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ],
+        "stateMap": [
+          {
+            "property": {
+              "min": 0,
+              "max": 5,
+              "name": "CUSTOM:blockstate",
+              "type": "integer"
+            },
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "animations": [],
+    "itemTexture": "",
+    "particleTexture": "",
+    "blockSetType": "OAK",
+    "leavesParticleChance": 0.0,
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "CUTOUT_MIPPED",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 8.0,
+        "my": 10.0,
+        "mz": 21.0,
+        "Mx": 9.0,
+        "My": 12.0,
+        "Mz": 22.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 11.0,
+        "mz": 20.0,
+        "Mx": 9.0,
+        "My": 13.0,
+        "Mz": 21.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 13.0,
+        "mz": 19.0,
+        "Mx": 9.0,
+        "My": 14.0,
+        "Mz": 20.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 9.0,
+        "mz": 20.0,
+        "Mx": 9.0,
+        "My": 11.0,
+        "Mz": 21.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 9.0,
+        "mz": 18.0,
+        "Mx": 9.0,
+        "My": 11.0,
+        "Mz": 19.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 9.0,
+        "mz": 19.0,
+        "Mx": 9.0,
+        "My": 11.0,
+        "Mz": 20.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 13.0,
+        "mz": 18.0,
+        "Mx": 9.0,
+        "My": 15.0,
+        "Mz": 19.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 1.0,
+        "mz": 8.0,
+        "Mx": 9.0,
+        "My": 3.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 2.0,
+        "mz": 9.0,
+        "Mx": 9.0,
+        "My": 4.0,
+        "Mz": 11.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 3.0,
+        "mz": 10.0,
+        "Mx": 9.0,
+        "My": 5.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 4.0,
+        "mz": 11.0,
+        "Mx": 9.0,
+        "My": 6.0,
+        "Mz": 13.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 5.0,
+        "mz": 12.0,
+        "Mx": 9.0,
+        "My": 7.0,
+        "Mz": 14.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 6.0,
+        "mz": 13.0,
+        "Mx": 9.0,
+        "My": 8.0,
+        "Mz": 15.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 7.0,
+        "mz": 14.0,
+        "Mx": 9.0,
+        "My": 9.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 8.0,
+        "mz": 15.0,
+        "Mx": 9.0,
+        "My": 10.0,
+        "Mz": 17.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 10.0,
+        "mz": 16.0,
+        "Mx": 9.0,
+        "My": 14.0,
+        "Mz": 17.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 9.0,
+        "mz": 17.0,
+        "Mx": 9.0,
+        "My": 15.0,
+        "Mz": 18.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 0.0,
+        "mz": 7.0,
+        "Mx": 9.0,
+        "My": 2.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 8.0,
+        "my": 11.0,
+        "mz": 18.0,
+        "Mx": 9.0,
+        "My": 13.0,
+        "Mz": 20.0,
+        "subtract": false
+      }
+    ],
+    "customProperties": [
+      {
+        "min": 0,
+        "max": 5,
+        "name": "CUSTOM:blockstate",
+        "type": "integer",
+        "value": 0
+      }
+    ],
+    "name": "Key portal block",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 5.0,
+    "resistance": 10.0,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 1,
+    "rarity": "COMMON",
+    "immuneToFire": false,
+    "creativeTabs": [],
+    "destroyTool": "Not specified",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 0,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "hasCustomOpacity": true,
+    "lightOpacity": 0,
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "harp",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
+    "ignitedByLava": false,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "WOOD"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": {
+      "fixedValue": 0.0
+    },
+    "unbreakable": false,
+    "vanillaToolTier": "DIAMOND",
+    "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
+    "hasInventory": false,
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "Portalblockbreakviaportal"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Portalblockbreakviaportal"
+    },
+    "generateFeature": false,
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

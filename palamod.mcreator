@@ -45575,6 +45575,26 @@
           "src/main/java/palamod/procedures/PortaldropprocessProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Keyportalblock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_portal_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/block/key_portal_block_2.json",
+          "src/main/java/palamod/block/KeyportalblockBlock.java",
+          "src/main/resources/assets/palamod/models/item/key_portal_block.json",
+          "src/main/resources/assets/palamod/models/block/key_portal_block_1.json",
+          "src/main/resources/data/palamod/loot_table/blocks/key_portal_block.json",
+          "src/main/resources/assets/palamod/blockstates/key_portal_block.json",
+          "src/main/resources/assets/palamod/models/block/key_portal_block.json",
+          "src/main/resources/assets/palamod/models/block/key_portal_block_0.json",
+          "src/main/resources/assets/palamod/models/block/key_portal_block_3.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -48335,7 +48355,13 @@
     ],
     "BLOCKS:minecraft:dirt": [],
     "BLOCKS:minecraft:sand": [],
-    "BIOMES:minecraft:is_overworld": []
+    "BIOMES:minecraft:is_overworld": [],
+    "BLOCKS:mod:portal_blocks": [
+      "CUSTOM:AmethystPortalblock",
+      "CUSTOM:TitanePortalBlock",
+      "CUSTOM:PaladiumPortalBlock",
+      "CUSTOM:EndiumPortalBlock"
+    ]
   },
   "tab_element_order": {
     "CUSTOM:Palamod": [
@@ -50619,7 +50645,8 @@
       "item.palamod.endium_heart": "Endium heart",
       "item.palamod.amethyst_portal_key": "Amethyst portal key",
       "block.palamod.portal_block": "Portal block",
-      "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget"
+      "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget",
+      "block.palamod.key_portal_block": "Key portal block"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52297,7 +52324,8 @@
       "item.palamod.endium_heart": "Endium heart",
       "item.palamod.amethyst_portal_key": "Amethyst portal key",
       "block.palamod.portal_block": "Portal block",
-      "palamod.portal.need_pollen": ""
+      "palamod.portal.need_pollen": "",
+      "block.palamod.key_portal_block": "Key portal block"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53975,7 +54003,8 @@
       "item.palamod.endium_heart": "Endium heart",
       "item.palamod.amethyst_portal_key": "Amethyst portal key",
       "block.palamod.portal_block": "Portal block",
-      "palamod.portal.need_pollen": ""
+      "palamod.portal.need_pollen": "",
+      "block.palamod.key_portal_block": "Key portal block"
     }
   },
   "metadata": {

@@ -1,10 +1,12 @@
 package palamod.block;
 
 import palamod.procedures.PortalprocessProcedure;
+import palamod.procedures.PortalblockbreakviaportalProcedure;
 
 import palamod.block.entity.PaladiumPortalBlockBlockEntity;
 
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -23,6 +25,13 @@ import net.minecraft.core.BlockPos;
 public class PaladiumPortalBlockBlock extends Block implements EntityBlock {
 	public PaladiumPortalBlockBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f));
+	}
+
+	@Override
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		return retval;
 	}
 
 	@Override

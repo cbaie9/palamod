@@ -70,11 +70,11 @@ public class PortalblockbreakviaportalProcedure {
 							if (pass) {
 								break;
 							}
-							loop = loop + 1;
 						}
 					}
 				}
 			}
+			loop = loop + 1;
 		}
 		if (pass && getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "portal_powered") && !CheckportalstructureProcedure.execute(world, z_core, y_core, x_core, angle_block, shiny_wood)) {
 			if ((getBlockNBTString(world, BlockPos.containing(x_core, y_core, z_core), "position")).equals("west")) {
@@ -118,6 +118,7 @@ public class PortalblockbreakviaportalProcedure {
 				world.destroyBlock(BlockPos.containing(x_core, y_core, z_core + 3), false);
 				world.destroyBlock(BlockPos.containing(x_core - 1, y_core, z_core + 3), false);
 			}
+			world.destroyBlock(BlockPos.containing(x_core, y_core + 1, z_core), false);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x_core, y_core, z_core);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

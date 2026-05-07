@@ -151,10 +151,10 @@
       "name": "Portalprocess"
     },
     "onDestroyedByPlayer": {
-      "name": "Portalblockbreak"
+      "name": "Portalblockbreakviaportal"
     },
     "onDestroyedByExplosion": {
-      "name": "Portalblockbreak"
+      "name": "Portalblockbreakviaportal"
     },
     "generateFeature": false,
     "restrictionBiomes": [],
