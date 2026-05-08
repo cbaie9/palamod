@@ -45712,6 +45712,125 @@
           "src/main/java/palamod/procedures/KeytooltipProcedure.java"
         ]
       }
+    },
+    {
+      "name": "OxLibflaskgenerator",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ox_libflaskgenerator",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "stock",
+            "type": "number"
+          },
+          {
+            "name": "seve_type",
+            "type": "string"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/OxLibflaskgeneratorProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "Oxlibflaskluncherviajudeecercis",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxlibflaskluncherviajudeecercis",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/OxlibflaskluncherviajudeecercisProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "Oxlibflaskluncherviajacaranda",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxlibflaskluncherviajacaranda",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/OxlibflaskluncherviajacarandaProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "Oxlibflaskluncherviaerable",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxlibflaskluncherviaerable",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/OxlibflaskluncherviaerableProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "Oxlibflaskluncherviaostrya",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxlibflaskluncherviaostrya",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/OxlibflaskluncherviaostryaProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
     }
   ],
   "variable_elements": [
