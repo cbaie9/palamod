@@ -45,7 +45,6 @@ public class PortaldropprocessProcedure {
 			return;
 		boolean pass = false;
 		BlockState active = Blocks.AIR.defaultBlockState();
-		String type = "";
 		ItemStack key = ItemStack.EMPTY;
 		double y_core = 0;
 		double x_core = 0;
@@ -54,8 +53,27 @@ public class PortaldropprocessProcedure {
 		double limit_to_result = 0;
 		double level_alchi = 0;
 		double level_required = 0;
+		String type = "";
+		String type_input = "";
+		String stock_name = "";
+		PalamodMod.LOGGER.debug("Drop portal --------");
 		level_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
-		if (itemstack.getItem() == PalamodModItems.TANKITEM.get()) {
+		if (itemstack.getItem() == PalamodModItems.TANKITEM.get() || itemstack.getItem() == PalamodModItems.FLASK.get()) {
+			if (itemstack.getItem() == PalamodModItems.TANKITEM.get()) {
+				type_input = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("type");
+				stock_name = "stock";
+			} else {
+				stock_name = "seve";
+				if (1 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type")) {
+					type_input = "ostrya";
+				} else if (2 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type")) {
+					type_input = "judeecercis";
+				} else if (3 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type")) {
+					type_input = "jacaranda";
+				} else if (4 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type")) {
+					type_input = "erable";
+				}
+			}
 			for (int index0 = 0; index0 < 4; index0++) {
 				if (loop == 0) {
 					active = PalamodModBlocks.AMETHYST_PORTALBLOCK.get().defaultBlockState();
@@ -77,6 +95,8 @@ public class PortaldropprocessProcedure {
 					type = "ostrya";
 					level_required = 20;
 					limit_to_result = 3448;
+				} else {
+					break;
 				}
 				int horizontalRadiusHemiBot = (int) 5 - 1;
 				int verticalRadiusHemiBot = (int) 2;
@@ -96,7 +116,7 @@ public class PortaldropprocessProcedure {
 									z_core = z + zi;
 									pass = true;
 									if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
-										PalamodMod.LOGGER.info(("Core :  x : " + x_core + " y : " + y_core + " z : " + z_core + "\n" + level_required + " - " + limit_to_result));
+										PalamodMod.LOGGER.debug(("Core(portal) :  x : " + x_core + " y : " + y_core + " z : " + z_core + "\n" + level_required + " - " + limit_to_result + "\n" + "Active :" + active));
 									}
 								}
 								if (pass) {
@@ -106,10 +126,16 @@ public class PortaldropprocessProcedure {
 						}
 					}
 				}
+				if (pass) {
+					break;
+				}
+				loop = loop + 1;
 			}
+			PalamodMod.LOGGER.info(type_input);
+			PalamodMod.LOGGER.info(type);
 			if (pass) {
 				if (level_alchi >= level_required || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
-					if (getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "portal_powered") && (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("type")).equals(type)) {
+					if (getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "portal_powered") && (type_input).equals(type)) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x_core, y_core, z_core);
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -121,9 +147,9 @@ public class PortaldropprocessProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						PalamodMod.LOGGER.info(("tank stock" + key.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("stock")));
+						PalamodMod.LOGGER.info(("tank stock" + key.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble(stock_name)));
 						{
-							final String _tagName = "stock";
+							final String _tagName = stock_name;
 							final double _tagValue = 0;
 							CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 						}
@@ -137,14 +163,14 @@ public class PortaldropprocessProcedure {
 							BlockEntity _blockEntity = world.getBlockEntity(_bp);
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null) {
-								_blockEntity.getPersistentData().putString("key_type", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("type")));
+								_blockEntity.getPersistentData().putString("key_type", type_input);
 							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						PalamodMod.LOGGER.info(("key stock" + getBlockNBTNumber(world, BlockPos.containing(x_core, y_core, z_core), "key_stock")));
 						while (getBlockNBTNumber(world, BlockPos.containing(x_core, y_core, z_core), "key_stock") >= limit_to_result) {
-							PalamodMod.LOGGER.info(("tank stock" + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("stock")));
+							PalamodMod.LOGGER.info(("tank stock" + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble(stock_name)));
 							if (("jacaranda").equals(type)) {
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x_core, y_core, z_core);

@@ -15,11 +15,13 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -54,13 +56,13 @@ public class PortalprocessProcedure {
 			key_block = (blockStateWithInt(PalamodModBlocks.KEY_PORTAL_BLOCK.get().defaultBlockState(), "blockstate", 3));
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ENDIUM_PORTAL_BLOCK.get()) {
 			angle_block = PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK.get().defaultBlockState();
-			shiny_wood = PalamodModBlocks.SHINY_ERABLE_WOOD.get().defaultBlockState();
+			shiny_wood = PalamodModBlocks.SHINY_OSTRYA_WOOD.get().defaultBlockState();
 			key = new ItemStack(PalamodModItems.ENDIUM_PORTAL_KEY.get()).copy();
 			level_required = 20;
 			key_block = (blockStateWithInt(PalamodModBlocks.KEY_PORTAL_BLOCK.get().defaultBlockState(), "blockstate", 4));
 		}
-		PalamodMod.LOGGER.debug(("Portal dump :" + "\n" + "angle block :" + angle_block + "\n" + "shiny wood :" + shiny_wood + "\n" + "key : " + key + "\n" + getBlockNBTString(world, BlockPos.containing(x, y, z), "position") + "\n"
-				+ getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered") + IsgameserversideProcedure.execute()));
+		PalamodMod.LOGGER.debug(("Portal dump :" + "\n" + "angle block :" + angle_block + "\n" + "shiny wood :" + shiny_wood + "\n" + "key : " + key + "\n" + getBlockNBTString(world, BlockPos.containing(x, y, z), "position") + "\n" + "powered : "
+				+ getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")));
 		if (CheckportalstructureProcedure.execute(world, x, y, z, angle_block, shiny_wood) && key.getItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()
 				&& (level_alchi >= level_required || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) && !getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")) {
 			if (!world.isClientSide()) {
@@ -69,14 +71,18 @@ public class PortalprocessProcedure {
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().put("key", (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).saveOptional(world.registryAccess()));
+					_blockEntity.getPersistentData().putDouble("key_stock",
+							((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("key_stock")));
+					_blockEntity.getPersistentData().putString("key_type",
+							((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("key_type")));
 				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack21 = new ItemStack(Blocks.AIR).copy();
-				_setstack21.setCount(0);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack21);
+				ItemStack _setstack27 = new ItemStack(Blocks.AIR).copy();
+				_setstack27.setCount(0);
+				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack27);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}

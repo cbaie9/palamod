@@ -1,6 +1,6 @@
 package palamod.block;
 
-import palamod.procedures.PortalblockbreakviaportalProcedure;
+import palamod.procedures.PortalblockbreakviaOtherProcedure;
 
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -46,13 +46,13 @@ public class ShinyOstryaWoodBlock extends Block {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		PortalblockbreakviaOtherProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		return retval;
 	}
 
 	@Override
 	public void wasExploded(Level world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
-		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		PortalblockbreakviaOtherProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 }

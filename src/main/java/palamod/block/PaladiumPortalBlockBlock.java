@@ -1,7 +1,7 @@
 package palamod.block;
 
 import palamod.procedures.PortalprocessProcedure;
-import palamod.procedures.PortalblockbreakviaportalProcedure;
+import palamod.procedures.PortalblockbreakviaOtherProcedure;
 
 import palamod.block.entity.PaladiumPortalBlockBlockEntity;
 
@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
@@ -30,8 +31,14 @@ public class PaladiumPortalBlockBlock extends Block implements EntityBlock {
 	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		PortalblockbreakviaOtherProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		return retval;
+	}
+
+	@Override
+	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+		super.wasExploded(world, pos, e);
+		PortalblockbreakviaOtherProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

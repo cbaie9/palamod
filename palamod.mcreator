@@ -45517,6 +45517,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "called",
+            "type": "blockstate"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -45593,6 +45597,119 @@
           "src/main/resources/assets/palamod/models/block/key_portal_block.json",
           "src/main/resources/assets/palamod/models/block/key_portal_block_0.json",
           "src/main/resources/assets/palamod/models/block/key_portal_block_3.json"
+        ]
+      }
+    },
+    {
+      "name": "PortalblockbreakviaOther",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portalblockbreakvia_other",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PortalblockbreakviaOtherProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "IsPortalGlassActuallyBroken",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_portal_glass_actually_broken",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "position",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/IsPortalGlassActuallyBrokenProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PortalblockbreakviaPortalBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portalblockbreakvia_portal_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PortalblockbreakviaPortalBlockProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Keytooltip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keytooltip",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/KeytooltipProcedure.java"
         ]
       }
     }
@@ -48207,7 +48324,7 @@
       "CUSTOM:Ostrya_woodLog",
       "CUSTOM:Jacaranda_Log",
       "CUSTOM:Judeecercis_Log",
-      "CUSTOM:DeadLog"
+      "CUSTOM:Erable_Log"
     ],
     "ITEMS:c:glass": [
       "TAG:neoforge:glass"
@@ -48361,6 +48478,9 @@
       "CUSTOM:TitanePortalBlock",
       "CUSTOM:PaladiumPortalBlock",
       "CUSTOM:EndiumPortalBlock"
+    ],
+    "ITEMS:neoforge:chest": [
+      "TAG:c:chest"
     ]
   },
   "tab_element_order": {

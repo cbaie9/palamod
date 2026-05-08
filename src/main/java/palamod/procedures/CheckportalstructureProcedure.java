@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import palamod.PalamodMod;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
@@ -15,6 +17,7 @@ public class CheckportalstructureProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z, BlockState angle_block_dep, BlockState shiny_wood_dep) {
 		BlockState angle_block = Blocks.AIR.defaultBlockState();
 		BlockState shiny_wood = Blocks.AIR.defaultBlockState();
+		boolean output = false;
 		angle_block = angle_block_dep;
 		shiny_wood = shiny_wood_dep;
 		if ((!getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered") || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == PalamodModBlocks.KEY_PORTAL_BLOCK.get())
@@ -37,7 +40,7 @@ public class CheckportalstructureProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					return true;
+					output = true;
 				} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
 						&& (world.getBlockState(BlockPos.containing(x + 3, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 1, y, z - 2))).getBlock() == shiny_wood.getBlock()
 						&& (world.getBlockState(BlockPos.containing(x + 2, y, z - 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 3, y, z - 2))).getBlock() == shiny_wood.getBlock()
@@ -54,7 +57,7 @@ public class CheckportalstructureProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					return true;
+					output = true;
 				}
 			} else if ((world.getBlockState(BlockPos.containing(x + 2, y, z))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z))).getBlock() == angle_block.getBlock()
 					&& (world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == shiny_wood.getBlock()) {
@@ -74,7 +77,7 @@ public class CheckportalstructureProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					return true;
+					output = true;
 				} else if ((world.getBlockState(BlockPos.containing(x + 2, y, z + 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 2))).getBlock() == shiny_wood.getBlock()
 						&& (world.getBlockState(BlockPos.containing(x + 2, y, z + 3))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 1))).getBlock() == shiny_wood.getBlock()
 						&& (world.getBlockState(BlockPos.containing(x - 2, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 3))).getBlock() == shiny_wood.getBlock()
@@ -91,11 +94,12 @@ public class CheckportalstructureProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					return true;
+					output = true;
 				}
 			}
 		}
-		return false;
+		PalamodMod.LOGGER.debug(("check portal =" + output));
+		return output;
 	}
 
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {

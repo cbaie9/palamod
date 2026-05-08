@@ -13,16 +13,16 @@ public class TankitemtooltipProcedure {
 		String item_display = "";
 		double max_stock = 0;
 		if (1 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type")) {
-			item_display = (new ItemStack(PalamodModBlocks.GOLDEN_TANK.get())).getDisplayName().getString();
+			item_display = (((new ItemStack(PalamodModBlocks.GOLDEN_TANK.get())).getDisplayName().getString()).replace("[", "")).replace("]", "");
 			max_stock = 35;
 		} else if (2 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type")) {
-			item_display = (new ItemStack(PalamodModBlocks.AMETHYST_TANK.get())).getDisplayName().getString();
+			item_display = (((new ItemStack(PalamodModBlocks.AMETHYST_TANK.get())).getDisplayName().getString()).replace("[", "")).replace("]", "");
 			max_stock = 60;
 		} else if (3 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type")) {
-			item_display = (new ItemStack(PalamodModBlocks.TITANE_TANK.get())).getDisplayName().getString();
+			item_display = (((new ItemStack(PalamodModBlocks.TITANE_TANK.get())).getDisplayName().getString()).replace("[", "")).replace("]", "");
 			max_stock = 95;
 		} else if (4 == itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type")) {
-			item_display = (new ItemStack(PalamodModBlocks.PALADIUM_TANK.get())).getDisplayName().getString();
+			item_display = (((new ItemStack(PalamodModBlocks.PALADIUM_TANK.get())).getDisplayName().getString()).replace("[", "")).replace("]", "");
 			max_stock = 135;
 		}
 		itemstack.set(DataComponents.CUSTOM_NAME,

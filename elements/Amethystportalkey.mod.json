@@ -47,6 +47,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
+    "onItemInInventoryTick": {
+      "name": "Keytooltip"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

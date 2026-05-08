@@ -148,10 +148,10 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onDestroyedByPlayer": {
-      "name": "Portalblockbreakviaportal"
+      "name": "PortalblockbreakviaOther"
     },
     "onDestroyedByExplosion": {
-      "name": "Portalblockbreakviaportal"
+      "name": "PortalblockbreakviaOther"
     },
     "generateFeature": false,
     "restrictionBiomes": [],
