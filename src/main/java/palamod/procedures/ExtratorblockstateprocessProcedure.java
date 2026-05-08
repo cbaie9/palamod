@@ -64,7 +64,7 @@ public class ExtratorblockstateprocessProcedure {
 				}
 			} else {
 				{
-					int _value = (int) (1 + Math.round(((getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip13 ? blockstate.getValue(_getip13) : -1) / 15d) * 12));
+					int _value = (int) (1 + Math.round(((getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip13 ? blockstate.getValue(_getip13) : -1) / 15d) * 9));
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
@@ -89,6 +89,19 @@ public class ExtratorblockstateprocessProcedure {
 					if (_bs.getBlock().getStateDefinition().getProperty("extracted_sap") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
+				{
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					if (_bs.getBlock().getStateDefinition().getProperty("fiole") instanceof BooleanProperty _booleanProp)
+						world.setBlock(_pos, _bs.setValue(_booleanProp, true), 3);
+				}
+				{
+					int _value = (int) Math.round(((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("seve") / 16) * 9);
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+				}
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -103,19 +116,6 @@ public class ExtratorblockstateprocessProcedure {
 				if (entity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(PalamodModItems.FLASK.get());
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-				}
-				{
-					BlockPos _pos = BlockPos.containing(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					if (_bs.getBlock().getStateDefinition().getProperty("fiole") instanceof BooleanProperty _booleanProp)
-						world.setBlock(_pos, _bs.setValue(_booleanProp, true), 3);
-				}
-				{
-					int _value = (int) (1 + Math.round(((getPropertyByName(blockstate, "extracted_sap") instanceof IntegerProperty _getip29 ? blockstate.getValue(_getip29) : -1) / 16d) * 12));
-					BlockPos _pos = BlockPos.containing(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
-						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
 			}
 		}

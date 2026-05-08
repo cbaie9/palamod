@@ -142,7 +142,7 @@ public class PortaldropprocessProcedure {
 							BlockState _bs = world.getBlockState(_bp);
 							if (_blockEntity != null) {
 								_blockEntity.getPersistentData().putDouble("key_stock",
-										(getBlockNBTNumber(world, BlockPos.containing(x_core, y_core, z_core), "key_stock") + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("stock")));
+										(getBlockNBTNumber(world, BlockPos.containing(x_core, y_core, z_core), "key_stock") + itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble(stock_name)));
 							}
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
