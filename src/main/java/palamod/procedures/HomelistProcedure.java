@@ -1,6 +1,5 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
@@ -11,7 +10,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -23,19 +21,11 @@ public class HomelistProcedure {
 		if (entity == null)
 			return;
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
+		File home = new File("");
+		String folder = "";
 		double cycle_loop = 0;
 		double lvl = 0;
-		File home = new File("");
-		File jobs = new File("");
-		String folder = "";
-		if (IsgameserversideProcedure.execute()) {
-			folder = FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString();
-		} else if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			folder = FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-					+ "\\home\\" + entity.getUUID().toString();
-		} else {
-			folder = "null";
-		}
+		folder = FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString();
 		if (!("null").equals(folder)) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

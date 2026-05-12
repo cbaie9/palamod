@@ -1,6 +1,9 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
+import palamod.init.PalamodModGameRules;
+
+import palamod.PalamodMod;
+
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
@@ -12,7 +15,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -25,17 +27,9 @@ public class SethomeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
 			return;
-		double lvl = 0;
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		File jobs = new File("");
 		File home = new File("");
-		if (IsgameserversideProcedure.execute()) {
-			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		} else if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()),
-					File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		}
+		home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
 		if (home.exists()) {
 			main.addProperty("home_x", x);
 			main.addProperty("home_y", y);
@@ -56,6 +50,10 @@ public class SethomeprocessProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" The home " + "" + StringArgumentType.getString(arguments, "home_name")
 								+ " has been created at your position\",\"color\":\"gold\"},{\"text\":\"\\n \"}]"));
+			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				PalamodMod.LOGGER.debug((((((((Component.translatable("palamod.procedure.home.run").getString()).replace("%6", "" + entity.level().dimension())).replace("%5", "" + z)).replace("%4", "" + y)).replace("%3", "" + x)).replace("%2",
+						"'" + StringArgumentType.getString(arguments, "home_name") + "'")).replace("%1", entity.getDisplayName().getString())));
+			}
 		} else {
 			try {
 				home.getParentFile().mkdirs();
@@ -65,6 +63,10 @@ public class SethomeprocessProcedure {
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("Creating a file for saving home " + StringArgumentType.getString(arguments, "home_name") + ". . .")), false);
+			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				PalamodMod.LOGGER.debug(((((Component.translatable("palamod.procedure.home.createfile").getString()).replace("%3", entity.getDisplayName().getString())).replace("%2", "'" + StringArgumentType.getString(arguments, "home_name") + "'"))
+						.replace("%1", "'" + jobs.getPath() + "'")));
+			}
 			SethomeprocessProcedure.execute(world, x, y, z, arguments, entity);
 		}
 	}

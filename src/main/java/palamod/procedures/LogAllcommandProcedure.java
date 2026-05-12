@@ -20,19 +20,19 @@ public class LogAllcommandProcedure {
 	public static void onCommand(CommandEvent event) {
 		Entity entity = event.getParseResults().getContext().getSource().getEntity();
 		if (entity != null) {
-			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getParseResults().getReader().getString());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, String command) {
+		execute(null, world, x, y, z, entity, command);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, String command) {
+		if (entity == null || command == null)
 			return;
 		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
-			PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " executed a command in the chat at " + " x : " + x + " y : " + y + " z : " + z));
+			PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " executed a command in the chat at " + " x : " + x + " y : " + y + " z : " + z + " | command : " + command));
 		}
 	}
 }
