@@ -1678,5 +1678,6 @@
   "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget",
   "block.palamod.key_portal_block": "Key portal block",
   "palamod.procedure.home.createfile": "[ /sethome ] : File created at %1 for home %2 of %3, relunching sethome",
-  "palamod.procedure.home.run": "[ /sethome ] : %1 created a home named %2 at x : %3, y : %4, z : %5 ( dim id : %6 ) "
+  "palamod.procedure.home.run": "[ /sethome ] : %1 created a home named %2 at x : %3, y : %4, z : %5 ( dim id : %6 ) ",
+  "attribute.palamod.is_fighting": "Is Fighting"
 }

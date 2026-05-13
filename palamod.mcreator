@@ -45835,6 +45835,16 @@
         ]
       },
       "path": "~/oxylib"
+    },
+    {
+      "name": "IsFighting",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_fighting",
+      "metadata": {
+        "files": []
+      }
     }
   ],
   "variable_elements": [
@@ -50893,7 +50903,8 @@
       "palamod.portal.need_pollen": "You need 2 endium pollen to craft an endium nugget",
       "block.palamod.key_portal_block": "Key portal block",
       "palamod.procedure.home.createfile": "[ /sethome ] : File created at %1 for home %2 of %3, relunching sethome",
-      "palamod.procedure.home.run": "[ /sethome ] : %1 created a home named %2 at x : %3, y : %4, z : %5 ( dim id : %6 ) "
+      "palamod.procedure.home.run": "[ /sethome ] : %1 created a home named %2 at x : %3, y : %4, z : %5 ( dim id : %6 ) ",
+      "attribute.palamod.is_fighting": "Is Fighting"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52574,7 +52585,8 @@
       "palamod.portal.need_pollen": "",
       "block.palamod.key_portal_block": "Key portal block",
       "palamod.procedure.home.createfile": "",
-      "palamod.procedure.home.run": ""
+      "palamod.procedure.home.run": "",
+      "attribute.palamod.is_fighting": "Is Fighting"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54255,11 +54267,13 @@
       "palamod.portal.need_pollen": "",
       "block.palamod.key_portal_block": "Key portal block",
       "palamod.procedure.home.createfile": "",
-      "palamod.procedure.home.run": ""
+      "palamod.procedure.home.run": "",
+      "attribute.palamod.is_fighting": "Is Fighting"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/palamod/init/PalamodModAttributes.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
       "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/palamod/world/features/StructureFeature.java",

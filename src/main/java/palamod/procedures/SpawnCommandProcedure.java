@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModAttributes;
+
 import palamod.PalamodMod;
 
 import net.neoforged.fml.loading.FMLPaths;
@@ -8,6 +10,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
@@ -104,11 +107,15 @@ public class SpawnCommandProcedure {
 						dim_check = true;
 					}
 					if (dim_check) {
-						{
-							Entity _ent = entity;
-							_ent.teleportTo(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble());
-							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+						if (0 == (entity instanceof LivingEntity _livingEntity14 && _livingEntity14.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING) ? _livingEntity14.getAttribute(PalamodModAttributes.IS_FIGHTING).getValue() : 0)) {
+							{
+								Entity _ent = entity;
+								_ent.teleportTo(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble());
+								if (_ent instanceof ServerPlayer _serverPlayer)
+									_serverPlayer.connection.teleport(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+							}
+						} else {
+							MsgtellrawautosendProcedure.execute(world, x, y, z, "You can't teleport if you are in a fight");
 						}
 					} else {
 						if (world instanceof ServerLevel _level)

@@ -1677,5 +1677,6 @@
   "palamod.portal.need_pollen": "",
   "block.palamod.key_portal_block": "Key portal block",
   "palamod.procedure.home.createfile": "",
-  "palamod.procedure.home.run": ""
+  "palamod.procedure.home.run": "",
+  "attribute.palamod.is_fighting": "Is Fighting"
 }
