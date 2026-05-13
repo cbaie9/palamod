@@ -65,7 +65,7 @@ public class SethomeprocessProcedure {
 				_player.displayClientMessage(Component.literal(("Creating a file for saving home " + StringArgumentType.getString(arguments, "home_name") + ". . .")), false);
 			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug(((((Component.translatable("palamod.procedure.home.createfile").getString()).replace("%3", entity.getDisplayName().getString())).replace("%2", "'" + StringArgumentType.getString(arguments, "home_name") + "'"))
-						.replace("%1", "'" + jobs.getPath() + "'")));
+						.replace("%1", "'" + home.getPath() + "'")));
 			}
 			SethomeprocessProcedure.execute(world, x, y, z, arguments, entity);
 		}

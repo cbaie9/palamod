@@ -1,6 +1,7 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
+import palamod.PalamodMod;
+
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
@@ -20,7 +21,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -36,13 +36,7 @@ public class SpawnCommandProcedure {
 		File home = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		boolean dim_check = false;
-		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\global\\"),
-					File.separator + "spawn.json");
-		} else if (IsgameserversideProcedure.execute()) {
-			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/spawn/"), File.separator + "spawn.json");
-		}
+		home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/spawn/"), File.separator + "spawn.json");
 		if (home.exists()) {
 			{
 				try {
@@ -125,6 +119,8 @@ public class SpawnCommandProcedure {
 					e.printStackTrace();
 				}
 			}
+		} else {
+			PalamodMod.LOGGER.error("File for spawn not found");
 		}
 	}
 }
