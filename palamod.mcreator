@@ -45845,6 +45845,37 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "HoodHelmetArmorHelmetTickEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hood_helmet_armor_helmet_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/HoodHelmetArmorHelmetTickEventProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "HoodHelmetArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hood_helmet_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/item/HoodHelmetArmorItem.java",
+          "src/main/resources/assets/palamod/models/item/hood_helmet_armor_helmet.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -47458,6 +47489,7 @@
       "CUSTOM:Endiumshovelhead"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:HoodHelmetArmor.helmet",
       "~CUSTOM:Pigarmor.helmet",
       "~CUSTOM:Mixedendiumarmor.helmet",
       "~CUSTOM:Paladiumarmorcustom10.helmet",
@@ -48909,7 +48941,8 @@
       "EndiumPortalBlock",
       "EndiumPortalAngleBlock",
       "Endiumheart",
-      "Amethystportalkey"
+      "Amethystportalkey",
+      "HoodHelmetArmor"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -49068,7 +49101,8 @@
       "Unclaimfinder",
       "Unclaimfinderorange",
       "Unclaimfinderred",
-      "Unclaimfinderblue"
+      "Unclaimfinderblue",
+      "HoodHelmetArmor"
     ],
     "CUSTOM:Baseclaim": [
       "Obsidiantrapdoor",
@@ -50904,7 +50938,8 @@
       "block.palamod.key_portal_block": "Key portal block",
       "palamod.procedure.home.createfile": "[ /sethome ] : File created at %1 for home %2 of %3, relunching sethome",
       "palamod.procedure.home.run": "[ /sethome ] : %1 created a home named %2 at x : %3, y : %4, z : %5 ( dim id : %6 ) ",
-      "attribute.palamod.is_fighting": "Is Fighting"
+      "attribute.palamod.is_fighting": "Is Fighting",
+      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52586,7 +52621,8 @@
       "block.palamod.key_portal_block": "Key portal block",
       "palamod.procedure.home.createfile": "",
       "palamod.procedure.home.run": "",
-      "attribute.palamod.is_fighting": "Is Fighting"
+      "attribute.palamod.is_fighting": "Is Fighting",
+      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54268,7 +54304,8 @@
       "block.palamod.key_portal_block": "Key portal block",
       "palamod.procedure.home.createfile": "",
       "palamod.procedure.home.run": "",
-      "attribute.palamod.is_fighting": "Is Fighting"
+      "attribute.palamod.is_fighting": "Is Fighting",
+      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
     }
   },
   "metadata": {
@@ -54327,7 +54364,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.20.065.1",
+    "version": "1.20.066",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

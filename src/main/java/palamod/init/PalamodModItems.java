@@ -699,6 +699,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> ENDIUM_PORTAL_ANGLE_BLOCK;
 	public static final DeferredItem<Item> PORTAL_BLOCK;
 	public static final DeferredItem<Item> KEY_PORTAL_BLOCK;
+	public static final DeferredItem<Item> HOOD_HELMET_ARMOR_HELMET;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1358,6 +1359,7 @@ public class PalamodModItems {
 		ENDIUM_PORTAL_ANGLE_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK, new Item.Properties().rarity(Rarity.RARE));
 		PORTAL_BLOCK = block(PalamodModBlocks.PORTAL_BLOCK, new Item.Properties().stacksTo(1));
 		KEY_PORTAL_BLOCK = block(PalamodModBlocks.KEY_PORTAL_BLOCK, new Item.Properties().stacksTo(1));
+		HOOD_HELMET_ARMOR_HELMET = REGISTRY.register("hood_helmet_armor_helmet", HoodHelmetArmorItem.Helmet::new);
 	}
 
 	// Start of user code block custom items

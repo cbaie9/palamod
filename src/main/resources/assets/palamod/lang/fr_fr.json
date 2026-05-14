@@ -1678,5 +1678,6 @@
   "block.palamod.key_portal_block": "Key portal block",
   "palamod.procedure.home.createfile": "",
   "palamod.procedure.home.run": "",
-  "attribute.palamod.is_fighting": "Is Fighting"
+  "attribute.palamod.is_fighting": "Is Fighting",
+  "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
 }

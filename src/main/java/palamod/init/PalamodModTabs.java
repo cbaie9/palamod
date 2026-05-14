@@ -339,6 +339,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK.get().asItem());
 				tabData.accept(PalamodModItems.ENDIUM_HEART.get());
 				tabData.accept(PalamodModItems.AMETHYST_PORTAL_KEY.get());
+				tabData.accept(PalamodModItems.HOOD_HELMET_ARMOR_HELMET.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {
@@ -501,6 +502,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER_ORANGE.get());
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER_RED.get());
 				tabData.accept(PalamodModItems.UNCLAIM_FINDER_BLUE.get());
+				tabData.accept(PalamodModItems.HOOD_HELMET_ARMOR_HELMET.get());
 			}).withTabsBefore(DECORATIONCREATIVETAB.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASECLAIM = REGISTRY.register("baseclaim",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.baseclaim")).icon(() -> new ItemStack(PalamodModBlocks.RENFORCED_OBSIDIAN.get())).displayItems((parameters, tabData) -> {
