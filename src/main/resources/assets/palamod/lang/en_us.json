@@ -1682,5 +1682,11 @@
   "attribute.palamod.is_fighting": "Is Fighting",
   "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
   "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
-  "gamerule.defaultFightingTime": "Fighting Time"
+  "gamerule.defaultFightingTime": "Fighting Time",
+  "attribute.palamod.fighting_time": "Fighting Time",
+  "palamod.procedure.infight.source": "You hit %1, you are now in a fight for %2 seconds, the command to teleport has been restrained in that time, each hit infliged or received will reset the countdown to %2 seconds Use /fight time to know for how high the countdown is, Good Luck :)",
+  "palamod.procedure.infight.victim": "You been hurt by %1, you are now in a fight for %2 seconds, the command to teleport has been restrained in that time, each hit infliged or received will reset the countdown to %2 seconds Use /fight time to know for how high the countdown is, Good Luck :)",
+  "palamod.procedure.infight.out": "You are not a in a fight anymore",
+  "palamod.procedure.infight.getime": "You are still in fight for %1 ( %2 second(s) )",
+  "palamod.procedure.infight.overlayLabel": "%1 s"
 }

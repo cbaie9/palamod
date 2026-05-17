@@ -42275,7 +42275,8 @@
         "files": [
           "src/main/java/palamod/procedures/MsgtellrawautosendProcedure.java"
         ]
-      }
+      },
+      "path": "~/oxylib"
     },
     {
       "name": "Extratorblockstateprocess",
@@ -45844,25 +45845,8 @@
       "registry_name": "is_fighting",
       "metadata": {
         "files": []
-      }
-    },
-    {
-      "name": "HoodHelmetArmorHelmetTickEvent",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hood_helmet_armor_helmet_tick_event",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/palamod/procedures/HoodHelmetArmorHelmetTickEventProcedure.java"
-        ]
-      }
+      },
+      "path": "~/oxylib/fightingMode"
     },
     {
       "name": "HoodHelmetArmor",
@@ -45946,6 +45930,238 @@
           "src/main/java/palamod/procedures/SlimyhelmetjumpProcedure.java"
         ]
       }
+    },
+    {
+      "name": "FightingTime",
+      "type": "attribute",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_time",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "Msgtellrawautosendspecialselector",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "msgtellrawautosendspecialselector",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "selecteur",
+            "type": "string"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/MsgtellrawautosendspecialselectorProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "FightingModeActivate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_mode_activate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/FightingModeActivateProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "FightingModeGetOut",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_mode_get_out",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/FightingModeGetOutProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "FightingTimeProcess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_time_process",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/FightingTimeProcessProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "FightimeOverlayGetindex",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fightime_overlay_getindex",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/FightimeOverlayGetindexProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "FightingTimeOverlayGetLogic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_time_overlay_get_logic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/FightingTimeOverlayGetLogicProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "FightingTimeOverlayGetLabel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_time_overlay_get_label",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/FightingTimeOverlayGetLabelProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "FightingTimeOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighting_time_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/screens/FightingTimeOverlayOverlay.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
     }
   ],
   "variable_elements": [
@@ -48705,9 +48921,6 @@
       "CUSTOM:Titanetank",
       "CUSTOM:PaladiumTank"
     ],
-    "BLOCKS:minecraft:dirt": [],
-    "BLOCKS:minecraft:sand": [],
-    "BIOMES:minecraft:is_overworld": [],
     "BLOCKS:mod:portal_blocks": [
       "CUSTOM:AmethystPortalblock",
       "CUSTOM:TitanePortalBlock",
@@ -51011,7 +51224,13 @@
       "attribute.palamod.is_fighting": "Is Fighting",
       "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
       "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
-      "gamerule.defaultFightingTime": "Fighting Time"
+      "gamerule.defaultFightingTime": "Fighting Time",
+      "attribute.palamod.fighting_time": "Fighting Time",
+      "palamod.procedure.infight.source": "You hit %1, you are now in a fight for %2 seconds, the command to teleport has been restrained in that time, each hit infliged or received will reset the countdown to %2 seconds Use /fight time to know for how high the countdown is, Good Luck :)",
+      "palamod.procedure.infight.victim": "You been hurt by %1, you are now in a fight for %2 seconds, the command to teleport has been restrained in that time, each hit infliged or received will reset the countdown to %2 seconds Use /fight time to know for how high the countdown is, Good Luck :)",
+      "palamod.procedure.infight.out": "You are not a in a fight anymore",
+      "palamod.procedure.infight.getime": "You are still in fight for %1 ( %2 second(s) )",
+      "palamod.procedure.infight.overlayLabel": "%1 s"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52696,7 +52915,13 @@
       "attribute.palamod.is_fighting": "Is Fighting",
       "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
       "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
-      "gamerule.defaultFightingTime": "Fighting Time"
+      "gamerule.defaultFightingTime": "Fighting Time",
+      "attribute.palamod.fighting_time": "Fighting Time",
+      "palamod.procedure.infight.source": "",
+      "palamod.procedure.infight.victim": "",
+      "palamod.procedure.infight.out": "",
+      "palamod.procedure.infight.getime": "",
+      "palamod.procedure.infight.overlayLabel": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54381,7 +54606,13 @@
       "attribute.palamod.is_fighting": "Is Fighting",
       "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
       "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
-      "gamerule.defaultFightingTime": "Fighting Time"
+      "gamerule.defaultFightingTime": "Fighting Time",
+      "attribute.palamod.fighting_time": "Fighting Time",
+      "palamod.procedure.infight.source": "",
+      "palamod.procedure.infight.victim": "",
+      "palamod.procedure.infight.out": "",
+      "palamod.procedure.infight.getime": "",
+      "palamod.procedure.infight.overlayLabel": ""
     }
   },
   "metadata": {

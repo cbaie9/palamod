@@ -1,0 +1,55 @@
+{
+  "_fv": 85,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_fighting_time_overlay_get_l",
+          "text": {
+            "fixedValue": "",
+            "name": "FightingTimeOverlayGetLabel"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": 9,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "split_combat.png",
+          "spritesCount": 21,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "FightimeOverlayGetindex"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 4,
+          "locked": false
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "FightingTimeOverlayGetLogic"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

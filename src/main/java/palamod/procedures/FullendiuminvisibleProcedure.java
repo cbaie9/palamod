@@ -10,7 +10,6 @@ import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -74,28 +73,18 @@ public class FullendiuminvisibleProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 900, 1, false, false));
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PalamodModItems.TRAVEL_ARMOR_HELMET.get()) {
-			if (entity instanceof LivingEntity _entity) {
-				AttributeModifier modifier = new AttributeModifier(ResourceLocation.parse("palamod:slimy"), 1000000, AttributeModifier.Operation.ADD_VALUE);
-				if (!_entity.getAttribute(Attributes.SAFE_FALL_DISTANCE).hasModifier(modifier.id())) {
-					_entity.getAttribute(Attributes.SAFE_FALL_DISTANCE).addPermanentModifier(modifier);
-				}
-			}
+			if (entity instanceof LivingEntity _livingEntity25 && _livingEntity25.getAttributes().hasAttribute(Attributes.SAFE_FALL_DISTANCE))
+				_livingEntity25.getAttribute(Attributes.SAFE_FALL_DISTANCE).setBaseValue(1000000);
 		} else {
-			if (entity instanceof LivingEntity _entity) {
-				_entity.getAttribute(Attributes.SAFE_FALL_DISTANCE).removeModifier(ResourceLocation.parse("palamod:slimy"));
-			}
+			if (entity instanceof LivingEntity _livingEntity26 && _livingEntity26.getAttributes().hasAttribute(Attributes.SAFE_FALL_DISTANCE))
+				_livingEntity26.getAttribute(Attributes.SAFE_FALL_DISTANCE).setBaseValue(3);
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PalamodModItems.HOOD_HELMET_ARMOR_HELMET.get()) {
-			if (entity instanceof LivingEntity _entity) {
-				AttributeModifier modifier = new AttributeModifier(ResourceLocation.parse("palamod:hood"), 0, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
-				if (!_entity.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).hasModifier(modifier.id())) {
-					_entity.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).addPermanentModifier(modifier);
-				}
-			}
+			if (entity instanceof LivingEntity _livingEntity29 && _livingEntity29.getAttributes().hasAttribute(NeoForgeMod.NAMETAG_DISTANCE))
+				_livingEntity29.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).setBaseValue(0);
 		} else {
-			if (entity instanceof LivingEntity _entity) {
-				_entity.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).removeModifier(ResourceLocation.parse("palamod:hood"));
-			}
+			if (entity instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(NeoForgeMod.NAMETAG_DISTANCE))
+				_livingEntity30.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).setBaseValue(64);
 		}
 	}
 }

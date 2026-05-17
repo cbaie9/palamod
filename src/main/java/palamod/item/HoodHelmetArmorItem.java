@@ -1,19 +1,13 @@
 package palamod.item;
 
-import palamod.procedures.HoodHelmetArmorHelmetTickEventProcedure;
-
 import net.neoforged.neoforge.registries.RegisterEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
@@ -23,8 +17,6 @@ import net.minecraft.Util;
 
 import java.util.List;
 import java.util.EnumMap;
-
-import com.google.common.collect.Iterables;
 
 @EventBusSubscriber
 public abstract class HoodHelmetArmorItem extends ArmorItem {
@@ -52,14 +44,6 @@ public abstract class HoodHelmetArmorItem extends ArmorItem {
 	public static class Helmet extends HoodHelmetArmorItem {
 		public Helmet() {
 			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(15)));
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				HoodHelmetArmorHelmetTickEventProcedure.execute(entity);
-			}
 		}
 	}
 }

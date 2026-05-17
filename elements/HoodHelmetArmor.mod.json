@@ -10,9 +10,6 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "onHelmetTick": {
-      "name": "HoodHelmetArmorHelmetTickEvent"
-    },
     "creativeTabs": [
       {
         "value": "CUSTOM:Pvpcreativetab"

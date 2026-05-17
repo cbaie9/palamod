@@ -1681,5 +1681,11 @@
   "attribute.palamod.is_fighting": "Is Fighting",
   "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
   "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
-  "gamerule.defaultFightingTime": "Fighting Time"
+  "gamerule.defaultFightingTime": "Fighting Time",
+  "attribute.palamod.fighting_time": "Fighting Time",
+  "palamod.procedure.infight.source": "",
+  "palamod.procedure.infight.victim": "",
+  "palamod.procedure.infight.out": "",
+  "palamod.procedure.infight.getime": "",
+  "palamod.procedure.infight.overlayLabel": ""
 }
