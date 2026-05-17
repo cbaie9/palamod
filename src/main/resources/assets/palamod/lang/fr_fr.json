@@ -1687,5 +1687,7 @@
   "palamod.procedure.infight.victim": "",
   "palamod.procedure.infight.out": "",
   "palamod.procedure.infight.getime": "",
-  "palamod.procedure.infight.overlayLabel": ""
+  "palamod.procedure.infight.overlayLabel": "",
+  "palamod.procedure.spawn.fightplayermsg": "",
+  "palamod.procedure.home.fightplayermsg": ""
 }

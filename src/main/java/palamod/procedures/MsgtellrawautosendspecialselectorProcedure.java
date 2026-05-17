@@ -14,6 +14,6 @@ public class MsgtellrawautosendspecialselectorProcedure {
 			return;
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					(("tellraw %1 [\"\",{\"text\":\"[ Bem ]\",\"color\":\"light_purple\"},{\"text\":\" : %2\",\"color\":\"white\"}]".replace("%2", text)).replace("%1", selecteur)));
+					(("tellraw %1 [\"\",{\"text\":\"[ Palamod ]\",\"color\":\"dark_red\"},{\"text\":\" : %2\",\"color\":\"gold\"}]".replace("%2", text)).replace("%1", selecteur)));
 	}
 }

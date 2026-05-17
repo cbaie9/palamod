@@ -51230,7 +51230,9 @@
       "palamod.procedure.infight.victim": "You been hurt by %1, you are now in a fight for %2 seconds, the command to teleport has been restrained in that time, each hit infliged or received will reset the countdown to %2 seconds Use /fight time to know for how high the countdown is, Good Luck :)",
       "palamod.procedure.infight.out": "You are not a in a fight anymore",
       "palamod.procedure.infight.getime": "You are still in fight for %1 ( %2 second(s) )",
-      "palamod.procedure.infight.overlayLabel": "%1 s"
+      "palamod.procedure.infight.overlayLabel": "%1 s",
+      "palamod.procedure.spawn.fightplayermsg": "You can\u0027t teleport to spawn because you are in a fight, please quit the fight to teleport to the spawn",
+      "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52921,7 +52923,9 @@
       "palamod.procedure.infight.victim": "",
       "palamod.procedure.infight.out": "",
       "palamod.procedure.infight.getime": "",
-      "palamod.procedure.infight.overlayLabel": ""
+      "palamod.procedure.infight.overlayLabel": "",
+      "palamod.procedure.spawn.fightplayermsg": "",
+      "palamod.procedure.home.fightplayermsg": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54612,7 +54616,9 @@
       "palamod.procedure.infight.victim": "",
       "palamod.procedure.infight.out": "",
       "palamod.procedure.infight.getime": "",
-      "palamod.procedure.infight.overlayLabel": ""
+      "palamod.procedure.infight.overlayLabel": "",
+      "palamod.procedure.spawn.fightplayermsg": "",
+      "palamod.procedure.home.fightplayermsg": ""
     }
   },
   "metadata": {
