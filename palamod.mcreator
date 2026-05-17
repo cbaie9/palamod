@@ -45911,6 +45911,41 @@
         ]
       },
       "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "Hoodhelmetcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hoodhelmetcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/hoodhelmetcraft.json",
+          "src/main/resources/data/palamod/advancement/recipes/hoodhelmetcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "Slimyhelmetjump",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimyhelmetjump",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SlimyhelmetjumpProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

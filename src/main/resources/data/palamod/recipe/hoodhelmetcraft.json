@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "minecraft:wool"
+    },
+    "b": {
+      "item": "palamod:paladium_core"
+    }
+  },
+  "result": {
+    "id": "palamod:hood_helmet_armor_helmet",
+    "count": 1
+  }
+}
