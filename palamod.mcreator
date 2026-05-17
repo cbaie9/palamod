@@ -45876,6 +45876,41 @@
           "src/main/resources/assets/palamod/models/item/hood_helmet_armor_helmet.json"
         ]
       }
+    },
+    {
+      "name": "DefaultFightingTime",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "default_fighting_time",
+      "metadata": {
+        "type": "number",
+        "files": []
+      },
+      "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "LoadOnEntityGameruleFighting",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_on_entity_gamerule_fighting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadOnEntityGameruleFightingProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/fightingMode"
     }
   ],
   "variable_elements": [
@@ -50939,7 +50974,9 @@
       "palamod.procedure.home.createfile": "[ /sethome ] : File created at %1 for home %2 of %3, relunching sethome",
       "palamod.procedure.home.run": "[ /sethome ] : %1 created a home named %2 at x : %3, y : %4, z : %5 ( dim id : %6 ) ",
       "attribute.palamod.is_fighting": "Is Fighting",
-      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
+      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
+      "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+      "gamerule.defaultFightingTime": "Fighting Time"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52622,7 +52659,9 @@
       "palamod.procedure.home.createfile": "",
       "palamod.procedure.home.run": "",
       "attribute.palamod.is_fighting": "Is Fighting",
-      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
+      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
+      "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+      "gamerule.defaultFightingTime": "Fighting Time"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54305,7 +54344,9 @@
       "palamod.procedure.home.createfile": "",
       "palamod.procedure.home.run": "",
       "attribute.palamod.is_fighting": "Is Fighting",
-      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet"
+      "item.palamod.hood_helmet_armor_helmet": "Hood Helmet Armor Helmet",
+      "gamerule.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+      "gamerule.defaultFightingTime": "Fighting Time"
     }
   },
   "metadata": {
@@ -54353,7 +54394,12 @@
     "children": [
       {
         "name": "oxylib",
-        "children": []
+        "children": [
+          {
+            "name": "fightingMode",
+            "children": []
+          }
+        ]
       },
       {
         "name": "clicker",

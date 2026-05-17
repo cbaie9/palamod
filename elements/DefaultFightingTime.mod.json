@@ -1,0 +1,12 @@
+{
+  "_fv": 85,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Fighting Time",
+    "description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 400
+  }
+}

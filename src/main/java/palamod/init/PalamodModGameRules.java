@@ -24,6 +24,7 @@ public class PalamodModGameRules {
 	public static GameRules.Key<GameRules.IntegerValue> JOBS_XP_BASE_MULTIPLIER;
 	public static GameRules.Key<GameRules.BooleanValue> JOBS_LEVEL_BASE;
 	public static GameRules.Key<GameRules.IntegerValue> BASE_JOB_LEVEL_MULTIPLIER;
+	public static GameRules.Key<GameRules.IntegerValue> DEFAULT_FIGHTING_TIME;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
@@ -40,5 +41,6 @@ public class PalamodModGameRules {
 		JOBS_XP_BASE_MULTIPLIER = GameRules.register("jobsXpBaseMultiplier", GameRules.Category.PLAYER, GameRules.IntegerValue.create(100));
 		JOBS_LEVEL_BASE = GameRules.register("jobsLevelBase", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 		BASE_JOB_LEVEL_MULTIPLIER = GameRules.register("baseJobLevelMultiplier", GameRules.Category.PLAYER, GameRules.IntegerValue.create(1000));
+		DEFAULT_FIGHTING_TIME = GameRules.register("defaultFightingTime", GameRules.Category.PLAYER, GameRules.IntegerValue.create(400));
 	}
 }
