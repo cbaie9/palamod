@@ -46162,6 +46162,120 @@
         ]
       },
       "path": "~/oxylib/fightingMode"
+    },
+    {
+      "name": "BacklogOntp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backlog_ontp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "command",
+            "type": "string"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/BacklogOntpProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/back"
+    },
+    {
+      "name": "BacklogOnCustomTp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backlog_on_custom_tp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/BacklogOnCustomTpProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/back"
+    },
+    {
+      "name": "BackCommandProcess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "back_command_process",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/BackCommandProcessProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/back"
+    },
+    {
+      "name": "BackCommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "back_command",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/BackCommandCommand.java"
+        ]
+      },
+      "path": "~/oxylib/back"
     }
   ],
   "variable_elements": [
@@ -51232,7 +51346,10 @@
       "palamod.procedure.infight.getime": "You are still in fight for %1 ( %2 second(s) )",
       "palamod.procedure.infight.overlayLabel": "%1 s",
       "palamod.procedure.spawn.fightplayermsg": "You can\u0027t teleport to spawn because you are in a fight, please quit the fight to teleport to the spawn",
-      "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home"
+      "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home",
+      "palamod.procedure.gamerule_disable_adminshop_": "The Adminshop system of the Palamod has been disabled due to the Money system being disabled, if the money system shouldn\u0027t be disabled, please contact administrators",
+      "palamod.procedure.back.logontp": "[/back:BacklogOnTp] : Logged teleportation for %1 at x: %2, y : %3, z : %4 ",
+      "palamod.procedure.back.tp": "You were teleporting the place where you were before your last teleportation. "
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52920,7 +53037,9 @@
       "palamod.procedure.infight.getime": "Vous êtes encore en combat pour %1 ( %2 secondes)",
       "palamod.procedure.infight.overlayLabel": "%1 s",
       "palamod.procedure.spawn.fightplayermsg": "Vous ne pouvez pas vous téléporter au point d\u0027apparition car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter",
-      "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison"
+      "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison",
+      "palamod.procedure.back.logontp": "",
+      "palamod.procedure.back.tp": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54608,7 +54727,9 @@
       "palamod.procedure.infight.getime": "Vous êtes encore en combat pour %1 ( %2 secondes)",
       "palamod.procedure.infight.overlayLabel": "%1 s",
       "palamod.procedure.spawn.fightplayermsg": "Vous ne pouvez pas vous téléporter au point d\u0027apparition car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter",
-      "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison"
+      "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison",
+      "palamod.procedure.back.logontp": "",
+      "palamod.procedure.back.tp": ""
     }
   },
   "metadata": {
@@ -54659,6 +54780,10 @@
         "children": [
           {
             "name": "fightingMode",
+            "children": []
+          },
+          {
+            "name": "back",
             "children": []
           }
         ]

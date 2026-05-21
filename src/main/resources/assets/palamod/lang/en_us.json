@@ -1690,5 +1690,8 @@
   "palamod.procedure.infight.getime": "You are still in fight for %1 ( %2 second(s) )",
   "palamod.procedure.infight.overlayLabel": "%1 s",
   "palamod.procedure.spawn.fightplayermsg": "You can\u0027t teleport to spawn because you are in a fight, please quit the fight to teleport to the spawn",
-  "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home"
+  "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home",
+  "palamod.procedure.gamerule_disable_adminshop_": "The Adminshop system of the Palamod has been disabled due to the Money system being disabled, if the money system shouldn\u0027t be disabled, please contact administrators",
+  "palamod.procedure.back.logontp": "[/back:BacklogOnTp] : Logged teleportation for %1 at x: %2, y : %3, z : %4 ",
+  "palamod.procedure.back.tp": "You were teleporting the place where you were before your last teleportation. "
 }

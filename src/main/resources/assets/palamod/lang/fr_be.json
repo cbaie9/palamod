@@ -1684,5 +1684,7 @@
   "palamod.procedure.infight.getime": "Vous êtes encore en combat pour %1 ( %2 secondes)",
   "palamod.procedure.infight.overlayLabel": "%1 s",
   "palamod.procedure.spawn.fightplayermsg": "Vous ne pouvez pas vous téléporter au point d\u0027apparition car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter",
-  "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison"
+  "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison",
+  "palamod.procedure.back.logontp": "",
+  "palamod.procedure.back.tp": ""
 }

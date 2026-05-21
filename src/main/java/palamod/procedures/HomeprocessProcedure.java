@@ -110,6 +110,7 @@ public class HomeprocessProcedure {
 									dim_check = true;
 								}
 								if (dim_check) {
+									BacklogOnCustomTpProcedure.execute(x, y, z, entity);
 									{
 										Entity _ent = entity;
 										_ent.teleportTo(main.get("home_x").getAsDouble(), main.get("home_y").getAsDouble(), main.get("home_z").getAsDouble());

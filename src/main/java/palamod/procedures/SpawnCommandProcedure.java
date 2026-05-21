@@ -109,6 +109,7 @@ public class SpawnCommandProcedure {
 						}
 						if (dim_check) {
 							if (0 == (entity instanceof LivingEntity _livingEntity15 && _livingEntity15.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING) ? _livingEntity15.getAttribute(PalamodModAttributes.IS_FIGHTING).getValue() : 0)) {
+								BacklogOnCustomTpProcedure.execute(x, y, z, entity);
 								{
 									Entity _ent = entity;
 									_ent.teleportTo(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble());
