@@ -46276,6 +46276,161 @@
         ]
       },
       "path": "~/oxylib/back"
+    },
+    {
+      "name": "ReadBalltop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "read_balltop",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "file",
+        "files": [
+          "src/main/java/palamod/procedures/ReadBalltopProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/balltop"
+    },
+    {
+      "name": "ReadMoneyFolder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "read_money_folder",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/ReadMoneyFolderProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "GenerateBalltop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generate_balltop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/GenerateBalltopProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/balltop"
+    },
+    {
+      "name": "BalltopShow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balltop_show",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/BalltopShowProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/balltop"
+    },
+    {
+      "name": "BalltopPreReload",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balltop_pre_reload",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/BalltopPreReloadProcedure.java"
+        ]
+      },
+      "path": "~/oxylib/balltop"
+    },
+    {
+      "name": "Balltop",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balltop",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/command/BalltopCommand.java"
+        ]
+      },
+      "path": "~/oxylib/balltop"
+    },
+    {
+      "name": "CreateMoneyFile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_money_file",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/CreateMoneyFileProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
     }
   ],
   "variable_elements": [
@@ -49656,7 +49811,6 @@
   "language_map": {
     "en_us": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "this account ( bypass the code ",
-      "": "Open or create the faction menu ( wip )",
       "item.palamod.pickaxeofthegodslv_13.description_0": "Level 13",
       "item.palamod.fake_water_bucket": "Fake water Bucket",
       "block.palamod.fertilzed_dirt": "Fertilzed dirt",
@@ -51349,7 +51503,12 @@
       "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home",
       "palamod.procedure.gamerule_disable_adminshop_": "The Adminshop system of the Palamod has been disabled due to the Money system being disabled, if the money system shouldn\u0027t be disabled, please contact administrators",
       "palamod.procedure.back.logontp": "[/back:BacklogOnTp] : Logged teleportation for %1 at x: %2, y : %3, z : %4 ",
-      "palamod.procedure.back.tp": "You were teleporting the place where you were before your last teleportation. "
+      "palamod.procedure.back.tp": "You were teleporting the place where you were before your last teleportation. ",
+      "palamod.procedure.balltop.1st": "1st",
+      "palamod.procedure.balltop.2nd": "2nd",
+      "palamod.procedure.balltop.3rd": "3rd",
+      "palamod.procedure.balltop.4rd": "4rd",
+      "palamod.procedure.balltop.5rd": "5rd"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53039,7 +53198,12 @@
       "palamod.procedure.spawn.fightplayermsg": "Vous ne pouvez pas vous téléporter au point d\u0027apparition car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter",
       "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison",
       "palamod.procedure.back.logontp": "",
-      "palamod.procedure.back.tp": ""
+      "palamod.procedure.back.tp": "",
+      "palamod.procedure.balltop.1st": "",
+      "palamod.procedure.balltop.2nd": "",
+      "palamod.procedure.balltop.3rd": "",
+      "palamod.procedure.balltop.4rd": "",
+      "palamod.procedure.balltop.5rd": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54729,7 +54893,12 @@
       "palamod.procedure.spawn.fightplayermsg": "Vous ne pouvez pas vous téléporter au point d\u0027apparition car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter",
       "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison",
       "palamod.procedure.back.logontp": "",
-      "palamod.procedure.back.tp": ""
+      "palamod.procedure.back.tp": "",
+      "palamod.procedure.balltop.1st": "",
+      "palamod.procedure.balltop.2nd": "",
+      "palamod.procedure.balltop.3rd": "",
+      "palamod.procedure.balltop.4rd": "",
+      "palamod.procedure.balltop.5rd": ""
     }
   },
   "metadata": {
@@ -54784,6 +54953,10 @@
           },
           {
             "name": "back",
+            "children": []
+          },
+          {
+            "name": "balltop",
             "children": []
           }
         ]

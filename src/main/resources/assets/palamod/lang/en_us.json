@@ -1,6 +1,5 @@
 {
   "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "this account ( bypass the code ",
-  "": "Open or create the faction menu ( wip )",
   "item.palamod.pickaxeofthegodslv_13.description_0": "Level 13",
   "item.palamod.fake_water_bucket": "Fake water Bucket",
   "block.palamod.fertilzed_dirt": "Fertilzed dirt",
@@ -1693,5 +1692,10 @@
   "palamod.procedure.home.fightplayermsg": "You can\u0027t teleport to your home because you are in a fight, please quit the fight to teleport to your home",
   "palamod.procedure.gamerule_disable_adminshop_": "The Adminshop system of the Palamod has been disabled due to the Money system being disabled, if the money system shouldn\u0027t be disabled, please contact administrators",
   "palamod.procedure.back.logontp": "[/back:BacklogOnTp] : Logged teleportation for %1 at x: %2, y : %3, z : %4 ",
-  "palamod.procedure.back.tp": "You were teleporting the place where you were before your last teleportation. "
+  "palamod.procedure.back.tp": "You were teleporting the place where you were before your last teleportation. ",
+  "palamod.procedure.balltop.1st": "1st",
+  "palamod.procedure.balltop.2nd": "2nd",
+  "palamod.procedure.balltop.3rd": "3rd",
+  "palamod.procedure.balltop.4rd": "4rd",
+  "palamod.procedure.balltop.5rd": "5rd"
 }

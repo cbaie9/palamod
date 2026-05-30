@@ -107,25 +107,7 @@ public class OpenpalamodgameProcedure {
 				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
 				File.separator + "clicker_upgrade.json");
 		JobsfilecreateautorepairProcedure.execute(world, entity);
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE) && !money.exists()) {
-			try {
-				money.getParentFile().mkdirs();
-				money.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			money_main.addProperty("money", 0);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(money);
-					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		}
+		CreateMoneyFileProcedure.execute(world, entity);
 		if (!clicker.exists()) {
 			try {
 				clicker.getParentFile().mkdirs();

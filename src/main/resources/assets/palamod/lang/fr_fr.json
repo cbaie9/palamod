@@ -1686,5 +1686,10 @@
   "palamod.procedure.spawn.fightplayermsg": "Vous ne pouvez pas vous téléporter au point d\u0027apparition car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter",
   "palamod.procedure.home.fightplayermsg": "Vous ne pouvez pas vous téléporter à votre maison car vous êtes dans un combat, veuillez quitter le combat pour vous téléporter à votre maison",
   "palamod.procedure.back.logontp": "",
-  "palamod.procedure.back.tp": ""
+  "palamod.procedure.back.tp": "",
+  "palamod.procedure.balltop.1st": "",
+  "palamod.procedure.balltop.2nd": "",
+  "palamod.procedure.balltop.3rd": "",
+  "palamod.procedure.balltop.4rd": "",
+  "palamod.procedure.balltop.5rd": ""
 }
