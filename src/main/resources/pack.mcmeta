@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 81,
+    "min_format": 101.1,
+    "max_format": 101.1,
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )"
   }
 }

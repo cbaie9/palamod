@@ -20,7 +20,7 @@ public class ConnectOpenjobsguiProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+		if (IsgameclientsideProcedure.execute()) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

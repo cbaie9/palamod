@@ -21,15 +21,21 @@ public class Switch_arrow_processProcedure {
 		z_source = sourceentity.getZ();
 		{
 			Entity _ent = immediatesourceentity;
-			_ent.teleportTo(x_source, y_source, z_source);
+			double _tx = x_source;
+			double _ty = y_source;
+			double _tz = z_source;
+			_ent.teleportTo(_tx, _ty, _tz);
 			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(x_source, y_source, z_source, _ent.getYRot(), _ent.getXRot());
+				_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 		}
 		{
 			Entity _ent = sourceentity;
-			_ent.teleportTo(x_luncher, y_luncher, z_luncher);
+			double _tx = x_luncher;
+			double _ty = y_luncher;
+			double _tz = z_luncher;
+			_ent.teleportTo(_tx, _ty, _tz);
 			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(x_luncher, y_luncher, z_luncher, _ent.getYRot(), _ent.getXRot());
+				_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 		}
 	}
 }

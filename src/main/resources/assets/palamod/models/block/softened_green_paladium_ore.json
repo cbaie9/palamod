@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/softened_green_paladium_ore",
     "particle": "palamod:block/softened_green_paladium_ore"
-  },
-  "render_type": "solid"
+  }
 }

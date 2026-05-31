@@ -8,7 +8,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ItemOwner;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
@@ -42,7 +42,7 @@ public class TankitemItem extends Item {
 		public static final MapCodec<TankTypeProperty> MAP_CODEC = MapCodec.unit(new TankTypeProperty());
 
 		@Override
-		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable LivingEntity entity, int seed) {
+		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable ItemOwner owner, int seed) {
 			return (float) TankitemPropertyValueProviderProcedure.execute(itemStackToRender);
 		}
 

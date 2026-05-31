@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/compressed_sponge",
     "particle": "palamod:block/compressed_sponge"
-  },
-  "render_type": "solid"
+  }
 }

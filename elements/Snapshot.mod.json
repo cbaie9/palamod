@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "overlay",
   "definition": {
     "priority": "LOWEST",
@@ -16,9 +16,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "displayCondition": {
-            "name": "Devchecksnap"
-          },
+          "displayCondition": "Devchecksnap",
           "anchorPoint": "TOP_LEFT",
           "x": 1,
           "y": 10,

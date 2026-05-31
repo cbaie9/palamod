@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -320,9 +320,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 302,
           "y": 25,
           "locked": false
@@ -334,9 +332,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 268,
           "y": 25,
           "locked": false
@@ -348,9 +344,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Connectitemmenu"
-          },
+          "onClick": "Connectitemmenu",
           "x": 284,
           "y": 25,
           "locked": false

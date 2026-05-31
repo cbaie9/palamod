@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Paladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:Compressedpaladium",
+      "",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Paladiumhammer",
+      "CUSTOM:Compressedpaladium",
+      "",
+      "CUSTOM:Compressedpaladium",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Onemoremodifier"
-    },
+    "recipeReturnStack": "CUSTOM:Onemoremodifier",
     "name": "onemoremodifiercraft",
     "namespace": "mod"
   }

@@ -3,7 +3,7 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -18,6 +18,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
@@ -30,7 +31,7 @@ import javax.annotation.Nullable;
 @EventBusSubscriber
 public class SpawnerupbreakblockProcedure {
 	@SubscribeEvent
-	public static void onBlockBreak(BlockEvent.BreakEvent event) {
+	public static void onBlockBreak(BreakBlockEvent event) {
 		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getPlayer());
 	}
 
@@ -131,7 +132,7 @@ public class SpawnerupbreakblockProcedure {
 					return false;
 				}
 			};
-			level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(dataConsumer, pos, Vec2.ZERO, level, 4, "", Component.literal(""), level.getServer(), null), command);
+			level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(dataConsumer, pos, Vec2.ZERO, level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), level.getServer(), null), command);
 		}
 		return result.toString();
 	}

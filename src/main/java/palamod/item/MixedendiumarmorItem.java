@@ -17,8 +17,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 
 import javax.annotation.Nullable;
@@ -27,8 +27,8 @@ import java.util.Map;
 
 public abstract class MixedendiumarmorItem extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(350, Map.of(ArmorType.BOOTS, 4, ArmorType.LEGGINGS, 6, ArmorType.CHESTPLATE, 7, ArmorType.HELMET, 5, ArmorType.BODY, 7), 65,
-			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 4.5f, 0.25f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:mixed_endium_armor_repair_items")),
-			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:mixed_endium_armor")));
+			DeferredHolder.create(Registries.SOUND_EVENT, Identifier.parse("item.armor.equip_diamond")), 4.5f, 0.25f, TagKey.create(Registries.ITEM, Identifier.parse("palamod:mixed_endium_armor_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.parse("palamod:mixed_endium_armor")));
 
 	private MixedendiumarmorItem(Item.Properties properties) {
 		super(properties);

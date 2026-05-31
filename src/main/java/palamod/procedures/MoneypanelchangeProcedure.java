@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.server.permissions.Permissions;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
@@ -36,11 +37,11 @@ public class MoneypanelchangeProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEMONEYGAMERULE.get()))) {
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 			if (entity instanceof Player _player)
 				_player.closeContainer();
-			if (entity instanceof Player _playerCmd6 && _playerCmd6.hasPermissions(4)) {
+			if (hasEntityPermissionLevel(entity, 4)) {
 				main_money.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
 				{
 					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
@@ -84,5 +85,18 @@ public class MoneypanelchangeProcedure {
 			e.printStackTrace();
 			return null;
 		}
+	}
+
+	private static boolean hasEntityPermissionLevel(Entity entity, int permissionLevel) {
+		if (entity instanceof Player _player) {
+			return switch (permissionLevel) {
+				case 0 -> true;
+				case 1 -> _player.permissions().hasPermission(Permissions.COMMANDS_MODERATOR);
+				case 2 -> _player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+				case 3 -> _player.permissions().hasPermission(Permissions.COMMANDS_ADMIN);
+				default -> _player.permissions().hasPermission(Permissions.COMMANDS_OWNER);
+			};
+		}
+		return false;
 	}
 }

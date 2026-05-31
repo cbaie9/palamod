@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Blasting",
@@ -11,12 +11,8 @@
     "cookingTime": 100,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "blastingInputStack": {
-      "value": "CUSTOM:Findiumoredeepslate"
-    },
-    "blastingReturnStack": {
-      "value": "CUSTOM:Findium"
-    },
+    "blastingInputStack": "CUSTOM:Findiumoredeepslate",
+    "blastingReturnStack": "CUSTOM:Findium",
     "name": "findiumoredblast",
     "namespace": "mod"
   }

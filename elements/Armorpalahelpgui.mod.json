@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -43,9 +43,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_back_true_1.png",
           "hoveredImage": "arrow_back_true2.png",
-          "onClick": {
-            "name": "Connectitemmenu"
-          },
+          "onClick": "Connectitemmenu",
           "x": 318,
           "y": 24,
           "locked": false
@@ -57,9 +55,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 339,
           "y": 24,
           "locked": false
@@ -71,9 +67,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 299,
           "y": 24,
           "locked": false
@@ -1714,9 +1708,7 @@
           "name": "button_if_bugged",
           "text": "If bugged ",
           "isUndecorated": false,
-          "onClick": {
-            "name": "ArmorpalahelpguiThisGUIIsOpened"
-          },
+          "onClick": "ArmorpalahelpguiThisGUIIsOpened",
           "width": 57,
           "height": 20,
           "x": 76,

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      }
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Compressedtitane",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumcore"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Internetcard"
-    },
+    "recipeReturnStack": "CUSTOM:Internetcard",
     "name": "internetcardcraft",
     "namespace": "mod"
   }

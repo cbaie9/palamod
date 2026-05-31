@@ -17,7 +17,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -44,9 +44,9 @@ public class FullendiuminvisibleProcedure {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 900, 1, false, false));
 			if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel _serverLevel9
-					&& _plr9.getAdvancements().getOrStartProgress(_serverLevel9.getServer().getAdvancements().get(ResourceLocation.parse("palamod:avancementsupremearmor"))).isDone())) {
+					&& _plr9.getAdvancements().getOrStartProgress(_serverLevel9.getServer().getAdvancements().get(Identifier.parse("palamod:avancementsupremearmor"))).isDone())) {
 				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
-					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:avancementsupremearmor"));
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(Identifier.parse("palamod:avancementsupremearmor"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {

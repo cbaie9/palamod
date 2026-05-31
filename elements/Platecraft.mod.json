@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumslab"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumslab"
-      },
-      {
-        "value": "Blocks.IRON_BLOCK"
-      },
-      {
-        "value": "CUSTOM:Paladiumslab"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumslab"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:Paladiumslab",
+      "",
+      "CUSTOM:Paladiumslab",
+      "Blocks.IRON_BLOCK",
+      "CUSTOM:Paladiumslab",
+      "",
+      "CUSTOM:Paladiumslab",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Plate"
-    },
+    "recipeReturnStack": "CUSTOM:Plate",
     "name": "platecraft",
     "namespace": "mod"
   }

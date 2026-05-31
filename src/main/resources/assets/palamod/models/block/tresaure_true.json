@@ -8,6 +8,5 @@
     "south": "palamod:block/lootbox",
     "west": "palamod:block/lootbox",
     "particle": "palamod:block/lootbox_down"
-  },
-  "render_type": "solid"
+  }
 }

@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/paladium_block",
     "particle": "palamod:block/paladium_block"
-  },
-  "render_type": "solid"
+  }
 }

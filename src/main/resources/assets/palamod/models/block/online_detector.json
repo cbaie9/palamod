@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/onlinedetector_off",
     "particle": "palamod:block/onlinedetector_off"
-  },
-  "render_type": "solid"
+  }
 }

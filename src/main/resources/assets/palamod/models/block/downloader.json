@@ -8,6 +8,5 @@
     "south": "palamod:block/uploader_devant_deriere",
     "west": "palamod:block/uploder_droit_gauche",
     "particle": "palamod:block/uploader_down"
-  },
-  "render_type": "solid"
+  }
 }

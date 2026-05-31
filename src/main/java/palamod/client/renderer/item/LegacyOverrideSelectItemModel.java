@@ -1,5 +1,7 @@
 package palamod.client.renderer.item;
 
+import org.joml.Matrix4fc;
+
 import net.neoforged.neoforge.client.event.RegisterItemModelsEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -8,7 +10,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.ItemOwner;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.resources.model.ResolvableModel;
 import net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty;
 import net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties;
@@ -23,6 +26,8 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import javax.annotation.Nullable;
 
 import java.util.List;
+
+import java.lang.classfile.constantpool.FloatEntry;
 
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.mojang.serialization.MapCodec;
@@ -42,15 +47,15 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 	}
 
 	@Override
-	public void update(ItemStackRenderState renderState, ItemStack itemStack, ItemModelResolver modelResolver, ItemDisplayContext displayContext, @Nullable ClientLevel level, @Nullable LivingEntity entity, int seed) {
+	public void update(ItemStackRenderState renderState, ItemStack itemStack, ItemModelResolver modelResolver, ItemDisplayContext displayContext, @Nullable ClientLevel level, @Nullable ItemOwner owner, int seed) {
 		ItemModel model = fallback;
 		for (int i = overrides.length - 1; i >= 0; i--) {
-			if (overrides[i].test(itemStack, level, entity, seed, displayContext)) {
+			if (overrides[i].test(itemStack, level, owner != null ? owner.asLivingEntity() : null, seed, displayContext)) {
 				model = models[i];
 				break;
 			}
 		}
-		model.update(renderState, itemStack, modelResolver, displayContext, level, entity, seed);
+		model.update(renderState, itemStack, modelResolver, displayContext, level, owner, seed);
 	}
 
 	public record FloatEntry(RangeSelectItemModelProperty property, float value) implements PredicateEntry {
@@ -111,11 +116,11 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 		}
 
 		@Override
-		public ItemModel bake(ItemModel.BakingContext bakingContext) {
+		public ItemModel bake(ItemModel.BakingContext bakingContext, Matrix4fc transformation) {
 			ItemModel[] models = new ItemModel[overrides.size()];
 			for (int i = 0; i < overrides.size(); i++)
-				models[i] = overrides.get(i).model.bake(bakingContext);
-			return new LegacyOverrideSelectItemModel(overrides.toArray(LegacyOverrideSelectItemModel.ModelOverride[]::new), models, fallback.bake(bakingContext));
+				models[i] = overrides.get(i).model.bake(bakingContext, transformation);
+			return new LegacyOverrideSelectItemModel(overrides.toArray(LegacyOverrideSelectItemModel.ModelOverride[]::new), models, fallback.bake(bakingContext, transformation));
 		}
 
 		@Override
@@ -127,6 +132,6 @@ public class LegacyOverrideSelectItemModel implements ItemModel {
 
 	@SubscribeEvent
 	public static void registerItemModelTypes(RegisterItemModelsEvent event) {
-		event.register(ResourceLocation.parse("palamod:legacy_overrides"), LegacyOverrideSelectItemModel.Unbaked.MAP_CODEC);
+		event.register(Identifier.parse("palamod:legacy_overrides"), LegacyOverrideSelectItemModel.Unbaked.MAP_CODEC);
 	}
 }

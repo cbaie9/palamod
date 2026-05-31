@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.component.CustomData;
@@ -39,7 +37,7 @@ public class Legendarystonefortune_processProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = item.copy();
 				_setstack.setCount(Mth.nextInt(RandomSource.create(), 10, 64));
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				_player.getInventory().placeItemBackInInventory(_setstack);
 			}
 			{
 				final String _tagName = "name";

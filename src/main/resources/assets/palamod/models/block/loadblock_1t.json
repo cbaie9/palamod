@@ -8,6 +8,5 @@
     "south": "palamod:block/crystal",
     "west": "palamod:block/crystal",
     "particle": "palamod:block/chiseled_top"
-  },
-  "render_type": "solid"
+  }
 }

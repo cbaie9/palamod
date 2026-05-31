@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/grinder_casing_block16",
     "particle": "palamod:block/grinder_casing_block16"
-  },
-  "render_type": "solid"
+  }
 }

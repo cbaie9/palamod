@@ -4,6 +4,5 @@
     "particle": "palamod:block/door_9",
     "bottom": "palamod:block/door_9",
     "top": "palamod:block/door_1"
-  },
-  "render_type": "cutout"
+  }
 }

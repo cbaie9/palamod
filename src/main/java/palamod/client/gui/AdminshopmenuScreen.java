@@ -15,16 +15,19 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -54,38 +57,36 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	private ImageButton imagebutton_adminshop_new_placeholder19;
 	private ImageButton imagebutton_adminshop_new_placeholder20;
 	private ExtendedSlider slider;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/adminshopmenu.png");
-	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_2 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_3 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_4 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_5 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_6 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
-	private static final ResourceLocation SPRITE_7 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_8 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_9 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_10 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_11 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_12 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_13 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
-	private static final ResourceLocation SPRITE_14 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private static final ResourceLocation SPRITE_15 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private static final ResourceLocation SPRITE_16 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private static final ResourceLocation SPRITE_17 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private static final ResourceLocation SPRITE_18 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private static final ResourceLocation SPRITE_19 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private static final ResourceLocation SPRITE_20 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/adminshopmenu.png");
+	private static final Identifier SPRITE_0 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_1 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_2 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_3 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_4 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_5 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_6 = Identifier.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final Identifier SPRITE_7 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_8 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_9 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_10 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_11 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_12 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_13 = Identifier.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final Identifier SPRITE_14 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier SPRITE_15 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier SPRITE_16 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier SPRITE_17 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier SPRITE_18 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier SPRITE_19 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final Identifier SPRITE_20 = Identifier.parse("palamod:textures/screens/sprite_row3_v1.png");
 
 	public AdminshopmenuScreen(AdminshopmenuMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 300, 200);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 300;
-		this.imageHeight = 200;
 	}
 
 	@Override
@@ -99,22 +100,18 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		boolean customTooltipShown = false;
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		if (mouseX > leftPos + 280 && mouseX < leftPos + 296 && mouseY > topPos + 17 && mouseY < topPos + 33) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
-			customTooltipShown = true;
 		}
-		if (!customTooltipShown)
-			this.renderTooltip(guiGraphics, mouseX, mouseY);
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 20, this.topPos + 42, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 56, this.topPos + 42, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
@@ -140,28 +137,24 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		return super.keyPressed(key, b, c);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
-		return (this.getFocused() != null && this.isDragging() && button == 0) ? this.getFocused().mouseDragged(mouseX, mouseY, button, dragX, dragY) : super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
-	}
-
-	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 280, this.topPos + 17, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/cross_no_button.png"), Identifier.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -170,13 +163,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_adminshop_new_placeholder = new ImageButton(this.leftPos + 16, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -185,13 +178,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder);
 		imagebutton_adminshop_new_placeholder1 = new ImageButton(this.leftPos + 16, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -200,13 +193,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder1);
 		imagebutton_adminshop_new_placeholder2 = new ImageButton(this.leftPos + 16, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -215,13 +208,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder2);
 		imagebutton_adminshop_new_placeholder3 = new ImageButton(this.leftPos + 52, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -230,13 +223,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder3);
 		imagebutton_adminshop_new_placeholder4 = new ImageButton(this.leftPos + 52, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -245,13 +238,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder4);
 		imagebutton_adminshop_new_placeholder5 = new ImageButton(this.leftPos + 52, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -260,13 +253,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder5);
 		imagebutton_adminshop_new_placeholder6 = new ImageButton(this.leftPos + 88, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -275,13 +268,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder6);
 		imagebutton_adminshop_new_placeholder7 = new ImageButton(this.leftPos + 88, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -290,13 +283,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder7);
 		imagebutton_adminshop_new_placeholder8 = new ImageButton(this.leftPos + 88, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -305,13 +298,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder8);
 		imagebutton_adminshop_new_placeholder9 = new ImageButton(this.leftPos + 124, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -320,13 +313,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder9);
 		imagebutton_adminshop_new_placeholder10 = new ImageButton(this.leftPos + 124, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -335,13 +328,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder10);
 		imagebutton_adminshop_new_placeholder11 = new ImageButton(this.leftPos + 124, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -350,13 +343,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder11);
 		imagebutton_adminshop_new_placeholder12 = new ImageButton(this.leftPos + 160, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -365,13 +358,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder12);
 		imagebutton_adminshop_new_placeholder13 = new ImageButton(this.leftPos + 160, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -380,13 +373,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder13);
 		imagebutton_adminshop_new_placeholder14 = new ImageButton(this.leftPos + 160, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -395,13 +388,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder14);
 		imagebutton_adminshop_new_placeholder15 = new ImageButton(this.leftPos + 196, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -410,13 +403,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder15);
 		imagebutton_adminshop_new_placeholder16 = new ImageButton(this.leftPos + 196, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -425,13 +418,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder16);
 		imagebutton_adminshop_new_placeholder17 = new ImageButton(this.leftPos + 196, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -440,13 +433,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder17);
 		imagebutton_adminshop_new_placeholder18 = new ImageButton(this.leftPos + 232, this.topPos + 38, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -455,13 +448,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder18);
 		imagebutton_adminshop_new_placeholder19 = new ImageButton(this.leftPos + 232, this.topPos + 86, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -470,13 +463,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder19);
 		imagebutton_adminshop_new_placeholder20 = new ImageButton(this.leftPos + 232, this.topPos + 134, 24, 24,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/adminshop_btn_pashover.png"), ResourceLocation.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/adminshop_btn_pashover.png"), Identifier.parse("palamod:textures/screens/adminshop_btn_hover.png")), e -> {
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
@@ -485,7 +478,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

@@ -13,10 +13,10 @@ import palamod.block.*;
 
 import palamod.PalamodMod;
 
+import net.neoforged.neoforge.transfer.fluid.BucketResourceHandler;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.fluids.capability.wrappers.FluidBucketWrapper;
 import net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -30,7 +30,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.function.Function;
 
@@ -986,7 +986,7 @@ public class PalamodModItems {
 		ELEVATOR_GRAY = register("elevator_gray", ElevatorgrayBlock.Item::new);
 		ELEVATOR_LIGHT_GRAY = register("elevator_light_gray", ElevatorlightgrayBlock.Item::new);
 		ELEVATOR_CYAN = register("elevator_cyan", ElevatorcyanBlock.Item::new);
-		PALADIUM_GOLEM_SPAWN_EGG = register("paladium_golem_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.PALADIUM_GOLEM.get(), properties));
+		PALADIUM_GOLEM_SPAWN_EGG = register("paladium_golem_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(PalamodModEntities.PALADIUM_GOLEM.get())));
 		GUARDIAN_STONE = register("guardian_stone", GuardianstoneItem::new);
 		GUARDIAN_BLOCK = register("guardian_block", GuardianblockBlock.Item::new);
 		GREEN_PALADIUM_BROADSWORD_HEAD = register("green_paladium_broadsword_head", HeadgreenbroadswordItem::new);
@@ -1222,7 +1222,7 @@ public class PalamodModItems {
 		PALADUM_BACKPACK = register("paladum_backpack", PaladumbackpackItem::new);
 		ENDIUM_BACKPACK = register("endium_backpack", EndiumbackpackItem::new);
 		TOTEM_FERTILITY = register("totem_fertility", TotemfertilityBlock.Item::new);
-		GODVILLAGER_SPAWN_EGG = register("godvillager_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.GODVILLAGER.get(), properties));
+		GODVILLAGER_SPAWN_EGG = register("godvillager_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(PalamodModEntities.GODVILLAGER.get())));
 		XP_BUSH_LOW = block(PalamodModBlocks.XP_BUSH_LOW);
 		CHEST_EXPLORER = register("chest_explorer", ChestexplorerItem::new);
 		PALADIUM_RAW_ORE = register("paladium_raw_ore", PaladiumraworeItem::new);
@@ -1290,7 +1290,7 @@ public class PalamodModItems {
 		ENDIUM_FLOWER_ON = block(PalamodModBlocks.ENDIUM_FLOWER_ON);
 		CLATHRUSARCHERI = block(PalamodModBlocks.CLATHRUSARCHERI);
 		PALADIUM_FLOWER = block(PalamodModBlocks.PALADIUM_FLOWER);
-		DANKAROCTEST_1_SPAWN_EGG = register("dankaroctest_1_spawn_egg", properties -> new SpawnEggItem(PalamodModEntities.DANKAROCTEST_1.get(), properties));
+		DANKAROCTEST_1_SPAWN_EGG = register("dankaroctest_1_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(PalamodModEntities.DANKAROCTEST_1.get())));
 		DANKABLOCK = block(PalamodModBlocks.DANKABLOCK);
 		PALADIUM_INK = register("paladium_ink", PaladiuminkItem::new);
 		UNCLAIM_FINDER = register("unclaim_finder", UnclaimfinderItem::new);
@@ -1361,7 +1361,7 @@ public class PalamodModItems {
 	// Start of user code block custom items
 	// End of user code block custom items
 	private static <I extends Item> DeferredItem<I> register(String name, Function<Item.Properties, ? extends I> supplier) {
-		return REGISTRY.registerItem(name, supplier, new Item.Properties());
+		return REGISTRY.registerItem(name, supplier, Item.Properties::new);
 	}
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
@@ -1369,7 +1369,7 @@ public class PalamodModItems {
 	}
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block, Item.Properties properties) {
-		return REGISTRY.registerItem(block.getId().getPath(), prop -> new BlockItem(block.get(), prop), properties);
+		return REGISTRY.registerItem(block.getId().getPath(), prop -> new BlockItem(block.get(), prop), () -> properties);
 	}
 
 	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block) {
@@ -1377,28 +1377,28 @@ public class PalamodModItems {
 	}
 
 	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block, Item.Properties properties) {
-		return REGISTRY.registerItem(block.getId().getPath(), prop -> new DoubleHighBlockItem(block.get(), prop), properties);
+		return REGISTRY.registerItem(block.getId().getPath(), prop -> new DoubleHighBlockItem(block.get(), prop), () -> properties);
 	}
 
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PaladiumphoneInventoryCapability(stack), PALADIUM_PHONE.get());
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidstoneInventoryCapability(stack), VOIDSTONE.get());
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new MinerjobsitemInventoryCapability(stack), JOBS_ITEM_MINER.get());
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new FarmerjobsitemInventoryCapability(stack), JOBS_ITEM_FARMER.get());
-		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), FAKE_WATER_BUCKET.get());
-		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), ANGELIC_WATER_BUCKET.get());
+		event.registerItem(Capabilities.Item.ITEM, (stack, access) -> new PaladiumphoneInventoryCapability(access), PALADIUM_PHONE.get());
+		event.registerItem(Capabilities.Item.ITEM, (stack, access) -> new VoidstoneInventoryCapability(access), VOIDSTONE.get());
+		event.registerItem(Capabilities.Item.ITEM, (stack, access) -> new MinerjobsitemInventoryCapability(access), JOBS_ITEM_MINER.get());
+		event.registerItem(Capabilities.Item.ITEM, (stack, access) -> new FarmerjobsitemInventoryCapability(access), JOBS_ITEM_FARMER.get());
+		event.registerItem(Capabilities.Fluid.ITEM, (stack, access) -> new BucketResourceHandler(access), FAKE_WATER_BUCKET.get());
+		event.registerItem(Capabilities.Fluid.ITEM, (stack, access) -> new BucketResourceHandler(access), ANGELIC_WATER_BUCKET.get());
 	}
 
 	@EventBusSubscriber(Dist.CLIENT)
 	public static class ItemsClientSideHandler {
 		@SubscribeEvent
 		public static void registerItemModelProperties(RegisterRangeSelectItemModelPropertyEvent event) {
-			event.register(ResourceLocation.parse("palamod:xp_bottle/xp"), XpbottleItem.XpProperty.MAP_CODEC);
-			event.register(ResourceLocation.parse("palamod:xp_bottle/jobs_type"), XpbottleItem.JobsTypeProperty.MAP_CODEC);
-			event.register(ResourceLocation.parse("palamod:flask/seve"), FlaskItem.SeveProperty.MAP_CODEC);
-			event.register(ResourceLocation.parse("palamod:flask/type"), FlaskItem.TypeProperty.MAP_CODEC);
-			event.register(ResourceLocation.parse("palamod:tankitem/tank_type"), TankitemItem.TankTypeProperty.MAP_CODEC);
+			event.register(Identifier.parse("palamod:xp_bottle/xp"), XpbottleItem.XpProperty.MAP_CODEC);
+			event.register(Identifier.parse("palamod:xp_bottle/jobs_type"), XpbottleItem.JobsTypeProperty.MAP_CODEC);
+			event.register(Identifier.parse("palamod:flask/seve"), FlaskItem.SeveProperty.MAP_CODEC);
+			event.register(Identifier.parse("palamod:flask/type"), FlaskItem.TypeProperty.MAP_CODEC);
+			event.register(Identifier.parse("palamod:tankitem/tank_type"), TankitemItem.TankTypeProperty.MAP_CODEC);
 		}
 	}
 }

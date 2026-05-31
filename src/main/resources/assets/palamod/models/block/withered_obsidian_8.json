@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/withered_obsidian_8",
     "particle": "palamod:block/withered_obsidian_8"
-  },
-  "render_type": "solid"
+  }
 }

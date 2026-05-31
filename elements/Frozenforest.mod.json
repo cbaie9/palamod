@@ -1,38 +1,22 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "biome",
   "definition": {
     "name": "Frozen forest",
-    "groundBlock": {
-      "value": "Blocks.GRASS"
-    },
-    "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
-    },
-    "underwaterBlock": {
-      "value": "Blocks.GRAVEL"
-    },
+    "groundBlock": "Blocks.GRASS",
+    "undergroundBlock": "Blocks.DIRT#0",
+    "underwaterBlock": "Blocks.GRAVEL",
     "grassColor": {
       "value": -16030631,
       "falpha": 0.0
     },
-    "ambientSound": {
-      "value": ""
-    },
-    "additionsSound": {
-      "value": ""
-    },
-    "music": {
-      "value": ""
-    },
-    "moodSound": {
-      "value": ""
-    },
+    "ambientSound": "",
+    "additionsSound": "",
+    "music": "",
+    "moodSound": "",
     "moodSoundDelay": 6000,
     "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
+    "particleToSpawn": "EXPLOSION_NORMAL",
     "particlesProbability": 0.5,
     "rainingPossibility": 0.5,
     "temperature": 0.5,
@@ -67,18 +51,10 @@
     "vanillaTreeType": "Default",
     "treeType": 0,
     "minHeight": 7,
-    "treeStem": {
-      "value": ""
-    },
-    "treeBranch": {
-      "value": ""
-    },
-    "treeVines": {
-      "value": ""
-    },
-    "treeFruits": {
-      "value": ""
-    },
+    "treeStem": "",
+    "treeBranch": "",
+    "treeVines": "",
+    "treeFruits": "",
     "defaultFeatures": [
       "Caves",
       "Ores",
@@ -107,9 +83,7 @@
     "spawnRuinedPortal": "NONE",
     "spawnEntries": [
       {
-        "entity": {
-          "value": "EntityPig"
-        },
+        "entity": "EntityPig",
         "minGroup": 1,
         "maxGroup": 4,
         "weight": 10,

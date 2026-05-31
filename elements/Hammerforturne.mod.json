@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "enchantment",
   "definition": {
     "name": "Fortune",
@@ -10,18 +10,10 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "CUSTOM:Paladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Endiumhammer"
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Creativehammer"
-      }
+      "CUSTOM:Paladiumhammer",
+      "CUSTOM:Endiumhammer",
+      "CUSTOM:Greenpaladiumhammer",
+      "CUSTOM:Creativehammer"
     ],
     "isTreasureEnchantment": true,
     "isCurse": true,

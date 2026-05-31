@@ -3,8 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
@@ -54,7 +52,7 @@ public class XpbushongiveProcedure {
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PalamodModItems.XP_BERRY.get()).copy();
 			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			_player.getInventory().placeItemBackInInventory(_setstack);
 		}
 		if (!world.isClientSide()) {
 			BlockPos _bp = BlockPos.containing(x, y, z);

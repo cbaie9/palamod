@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -64,9 +64,7 @@
           "name": "button_buy",
           "text": "buy",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Newadminshopbuyprocess"
-          },
+          "onClick": "Newadminshopbuyprocess",
           "width": 40,
           "height": 20,
           "x": 152,
@@ -80,9 +78,7 @@
           "name": "button_sell",
           "text": "sell",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Newadminshopsell"
-          },
+          "onClick": "Newadminshopsell",
           "width": 46,
           "height": 20,
           "x": 225,
@@ -142,9 +138,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 280,
           "y": 40,
           "locked": false
@@ -156,9 +150,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_back_true_1.png",
           "hoveredImage": "arrow_back_true2.png",
-          "onClick": {
-            "name": "Adminshop_open"
-          },
+          "onClick": "Adminshop_open",
           "x": 261,
           "y": 40,
           "locked": false

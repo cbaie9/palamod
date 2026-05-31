@@ -4,8 +4,6 @@ import palamod.procedures.FightingTimeOverlayGetLogicProcedure;
 import palamod.procedures.FightingTimeOverlayGetLabelProcedure;
 import palamod.procedures.FightimeOverlayGetindexProcedure;
 
-import org.checkerframework.checker.units.qual.h;
-
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,13 +13,13 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class FightingTimeOverlayOverlay {
-	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/split_combat.png");
+	private static final Identifier SPRITE_0 = Identifier.parse("palamod:textures/screens/split_combat.png");
 
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
@@ -42,7 +40,7 @@ public class FightingTimeOverlayOverlay {
 
 			event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, 6, 4, Mth.clamp((int) FightimeOverlayGetindexProcedure.execute(entity) * 22, 0, 440), 0, 22, 22, 462, 22);
 
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+			event.getGuiGraphics().text(Minecraft.getInstance().font,
 
 					FightingTimeOverlayGetLabelProcedure.execute(entity), 9, 29, -1, false);
 		}

@@ -3,8 +3,6 @@ package palamod.command;
 import palamod.procedures.PalalaglunchsilentProcedure;
 import palamod.procedures.PalalaglunchProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -20,7 +18,7 @@ import net.minecraft.commands.Commands;
 public class PalalagCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("palalag").requires(s -> s.hasPermission(4)).then(Commands.literal("force").executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("palalag").requires(Commands.hasPermission(Commands.LEVEL_OWNERS)).then(Commands.literal("force").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

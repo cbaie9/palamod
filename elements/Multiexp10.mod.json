@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "potioneffect",
   "definition": {
     "effectName": "x10 experience boost",
@@ -8,20 +8,14 @@
       "value": -10027264,
       "falpha": 0.0
     },
-    "onAddedSound": {
-      "value": ""
-    },
+    "onAddedSound": "",
     "isInstant": false,
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [],
-    "onStarted": {
-      "name": "Addmultixp10file"
-    },
-    "onExpired": {
-      "name": "Removemultixp10file"
-    }
+    "onStarted": "Addmultixp10file",
+    "onExpired": "Removemultixp10file"
   }
 }

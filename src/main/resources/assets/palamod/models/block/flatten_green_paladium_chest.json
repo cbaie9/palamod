@@ -8,6 +8,5 @@
     "south": "palamod:block/palavert_side",
     "west": "palamod:block/palavert_side",
     "particle": "palamod:block/palavert_down"
-  },
-  "render_type": "solid"
+  }
 }

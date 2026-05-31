@@ -66,7 +66,10 @@ public class PaladiumcrusherBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
+		return state.setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
@@ -139,7 +142,7 @@ public class PaladiumcrusherBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos, Direction direction) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
 		if (tileentity instanceof PaladiumcrusherBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
@@ -155,7 +158,7 @@ public class PaladiumcrusherBlock extends Block implements EntityBlock {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+			Entity entity = PalamodMod.clientPlayer();
 			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 			if (hoverText != null) {
 				for (String line : hoverText.split("\n")) {

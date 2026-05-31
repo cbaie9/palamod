@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "endium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumArmor.body"
-      }
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumArmor.body"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "CUSTOM:EndiumIngot",
+      "",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumArmor.body"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumArmor.body",
     "name": "endiumchestplatecraft",
     "namespace": "mod"
   }

@@ -19,7 +19,7 @@ import net.minecraft.core.BlockPos;
 
 public class EndiumflowerBlock extends FlowerBlock {
 	public EndiumflowerBlock(BlockBehaviour.Properties properties) {
-		super(MobEffects.REGENERATION, 100, properties.mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+		super(MobEffects.REGENERATION, 100, properties.mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollision().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

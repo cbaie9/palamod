@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:Softenedredstoneore"
-    },
-    "smeltingReturnStack": {
-      "value": "Items.REDSTONE"
-    },
+    "smeltingInputStack": "CUSTOM:Softenedredstoneore",
+    "smeltingReturnStack": "Items.REDSTONE",
     "name": "softenedredstoneoresmelt",
     "namespace": "mod"
   }

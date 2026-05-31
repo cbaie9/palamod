@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/titane_ore_deepslate",
     "particle": "palamod:block/titane_ore_deepslate"
-  },
-  "render_type": "solid"
+  }
 }

@@ -2,8 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -14,9 +15,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
@@ -79,11 +82,11 @@ public class Gcodev6Procedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					int _slotid = 3;
-					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(1);
-					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				if (world instanceof ServerLevel _serverLevel) {
+					BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+					if (_be instanceof Container _container) {
+						_container.getItem(3).shrink(1);
+					}
 				}
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "g_ingot") == 4) {
 					if (!world.isClientSide()) {
@@ -107,7 +110,7 @@ public class Gcodev6Procedure {
 			if (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0
 					|| input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 64 && output_craft.getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem()
 							&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() < (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getMaxStackSize()
-							&& !output_craft.is(ItemTags.create(ResourceLocation.parse("palamod:heads")))) {
+							&& !output_craft.is(ItemTags.create(Identifier.parse("palamod:heads")))) {
 				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_craft")).equals(output_craft.getDisplayName().getString())) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -144,25 +147,28 @@ public class Gcodev6Procedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = output_craft.copy();
-						_setstack.setCount((int) (input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()));
-						_itemHandlerModifiable.setStackInSlot(2, _setstack);
-					}
-					if (!(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:grinder_craft_noclear")))) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							int _slotid = 0;
-							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-							_stk.shrink(1);
-							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = output_craft.copy();
+							_setstack.setCount((int) (input_g2 + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()));
+							_container.setItem(2, _setstack);
 						}
 					}
-					if (!(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:grinder_craft_noclear")))) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							int _slotid = 1;
-							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-							_stk.shrink(1);
-							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					if (!(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).is(ItemTags.create(Identifier.parse("palamod:grinder_craft_noclear")))) {
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.getItem(0).shrink(1);
+							}
+						}
+					}
+					if (!(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).is(ItemTags.create(Identifier.parse("palamod:grinder_craft_noclear")))) {
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.getItem(1).shrink(1);
+							}
 						}
 					}
 					if (!world.isClientSide()) {
@@ -190,20 +196,20 @@ public class Gcodev6Procedure {
 				}
 			}
 		}
-		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_grinder")))
-				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:upgrades_grinder")))) {
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).is(ItemTags.create(Identifier.parse("palamod:hammer_grinder")))
+				&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).is(ItemTags.create(Identifier.parse("palamod:upgrades_grinder")))) {
 			num_enchant = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))))
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:hammer_fortune"))))
 					+ (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed"))))
+							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:speed"))))
 					+ (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt"))));
+							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:smelt"))));
 			if (num_enchant < 3 + (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant"))))) {
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:onemoreupgradeenchant"))))) {
 				if (PalamodModItems.SPEED_MODIFIER.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() && (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) != 0)
+						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:speed")))) != 0)
 						|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) < 3)) {
+								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:speed")))) < 3)) {
 					if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.SPEED_MODIFIER.get()).getDisplayName().getString())) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -241,30 +247,33 @@ public class Gcodev6Procedure {
 						}
 						output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
 						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.EFFICIENCY),
-								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1);
+								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:speed")))) + 1);
 						{
 							final String _tagName = "modifier";
 							final boolean _tagValue = true;
 							CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
 						}
-						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed"))),
-								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) + 1);
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							int _slotid = 4;
-							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-							_stk.shrink(1);
-							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:speed"))),
+								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:speed")))) + 1);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.getItem(4).shrink(1);
+							}
 						}
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_fusion.copy();
-							_setstack.setCount(1);
-							_itemHandlerModifiable.setStackInSlot(5, _setstack);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								ItemStack _setstack = output_fusion.copy();
+								_setstack.setCount(1);
+								_container.setItem(5, _setstack);
+							}
 						}
 					}
 				} else if (PalamodModItems.FORTUNE_MODIFIER.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() && (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) != 0)
+						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:hammer_fortune")))) != 0)
 						|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) < 3)) {
+								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:hammer_fortune")))) < 3)) {
 					if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.FORTUNE_MODIFIER.get()).getDisplayName().getString())) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -306,22 +315,25 @@ public class Gcodev6Procedure {
 							final boolean _tagValue = true;
 							CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
 						}
-						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))),
-								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) + 1);
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							int _slotid = 4;
-							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-							_stk.shrink(1);
-							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:hammer_fortune"))),
+								output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:hammer_fortune")))) + 1);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.getItem(4).shrink(1);
+							}
 						}
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_fusion.copy();
-							_setstack.setCount(1);
-							_itemHandlerModifiable.setStackInSlot(5, _setstack);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								ItemStack _setstack = output_fusion.copy();
+								_setstack.setCount(1);
+								_container.setItem(5, _setstack);
+							}
 						}
 					}
 				} else if (PalamodModItems.SMELT_MODIFIER.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() && !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0)) {
+						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:smelt")))) != 0)) {
 					if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.SMELT_MODIFIER.get()).getDisplayName().getString())) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -358,24 +370,27 @@ public class Gcodev6Procedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						output_fusion = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).copy();
-						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt"))), 1);
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							int _slotid = 4;
-							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-							_stk.shrink(1);
-							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+						output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:smelt"))), 1);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.getItem(4).shrink(1);
+							}
 						}
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_fusion.copy();
-							_setstack.setCount(1);
-							_itemHandlerModifiable.setStackInSlot(5, _setstack);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								ItemStack _setstack = output_fusion.copy();
+								_setstack.setCount(1);
+								_container.setItem(5, _setstack);
+							}
 						}
 					}
 				}
 			} else if (PalamodModItems.ONE_MORE_MODIFIER.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() && (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) != 0)
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:onemoreupgradeenchant")))) != 0)
 					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) < 2)) {
+							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:onemoreupgradeenchant")))) < 2)) {
 				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.ONE_MORE_MODIFIER.get()).getDisplayName().getString())) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -417,25 +432,28 @@ public class Gcodev6Procedure {
 						final boolean _tagValue = true;
 						CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
 					}
-					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant"))),
-							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:onemoreupgradeenchant")))) + 1);
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						int _slotid = 4;
-						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-						_stk.shrink(1);
-						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:onemoreupgradeenchant"))),
+							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:onemoreupgradeenchant")))) + 1);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							_container.getItem(4).shrink(1);
+						}
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = output_fusion.copy();
-						_setstack.setCount(1);
-						_itemHandlerModifiable.setStackInSlot(5, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = output_fusion.copy();
+							_setstack.setCount(1);
+							_container.setItem(5, _setstack);
+						}
 					}
 				}
 			}
 		}
-		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).is(ItemTags.create(ResourceLocation.parse("palamod:potg_can_be_enchanted")))) {
+		if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).is(ItemTags.create(Identifier.parse("palamod:potg_can_be_enchanted")))) {
 			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get() && !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0)) {
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:autosmeltpotg")))) != 0)) {
 				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.AUTO_SMELT_UPGRADE_POTG.get()).getDisplayName().getString())) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -477,26 +495,29 @@ public class Gcodev6Procedure {
 						final boolean _tagValue = true;
 						CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
 					}
-					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg"))),
-							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) + 1);
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						int _slotid = 4;
-						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-						_stk.shrink(1);
-						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:autosmeltpotg"))),
+							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:autosmeltpotg")))) + 1);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							_container.getItem(4).shrink(1);
+						}
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = output_fusion.copy();
-						_setstack.setCount(1);
-						_itemHandlerModifiable.setStackInSlot(5, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = output_fusion.copy();
+							_setstack.setCount(1);
+							_container.setItem(5, _setstack);
+						}
 					}
 				}
 			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).copy()).getItem() == PalamodModItems.BIG_HOLE_UPGRADE.get() && (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0)
+					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:bighole")))) != 0)
 					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0
+							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:bighole")))) != 0
 							&& 1 == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
-									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))))) {
+									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:bighole")))))) {
 				if (!(getBlockNBTString(world, BlockPos.containing(x, y, z), "llic_fusion")).equals(new ItemStack(PalamodModItems.BIG_HOLE_UPGRADE.get()).getDisplayName().getString())) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -538,18 +559,21 @@ public class Gcodev6Procedure {
 						final boolean _tagValue = true;
 						CustomData.update(DataComponents.CUSTOM_DATA, output_fusion, tag -> tag.putBoolean(_tagName, _tagValue));
 					}
-					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole"))),
-							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) + 1);
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						int _slotid = 4;
-						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-						_stk.shrink(1);
-						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					output_fusion.enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:bighole"))),
+							output_fusion.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:bighole")))) + 1);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							_container.getItem(4).shrink(1);
+						}
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = output_fusion.copy();
-						_setstack.setCount(1);
-						_itemHandlerModifiable.setStackInSlot(5, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = output_fusion.copy();
+							_setstack.setCount(1);
+							_container.setItem(5, _setstack);
+						}
 					}
 				}
 			}
@@ -559,9 +583,9 @@ public class Gcodev6Procedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

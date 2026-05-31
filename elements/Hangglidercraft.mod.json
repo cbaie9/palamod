@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Wing"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "CUSTOM:Wing"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "Items.LEATHER",
+      "",
+      "CUSTOM:Wing",
+      "Items.LEATHER",
+      "CUSTOM:Wing",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Hangglider"
-    },
+    "recipeReturnStack": "CUSTOM:Hangglider",
     "name": "hangglider_craft",
     "namespace": "mod"
   }

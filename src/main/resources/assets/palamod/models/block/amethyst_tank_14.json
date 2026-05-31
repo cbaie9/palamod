@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l2_judeecercis",
     "side": "palamod:block/fluid_2_judeecercis",
     "cadre": "palamod:block/amethyste_tank"
-  },
-  "render_type": "translucent"
+  }
 }

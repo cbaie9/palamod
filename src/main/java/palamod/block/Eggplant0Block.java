@@ -26,7 +26,7 @@ import net.minecraft.core.BlockPos;
 
 public class Eggplant0Block extends FlowerBlock {
 	public Eggplant0Block(BlockBehaviour.Properties properties) {
-		super(MobEffects.FIRE_RESISTANCE, 10, properties.mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+		super(MobEffects.FIRE_RESISTANCE, 10, properties.mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollision().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

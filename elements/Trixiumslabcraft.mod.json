@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Trixium"
-      },
-      {
-        "value": "CUSTOM:Trixium"
-      },
-      {
-        "value": "CUSTOM:Trixium"
-      }
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Trixium",
+      "CUSTOM:Trixium",
+      "CUSTOM:Trixium"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Trixiumslab"
-    },
+    "recipeReturnStack": "CUSTOM:Trixiumslab",
     "name": "trixiumslabcraft",
     "namespace": "mod"
   }

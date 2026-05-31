@@ -4,6 +4,5 @@
     "all": "palamod:block/portal",
     "particle": "palamod:block/portal",
     "0": "palamod:block/portal"
-  },
-  "render_type": "cutout"
+  }
 }

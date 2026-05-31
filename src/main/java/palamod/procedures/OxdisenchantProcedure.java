@@ -5,7 +5,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 public class OxdisenchantProcedure {
@@ -14,8 +14,9 @@ public class OxdisenchantProcedure {
 			return;
 		ItemStack item_dis = ItemStack.EMPTY;
 		double dis_num = 0;
-		item_dis = new ItemStack(BuiltInRegistries.ITEM
-				.getValue(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH)))).copy();
+		item_dis = new ItemStack(
+				BuiltInRegistries.ITEM.getValue(Identifier.parse(((BuiltInRegistries.ITEM.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))))
+				.copy();
 		dis_num = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
 		if (entity instanceof Player _player) {
 			ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);

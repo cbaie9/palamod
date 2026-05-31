@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class CheckportalstructureProcedure {
@@ -21,7 +21,7 @@ public class CheckportalstructureProcedure {
 		angle_block = angle_block_dep;
 		shiny_wood = shiny_wood_dep;
 		if ((!getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered") || (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == PalamodModBlocks.KEY_PORTAL_BLOCK.get())
-				&& (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:portal_blocks")))) {
+				&& (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("palamod:portal_blocks")))) {
 			if ((world.getBlockState(BlockPos.containing(x, y, z + 2))).getBlock() == angle_block.getBlock() && (world.getBlockState(BlockPos.containing(x, y, z - 2))).getBlock() == angle_block.getBlock()
 					&& (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == shiny_wood.getBlock()) {
 				if ((world.getBlockState(BlockPos.containing(x - 1, y, z + 2))).getBlock() == shiny_wood.getBlock() && (world.getBlockState(BlockPos.containing(x - 2, y, z + 2))).getBlock() == shiny_wood.getBlock()

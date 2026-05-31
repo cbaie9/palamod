@@ -8,6 +8,5 @@
     "south": "palamod:block/mega_safe_chest_side_3",
     "west": "palamod:block/mega_safe_chest_side_2",
     "particle": "palamod:block/mega_safe_chest_top"
-  },
-  "render_type": "solid"
+  }
 }

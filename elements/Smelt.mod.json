@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "enchantment",
   "definition": {
     "name": "Smelt",
@@ -10,18 +10,10 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "CUSTOM:Paladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Creativehammer"
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Endiumhammer"
-      }
+      "CUSTOM:Paladiumhammer",
+      "CUSTOM:Creativehammer",
+      "CUSTOM:Greenpaladiumhammer",
+      "CUSTOM:Endiumhammer"
     ],
     "isTreasureEnchantment": false,
     "isCurse": false,

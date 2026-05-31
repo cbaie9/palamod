@@ -1,10 +1,8 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "itemextension",
   "definition": {
-    "item": {
-      "value": "CUSTOM:Judeecercis_Slab"
-    },
+    "item": "CUSTOM:Judeecercis_Slab",
     "enableFuel": true,
     "fuelPower": {
       "fixedValue": 100.0

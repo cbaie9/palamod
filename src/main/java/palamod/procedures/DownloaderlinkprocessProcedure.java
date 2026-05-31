@@ -6,6 +6,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
@@ -26,11 +27,11 @@ public class DownloaderlinkprocessProcedure {
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
 		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "language")).equals("french")) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Le downloader a ete lie a votre compte bancaire : valeur =" + getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account"))), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal(("Le downloader a ete lie a votre compte bancaire : valeur =" + getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account"))), false);
 		} else {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("Your bank account has been link to this block : value=" + getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account"))), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal(("Your bank account has been link to this block : value=" + getBlockNBTString(world, BlockPos.containing(x, y, z), "downloader_linked_account"))), false);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

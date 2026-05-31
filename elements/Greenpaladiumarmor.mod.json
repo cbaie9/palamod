@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,22 +10,12 @@
     "textureLeggings": "paladium_green_leggings",
     "enableBoots": true,
     "textureBoots": "paladium_green_boots",
-    "onHelmetTick": {
-      "name": "PaladiumArmorHelmetTickEvent"
-    },
-    "onBodyTick": {
-      "name": "PaladiumArmorBodyTickEvent"
-    },
-    "onLeggingsTick": {
-      "name": "PaladiumArmorLeggingsTickEvent"
-    },
-    "onBootsTick": {
-      "name": "PaladiumArmorBootsTickEvent"
-    },
+    "onHelmetTick": "PaladiumArmorHelmetTickEvent",
+    "onBodyTick": "PaladiumArmorBodyTickEvent",
+    "onLeggingsTick": "PaladiumArmorLeggingsTickEvent",
+    "onBootsTick": "PaladiumArmorBootsTickEvent",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "paladium_green_",
     "helmetName": "Green paladium Helmet",
@@ -96,13 +86,9 @@
     "enchantability": 60,
     "toughness": 4.0,
     "knockbackResistance": 0.2,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      }
+      "CUSTOM:PaladiumGreeningot"
     ],
     "rarity": "COMMON"
   }

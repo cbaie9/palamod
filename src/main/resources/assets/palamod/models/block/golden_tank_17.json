@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l8_judeecercis",
     "side": "palamod:block/fluid_8_judeecercis",
     "cadre": "palamod:block/gold_tank"
-  },
-  "render_type": "translucent"
+  }
 }

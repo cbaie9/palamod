@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/cave_block",
     "particle": "palamod:block/cave_block"
-  },
-  "render_type": "cutout_mipped"
+  }
 }

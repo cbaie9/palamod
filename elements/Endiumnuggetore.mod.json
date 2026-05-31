@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "block",
   "definition": {
     "texture": "endium_nugget_ore",
@@ -51,14 +51,10 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "destroyTool": "pickaxe",
-    "customDrop": {
-      "value": "CUSTOM:Endiumnugget"
-    },
+    "customDrop": "CUSTOM:Endiumnugget",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -78,9 +74,7 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "basedrum",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
     "ignitedByLava": false,
@@ -93,24 +87,12 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "STONE"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "soundOnStep": "STONE",
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -137,47 +119,21 @@
     "fluidRestrictions": [],
     "generateFeature": true,
     "restrictionBiomes": [
-      {
-        "value": "CUSTOM:Frozenforest"
-      },
-      {
-        "value": "CUSTOM:Roofedforest"
-      },
-      {
-        "value": "CUSTOM:Forestender"
-      },
-      {
-        "value": "plains"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "forest_hills"
-      },
-      {
-        "value": "ocean"
-      },
-      {
-        "value": "lush_caves"
-      },
-      {
-        "value": "dripstone_caves"
-      },
-      {
-        "value": "meadow"
-      },
-      {
-        "value": "savanna_rock"
-      },
-      {
-        "value": "mutated_plains"
-      }
+      "CUSTOM:Frozenforest",
+      "CUSTOM:Roofedforest",
+      "CUSTOM:Forestender",
+      "plains",
+      "forest",
+      "forest_hills",
+      "ocean",
+      "lush_caves",
+      "dripstone_caves",
+      "meadow",
+      "savanna_rock",
+      "mutated_plains"
     ],
     "blocksToReplace": [
-      {
-        "value": "Blocks.STONE#0"
-      }
+      "Blocks.STONE#0"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 1,

@@ -1,6 +1,6 @@
 package palamod.client.model;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
@@ -18,7 +18,7 @@ import net.minecraft.client.model.EntityModel;
 public class ModelBIG_dynamitev2 extends EntityModel<LivingEntityRenderState> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("palamod", "model_big_dynamitev_2"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(Identifier.fromNamespaceAndPath("palamod", "model_big_dynamitev_2"), "main");
 	public final ModelPart bb_main;
 
 	public ModelBIG_dynamitev2(ModelPart root) {

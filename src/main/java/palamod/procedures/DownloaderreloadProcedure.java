@@ -10,7 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class DownloaderreloadProcedure {
@@ -29,7 +29,7 @@ public class DownloaderreloadProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 			if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu2 ? _menu2.getSlots().get(3).getItem() : ItemStack.EMPTY)
-					.is(ItemTags.create(ResourceLocation.parse("forge:uploadersellable")))) {
+					.is(ItemTags.create(Identifier.parse("forge:uploadersellable")))) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);

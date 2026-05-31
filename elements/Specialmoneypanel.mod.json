@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -120,9 +120,7 @@
           "name": "button_give",
           "text": "Give",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Specialmoneyprocess"
-          },
+          "onClick": "Specialmoneyprocess",
           "width": 46,
           "height": 20,
           "x": 245,

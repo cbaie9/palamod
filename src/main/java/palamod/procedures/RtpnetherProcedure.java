@@ -10,11 +10,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceKey;
@@ -79,33 +79,6 @@ public class RtpnetherProcedure {
 									for (MobEffectInstance _effectinstance : _player.getActiveEffects())
 										_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance, false));
 									_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
-								}
-							}
-						}
-						int horizontalRadiusSphere = (int) 5 - 1;
-						int verticalRadiusSphere = (int) 5 - 1;
-						int yIterationsSphere = verticalRadiusSphere;
-						for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-							for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-								for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-									double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-											+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-									if (distanceSq <= 1.0) {
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
-											BlockState _bs = Blocks.AIR.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Property<?> _propertyOld : _bso.getProperties()) {
-												Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
-												if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
-													try {
-														_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
-													} catch (Exception e) {
-													}
-											}
-											world.setBlock(_bp, _bs, 3);
-										}
-									}
 								}
 							}
 						}
@@ -237,13 +210,17 @@ public class RtpnetherProcedure {
 						}
 						{
 							Entity _ent = entity;
-							_ent.teleportTo(xrandom, 70, zrandom);
+							double _tx = xrandom;
+							double _ty = 70;
+							double _tz = zrandom;
+							_ent.teleportTo(_tx, _ty, _tz);
 							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(xrandom, 70, zrandom, _ent.getYRot(), _ent.getXRot());
+								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 						}
 					} else {
 						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									("tellraw @s [\"\",{\"text\":\"[ Palamod ]\",\"color\":\"dark_red\"},{\"text\":\" : " + "" + Component.translatable("palamod.procedure.jobs_miner_err_nel").getString() + "\",\"color\":\"gold\"}]"));
 					}
 				} catch (IOException e) {
@@ -251,8 +228,8 @@ public class RtpnetherProcedure {
 				}
 			}
 		} else {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("This command is in beta due minecraft generation being extremely slow  | type /nether true to do it anyway"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("This command is in beta due minecraft generation being extremely slow  | type /nether true to do it anyway"), false);
 		}
 	}
 }

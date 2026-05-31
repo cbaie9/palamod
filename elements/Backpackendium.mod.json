@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -1613,12 +1613,8 @@
         }
       }
     ],
-    "onTick": {
-      "name": "Lasecu2conbackpackgui"
-    },
-    "onClosed": {
-      "name": "Backpackwriteitem"
-    },
+    "onTick": "Lasecu2conbackpackgui",
+    "onClosed": "Backpackwriteitem",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

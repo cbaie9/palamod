@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.COMPASS"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "Items.COMPASS",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Loadblock1t"
-    },
+    "recipeReturnStack": "CUSTOM:Loadblock1t",
     "name": "loadcraft_1",
     "namespace": "mod"
   }

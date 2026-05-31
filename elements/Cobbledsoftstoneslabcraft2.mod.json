@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Stone cutting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "stoneCuttingInputStack": {
-      "value": "CUSTOM:Cobbleledsoftstone"
-    },
-    "stoneCuttingReturnStack": {
-      "value": "CUSTOM:Cobbledsoftstoneslab"
-    },
+    "stoneCuttingInputStack": "CUSTOM:Cobbleledsoftstone",
+    "stoneCuttingReturnStack": "CUSTOM:Cobbledsoftstoneslab",
     "name": "cobbledsoftstoneslabcraft_2",
     "namespace": "mod"
   }

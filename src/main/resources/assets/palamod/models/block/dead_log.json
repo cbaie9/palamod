@@ -8,6 +8,5 @@
     "south": "palamod:block/dead_wood",
     "west": "palamod:block/dead_wood",
     "particle": "palamod:block/dead_wood_top"
-  },
-  "render_type": "solid"
+  }
 }

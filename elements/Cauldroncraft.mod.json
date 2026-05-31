@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Lightningpotion"
-      }
+      "CUSTOM:Lightningpotion"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      }
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Lightningpotion"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Cauldron"
-    },
+    "recipeReturnStack": "CUSTOM:Cauldron",
     "name": "cauldroncraft",
     "namespace": "mod"
   }

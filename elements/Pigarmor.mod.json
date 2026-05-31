@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,9 +11,7 @@
     "enableBoots": true,
     "textureBoots": "pig_boots",
     "creativeTabs": [
-      {
-        "value": "COMBAT"
-      }
+      "COMBAT"
     ],
     "armorTextureFile": "pig_armor",
     "helmetName": "Pig Helmet",
@@ -96,13 +94,9 @@
     "enchantability": 9,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
-    "equipSound": {
-      "value": "item.armor.equip_generic"
-    },
+    "equipSound": "item.armor.equip_generic",
     "repairItems": [
-      {
-        "value": "Items.PORKCHOP"
-      }
+      "Items.PORKCHOP"
     ],
     "rarity": "COMMON"
   }

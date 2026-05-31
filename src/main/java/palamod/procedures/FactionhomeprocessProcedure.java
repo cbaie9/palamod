@@ -5,6 +5,7 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
@@ -24,20 +25,21 @@ public class FactionhomeprocessProcedure {
 		if (getBlockNBTLogic(world, new BlockPos(0, 9, 0), ("Faction_home_" + get_id + "_" + StringArgumentType.getString(arguments, "home_name"))) == true) {
 			{
 				Entity _ent = entity;
-				_ent.teleportTo((getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"))),
-						(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))),
-						(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))));
+				double _tx = (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x")));
+				double _ty = (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y")));
+				double _tz = (getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y")));
+				_ent.teleportTo(_tx, _ty, _tz);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport((getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_x"))),
-							(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))),
-							(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "_home_" + StringArgumentType.getString(arguments, "home_name") + "_y"))), _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 			}
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+				_level.getServer().getCommands().performPrefixedCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" You have been teleported to your faction home " + "" + StringArgumentType.getString(arguments, "home_name") + "\",\"color\":\"gold\"}]"));
 		} else {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+				_level.getServer().getCommands().performPrefixedCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" The faction home " + "" + StringArgumentType.getString(arguments, "home_name")
 								+ " witch you tried to teleported doesn't exist or has been deleted\",\"color\":\"gold\"}]"));
 		}

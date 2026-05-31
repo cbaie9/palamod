@@ -3,44 +3,45 @@
  */
 package palamod.init;
 
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
+import palamod.PalamodMod;
 
-import net.minecraft.world.level.GameRules;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
-@EventBusSubscriber
+import net.minecraft.world.level.gamerules.GameRuleTypeVisitor;
+import net.minecraft.world.level.gamerules.GameRuleType;
+import net.minecraft.world.level.gamerules.GameRuleCategory;
+import net.minecraft.world.level.gamerules.GameRule;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.core.registries.Registries;
+
+import com.mojang.serialization.Codec;
+import com.mojang.brigadier.arguments.IntegerArgumentType;
+import com.mojang.brigadier.arguments.BoolArgumentType;
+
 public class PalamodModGameRules {
-	public static GameRules.Key<GameRules.BooleanValue> LOGSALL;
-	public static GameRules.Key<GameRules.BooleanValue> LOCKEDCRAFT;
-	public static GameRules.Key<GameRules.BooleanValue> LOCKEDUSE;
-	public static GameRules.Key<GameRules.BooleanValue> COMMANDFURNACENOPERMACCESS;
-	public static GameRules.Key<GameRules.BooleanValue> COMMANDFACTIONNOPERMACCESS;
-	public static GameRules.Key<GameRules.BooleanValue> COMMANDFEEDNOPERMACCESS;
-	public static GameRules.Key<GameRules.BooleanValue> DISABLEJOBSGAMERULE;
-	public static GameRules.Key<GameRules.BooleanValue> DISABLEMONEYGAMERULE;
-	public static GameRules.Key<GameRules.BooleanValue> PALAMODDEBUGLOG;
-	public static GameRules.Key<GameRules.BooleanValue> COMMAND_CRAFT_NO_PERM_ACCESS;
-	public static GameRules.Key<GameRules.IntegerValue> JOBS_XP_BASE_MULTIPLIER;
-	public static GameRules.Key<GameRules.BooleanValue> JOBS_LEVEL_BASE;
-	public static GameRules.Key<GameRules.IntegerValue> BASE_JOB_LEVEL_MULTIPLIER;
-	public static GameRules.Key<GameRules.IntegerValue> DEFAULT_FIGHTING_TIME;
+	public static final DeferredRegister<GameRule<?>> REGISTRY = DeferredRegister.create(Registries.GAME_RULE, PalamodMod.MODID);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> LOGSALL = registerBoolean("logsall", GameRuleCategory.PLAYER, false);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> LOCKEDCRAFT = registerBoolean("lockedcraft", GameRuleCategory.PLAYER, true);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> LOCKEDUSE = registerBoolean("lockeduse", GameRuleCategory.PLAYER, true);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> COMMANDFURNACENOPERMACCESS = registerBoolean("commandfurnacenopermaccess", GameRuleCategory.PLAYER, true);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> COMMANDFACTIONNOPERMACCESS = registerBoolean("commandfactionnopermaccess", GameRuleCategory.PLAYER, false);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> COMMANDFEEDNOPERMACCESS = registerBoolean("commandfeednopermaccess", GameRuleCategory.PLAYER, true);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> DISABLEJOBSGAMERULE = registerBoolean("disablejobsgamerule", GameRuleCategory.PLAYER, false);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> DISABLEMONEYGAMERULE = registerBoolean("disablemoneygamerule", GameRuleCategory.PLAYER, false);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> PALAMODDEBUGLOG = registerBoolean("palamoddebuglog", GameRuleCategory.UPDATES, false);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> COMMAND_CRAFT_NO_PERM_ACCESS = registerBoolean("command_craft_no_perm_access", GameRuleCategory.PLAYER, true);
+	public static DeferredHolder<GameRule<?>, GameRule<Integer>> JOBS_XP_BASE_MULTIPLIER = registerInteger("jobs_xp_base_multiplier", GameRuleCategory.PLAYER, 100);
+	public static DeferredHolder<GameRule<?>, GameRule<Boolean>> JOBS_LEVEL_BASE = registerBoolean("jobs_level_base", GameRuleCategory.PLAYER, false);
+	public static DeferredHolder<GameRule<?>, GameRule<Integer>> BASE_JOB_LEVEL_MULTIPLIER = registerInteger("base_job_level_multiplier", GameRuleCategory.PLAYER, 1000);
+	public static DeferredHolder<GameRule<?>, GameRule<Integer>> DEFAULT_FIGHTING_TIME = registerInteger("default_fighting_time", GameRuleCategory.PLAYER, 400);
 
-	@SubscribeEvent
-	public static void registerGameRules(FMLCommonSetupEvent event) {
-		LOGSALL = GameRules.register("logsall", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
-		LOCKEDCRAFT = GameRules.register("lockedcraft", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-		LOCKEDUSE = GameRules.register("lockeduse", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-		COMMANDFURNACENOPERMACCESS = GameRules.register("commandfurnacenopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-		COMMANDFACTIONNOPERMACCESS = GameRules.register("commandfactionnopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
-		COMMANDFEEDNOPERMACCESS = GameRules.register("commandfeednopermaccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-		DISABLEJOBSGAMERULE = GameRules.register("disablejobsgamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
-		DISABLEMONEYGAMERULE = GameRules.register("disablemoneygamerule", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
-		PALAMODDEBUGLOG = GameRules.register("palamoddebuglog", GameRules.Category.UPDATES, GameRules.BooleanValue.create(false));
-		COMMAND_CRAFT_NO_PERM_ACCESS = GameRules.register("commandCraftNoPermAccess", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-		JOBS_XP_BASE_MULTIPLIER = GameRules.register("jobsXpBaseMultiplier", GameRules.Category.PLAYER, GameRules.IntegerValue.create(100));
-		JOBS_LEVEL_BASE = GameRules.register("jobsLevelBase", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
-		BASE_JOB_LEVEL_MULTIPLIER = GameRules.register("baseJobLevelMultiplier", GameRules.Category.PLAYER, GameRules.IntegerValue.create(1000));
-		DEFAULT_FIGHTING_TIME = GameRules.register("defaultFightingTime", GameRules.Category.PLAYER, GameRules.IntegerValue.create(400));
+	private static DeferredHolder<GameRule<?>, GameRule<Boolean>> registerBoolean(String registryname, GameRuleCategory category, boolean value) {
+		return REGISTRY.register(registryname, () -> new GameRule<>(category, GameRuleType.BOOL, BoolArgumentType.bool(), GameRuleTypeVisitor::visitBoolean, Codec.BOOL, b -> b ? 1 : 0, value, FeatureFlagSet.of()));
+	}
+
+	private static DeferredHolder<GameRule<?>, GameRule<Integer>> registerInteger(String registryname, GameRuleCategory category, int value) {
+		return REGISTRY.register(registryname, () -> new GameRule<>(category, GameRuleType.INT, IntegerArgumentType.integer(Integer.MIN_VALUE, Integer.MAX_VALUE), GameRuleTypeVisitor::visitInteger,
+				Codec.intRange(Integer.MIN_VALUE, Integer.MAX_VALUE), i -> i, value, FeatureFlagSet.of()));
 	}
 }

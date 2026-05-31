@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +16,7 @@ public class TotemdestroyplayerProcedure {
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			_setstack.setCount((int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock"));
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			_player.getInventory().placeItemBackInInventory(_setstack);
 		}
 	}
 

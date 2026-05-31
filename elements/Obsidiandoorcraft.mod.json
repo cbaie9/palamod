@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": ""
-      }
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Obsidiandoor"
-    },
+    "recipeReturnStack": "CUSTOM:Obsidiandoor",
     "name": "obsidiandoorcraft",
     "namespace": "mod"
   }

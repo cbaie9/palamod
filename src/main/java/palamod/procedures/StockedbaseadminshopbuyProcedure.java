@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class StockedbaseadminshopbuyProcedure {
 	public static double execute(ItemStack itemstack) {
@@ -64,7 +64,7 @@ public class StockedbaseadminshopbuyProcedure {
 			num = 7.5;
 		} else if (itemstack.getItem() == Blocks.CRIMSON_FUNGUS.asItem()) {
 			num = 7.5;
-		} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("minecraft:wool")))) {
+		} else if (itemstack.is(ItemTags.create(Identifier.parse("minecraft:wool")))) {
 			num = 7.5;
 		} else if (itemstack.getItem() == Blocks.OBSIDIAN.asItem()) {
 			num = 10;

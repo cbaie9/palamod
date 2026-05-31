@@ -4,9 +4,9 @@ import palamod.init.PalamodModMenus;
 
 import palamod.PalamodMod;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.loading.FMLPaths;
 
@@ -14,6 +14,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 
 import java.io.IOException;
@@ -59,12 +60,12 @@ public class AdhtruesellexampleProcedure {
 				if (n == 0) {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("You can't sell 0 item"), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal("You can't sell 0 item"), false);
 				}
-				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
-					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
-						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
+				if (entity.getCapability(Capabilities.Item.ENTITY, null) instanceof ResourceHandler<ItemResource> _resourceHandler) {
+					for (int _idx = 0; _idx < _resourceHandler.size(); _idx++) {
+						ItemStack itemstackiterator = ItemUtil.getStack(_resourceHandler, _idx);
 						if (itemstackiterator.getItem() == item.getItem()) {
 							n2 = n2 + itemstackiterator.getCount();
 						}
@@ -76,21 +77,21 @@ public class AdhtruesellexampleProcedure {
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) n2, _player.inventoryMenu.getCraftSlots());
 					}
 					main.addProperty("money", (main.get("money").getAsDouble() + n2 * fac_v));
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You sell  " + n2 + " items")), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("You sell  " + n2 + " items")), false);
 				} else if (n <= n2) {
 					main.addProperty("money", (main.get("money").getAsDouble() + n * fac_v));
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = item;
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) n, _player.inventoryMenu.getCraftSlots());
 					}
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You sell  " + n + " items")), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("You sell  " + n + " items")), false);
 				} else {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("You don't enough items to sell ( number too big )"), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal("You don't enough items to sell ( number too big )"), false);
 				}
 			} catch (IOException e) {
 				e.printStackTrace();

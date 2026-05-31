@@ -4,7 +4,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class Elevator_processProcedure {
@@ -18,12 +18,15 @@ public class Elevator_processProcedure {
 			y_pos = y;
 			add_num = 1;
 			for (int index0 = 0; index0 < 320; index0++) {
-				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
+				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(Identifier.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo((x + 0.5), (y_pos - add_num + 1), (z + 0.5));
+						double _tx = (x + 0.5);
+						double _ty = (y_pos - add_num + 1);
+						double _tz = (z + 0.5);
+						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((x + 0.5), (y_pos - add_num + 1), (z + 0.5), _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
 					break;
 				} else {
@@ -36,12 +39,15 @@ public class Elevator_processProcedure {
 			y_pos = y;
 			add_num = 1;
 			for (int index1 = 0; index1 < 320; index1++) {
-				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
+				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(Identifier.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo((x + 0.5), (y_pos + add_num + 1), (z + 0.5));
+						double _tx = (x + 0.5);
+						double _ty = (y_pos + add_num + 1);
+						double _tz = (z + 0.5);
+						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((x + 0.5), (y_pos + add_num + 1), (z + 0.5), _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
 					break;
 				} else {

@@ -2,8 +2,6 @@ package palamod.client.screens;
 
 import palamod.procedures.DevchecksnapProcedure;
 
-import org.checkerframework.checker.units.qual.h;
-
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -34,7 +32,7 @@ public class SnapshotOverlay {
 		}
 		if (true) {
 			if (DevchecksnapProcedure.execute(entity))
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.palamod.snapshot.label_paladium_creator_footage_devlopp"), 1, 10, -26368, false);
+				event.getGuiGraphics().text(Minecraft.getInstance().font, Component.translatable("gui.palamod.snapshot.label_paladium_creator_footage_devlopp"), 1, 10, -26368, false);
 		}
 	}
 }

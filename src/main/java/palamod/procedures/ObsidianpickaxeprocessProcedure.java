@@ -4,10 +4,10 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
@@ -16,7 +16,7 @@ public class ObsidianpickaxeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:opic")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("palamod:opic")))) {
 			if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
 				{
 					Direction _dir = Direction.SOUTH;
@@ -28,8 +28,8 @@ public class ObsidianpickaxeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.SOUTH)), true);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.SOUTH)), true);
 			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
 				{
 					Direction _dir = Direction.EAST;
@@ -41,8 +41,8 @@ public class ObsidianpickaxeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.EAST)), true);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.EAST)), true);
 			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
 				{
 					Direction _dir = Direction.WEST;
@@ -54,8 +54,8 @@ public class ObsidianpickaxeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.WEST)), true);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.WEST)), true);
 			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
 				{
 					Direction _dir = Direction.UP;
@@ -67,8 +67,8 @@ public class ObsidianpickaxeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.UP)), true);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.UP)), true);
 			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.UP) {
 				{
 					Direction _dir = Direction.SOUTH;
@@ -80,8 +80,8 @@ public class ObsidianpickaxeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.SOUTH)), true);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.SOUTH)), true);
 			} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.DOWN) {
 				{
 					Direction _dir = Direction.NORTH;
@@ -93,8 +93,8 @@ public class ObsidianpickaxeprocessProcedure {
 						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.NORTH)), true);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.obsidian_pickaxe").getString() + "" + Direction.NORTH)), true);
 			}
 		}
 	}

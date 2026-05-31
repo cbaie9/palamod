@@ -5,6 +5,5 @@
     "particle": "palamod:block/spikewood_2",
     "0": "minecraft:block/stripped_oak_log_top",
     "1": "minecraft:block/oak_planks"
-  },
-  "render_type": "solid"
+  }
 }

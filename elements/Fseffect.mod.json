@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Fly speed",
@@ -14,8 +14,6 @@
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [],
-    "onStarted": {
-      "name": "FseffectEffectStartedapplied"
-    }
+    "onStarted": "FseffectEffectStartedapplied"
   }
 }

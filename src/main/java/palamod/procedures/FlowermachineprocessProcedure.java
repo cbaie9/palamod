@@ -2,8 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -14,8 +15,10 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class FlowermachineprocessProcedure {
@@ -242,58 +245,85 @@ public class FlowermachineprocessProcedure {
 							set = flower4item.copy();
 						}
 						if (set.getItem() == Blocks.OXEYE_DAISY.asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(Blocks.OXEYE_DAISY).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(1, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(Blocks.OXEYE_DAISY).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
+									_container.setItem(1, _setstack);
+								}
 							}
 						} else if (set.getItem() == PalamodModBlocks.ENDIUM_FLOWER.get().asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_FLOWER.get()).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModBlocks.ENDIUM_FLOWER.get()).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+									_container.setItem(2, _setstack);
+								}
 							}
 						} else if (set.getItem() == PalamodModBlocks.PALADIUM_FLOWER.get().asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_FLOWER.get()).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(3, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_FLOWER.get()).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 3).getCount() + 1);
+									_container.setItem(3, _setstack);
+								}
 							}
 						} else if (set.getItem() == Blocks.POPPY.asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(Blocks.POPPY).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(4, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(Blocks.POPPY).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount() + 1);
+									_container.setItem(4, _setstack);
+								}
 							}
 						} else if (set.getItem() == PalamodModBlocks.CLATHRUSARCHERI.get().asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.CLATHRUSARCHERI.get()).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(5, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModBlocks.CLATHRUSARCHERI.get()).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).getCount() + 1);
+									_container.setItem(5, _setstack);
+								}
 							}
 						} else if (set.getItem() == PalamodModBlocks.MINERAL_FLOWER.get().asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModBlocks.MINERAL_FLOWER.get()).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(6, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModBlocks.MINERAL_FLOWER.get()).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 6).getCount() + 1);
+									_container.setItem(6, _setstack);
+								}
 							}
 						} else if (set.getItem() == Blocks.DANDELION.asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(Blocks.DANDELION).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(7, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(Blocks.DANDELION).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 7).getCount() + 1);
+									_container.setItem(7, _setstack);
+								}
 							}
 						} else if (set.getItem() == Blocks.LILY_OF_THE_VALLEY.asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(Blocks.LILY_OF_THE_VALLEY).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 8).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(8, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(Blocks.LILY_OF_THE_VALLEY).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 8).getCount() + 1);
+									_container.setItem(8, _setstack);
+								}
 							}
 						} else if (set.getItem() == Blocks.ALLIUM.asItem()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(Blocks.ALLIUM).copy();
-								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).getCount() + 1);
-								_itemHandlerModifiable.setStackInSlot(9, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(Blocks.ALLIUM).copy();
+									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 9).getCount() + 1);
+									_container.setItem(9, _setstack);
+								}
 							}
 						}
 						iloop = iloop + 1;
@@ -320,11 +350,11 @@ public class FlowermachineprocessProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					int _slotid = 0;
-					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(1);
-					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+				if (world instanceof ServerLevel _serverLevel) {
+					BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+					if (_be instanceof Container _container) {
+						_container.getItem(0).shrink(1);
+					}
 				}
 			}
 			world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
@@ -347,9 +377,9 @@ public class FlowermachineprocessProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

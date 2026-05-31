@@ -15,7 +15,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
@@ -44,7 +44,7 @@ public class PlaceemptyspawnerProcedure {
 					_player.getInventory().setChanged();
 			}
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:replaceable")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("minecraft:replaceable")))) {
 			world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.EMPTY_SPAWNER.get().defaultBlockState(), 3);
 		} else {
 			world.setBlock(BlockPos.containing(x, y + 1, z), PalamodModBlocks.EMPTY_SPAWNER.get().defaultBlockState(), 3);
@@ -62,9 +62,9 @@ public class PlaceemptyspawnerProcedure {
 		}
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.stone.place")), SoundSource.BLOCKS, 1, 1);
+				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.stone.place")), SoundSource.BLOCKS, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.stone.place")), SoundSource.BLOCKS, 1, 1, false);
+				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.stone.place")), SoundSource.BLOCKS, 1, 1, false);
 			}
 		}
 	}

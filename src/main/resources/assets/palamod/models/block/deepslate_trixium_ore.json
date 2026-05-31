@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/trixium_ore_deepslate",
     "particle": "palamod:block/trixium_ore_deepslate"
-  },
-  "render_type": "solid"
+  }
 }

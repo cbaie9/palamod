@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/lava_sponge_wet",
     "particle": "palamod:block/lava_sponge_wet"
-  },
-  "render_type": "solid"
+  }
 }

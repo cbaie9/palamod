@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreenblock"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:Paladiumseedplanter"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      }
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:PaladiumGreenblock",
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:Paladiumseedplanter",
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumstick"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Greenpaladiumseedplanter"
-    },
+    "recipeReturnStack": "CUSTOM:Greenpaladiumseedplanter",
     "name": "greenpaladiumseedplantercraft",
     "namespace": "mod"
   }

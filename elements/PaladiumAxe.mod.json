@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "tool",
   "definition": {
     "toolType": "Axe",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 24.0,
     "attackSpeed": 1.0,
@@ -24,9 +22,7 @@
     "damageVsEntity": 7.5,
     "usageCount": 4999,
     "repairItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot"
     ],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",

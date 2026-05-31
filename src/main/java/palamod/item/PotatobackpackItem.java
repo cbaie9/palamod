@@ -2,7 +2,9 @@ package palamod.item;
 
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.item.Item;
 import net.minecraft.network.chat.Component;
 
@@ -14,8 +16,8 @@ public class PotatobackpackItem extends Item {
 	}
 
 	@Override
-	public ItemStack getCraftingRemainder(ItemStack itemstack) {
-		return new ItemStack(this);
+	public ItemStackTemplate getCraftingRemainder(ItemInstance itemInstance) {
+		return new ItemStackTemplate(this);
 	}
 
 	@Override

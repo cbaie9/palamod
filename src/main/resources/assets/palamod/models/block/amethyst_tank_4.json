@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l10_jacaranda",
     "side": "palamod:block/fluid_10_jacaranda",
     "cadre": "palamod:block/amethyste_tank"
-  },
-  "render_type": "translucent"
+  }
 }

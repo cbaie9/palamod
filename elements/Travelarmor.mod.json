@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,22 +10,12 @@
     "textureLeggings": "travel_leggings",
     "enableBoots": true,
     "textureBoots": "travel_boots",
-    "onHelmetTick": {
-      "name": "TravelarmorHelmetTickEvent"
-    },
-    "onBodyTick": {
-      "name": "TravelarmorBody_jumpboost"
-    },
-    "onLeggingsTick": {
-      "name": "TravelarmorLeggings_speedboost"
-    },
-    "onBootsTick": {
-      "name": "TravelarmorBoots_slowfalling"
-    },
+    "onHelmetTick": "TravelarmorHelmetTickEvent",
+    "onBodyTick": "TravelarmorBody_jumpboost",
+    "onLeggingsTick": "TravelarmorLeggings_speedboost",
+    "onBootsTick": "TravelarmorBoots_slowfalling",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "travel2_",
     "helmetName": "Slimy Helmet",
@@ -96,9 +86,7 @@
     "enchantability": 20,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
-    "equipSound": {
-      "value": "item.armor.equip_diamond"
-    },
+    "equipSound": "item.armor.equip_diamond",
     "repairItems": [],
     "rarity": "COMMON"
   }

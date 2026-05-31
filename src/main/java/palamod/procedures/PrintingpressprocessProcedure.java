@@ -4,9 +4,9 @@ import palamod.init.PalamodModItems;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -23,9 +23,11 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.Container;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
@@ -83,8 +85,12 @@ public class PrintingpressprocessProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
-						_itemHandlerModifiable.setStackInSlot(0, ItemStack.EMPTY);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							_container.setItem(0, ItemStack.EMPTY);
+						}
+					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -98,17 +104,17 @@ public class PrintingpressprocessProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
 				} else {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
 				}
@@ -130,13 +136,16 @@ public class PrintingpressprocessProcedure {
 						}
 						output_item = new ItemStack(PalamodModItems.PLATE.get()).copy();
 						output_item.applyComponents((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getComponents());
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = output_item.copy();
-							_setstack.setCount(1);
-							_itemHandlerModifiable.setStackInSlot(0, _setstack);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								ItemStack _setstack = output_item.copy();
+								_setstack.setCount(1);
+								_container.setItem(0, _setstack);
+							}
 						}
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal("plate ready"), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal("plate ready"), false);
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack40 = new ItemStack(Blocks.AIR).copy();
 							_setstack40.setCount(1);
@@ -159,8 +168,8 @@ public class PrintingpressprocessProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack57 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
 							_setstack57.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
@@ -170,8 +179,8 @@ public class PrintingpressprocessProcedure {
 						}
 					} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() > 64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
 						remove_item = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - (64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"));
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack68 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
 							_setstack68.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
@@ -194,8 +203,8 @@ public class PrintingpressprocessProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack85 = new ItemStack(Items.WRITTEN_BOOK).copy();
 							_setstack85.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
@@ -205,8 +214,8 @@ public class PrintingpressprocessProcedure {
 						}
 					} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() > 64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
 						remove_item = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - (64 - getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"));
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack96 = new ItemStack(Items.BOOK).copy();
 							_setstack96.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
@@ -232,10 +241,14 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = output_item.copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
-							_itemHandlerModifiable.setStackInSlot(0, ItemStack.EMPTY);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.setItem(0, ItemStack.EMPTY);
+							}
+						}
 					} else if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count") > 0) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -247,8 +260,8 @@ public class PrintingpressprocessProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, new ItemStack(PalamodModItems.PALADIUM_INK.get()));
 							entityToSpawn.setPickUpDelay(10);
@@ -265,8 +278,8 @@ public class PrintingpressprocessProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, new ItemStack(Items.BOOK));
 							entityToSpawn.setPickUpDelay(10);
@@ -294,9 +307,9 @@ public class PrintingpressprocessProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

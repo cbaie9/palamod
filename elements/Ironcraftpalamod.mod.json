@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      },
-      {
-        "value": "CUSTOM:Ironparticle"
-      }
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle",
+      "CUSTOM:Ironparticle"
     ],
-    "recipeReturnStack": {
-      "value": "Items.IRON_INGOT"
-    },
+    "recipeReturnStack": "Items.IRON_INGOT",
     "name": "ironcraftpalamod",
     "namespace": "mod"
   }

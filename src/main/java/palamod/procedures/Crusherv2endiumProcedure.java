@@ -5,8 +5,9 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -16,6 +17,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
@@ -24,10 +26,13 @@ public class Crusherv2endiumProcedure {
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") >= 128) {
 			if (PalamodModItems.ENDIUM_NUGGET.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 63 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
 					|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-					_itemHandlerModifiable.setStackInSlot(2, _setstack);
+				if (world instanceof ServerLevel _serverLevel) {
+					BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+					if (_be instanceof Container _container) {
+						ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+						_container.setItem(2, _setstack);
+					}
 				}
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
@@ -39,7 +44,7 @@ public class Crusherv2endiumProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				if (world instanceof ServerLevel _serverLevelGR8 && _serverLevelGR8.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR8 && _serverLevelGR8.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( endium )"));
 				}
 			}
@@ -47,10 +52,13 @@ public class Crusherv2endiumProcedure {
 			if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") / 128) {
 				if (PalamodModItems.ENDIUM_NUGGET.get() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 63 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
 						|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-						_itemHandlerModifiable.setStackInSlot(2, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+							_container.setItem(2, _setstack);
+						}
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -62,7 +70,7 @@ public class Crusherv2endiumProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 						PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( endium )"));
 					}
 				}
@@ -70,10 +78,13 @@ public class Crusherv2endiumProcedure {
 				if (Blocks.DIRT.asItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && 63 >= itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()
 						|| 0 == itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount()) {
 					if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium")) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-							_itemHandlerModifiable.setStackInSlot(2, _setstack);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
+								_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+								_container.setItem(2, _setstack);
+							}
 						}
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -85,7 +96,7 @@ public class Crusherv2endiumProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (world instanceof ServerLevel _serverLevelGR28 && _serverLevelGR28.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR28 && _serverLevelGR28.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 							PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( failed ) ( endium ) "));
 						}
 					}
@@ -103,9 +114,9 @@ public class Crusherv2endiumProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

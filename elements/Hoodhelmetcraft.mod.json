@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      }
+      "Blocks.WOOL",
+      "CUSTOM:Paladiumcore"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "Blocks.WOOL"
-      },
-      {
-        "value": "Blocks.WOOL"
-      }
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "CUSTOM:Paladiumcore",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.WOOL"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:HoodHelmetArmor.helmet"
-    },
+    "recipeReturnStack": "CUSTOM:HoodHelmetArmor.helmet",
     "name": "hoodhelmetcraft",
     "namespace": "mod"
   }

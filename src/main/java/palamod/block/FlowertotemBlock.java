@@ -101,7 +101,7 @@ public class FlowertotemBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos, Direction direction) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
 		if (tileentity instanceof FlowertotemBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);

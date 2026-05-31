@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "titane_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethystseedplanter"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      }
+      "CUSTOM:Amethystseedplanter",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanestick"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Amethystseedplanter"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Amethystseedplanter",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanestick",
+      "CUSTOM:Titanestick",
+      "CUSTOM:Titanestick"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titaneseedplanter"
-    },
+    "recipeReturnStack": "CUSTOM:Titaneseedplanter",
     "name": "titaneseedplantercraft",
     "namespace": "mod"
   }

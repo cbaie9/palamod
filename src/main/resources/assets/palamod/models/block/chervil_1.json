@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/chervil_stage_1",
     "particle": "palamod:block/chervil_stage_1"
-  },
-  "render_type": "cutout"
+  }
 }

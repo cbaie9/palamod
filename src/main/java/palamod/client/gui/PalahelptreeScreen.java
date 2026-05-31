@@ -13,13 +13,16 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -29,24 +32,22 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_cross_no_button;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/palahelptree.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/erable_log.png");
-	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/jacaranda_log.png");
-	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/judeecercis_log.png");
-	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/ostrya_log.png");
-	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
-	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
-	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/palahelptree.png");
+	private static final Identifier IMAGE_1 = Identifier.parse("palamod:textures/screens/erable_log.png");
+	private static final Identifier IMAGE_2 = Identifier.parse("palamod:textures/screens/jacaranda_log.png");
+	private static final Identifier IMAGE_3 = Identifier.parse("palamod:textures/screens/judeecercis_log.png");
+	private static final Identifier IMAGE_4 = Identifier.parse("palamod:textures/screens/ostrya_log.png");
+	private static final Identifier IMAGE_5 = Identifier.parse("palamod:textures/screens/left_gray_line.png");
+	private static final Identifier IMAGE_6 = Identifier.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final Identifier IMAGE_7 = Identifier.parse("palamod:textures/screens/right_gray_line.png");
 
 	public PalahelptreeScreen(PalahelptreeMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 220, 166);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 220;
-		this.imageHeight = 166;
 	}
 
 	@Override
@@ -56,13 +57,12 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 220, 166, 220, 166);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 10, this.topPos + 102, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 10, this.topPos + 34, 0, 0, 16, 16, 16, 16);
@@ -74,32 +74,33 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		return super.keyPressed(key, b, c);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Palahelptree0Procedure.execute(entity), 38, 96, -52480, false);
-		guiGraphics.drawString(this.font, Palahelptree1Procedure.execute(entity), 38, 108, -52480, false);
-		guiGraphics.drawString(this.font, Palahelptree2Procedure.execute(entity), 35, 30, -6750055, false);
-		guiGraphics.drawString(this.font, Palahelptree3Procedure.execute(entity), 35, 44, -6750055, false);
-		guiGraphics.drawString(this.font, Palahelptree4Procedure.execute(entity), 35, 65, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelptree5Procedure.execute(entity), 35, 77, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelptree6Procedure.execute(entity), 38, 131, -13434727, false);
-		guiGraphics.drawString(this.font, Palahelptree7Procedure.execute(entity), 38, 144, -13434727, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelptree.label_palahelp_trees"), 59, 7, -1, false);
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.text(this.font, Palahelptree0Procedure.execute(entity), 38, 96, -52480, false);
+		guiGraphics.text(this.font, Palahelptree1Procedure.execute(entity), 38, 108, -52480, false);
+		guiGraphics.text(this.font, Palahelptree2Procedure.execute(entity), 35, 30, -6750055, false);
+		guiGraphics.text(this.font, Palahelptree3Procedure.execute(entity), 35, 44, -6750055, false);
+		guiGraphics.text(this.font, Palahelptree4Procedure.execute(entity), 35, 65, -12829636, false);
+		guiGraphics.text(this.font, Palahelptree5Procedure.execute(entity), 35, 77, -12829636, false);
+		guiGraphics.text(this.font, Palahelptree6Procedure.execute(entity), 38, 131, -13434727, false);
+		guiGraphics.text(this.font, Palahelptree7Procedure.execute(entity), 38, 144, -13434727, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.palahelptree.label_palahelp_trees"), 59, 7, -1, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + 153, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/home_pixel_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/home_pixel_adminshop.png"), Identifier.parse("palamod:textures/screens/pointec_home_pixel_adminshop.png")), e -> {
 					int x = PalahelptreeScreen.this.x;
 					int y = PalahelptreeScreen.this.y;
 					if (true) {
@@ -108,13 +109,13 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 173, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/arrow_adminshop.png"), Identifier.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
 					int x = PalahelptreeScreen.this.x;
 					int y = PalahelptreeScreen.this.y;
 					if (true) {
@@ -123,13 +124,13 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 195, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/cross_no_button.png"), Identifier.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					int x = PalahelptreeScreen.this.x;
 					int y = PalahelptreeScreen.this.y;
 					if (true) {
@@ -138,7 +139,7 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

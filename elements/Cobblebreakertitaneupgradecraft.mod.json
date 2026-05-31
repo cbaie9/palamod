@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "cobblebreaker_upgrades",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakeramethystupgrade"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakertitaneupgrade"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Cobblebreakeramethystupgrade",
+      "CUSTOM:Cobblebreakertitaneupgrade"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakeramethystupgrade"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Cobblebreakeramethystupgrade",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Cobblebreakertitaneupgrade"
-    },
+    "recipeReturnStack": "CUSTOM:Cobblebreakertitaneupgrade",
     "name": "cobblebreakertitaneupgradecraft",
     "namespace": "mod"
   }

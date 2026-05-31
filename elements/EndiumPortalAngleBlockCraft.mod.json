@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Endiumpollen"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumpollen"
-      },
-      {
-        "value": "CUSTOM:FindiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumheart"
-      },
-      {
-        "value": "CUSTOM:FindiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumpollen"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumpollen"
-      }
+      "CUSTOM:Endiumpollen",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Endiumpollen",
+      "CUSTOM:FindiumBlock",
+      "CUSTOM:Endiumheart",
+      "CUSTOM:FindiumBlock",
+      "CUSTOM:Endiumpollen",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Endiumpollen"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumPortalAngleBlock"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumPortalAngleBlock",
     "name": "endium_portal_angle_block_craft",
     "namespace": "mod"
   }

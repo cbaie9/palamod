@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.GOLDEN_SWORD"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.GOLDEN_SWORD"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Items.GOLDEN_SWORD"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      }
+      "",
+      "Items.GOLDEN_SWORD",
+      "",
+      "Items.GOLDEN_SWORD",
+      "Items.GOLD_INGOT",
+      "Items.GOLDEN_SWORD",
+      "Items.GOLD_INGOT",
+      "Items.GOLD_INGOT",
+      "Items.GOLD_INGOT"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Spikegold"
-    },
+    "recipeReturnStack": "CUSTOM:Spikegold",
     "name": "goldspikecraft",
     "namespace": "mod"
   }

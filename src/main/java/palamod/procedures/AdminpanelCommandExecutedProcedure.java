@@ -9,6 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.server.permissions.Permissions;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
@@ -22,7 +23,7 @@ public class AdminpanelCommandExecutedProcedure {
 			return;
 		if (entity instanceof Player _player)
 			_player.closeContainer();
-		if (entity instanceof Player _playerCmd1 && _playerCmd1.hasPermissions(4)) {
+		if (hasEntityPermissionLevel(entity, 4)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -63,5 +64,18 @@ public class AdminpanelCommandExecutedProcedure {
 				}, _bpos);
 			}
 		}
+	}
+
+	private static boolean hasEntityPermissionLevel(Entity entity, int permissionLevel) {
+		if (entity instanceof Player _player) {
+			return switch (permissionLevel) {
+				case 0 -> true;
+				case 1 -> _player.permissions().hasPermission(Permissions.COMMANDS_MODERATOR);
+				case 2 -> _player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+				case 3 -> _player.permissions().hasPermission(Permissions.COMMANDS_ADMIN);
+				default -> _player.permissions().hasPermission(Permissions.COMMANDS_OWNER);
+			};
+		}
+		return false;
 	}
 }

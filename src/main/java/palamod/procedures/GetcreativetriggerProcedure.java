@@ -15,7 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -36,9 +36,9 @@ public class GetcreativetriggerProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _plr0 && _plr0.gameMode() == GameType.CREATIVE && !(entity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel _serverLevel1
-				&& _plr1.getAdvancements().getOrStartProgress(_serverLevel1.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
+				&& _plr1.getAdvancements().getOrStartProgress(_serverLevel1.getServer().getAdvancements().get(Identifier.parse("palamod:advinvicrea"))).isDone())) {
 			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
-				AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"));
+				AdvancementHolder _adv = _level.getServer().getAdvancements().get(Identifier.parse("palamod:advinvicrea"));
 				if (_adv != null) {
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
@@ -47,7 +47,7 @@ public class GetcreativetriggerProcedure {
 					}
 				}
 			}
-			if (world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get creative trigger"));
 			}
 		}

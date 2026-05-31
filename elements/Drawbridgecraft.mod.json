@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.PISTON"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.PISTON"
-      },
-      {
-        "value": "Blocks.SLIME_BLOCK"
-      },
-      {
-        "value": "Blocks.DROPPER"
-      },
-      {
-        "value": "Blocks.SLIME_BLOCK"
-      },
-      {
-        "value": "Items.REDSTONE"
-      },
-      {
-        "value": "Items.REDSTONE"
-      },
-      {
-        "value": "Items.REDSTONE"
-      }
+      "Blocks.PISTON",
+      "",
+      "Blocks.PISTON",
+      "Blocks.SLIME_BLOCK",
+      "Blocks.DROPPER",
+      "Blocks.SLIME_BLOCK",
+      "Items.REDSTONE",
+      "Items.REDSTONE",
+      "Items.REDSTONE"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Drawbridge"
-    },
+    "recipeReturnStack": "CUSTOM:Drawbridge",
     "name": "drawbridgecraft",
     "namespace": "mod"
   }

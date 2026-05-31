@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/judeecercis_sapling",
     "particle": "palamod:block/judeecercis_sapling"
-  },
-  "render_type": "cutout"
+  }
 }

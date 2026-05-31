@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Double experience boost",
@@ -14,11 +14,7 @@
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [],
-    "onStarted": {
-      "name": "Addmultixp2file"
-    },
-    "onExpired": {
-      "name": "Removemultixp2file"
-    }
+    "onStarted": "Addmultixp2file",
+    "onExpired": "Removemultixp2file"
   }
 }

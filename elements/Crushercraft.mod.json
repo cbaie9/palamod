@@ -1,26 +1,16 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Paladiumcrusher"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      }
+      "CUSTOM:Paladiumcrusher",
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:Findium",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Compressedamethyste"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -28,37 +18,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      }
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Findium",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumcore"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiumcrusher"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiumcrusher",
     "name": "cursher_craft",
     "namespace": "mod"
   }

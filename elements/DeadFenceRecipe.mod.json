@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "wooden_fence",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:DeadPlanks"
-      }
+      "CUSTOM:DeadPlanks"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:DeadPlanks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:DeadPlanks"
-      },
-      {
-        "value": "CUSTOM:DeadPlanks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:DeadPlanks"
-      }
+      "",
+      "",
+      "",
+      "CUSTOM:DeadPlanks",
+      "Items.STICK",
+      "CUSTOM:DeadPlanks",
+      "CUSTOM:DeadPlanks",
+      "Items.STICK",
+      "CUSTOM:DeadPlanks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:DeadFence"
-    },
+    "recipeReturnStack": "CUSTOM:DeadFence",
     "name": "dead_fence_recipe",
     "namespace": "mod"
   }

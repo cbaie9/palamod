@@ -9,7 +9,6 @@ import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -80,7 +79,7 @@ public class Lasecu2conbackpackguiProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu45 ? _menu45.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
@@ -94,7 +93,7 @@ public class Lasecu2conbackpackguiProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu49 ? _menu49.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
@@ -108,7 +107,7 @@ public class Lasecu2conbackpackguiProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu53 ? _menu53.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);
@@ -127,7 +126,7 @@ public class Lasecu2conbackpackguiProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu58 ? _menu58.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 					}
 				}

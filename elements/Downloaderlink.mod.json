@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -67,9 +67,7 @@
           "name": "button_no",
           "text": "No",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectdownloader"
-          },
+          "onClick": "Connectdownloader",
           "width": 35,
           "height": 20,
           "x": 151,
@@ -83,9 +81,7 @@
           "name": "button_process",
           "text": "Process",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Downloaderlinkprocess"
-          },
+          "onClick": "Downloaderlinkprocess",
           "width": 61,
           "height": 20,
           "x": 210,

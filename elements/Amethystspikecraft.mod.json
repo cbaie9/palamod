@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.DIAMOND_SWORD"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.DIAMOND_SWORD"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Items.DIAMOND_SWORD"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "",
+      "Items.DIAMOND_SWORD",
+      "",
+      "Items.DIAMOND_SWORD",
+      "CUSTOM:Amethyste",
+      "Items.DIAMOND_SWORD",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Ametystespike"
-    },
+    "recipeReturnStack": "CUSTOM:Ametystespike",
     "name": "amethystspikecraft",
     "namespace": "mod"
   }

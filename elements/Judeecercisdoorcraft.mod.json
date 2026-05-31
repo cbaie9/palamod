@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Judeecercis_Planks",
+      "",
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Judeecercis_Planks",
+      "",
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Judeecercis_Planks",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Judeecercisdoor"
-    },
+    "recipeReturnStack": "CUSTOM:Judeecercisdoor",
     "name": "judeecercisdoorcraft",
     "namespace": "mod"
   }

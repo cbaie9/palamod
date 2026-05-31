@@ -4,6 +4,5 @@
     "all": "palamod:block/xp_bush",
     "particle": "palamod:block/xp_bush",
     "0": "palamod:block/xp_bush"
-  },
-  "render_type": "cutout_mipped"
+  }
 }

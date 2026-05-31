@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
@@ -32,36 +33,11 @@ public class CauldronmanagerprocessProcedure {
 		double z_core = 0;
 		double z_while = 0;
 		double x_while = 0;
-		int horizontalRadiusHemiBot = (int) 3 - 1;
-		int verticalRadiusHemiBot = (int) 2;
-		int yIterationsHemiBot = verticalRadiusHemiBot;
-		for (int i = -yIterationsHemiBot; i <= 0; i++) {
-			if (i == -verticalRadiusHemiBot) {
-				continue;
-			}
-			for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-				for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-							+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-					if (distanceSq <= 1.0) {
-						if (PalamodModBlocks.CAULDRON_CORE.get() == (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock()) {
-							x_core = x + xi;
-							y_core = y + i;
-							z_core = z + zi;
-							pass = true;
-							if (world instanceof ServerLevel _serverLevelGR8 && _serverLevelGR8.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
-								PalamodMod.LOGGER.info(("Core :  x : " + x_core + " y : " + y_core + " z : " + z_core));
-							}
-						}
-					}
-				}
-			}
-		}
 		if (pass) {/*layer 1*/
 			x_while = x_core - 3;
 			z_while = z_core - 3;
 			while (!(x_while == x_core + 3 && z_while == z_core + 3)) {
-				if (world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+				if (world instanceof ServerLevel _serverLevelGR4 && _serverLevelGR4.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 					PalamodMod.LOGGER.debug(("log l1 : x: " + x_while + "  y: " + y_core + " z: " + z_while));
 					if (failsafe_crash >= 50) {
 						break;
@@ -73,7 +49,7 @@ public class CauldronmanagerprocessProcedure {
 						continue;
 					}
 					if (!(PalamodModBlocks.CAULDRON.get() == (world.getBlockState(BlockPos.containing(x_while, y_core, z_while))).getBlock())) {
-						if (world instanceof ServerLevel _serverLevelGR15 && _serverLevelGR15.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+						if (world instanceof ServerLevel _serverLevelGR8 && _serverLevelGR8.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 							PalamodMod.LOGGER.debug(("layer 1 failed : x: " + x_while + "  y: " + y_core + " z: " + z_while));
 						}
 						break;
@@ -87,14 +63,14 @@ public class CauldronmanagerprocessProcedure {
 				}
 			}
 			layer_one = PalamodModBlocks.CAULDRON.get() == (world.getBlockState(BlockPos.containing(x_core + 3, y_core, z_core + 3))).getBlock() && x_while == x_core + 3 && z_while == z_core + 3;
-			if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+			if (world instanceof ServerLevel _serverLevelGR12 && _serverLevelGR12.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 				PalamodMod.LOGGER.info("layer1 : " + layer_one + "\n" + (x_while == x_core + 3) + "\n" + (z_while == z_core + 3));
 			} /*layer 2*/
 			x_while = x_core - 2;
 			z_while = z_core - 2;
 			failsafe_crash = 0;
 			while (!(x_while == x_core + 2 && z_while == z_core + 2)) {
-				if (world instanceof ServerLevel _serverLevelGR20 && _serverLevelGR20.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+				if (world instanceof ServerLevel _serverLevelGR13 && _serverLevelGR13.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 					PalamodMod.LOGGER.debug(("log l2 : x: " + x_while + "  y: " + y_core + " z: " + z_while));
 				}
 				if (failsafe_crash >= 50) {
@@ -122,7 +98,7 @@ public class CauldronmanagerprocessProcedure {
 				}
 			}
 			layer_two = PalamodModBlocks.CAULDRON.get() == (world.getBlockState(BlockPos.containing(x_core + 2, y_core + 1, z_core + 2))).getBlock() && x_while == x_core + 2 && z_while == z_core + 2;
-			if (world instanceof ServerLevel _serverLevelGR26 && _serverLevelGR26.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+			if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 				PalamodMod.LOGGER.info("layer2 : " + layer_two);
 			}
 			if (layer_one && layer_two) {
@@ -156,7 +132,7 @@ public class CauldronmanagerprocessProcedure {
 					z_while = z_core - 1;
 					failsafe_crash = 0;
 					while (!(x_while == x_core + 1 && z_while == z_core + 1)) {
-						if (world instanceof ServerLevel _serverLevelGR31 && _serverLevelGR31.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+						if (world instanceof ServerLevel _serverLevelGR24 && _serverLevelGR24.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 							PalamodMod.LOGGER.debug(("log place : x: " + x_while + "  y: " + y_core + " z: " + z_while));
 						}
 						if (failsafe_crash >= 50) {
@@ -174,7 +150,8 @@ public class CauldronmanagerprocessProcedure {
 					}
 					world.setBlock(BlockPos.containing(x_core + 1, y_core + 1, z_core + 1), PalamodModBlocks.ANGELIC_WATER.get().defaultBlockState(), 3);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"kill @e[type=minecraft:item,distance=..5,limit=1]");
 				}
 			} else {
@@ -212,7 +189,7 @@ public class CauldronmanagerprocessProcedure {
 					z_while = z_core - 1;
 					failsafe_crash = 0;
 					while (!(x_while == x_core + 1 && z_while == z_core + 1)) {
-						if (world instanceof ServerLevel _serverLevelGR45 && _serverLevelGR45.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+						if (world instanceof ServerLevel _serverLevelGR38 && _serverLevelGR38.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 							PalamodMod.LOGGER.debug(("log place : x: " + x_while + "  y: " + y_core + " z: " + z_while));
 						}
 						if (failsafe_crash >= 50) {

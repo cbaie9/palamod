@@ -23,7 +23,7 @@ public class JobsminersetxpProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments) {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get()))) {
 			jobs = GetjobsfileProcedure.execute(commandParameterEntity(arguments, "entity"));
 			if (jobs.exists()) {
 				{

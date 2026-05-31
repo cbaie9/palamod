@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:TitaneIngot",
+      "Blocks.STAINED_GLASS",
+      "",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:TitaneIngot",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanetank"
-    },
+    "recipeReturnStack": "CUSTOM:Titanetank",
     "name": "titanetankcraft",
     "namespace": "mod"
   }

@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/spawner_structure_four",
     "particle": "palamod:block/spawner_structure_four"
-  },
-  "render_type": "solid"
+  }
 }

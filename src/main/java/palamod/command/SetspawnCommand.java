@@ -3,8 +3,6 @@ package palamod.command;
 import palamod.procedures.SetspawnprocessProcedure;
 import palamod.procedures.SetspawndynablockProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -25,7 +23,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class SetspawnCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("setspawn").requires(s -> s.hasPermission(4)).then(Commands.argument("x_pos", DoubleArgumentType.doubleArg())
+		event.getDispatcher().register(Commands.literal("setspawn").requires(Commands.hasPermission(Commands.LEVEL_OWNERS)).then(Commands.argument("x_pos", DoubleArgumentType.doubleArg())
 				.then(Commands.argument("y_pos", DoubleArgumentType.doubleArg(-64, 320)).then(Commands.argument("z_pos", DoubleArgumentType.doubleArg()).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();

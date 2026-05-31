@@ -1,17 +1,15 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.common.extensions.ILevelExtension;
-import net.neoforged.neoforge.capabilities.Capabilities;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
@@ -21,7 +19,7 @@ public class PalamachineprocessV3Procedure {
 		double iloop = 0;
 		result_craft = PalamachineprocessgetrecipeProcedure.execute(world, x, y, z).copy();
 		if (!(result_craft.getItem() == Blocks.BARRIER.asItem())) {
-			if (result_craft.getItem() == BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(((getBlockNBTString(world, BlockPos.containing(x, y, z), "result_string_craft"))).toLowerCase(java.util.Locale.ENGLISH)))) {
+			if (result_craft.getItem() == BuiltInRegistries.ITEM.getValue(Identifier.parse(((getBlockNBTString(world, BlockPos.containing(x, y, z), "result_string_craft"))).toLowerCase(java.util.Locale.ENGLISH)))) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -35,26 +33,29 @@ public class PalamachineprocessV3Procedure {
 				if (Math.random() < 0.4) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 				}
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "palamachine_timer") >= 60) {
 					for (int index0 = 0; index0 < 5; index0++) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							int _slotid = (int) iloop;
-							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-							_stk.shrink(1);
-							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.getItem((int) iloop).shrink(1);
+							}
 						}
 						iloop = iloop + 1;
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = result_craft.copy();
-						_setstack.setCount(1);
-						_itemHandlerModifiable.setStackInSlot(5, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = result_craft.copy();
+							_setstack.setCount(1);
+							_container.setItem(5, _setstack);
+						}
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);

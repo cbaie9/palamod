@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l12_erable",
     "side": "palamod:block/fluid_12_erable",
     "cadre": "palamod:block/gold_tank"
-  },
-  "render_type": "translucent"
+  }
 }

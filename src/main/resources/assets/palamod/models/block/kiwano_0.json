@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/kiwano_stage_0",
     "particle": "palamod:block/kiwano_stage_0"
-  },
-  "render_type": "cutout"
+  }
 }

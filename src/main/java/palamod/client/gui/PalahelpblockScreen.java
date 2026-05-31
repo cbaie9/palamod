@@ -13,17 +13,20 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -36,21 +39,19 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 	private Button button_fluid;
 	private ImageButton imagebutton_close_gui_nohover;
 	private ImageButton imagebutton_arrow_back_true_1;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/gui176_166.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/adminshopblockoakwood.png");
-	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
-	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
-	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/pack.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/gui176_166.png");
+	private static final Identifier IMAGE_1 = Identifier.parse("palamod:textures/screens/adminshopblockoakwood.png");
+	private static final Identifier IMAGE_2 = Identifier.parse("palamod:textures/screens/left_gray_line.png");
+	private static final Identifier IMAGE_3 = Identifier.parse("palamod:textures/screens/right_gray_line.png");
+	private static final Identifier IMAGE_4 = Identifier.parse("palamod:textures/screens/pack.png");
 
 	public PalahelpblockScreen(PalahelpblockMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 176, 166);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
 	}
 
 	@Override
@@ -60,26 +61,21 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		boolean customTooltipShown = false;
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 21) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 5 && mouseY < topPos + 20) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.palahelpblock.tooltip_back_to_palahelp_menu"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
-		if (!customTooltipShown)
-			this.renderTooltip(guiGraphics, mouseX, mouseY);
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + -1, this.topPos + 0, 0, 0, -1, -1, -1, -1);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
@@ -88,17 +84,18 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		return super.keyPressed(key, b, c);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpblock.label_palahelp_block_menu"), 6, 7, -1250068, false);
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.palahelpblock.label_palahelp_block_menu"), 6, 7, -1250068, false);
 	}
 
 	@Override
@@ -135,7 +132,7 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 		}).bounds(this.leftPos + 96, this.topPos + 112, 50, 20).build();
 		this.addRenderableWidget(button_fluid);
 		imagebutton_close_gui_nohover = new ImageButton(this.leftPos + 153, this.topPos + 4, 17, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/close_gui_nohover.png"), Identifier.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
 					int x = PalahelpblockScreen.this.x;
 					int y = PalahelpblockScreen.this.y;
 					if (true) {
@@ -144,13 +141,13 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_close_gui_nohover);
 		imagebutton_arrow_back_true_1 = new ImageButton(this.leftPos + 133, this.topPos + 4, 17, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/arrow_back_true_1.png"), Identifier.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					int x = PalahelpblockScreen.this.x;
 					int y = PalahelpblockScreen.this.y;
 					if (true) {
@@ -159,7 +156,7 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

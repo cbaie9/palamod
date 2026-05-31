@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l14_jacaranda",
     "side": "palamod:block/fluid_14_jacaranda",
     "cadre": "palamod:block/titane_tank"
-  },
-  "render_type": "translucent"
+  }
 }

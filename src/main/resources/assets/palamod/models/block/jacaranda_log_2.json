@@ -8,6 +8,5 @@
     "south": "palamod:block/jacaranda_sap3",
     "west": "palamod:block/jacaranda_sap3",
     "particle": "palamod:block/jacaranda_top"
-  },
-  "render_type": "solid"
+  }
 }

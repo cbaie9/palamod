@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 9,
     "group": "endium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:EndiumBlock"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "CUSTOM:EndiumBlock",
+      "CUSTOM:EndiumIngot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumBlock"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:EndiumBlock",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumIngot"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumIngot",
     "name": "endium_block_ore_recipe",
     "namespace": "mod"
   }

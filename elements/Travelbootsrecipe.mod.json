@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.FEATHER"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.FEATHER"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "Items.FEATHER",
+      "",
+      "Items.FEATHER",
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:TitaneIngot",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Travelarmor.boots"
-    },
+    "recipeReturnStack": "CUSTOM:Travelarmor.boots",
     "name": "travelbootsrecipe",
     "namespace": "mod"
   }

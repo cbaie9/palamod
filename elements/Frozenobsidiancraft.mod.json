@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.PACKED_ICE"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Blocks.PACKED_ICE"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Blocks.PACKED_ICE"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Blocks.PACKED_ICE"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Blocks.PACKED_ICE"
-      }
+      "Blocks.PACKED_ICE",
+      "TAG:neoforge:obsidian",
+      "Blocks.PACKED_ICE",
+      "TAG:neoforge:obsidian",
+      "Blocks.PACKED_ICE",
+      "TAG:neoforge:obsidian",
+      "Blocks.PACKED_ICE",
+      "TAG:neoforge:obsidian",
+      "Blocks.PACKED_ICE"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Frozenobsidian"
-    },
+    "recipeReturnStack": "CUSTOM:Frozenobsidian",
     "name": "frozenobsidiancraft",
     "namespace": "mod"
   }

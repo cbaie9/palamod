@@ -10,8 +10,6 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,9 +26,10 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
@@ -53,7 +52,7 @@ public class Luckyprocess1adminProcedure {
 			PalamodMod.queueServerWork(100, () -> {
 				if (entity instanceof Player _player)
 					_player.giveExperienceLevels(-(10000));
-				if (world instanceof ServerLevel _serverLevelGR2 && _serverLevelGR2.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR2 && _serverLevelGR2.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " a eu aux lucky block l'event" + "0 + 0 = La tete a Toto"));
 				}
 			});
@@ -77,17 +76,17 @@ public class Luckyprocess1adminProcedure {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.WEIGHTED_BOOTS.get()).copy();
 					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 			});
-			if (world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + " 20 000 Lieux"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
 		}
 		if (Random >= 11600 && Random <= 14700) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Vous avez eu un event non impl\uFFFDment\uFFFD ( Adieu Faction ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"), true);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("Vous avez eu un event non impl\uFFFDment\uFFFD ( Adieu Faction ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"), true);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -98,7 +97,7 @@ public class Luckyprocess1adminProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world instanceof ServerLevel _serverLevelGR16 && _serverLevelGR16.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR16 && _serverLevelGR16.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Adieu Faction ( Non impl\uFFFDment\uFFFD )"));
 			}
 			PalamodModVariables.Lucky_destroy = 2;
@@ -119,12 +118,14 @@ public class Luckyprocess1adminProcedure {
 			}
 			PalamodMod.queueServerWork(100, () -> {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-5 ~-1 ~5 ~5 ~-1 ~-5 minecraft:netherrack");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-5 ~ ~5 ~5 ~ ~-5 minecraft:fire");
-				if (world instanceof ServerLevel _serverLevelGR24 && _serverLevelGR24.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR24 && _serverLevelGR24.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Allumer le feu"));
 				}
 			});
@@ -146,24 +147,27 @@ public class Luckyprocess1adminProcedure {
 			}
 			PalamodMod.queueServerWork(100, () -> {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-3 ~-1 ~3 ~3 ~-1 ~-3 palamod:amethyste_block");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-2 ~1 ~2 ~2 ~1 ~-2 palamod:amethyste_block");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-1 ~2 ~1 ~1 ~2 ~-1 palamod:amethyste_block");
 				world.setBlock(BlockPos.containing(x, y + 2, z), Blocks.BEACON.defaultBlockState(), 3);
-				if (world instanceof ServerLevel _serverLevelGR35 && _serverLevelGR35.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR35 && _serverLevelGR35.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Amethyste beacon"));
 				}
 			});
 			PalamodModVariables.Lucky_destroy = 3;
 		}
 		if (Random >= 27500 && Random <= 14700) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Vous avez eu un event non impl\uFFFDment\uFFFD ( Analyste ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"), true);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("Vous avez eu un event non impl\uFFFDment\uFFFD ( Analyste ) ( N\uFFFDgatif ) Vous avez le droit \uFFFD un deuxi\uFFFDme essai"), true);
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack40 = new ItemStack(PalamodModItems.CHUNK_ANASLYSER.get()).copy();
 				_setstack40.setCount(1);
@@ -179,7 +183,7 @@ public class Luckyprocess1adminProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.CHUNK_ANASLYSER.get()).copy();
 				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				_player.getInventory().placeItemBackInInventory(_setstack);
 			}
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -191,7 +195,7 @@ public class Luckyprocess1adminProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world instanceof ServerLevel _serverLevelGR45 && _serverLevelGR45.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR45 && _serverLevelGR45.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Analyste ( Non impl\uFFFDment\uFFFD )"));
 			}
 			PalamodModVariables.Lucky_destroy = 1;
@@ -212,12 +216,14 @@ public class Luckyprocess1adminProcedure {
 			}
 			PalamodMod.queueServerWork(100, () -> {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-5 ~-1 ~5 ~5 ~-1 ~-5 minecraft:cobweb");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-5 ~ ~5 ~5 ~ ~-5 minecraft:cobweb");
-				if (world instanceof ServerLevel _serverLevelGR53 && _serverLevelGR53.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR53 && _serverLevelGR53.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Aracno- trap"));
 				}
 			});
@@ -246,7 +252,7 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR61 && _serverLevelGR61.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR61 && _serverLevelGR61.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Batman Nerveux"));
 				}
 			});
@@ -275,7 +281,7 @@ public class Luckyprocess1adminProcedure {
 				}
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR69 && _serverLevelGR69.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR69 && _serverLevelGR69.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Body guard"));
 				}
 			});
@@ -304,7 +310,7 @@ public class Luckyprocess1adminProcedure {
 				}
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR77 && _serverLevelGR77.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR77 && _serverLevelGR77.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Boom"));
 				}
 			});
@@ -333,7 +339,7 @@ public class Luckyprocess1adminProcedure {
 				}
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR85 && _serverLevelGR85.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR85 && _serverLevelGR85.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "BOOM"));
 				}
 			});
@@ -355,16 +361,15 @@ public class Luckyprocess1adminProcedure {
 			}
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.BAMBOO_SAPLING.defaultBlockState(), 3);
 			for (int index4 = 0; index4 < 5; index4++) {
-				if (world instanceof Level _level) {
+				if (world instanceof ServerLevel _level) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
-					if (BoneMealItem.growCrop(new ItemStack(Items.BONE_MEAL), _level, _bp) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, _bp, null)) {
-						if (!_level.isClientSide())
-							_level.levelEvent(2005, _bp, 0);
+					if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), _level, _bp, null) || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _level, _bp, null)) {
+						_level.levelEvent(2005, _bp, 0);
 					}
 				}
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR94 && _serverLevelGR94.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR94 && _serverLevelGR94.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Boo-Ban"));
 				}
 			});
@@ -388,14 +393,17 @@ public class Luckyprocess1adminProcedure {
 				PalamodMod.queueServerWork(20, () -> {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo(x, (y + 1), z);
+						double _tx = x;
+						double _ty = (y + 1);
+						double _tz = z;
+						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport(x, (y + 1), z, _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
 				});
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR103 && _serverLevelGR103.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR103 && _serverLevelGR103.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Bunny life"));
 				}
 			});
@@ -418,7 +426,7 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR111 && _serverLevelGR111.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR111 && _serverLevelGR111.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "\"C'est pas pass\uFFFD loin\""));
 				}
 			});
@@ -440,12 +448,15 @@ public class Luckyprocess1adminProcedure {
 			}
 			{
 				Entity _ent = entity;
-				_ent.teleportTo(x, 256, z);
+				double _tx = x;
+				double _ty = 256;
+				double _tz = z;
+				_ent.teleportTo(_tx, _ty, _tz);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(x, 256, z, _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR119 && _serverLevelGR119.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR119 && _serverLevelGR119.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "\"C'est tr\uFFFDs haut non ?\""));
 				}
 			});
@@ -474,7 +485,7 @@ public class Luckyprocess1adminProcedure {
 				}
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR127 && _serverLevelGR127.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR127 && _serverLevelGR127.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Caballo de la muerte"));
 				}
 			});
@@ -496,10 +507,11 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+				_level.getServer().getCommands().performPrefixedCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"msg @s Le coffre au tr\uFFFDsor  est a X:21000 Y:255 Z:100");
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR136 && _serverLevelGR136.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR136 && _serverLevelGR136.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "carte au tr\uFFFDsor (\uFFFD$\uFFFD$"));
 				}
 			});
@@ -521,10 +533,11 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+				_level.getServer().getCommands().performPrefixedCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"msg @s Le coffre au tr\uFFFDsor  est a X:21000 Y:255 Z:100");
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR145 && _serverLevelGR145.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR145 && _serverLevelGR145.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "carte au tr\uFFFDsor $\uFFFD$"));
 				}
 			});
@@ -546,7 +559,7 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR153 && _serverLevelGR153.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR153 && _serverLevelGR153.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Au voleur"));
 				}
 				PalamodModVariables.Lucky_destroy = 1;
@@ -568,7 +581,7 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR161 && _serverLevelGR161.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR161 && _serverLevelGR161.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Coffre fort"));
 				}
 			});
@@ -590,7 +603,7 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR169 && _serverLevelGR169.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR169 && _serverLevelGR169.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Colorful lamp"));
 				}
 			});
@@ -601,7 +614,7 @@ public class Luckyprocess1adminProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
 				_setstack.setCount(12);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				_player.getInventory().placeItemBackInInventory(_setstack);
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack174 = new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()).copy();
@@ -616,7 +629,7 @@ public class Luckyprocess1adminProcedure {
 				_player.containerMenu.broadcastChanges();
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR177 && _serverLevelGR177.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR177 && _serverLevelGR177.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Comment t'a eu \uFFFDa"));
 				}
 			});
@@ -627,7 +640,7 @@ public class Luckyprocess1adminProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 				_setstack.setCount(64);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				_player.getInventory().placeItemBackInInventory(_setstack);
 			}
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				ItemStack _setstack182 = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
@@ -643,13 +656,13 @@ public class Luckyprocess1adminProcedure {
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.anvil.fall")), SoundSource.MASTER, 2, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.anvil.fall")), SoundSource.MASTER, 2, 1);
 				} else {
-					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.anvil.fall")), SoundSource.MASTER, 2, 1, false);
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.anvil.fall")), SoundSource.MASTER, 2, 1, false);
 				}
 			}
 			PalamodMod.queueServerWork(100, () -> {
-				if (world instanceof ServerLevel _serverLevelGR186 && _serverLevelGR186.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR186 && _serverLevelGR186.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Consolation"));
 				}
 			});
@@ -659,13 +672,16 @@ public class Luckyprocess1adminProcedure {
 			PalamodModVariables.lucky_name = "Diamond beacon";
 			PalamodMod.queueServerWork(100, () -> {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-3 ~-1 ~3 ~3 ~-1 ~-3 minecraft:diamond_block");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-2 ~1 ~2 ~2 ~1 ~-2 minecraft:diamond_block");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-1 ~2 ~1 ~1 ~2 ~-1 minecraft:diamond_block");
 				world.setBlock(BlockPos.containing(x, y + 2, z), Blocks.BEACON.defaultBlockState(), 3);
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
@@ -680,7 +696,7 @@ public class Luckyprocess1adminProcedure {
 					_menu.getSlots().get(5).set(_setstack196);
 					_player.containerMenu.broadcastChanges();
 				}
-				if (world instanceof ServerLevel _serverLevelGR197 && _serverLevelGR197.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR197 && _serverLevelGR197.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Diamond beacon"));
 				}
 			});
@@ -702,16 +718,19 @@ public class Luckyprocess1adminProcedure {
 			}
 			PalamodMod.queueServerWork(100, () -> {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-3 ~-1 ~3 ~3 ~-1 ~-3 minecraft:diamond_block");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-2 ~1 ~2 ~2 ~1 ~-2 minecraft:diamond_block");
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"fill ~-1 ~2 ~1 ~1 ~2 ~-1 minecraft:diamond_block");
 				world.setBlock(BlockPos.containing(x, y + 2, z), Blocks.BEACON.defaultBlockState(), 3);
-				if (world instanceof ServerLevel _serverLevelGR208 && _serverLevelGR208.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+				if (world instanceof ServerLevel _serverLevelGR208 && _serverLevelGR208.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 					PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " \uFFFD eu aux lucky block l'event" + "Diamond beacon"));
 				}
 			});

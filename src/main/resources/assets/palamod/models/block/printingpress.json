@@ -4,6 +4,5 @@
     "all": "palamod:block/printpress",
     "particle": "palamod:block/printpress",
     "1": "palamod:block/printpress"
-  },
-  "render_type": "solid"
+  }
 }

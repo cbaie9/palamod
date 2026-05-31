@@ -8,7 +8,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -29,9 +29,9 @@ public class PalamodavaproProcedure {
 		if (entity == null)
 			return;
 		if (!(entity instanceof ServerPlayer _plr0 && _plr0.level() instanceof ServerLevel _serverLevel0
-				&& _plr0.getAdvancements().getOrStartProgress(_serverLevel0.getServer().getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"))).isDone())) {
+				&& _plr0.getAdvancements().getOrStartProgress(_serverLevel0.getServer().getAdvancements().get(Identifier.parse("palamod:palamodavancement"))).isDone())) {
 			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
-				AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:palamodavancement"));
+				AdvancementHolder _adv = _level.getServer().getAdvancements().get(Identifier.parse("palamod:palamodavancement"));
 				if (_adv != null) {
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {

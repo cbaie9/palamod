@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "enchantment",
   "definition": {
     "name": "Botteled",
@@ -10,9 +10,7 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "TAG:forge:pickaxe"
-      }
+      "TAG:forge:pickaxe"
     ],
     "isTreasureEnchantment": true,
     "isCurse": false,

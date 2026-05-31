@@ -4,6 +4,5 @@
     "all": "palamod:block/crown",
     "particle": "palamod:block/crown",
     "0": "palamod:block/crown"
-  },
-  "render_type": "solid"
+  }
 }

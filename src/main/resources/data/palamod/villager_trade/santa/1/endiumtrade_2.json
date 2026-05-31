@@ -1,0 +1,16 @@
+{
+  "wants": {
+    "id": "minecraft:snow_block",
+    "count": 2
+  },
+  "additional_wants": {
+    "id": "minecraft:snowball",
+    "count": 8
+  },
+  "gives": {
+    "id": "minecraft:powder_snow_bucket"
+  },
+  "max_uses": 20,
+  "xp": 7,
+  "reputation_discount": 0.05
+}

@@ -6,7 +6,6 @@ import palamod.network.PalamodModVariables;
 
 import palamod.PalamodMod;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -16,9 +15,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -70,55 +67,6 @@ public class AnalyserdendProcedure {
 		xloop = x - 8;
 		zloop = z - 8;
 		PalamodMod.LOGGER.debug(("[ Palamod ]  proc1 :" + proc1id + "( staus proc2an )" + "( server may lag  )"));
-		int horizontalRadiusSphere = (int) 200 - 1;
-		int verticalRadiusSphere = (int) 320 - 1;
-		int yIterationsSphere = verticalRadiusSphere;
-		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-					if (distanceSq <= 1.0) {
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:ores"))) || aready_iden) {
-							ores = ores + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.BEDROCK || aready_iden) {
-							bedrock = bedrock + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.CAVE_AIR
-								|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.VOID_AIR || aready_iden) {
-							air = air + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.GRASS_BLOCK || aready_iden) {
-							grass = grass + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.MAGENTA_SHULKER_BOX || aready_iden) {
-							shulkers = cobblestone + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:anvil"))) || aready_iden) {
-							anvil = anvil + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:planks"))) || aready_iden) {
-							planks = planks + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:anvil"))) || aready_iden) {
-							anvil = anvil + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:wool"))) || aready_iden) {
-							wool = wool + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:logs"))) || aready_iden) {
-							logs = logs + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("minecraft:planks"))) || aready_iden) {
-							planks = planks + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:cobblestone"))) || aready_iden) {
-							cobblestone = cobblestone + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:chests"))) || aready_iden) {
-							chest = chest + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.END_STONE || aready_iden) {
-							endstone = endstone + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.DIRT || aready_iden) {
-							dirt = dirt + 1;
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.CLAY || aready_iden) {
-							clay = clay + 1;
-						}
-						aready_iden = false;
-						yloop = yloop + 1;
-					}
-				}
-			}
-		}
 		PalamodMod.LOGGER.debug(("[ Palamod ]  proc1 :" + proc1id + "( staus proc2result )" + "( server may lag  )"));
 		entity.getPersistentData().putDouble("analy_ores", ores);
 		entity.getPersistentData().putDouble("analy_stone", stone);

@@ -8,6 +8,5 @@
     "south": "palamod:block/grinder_block_side16",
     "west": "palamod:block/grinder_frame_block16",
     "particle": "palamod:block/grinder_frame_block16"
-  },
-  "render_type": "solid"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "Blocks.CHEST"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Harpagophytum"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:PaladiumBlock",
+      "",
+      "CUSTOM:PaladiumBlock",
+      "Blocks.CHEST",
+      "CUSTOM:PaladiumBlock",
+      "",
+      "CUSTOM:Harpagophytum",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Flatchestupgrade"
-    },
+    "recipeReturnStack": "CUSTOM:Flatchestupgrade",
     "name": "flat_chest_upgrade_craft",
     "namespace": "mod"
   }

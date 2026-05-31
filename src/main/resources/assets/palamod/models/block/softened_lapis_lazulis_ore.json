@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/softened_lapis_lazulis_ore",
     "particle": "palamod:block/softened_lapis_lazulis_ore"
-  },
-  "render_type": "solid"
+  }
 }

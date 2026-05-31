@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,9 +11,7 @@
     "name": "Roulette paladienne disc",
     "rarity": "RARE",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "stackSize": 1,
     "enchantability": 0,
@@ -48,9 +46,7 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": true,
-    "musicDiscMusic": {
-      "value": "CUSTOM:roulette_paladienne"
-    },
+    "musicDiscMusic": "CUSTOM:roulette_paladienne",
     "musicDiscDescription": "Fuze III - Roulette paladienne",
     "musicDiscLengthInTicks": 2080,
     "musicDiscAnalogOutput": 4,

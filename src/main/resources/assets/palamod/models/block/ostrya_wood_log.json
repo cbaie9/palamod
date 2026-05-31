@@ -8,6 +8,5 @@
     "south": "palamod:block/ostrya",
     "west": "palamod:block/ostrya",
     "particle": "palamod:block/ostrya_top"
-  },
-  "render_type": "solid"
+  }
 }

@@ -37,19 +37,19 @@ public class RotatedorangeslimepadBlock extends Block implements SimpleWaterlogg
 	private final Function<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public RotatedorangeslimepadBlock(BlockBehaviour.Properties properties) {
-		super(properties.mapColor(MapColor.COLOR_GREEN).sound(SoundType.SLIME_BLOCK).strength(1f, 10f).requiresCorrectToolForDrops().noCollission().friction(0.8f).isRedstoneConductor((bs, br, bp) -> false).ignitedByLava());
+		super(properties.mapColor(MapColor.COLOR_GREEN).sound(SoundType.SLIME_BLOCK).strength(1f, 10f).requiresCorrectToolForDrops().noCollision().friction(0.8f).isRedstoneConductor((bs, br, bp) -> false).ignitedByLava());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
 	}
 
 	private Function<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				default -> box(1, 1, 4, 15, 15, 12);
 				case NORTH -> box(1, 1, 4, 15, 15, 12);
 				case EAST -> box(4, 1, 1, 12, 15, 15);
 				case WEST -> box(4, 1, 1, 12, 15, 15);
 				case UP -> box(1, 4, 1, 15, 12, 15);
 				case DOWN -> box(1, 4, 1, 15, 12, 15);
+				default -> box(1, 1, 4, 15, 15, 12);
 			};
 		}, WATERLOGGED);
 	}
@@ -65,7 +65,7 @@ public class RotatedorangeslimepadBlock extends Block implements SimpleWaterlogg
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
+	public int getLightDampening(BlockState state) {
 		return propagatesSkylightDown(state) ? 0 : 1;
 	}
 
@@ -82,8 +82,11 @@ public class RotatedorangeslimepadBlock extends Block implements SimpleWaterlogg
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return super.getStateForPlacement(context).setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
+		return state.setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
@@ -119,8 +122,8 @@ public class RotatedorangeslimepadBlock extends Block implements SimpleWaterlogg
 	}
 
 	@Override
-	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity, InsideBlockEffectApplier insideBlockEffectApplier) {
-		super.entityInside(blockstate, world, pos, entity, insideBlockEffectApplier);
+	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity, InsideBlockEffectApplier insideBlockEffectApplier, boolean isPrecise) {
+		super.entityInside(blockstate, world, pos, entity, insideBlockEffectApplier, isPrecise);
 		SlimeprocessProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 }

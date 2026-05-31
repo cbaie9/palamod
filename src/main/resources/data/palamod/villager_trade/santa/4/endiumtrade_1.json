@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "palamod:paladium_block",
+    "count": 64
+  },
+  "gives": {
+    "id": "minecraft:dirt"
+  },
+  "max_uses": 1000,
+  "xp": 500,
+  "reputation_discount": 0
+}

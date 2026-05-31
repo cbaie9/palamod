@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Mixedendiumingot"
-      },
-      {
-        "value": "CUSTOM:Mixedendiumingot"
-      },
-      {
-        "value": "CUSTOM:Mixedendiumingot"
-      },
-      {
-        "value": "CUSTOM:Mixedendiumingot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Mixedendiumingot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Mixedendiumingot",
+      "CUSTOM:Mixedendiumingot",
+      "CUSTOM:Mixedendiumingot",
+      "CUSTOM:Mixedendiumingot",
+      "",
+      "CUSTOM:Mixedendiumingot",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Mixedendiumarmor.helmet"
-    },
+    "recipeReturnStack": "CUSTOM:Mixedendiumarmor.helmet",
     "name": "mixed_endium_helmet_craft",
     "namespace": "mod"
   }

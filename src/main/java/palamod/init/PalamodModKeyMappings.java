@@ -17,12 +17,15 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class PalamodModKeyMappings {
-	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, "key.categories.palamod") {
+	public static final KeyMapping.Category CATEGORY_PALAMOD = new KeyMapping.Category(Identifier.parse("palamod:palamod"));
+	public static final KeyMapping.Category CATEGORY_UI = new KeyMapping.Category(Identifier.parse("palamod:ui"));
+	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, CATEGORY_PALAMOD) {
 		private boolean isDownOld = false;
 
 		@Override
@@ -35,7 +38,7 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping FACTIONBLINDING = new KeyMapping("key.palamod.factionblinding", GLFW.GLFW_KEY_F, "key.categories.palamod") {
+	public static final KeyMapping FACTIONBLINDING = new KeyMapping("key.palamod.factionblinding", GLFW.GLFW_KEY_F, CATEGORY_PALAMOD) {
 		private boolean isDownOld = false;
 
 		@Override
@@ -48,7 +51,7 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping JOBSKEYBINDING = new KeyMapping("key.palamod.jobskeybinding", GLFW.GLFW_KEY_J, "key.categories.palamod") {
+	public static final KeyMapping JOBSKEYBINDING = new KeyMapping("key.palamod.jobskeybinding", GLFW.GLFW_KEY_J, CATEGORY_PALAMOD) {
 		private boolean isDownOld = false;
 
 		@Override
@@ -61,7 +64,7 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping OPENCLICKER = new KeyMapping("key.palamod.openclicker", GLFW.GLFW_KEY_K, "key.categories.ui") {
+	public static final KeyMapping OPENCLICKER = new KeyMapping("key.palamod.openclicker", GLFW.GLFW_KEY_K, CATEGORY_UI) {
 		private boolean isDownOld = false;
 
 		@Override
@@ -77,6 +80,8 @@ public class PalamodModKeyMappings {
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
+		event.registerCategory(CATEGORY_PALAMOD);
+		event.registerCategory(CATEGORY_UI);
 		event.register(ADMINSHOPKEYBLINDING);
 		event.register(FACTIONBLINDING);
 		event.register(JOBSKEYBINDING);

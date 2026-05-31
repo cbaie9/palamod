@@ -8,6 +8,5 @@
     "south": "palamod:block/empty_broken_mob_spawner",
     "west": "palamod:block/empty_broken_mob_spawner",
     "particle": "palamod:block/spawner_top"
-  },
-  "render_type": "cutout"
+  }
 }

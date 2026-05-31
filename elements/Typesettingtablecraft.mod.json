@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "CUSTOM:Plate"
-      },
-      {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "TAG:minecraft:wooden_slabs"
-      },
-      {
-        "value": "TAG:minecraft:wooden_slabs"
-      },
-      {
-        "value": "TAG:minecraft:wooden_slabs"
-      },
-      {
-        "value": "TAG:minecraft:planks"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "TAG:minecraft:planks"
-      }
+      "Items.IRON_INGOT",
+      "CUSTOM:Plate",
+      "Items.IRON_INGOT",
+      "TAG:minecraft:wooden_slabs",
+      "TAG:minecraft:wooden_slabs",
+      "TAG:minecraft:wooden_slabs",
+      "TAG:minecraft:planks",
+      "CUSTOM:Findium",
+      "TAG:minecraft:planks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Typesettingtable"
-    },
+    "recipeReturnStack": "CUSTOM:Typesettingtable",
     "name": "typesettingtablecraft",
     "namespace": "mod"
   }

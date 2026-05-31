@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -55,7 +53,7 @@ public class OxLibflaskgeneratorProcedure {
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = flask.copy();
 			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			_player.getInventory().placeItemBackInInventory(_setstack);
 		}
 	}
 }

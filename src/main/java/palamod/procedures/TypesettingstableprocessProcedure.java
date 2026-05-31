@@ -4,9 +4,9 @@ import palamod.init.PalamodModItems;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -26,6 +26,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.Container;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
@@ -56,10 +58,13 @@ public class TypesettingstableprocessProcedure {
 				}
 				input_book = new ItemStack(PalamodModItems.PLATE.get()).copy();
 				input_book.applyComponents((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getComponents());
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = input_book.copy();
-					_setstack.setCount(1);
-					_itemHandlerModifiable.setStackInSlot(0, _setstack);
+				if (world instanceof ServerLevel _serverLevel) {
+					BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+					if (_be instanceof Container _container) {
+						ItemStack _setstack = input_book.copy();
+						_setstack.setCount(1);
+						_container.setItem(0, _setstack);
+					}
 				}
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack12 = new ItemStack(Blocks.AIR).copy();
@@ -137,10 +142,14 @@ public class TypesettingstableprocessProcedure {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = output_book.copy();
 						_setstack.setCount(1);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						_player.getInventory().placeItemBackInInventory(_setstack);
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
-						_itemHandlerModifiable.setStackInSlot(0, ItemStack.EMPTY);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							_container.setItem(0, ItemStack.EMPTY);
+						}
+					}
 					if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "plate_loaded")) {
 						{
 							int _value = 2;
@@ -173,7 +182,7 @@ public class TypesettingstableprocessProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PLATE.get()).copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "book_loaded")) {
 							{
@@ -209,10 +218,14 @@ public class TypesettingstableprocessProcedure {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = output_book.copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
-							_itemHandlerModifiable.setStackInSlot(0, ItemStack.EMPTY);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								_container.setItem(0, ItemStack.EMPTY);
+							}
+						}
 						if (entity instanceof Player _player)
 							_player.giveExperienceLevels(-(30));
 						if (!world.isClientSide()) {
@@ -235,17 +248,20 @@ public class TypesettingstableprocessProcedure {
 						}
 					} else {
 						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									("tellraw @s [\"\",{\"text\":\"[ Palamod ]\",\"color\":\"gold\"},{\"text\":\" : " + "" + Component.translatable("palamod.procedure.type_set3").getString() + "\",\"color\":\"dark_red\"}]"));
 					}
 				} else {
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								("tellraw @s [\"\",{\"text\":\"[ Palamod ]\",\"color\":\"gold\"},{\"text\":\" : " + "" + Component.translatable("palamod.procedure.type_set1").getString() + "\",\"color\":\"dark_red\"}]"));
 				}
 			} else {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("tellraw @s [\"\",{\"text\":\"[ Palamod ]\",\"color\":\"gold\"},{\"text\":\" : " + "" + Component.translatable("palamod.procedure.type_set2").getString() + "\",\"color\":\"dark_red\"}]"));
 			}
 		}
@@ -260,9 +276,9 @@ public class TypesettingstableprocessProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

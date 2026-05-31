@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "enchantment",
   "definition": {
     "name": "Charged",
@@ -10,21 +10,11 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "CUSTOM:Legendarystonefortune"
-      },
-      {
-        "value": "CUSTOM:Legendarystoneinvisible"
-      },
-      {
-        "value": "CUSTOM:Legendarystonepower"
-      },
-      {
-        "value": "CUSTOM:Legendarystonejobs"
-      },
-      {
-        "value": "CUSTOM:Legendarystoneteleportation"
-      }
+      "CUSTOM:Legendarystonefortune",
+      "CUSTOM:Legendarystoneinvisible",
+      "CUSTOM:Legendarystonepower",
+      "CUSTOM:Legendarystonejobs",
+      "CUSTOM:Legendarystoneteleportation"
     ],
     "isTreasureEnchantment": true,
     "isCurse": true,

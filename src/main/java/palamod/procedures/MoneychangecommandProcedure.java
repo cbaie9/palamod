@@ -12,6 +12,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.server.permissions.Permissions;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
@@ -42,7 +44,7 @@ public class MoneychangecommandProcedure {
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
-		if (entity instanceof Player _playerCmd5 && _playerCmd5.hasPermissions(4)) {
+		if (hasEntityPermissionLevel(entity, 4)) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
@@ -81,7 +83,8 @@ public class MoneychangecommandProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								("tellraw " + entity.getDisplayName().getString() + " [\"\",{\"text\":\"[ Palamod ] : \",\"color\":\"dark_red\"},{\"text\":\"" + Component.translatable("palamod.procedure.money_current").getString()
 										+ main.get("money").getAsDouble() + "$\",\"color\":\"gold\"}]"));
 				} catch (IOException e) {
@@ -118,5 +121,18 @@ public class MoneychangecommandProcedure {
 			e.printStackTrace();
 			return null;
 		}
+	}
+
+	private static boolean hasEntityPermissionLevel(Entity entity, int permissionLevel) {
+		if (entity instanceof Player _player) {
+			return switch (permissionLevel) {
+				case 0 -> true;
+				case 1 -> _player.permissions().hasPermission(Permissions.COMMANDS_MODERATOR);
+				case 2 -> _player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+				case 3 -> _player.permissions().hasPermission(Permissions.COMMANDS_ADMIN);
+				default -> _player.permissions().hasPermission(Permissions.COMMANDS_OWNER);
+			};
+		}
+		return false;
 	}
 }

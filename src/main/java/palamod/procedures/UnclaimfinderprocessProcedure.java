@@ -8,11 +8,8 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.BlockPos;
 
 public class UnclaimfinderprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -30,22 +27,6 @@ public class UnclaimfinderprocessProcedure {
 			} else if (itemstack.getItem() == PalamodModItems.UNCLAIM_FINDER_BLUE.get()) {
 				radius = 64;
 			}
-			int horizontalRadiusSphere = (int) radius - 1;
-			int verticalRadiusSphere = (int) 150 - 1;
-			int yIterationsSphere = verticalRadiusSphere;
-			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-					for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-						if (distanceSq <= 1.0) {
-							if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("palamod:tile_entity")))) {
-								pourcentage = pourcentage + 1;
-							}
-						}
-					}
-				}
-			}
 			{
 				final String _tagName = "cooldown";
 				final String _tagValue = (itemstack.getDisplayName().getString());
@@ -61,7 +42,7 @@ public class UnclaimfinderprocessProcedure {
 				final double _tagValue = pourcentage;
 				CustomData.update(DataComponents.CUSTOM_DATA, itemstack, tag -> tag.putDouble(_tagName, _tagValue));
 			}
-			if (!(entity instanceof Player _plr24 && _plr24.gameMode() == GameType.CREATIVE)) {
+			if (!(entity instanceof Player _plr20 && _plr20.gameMode() == GameType.CREATIVE)) {
 				if (world instanceof ServerLevel _level) {
 					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});

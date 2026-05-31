@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Titanechestv2"
-      },
-      {
-        "value": "CUSTOM:Titanechest"
-      },
-      {
-        "value": "CUSTOM:Flatchestupgrade"
-      }
+      "CUSTOM:Titanechestv2",
+      "CUSTOM:Titanechest",
+      "CUSTOM:Flatchestupgrade"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Titanechestv2"
-      },
-      {
-        "value": "CUSTOM:Flatchestupgrade"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Titanechestv2",
+      "CUSTOM:Flatchestupgrade",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanechest"
-    },
+    "recipeReturnStack": "CUSTOM:Titanechest",
     "name": "flattentitanechestcraft",
     "namespace": "mod"
   }

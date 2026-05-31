@@ -5,6 +5,5 @@
     "particle": "palamod:block/spikeametyste_2",
     "0": "palamod:block/spikeametyste_1",
     "1": "palamod:block/spikeametyste_2"
-  },
-  "render_type": "solid"
+  }
 }

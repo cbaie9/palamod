@@ -9,7 +9,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -42,7 +42,7 @@ public class Orangeblue4dropProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 20 <= lvl) {
+			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().get(PalamodModGameRules.LOCKEDUSE.get())) || 20 <= lvl) {
 				if (Math.random() < 0.1) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get()));
@@ -57,9 +57,9 @@ public class Orangeblue4dropProcedure {
 				}
 				if (Math.random() < 0.00390625) {
 					if (!(entity instanceof ServerPlayer _plr6 && _plr6.level() instanceof ServerLevel _serverLevel6
-							&& _plr6.getAdvancements().getOrStartProgress(_serverLevel6.getServer().getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"))).isDone())) {
+							&& _plr6.getAdvancements().getOrStartProgress(_serverLevel6.getServer().getAdvancements().get(Identifier.parse("palamod:endiumnuggetdropfromplant"))).isDone())) {
 						if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
-							AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:endiumnuggetdropfromplant"));
+							AdvancementHolder _adv = _level.getServer().getAdvancements().get(Identifier.parse("palamod:endiumnuggetdropfromplant"));
 							if (_adv != null) {
 								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 								if (!_ap.isDone()) {

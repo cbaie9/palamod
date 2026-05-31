@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.GOLDEN_SWORD"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.GOLDEN_SWORD"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "Items.GOLDEN_SWORD"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "Items.DIAMOND"
-      }
+      "",
+      "Items.GOLDEN_SWORD",
+      "",
+      "Items.GOLDEN_SWORD",
+      "Items.DIAMOND",
+      "Items.GOLDEN_SWORD",
+      "Items.DIAMOND",
+      "Items.DIAMOND",
+      "Items.DIAMOND"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Diamondspike"
-    },
+    "recipeReturnStack": "CUSTOM:Diamondspike",
     "name": "diamondspikecraft",
     "namespace": "mod"
   }

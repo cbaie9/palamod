@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Paladiumchestv2"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      }
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Paladiumchestv2",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Compressedpaladium"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumchestv2"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumchestv2",
     "name": "endiumchestcraft",
     "namespace": "mod"
   }

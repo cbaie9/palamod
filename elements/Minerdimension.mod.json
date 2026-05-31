@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
-      {
-        "value": "CUSTOM:Alternateplaines"
-      }
+      "CUSTOM:Alternateplaines"
     ],
     "biomesInDimensionCaves": [],
     "worldGenType": "Normal world gen",
-    "mainFillerBlock": {
-      "value": "CUSTOM:Softstone"
-    },
-    "fluidBlock": {
-      "value": "Blocks.AIR"
-    },
+    "mainFillerBlock": "CUSTOM:Softstone",
+    "fluidBlock": "Blocks.AIR",
     "seaLevel": -64,
     "generateOreVeins": true,
     "generateAquifers": false,
@@ -42,19 +36,11 @@
     "minMonsterSpawnLightLimit": 0,
     "maxMonsterSpawnLightLimit": 0,
     "monsterSpawnBlockLightLimit": 0,
-    "onPlayerLeavesDimension": {
-      "name": "Clearportalexitminerdimension"
-    },
-    "portalFrame": {
-      "value": "CUSTOM:Witheredobsidian13"
-    },
-    "portalParticles": {
-      "value": "PORTAL"
-    },
+    "onPlayerLeavesDimension": "Clearportalexitminerdimension",
+    "portalFrame": "CUSTOM:Witheredobsidian13",
+    "portalParticles": "PORTAL",
     "portalLuminance": 7,
-    "portalSound": {
-      "value": "block.portal.ambient"
-    },
+    "portalSound": "block.portal.ambient",
     "enableIgniter": false,
     "igniterName": "Minerdimension Portal Igniter",
     "igniterRarity": "COMMON",
@@ -62,9 +48,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "TOOLS"
-      }
+      "TOOLS"
     ],
     "texture": "flint_and_steel",
     "portalTexture": "miner_portal",

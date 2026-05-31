@@ -4,14 +4,14 @@ import palamod.entity.PaladiumgolemEntity;
 
 import palamod.client.model.ModelGolem_gplacement_vlegtest;
 
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class PaladiumgolemRenderer extends MobRenderer<PaladiumgolemEntity, LivingEntityRenderState, ModelGolem_gplacement_vlegtest> {
 	private PaladiumgolemEntity entity = null;
-	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/golem1.12.png");
+	private final Identifier entityTexture = Identifier.parse("palamod:textures/entities/golem1.12.png");
 
 	public PaladiumgolemRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelGolem_gplacement_vlegtest(context.bakeLayer(ModelGolem_gplacement_vlegtest.LAYER_LOCATION)), 0.5f);
@@ -29,7 +29,7 @@ public class PaladiumgolemRenderer extends MobRenderer<PaladiumgolemEntity, Livi
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
+	public Identifier getTextureLocation(LivingEntityRenderState state) {
 		return entityTexture;
 	}
 }

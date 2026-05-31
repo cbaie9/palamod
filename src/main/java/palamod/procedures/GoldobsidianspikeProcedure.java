@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -27,7 +27,7 @@ public class GoldobsidianspikeProcedure {
 			}
 			world.setBlock(_bp, _bs, 3);
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(Identifier.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.NORTH;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -38,7 +38,7 @@ public class GoldobsidianspikeProcedure {
 					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(Identifier.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.SOUTH;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -49,7 +49,7 @@ public class GoldobsidianspikeProcedure {
 					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(Identifier.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.EAST;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -60,7 +60,7 @@ public class GoldobsidianspikeProcedure {
 					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(Identifier.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.WEST;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -71,7 +71,7 @@ public class GoldobsidianspikeProcedure {
 					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(Identifier.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.UP;
 				BlockPos _pos = BlockPos.containing(x, y, z);
@@ -82,7 +82,7 @@ public class GoldobsidianspikeProcedure {
 					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 				}
 			}
-		} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("palamod:omt")))) {
+		} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(Identifier.parse("palamod:omt")))) {
 			{
 				Direction _dir = Direction.DOWN;
 				BlockPos _pos = BlockPos.containing(x, y, z);

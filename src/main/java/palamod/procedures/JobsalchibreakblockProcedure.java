@@ -3,7 +3,7 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -16,9 +16,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -36,7 +37,7 @@ import java.io.BufferedReader;
 @EventBusSubscriber
 public class JobsalchibreakblockProcedure {
 	@SubscribeEvent
-	public static void onBlockBreak(BlockEvent.BreakEvent event) {
+	public static void onBlockBreak(BreakBlockEvent event) {
 		execute(event, event.getLevel(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getPlayer());
 	}
 
@@ -54,7 +55,7 @@ public class JobsalchibreakblockProcedure {
 		boolean money_getadd = false;
 		double money_add = 0;
 		double xp_block = 0;
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get()))) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			money = ReadcacheProcedure.execute(entity);
 			if (jobs.exists() && !(entity instanceof Player _plr2 && _plr2.gameMode() == GameType.CREATIVE) && money.exists()) {
@@ -68,13 +69,13 @@ public class JobsalchibreakblockProcedure {
 						}
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
+						if (world.getGameTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 							main.addProperty("xpstreak_alchi", 0);
 						}
 						if (GetalchibreakblocklogicProcedure.execute(world, x, y, z, entity)) {
 							xp_block = GetxpalchibreakblockProcedure.execute(world, x, y, z, entity);
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
+									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0)
 											|| 4 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0))
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
@@ -93,11 +94,11 @@ public class JobsalchibreakblockProcedure {
 								main.addProperty("xp_alchi", (xp_block * main.get("multi_exp").getAsDouble() + main.get("xp_alchi").getAsDouble()));
 							}
 							main.addProperty("xpstreak_alchi", (xp_block * main.get("multi_exp").getAsDouble() + main.get("xpstreak_alchi").getAsDouble()));
-							main.addProperty("xpstreak_time_alchi", (world.dayTime() + 80));
-							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_block * main.get("multi_exp").getAsDouble() + main.get("xpstreak_alchi").getAsDouble())
+							main.addProperty("xpstreak_time_alchi", (world.getGameTime() + 80));
+							if (entity instanceof ServerPlayer _player)
+								_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_block * main.get("multi_exp").getAsDouble() + main.get("xpstreak_alchi").getAsDouble())
 										+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
-												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
+												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
 										true);
 						}
 					} catch (IOException e) {

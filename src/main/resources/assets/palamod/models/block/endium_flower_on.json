@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/flower_endium_detected",
     "particle": "palamod:block/flower_endium_detected"
-  },
-  "render_type": "cutout"
+  }
 }

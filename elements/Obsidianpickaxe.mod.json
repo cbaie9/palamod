@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Baseclaim"
-      }
+      "CUSTOM:Baseclaim"
     ],
     "efficiency": 4.0,
     "attackSpeed": 1.0,
@@ -30,8 +28,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedOnBlock": {
-      "name": "Obsidianpickaxeprocess"
-    }
+    "onRightClickedOnBlock": "Obsidianpickaxeprocess"
   }
 }

@@ -2,8 +2,6 @@ package palamod.command;
 
 import palamod.procedures.BackCommandProcessProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -19,7 +17,7 @@ import net.minecraft.commands.Commands;
 public class BackCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("back").requires(s -> s.hasPermission(2)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("back").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

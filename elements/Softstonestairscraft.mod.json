@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Softstone"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Softstone"
-      },
-      {
-        "value": "CUSTOM:Softstone"
-      },
-      {
-        "value": "CUSTOM:Softstone"
-      },
-      {
-        "value": "CUSTOM:Softstone"
-      },
-      {
-        "value": "CUSTOM:Softstone"
-      }
+      "",
+      "",
+      "CUSTOM:Softstone",
+      "",
+      "CUSTOM:Softstone",
+      "CUSTOM:Softstone",
+      "CUSTOM:Softstone",
+      "CUSTOM:Softstone",
+      "CUSTOM:Softstone"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Softstonestairs"
-    },
+    "recipeReturnStack": "CUSTOM:Softstonestairs",
     "name": "softstonestairscraft",
     "namespace": "mod"
   }

@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -54,9 +54,9 @@ public class GetXpcraftjobsProcedure {
 					output = 0.2;
 				} else if (item.getItem() == PalamodModBlocks.EXTRACTOR.get().asItem()) {
 					output = 20;
-				} else if (item.is(ItemTags.create(ResourceLocation.parse("palamod:glueball_tier_one"))) && lvl_alchi >= 6) {
+				} else if (item.is(ItemTags.create(Identifier.parse("palamod:glueball_tier_one"))) && lvl_alchi >= 6) {
 					output = 2;
-				} else if (item.is(ItemTags.create(ResourceLocation.parse("palamod:glueball_tier_two"))) && lvl_alchi >= 10) {
+				} else if (item.is(ItemTags.create(Identifier.parse("palamod:glueball_tier_two"))) && lvl_alchi >= 10) {
 					output = 15;
 				} else if (item.getItem() == Items.BREAD) {
 					output = 1;
@@ -80,9 +80,9 @@ public class GetXpcraftjobsProcedure {
 					output = 150;
 				} else if (PalamodModItems.GREEN_PALADIUM_INGOT.get() == item.getItem() && lvl >= 12) {
 					output = 200;
-				} else if (item.is(ItemTags.create(ResourceLocation.parse("palamod:smeltable_corpse_xp")))) {
+				} else if (item.is(ItemTags.create(Identifier.parse("palamod:smeltable_corpse_xp")))) {
 					output = 10;
-				} else if (item.is(ItemTags.create(ResourceLocation.parse("palamod:smeltable_corpse_fish")))) {
+				} else if (item.is(ItemTags.create(Identifier.parse("palamod:smeltable_corpse_fish")))) {
 					output = 15;
 				}
 			}

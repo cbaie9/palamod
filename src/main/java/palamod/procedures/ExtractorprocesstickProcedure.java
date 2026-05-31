@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -24,22 +24,22 @@ public class ExtractorprocesstickProcedure {
 			x_bloc = x;
 			z_bloc = z;
 			if (Direction.NORTH == (getDirectionFromBlockState(blockstate))) {/*north =z+1*/
-				if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("palamod:can_be_extracted")))) {
+				if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(Identifier.parse("palamod:can_be_extracted")))) {
 					pass_block = true;
 					z_bloc = z + 1;
 				}
 			} else if (Direction.SOUTH == (getDirectionFromBlockState(blockstate))) {/*south =z-1*/
-				if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("palamod:can_be_extracted")))) {
+				if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(Identifier.parse("palamod:can_be_extracted")))) {
 					pass_block = true;
 					z_bloc = z - 1;
 				}
 			} else if (Direction.WEST == (getDirectionFromBlockState(blockstate))) {/*west =x+1*/
-				if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:can_be_extracted")))) {
+				if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(Identifier.parse("palamod:can_be_extracted")))) {
 					pass_block = true;
 					x_bloc = x + 1;
 				}
 			} else if (Direction.EAST == (getDirectionFromBlockState(blockstate))) {/*east =x-1*/
-				if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:can_be_extracted")))) {
+				if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(Identifier.parse("palamod:can_be_extracted")))) {
 					pass_block = true;
 					x_bloc = x - 1;
 				}

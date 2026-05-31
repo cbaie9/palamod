@@ -8,6 +8,5 @@
     "south": "palamod:block/endium_side",
     "west": "palamod:block/endium_side",
     "particle": "palamod:block/endium_down"
-  },
-  "render_type": "solid"
+  }
 }

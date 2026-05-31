@@ -4,6 +4,5 @@
     "all": "palamod:block/palavert_down",
     "particle": "palamod:block/palavert_down",
     "texture": "palamod:block/gpaladium_chest"
-  },
-  "render_type": "solid"
+  }
 }

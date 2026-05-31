@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -269,9 +269,7 @@
       {
         "type": "entitymodel",
         "data": {
-          "entityModel": {
-            "name": "Guardianentityprovider"
-          },
+          "entityModel": "Guardianentityprovider",
           "scale": 30,
           "rotationX": 0,
           "followMouseMovement": false,

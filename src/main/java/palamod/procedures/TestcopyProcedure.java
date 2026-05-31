@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,12 +17,12 @@ public class TestcopyProcedure {
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = (vr.copy()).copy();
 			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			_player.getInventory().placeItemBackInInventory(_setstack);
 		}
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = vr.copy();
 			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			_player.getInventory().placeItemBackInInventory(_setstack);
 		}
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "enchantment",
   "definition": {
     "name": "One more upgrade",
@@ -10,9 +10,7 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "TAG:mod:hammer_grinder"
-      }
+      "TAG:mod:hammer_grinder"
     ],
     "isTreasureEnchantment": true,
     "isCurse": true,

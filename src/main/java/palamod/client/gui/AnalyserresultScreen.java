@@ -9,41 +9,42 @@ import palamod.init.PalamodModScreens;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class AnalyserresultScreen extends AbstractContainerScreen<AnalyserresultMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/analyserresult.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/end_stone.png");
-	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/clay.png");
-	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/paladium_ore.png");
-	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/planks_oak.png");
-	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/cobblestone.png");
-	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/chest_ico32.png");
-	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/dirt.png");
-	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/erable_log.png");
-	private static final ResourceLocation IMAGE_9 = ResourceLocation.parse("palamod:textures/screens/wool_colored_white.png");
-	private static final ResourceLocation IMAGE_10 = ResourceLocation.parse("palamod:textures/screens/bedrock.png");
-	private static final ResourceLocation IMAGE_11 = ResourceLocation.parse("palamod:textures/screens/air_scre.png");
-	private static final ResourceLocation IMAGE_12 = ResourceLocation.parse("palamod:textures/screens/shulker_screen.png");
-	private static final ResourceLocation IMAGE_13 = ResourceLocation.parse("palamod:textures/screens/stone32.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/analyserresult.png");
+	private static final Identifier IMAGE_1 = Identifier.parse("palamod:textures/screens/end_stone.png");
+	private static final Identifier IMAGE_2 = Identifier.parse("palamod:textures/screens/clay.png");
+	private static final Identifier IMAGE_3 = Identifier.parse("palamod:textures/screens/paladium_ore.png");
+	private static final Identifier IMAGE_4 = Identifier.parse("palamod:textures/screens/planks_oak.png");
+	private static final Identifier IMAGE_5 = Identifier.parse("palamod:textures/screens/cobblestone.png");
+	private static final Identifier IMAGE_6 = Identifier.parse("palamod:textures/screens/chest_ico32.png");
+	private static final Identifier IMAGE_7 = Identifier.parse("palamod:textures/screens/dirt.png");
+	private static final Identifier IMAGE_8 = Identifier.parse("palamod:textures/screens/erable_log.png");
+	private static final Identifier IMAGE_9 = Identifier.parse("palamod:textures/screens/wool_colored_white.png");
+	private static final Identifier IMAGE_10 = Identifier.parse("palamod:textures/screens/bedrock.png");
+	private static final Identifier IMAGE_11 = Identifier.parse("palamod:textures/screens/air_scre.png");
+	private static final Identifier IMAGE_12 = Identifier.parse("palamod:textures/screens/shulker_screen.png");
+	private static final Identifier IMAGE_13 = Identifier.parse("palamod:textures/screens/stone32.png");
 
 	public AnalyserresultScreen(AnalyserresultMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 400, 220);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 400;
-		this.imageHeight = 220;
 	}
 
 	@Override
@@ -53,13 +54,12 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 400, 220, 400, 220);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 6, this.topPos + 7, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 118, this.topPos + 6, 0, 0, 16, 16, 16, 16);
@@ -77,42 +77,43 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		return super.keyPressed(key, b, c);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_ores"), 40, 40, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_endstone"), 39, 7, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_planks"), 38, 73, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_clay"), 153, 6, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_cobblestone"), 37, 99, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_chests"), 35, 137, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_dirt"), 37, 166, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_logs"), 151, 39, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_wool"), 153, 71, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_bedrock"), 151, 101, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnoresProcedure.execute(), 39, 59, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturndirtProcedure.execute(), 37, 187, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnstoneProcedure.execute(), 268, 22, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnendstoneProcedure.execute(), 40, 19, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnairProcedure.execute(), 152, 148, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnshulkerProcedure.execute(), 152, 178, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnchestProcedure.execute(), 34, 148, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnwoolProcedure.execute(), 153, 84, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnbedrockProcedure.execute(), 152, 112, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturncobbleProcedure.execute(), 25, 111, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnlogsProcedure.execute(), 153, 51, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnplanksProcedure.execute(), 38, 84, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_air"), 151, 130, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_stone"), 267, 9, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_shulker"), 151, 165, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnclayProcedure.execute(), 151, 22, -12829636, false);
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_ores"), 40, 40, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_endstone"), 39, 7, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_planks"), 38, 73, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_clay"), 153, 6, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_cobblestone"), 37, 99, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_chests"), 35, 137, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_dirt"), 37, 166, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_logs"), 151, 39, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_wool"), 153, 71, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_bedrock"), 151, 101, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnoresProcedure.execute(), 39, 59, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturndirtProcedure.execute(), 37, 187, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnstoneProcedure.execute(), 268, 22, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnendstoneProcedure.execute(), 40, 19, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnairProcedure.execute(), 152, 148, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnshulkerProcedure.execute(), 152, 178, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnchestProcedure.execute(), 34, 148, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnwoolProcedure.execute(), 153, 84, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnbedrockProcedure.execute(), 152, 112, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturncobbleProcedure.execute(), 25, 111, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnlogsProcedure.execute(), 153, 51, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnplanksProcedure.execute(), 38, 84, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_air"), 151, 130, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_stone"), 267, 9, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.analyserresult.label_shulker"), 151, 165, -12829636, false);
+		guiGraphics.text(this.font, AnalyreturnclayProcedure.execute(), 151, 22, -12829636, false);
 	}
 
 	@Override

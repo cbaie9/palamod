@@ -10,37 +10,38 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class CobbleakerserverScreen extends AbstractContainerScreen<CobbleakerserverMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/cobblebreakergui.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/particle_iron.png");
-	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/particle_gold.png");
-	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/particle_diamond.png");
-	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/particle_amethyst.png");
-	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/particle_titane.png");
-	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/particle_paladium.png");
-	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/green_paladium_particle.png");
-	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/upgrade_cobblebreaker.png");
-	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/arrow_down_sprite16.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/cobblebreakergui.png");
+	private static final Identifier IMAGE_1 = Identifier.parse("palamod:textures/screens/particle_iron.png");
+	private static final Identifier IMAGE_2 = Identifier.parse("palamod:textures/screens/particle_gold.png");
+	private static final Identifier IMAGE_3 = Identifier.parse("palamod:textures/screens/particle_diamond.png");
+	private static final Identifier IMAGE_4 = Identifier.parse("palamod:textures/screens/particle_amethyst.png");
+	private static final Identifier IMAGE_5 = Identifier.parse("palamod:textures/screens/particle_titane.png");
+	private static final Identifier IMAGE_6 = Identifier.parse("palamod:textures/screens/particle_paladium.png");
+	private static final Identifier IMAGE_7 = Identifier.parse("palamod:textures/screens/green_paladium_particle.png");
+	private static final Identifier IMAGE_8 = Identifier.parse("palamod:textures/screens/upgrade_cobblebreaker.png");
+	private static final Identifier SPRITE_0 = Identifier.parse("palamod:textures/screens/arrow_down_sprite16.png");
 
 	public CobbleakerserverScreen(CobbleakerserverMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 176, 180);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 180;
 	}
 
 	@Override
@@ -50,13 +51,12 @@ public class CobbleakerserverScreen extends AbstractContainerScreen<Cobbleakerse
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
@@ -70,16 +70,17 @@ public class CobbleakerserverScreen extends AbstractContainerScreen<Cobbleakerse
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		return super.keyPressed(key, b, c);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
 	}
 
 	@Override

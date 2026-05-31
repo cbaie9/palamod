@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -57,28 +57,14 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "PLANT"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
+    "soundOnStep": "PLANT",
+    "breakSound": "",
+    "stepSound": "",
+    "placeSound": "",
+    "hitSound": "",
+    "fallSound": "",
     "useLootTableForDrops": false,
-    "customDrop": {
-      "value": "CUSTOM:Eggplantseed"
-    },
+    "customDrop": "CUSTOM:Eggplantseed",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -87,9 +73,7 @@
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
-    "creativePickItem": {
-      "value": "CUSTOM:Eggplantseed"
-    },
+    "creativePickItem": "CUSTOM:Eggplantseed",
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
     "ignitedByLava": false,
@@ -98,12 +82,8 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [
-      {
-        "value": "Blocks.FARMLAND"
-      },
-      {
-        "value": "CUSTOM:Fertilseddirt"
-      }
+      "Blocks.FARMLAND",
+      "CUSTOM:Fertilseddirt"
     ],
     "isBonemealable": false,
     "frequencyOnChunks": 0,
@@ -112,11 +92,7 @@
     "generationType": "Flower",
     "patchSize": 64,
     "generateAtAnyHeight": false,
-    "onDestroyedByPlayer": {
-      "name": "Eggplant3drop"
-    },
-    "onRightClicked": {
-      "name": "Eggplant3shear"
-    }
+    "onDestroyedByPlayer": "Eggplant3drop",
+    "onRightClicked": "Eggplant3shear"
   }
 }

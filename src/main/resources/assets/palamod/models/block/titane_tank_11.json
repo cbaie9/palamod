@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l10_erable",
     "side": "palamod:block/fluid_10_erable",
     "cadre": "palamod:block/titane_tank"
-  },
-  "render_type": "translucent"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,22 +10,12 @@
     "textureLeggings": "paladium_leggings",
     "enableBoots": true,
     "textureBoots": "paladium_boots",
-    "onHelmetTick": {
-      "name": "PaladiumArmorHelmetTickEvent"
-    },
-    "onBodyTick": {
-      "name": "PaladiumArmorBodyTickEvent"
-    },
-    "onLeggingsTick": {
-      "name": "PaladiumArmorLeggingsTickEvent"
-    },
-    "onBootsTick": {
-      "name": "PaladiumArmorBootsTickEvent"
-    },
+    "onHelmetTick": "PaladiumArmorHelmetTickEvent",
+    "onBodyTick": "PaladiumArmorBodyTickEvent",
+    "onLeggingsTick": "PaladiumArmorLeggingsTickEvent",
+    "onBootsTick": "PaladiumArmorBootsTickEvent",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "paladium_cla",
     "helmetName": "Paladium Helmet",
@@ -96,13 +86,9 @@
     "enchantability": 55,
     "toughness": 3.5,
     "knockbackResistance": 0.15,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot"
     ],
     "rarity": "COMMON"
   }

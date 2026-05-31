@@ -4,8 +4,8 @@ import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
@@ -16,8 +16,8 @@ public class GetdirectoryjobsProcedure {
 		if (entity == null)
 			return;
 		File jobs = new File("");
-		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(
+		if (entity instanceof ServerPlayer _player)
+			_player.sendSystemMessage(
 					Component.literal((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 							+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString())),
 					false);

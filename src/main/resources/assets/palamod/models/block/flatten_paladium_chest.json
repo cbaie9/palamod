@@ -8,6 +8,5 @@
     "south": "palamod:block/pala_face2",
     "west": "palamod:block/pala_face2",
     "particle": "palamod:block/pala_face1"
-  },
-  "render_type": "solid"
+  }
 }

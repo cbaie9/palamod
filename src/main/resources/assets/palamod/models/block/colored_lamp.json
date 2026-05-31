@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/colored_lamp",
     "particle": "palamod:block/colored_lamp"
-  },
-  "render_type": "solid"
+  }
 }

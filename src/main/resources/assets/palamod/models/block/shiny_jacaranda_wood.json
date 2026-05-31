@@ -8,6 +8,5 @@
     "south": "palamod:block/shiny_jacaranda_block",
     "west": "palamod:block/shiny_jacaranda_block",
     "particle": "palamod:block/jacaranda_top"
-  },
-  "render_type": "solid"
+  }
 }

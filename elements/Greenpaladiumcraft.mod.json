@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:Compressedgreenpaladum"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:Compressedgreenpaladum"
-      },
-      {
-        "value": "CUSTOM:Paladiumchestv2"
-      },
-      {
-        "value": "CUSTOM:Compressedgreenpaladum"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:Compressedgreenpaladum"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      }
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:Compressedgreenpaladum",
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:Compressedgreenpaladum",
+      "CUSTOM:Paladiumchestv2",
+      "CUSTOM:Compressedgreenpaladum",
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:Compressedgreenpaladum",
+      "CUSTOM:PaladiumGreeningot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Greenpaladiumchestv2"
-    },
+    "recipeReturnStack": "CUSTOM:Greenpaladiumchestv2",
     "name": "greenpaladiumcraft",
     "namespace": "mod"
   }

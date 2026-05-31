@@ -4,6 +4,5 @@
     "all": "palamod:block/exctrator",
     "particle": "palamod:block/exctrator",
     "1": "palamod:block/exctrator"
-  },
-  "render_type": "cutout"
+  }
 }

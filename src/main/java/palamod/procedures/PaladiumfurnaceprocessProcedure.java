@@ -5,8 +5,9 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -21,10 +22,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.util.ProblemReporter;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
@@ -74,7 +76,7 @@ public class PaladiumfurnaceprocessProcedure {
 		input = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
 		if (((world instanceof Level _levelFV5 ? fuel.getBurnTime(null, _levelFV5.fuelValues()) : 0) > 0 || getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof ServerLevel _level7
 				&& _level7.recipeAccess().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level7).isPresent()) {
-			if ((getItemStackFromItemStackSlot(world, input)).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
+			if ((getItemStackSmeltingResult(world, input)).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
 					|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) {
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") == 0) {
 					if (!world.isClientSide()) {
@@ -88,10 +90,13 @@ public class PaladiumfurnaceprocessProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = fuel.copy();
-						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() - 1);
-						_itemHandlerModifiable.setStackInSlot(1, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = fuel.copy();
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() - 1);
+							_container.setItem(1, _setstack);
+						}
 					}
 				}
 				if (!world.isClientSide()) {
@@ -105,15 +110,21 @@ public class PaladiumfurnaceprocessProcedure {
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") >= 24) {
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = (getItemStackFromItemStackSlot(world, input)).copy();
-						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-						_itemHandlerModifiable.setStackInSlot(2, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = (getItemStackSmeltingResult(world, input)).copy();
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+							_container.setItem(2, _setstack);
+						}
 					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = input.copy();
-						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() - 1);
-						_itemHandlerModifiable.setStackInSlot(0, _setstack);
+					if (world instanceof ServerLevel _serverLevel) {
+						BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+						if (_be instanceof Container _container) {
+							ItemStack _setstack = input.copy();
+							_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() - 1);
+							_container.setItem(0, _setstack);
+						}
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
@@ -158,9 +169,9 @@ public class PaladiumfurnaceprocessProcedure {
 			if (Math.random() < 0.2) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}
@@ -226,9 +237,9 @@ public class PaladiumfurnaceprocessProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}
@@ -240,10 +251,10 @@ public class PaladiumfurnaceprocessProcedure {
 		return -1;
 	}
 
-	private static ItemStack getItemStackFromItemStackSlot(LevelAccessor level, ItemStack input) {
+	private static ItemStack getItemStackSmeltingResult(LevelAccessor level, ItemStack input) {
 		SingleRecipeInput recipeInput = new SingleRecipeInput(input);
 		if (level instanceof ServerLevel serverLevel) {
-			return serverLevel.recipeAccess().getRecipeFor(RecipeType.SMELTING, recipeInput, serverLevel).map(recipe -> recipe.value().assemble(recipeInput, serverLevel.registryAccess()).copy()).orElse(ItemStack.EMPTY);
+			return serverLevel.recipeAccess().getRecipeFor(RecipeType.SMELTING, recipeInput, serverLevel).map(recipe -> recipe.value().assemble(recipeInput).copy()).orElse(ItemStack.EMPTY);
 		}
 		return ItemStack.EMPTY;
 	}

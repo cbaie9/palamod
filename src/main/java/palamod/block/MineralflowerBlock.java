@@ -21,7 +21,7 @@ import net.minecraft.core.BlockPos;
 
 public class MineralflowerBlock extends FlowerBlock implements BonemealableBlock {
 	public MineralflowerBlock(BlockBehaviour.Properties properties) {
-		super(MobEffects.REGENERATION, 100, properties.mapColor(MapColor.METAL).sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+		super(MobEffects.REGENERATION, 100, properties.mapColor(MapColor.METAL).sound(SoundType.GRASS).instabreak().noCollision().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

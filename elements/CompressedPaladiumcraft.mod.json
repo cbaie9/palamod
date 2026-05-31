@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumIngot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      }
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Compressedpaladium"
-    },
+    "recipeReturnStack": "CUSTOM:Compressedpaladium",
     "name": "compressed_paladium_craft",
     "namespace": "mod"
   }

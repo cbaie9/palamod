@@ -8,6 +8,5 @@
     "south": "palamod:block/mega_boom_obsi_side",
     "west": "palamod:block/mega_boom_obsi_side",
     "particle": "minecraft:block/obsidian"
-  },
-  "render_type": "solid"
+  }
 }

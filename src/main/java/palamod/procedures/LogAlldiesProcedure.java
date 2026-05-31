@@ -31,7 +31,7 @@ public class LogAlldiesProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 			PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " is died\\killed by" + sourceentity + " at " + " x : " + x + " y : " + y + " z : " + z));
 		}
 	}

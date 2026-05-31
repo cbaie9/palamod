@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -53,9 +53,7 @@
           "name": "button_franais",
           "text": "français",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Frenchredirect"
-          },
+          "onClick": "Frenchredirect",
           "width": 67,
           "height": 20,
           "x": 154,
@@ -69,9 +67,7 @@
           "name": "button_english",
           "text": "english",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Englishredirect"
-          },
+          "onClick": "Englishredirect",
           "width": 61,
           "height": 20,
           "x": 152,

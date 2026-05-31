@@ -27,6 +27,6 @@ public class LoadOnEntityGameruleFightingProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putDouble("MaxFightingTime", (world instanceof ServerLevel _serverLevelGR0 ? _serverLevelGR0.getGameRules().getInt(PalamodModGameRules.DEFAULT_FIGHTING_TIME) : 0));
+		entity.getPersistentData().putDouble("MaxFightingTime", (world instanceof ServerLevel _serverLevelGR0 ? _serverLevelGR0.getGameRules().get(PalamodModGameRules.DEFAULT_FIGHTING_TIME.get()) : 0));
 	}
 }

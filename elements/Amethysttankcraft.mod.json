@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:Amethyste",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:Amethyste",
+      "Blocks.STAINED_GLASS",
+      "",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:Amethyste",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:Amethyste"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethysttank"
-    },
+    "recipeReturnStack": "CUSTOM:Amethysttank",
     "name": "amethysttankcraft",
     "namespace": "mod"
   }

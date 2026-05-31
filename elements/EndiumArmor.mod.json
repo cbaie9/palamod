@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,22 +10,12 @@
     "textureLeggings": "endium_leggings",
     "enableBoots": true,
     "textureBoots": "endium_boots",
-    "onHelmetTick": {
-      "name": "Fullendiuminvisible"
-    },
-    "onBodyTick": {
-      "name": "Fullendiuminvisible"
-    },
-    "onLeggingsTick": {
-      "name": "Fullendiuminvisible"
-    },
-    "onBootsTick": {
-      "name": "Fullendiuminvisible"
-    },
+    "onHelmetTick": "Fullendiuminvisible",
+    "onBodyTick": "Fullendiuminvisible",
+    "onLeggingsTick": "Fullendiuminvisible",
+    "onBootsTick": "Fullendiuminvisible",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "endium_",
     "helmetName": "Endium Helmet",
@@ -111,13 +101,9 @@
     "enchantability": 70,
     "toughness": 5.0,
     "knockbackResistance": 0.3,
-    "equipSound": {
-      "value": "item.armor.equip_netherite"
-    },
+    "equipSound": "item.armor.equip_netherite",
     "repairItems": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "CUSTOM:EndiumIngot"
     ],
     "rarity": "COMMON"
   }

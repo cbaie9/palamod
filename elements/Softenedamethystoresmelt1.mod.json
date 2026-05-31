@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:Softenedamethystore"
-    },
-    "smeltingReturnStack": {
-      "value": "CUSTOM:Amethyste"
-    },
+    "smeltingInputStack": "CUSTOM:Softenedamethystore",
+    "smeltingReturnStack": "CUSTOM:Amethyste",
     "name": "softenedamethystoresmelt_1",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanechestv2"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "Blocks.HOPPER"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "Items.LEATHER"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanechestv2",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "Blocks.HOPPER",
+      "CUSTOM:TitaneIngot",
+      "Items.LEATHER",
+      "CUSTOM:TitaneIngot",
+      "Items.LEATHER"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanebackpack"
-    },
+    "recipeReturnStack": "CUSTOM:Titanebackpack",
     "name": "titanebackpackcraft",
     "namespace": "mod"
   }

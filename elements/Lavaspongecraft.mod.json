@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.LAVA_BUCKET"
-      },
-      {
-        "value": "Blocks.SOUL_SAND"
-      },
-      {
-        "value": "Items.LAVA_BUCKET"
-      },
-      {
-        "value": "Blocks.SOUL_SAND"
-      },
-      {
-        "value": "Blocks.SPONGE#0"
-      },
-      {
-        "value": "Blocks.SOUL_SAND"
-      },
-      {
-        "value": "Items.LAVA_BUCKET"
-      },
-      {
-        "value": "Blocks.SOUL_SAND"
-      },
-      {
-        "value": "Items.LAVA_BUCKET"
-      }
+      "Items.LAVA_BUCKET",
+      "Blocks.SOUL_SAND",
+      "Items.LAVA_BUCKET",
+      "Blocks.SOUL_SAND",
+      "Blocks.SPONGE#0",
+      "Blocks.SOUL_SAND",
+      "Items.LAVA_BUCKET",
+      "Blocks.SOUL_SAND",
+      "Items.LAVA_BUCKET"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Lavasponge"
-    },
+    "recipeReturnStack": "CUSTOM:Lavasponge",
     "name": "lavaspongecraft",
     "namespace": "mod"
   }

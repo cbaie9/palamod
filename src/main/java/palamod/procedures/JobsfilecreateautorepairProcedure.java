@@ -27,7 +27,7 @@ public class JobsfilecreateautorepairProcedure {
 		String jobs_name = "";
 		double i = 0;
 		PalamodMod.LOGGER.debug("[Palamod] [ Jobs File create autorepair ] Start procedure");
-		if (!(world instanceof ServerLevel _serverLevelGR1 && _serverLevelGR1.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR1 && _serverLevelGR1.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get()))) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			cache = ReadcacheProcedure.execute(entity);
 			if (!cache.exists()) {
@@ -88,7 +88,7 @@ public class JobsfilecreateautorepairProcedure {
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
-				main.addProperty("multi_exp", ((world instanceof ServerLevel _serverLevelGR17 ? _serverLevelGR17.getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER) : 0) / 100d));
+				main.addProperty("multi_exp", ((world instanceof ServerLevel _serverLevelGR17 ? _serverLevelGR17.getGameRules().get(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER.get()) : 0) / 100d));
 				main.addProperty("next_level_miner", 480);
 				main.addProperty("next_level_farmer", 480);
 				main.addProperty("next_level_hunter", 480);
@@ -133,7 +133,7 @@ public class JobsfilecreateautorepairProcedure {
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						if (!main.has("multi_exp")) {
-							main.addProperty("multi_exp", ((world instanceof ServerLevel _serverLevelGR43 ? _serverLevelGR43.getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER) : 0) / 100d));
+							main.addProperty("multi_exp", ((world instanceof ServerLevel _serverLevelGR43 ? _serverLevelGR43.getGameRules().get(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER.get()) : 0) / 100d));
 						}
 						jobs_name = "miner";
 						for (int index0 = 0; index0 < 4; index0++) {

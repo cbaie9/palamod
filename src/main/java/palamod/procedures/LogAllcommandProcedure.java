@@ -32,7 +32,7 @@ public class LogAllcommandProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, String command) {
 		if (entity == null || command == null)
 			return;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 			PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " executed a command in the chat at " + " x : " + x + " y : " + y + " z : " + z + " | command : " + command));
 		}
 	}

@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "endium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumAxe"
-      }
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumAxe"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "TAG:neoforge:stick"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "TAG:neoforge:stick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "",
+      "CUSTOM:EndiumIngot",
+      "TAG:neoforge:stick",
+      "",
+      "",
+      "TAG:neoforge:stick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumAxe"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumAxe",
     "name": "endiumaxecraft",
     "namespace": "mod"
   }

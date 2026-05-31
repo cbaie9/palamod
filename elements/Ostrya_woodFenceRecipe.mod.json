@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "ostrya_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodFence"
-      }
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodFence"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      }
+      "",
+      "",
+      "",
+      "CUSTOM:Ostrya_woodPlanks",
+      "Items.STICK",
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodPlanks",
+      "Items.STICK",
+      "CUSTOM:Ostrya_woodPlanks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Ostrya_woodFence"
-    },
+    "recipeReturnStack": "CUSTOM:Ostrya_woodFence",
     "name": "ostrya_wood_fence_recipe",
     "namespace": "mod"
   }

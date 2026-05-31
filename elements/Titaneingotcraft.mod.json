@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      },
-      {
-        "value": "CUSTOM:Titanepollen"
-      }
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen",
+      "CUSTOM:Titanepollen"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:TitaneBlock"
-    },
+    "recipeReturnStack": "CUSTOM:TitaneBlock",
     "name": "titaneingotcraft",
     "namespace": "mod"
   }

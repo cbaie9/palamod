@@ -11,8 +11,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
@@ -57,11 +58,11 @@ public class Legendarystonejobs_processProcedure {
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						rd_amount = main.get("multi_exp").getAsDouble() * Mth.nextInt(RandomSource.create(), 1, 20) * 300;
-						if (world.dayTime() > main.get(("xpstreak_time_" + jobs_string)).getAsDouble()) {
+						if (world.getGameTime() > main.get(("xpstreak_time_" + jobs_string)).getAsDouble()) {
 							main.addProperty(("xpstreak_" + jobs_string), 0);
 						}
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
+								.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:botteled")))) != 0
 								&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0)
 										|| random == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0))
 								&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
@@ -80,9 +81,9 @@ public class Legendarystonejobs_processProcedure {
 							main.addProperty(("xp_" + jobs_string), (rd_amount * main.get("multi_exp").getAsDouble() + main.get(("xp_" + jobs_string)).getAsDouble()));
 						}
 						main.addProperty(("xpstreak_" + jobs_string), (rd_amount + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
-						main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (rd_amount + main.get(("xpstreak_" + jobs_string)).getAsDouble())
+						main.addProperty(("xpstreak_time_" + jobs_string), (world.getGameTime() + 80));
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (rd_amount + main.get(("xpstreak_" + jobs_string)).getAsDouble())
 									+ Component.translatable("palamod.procedure.jobswin2lg_jobs").getString())), true);
 					} catch (IOException e) {
 						e.printStackTrace();

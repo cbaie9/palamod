@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "green_paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Greenpaladiumhoe"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      }
+      "CUSTOM:Greenpaladiumhoe",
+      "CUSTOM:PaladiumGreeningot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:PaladiumGreeningot",
+      "CUSTOM:PaladiumGreeningot",
+      "",
+      "",
+      "Items.STICK",
+      "",
+      "",
+      "Items.STICK",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Greenpaladiumhoe"
-    },
+    "recipeReturnStack": "CUSTOM:Greenpaladiumhoe",
     "name": "greenpaladiumhoecraft",
     "namespace": "mod"
   }

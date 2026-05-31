@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -55,9 +55,7 @@
           "name": "button_test_code",
           "text": "test code",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Phonecode"
-          },
+          "onClick": "Phonecode",
           "width": 72,
           "height": 20,
           "x": 224,

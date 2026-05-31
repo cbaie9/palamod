@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "function",
   "definition": {
     "code": "# Enter the function code here\n# Enter the function code here\nkill @e[type=experience_orb]\nkill @e[type=egg]\nkill @e[type=leash_knot]\n# all boat\nkill @e[type=acacia_boat]\nkill @e[type=acacia_chest_boat]\nkill @e[type=birch_boat]\nkill @e[type=birch_chest_boat]\nkill @e[type=cherry_boat]\nkill @e[type=cherry_chest_boat]\nkill @e[type=dark_oak_boat]\nkill @e[type=dark_oak_chest_boat]\nkill @e[type=jungle_boat]\nkill @e[type=jungle_chest_boat]\nkill @e[type=mangrove_boat]\nkill @e[type=mangrove_chest_boat]\nkill @e[type=oak_boat]\nkill @e[type=oak_chest_boat]\nkill @e[type=pale_oak_chest_boat]\nkill @e[type=pale_oak_boat]\nkill @e[type=spruce_chest_boat]\nkill @e[type=spruce_boat]\n# ---\nkill @e[type=boat]\nkill @e[type=minecart]\nkill @e[type=chest_minecart]\nkill @e[type=furnace_minecart]\nkill @e[type=tnt_minecart]\nkill @e[type=command_block_minecart]\nkill @e[type=spawner_minecart]\nkill @e[type=hopper_minecart]\nkill @e[type=ender_pearl]\nkill @e[type=eye_of_ender]\n# mc1.21.8 v3repaste for v1.21\n\n",

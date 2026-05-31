@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      }
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:Amethyste",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:AmethysteBlock"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Compressedamethyste"
-    },
+    "recipeReturnStack": "CUSTOM:Compressedamethyste",
     "name": "compressedamethystcraft",
     "namespace": "mod"
   }

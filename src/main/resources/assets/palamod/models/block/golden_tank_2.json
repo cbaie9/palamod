@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l6_jacaranda",
     "side": "palamod:block/fluid_6_jacaranda",
     "cadre": "palamod:block/gold_tank"
-  },
-  "render_type": "translucent"
+  }
 }

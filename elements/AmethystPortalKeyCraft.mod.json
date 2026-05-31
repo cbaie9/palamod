@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:AmethysteSword"
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      }
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:AmethysteSword",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Compressedamethyste"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:AmethysteSword"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:AmethysteSword"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:AmethysteSword",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:AmethysteSword",
+      "",
+      "CUSTOM:Amethytestick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystportalkey"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystportalkey",
     "name": "amethyst_portal_key_craft",
     "namespace": "mod"
   }

@@ -4,6 +4,5 @@
     "all": "palamod:block/slime_orange",
     "particle": "palamod:block/slime_orange",
     "0": "palamod:block/slime_orange"
-  },
-  "render_type": "solid"
+  }
 }

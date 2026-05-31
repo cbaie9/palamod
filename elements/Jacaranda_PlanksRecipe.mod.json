@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 4,
     "group": "jacaranda_craft_group",
     "unlockingItems": [
-      {
-        "value": "TAG:forge:jacaranda__log"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      }
+      "TAG:forge:jacaranda__log",
+      "CUSTOM:Jacaranda_Planks"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "TAG:forge:jacaranda__log"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "TAG:forge:jacaranda__log",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Jacaranda_Planks"
-    },
+    "recipeReturnStack": "CUSTOM:Jacaranda_Planks",
     "name": "jacaranda_planks_recipe",
     "namespace": "mod"
   }

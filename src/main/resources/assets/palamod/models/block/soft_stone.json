@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/soft_stone",
     "particle": "palamod:block/soft_stone"
-  },
-  "render_type": "solid"
+  }
 }

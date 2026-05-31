@@ -5,6 +5,5 @@
     "particle": "palamod:block/spike_diam_1",
     "0": "palamod:block/spike_diam_2",
     "1": "palamod:block/spike_diam_1"
-  },
-  "render_type": "solid"
+  }
 }

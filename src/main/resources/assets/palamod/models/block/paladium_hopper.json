@@ -6,6 +6,5 @@
     "side": "palamod:block/paladium_hopper_outside",
     "top": "palamod:block/paladium_hopper_top",
     "inside": "palamod:block/paladium_hopper_inside"
-  },
-  "render_type": "cutout"
+  }
 }

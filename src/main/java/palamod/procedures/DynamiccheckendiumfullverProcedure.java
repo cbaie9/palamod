@@ -3,7 +3,7 @@ package palamod.procedures;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class DynamiccheckendiumfullverProcedure {
@@ -11,10 +11,10 @@ public class DynamiccheckendiumfullverProcedure {
 		if (entity == null)
 			return false;
 		if ((getBlockNBTLogic(world, new BlockPos(0, 10, 0), ("Minage_setlayer_dynamic_enda_" + entity.getDisplayName().getString()))
-				|| (world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("palamod:forestender")) || world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("palamod:frozenforest"))
-						|| world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("palamod:roofedforest")) || world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("plains"))
-						|| world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("forest")) || world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("plains"))
-						|| world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("ocean"))) && getBlockNBTLogic(world, new BlockPos(0, 10, 0), ("Minage_setlayer_dynamic_enda_hide_" + entity.getDisplayName().getString())))
+				|| (world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("palamod:forestender")) || world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("palamod:frozenforest"))
+						|| world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("palamod:roofedforest")) || world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("plains"))
+						|| world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("forest")) || world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("plains"))
+						|| world.getBiome(BlockPos.containing(x, y, z)).is(Identifier.parse("ocean"))) && getBlockNBTLogic(world, new BlockPos(0, 10, 0), ("Minage_setlayer_dynamic_enda_hide_" + entity.getDisplayName().getString())))
 				&& entity.getY() < 128 && entity.getY() > -64) {
 			return true;
 		}

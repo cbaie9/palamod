@@ -5,15 +5,13 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
@@ -61,15 +59,15 @@ public class NewadminshopbuyprocessProcedure {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = item.copy();
 						_setstack.setCount((int) n);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						_player.getInventory().placeItemBackInInventory(_setstack);
 					}
 					if (entity instanceof Player _player)
 						_player.closeContainer();
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(
 								(Component.translatable("palamod.adminshop_buy_1").getString() + " " + n + " " + item.getDisplayName().getString() + " " + Component.translatable("palamod.adminshop_buy_2").getString() + " " + n * fac_v + " $")),
 								false);
-					if (world instanceof ServerLevel _serverLevelGR14 && _serverLevelGR14.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR14 && _serverLevelGR14.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " " + Component.translatable("palamod.adminshop_buy_3").getString() + " " + n + " " + item.getDisplayName().getString() + " "
 								+ Component.translatable("palamod.adminshop_buy_2").getString() + " " + n * fac_v + " $"));
 					}
@@ -77,18 +75,18 @@ public class NewadminshopbuyprocessProcedure {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (0 == n) {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal((Component.translatable("palamod.adminshop_logs0_player").getString())), false);
-						if (world instanceof ServerLevel _serverLevelGR23 && _serverLevelGR23.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal((Component.translatable("palamod.adminshop_logs0_player").getString())), false);
+						if (world instanceof ServerLevel _serverLevelGR23 && _serverLevelGR23.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 							PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " " + Component.translatable("palamod.adminshop_logs0").getString() + " " + item.getDisplayName().getString()));
 						}
 					} else {
 						if (1 < n) {
-							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.adminshop_buy_4").getString())), false);
+							if (entity instanceof ServerPlayer _player)
+								_player.sendSystemMessage(Component.literal((Component.translatable("palamod.adminshop_buy_4").getString())), false);
 						} else {
-							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.adminshop_buy_5").getString())), false);
+							if (entity instanceof ServerPlayer _player)
+								_player.sendSystemMessage(Component.literal((Component.translatable("palamod.adminshop_buy_5").getString())), false);
 						}
 					}
 				}

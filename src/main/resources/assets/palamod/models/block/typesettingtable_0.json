@@ -4,6 +4,5 @@
     "all": "palamod:block/",
     "particle": "minecraft:block/oak_planks",
     "0": "palamod:block/typesettingtable"
-  },
-  "render_type": "solid"
+  }
 }

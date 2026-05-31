@@ -24,7 +24,7 @@ public class JobsmineraddxpProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double xp = 0;
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get()))) {
 			jobs = GetjobsfileProcedure.execute(commandParameterEntity(arguments, "player"));
 			if (jobs.exists()) {
 				{

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Tunnel vision",
@@ -14,11 +14,7 @@
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [],
-    "onActiveTick": {
-      "name": "Tunnelvisioneffectprocess"
-    },
-    "onExpired": {
-      "name": "TunnelvisionEffectExpires"
-    }
+    "onActiveTick": "Tunnelvisioneffectprocess",
+    "onExpired": "TunnelvisionEffectExpires"
   }
 }

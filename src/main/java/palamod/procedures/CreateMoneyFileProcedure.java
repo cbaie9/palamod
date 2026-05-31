@@ -21,7 +21,7 @@ public class CreateMoneyFileProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		money = ReadMoneyFileProcedure.execute(entity);
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) && !money.exists()) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEMONEYGAMERULE.get())) && !money.exists()) {
 			try {
 				money.getParentFile().mkdirs();
 				money.createNewFile();

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -43,9 +43,7 @@
           "name": "button_grinder",
           "text": "Grinder",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectgrinderpag1"
-          },
+          "onClick": "Connectgrinderpag1",
           "width": 75,
           "height": 20,
           "x": 218,
@@ -59,9 +57,7 @@
           "name": "button_palamachine",
           "text": "Palamachine",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectpalamachinepalahelp"
-          },
+          "onClick": "Connectpalamachinepalahelp",
           "width": 75,
           "height": 20,
           "x": 218,
@@ -75,9 +71,7 @@
           "name": "button_crusher",
           "text": "Crusher",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectpalahelpcrusher"
-          },
+          "onClick": "Connectpalahelpcrusher",
           "width": 75,
           "height": 20,
           "x": 218,
@@ -91,9 +85,7 @@
           "name": "button_forge",
           "text": "forge",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectforgepalahelp"
-          },
+          "onClick": "Connectforgepalahelp",
           "width": 75,
           "height": 20,
           "x": 218,
@@ -107,9 +99,7 @@
           "name": "button_uploader",
           "text": "Uploader",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectnotyetgui"
-          },
+          "onClick": "Connectnotyetgui",
           "width": 75,
           "height": 20,
           "x": 218,
@@ -123,9 +113,7 @@
           "name": "button_downloader",
           "text": "Downloader",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectnotyetgui"
-          },
+          "onClick": "Connectnotyetgui",
           "width": 75,
           "height": 20,
           "x": 218,
@@ -169,9 +157,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Blockback"
-          },
+          "onClick": "Blockback",
           "x": 248,
           "y": 41,
           "locked": false
@@ -183,9 +169,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 265,
           "y": 41,
           "locked": false
@@ -197,9 +181,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 281,
           "y": 41,
           "locked": false
@@ -211,9 +193,7 @@
           "name": "button_drawbridge",
           "text": "Drawbridge",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectnotyetgui"
-          },
+          "onClick": "Connectnotyetgui",
           "width": 77,
           "height": 20,
           "x": 130,

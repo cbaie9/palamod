@@ -13,9 +13,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -29,7 +29,7 @@ public class TankprocessProcedure {
 		String seve_string = "";
 		double max_stock = 0;
 		double decalc_blockstate = 0;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			PalamodMod.LOGGER.debug(("---------------------" + "\n" + "tank" + "\n" + "stock : " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "stock") + "\n" + "type : " + getBlockNBTString(world, BlockPos.containing(x, y, z), "type")));
 		}
 		if (!getBlockNBTLogic(world, BlockPos.containing(x, y, z), "setup")) {
@@ -67,7 +67,7 @@ public class TankprocessProcedure {
 			max_stock = 135;
 		}
 		if (PalamodModItems.FLASK.get() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()) {
-			if (world instanceof ServerLevel _serverLevelGR26 && _serverLevelGR26.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+			if (world instanceof ServerLevel _serverLevelGR26 && _serverLevelGR26.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 				PalamodMod.LOGGER.info((((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("seve", 0)) + " - " + seve_string));
 			}
 			if (0 < (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("seve", 0)) {
@@ -158,8 +158,8 @@ public class TankprocessProcedure {
 				}
 			}
 		} else {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((BuiltInRegistries.ITEM.getKey((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())).getItem()).toString() + " - "
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal((BuiltInRegistries.ITEM.getKey((new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())).getItem()).toString() + " - "
 						+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "stock") + "/" + max_stock + " | Type : " + getBlockNBTString(world, BlockPos.containing(x, y, z), "type"))), false);
 		} /*reload blockstate*/
 		if (("jacaranda").equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "type"))) {
@@ -188,7 +188,7 @@ public class TankprocessProcedure {
 					world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 			}
 		}
-		if (world instanceof ServerLevel _serverLevelGR76 && _serverLevelGR76.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR76 && _serverLevelGR76.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			PalamodMod.LOGGER.debug(("fin-tank V2" + "\n" + "tank" + "\n" + "stock : " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "stock") + "\n" + "BLOCKSTATE : "
 					+ ((getBlockNBTNumber(world, BlockPos.containing(x, y, z), "stock") / max_stock) * 7 + decalc_blockstate) + "\n" + "fin-tank"));
 		}

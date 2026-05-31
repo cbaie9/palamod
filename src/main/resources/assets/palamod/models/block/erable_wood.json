@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/erable",
     "particle": "palamod:block/erable"
-  },
-  "render_type": "solid"
+  }
 }

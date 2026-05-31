@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/big_obsi",
     "particle": "palamod:block/big_obsi"
-  },
-  "render_type": "solid"
+  }
 }

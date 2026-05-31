@@ -4,8 +4,9 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
@@ -21,7 +22,8 @@ public class FinfofacProcedure {
 		get_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 		get_name = getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_name_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))));
 		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+			_level.getServer().getCommands().performPrefixedCommand(
+					new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\"\\n\"},{\"text\":\"---------------------------------------\",\"color\":\"dark_green\"},{\"text\":\"\\n\"},{\"text\":\"Faction \",\"color\":\"aqua\"},{\"text\":\""
 							+ "" + get_name + "\",\"color\":\"gold\"},{\"text\":\"\\n\\n\"},{\"text\":\"Leader (uuid) : \",\"color\":\"aqua\"},{\"text\":\"" + getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_leader_" + get_id))
 							+ "\",\"color\":\"gold\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"The leader of the faction\"}},{\"text\":\"\\n\"},{\"text\":\"Member in the faction : \",\"color\":\"aqua\"},{\"text\":\""
@@ -33,8 +35,8 @@ public class FinfofacProcedure {
 							+ "\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction invite\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Number of player who were invited in the faction\"}},{\"text\":\"\\n\"},{\"text\":\"Number of officer : \",\"color\":\"aqua\"},{\"text\":\""
 							+ Math.round(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_nb-offi_" + get_id)))
 							+ "\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/faction promote\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Number of officer in the faction\"}},{\"text\":\"\\n\\n\"},{\"text\":\"-> Type  \",\"color\":\"gold\"},{\"keybind\":\"key.palamod.factionblinding\",\"color\":\"gold\"},{\"text\":\" to open the faction menu\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------------------\",\"color\":\"dark_green\"}]"));
-		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("" + get_id)), false);
+		if (entity instanceof ServerPlayer _player)
+			_player.sendSystemMessage(Component.literal(("" + get_id)), false);
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

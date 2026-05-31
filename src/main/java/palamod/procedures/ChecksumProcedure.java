@@ -4,8 +4,8 @@ import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
@@ -75,14 +75,14 @@ public class ChecksumProcedure {
 												/ Math.pow(main_obj.get("Crusher-paladium-output").getAsDouble(), main_obj.get("Crusher-endium-output").getAsDouble()))
 										* (main_obj.get("Crusher-titane-output").getAsDouble() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
 					}
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("Checksum :" + output)), false);
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("Valid value :" + valid)), false);
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("Crusher cheat : " + main_obj.get("Crusher-Custom").getAsBoolean())), false);
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("Crusher :" + main_obj.get("Grinder-Custom").getAsBoolean())), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("Checksum :" + output)), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("Valid value :" + valid)), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("Crusher cheat : " + main_obj.get("Crusher-Custom").getAsBoolean())), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("Crusher :" + main_obj.get("Grinder-Custom").getAsBoolean())), false);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

@@ -66,7 +66,7 @@ public class PortalprocessProcedure {
 		PalamodMod.LOGGER.debug(("Portal dump :" + "\n" + "angle block :" + angle_block + "\n" + "shiny wood :" + shiny_wood + "\n" + "key : " + key + "\n" + getBlockNBTString(world, BlockPos.containing(x, y, z), "position") + "\n" + "powered : "
 				+ getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")));
 		if (CheckportalstructureProcedure.execute(world, x, y, z, angle_block, shiny_wood) && key.getItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()
-				&& (level_alchi >= level_required || !(world instanceof ServerLevel _serverLevelGR17 && _serverLevelGR17.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)))
+				&& (level_alchi >= level_required || !(world instanceof ServerLevel _serverLevelGR17 && _serverLevelGR17.getGameRules().get(PalamodModGameRules.LOCKEDUSE.get())))
 				&& !getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);

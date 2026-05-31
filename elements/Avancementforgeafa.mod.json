@@ -1,12 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "achievement",
   "definition": {
     "achievementName": "Forge it today and tomorow",
     "achievementDescription": "Craft a Forge",
-    "achievementIcon": {
-      "value": "CUSTOM:Paladiumforge"
-    },
+    "achievementIcon": "CUSTOM:Paladiumforge",
     "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
@@ -16,9 +14,7 @@
     "rewardRecipes": [],
     "rewardXP": 0,
     "achievementType": "goal",
-    "parent": {
-      "value": "CUSTOM:Avancementanshinyredingot"
-    },
+    "parent": "CUSTOM:Avancementanshinyredingot",
     "triggerxml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"advancement_trigger\" x=\"40\" y=\"80\"><next><block type=\"block_placed\" x=\"55\" y=\"13\"><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:Paladiumforge</field></block></value></block></next></block></xml>"
   }
 }

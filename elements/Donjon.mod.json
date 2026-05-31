@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "loottable",
   "definition": {
     "type": "Chest",
@@ -13,9 +13,7 @@
         "entries": [
           {
             "type": "item",
-            "item": {
-              "value": "Items.ROTTEN_FLESH"
-            },
+            "item": "Items.ROTTEN_FLESH",
             "weight": 11,
             "minCount": 1,
             "maxCount": 18,
@@ -27,9 +25,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Erablesappling"
-            },
+            "item": "CUSTOM:Erablesappling",
             "weight": 9,
             "minCount": 1,
             "maxCount": 4,
@@ -41,9 +37,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Ostryasappling"
-            },
+            "item": "CUSTOM:Ostryasappling",
             "weight": 9,
             "minCount": 1,
             "maxCount": 4,
@@ -55,9 +49,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Judeecercissappling"
-            },
+            "item": "CUSTOM:Judeecercissappling",
             "weight": 9,
             "minCount": 1,
             "maxCount": 4,
@@ -69,9 +61,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Jacarandasappling"
-            },
+            "item": "CUSTOM:Jacarandasappling",
             "weight": 9,
             "minCount": 1,
             "maxCount": 4,
@@ -92,9 +82,7 @@
         "entries": [
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:PaladiumIngot"
-            },
+            "item": "CUSTOM:PaladiumIngot",
             "weight": 1,
             "minCount": 1,
             "maxCount": 1,
@@ -106,9 +94,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:TitaneIngot"
-            },
+            "item": "CUSTOM:TitaneIngot",
             "weight": 2,
             "minCount": 1,
             "maxCount": 1,
@@ -120,9 +106,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Amethyste"
-            },
+            "item": "CUSTOM:Amethyste",
             "weight": 3,
             "minCount": 1,
             "maxCount": 1,
@@ -134,9 +118,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "Items.DIAMOND"
-            },
+            "item": "Items.DIAMOND",
             "weight": 4,
             "minCount": 1,
             "maxCount": 1,
@@ -148,9 +130,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "Items.IRON_INGOT"
-            },
+            "item": "Items.IRON_INGOT",
             "weight": 5,
             "minCount": 1,
             "maxCount": 1,
@@ -162,9 +142,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "Items.GOLD_INGOT"
-            },
+            "item": "Items.GOLD_INGOT",
             "weight": 6,
             "minCount": 1,
             "maxCount": 1,
@@ -185,9 +163,7 @@
         "entries": [
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Megasafechest"
-            },
+            "item": "CUSTOM:Megasafechest",
             "weight": 1,
             "minCount": 1,
             "maxCount": 1,
@@ -199,9 +175,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Colofullamp"
-            },
+            "item": "CUSTOM:Colofullamp",
             "weight": 1,
             "minCount": 1,
             "maxCount": 1,

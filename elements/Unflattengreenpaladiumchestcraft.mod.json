@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Greenpaladiumchestv2"
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumchest"
-      }
+      "CUSTOM:Greenpaladiumchestv2",
+      "CUSTOM:Greenpaladiumchest"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumchest"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Greenpaladiumchest",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Greenpaladiumchestv2"
-    },
+    "recipeReturnStack": "CUSTOM:Greenpaladiumchestv2",
     "name": "unflattengreenpaladiumchestcraft",
     "namespace": "mod"
   }

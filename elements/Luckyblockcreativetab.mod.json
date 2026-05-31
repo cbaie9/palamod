@@ -1,11 +1,9 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "tab",
   "definition": {
     "name": "Palamod : Luckyblock tab",
-    "icon": {
-      "value": "CUSTOM:Luckyblock"
-    },
+    "icon": "CUSTOM:Luckyblock",
     "showSearch": false
   }
 }

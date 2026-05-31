@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class Rustinechests1Procedure {
@@ -69,8 +69,7 @@ public class Rustinechests1Procedure {
 				is111full = false;
 			}
 		}
-		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(109).getItem() : ItemStack.EMPTY)
-				.is(ItemTags.create(ResourceLocation.parse("palamod:rings")))) {
+		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get(109).getItem() : ItemStack.EMPTY).is(ItemTags.create(Identifier.parse("palamod:rings")))) {
 			if (is12 && !is12full) {
 				if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 					ItemStack _setstack13 = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu12 ? _menu12.getSlots().get(109).getItem() : ItemStack.EMPTY).copy();

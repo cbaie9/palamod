@@ -4,8 +4,6 @@ import palamod.procedures.UnclaimfindergetpctgProcedure;
 import palamod.procedures.HasunclaiminhandProcedure;
 import palamod.procedures.GetunclaimfindertypeProcedure;
 
-import org.checkerframework.checker.units.qual.h;
-
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,13 +13,13 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class UnclaimfinderoverlayOverlay {
-	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/overlay_unclaimfinder.png");
+	private static final Identifier SPRITE_0 = Identifier.parse("palamod:textures/screens/overlay_unclaimfinder.png");
 
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
@@ -43,7 +41,7 @@ public class UnclaimfinderoverlayOverlay {
 				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, w - 51, 20, Mth.clamp((int) GetunclaimfindertypeProcedure.execute(entity) * 32, 0, 96), 0, 32, 32, 128, 32);
 			}
 			if (HasunclaiminhandProcedure.execute(entity))
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+				event.getGuiGraphics().text(Minecraft.getInstance().font,
 
 						UnclaimfindergetpctgProcedure.execute(entity), w - 53, 39, -1, false);
 		}

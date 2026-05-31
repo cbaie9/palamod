@@ -2,7 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
@@ -10,6 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.Permissions;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -36,42 +36,42 @@ public class PalakitprocessProcedure {
 					}
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || entity instanceof Player _playerCmd5 && _playerCmd5.hasPermissions(2)) {
+					if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || hasEntityPermissionLevel(entity, 2)) {
 						main.addProperty("money", (main.get("money").getAsDouble() + 500));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get()).copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get()).copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_BOOTS.get()).copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
 							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
 							_setstack.setCount(64);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(Blocks.OAK_LOG).copy();
 							_setstack.setCount(20);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							_player.getInventory().placeItemBackInInventory(_setstack);
 						}
 						entity.getPersistentData().putBoolean("take_palakit", true);
 						write = true;
@@ -93,44 +93,57 @@ public class PalakitprocessProcedure {
 				}
 			}
 		} else {
-			if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || entity instanceof Player _playerCmd19 && _playerCmd19.hasPermissions(2)) {
+			if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || hasEntityPermissionLevel(entity, 2)) {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_CHESTPLATE.get()).copy();
 					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_LEGGINGS.get()).copy();
 					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_ARMOR_BOOTS.get()).copy();
 					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.TITANE_PICKAXE.get()).copy();
 					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
 					_setstack.setCount(64);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(Blocks.OAK_LOG).copy();
 					_setstack.setCount(20);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 				entity.getPersistentData().putBoolean("take_palakit", true);
 			}
 		}
+	}
+
+	private static boolean hasEntityPermissionLevel(Entity entity, int permissionLevel) {
+		if (entity instanceof Player _player) {
+			return switch (permissionLevel) {
+				case 0 -> true;
+				case 1 -> _player.permissions().hasPermission(Permissions.COMMANDS_MODERATOR);
+				case 2 -> _player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+				case 3 -> _player.permissions().hasPermission(Permissions.COMMANDS_ADMIN);
+				default -> _player.permissions().hasPermission(Permissions.COMMANDS_OWNER);
+			};
+		}
+		return false;
 	}
 }

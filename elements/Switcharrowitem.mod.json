@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,21 +11,15 @@
     "name": "Switch arrow",
     "rarity": "COMMON",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      },
-      {
-        "value": "CUSTOM:Pvpcreativetab"
-      }
+      "CUSTOM:Palamod",
+      "CUSTOM:Pvpcreativetab"
     ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 72000,
     "toolType": 1.0,
     "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
-    },
+    "recipeRemainder": "",
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "isPiglinCurrency": false,
@@ -49,23 +43,17 @@
     "enableRanged": true,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
-    "projectile": {
-      "value": "CUSTOM:Switcharrow"
-    },
+    "projectile": "CUSTOM:Switcharrow",
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
-    "eatResultItem": {
-      "value": ""
-    },
+    "eatResultItem": "",
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "bow",
     "isMusicDisc": false,
-    "musicDiscMusic": {
-      "value": ""
-    },
+    "musicDiscMusic": "",
     "musicDiscDescription": "",
     "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,

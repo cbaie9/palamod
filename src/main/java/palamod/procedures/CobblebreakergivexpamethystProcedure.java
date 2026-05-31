@@ -2,7 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
@@ -15,8 +17,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -43,12 +46,12 @@ public class CobblebreakergivexpamethystProcedure {
 			_player.giveExperiencePoints(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 4).getCount());
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
 			}
 		}
-		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
+		if (IsgameclientsideProcedure.execute()) {
 			jobs = GetjobsfileProcedure.execute(entity);
 			if (jobs.exists()) {
 				{
@@ -63,11 +66,11 @@ public class CobblebreakergivexpamethystProcedure {
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						lvl = main.get("lvl_miner").getAsDouble();
 						if (25 <= lvl) {
-							if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
+							if (world.getGameTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 								main.addProperty("xpstreak_miner", 0);
 							}
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
+									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, Identifier.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0)
 											|| 1 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("jobs_type", 0))
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
@@ -86,11 +89,11 @@ public class CobblebreakergivexpamethystProcedure {
 								main.addProperty("xp_miner", (12 * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
 							}
 							main.addProperty("xpstreak_miner", (12 * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
-							main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
-							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (12 * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
+							main.addProperty("xpstreak_time_miner", (world.getGameTime() + 80));
+							if (entity instanceof ServerPlayer _player)
+								_player.sendSystemMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (12 * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
 										+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
-												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
+												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
 										true);
 						}
 					} catch (IOException e) {
@@ -114,9 +117,9 @@ public class CobblebreakergivexpamethystProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

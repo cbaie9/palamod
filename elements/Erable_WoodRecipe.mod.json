@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "erable_craft_group",
     "unlockingItems": [
-      {
-        "value": "TAG:forge:erable__log"
-      }
+      "TAG:forge:erable__log"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Erable_Log"
-      },
-      {
-        "value": "CUSTOM:Erable_Log"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Erable_Log"
-      },
-      {
-        "value": "CUSTOM:Erable_Log"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Erable_Log",
+      "CUSTOM:Erable_Log",
+      "",
+      "CUSTOM:Erable_Log",
+      "CUSTOM:Erable_Log",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Erable_Wood"
-    },
+    "recipeReturnStack": "CUSTOM:Erable_Wood",
     "name": "erable_wood_recipe",
     "namespace": "mod"
   }

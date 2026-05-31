@@ -14,7 +14,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
@@ -33,7 +34,7 @@ public class TankItemPlaceProcedure {
 		} else {
 			tank = PalamodModBlocks.PALADIUM_TANK.get().defaultBlockState();
 		}
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:replaceable"))) || Blocks.AIR == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("minecraft:replaceable"))) || Blocks.AIR == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
 			world.setBlock(BlockPos.containing(x, y, z), tank, 3);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
@@ -55,7 +56,7 @@ public class TankItemPlaceProcedure {
 					_player.getInventory().setChanged();
 			}
 		} else {
-			if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:replaceable"))) || Blocks.AIR == (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock()) {
+			if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(Identifier.parse("minecraft:replaceable"))) || Blocks.AIR == (world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock()) {
 				world.setBlock(BlockPos.containing(x, y + 1, z), tank, 3);
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y + 1, z);
@@ -77,8 +78,8 @@ public class TankItemPlaceProcedure {
 						_player.getInventory().setChanged();
 				}
 			} else {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("palamod.item.tank_item.place").getString())), false);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal((Component.translatable("palamod.item.tank_item.place").getString())), false);
 			}
 		}
 	}

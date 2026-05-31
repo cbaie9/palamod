@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/flower_mineral",
     "particle": "palamod:block/flower_mineral"
-  },
-  "render_type": "cutout"
+  }
 }

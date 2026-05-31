@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/cauldron_core",
     "particle": "palamod:block/cauldron_core"
-  },
-  "render_type": "solid"
+  }
 }

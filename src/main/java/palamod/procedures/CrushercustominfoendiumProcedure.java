@@ -45,7 +45,7 @@ public class CrushercustominfoendiumProcedure {
 				}
 			}
 		}
-		if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") + " / " + output + " - " + (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") / output) * 100 + "%";
 		}
 		return (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_endium") / output) * 100 + "%";

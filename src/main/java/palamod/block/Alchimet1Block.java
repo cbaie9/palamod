@@ -61,7 +61,7 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
+	public int getLightDampening(BlockState state) {
 		return propagatesSkylightDown(state) ? 0 : 1;
 	}
 
@@ -78,8 +78,11 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return super.getStateForPlacement(context).setValue(WATERLOGGED, flag);
+		return state.setValue(WATERLOGGED, flag);
 	}
 
 	@Override
@@ -143,7 +146,7 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 	}
 
 	@Override
-	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos, Direction direction) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
 		if (tileentity instanceof Alchimet1BlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);

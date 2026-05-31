@@ -5,6 +5,5 @@
     "bottom": "palamod:block/soft_stone",
     "top": "palamod:block/soft_stone",
     "side": "palamod:block/soft_stone"
-  },
-  "render_type": "solid"
+  }
 }

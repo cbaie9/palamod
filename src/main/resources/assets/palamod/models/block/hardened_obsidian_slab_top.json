@@ -5,6 +5,5 @@
     "bottom": "minecraft:block/obsidian",
     "top": "minecraft:block/obsidian",
     "side": "minecraft:block/obsidian"
-  },
-  "render_type": "solid"
+  }
 }

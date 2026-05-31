@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.STRING"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "Items.STRING"
-      },
-      {
-        "value": "Items.STRING"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "Items.STRING"
-      },
-      {
-        "value": "Items.STRING"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "Items.STRING"
-      }
+      "Items.STRING",
+      "Items.DIAMOND",
+      "Items.STRING",
+      "Items.STRING",
+      "Items.DIAMOND",
+      "Items.STRING",
+      "Items.STRING",
+      "Items.DIAMOND",
+      "Items.STRING"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Diamondstring"
-    },
+    "recipeReturnStack": "CUSTOM:Diamondstring",
     "name": "diamondstringcraft",
     "namespace": "mod"
   }

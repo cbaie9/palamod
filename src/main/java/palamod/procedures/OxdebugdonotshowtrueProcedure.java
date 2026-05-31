@@ -4,8 +4,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
@@ -28,8 +28,8 @@ public class OxdebugdonotshowtrueProcedure {
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
 		if (BoolArgumentType.getBool(arguments, "debug")) {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(PalamodgameserververProcedure.execute(world)), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal(PalamodgameserververProcedure.execute(world)), false);
 		}
 	}
 }

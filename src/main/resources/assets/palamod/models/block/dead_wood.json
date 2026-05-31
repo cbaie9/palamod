@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/dead_wood",
     "particle": "palamod:block/dead_wood"
-  },
-  "render_type": "solid"
+  }
 }

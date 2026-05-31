@@ -8,6 +8,5 @@
     "south": "palamod:block/titane_face4",
     "west": "palamod:block/titane_face4",
     "particle": "palamod:block/titane_face2"
-  },
-  "render_type": "solid"
+  }
 }

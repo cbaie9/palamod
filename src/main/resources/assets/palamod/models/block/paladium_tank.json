@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/empty_texture",
     "side": "palamod:block/empty_texture",
     "cadre": "palamod:block/paladium_tank"
-  },
-  "render_type": "translucent"
+  }
 }

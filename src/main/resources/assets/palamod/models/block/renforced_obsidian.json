@@ -3,6 +3,5 @@
   "textures": {
     "all": "minecraft:block/obsidian",
     "particle": "minecraft:block/obsidian"
-  },
-  "render_type": "solid"
+  }
 }

@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "findium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Findiumslab"
-      }
+      "CUSTOM:Findium",
+      "CUSTOM:Findiumslab"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      }
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Findium",
+      "CUSTOM:Findium",
+      "CUSTOM:Findium"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Findiumslab"
-    },
+    "recipeReturnStack": "CUSTOM:Findiumslab",
     "name": "findiumslabcraft",
     "namespace": "mod"
   }

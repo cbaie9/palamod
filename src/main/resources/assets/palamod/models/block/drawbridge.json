@@ -8,6 +8,5 @@
     "south": "palamod:block/drawbridge_side",
     "west": "palamod:block/drawbridge_side",
     "particle": "palamod:block/drawbridge_top"
-  },
-  "render_type": "solid"
+  }
 }

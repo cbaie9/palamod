@@ -65,6 +65,7 @@ public class PalamodMod {
 		PalamodModMenus.REGISTRY.register(modEventBus);
 		PalamodModParticleTypes.REGISTRY.register(modEventBus);
 		PalamodModVillagerProfessions.PROFESSIONS.register(modEventBus);
+		PalamodModGameRules.REGISTRY.register(modEventBus);
 		PalamodModFluids.REGISTRY.register(modEventBus);
 		PalamodModFluidTypes.REGISTRY.register(modEventBus);
 		PalamodModAttributes.REGISTRY.register(modEventBus);
@@ -119,7 +120,7 @@ public class PalamodMod {
 
 	@Nullable
 	public static Player clientPlayer() {
-		if (FMLEnvironment.dist.isClient()) {
+		if (FMLEnvironment.getDist().isClient()) {
 			try {
 				if (minecraft == null || playerHandle == null) {
 					Class<?> minecraftClass = Class.forName("net.minecraft.client.Minecraft");

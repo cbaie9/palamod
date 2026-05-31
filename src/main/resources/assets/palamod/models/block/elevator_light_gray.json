@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/elevator_light_gray",
     "particle": "palamod:block/elevator_light_gray"
-  },
-  "render_type": "solid"
+  }
 }

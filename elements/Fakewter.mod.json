@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "fluid",
   "definition": {
     "name": "Fake water",
@@ -24,9 +24,7 @@
     "levelDecrease": 1,
     "slopeFindDistance": 5,
     "spawnParticles": false,
-    "dripParticle": {
-      "value": "DRIP_WATER"
-    },
+    "dripParticle": "DRIP_WATER",
     "flowStrength": 1.0,
     "luminosity": 0,
     "density": 1000,
@@ -36,13 +34,9 @@
     "generateBucket": true,
     "textureBucket": "bucket_sulfuric",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
-    "emptySound": {
-      "value": ""
-    },
+    "emptySound": "",
     "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
@@ -56,8 +50,6 @@
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "colorOnMap": "WATER",
-    "onEntityCollides": {
-      "name": "FakewaterMobplayerCollidesBlock"
-    }
+    "onEntityCollides": "FakewaterMobplayerCollidesBlock"
   }
 }

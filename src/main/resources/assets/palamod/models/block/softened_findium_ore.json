@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/softened_findium_ore",
     "particle": "palamod:block/softened_findium_ore"
-  },
-  "render_type": "solid"
+  }
 }

@@ -6,6 +6,7 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
@@ -23,8 +24,8 @@ public class PotgtransfertProcedure {
 						tag -> tag.putDouble(_tagName, _tagValue));
 			}
 			entity.getPersistentData().putDouble("Pickaxe_stone", 0);
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("Entity potg xp was transfert in the potg in your main hand"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("Entity potg xp was transfert in the potg in your main hand"), false);
 		}
 	}
 }

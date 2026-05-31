@@ -9,7 +9,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ItemOwner;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty;
@@ -42,7 +42,7 @@ public class XpbottleItem extends Item {
 		public static final MapCodec<XpProperty> MAP_CODEC = MapCodec.unit(new XpProperty());
 
 		@Override
-		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable LivingEntity entity, int seed) {
+		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable ItemOwner owner, int seed) {
 			return (float) GetxpfrombottleProcedure.execute(itemStackToRender);
 		}
 
@@ -56,7 +56,7 @@ public class XpbottleItem extends Item {
 		public static final MapCodec<JobsTypeProperty> MAP_CODEC = MapCodec.unit(new JobsTypeProperty());
 
 		@Override
-		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable LivingEntity entity, int seed) {
+		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable ItemOwner owner, int seed) {
 			return (float) GetjobsfrombottleProcedure.execute(itemStackToRender);
 		}
 

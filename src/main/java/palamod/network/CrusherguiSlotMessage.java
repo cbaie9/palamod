@@ -11,7 +11,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
@@ -21,7 +21,7 @@ import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record CrusherguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
-	public static final Type<CrusherguiSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "crushergui_slots"));
+	public static final Type<CrusherguiSlotMessage> TYPE = new Type<>(Identifier.fromNamespaceAndPath(PalamodMod.MODID, "crushergui_slots"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, CrusherguiSlotMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, CrusherguiSlotMessage message) -> {
 		buffer.writeInt(message.slotID);
 		buffer.writeInt(message.x);

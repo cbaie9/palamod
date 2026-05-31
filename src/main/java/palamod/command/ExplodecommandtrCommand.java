@@ -2,8 +2,6 @@ package palamod.command;
 
 import palamod.procedures.ExplodecommandProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -21,7 +19,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class ExplodecommandtrCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("explode").requires(s -> s.hasPermission(2)).then(Commands.argument("power", DoubleArgumentType.doubleArg()).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("explode").requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)).then(Commands.argument("power", DoubleArgumentType.doubleArg()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

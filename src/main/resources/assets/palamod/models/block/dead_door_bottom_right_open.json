@@ -4,6 +4,5 @@
     "particle": "palamod:block/dead_door_bottom",
     "bottom": "palamod:block/dead_door_bottom",
     "top": "palamod:block/dead_door_top"
-  },
-  "render_type": "cutout"
+  }
 }

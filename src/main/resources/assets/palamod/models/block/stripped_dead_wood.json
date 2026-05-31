@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/stripped_dead_log",
     "particle": "palamod:block/stripped_dead_log"
-  },
-  "render_type": "solid"
+  }
 }

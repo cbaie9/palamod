@@ -19,7 +19,7 @@ public class GetleveljobsProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		jobs = GetjobsfileProcedure.execute(entity);
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get()))) {
 			if (jobs.exists() && ((jobs_name).equals("miner") || (jobs_name).equals("farmer") || (jobs_name).equals("hunter") || (jobs_name).equals("alchi"))) {
 				{
 					try {

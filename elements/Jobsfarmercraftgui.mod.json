@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -421,9 +421,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 341,
           "y": 19,
           "locked": false
@@ -450,9 +448,7 @@
           "name": "imagebutton_endium_pickaxe",
           "image": "amethyst_hoe.png",
           "hoveredImage": "amethyst_hoe_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmeramethysthoe"
-          },
+          "onClick": "Jobsminerfarmeramethysthoe",
           "x": 74,
           "y": 44,
           "locked": false
@@ -464,9 +460,7 @@
           "name": "imagebutton_potg_of_1",
           "image": "titane_radius_hoe.png",
           "hoveredImage": "titane_hoe_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercrafttitanehoe"
-          },
+          "onClick": "Jobsfarmercrafttitanehoe",
           "x": 94,
           "y": 43,
           "locked": false
@@ -478,9 +472,7 @@
           "name": "imagebutton_amethyste_exca",
           "image": "paladium_radius_hoe.png",
           "hoveredImage": "paladium_hoe_hover.png",
-          "onClick": {
-            "name": "Jobsfarmerpaladiumhoe"
-          },
+          "onClick": "Jobsfarmerpaladiumhoe",
           "x": 112,
           "y": 44,
           "locked": false
@@ -492,9 +484,7 @@
           "name": "imagebutton_titane_excavator",
           "image": "endium_radius_hoe.png",
           "hoveredImage": "endium_radius_hoe_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmerendiumhoe"
-          },
+          "onClick": "Jobsminerfarmerendiumhoe",
           "x": 131,
           "y": 44,
           "locked": false
@@ -506,9 +496,7 @@
           "name": "imagebutton_paladium_excavator",
           "image": "green_paladium_radius_hoe.png",
           "hoveredImage": "paladium_hoe_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmergreenpaladiumhoe"
-          },
+          "onClick": "Jobsminerfarmergreenpaladiumhoe",
           "x": 150,
           "y": 44,
           "locked": false
@@ -520,9 +508,7 @@
           "name": "imagebutton_magical_tool16",
           "image": "seedplanter_amethyst.png",
           "hoveredImage": "seedplanter_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmeramethystseedplanter"
-          },
+          "onClick": "Jobsminerfarmeramethystseedplanter",
           "x": 169,
           "y": 44,
           "locked": false
@@ -534,9 +520,7 @@
           "name": "imagebutton_voidstone",
           "image": "seedplanter_titane.png",
           "hoveredImage": "seedplanter_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmertitaneseedplanter"
-          },
+          "onClick": "Jobsminerfarmertitaneseedplanter",
           "x": 188,
           "y": 44,
           "locked": false
@@ -548,9 +532,7 @@
           "name": "imagebutton_obsidian_pickaxe",
           "image": "seedplanter_paladium.png",
           "hoveredImage": "seedplanter_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmerpaladiumseedplanter"
-          },
+          "onClick": "Jobsminerfarmerpaladiumseedplanter",
           "x": 207,
           "y": 44,
           "locked": false
@@ -562,9 +544,7 @@
           "name": "imagebutton_boom_obsi",
           "image": "seedplanter_green_paladium.png",
           "hoveredImage": "seedplanter_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmergreenpaladiumseedplanter"
-          },
+          "onClick": "Jobsminerfarmergreenpaladiumseedplanter",
           "x": 226,
           "y": 44,
           "locked": false
@@ -576,9 +556,7 @@
           "name": "imagebutton_big_obsi",
           "image": "seedplanter_endium.png",
           "hoveredImage": "seedplanter_hover.png",
-          "onClick": {
-            "name": "Jobsminerfarmerendiumseedplanter"
-          },
+          "onClick": "Jobsminerfarmerendiumseedplanter",
           "x": 74,
           "y": 63,
           "locked": false
@@ -590,9 +568,7 @@
           "name": "imagebutton_spike_obsi",
           "image": "amethyst_backpack.png",
           "hoveredImage": "backpack_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercraftamethystbackpack"
-          },
+          "onClick": "Jobsfarmercraftamethystbackpack",
           "x": 112,
           "y": 63,
           "locked": false
@@ -604,9 +580,7 @@
           "name": "imagebutton_spike_obsi_1",
           "image": "titan_backpack.png",
           "hoveredImage": "backpack_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercrafttitanebackpack"
-          },
+          "onClick": "Jobsfarmercrafttitanebackpack",
           "x": 131,
           "y": 63,
           "locked": false
@@ -618,9 +592,7 @@
           "name": "imagebutton_spike_obsi_2",
           "image": "paladium_backpack.png",
           "hoveredImage": "backpack_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercraftpaladiumbackpack"
-          },
+          "onClick": "Jobsfarmercraftpaladiumbackpack",
           "x": 150,
           "y": 63,
           "locked": false
@@ -632,9 +604,7 @@
           "name": "imagebutton_spike_obsi_3",
           "image": "endium_backpack.png",
           "hoveredImage": "backpack_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercraftendiumbackpack"
-          },
+          "onClick": "Jobsfarmercraftendiumbackpack",
           "x": 169,
           "y": 63,
           "locked": false
@@ -646,9 +616,7 @@
           "name": "imagebutton_spike_obsi_4",
           "image": "colored_grass_seed.png",
           "hoveredImage": "colored_seed_hover.png",
-          "onClick": {
-            "name": "Jobsminercraftamethystspike"
-          },
+          "onClick": "Jobsminercraftamethystspike",
           "x": 188,
           "y": 63,
           "locked": false
@@ -660,9 +628,7 @@
           "name": "imagebutton_spike_obsi_5",
           "image": "root_tree_foliage.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercrafttitanespike"
-          },
+          "onClick": "Jobsminercrafttitanespike",
           "x": 207,
           "y": 63,
           "locked": false
@@ -674,9 +640,7 @@
           "name": "imagebutton_spike_obsi_6",
           "image": "crusher_front.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsfarmercraftcrusher"
-          },
+          "onClick": "Jobsfarmercraftcrusher",
           "x": 226,
           "y": 63,
           "locked": false
@@ -688,9 +652,7 @@
           "name": "imagebutton_lava_obsi",
           "image": "totem.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsfarmercraftfertilitytotem"
-          },
+          "onClick": "Jobsfarmercraftfertilitytotem",
           "x": 74,
           "y": 82,
           "locked": false
@@ -702,9 +664,7 @@
           "name": "imagebutton_fake_obsi",
           "image": "beta_block.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsfarmercraftfarmerthrone"
-          },
+          "onClick": "Jobsfarmercraftfarmerthrone",
           "x": 93,
           "y": 82,
           "locked": false
@@ -716,9 +676,7 @@
           "name": "imagebutton_slime_obsi",
           "image": "endium_chestplate.png",
           "hoveredImage": "chestplate_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercraftendiumchestplate"
-          },
+          "onClick": "Jobsfarmercraftendiumchestplate",
           "x": 112,
           "y": 82,
           "locked": false
@@ -730,9 +688,7 @@
           "name": "imagebutton_poison_obsi",
           "image": "endium_axe.png",
           "hoveredImage": "endium_axe_hover.png",
-          "onClick": {
-            "name": "Jobsfarmercraftendiumaxe"
-          },
+          "onClick": "Jobsfarmercraftendiumaxe",
           "x": 131,
           "y": 82,
           "locked": false
@@ -744,9 +700,7 @@
           "name": "imagebutton_beta_block",
           "image": "elevator_block.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminerfarmerelevator"
-          },
+          "onClick": "Jobsminerfarmerelevator",
           "x": 93,
           "y": 63,
           "locked": false
@@ -1200,12 +1154,8 @@
         }
       }
     ],
-    "onOpen": {
-      "name": "Jobscraftsetup"
-    },
-    "onClosed": {
-      "name": "Dropitemcraft"
-    },
+    "onOpen": "Jobscraftsetup",
+    "onClosed": "Dropitemcraft",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

@@ -8,6 +8,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.arguments.EntityArgument;
@@ -35,7 +36,7 @@ public class PaycommandprocessProcedure {
 		File money_p2 = new File("");
 		double money_count_p1 = 0;
 		double money_count_p2 = 0;
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEMONEYGAMERULE.get()))) {
 			if (!((null) == (commandParameterEntity(arguments, "player2")))) {
 				money_p1 = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 				money_p2 = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player2")).getUUID().toString() + ".json"));
@@ -95,7 +96,8 @@ public class PaycommandprocessProcedure {
 					MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.pay1").getString() + "" + DoubleArgumentType.getDouble(arguments, "amount") + "$ "
 							+ Component.translatable("palamod.procedure.pay2").getString() + " " + (commandParameterEntity(arguments, "player2")).getDisplayName().getString());
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								("tellraw " + commandParameterEntity(arguments, "player2") + " {\"text\":\"" + Component.translatable("palamod.procedure.pay3").getString() + " " + DoubleArgumentType.getDouble(arguments, "amount") + "$ "
 										+ Component.translatable("palamod.procedure.pay4").getString() + entity + ", " + Component.translatable("palamod.procedure.pay5").getString() + " " + StringArgumentType.getString(arguments, "reason")
 										+ "\",\"color\":\"green\"}"));

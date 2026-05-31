@@ -1,11 +1,9 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "tab",
   "definition": {
     "name": "Palamod : Base claim",
-    "icon": {
-      "value": "CUSTOM:Renforcedobsidian"
-    },
+    "icon": "CUSTOM:Renforcedobsidian",
     "showSearch": false
   }
 }

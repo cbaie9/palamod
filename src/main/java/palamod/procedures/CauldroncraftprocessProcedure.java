@@ -23,9 +23,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
@@ -60,67 +61,45 @@ public class CauldroncraftprocessProcedure {
 		double nb_items = 0;
 		double random = 0;
 		double jobs_alchi = 0;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			PalamodMod.LOGGER.info("drop");
 			PalamodMod.LOGGER.info(("drop        :" + itemstack));
 		}
-		if ((entity instanceof ServerPlayer || entity instanceof Player) && itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:cauldron_craft")))) {
-			int horizontalRadiusHemiBot = (int) 3 - 1;
-			int verticalRadiusHemiBot = (int) 3;
-			int yIterationsHemiBot = verticalRadiusHemiBot;
-			for (int i = -yIterationsHemiBot; i <= 0; i++) {
-				if (i == -verticalRadiusHemiBot) {
-					continue;
-				}
-				for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-					for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-								+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-						if (distanceSq <= 1.0) {
-							if (PalamodModBlocks.CAULDRON_CORE.get() == (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock()) {
-								x_core = x + xi;
-								y_core = y + i;
-								z_core = z + zi;
-								pass = getBlockNBTLogic(world, BlockPos.containing(x + xi, y + i, z_core), "cauldron_open");
-								if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
-									PalamodMod.LOGGER.info(("Core :  x : " + x_core + " y : " + y_core + " z : " + z_core));
-								}
-							}
-						}
-					}
-				}
-			}
+		if ((entity instanceof ServerPlayer || entity instanceof Player) && itemstack.is(ItemTags.create(Identifier.parse("palamod:cauldron_craft")))) {
 			if (pass) {
 				tank1_type = "None";
 				tank2_type = "None";
-				if (world instanceof ServerLevel _serverLevelGR22 && _serverLevelGR22.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+				if (world instanceof ServerLevel _serverLevelGR13 && _serverLevelGR13.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 					PalamodMod.LOGGER.info("core found");
 					PalamodMod.LOGGER.info(("core found" + itemstack + "\n" + "setup : " + getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "cauldron_open") + "\n"
-							+ itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:modded_flowers"))) + itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:vanilla_flowers")))));
+							+ itemstack.is(ItemTags.create(Identifier.parse("palamod:modded_flowers"))) + itemstack.is(ItemTags.create(Identifier.parse("palamod:vanilla_flowers")))));
 				}
 				nb_items = itemstack.getCount();
-				if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:modded_flowers")))) {
+				if (itemstack.is(ItemTags.create(Identifier.parse("palamod:modded_flowers")))) {
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"kill @e[type=minecraft:item,distance=..5]");
 					res = true;
-				} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:vanilla_flowers")))) {
+				} else if (itemstack.is(ItemTags.create(Identifier.parse("palamod:vanilla_flowers")))) {
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"kill @e[type=minecraft:item,distance=..5]");
 					res = true;
 				} else if (Blocks.GLOWSTONE.asItem() == itemstack.getItem()) {
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"kill @e[type=minecraft:item,distance=..5]");
 					res = true;
 				} else if (itemstack.getItem() == PalamodModItems.GLUEBALL_PATTERN.get()) {
 					PalamodMod.LOGGER.info("Starting glueball craft, acquering tank 1 and 2");
 					no_clear = true;
 					res = true;
-					PalamodMod.LOGGER.info(("TANK" + (world.getBlockState(BlockPos.containing(x_core - 3, y_core + 1, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))
+					PalamodMod.LOGGER.info(("TANK" + (world.getBlockState(BlockPos.containing(x_core - 3, y_core + 1, z_core))).is(BlockTags.create(Identifier.parse("palamod:tanks")))
 							+ getBlockNBTLogic(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "setup") + (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "stock"))));
-					if ((world.getBlockState(BlockPos.containing(x_core - 3, y_core + 1, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))) {
+					if ((world.getBlockState(BlockPos.containing(x_core - 3, y_core + 1, z_core))).is(BlockTags.create(Identifier.parse("palamod:tanks")))) {
 						if (getBlockNBTLogic(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "setup")) {
 							if (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "stock")) {
 								if (("ostrya").equals(getBlockNBTString(world, BlockPos.containing(x_core - 3, y_core + 1, z_core), "type"))
@@ -133,7 +112,7 @@ public class CauldroncraftprocessProcedure {
 							}
 						}
 					}
-					if ((world.getBlockState(BlockPos.containing(x_core + 3, y_core + 1, z_core))).is(BlockTags.create(ResourceLocation.parse("palamod:tanks")))) {
+					if ((world.getBlockState(BlockPos.containing(x_core + 3, y_core + 1, z_core))).is(BlockTags.create(Identifier.parse("palamod:tanks")))) {
 						if (getBlockNBTLogic(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "setup")) {
 							if (5 <= getBlockNBTNumber(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "stock")) {
 								if (("ostrya").equals(getBlockNBTString(world, BlockPos.containing(x_core + 3, y_core + 1, z_core), "type"))
@@ -148,7 +127,7 @@ public class CauldroncraftprocessProcedure {
 					}
 					jobs_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
 					PalamodMod.LOGGER.info(("jobs acr for player : " + entity.getDisplayName().getString() + ", level alchi : " + jobs_alchi));
-					if (!(world instanceof ServerLevel _serverLevelGR72 && _serverLevelGR72.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+					if (!(world instanceof ServerLevel _serverLevelGR63 && _serverLevelGR63.getGameRules().get(PalamodModGameRules.LOCKEDCRAFT.get()))) {
 						jobs_alchi = 9999;
 					}
 					if (!("None").equals(tank1_type) || !("None").equals(tank2_type)) {
@@ -440,16 +419,17 @@ public class CauldroncraftprocessProcedure {
 					}
 				} else if (PalamodModBlocks.ENDIUM_FLOWER.get().asItem() == itemstack.getItem() || PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem() == itemstack.getItem()) {
 					jobs_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
-					if (!(world instanceof ServerLevel _serverLevelGR121 && _serverLevelGR121.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+					if (!(world instanceof ServerLevel _serverLevelGR112 && _serverLevelGR112.getGameRules().get(PalamodModGameRules.LOCKEDCRAFT.get()))) {
 						jobs_alchi = 9999;
 					}
 					if (jobs_alchi >= 20) {
 						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									"kill @e[type=minecraft:item,distance=..5]");
 						res = true;
 					}
-				} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:cauldron_craft")))) {
+				} else if (itemstack.is(ItemTags.create(Identifier.parse("palamod:cauldron_craft")))) {
 					res = true;
 				}
 			}
@@ -457,7 +437,8 @@ public class CauldroncraftprocessProcedure {
 				if (!no_clear) {
 					PalamodMod.queueServerWork(3, () -> {
 						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							_level.getServer().getCommands().performPrefixedCommand(
+									new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 									"kill @e[type=minecraft:item,distance=..5]");
 						PalamodMod.queueServerWork(1, () -> {
 							CauldroncraftresultProcedure.execute(world, x, y, z, entity, itemstack, new ItemStack(PalamodModBlocks.NBT_BLOCK.get()));

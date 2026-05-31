@@ -8,6 +8,5 @@
     "south": "palamod:block/paladiummachine",
     "west": "palamod:block/paladiummachine",
     "particle": "palamod:block/paladiummachine"
-  },
-  "render_type": "solid"
+  }
 }

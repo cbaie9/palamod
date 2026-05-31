@@ -25,7 +25,7 @@ import net.minecraft.core.BlockPos;
 
 public class OstryasapplingBlock extends Block {
 	public OstryasapplingBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.GRASS).strength(0f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.GRASS).strength(0f, 10f).noCollision().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class OstryasapplingBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
+	public int getLightDampening(BlockState state) {
 		return 0;
 	}
 

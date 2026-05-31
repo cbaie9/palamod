@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -26,9 +26,7 @@
           "name": "button_blocks",
           "text": "Blocks",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Blockconnecthelp"
-          },
+          "onClick": "Blockconnecthelp",
           "width": 81,
           "height": 20,
           "x": 214,
@@ -59,9 +57,7 @@
           "name": "button_items",
           "text": "Items",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectitemmenu"
-          },
+          "onClick": "Connectitemmenu",
           "width": 81,
           "height": 20,
           "x": 214,
@@ -75,9 +71,7 @@
           "name": "button_gui",
           "text": "Interface",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Machineconnectpalahelp"
-          },
+          "onClick": "Machineconnectpalahelp",
           "width": 81,
           "height": 20,
           "x": 214,
@@ -108,9 +102,7 @@
           "name": "button_lucky_blocks",
           "text": "Lucky blocks",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectnotyetgui"
-          },
+          "onClick": "Connectnotyetgui",
           "width": 81,
           "height": 20,
           "x": 214,
@@ -124,9 +116,7 @@
           "name": "button_metiers_soon",
           "text": "Jobs",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectnotyetgui"
-          },
+          "onClick": "Connectnotyetgui",
           "width": 81,
           "height": 20,
           "x": 214,

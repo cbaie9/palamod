@@ -46,7 +46,7 @@ public class CauldronsetupprocessProcedure {
 		double z_core = 0;
 		double y_core = 0;
 		double failsafe_crash = 0;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			PalamodMod.LOGGER.debug(("------------------------" + "\n" + "Chaudron" + "\n"));
 		}
 		if (entity instanceof ServerPlayer || entity instanceof Player) {

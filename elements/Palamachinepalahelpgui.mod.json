@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -123,9 +123,7 @@
           "name": "button_back",
           "text": "back",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Blockconnecthelp"
-          },
+          "onClick": "Blockconnecthelp",
           "width": 45,
           "height": 20,
           "x": 123,
@@ -139,9 +137,7 @@
           "name": "button_menu",
           "text": "menu",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "width": 45,
           "height": 20,
           "x": 251,

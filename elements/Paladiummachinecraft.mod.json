@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Paladiummachine"
-      }
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Paladiummachine"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      }
+      "Blocks.STONE#0",
+      "Blocks.STONE#0",
+      "Blocks.STONE#0",
+      "Blocks.STONE#0",
+      "CUSTOM:Compressedpaladium",
+      "Blocks.STONE#0",
+      "Blocks.STONE#0",
+      "Blocks.STONE#0",
+      "Blocks.STONE#0"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiummachine"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiummachine",
     "name": "paladiummachinecraft",
     "namespace": "mod"
   }

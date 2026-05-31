@@ -4,6 +4,5 @@
     "all": "palamod:block/titane_portal_key",
     "particle": "palamod:block/amethyste_portal_key",
     "0": "palamod:block/titane_portal_key"
-  },
-  "render_type": "cutout_mipped"
+  }
 }

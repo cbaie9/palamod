@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/orangeblue_stage_4",
     "particle": "palamod:block/orangeblue_stage_4"
-  },
-  "render_type": "cutout"
+  }
 }

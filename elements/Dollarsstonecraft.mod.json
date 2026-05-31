@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.ENDER_PEARL"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.ENDER_PEARL"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Voidstone"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.ENDER_PEARL"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Items.ENDER_PEARL"
-      }
+      "Items.ENDER_PEARL",
+      "CUSTOM:PaladiumIngot",
+      "Items.ENDER_PEARL",
+      "",
+      "CUSTOM:Voidstone",
+      "",
+      "Items.ENDER_PEARL",
+      "CUSTOM:Amethyste",
+      "Items.ENDER_PEARL"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Moulastone"
-    },
+    "recipeReturnStack": "CUSTOM:Moulastone",
     "name": "dollarsstonecraft",
     "namespace": "mod"
   }

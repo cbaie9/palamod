@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -83,9 +83,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 393,
           "y": 12,
           "locked": false
@@ -97,9 +95,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Connectitemmenu"
-          },
+          "onClick": "Connectitemmenu",
           "x": 373,
           "y": 12,
           "locked": false
@@ -111,9 +107,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 356,
           "y": 13,
           "locked": false
@@ -490,9 +484,7 @@
           "name": "imagebutton_speed_stick",
           "image": "speed_stick.png",
           "hoveredImage": "speed_stick_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodespeed"
-          },
+          "onClick": "Palahelpstickmodespeed",
           "x": 20,
           "y": 12,
           "locked": false
@@ -504,9 +496,7 @@
           "name": "imagebutton_jump_stick2",
           "image": "jump_stick2.png",
           "hoveredImage": "jump_stick_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodejump"
-          },
+          "onClick": "Palahelpstickmodejump",
           "x": 37,
           "y": 12,
           "locked": false
@@ -518,9 +508,7 @@
           "name": "imagebutton_hyperjump_stick",
           "image": "hyperjump_stick.png",
           "hoveredImage": "hyper_jump_stick_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodehyperjump"
-          },
+          "onClick": "Palahelpstickmodehyperjump",
           "x": 56,
           "y": 13,
           "locked": false
@@ -532,9 +520,7 @@
           "name": "imagebutton_heal_stick",
           "image": "heal_stick.png",
           "hoveredImage": "heal_stick_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodeheal"
-          },
+          "onClick": "Palahelpstickmodeheal",
           "x": 75,
           "y": 12,
           "locked": false
@@ -546,9 +532,7 @@
           "name": "imagebutton_damage_stick",
           "image": "damage_stick.png",
           "hoveredImage": "damage_stick_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodedamage"
-          },
+          "onClick": "Palahelpstickmodedamage",
           "x": 93,
           "y": 12,
           "locked": false
@@ -560,9 +544,7 @@
           "name": "imagebutton_strenghtstick",
           "image": "strenghtstick.png",
           "hoveredImage": "strenght_stick_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodestrenght"
-          },
+          "onClick": "Palahelpstickmodestrenght",
           "x": 109,
           "y": 13,
           "locked": false
@@ -574,9 +556,7 @@
           "name": "imagebutton_stickofgod",
           "image": "stickofgod.png",
           "hoveredImage": "stick_of_gods_hover_poi.png",
-          "onClick": {
-            "name": "Palahelpstickmodesog"
-          },
+          "onClick": "Palahelpstickmodesog",
           "x": 127,
           "y": 13,
           "locked": false

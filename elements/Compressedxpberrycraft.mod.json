@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Compressedxpberry"
-      }
+      "CUSTOM:Xpberry",
+      "CUSTOM:Compressedxpberry"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      },
-      {
-        "value": "CUSTOM:Xpberry"
-      }
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry",
+      "CUSTOM:Xpberry"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Compressedxpberry"
-    },
+    "recipeReturnStack": "CUSTOM:Compressedxpberry",
     "name": "compressedxpberrycraft",
     "namespace": "mod"
   }

@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/endium_nugget_ore_deepslate",
     "particle": "palamod:block/endium_nugget_ore_deepslate"
-  },
-  "render_type": "solid"
+  }
 }

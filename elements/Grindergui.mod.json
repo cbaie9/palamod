@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -114,9 +114,7 @@
           "name": "imagebutton_help_button",
           "image": "help_button.png",
           "hoveredImage": "help_button_poi.png",
-          "onClick": {
-            "name": "Connectgrinderpag1"
-          },
+          "onClick": "Connectgrinderpag1",
           "x": 299,
           "y": 180,
           "locked": false
@@ -175,9 +173,7 @@
         "data": {
           "image": "btn-blue_on.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Lightbluegrinderon"
-          },
+          "displayCondition": "Lightbluegrinderon",
           "x": 296,
           "y": 102,
           "locked": false
@@ -188,9 +184,7 @@
         "data": {
           "image": "btn-red_on.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Lightredgrinderon"
-          },
+          "displayCondition": "Lightredgrinderon",
           "x": 266,
           "y": 102,
           "locked": false
@@ -201,9 +195,7 @@
         "data": {
           "image": "btn-green_on.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Lightgreengrinderon"
-          },
+          "displayCondition": "Lightgreengrinderon",
           "x": 281,
           "y": 102,
           "locked": false
@@ -266,9 +258,7 @@
         }
       }
     ],
-    "onOpen": {
-      "name": "Grinderadvancementreq"
-    },
+    "onOpen": "Grinderadvancementreq",
     "gridSettings": {
       "sx": 40,
       "sy": 18,

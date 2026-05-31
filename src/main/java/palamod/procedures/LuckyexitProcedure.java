@@ -34,19 +34,19 @@ public class LuckyexitProcedure {
 				}
 				world.setBlock(_bp, _bs, 3);
 			}
-			if ((world instanceof ServerLevel _serverLevelGR1 && _serverLevelGR1.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) == true) {
+			if ((world instanceof ServerLevel _serverLevelGR1 && _serverLevelGR1.getGameRules().get(PalamodModGameRules.LOGSALL.get())) == true) {
 				PalamodMod.LOGGER.info(("(" + entity.getDisplayName().getString() + " ) Fermeture de l'interface lucky block apr\u00E8s ouverture [ code 1 ]"));
 			}
 		} else if (PalamodModVariables.Lucky_destroy == 2) {
-			if ((world instanceof ServerLevel _serverLevelGR4 && _serverLevelGR4.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) == true) {
+			if ((world instanceof ServerLevel _serverLevelGR4 && _serverLevelGR4.getGameRules().get(PalamodModGameRules.LOGSALL.get())) == true) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + "Ferme un lucky block ( Event non Ajout\uFFFD ) [ code 2 ]"));
 			}
 		} else if (PalamodModVariables.Lucky_destroy == 0) {
-			if ((world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) == true) {
+			if ((world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().get(PalamodModGameRules.LOGSALL.get())) == true) {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + "Ferme un lucky block ( echap ) [ code  0 ]"));
 			}
 		} else {
-			if ((world instanceof ServerLevel _serverLevelGR10 && _serverLevelGR10.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) == true) {
+			if ((world instanceof ServerLevel _serverLevelGR10 && _serverLevelGR10.getGameRules().get(PalamodModGameRules.LOGSALL.get())) == true) {
 				PalamodMod.LOGGER.info(("(" + entity.getDisplayName().getString() + " ) Fermeture de l'interface lucky block apr\u00E8s ouverture sans renplacement [ code 3 ]"));
 			}
 		}

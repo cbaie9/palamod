@@ -7,6 +7,5 @@
     "2": "palamod:block/tex3",
     "3": "palamod:block/pillartex",
     "missing": "palamod:block/alchimie_texture"
-  },
-  "render_type": "solid"
+  }
 }

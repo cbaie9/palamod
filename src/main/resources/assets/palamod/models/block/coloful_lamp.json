@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/clamp_animated",
     "particle": "palamod:block/clamp_animated"
-  },
-  "render_type": "solid"
+  }
 }

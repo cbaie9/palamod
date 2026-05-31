@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "block",
   "definition": {
     "texture": "berry_xp_bush_fancy",
@@ -51,14 +51,10 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "destroyTool": "Not specified",
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -78,9 +74,7 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "basedrum",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
     "ignitedByLava": false,
@@ -93,24 +87,12 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "PLANT"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "soundOnStep": "PLANT",
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -135,52 +117,24 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "Xpbushsetup"
-    },
-    "onTickUpdate": {
-      "name": "Xpbushprocess"
-    },
-    "onRandomUpdateEvent": {
-      "name": "Xpbushprocess"
-    },
-    "onEntityCollides": {
-      "name": "Xpbushdamage"
-    },
+    "onBlockAdded": "Xpbushsetup",
+    "onTickUpdate": "Xpbushprocess",
+    "onRandomUpdateEvent": "Xpbushprocess",
+    "onEntityCollides": "Xpbushdamage",
     "generateFeature": true,
     "restrictionBiomes": [
-      {
-        "value": "deep_cold_ocean"
-      },
-      {
-        "value": "deep_ocean"
-      },
-      {
-        "value": "deep_dark"
-      },
-      {
-        "value": "deep_frozen_ocean"
-      },
-      {
-        "value": "deep_lukewarm_ocean"
-      }
+      "deep_cold_ocean",
+      "deep_ocean",
+      "deep_dark",
+      "deep_frozen_ocean",
+      "deep_lukewarm_ocean"
     ],
     "blocksToReplace": [
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#1"
-      },
-      {
-        "value": "Blocks.STONE#3"
-      },
-      {
-        "value": "Blocks.STONE#5"
-      },
-      {
-        "value": "Blocks.DEEPSLATE"
-      }
+      "Blocks.STONE#0",
+      "Blocks.STONE#1",
+      "Blocks.STONE#3",
+      "Blocks.STONE#5",
+      "Blocks.DEEPSLATE"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 15,

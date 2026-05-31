@@ -4,6 +4,5 @@
     "all": "palamod:block/connect2dirt",
     "particle": "palamod:block/connect2dirt",
     "1": "palamod:block/ferti_dirt"
-  },
-  "render_type": "solid"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -421,9 +421,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 341,
           "y": 19,
           "locked": false
@@ -450,9 +448,7 @@
           "name": "imagebutton_endium_pickaxe",
           "image": "endium_pickaxe.png",
           "hoveredImage": "endium_pickaxe_white.png",
-          "onClick": {
-            "name": "Jobsminercraftendiumpickaxe"
-          },
+          "onClick": "Jobsminercraftendiumpickaxe",
           "x": 74,
           "y": 44,
           "locked": false
@@ -475,9 +471,7 @@
           "name": "imagebutton_amethyste_exca",
           "image": "amethyste_exca.png",
           "hoveredImage": "amethyst_excavator_white.png",
-          "onClick": {
-            "name": "Jobsminercraftamethystexcavator"
-          },
+          "onClick": "Jobsminercraftamethystexcavator",
           "x": 112,
           "y": 44,
           "locked": false
@@ -489,9 +483,7 @@
           "name": "imagebutton_titane_excavator",
           "image": "titane_excavator.png",
           "hoveredImage": "titane_excavator_white.png",
-          "onClick": {
-            "name": "Jobsminercrafttitaneexcavator"
-          },
+          "onClick": "Jobsminercrafttitaneexcavator",
           "x": 131,
           "y": 44,
           "locked": false
@@ -503,9 +495,7 @@
           "name": "imagebutton_paladium_excavator",
           "image": "paladium_excavator.png",
           "hoveredImage": "paladium_excavator_white.png",
-          "onClick": {
-            "name": "Jobsminercraftgreenpaladiumexcavator"
-          },
+          "onClick": "Jobsminercraftgreenpaladiumexcavator",
           "x": 150,
           "y": 44,
           "locked": false
@@ -517,9 +507,7 @@
           "name": "imagebutton_magical_tool16",
           "image": "magical_tool16.png",
           "hoveredImage": "magical_tool16_white.png",
-          "onClick": {
-            "name": "Jobsminercraftmagicialtool"
-          },
+          "onClick": "Jobsminercraftmagicialtool",
           "x": 169,
           "y": 44,
           "locked": false
@@ -531,9 +519,7 @@
           "name": "imagebutton_voidstone",
           "image": "voidstone.png",
           "hoveredImage": "voidstone_white.png",
-          "onClick": {
-            "name": "Jobsminercraftvoidstone"
-          },
+          "onClick": "Jobsminercraftvoidstone",
           "x": 188,
           "y": 44,
           "locked": false
@@ -545,9 +531,7 @@
           "name": "imagebutton_obsidian_pickaxe",
           "image": "obsidian_pickaxe.png",
           "hoveredImage": "obsidian_pickaxe_white.png",
-          "onClick": {
-            "name": "Jobsminercraftobsidianpickaxe"
-          },
+          "onClick": "Jobsminercraftobsidianpickaxe",
           "x": 207,
           "y": 44,
           "locked": false
@@ -559,9 +543,7 @@
           "name": "imagebutton_boom_obsi",
           "image": "boom_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftboomtnt"
-          },
+          "onClick": "Jobsminercraftboomtnt",
           "x": 226,
           "y": 44,
           "locked": false
@@ -573,9 +555,7 @@
           "name": "imagebutton_big_obsi",
           "image": "big_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcompactobsidian"
-          },
+          "onClick": "Jobsminercraftcompactobsidian",
           "x": 74,
           "y": 63,
           "locked": false
@@ -587,9 +567,7 @@
           "name": "imagebutton_spike_obsi",
           "image": "spike_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftwoddenspike"
-          },
+          "onClick": "Jobsminercraftwoddenspike",
           "x": 112,
           "y": 63,
           "locked": false
@@ -601,9 +579,7 @@
           "name": "imagebutton_spike_obsi_1",
           "image": "spike_obsi_1.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftironspike"
-          },
+          "onClick": "Jobsminercraftironspike",
           "x": 131,
           "y": 63,
           "locked": false
@@ -615,9 +591,7 @@
           "name": "imagebutton_spike_obsi_2",
           "image": "spike_obsi_2.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftgoldenspike"
-          },
+          "onClick": "Jobsminercraftgoldenspike",
           "x": 150,
           "y": 63,
           "locked": false
@@ -629,9 +603,7 @@
           "name": "imagebutton_spike_obsi_3",
           "image": "spike_obsi_3.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftdiamondspike"
-          },
+          "onClick": "Jobsminercraftdiamondspike",
           "x": 169,
           "y": 63,
           "locked": false
@@ -643,9 +615,7 @@
           "name": "imagebutton_spike_obsi_4",
           "image": "spike_obsi_4.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftamethystspike"
-          },
+          "onClick": "Jobsminercraftamethystspike",
           "x": 188,
           "y": 63,
           "locked": false
@@ -657,9 +627,7 @@
           "name": "imagebutton_spike_obsi_5",
           "image": "spike_obsi_5.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercrafttitanespike"
-          },
+          "onClick": "Jobsminercrafttitanespike",
           "x": 207,
           "y": 63,
           "locked": false
@@ -671,9 +639,7 @@
           "name": "imagebutton_spike_obsi_6",
           "image": "spike_obsi_6.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftpaladiumspike"
-          },
+          "onClick": "Jobsminercraftpaladiumspike",
           "x": 226,
           "y": 63,
           "locked": false
@@ -685,9 +651,7 @@
           "name": "imagebutton_lava_obsi",
           "image": "lava_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftlavaobsidian"
-          },
+          "onClick": "Jobsminercraftlavaobsidian",
           "x": 74,
           "y": 82,
           "locked": false
@@ -699,9 +663,7 @@
           "name": "imagebutton_fake_obsi",
           "image": "fake_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftfakewaterobsidian"
-          },
+          "onClick": "Jobsminercraftfakewaterobsidian",
           "x": 93,
           "y": 82,
           "locked": false
@@ -713,9 +675,7 @@
           "name": "imagebutton_slime_obsi",
           "image": "slime_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftslimeobsidian"
-          },
+          "onClick": "Jobsminercraftslimeobsidian",
           "x": 112,
           "y": 82,
           "locked": false
@@ -727,9 +687,7 @@
           "name": "imagebutton_poison_obsi",
           "image": "poison_obsi.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftpoisonobsidian"
-          },
+          "onClick": "Jobsminercraftpoisonobsidian",
           "x": 131,
           "y": 82,
           "locked": false
@@ -741,9 +699,7 @@
           "name": "imagebutton_cave_block_vfufu",
           "image": "cave_block_vfufu.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcaveblock"
-          },
+          "onClick": "Jobsminercraftcaveblock",
           "x": 150,
           "y": 82,
           "locked": false
@@ -755,9 +711,7 @@
           "name": "imagebutton_big_tnt_side",
           "image": "big_tnt_side.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcompacttnt"
-          },
+          "onClick": "Jobsminercraftcompacttnt",
           "x": 169,
           "y": 82,
           "locked": false
@@ -769,9 +723,7 @@
           "name": "imagebutton_effect_tnt_side",
           "image": "effect_tnt_side.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftmagictnt"
-          },
+          "onClick": "Jobsminercraftmagictnt",
           "x": 188,
           "y": 82,
           "locked": false
@@ -783,9 +735,7 @@
           "name": "imagebutton_wither_tnt_side",
           "image": "wither_tnt_side.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftwithertnt"
-          },
+          "onClick": "Jobsminercraftwithertnt",
           "x": 207,
           "y": 82,
           "locked": false
@@ -797,9 +747,7 @@
           "name": "imagebutton_sponge_tnt_side",
           "image": "sponge_tnt_side.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftspongetnt"
-          },
+          "onClick": "Jobsminercraftspongetnt",
           "x": 226,
           "y": 82,
           "locked": false
@@ -811,9 +759,7 @@
           "name": "imagebutton_sponge",
           "image": "sponge.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcompressedtnt"
-          },
+          "onClick": "Jobsminercraftcompressedtnt",
           "x": 74,
           "y": 101,
           "locked": false
@@ -825,9 +771,7 @@
           "name": "imagebutton_endium_tnt_side",
           "image": "endium_tnt_side.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftendiumtnt"
-          },
+          "onClick": "Jobsminercraftendiumtnt",
           "x": 93,
           "y": 101,
           "locked": false
@@ -839,9 +783,7 @@
           "name": "imagebutton_beta_block",
           "image": "mega_boom_obsi_side.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftmegaboomobsidian"
-          },
+          "onClick": "Jobsminercraftmegaboomobsidian",
           "x": 93,
           "y": 63,
           "locked": false
@@ -853,9 +795,7 @@
           "name": "imagebutton_beta_block1",
           "image": "builder_wand_amethyst.png",
           "hoveredImage": "builder_wand_white.png",
-          "onClick": {
-            "name": "Jobsminercraftnotingamesoon"
-          },
+          "onClick": "Jobsminercraftnotingamesoon",
           "x": 112,
           "y": 101,
           "locked": false
@@ -867,9 +807,7 @@
           "name": "imagebutton_beta_block2",
           "image": "builder_wand_titane.png",
           "hoveredImage": "builder_wand_white.png",
-          "onClick": {
-            "name": "Jobsminercraftnotingamesoon"
-          },
+          "onClick": "Jobsminercraftnotingamesoon",
           "x": 131,
           "y": 101,
           "locked": false
@@ -881,9 +819,7 @@
           "name": "imagebutton_beta_block3",
           "image": "builder_wand_paladium.png",
           "hoveredImage": "builder_wand_white.png",
-          "onClick": {
-            "name": "Jobsminercraftnotingamesoon"
-          },
+          "onClick": "Jobsminercraftnotingamesoon",
           "x": 150,
           "y": 101,
           "locked": false
@@ -895,9 +831,7 @@
           "name": "imagebutton_beta_block4",
           "image": "builder_wand_endium.png",
           "hoveredImage": "builder_wand_white.png",
-          "onClick": {
-            "name": "Jobsminercraftnotingamesoon"
-          },
+          "onClick": "Jobsminercraftnotingamesoon",
           "x": 169,
           "y": 101,
           "locked": false
@@ -909,9 +843,7 @@
           "name": "imagebutton_cobblebreaker_front",
           "image": "cobblebreaker_front.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcobblebreaker"
-          },
+          "onClick": "Jobsminercraftcobblebreaker",
           "x": 188,
           "y": 101,
           "locked": false
@@ -923,9 +855,7 @@
           "name": "imagebutton_cobblebreaker_amethyst_upgrade",
           "image": "cobblebreaker_amethyst_upgrade.png",
           "hoveredImage": "upgrade_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcobblebreakeramethysteupgrade"
-          },
+          "onClick": "Jobsminercraftcobblebreakeramethysteupgrade",
           "x": 207,
           "y": 101,
           "locked": false
@@ -937,9 +867,7 @@
           "name": "imagebutton_cobblebreaker_titane_upgrade",
           "image": "cobblebreaker_titane_upgrade.png",
           "hoveredImage": "upgrade_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcobblebreakertitaneupgrade"
-          },
+          "onClick": "Jobsminercraftcobblebreakertitaneupgrade",
           "x": 226,
           "y": 101,
           "locked": false
@@ -951,9 +879,7 @@
           "name": "imagebutton_cobblebreaker_paladium_upgrade",
           "image": "cobblebreaker_paladium_upgrade.png",
           "hoveredImage": "upgrade_white.png",
-          "onClick": {
-            "name": "Jobsminercraftcobblebreakerpaladiumupgrade"
-          },
+          "onClick": "Jobsminercraftcobblebreakerpaladiumupgrade",
           "x": 74,
           "y": 120,
           "locked": false
@@ -965,9 +891,7 @@
           "name": "imagebutton_voidstone_minage",
           "image": "voidstone_minage.png",
           "hoveredImage": "voidstone_minage_white.png",
-          "onClick": {
-            "name": "Jobsminercraftvoidstoneminage"
-          },
+          "onClick": "Jobsminercraftvoidstoneminage",
           "x": 93,
           "y": 120,
           "locked": false
@@ -979,9 +903,7 @@
           "name": "imagebutton_moula_stone",
           "image": "moula_stone.png",
           "hoveredImage": "white_moulastone.png",
-          "onClick": {
-            "name": "Jobsminercraftmoulastone"
-          },
+          "onClick": "Jobsminercraftmoulastone",
           "x": 111,
           "y": 120,
           "locked": false
@@ -993,9 +915,7 @@
           "name": "imagebutton_sealed_xp_bottle",
           "image": "sealed_xp_bottle.png",
           "hoveredImage": "white_sealed_xp_bottle.png",
-          "onClick": {
-            "name": "Jobsminercraftsealedxpbottle"
-          },
+          "onClick": "Jobsminercraftsealedxpbottle",
           "x": 134,
           "y": 121,
           "locked": false
@@ -1007,9 +927,7 @@
           "name": "imagebutton_forge_front_off",
           "image": "forge_front_off.png",
           "hoveredImage": "forge_front_on.png",
-          "onClick": {
-            "name": "Jobsminercraftpalaforge"
-          },
+          "onClick": "Jobsminercraftpalaforge",
           "x": 150,
           "y": 120,
           "locked": false
@@ -1021,9 +939,7 @@
           "name": "imagebutton_beta_block5",
           "image": "beta_block.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftnotingamesoon"
-          },
+          "onClick": "Jobsminercraftnotingamesoon",
           "x": 169,
           "y": 120,
           "locked": false
@@ -1762,9 +1678,7 @@
           "name": "imagebutton_withered_obsidian_0",
           "image": "withered_obsidian_0.png",
           "hoveredImage": "block_white.png",
-          "onClick": {
-            "name": "Jobsminercraftwitheredobsidian"
-          },
+          "onClick": "Jobsminercraftwitheredobsidian",
           "x": 188,
           "y": 120,
           "locked": false
@@ -1790,9 +1704,7 @@
           "name": "imagebutton_green_paladium_excavator",
           "image": "green_paladium_excavator.png",
           "hoveredImage": "paladium_excavator_white.png",
-          "onClick": {
-            "name": "Jobsminercraftgreenpaladiumexcavator"
-          },
+          "onClick": "Jobsminercraftgreenpaladiumexcavator",
           "x": 207,
           "y": 120,
           "locked": false
@@ -1813,12 +1725,8 @@
         }
       }
     ],
-    "onOpen": {
-      "name": "Jobscraftsetup"
-    },
-    "onClosed": {
-      "name": "Dropitemcraft"
-    },
+    "onOpen": "Jobscraftsetup",
+    "onClosed": "Dropitemcraft",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

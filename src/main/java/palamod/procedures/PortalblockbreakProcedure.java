@@ -1,6 +1,5 @@
 package palamod.procedures;
 
-import palamod.init.PalamodModGameRules;
 import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
@@ -49,25 +48,6 @@ public class PortalblockbreakProcedure {
 				active = PalamodModBlocks.ENDIUM_PORTAL_BLOCK.get().defaultBlockState();
 				shiny_wood = PalamodModBlocks.SHINY_OSTRYA_WOOD.get().defaultBlockState();
 				angle_block = PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK.get().defaultBlockState();
-			}
-			int horizontalRadiusSquare = (int) 8 - 1;
-			int verticalRadiusSquare = (int) 3 - 1;
-			int yIterationsSquare = verticalRadiusSquare;
-			for (int i = -yIterationsSquare; i <= yIterationsSquare; i++) {
-				for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
-					for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
-						// Execute the desired statements within the square/cube
-						if (active.getBlock() == (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock()) {
-							x_core = x + xi;
-							y_core = y + i;
-							z_core = z + zi;
-							pass = true;
-							if (world instanceof ServerLevel _serverLevelGR9 && _serverLevelGR9.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
-								PalamodMod.LOGGER.info(("Core :  x : " + x_core + " y : " + y_core + " z : " + z_core + "\n" + "pass mode : " + active));
-							}
-						}
-					}
-				}
 			}
 			if (pass) {
 				break;

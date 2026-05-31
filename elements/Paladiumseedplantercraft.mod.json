@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Titaneseedplanter"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Titaneseedplanter",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumstick"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiumseedplanter"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiumseedplanter",
     "name": "paladiumseedplantercraft",
     "namespace": "mod"
   }

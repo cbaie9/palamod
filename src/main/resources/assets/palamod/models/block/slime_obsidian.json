@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/slime_obsi",
     "particle": "palamod:block/slime_obsi"
-  },
-  "render_type": "solid"
+  }
 }

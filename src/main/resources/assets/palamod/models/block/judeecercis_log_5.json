@@ -8,6 +8,5 @@
     "south": "palamod:block/judeecercis_sap6",
     "west": "palamod:block/judeecercis_sap6",
     "particle": "palamod:block/judeecercis_top"
-  },
-  "render_type": "solid"
+  }
 }

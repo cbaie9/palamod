@@ -1,29 +1,21 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
     "group": "titane_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneOre"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneOre",
+      "CUSTOM:TitaneIngot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 3.5,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:TitaneOre"
-    },
-    "smeltingReturnStack": {
-      "value": "CUSTOM:TitaneIngot"
-    },
+    "smeltingInputStack": "CUSTOM:TitaneOre",
+    "smeltingReturnStack": "CUSTOM:TitaneIngot",
     "name": "titane_ore_smelting",
     "namespace": "mod"
   }

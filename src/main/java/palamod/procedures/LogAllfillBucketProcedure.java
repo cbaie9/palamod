@@ -32,7 +32,7 @@ public class LogAllfillBucketProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 			PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " fill a bucket at " + " x : " + x + " y : " + y + " z : " + z));
 		}
 	}

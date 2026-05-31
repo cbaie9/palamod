@@ -8,6 +8,5 @@
     "south": "palamod:block/cauldron_side",
     "west": "palamod:block/cauldron_side",
     "particle": "palamod:block/cauldron_side"
-  },
-  "render_type": "solid"
+  }
 }

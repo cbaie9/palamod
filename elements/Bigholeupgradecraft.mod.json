@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": "Blocks.GLASS"
-      },
-      {
-        "value": "CUSTOM:Paladiumexcavator"
-      },
-      {
-        "value": "Blocks.GLASS"
-      },
-      {
-        "value": "Blocks.GLASS"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "Blocks.GLASS"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "Blocks.GLASS",
+      "CUSTOM:Paladiumexcavator",
+      "Blocks.GLASS",
+      "Blocks.GLASS",
+      "CUSTOM:Paladiumcore",
+      "Blocks.GLASS",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Bigholeupgrade"
-    },
+    "recipeReturnStack": "CUSTOM:Bigholeupgrade",
     "name": "bigholeupgradecraft",
     "namespace": "mod"
   }

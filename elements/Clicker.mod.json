@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -37,9 +37,7 @@
           "name": "imagebutton_clicker_close_btn",
           "image": "close_gui_nohover.png",
           "hoveredImage": "close_gui_hover.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 370,
           "y": 21,
           "locked": false
@@ -51,9 +49,7 @@
           "name": "imagebutton_clicker_potato_btn_v11",
           "image": "clicker_potato_btn_v1.1.png",
           "hoveredImage": "",
-          "onClick": {
-            "name": "Addclickcoin"
-          },
+          "onClick": "Addclickcoin",
           "x": 45,
           "y": 75,
           "locked": false
@@ -177,12 +173,8 @@
           "name": "imagebutton_page_up_clicker",
           "image": "page_up_clicker.png",
           "hoveredImage": "",
-          "onClick": {
-            "name": "Clickerpageup"
-          },
-          "displayCondition": {
-            "name": "Clickerconditionpageup"
-          },
+          "onClick": "Clickerpageup",
+          "displayCondition": "Clickerconditionpageup",
           "x": 366,
           "y": 196,
           "locked": false
@@ -194,12 +186,8 @@
           "name": "imagebutton_page_down",
           "image": "page_down.png",
           "hoveredImage": "",
-          "onClick": {
-            "name": "Clickerpagedown"
-          },
-          "displayCondition": {
-            "name": "Clickerconditionpagedown"
-          },
+          "onClick": "Clickerpagedown",
+          "displayCondition": "Clickerconditionpagedown",
           "x": 294,
           "y": 196,
           "locked": false
@@ -239,9 +227,7 @@
           "name": "button_up",
           "text": "up",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Debugupbuild1"
-          },
+          "onClick": "Debugupbuild1",
           "width": 35,
           "height": 20,
           "x": 8,

@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class IssetupflowertotemokProcedure {
@@ -25,15 +25,14 @@ public class IssetupflowertotemokProcedure {
 				&& (world.getBlockState(BlockPos.containing(x + 1, y - 1, z - 1))).getBlock() == Blocks.GRASS_BLOCK && (world.getBlockState(BlockPos.containing(x + 1, y - 1, z))).getBlock() == Blocks.PODZOL
 				&& (world.getBlockState(BlockPos.containing(x - 1, y - 1, z))).getBlock() == Blocks.PODZOL && (world.getBlockState(BlockPos.containing(x, y - 1, z + 1))).getBlock() == Blocks.PODZOL
 				&& (world.getBlockState(BlockPos.containing(x, y - 1, z - 1))).getBlock() == Blocks.PODZOL) {
-			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))
-					|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("palamod:xp_bush")))) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(Identifier.parse("palamod:xp_bush"))) || (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))
+					|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(Identifier.parse("palamod:xp_bush")))) {
 				xp_bush = true;
 			}
 			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.ALLIUM || (world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock() == Blocks.ALLIUM

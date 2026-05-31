@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 16.0,
     "attackSpeed": 30.0,
@@ -24,9 +22,7 @@
     "damageVsEntity": 7.5,
     "usageCount": 2000,
     "repairItems": [
-      {
-        "value": "CUSTOM:Endiumnugget"
-      }
+      "CUSTOM:Endiumnugget"
     ],
     "immuneToFire": true,
     "blockDropsTier": "NETHERITE",

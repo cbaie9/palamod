@@ -1,0 +1,15 @@
+{
+  "wants": {
+    "id": "palamod:uploader"
+  },
+  "additional_wants": {
+    "id": "palamod:paladium_apple",
+    "count": 6
+  },
+  "gives": {
+    "id": "minecraft:music_disc_cat"
+  },
+  "max_uses": 2,
+  "xp": 45,
+  "reputation_discount": 0.1
+}

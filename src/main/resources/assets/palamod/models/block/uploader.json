@@ -8,6 +8,5 @@
     "south": "palamod:block/uploder_side",
     "west": "palamod:block/uploader",
     "particle": "palamod:block/uploader_down"
-  },
-  "render_type": "solid"
+  }
 }

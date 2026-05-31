@@ -1,0 +1,12 @@
+{
+  "wants": {
+    "id": "minecraft:amethyst_block",
+    "count": 10
+  },
+  "gives": {
+    "id": "minecraft:jukebox"
+  },
+  "max_uses": 10,
+  "xp": 5,
+  "reputation_discount": 0.05
+}

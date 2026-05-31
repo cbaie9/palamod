@@ -6,10 +6,10 @@ plugins {
 version = '1.0'
 base.archivesName = "modid"
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
-    version = "21.8.31"
+    version = "26.1.2.65-beta"
 
     runs {
         client {

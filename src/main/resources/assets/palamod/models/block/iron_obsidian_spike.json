@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/spike_obsi_1",
     "particle": "palamod:block/spike_obsi_1"
-  },
-  "render_type": "solid"
+  }
 }

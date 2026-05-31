@@ -14,13 +14,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 
 @EventBusSubscriber
 public class ObsidianpickaxeItem extends Item {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 0, 4f, 0, 2, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:obsidian_pickaxe_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 0, 4f, 0, 2, TagKey.create(Registries.ITEM, Identifier.parse("palamod:obsidian_pickaxe_repair_items")));
 
 	public ObsidianpickaxeItem(Item.Properties properties) {
 		super(properties.pickaxe(TOOL_MATERIAL, 3f, -3f));
@@ -28,7 +28,7 @@ public class ObsidianpickaxeItem extends Item {
 
 	@SubscribeEvent
 	public static void modifyDefaultComponents(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.OBSIDIAN_PICKAXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.OBSIDIAN_PICKAXE.get(), (builder, _, _) -> builder.set(DataComponents.MAX_DAMAGE, null));
 	}
 
 	@Override

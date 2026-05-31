@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/nbeta",
     "particle": "palamod:block/nbeta"
-  },
-  "render_type": "solid"
+  }
 }

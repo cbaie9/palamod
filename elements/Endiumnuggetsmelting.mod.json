@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Blasting",
@@ -11,12 +11,8 @@
     "cookingTime": 50,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "blastingInputStack": {
-      "value": "CUSTOM:Endiumnuggetore"
-    },
-    "blastingReturnStack": {
-      "value": "CUSTOM:Endiumnugget"
-    },
+    "blastingInputStack": "CUSTOM:Endiumnuggetore",
+    "blastingReturnStack": "CUSTOM:Endiumnugget",
     "name": "endiumnuggetsmelting",
     "namespace": "mod"
   }

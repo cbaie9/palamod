@@ -4,7 +4,7 @@ import palamod.init.PalamodModItems;
 
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
@@ -13,7 +13,7 @@ public class KeytooltipProcedure {
 	public static void execute(ItemStack itemstack) {
 		double max_stock = 0;
 		String item_display = "";
-		item_display = ((new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH)))).getDisplayName().getString()).replace("[", ""))
+		item_display = ((new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.parse(((BuiltInRegistries.ITEM.getKey(itemstack.getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH)))).getDisplayName().getString()).replace("[", ""))
 				.replace("]", "");
 		if (itemstack.getItem() == PalamodModItems.AMETHYST_PORTAL_KEY.get()) {
 			max_stock = 1;

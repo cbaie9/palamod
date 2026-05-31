@@ -5,8 +5,9 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.loading.FMLPaths;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
@@ -50,10 +52,13 @@ public class Crusherv2amecustomProcedure {
 					bufferedReader.close();
 					main_obj = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") >= main_obj.get("Crusher-amethyst-input").getAsDouble()) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-							ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
-							_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
-							_itemHandlerModifiable.setStackInSlot(2, _setstack);
+						if (world instanceof ServerLevel _serverLevel) {
+							BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+							if (_be instanceof Container _container) {
+								ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
+								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
+								_container.setItem(2, _setstack);
+							}
 						}
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
@@ -65,15 +70,18 @@ public class Crusherv2amecustomProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 							PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( amethyst ) ( custom on )"));
 						}
 					} else {
 						if (Math.random() < getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst") / main_obj.get("Crusher-amethyst-input").getAsDouble()) {
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
-								_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.AMETHYST_INGOT.get()).copy();
+									_setstack.setCount((int) (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + main_obj.get("Crusher-amethyst-output").getAsDouble()));
+									_container.setItem(2, _setstack);
+								}
 							}
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
@@ -85,15 +93,18 @@ public class Crusherv2amecustomProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( amethyst ) ( custom on )"));
 							}
 						} else {
 							if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_amethyst")) {
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(Blocks.DIRT).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x, y, z);
@@ -105,7 +116,7 @@ public class Crusherv2amecustomProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ServerLevel _serverLevelGR25 && _serverLevelGR25.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR25 && _serverLevelGR25.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( failed ) ( amethyst )  ( custom on )"));
 								}
 							}
@@ -127,9 +138,9 @@ public class Crusherv2amecustomProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}

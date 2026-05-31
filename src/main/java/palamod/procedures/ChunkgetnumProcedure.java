@@ -1,7 +1,7 @@
 package palamod.procedures;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 
 public class ChunkgetnumProcedure {
@@ -22,7 +22,7 @@ public class ChunkgetnumProcedure {
 			pos_z = false;
 		}
 		chunk = "r X " + Math.floor(x / 16) + " Y " + Math.floor(y / 16) + " Z " + Math.floor(z / 16);
-		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(chunk), false);
+		if (entity instanceof ServerPlayer _player)
+			_player.sendSystemMessage(Component.literal(chunk), false);
 	}
 }

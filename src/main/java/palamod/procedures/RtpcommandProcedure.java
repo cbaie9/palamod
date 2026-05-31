@@ -13,9 +13,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
@@ -46,25 +47,30 @@ public class RtpcommandProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("minecraft:ocean")))) {
+					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, Identifier.parse("minecraft:ocean")))) {
 						yrandom = world.getHeight(Heightmap.Types.OCEAN_FLOOR, (int) xrandom, (int) zrandom);
 					} else {
 						yrandom = world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) xrandom, (int) zrandom);
 					}
 					{
 						Entity _ent = entity;
-						_ent.teleportTo(xrandom, yrandom, zrandom);
+						double _tx = xrandom;
+						double _ty = yrandom;
+						double _tz = zrandom;
+						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport(xrandom, yrandom, zrandom, _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
 				} else {
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"tellraw @p [\"\",{\"text\":\"[ palamod ]\",\"color\":\"dark_red\"},{\"text\":\" You already used 3/3 use of /rtp on this world Get a \",\"color\":\"gold\"},{\"text\":\"legendary stone of teleportation\",\"color\":\"gold\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Can be obtainable via lucky block\"}},{\"text\":\" to get unlimited\",\"color\":\"gold\"}]");
 				}
 			} else {
 				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					_level.getServer().getCommands().performPrefixedCommand(
+							new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"tellraw @p [\"\",{\"text\":\"[ palamod ]\",\"color\":\"dark_red\"},{\"text\":\" A required service from \",\"color\":\"gold\"},{\"text\":\"/$setup\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"suggest_command\",\"value\":\"/$setup\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Execute /$setup\"}},{\"text\":\" is not installed Contact your administrator to excute this command to \\\"unlock\\\" that feature\",\"color\":\"gold\"}]");
 			}
 		}

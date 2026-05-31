@@ -23,7 +23,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
@@ -33,7 +33,7 @@ import java.util.function.Consumer;
 
 @EventBusSubscriber
 public class EndiumAxeItem extends AxeItem {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 50f, 0, 50, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:endium_axe_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 0, 50f, 0, 50, TagKey.create(Registries.ITEM, Identifier.parse("palamod:endium_axe_repair_items")));
 
 	public EndiumAxeItem(Item.Properties properties) {
 		super(TOOL_MATERIAL, 8f, -3f, properties.fireResistant());
@@ -41,7 +41,7 @@ public class EndiumAxeItem extends AxeItem {
 
 	@SubscribeEvent
 	public static void modifyDefaultComponents(ModifyDefaultComponentsEvent event) {
-		event.modify(PalamodModItems.ENDIUM_AXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
+		event.modify(PalamodModItems.ENDIUM_AXE.get(), (builder, _, _) -> builder.set(DataComponents.MAX_DAMAGE, null));
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class EndiumAxeItem extends AxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+		Entity entity = PalamodMod.clientPlayer();
 		String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {

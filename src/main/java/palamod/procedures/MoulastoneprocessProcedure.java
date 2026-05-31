@@ -1,6 +1,8 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.loading.FMLPaths;
 
@@ -11,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.component.DataComponents;
 
 import java.io.IOException;
@@ -48,10 +50,10 @@ public class MoulastoneprocessProcedure {
 				}
 			}
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("powered", false) == true) {
-				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
-					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
-						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
-						if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("palamod:cobblebreakable"))) || itemstackiterator.is(ItemTags.create(ResourceLocation.parse("c:stone")))) {
+				if (entity.getCapability(Capabilities.Item.ENTITY, null) instanceof ResourceHandler<ItemResource> _resourceHandler) {
+					for (int _idx = 0; _idx < _resourceHandler.size(); _idx++) {
+						ItemStack itemstackiterator = ItemUtil.getStack(_resourceHandler, _idx);
+						if (itemstackiterator.is(ItemTags.create(Identifier.parse("palamod:cobblebreakable"))) || itemstackiterator.is(ItemTags.create(Identifier.parse("c:stone")))) {
 							if (entity instanceof Player _player) {
 								ItemStack _stktoremove = itemstackiterator;
 								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), itemstackiterator.getCount(), _player.inventoryMenu.getCraftSlots());

@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/cobbleled_soft_stone",
     "particle": "palamod:block/cobbleled_soft_stone"
-  },
-  "render_type": "solid"
+  }
 }

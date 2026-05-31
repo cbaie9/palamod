@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/cloudv2",
     "particle": "palamod:block/cloudv2"
-  },
-  "render_type": "solid"
+  }
 }

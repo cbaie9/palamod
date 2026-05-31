@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/amethyst_ore",
     "particle": "palamod:block/amethyst_ore"
-  },
-  "render_type": "solid"
+  }
 }

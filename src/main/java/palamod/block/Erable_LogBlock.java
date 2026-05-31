@@ -40,7 +40,10 @@ public class Erable_LogBlock extends Block {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis()).setValue(SAP, 96).setValue(BLOCKSTATE, 0);
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
+		return state.setValue(AXIS, context.getClickedFace().getAxis()).setValue(SAP, 96).setValue(BLOCKSTATE, 0);
 	}
 
 	@Override

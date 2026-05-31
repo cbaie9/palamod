@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:PaladiumGreenblock"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumseedplanter"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      }
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:PaladiumGreenblock",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:Greenpaladiumseedplanter",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Paladiumstick"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumseedplanter"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumseedplanter",
     "name": "endiumseedplantercraft",
     "namespace": "mod"
   }

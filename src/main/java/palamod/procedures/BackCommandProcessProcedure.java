@@ -7,6 +7,7 @@ import net.neoforged.fml.loading.FMLPaths;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.Permissions;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 
@@ -26,7 +27,7 @@ public class BackCommandProcessProcedure {
 		double ypos = 0;
 		double zpos = 0;
 		double xpos = 0;
-		if (entity instanceof Player _playerCmd0 && _playerCmd0.hasPermissions(2)) {
+		if (hasEntityPermissionLevel(entity, 2)) {
 			xpos = x;
 			ypos = y;
 			zpos = z;
@@ -44,9 +45,12 @@ public class BackCommandProcessProcedure {
 						readmain = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						{
 							Entity _ent = entity;
-							_ent.teleportTo(readmain.get("x_pos").getAsDouble(), readmain.get("y_pos").getAsDouble(), readmain.get("z_pos").getAsDouble());
+							double _tx = readmain.get("x_pos").getAsDouble();
+							double _ty = readmain.get("y_pos").getAsDouble();
+							double _tz = readmain.get("z_pos").getAsDouble();
+							_ent.teleportTo(_tx, _ty, _tz);
 							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(readmain.get("x_pos").getAsDouble(), readmain.get("y_pos").getAsDouble(), readmain.get("z_pos").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 						}
 					} catch (IOException e) {
 						e.printStackTrace();
@@ -69,5 +73,18 @@ public class BackCommandProcessProcedure {
 				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.back.tp").getString());
 			}
 		}
+	}
+
+	private static boolean hasEntityPermissionLevel(Entity entity, int permissionLevel) {
+		if (entity instanceof Player _player) {
+			return switch (permissionLevel) {
+				case 0 -> true;
+				case 1 -> _player.permissions().hasPermission(Permissions.COMMANDS_MODERATOR);
+				case 2 -> _player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+				case 3 -> _player.permissions().hasPermission(Permissions.COMMANDS_ADMIN);
+				default -> _player.permissions().hasPermission(Permissions.COMMANDS_OWNER);
+			};
+		}
+		return false;
 	}
 }

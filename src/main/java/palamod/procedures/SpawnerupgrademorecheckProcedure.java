@@ -4,12 +4,12 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.BlockPos;
 
 public class SpawnerupgrademorecheckProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z, ItemStack itemstack) {
-		if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_more_upgrades") && itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:spawner_upgrades")))) {
+		if (1 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_more_upgrades") && itemstack.is(ItemTags.create(Identifier.parse("palamod:spawner_upgrades")))) {
 			return true;
 		}
 		return false;

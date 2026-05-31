@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -31,9 +31,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 344,
           "y": 37,
           "locked": true
@@ -356,9 +354,7 @@
           "name": "imagebutton_adminshop_new_placeholder",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1"
-          },
+          "onClick": "Connectadminshoprow1",
           "x": 80,
           "y": 58,
           "locked": true
@@ -370,9 +366,7 @@
           "name": "imagebutton_adminshop_new_placeholder1",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col1"
-          },
+          "onClick": "Connectadminshoprow2col1",
           "x": 80,
           "y": 106,
           "locked": true
@@ -384,9 +378,7 @@
           "name": "imagebutton_adminshop_new_placeholder2",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col1"
-          },
+          "onClick": "Connectadminshoprow3col1",
           "x": 80,
           "y": 154,
           "locked": true
@@ -398,9 +390,7 @@
           "name": "imagebutton_adminshop_new_placeholder3",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1col2"
-          },
+          "onClick": "Connectadminshoprow1col2",
           "x": 116,
           "y": 58,
           "locked": true
@@ -412,9 +402,7 @@
           "name": "imagebutton_adminshop_new_placeholder4",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col2"
-          },
+          "onClick": "Connectadminshoprow2col2",
           "x": 116,
           "y": 106,
           "locked": true
@@ -426,9 +414,7 @@
           "name": "imagebutton_adminshop_new_placeholder5",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col2"
-          },
+          "onClick": "Connectadminshoprow3col2",
           "x": 116,
           "y": 154,
           "locked": true
@@ -440,9 +426,7 @@
           "name": "imagebutton_adminshop_new_placeholder6",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1col3"
-          },
+          "onClick": "Connectadminshoprow1col3",
           "x": 152,
           "y": 58,
           "locked": true
@@ -454,9 +438,7 @@
           "name": "imagebutton_adminshop_new_placeholder7",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col3"
-          },
+          "onClick": "Connectadminshoprow2col3",
           "x": 152,
           "y": 106,
           "locked": true
@@ -468,9 +450,7 @@
           "name": "imagebutton_adminshop_new_placeholder8",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col3"
-          },
+          "onClick": "Connectadminshoprow3col3",
           "x": 152,
           "y": 154,
           "locked": true
@@ -482,9 +462,7 @@
           "name": "imagebutton_adminshop_new_placeholder9",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1col4"
-          },
+          "onClick": "Connectadminshoprow1col4",
           "x": 188,
           "y": 58,
           "locked": true
@@ -496,9 +474,7 @@
           "name": "imagebutton_adminshop_new_placeholder10",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col4"
-          },
+          "onClick": "Connectadminshoprow2col4",
           "x": 188,
           "y": 106,
           "locked": true
@@ -510,9 +486,7 @@
           "name": "imagebutton_adminshop_new_placeholder11",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col4"
-          },
+          "onClick": "Connectadminshoprow3col4",
           "x": 188,
           "y": 154,
           "locked": true
@@ -524,9 +498,7 @@
           "name": "imagebutton_adminshop_new_placeholder12",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1col5"
-          },
+          "onClick": "Connectadminshoprow1col5",
           "x": 224,
           "y": 58,
           "locked": true
@@ -538,9 +510,7 @@
           "name": "imagebutton_adminshop_new_placeholder13",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col5"
-          },
+          "onClick": "Connectadminshoprow2col5",
           "x": 224,
           "y": 106,
           "locked": true
@@ -552,9 +522,7 @@
           "name": "imagebutton_adminshop_new_placeholder14",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col5"
-          },
+          "onClick": "Connectadminshoprow3col5",
           "x": 224,
           "y": 154,
           "locked": true
@@ -566,9 +534,7 @@
           "name": "imagebutton_adminshop_new_placeholder15",
           "image": "adminshop_btn_hover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1col6"
-          },
+          "onClick": "Connectadminshoprow1col6",
           "x": 260,
           "y": 58,
           "locked": true
@@ -580,9 +546,7 @@
           "name": "imagebutton_adminshop_new_placeholder16",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col6"
-          },
+          "onClick": "Connectadminshoprow2col6",
           "x": 260,
           "y": 106,
           "locked": true
@@ -594,9 +558,7 @@
           "name": "imagebutton_adminshop_new_placeholder17",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col6"
-          },
+          "onClick": "Connectadminshoprow3col6",
           "x": 260,
           "y": 154,
           "locked": true
@@ -608,9 +570,7 @@
           "name": "imagebutton_adminshop_new_placeholder18",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow1col7"
-          },
+          "onClick": "Connectadminshoprow1col7",
           "x": 296,
           "y": 58,
           "locked": true
@@ -622,9 +582,7 @@
           "name": "imagebutton_adminshop_new_placeholder19",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow2col7"
-          },
+          "onClick": "Connectadminshoprow2col7",
           "x": 296,
           "y": 106,
           "locked": true
@@ -636,9 +594,7 @@
           "name": "imagebutton_adminshop_new_placeholder20",
           "image": "adminshop_btn_pashover.png",
           "hoveredImage": "adminshop_btn_hover.png",
-          "onClick": {
-            "name": "Connectadminshoprow3col7"
-          },
+          "onClick": "Connectadminshoprow3col7",
           "x": 296,
           "y": 154,
           "locked": true

@@ -42,7 +42,7 @@ public class WithertntBlock extends Block {
 
 	@Override
 	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
-		return PathType.DANGER_OTHER;
+		return PathType.DAMAGING_IN_NEIGHBOR;
 	}
 
 	@Override
@@ -80,7 +80,7 @@ public class WithertntBlock extends Block {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
 			super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
-			Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
+			Entity entity = PalamodMod.clientPlayer();
 			String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 			if (hoverText != null) {
 				for (String line : hoverText.split("\n")) {

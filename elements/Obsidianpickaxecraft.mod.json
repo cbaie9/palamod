@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Paladiumspike"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumspike"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Paladiumspike",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumspike",
+      "",
+      "CUSTOM:Paladiumstick",
+      "",
+      "",
+      "CUSTOM:Paladiumstick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Obsidianpickaxe"
-    },
+    "recipeReturnStack": "CUSTOM:Obsidianpickaxe",
     "name": "obsidianpickaxecraft",
     "namespace": "mod"
   }

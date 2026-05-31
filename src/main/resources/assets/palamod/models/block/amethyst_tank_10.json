@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l8_erable",
     "side": "palamod:block/fluid_8_erable",
     "cadre": "palamod:block/amethyste_tank"
-  },
-  "render_type": "translucent"
+  }
 }

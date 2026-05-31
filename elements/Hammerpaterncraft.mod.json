@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "grinder_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanehammer"
-      },
-      {
-        "value": "CUSTOM:Hammerpatern"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanehammer",
+      "CUSTOM:Hammerpatern"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Titanehammer"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Titanehammer",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Hammerpatern"
-    },
+    "recipeReturnStack": "CUSTOM:Hammerpatern",
     "name": "hammerpaterncraft",
     "namespace": "mod"
   }

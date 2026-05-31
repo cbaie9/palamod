@@ -2,8 +2,6 @@ package palamod.client.screens;
 
 import palamod.procedures.TunnelvisionoverlayDisplayOverlayIngameProcedure;
 
-import org.checkerframework.checker.units.qual.h;
-
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -12,13 +10,13 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class TunnelvisionoverlayOverlay {
-	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/pastouche_flou.png");
+	private static final Identifier BACKGROUND = Identifier.parse("palamod:textures/screens/pastouche_flou.png");
 
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {

@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/jacaranda",
     "particle": "palamod:block/jacaranda"
-  },
-  "render_type": "solid"
+  }
 }

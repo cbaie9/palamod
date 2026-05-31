@@ -5,6 +5,5 @@
     "particle": "palamod:block/exctrator",
     "1": "palamod:block/exctrator",
     "2": "palamod:block/seve"
-  },
-  "render_type": "cutout"
+  }
 }

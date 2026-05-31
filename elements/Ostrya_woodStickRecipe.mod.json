@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 4,
     "group": "ostrya_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "Items.STICK"
-      }
+      "CUSTOM:Ostrya_woodPlanks",
+      "Items.STICK"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Ostrya_woodPlanks",
+      "",
+      "",
+      "CUSTOM:Ostrya_woodPlanks",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "Items.STICK"
-    },
+    "recipeReturnStack": "Items.STICK",
     "name": "ostrya_wood_stick_recipe",
     "namespace": "mod"
   }

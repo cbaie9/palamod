@@ -121,12 +121,12 @@ public class GrinderopenProcedure {
 					}
 					world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
 				} else {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("debug12"), false);
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal("debug12"), false);
 				}
 			} else {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("debug1"), false);
+				if (entity instanceof ServerPlayer _player)
+					_player.sendSystemMessage(Component.literal("debug1"), false);
 			}
 		} else if ((world.getBlockState(BlockPos.containing(x + 2, y - 1, z))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x + 2, y - 1, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
 				&& (world.getBlockState(BlockPos.containing(x + 2, y - 1, z - 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get() && (world.getBlockState(BlockPos.containing(x + 2, y, z + 1))).getBlock() == PalamodModBlocks.GRINDER_FRAME.get()
@@ -221,8 +221,8 @@ public class GrinderopenProcedure {
 			}
 			world.scheduleTick(BlockPos.containing(x, y, z), world.getBlockState(BlockPos.containing(x, y, z)).getBlock(), 1);
 		} else {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("The structure is incomplete"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("The structure is incomplete"), false);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

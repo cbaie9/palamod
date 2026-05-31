@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Amethystinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Amethystinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Amethystinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Amethystinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Amethystinfusedobsidian",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Amethystinfusedobsidian",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Amethystinfusedobsidian",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Amethystinfusedobsidian",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titaneinfusedobsidian"
-    },
+    "recipeReturnStack": "CUSTOM:Titaneinfusedobsidian",
     "name": "titane_infused_obsidian_craft",
     "namespace": "mod"
   }

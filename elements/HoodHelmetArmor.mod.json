@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,12 +11,8 @@
     "enableBoots": false,
     "textureBoots": "",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Pvpcreativetab"
-      },
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Pvpcreativetab",
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "hood_",
     "helmetName": "Hood Helmet Armor Helmet",
@@ -99,9 +95,7 @@
     "enchantability": 9,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [],
     "rarity": "COMMON"
   }

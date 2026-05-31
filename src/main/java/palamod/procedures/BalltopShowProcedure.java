@@ -6,6 +6,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
@@ -27,7 +28,7 @@ public class BalltopShowProcedure {
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		balltop = ReadBalltopProcedure.execute();
 		money = ReadMoneyFileProcedure.execute(entity);
-		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) || balltop.exists() || money.exists()) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEMONEYGAMERULE.get())) || balltop.exists() || money.exists()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
@@ -54,7 +55,8 @@ public class BalltopShowProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						_level.getServer().getCommands().performPrefixedCommand(
+								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, LevelBasedPermissionSet.OWNER, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								(((((((((((((((((("tellraw @p [\"\",{\"text\":\"[ Palamod ] : Balltop\\n\"},{\"text\":\"--------------------------------\",\"color\":\"dark_green\"},{\"text\":\"\\n%i1 | \"},{\"text\":\"%1 : %2\",\"color\":\"gold\"},{\"text\":\"\\n%i2 | \"},{\"text\":\"%3 : %4\",\"color\":\"gold\"},{\"text\":\"\\n\"},{\"text\":\"%i3 |\",\"color\":\"white\"},{\"text\":\" %5 : %6\",\"color\":\"gold\"},{\"text\":\"\\n%i4 | \"},{\"text\":\"%7 : %8\",\"color\":\"gold\"},{\"text\":\"\\n%i5 | \"},{\"text\":\"%9 : %a\",\"color\":\"gold\"},{\"text\":\"\\n\\n\"},{\"text\":\"%b : %c  %d \",\"color\":\"blue\"},{\"text\":\"\\n\"},{\"text\":\"--------------------------------\",\"color\":\"dark_green\"}]"
 										.replace("%i5", Component.translatable("palamod.procedure.balltop.5rd").getString())).replace("%i4", Component.translatable("palamod.procedure.balltop.4rd").getString()))
 										.replace("%i3", Component.translatable("palamod.procedure.balltop.3rd").getString())).replace("%i2", Component.translatable("palamod.procedure.balltop.2nd").getString()))

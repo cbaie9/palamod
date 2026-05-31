@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/lava_obsi",
     "particle": "palamod:block/lava_obsi"
-  },
-  "render_type": "solid"
+  }
 }

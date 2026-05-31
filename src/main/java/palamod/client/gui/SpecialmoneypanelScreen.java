@@ -11,15 +11,17 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class SpecialmoneypanelScreen extends AbstractContainerScreen<SpecialmoneypanelMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -30,17 +32,15 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	private EditBox money;
 	private Checkbox custom_destructible;
 	private Button button_give;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/specialmoneypanel.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/specialmoneypanel.png");
 
 	public SpecialmoneypanelScreen(SpecialmoneypanelMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 176, 224);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 224;
 	}
 
 	@Override
@@ -55,52 +55,52 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 		if (elementType == 1 && elementState instanceof Boolean logicState) {
 			if (name.equals("custom_destructible")) {
 				if (custom_destructible.selected() != logicState)
-					custom_destructible.onPress();
+					custom_destructible.onPress(null);
 			}
 		}
 		menuStateUpdateActive = false;
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		player_name.render(guiGraphics, mouseX, mouseY, partialTicks);
-		money.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
+		player_name.extractWidgetRenderState(guiGraphics, mouseX, mouseY, partialTicks);
+		money.extractWidgetRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 224, 176, 224);
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
 		if (player_name.isFocused())
-			return player_name.keyPressed(key, b, c);
+			return player_name.keyPressed(event);
 		if (money.isFocused())
-			return money.keyPressed(key, b, c);
-		return super.keyPressed(key, b, c);
+			return money.keyPressed(event);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	public void resize(Minecraft minecraft, int width, int height) {
+	public void resize(int width, int height) {
 		String player_nameValue = player_name.getValue();
 		String moneyValue = money.getValue();
-		super.resize(minecraft, width, height);
+		super.resize(width, height);
 		player_name.setValue(player_nameValue);
 		money.setValue(moneyValue);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_specific_player"), 26, 8, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_amount_of_money"), 26, 40, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_item_default_money_item"), 7, 74, -12829636, false);
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_specific_player"), 26, 8, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_amount_of_money"), 26, 40, -12829636, false);
+		guiGraphics.text(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_item_default_money_item"), 7, 74, -12829636, false);
 	}
 
 	@Override

@@ -8,6 +8,5 @@
     "south": "palamod:block/erable",
     "west": "palamod:block/erable",
     "particle": "palamod:block/erable_top"
-  },
-  "render_type": "solid"
+  }
 }

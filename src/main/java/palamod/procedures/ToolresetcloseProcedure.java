@@ -1,14 +1,12 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.common.extensions.ILevelExtension;
-import net.neoforged.neoforge.capabilities.Capabilities;
-
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class ToolresetcloseProcedure {
@@ -16,8 +14,12 @@ public class ToolresetcloseProcedure {
 		double nloop = 0;
 		nloop = 0;
 		for (int index0 = 0; index0 < 100; index0++) {
-			if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, new BlockPos(0, 10, 0), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
-				_itemHandlerModifiable.setStackInSlot((int) nloop, ItemStack.EMPTY);
+			if (world instanceof ServerLevel _serverLevel) {
+				BlockEntity _be = _serverLevel.getBlockEntity(new BlockPos(0, 10, 0));
+				if (_be instanceof Container _container) {
+					_container.setItem((int) nloop, ItemStack.EMPTY);
+				}
+			}
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

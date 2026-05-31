@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l4_judeecercis",
     "side": "palamod:block/fluid_4_judeecercis",
     "cadre": "palamod:block/titane_tank"
-  },
-  "render_type": "translucent"
+  }
 }

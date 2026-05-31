@@ -17,8 +17,8 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 
 import javax.annotation.Nullable;
@@ -27,8 +27,8 @@ import java.util.Map;
 
 public abstract class Paladiumarmorcustom2Item extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(260, Map.of(ArmorType.BOOTS, 7, ArmorType.LEGGINGS, 8, ArmorType.CHESTPLATE, 8, ArmorType.HELMET, 7, ArmorType.BODY, 8), 55,
-			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 3.5f, 0.15f, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:paladium_armor_custom2_repair_items")),
-			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("palamod:paladium_armor_custom2")));
+			DeferredHolder.create(Registries.SOUND_EVENT, Identifier.parse("item.armor.equip_diamond")), 3.5f, 0.15f, TagKey.create(Registries.ITEM, Identifier.parse("palamod:paladium_armor_custom2_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.parse("palamod:paladium_armor_custom2")));
 
 	private Paladiumarmorcustom2Item(Item.Properties properties) {
 		super(properties);

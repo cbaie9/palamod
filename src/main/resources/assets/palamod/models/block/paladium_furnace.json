@@ -8,6 +8,5 @@
     "south": "palamod:block/paladium_furnace_side",
     "west": "palamod:block/paladium_furnace_side",
     "particle": "palamod:block/paladium_furnace_side"
-  },
-  "render_type": "solid"
+  }
 }

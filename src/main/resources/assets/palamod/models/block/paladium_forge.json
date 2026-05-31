@@ -8,6 +8,5 @@
     "south": "palamod:block/forge_side",
     "west": "palamod:block/forge_side",
     "particle": "palamod:block/forge_top"
-  },
-  "render_type": "solid"
+  }
 }

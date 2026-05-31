@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/softened_redstone_ore",
     "particle": "palamod:block/softened_redstone_ore"
-  },
-  "render_type": "solid"
+  }
 }

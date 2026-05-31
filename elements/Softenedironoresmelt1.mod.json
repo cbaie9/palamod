@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:Softenedironore"
-    },
-    "smeltingReturnStack": {
-      "value": "Items.IRON_INGOT"
-    },
+    "smeltingInputStack": "CUSTOM:Softenedironore",
+    "smeltingReturnStack": "Items.IRON_INGOT",
     "name": "softenedironoresmelt_1",
     "namespace": "mod"
   }

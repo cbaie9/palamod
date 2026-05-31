@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l6_ostrya",
     "side": "palamod:block/fluid_6_ostrya",
     "cadre": "palamod:block/amethyste_tank"
-  },
-  "render_type": "translucent"
+  }
 }

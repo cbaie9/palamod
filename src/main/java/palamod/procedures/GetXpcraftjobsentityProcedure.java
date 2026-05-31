@@ -2,12 +2,23 @@ package palamod.procedures;
 
 import palamod.PalamodMod;
 
-import net.minecraft.world.entity.monster.*;
+import net.minecraft.world.entity.monster.zombie.Zombie;
+import net.minecraft.world.entity.monster.spider.Spider;
+import net.minecraft.world.entity.monster.spider.CaveSpider;
+import net.minecraft.world.entity.monster.skeleton.Skeleton;
+import net.minecraft.world.entity.monster.Witch;
+import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.monster.Blaze;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.animal.squid.Squid;
+import net.minecraft.world.entity.animal.squid.GlowSquid;
 import net.minecraft.world.entity.animal.sheep.Sheep;
-import net.minecraft.world.entity.animal.horse.Horse;
-import net.minecraft.world.entity.animal.*;
-import net.minecraft.world.entity.GlowSquid;
+import net.minecraft.world.entity.animal.rabbit.Rabbit;
+import net.minecraft.world.entity.animal.pig.Pig;
+import net.minecraft.world.entity.animal.golem.SnowGolem;
+import net.minecraft.world.entity.animal.equine.Horse;
+import net.minecraft.world.entity.animal.cow.Cow;
+import net.minecraft.world.entity.animal.chicken.Chicken;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.BuiltInRegistries;
 

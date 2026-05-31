@@ -3,6 +3,5 @@
   "textures": {
     "texture": "palamod:block/dead_planks",
     "particle": "palamod:block/dead_planks"
-  },
-  "render_type": "solid"
+  }
 }

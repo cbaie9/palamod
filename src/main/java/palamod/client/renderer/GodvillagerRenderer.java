@@ -3,20 +3,20 @@ package palamod.client.renderer;
 import palamod.entity.GodvillagerEntity;
 
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.client.renderer.entity.state.VillagerRenderState;
 import net.minecraft.client.renderer.entity.state.HoldingEntityRenderState;
 import net.minecraft.client.renderer.entity.layers.CrossedArmsItemLayer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.model.npc.VillagerModel;
 import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.VillagerModel;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class GodvillagerRenderer extends MobRenderer<GodvillagerEntity, VillagerRenderState, VillagerModel> {
 	private GodvillagerEntity entity = null;
-	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/santa-villager.png");
+	private final Identifier entityTexture = Identifier.parse("palamod:textures/entities/santa-villager.png");
 
 	public GodvillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new VillagerModel(context.bakeLayer(ModelLayers.VILLAGER)), 0.5f);
@@ -38,7 +38,7 @@ public class GodvillagerRenderer extends MobRenderer<GodvillagerEntity, Villager
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(VillagerRenderState state) {
+	public Identifier getTextureLocation(VillagerRenderState state) {
 		return entityTexture;
 	}
 

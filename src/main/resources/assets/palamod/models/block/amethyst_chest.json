@@ -4,6 +4,5 @@
     "all": "palamod:block/amethyst_down",
     "particle": "palamod:block/amethyst_down",
     "texture": "palamod:block/amethystchest"
-  },
-  "render_type": "solid"
+  }
 }

@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/endium_angle_portal_block",
     "particle": "palamod:block/endium_angle_portal_block"
-  },
-  "render_type": "solid"
+  }
 }

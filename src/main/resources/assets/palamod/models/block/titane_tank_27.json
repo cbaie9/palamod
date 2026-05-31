@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l14_ostrya",
     "side": "palamod:block/fluid_14_ostrya",
     "cadre": "palamod:block/titane_tank"
-  },
-  "render_type": "translucent"
+  }
 }

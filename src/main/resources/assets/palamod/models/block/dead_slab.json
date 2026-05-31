@@ -5,6 +5,5 @@
     "bottom": "palamod:block/dead_planks",
     "top": "palamod:block/dead_planks",
     "side": "palamod:block/dead_planks"
-  },
-  "render_type": "solid"
+  }
 }

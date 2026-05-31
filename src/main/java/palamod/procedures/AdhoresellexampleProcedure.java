@@ -6,15 +6,13 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
@@ -60,9 +58,9 @@ public class AdhoresellexampleProcedure {
 				if (0 == n) {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("You cannot bought nothing put a number greater than 0 to continue"), false);
-					if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal("You cannot bought nothing put a number greater than 0 to continue"), false);
+					if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0  " + item.getDisplayName().getString()));
 					}
 				}
@@ -71,24 +69,24 @@ public class AdhoresellexampleProcedure {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = item.copy();
 						_setstack.setCount((int) n);
-						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						_player.getInventory().placeItemBackInInventory(_setstack);
 					}
 					if (entity instanceof Player _player)
 						_player.closeContainer();
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You succesfuly bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $")), false);
-					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (entity instanceof ServerPlayer _player)
+						_player.sendSystemMessage(Component.literal(("You succesfuly bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $")), false);
+					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $"));
 					}
 				} else {
 					if (entity instanceof Player _player)
 						_player.closeContainer();
 					if (1 < n) {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal("You don't enough money to buy these items"), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal("You don't enough money to buy these items"), false);
 					} else {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal("You don't enough money to buy this item"), false);
+						if (entity instanceof ServerPlayer _player)
+							_player.sendSystemMessage(Component.literal("You don't enough money to buy this item"), false);
 					}
 				}
 			} catch (IOException e) {

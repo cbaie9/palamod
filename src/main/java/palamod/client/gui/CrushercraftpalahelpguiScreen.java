@@ -13,16 +13,19 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<CrushercraftpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -35,17 +38,15 @@ public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<Crush
 	private ImageButton imagebutton_endium_nugets_vfufu;
 	private ImageButton imagebutton_help_button;
 	private ImageButton imagebutton_close_gui_nohover;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/crusher_jei.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/crusher_jei.png");
 
 	public CrushercraftpalahelpguiScreen(CrushercraftpalahelpguiMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 176, 85);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 85;
 	}
 
 	@Override
@@ -55,87 +56,73 @@ public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<Crush
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		boolean customTooltipShown = false;
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		if (mouseX > leftPos + 21 && mouseX < leftPos + 39 && mouseY > topPos + 8 && mouseY < topPos + 26) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_fruits_slot_input"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 21 && mouseX < leftPos + 39 && mouseY > topPos + 44 && mouseY < topPos + 62) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_fuel_slot_input"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 90 && mouseX < leftPos + 108 && mouseY > topPos + 44 && mouseY < topPos + 62) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_crushers_output_slot"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 157 && mouseX < leftPos + 174 && mouseY > topPos + -23 && mouseY < topPos + -6) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 114 && mouseX < leftPos + 169 && mouseY > topPos + 27 && mouseY < topPos + 73) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_crusher_progression_bar"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 68 && mouseX < leftPos + 154 && mouseY > topPos + 6 && mouseY < topPos + 27) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_click_on_me_once_on_the_bar_your"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 142 && mouseX < leftPos + 153 && mouseY > topPos + -22 && mouseY < topPos + -7) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_help_with_the_crusher"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 22 && mouseX < leftPos + 38 && mouseY > topPos + -19 && mouseY < topPos + -7) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_amethyst_craft"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 51 && mouseX < leftPos + 67 && mouseY > topPos + -19 && mouseY < topPos + -7) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_titane_craft"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 78 && mouseX < leftPos + 93 && mouseY > topPos + -19 && mouseY < topPos + -7) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_paladium_craft"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + -21 && mouseY < topPos + -6) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_endium_nugget_craft"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 23 && mouseX < leftPos + 37 && mouseY > topPos + 28 && mouseY < topPos + 43) {
 			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushercraftpalahelpgui.tooltip_fuel_progressbar"), mouseX, mouseY);
-			customTooltipShown = true;
 		}
-		if (!customTooltipShown)
-			this.renderTooltip(guiGraphics, mouseX, mouseY);
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 256, 256, 256, 256);
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-		return super.keyPressed(key, b, c);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_paladium_ingot = new ImageButton(this.leftPos + 78, this.topPos + -21, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_ingot.png"), ResourceLocation.parse("palamod:textures/screens/paladium_ingot.png")), e -> {
+		imagebutton_paladium_ingot = new ImageButton(this.leftPos + 78, this.topPos + -21, 16, 16, new WidgetSprites(Identifier.parse("palamod:textures/screens/paladium_ingot.png"), Identifier.parse("palamod:textures/screens/paladium_ingot.png")),
+				e -> {
 					int x = CrushercraftpalahelpguiScreen.this.x;
 					int y = CrushercraftpalahelpguiScreen.this.y;
 					if (true) {
@@ -144,13 +131,13 @@ public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<Crush
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_paladium_ingot);
-		imagebutton_amethyst_ingot = new ImageButton(this.leftPos + 22, this.topPos + -21, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/amethyst_ingot.png"), ResourceLocation.parse("palamod:textures/screens/amethyst_ingot.png")), e -> {
+		imagebutton_amethyst_ingot = new ImageButton(this.leftPos + 22, this.topPos + -21, 16, 16, new WidgetSprites(Identifier.parse("palamod:textures/screens/amethyst_ingot.png"), Identifier.parse("palamod:textures/screens/amethyst_ingot.png")),
+				e -> {
 					int x = CrushercraftpalahelpguiScreen.this.x;
 					int y = CrushercraftpalahelpguiScreen.this.y;
 					if (true) {
@@ -159,28 +146,27 @@ public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<Crush
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_amethyst_ingot);
-		imagebutton_titane_ingot = new ImageButton(this.leftPos + 51, this.topPos + -21, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/titane_ingot.png"), ResourceLocation.parse("palamod:textures/screens/titane_ingot.png")), e -> {
-					int x = CrushercraftpalahelpguiScreen.this.x;
-					int y = CrushercraftpalahelpguiScreen.this.y;
-					if (true) {
-						ClientPacketDistributor.sendToServer(new CrushercraftpalahelpguiButtonMessage(2, x, y, z));
-						CrushercraftpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
-					}
-				}) {
+		imagebutton_titane_ingot = new ImageButton(this.leftPos + 51, this.topPos + -21, 16, 16, new WidgetSprites(Identifier.parse("palamod:textures/screens/titane_ingot.png"), Identifier.parse("palamod:textures/screens/titane_ingot.png")), e -> {
+			int x = CrushercraftpalahelpguiScreen.this.x;
+			int y = CrushercraftpalahelpguiScreen.this.y;
+			if (true) {
+				ClientPacketDistributor.sendToServer(new CrushercraftpalahelpguiButtonMessage(2, x, y, z));
+				CrushercraftpalahelpguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_titane_ingot);
 		imagebutton_endium_nugets_vfufu = new ImageButton(this.leftPos + 106, this.topPos + -21, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_nugets_vfufu.png"), ResourceLocation.parse("palamod:textures/screens/endium_nugets_vfufu.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/endium_nugets_vfufu.png"), Identifier.parse("palamod:textures/screens/endium_nugets_vfufu.png")), e -> {
 					int x = CrushercraftpalahelpguiScreen.this.x;
 					int y = CrushercraftpalahelpguiScreen.this.y;
 					if (true) {
@@ -189,28 +175,27 @@ public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<Crush
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_endium_nugets_vfufu);
-		imagebutton_help_button = new ImageButton(this.leftPos + 139, this.topPos + -23, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/help_button.png"), ResourceLocation.parse("palamod:textures/screens/help_button_poi.png")), e -> {
-					int x = CrushercraftpalahelpguiScreen.this.x;
-					int y = CrushercraftpalahelpguiScreen.this.y;
-					if (true) {
-						ClientPacketDistributor.sendToServer(new CrushercraftpalahelpguiButtonMessage(4, x, y, z));
-						CrushercraftpalahelpguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
-					}
-				}) {
+		imagebutton_help_button = new ImageButton(this.leftPos + 139, this.topPos + -23, 16, 16, new WidgetSprites(Identifier.parse("palamod:textures/screens/help_button.png"), Identifier.parse("palamod:textures/screens/help_button_poi.png")), e -> {
+			int x = CrushercraftpalahelpguiScreen.this.x;
+			int y = CrushercraftpalahelpguiScreen.this.y;
+			if (true) {
+				ClientPacketDistributor.sendToServer(new CrushercraftpalahelpguiButtonMessage(4, x, y, z));
+				CrushercraftpalahelpguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_help_button);
 		imagebutton_close_gui_nohover = new ImageButton(this.leftPos + 157, this.topPos + -23, 17, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/close_gui_nohover.png"), ResourceLocation.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/close_gui_nohover.png"), Identifier.parse("palamod:textures/screens/close_gui_hover.png")), e -> {
 					int x = CrushercraftpalahelpguiScreen.this.x;
 					int y = CrushercraftpalahelpguiScreen.this.y;
 					if (true) {
@@ -219,7 +204,7 @@ public class CrushercraftpalahelpguiScreen extends AbstractContainerScreen<Crush
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

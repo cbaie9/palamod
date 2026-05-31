@@ -3,6 +3,5 @@
   "textures": {
     "cross": "palamod:block/flower_clathrusarcheri",
     "particle": "palamod:block/flower_clathrusarcheri"
-  },
-  "render_type": "cutout"
+  }
 }

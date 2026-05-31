@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/caution",
     "particle": "palamod:block/caution"
-  },
-  "render_type": "solid"
+  }
 }

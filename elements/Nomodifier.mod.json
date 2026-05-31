@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "enchantment",
   "definition": {
     "name": "No modifier",
@@ -10,18 +10,10 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "CUSTOM:Creativehammer"
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Paladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Endiumhammer"
-      }
+      "CUSTOM:Creativehammer",
+      "CUSTOM:Greenpaladiumhammer",
+      "CUSTOM:Paladiumhammer",
+      "CUSTOM:Endiumhammer"
     ],
     "isTreasureEnchantment": true,
     "isCurse": true,

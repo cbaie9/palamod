@@ -8,6 +8,5 @@
     "south": "palamod:block/black_luckyblock",
     "west": "palamod:block/black_luckyblock",
     "particle": "palamod:block/black_luckyblock"
-  },
-  "render_type": "solid"
+  }
 }

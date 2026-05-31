@@ -6,6 +6,5 @@
     "top-giga": "palamod:block/l8_jacaranda",
     "side": "palamod:block/fluid_8_jacaranda",
     "cadre": "palamod:block/paladium_tank"
-  },
-  "render_type": "translucent"
+  }
 }

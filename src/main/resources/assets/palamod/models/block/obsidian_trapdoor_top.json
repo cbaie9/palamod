@@ -3,6 +3,5 @@
   "textures": {
     "texture": "palamod:block/obsidiant_trapdoor",
     "particle": "palamod:block/obsidiant_trapdoor"
-  },
-  "render_type": "solid"
+  }
 }

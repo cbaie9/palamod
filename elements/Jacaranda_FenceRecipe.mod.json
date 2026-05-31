@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "jacaranda_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Fence"
-      }
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Fence"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      }
+      "",
+      "",
+      "",
+      "CUSTOM:Jacaranda_Planks",
+      "Items.STICK",
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks",
+      "Items.STICK",
+      "CUSTOM:Jacaranda_Planks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Jacaranda_Fence"
-    },
+    "recipeReturnStack": "CUSTOM:Jacaranda_Fence",
     "name": "jacaranda_fence_recipe",
     "namespace": "mod"
   }

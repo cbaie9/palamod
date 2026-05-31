@@ -8,6 +8,5 @@
     "south": "palamod:block/sponge_tnt_side",
     "west": "palamod:block/sponge_tnt_side",
     "particle": "palamod:block/sponge_tnt_bottom"
-  },
-  "render_type": "solid"
+  }
 }

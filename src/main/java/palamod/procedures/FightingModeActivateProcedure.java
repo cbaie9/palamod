@@ -44,10 +44,10 @@ public class FightingModeActivateProcedure {
 					_livingEntity7.getAttribute(PalamodModAttributes.IS_FIGHTING).setBaseValue(1);
 				if ((sourceentity instanceof LivingEntity _livingEntity8 && _livingEntity8.getAttributes().hasAttribute(PalamodModAttributes.FIGHTING_TIME) ? _livingEntity8.getAttribute(PalamodModAttributes.FIGHTING_TIME).getBaseValue() : 0) == 0) {
 					MsgtellrawautosendspecialselectorProcedure.execute(world, x, y, z, sourceentity.getDisplayName().getString(), ((Component.translatable("palamod.procedure.infight.source").getString()).replace("%2",
-							"" + ((world instanceof ServerLevel _serverLevelGR10 ? _serverLevelGR10.getGameRules().getInt(PalamodModGameRules.DEFAULT_FIGHTING_TIME) : 0) / 20d))).replace("%1", entity.getDisplayName().getString()));
+							"" + ((world instanceof ServerLevel _serverLevelGR10 ? _serverLevelGR10.getGameRules().get(PalamodModGameRules.DEFAULT_FIGHTING_TIME.get()) : 0) / 20d))).replace("%1", entity.getDisplayName().getString()));
 				}
 				if (sourceentity instanceof LivingEntity _livingEntity14 && _livingEntity14.getAttributes().hasAttribute(PalamodModAttributes.FIGHTING_TIME))
-					_livingEntity14.getAttribute(PalamodModAttributes.FIGHTING_TIME).setBaseValue((world instanceof ServerLevel _serverLevelGR13 ? _serverLevelGR13.getGameRules().getInt(PalamodModGameRules.DEFAULT_FIGHTING_TIME) : 0));
+					_livingEntity14.getAttribute(PalamodModAttributes.FIGHTING_TIME).setBaseValue((world instanceof ServerLevel _serverLevelGR13 ? _serverLevelGR13.getGameRules().get(PalamodModGameRules.DEFAULT_FIGHTING_TIME.get()) : 0));
 			}
 			if (!(entity instanceof Player _plr15 && _plr15.gameMode() == GameType.CREATIVE || entity instanceof Player _plr16 && _plr16.gameMode() == GameType.SPECTATOR)) {
 				PalamodMod.LOGGER.info("Putting victim/target in fight mode");
@@ -57,11 +57,11 @@ public class FightingModeActivateProcedure {
 					MsgtellrawautosendspecialselectorProcedure
 							.execute(world, x, y, z, entity.getDisplayName().getString(),
 									((Component.translatable("palamod.procedure.infight.victim").getString()).replace("%2",
-											"" + ((world instanceof ServerLevel _serverLevelGR21 ? _serverLevelGR21.getGameRules().getInt(PalamodModGameRules.DEFAULT_FIGHTING_TIME) : 0) / 20d)))
+											"" + ((world instanceof ServerLevel _serverLevelGR21 ? _serverLevelGR21.getGameRules().get(PalamodModGameRules.DEFAULT_FIGHTING_TIME.get()) : 0) / 20d)))
 											.replace("%1", sourceentity.getDisplayName().getString()));
 				}
 				if (entity instanceof LivingEntity _livingEntity25 && _livingEntity25.getAttributes().hasAttribute(PalamodModAttributes.FIGHTING_TIME))
-					_livingEntity25.getAttribute(PalamodModAttributes.FIGHTING_TIME).setBaseValue((world instanceof ServerLevel _serverLevelGR24 ? _serverLevelGR24.getGameRules().getInt(PalamodModGameRules.DEFAULT_FIGHTING_TIME) : 0));
+					_livingEntity25.getAttribute(PalamodModAttributes.FIGHTING_TIME).setBaseValue((world instanceof ServerLevel _serverLevelGR24 ? _serverLevelGR24.getGameRules().get(PalamodModGameRules.DEFAULT_FIGHTING_TIME.get()) : 0));
 			}
 		}
 	}

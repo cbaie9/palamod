@@ -13,19 +13,21 @@ import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
+
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -37,18 +39,16 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 	private Button button_sell;
 	private ImageButton imagebutton_cross_no_button;
 	private ImageButton imagebutton_arrow_adminshop;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/gui176_166.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/xp_berry.png");
+	private static final Identifier IMAGE_0 = Identifier.parse("palamod:textures/screens/gui176_166.png");
+	private static final Identifier IMAGE_1 = Identifier.parse("palamod:textures/screens/xp_berry.png");
 
 	public NewAdminshopguiScreen(NewAdminshopguiMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text);
+		super(container, inventory, text, 176, 166);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
 	}
 
 	@Override
@@ -62,58 +62,54 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 	}
 
 	@Override
-	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
-		boolean customTooltipShown = false;
+	public void extractRenderState(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 4 && mouseY < topPos + 19) {
 			String hoverText = ReturnadminshoporemenuProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
-			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 3 && mouseY < topPos + 19) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
 				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
-			customTooltipShown = true;
 		}
-		if (!customTooltipShown)
-			this.renderTooltip(guiGraphics, mouseX, mouseY);
+		super.extractRenderState(guiGraphics, mouseX, mouseY, partialTicks);
+		number_buy.extractWidgetRenderState(guiGraphics, mouseX, mouseY, partialTicks);
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+	public void extractBackground(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 5, this.topPos + 4, 0, 0, 16, 16, 16, 16);
 	}
 
 	@Override
-	public boolean keyPressed(int key, int b, int c) {
+	public boolean keyPressed(KeyEvent event) {
+		int key = InputConstants.getKey(event).getValue();
 		if (key == 256) {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
 		if (number_buy.isFocused())
-			return number_buy.keyPressed(key, b, c);
-		return super.keyPressed(key, b, c);
+			return number_buy.keyPressed(event);
+		return super.keyPressed(event);
 	}
 
 	@Override
-	public void resize(Minecraft minecraft, int width, int height) {
+	public void resize(int width, int height) {
 		String number_buyValue = number_buy.getValue();
-		super.resize(minecraft, width, height);
+		super.resize(width, height);
 		number_buy.setValue(number_buyValue);
 	}
 
 	@Override
-	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, NewadminshopguigettitleProcedure.execute(entity), 37, 9, -1, false);
-		guiGraphics.drawString(this.font, AdminshoppreviewProcedure.execute(entity), 29, 74, -4671036, false);
-		guiGraphics.drawString(this.font, GetsellpricetextProcedure.execute(entity), 25, 30, -4671036, false);
-		guiGraphics.drawString(this.font, GetbuypricetextProcedure.execute(entity), 25, 44, -4671036, false);
+	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.text(this.font, NewadminshopguigettitleProcedure.execute(entity), 37, 9, -1, false);
+		guiGraphics.text(this.font, AdminshoppreviewProcedure.execute(entity), 29, 74, -4671036, false);
+		guiGraphics.text(this.font, GetsellpricetextProcedure.execute(entity), 25, 30, -4671036, false);
+		guiGraphics.text(this.font, GetbuypricetextProcedure.execute(entity), 25, 44, -4671036, false);
 	}
 
 	@Override
@@ -146,7 +142,7 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 		}).bounds(this.leftPos + 99, this.topPos + 109, 46, 20).build();
 		this.addRenderableWidget(button_sell);
 		imagebutton_cross_no_button = new ImageButton(this.leftPos + 154, this.topPos + 3, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/cross_no_button.png"), ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/cross_no_button.png"), Identifier.parse("palamod:textures/screens/pointed_cross_no_button.png")), e -> {
 					int x = NewAdminshopguiScreen.this.x;
 					int y = NewAdminshopguiScreen.this.y;
 					if (true) {
@@ -155,13 +151,13 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 135, this.topPos + 3, 17, 17,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
+				new WidgetSprites(Identifier.parse("palamod:textures/screens/arrow_back_true_1.png"), Identifier.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					int x = NewAdminshopguiScreen.this.x;
 					int y = NewAdminshopguiScreen.this.y;
 					if (true) {
@@ -170,7 +166,7 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 					}
 				}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+			public void extractContents(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY, float partialTicks) {
 				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};

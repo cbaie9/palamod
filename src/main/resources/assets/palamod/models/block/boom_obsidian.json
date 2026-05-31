@@ -8,6 +8,5 @@
     "south": "palamod:block/boom_obsi",
     "west": "palamod:block/boom_obsi",
     "particle": "minecraft:block/obsidian"
-  },
-  "render_type": "solid"
+  }
 }

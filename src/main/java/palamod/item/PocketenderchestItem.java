@@ -25,7 +25,7 @@ public class PocketenderchestItem extends Item {
     @Override
     public InteractionResult use(Level world, Player player, InteractionHand hand) {
 
-        if (world.isClientSide) {
+        if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
 

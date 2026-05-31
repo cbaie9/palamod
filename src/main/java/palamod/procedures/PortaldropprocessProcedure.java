@@ -6,7 +6,6 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -98,34 +97,6 @@ public class PortaldropprocessProcedure {
 				} else {
 					break;
 				}
-				int horizontalRadiusHemiBot = (int) 5 - 1;
-				int verticalRadiusHemiBot = (int) 2;
-				int yIterationsHemiBot = verticalRadiusHemiBot;
-				for (int i = -yIterationsHemiBot; i <= 0; i++) {
-					if (i == -verticalRadiusHemiBot) {
-						continue;
-					}
-					for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-						for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-							double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-									+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-							if (distanceSq <= 1.0) {
-								if (active.getBlock() == (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock()) {
-									x_core = x + xi;
-									y_core = y + i;
-									z_core = z + zi;
-									pass = true;
-									if (world instanceof ServerLevel _serverLevelGR25 && _serverLevelGR25.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
-										PalamodMod.LOGGER.debug(("Core(portal) :  x : " + x_core + " y : " + y_core + " z : " + z_core + "\n" + level_required + " - " + limit_to_result + "\n" + "Active :" + active));
-									}
-								}
-								if (pass) {
-									break;
-								}
-							}
-						}
-					}
-				}
 				if (pass) {
 					break;
 				}
@@ -134,7 +105,7 @@ public class PortaldropprocessProcedure {
 			PalamodMod.LOGGER.info(type_input);
 			PalamodMod.LOGGER.info(type);
 			if (pass) {
-				if (level_alchi >= level_required || !(world instanceof ServerLevel _serverLevelGR28 && _serverLevelGR28.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE))) {
+				if (level_alchi >= level_required || !(world instanceof ServerLevel _serverLevelGR21 && _serverLevelGR21.getGameRules().get(PalamodModGameRules.LOCKEDUSE.get()))) {
 					if (getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "portal_powered") && (type_input).equals(type)) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x_core, y_core, z_core);
@@ -249,7 +220,7 @@ public class PortaldropprocessProcedure {
 										if (entity instanceof Player _player) {
 											ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_POLLEN.get()).copy();
 											_setstack.setCount(1);
-											ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+											_player.getInventory().placeItemBackInInventory(_setstack);
 										}
 										MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.portal.need_pollen").getString());
 										break;

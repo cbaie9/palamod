@@ -1,7 +1,6 @@
 package palamod.procedures;
 
 import palamod.init.PalamodModGameRules;
-import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
@@ -55,81 +54,6 @@ public class SpawncontrollertickProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			int horizontalRadiusSquare = (int) 10 - 1;
-			int verticalRadiusSquare = (int) 3 - 1;
-			int yIterationsSquare = verticalRadiusSquare;
-			for (int i = -yIterationsSquare; i <= yIterationsSquare; i++) {
-				for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
-					for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
-						// Execute the desired statements within the square/cube
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PalamodModBlocks.EMPTY_SPAWNER.get()) {
-							if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") > 50) {
-								if ((getBlockNBTString(world, BlockPos.containing(x + xi, y + i, z + zi), "spawner_type")).equals("witch")) {
-									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
-										tier_witch = tier_witch + 1;
-										nb_witch = nb_witch + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
-										tier_witch = tier_witch + 2;
-										nb_witch = nb_witch + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
-										tier_witch = tier_witch + 3;
-										nb_witch = nb_witch + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
-										tier_witch = tier_witch + 4;
-										nb_witch = nb_witch + 1;
-									}
-									nb_spawn = nb_spawn + 1;
-								} else if ((getBlockNBTString(world, BlockPos.containing(x + xi, y + i, z + zi), "spawner_type")).equals("zombie")) {
-									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
-										tier_zombie = tier_zombie + 1;
-										nb_zombie = nb_zombie + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
-										tier_zombie = tier_zombie + 2;
-										nb_zombie = nb_zombie + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
-										tier_zombie = tier_zombie + 3;
-										nb_zombie = nb_zombie + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
-										tier_zombie = tier_zombie + 4;
-										nb_zombie = nb_zombie + 1;
-									}
-									nb_spawn = nb_spawn + 1;
-								} else if ((getBlockNBTString(world, BlockPos.containing(x + xi, y + i, z + zi), "spawner_type")).equals("skeleton")) {
-									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
-										tier_skelette = tier_skelette + 1;
-										nb_skeleton = nb_skeleton + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
-										tier_skelette = tier_skelette + 2;
-										nb_skeleton = nb_skeleton + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
-										tier_zombie = tier_skelette + 3;
-										nb_skeleton = nb_skeleton + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
-										tier_skelette = tier_skelette + 4;
-										nb_skeleton = nb_skeleton + 1;
-									}
-									nb_spawn = nb_spawn + 1;
-								} else if ((getBlockNBTString(world, BlockPos.containing(x + xi, y + i, z + zi), "spawner_type")).equals("creeper")) {
-									if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 100 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 50) {
-										tier_creeper = tier_creeper + 1;
-										nb_creeper = nb_creeper + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 150 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 100) {
-										tier_creeper = tier_creeper + 2;
-										nb_creeper = nb_creeper + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") < 200 && getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 150) {
-										tier_creeper = tier_creeper + 3;
-										nb_creeper = nb_creeper + 1;
-									} else if (getBlockNBTNumber(world, BlockPos.containing(x + xi, y + i, z + zi), "soul") >= 200) {
-										tier_creeper = tier_creeper + 4;
-										nb_creeper = nb_creeper + 1;
-									}
-									nb_spawn = nb_spawn + 1;
-								}
-							}
-						}
-					}
-				}
-			}
 			if (nb_spawn > 0) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
@@ -160,7 +84,7 @@ public class SpawncontrollertickProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world instanceof ServerLevel _serverLevelGR157 && _serverLevelGR157.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+			if (world instanceof ServerLevel _serverLevelGR54 && _serverLevelGR54.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 				PalamodMod.LOGGER.info(("nb zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") + "\n" + "tier zombie" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "nb spawner"
 						+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") + "\n" + "calc"
 						+ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + "\n" + "slime"

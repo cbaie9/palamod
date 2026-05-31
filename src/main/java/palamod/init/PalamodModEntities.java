@@ -20,8 +20,8 @@ import net.neoforged.bus.api.EventPriority;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 
 @EventBusSubscriber
@@ -77,13 +77,13 @@ public class PalamodModEntities {
 	// Start of user code block custom entities
 	// End of user code block custom entities
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, registryname))));
+		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(PalamodMod.MODID, registryname))));
 	}
 
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerEntity(Capabilities.ItemHandler.ENTITY, PALADIUM_GOLEM.get(), (living, context) -> living.getCombinedInventory());
-		event.registerEntity(Capabilities.ItemHandler.ENTITY, GODVILLAGER.get(), (living, context) -> living.getCombinedInventory());
+		event.registerEntity(Capabilities.Item.ENTITY, PALADIUM_GOLEM.get(), (living, context) -> living.getCombinedInventory());
+		event.registerEntity(Capabilities.Item.ENTITY, GODVILLAGER.get(), (living, context) -> living.getCombinedInventory());
 	}
 
 	@SubscribeEvent

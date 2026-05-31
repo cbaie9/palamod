@@ -25,7 +25,7 @@ import net.minecraft.core.BlockPos;
 
 public class ErablesapplingBlock extends Block {
 	public ErablesapplingBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.GRASS).strength(0f, 1f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.GRASS).strength(0f, 1f).noCollision().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class ErablesapplingBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
+	public int getLightDampening(BlockState state) {
 		return 0;
 	}
 

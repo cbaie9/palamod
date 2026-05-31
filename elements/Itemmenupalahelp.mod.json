@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -103,9 +103,7 @@
           "name": "button_legendary_stone",
           "text": "Legendary stone",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectlegendarystone"
-          },
+          "onClick": "Connectlegendarystone",
           "width": 100,
           "height": 20,
           "x": 191,
@@ -119,9 +117,7 @@
           "name": "button_armor",
           "text": "Armors",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectarmorpalahelp"
-          },
+          "onClick": "Connectarmorpalahelp",
           "width": 61,
           "height": 20,
           "x": 230,
@@ -168,9 +164,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 280,
           "y": 42,
           "locked": false
@@ -182,9 +176,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Blockback"
-          },
+          "onClick": "Blockback",
           "x": 259,
           "y": 42,
           "locked": false
@@ -196,9 +188,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 240,
           "y": 43,
           "locked": false
@@ -210,9 +200,7 @@
           "name": "button_newstck",
           "text": "Sticks",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Opennewstickgui"
-          },
+          "onClick": "Opennewstickgui",
           "width": 61,
           "height": 20,
           "x": 230,

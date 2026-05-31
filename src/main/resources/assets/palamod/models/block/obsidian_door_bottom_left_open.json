@@ -4,6 +4,5 @@
     "particle": "palamod:block/obsidian_door_new_2",
     "bottom": "palamod:block/obsidian_door_new_2",
     "top": "palamod:block/obsidian_door_new"
-  },
-  "render_type": "cutout"
+  }
 }

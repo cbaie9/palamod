@@ -5,6 +5,5 @@
     "particle": "palamod:block/totem",
     "2": "palamod:block/head",
     "7": "palamod:block/wing"
-  },
-  "render_type": "solid"
+  }
 }

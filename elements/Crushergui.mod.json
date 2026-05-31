@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -51,9 +51,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Crusherluncherv2"
-          },
+          "onSlotChanged": "Crusherluncherv2",
           "x": 52,
           "y": 37,
           "locked": true
@@ -90,9 +88,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Crusherluncherv2"
-          },
+          "onSlotChanged": "Crusherluncherv2",
           "x": 52,
           "y": 73,
           "locked": true
@@ -106,9 +102,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Crusherluncherv2"
-          },
+          "onSlotChanged": "Crusherluncherv2",
           "x": 205,
           "y": 116,
           "locked": true
@@ -278,9 +272,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "displayCondition": {
-            "name": "Crushertextad4"
-          },
+          "displayCondition": "Crushertextad4",
           "x": 147,
           "y": 56,
           "locked": false
@@ -299,9 +291,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "displayCondition": {
-            "name": "Crushertextad3"
-          },
+          "displayCondition": "Crushertextad3",
           "x": 146,
           "y": 90,
           "locked": false
@@ -320,9 +310,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "displayCondition": {
-            "name": "Crushertextad2"
-          },
+          "displayCondition": "Crushertextad2",
           "x": 266,
           "y": 56,
           "locked": false
@@ -341,9 +329,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "displayCondition": {
-            "name": "Crushertextad"
-          },
+          "displayCondition": "Crushertextad",
           "x": 267,
           "y": 90,
           "locked": false
@@ -355,12 +341,8 @@
           "name": "imagebutton_button_white3",
           "image": "button_white.png",
           "hoveredImage": "button_gray.png",
-          "onClick": {
-            "name": "Crusherluncherv2titane"
-          },
-          "displayCondition": {
-            "name": "Crushershowlunchertitane"
-          },
+          "onClick": "Crusherluncherv2titane",
+          "displayCondition": "Crushershowlunchertitane",
           "x": 147,
           "y": 70,
           "locked": false
@@ -372,12 +354,8 @@
           "name": "imagebutton_button_white4",
           "image": "button_white.png",
           "hoveredImage": "button_blue.png",
-          "onClick": {
-            "name": "Crusherluncherv2endium"
-          },
-          "displayCondition": {
-            "name": "Crushershowluncherendium"
-          },
+          "onClick": "Crusherluncherv2endium",
+          "displayCondition": "Crushershowluncherendium",
           "x": 261,
           "y": 70,
           "locked": false
@@ -389,12 +367,8 @@
           "name": "imagebutton_button_white5",
           "image": "button_white.png",
           "hoveredImage": "button_purple.png",
-          "onClick": {
-            "name": "Crusherluncherv2amethyst"
-          },
-          "displayCondition": {
-            "name": "Crushershowluncheramethyst"
-          },
+          "onClick": "Crusherluncherv2amethyst",
+          "displayCondition": "Crushershowluncheramethyst",
           "x": 147,
           "y": 38,
           "locked": false
@@ -406,12 +380,8 @@
           "name": "imagebutton_button_white6",
           "image": "button_white.png",
           "hoveredImage": "button_red.png",
-          "onClick": {
-            "name": "Crusherluncherv2paladium"
-          },
-          "displayCondition": {
-            "name": "Crushershowluncherpaladium"
-          },
+          "onClick": "Crusherluncherv2paladium",
+          "displayCondition": "Crushershowluncherpaladium",
           "x": 261,
           "y": 38,
           "locked": false
@@ -492,9 +462,7 @@
           "name": "imagebutton_crusher_btn_pctg_on",
           "image": "crusher_btn_pctg_on.png",
           "hoveredImage": "crusher_btn_pctg_on_hover.png",
-          "onClick": {
-            "name": "Changecrushershowpctg"
-          },
+          "onClick": "Changecrushershowpctg",
           "x": 185,
           "y": 117,
           "locked": true
@@ -545,9 +513,7 @@
         "data": {
           "image": "delim_amethyst_crusher.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "x": 146,
           "y": 37,
           "locked": true
@@ -558,9 +524,7 @@
         "data": {
           "image": "delim_titane_crusher.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "x": 146,
           "y": 69,
           "locked": true
@@ -571,9 +535,7 @@
         "data": {
           "image": "delim_endium_crusher.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "x": 260,
           "y": 69,
           "locked": true
@@ -584,9 +546,7 @@
         "data": {
           "image": "delim_paladium_crusher.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "x": 260,
           "y": 37,
           "locked": true
@@ -598,9 +558,7 @@
           "name": "imagebutton_pro_mode_crusher",
           "image": "pro_mode_crusher.png",
           "hoveredImage": "pro_mode_crusher_hover.png",
-          "onClick": {
-            "name": "Changecrusherpromode"
-          },
+          "onClick": "Changecrusherpromode",
           "x": 158,
           "y": 117,
           "locked": false
@@ -612,12 +570,8 @@
           "name": "imagebutton_book_button",
           "image": "book_button.png",
           "hoveredImage": "book_button_hover.png",
-          "onClick": {
-            "name": "Connectpalahelpcrushercraft"
-          },
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "onClick": "Connectpalahelpcrushercraft",
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "x": 60,
           "y": 105,
           "locked": false
@@ -644,9 +598,7 @@
           "text": {
             "fixedValue": "Percentage of getting an ingot"
           },
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "width": 152,
           "height": 71,
           "x": 225,
@@ -675,9 +627,7 @@
           "text": {
             "fixedValue": "Output Slot"
           },
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "width": 18,
           "height": 18,
           "x": 205,
@@ -692,9 +642,7 @@
           "text": {
             "fixedValue": "Show Crusher Crafts"
           },
-          "displayCondition": {
-            "name": "Iscrushercrusherpromodefalse"
-          },
+          "displayCondition": "Iscrushercrusherpromodefalse",
           "width": 20,
           "height": 18,
           "x": 60,

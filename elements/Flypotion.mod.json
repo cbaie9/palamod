@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,18 +11,14 @@
     "name": "Padel",
     "rarity": "UNCOMMON",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 32,
     "toolType": 0.0,
     "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
-    },
+    "recipeRemainder": "",
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "isPiglinCurrency": false,
@@ -40,9 +36,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
-      "name": "FseffectEffectStartedapplied"
-    },
+    "onFinishUsingItem": "FseffectEffectStartedapplied",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -50,14 +44,12 @@
     "isFood": true,
     "nutritionalValue": 0,
     "saturation": 5.0,
-    "eatResultItem": {
-      "value": "Items.GLASS_BOTTLE"
-    },
+    "eatResultItem": "Items.GLASS_BOTTLE",
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
-    "musicDiscLengthInTicks": 0,
+    "musicDiscLengthInTicks": 1,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": [],
     "attributeModifiers": []

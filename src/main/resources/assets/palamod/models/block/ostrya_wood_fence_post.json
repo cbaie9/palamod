@@ -3,6 +3,5 @@
   "textures": {
     "texture": "palamod:block/ostrya_planks",
     "particle": "palamod:block/ostrya_planks"
-  },
-  "render_type": "solid"
+  }
 }

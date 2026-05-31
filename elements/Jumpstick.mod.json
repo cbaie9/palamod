@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "tool",
   "definition": {
     "toolType": "Special",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Pvpcreativetab"
-      }
+      "CUSTOM:Pvpcreativetab"
     ],
     "efficiency": 0.0,
     "attackSpeed": 1.0,
@@ -34,14 +32,8 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedInAir": {
-      "name": "Jumpstickprocess"
-    },
-    "onRightClickedOnBlock": {
-      "name": "Jumpstickprocess"
-    },
-    "onItemInInventoryTick": {
-      "name": "Legendarystonestick"
-    }
+    "onRightClickedInAir": "Jumpstickprocess",
+    "onRightClickedOnBlock": "Jumpstickprocess",
+    "onItemInInventoryTick": "Legendarystonestick"
   }
 }

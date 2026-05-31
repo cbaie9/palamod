@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Stone cutting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "stoneCuttingInputStack": {
-      "value": "CUSTOM:Renforcedobsidian"
-    },
-    "stoneCuttingReturnStack": {
-      "value": "CUSTOM:Hardenedobsidianslab"
-    },
+    "stoneCuttingInputStack": "CUSTOM:Renforcedobsidian",
+    "stoneCuttingReturnStack": "CUSTOM:Hardenedobsidianslab",
     "name": "hardenedobsidianslabcutter",
     "namespace": "mod"
   }

@@ -6,6 +6,8 @@ import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.permissions.Permissions;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 
 import java.util.zip.ZipInputStream;
@@ -25,7 +27,7 @@ public class BackuploadconfigProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double lvl = 0;
 		File jobs = new File("");
-		if (entity instanceof Player _playerCmd0 && _playerCmd0.hasPermissions(4)) {
+		if (hasEntityPermissionLevel(entity, 4)) {
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\backup\\palamod\\config\\backup-" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + ".zip"));
 			try {
 				new Object() {
@@ -59,12 +61,25 @@ public class BackuploadconfigProcedure {
 			} catch (IOException e) {
 				PalamodMod.LOGGER.error(e);
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("The configuration had been loaded into the server ; Wrongfull configuration can cause mod to malfunction" + FMLPaths.GAMEDIR.get().toString() + "\\backup\\palamod\\config\\backup-"
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal(("The configuration had been loaded into the server ; Wrongfull configuration can cause mod to malfunction" + FMLPaths.GAMEDIR.get().toString() + "\\backup\\palamod\\config\\backup-"
 						+ new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + ".zip")), false);
 		} else {
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("You do not have the required permission to do that command, please call your administrator if you want go further"), false);
+			if (entity instanceof ServerPlayer _player)
+				_player.sendSystemMessage(Component.literal("You do not have the required permission to do that command, please call your administrator if you want go further"), false);
 		}
+	}
+
+	private static boolean hasEntityPermissionLevel(Entity entity, int permissionLevel) {
+		if (entity instanceof Player _player) {
+			return switch (permissionLevel) {
+				case 0 -> true;
+				case 1 -> _player.permissions().hasPermission(Permissions.COMMANDS_MODERATOR);
+				case 2 -> _player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER);
+				case 3 -> _player.permissions().hasPermission(Permissions.COMMANDS_ADMIN);
+				default -> _player.permissions().hasPermission(Permissions.COMMANDS_OWNER);
+			};
+		}
+		return false;
 	}
 }

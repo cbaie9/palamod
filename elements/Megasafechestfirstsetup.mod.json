@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -150,9 +150,7 @@
           "name": "button_save",
           "text": "save",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Safekeepcodeprocess"
-          },
+          "onClick": "Safekeepcodeprocess",
           "width": 46,
           "height": 20,
           "x": 152,

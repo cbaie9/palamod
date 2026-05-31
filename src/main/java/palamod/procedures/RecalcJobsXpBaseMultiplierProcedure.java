@@ -3,7 +3,7 @@ package palamod.procedures;
 import palamod.init.PalamodModMobEffects;
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -24,7 +24,7 @@ import java.io.BufferedReader;
 @EventBusSubscriber
 public class RecalcJobsXpBaseMultiplierProcedure {
 	@SubscribeEvent
-	public static void onBlockBreak(BlockEvent.BreakEvent event) {
+	public static void onBlockBreak(BreakBlockEvent event) {
 		execute(event, event.getLevel(), event.getPlayer());
 	}
 
@@ -40,7 +40,7 @@ public class RecalcJobsXpBaseMultiplierProcedure {
 		double base = 0;
 		double actual_multi_exp = 0;
 		jobs = GetjobsfileProcedure.execute(entity);
-		base = (world instanceof ServerLevel _serverLevelGR0 ? _serverLevelGR0.getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER) : 0) / 100d;
+		base = (world instanceof ServerLevel _serverLevelGR0 ? _serverLevelGR0.getGameRules().get(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER.get()) : 0) / 100d;
 		if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PalamodModMobEffects.MULTIEXP_2)) {
 			base = base * 2;
 		}

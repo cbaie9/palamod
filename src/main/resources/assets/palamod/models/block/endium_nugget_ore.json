@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/endium_nugget_ore",
     "particle": "palamod:block/endium_nugget_ore"
-  },
-  "render_type": "solid"
+  }
 }

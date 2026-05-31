@@ -8,6 +8,5 @@
     "south": "palamod:block/big_tnt_side",
     "west": "palamod:block/big_tnt_side",
     "particle": "palamod:block/big_tnt_bottom"
-  },
-  "render_type": "solid"
+  }
 }

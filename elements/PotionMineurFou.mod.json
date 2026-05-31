@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "potion",
   "definition": {
     "potionName": "Potion Mineur Fou 1H",
@@ -8,9 +8,7 @@
     "arrowName": "Arrow of Potion Mineur Fou",
     "effects": [
       {
-        "effect": {
-          "value": "CUSTOM:MineurFou"
-        },
+        "effect": "CUSTOM:MineurFou",
         "duration": 72000,
         "infinite": false,
         "amplifier": 0,

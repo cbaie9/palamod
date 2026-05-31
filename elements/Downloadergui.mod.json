@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -73,9 +73,7 @@
           "name": "button_reload",
           "text": "reload",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Downloaderreload"
-          },
+          "onClick": "Downloaderreload",
           "width": 56,
           "height": 20,
           "x": 239,
@@ -88,9 +86,7 @@
         "data": {
           "name": "download_state",
           "text": "State",
-          "isCheckedProcedure": {
-            "name": "Downloaderchecked"
-          },
+          "isCheckedProcedure": "Downloaderchecked",
           "x": 130,
           "y": 41,
           "locked": false
@@ -112,9 +108,7 @@
           "name": "button_link",
           "text": "Link",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectdownloaderlink"
-          },
+          "onClick": "Connectdownloaderlink",
           "width": 46,
           "height": 20,
           "x": 129,

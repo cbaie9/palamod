@@ -6,8 +6,6 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
@@ -19,7 +17,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class CauldroncraftresultProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack, ItemStack itemstack_transfert) {
@@ -29,12 +27,12 @@ public class CauldroncraftresultProcedure {
 		double random = 0;
 		double nb_items = 0;
 		double cmp_respawn = 0;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			PalamodMod.LOGGER.info("DROP RESULT");
 		}
 		nb_items = itemstack.getCount();
 		PalamodMod.LOGGER.info(("" + nb_items));
-		if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:modded_flowers")))) {
+		if (itemstack.is(ItemTags.create(Identifier.parse("palamod:modded_flowers")))) {
 			output = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
 			output.setCount((int) nb_items);
 			if (world instanceof ServerLevel _level) {
@@ -42,11 +40,11 @@ public class CauldroncraftresultProcedure {
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}
-		} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:vanilla_flowers")))) {
+		} else if (itemstack.is(ItemTags.create(Identifier.parse("palamod:vanilla_flowers")))) {
 			for (int index0 = 0; index0 < (int) nb_items; index0++) {
 				if (Math.random() < 0.25) {
 					random = Mth.nextInt(RandomSource.create(), 1, 3);
-					if (world instanceof ServerLevel _serverLevelGR12 && _serverLevelGR12.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+					if (world instanceof ServerLevel _serverLevelGR12 && _serverLevelGR12.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 						PalamodMod.LOGGER.info("drop");
 					}
 					if (1 == random) {
@@ -103,7 +101,7 @@ public class CauldroncraftresultProcedure {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModBlocks.ERABLE_LOG.get()).copy();
 					_setstack.setCount((int) (nb_items - cmp_respawn));
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 			}
 		} else if (PalamodModBlocks.OSTRYA_WOOD_LOG.get().asItem() == itemstack.getItem()) {
@@ -126,7 +124,7 @@ public class CauldroncraftresultProcedure {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModBlocks.OSTRYA_WOOD_LOG.get()).copy();
 					_setstack.setCount((int) (nb_items - cmp_respawn));
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 			}
 		} else if (PalamodModBlocks.JUDEECERCIS_LOG.get().asItem() == itemstack.getItem()) {
@@ -149,7 +147,7 @@ public class CauldroncraftresultProcedure {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModBlocks.JUDEECERCIS_LOG.get()).copy();
 					_setstack.setCount((int) (nb_items - cmp_respawn));
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 			}
 		} else if (PalamodModBlocks.JACARANDA_LOG.get().asItem() == itemstack.getItem()) {
@@ -172,7 +170,7 @@ public class CauldroncraftresultProcedure {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModBlocks.JACARANDA_LOG.get()).copy();
 					_setstack.setCount((int) (nb_items - cmp_respawn));
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					_player.getInventory().placeItemBackInInventory(_setstack);
 				}
 			}
 		} else if (PalamodModItems.GLUEBALL_PATTERN.get() == itemstack.getItem()) {
@@ -190,7 +188,7 @@ public class CauldroncraftresultProcedure {
 				}
 				if (Math.random() < 0.25) {
 					random = Mth.nextInt(RandomSource.create(), 1, 4);
-					if (world instanceof ServerLevel _serverLevelGR53 && _serverLevelGR53.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+					if (world instanceof ServerLevel _serverLevelGR53 && _serverLevelGR53.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 						PalamodMod.LOGGER.info("drop");
 					}
 					if (1 == random) {
@@ -225,7 +223,7 @@ public class CauldroncraftresultProcedure {
 				}
 			}
 		}
-		if (world instanceof ServerLevel _serverLevelGR59 && _serverLevelGR59.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR59 && _serverLevelGR59.getGameRules().get(PalamodModGameRules.PALAMODDEBUGLOG.get())) {
 			PalamodMod.LOGGER.info("END DROP RESULT");
 		}
 	}

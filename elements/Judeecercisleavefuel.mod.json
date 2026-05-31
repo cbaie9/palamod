@@ -1,10 +1,8 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "itemextension",
   "definition": {
-    "item": {
-      "value": "CUSTOM:Judeecercis_Leaves"
-    },
+    "item": "CUSTOM:Judeecercis_Leaves",
     "enableFuel": true,
     "fuelPower": {
       "fixedValue": 60.0

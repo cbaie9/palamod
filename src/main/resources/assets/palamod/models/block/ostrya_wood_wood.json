@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/ostrya",
     "particle": "palamod:block/ostrya"
-  },
-  "render_type": "solid"
+  }
 }

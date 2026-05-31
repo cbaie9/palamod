@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "ostrya_craft_group",
     "unlockingItems": [
-      {
-        "value": "TAG:forge:ostrya_wood_log"
-      }
+      "TAG:forge:ostrya_wood_log"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Ostrya_woodLog"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodLog"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodLog"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodLog"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Ostrya_woodLog",
+      "",
+      "CUSTOM:Ostrya_woodLog",
+      "CUSTOM:Ostrya_woodLog",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Ostrya_woodWood"
-    },
+    "recipeReturnStack": "CUSTOM:Ostrya_woodWood",
     "name": "ostrya_wood_wood_recipe",
     "namespace": "mod"
   }

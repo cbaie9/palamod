@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -318,9 +318,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 399,
           "y": 23,
           "locked": false
@@ -332,9 +330,7 @@
           "name": "imagebutton_example_gui_button",
           "image": "example_gui_button.png",
           "hoveredImage": "example_gui_button_poi.png",
-          "onClick": {
-            "name": "Connectephcrusher"
-          },
+          "onClick": "Connectephcrusher",
           "x": 376,
           "y": 23,
           "locked": false
@@ -346,9 +342,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Machineconnectpalahelp"
-          },
+          "onClick": "Machineconnectpalahelp",
           "x": 329,
           "y": 23,
           "locked": false
@@ -360,9 +354,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 352,
           "y": 23,
           "locked": false
@@ -374,9 +366,7 @@
           "name": "imagebutton_book_button",
           "image": "book_button.png",
           "hoveredImage": "book_button_hover.png",
-          "onClick": {
-            "name": "Connectpalahelpcrushercraft"
-          },
+          "onClick": "Connectpalahelpcrushercraft",
           "x": 305,
           "y": 23,
           "locked": false

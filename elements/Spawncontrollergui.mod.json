@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -42,9 +42,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Getupgradeinspawncontroller"
-          },
+          "onSlotChanged": "Getupgradeinspawncontroller",
           "x": 187,
           "y": 64,
           "locked": false
@@ -64,9 +62,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Getupgradeinspawncontroller"
-          },
+          "onSlotChanged": "Getupgradeinspawncontroller",
           "x": 205,
           "y": 64,
           "locked": false
@@ -87,9 +83,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "onSlotChanged": {
-            "name": "Getupgradeinspawncontroller"
-          },
+          "onSlotChanged": "Getupgradeinspawncontroller",
           "x": 187,
           "y": 82,
           "locked": false
@@ -110,9 +104,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Getupgradeinspawncontroller"
-          },
+          "onSlotChanged": "Getupgradeinspawncontroller",
           "x": 205,
           "y": 82,
           "locked": false
@@ -123,9 +115,7 @@
         "data": {
           "image": "lock_slot.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Spawnerupgrademorechecknot"
-          },
+          "displayCondition": "Spawnerupgrademorechecknot",
           "x": 188,
           "y": 83,
           "locked": false
@@ -136,9 +126,7 @@
         "data": {
           "image": "lock_slot.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "Spawnerupgrademorechecknot"
-          },
+          "displayCondition": "Spawnerupgrademorechecknot",
           "x": 206,
           "y": 83,
           "locked": false

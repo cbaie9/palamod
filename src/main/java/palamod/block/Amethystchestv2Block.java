@@ -53,10 +53,10 @@ public class Amethystchestv2Block extends Block implements EntityBlock {
 	private Function<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				default -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 15, 9, 11, 16));
 				case NORTH -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 0, 9, 11, 1));
 				case EAST -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(15, 7, 7, 16, 11, 9));
 				case WEST -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(0, 7, 7, 1, 11, 9));
+				default -> Shapes.or(box(1, 0, 1, 15, 10, 15), box(1, 9, 1, 15, 14, 15), box(7, 7, 15, 9, 11, 16));
 			};
 		});
 	}
@@ -79,7 +79,10 @@ public class Amethystchestv2Block extends Block implements EntityBlock {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
+		return state.setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
@@ -144,7 +147,7 @@ public class Amethystchestv2Block extends Block implements EntityBlock {
 	}
 
 	@Override
-	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
+	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos, Direction direction) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
 		if (tileentity instanceof Amethystchestv2BlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);

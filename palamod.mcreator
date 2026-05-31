@@ -23568,7 +23568,12 @@
       "registry_name": "santa",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/textures/entity/villager/profession/santa.png.mcmeta"
+          "src/main/resources/assets/palamod/textures/entity/villager/profession/santa.png.mcmeta",
+          "src/main/resources/data/palamod/trade_set/santa/level_3.json",
+          "src/main/resources/data/palamod/trade_set/santa/level_1.json",
+          "src/main/resources/data/palamod/trade_set/santa/level_5.json",
+          "src/main/resources/data/palamod/trade_set/santa/level_2.json",
+          "src/main/resources/data/palamod/trade_set/santa/level_4.json"
         ]
       }
     },
@@ -23579,7 +23584,15 @@
       "locked_code": false,
       "registry_name": "endiumtrade",
       "metadata": {
-        "files": []
+        "files": [
+          "src/main/resources/data/palamod/villager_trade/santa/4/endiumtrade_1.json",
+          "src/main/resources/data/palamod/villager_trade/santa/5/endiumtrade_0.json",
+          "src/main/resources/data/palamod/villager_trade/santa/1/endiumtrade_2.json",
+          "src/main/resources/data/palamod/villager_trade/santa/4/endiumtrade_6.json",
+          "src/main/resources/data/palamod/villager_trade/santa/5/endiumtrade_5.json",
+          "src/main/resources/data/palamod/villager_trade/santa/2/endiumtrade_3.json",
+          "src/main/resources/data/palamod/villager_trade/santa/3/endiumtrade_4.json"
+        ]
       }
     },
     {
@@ -36630,7 +36643,7 @@
     {
       "name": "Isgameserverside",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "isgameserverside",
       "metadata": {
@@ -36692,7 +36705,7 @@
     {
       "name": "Isgameclientside",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "isgameclientside",
       "metadata": {
@@ -36700,24 +36713,7 @@
         "files": [
           "src/main/java/palamod/procedures/IsgameclientsideProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -40202,7 +40198,7 @@
     {
       "name": "Pocketenderchest",
       "type": "item",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "pocketenderchest",
       "metadata": {
@@ -43514,7 +43510,7 @@
     {
       "name": "Amethystanvil",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "amethyst_anvil",
       "metadata": {
@@ -43530,7 +43526,7 @@
     {
       "name": "Titaneanvil",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "titane_anvil",
       "metadata": {
@@ -43546,7 +43542,7 @@
     {
       "name": "Paladiumanvil",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "paladium_anvil",
       "metadata": {
@@ -43669,7 +43665,7 @@
     {
       "name": "JobCraftRestrictionManagerProcedure",
       "type": "code",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "job_craft_restriction_manager_procedure",
       "metadata": {
@@ -43693,7 +43689,7 @@
     {
       "name": "Reloadcommandaddon",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "reloadcommandaddon",
       "metadata": {
@@ -44074,7 +44070,7 @@
     {
       "name": "Craft",
       "type": "command",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "craft",
       "metadata": {
@@ -47600,10 +47596,6 @@
       "Blocks.WOOL#14",
       "Blocks.WOOL#15"
     ],
-    "BLOCKS:minecraft:replaceable": [
-      "~CUSTOM:Angelicwter",
-      "~CUSTOM:Fakewter"
-    ],
     "ITEMS:mod:potgtag": [
       "CUSTOM:Pickaxeofthegodslv1",
       "CUSTOM:Pickaxeofthegodslv2",
@@ -47626,16 +47618,6 @@
       "CUSTOM:Pickaxeofthegodslv13",
       "CUSTOM:Pickaxeofthegodslv20",
       "CUSTOM:Creativepotg"
-    ],
-    "ENCHANTMENTS:minecraft:treasure": [
-      "~CUSTOM:Nomodifier",
-      "~CUSTOM:Onemoreupgradeenchant",
-      "~CUSTOM:Botteled",
-      "~CUSTOM:Chargedenchant",
-      "~CUSTOM:Autosmeltpotg",
-      "~CUSTOM:Bighole",
-      "~CUSTOM:Speed",
-      "~CUSTOM:Hammerforturne"
     ],
     "ITEMS:forge:erable__log": [
       "CUSTOM:Erable_Wood",
@@ -47674,102 +47656,10 @@
       "Blocks.STONE#0",
       "Blocks.COBBLESTONE"
     ],
-    "BLOCKS:minecraft:needs_stone_tool": [
-      "~CUSTOM:Shinyjacarandawood",
-      "~CUSTOM:Goldentank",
-      "~CUSTOM:Amethysttank",
-      "~CUSTOM:Emptyspawner",
-      "~CUSTOM:Spawncontroller",
-      "~CUSTOM:Softenedlapislazulisore",
-      "~CUSTOM:Softenedredstoneore",
-      "~CUSTOM:Softenedironore",
-      "~CUSTOM:Cobbledsoftstonestairs",
-      "~CUSTOM:Cobbledsoftstoneslab",
-      "~CUSTOM:Cobbleledsoftstone",
-      "~CUSTOM:Trixiumstairs",
-      "~CUSTOM:Trixiumslab",
-      "~CUSTOM:Paladiumhoppersouth",
-      "~CUSTOM:Paladiumhopper",
-      "~CUSTOM:Unknownblock",
-      "~CUSTOM:Printingpress",
-      "~CUSTOM:Onlinedetectoron",
-      "~CUSTOM:Onlinedetector",
-      "~CUSTOM:Woddenspike",
-      "~CUSTOM:Titanechestv2",
-      "~CUSTOM:Endiumchestv2",
-      "~CUSTOM:Amethystchestv2",
-      "~CUSTOM:Greenpaladiumchestv2",
-      "~CUSTOM:Paladiumchestv2",
-      "~CUSTOM:Caveblock",
-      "~CUSTOM:Trixiumblock",
-      "~CUSTOM:Downloader",
-      "~CUSTOM:Endiumchest",
-      "~CUSTOM:Greenpaladiumchest",
-      "~CUSTOM:Amethystchest",
-      "~CUSTOM:Paladiumchest",
-      "~CUSTOM:Titanechest",
-      "~CUSTOM:Uploader",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Elevatorcyan",
-      "~CUSTOM:Elevatorlightgray",
-      "~CUSTOM:Elevatorgray",
-      "~CUSTOM:Elevatorpurple",
-      "~CUSTOM:Elevatororange",
-      "~CUSTOM:Elevatorbrown",
-      "~CUSTOM:Elevatorlightgreen",
-      "~CUSTOM:Elevatorlightblue",
-      "~CUSTOM:Elevatorpink",
-      "~CUSTOM:Elevatorgreen",
-      "~CUSTOM:Elevatorblue",
-      "~CUSTOM:Elevatorred",
-      "~CUSTOM:Elevatorwhite",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Fakepaladiumore",
-      "~CUSTOM:Luckyblock",
-      "~CUSTOM:Paladiummachine",
-      "~CUSTOM:Tcv2",
-      "~CUSTOM:Loadblock1t",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Ametystespike",
-      "~CUSTOM:Diamondspike",
-      "~CUSTOM:Paladiumfurnaceon",
-      "~CUSTOM:Paladiumfurnace",
-      "~CUSTOM:Grinderblock",
-      "~CUSTOM:Grinderframe",
-      "~CUSTOM:Grindercasing",
-      "~CUSTOM:Alchimet1",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:EndiumBlock",
-      "~CUSTOM:Paladiumcrusher",
-      "~CUSTOM:TitaneBlock",
-      "~CUSTOM:PaladiumBlock"
-    ],
     "ITEMS:neoforge:cobblestone": [
       "Blocks.COBBLED_DEEPSLATE",
       "Blocks.COBBLESTONE",
       "CUSTOM:Cobbleledsoftstone"
-    ],
-    "BLOCKS:minecraft:stairs": [
-      "~CUSTOM:DeadStairs",
-      "~CUSTOM:Cobbledsoftstonestairs",
-      "~CUSTOM:Softstonestairs",
-      "~CUSTOM:Trixiumstairs",
-      "~CUSTOM:Obsidianstairs",
-      "~CUSTOM:Renforcedobsidianstairs",
-      "~CUSTOM:Greenpaladiumstairs",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Ostrya_woodStairs"
     ],
     "BLOCKS:mod:xp_bush": [
       "CUSTOM:Xpbush",
@@ -47839,83 +47729,6 @@
     ],
     "ITEMS:mod:paladium_ring_big": [
       "CUSTOM:Bigring"
-    ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:CauldronCore",
-      "~CUSTOM:Cauldron",
-      "~CUSTOM:Moneyanvil",
-      "~CUSTOM:Softeneddiamondore",
-      "~CUSTOM:Softenedgoldore",
-      "~CUSTOM:Softenedfindiumore",
-      "~CUSTOM:Softenedtrixiumore",
-      "~CUSTOM:Softenedamethystore",
-      "~CUSTOM:Exctractor",
-      "~CUSTOM:Trixiumore",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:FindiumOre",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:AmethysteOre"
-    ],
-    "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:EndiumPortalAngleBlock",
-      "~CUSTOM:PaladiumTank",
-      "~CUSTOM:Titanetank",
-      "~CUSTOM:Knockbackobsidian",
-      "~CUSTOM:Frozenobsidian",
-      "~CUSTOM:Paladiuminfusedobsidian",
-      "~CUSTOM:Titaneinfusedobsidian",
-      "~CUSTOM:Amethystinfusedobsidian",
-      "~CUSTOM:Diamondinfusedobsidian",
-      "~CUSTOM:Softenedendiumnuggetore",
-      "~CUSTOM:Softenedgreenpaladiumore",
-      "~CUSTOM:Softenedpaladiumore",
-      "~CUSTOM:Softenedtitaneore",
-      "~CUSTOM:Witheredobsidian13",
-      "~CUSTOM:Witheredobsidian12",
-      "~CUSTOM:Witheredobsidian11",
-      "~CUSTOM:Witheredobsidian10",
-      "~CUSTOM:Witheredobsidian9",
-      "~CUSTOM:Witheredobsidian8",
-      "~CUSTOM:Witheredobsidian7",
-      "~CUSTOM:Witheredobsidian6",
-      "~CUSTOM:Witheredobsidian5",
-      "~CUSTOM:Witheredobsidian4",
-      "~CUSTOM:Witheredobsidian3",
-      "~CUSTOM:Witheredobsidian2",
-      "~CUSTOM:Witheredobsidian1",
-      "~CUSTOM:Witheredobsidian0",
-      "~CUSTOM:Megaboomobsidian",
-      "~CUSTOM:Boomobsidian",
-      "~CUSTOM:Poisonobsidian",
-      "~CUSTOM:Slimeobsidian",
-      "~CUSTOM:Paladiumobsidianspike",
-      "~CUSTOM:Titaneobsidianspike",
-      "~CUSTOM:Amethystobsidianspike",
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
-      "~CUSTOM:Paladiumgreenoredeepslate",
-      "~CUSTOM:Paladiumoredeepslate",
-      "~CUSTOM:Trixiumnbtblock",
-      "~CUSTOM:Lavaobsidian",
-      "~CUSTOM:Fakewaterobsidian",
-      "~CUSTOM:Compactedobsidian",
-      "~CUSTOM:Obsidiandoor",
-      "~CUSTOM:Obsidiantrapdoor",
-      "~CUSTOM:PaladiumGreenore",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:TitaneOre",
-      "~CUSTOM:PaladiumOre"
     ],
     "ITEMS:mod:hyper_jump_stick": [
       "CUSTOM:Hyperjumpstick"
@@ -48024,16 +47837,6 @@
       "CUSTOM:Endiumnuggetore",
       "CUSTOM:PaladiumGreenore"
     ],
-    "BLOCKS:minecraft:fences": [
-      "CUSTOM:Jacaranda_Fence",
-      "CUSTOM:Jacaranda_FenceGate",
-      "CUSTOM:Erable_Fence",
-      "CUSTOM:Erable_FenceGate",
-      "CUSTOM:Judeecercis_Fence",
-      "CUSTOM:Judeecercis_FenceGate",
-      "CUSTOM:Ostrya_woodFence",
-      "CUSTOM:Ostrya_woodFenceGate"
-    ],
     "ITEMS:forge:ostrya_wood_log": [
       "CUSTOM:Ostrya_woodWood",
       "CUSTOM:Ostrya_woodLog"
@@ -48056,12 +47859,6 @@
       "Blocks.DOUBLE_PLANT#2",
       "Blocks.SEAGRASS",
       "Blocks.TALL_SEAGRASS"
-    ],
-    "BIOMES:minecraft:has_structure/village_plains": [
-      "~CUSTOM:Alternateplaines"
-    ],
-    "BIOMES:minecraft:has_structure/stronghold": [
-      "~CUSTOM:Forestender"
     ],
     "ITEMS:mod:palamodmoddedfuel": [
       "CUSTOM:Goldmixedcoal",
@@ -48095,24 +47892,6 @@
       "CUSTOM:EndiumArmor.legs",
       "CUSTOM:EndiumArmor.boots"
     ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:DeadSlab",
-      "~CUSTOM:Cobbledsoftstoneslab",
-      "~CUSTOM:Softstoneslab",
-      "~CUSTOM:Trixiumslab",
-      "~CUSTOM:Hardenedobsidianslab",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Ostrya_woodSlab"
-    ],
     "ITEMS:mod:endium_ring_medium": [
       "CUSTOM:Endiummediumring"
     ],
@@ -48123,9 +47902,6 @@
       "Blocks.GRASS_PATH",
       "Blocks.MYCELIUM",
       "Blocks.FARMLAND"
-    ],
-    "BIOMES:minecraft:has_structure/village_snowy": [
-      "~CUSTOM:Frozenforest"
     ],
     "ITEMS:minecraft:planks": [
       "CUSTOM:Erable_Planks",
@@ -48218,53 +47994,6 @@
       "CUSTOM:Paladiumarmorcustom10.legs",
       "CUSTOM:Paladiumarmorcustom10.boots"
     ],
-    "ITEMS:minecraft:pickaxes": [
-      "~CUSTOM:Endiumseedplanter",
-      "~CUSTOM:Greenpaladiumseedplanter",
-      "~CUSTOM:Paladiumseedplanter",
-      "~CUSTOM:Titaneseedplanter",
-      "~CUSTOM:Amethystseedplanter",
-      "~CUSTOM:Obsidianpickaxe",
-      "~CUSTOM:Creativehammer",
-      "~CUSTOM:Greenpaladiumhammer",
-      "~CUSTOM:Creativepotg",
-      "~CUSTOM:Pickaxeofthegodslv13",
-      "~CUSTOM:Pickaxeofthegodslv20",
-      "~CUSTOM:Pickaxeofthegodslv19",
-      "~CUSTOM:Pickaxeofthegodslv18",
-      "~CUSTOM:Pickaxeofthegodslv17",
-      "~CUSTOM:Pickaxeofthegodslv16",
-      "~CUSTOM:Pickaxeofthegodslv15",
-      "~CUSTOM:Pickaxeofthegodslv14",
-      "~CUSTOM:Pickaxeofthegodslv12",
-      "~CUSTOM:Pickaxeofthegodslv11",
-      "~CUSTOM:Pickaxeofthegodslv10",
-      "~CUSTOM:Pickaxeofthegodslv9",
-      "~CUSTOM:Pickaxeofthegodslv8",
-      "~CUSTOM:Pickaxeofthegodslv7",
-      "~CUSTOM:Pickaxeofthegodslv6",
-      "~CUSTOM:Pickaxeofthegodslv5",
-      "~CUSTOM:Pickaxeofthegodslv4",
-      "~CUSTOM:Pickaxeofthegodslv3",
-      "~CUSTOM:Pickaxeofthegodslv2",
-      "~CUSTOM:Pickaxeofthegodslv1",
-      "~CUSTOM:Endiumhammer",
-      "~CUSTOM:Paladiumhammer",
-      "~CUSTOM:Titanehammer",
-      "~CUSTOM:Amethystehammer",
-      "~CUSTOM:Paladiumgreenpickaxe",
-      "~CUSTOM:Stickofgods",
-      "~CUSTOM:Damagestick",
-      "~CUSTOM:Strenghtstick",
-      "~CUSTOM:Healstick",
-      "~CUSTOM:Hyperjumpstick",
-      "~CUSTOM:Jumpstick",
-      "~CUSTOM:Speedstick",
-      "~CUSTOM:EndiumPickaxe",
-      "~CUSTOM:AmethystePickaxe",
-      "~CUSTOM:TitanePickaxe",
-      "~CUSTOM:PaladiumPickaxe"
-    ],
     "ITEMS:mod:repairable_green": [
       "CUSTOM:Paladiumgreenpickaxe",
       "CUSTOM:Paladiumgreenaxe",
@@ -48275,18 +48004,12 @@
       "CUSTOM:Greenpaladiumarmor.legs",
       "CUSTOM:Greenpaladiumarmor.boots"
     ],
-    "BIOMES:minecraft:has_structure/end_city": [
-      "~CUSTOM:Alternateplaines"
-    ],
     "BLOCKS:mod:kiwano": [
       "CUSTOM:Kiwano0",
       "CUSTOM:Kiwano1",
       "CUSTOM:Kiwano2",
       "CUSTOM:Kiwano3",
       "CUSTOM:Kiwano4"
-    ],
-    "BLOCKS:minecraft:mineable/shovel": [
-      "~CUSTOM:Fertilseddirt"
     ],
     "BLOCKS:mod:eggplant": [
       "CUSTOM:Eggplant0",
@@ -48297,17 +48020,6 @@
     "ITEMS:mod:green_paladium_ring_medium": [
       "CUSTOM:Mediumringgreenpaladium"
     ],
-    "ITEMS:minecraft:shovels": [
-      "~CUSTOM:Endiumshovel",
-      "~CUSTOM:Greenpaladumexcator",
-      "~CUSTOM:Paladiumexcavator",
-      "~CUSTOM:Titaneexcavator",
-      "~CUSTOM:Amethystexacvator",
-      "~CUSTOM:Paladiumgreenshovel",
-      "~CUSTOM:AmethysteShovel",
-      "~CUSTOM:TitaneShovel",
-      "~CUSTOM:PaladiumShovel"
-    ],
     "BLOCKS:neoforge:amethyst_ore": [
       "CUSTOM:AmethysteOre",
       "CUSTOM:Amethystoredeepslate",
@@ -48316,38 +48028,6 @@
     "BLOCKS:forge:unbreakable": [
       "Blocks.BEDROCK",
       "CUSTOM:Stony"
-    ],
-    "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:Pigarmor.body",
-      "~CUSTOM:Mixedendiumarmor.body",
-      "~CUSTOM:Paladiumarmorcustom10.body",
-      "~CUSTOM:Paladiumarmorcustom9.body",
-      "~CUSTOM:Paladiumarmorcustom8.body",
-      "~CUSTOM:Paladiumarmorcustom7.body",
-      "~CUSTOM:Paladiumarmorcustom6.body",
-      "~CUSTOM:Paladiumarmorcustom5.body",
-      "~CUSTOM:Paladiumarmorcustom4.body",
-      "~CUSTOM:Paladiumarmorcustom3.body",
-      "~CUSTOM:Paladiumarmorcustom2.body",
-      "~CUSTOM:Paladiumarmorcustom1.body",
-      "~CUSTOM:Ranbowarmor.body",
-      "~CUSTOM:Invisiblearmor.body",
-      "~CUSTOM:Travelarmor.body",
-      "~CUSTOM:Greenpaladiumarmor.body",
-      "~CUSTOM:EndiumArmor.body",
-      "~CUSTOM:AmethysteArmor.body",
-      "~CUSTOM:TitaneArmor.body",
-      "~CUSTOM:PaladiumArmor.body"
-    ],
-    "BLOCKS:minecraft:mineable/hoe": [
-      "~CUSTOM:Endiumtnt",
-      "~CUSTOM:Compacttnt",
-      "~CUSTOM:Magictnt",
-      "~CUSTOM:Withertnt",
-      "~CUSTOM:Wetlavasponge",
-      "~CUSTOM:Lavasponge",
-      "~CUSTOM:Spongetnt",
-      "~CUSTOM:Compressedsponge"
     ],
     "ITEMS:forge:uploadersellable": [
       "CUSTOM:PaladiumIngot",
@@ -48420,32 +48100,6 @@
       "Blocks.REEDS",
       "Items.EMERALD"
     ],
-    "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:Cavernehammer",
-      "~CUSTOM:Unclaimfinderblue",
-      "~CUSTOM:Unclaimfinderred",
-      "~CUSTOM:Unclaimfinderorange",
-      "~CUSTOM:Unclaimfinder",
-      "~CUSTOM:Extractor",
-      "~CUSTOM:Xpbottle",
-      "~CUSTOM:Flatchestupgrade",
-      "~CUSTOM:Pesyblpotion",
-      "~CUSTOM:Bigringgreenpaladium",
-      "~CUSTOM:Mediumringgreenpaladium",
-      "~CUSTOM:Smallringgreenpaladium",
-      "~CUSTOM:Endiumbigring",
-      "~CUSTOM:Endiummediumring",
-      "~CUSTOM:Endiumsmallring",
-      "~CUSTOM:Bigring",
-      "~CUSTOM:Mediumring",
-      "~CUSTOM:Smallring",
-      "~CUSTOM:Paladiumphone",
-      "~CUSTOM:Compressedxpberry",
-      "~CUSTOM:Xpberry"
-    ],
-    "BIOMES:minecraft:has_structure/igloo": [
-      "~CUSTOM:Frozenforest"
-    ],
     "BIOMES:mod:is_miner_dimension": [
       "CUSTOM:Alternateplaines"
     ],
@@ -48456,9 +48110,6 @@
       "CUSTOM:Forturnemodifier",
       "CUSTOM:Smeltmodifier",
       "CUSTOM:Onemoremodifier"
-    ],
-    "BIOMES:minecraft:has_structure/woodland_mansion": [
-      "~CUSTOM:Forestender"
     ],
     "BLOCKS:minecraft:logs": [
       "CUSTOM:Ostrya_woodLog",
@@ -48471,9 +48122,6 @@
       "CUSTOM:Erable_Log",
       "Blocks.LOG"
     ],
-    "BIOMES:minecraft:has_structure/mineshaft_mesa": [
-      "~CUSTOM:Alternateplaines"
-    ],
     "ITEMS:forge:fuel_coalblock": [
       "Blocks.COAL_BLOCK"
     ],
@@ -48484,9 +48132,6 @@
       "CUSTOM:TitaneOre",
       "CUSTOM:Titaneoredeepslate",
       "CUSTOM:Softenedtitaneore"
-    ],
-    "BIOMES:minecraft:has_structure/bastion_remnant": [
-      "~CUSTOM:Alternateplaines"
     ],
     "BLOCKS:mod:orangeblue": [
       "CUSTOM:Orangeblue0",
@@ -48691,35 +48336,6 @@
       "Blocks.BEEHIVE",
       "Blocks.GLOWSTONE"
     ],
-    "ITEMS:minecraft:axes": [
-      "~CUSTOM:Creativehammer",
-      "~CUSTOM:Creativepotg",
-      "~CUSTOM:Pickaxeofthegodslv13",
-      "~CUSTOM:Pickaxeofthegodslv20",
-      "~CUSTOM:Pickaxeofthegodslv19",
-      "~CUSTOM:Pickaxeofthegodslv18",
-      "~CUSTOM:Pickaxeofthegodslv17",
-      "~CUSTOM:Pickaxeofthegodslv16",
-      "~CUSTOM:Pickaxeofthegodslv15",
-      "~CUSTOM:Pickaxeofthegodslv14",
-      "~CUSTOM:Pickaxeofthegodslv12",
-      "~CUSTOM:Pickaxeofthegodslv11",
-      "~CUSTOM:Pickaxeofthegodslv10",
-      "~CUSTOM:Pickaxeofthegodslv9",
-      "~CUSTOM:Pickaxeofthegodslv8",
-      "~CUSTOM:Pickaxeofthegodslv7",
-      "~CUSTOM:Pickaxeofthegodslv6",
-      "~CUSTOM:Pickaxeofthegodslv5",
-      "~CUSTOM:Pickaxeofthegodslv4",
-      "~CUSTOM:Pickaxeofthegodslv3",
-      "~CUSTOM:Pickaxeofthegodslv2",
-      "~CUSTOM:Pickaxeofthegodslv1",
-      "~CUSTOM:Paladiumgreenaxe",
-      "~CUSTOM:EndiumAxe",
-      "~CUSTOM:AmethysteAxe",
-      "~CUSTOM:TitaneAxe",
-      "~CUSTOM:PaladiumAxe"
-    ],
     "BLOCKS:c:obsidian": [
       "CUSTOM:Renforcedobsidian",
       "Blocks.OBSIDIAN",
@@ -48762,30 +48378,6 @@
       "CUSTOM:Endiumfastswordhead",
       "CUSTOM:Greenpaladiumfastswordhead",
       "CUSTOM:Endiumshovelhead"
-    ],
-    "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:HoodHelmetArmor.helmet",
-      "~CUSTOM:Pigarmor.helmet",
-      "~CUSTOM:Mixedendiumarmor.helmet",
-      "~CUSTOM:Paladiumarmorcustom10.helmet",
-      "~CUSTOM:Paladiumarmorcustom9.helmet",
-      "~CUSTOM:Paladiumarmorcustom8.helmet",
-      "~CUSTOM:Paladiumarmorcustom7.helmet",
-      "~CUSTOM:Paladiumarmorcustom6.helmet",
-      "~CUSTOM:Paladiumarmorcustom5.helmet",
-      "~CUSTOM:Paladiumarmorcustom4.helmet",
-      "~CUSTOM:Paladiumarmorcustom3.helmet",
-      "~CUSTOM:Paladiumarmorcustom2.helmet",
-      "~CUSTOM:Paladiumarmorcustom1.helmet",
-      "~CUSTOM:Ranbowarmor.helmet",
-      "~CUSTOM:Invisiblearmor.helmet",
-      "~CUSTOM:Scuba.helmet",
-      "~CUSTOM:Travelarmor.helmet",
-      "~CUSTOM:Greenpaladiumarmor.helmet",
-      "~CUSTOM:EndiumArmor.helmet",
-      "~CUSTOM:AmethysteArmor.helmet",
-      "~CUSTOM:TitaneArmor.helmet",
-      "~CUSTOM:PaladiumArmor.helmet"
     ],
     "BLOCKS:forge:air": [
       "Blocks.AIR",
@@ -48834,9 +48426,6 @@
       "CUSTOM:Softenedredstoneore",
       "CUSTOM:Softenedlapislazulisore"
     ],
-    "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Smelt"
-    ],
     "BLOCKS:forge:plant": [
       "CUSTOM:Eggplant0",
       "CUSTOM:Eggplant1",
@@ -48874,201 +48463,10 @@
       "CUSTOM:Judeecercis_Wood",
       "CUSTOM:Judeecercis_Log"
     ],
-    "BIOMES:minecraft:has_structure/mineshaft": [
-      "~CUSTOM:Forestender"
-    ],
-    "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~CUSTOM:Softstone"
-    ],
-    "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:Smelt"
-    ],
     "ITEMS:mod:green_paladium_ring": [
       "CUSTOM:Smallringgreenpaladium",
       "CUSTOM:Mediumringgreenpaladium",
       "CUSTOM:Bigringgreenpaladium"
-    ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:EndiumPortalAngleBlock",
-      "~CUSTOM:CauldronCore",
-      "~CUSTOM:Cauldron",
-      "~CUSTOM:PaladiumTank",
-      "~CUSTOM:Titanetank",
-      "~CUSTOM:Goldentank",
-      "~CUSTOM:Amethysttank",
-      "~CUSTOM:Moneyanvil",
-      "~CUSTOM:Knockbackobsidian",
-      "~CUSTOM:Frozenobsidian",
-      "~CUSTOM:Paladiuminfusedobsidian",
-      "~CUSTOM:Titaneinfusedobsidian",
-      "~CUSTOM:Amethystinfusedobsidian",
-      "~CUSTOM:Diamondinfusedobsidian",
-      "~CUSTOM:Emptyspawner",
-      "~CUSTOM:Spawncontroller",
-      "~CUSTOM:Dankablock",
-      "~CUSTOM:Flowertotem",
-      "~CUSTOM:Softenedlapislazulisore",
-      "~CUSTOM:Softenedredstoneore",
-      "~CUSTOM:Softeneddiamondore",
-      "~CUSTOM:Softenedgoldore",
-      "~CUSTOM:Softenedironore",
-      "~CUSTOM:Softcoalore",
-      "~CUSTOM:Cobbledsoftstonestairs",
-      "~CUSTOM:Cobbledsoftstoneslab",
-      "~CUSTOM:Softstonestairs",
-      "~CUSTOM:Softstoneslab",
-      "~CUSTOM:Cobbleledsoftstone",
-      "~CUSTOM:Softenedendiumnuggetore",
-      "~CUSTOM:Softenedfindiumore",
-      "~CUSTOM:Softenedgreenpaladiumore",
-      "~CUSTOM:Softenedtrixiumore",
-      "~CUSTOM:Softenedpaladiumore",
-      "~CUSTOM:Softenedtitaneore",
-      "~CUSTOM:Softenedamethystore",
-      "~CUSTOM:Softstone",
-      "~CUSTOM:Witheredobsidian13",
-      "~CUSTOM:Witheredobsidian12",
-      "~CUSTOM:Witheredobsidian11",
-      "~CUSTOM:Witheredobsidian10",
-      "~CUSTOM:Witheredobsidian9",
-      "~CUSTOM:Witheredobsidian8",
-      "~CUSTOM:Witheredobsidian7",
-      "~CUSTOM:Witheredobsidian6",
-      "~CUSTOM:Witheredobsidian5",
-      "~CUSTOM:Witheredobsidian4",
-      "~CUSTOM:Witheredobsidian3",
-      "~CUSTOM:Witheredobsidian2",
-      "~CUSTOM:Witheredobsidian1",
-      "~CUSTOM:Witheredobsidian0",
-      "~CUSTOM:Rotatedorangeslimepad",
-      "~CUSTOM:Rotatedblueslimepad",
-      "~CUSTOM:Rotatedpurpleslimepad",
-      "~CUSTOM:Rotatedredslimepad",
-      "~CUSTOM:Rotatedslimepad",
-      "~CUSTOM:Cobblebreakerserver",
-      "~CUSTOM:Trixiumstairs",
-      "~CUSTOM:Trixiumslab",
-      "~CUSTOM:Paladiumhoppersouth",
-      "~CUSTOM:Paladiumhopper",
-      "~CUSTOM:Purpleslimepad",
-      "~CUSTOM:Orangeslimepad",
-      "~CUSTOM:Blueslimepad",
-      "~CUSTOM:Redslimepad",
-      "~CUSTOM:Megaboomobsidian",
-      "~CUSTOM:Boomobsidian",
-      "~CUSTOM:Exctractor",
-      "~CUSTOM:Poisonobsidian",
-      "~CUSTOM:Slimeobsidian",
-      "~CUSTOM:Hardenedobsidianslab",
-      "~CUSTOM:Obsidianslab",
-      "~CUSTOM:Obsidianstairs",
-      "~CUSTOM:Renforcedobsidianstairs",
-      "~CUSTOM:Unknownblock",
-      "~CUSTOM:Drawbridge",
-      "~CUSTOM:Printingpress",
-      "~CUSTOM:Cobblebreaker",
-      "~CUSTOM:Onlinedetectoron",
-      "~CUSTOM:Onlinedetector",
-      "~CUSTOM:Paladiumobsidianspike",
-      "~CUSTOM:Titaneobsidianspike",
-      "~CUSTOM:Amethystobsidianspike",
-      "~CUSTOM:Diamondobsidianspike",
-      "~CUSTOM:Goldenobsidianspike",
-      "~CUSTOM:Ironobsidianspike",
-      "~CUSTOM:Spikeobsidianwood",
-      "~CUSTOM:Woddenspike",
-      "~CUSTOM:Titanechestv2",
-      "~CUSTOM:Endiumchestv2",
-      "~CUSTOM:Amethystchestv2",
-      "~CUSTOM:Greenpaladiumchestv2",
-      "~CUSTOM:Paladiumchestv2",
-      "~CUSTOM:Caveblock",
-      "~CUSTOM:Trixiumblock",
-      "~CUSTOM:Trixiumore",
-      "~CUSTOM:Findiumoredeepslate",
-      "~CUSTOM:Endiumnuggetoredeepslate",
-      "~CUSTOM:Paladiumgreenoredeepslate",
-      "~CUSTOM:Trixiumoredeepslate",
-      "~CUSTOM:Paladiumoredeepslate",
-      "~CUSTOM:Titaneoredeepslate",
-      "~CUSTOM:Amethystoredeepslate",
-      "~CUSTOM:Alarmon",
-      "~CUSTOM:Downloader",
-      "~CUSTOM:Endiumchest",
-      "~CUSTOM:Greenpaladiumchest",
-      "~CUSTOM:Amethystchest",
-      "~CUSTOM:Paladiumchest",
-      "~CUSTOM:Titanechest",
-      "~CUSTOM:Hdvblock",
-      "~CUSTOM:Uploader",
-      "~CUSTOM:Greenpaladiumslab",
-      "~CUSTOM:Greenpaladiumstairs",
-      "~CUSTOM:Endiumstairs",
-      "~CUSTOM:Endiumslab",
-      "~CUSTOM:Endiumnuggetore",
-      "~CUSTOM:Blackluckyblock",
-      "~CUSTOM:Elevatorcyan",
-      "~CUSTOM:Elevatorlightgray",
-      "~CUSTOM:Elevatorgray",
-      "~CUSTOM:Elevatorpurple",
-      "~CUSTOM:Elevatororange",
-      "~CUSTOM:Elevatorbrown",
-      "~CUSTOM:Elevatorlightgreen",
-      "~CUSTOM:Elevatorlightblue",
-      "~CUSTOM:Elevatorpink",
-      "~CUSTOM:Elevatorgreen",
-      "~CUSTOM:Elevatorblue",
-      "~CUSTOM:Elevatorred",
-      "~CUSTOM:Elevatorwhite",
-      "~CUSTOM:Amethystslab",
-      "~CUSTOM:Amethyststairs",
-      "~CUSTOM:Paladiumslab",
-      "~CUSTOM:Paladiumstairs",
-      "~CUSTOM:Trixiumnbtblock",
-      "~CUSTOM:Fakepaladiumore",
-      "~CUSTOM:Megasafechest",
-      "~CUSTOM:Alarm",
-      "~CUSTOM:Truetresure",
-      "~CUSTOM:Falsetresure",
-      "~CUSTOM:Luckyblock",
-      "~CUSTOM:Paladiummachine",
-      "~CUSTOM:Tcv2",
-      "~CUSTOM:Loadblock1t",
-      "~CUSTOM:Titanestairs",
-      "~CUSTOM:Titaneslab",
-      "~CUSTOM:Paladiumforge",
-      "~CUSTOM:Paladiumspike",
-      "~CUSTOM:Titanespike",
-      "~CUSTOM:Ametystespike",
-      "~CUSTOM:Diamondspike",
-      "~CUSTOM:Spikegold",
-      "~CUSTOM:Ironspike",
-      "~CUSTOM:Lavaobsidian",
-      "~CUSTOM:Fakewaterobsidian",
-      "~CUSTOM:Compactedobsidian",
-      "~CUSTOM:Obsidiandoor",
-      "~CUSTOM:Obsidiantrapdoor",
-      "~CUSTOM:Paladiumfurnaceon",
-      "~CUSTOM:Paladiumfurnace",
-      "~CUSTOM:Grinderblock",
-      "~CUSTOM:Grinderframe",
-      "~CUSTOM:Grindercasing",
-      "~CUSTOM:Alchimet1",
-      "~CUSTOM:PaladiumGreenblock",
-      "~CUSTOM:PaladiumGreenore",
-      "~CUSTOM:Slimepad",
-      "~CUSTOM:Findiumslab",
-      "~CUSTOM:Findiumstairs",
-      "~CUSTOM:FindiumBlock",
-      "~CUSTOM:FindiumOre",
-      "~CUSTOM:EndiumBlock",
-      "~CUSTOM:Paladiumcrusher",
-      "~CUSTOM:AmethysteBlock",
-      "~CUSTOM:AmethysteOre",
-      "~CUSTOM:TitaneBlock",
-      "~CUSTOM:TitaneOre",
-      "~CUSTOM:PaladiumBlock",
-      "~CUSTOM:PaladiumOre"
     ],
     "ITEMS:mod:speed_stick": [
       "CUSTOM:Speedstick"
@@ -49093,48 +48491,15 @@
     "ITEMS:mod:paladium_ring_medium": [
       "CUSTOM:Mediumring"
     ],
-    "ITEMS:minecraft:foot_armor": [
-      "~CUSTOM:Pigarmor.boots",
-      "~CUSTOM:Mixedendiumarmor.boots",
-      "~CUSTOM:Paladiumarmorcustom10.boots",
-      "~CUSTOM:Paladiumarmorcustom9.boots",
-      "~CUSTOM:Paladiumarmorcustom8.boots",
-      "~CUSTOM:Paladiumarmorcustom7.boots",
-      "~CUSTOM:Paladiumarmorcustom6.boots",
-      "~CUSTOM:Paladiumarmorcustom5.boots",
-      "~CUSTOM:Paladiumarmorcustom4.boots",
-      "~CUSTOM:Paladiumarmorcustom3.boots",
-      "~CUSTOM:Paladiumarmorcustom2.boots",
-      "~CUSTOM:Paladiumarmorcustom1.boots",
-      "~CUSTOM:Ranbowarmor.boots",
-      "~CUSTOM:Invisiblearmor.boots",
-      "~CUSTOM:Travelarmor.boots",
-      "~CUSTOM:Weighted.boots",
-      "~CUSTOM:Greenpaladiumarmor.boots",
-      "~CUSTOM:EndiumArmor.boots",
-      "~CUSTOM:AmethysteArmor.boots",
-      "~CUSTOM:TitaneArmor.boots",
-      "~CUSTOM:PaladiumArmor.boots"
-    ],
     "ITEMS:mod:backpack": [
       "CUSTOM:Amethystbackpack",
       "CUSTOM:Titanebackpack",
       "CUSTOM:Paladumbackpack",
       "CUSTOM:Endiumbackpack"
     ],
-    "BIOMES:minecraft:has_structure/buried_treasure": [
-      "~CUSTOM:Alternateplaines"
-    ],
     "ITEMS:mod:trixium_depo": [
       "CUSTOM:Trixium",
       "CUSTOM:Trixiumblock"
-    ],
-    "ITEMS:minecraft:hoes": [
-      "~CUSTOM:Endiumhoe",
-      "~CUSTOM:Greenpaladiumhoe",
-      "~CUSTOM:Paladiumhoe",
-      "~CUSTOM:Titanehoe",
-      "~CUSTOM:Amethtysthoe"
     ],
     "BLOCKS:mod:chervil": [
       "CUSTOM:Chervil1",
@@ -49164,67 +48529,11 @@
       "CUSTOM:Orangeblue",
       "CUSTOM:Chervil"
     ],
-    "ITEMS:minecraft:swords": [
-      "~CUSTOM:Endiumfastsword",
-      "~CUSTOM:Greenpaladiumfastsword",
-      "~CUSTOM:Creativehammer",
-      "~CUSTOM:Endiumbroadsword",
-      "~CUSTOM:Greenpaladiumbroadsword",
-      "~CUSTOM:Creativepotg",
-      "~CUSTOM:Infernalknocker",
-      "~CUSTOM:Pickaxeofthegodslv13",
-      "~CUSTOM:Pickaxeofthegodslv20",
-      "~CUSTOM:Pickaxeofthegodslv19",
-      "~CUSTOM:Pickaxeofthegodslv18",
-      "~CUSTOM:Pickaxeofthegodslv17",
-      "~CUSTOM:Pickaxeofthegodslv16",
-      "~CUSTOM:Pickaxeofthegodslv15",
-      "~CUSTOM:Pickaxeofthegodslv14",
-      "~CUSTOM:Pickaxeofthegodslv12",
-      "~CUSTOM:Pickaxeofthegodslv11",
-      "~CUSTOM:Pickaxeofthegodslv10",
-      "~CUSTOM:Pickaxeofthegodslv9",
-      "~CUSTOM:Pickaxeofthegodslv8",
-      "~CUSTOM:Pickaxeofthegodslv7",
-      "~CUSTOM:Pickaxeofthegodslv6",
-      "~CUSTOM:Pickaxeofthegodslv5",
-      "~CUSTOM:Pickaxeofthegodslv4",
-      "~CUSTOM:Pickaxeofthegodslv3",
-      "~CUSTOM:Pickaxeofthegodslv2",
-      "~CUSTOM:Pickaxeofthegodslv1",
-      "~CUSTOM:Paladiumfastsword",
-      "~CUSTOM:Titanefastsword",
-      "~CUSTOM:Amethystefastsword",
-      "~CUSTOM:Amethystebroadsword",
-      "~CUSTOM:Titanebroadsword",
-      "~CUSTOM:Paladiumbroadsword",
-      "~CUSTOM:Paladiumgreensword",
-      "~CUSTOM:EndiumSword",
-      "~CUSTOM:AmethysteSword",
-      "~CUSTOM:TitaneSword",
-      "~CUSTOM:PaladiumSword"
-    ],
-    "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:Smelt"
-    ],
     "ITEMS:neoforge:stick": [
       "CUSTOM:Paladiumstick",
       "CUSTOM:Titanestick",
       "CUSTOM:Amethytestick",
       "Items.STICK"
-    ],
-    "BIOMES:minecraft:has_structure/nether_fortress": [
-      "~CUSTOM:Alternateplaines"
-    ],
-    "ITEMS:minecraft:meat": [
-      "~CUSTOM:Spacefood"
-    ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:Clashkumiz",
-      "~CUSTOM:Roulettepaladiennedisc",
-      "~CUSTOM:Antifuzedisc",
-      "~CUSTOM:Fuzedisc",
-      "~CUSTOM:Miichalenge"
     ],
     "ITEMS:forge:fuel_coal": [
       "Items.COAL#0",
@@ -49258,64 +48567,6 @@
       "CUSTOM:Paladiumoredeepslate",
       "CUSTOM:Paladiumgreenoredeepslate"
     ],
-    "BLOCKS:minecraft:mineable/axe": [
-      "~CUSTOM:EndiumPortalBlock",
-      "~CUSTOM:PaladiumPortalBlock",
-      "~CUSTOM:TitanePortalBlock",
-      "~CUSTOM:AmethystPortalblock",
-      "~CUSTOM:ShinyOstryaWood",
-      "~CUSTOM:ShinyErablewood",
-      "~CUSTOM:Shinyjudeecerciswood",
-      "~CUSTOM:Shinyjacarandawood",
-      "~CUSTOM:DeadButton",
-      "~CUSTOM:DeadPressurePlate",
-      "~CUSTOM:DeadTrapdoor",
-      "~CUSTOM:DeadDoor",
-      "~CUSTOM:DeadFenceGate",
-      "~CUSTOM:DeadFence",
-      "~CUSTOM:DeadSlab",
-      "~CUSTOM:DeadStairs",
-      "~CUSTOM:DeadPlanks",
-      "~CUSTOM:StrippedDeadWood",
-      "~CUSTOM:StrippedDeadLog",
-      "~CUSTOM:DeadWood",
-      "~CUSTOM:DeadLog",
-      "~CUSTOM:Totemfertility",
-      "~CUSTOM:Typesettingtable",
-      "~CUSTOM:Erabletrapdoor",
-      "~CUSTOM:Jacarandadoor",
-      "~CUSTOM:Erabledoor",
-      "~CUSTOM:Ostryadoor",
-      "~CUSTOM:Judeecercisdoor",
-      "~CUSTOM:Erable_FenceGate",
-      "~CUSTOM:Erable_Fence",
-      "~CUSTOM:Erable_Slab",
-      "~CUSTOM:Erable_Stairs",
-      "~CUSTOM:Erable_Planks",
-      "~CUSTOM:Erable_Log",
-      "~CUSTOM:Erable_Wood",
-      "~CUSTOM:Judeecercis_FenceGate",
-      "~CUSTOM:Judeecercis_Fence",
-      "~CUSTOM:Judeecercis_Slab",
-      "~CUSTOM:Judeecercis_Stairs",
-      "~CUSTOM:Judeecercis_Planks",
-      "~CUSTOM:Judeecercis_Log",
-      "~CUSTOM:Judeecercis_Wood",
-      "~CUSTOM:Jacaranda_FenceGate",
-      "~CUSTOM:Jacaranda_Fence",
-      "~CUSTOM:Jacaranda_Slab",
-      "~CUSTOM:Jacaranda_Stairs",
-      "~CUSTOM:Jacaranda_Planks",
-      "~CUSTOM:Jacaranda_Log",
-      "~CUSTOM:Jacaranda_Wood",
-      "~CUSTOM:Ostrya_woodFenceGate",
-      "~CUSTOM:Ostrya_woodFence",
-      "~CUSTOM:Ostrya_woodSlab",
-      "~CUSTOM:Ostrya_woodStairs",
-      "~CUSTOM:Ostrya_woodPlanks",
-      "~CUSTOM:Ostrya_woodLog",
-      "~CUSTOM:Ostrya_woodWood"
-    ],
     "ITEMS:neoforge:leather": [
       "Items.LEATHER"
     ],
@@ -49342,9 +48593,6 @@
       "CUSTOM:Paladiumarmorcustom3.boots",
       "TAG:mod:paladiumarmorstag"
     ],
-    "BIOMES:minecraft:has_structure/ruined_portal_standard": [
-      "~CUSTOM:Alternateplaines"
-    ],
     "BLOCKS:neoforge:paladium_ore": [
       "CUSTOM:PaladiumOre",
       "CUSTOM:Paladiumoredeepslate",
@@ -49368,35 +48616,6 @@
     "ITEMS:forge:jacaranda__log": [
       "CUSTOM:Jacaranda_Wood",
       "CUSTOM:Jacaranda_Log"
-    ],
-    "ITEMS:minecraft:leg_armor": [
-      "~CUSTOM:Pigarmor.legs",
-      "~CUSTOM:Mixedendiumarmor.legs",
-      "~CUSTOM:Paladiumarmorcustom10.legs",
-      "~CUSTOM:Paladiumarmorcustom9.legs",
-      "~CUSTOM:Paladiumarmorcustom8.legs",
-      "~CUSTOM:Paladiumarmorcustom7.legs",
-      "~CUSTOM:Paladiumarmorcustom6.legs",
-      "~CUSTOM:Paladiumarmorcustom5.legs",
-      "~CUSTOM:Paladiumarmorcustom4.legs",
-      "~CUSTOM:Paladiumarmorcustom3.legs",
-      "~CUSTOM:Paladiumarmorcustom2.legs",
-      "~CUSTOM:Paladiumarmorcustom1.legs",
-      "~CUSTOM:Ranbowarmor.legs",
-      "~CUSTOM:Invisiblearmor.legs",
-      "~CUSTOM:Travelarmor.legs",
-      "~CUSTOM:Greenpaladiumarmor.legs",
-      "~CUSTOM:EndiumArmor.legs",
-      "~CUSTOM:AmethysteArmor.legs",
-      "~CUSTOM:TitaneArmor.legs",
-      "~CUSTOM:PaladiumArmor.legs"
-    ],
-    "BLOCKS:minecraft:wooden_fences": [
-      "~CUSTOM:DeadFence",
-      "~CUSTOM:Erable_Fence",
-      "~CUSTOM:Judeecercis_Fence",
-      "~CUSTOM:Jacaranda_Fence",
-      "~CUSTOM:Ostrya_woodFence"
     ],
     "BLOCKS:mod:tile_entity": [
       "TAG:forge:chest",
@@ -49440,35 +48659,6 @@
     ],
     "ENTITIES:mod:creeper": [
       "EntityCreeper"
-    ],
-    "BLOCKS:minecraft:trapdoors": [
-      "~CUSTOM:Obsidiantrapdoor"
-    ],
-    "BLOCKS:minecraft:doors": [
-      "~CUSTOM:Obsidiandoor"
-    ],
-    "BLOCKS:minecraft:mob_interactable_doors": [
-      "~CUSTOM:Obsidiandoor"
-    ],
-    "BLOCKS:minecraft:wooden_doors": [
-      "~CUSTOM:DeadDoor",
-      "~CUSTOM:Jacarandadoor",
-      "~CUSTOM:Erabledoor",
-      "~CUSTOM:Ostryadoor",
-      "~CUSTOM:Judeecercisdoor"
-    ],
-    "BLOCKS:minecraft:wooden_trapdoors": [
-      "~CUSTOM:DeadTrapdoor",
-      "~CUSTOM:Erabletrapdoor"
-    ],
-    "ENCHANTMENTS:minecraft:curse": [
-      "~CUSTOM:Nomodifier",
-      "~CUSTOM:Onemoreupgradeenchant",
-      "~CUSTOM:Chargedenchant",
-      "~CUSTOM:Autosmeltpotg",
-      "~CUSTOM:Bighole",
-      "~CUSTOM:Speed",
-      "~CUSTOM:Hammerforturne"
     ],
     "BLOCKS:minecraft:mv_blocks": [
       "CUSTOM:Softstone",
@@ -49727,12 +48917,6 @@
       "CUSTOM:Spawnerupgradelooting",
       "CUSTOM:Spawnerupgradespeed"
     ],
-    "BLOCKS:minecraft:wooden_pressure_plates": [
-      "~CUSTOM:DeadPressurePlate"
-    ],
-    "BLOCKS:minecraft:wooden_buttons": [
-      "~CUSTOM:DeadButton"
-    ],
     "BLOCKS:mod:dead_logs": [
       "CUSTOM:DeadLog",
       "CUSTOM:DeadWood",
@@ -49922,160 +49106,1002 @@
       "Blocks.TRAPPED_CHEST"
     ],
     "ITEMS:palamod:paladium_pickaxe_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~PaladiumPickaxe@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_axe_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~PaladiumAxe@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_sword_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~PaladiumSword@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_shovel_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~PaladiumShovel@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~PaladiumArmor@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:titane_pickaxe_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~TitanePickaxe@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:titane_axe_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~TitaneAxe@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:titane_sword_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~TitaneSword@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:titane_shovel_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~TitaneShovel@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:titane_armor_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~TitaneArmor@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:amethyst_pickaxe_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~AmethystePickaxe@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:amethyst_axe_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~AmethysteAxe@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:amethyst_sword_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~AmethysteSword@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:amethyst_shovel_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~AmethysteShovel@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:amethyst_armor_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~AmethysteArmor@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:endium_pickaxe_repair_items": [
-      "~CUSTOM:EndiumIngot"
+      "~EndiumPickaxe@CUSTOM:EndiumIngot"
     ],
     "ITEMS:palamod:endium_axe_repair_items": [
-      "~CUSTOM:EndiumIngot"
+      "~EndiumAxe@CUSTOM:EndiumIngot"
     ],
     "ITEMS:palamod:endium_sword_repair_items": [
-      "~CUSTOM:EndiumIngot"
+      "~EndiumSword@CUSTOM:EndiumIngot"
     ],
     "ITEMS:palamod:endium_armor_repair_items": [
-      "~CUSTOM:EndiumIngot"
+      "~EndiumArmor@CUSTOM:EndiumIngot"
     ],
     "ITEMS:palamod:green_paladium_pickaxe_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumgreenpickaxe@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:green_paladium_axe_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumgreenaxe@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:green_paladium_sword_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumgreensword@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:green_paladium_shovel_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumgreenshovel@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:amethyst_fastsword_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~Amethystefastsword@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:titane_fastsword_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~Titanefastsword@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:paladium_fastsword_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumfastsword@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:green_paladium_armor_repair_items": [
-      "~CUSTOM:PaladiumGreeningot"
+      "~Greenpaladiumarmor@CUSTOM:PaladiumGreeningot"
     ],
     "ITEMS:palamod:amethyst_excavator_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~Amethystexacvator@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:titane_excavator_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~Titaneexcavator@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:paladium_excavator_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumexcavator@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:invisible_armor_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Invisiblearmor@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom1_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom1@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom2_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom2@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom3_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom3@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:green_paladum_excavator_repair_items": [
-      "~CUSTOM:PaladiumGreeningot"
+      "~Greenpaladumexcator@CUSTOM:PaladiumGreeningot"
     ],
     "ITEMS:palamod:green_paladium_fastsword_repair_items": [
-      "~CUSTOM:PaladiumGreeningot"
+      "~Greenpaladiumfastsword@CUSTOM:PaladiumGreeningot"
     ],
     "ITEMS:palamod:endium_fastsword_repair_items": [
-      "~CUSTOM:Endiumnugget"
+      "~Endiumfastsword@CUSTOM:Endiumnugget"
     ],
     "ITEMS:palamod:endium_shovel_repair_items": [
-      "~CUSTOM:Endiumnugget"
+      "~Endiumshovel@CUSTOM:Endiumnugget"
     ],
     "ITEMS:palamod:amethyst_hoe_repair_items": [
-      "~CUSTOM:Amethyste"
+      "~Amethtysthoe@CUSTOM:Amethyste"
     ],
     "ITEMS:palamod:titane_hoe_repair_items": [
-      "~CUSTOM:TitaneIngot"
+      "~Titanehoe@CUSTOM:TitaneIngot"
     ],
     "ITEMS:palamod:paladium_hoe_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumhoe@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:green_paladium_hoe_repair_items": [
-      "~CUSTOM:PaladiumGreeningot"
+      "~Greenpaladiumhoe@CUSTOM:PaladiumGreeningot"
     ],
     "ITEMS:palamod:endium_hoe_repair_items": [
-      "~CUSTOM:Endiumnugget"
+      "~Endiumhoe@CUSTOM:Endiumnugget"
     ],
     "ITEMS:palamod:paladium_armor_custom4_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom4@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom5_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom5@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom6_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom6@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom7_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom7@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom8_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom8@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom9_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom9@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:paladium_armor_custom10_repair_items": [
-      "~CUSTOM:PaladiumIngot"
+      "~Paladiumarmorcustom10@CUSTOM:PaladiumIngot"
     ],
     "ITEMS:palamod:mixed_endium_armor_repair_items": [
-      "~CUSTOM:Mixedendiumingot"
+      "~Mixedendiumarmor@CUSTOM:Mixedendiumingot"
     ],
     "ITEMS:palamod:pig_armor_repair_items": [
-      "~Items.PORKCHOP"
+      "~Pigarmor@Items.PORKCHOP"
+    ],
+    "VILLAGER_TRADES:palamod:santa/level_1": [
+      "~Endiumtrade@endiumtrade_2"
+    ],
+    "VILLAGER_TRADES:palamod:santa/level_2": [
+      "~Endiumtrade@endiumtrade_3"
+    ],
+    "VILLAGER_TRADES:palamod:santa/level_3": [
+      "~Endiumtrade@endiumtrade_4"
+    ],
+    "VILLAGER_TRADES:palamod:santa/level_4": [
+      "~Endiumtrade@endiumtrade_6",
+      "~Endiumtrade@endiumtrade_1"
+    ],
+    "VILLAGER_TRADES:palamod:santa/level_5": [
+      "~Endiumtrade@endiumtrade_5",
+      "~Endiumtrade@endiumtrade_0"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
+      "~CauldronCore@CUSTOM:CauldronCore",
+      "~Cauldron@CUSTOM:Cauldron",
+      "~PaladiumTank@CUSTOM:PaladiumTank",
+      "~Titanetank@CUSTOM:Titanetank",
+      "~Goldentank@CUSTOM:Goldentank",
+      "~Amethysttank@CUSTOM:Amethysttank",
+      "~Moneyanvil@CUSTOM:Moneyanvil",
+      "~Knockbackobsidian@CUSTOM:Knockbackobsidian",
+      "~Frozenobsidian@CUSTOM:Frozenobsidian",
+      "~Paladiuminfusedobsidian@CUSTOM:Paladiuminfusedobsidian",
+      "~Titaneinfusedobsidian@CUSTOM:Titaneinfusedobsidian",
+      "~Amethystinfusedobsidian@CUSTOM:Amethystinfusedobsidian",
+      "~Diamondinfusedobsidian@CUSTOM:Diamondinfusedobsidian",
+      "~Emptyspawner@CUSTOM:Emptyspawner",
+      "~Spawncontroller@CUSTOM:Spawncontroller",
+      "~Dankablock@CUSTOM:Dankablock",
+      "~Flowertotem@CUSTOM:Flowertotem",
+      "~Softenedlapislazulisore@CUSTOM:Softenedlapislazulisore",
+      "~Softenedredstoneore@CUSTOM:Softenedredstoneore",
+      "~Softeneddiamondore@CUSTOM:Softeneddiamondore",
+      "~Softenedgoldore@CUSTOM:Softenedgoldore",
+      "~Softenedironore@CUSTOM:Softenedironore",
+      "~Softcoalore@CUSTOM:Softcoalore",
+      "~Cobbledsoftstonestairs@CUSTOM:Cobbledsoftstonestairs",
+      "~Cobbledsoftstoneslab@CUSTOM:Cobbledsoftstoneslab",
+      "~Softstonestairs@CUSTOM:Softstonestairs",
+      "~Softstoneslab@CUSTOM:Softstoneslab",
+      "~Cobbleledsoftstone@CUSTOM:Cobbleledsoftstone",
+      "~Softenedendiumnuggetore@CUSTOM:Softenedendiumnuggetore",
+      "~Softenedfindiumore@CUSTOM:Softenedfindiumore",
+      "~Softenedgreenpaladiumore@CUSTOM:Softenedgreenpaladiumore",
+      "~Softenedtrixiumore@CUSTOM:Softenedtrixiumore",
+      "~Softenedpaladiumore@CUSTOM:Softenedpaladiumore",
+      "~Softenedtitaneore@CUSTOM:Softenedtitaneore",
+      "~Softenedamethystore@CUSTOM:Softenedamethystore",
+      "~Softstone@CUSTOM:Softstone",
+      "~Witheredobsidian13@CUSTOM:Witheredobsidian13",
+      "~Witheredobsidian12@CUSTOM:Witheredobsidian12",
+      "~Witheredobsidian11@CUSTOM:Witheredobsidian11",
+      "~Witheredobsidian10@CUSTOM:Witheredobsidian10",
+      "~Witheredobsidian9@CUSTOM:Witheredobsidian9",
+      "~Witheredobsidian8@CUSTOM:Witheredobsidian8",
+      "~Witheredobsidian7@CUSTOM:Witheredobsidian7",
+      "~Witheredobsidian6@CUSTOM:Witheredobsidian6",
+      "~Witheredobsidian5@CUSTOM:Witheredobsidian5",
+      "~Witheredobsidian4@CUSTOM:Witheredobsidian4",
+      "~Witheredobsidian3@CUSTOM:Witheredobsidian3",
+      "~Witheredobsidian2@CUSTOM:Witheredobsidian2",
+      "~Witheredobsidian1@CUSTOM:Witheredobsidian1",
+      "~Witheredobsidian0@CUSTOM:Witheredobsidian0",
+      "~Rotatedorangeslimepad@CUSTOM:Rotatedorangeslimepad",
+      "~Rotatedblueslimepad@CUSTOM:Rotatedblueslimepad",
+      "~Rotatedpurpleslimepad@CUSTOM:Rotatedpurpleslimepad",
+      "~Rotatedredslimepad@CUSTOM:Rotatedredslimepad",
+      "~Rotatedslimepad@CUSTOM:Rotatedslimepad",
+      "~Cobblebreakerserver@CUSTOM:Cobblebreakerserver",
+      "~Trixiumstairs@CUSTOM:Trixiumstairs",
+      "~Trixiumslab@CUSTOM:Trixiumslab",
+      "~Paladiumhoppersouth@CUSTOM:Paladiumhoppersouth",
+      "~Paladiumhopper@CUSTOM:Paladiumhopper",
+      "~Purpleslimepad@CUSTOM:Purpleslimepad",
+      "~Orangeslimepad@CUSTOM:Orangeslimepad",
+      "~Blueslimepad@CUSTOM:Blueslimepad",
+      "~Redslimepad@CUSTOM:Redslimepad",
+      "~Megaboomobsidian@CUSTOM:Megaboomobsidian",
+      "~Boomobsidian@CUSTOM:Boomobsidian",
+      "~Exctractor@CUSTOM:Exctractor",
+      "~Poisonobsidian@CUSTOM:Poisonobsidian",
+      "~Slimeobsidian@CUSTOM:Slimeobsidian",
+      "~Hardenedobsidianslab@CUSTOM:Hardenedobsidianslab",
+      "~Obsidianslab@CUSTOM:Obsidianslab",
+      "~Obsidianstairs@CUSTOM:Obsidianstairs",
+      "~Renforcedobsidianstairs@CUSTOM:Renforcedobsidianstairs",
+      "~Unknownblock@CUSTOM:Unknownblock",
+      "~Drawbridge@CUSTOM:Drawbridge",
+      "~Printingpress@CUSTOM:Printingpress",
+      "~Cobblebreaker@CUSTOM:Cobblebreaker",
+      "~Onlinedetectoron@CUSTOM:Onlinedetectoron",
+      "~Onlinedetector@CUSTOM:Onlinedetector",
+      "~Paladiumobsidianspike@CUSTOM:Paladiumobsidianspike",
+      "~Titaneobsidianspike@CUSTOM:Titaneobsidianspike",
+      "~Amethystobsidianspike@CUSTOM:Amethystobsidianspike",
+      "~Diamondobsidianspike@CUSTOM:Diamondobsidianspike",
+      "~Goldenobsidianspike@CUSTOM:Goldenobsidianspike",
+      "~Ironobsidianspike@CUSTOM:Ironobsidianspike",
+      "~Spikeobsidianwood@CUSTOM:Spikeobsidianwood",
+      "~Woddenspike@CUSTOM:Woddenspike",
+      "~Titanechestv2@CUSTOM:Titanechestv2",
+      "~Endiumchestv2@CUSTOM:Endiumchestv2",
+      "~Amethystchestv2@CUSTOM:Amethystchestv2",
+      "~Greenpaladiumchestv2@CUSTOM:Greenpaladiumchestv2",
+      "~Paladiumchestv2@CUSTOM:Paladiumchestv2",
+      "~Caveblock@CUSTOM:Caveblock",
+      "~Trixiumblock@CUSTOM:Trixiumblock",
+      "~Trixiumore@CUSTOM:Trixiumore",
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
+      "~Endiumnuggetoredeepslate@CUSTOM:Endiumnuggetoredeepslate",
+      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
+      "~Trixiumoredeepslate@CUSTOM:Trixiumoredeepslate",
+      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
+      "~Titaneoredeepslate@CUSTOM:Titaneoredeepslate",
+      "~Amethystoredeepslate@CUSTOM:Amethystoredeepslate",
+      "~Alarmon@CUSTOM:Alarmon",
+      "~Downloader@CUSTOM:Downloader",
+      "~Endiumchest@CUSTOM:Endiumchest",
+      "~Greenpaladiumchest@CUSTOM:Greenpaladiumchest",
+      "~Amethystchest@CUSTOM:Amethystchest",
+      "~Paladiumchest@CUSTOM:Paladiumchest",
+      "~Titanechest@CUSTOM:Titanechest",
+      "~Hdvblock@CUSTOM:Hdvblock",
+      "~Uploader@CUSTOM:Uploader",
+      "~Greenpaladiumslab@CUSTOM:Greenpaladiumslab",
+      "~Greenpaladiumstairs@CUSTOM:Greenpaladiumstairs",
+      "~Endiumstairs@CUSTOM:Endiumstairs",
+      "~Endiumslab@CUSTOM:Endiumslab",
+      "~Endiumnuggetore@CUSTOM:Endiumnuggetore",
+      "~Blackluckyblock@CUSTOM:Blackluckyblock",
+      "~Elevatorcyan@CUSTOM:Elevatorcyan",
+      "~Elevatorlightgray@CUSTOM:Elevatorlightgray",
+      "~Elevatorgray@CUSTOM:Elevatorgray",
+      "~Elevatorpurple@CUSTOM:Elevatorpurple",
+      "~Elevatororange@CUSTOM:Elevatororange",
+      "~Elevatorbrown@CUSTOM:Elevatorbrown",
+      "~Elevatorlightgreen@CUSTOM:Elevatorlightgreen",
+      "~Elevatorlightblue@CUSTOM:Elevatorlightblue",
+      "~Elevatorpink@CUSTOM:Elevatorpink",
+      "~Elevatorgreen@CUSTOM:Elevatorgreen",
+      "~Elevatorblue@CUSTOM:Elevatorblue",
+      "~Elevatorred@CUSTOM:Elevatorred",
+      "~Elevatorwhite@CUSTOM:Elevatorwhite",
+      "~Amethystslab@CUSTOM:Amethystslab",
+      "~Amethyststairs@CUSTOM:Amethyststairs",
+      "~Paladiumslab@CUSTOM:Paladiumslab",
+      "~Paladiumstairs@CUSTOM:Paladiumstairs",
+      "~Trixiumnbtblock@CUSTOM:Trixiumnbtblock",
+      "~Fakepaladiumore@CUSTOM:Fakepaladiumore",
+      "~Megasafechest@CUSTOM:Megasafechest",
+      "~Alarm@CUSTOM:Alarm",
+      "~Truetresure@CUSTOM:Truetresure",
+      "~Falsetresure@CUSTOM:Falsetresure",
+      "~Luckyblock@CUSTOM:Luckyblock",
+      "~Paladiummachine@CUSTOM:Paladiummachine",
+      "~Tcv2@CUSTOM:Tcv2",
+      "~Loadblock1t@CUSTOM:Loadblock1t",
+      "~Titanestairs@CUSTOM:Titanestairs",
+      "~Titaneslab@CUSTOM:Titaneslab",
+      "~Paladiumforge@CUSTOM:Paladiumforge",
+      "~Paladiumspike@CUSTOM:Paladiumspike",
+      "~Titanespike@CUSTOM:Titanespike",
+      "~Ametystespike@CUSTOM:Ametystespike",
+      "~Diamondspike@CUSTOM:Diamondspike",
+      "~Spikegold@CUSTOM:Spikegold",
+      "~Ironspike@CUSTOM:Ironspike",
+      "~Lavaobsidian@CUSTOM:Lavaobsidian",
+      "~Fakewaterobsidian@CUSTOM:Fakewaterobsidian",
+      "~Compactedobsidian@CUSTOM:Compactedobsidian",
+      "~Obsidiandoor@CUSTOM:Obsidiandoor",
+      "~Obsidiantrapdoor@CUSTOM:Obsidiantrapdoor",
+      "~Paladiumfurnaceon@CUSTOM:Paladiumfurnaceon",
+      "~Paladiumfurnace@CUSTOM:Paladiumfurnace",
+      "~Grinderblock@CUSTOM:Grinderblock",
+      "~Grinderframe@CUSTOM:Grinderframe",
+      "~Grindercasing@CUSTOM:Grindercasing",
+      "~Alchimet1@CUSTOM:Alchimet1",
+      "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
+      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
+      "~Slimepad@CUSTOM:Slimepad",
+      "~Findiumslab@CUSTOM:Findiumslab",
+      "~Findiumstairs@CUSTOM:Findiumstairs",
+      "~FindiumBlock@CUSTOM:FindiumBlock",
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~EndiumBlock@CUSTOM:EndiumBlock",
+      "~Paladiumcrusher@CUSTOM:Paladiumcrusher",
+      "~AmethysteBlock@CUSTOM:AmethysteBlock",
+      "~AmethysteOre@CUSTOM:AmethysteOre",
+      "~TitaneBlock@CUSTOM:TitaneBlock",
+      "~TitaneOre@CUSTOM:TitaneOre",
+      "~PaladiumBlock@CUSTOM:PaladiumBlock",
+      "~PaladiumOre@CUSTOM:PaladiumOre"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
+      "~PaladiumTank@CUSTOM:PaladiumTank",
+      "~Titanetank@CUSTOM:Titanetank",
+      "~Knockbackobsidian@CUSTOM:Knockbackobsidian",
+      "~Frozenobsidian@CUSTOM:Frozenobsidian",
+      "~Paladiuminfusedobsidian@CUSTOM:Paladiuminfusedobsidian",
+      "~Titaneinfusedobsidian@CUSTOM:Titaneinfusedobsidian",
+      "~Amethystinfusedobsidian@CUSTOM:Amethystinfusedobsidian",
+      "~Diamondinfusedobsidian@CUSTOM:Diamondinfusedobsidian",
+      "~Softenedendiumnuggetore@CUSTOM:Softenedendiumnuggetore",
+      "~Softenedgreenpaladiumore@CUSTOM:Softenedgreenpaladiumore",
+      "~Softenedpaladiumore@CUSTOM:Softenedpaladiumore",
+      "~Softenedtitaneore@CUSTOM:Softenedtitaneore",
+      "~Witheredobsidian13@CUSTOM:Witheredobsidian13",
+      "~Witheredobsidian12@CUSTOM:Witheredobsidian12",
+      "~Witheredobsidian11@CUSTOM:Witheredobsidian11",
+      "~Witheredobsidian10@CUSTOM:Witheredobsidian10",
+      "~Witheredobsidian9@CUSTOM:Witheredobsidian9",
+      "~Witheredobsidian8@CUSTOM:Witheredobsidian8",
+      "~Witheredobsidian7@CUSTOM:Witheredobsidian7",
+      "~Witheredobsidian6@CUSTOM:Witheredobsidian6",
+      "~Witheredobsidian5@CUSTOM:Witheredobsidian5",
+      "~Witheredobsidian4@CUSTOM:Witheredobsidian4",
+      "~Witheredobsidian3@CUSTOM:Witheredobsidian3",
+      "~Witheredobsidian2@CUSTOM:Witheredobsidian2",
+      "~Witheredobsidian1@CUSTOM:Witheredobsidian1",
+      "~Witheredobsidian0@CUSTOM:Witheredobsidian0",
+      "~Megaboomobsidian@CUSTOM:Megaboomobsidian",
+      "~Boomobsidian@CUSTOM:Boomobsidian",
+      "~Poisonobsidian@CUSTOM:Poisonobsidian",
+      "~Slimeobsidian@CUSTOM:Slimeobsidian",
+      "~Paladiumobsidianspike@CUSTOM:Paladiumobsidianspike",
+      "~Titaneobsidianspike@CUSTOM:Titaneobsidianspike",
+      "~Amethystobsidianspike@CUSTOM:Amethystobsidianspike",
+      "~Diamondobsidianspike@CUSTOM:Diamondobsidianspike",
+      "~Goldenobsidianspike@CUSTOM:Goldenobsidianspike",
+      "~Ironobsidianspike@CUSTOM:Ironobsidianspike",
+      "~Spikeobsidianwood@CUSTOM:Spikeobsidianwood",
+      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
+      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
+      "~Trixiumnbtblock@CUSTOM:Trixiumnbtblock",
+      "~Lavaobsidian@CUSTOM:Lavaobsidian",
+      "~Fakewaterobsidian@CUSTOM:Fakewaterobsidian",
+      "~Compactedobsidian@CUSTOM:Compactedobsidian",
+      "~Obsidiandoor@CUSTOM:Obsidiandoor",
+      "~Obsidiantrapdoor@CUSTOM:Obsidiantrapdoor",
+      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
+      "~Findiumstairs@CUSTOM:Findiumstairs",
+      "~TitaneOre@CUSTOM:TitaneOre",
+      "~PaladiumOre@CUSTOM:PaladiumOre"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~Shinyjacarandawood@CUSTOM:Shinyjacarandawood",
+      "~Goldentank@CUSTOM:Goldentank",
+      "~Amethysttank@CUSTOM:Amethysttank",
+      "~Emptyspawner@CUSTOM:Emptyspawner",
+      "~Spawncontroller@CUSTOM:Spawncontroller",
+      "~Softenedlapislazulisore@CUSTOM:Softenedlapislazulisore",
+      "~Softenedredstoneore@CUSTOM:Softenedredstoneore",
+      "~Softenedironore@CUSTOM:Softenedironore",
+      "~Cobbledsoftstonestairs@CUSTOM:Cobbledsoftstonestairs",
+      "~Cobbledsoftstoneslab@CUSTOM:Cobbledsoftstoneslab",
+      "~Cobbleledsoftstone@CUSTOM:Cobbleledsoftstone",
+      "~Trixiumstairs@CUSTOM:Trixiumstairs",
+      "~Trixiumslab@CUSTOM:Trixiumslab",
+      "~Paladiumhoppersouth@CUSTOM:Paladiumhoppersouth",
+      "~Paladiumhopper@CUSTOM:Paladiumhopper",
+      "~Unknownblock@CUSTOM:Unknownblock",
+      "~Printingpress@CUSTOM:Printingpress",
+      "~Onlinedetectoron@CUSTOM:Onlinedetectoron",
+      "~Onlinedetector@CUSTOM:Onlinedetector",
+      "~Woddenspike@CUSTOM:Woddenspike",
+      "~Titanechestv2@CUSTOM:Titanechestv2",
+      "~Endiumchestv2@CUSTOM:Endiumchestv2",
+      "~Amethystchestv2@CUSTOM:Amethystchestv2",
+      "~Greenpaladiumchestv2@CUSTOM:Greenpaladiumchestv2",
+      "~Paladiumchestv2@CUSTOM:Paladiumchestv2",
+      "~Caveblock@CUSTOM:Caveblock",
+      "~Trixiumblock@CUSTOM:Trixiumblock",
+      "~Downloader@CUSTOM:Downloader",
+      "~Endiumchest@CUSTOM:Endiumchest",
+      "~Greenpaladiumchest@CUSTOM:Greenpaladiumchest",
+      "~Amethystchest@CUSTOM:Amethystchest",
+      "~Paladiumchest@CUSTOM:Paladiumchest",
+      "~Titanechest@CUSTOM:Titanechest",
+      "~Uploader@CUSTOM:Uploader",
+      "~Greenpaladiumslab@CUSTOM:Greenpaladiumslab",
+      "~Endiumstairs@CUSTOM:Endiumstairs",
+      "~Endiumslab@CUSTOM:Endiumslab",
+      "~Elevatorcyan@CUSTOM:Elevatorcyan",
+      "~Elevatorlightgray@CUSTOM:Elevatorlightgray",
+      "~Elevatorgray@CUSTOM:Elevatorgray",
+      "~Elevatorpurple@CUSTOM:Elevatorpurple",
+      "~Elevatororange@CUSTOM:Elevatororange",
+      "~Elevatorbrown@CUSTOM:Elevatorbrown",
+      "~Elevatorlightgreen@CUSTOM:Elevatorlightgreen",
+      "~Elevatorlightblue@CUSTOM:Elevatorlightblue",
+      "~Elevatorpink@CUSTOM:Elevatorpink",
+      "~Elevatorgreen@CUSTOM:Elevatorgreen",
+      "~Elevatorblue@CUSTOM:Elevatorblue",
+      "~Elevatorred@CUSTOM:Elevatorred",
+      "~Elevatorwhite@CUSTOM:Elevatorwhite",
+      "~Paladiumslab@CUSTOM:Paladiumslab",
+      "~Paladiumstairs@CUSTOM:Paladiumstairs",
+      "~Fakepaladiumore@CUSTOM:Fakepaladiumore",
+      "~Luckyblock@CUSTOM:Luckyblock",
+      "~Paladiummachine@CUSTOM:Paladiummachine",
+      "~Tcv2@CUSTOM:Tcv2",
+      "~Loadblock1t@CUSTOM:Loadblock1t",
+      "~Titanestairs@CUSTOM:Titanestairs",
+      "~Titaneslab@CUSTOM:Titaneslab",
+      "~Ametystespike@CUSTOM:Ametystespike",
+      "~Diamondspike@CUSTOM:Diamondspike",
+      "~Paladiumfurnaceon@CUSTOM:Paladiumfurnaceon",
+      "~Paladiumfurnace@CUSTOM:Paladiumfurnace",
+      "~Grinderblock@CUSTOM:Grinderblock",
+      "~Grinderframe@CUSTOM:Grinderframe",
+      "~Grindercasing@CUSTOM:Grindercasing",
+      "~Alchimet1@CUSTOM:Alchimet1",
+      "~Findiumslab@CUSTOM:Findiumslab",
+      "~EndiumBlock@CUSTOM:EndiumBlock",
+      "~Paladiumcrusher@CUSTOM:Paladiumcrusher",
+      "~TitaneBlock@CUSTOM:TitaneBlock",
+      "~PaladiumBlock@CUSTOM:PaladiumBlock"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~Endiumseedplanter@CUSTOM:Endiumseedplanter",
+      "~Greenpaladiumseedplanter@CUSTOM:Greenpaladiumseedplanter",
+      "~Paladiumseedplanter@CUSTOM:Paladiumseedplanter",
+      "~Titaneseedplanter@CUSTOM:Titaneseedplanter",
+      "~Amethystseedplanter@CUSTOM:Amethystseedplanter",
+      "~Obsidianpickaxe@CUSTOM:Obsidianpickaxe",
+      "~Creativehammer@CUSTOM:Creativehammer",
+      "~Greenpaladiumhammer@CUSTOM:Greenpaladiumhammer",
+      "~Creativepotg@CUSTOM:Creativepotg",
+      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
+      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
+      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
+      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
+      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
+      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
+      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
+      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
+      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
+      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
+      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
+      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
+      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
+      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
+      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
+      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
+      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
+      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
+      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
+      "~Endiumhammer@CUSTOM:Endiumhammer",
+      "~Paladiumhammer@CUSTOM:Paladiumhammer",
+      "~Titanehammer@CUSTOM:Titanehammer",
+      "~Amethystehammer@CUSTOM:Amethystehammer",
+      "~Paladiumgreenpickaxe@CUSTOM:Paladiumgreenpickaxe",
+      "~Stickofgods@CUSTOM:Stickofgods",
+      "~Damagestick@CUSTOM:Damagestick",
+      "~Strenghtstick@CUSTOM:Strenghtstick",
+      "~Healstick@CUSTOM:Healstick",
+      "~Hyperjumpstick@CUSTOM:Hyperjumpstick",
+      "~Jumpstick@CUSTOM:Jumpstick",
+      "~Speedstick@CUSTOM:Speedstick",
+      "~EndiumPickaxe@CUSTOM:EndiumPickaxe",
+      "~AmethystePickaxe@CUSTOM:AmethystePickaxe",
+      "~TitanePickaxe@CUSTOM:TitanePickaxe",
+      "~PaladiumPickaxe@CUSTOM:PaladiumPickaxe"
+    ],
+    "ITEMS:minecraft:axes": [
+      "~Creativehammer@CUSTOM:Creativehammer",
+      "~Creativepotg@CUSTOM:Creativepotg",
+      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
+      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
+      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
+      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
+      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
+      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
+      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
+      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
+      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
+      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
+      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
+      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
+      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
+      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
+      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
+      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
+      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
+      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
+      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
+      "~Paladiumgreenaxe@CUSTOM:Paladiumgreenaxe",
+      "~EndiumAxe@CUSTOM:EndiumAxe",
+      "~AmethysteAxe@CUSTOM:AmethysteAxe",
+      "~TitaneAxe@CUSTOM:TitaneAxe",
+      "~PaladiumAxe@CUSTOM:PaladiumAxe"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~Endiumfastsword@CUSTOM:Endiumfastsword",
+      "~Greenpaladiumfastsword@CUSTOM:Greenpaladiumfastsword",
+      "~Creativehammer@CUSTOM:Creativehammer",
+      "~Endiumbroadsword@CUSTOM:Endiumbroadsword",
+      "~Greenpaladiumbroadsword@CUSTOM:Greenpaladiumbroadsword",
+      "~Creativepotg@CUSTOM:Creativepotg",
+      "~Infernalknocker@CUSTOM:Infernalknocker",
+      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
+      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
+      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
+      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
+      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
+      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
+      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
+      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
+      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
+      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
+      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
+      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
+      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
+      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
+      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
+      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
+      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
+      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
+      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
+      "~Paladiumfastsword@CUSTOM:Paladiumfastsword",
+      "~Titanefastsword@CUSTOM:Titanefastsword",
+      "~Amethystefastsword@CUSTOM:Amethystefastsword",
+      "~Amethystebroadsword@CUSTOM:Amethystebroadsword",
+      "~Titanebroadsword@CUSTOM:Titanebroadsword",
+      "~Paladiumbroadsword@CUSTOM:Paladiumbroadsword",
+      "~Paladiumgreensword@CUSTOM:Paladiumgreensword",
+      "~EndiumSword@CUSTOM:EndiumSword",
+      "~AmethysteSword@CUSTOM:AmethysteSword",
+      "~TitaneSword@CUSTOM:TitaneSword",
+      "~PaladiumSword@CUSTOM:PaladiumSword"
+    ],
+    "ITEMS:minecraft:shovels": [
+      "~Endiumshovel@CUSTOM:Endiumshovel",
+      "~Greenpaladumexcator@CUSTOM:Greenpaladumexcator",
+      "~Paladiumexcavator@CUSTOM:Paladiumexcavator",
+      "~Titaneexcavator@CUSTOM:Titaneexcavator",
+      "~Amethystexacvator@CUSTOM:Amethystexacvator",
+      "~Paladiumgreenshovel@CUSTOM:Paladiumgreenshovel",
+      "~AmethysteShovel@CUSTOM:AmethysteShovel",
+      "~TitaneShovel@CUSTOM:TitaneShovel",
+      "~PaladiumShovel@CUSTOM:PaladiumShovel"
+    ],
+    "ITEMS:minecraft:head_armor": [
+      "~HoodHelmetArmor@CUSTOM:HoodHelmetArmor.helmet",
+      "~Pigarmor@CUSTOM:Pigarmor.helmet",
+      "~Mixedendiumarmor@CUSTOM:Mixedendiumarmor.helmet",
+      "~Paladiumarmorcustom10@CUSTOM:Paladiumarmorcustom10.helmet",
+      "~Paladiumarmorcustom9@CUSTOM:Paladiumarmorcustom9.helmet",
+      "~Paladiumarmorcustom8@CUSTOM:Paladiumarmorcustom8.helmet",
+      "~Paladiumarmorcustom7@CUSTOM:Paladiumarmorcustom7.helmet",
+      "~Paladiumarmorcustom6@CUSTOM:Paladiumarmorcustom6.helmet",
+      "~Paladiumarmorcustom5@CUSTOM:Paladiumarmorcustom5.helmet",
+      "~Paladiumarmorcustom4@CUSTOM:Paladiumarmorcustom4.helmet",
+      "~Paladiumarmorcustom3@CUSTOM:Paladiumarmorcustom3.helmet",
+      "~Paladiumarmorcustom2@CUSTOM:Paladiumarmorcustom2.helmet",
+      "~Paladiumarmorcustom1@CUSTOM:Paladiumarmorcustom1.helmet",
+      "~Ranbowarmor@CUSTOM:Ranbowarmor.helmet",
+      "~Invisiblearmor@CUSTOM:Invisiblearmor.helmet",
+      "~Scuba@CUSTOM:Scuba.helmet",
+      "~Travelarmor@CUSTOM:Travelarmor.helmet",
+      "~Greenpaladiumarmor@CUSTOM:Greenpaladiumarmor.helmet",
+      "~EndiumArmor@CUSTOM:EndiumArmor.helmet",
+      "~AmethysteArmor@CUSTOM:AmethysteArmor.helmet",
+      "~TitaneArmor@CUSTOM:TitaneArmor.helmet",
+      "~PaladiumArmor@CUSTOM:PaladiumArmor.helmet"
+    ],
+    "ITEMS:minecraft:chest_armor": [
+      "~Pigarmor@CUSTOM:Pigarmor.body",
+      "~Mixedendiumarmor@CUSTOM:Mixedendiumarmor.body",
+      "~Paladiumarmorcustom10@CUSTOM:Paladiumarmorcustom10.body",
+      "~Paladiumarmorcustom9@CUSTOM:Paladiumarmorcustom9.body",
+      "~Paladiumarmorcustom8@CUSTOM:Paladiumarmorcustom8.body",
+      "~Paladiumarmorcustom7@CUSTOM:Paladiumarmorcustom7.body",
+      "~Paladiumarmorcustom6@CUSTOM:Paladiumarmorcustom6.body",
+      "~Paladiumarmorcustom5@CUSTOM:Paladiumarmorcustom5.body",
+      "~Paladiumarmorcustom4@CUSTOM:Paladiumarmorcustom4.body",
+      "~Paladiumarmorcustom3@CUSTOM:Paladiumarmorcustom3.body",
+      "~Paladiumarmorcustom2@CUSTOM:Paladiumarmorcustom2.body",
+      "~Paladiumarmorcustom1@CUSTOM:Paladiumarmorcustom1.body",
+      "~Ranbowarmor@CUSTOM:Ranbowarmor.body",
+      "~Invisiblearmor@CUSTOM:Invisiblearmor.body",
+      "~Travelarmor@CUSTOM:Travelarmor.body",
+      "~Greenpaladiumarmor@CUSTOM:Greenpaladiumarmor.body",
+      "~EndiumArmor@CUSTOM:EndiumArmor.body",
+      "~AmethysteArmor@CUSTOM:AmethysteArmor.body",
+      "~TitaneArmor@CUSTOM:TitaneArmor.body",
+      "~PaladiumArmor@CUSTOM:PaladiumArmor.body"
+    ],
+    "ITEMS:minecraft:leg_armor": [
+      "~Pigarmor@CUSTOM:Pigarmor.legs",
+      "~Mixedendiumarmor@CUSTOM:Mixedendiumarmor.legs",
+      "~Paladiumarmorcustom10@CUSTOM:Paladiumarmorcustom10.legs",
+      "~Paladiumarmorcustom9@CUSTOM:Paladiumarmorcustom9.legs",
+      "~Paladiumarmorcustom8@CUSTOM:Paladiumarmorcustom8.legs",
+      "~Paladiumarmorcustom7@CUSTOM:Paladiumarmorcustom7.legs",
+      "~Paladiumarmorcustom6@CUSTOM:Paladiumarmorcustom6.legs",
+      "~Paladiumarmorcustom5@CUSTOM:Paladiumarmorcustom5.legs",
+      "~Paladiumarmorcustom4@CUSTOM:Paladiumarmorcustom4.legs",
+      "~Paladiumarmorcustom3@CUSTOM:Paladiumarmorcustom3.legs",
+      "~Paladiumarmorcustom2@CUSTOM:Paladiumarmorcustom2.legs",
+      "~Paladiumarmorcustom1@CUSTOM:Paladiumarmorcustom1.legs",
+      "~Ranbowarmor@CUSTOM:Ranbowarmor.legs",
+      "~Invisiblearmor@CUSTOM:Invisiblearmor.legs",
+      "~Travelarmor@CUSTOM:Travelarmor.legs",
+      "~Greenpaladiumarmor@CUSTOM:Greenpaladiumarmor.legs",
+      "~EndiumArmor@CUSTOM:EndiumArmor.legs",
+      "~AmethysteArmor@CUSTOM:AmethysteArmor.legs",
+      "~TitaneArmor@CUSTOM:TitaneArmor.legs",
+      "~PaladiumArmor@CUSTOM:PaladiumArmor.legs"
+    ],
+    "ITEMS:minecraft:foot_armor": [
+      "~Pigarmor@CUSTOM:Pigarmor.boots",
+      "~Mixedendiumarmor@CUSTOM:Mixedendiumarmor.boots",
+      "~Paladiumarmorcustom10@CUSTOM:Paladiumarmorcustom10.boots",
+      "~Paladiumarmorcustom9@CUSTOM:Paladiumarmorcustom9.boots",
+      "~Paladiumarmorcustom8@CUSTOM:Paladiumarmorcustom8.boots",
+      "~Paladiumarmorcustom7@CUSTOM:Paladiumarmorcustom7.boots",
+      "~Paladiumarmorcustom6@CUSTOM:Paladiumarmorcustom6.boots",
+      "~Paladiumarmorcustom5@CUSTOM:Paladiumarmorcustom5.boots",
+      "~Paladiumarmorcustom4@CUSTOM:Paladiumarmorcustom4.boots",
+      "~Paladiumarmorcustom3@CUSTOM:Paladiumarmorcustom3.boots",
+      "~Paladiumarmorcustom2@CUSTOM:Paladiumarmorcustom2.boots",
+      "~Paladiumarmorcustom1@CUSTOM:Paladiumarmorcustom1.boots",
+      "~Ranbowarmor@CUSTOM:Ranbowarmor.boots",
+      "~Invisiblearmor@CUSTOM:Invisiblearmor.boots",
+      "~Travelarmor@CUSTOM:Travelarmor.boots",
+      "~Weighted@CUSTOM:Weighted.boots",
+      "~Greenpaladiumarmor@CUSTOM:Greenpaladiumarmor.boots",
+      "~EndiumArmor@CUSTOM:EndiumArmor.boots",
+      "~AmethysteArmor@CUSTOM:AmethysteArmor.boots",
+      "~TitaneArmor@CUSTOM:TitaneArmor.boots",
+      "~PaladiumArmor@CUSTOM:PaladiumArmor.boots"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CauldronCore@CUSTOM:CauldronCore",
+      "~Cauldron@CUSTOM:Cauldron",
+      "~Moneyanvil@CUSTOM:Moneyanvil",
+      "~Softeneddiamondore@CUSTOM:Softeneddiamondore",
+      "~Softenedgoldore@CUSTOM:Softenedgoldore",
+      "~Softenedfindiumore@CUSTOM:Softenedfindiumore",
+      "~Softenedtrixiumore@CUSTOM:Softenedtrixiumore",
+      "~Softenedamethystore@CUSTOM:Softenedamethystore",
+      "~Exctractor@CUSTOM:Exctractor",
+      "~Trixiumore@CUSTOM:Trixiumore",
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
+      "~Amethystslab@CUSTOM:Amethystslab",
+      "~Amethyststairs@CUSTOM:Amethyststairs",
+      "~Paladiumforge@CUSTOM:Paladiumforge",
+      "~Paladiumspike@CUSTOM:Paladiumspike",
+      "~Titanespike@CUSTOM:Titanespike",
+      "~Spikegold@CUSTOM:Spikegold",
+      "~Ironspike@CUSTOM:Ironspike",
+      "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
+      "~FindiumBlock@CUSTOM:FindiumBlock",
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~AmethysteBlock@CUSTOM:AmethysteBlock",
+      "~AmethysteOre@CUSTOM:AmethysteOre"
+    ],
+    "BLOCKS:minecraft:mineable/axe": [
+      "~TitanePortalBlock@CUSTOM:TitanePortalBlock",
+      "~EndiumPortalBlock@CUSTOM:EndiumPortalBlock",
+      "~PaladiumPortalBlock@CUSTOM:PaladiumPortalBlock",
+      "~AmethystPortalblock@CUSTOM:AmethystPortalblock",
+      "~ShinyOstryaWood@CUSTOM:ShinyOstryaWood",
+      "~ShinyErablewood@CUSTOM:ShinyErablewood",
+      "~Shinyjudeecerciswood@CUSTOM:Shinyjudeecerciswood",
+      "~Shinyjacarandawood@CUSTOM:Shinyjacarandawood",
+      "~DeadButton@CUSTOM:DeadButton",
+      "~DeadPressurePlate@CUSTOM:DeadPressurePlate",
+      "~DeadTrapdoor@CUSTOM:DeadTrapdoor",
+      "~DeadDoor@CUSTOM:DeadDoor",
+      "~DeadFenceGate@CUSTOM:DeadFenceGate",
+      "~DeadFence@CUSTOM:DeadFence",
+      "~DeadSlab@CUSTOM:DeadSlab",
+      "~DeadStairs@CUSTOM:DeadStairs",
+      "~DeadPlanks@CUSTOM:DeadPlanks",
+      "~StrippedDeadWood@CUSTOM:StrippedDeadWood",
+      "~StrippedDeadLog@CUSTOM:StrippedDeadLog",
+      "~DeadWood@CUSTOM:DeadWood",
+      "~DeadLog@CUSTOM:DeadLog",
+      "~Totemfertility@CUSTOM:Totemfertility",
+      "~Typesettingtable@CUSTOM:Typesettingtable",
+      "~Erabletrapdoor@CUSTOM:Erabletrapdoor",
+      "~Jacarandadoor@CUSTOM:Jacarandadoor",
+      "~Erabledoor@CUSTOM:Erabledoor",
+      "~Ostryadoor@CUSTOM:Ostryadoor",
+      "~Judeecercisdoor@CUSTOM:Judeecercisdoor",
+      "~Erable_FenceGate@CUSTOM:Erable_FenceGate",
+      "~Erable_Fence@CUSTOM:Erable_Fence",
+      "~Erable_Slab@CUSTOM:Erable_Slab",
+      "~Erable_Stairs@CUSTOM:Erable_Stairs",
+      "~Erable_Planks@CUSTOM:Erable_Planks",
+      "~Erable_Log@CUSTOM:Erable_Log",
+      "~Erable_Wood@CUSTOM:Erable_Wood",
+      "~Judeecercis_FenceGate@CUSTOM:Judeecercis_FenceGate",
+      "~Judeecercis_Fence@CUSTOM:Judeecercis_Fence",
+      "~Judeecercis_Slab@CUSTOM:Judeecercis_Slab",
+      "~Judeecercis_Stairs@CUSTOM:Judeecercis_Stairs",
+      "~Judeecercis_Planks@CUSTOM:Judeecercis_Planks",
+      "~Judeecercis_Log@CUSTOM:Judeecercis_Log",
+      "~Judeecercis_Wood@CUSTOM:Judeecercis_Wood",
+      "~Jacaranda_FenceGate@CUSTOM:Jacaranda_FenceGate",
+      "~Jacaranda_Fence@CUSTOM:Jacaranda_Fence",
+      "~Jacaranda_Slab@CUSTOM:Jacaranda_Slab",
+      "~Jacaranda_Stairs@CUSTOM:Jacaranda_Stairs",
+      "~Jacaranda_Planks@CUSTOM:Jacaranda_Planks",
+      "~Jacaranda_Log@CUSTOM:Jacaranda_Log",
+      "~Jacaranda_Wood@CUSTOM:Jacaranda_Wood",
+      "~Ostrya_woodFenceGate@CUSTOM:Ostrya_woodFenceGate",
+      "~Ostrya_woodFence@CUSTOM:Ostrya_woodFence",
+      "~Ostrya_woodSlab@CUSTOM:Ostrya_woodSlab",
+      "~Ostrya_woodStairs@CUSTOM:Ostrya_woodStairs",
+      "~Ostrya_woodPlanks@CUSTOM:Ostrya_woodPlanks",
+      "~Ostrya_woodLog@CUSTOM:Ostrya_woodLog",
+      "~Ostrya_woodWood@CUSTOM:Ostrya_woodWood"
+    ],
+    "BLOCKS:minecraft:stairs": [
+      "~DeadStairs@CUSTOM:DeadStairs",
+      "~Cobbledsoftstonestairs@CUSTOM:Cobbledsoftstonestairs",
+      "~Softstonestairs@CUSTOM:Softstonestairs",
+      "~Trixiumstairs@CUSTOM:Trixiumstairs",
+      "~Obsidianstairs@CUSTOM:Obsidianstairs",
+      "~Renforcedobsidianstairs@CUSTOM:Renforcedobsidianstairs",
+      "~Greenpaladiumstairs@CUSTOM:Greenpaladiumstairs",
+      "~Endiumstairs@CUSTOM:Endiumstairs",
+      "~Amethyststairs@CUSTOM:Amethyststairs",
+      "~Paladiumstairs@CUSTOM:Paladiumstairs",
+      "~Titanestairs@CUSTOM:Titanestairs",
+      "~Findiumstairs@CUSTOM:Findiumstairs",
+      "~Erable_Stairs@CUSTOM:Erable_Stairs",
+      "~Judeecercis_Stairs@CUSTOM:Judeecercis_Stairs",
+      "~Jacaranda_Stairs@CUSTOM:Jacaranda_Stairs",
+      "~Ostrya_woodStairs@CUSTOM:Ostrya_woodStairs"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~DeadSlab@CUSTOM:DeadSlab",
+      "~Cobbledsoftstoneslab@CUSTOM:Cobbledsoftstoneslab",
+      "~Softstoneslab@CUSTOM:Softstoneslab",
+      "~Trixiumslab@CUSTOM:Trixiumslab",
+      "~Hardenedobsidianslab@CUSTOM:Hardenedobsidianslab",
+      "~Obsidianslab@CUSTOM:Obsidianslab",
+      "~Greenpaladiumslab@CUSTOM:Greenpaladiumslab",
+      "~Endiumslab@CUSTOM:Endiumslab",
+      "~Amethystslab@CUSTOM:Amethystslab",
+      "~Paladiumslab@CUSTOM:Paladiumslab",
+      "~Titaneslab@CUSTOM:Titaneslab",
+      "~Findiumslab@CUSTOM:Findiumslab",
+      "~Erable_Slab@CUSTOM:Erable_Slab",
+      "~Judeecercis_Slab@CUSTOM:Judeecercis_Slab",
+      "~Jacaranda_Slab@CUSTOM:Jacaranda_Slab",
+      "~Ostrya_woodSlab@CUSTOM:Ostrya_woodSlab"
+    ],
+    "BLOCKS:minecraft:wooden_fences": [
+      "~DeadFence@CUSTOM:DeadFence",
+      "~Erable_Fence@CUSTOM:Erable_Fence",
+      "~Judeecercis_Fence@CUSTOM:Judeecercis_Fence",
+      "~Jacaranda_Fence@CUSTOM:Jacaranda_Fence",
+      "~Ostrya_woodFence@CUSTOM:Ostrya_woodFence"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~Xpbottle@CUSTOM:Xpbottle",
+      "~Cavernehammer@CUSTOM:Cavernehammer",
+      "~Unclaimfinderblue@CUSTOM:Unclaimfinderblue",
+      "~Unclaimfinderred@CUSTOM:Unclaimfinderred",
+      "~Unclaimfinderorange@CUSTOM:Unclaimfinderorange",
+      "~Unclaimfinder@CUSTOM:Unclaimfinder",
+      "~Extractor@CUSTOM:Extractor",
+      "~Flatchestupgrade@CUSTOM:Flatchestupgrade",
+      "~Pesyblpotion@CUSTOM:Pesyblpotion",
+      "~Bigringgreenpaladium@CUSTOM:Bigringgreenpaladium",
+      "~Mediumringgreenpaladium@CUSTOM:Mediumringgreenpaladium",
+      "~Smallringgreenpaladium@CUSTOM:Smallringgreenpaladium",
+      "~Endiumbigring@CUSTOM:Endiumbigring",
+      "~Endiummediumring@CUSTOM:Endiummediumring",
+      "~Endiumsmallring@CUSTOM:Endiumsmallring",
+      "~Bigring@CUSTOM:Bigring",
+      "~Mediumring@CUSTOM:Mediumring",
+      "~Smallring@CUSTOM:Smallring",
+      "~Paladiumphone@CUSTOM:Paladiumphone",
+      "~Compressedxpberry@CUSTOM:Compressedxpberry",
+      "~Xpberry@CUSTOM:Xpberry"
+    ],
+    "PAINTING_VARIANTS:minecraft:placeable": [
+      "~Cherrytree@CUSTOM:Cherrytree",
+      "~Forest332@CUSTOM:Forest332",
+      "~Road32@CUSTOM:Road32",
+      "~Forest32@CUSTOM:Forest32",
+      "~Fish32@CUSTOM:Fish32",
+      "~Papillusion322@CUSTOM:Papillusion322",
+      "~Golem64@CUSTOM:Golem64",
+      "~Sunrise432@CUSTOM:Sunrise432",
+      "~Papillusion32@CUSTOM:Papillusion32",
+      "~Nether32@CUSTOM:Nether32",
+      "~Plains32@CUSTOM:Plains32",
+      "~Plains16@CUSTOM:Plains16",
+      "~Desertpaining16@CUSTOM:Desertpaining16",
+      "~Sunrise316@CUSTOM:Sunrise316",
+      "~Sunrise216@CUSTOM:Sunrise216",
+      "~Sunrise116@CUSTOM:Sunrise116",
+      "~Tsuamie16@CUSTOM:Tsuamie16",
+      "~Luckypainting@CUSTOM:Luckypainting"
+    ],
+    "BLOCKS:minecraft:trapdoors": [
+      "~Obsidiantrapdoor@CUSTOM:Obsidiantrapdoor"
+    ],
+    "BLOCKS:minecraft:doors": [
+      "~Obsidiandoor@CUSTOM:Obsidiandoor"
+    ],
+    "BLOCKS:minecraft:mob_interactable_doors": [
+      "~Obsidiandoor@CUSTOM:Obsidiandoor"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~Smelt@CUSTOM:Smelt"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~Smelt@CUSTOM:Smelt"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~Smelt@CUSTOM:Smelt"
+    ],
+    "ENCHANTMENTS:minecraft:curse": [
+      "~Nomodifier@CUSTOM:Nomodifier",
+      "~Onemoreupgradeenchant@CUSTOM:Onemoreupgradeenchant",
+      "~Chargedenchant@CUSTOM:Chargedenchant",
+      "~Autosmeltpotg@CUSTOM:Autosmeltpotg",
+      "~Bighole@CUSTOM:Bighole",
+      "~Speed@CUSTOM:Speed",
+      "~Hammerforturne@CUSTOM:Hammerforturne"
+    ],
+    "ENCHANTMENTS:minecraft:treasure": [
+      "~Nomodifier@CUSTOM:Nomodifier",
+      "~Onemoreupgradeenchant@CUSTOM:Onemoreupgradeenchant",
+      "~Botteled@CUSTOM:Botteled",
+      "~Chargedenchant@CUSTOM:Chargedenchant",
+      "~Autosmeltpotg@CUSTOM:Autosmeltpotg",
+      "~Bighole@CUSTOM:Bighole",
+      "~Speed@CUSTOM:Speed",
+      "~Hammerforturne@CUSTOM:Hammerforturne"
+    ],
+    "BIOMES:minecraft:has_structure/mineshaft": [
+      "~Forestender@CUSTOM:Forestender"
+    ],
+    "BIOMES:minecraft:has_structure/stronghold": [
+      "~Forestender@CUSTOM:Forestender"
+    ],
+    "BIOMES:minecraft:has_structure/woodland_mansion": [
+      "~Forestender@CUSTOM:Forestender"
+    ],
+    "BIOMES:minecraft:has_structure/igloo": [
+      "~Frozenforest@CUSTOM:Frozenforest"
+    ],
+    "BIOMES:minecraft:has_structure/village_snowy": [
+      "~Frozenforest@CUSTOM:Frozenforest"
+    ],
+    "ITEMS:minecraft:meat": [
+      "~Spacefood@CUSTOM:Spacefood"
+    ],
+    "BLOCKS:minecraft:wooden_doors": [
+      "~DeadDoor@CUSTOM:DeadDoor",
+      "~Jacarandadoor@CUSTOM:Jacarandadoor",
+      "~Erabledoor@CUSTOM:Erabledoor",
+      "~Ostryadoor@CUSTOM:Ostryadoor",
+      "~Judeecercisdoor@CUSTOM:Judeecercisdoor"
+    ],
+    "BLOCKS:minecraft:wooden_trapdoors": [
+      "~DeadTrapdoor@CUSTOM:DeadTrapdoor",
+      "~Erabletrapdoor@CUSTOM:Erabletrapdoor"
+    ],
+    "POINTS_OF_INTEREST:minecraft:acquirable_job_site": [
+      "~Santa@CUSTOM:Santa"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~Fertilseddirt@CUSTOM:Fertilseddirt"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~Endiumhoe@CUSTOM:Endiumhoe",
+      "~Greenpaladiumhoe@CUSTOM:Greenpaladiumhoe",
+      "~Paladiumhoe@CUSTOM:Paladiumhoe",
+      "~Titanehoe@CUSTOM:Titanehoe",
+      "~Amethtysthoe@CUSTOM:Amethtysthoe"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~Endiumtnt@CUSTOM:Endiumtnt",
+      "~Compacttnt@CUSTOM:Compacttnt",
+      "~Magictnt@CUSTOM:Magictnt",
+      "~Withertnt@CUSTOM:Withertnt",
+      "~Wetlavasponge@CUSTOM:Wetlavasponge",
+      "~Lavasponge@CUSTOM:Lavasponge",
+      "~Spongetnt@CUSTOM:Spongetnt",
+      "~Compressedsponge@CUSTOM:Compressedsponge"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~Angelicwter@CUSTOM:Angelicwter",
+      "~Fakewter@CUSTOM:Fakewter"
+    ],
+    "ITEMS:minecraft:music_discs": [
+      "~Clashkumiz@CUSTOM:Clashkumiz",
+      "~Roulettepaladiennedisc@CUSTOM:Roulettepaladiennedisc",
+      "~Antifuzedisc@CUSTOM:Antifuzedisc",
+      "~Fuzedisc@CUSTOM:Fuzedisc",
+      "~Miichalenge@CUSTOM:Miichalenge"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Minerdimension@CUSTOM:Softstone"
+    ],
+    "BIOMES:minecraft:has_structure/mineshaft_mesa": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/buried_treasure": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/nether_fortress": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/bastion_remnant": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/end_city": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/village_plains": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BIOMES:minecraft:has_structure/ruined_portal_standard": [
+      "~Alternateplaines@CUSTOM:Alternateplaines"
+    ],
+    "BLOCKS:minecraft:wooden_pressure_plates": [
+      "~DeadPressurePlate@CUSTOM:DeadPressurePlate"
+    ],
+    "BLOCKS:minecraft:wooden_buttons": [
+      "~DeadButton@CUSTOM:DeadButton"
     ]
   },
   "tab_element_order": {
@@ -52691,7 +52717,35 @@
       "item.palamod.key_portal_block": "Key portal block",
       "item.palamod.paladium_anvil": "Paladium anvil",
       "item.palamod.amethyst_anvil": "Amethyst anvil",
-      "item.palamod.titane_anvil": "Titane anvil"
+      "item.palamod.titane_anvil": "Titane anvil",
+      "gamerule.palamod.logsall.description": "logs all action executed by the player ",
+      "gamerule.palamod.logsall": "logs all",
+      "gamerule.palamod.lockedcraft.description": "lock certain craft behind jobs level you can farm to unlock more items",
+      "gamerule.palamod.lockedcraft": "Palamod : Locked crafts",
+      "gamerule.palamod.lockeduse": "Locked Use",
+      "gamerule.palamod.lockeduse.description": "Lock jobs items from being use when you don\u0027t have the required level ",
+      "gamerule.palamod.commandfurnacenopermaccess": "/furnace access to players",
+      "gamerule.palamod.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.palamod.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.palamod.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.palamod.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "gamerule.palamod.commandfeednopermaccess": "/feed access to players",
+      "gamerule.palamod.disablejobsgamerule.description": "Disable Palamod Jobs system and it\u0027s componants ( Notice : this gamerule will overright the gamerule Locked Use and Locked Craft to let players have access to item without Jobs system )",
+      "gamerule.palamod.disablejobsgamerule": "Disable jobs",
+      "gamerule.palamod.disablemoneygamerule": "Disable Money System",
+      "gamerule.palamod.disablemoneygamerule.description": "Disable Money systeme and it\u0027s componants (like /money, money item ,etc....)",
+      "gamerule.palamod.palamoddebuglog": "Palamod Debug log",
+      "gamerule.palamod.palamoddebuglog.description": "Show Palamod debug logs, useful for debugging",
+      "gamerule.palamod.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.palamod.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
+      "gamerule.palamod.jobsXpBaseMultiplier": "Jobs Xp Base Mutlitplier",
+      "gamerule.palamod.jobsXpBaseMultiplier.description": "Change the base Xp multiplier, the value is in % and the default value is 100 ( % )",
+      "gamerule.palamod.jobsLevelBase.description": "the normal \u0027maximun\u0027 for unlocking item is 20, putting true will revert to old system who is 100",
+      "gamerule.palamod.jobsLevelBase": "Jobs Level Base",
+      "gamerule.palamod.baseJobLevelMultiplier": "Base Job Level Mutliplier",
+      "gamerule.palamod.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
+      "gamerule.palamod.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+      "gamerule.palamod.defaultFightingTime": "Fighting Time"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54698,7 +54752,35 @@
       "item.palamod.key_portal_block": "Key portal block",
       "item.palamod.paladium_anvil": "Enclume en Paladium",
       "item.palamod.amethyst_anvil": "Enclume en Améthyste",
-      "item.palamod.titane_anvil": "Enclume en Titane"
+      "item.palamod.titane_anvil": "Enclume en Titane",
+      "gamerule.palamod.logsall.description": "logs all action executed by the player ",
+      "gamerule.palamod.logsall": "logs all",
+      "gamerule.palamod.lockedcraft.description": "lock certain craft behind jobs level you can farm to unlock more items",
+      "gamerule.palamod.lockedcraft": "Palamod : Locked crafts",
+      "gamerule.palamod.lockeduse": "Locked Use",
+      "gamerule.palamod.lockeduse.description": "Lock jobs items from being use when you don\u0027t have the required level ",
+      "gamerule.palamod.commandfurnacenopermaccess": "/furnace access to players",
+      "gamerule.palamod.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.palamod.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.palamod.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.palamod.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "gamerule.palamod.commandfeednopermaccess": "/feed access to players",
+      "gamerule.palamod.disablejobsgamerule.description": "Disable Palamod Jobs system and it\u0027s componants ( Notice : this gamerule will overright the gamerule Locked Use and Locked Craft to let players have access to item without Jobs system )",
+      "gamerule.palamod.disablejobsgamerule": "Disable jobs",
+      "gamerule.palamod.disablemoneygamerule": "Disable Money System",
+      "gamerule.palamod.disablemoneygamerule.description": "Disable Money systeme and it\u0027s componants (like /money, money item ,etc....)",
+      "gamerule.palamod.palamoddebuglog": "Palamod Debug log",
+      "gamerule.palamod.palamoddebuglog.description": "Show Palamod debug logs, useful for debugging",
+      "gamerule.palamod.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.palamod.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
+      "gamerule.palamod.jobsXpBaseMultiplier": "Jobs Xp Base Mutlitplier",
+      "gamerule.palamod.jobsXpBaseMultiplier.description": "Change the base Xp multiplier, the value is in % and the default value is 100 ( % )",
+      "gamerule.palamod.jobsLevelBase.description": "the normal \u0027maximun\u0027 for unlocking item is 20, putting true will revert to old system who is 100",
+      "gamerule.palamod.jobsLevelBase": "Jobs Level Base",
+      "gamerule.palamod.baseJobLevelMultiplier": "Base Job Level Mutliplier",
+      "gamerule.palamod.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
+      "gamerule.palamod.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+      "gamerule.palamod.defaultFightingTime": "Fighting Time"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56705,14 +56787,44 @@
       "item.palamod.key_portal_block": "Key portal block",
       "item.palamod.paladium_anvil": "",
       "item.palamod.amethyst_anvil": "",
-      "item.palamod.titane_anvil": ""
+      "item.palamod.titane_anvil": "",
+      "gamerule.palamod.logsall.description": "logs all action executed by the player ",
+      "gamerule.palamod.logsall": "logs all",
+      "gamerule.palamod.lockedcraft.description": "lock certain craft behind jobs level you can farm to unlock more items",
+      "gamerule.palamod.lockedcraft": "Palamod : Locked crafts",
+      "gamerule.palamod.lockeduse": "Locked Use",
+      "gamerule.palamod.lockeduse.description": "Lock jobs items from being use when you don\u0027t have the required level ",
+      "gamerule.palamod.commandfurnacenopermaccess": "/furnace access to players",
+      "gamerule.palamod.commandfurnacenopermaccess.description": "Determine if the players have access to /furnace without any permission",
+      "gamerule.palamod.commandfactionnopermaccess": "/faction access to players",
+      "gamerule.palamod.commandfactionnopermaccess.description": "Determine if the players have access to /faction without any permission",
+      "gamerule.palamod.commandfeednopermaccess.description": "Determine if the players have access to /feed without any permission",
+      "gamerule.palamod.commandfeednopermaccess": "/feed access to players",
+      "gamerule.palamod.disablejobsgamerule.description": "Disable Palamod Jobs system and it\u0027s componants ( Notice : this gamerule will overright the gamerule Locked Use and Locked Craft to let players have access to item without Jobs system )",
+      "gamerule.palamod.disablejobsgamerule": "Disable jobs",
+      "gamerule.palamod.disablemoneygamerule": "Disable Money System",
+      "gamerule.palamod.disablemoneygamerule.description": "Disable Money systeme and it\u0027s componants (like /money, money item ,etc....)",
+      "gamerule.palamod.palamoddebuglog": "Palamod Debug log",
+      "gamerule.palamod.palamoddebuglog.description": "Show Palamod debug logs, useful for debugging",
+      "gamerule.palamod.commandCraftNoPermAccess": "/craft access to Players",
+      "gamerule.palamod.commandCraftNoPermAccess.description": "Give Access to /craft to players with no pertmission",
+      "gamerule.palamod.jobsXpBaseMultiplier": "Jobs Xp Base Mutlitplier",
+      "gamerule.palamod.jobsXpBaseMultiplier.description": "Change the base Xp multiplier, the value is in % and the default value is 100 ( % )",
+      "gamerule.palamod.jobsLevelBase.description": "the normal \u0027maximun\u0027 for unlocking item is 20, putting true will revert to old system who is 100",
+      "gamerule.palamod.jobsLevelBase": "Jobs Level Base",
+      "gamerule.palamod.baseJobLevelMultiplier": "Base Job Level Mutliplier",
+      "gamerule.palamod.baseJobLevelMultiplier.description": "Change how job\u0027s levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
+      "gamerule.palamod.defaultFightingTime.description": "Default time en ticks when players are put in a \"fighting\" mode where they cannot teleport ",
+      "gamerule.palamod.defaultFightingTime": "Fighting Time"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/palamod/init/PalamodModAttributes.java",
       "src/main/java/palamod/init/PalamodModBiomes.java",
+      "src/main/java/palamod/mixin/LevelStorageSourceMixin.java",
       "src/main/java/palamod/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/java/palamod/mixin/BiomeSourcePresetMixin.java",
       "src/main/java/palamod/world/features/StructureFeature.java",
       "src/main/java/palamod/world/features/configurations/StructureFeatureConfiguration.java",
       "src/main/java/palamod/init/PalamodModFluids.java",
@@ -56724,14 +56836,11 @@
       "src/main/java/palamod/client/renderer/item/LegacyOverrideSelectItemModel.java",
       "src/main/java/palamod/init/PalamodModFuels.java",
       "src/main/java/palamod/init/PalamodModKeyMappings.java",
-      "src/main/resources/data/minecraft/tags/painting_variant/placeable.json",
       "src/main/java/palamod/init/PalamodModParticles.java",
       "src/main/java/palamod/init/PalamodModParticleTypes.java",
       "src/main/java/palamod/init/PalamodModMobEffects.java",
       "src/main/java/palamod/init/PalamodModPotions.java",
       "src/main/java/palamod/init/PalamodModVillagerProfessions.java",
-      "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
-      "src/main/java/palamod/init/PalamodModTrades.java",
       "src/main/java/palamod/init/PalamodModBlocks.java",
       "src/main/java/palamod/init/PalamodModBlockEntities.java",
       "src/main/java/palamod/init/PalamodModItems.java",
@@ -56790,9 +56899,9 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "neoforge-1.21.8",
+    "currentGenerator": "neoforge-26.1.2",
     "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games ",
     "modElementsPackage": "palamod"
   },
-  "mcreatorVersion": 202600114619
+  "mcreatorVersion": 202600222416
 }

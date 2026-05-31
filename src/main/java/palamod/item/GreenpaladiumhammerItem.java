@@ -14,14 +14,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
 public class GreenpaladiumhammerItem extends Item {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3999, 8f, 0, 1, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:green_paladium_hammer_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3999, 8f, 0, 1, TagKey.create(Registries.ITEM, Identifier.parse("palamod:green_paladium_hammer_repair_items")));
 
 	public GreenpaladiumhammerItem(Item.Properties properties) {
 		super(properties.pickaxe(TOOL_MATERIAL, 0f, -3f));

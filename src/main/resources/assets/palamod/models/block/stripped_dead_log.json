@@ -8,6 +8,5 @@
     "south": "palamod:block/stripped_dead_log",
     "west": "palamod:block/stripped_dead_log",
     "particle": "palamod:block/stripped_dead_log_top"
-  },
-  "render_type": "solid"
+  }
 }

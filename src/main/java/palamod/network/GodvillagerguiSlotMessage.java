@@ -12,7 +12,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
@@ -22,7 +22,7 @@ import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record GodvillagerguiSlotMessage(int slotID, int x, int y, int z, int changeType, int meta) implements CustomPacketPayload {
-	public static final Type<GodvillagerguiSlotMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "godvillagergui_slots"));
+	public static final Type<GodvillagerguiSlotMessage> TYPE = new Type<>(Identifier.fromNamespaceAndPath(PalamodMod.MODID, "godvillagergui_slots"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, GodvillagerguiSlotMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, GodvillagerguiSlotMessage message) -> {
 		buffer.writeInt(message.slotID);
 		buffer.writeInt(message.x);

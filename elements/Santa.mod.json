@@ -1,14 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 86,
   "_type": "villagerprofession",
   "definition": {
     "displayName": "Santa claus",
-    "pointOfInterest": {
-      "value": "CUSTOM:Luckyblock"
-    },
-    "actionSound": {
-      "value": "entity.villager.work_cartographer"
-    },
+    "pointOfInterest": "CUSTOM:Luckyblock",
+    "actionSound": "entity.villager.work_cartographer",
     "hat": "Full",
     "professionTextureFile": "santa-villager.png",
     "zombifiedProfessionTextureFile": "zombified-santa-villager.png"

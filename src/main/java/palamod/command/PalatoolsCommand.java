@@ -4,8 +4,6 @@ import palamod.procedures.ToolresetallProcedure;
 import palamod.procedures.Luckyprocess1adminProcedure;
 import palamod.procedures.ClearoreProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -23,7 +21,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class PalatoolsCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("palatools").requires(s -> s.hasPermission(4))
+		event.getDispatcher().register(Commands.literal("palatools").requires(Commands.hasPermission(Commands.LEVEL_OWNERS))
 				.then(Commands.literal("adminshop").then(Commands.literal("price").then(Commands.literal("set").then(Commands.literal("paladium")).then(Commands.literal("paladium"))).then(Commands.literal("reset").then(Commands.literal("all")))))
 				.then(Commands.literal("Clear").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

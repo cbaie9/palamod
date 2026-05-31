@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/poison_obsi",
     "particle": "palamod:block/poison_obsi"
-  },
-  "render_type": "solid"
+  }
 }

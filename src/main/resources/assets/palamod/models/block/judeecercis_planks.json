@@ -3,6 +3,5 @@
   "textures": {
     "all": "palamod:block/judeecercis_planks",
     "particle": "palamod:block/judeecercis_planks"
-  },
-  "render_type": "solid"
+  }
 }

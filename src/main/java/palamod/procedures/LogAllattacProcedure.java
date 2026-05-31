@@ -31,7 +31,7 @@ public class LogAllattacProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 			PalamodMod.LOGGER.debug((sourceentity + " attack " + entity.getDisplayName().getString() + " at " + " x : " + x + " y : " + y + " z : " + z));
 		}
 	}

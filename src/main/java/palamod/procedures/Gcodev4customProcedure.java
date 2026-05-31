@@ -8,8 +8,9 @@ import palamod.init.PalamodModBlocks;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.transfer.item.ItemUtil;
+import net.neoforged.neoforge.transfer.item.ItemResource;
+import net.neoforged.neoforge.transfer.ResourceHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.loading.FMLPaths;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.Container;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
@@ -75,13 +77,13 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 3;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(3).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR21 && _serverLevelGR21.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR21 && _serverLevelGR21.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + " Insert paladium ingot into grinder"));
 							}
 							if (!world.isClientSide()) {
@@ -122,13 +124,13 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 3;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(3).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR38 && _serverLevelGR38.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR38 && _serverLevelGR38.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert green paladium ingot into grinder"));
 							}
 							if (!world.isClientSide()) {
@@ -169,13 +171,13 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 3;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(3).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR55 && _serverLevelGR55.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR55 && _serverLevelGR55.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert paladium block into grinder"));
 							}
 							if (!world.isClientSide()) {
@@ -216,13 +218,13 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 3;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(3).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR72 && _serverLevelGR72.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR72 && _serverLevelGR72.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert green paladium block into grinder"));
 							}
 							if (!world.isClientSide()) {
@@ -263,13 +265,13 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 3;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(3).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR89 && _serverLevelGR89.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR89 && _serverLevelGR89.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert endium nugget  into grinder"));
 							}
 							if (!world.isClientSide()) {
@@ -310,13 +312,13 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 3;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(3).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR106 && _serverLevelGR106.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR106 && _serverLevelGR106.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert endium nugget  into grinder"));
 							}
 							if (!world.isClientSide()) {
@@ -371,12 +373,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR134 && _serverLevelGR134.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR134 && _serverLevelGR134.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert smelt paladium ingot"));
 								}
 							} else {
@@ -405,12 +410,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR150 && _serverLevelGR150.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR150 && _serverLevelGR150.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert smelt green paladium ingot"));
 								}
 							} else {
@@ -439,12 +447,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR166 && _serverLevelGR166.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR166 && _serverLevelGR166.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert smelt endium ingot"));
 								}
 							} else {
@@ -502,12 +513,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR193 && _serverLevelGR193.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR193 && _serverLevelGR193.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt paladium block"));
 								}
 							} else {
@@ -537,12 +551,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModBlocks.PALADIUM_GREEN_BLOCK.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR209 && _serverLevelGR209.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR209 && _serverLevelGR209.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt green paladium block"));
 								}
 							} else {
@@ -571,12 +588,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_INGOT.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_INGOT.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR225 && _serverLevelGR225.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR225 && _serverLevelGR225.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt endium ingot"));
 								}
 							} else {
@@ -634,12 +654,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.AXE_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.AXE_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR252 && _serverLevelGR252.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR252 && _serverLevelGR252.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert smelt axe head"));
 								}
 							} else {
@@ -668,12 +691,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR268 && _serverLevelGR268.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR268 && _serverLevelGR268.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert smelt green paladium axe head"));
 								}
 							} else {
@@ -702,12 +728,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_AXE.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_AXE.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR284 && _serverLevelGR284.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR284 && _serverLevelGR284.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Insert smelt endium axe head"));
 								}
 							} else {
@@ -765,12 +794,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXE_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.PICKAXE_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR311 && _serverLevelGR311.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR311 && _serverLevelGR311.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt paladium pickaxe head"));
 								}
 							} else {
@@ -800,12 +832,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_PICKAXE_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR327 && _serverLevelGR327.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR327 && _serverLevelGR327.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt  green paladium pickaxe head"));
 								}
 							} else {
@@ -834,12 +869,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_PICKAXE.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_PICKAXE.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR343 && _serverLevelGR343.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR343 && _serverLevelGR343.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt endium pickaxe head"));
 								}
 							} else {
@@ -897,12 +935,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.SHOVEL_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.SHOVEL_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR370 && _serverLevelGR370.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR370 && _serverLevelGR370.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt paladium shovel head"));
 								}
 							} else {
@@ -932,12 +973,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SHOVEL_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR386 && _serverLevelGR386.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR386 && _serverLevelGR386.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt green paladium shovel head"));
 								}
 							} else {
@@ -966,12 +1010,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_SHOVEL_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR402 && _serverLevelGR402.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR402 && _serverLevelGR402.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  endium shovel head"));
 								}
 							} else {
@@ -1031,12 +1078,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.SWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.SWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR433 && _serverLevelGR433.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR433 && _serverLevelGR433.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt paladium sword head"));
 								}
 							} else {
@@ -1065,12 +1115,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_SWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR449 && _serverLevelGR449.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR449 && _serverLevelGR449.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt  green paladium sword head"));
 								}
 							} else {
@@ -1099,12 +1152,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_SWORD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.HEAD_ENDIUM_SWORD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR465 && _serverLevelGR465.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR465 && _serverLevelGR465.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt endium sword head"));
 								}
 							} else {
@@ -1164,12 +1220,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.HAMMER_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.HAMMER_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR496 && _serverLevelGR496.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR496 && _serverLevelGR496.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt paladium hammer head"));
 								}
 							} else {
@@ -1199,12 +1258,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR512 && _serverLevelGR512.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR512 && _serverLevelGR512.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt  green paladium hammer head"));
 								}
 							} else {
@@ -1233,12 +1295,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR528 && _serverLevelGR528.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR528 && _serverLevelGR528.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt endium hammer head"));
 								}
 							} else {
@@ -1298,12 +1363,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.BROADSWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR559 && _serverLevelGR559.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR559 && _serverLevelGR559.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt paladium sword head"));
 								}
 							} else {
@@ -1333,12 +1401,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_BROADSWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR575 && _serverLevelGR575.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR575 && _serverLevelGR575.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt  green paladium broadsword head"));
 								}
 							} else {
@@ -1367,12 +1438,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_BROADSWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR591 && _serverLevelGR591.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR591 && _serverLevelGR591.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt endium broadsword head"));
 								}
 							} else {
@@ -1432,12 +1506,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.FASTSWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR622 && _serverLevelGR622.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR622 && _serverLevelGR622.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt paladium fastsword head"));
 								}
 							} else {
@@ -1467,12 +1544,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_FASTSWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR638 && _serverLevelGR638.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR638 && _serverLevelGR638.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt  green paladium fastsword head ( err:0g4)"));
 								}
 							} else {
@@ -1501,12 +1581,15 @@ public class Gcodev4customProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get()).copy();
-									_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
-									_itemHandlerModifiable.setStackInSlot(2, _setstack);
+								if (world instanceof ServerLevel _serverLevel) {
+									BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+									if (_be instanceof Container _container) {
+										ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_FASTSWORD_HEAD.get()).copy();
+										_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
+										_container.setItem(2, _setstack);
+									}
 								}
-								if (world instanceof ServerLevel _serverLevelGR654 && _serverLevelGR654.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR654 && _serverLevelGR654.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 									PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ] smelt endium fastsword head ( err:0e4 )"));
 								}
 							} else {
@@ -1559,24 +1642,27 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_AXE.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_AXE.get()).copy();
+									_setstack.setCount(1);
+									_container.setItem(2, _setstack);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 1;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(1).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 0;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(0).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR673 && _serverLevelGR673.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR673 && _serverLevelGR673.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt paladium axe [ type 2 ]"));
 							}
 						} else {
@@ -1615,24 +1701,27 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_AXE.get()).copy();
+									_setstack.setCount(1);
+									_container.setItem(2, _setstack);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 1;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(1).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 0;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(0).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR690 && _serverLevelGR690.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR690 && _serverLevelGR690.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt green paladium axe [ type 2 ]"));
 							}
 						} else {
@@ -1673,24 +1762,27 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_AXE.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_AXE.get()).copy();
+									_setstack.setCount(1);
+									_container.setItem(2, _setstack);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 1;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(1).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 0;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(0).shrink(1);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR709 && _serverLevelGR709.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR709 && _serverLevelGR709.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt endium axe [ type 2 ]"));
 							}
 						} else {
@@ -1732,24 +1824,27 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 1;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(1).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 0;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(0).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).copy();
+									_setstack.setCount(1);
+									_container.setItem(2, _setstack);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR731 && _serverLevelGR731.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR731 && _serverLevelGR731.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt paladium hammer [ type2 ]"));
 							}
 						} else {
@@ -1804,24 +1899,27 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 1;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(1).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 0;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(0).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.GREEN_PALADIUM_HAMMER.get()).copy();
+									_setstack.setCount(1);
+									_container.setItem(2, _setstack);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR755 && _serverLevelGR755.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR755 && _serverLevelGR755.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt green paladium hammer [ type2 ]"));
 							}
 						} else {
@@ -1876,24 +1974,27 @@ public class Gcodev4customProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 1;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(1).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								int _slotid = 0;
-								ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-								_stk.shrink(1);
-								_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									_container.getItem(0).shrink(1);
+								}
 							}
-							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-								ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER.get()).copy();
-								_setstack.setCount(1);
-								_itemHandlerModifiable.setStackInSlot(2, _setstack);
+							if (world instanceof ServerLevel _serverLevel) {
+								BlockEntity _be = _serverLevel.getBlockEntity(BlockPos.containing(x, y, z));
+								if (_be instanceof Container _container) {
+									ItemStack _setstack = new ItemStack(PalamodModItems.ENDIUM_HAMMER.get()).copy();
+									_setstack.setCount(1);
+									_container.setItem(2, _setstack);
+								}
 							}
-							if (world instanceof ServerLevel _serverLevelGR779 && _serverLevelGR779.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR779 && _serverLevelGR779.getGameRules().get(PalamodModGameRules.LOGSALL.get())) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "[ Craft ]  smelt endium hammer [ type2 ]"));
 							}
 						} else {
@@ -1939,9 +2040,9 @@ public class Gcodev4customProcedure {
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
 		if (world instanceof ILevelExtension ext) {
-			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			ResourceHandler<ItemResource> itemHandler = ext.getCapability(Capabilities.Item.BLOCK, pos, null);
 			if (itemHandler != null)
-				return itemHandler.getStackInSlot(slot);
+				return ItemUtil.getStack(itemHandler, slot);
 		}
 		return ItemStack.EMPTY;
 	}
