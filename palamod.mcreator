@@ -52688,7 +52688,10 @@
       "item.palamod.endium_portal_block": "Endium Portal Block",
       "item.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.portal_block": "Portal block",
-      "item.palamod.key_portal_block": "Key portal block"
+      "item.palamod.key_portal_block": "Key portal block",
+      "item.palamod.paladium_anvil": "Paladium anvil",
+      "item.palamod.amethyst_anvil": "Amethyst anvil",
+      "item.palamod.titane_anvil": "Titane anvil"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54692,7 +54695,10 @@
       "item.palamod.endium_portal_block": "Endium Portal Block",
       "item.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.portal_block": "Portal block",
-      "item.palamod.key_portal_block": "Key portal block"
+      "item.palamod.key_portal_block": "Key portal block",
+      "item.palamod.paladium_anvil": "Enclume en Paladium",
+      "item.palamod.amethyst_anvil": "Enclume en Améthyste",
+      "item.palamod.titane_anvil": "Enclume en Titane"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56696,7 +56702,10 @@
       "item.palamod.endium_portal_block": "Endium Portal Block",
       "item.palamod.endium_portal_angle_block": "Endium Portal Angle Block",
       "item.palamod.portal_block": "Portal block",
-      "item.palamod.key_portal_block": "Key portal block"
+      "item.palamod.key_portal_block": "Key portal block",
+      "item.palamod.paladium_anvil": "",
+      "item.palamod.amethyst_anvil": "",
+      "item.palamod.titane_anvil": ""
     }
   },
   "metadata": {

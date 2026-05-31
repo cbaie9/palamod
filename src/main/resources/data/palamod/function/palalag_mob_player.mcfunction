@@ -1,7 +1,28 @@
 # Enter the function code here
+# Enter the function code here
 kill @e[type=experience_orb]
 kill @e[type=egg]
 kill @e[type=leash_knot]
+# all boat
+kill @e[type=acacia_boat]
+kill @e[type=acacia_chest_boat]
+kill @e[type=birch_boat]
+kill @e[type=birch_chest_boat]
+kill @e[type=cherry_boat]
+kill @e[type=cherry_chest_boat]
+kill @e[type=dark_oak_boat]
+kill @e[type=dark_oak_chest_boat]
+kill @e[type=jungle_boat]
+kill @e[type=jungle_chest_boat]
+kill @e[type=mangrove_boat]
+kill @e[type=mangrove_chest_boat]
+kill @e[type=oak_boat]
+kill @e[type=oak_chest_boat]
+kill @e[type=pale_oak_chest_boat]
+kill @e[type=pale_oak_boat]
+kill @e[type=spruce_chest_boat]
+kill @e[type=spruce_boat]
+# ---
 kill @e[type=boat]
 kill @e[type=minecart]
 kill @e[type=chest_minecart]
@@ -12,4 +33,5 @@ kill @e[type=spawner_minecart]
 kill @e[type=hopper_minecart]
 kill @e[type=ender_pearl]
 kill @e[type=eye_of_ender]
+# mc1.21.8 v3repaste for v1.21
 
