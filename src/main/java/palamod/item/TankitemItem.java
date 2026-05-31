@@ -1,19 +1,28 @@
 package palamod.item;
 
 import palamod.procedures.TankitemtooltipProcedure;
+import palamod.procedures.TankitemPropertyValueProviderProcedure;
 import palamod.procedures.TankItemPlaceProcedure;
 
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty;
+import net.minecraft.client.multiplayer.ClientLevel;
+
+import javax.annotation.Nullable;
+
+import com.mojang.serialization.MapCodec;
 
 public class TankitemItem extends Item {
-	public TankitemItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+	public TankitemItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.UNCOMMON).stacksTo(1));
 	}
 
 	@Override
@@ -24,8 +33,22 @@ public class TankitemItem extends Item {
 	}
 
 	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
+	public void inventoryTick(ItemStack itemstack, ServerLevel world, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
+		super.inventoryTick(itemstack, world, entity, equipmentSlot);
 		TankitemtooltipProcedure.execute(itemstack);
+	}
+
+	public record TankTypeProperty() implements RangeSelectItemModelProperty {
+		public static final MapCodec<TankTypeProperty> MAP_CODEC = MapCodec.unit(new TankTypeProperty());
+
+		@Override
+		public float get(ItemStack itemStackToRender, @Nullable ClientLevel clientWorld, @Nullable LivingEntity entity, int seed) {
+			return (float) TankitemPropertyValueProviderProcedure.execute(itemStackToRender);
+		}
+
+		@Override
+		public MapCodec<TankTypeProperty> type() {
+			return MAP_CODEC;
+		}
 	}
 }

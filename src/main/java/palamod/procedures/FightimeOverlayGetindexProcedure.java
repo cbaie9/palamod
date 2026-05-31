@@ -10,8 +10,8 @@ public class FightimeOverlayGetindexProcedure {
 		if (entity == null)
 			return 0;
 		double maxfightingtime = 0;
-		if (0 < entity.getPersistentData().getDouble("MaxFightingTime")) {
-			maxfightingtime = entity.getPersistentData().getDouble("MaxFightingTime");
+		if (0 < entity.getPersistentData().getDoubleOr("MaxFightingTime", 0)) {
+			maxfightingtime = entity.getPersistentData().getDoubleOr("MaxFightingTime", 0);
 		} else {
 			maxfightingtime = 400;
 		}

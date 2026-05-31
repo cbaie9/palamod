@@ -7,15 +7,9 @@
     "aca"
   ],
   "key": {
-    "a": {
-      "tag": "neoforge:cobblestone"
-    },
-    "b": {
-      "item": "palamod:voidstone"
-    },
-    "c": {
-      "item": "palamod:fortune_modifier"
-    }
+    "a": "#neoforge:cobblestone",
+    "b": "palamod:voidstone",
+    "c": "palamod:fortune_modifier"
   },
   "result": {
     "id": "palamod:cobblebreaker",

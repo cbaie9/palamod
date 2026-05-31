@@ -5,9 +5,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:flatten_green_paladium_chest"
-    }
+    "a": "palamod:flatten_green_paladium_chest"
   },
   "result": {
     "id": "palamod:green_paladium_chest",

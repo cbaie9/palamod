@@ -10,6 +10,7 @@ import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -20,7 +21,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -60,7 +63,7 @@ public class PaladiumfurnaceprocessProcedure {
 					_be = world.getBlockEntity(_bp);
 					if (_be != null) {
 						try {
-							_be.loadWithComponents(_bnbt, world.registryAccess());
+							_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 						} catch (Exception ignored) {
 						}
 					}
@@ -69,11 +72,9 @@ public class PaladiumfurnaceprocessProcedure {
 		}
 		fuel = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).copy()).copy();
 		input = (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).copy();
-		if ((fuel.getBurnTime(null) > 0 || getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof Level _level7
-				&& _level7.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level7).isPresent()) {
-			if ((world instanceof Level _lvlSmeltResult
-					? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-					: ItemStack.EMPTY).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
+		if (((world instanceof Level _levelFV5 ? fuel.getBurnTime(null, _levelFV5.fuelValues()) : 0) > 0 || getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") > 0) && world instanceof ServerLevel _level7
+				&& _level7.recipeAccess().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _level7).isPresent()) {
+			if ((getItemStackFromItemStackSlot(world, input)).getItem() == (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).copy()).getItem() && itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() <= 63
 					|| itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() == 0) {
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "pala_fuel") == 0) {
 					if (!world.isClientSide()) {
@@ -81,8 +82,8 @@ public class PaladiumfurnaceprocessProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null) {
-							_blockEntity.getPersistentData().putDouble("pala_fuel", (fuel.getBurnTime(null)));
-							_blockEntity.getPersistentData().putDouble("max_fuel", (fuel.getBurnTime(null)));
+							_blockEntity.getPersistentData().putDouble("pala_fuel", (world instanceof Level _levelFV14 ? fuel.getBurnTime(null, _levelFV14.fuelValues()) : 0));
+							_blockEntity.getPersistentData().putDouble("max_fuel", (world instanceof Level _levelFV16 ? fuel.getBurnTime(null, _levelFV16.fuelValues()) : 0));
 						}
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
@@ -105,10 +106,7 @@ public class PaladiumfurnaceprocessProcedure {
 				}
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") >= 24) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-						ItemStack _setstack = (world instanceof Level _lvlSmeltResult
-								? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput(input), _lvlSmeltResult).map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy())
-										.orElse(ItemStack.EMPTY)
-								: ItemStack.EMPTY).copy();
+						ItemStack _setstack = (getItemStackFromItemStackSlot(world, input)).copy();
 						_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 2).getCount() + 1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
@@ -160,9 +158,9 @@ public class PaladiumfurnaceprocessProcedure {
 			if (Math.random() < 0.2) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.furnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}
@@ -238,8 +236,16 @@ public class PaladiumfurnaceprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
+	}
+
+	private static ItemStack getItemStackFromItemStackSlot(LevelAccessor level, ItemStack input) {
+		SingleRecipeInput recipeInput = new SingleRecipeInput(input);
+		if (level instanceof ServerLevel serverLevel) {
+			return serverLevel.recipeAccess().getRecipeFor(RecipeType.SMELTING, recipeInput, serverLevel).map(recipe -> recipe.value().assemble(recipeInput, serverLevel.registryAccess()).copy()).orElse(ItemStack.EMPTY);
+		}
+		return ItemStack.EMPTY;
 	}
 
 	private static Direction getBlockDirection(LevelAccessor world, BlockPos pos) {
@@ -257,7 +263,7 @@ public class PaladiumfurnaceprocessProcedure {
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 }

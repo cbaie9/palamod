@@ -15,6 +15,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
 import java.io.IOException;
@@ -32,15 +33,7 @@ public class AdhoresellexampleProcedure {
 		ItemStack item = ItemStack.EMPTY;
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		n = Math.round(Math.abs(new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
+		n = Math.round(Math.abs(parseDouble((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		fac_v = 120;
 		item = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
 		main = new Object() {
@@ -69,7 +62,7 @@ public class AdhoresellexampleProcedure {
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("You cannot bought nothing put a number greater than 0 to continue"), false);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " tried to bought 0  " + item.getDisplayName().getString()));
 					}
 				}
@@ -84,7 +77,7 @@ public class AdhoresellexampleProcedure {
 						_player.closeContainer();
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("You succesfuly bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $")), false);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR18 && _serverLevelGR18.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " bought " + n + " " + item.getDisplayName().getString() + " for a total of " + n * fac_v + " $"));
 					}
 				} else {
@@ -111,6 +104,14 @@ public class AdhoresellexampleProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
+		}
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
 		}
 	}
 }

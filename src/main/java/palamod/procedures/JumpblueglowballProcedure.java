@@ -10,6 +10,6 @@ public class JumpblueglowballProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 20, 1));
+			_entity.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 20, 1));
 	}
 }

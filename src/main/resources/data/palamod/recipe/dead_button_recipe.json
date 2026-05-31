@@ -3,9 +3,7 @@
   "group": "wooden_button",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "palamod:dead_planks"
-    }
+    "palamod:dead_planks"
   ],
   "result": {
     "id": "palamod:dead_button",

@@ -12,7 +12,7 @@ public class AnalyluncherProcedure {
 			return;
 		world.addParticle(ParticleTypes.SPLASH, x, y, z, 0, 1, 0);
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(itemstack.getItem(), 900);
+			_player.getCooldowns().addCooldown(itemstack, 900);
 		AnalyserdendProcedure.execute(world, x, y, z, entity, itemstack);
 	}
 }

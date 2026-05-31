@@ -14,6 +14,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 
 import java.io.IOException;
@@ -31,15 +32,7 @@ public class NewadminshopbuyprocessProcedure {
 		ItemStack item = ItemStack.EMPTY;
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		n = Math.round(Math.abs(new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
+		n = Math.round(Math.abs(parseDouble((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		item = AdminshopgetitemProcedure.execute(entity).copy();
 		fac_v = StockedbaseadminshopbuyProcedure.execute(item);
 		main = new Object() {
@@ -76,7 +69,7 @@ public class NewadminshopbuyprocessProcedure {
 						_player.displayClientMessage(Component.literal(
 								(Component.translatable("palamod.adminshop_buy_1").getString() + " " + n + " " + item.getDisplayName().getString() + " " + Component.translatable("palamod.adminshop_buy_2").getString() + " " + n * fac_v + " $")),
 								false);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+					if (world instanceof ServerLevel _serverLevelGR14 && _serverLevelGR14.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 						PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " " + Component.translatable("palamod.adminshop_buy_3").getString() + " " + n + " " + item.getDisplayName().getString() + " "
 								+ Component.translatable("palamod.adminshop_buy_2").getString() + " " + n * fac_v + " $"));
 					}
@@ -86,7 +79,7 @@ public class NewadminshopbuyprocessProcedure {
 					if (0 == n) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal((Component.translatable("palamod.adminshop_logs0_player").getString())), false);
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR23 && _serverLevelGR23.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((entity.getDisplayName().getString() + " " + Component.translatable("palamod.adminshop_logs0").getString() + " " + item.getDisplayName().getString()));
 						}
 					} else {
@@ -112,6 +105,14 @@ public class NewadminshopbuyprocessProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
+		}
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
 		}
 	}
 }

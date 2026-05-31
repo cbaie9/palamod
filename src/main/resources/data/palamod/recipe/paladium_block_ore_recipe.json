@@ -3,9 +3,7 @@
   "group": "paladium_craft_group",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:paladium_block"
-    }
+    "palamod:paladium_block"
   ],
   "result": {
     "id": "palamod:paladium_ingot",

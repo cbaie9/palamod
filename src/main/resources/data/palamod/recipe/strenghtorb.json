@@ -8,12 +8,8 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "minecraft:blaze_powder"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:blaze_powder"
   },
   "result": {
     "id": "palamod:strengh_orb",

@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SlabBlock;
 
 public class ObsidianslabBlock extends SlabBlock {
-	public ObsidianslabBlock() {
-		super(BlockBehaviour.Properties.of().strength(50f, 1200f).instrument(NoteBlockInstrument.BASEDRUM));
+	public ObsidianslabBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(50f, 1200f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 }

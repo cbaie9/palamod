@@ -3,10 +3,10 @@ package palamod.item;
 import palamod.procedures.PlaceemptyspawnerProcedure;
 import palamod.procedures.GettooptipcavernhammerProcedure;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
+import palamod.PalamodMod;
 
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
@@ -14,24 +14,22 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.Minecraft;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class EmptyspawneritemItem extends Item {
-	public EmptyspawneritemItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+	public EmptyspawneritemItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.UNCOMMON).stacksTo(1));
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
 		String hoverText = GettooptipcavernhammerProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
+				componentConsumer.accept(Component.literal(line));
 			}
 		}
 	}

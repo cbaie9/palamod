@@ -2,22 +2,21 @@ package palamod.item;
 
 import palamod.procedures.CraftableToolTipTextProcedure;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
+import palamod.PalamodMod;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.Minecraft;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class CavernehammerItem extends Item {
-	public CavernehammerItem() {
-		super(new Item.Properties().durability(256));
+	public CavernehammerItem(Item.Properties properties) {
+		super(properties.durability(256));
 	}
 
 	@Override
@@ -26,14 +25,13 @@ public class CavernehammerItem extends Item {
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
 		String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
+				componentConsumer.accept(Component.literal(line));
 			}
 		}
 	}

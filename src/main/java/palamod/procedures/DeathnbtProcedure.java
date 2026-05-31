@@ -6,7 +6,7 @@ public class DeathnbtProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("Palamod.alive")) {
+		if (entity.getPersistentData().getBooleanOr("Palamod.alive", false)) {
 			entity.getPersistentData().putBoolean("Palamod.alive", false);
 		}
 	}

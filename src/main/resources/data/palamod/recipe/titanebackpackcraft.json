@@ -7,18 +7,10 @@
     "dad"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:titane_chest"
-    },
-    "c": {
-      "item": "minecraft:hopper"
-    },
-    "d": {
-      "item": "minecraft:leather"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:titane_chest",
+    "c": "minecraft:hopper",
+    "d": "minecraft:leather"
   },
   "result": {
     "id": "palamod:titane_backpack",

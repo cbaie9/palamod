@@ -8,12 +8,8 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "minecraft:book"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:book"
   },
   "result": {
     "id": "palamod:heal_orb",

@@ -6,12 +6,8 @@
     "b b"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:feather"
-    },
-    "b": {
-      "item": "palamod:titane_ingot"
-    }
+    "a": "minecraft:feather",
+    "b": "palamod:titane_ingot"
   },
   "result": {
     "id": "palamod:travel_armor_boots",

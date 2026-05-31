@@ -6,12 +6,12 @@ import palamod.network.SpawncontrollerguiSlotMessage;
 
 import palamod.init.PalamodModMenus;
 
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -299,7 +299,7 @@ public class SpawncontrollerguiMenu extends AbstractContainerMenu implements Pal
 
 	private void slotChanged(int slotid, int ctype, int meta) {
 		if (this.world != null && this.world.isClientSide()) {
-			PacketDistributor.sendToServer(new SpawncontrollerguiSlotMessage(slotid, x, y, z, ctype, meta));
+			ClientPacketDistributor.sendToServer(new SpawncontrollerguiSlotMessage(slotid, x, y, z, ctype, meta));
 			SpawncontrollerguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}

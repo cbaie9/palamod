@@ -3,9 +3,7 @@
   "group": "amethyst_craft_group",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:amethyst_block"
-    }
+    "palamod:amethyst_block"
   ],
   "result": {
     "id": "palamod:amethyst_ingot",

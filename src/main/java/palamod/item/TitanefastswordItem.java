@@ -1,50 +1,16 @@
 package palamod.item;
 
-import palamod.init.PalamodModItems;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
-public class TitanefastswordItem extends SwordItem {
-	private static final Tier TOOL_TIER = new Tier() {
-		@Override
-		public int getUses() {
-			return 400;
-		}
+public class TitanefastswordItem extends Item {
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 400, 12f, 0, 10, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:titane_fastsword_repair_items")));
 
-		@Override
-		public float getSpeed() {
-			return 12f;
-		}
-
-		@Override
-		public float getAttackDamageBonus() {
-			return 0;
-		}
-
-		@Override
-		public TagKey<Block> getIncorrectBlocksForDrops() {
-			return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-		}
-
-		@Override
-		public int getEnchantmentValue() {
-			return 10;
-		}
-
-		@Override
-		public Ingredient getRepairIngredient() {
-			return Ingredient.of(new ItemStack(PalamodModItems.TITANE_INGOT.get()));
-		}
-	};
-
-	public TitanefastswordItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 5f, 6f)));
+	public TitanefastswordItem(Item.Properties properties) {
+		super(properties.sword(TOOL_MATERIAL, 5f, 6f));
 	}
 }

@@ -10,11 +10,12 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class AmethysteBlockBlock extends Block {
-	public AmethysteBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).strength(5f, 10f).requiresCorrectToolForDrops());
+	public AmethysteBlockBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.AMETHYST).strength(5f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override
@@ -25,7 +26,7 @@ public class AmethysteBlockBlock extends Block {
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+	public void wasExploded(ServerLevel world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
 		PortalblockbreakviaportalProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}

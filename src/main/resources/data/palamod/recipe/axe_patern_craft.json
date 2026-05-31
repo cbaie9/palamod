@@ -8,15 +8,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:titane_axe"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:titane_axe"
   },
   "result": {
     "id": "palamod:axe_patern",

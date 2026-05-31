@@ -4,6 +4,7 @@ import palamod.PalamodMod;
 
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
+import net.minecraft.world.entity.animal.sheep.Sheep;
 import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.GlowSquid;

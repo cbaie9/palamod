@@ -18,8 +18,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class EndiumfloweronBlock extends FlowerBlock {
-	public EndiumfloweronBlock() {
-		super(MobEffects.REGENERATION, 100, BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+	public EndiumfloweronBlock(BlockBehaviour.Properties properties) {
+		super(MobEffects.REGENERATION, 100, properties.mapColor(MapColor.GRASS).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

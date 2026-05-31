@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:compressed_paladium"
-    },
-    "c": {
-      "item": "palamod:titane_chest"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:compressed_paladium",
+    "c": "palamod:titane_chest"
   },
   "result": {
     "id": "palamod:paladium_chest",

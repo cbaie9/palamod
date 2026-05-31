@@ -18,7 +18,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 public class PalamodModFluids {
@@ -32,10 +32,10 @@ public class PalamodModFluids {
 	public static class FluidsClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			ItemBlockRenderTypes.setRenderLayer(FAKE_WATER.get(), RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_FAKE_WATER.get(), RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(ANGELIC_WATER.get(), RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_ANGELIC_WATER.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FAKE_WATER.get(), ChunkSectionLayer.TRANSLUCENT);
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_FAKE_WATER.get(), ChunkSectionLayer.TRANSLUCENT);
+			ItemBlockRenderTypes.setRenderLayer(ANGELIC_WATER.get(), ChunkSectionLayer.TRANSLUCENT);
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_ANGELIC_WATER.get(), ChunkSectionLayer.TRANSLUCENT);
 		}
 	}
 }

@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:lightning_potion"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    }
+    "a": "palamod:lightning_potion",
+    "b": "palamod:paladium_ingot"
   },
   "result": {
     "id": "palamod:cauldron",

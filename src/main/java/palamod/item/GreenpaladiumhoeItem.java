@@ -3,70 +3,40 @@ package palamod.item;
 import palamod.procedures.CraftableToolTipTextProcedure;
 import palamod.procedures.BighoeprocessProcedure;
 
-import palamod.init.PalamodModItems;
+import palamod.PalamodMod;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.Registries;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class GreenpaladiumhoeItem extends HoeItem {
-	private static final Tier TOOL_TIER = new Tier() {
-		@Override
-		public int getUses() {
-			return 5000;
-		}
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 5000, 4f, 0, 2, TagKey.create(Registries.ITEM, ResourceLocation.parse("palamod:green_paladium_hoe_repair_items")));
 
-		@Override
-		public float getSpeed() {
-			return 4f;
-		}
-
-		@Override
-		public float getAttackDamageBonus() {
-			return 0;
-		}
-
-		@Override
-		public TagKey<Block> getIncorrectBlocksForDrops() {
-			return BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
-		}
-
-		@Override
-		public int getEnchantmentValue() {
-			return 2;
-		}
-
-		@Override
-		public Ingredient getRepairIngredient() {
-			return Ingredient.of(new ItemStack(PalamodModItems.GREEN_PALADIUM_INGOT.get()));
-		}
-	};
-
-	public GreenpaladiumhoeItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 3f, -3f)));
+	public GreenpaladiumhoeItem(Item.Properties properties) {
+		super(TOOL_MATERIAL, 3f, -3f, properties);
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> componentConsumer, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, tooltipDisplay, componentConsumer, flag);
+		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : PalamodMod.clientPlayer();
 		String hoverText = CraftableToolTipTextProcedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
+				componentConsumer.accept(Component.literal(line));
 			}
 		}
 	}

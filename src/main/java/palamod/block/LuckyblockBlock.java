@@ -24,8 +24,8 @@ import net.minecraft.core.BlockPos;
 import io.netty.buffer.Unpooled;
 
 public class LuckyblockBlock extends Block implements EntityBlock {
-	public LuckyblockBlock() {
-		super(BlockBehaviour.Properties.of().strength(1f, 10f).requiresCorrectToolForDrops());
+	public LuckyblockBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override

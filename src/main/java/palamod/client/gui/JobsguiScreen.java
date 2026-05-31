@@ -8,7 +8,7 @@ import palamod.network.JobsguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -16,12 +16,11 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -61,14 +60,10 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 350, 200, 350, 200);
 		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(SPRITE_0, this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(entity) * 16, 0, 400), 0, 16, 16, 416, 16);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 10, this.topPos + 149, Mth.clamp((int) LastunlockedgetspriteProcedure.execute(entity) * 16, 0, 400), 0, 16, 16, 416, 16);
 		}
-		RenderSystem.disableBlend();
 	}
 
 	@Override
@@ -105,13 +100,13 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					int x = JobsguiScreen.this.x;
 					int y = JobsguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsguiButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new JobsguiButtonMessage(0, x, y, z));
 						JobsguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_screen_beta_template_jobs);
@@ -120,13 +115,13 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					int x = JobsguiScreen.this.x;
 					int y = JobsguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsguiButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new JobsguiButtonMessage(1, x, y, z));
 						JobsguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs);
@@ -135,13 +130,13 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					int x = JobsguiScreen.this.x;
 					int y = JobsguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsguiButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new JobsguiButtonMessage(2, x, y, z));
 						JobsguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs1);
@@ -150,13 +145,13 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					int x = JobsguiScreen.this.x;
 					int y = JobsguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsguiButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new JobsguiButtonMessage(3, x, y, z));
 						JobsguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_screen_beta2_template_jobs2);
@@ -165,13 +160,13 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 					int x = JobsguiScreen.this.x;
 					int y = JobsguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsguiButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new JobsguiButtonMessage(4, x, y, z));
 						JobsguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);

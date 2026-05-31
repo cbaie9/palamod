@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:green_paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:compressed_green_paladum"
-    },
-    "c": {
-      "item": "palamod:paladium_chest"
-    }
+    "a": "palamod:green_paladium_ingot",
+    "b": "palamod:compressed_green_paladum",
+    "c": "palamod:paladium_chest"
   },
   "result": {
     "id": "palamod:green_paladium_chest",

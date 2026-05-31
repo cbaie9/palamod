@@ -8,9 +8,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst_ingot"
-    }
+    "a": "palamod:amethyst_ingot"
   },
   "result": {
     "id": "palamod:amethyst_armor_leggings",

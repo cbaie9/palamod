@@ -17,6 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class CauldronsetupprocessProcedure {
 		double z_core = 0;
 		double y_core = 0;
 		double failsafe_crash = 0;
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			PalamodMod.LOGGER.debug(("------------------------" + "\n" + "Chaudron" + "\n"));
 		}
 		if (entity instanceof ServerPlayer || entity instanceof Player) {

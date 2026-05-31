@@ -50,7 +50,7 @@ public class SethomeprocessProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						("tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" The home " + "" + StringArgumentType.getString(arguments, "home_name")
 								+ " has been created at your position\",\"color\":\"gold\"},{\"text\":\"\\n \"}]"));
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR14 && _serverLevelGR14.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((((((((Component.translatable("palamod.procedure.home.run").getString()).replace("%6", "" + entity.level().dimension())).replace("%5", "" + z)).replace("%4", "" + y)).replace("%3", "" + x)).replace("%2",
 						"'" + StringArgumentType.getString(arguments, "home_name") + "'")).replace("%1", entity.getDisplayName().getString())));
 			}
@@ -63,7 +63,7 @@ public class SethomeprocessProcedure {
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("Creating a file for saving home " + StringArgumentType.getString(arguments, "home_name") + ". . .")), false);
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR23 && _serverLevelGR23.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug(((((Component.translatable("palamod.procedure.home.createfile").getString()).replace("%3", entity.getDisplayName().getString())).replace("%2", "'" + StringArgumentType.getString(arguments, "home_name") + "'"))
 						.replace("%1", "'" + home.getPath() + "'")));
 			}

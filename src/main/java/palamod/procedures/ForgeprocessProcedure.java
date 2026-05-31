@@ -18,6 +18,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class ForgeprocessProcedure {
@@ -40,7 +41,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR10 && _serverLevelGR10.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyste ore"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_SWORD.get()
@@ -56,7 +57,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst broadsword"));
 			}
 		} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.TITANE_ORE.get().asItem()
@@ -73,7 +74,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR30 && _serverLevelGR30.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane ore"));
 			}
 		} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.PALADIUM_ORE.get().asItem()
@@ -90,7 +91,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR41 && _serverLevelGR41.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn paladium ore"));
 			}
 		} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.FINDIUM_ORE.get().asItem()
@@ -107,7 +108,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR52 && _serverLevelGR52.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn findium ore"));
 			}
 		} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.DEEPSLATE_GREEN_PALADIUM_ORE.get().asItem()
@@ -124,7 +125,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR63 && _serverLevelGR63.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn green paladium ore"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_AXE.get()
@@ -140,7 +141,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR72 && _serverLevelGR72.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst axe"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_SHOVEL.get()
@@ -156,7 +157,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR81 && _serverLevelGR81.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst shovel"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_BROADSWORD.get()
@@ -172,7 +173,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR90 && _serverLevelGR90.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst broadsword"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_FASTSWORD.get()
@@ -188,7 +189,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR99 && _serverLevelGR99.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst fastsword"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_HAMMER.get()
@@ -204,7 +205,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR108 && _serverLevelGR108.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst hammer"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.AMETHYST_STICK.get()
@@ -220,7 +221,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR117 && _serverLevelGR117.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn amethyst stick"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_HAMMER.get()
@@ -236,7 +237,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR126 && _serverLevelGR126.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane hammer"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.PALADIUM_HAMMER.get()
@@ -252,7 +253,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR135 && _serverLevelGR135.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn paladium hammer"));
 			}
 		} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_PICKAXE.get()
@@ -269,7 +270,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR146 && _serverLevelGR146.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane pickaxe / axe"));
 			}
 		} else if (((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_SWORD.get()
@@ -286,7 +287,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR157 && _serverLevelGR157.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane stick / sword"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_SHOVEL.get()
@@ -302,7 +303,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR166 && _serverLevelGR166.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane shovel"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANEBROADSWORD.get()
@@ -318,7 +319,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR175 && _serverLevelGR175.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane broadsword"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_FASTSWORD.get()
@@ -334,7 +335,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR184 && _serverLevelGR184.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane fastsword"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.TITANE_BLOCK.get().asItem()
@@ -350,7 +351,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR193 && _serverLevelGR193.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane block"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.TITANE_SLAB.get().asItem()
@@ -366,7 +367,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR202 && _serverLevelGR202.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane slab"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModBlocks.TITANE_STAIRS.get().asItem()
@@ -396,7 +397,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR219 && _serverLevelGR219.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane helmet"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_ARMOR_CHESTPLATE.get()
@@ -412,7 +413,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR228 && _serverLevelGR228.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane chesplate"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_ARMOR_LEGGINGS.get()
@@ -428,7 +429,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR237 && _serverLevelGR237.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane leggins"));
 			}
 		} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == PalamodModItems.TITANE_ARMOR_BOOTS.get()
@@ -444,7 +445,7 @@ public class ForgeprocessProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+			if (world instanceof ServerLevel _serverLevelGR246 && _serverLevelGR246.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 				PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "want burn titane boots"));
 			}
 		} else {
@@ -838,7 +839,7 @@ public class ForgeprocessProcedure {
 							_stk.shrink(1);
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR372 && _serverLevelGR372.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "insert block of coal"));
 						}
 						if (!world.isClientSide()) {
@@ -859,7 +860,7 @@ public class ForgeprocessProcedure {
 							_stk.shrink(1);
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR381 && _serverLevelGR381.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "insert coal"));
 						}
 						if (!world.isClientSide()) {
@@ -880,7 +881,7 @@ public class ForgeprocessProcedure {
 							_stk.shrink(1);
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR388 && _serverLevelGR388.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "insert palamixed coal"));
 						}
 						if (!world.isClientSide()) {
@@ -901,7 +902,7 @@ public class ForgeprocessProcedure {
 							_stk.shrink(1);
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR395 && _serverLevelGR395.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "insert gold mixed coal"));
 						}
 						if (!world.isClientSide()) {
@@ -922,7 +923,7 @@ public class ForgeprocessProcedure {
 							_stk.shrink(1);
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR402 && _serverLevelGR402.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "insert amethyst mixed coal"));
 						}
 						if (!world.isClientSide()) {
@@ -943,7 +944,7 @@ public class ForgeprocessProcedure {
 							_stk.shrink(1);
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR409 && _serverLevelGR409.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.debug((("x: " + x) + "" + (" y : " + y) + (" z: : " + z) + "insert titane mixed coal"));
 						}
 						if (!world.isClientSide()) {
@@ -1028,7 +1029,7 @@ public class ForgeprocessProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 

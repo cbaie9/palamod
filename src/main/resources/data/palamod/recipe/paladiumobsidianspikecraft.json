@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "neoforge:obsidian"
-    },
-    {
-      "item": "palamod:paladium_spike"
-    }
+    "#neoforge:obsidian",
+    "palamod:paladium_spike"
   ],
   "result": {
     "id": "palamod:paladium_obsidian_spike",

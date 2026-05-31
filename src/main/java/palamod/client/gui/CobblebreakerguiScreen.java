@@ -12,10 +12,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CobblebreakerguiScreen extends AbstractContainerScreen<CobblebreakerguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -58,20 +57,16 @@ public class CobblebreakerguiScreen extends AbstractContainerScreen<Cobblebreake
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 60, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 81, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 102, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 123, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_7, this.leftPos + 144, this.topPos + 53, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_8, this.leftPos + 148, this.topPos + 14, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(SPRITE_0, this.leftPos + 82, this.topPos + 25, Mth.clamp((int) CobblebreakerarrowreturnspriteProcedure.execute(world, x, y, z) * 14, 0, 266), 0, 14, 16, 280, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 180, 176, 180);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 18, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 39, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 60, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 81, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 102, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 123, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_7, this.leftPos + 144, this.topPos + 53, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_8, this.leftPos + 148, this.topPos + 14, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 82, this.topPos + 25, Mth.clamp((int) CobblebreakerarrowreturnspriteProcedure.execute(world, x, y, z) * 14, 0, 266), 0, 14, 16, 280, 16);
 	}
 
 	@Override

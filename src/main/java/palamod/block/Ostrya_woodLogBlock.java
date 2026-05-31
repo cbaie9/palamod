@@ -2,8 +2,6 @@ package palamod.block;
 
 import palamod.procedures.SetsapblockstatevisualProcedure;
 
-import net.neoforged.neoforge.common.util.TriState;
-
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -18,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.util.TriState;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
@@ -28,8 +27,8 @@ public class Ostrya_woodLogBlock extends Block {
 	public static final IntegerProperty SAP = IntegerProperty.create("sap", 0, 96);
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 15);
 
-	public Ostrya_woodLogBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+	public Ostrya_woodLogBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(SAP, 96).setValue(BLOCKSTATE, 0));
 	}
 

@@ -16,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
 @EventBusSubscriber(Dist.CLIENT)
@@ -39,7 +40,7 @@ public class UnclaimfinderoverlayOverlay {
 		}
 		if (HasunclaiminhandProcedure.execute(entity)) {
 			if (HasunclaiminhandProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(SPRITE_0, w - 51, 20, Mth.clamp((int) GetunclaimfindertypeProcedure.execute(entity) * 32, 0, 96), 0, 32, 32, 128, 32);
+				event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, w - 51, 20, Mth.clamp((int) GetunclaimfindertypeProcedure.execute(entity) * 32, 0, 96), 0, 32, 32, 128, 32);
 			}
 			if (HasunclaiminhandProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,

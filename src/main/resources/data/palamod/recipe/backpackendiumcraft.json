@@ -7,21 +7,11 @@
     "ded"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_chest"
-    },
-    "c": {
-      "item": "minecraft:hopper"
-    },
-    "d": {
-      "item": "minecraft:leather"
-    },
-    "e": {
-      "item": "palamod:endium_nugget"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:paladium_chest",
+    "c": "minecraft:hopper",
+    "d": "minecraft:leather",
+    "e": "palamod:endium_nugget"
   },
   "result": {
     "id": "palamod:endium_backpack",

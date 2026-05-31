@@ -7,15 +7,9 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:obsidian"
-    },
-    "b": {
-      "item": "palamod:compressed_paladium"
-    },
-    "c": {
-      "item": "minecraft:sugar"
-    }
+    "a": "minecraft:obsidian",
+    "b": "palamod:compressed_paladium",
+    "c": "minecraft:sugar"
   },
   "result": {
     "id": "palamod:spawner_upgrade_speed",

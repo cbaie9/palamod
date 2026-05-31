@@ -5,6 +5,7 @@ import palamod.init.PalamodModBlocks;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
@@ -43,7 +45,7 @@ public class XpbushongiveProcedure {
 				_be = world.getBlockEntity(_bp);
 				if (_be != null) {
 					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
+						_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 					} catch (Exception ignored) {
 					}
 				}

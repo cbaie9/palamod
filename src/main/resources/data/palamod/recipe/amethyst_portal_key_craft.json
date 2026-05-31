@@ -7,18 +7,10 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "palamod:lightning_potion"
-    },
-    "b": {
-      "item": "palamod:amethyst_stick"
-    },
-    "c": {
-      "item": "palamod:amethyst_sword"
-    },
-    "d": {
-      "item": "palamod:compressed_amethyst"
-    }
+    "a": "palamod:lightning_potion",
+    "b": "palamod:amethyst_stick",
+    "c": "palamod:amethyst_sword",
+    "d": "palamod:compressed_amethyst"
   },
   "result": {
     "id": "palamod:amethyst_portal_key",

@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "tag": "minecraft:wool"
-    },
-    "b": {
-      "item": "palamod:paladium_core"
-    }
+    "a": "#minecraft:wool",
+    "b": "palamod:paladium_core"
   },
   "result": {
     "id": "palamod:hood_helmet_armor_helmet",

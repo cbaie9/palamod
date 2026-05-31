@@ -2,31 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "palamod:item/tank_item_base"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "palamod:tankitem_tank_type": 1
-      },
-      "model": "palamod:item/tankitem_0"
-    },
-    {
-      "predicate": {
-        "palamod:tankitem_tank_type": 2
-      },
-      "model": "palamod:item/tankitem_1"
-    },
-    {
-      "predicate": {
-        "palamod:tankitem_tank_type": 3
-      },
-      "model": "palamod:item/tankitem_2"
-    },
-    {
-      "predicate": {
-        "palamod:tankitem_tank_type": 4
-      },
-      "model": "palamod:item/tankitem_3"
-    }
-  ]
+  }
 }

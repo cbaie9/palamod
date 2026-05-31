@@ -3,9 +3,7 @@
   "group": "ostrya_craft_group",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "forge:ostrya_wood_log"
-    }
+    "#forge:ostrya_wood_log"
   ],
   "result": {
     "id": "palamod:ostrya_wood_planks",

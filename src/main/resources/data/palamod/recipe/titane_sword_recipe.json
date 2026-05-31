@@ -8,12 +8,8 @@
     "b"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "palamod:titane_sword",

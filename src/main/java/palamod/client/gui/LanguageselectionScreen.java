@@ -6,18 +6,17 @@ import palamod.network.LanguageselectionButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class LanguageselectionScreen extends AbstractContainerScreen<LanguageselectionMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -55,13 +54,9 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 7, this.topPos + 31, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 6, this.topPos + 66, 0, 0, 16, 16, 16, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 7, this.topPos + 31, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 6, this.topPos + 66, 0, 0, 16, 16, 16, 16);
 	}
 
 	@Override
@@ -85,7 +80,7 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 			int x = LanguageselectionScreen.this.x;
 			int y = LanguageselectionScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new LanguageselectionButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new LanguageselectionButtonMessage(0, x, y, z));
 				LanguageselectionButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 28, this.topPos + 64, 67, 20).build();
@@ -94,7 +89,7 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 			int x = LanguageselectionScreen.this.x;
 			int y = LanguageselectionScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new LanguageselectionButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new LanguageselectionButtonMessage(1, x, y, z));
 				LanguageselectionButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 29, 61, 20).build();

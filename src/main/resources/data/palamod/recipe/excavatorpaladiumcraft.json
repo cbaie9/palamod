@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:titane_excavator"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:titane_excavator"
   },
   "result": {
     "id": "palamod:paladium_excavator",

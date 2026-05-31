@@ -8,9 +8,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    }
+    "a": "palamod:paladium_ingot"
   },
   "result": {
     "id": "palamod:paladium_armor_chestplate",

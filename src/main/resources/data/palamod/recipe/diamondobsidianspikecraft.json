@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "neoforge:obsidian"
-    },
-    {
-      "item": "palamod:diamond_spike"
-    }
+    "#neoforge:obsidian",
+    "palamod:diamond_spike"
   ],
   "result": {
     "id": "palamod:diamond_obsidian_spike",

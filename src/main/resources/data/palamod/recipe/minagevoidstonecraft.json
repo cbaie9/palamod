@@ -7,18 +7,10 @@
     " d "
   ],
   "key": {
-    "a": {
-      "item": "minecraft:ender_pearl"
-    },
-    "b": {
-      "item": "palamod:titane_ingot"
-    },
-    "c": {
-      "item": "palamod:voidstone"
-    },
-    "d": {
-      "item": "palamod:titane_chest"
-    }
+    "a": "minecraft:ender_pearl",
+    "b": "palamod:titane_ingot",
+    "c": "palamod:voidstone",
+    "d": "palamod:titane_chest"
   },
   "result": {
     "id": "palamod:minage_voidstone",

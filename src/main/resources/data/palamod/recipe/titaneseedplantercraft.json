@@ -8,15 +8,9 @@
     "ccc"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:amethyst_seedplanter"
-    },
-    "c": {
-      "item": "palamod:titane_stick"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:amethyst_seedplanter",
+    "c": "palamod:titane_stick"
   },
   "result": {
     "id": "palamod:titane_seedplanter",

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:titane_ingot"
-    }
+    "palamod:titane_ingot"
   ],
   "result": {
     "id": "palamod:titane_particle",

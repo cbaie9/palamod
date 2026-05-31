@@ -7,24 +7,12 @@
     "afa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:findium"
-    },
-    "b": {
-      "item": "minecraft:skeleton_skull"
-    },
-    "c": {
-      "item": "palamod:compressed_paladium"
-    },
-    "d": {
-      "item": "palamod:broken_spawner"
-    },
-    "e": {
-      "item": "palamod:guardian_stone"
-    },
-    "f": {
-      "item": "palamod:paladium_crusher"
-    }
+    "a": "palamod:findium",
+    "b": "minecraft:skeleton_skull",
+    "c": "palamod:compressed_paladium",
+    "d": "palamod:broken_spawner",
+    "e": "palamod:guardian_stone",
+    "f": "palamod:paladium_crusher"
   },
   "result": {
     "id": "palamod:empty_spawner",

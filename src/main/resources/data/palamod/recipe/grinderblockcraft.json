@@ -8,12 +8,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_furnace"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:paladium_furnace"
   },
   "result": {
     "id": "palamod:grinder_block",

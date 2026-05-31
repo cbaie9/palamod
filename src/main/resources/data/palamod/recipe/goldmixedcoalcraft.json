@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:coal"
-    }
+    "minecraft:gold_ingot",
+    "minecraft:coal"
   ],
   "result": {
     "id": "palamod:gold_mixedcoal",

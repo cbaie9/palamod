@@ -1,24 +1,17 @@
 package palamod.item;
 
-import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
 
 public class TrixiumItem extends Item {
-	public TrixiumItem() {
-		super(new Item.Properties().rarity(Rarity.UNCOMMON));
+	public TrixiumItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.UNCOMMON));
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
-	}
-
-	@Override
-	public SoundEvent getEatingSound() {
-		return SoundEvents.EMPTY;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

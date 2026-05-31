@@ -21,7 +21,7 @@ public class PalamachineprocessV3Procedure {
 		double iloop = 0;
 		result_craft = PalamachineprocessgetrecipeProcedure.execute(world, x, y, z).copy();
 		if (!(result_craft.getItem() == Blocks.BARRIER.asItem())) {
-			if (result_craft.getItem() == BuiltInRegistries.ITEM.get(ResourceLocation.parse(((getBlockNBTString(world, BlockPos.containing(x, y, z), "result_string_craft"))).toLowerCase(java.util.Locale.ENGLISH)))) {
+			if (result_craft.getItem() == BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(((getBlockNBTString(world, BlockPos.containing(x, y, z), "result_string_craft"))).toLowerCase(java.util.Locale.ENGLISH)))) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -35,9 +35,9 @@ public class PalamachineprocessV3Procedure {
 				if (Math.random() < 0.4) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.blastfurnace.fire_crackle")), SoundSource.BLOCKS, 1, 1, false);
 						}
 					}
 				}
@@ -101,14 +101,14 @@ public class PalamachineprocessV3Procedure {
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

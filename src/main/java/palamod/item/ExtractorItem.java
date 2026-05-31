@@ -7,8 +7,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
 public class ExtractorItem extends Item {
-	public ExtractorItem() {
-		super(new Item.Properties().durability(145));
+	public ExtractorItem(Item.Properties properties) {
+		super(properties.durability(145));
 	}
 
 	@Override

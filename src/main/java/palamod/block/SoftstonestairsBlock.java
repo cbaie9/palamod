@@ -7,12 +7,12 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.util.FastColor;
+import net.minecraft.util.ARGB;
 import net.minecraft.core.BlockPos;
 
 public class SoftstonestairsBlock extends StairBlock {
-	public SoftstonestairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.NETHERRACK).strength(0.4f).requiresCorrectToolForDrops());
+	public SoftstonestairsBlock(BlockBehaviour.Properties properties) {
+		super(Blocks.AIR.defaultBlockState(), properties.mapColor(MapColor.STONE).sound(SoundType.NETHERRACK).strength(0.4f).requiresCorrectToolForDrops());
 	}
 
 	@Override
@@ -22,6 +22,6 @@ public class SoftstonestairsBlock extends StairBlock {
 
 	@Override
 	public Integer getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
-		return FastColor.ARGB32.opaque(-8620714);
+		return ARGB.opaque(-8620714);
 	}
 }

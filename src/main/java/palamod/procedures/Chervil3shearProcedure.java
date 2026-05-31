@@ -42,7 +42,7 @@ public class Chervil3shearProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || 14 <= lvl) {
+			if (!(world instanceof ServerLevel _serverLevelGR3 && _serverLevelGR3.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) || 14 <= lvl) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHEARS) {
 					world.setBlock(BlockPos.containing(x, y, z), PalamodModBlocks.CHERVIL_1.get().defaultBlockState(), 3);
 					if (Math.random() < 0.2) {

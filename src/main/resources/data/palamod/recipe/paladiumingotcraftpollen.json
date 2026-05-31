@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_pollen"
-    }
+    "a": "palamod:paladium_pollen"
   },
   "result": {
     "id": "palamod:paladium_ingot",

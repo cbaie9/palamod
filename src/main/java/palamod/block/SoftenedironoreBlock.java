@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 
 public class SoftenedironoreBlock extends Block {
-	public SoftenedironoreBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK).strength(1f, 10f).requiresCorrectToolForDrops());
+	public SoftenedironoreBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.NETHERRACK).strength(1f, 10f).requiresCorrectToolForDrops());
 	}
 }

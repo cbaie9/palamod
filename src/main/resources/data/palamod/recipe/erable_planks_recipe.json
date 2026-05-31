@@ -3,9 +3,7 @@
   "group": "erable_craft_group",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "forge:erable__log"
-    }
+    "#forge:erable__log"
   ],
   "result": {
     "id": "palamod:erable_planks",

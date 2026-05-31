@@ -20,7 +20,7 @@ public class GetspawnerbackitemProcedure {
 		if (entity == null)
 			return;
 		ItemStack output = ItemStack.EMPTY;
-		PalamodMod.LOGGER.info(("" + entity.getPersistentData().getDouble("cache.soul")));
+		PalamodMod.LOGGER.info(("" + entity.getPersistentData().getDoubleOr("cache.soul", 0)));
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "soul") > 0) {
 			output = new ItemStack(PalamodModItems.EMPTY_SPAWNER_ITEM.get()).copy();
 			{
@@ -38,16 +38,16 @@ public class GetspawnerbackitemProcedure {
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}
-		} else if (entity.getPersistentData().getDouble("cache.soul") > 0) {
+		} else if (entity.getPersistentData().getDoubleOr("cache.soul", 0) > 0) {
 			output = new ItemStack(PalamodModItems.EMPTY_SPAWNER_ITEM.get()).copy();
 			{
 				final String _tagName = "soul";
-				final double _tagValue = (entity.getPersistentData().getDouble("cache.soul"));
+				final double _tagValue = (entity.getPersistentData().getDoubleOr("cache.soul", 0));
 				CustomData.update(DataComponents.CUSTOM_DATA, output, tag -> tag.putDouble(_tagName, _tagValue));
 			}
 			{
 				final String _tagName = "spawner_type";
-				final String _tagValue = (entity.getPersistentData().getString("cache.spawner_type"));
+				final String _tagValue = (entity.getPersistentData().getStringOr("cache.spawner_type", ""));
 				CustomData.update(DataComponents.CUSTOM_DATA, output, tag -> tag.putString(_tagName, _tagValue));
 			}
 			if (world instanceof ServerLevel _level) {
@@ -68,14 +68,14 @@ public class GetspawnerbackitemProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 }

@@ -47,7 +47,7 @@ public class MoulastoneprocessProcedure {
 					e.printStackTrace();
 				}
 			}
-			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
+			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("powered", false) == true) {
 				if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
 					for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
 						ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();

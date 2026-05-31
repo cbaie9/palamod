@@ -14,11 +14,11 @@ public class PotgtransfertProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(0).getItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY)
-				.copyTag().getDouble("Pickaxe_stone") > 0 && entity.getPersistentData().getDouble("Pickaxe_stone") > 0) {
+				.copyTag().getDoubleOr("Pickaxe_stone", 0) > 0 && entity.getPersistentData().getDoubleOr("Pickaxe_stone", 0) > 0) {
 			{
 				final String _tagName = "Pickaxe_stone";
 				final double _tagValue = ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get(0).getItem() : ItemStack.EMPTY)
-						.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") + entity.getPersistentData().getDouble("Pickaxe_stone"));
+						.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("Pickaxe_stone", 0) + entity.getPersistentData().getDoubleOr("Pickaxe_stone", 0));
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu6 ? _menu6.getSlots().get(0).getItem() : ItemStack.EMPTY),
 						tag -> tag.putDouble(_tagName, _tagValue));
 			}

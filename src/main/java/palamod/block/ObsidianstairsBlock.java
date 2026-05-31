@@ -6,8 +6,8 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.Blocks;
 
 public class ObsidianstairsBlock extends StairBlock {
-	public ObsidianstairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().strength(50f, 1200f).instrument(NoteBlockInstrument.BASEDRUM));
+	public ObsidianstairsBlock(BlockBehaviour.Properties properties) {
+		super(Blocks.AIR.defaultBlockState(), properties.strength(50f, 1200f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

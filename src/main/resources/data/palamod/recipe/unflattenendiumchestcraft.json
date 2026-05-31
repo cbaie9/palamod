@@ -5,9 +5,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:flatten_endium_chest"
-    }
+    "a": "palamod:flatten_endium_chest"
   },
   "result": {
     "id": "palamod:endium_chest",

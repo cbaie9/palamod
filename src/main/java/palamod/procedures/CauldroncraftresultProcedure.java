@@ -29,7 +29,7 @@ public class CauldroncraftresultProcedure {
 		double random = 0;
 		double nb_items = 0;
 		double cmp_respawn = 0;
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			PalamodMod.LOGGER.info("DROP RESULT");
 		}
 		nb_items = itemstack.getCount();
@@ -46,7 +46,7 @@ public class CauldroncraftresultProcedure {
 			for (int index0 = 0; index0 < (int) nb_items; index0++) {
 				if (Math.random() < 0.25) {
 					random = Mth.nextInt(RandomSource.create(), 1, 3);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+					if (world instanceof ServerLevel _serverLevelGR12 && _serverLevelGR12.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 						PalamodMod.LOGGER.info("drop");
 					}
 					if (1 == random) {
@@ -190,7 +190,7 @@ public class CauldroncraftresultProcedure {
 				}
 				if (Math.random() < 0.25) {
 					random = Mth.nextInt(RandomSource.create(), 1, 4);
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+					if (world instanceof ServerLevel _serverLevelGR53 && _serverLevelGR53.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 						PalamodMod.LOGGER.info("drop");
 					}
 					if (1 == random) {
@@ -225,7 +225,7 @@ public class CauldroncraftresultProcedure {
 				}
 			}
 		}
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR59 && _serverLevelGR59.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			PalamodMod.LOGGER.info("END DROP RESULT");
 		}
 	}

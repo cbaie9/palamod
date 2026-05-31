@@ -3,12 +3,8 @@
   "group": "amethyst_craft_group",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:amethyst_ingot"
-    },
-    {
-      "item": "palamod:amethyst_ingot"
-    }
+    "palamod:amethyst_ingot",
+    "palamod:amethyst_ingot"
   ],
   "result": {
     "id": "palamod:amethyst_stick",

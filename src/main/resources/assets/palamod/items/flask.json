@@ -1,0 +1,95 @@
+{
+  "model": {
+    "type": "palamod:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:flask/seve"
+            },
+            "value": 1
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/flask_0"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:flask/seve"
+            },
+            "value": 3
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/flask_1"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:flask/seve"
+            },
+            "value": 6
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/flask_2"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:flask/seve"
+            },
+            "value": 9
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/flask_3"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:flask/seve"
+            },
+            "value": 12
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/flask_4"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:flask/seve"
+            },
+            "value": 15
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/flask_5"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "palamod:item/flask"
+    }
+  }
+}

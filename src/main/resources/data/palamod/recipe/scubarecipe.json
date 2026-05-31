@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "tag": "c:glass_panes"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "#c:glass_panes"
   },
   "result": {
     "id": "palamod:scuba_helmet",

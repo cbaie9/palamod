@@ -24,9 +24,10 @@ public class RingprocessgreenpaladiumProcedure {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});
 			}
-			if (!(entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel && _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
+			if (!(entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel _serverLevel10
+					&& _plr10.getAdvancements().getOrStartProgress(_serverLevel10.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
@@ -44,9 +45,10 @@ public class RingprocessgreenpaladiumProcedure {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});
 			}
-			if (!(entity instanceof ServerPlayer _plr22 && _plr22.level() instanceof ServerLevel && _plr22.getAdvancements().getOrStartProgress(_plr22.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
+			if (!(entity instanceof ServerPlayer _plr22 && _plr22.level() instanceof ServerLevel _serverLevel22
+					&& _plr22.getAdvancements().getOrStartProgress(_serverLevel22.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
@@ -64,9 +66,10 @@ public class RingprocessgreenpaladiumProcedure {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});
 			}
-			if (!(entity instanceof ServerPlayer _plr34 && _plr34.level() instanceof ServerLevel && _plr34.getAdvancements().getOrStartProgress(_plr34.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
+			if (!(entity instanceof ServerPlayer _plr34 && _plr34.level() instanceof ServerLevel _serverLevel34
+					&& _plr34.getAdvancements().getOrStartProgress(_serverLevel34.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
@@ -84,9 +87,10 @@ public class RingprocessgreenpaladiumProcedure {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});
 			}
-			if (!(entity instanceof ServerPlayer _plr46 && _plr46.level() instanceof ServerLevel && _plr46.getAdvancements().getOrStartProgress(_plr46.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
+			if (!(entity instanceof ServerPlayer _plr46 && _plr46.level() instanceof ServerLevel _serverLevel46
+					&& _plr46.getAdvancements().getOrStartProgress(_serverLevel46.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
@@ -104,9 +108,10 @@ public class RingprocessgreenpaladiumProcedure {
 				itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 				});
 			}
-			if (!(entity instanceof ServerPlayer _plr58 && _plr58.level() instanceof ServerLevel && _plr58.getAdvancements().getOrStartProgress(_plr58.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
-				if (entity instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
+			if (!(entity instanceof ServerPlayer _plr58 && _plr58.level() instanceof ServerLevel _serverLevel58
+					&& _plr58.getAdvancements().getOrStartProgress(_serverLevel58.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"))).isDone())) {
+				if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
+					AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:achmringgreenpaladium"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {

@@ -9,12 +9,17 @@
       "offset": 8,
       "block_search_extent": 2
     },
-    "music": {
-      "sound": "music.overworld.flower_forest",
-      "min_delay": 12000,
-      "max_delay": 24000,
-      "replace_current_music": true
-    },
+    "music": [
+      {
+        "weight": 1,
+        "data": {
+          "sound": "music.overworld.flower_forest",
+          "min_delay": 12000,
+          "max_delay": 24000,
+          "replace_current_music": true
+        }
+      }
+    ],
     "foliage_color": -8977147,
     "grass_color": -15833288,
     "sky_color": 7972607,
@@ -33,13 +38,11 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
-  },
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
   "features": [
     [],
     [

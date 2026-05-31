@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:judeecercis_log"
-    }
+    "a": "palamod:judeecercis_log"
   },
   "result": {
     "id": "palamod:judeecercis_wood",

@@ -7,18 +7,10 @@
     " d "
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst_pickaxe"
-    },
-    "b": {
-      "item": "palamod:paladium_pickaxe"
-    },
-    "c": {
-      "item": "palamod:titane_pickaxe"
-    },
-    "d": {
-      "item": "palamod:paladium_stick"
-    }
+    "a": "palamod:amethyst_pickaxe",
+    "b": "palamod:paladium_pickaxe",
+    "c": "palamod:titane_pickaxe",
+    "d": "palamod:paladium_stick"
   },
   "result": {
     "id": "palamod:pickaxe_of_the_gods_lv1",

@@ -9,13 +9,14 @@ import palamod.network.SticknewhelpButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -23,8 +24,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -73,7 +72,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 		if (mouseX > leftPos + 379 && mouseX < leftPos + 395 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -83,17 +82,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 400, 225, 400, 225);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 300, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 331, this.topPos + 144, 0, 0, 24, 10, 24, 10);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 400, 225, 400, 225);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 300, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 331, this.topPos + 144, 0, 0, 24, 10, 24, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 	}
 
 	@Override
@@ -122,13 +117,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(0, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -137,13 +132,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(1, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);
@@ -152,13 +147,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(2, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
@@ -167,13 +162,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(3, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_speed_stick);
@@ -182,13 +177,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(4, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jump_stick2);
@@ -197,13 +192,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(5, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(5, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_hyperjump_stick);
@@ -212,13 +207,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(6, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(6, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_heal_stick);
@@ -227,13 +222,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(7, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(7, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_damage_stick);
@@ -242,13 +237,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(8, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(8, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_strenghtstick);
@@ -257,13 +252,13 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 					int x = SticknewhelpScreen.this.x;
 					int y = SticknewhelpScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new SticknewhelpButtonMessage(9, x, y, z));
+						ClientPacketDistributor.sendToServer(new SticknewhelpButtonMessage(9, x, y, z));
 						SticknewhelpButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_stickofgod);

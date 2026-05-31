@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:obsidian"
-    }
+    "a": "minecraft:obsidian"
   },
   "result": {
     "id": "palamod:obsidian_stairs",

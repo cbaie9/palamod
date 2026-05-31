@@ -1,23 +1,16 @@
 package palamod.item;
 
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
 
 public class HeadendiumpickaxeItem extends Item {
-	public HeadendiumpickaxeItem() {
-		super(new Item.Properties().stacksTo(1).fireResistant());
+	public HeadendiumpickaxeItem(Item.Properties properties) {
+		super(properties.stacksTo(1).fireResistant());
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
-	}
-
-	@Override
-	public SoundEvent getEatingSound() {
-		return SoundEvents.EMPTY;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

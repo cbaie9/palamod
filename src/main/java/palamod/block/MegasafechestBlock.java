@@ -20,8 +20,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class MegasafechestBlock extends Block implements EntityBlock {
-	public MegasafechestBlock() {
-		super(BlockBehaviour.Properties.of().strength(10f, 1000f).instrument(NoteBlockInstrument.BASEDRUM));
+	public MegasafechestBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(10f, 1000f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

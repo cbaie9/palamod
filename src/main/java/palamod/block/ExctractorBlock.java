@@ -14,7 +14,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,27 +36,26 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
-import net.minecraft.util.FastColor;
+import net.minecraft.util.ARGB;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.function.Function;
 
 public class ExctractorBlock extends Block implements EntityBlock {
-	public static final DirectionProperty FACING = DirectionalBlock.FACING;
+	public static final EnumProperty<Direction> FACING = DirectionalBlock.FACING;
 	public static final BooleanProperty FIOLE = BooleanProperty.create("fiole");
 	public static final IntegerProperty EXTRACTED_SAP = IntegerProperty.create("extracted_sap", 0, 15);
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 9);
-	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
+	private final Function<BlockState, VoxelShape> shapes = this.makeShapes();
 
-	public ExctractorBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false)
-				.instrument(NoteBlockInstrument.BASEDRUM));
+	public ExctractorBlock(BlockBehaviour.Properties properties) {
+		super(properties.mapColor(MapColor.COLOR_MAGENTA).strength(1f, 10f).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FIOLE, false).setValue(EXTRACTED_SAP, 0).setValue(BLOCKSTATE, 0));
 	}
 
-	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+	private Function<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
 				default -> Shapes.or(box(5, 5, 0.7, 11, 11, 1.95), box(5.75, 5.75, 1.7, 10.25, 10.25, 10.5), box(6.75, 3.5, 6.7, 9.25, 6, 9.2), box(6.5, 3.25, 6.45, 9.5, 3.75, 9.45), box(7.25, 10.25, 7.2, 8.75, 12.75, 8.7),
@@ -72,17 +71,17 @@ public class ExctractorBlock extends Block implements EntityBlock {
 				case DOWN -> Shapes.or(box(5, 14.05, 5, 11, 15.3, 11), box(5.75, 5.5, 5.75, 10.25, 14.3, 10.25), box(6.75, 6.8, 10, 9.25, 9.3, 12.5), box(6.5, 6.55, 12.25, 9.5, 9.55, 12.75), box(7.25, 7.3, 3.25, 8.75, 8.8, 5.75),
 						box(7.25, 5.8, 3.25, 8.75, 7.3, 4.5), box(7.25, 8.8, 3.25, 8.75, 10.3, 4.5), box(8.75, 7.3, 3.25, 10.25, 8.8, 4.5), box(5.75, 7.3, 3.25, 7.25, 8.8, 4.5));
 			};
-		});
+		}, FIOLE, EXTRACTED_SAP);
 	}
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return shapes.get(state);
+		return shapes.apply(state);
 	}
 
 	@Override
 	public Integer getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
-		return FastColor.ARGB32.opaque(-26266);
+		return ARGB.opaque(-26266);
 	}
 
 	@Override
@@ -160,15 +159,8 @@ public class ExctractorBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-		if (state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof ExctractorBlockEntity be) {
-				Containers.dropContents(world, pos, be);
-				world.updateNeighbourForOutputSignal(pos, this);
-			}
-			super.onRemove(state, world, pos, newState, isMoving);
-		}
+	protected void affectNeighborsAfterRemoval(BlockState blockstate, ServerLevel world, BlockPos blockpos, boolean flag) {
+		Containers.updateNeighboursAfterDestroy(blockstate, world, blockpos);
 	}
 
 	@Override

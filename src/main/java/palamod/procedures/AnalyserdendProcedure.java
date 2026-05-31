@@ -50,7 +50,7 @@ public class AnalyserdendProcedure {
 		double clay = 0;
 		double grass = 0;
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(itemstack.getItem(), 100);
+			_player.getCooldowns().addCooldown(itemstack, 100);
 		proc1id = Mth.nextInt(RandomSource.create(), 1, 999955);
 		PalamodMod.LOGGER.debug(("[ Palamod ] " + entity + " use Chunk analyser ( status proc1 ) id proc1 : " + proc1id));
 		aready_iden = false;

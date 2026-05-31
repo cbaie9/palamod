@@ -7,15 +7,9 @@
     "bbb"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_ingot"
-    },
-    "b": {
-      "item": "palamod:compressed_paladium"
-    },
-    "c": {
-      "item": "palamod:paladium_chest"
-    }
+    "a": "palamod:endium_ingot",
+    "b": "palamod:compressed_paladium",
+    "c": "palamod:paladium_chest"
   },
   "result": {
     "id": "palamod:endium_chest",

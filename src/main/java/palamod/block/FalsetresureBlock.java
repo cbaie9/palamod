@@ -14,8 +14,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class FalsetresureBlock extends Block {
-	public FalsetresureBlock() {
-		super(BlockBehaviour.Properties.of().strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
+	public FalsetresureBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

@@ -6,7 +6,7 @@ public class Palahelptree7Procedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		if ((entity.getPersistentData().getString("language")).equals("french")) {
+		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
 			return "en Endium";
 		}
 		return "portal";

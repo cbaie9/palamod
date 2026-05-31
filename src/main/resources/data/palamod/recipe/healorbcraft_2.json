@@ -8,12 +8,8 @@
     " a "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "minecraft:glistering_melon_slice"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "minecraft:glistering_melon_slice"
   },
   "result": {
     "id": "palamod:heal_orb",

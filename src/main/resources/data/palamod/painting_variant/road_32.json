@@ -1,5 +1,13 @@
 {
   "asset_id": "palamod:road_32",
   "height": 2,
-  "width": 2
+  "width": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.palamod.road_32.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.palamod.road_32.author"
+  }
 }

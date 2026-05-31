@@ -7,21 +7,11 @@
     "ded"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:iron_ingot"
-    },
-    "b": {
-      "item": "palamod:plate"
-    },
-    "c": {
-      "tag": "minecraft:wooden_slabs"
-    },
-    "d": {
-      "tag": "minecraft:planks"
-    },
-    "e": {
-      "item": "palamod:findium"
-    }
+    "a": "minecraft:iron_ingot",
+    "b": "palamod:plate",
+    "c": "#minecraft:wooden_slabs",
+    "d": "#minecraft:planks",
+    "e": "palamod:findium"
   },
   "result": {
     "id": "palamod:typesettingtable",

@@ -16,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.Minecraft;
 
 @EventBusSubscriber(Dist.CLIENT)
@@ -39,7 +40,7 @@ public class FightingTimeOverlayOverlay {
 		}
 		if (FightingTimeOverlayGetLogicProcedure.execute(entity)) {
 
-			event.getGuiGraphics().blit(SPRITE_0, 6, 4, Mth.clamp((int) FightimeOverlayGetindexProcedure.execute(entity) * 22, 0, 440), 0, 22, 22, 462, 22);
+			event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, 6, 4, Mth.clamp((int) FightimeOverlayGetindexProcedure.execute(entity) * 22, 0, 440), 0, 22, 22, 462, 22);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

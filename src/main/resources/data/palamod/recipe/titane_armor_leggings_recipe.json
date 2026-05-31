@@ -8,9 +8,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    }
+    "a": "palamod:titane_ingot"
   },
   "result": {
     "id": "palamod:titane_armor_leggings",

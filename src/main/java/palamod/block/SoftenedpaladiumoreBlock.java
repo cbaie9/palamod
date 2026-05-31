@@ -15,8 +15,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.core.BlockPos;
 
 public class SoftenedpaladiumoreBlock extends Block {
-	public SoftenedpaladiumoreBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.NETHER_GOLD_ORE).strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public SoftenedpaladiumoreBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.NETHER_GOLD_ORE).strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

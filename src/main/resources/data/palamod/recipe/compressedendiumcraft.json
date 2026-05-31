@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_fragment"
-    },
-    "b": {
-      "item": "palamod:paladium_block"
-    }
+    "a": "palamod:endium_fragment",
+    "b": "palamod:paladium_block"
   },
   "result": {
     "id": "palamod:compressed_endium",

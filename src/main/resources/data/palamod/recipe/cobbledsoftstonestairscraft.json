@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:cobbled_soft_stone"
-    }
+    "a": "palamod:cobbled_soft_stone"
   },
   "result": {
     "id": "palamod:cobbled_soft_stone_stairs",

@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:xp_berry"
-    }
+    "a": "palamod:xp_berry"
   },
   "result": {
     "id": "palamod:compressed_xp_berry",

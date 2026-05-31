@@ -6,12 +6,8 @@
     "b"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:wither_rose"
-    },
-    "b": {
-      "tag": "neoforge:obsidian"
-    }
+    "a": "minecraft:wither_rose",
+    "b": "#neoforge:obsidian"
   },
   "result": {
     "id": "palamod:withered_obsidian_0",

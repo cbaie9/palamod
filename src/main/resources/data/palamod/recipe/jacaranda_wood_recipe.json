@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:jacaranda_log"
-    }
+    "a": "palamod:jacaranda_log"
   },
   "result": {
     "id": "palamod:jacaranda_wood",

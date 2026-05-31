@@ -2,24 +2,12 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "palamod:paladium_excavator"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "minecraft:glass"
-    },
-    {
-      "item": "palamod:paladium_core"
-    },
-    {
-      "item": "minecraft:glass"
-    }
+    "minecraft:glass",
+    "palamod:paladium_excavator",
+    "minecraft:glass",
+    "minecraft:glass",
+    "palamod:paladium_core",
+    "minecraft:glass"
   ],
   "result": {
     "id": "palamod:big_hole_upgrade",

@@ -20,7 +20,7 @@ public class Paladiumgolem_dropstoneProcedure {
 			entityToSpawn.setPickUpDelay(10);
 			_level.addFreshEntity(entityToSpawn);
 		}
-		new ItemStack(PalamodModItems.GUARDIAN_STONE.get()).set(DataComponents.CUSTOM_NAME, Component.literal(("Guardian stone - Contain  " + entity.getPersistentData().getDouble("Golem_level") + " level Golem")));
+		new ItemStack(PalamodModItems.GUARDIAN_STONE.get()).set(DataComponents.CUSTOM_NAME, Component.literal(("Guardian stone - Contain  " + entity.getPersistentData().getDoubleOr("Golem_level", 0) + " level Golem")));
 		{
 			final String _tagName = "golem_kac";
 			final boolean _tagValue = true;
@@ -28,7 +28,7 @@ public class Paladiumgolem_dropstoneProcedure {
 		}
 		{
 			final String _tagName = "golem_level";
-			final double _tagValue = (entity.getPersistentData().getDouble("Golem_level"));
+			final double _tagValue = (entity.getPersistentData().getDoubleOr("Golem_level", 0));
 			CustomData.update(DataComponents.CUSTOM_DATA, new ItemStack(PalamodModItems.GUARDIAN_STONE.get()), tag -> tag.putDouble(_tagName, _tagValue));
 		}
 		if (true) {

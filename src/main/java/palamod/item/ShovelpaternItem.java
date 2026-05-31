@@ -1,23 +1,16 @@
 package palamod.item;
 
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
 
 public class ShovelpaternItem extends Item {
-	public ShovelpaternItem() {
-		super(new Item.Properties());
+	public ShovelpaternItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
-	}
-
-	@Override
-	public SoundEvent getEatingSound() {
-		return SoundEvents.EMPTY;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

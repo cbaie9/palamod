@@ -17,26 +17,10 @@ public class CloseguifaccreateProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert(PalamodModVariables.faction_create_ing) > 0) {
+		if (parseDouble(PalamodModVariables.faction_create_ing) > 0) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_INGOT.get()).copy();
-				_setstack.setCount((int) new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
-					}
-				}.convert(PalamodModVariables.faction_create_ing));
+				_setstack.setCount((int) parseDouble(PalamodModVariables.faction_create_ing));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if ((PalamodModVariables.faction_create_ing).equals("You can now create the faction")) {
@@ -47,6 +31,14 @@ public class CloseguifaccreateProcedure {
 			}
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal(("[ Palamod ] La faction" + entity.getPersistentData().getString("temp_fact_name") + "n'a pas pus \u00EAtre creer")), true);
+			_player.displayClientMessage(Component.literal(("[ Palamod ] La faction" + entity.getPersistentData().getStringOr("temp_fact_name", "") + "n'a pas pus \u00EAtre creer")), true);
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
+		}
 	}
 }

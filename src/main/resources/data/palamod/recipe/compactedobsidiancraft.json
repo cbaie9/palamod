@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:obsidian"
-    },
-    "b": {
-      "item": "palamod:paladium_core"
-    }
+    "a": "minecraft:obsidian",
+    "b": "palamod:paladium_core"
   },
   "result": {
     "id": "palamod:compacted_obsidian",

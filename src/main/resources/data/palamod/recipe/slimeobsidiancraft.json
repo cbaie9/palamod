@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "tag": "neoforge:obsidian"
-    },
-    "b": {
-      "tag": "palamod:slimepad"
-    }
+    "a": "#neoforge:obsidian",
+    "b": "#palamod:slimepad"
   },
   "result": {
     "id": "palamod:slime_obsidian",

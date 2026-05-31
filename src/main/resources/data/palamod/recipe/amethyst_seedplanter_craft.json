@@ -8,15 +8,9 @@
     "ccc"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst_ingot"
-    },
-    "b": {
-      "item": "palamod:compressed_amethyst"
-    },
-    "c": {
-      "item": "palamod:amethyst_stick"
-    }
+    "a": "palamod:amethyst_ingot",
+    "b": "palamod:compressed_amethyst",
+    "c": "palamod:amethyst_stick"
   },
   "result": {
     "id": "palamod:amethyst_seedplanter",

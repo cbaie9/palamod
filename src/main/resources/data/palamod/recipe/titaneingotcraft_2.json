@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_particle"
-    }
+    "a": "palamod:titane_particle"
   },
   "result": {
     "id": "palamod:titane_ingot",

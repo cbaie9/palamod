@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "palamod:endium_stairs"
-    }
+    "palamod:endium_stairs"
   ],
   "result": {
     "id": "palamod:endium_ingot",

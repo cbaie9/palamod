@@ -9,12 +9,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 
 public class FlypotionItem extends Item {
-	public FlypotionItem() {
-		super(new Item.Properties().rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(5f).build()));
+	public FlypotionItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(0).saturationModifier(5f).build()).usingConvertsTo(Items.GLASS_BOTTLE));
 	}
 
 	@Override
@@ -24,20 +23,8 @@ public class FlypotionItem extends Item {
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-		ItemStack retval = new ItemStack(Items.GLASS_BOTTLE);
-		super.finishUsingItem(itemstack, world, entity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		FseffectEffectStartedappliedProcedure.execute(world, x, y, z, entity);
-		if (itemstack.isEmpty()) {
-			return retval;
-		} else {
-			if (entity instanceof Player player && !player.getAbilities().instabuild) {
-				if (!player.getInventory().add(retval))
-					player.drop(retval, false);
-			}
-			return itemstack;
-		}
+		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
+		FseffectEffectStartedappliedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		return retval;
 	}
 }

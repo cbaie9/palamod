@@ -7,15 +7,9 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_block"
-    },
-    "b": {
-      "item": "minecraft:obsidian"
-    },
-    "c": {
-      "item": "palamod:paladium_hammer"
-    }
+    "a": "palamod:titane_block",
+    "b": "minecraft:obsidian",
+    "c": "palamod:paladium_hammer"
   },
   "result": {
     "id": "palamod:caverne_hammer",

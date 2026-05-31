@@ -8,12 +8,8 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_ingot"
-    },
-    "b": {
-      "item": "palamod:cobblebreaker_amethyst_upgrade"
-    }
+    "a": "palamod:titane_ingot",
+    "b": "palamod:cobblebreaker_amethyst_upgrade"
   },
   "result": {
     "id": "palamod:cobblebreaker_titane_upgrade",

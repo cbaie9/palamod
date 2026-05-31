@@ -1,8 +1,5 @@
 package palamod.client.particle;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.client.particle.SpriteSet;
@@ -11,7 +8,6 @@ import net.minecraft.client.particle.ParticleProvider;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 
-@OnlyIn(Dist.CLIENT)
 public class FlyparticleParticle extends TextureSheetParticle {
 	public static FlyparticleParticleProvider provider(SpriteSet spriteSet) {
 		return new FlyparticleParticleProvider(spriteSet);

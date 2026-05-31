@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "palamod:renforced_obsidian"
-  },
+  "ingredient": "palamod:renforced_obsidian",
   "result": {
     "id": "palamod:hardened_obsidian_slab",
     "count": 2

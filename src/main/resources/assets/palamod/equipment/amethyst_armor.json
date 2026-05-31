@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:amethyst_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:amethyst_armor"
+      }
+    ]
+  }
+}

@@ -7,15 +7,9 @@
     "bcb"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:feather"
-    },
-    "b": {
-      "item": "minecraft:leather"
-    },
-    "c": {
-      "item": "minecraft:iron_ingot"
-    }
+    "a": "minecraft:feather",
+    "b": "minecraft:leather",
+    "c": "minecraft:iron_ingot"
   },
   "result": {
     "id": "palamod:travel_armor_chestplate",

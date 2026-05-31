@@ -19,8 +19,8 @@ import net.minecraft.core.BlockPos;
 public class TitaneOreBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
-	public TitaneOreBlock() {
-		super(BlockBehaviour.Properties.of().strength(5.05f, 18.1194915919f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public TitaneOreBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(5.05f, 18.1194915919f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(BLOCKSTATE, 0));
 	}
 

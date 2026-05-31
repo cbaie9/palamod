@@ -36,7 +36,7 @@ public class PalakitprocessProcedure {
 					}
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (entity.getPersistentData().getBoolean("take_palakit") == false || entity.hasPermissions(2)) {
+					if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || entity instanceof Player _playerCmd5 && _playerCmd5.hasPermissions(2)) {
 						main.addProperty("money", (main.get("money").getAsDouble() + 500));
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
@@ -93,7 +93,7 @@ public class PalakitprocessProcedure {
 				}
 			}
 		} else {
-			if (entity.getPersistentData().getBoolean("take_palakit") == false || entity.hasPermissions(2)) {
+			if (entity.getPersistentData().getBooleanOr("take_palakit", false) == false || entity instanceof Player _playerCmd19 && _playerCmd19.hasPermissions(2)) {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PalamodModItems.PALADIUM_ARMOR_HELMET.get()).copy();
 					_setstack.setCount(1);

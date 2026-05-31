@@ -7,9 +7,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:mixed_endium_ingot"
-    }
+    "a": "palamod:mixed_endium_ingot"
   },
   "result": {
     "id": "palamod:mixed_endium_armor_helmet",

@@ -1,23 +1,16 @@
 package palamod.item;
 
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
 
 public class HeadgreenpickaxeItem extends Item {
-	public HeadgreenpickaxeItem() {
-		super(new Item.Properties().stacksTo(1));
+	public HeadgreenpickaxeItem(Item.Properties properties) {
+		super(properties.stacksTo(1));
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
-	}
-
-	@Override
-	public SoundEvent getEatingSound() {
-		return SoundEvents.EMPTY;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

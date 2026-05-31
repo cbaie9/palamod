@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:gold_particle"
-    }
+    "a": "palamod:gold_particle"
   },
   "result": {
     "id": "minecraft:gold_ingot",

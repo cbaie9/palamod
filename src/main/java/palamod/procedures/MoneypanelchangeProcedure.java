@@ -13,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -35,11 +36,11 @@ public class MoneypanelchangeProcedure {
 			return;
 		File money = new File("");
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
 			if (entity instanceof Player _player)
 				_player.closeContainer();
-			if (entity.hasPermissions(4)) {
+			if (entity instanceof Player _playerCmd6 && _playerCmd6.hasPermissions(4)) {
 				main_money.addProperty("money", (DoubleArgumentType.getDouble(arguments, "money")));
 				{
 					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();

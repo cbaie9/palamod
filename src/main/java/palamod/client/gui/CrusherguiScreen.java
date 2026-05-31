@@ -8,7 +8,7 @@ import palamod.network.CrusherguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -16,12 +16,11 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -82,26 +81,26 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 139 && mouseX < leftPos + 155 && mouseY > topPos + 99 && mouseY < topPos + 115) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.crushergui.tooltip_show_percentage_of_getting_a_ing"), mouseX, mouseY);
+			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushergui.tooltip_show_percentage_of_getting_a_ing"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z))
 			if (mouseX > leftPos + 179 && mouseX < leftPos + 331 && mouseY > topPos + 121 && mouseY < topPos + 192) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.crushergui.tooltip_percentage_of_getting_an_ingot"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushergui.tooltip_percentage_of_getting_an_ingot"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (mouseX > leftPos + 112 && mouseX < leftPos + 136 && mouseY > topPos + 99 && mouseY < topPos + 115) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.crushergui.tooltip_enabledisable_pro_mode"), mouseX, mouseY);
+			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushergui.tooltip_enabledisable_pro_mode"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z))
 			if (mouseX > leftPos + 159 && mouseX < leftPos + 177 && mouseY > topPos + 98 && mouseY < topPos + 116) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.crushergui.tooltip_output_slot"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushergui.tooltip_output_slot"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z))
 			if (mouseX > leftPos + 14 && mouseX < leftPos + 34 && mouseY > topPos + 87 && mouseY < topPos + 105) {
-				guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.crushergui.tooltip_show_crusher_crafts"), mouseX, mouseY);
+				guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.crushergui.tooltip_show_crusher_crafts"), mouseX, mouseY);
 				customTooltipShown = true;
 			}
 		if (!customTooltipShown)
@@ -110,42 +109,38 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 335, 205, 335, 205);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 177, this.topPos + 140, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 177, this.topPos + 158, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 177, this.topPos + 122, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 177, this.topPos + 176, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 7, this.topPos + 20, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 194, this.topPos + 19, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_7, this.leftPos + 197, this.topPos + 52, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_8, this.leftPos + 311, this.topPos + 52, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_9, this.leftPos + 311, this.topPos + 20, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_10, this.leftPos + 7, this.topPos + 56, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_11, this.leftPos + 101, this.topPos + 20, 0, 0, 92, 20, 92, 20);
-		guiGraphics.blit(IMAGE_12, this.leftPos + 215, this.topPos + 20, 0, 0, 92, 20, 92, 20);
-		guiGraphics.blit(IMAGE_13, this.leftPos + 101, this.topPos + 52, 0, 0, 92, 20, 92, 20);
-		guiGraphics.blit(IMAGE_14, this.leftPos + 215, this.topPos + 52, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 335, 205, 335, 205);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 177, this.topPos + 140, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 177, this.topPos + 158, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 177, this.topPos + 122, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 177, this.topPos + 176, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 7, this.topPos + 20, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 194, this.topPos + 19, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_7, this.leftPos + 197, this.topPos + 52, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_8, this.leftPos + 311, this.topPos + 52, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_9, this.leftPos + 311, this.topPos + 20, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_10, this.leftPos + 7, this.topPos + 56, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_11, this.leftPos + 101, this.topPos + 20, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_12, this.leftPos + 215, this.topPos + 20, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_13, this.leftPos + 101, this.topPos + 52, 0, 0, 92, 20, 92, 20);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_14, this.leftPos + 215, this.topPos + 52, 0, 0, 92, 20, 92, 20);
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_15, this.leftPos + 100, this.topPos + 19, 0, 0, 114, 32, 114, 32);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_15, this.leftPos + 100, this.topPos + 19, 0, 0, 114, 32, 114, 32);
 		}
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_16, this.leftPos + 100, this.topPos + 51, 0, 0, 114, 32, 114, 32);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_16, this.leftPos + 100, this.topPos + 51, 0, 0, 114, 32, 114, 32);
 		}
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_17, this.leftPos + 214, this.topPos + 51, 0, 0, 114, 32, 114, 32);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_17, this.leftPos + 214, this.topPos + 51, 0, 0, 114, 32, 114, 32);
 		}
 		if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_18, this.leftPos + 214, this.topPos + 19, 0, 0, 114, 32, 114, 32);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_18, this.leftPos + 214, this.topPos + 19, 0, 0, 114, 32, 114, 32);
 		}
-		guiGraphics.blit(SPRITE_0, this.leftPos + 198, this.topPos + 124, Mth.clamp((int) Crushersubprocessv3baramethystProcedure.execute(world, x, y, z) * 100, 0, 1600), 0, 100, 10, 1700, 10);
-		guiGraphics.blit(SPRITE_1, this.leftPos + 198, this.topPos + 141, 0, 0, 100, 10, 3300, 10);
-		guiGraphics.blit(SPRITE_2, this.leftPos + 198, this.topPos + 161, Mth.clamp((int) Crushersubprocessv3barpaladiumProcedure.execute(world, x, y, z) * 100, 0, 3200), 0, 100, 10, 3300, 10);
-		guiGraphics.blit(SPRITE_3, this.leftPos + 198, this.topPos + 180, Mth.clamp((int) Crushersubprocessv3barendiumProcedure.execute(world, x, y, z) * 136, 0, 17272), 0, 136, 10, 17408, 10);
-		guiGraphics.blit(SPRITE_4, this.leftPos + 7, this.topPos + 38, Mth.clamp((int) CrushersubprocessflamespritereturnProcedure.execute(world, x, y, z) * 16, 0, 144), 0, 16, 16, 160, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 198, this.topPos + 124, Mth.clamp((int) Crushersubprocessv3baramethystProcedure.execute(world, x, y, z) * 100, 0, 1600), 0, 100, 10, 1700, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 198, this.topPos + 141, 0, 0, 100, 10, 3300, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_2, this.leftPos + 198, this.topPos + 161, Mth.clamp((int) Crushersubprocessv3barpaladiumProcedure.execute(world, x, y, z) * 100, 0, 3200), 0, 100, 10, 3300, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_3, this.leftPos + 198, this.topPos + 180, Mth.clamp((int) Crushersubprocessv3barendiumProcedure.execute(world, x, y, z) * 136, 0, 17272), 0, 136, 10, 17408, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_4, this.leftPos + 7, this.topPos + 38, Mth.clamp((int) CrushersubprocessflamespritereturnProcedure.execute(world, x, y, z) * 16, 0, 144), 0, 16, 16, 160, 16);
 	}
 
 	@Override
@@ -182,7 +177,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (CrushershowlunchertitaneProcedure.execute(world, x, y, z)) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(0, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -191,7 +186,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				int x = CrusherguiScreen.this.x;
 				int y = CrusherguiScreen.this.y;
 				if (CrushershowlunchertitaneProcedure.execute(world, x, y, z))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white3);
@@ -200,7 +195,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (CrushershowluncherendiumProcedure.execute(world, x, y, z)) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(1, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -209,7 +204,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				int x = CrusherguiScreen.this.x;
 				int y = CrusherguiScreen.this.y;
 				if (CrushershowluncherendiumProcedure.execute(world, x, y, z))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white4);
@@ -218,7 +213,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (CrushershowluncheramethystProcedure.execute(world, x, y, z)) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(2, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -227,7 +222,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				int x = CrusherguiScreen.this.x;
 				int y = CrusherguiScreen.this.y;
 				if (CrushershowluncheramethystProcedure.execute(world, x, y, z))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white5);
@@ -236,7 +231,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (CrushershowluncherpaladiumProcedure.execute(world, x, y, z)) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(3, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -245,7 +240,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				int x = CrusherguiScreen.this.x;
 				int y = CrusherguiScreen.this.y;
 				if (CrushershowluncherpaladiumProcedure.execute(world, x, y, z))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_button_white6);
@@ -254,13 +249,13 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(4, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_crusher_btn_pctg_on);
@@ -269,13 +264,13 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(5, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(5, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_pro_mode_crusher);
@@ -284,7 +279,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 					int x = CrusherguiScreen.this.x;
 					int y = CrusherguiScreen.this.y;
 					if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z)) {
-						PacketDistributor.sendToServer(new CrusherguiButtonMessage(6, x, y, z));
+						ClientPacketDistributor.sendToServer(new CrusherguiButtonMessage(6, x, y, z));
 						CrusherguiButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -293,7 +288,7 @@ public class CrusherguiScreen extends AbstractContainerScreen<CrusherguiMenu> im
 				int x = CrusherguiScreen.this.x;
 				int y = CrusherguiScreen.this.y;
 				if (IscrushercrusherpromodefalseProcedure.execute(world, x, y, z))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_book_button);

@@ -14,6 +14,6 @@ public class MixedendiumarmorHelmetTickEventProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 60, 1, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 2, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 60, 2, false, false));
 	}
 }

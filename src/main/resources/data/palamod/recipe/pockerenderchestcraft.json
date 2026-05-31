@@ -6,12 +6,8 @@
     "b"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:ender_chest"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "minecraft:ender_chest",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "palamod:pocketenderchest",

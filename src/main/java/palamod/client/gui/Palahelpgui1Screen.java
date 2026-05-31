@@ -6,18 +6,17 @@ import palamod.network.Palahelpgui1ButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -57,12 +56,8 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 1, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 3, this.topPos + 20, 0, 0, 85, 84, 85, 84);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 1, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 3, this.topPos + 20, 0, 0, 85, 84, 85, 84);
 	}
 
 	@Override
@@ -88,7 +83,7 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 			int x = Palahelpgui1Screen.this.x;
 			int y = Palahelpgui1Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(0, x, y, z));
 				Palahelpgui1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 6, 81, 20).build();
@@ -97,7 +92,7 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 			int x = Palahelpgui1Screen.this.x;
 			int y = Palahelpgui1Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(1, x, y, z));
 				Palahelpgui1ButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 31, 81, 20).build();
@@ -106,7 +101,7 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 			int x = Palahelpgui1Screen.this.x;
 			int y = Palahelpgui1Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(2, x, y, z));
+				ClientPacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(2, x, y, z));
 				Palahelpgui1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 57, 81, 20).build();
@@ -115,7 +110,7 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 			int x = Palahelpgui1Screen.this.x;
 			int y = Palahelpgui1Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(3, x, y, z));
+				ClientPacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(3, x, y, z));
 				Palahelpgui1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 122, 81, 20).build();
@@ -124,7 +119,7 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 			int x = Palahelpgui1Screen.this.x;
 			int y = Palahelpgui1Screen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(4, x, y, z));
+				ClientPacketDistributor.sendToServer(new Palahelpgui1ButtonMessage(4, x, y, z));
 				Palahelpgui1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 88, this.topPos + 97, 81, 20).build();

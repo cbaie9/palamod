@@ -12,6 +12,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class LogAlluseBonemealProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 			PalamodMod.LOGGER.debug(
 					(entity.getDisplayName().getString() + " use bonemeal on  ( " + (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())).getDisplayName().getString() + " ) at " + " x : " + x + " y : " + y + " z : " + z));
 		}

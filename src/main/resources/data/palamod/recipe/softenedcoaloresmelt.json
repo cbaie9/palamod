@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 1,
   "cookingtime": 200,
-  "ingredient": {
-    "item": "palamod:softened_coal_ore"
-  },
+  "ingredient": "palamod:softened_coal_ore",
   "result": {
     "id": "minecraft:coal"
   }

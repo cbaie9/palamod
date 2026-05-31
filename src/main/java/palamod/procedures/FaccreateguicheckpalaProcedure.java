@@ -16,24 +16,8 @@ public class FaccreateguicheckpalaProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get(0).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.PALADIUM_INGOT.get()
-				&& new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
-					}
-				}.convert(PalamodModVariables.faction_create_ing) > 0) {
-			PalamodModVariables.faction_create_ing = "remaining to insert :" + (new Object() {
-				double convert(String s) {
-					try {
-						return Double.parseDouble(s.trim());
-					} catch (Exception e) {
-					}
-					return 0;
-				}
-			}.convert(PalamodModVariables.faction_create_ing) + 1);
+				&& parseDouble(PalamodModVariables.faction_create_ing) > 0) {
+			PalamodModVariables.faction_create_ing = "remaining to insert :" + (parseDouble(PalamodModVariables.faction_create_ing) + 1);
 			if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 				_menu.getSlots().get(0).remove(1);
 				_player.containerMenu.broadcastChanges();
@@ -41,6 +25,14 @@ public class FaccreateguicheckpalaProcedure {
 			if ((PalamodModVariables.faction_create_ing).equals("remaining to insert :100")) {
 				PalamodModVariables.faction_create_ing = "You can now create the faction";
 			}
+		}
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
 		}
 	}
 }

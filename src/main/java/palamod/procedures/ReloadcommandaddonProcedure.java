@@ -11,6 +11,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import palamod.procedures.JobCraftRestrictionManagerProcedure;
+import net.minecraft.server.level.ServerLevel;
 
 import javax.annotation.Nullable;
 
@@ -31,9 +32,12 @@ public class ReloadcommandaddonProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, String command) {
 		if (command == null)
 			return;
-		if (command.startsWith("reload") && !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
+		if (command.startsWith("reload")) {
+			if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))
+{
 			JobCraftRestrictionManagerProcedure.reload();
 			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.reload_craft_config").getString());
+		}
 		}
 	}
 }

@@ -8,9 +8,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:dead_planks"
-    }
+    "a": "palamod:dead_planks"
   },
   "result": {
     "id": "palamod:dead_stairs",

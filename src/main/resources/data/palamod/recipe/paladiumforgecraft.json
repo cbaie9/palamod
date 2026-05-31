@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:bricks"
-    },
-    "b": {
-      "item": "palamod:paladium_furnace"
-    },
-    "c": {
-      "item": "palamod:findium"
-    }
+    "a": "minecraft:bricks",
+    "b": "palamod:paladium_furnace",
+    "c": "palamod:findium"
   },
   "result": {
     "id": "palamod:paladium_forge",

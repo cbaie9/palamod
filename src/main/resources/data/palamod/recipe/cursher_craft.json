@@ -7,18 +7,10 @@
     "aca"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_core"
-    },
-    "b": {
-      "item": "palamod:compressed_amethyst"
-    },
-    "c": {
-      "item": "palamod:paladium_stick"
-    },
-    "d": {
-      "item": "palamod:findium"
-    }
+    "a": "palamod:paladium_core",
+    "b": "palamod:compressed_amethyst",
+    "c": "palamod:paladium_stick",
+    "d": "palamod:findium"
   },
   "result": {
     "id": "palamod:paladium_crusher",

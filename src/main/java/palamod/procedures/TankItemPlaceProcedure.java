@@ -24,11 +24,11 @@ public class TankItemPlaceProcedure {
 		if (entity == null)
 			return;
 		BlockState tank = Blocks.AIR.defaultBlockState();
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type") == 1) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("tank_type", 0) == 1) {
 			tank = PalamodModBlocks.GOLDEN_TANK.get().defaultBlockState();
-		} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type") == 2) {
+		} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("tank_type", 0) == 2) {
 			tank = PalamodModBlocks.AMETHYST_TANK.get().defaultBlockState();
-		} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("tank_type") == 3) {
+		} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("tank_type", 0) == 3) {
 			tank = PalamodModBlocks.TITANE_TANK.get().defaultBlockState();
 		} else {
 			tank = PalamodModBlocks.PALADIUM_TANK.get().defaultBlockState();
@@ -41,8 +41,8 @@ public class TankItemPlaceProcedure {
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null) {
 					_blockEntity.getPersistentData().putBoolean("setup", true);
-					_blockEntity.getPersistentData().putDouble("stock", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("stock")));
-					_blockEntity.getPersistentData().putString("type", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("type")));
+					_blockEntity.getPersistentData().putDouble("stock", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("stock", 0)));
+					_blockEntity.getPersistentData().putString("type", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("type", "")));
 				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
@@ -63,8 +63,8 @@ public class TankItemPlaceProcedure {
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putBoolean("setup", true);
-						_blockEntity.getPersistentData().putDouble("stock", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("stock")));
-						_blockEntity.getPersistentData().putString("type", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("type")));
+						_blockEntity.getPersistentData().putDouble("stock", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("stock", 0)));
+						_blockEntity.getPersistentData().putString("type", (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("type", "")));
 					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);

@@ -9,10 +9,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class AmethystchestguiScreen extends AbstractContainerScreen<AmethystchestguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -48,13 +47,9 @@ public class AmethystchestguiScreen extends AbstractContainerScreen<Amethystches
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 306, 225, 306, 225);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 260, this.topPos + 163, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 306, 225, 306, 225);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 260, this.topPos + 163, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 284, this.topPos + 112, 0, 0, 16, 16, 16, 16);
 	}
 
 	@Override

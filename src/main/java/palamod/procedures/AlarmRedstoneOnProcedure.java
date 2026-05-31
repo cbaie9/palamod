@@ -2,11 +2,13 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import net.minecraft.world.level.storage.TagValueInput;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.nbt.CompoundTag;
@@ -17,9 +19,9 @@ public class AlarmRedstoneOnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:lucky_alarm")), SoundSource.MASTER, 100, 1);
+				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:lucky_alarm")), SoundSource.MASTER, 100, 1);
 			} else {
-				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("palamod:lucky_alarm")), SoundSource.MASTER, 100, 1, false);
+				_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("palamod:lucky_alarm")), SoundSource.MASTER, 100, 1, false);
 			}
 		}
 		{
@@ -45,7 +47,7 @@ public class AlarmRedstoneOnProcedure {
 				_be = world.getBlockEntity(_bp);
 				if (_be != null) {
 					try {
-						_be.loadWithComponents(_bnbt, world.registryAccess());
+						_be.loadWithComponents(TagValueInput.create(ProblemReporter.DISCARDING, world.registryAccess(), _bnbt));
 					} catch (Exception ignored) {
 					}
 				}

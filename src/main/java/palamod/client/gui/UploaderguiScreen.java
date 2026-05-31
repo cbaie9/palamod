@@ -10,13 +10,14 @@ import palamod.network.UploaderguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -24,8 +25,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -64,22 +63,22 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 117 && mouseY > topPos + 34 && mouseY < topPos + 52) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
+			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 117 && mouseY > topPos + 68 && mouseY < topPos + 86) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be"), mouseX, mouseY);
+			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 200 && mouseX < leftPos + 216 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 181 && mouseX < leftPos + 197 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to"), mouseX, mouseY);
+			guiGraphics.setTooltipForNextFrame(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -88,17 +87,13 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 220, 180, 220, 180);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 28, this.topPos + 72, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 43, this.topPos + 72, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 130, this.topPos + 71, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 141, this.topPos + 71, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 85, this.topPos + 6, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 86, this.topPos + 6, 0, 0, 50, 16, 50, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 220, 180, 220, 180);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 28, this.topPos + 72, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 43, this.topPos + 72, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 130, this.topPos + 71, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 141, this.topPos + 71, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 85, this.topPos + 6, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 86, this.topPos + 6, 0, 0, 50, 16, 50, 16);
 	}
 
 	@Override
@@ -125,13 +120,13 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 					int x = UploaderguiScreen.this.x;
 					int y = UploaderguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new UploaderguiButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new UploaderguiButtonMessage(0, x, y, z));
 						UploaderguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -139,7 +134,7 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_help_img);

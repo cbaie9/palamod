@@ -5,9 +5,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:flatten_amethyst_chest"
-    }
+    "a": "palamod:flatten_amethyst_chest"
   },
   "result": {
     "id": "palamod:amethyst_chest",

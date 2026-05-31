@@ -8,12 +8,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:stone"
-    },
-    "b": {
-      "item": "palamod:compressed_paladium"
-    }
+    "a": "minecraft:stone",
+    "b": "palamod:compressed_paladium"
   },
   "result": {
     "id": "palamod:paladium_machine",

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:hood_helmet_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:hood_helmet_armor"
+      }
+    ]
+  }
+}

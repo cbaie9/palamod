@@ -7,18 +7,10 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "palamod:lightning_potion"
-    },
-    "b": {
-      "item": "palamod:paladium_stick"
-    },
-    "c": {
-      "item": "palamod:paladium_sword"
-    },
-    "d": {
-      "item": "palamod:compressed_paladium"
-    }
+    "a": "palamod:lightning_potion",
+    "b": "palamod:paladium_stick",
+    "c": "palamod:paladium_sword",
+    "d": "palamod:compressed_paladium"
   },
   "result": {
     "id": "palamod:paladium_portal_key",

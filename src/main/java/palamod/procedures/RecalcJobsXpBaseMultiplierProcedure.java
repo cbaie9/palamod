@@ -11,6 +11,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class RecalcJobsXpBaseMultiplierProcedure {
 		double base = 0;
 		double actual_multi_exp = 0;
 		jobs = GetjobsfileProcedure.execute(entity);
-		base = (world.getLevelData().getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER)) / 100d;
+		base = (world instanceof ServerLevel _serverLevelGR0 ? _serverLevelGR0.getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER) : 0) / 100d;
 		if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PalamodModMobEffects.MULTIEXP_2)) {
 			base = base * 2;
 		}

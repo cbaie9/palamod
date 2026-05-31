@@ -9,13 +9,13 @@ import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.entity.player.PlayerContainerEvent;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -331,7 +331,7 @@ public class GodvillagerguiMenu extends AbstractContainerMenu implements Palamod
 
 	private void slotChanged(int slotid, int ctype, int meta) {
 		if (this.world != null && this.world.isClientSide()) {
-			PacketDistributor.sendToServer(new GodvillagerguiSlotMessage(slotid, x, y, z, ctype, meta));
+			ClientPacketDistributor.sendToServer(new GodvillagerguiSlotMessage(slotid, x, y, z, ctype, meta));
 			GodvillagerguiSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}

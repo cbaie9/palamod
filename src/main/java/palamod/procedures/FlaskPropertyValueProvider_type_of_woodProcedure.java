@@ -6,6 +6,6 @@ import net.minecraft.core.component.DataComponents;
 
 public class FlaskPropertyValueProvider_type_of_woodProcedure {
 	public static double execute(ItemStack itemstack) {
-		return itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("type_of_seve");
+		return itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("type_of_seve", 0);
 	}
 }

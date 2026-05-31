@@ -20,8 +20,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class Chervil0Block extends FlowerBlock {
-	public Chervil0Block() {
-		super(MobEffects.FIRE_RESISTANCE, 60, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
+	public Chervil0Block(BlockBehaviour.Properties properties) {
+		super(MobEffects.FIRE_RESISTANCE, 60, properties.mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override

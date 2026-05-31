@@ -12,10 +12,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -33,21 +30,10 @@ public class StonyBlock_respawnProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (PalamodModBlocks.STONY.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() && !(getEntityGameType(entity) == GameType.CREATIVE)) {
+		if (PalamodModBlocks.STONY.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() && !(entity instanceof Player _plr2 && _plr2.gameMode() == GameType.CREATIVE)) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
 		}
-	}
-
-	private static GameType getEntityGameType(Entity entity) {
-		if (entity instanceof ServerPlayer serverPlayer) {
-			return serverPlayer.gameMode.getGameModeForPlayer();
-		} else if (entity instanceof Player player && player.level().isClientSide()) {
-			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
-			if (playerInfo != null)
-				return playerInfo.getGameMode();
-		}
-		return null;
 	}
 }

@@ -8,12 +8,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:titane_block"
-    },
-    "b": {
-      "item": "palamod:titane_ingot"
-    }
+    "a": "palamod:titane_block",
+    "b": "palamod:titane_ingot"
   },
   "result": {
     "id": "palamod:compressed_titane",

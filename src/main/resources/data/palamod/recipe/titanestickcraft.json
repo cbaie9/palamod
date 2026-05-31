@@ -3,12 +3,8 @@
   "group": "titane_craft_group",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:titane_ingot"
-    },
-    {
-      "item": "palamod:titane_ingot"
-    }
+    "palamod:titane_ingot",
+    "palamod:titane_ingot"
   ],
   "result": {
     "id": "palamod:titane_stick",

@@ -31,7 +31,7 @@ public class Elevator_processProcedure {
 					continue;
 				}
 			}
-		} else if (entity.getPersistentData().getBoolean("player.jumping")) {
+		} else if (entity.getPersistentData().getBooleanOr("player.jumping", false)) {
 			entity.getPersistentData().putBoolean("player.jumping", false);
 			y_pos = y;
 			add_num = 1;

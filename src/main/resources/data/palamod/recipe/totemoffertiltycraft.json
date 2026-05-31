@@ -7,18 +7,10 @@
     "ada"
   ],
   "key": {
-    "a": {
-      "tag": "c:logs"
-    },
-    "b": {
-      "item": "minecraft:creeper_head"
-    },
-    "c": {
-      "item": "palamod:compressed_paladium"
-    },
-    "d": {
-      "item": "minecraft:bone_meal"
-    }
+    "a": "#c:logs",
+    "b": "minecraft:creeper_head",
+    "c": "palamod:compressed_paladium",
+    "d": "minecraft:bone_meal"
   },
   "result": {
     "id": "palamod:totem_fertility",

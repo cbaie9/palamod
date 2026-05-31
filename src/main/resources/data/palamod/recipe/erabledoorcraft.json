@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:erable_planks"
-    }
+    "a": "palamod:erable_planks"
   },
   "result": {
     "id": "palamod:erable_door",

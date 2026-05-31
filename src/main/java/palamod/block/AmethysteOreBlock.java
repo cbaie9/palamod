@@ -20,8 +20,8 @@ import net.minecraft.core.BlockPos;
 public class AmethysteOreBlock extends Block {
 	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 
-	public AmethysteOreBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public AmethysteOreBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.AMETHYST_CLUSTER).strength(3f, 15.1571656651f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(BLOCKSTATE, 0));
 	}
 

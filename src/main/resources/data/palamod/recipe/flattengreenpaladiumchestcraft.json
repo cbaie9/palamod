@@ -5,12 +5,8 @@
     "ab"
   ],
   "key": {
-    "a": {
-      "item": "palamod:green_paladium_chest"
-    },
-    "b": {
-      "item": "palamod:flat_chest_upgrade"
-    }
+    "a": "palamod:green_paladium_chest",
+    "b": "palamod:flat_chest_upgrade"
   },
   "result": {
     "id": "palamod:flatten_green_paladium_chest",

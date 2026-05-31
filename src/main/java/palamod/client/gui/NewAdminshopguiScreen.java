@@ -8,13 +8,14 @@ import palamod.network.NewAdminshopguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -25,8 +26,6 @@ import net.minecraft.client.Minecraft;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -70,14 +69,14 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 4 && mouseY < topPos + 19) {
 			String hoverText = ReturnadminshoporemenuProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 3 && mouseY < topPos + 19) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -87,12 +86,8 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 5, this.topPos + 4, 0, 0, 16, 16, 16, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 5, this.topPos + 4, 0, 0, 16, 16, 16, 16);
 	}
 
 	@Override
@@ -136,7 +131,7 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 			int x = NewAdminshopguiScreen.this.x;
 			int y = NewAdminshopguiScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(0, x, y, z));
 				NewAdminshopguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 26, this.topPos + 109, 40, 20).build();
@@ -145,7 +140,7 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 			int x = NewAdminshopguiScreen.this.x;
 			int y = NewAdminshopguiScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(1, x, y, z));
 				NewAdminshopguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 99, this.topPos + 109, 46, 20).build();
@@ -155,13 +150,13 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 					int x = NewAdminshopguiScreen.this.x;
 					int y = NewAdminshopguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(2, x, y, z));
 						NewAdminshopguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -170,13 +165,13 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 					int x = NewAdminshopguiScreen.this.x;
 					int y = NewAdminshopguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new NewAdminshopguiButtonMessage(3, x, y, z));
 						NewAdminshopguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_adminshop);

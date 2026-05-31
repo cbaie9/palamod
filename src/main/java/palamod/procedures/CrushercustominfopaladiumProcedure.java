@@ -6,6 +6,7 @@ import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import java.io.IOException;
@@ -44,7 +45,7 @@ public class CrushercustominfopaladiumProcedure {
 				}
 			}
 		}
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR7 && _serverLevelGR7.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			return getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_paladium") + " / " + output + " - " + (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_paladium") / output) * 100 + "%";
 		}
 		return (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "crusher_num_paladium") / output) * 100 + "%";
@@ -53,7 +54,7 @@ public class CrushercustominfopaladiumProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

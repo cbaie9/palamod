@@ -16,7 +16,7 @@ public class ClearhanggliderProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.SLOW_FALLING);
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(MobEffects.MOVEMENT_SPEED);
+				_entity.removeEffect(MobEffects.SPEED);
 		}
 	}
 }

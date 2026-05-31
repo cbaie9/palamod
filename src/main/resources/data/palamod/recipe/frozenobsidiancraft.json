@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:packed_ice"
-    },
-    "b": {
-      "tag": "neoforge:obsidian"
-    }
+    "a": "minecraft:packed_ice",
+    "b": "#neoforge:obsidian"
   },
   "result": {
     "id": "palamod:frozen_obsidian",

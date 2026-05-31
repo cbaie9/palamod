@@ -6,18 +6,17 @@ import palamod.network.DownloaderlinkButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class DownloaderlinkScreen extends AbstractContainerScreen<DownloaderlinkMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -53,11 +52,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 	}
 
 	@Override
@@ -85,7 +80,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 			int x = DownloaderlinkScreen.this.x;
 			int y = DownloaderlinkScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new DownloaderlinkButtonMessage(0, x, y, z));
+				ClientPacketDistributor.sendToServer(new DownloaderlinkButtonMessage(0, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 71, 35, 20).build();
@@ -94,7 +89,7 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 			int x = DownloaderlinkScreen.this.x;
 			int y = DownloaderlinkScreen.this.y;
 			if (true) {
-				PacketDistributor.sendToServer(new DownloaderlinkButtonMessage(1, x, y, z));
+				ClientPacketDistributor.sendToServer(new DownloaderlinkButtonMessage(1, x, y, z));
 				DownloaderlinkButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 84, this.topPos + 71, 61, 20).build();

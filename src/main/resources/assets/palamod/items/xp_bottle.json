@@ -1,0 +1,91 @@
+{
+  "model": {
+    "type": "palamod:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xp_bottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xp_bottle/jobs_type"
+            },
+            "value": 1
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xp_bottle_0"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xp_bottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xp_bottle/jobs_type"
+            },
+            "value": 2
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xp_bottle_1"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xp_bottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xp_bottle/jobs_type"
+            },
+            "value": 3
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xp_bottle_2"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:xp_bottle/xp"
+            },
+            "value": 0.000000001
+          },
+          {
+            "property": {
+              "property": "palamod:xp_bottle/jobs_type"
+            },
+            "value": 4
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/xp_bottle_3"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "palamod:item/xp_bottle"
+    }
+  }
+}

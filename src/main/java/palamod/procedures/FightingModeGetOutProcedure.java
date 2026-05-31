@@ -12,10 +12,7 @@ import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -35,7 +32,7 @@ public class FightingModeGetOutProcedure {
 			return;
 		if (!(0 == (entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING) ? _livingEntity0.getAttribute(PalamodModAttributes.IS_FIGHTING).getValue() : 0))) {
 			if (0 == (entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(PalamodModAttributes.FIGHTING_TIME) ? _livingEntity1.getAttribute(PalamodModAttributes.FIGHTING_TIME).getBaseValue() : 0)
-					|| getEntityGameType(entity) == GameType.CREATIVE || getEntityGameType(entity) == GameType.SPECTATOR) {
+					|| entity instanceof Player _plr2 && _plr2.gameMode() == GameType.CREATIVE || entity instanceof Player _plr3 && _plr3.gameMode() == GameType.SPECTATOR) {
 				if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING))
 					_livingEntity4.getAttribute(PalamodModAttributes.IS_FIGHTING).setBaseValue(0);
 				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.infight.out").getString());
@@ -46,16 +43,5 @@ public class FightingModeGetOutProcedure {
 									- 1));
 			}
 		}
-	}
-
-	private static GameType getEntityGameType(Entity entity) {
-		if (entity instanceof ServerPlayer serverPlayer) {
-			return serverPlayer.gameMode.getGameModeForPlayer();
-		} else if (entity instanceof Player player && player.level().isClientSide()) {
-			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
-			if (playerInfo != null)
-				return playerInfo.getGameMode();
-		}
-		return null;
 	}
 }

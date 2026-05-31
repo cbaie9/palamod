@@ -8,7 +8,7 @@ import palamod.network.AdminshopmenuButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.client.gui.widget.ExtendedSlider;
 
 import net.minecraft.world.level.Level;
@@ -17,6 +17,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
@@ -24,8 +25,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
 import java.util.Arrays;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -54,6 +53,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	private ImageButton imagebutton_adminshop_new_placeholder18;
 	private ImageButton imagebutton_adminshop_new_placeholder19;
 	private ImageButton imagebutton_adminshop_new_placeholder20;
+	private ExtendedSlider slider;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/adminshopmenu.png");
 	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
 	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
@@ -76,7 +76,6 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	private static final ResourceLocation SPRITE_18 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
 	private static final ResourceLocation SPRITE_19 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
 	private static final ResourceLocation SPRITE_20 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
-	private ExtendedSlider slider;
 
 	public AdminshopmenuScreen(AdminshopmenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -106,7 +105,7 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		if (mouseX > leftPos + 280 && mouseX < leftPos + 296 && mouseY > topPos + 17 && mouseY < topPos + 33) {
 			String hoverText = ClosetheguitransProcedure.execute();
 			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+				guiGraphics.setComponentTooltipForNextFrame(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -116,32 +115,28 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
-		guiGraphics.blit(SPRITE_0, this.leftPos + 20, this.topPos + 42, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_1, this.leftPos + 56, this.topPos + 42, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_2, this.leftPos + 92, this.topPos + 42, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_3, this.leftPos + 128, this.topPos + 42, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_4, this.leftPos + 164, this.topPos + 42, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_5, this.leftPos + 200, this.topPos + 42, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_6, this.leftPos + 236, this.topPos + 42, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_7, this.leftPos + 20, this.topPos + 90, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_8, this.leftPos + 56, this.topPos + 90, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_9, this.leftPos + 92, this.topPos + 90, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_10, this.leftPos + 128, this.topPos + 90, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_11, this.leftPos + 164, this.topPos + 90, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_12, this.leftPos + 200, this.topPos + 90, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_13, this.leftPos + 236, this.topPos + 90, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_14, this.leftPos + 20, this.topPos + 138, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_15, this.leftPos + 56, this.topPos + 138, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_16, this.leftPos + 92, this.topPos + 138, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_17, this.leftPos + 128, this.topPos + 138, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_18, this.leftPos + 164, this.topPos + 138, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_19, this.leftPos + 200, this.topPos + 138, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(SPRITE_20, this.leftPos + 236, this.topPos + 138, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 20, this.topPos + 42, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 56, this.topPos + 42, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_2, this.leftPos + 92, this.topPos + 42, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_3, this.leftPos + 128, this.topPos + 42, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_4, this.leftPos + 164, this.topPos + 42, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_5, this.leftPos + 200, this.topPos + 42, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_6, this.leftPos + 236, this.topPos + 42, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_7, this.leftPos + 20, this.topPos + 90, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_8, this.leftPos + 56, this.topPos + 90, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_9, this.leftPos + 92, this.topPos + 90, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_10, this.leftPos + 128, this.topPos + 90, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_11, this.leftPos + 164, this.topPos + 90, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_12, this.leftPos + 200, this.topPos + 90, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_13, this.leftPos + 236, this.topPos + 90, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_14, this.leftPos + 20, this.topPos + 138, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_15, this.leftPos + 56, this.topPos + 138, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_16, this.leftPos + 92, this.topPos + 138, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_17, this.leftPos + 128, this.topPos + 138, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_18, this.leftPos + 164, this.topPos + 138, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_19, this.leftPos + 200, this.topPos + 138, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_20, this.leftPos + 236, this.topPos + 138, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
 	}
 
 	@Override
@@ -170,13 +165,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(0, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_cross_no_button);
@@ -185,13 +180,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(1, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder);
@@ -200,13 +195,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(2, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder1);
@@ -215,13 +210,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(3, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder2);
@@ -230,13 +225,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(4, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(4, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder3);
@@ -245,13 +240,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(5, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(5, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder4);
@@ -260,13 +255,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(6, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(6, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder5);
@@ -275,13 +270,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(7, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(7, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder6);
@@ -290,13 +285,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(8, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(8, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder7);
@@ -305,13 +300,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(9, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(9, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder8);
@@ -320,13 +315,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(10, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(10, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder9);
@@ -335,13 +330,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(11, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(11, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder10);
@@ -350,13 +345,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(12, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(12, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder11);
@@ -365,13 +360,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(13, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(13, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder12);
@@ -380,13 +375,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(14, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(14, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 14, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder13);
@@ -395,13 +390,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(15, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(15, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 15, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder14);
@@ -410,13 +405,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(16, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(16, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 16, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder15);
@@ -425,13 +420,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(17, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(17, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 17, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder16);
@@ -440,13 +435,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(18, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(18, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 18, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder17);
@@ -455,13 +450,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(19, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(19, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 19, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder18);
@@ -470,13 +465,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(20, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(20, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 20, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder19);
@@ -485,13 +480,13 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 					int x = AdminshopmenuScreen.this.x;
 					int y = AdminshopmenuScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new AdminshopmenuButtonMessage(21, x, y, z));
+						ClientPacketDistributor.sendToServer(new AdminshopmenuButtonMessage(21, x, y, z));
 						AdminshopmenuButtonMessage.handleButtonAction(entity, 21, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_adminshop_new_placeholder20);

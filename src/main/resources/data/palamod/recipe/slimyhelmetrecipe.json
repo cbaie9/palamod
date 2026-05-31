@@ -6,12 +6,8 @@
     "b b"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:slime_ball"
-    },
-    "b": {
-      "item": "minecraft:diamond"
-    }
+    "a": "minecraft:slime_ball",
+    "b": "minecraft:diamond"
   },
   "result": {
     "id": "palamod:travel_armor_helmet",

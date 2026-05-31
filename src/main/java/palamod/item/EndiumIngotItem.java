@@ -1,24 +1,17 @@
 package palamod.item;
 
-import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundEvent;
 
 public class EndiumIngotItem extends Item {
-	public EndiumIngotItem() {
-		super(new Item.Properties().fireResistant().rarity(Rarity.EPIC));
+	public EndiumIngotItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.EPIC).fireResistant());
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
-	}
-
-	@Override
-	public SoundEvent getEatingSound() {
-		return SoundEvents.EMPTY;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

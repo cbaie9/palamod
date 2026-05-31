@@ -7,15 +7,9 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "minecraft:gunpowder"
-    },
-    "b": {
-      "item": "minecraft:tnt"
-    },
-    "c": {
-      "tag": "neoforge:obsidian"
-    }
+    "a": "minecraft:gunpowder",
+    "b": "minecraft:tnt",
+    "c": "#neoforge:obsidian"
   },
   "result": {
     "id": "palamod:mega_boom_obsidian",

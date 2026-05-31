@@ -14,8 +14,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.core.BlockPos;
 
 public class SoftenedfindiumoreBlock extends Block {
-	public SoftenedfindiumoreBlock() {
-		super(BlockBehaviour.Properties.of().strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public SoftenedfindiumoreBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(3f, 5f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

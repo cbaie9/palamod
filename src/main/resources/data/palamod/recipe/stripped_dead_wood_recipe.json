@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:stripped_dead_log"
-    }
+    "a": "palamod:stripped_dead_log"
   },
   "result": {
     "id": "palamod:stripped_dead_wood",

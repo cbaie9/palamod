@@ -6,7 +6,7 @@ import net.minecraft.core.component.DataComponents;
 
 public class LegendarystoneglintconditionProcedure {
 	public static boolean execute(ItemStack itemstack) {
-		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0) {
+		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("cooldown", 0) == 0) {
 			return true;
 		}
 		return false;

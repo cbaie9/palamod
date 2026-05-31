@@ -8,6 +8,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.nbt.NbtOps;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
@@ -52,23 +54,20 @@ public class TankbreakpreloaddataProcedure {
 			final double _tagValue = (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "stock"));
 			CustomData.update(DataComponents.CUSTOM_DATA, output, tag -> tag.putDouble(_tagName, _tagValue));
 		}
-		{
-			Entity _entity14 = entity;
-			_entity14.getPersistentData().put("tank_preload", output.saveOptional(_entity14.level().registryAccess()));
-		}
+		entity.getPersistentData().put("tank_preload", (CompoundTag) ItemStack.OPTIONAL_CODEC.encode(output, NbtOps.INSTANCE, new CompoundTag()).result().orElseGet(CompoundTag::new));
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

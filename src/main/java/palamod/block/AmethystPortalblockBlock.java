@@ -19,12 +19,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.Containers;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class AmethystPortalblockBlock extends Block implements EntityBlock {
-	public AmethystPortalblockBlock() {
-		super(BlockBehaviour.Properties.of().strength(1f, 10f));
+	public AmethystPortalblockBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1f, 10f));
 	}
 
 	@Override
@@ -35,7 +36,7 @@ public class AmethystPortalblockBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void wasExploded(Level world, BlockPos pos, Explosion e) {
+	public void wasExploded(ServerLevel world, BlockPos pos, Explosion e) {
 		super.wasExploded(world, pos, e);
 		PortalblockbreakviaOtherProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
@@ -73,15 +74,8 @@ public class AmethystPortalblockBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-		if (state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof AmethystPortalblockBlockEntity be) {
-				Containers.dropContents(world, pos, be);
-				world.updateNeighbourForOutputSignal(pos, this);
-			}
-			super.onRemove(state, world, pos, newState, isMoving);
-		}
+	protected void affectNeighborsAfterRemoval(BlockState blockstate, ServerLevel world, BlockPos blockpos, boolean flag) {
+		Containers.updateNeighboursAfterDestroy(blockstate, world, blockpos);
 	}
 
 	@Override

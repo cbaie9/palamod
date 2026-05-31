@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "tag": "neoforge:obsidian"
-    },
-    "b": {
-      "item": "palamod:poison_imbue_potion"
-    }
+    "a": "#neoforge:obsidian",
+    "b": "palamod:poison_imbue_potion"
   },
   "result": {
     "id": "palamod:poison_obsidian",

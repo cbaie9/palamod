@@ -9,10 +9,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ExamplegrinderguiScreen extends AbstractContainerScreen<ExamplegrinderguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -51,16 +50,12 @@ public class ExamplegrinderguiScreen extends AbstractContainerScreen<Examplegrin
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 48, this.topPos + 63, 0, 0, 24, 10, 24, 10);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
-		guiGraphics.blit(SPRITE_0, this.leftPos + 152, this.topPos + 9, 0, 0, 51, 50, 2601, 50);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 121, this.topPos + 23, 0, 0, 32, 16, 32, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 53, this.topPos + 12, 0, 0, 16, 14, 16, 14);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 48, this.topPos + 63, 0, 0, 24, 10, 24, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 152, this.topPos + 9, 0, 0, 51, 50, 2601, 50);
 	}
 
 	@Override

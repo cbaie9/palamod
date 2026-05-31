@@ -7,18 +7,10 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "palamod:lightning_potion"
-    },
-    "b": {
-      "item": "palamod:titane_stick"
-    },
-    "c": {
-      "item": "palamod:titane_sword"
-    },
-    "d": {
-      "item": "palamod:compressed_titane"
-    }
+    "a": "palamod:lightning_potion",
+    "b": "palamod:titane_stick",
+    "c": "palamod:titane_sword",
+    "d": "palamod:compressed_titane"
   },
   "result": {
     "id": "palamod:titane_portal_key",

@@ -6,19 +6,18 @@ import palamod.network.DrawbrigeguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -72,27 +71,23 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 280, 160, 280, 160);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 41, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 15, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 15, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 93, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 67, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 41, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_7, this.leftPos + 67, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_8, this.leftPos + 93, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_9, this.leftPos + 119, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_10, this.leftPos + 119, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_11, this.leftPos + 145, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_12, this.leftPos + 145, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_13, this.leftPos + 171, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_14, this.leftPos + 171, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_15, this.leftPos + 197, this.topPos + 8, 0, 0, 26, 26, 26, 26);
-		guiGraphics.blit(IMAGE_16, this.leftPos + 197, this.topPos + 34, 0, 0, 26, 26, 26, 26);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 280, 160, 280, 160);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 41, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 15, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 15, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 93, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 67, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 41, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_7, this.leftPos + 67, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_8, this.leftPos + 93, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_9, this.leftPos + 119, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_10, this.leftPos + 119, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_11, this.leftPos + 145, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_12, this.leftPos + 145, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_13, this.leftPos + 171, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_14, this.leftPos + 171, this.topPos + 34, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_15, this.leftPos + 197, this.topPos + 8, 0, 0, 26, 26, 26, 26);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_16, this.leftPos + 197, this.topPos + 34, 0, 0, 26, 26, 26, 26);
 	}
 
 	@Override
@@ -116,13 +111,13 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					int x = DrawbrigeguiScreen.this.x;
 					int y = DrawbrigeguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(0, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_down0001);
@@ -131,13 +126,13 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					int x = DrawbrigeguiScreen.this.x;
 					int y = DrawbrigeguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(1, x, y, z));
+						ClientPacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(1, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_right01);
@@ -146,13 +141,13 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					int x = DrawbrigeguiScreen.this.x;
 					int y = DrawbrigeguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(2, x, y, z));
+						ClientPacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(2, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_up01);
@@ -161,13 +156,13 @@ public class DrawbrigeguiScreen extends AbstractContainerScreen<DrawbrigeguiMenu
 					int x = DrawbrigeguiScreen.this.x;
 					int y = DrawbrigeguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(3, x, y, z));
+						ClientPacketDistributor.sendToServer(new DrawbrigeguiButtonMessage(3, x, y, z));
 						DrawbrigeguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_left01);

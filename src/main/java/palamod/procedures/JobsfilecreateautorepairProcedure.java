@@ -7,6 +7,7 @@ import palamod.PalamodMod;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import java.io.IOException;
@@ -26,7 +27,7 @@ public class JobsfilecreateautorepairProcedure {
 		String jobs_name = "";
 		double i = 0;
 		PalamodMod.LOGGER.debug("[Palamod] [ Jobs File create autorepair ] Start procedure");
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
+		if (!(world instanceof ServerLevel _serverLevelGR1 && _serverLevelGR1.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 			cache = ReadcacheProcedure.execute(entity);
 			if (!cache.exists()) {
@@ -87,7 +88,7 @@ public class JobsfilecreateautorepairProcedure {
 				} catch (IOException exception) {
 					exception.printStackTrace();
 				}
-				main.addProperty("multi_exp", ((world.getLevelData().getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER)) / 100d));
+				main.addProperty("multi_exp", ((world instanceof ServerLevel _serverLevelGR17 ? _serverLevelGR17.getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER) : 0) / 100d));
 				main.addProperty("next_level_miner", 480);
 				main.addProperty("next_level_farmer", 480);
 				main.addProperty("next_level_hunter", 480);
@@ -132,7 +133,7 @@ public class JobsfilecreateautorepairProcedure {
 						bufferedReader.close();
 						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						if (!main.has("multi_exp")) {
-							main.addProperty("multi_exp", ((world.getLevelData().getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER)) / 100d));
+							main.addProperty("multi_exp", ((world instanceof ServerLevel _serverLevelGR43 ? _serverLevelGR43.getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER) : 0) / 100d));
 						}
 						jobs_name = "miner";
 						for (int index0 = 0; index0 < 4; index0++) {

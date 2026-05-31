@@ -66,15 +66,7 @@ public class SpecialmoneyprocessProcedure {
 		} else {
 			{
 				final String _tagName = "Money_amount";
-				final double _tagValue = new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
-					}
-				}.convert((entity instanceof Player _entity19 && _entity19.containerMenu instanceof PalamodModMenus.MenuAccessor _menu19) ? _menu19.getMenuState(0, "amount", "") : "");
+				final double _tagValue = parseDouble((entity instanceof Player _entity19 && _entity19.containerMenu instanceof PalamodModMenus.MenuAccessor _menu19) ? _menu19.getMenuState(0, "amount", "") : "");
 				CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 			}
 		}
@@ -102,5 +94,13 @@ public class SpecialmoneyprocessProcedure {
 				return stack.getCount();
 		}
 		return 0;
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
+		}
 	}
 }

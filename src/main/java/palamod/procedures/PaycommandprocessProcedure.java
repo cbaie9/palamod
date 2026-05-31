@@ -35,7 +35,7 @@ public class PaycommandprocessProcedure {
 		File money_p2 = new File("");
 		double money_count_p1 = 0;
 		double money_count_p2 = 0;
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
 			if (!((null) == (commandParameterEntity(arguments, "player2")))) {
 				money_p1 = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 				money_p2 = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player2")).getUUID().toString() + ".json"));

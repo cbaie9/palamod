@@ -22,6 +22,7 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
@@ -95,7 +96,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR23 && _serverLevelGR23.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "assemble paladium pickaxe [type 2 ]"));
 							}
 						} else {
@@ -169,7 +170,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR49 && _serverLevelGR49.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble green paladium pickaxe [ type 2]"));
 							}
 						} else {
@@ -243,7 +244,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR75 && _serverLevelGR75.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble endium pickaxe [ type 2 ]"));
 							}
 						} else {
@@ -317,7 +318,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR101 && _serverLevelGR101.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble paladium sword [ type 2 ]"));
 							}
 						} else {
@@ -391,7 +392,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR127 && _serverLevelGR127.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble green paladium sword [ type 2 ]"));
 							}
 						} else {
@@ -465,7 +466,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR153 && _serverLevelGR153.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble endium sword [ type 2 ]"));
 							}
 						} else {
@@ -539,7 +540,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR179 && _serverLevelGR179.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble paladium fastsword [ type 2 ]"));
 							}
 						} else {
@@ -613,7 +614,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR205 && _serverLevelGR205.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble green paladium fastsword [ type 2 ]"));
 							}
 						} else {
@@ -687,7 +688,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR231 && _serverLevelGR231.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble endium fastsword [ type 2 ]"));
 							}
 						} else {
@@ -761,7 +762,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR257 && _serverLevelGR257.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble paladium broadsword [ type 2 ]"));
 							}
 						} else {
@@ -835,7 +836,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR283 && _serverLevelGR283.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble green paladium broadsword [ type 2 ]"));
 							}
 						} else {
@@ -909,7 +910,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR309 && _serverLevelGR309.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble endium broadsword [ type 2 ]"));
 							}
 						} else {
@@ -983,7 +984,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR335 && _serverLevelGR335.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble paladium shovel [ type 2 ]"));
 							}
 						} else {
@@ -1057,7 +1058,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR361 && _serverLevelGR361.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble green paladium shovel [ type 2 ]"));
 							}
 						} else {
@@ -1131,7 +1132,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(2, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR387 && _serverLevelGR387.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Assemble endium shovel [ type 2 ]"));
 							}
 						} else {
@@ -1162,9 +1163,9 @@ public class Gcodecustompt2Procedure {
 					}
 					if (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0)
-							&& (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("modfier_num") == 3)
-									|| !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("modfier_num") == 4)
-											&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("moremodfier"))
+							&& (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("modfier_num", 0) == 3)
+									|| !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("modfier_num", 0) == 4)
+											&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("moremodfier", false))
 							&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.ENDIUM_HAMMER.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PALADIUM_HAMMER.get())
@@ -1205,7 +1206,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(5, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR420 && _serverLevelGR420.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "upgrade hammer ( smelt )"));
 							}
 						} else {
@@ -1238,9 +1239,9 @@ public class Gcodecustompt2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) != 0)
 							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) < 3)
-							&& (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("modfier_num") == 3)
-									|| !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("modfier_num") == 4)
-											&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("moremodfier"))
+							&& (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("modfier_num", 0) == 3)
+									|| !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("modfier_num", 0) == 4)
+											&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("moremodfier", false))
 							&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.ENDIUM_HAMMER.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PALADIUM_HAMMER.get())
@@ -1285,7 +1286,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(0, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR460 && _serverLevelGR460.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "upgrade  hammer ( speed ) 1"));
 							}
 						} else {
@@ -1318,9 +1319,9 @@ public class Gcodecustompt2Procedure {
 							.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:speed")))) != 0)
 							|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy())
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune")))) < 3)
-							&& (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("modfier_num") == 3)
-									|| !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("modfier_num") == 4)
-											&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("moremodfier"))
+							&& (!((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("modfier_num", 0) == 3)
+									|| !((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("modfier_num", 0) == 4)
+											&& (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBooleanOr("moremodfier", false))
 							&& ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.ENDIUM_HAMMER.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.GREEN_PALADIUM_HAMMER.get()
 									|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 5).copy()).getItem() == PalamodModItems.PALADIUM_HAMMER.get())
@@ -1363,7 +1364,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(5, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR497 && _serverLevelGR497.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "upgrade hammer ( forturne )"));
 							}
 						} else {
@@ -1438,7 +1439,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(5, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR525 && _serverLevelGR525.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Add BIg Hole Upgrade to potg"));
 							}
 						} else {
@@ -1509,7 +1510,7 @@ public class Gcodecustompt2Procedure {
 								_setstack.setCount(1);
 								_itemHandlerModifiable.setStackInSlot(5, _setstack);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR554 && _serverLevelGR554.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.debug(("Grinder at X:" + x + " Y:" + y + " Z:" + z + "Add Auto Smelt Upgrade to potg"));
 							}
 						} else {
@@ -1659,14 +1660,14 @@ public class Gcodecustompt2Procedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 }

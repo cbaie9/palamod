@@ -13,7 +13,7 @@ public class TitlepogProcedure {
 		ItemStack mainhand = ItemStack.EMPTY;
 		double pickaxe_stone = 0;
 		String output = "";
-		pickaxe_stone = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone");
+		pickaxe_stone = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("Pickaxe_stone", 0);
 		mainhand = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy();
 		if (pickaxe_stone >= 150000) {
 			output = "Fully upgraded - Level 20";

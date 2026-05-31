@@ -7,21 +7,11 @@
     "eee"
   ],
   "key": {
-    "a": {
-      "item": "palamod:compressed_paladium"
-    },
-    "b": {
-      "item": "palamod:paladium_green_block"
-    },
-    "c": {
-      "item": "palamod:endium_ingot"
-    },
-    "d": {
-      "item": "palamod:green_paladium_seedplanter"
-    },
-    "e": {
-      "item": "palamod:paladium_stick"
-    }
+    "a": "palamod:compressed_paladium",
+    "b": "palamod:paladium_green_block",
+    "c": "palamod:endium_ingot",
+    "d": "palamod:green_paladium_seedplanter",
+    "e": "palamod:paladium_stick"
   },
   "result": {
     "id": "palamod:endium_seedplanter",

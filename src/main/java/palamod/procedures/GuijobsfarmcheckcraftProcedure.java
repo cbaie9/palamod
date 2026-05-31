@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 
 import java.io.IOException;
@@ -46,7 +47,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu6 ? _menu6.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu8 ? _menu8.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
-							&& (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (100 <= lvl || !(world instanceof ServerLevel _serverLevelGR15 && _serverLevelGR15.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack16 = new ItemStack(PalamodModItems.ENDIUM_HOE.get()).copy();
 							_setstack16.setCount(1);
@@ -62,7 +63,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu23 ? _menu23.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
-							&& (75 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (75 <= lvl || !(world instanceof ServerLevel _serverLevelGR30 && _serverLevelGR30.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack31 = new ItemStack(PalamodModItems.GREEN_PALADIUM_HOE.get()).copy();
 							_setstack31.setCount(1);
@@ -87,7 +88,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu46 ? _menu46.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Items.BONE_MEAL
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu48 ? _menu48.getSlots().get(8).getItem() : ItemStack.EMPTY)
 									.is(ItemTags.create(ResourceLocation.parse("minecraft:logs")))
-							&& getAmountInGUISlot(entity, 9) == 0 && (55 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (55 <= lvl || !(world instanceof ServerLevel _serverLevelGR51 && _serverLevelGR51.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack52 = new ItemStack(PalamodModBlocks.TOTEM_FERTILITY.get()).copy();
 							_setstack52.setCount(1);
@@ -107,7 +108,7 @@ public class GuijobsfarmcheckcraftProcedure {
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu67 ? _menu67.getSlots().get(4).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu69 ? _menu69.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == Items.STICK
-							&& (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (100 <= lvl || !(world instanceof ServerLevel _serverLevelGR71 && _serverLevelGR71.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack72 = new ItemStack(PalamodModItems.ENDIUM_AXE.get()).copy();
 							_setstack72.setCount(1);
@@ -132,7 +133,7 @@ public class GuijobsfarmcheckcraftProcedure {
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu89 ? _menu89.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_INGOT
 									.get()
-							&& getAmountInGUISlot(entity, 9) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (100 <= lvl || !(world instanceof ServerLevel _serverLevelGR92 && _serverLevelGR92.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack93 = new ItemStack(PalamodModItems.ENDIUM_ARMOR_CHESTPLATE.get()).copy();
 							_setstack93.setCount(1);
@@ -160,7 +161,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 64
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu114 ? _menu114.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModBlocks.PALADIUM_CRUSHER.get().asItem())
-							&& (40 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (40 <= lvl || !(world instanceof ServerLevel _serverLevelGR116 && _serverLevelGR116.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack117 = new ItemStack(PalamodModBlocks.PALADIUM_CRUSHER.get()).copy();
 							_setstack117.setCount(1);
@@ -183,7 +184,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu132 ? _menu132.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_NUGGET
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu134 ? _menu134.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& getAmountInGUISlot(entity, 9) == 0 && (100 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (100 <= lvl || !(world instanceof ServerLevel _serverLevelGR137 && _serverLevelGR137.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack138 = new ItemStack(PalamodModItems.ENDIUM_BACKPACK.get()).copy();
 							_setstack138.setCount(1);
@@ -206,7 +207,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu153 ? _menu153.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.PALADIUM_INGOT
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu155 ? _menu155.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& getAmountInGUISlot(entity, 9) == 0 && (70 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (70 <= lvl || !(world instanceof ServerLevel _serverLevelGR158 && _serverLevelGR158.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack159 = new ItemStack(PalamodModItems.PALADUM_BACKPACK.get()).copy();
 							_setstack159.setCount(1);
@@ -229,7 +230,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu174 ? _menu174.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.TITANE_INGOT
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu176 ? _menu176.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& getAmountInGUISlot(entity, 9) == 0 && (53 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (53 <= lvl || !(world instanceof ServerLevel _serverLevelGR179 && _serverLevelGR179.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack180 = new ItemStack(PalamodModItems.TITANE_BACKPACK.get()).copy();
 							_setstack180.setCount(1);
@@ -252,7 +253,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu195 ? _menu195.getSlots().get(7).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.AMETHYST_INGOT
 									.get()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu197 ? _menu197.getSlots().get(8).getItem() : ItemStack.EMPTY).getItem() == Items.LEATHER
-							&& getAmountInGUISlot(entity, 9) == 0 && (35 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& getAmountInGUISlot(entity, 9) == 0 && (35 <= lvl || !(world instanceof ServerLevel _serverLevelGR200 && _serverLevelGR200.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack201 = new ItemStack(PalamodModItems.AMETHYST_BACKPACK.get()).copy();
 							_setstack201.setCount(1);
@@ -281,7 +282,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu222 ? _menu222.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModBlocks.ELEVATOR_WHITE.get().asItem())
-							&& (13 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (13 <= lvl || !(world instanceof ServerLevel _serverLevelGR224 && _serverLevelGR224.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack225 = new ItemStack(PalamodModBlocks.ELEVATOR_WHITE.get()).copy();
 							_setstack225.setCount(1);
@@ -311,7 +312,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu246 ? _menu246.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.ENDIUM_SEEDPLANTER.get())
-							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (65 <= lvl || !(world instanceof ServerLevel _serverLevelGR248 && _serverLevelGR248.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack249 = new ItemStack(PalamodModItems.ENDIUM_SEEDPLANTER.get()).copy();
 							_setstack249.setCount(1);
@@ -341,7 +342,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu270 ? _menu270.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get())
-							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (65 <= lvl || !(world instanceof ServerLevel _serverLevelGR272 && _serverLevelGR272.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack273 = new ItemStack(PalamodModItems.GREEN_PALADIUM_SEEDPLANTER.get()).copy();
 							_setstack273.setCount(1);
@@ -370,7 +371,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu294 ? _menu294.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.PALADIUM_SEEDPLANTER.get())
-							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (65 <= lvl || !(world instanceof ServerLevel _serverLevelGR296 && _serverLevelGR296.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack297 = new ItemStack(PalamodModItems.PALADIUM_SEEDPLANTER.get()).copy();
 							_setstack297.setCount(1);
@@ -399,7 +400,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu318 ? _menu318.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.PALADIUM_SEEDPLANTER.get())
-							&& (65 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (65 <= lvl || !(world instanceof ServerLevel _serverLevelGR320 && _serverLevelGR320.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack321 = new ItemStack(PalamodModItems.PALADIUM_SEEDPLANTER.get()).copy();
 							_setstack321.setCount(1);
@@ -427,7 +428,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu342 ? _menu342.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.TITANE_SEEDPLANTER.get())
-							&& (30 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (30 <= lvl || !(world instanceof ServerLevel _serverLevelGR344 && _serverLevelGR344.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack345 = new ItemStack(PalamodModItems.TITANE_SEEDPLANTER.get()).copy();
 							_setstack345.setCount(1);
@@ -456,7 +457,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (getAmountInGUISlot(entity, 9) == 0 || getAmountInGUISlot(entity, 9) < 0
 									&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu366 ? _menu366.getSlots().get(9).getItem() : ItemStack.EMPTY)
 											.getItem() == PalamodModItems.AMETHYST_SEEDPLANTER.get())
-							&& (10 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (10 <= lvl || !(world instanceof ServerLevel _serverLevelGR368 && _serverLevelGR368.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack369 = new ItemStack(PalamodModItems.AMETHYST_SEEDPLANTER.get()).copy();
 							_setstack369.setCount(1);
@@ -476,7 +477,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu384 ? _menu384.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu386 ? _menu386.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
-							&& (5 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (5 <= lvl || !(world instanceof ServerLevel _serverLevelGR393 && _serverLevelGR393.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack394 = new ItemStack(PalamodModItems.AMETHYST_HOE.get()).copy();
 							_setstack394.setCount(1);
@@ -496,7 +497,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu409 ? _menu409.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu411 ? _menu411.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
-							&& (20 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (20 <= lvl || !(world instanceof ServerLevel _serverLevelGR418 && _serverLevelGR418.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack419 = new ItemStack(PalamodModItems.TITANE_HOE.get()).copy();
 							_setstack419.setCount(1);
@@ -516,7 +517,7 @@ public class GuijobsfarmcheckcraftProcedure {
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu434 ? _menu434.getSlots().get(3).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu436 ? _menu436.getSlots().get(2).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()
 							&& getAmountInGUISlot(entity, 5) == 0 && getAmountInGUISlot(entity, 6) == 0 && getAmountInGUISlot(entity, 8) == 0 && getAmountInGUISlot(entity, 9) == 0 && getAmountInGUISlot(entity, 3) == 0
-							&& (50 <= lvl || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
+							&& (50 <= lvl || !(world instanceof ServerLevel _serverLevelGR443 && _serverLevelGR443.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)))) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							ItemStack _setstack444 = new ItemStack(PalamodModItems.PALADIUM_HOE.get()).copy();
 							_setstack444.setCount(1);

@@ -3,21 +3,11 @@
   "group": "green_paladium_craft_group",
   "category": "equipment",
   "ingredients": [
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "minecraft:stick"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "minecraft:stick"
-    }
+    "palamod:green_paladium_ingot",
+    "palamod:green_paladium_ingot",
+    "minecraft:stick",
+    "palamod:green_paladium_ingot",
+    "minecraft:stick"
   ],
   "result": {
     "id": "palamod:green_paladium_axe",

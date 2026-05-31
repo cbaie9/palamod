@@ -7,18 +7,10 @@
     "ddd"
   ],
   "key": {
-    "a": {
-      "item": "palamod:green_paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_green_block"
-    },
-    "c": {
-      "item": "palamod:paladium_seedplanter"
-    },
-    "d": {
-      "item": "palamod:paladium_stick"
-    }
+    "a": "palamod:green_paladium_ingot",
+    "b": "palamod:paladium_green_block",
+    "c": "palamod:paladium_seedplanter",
+    "d": "palamod:paladium_stick"
   },
   "result": {
     "id": "palamod:green_paladium_seedplanter",

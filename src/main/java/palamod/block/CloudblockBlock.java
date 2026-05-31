@@ -19,8 +19,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class CloudblockBlock extends Block implements EntityBlock {
-	public CloudblockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.SNOW).strength(1f, 10f).ignitedByLava());
+	public CloudblockBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.SNOW).strength(1f, 10f).ignitedByLava());
 	}
 
 	@Override
@@ -56,15 +56,8 @@ public class CloudblockBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-		if (state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof CloudblockBlockEntity be) {
-				Containers.dropContents(world, pos, be);
-				world.updateNeighbourForOutputSignal(pos, this);
-			}
-			super.onRemove(state, world, pos, newState, isMoving);
-		}
+	protected void affectNeighborsAfterRemoval(BlockState blockstate, ServerLevel world, BlockPos blockpos, boolean flag) {
+		Containers.updateNeighboursAfterDestroy(blockstate, world, blockpos);
 	}
 
 	@Override

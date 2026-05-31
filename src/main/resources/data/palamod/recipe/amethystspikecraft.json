@@ -7,12 +7,8 @@
     "bbb"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:diamond_sword"
-    },
-    "b": {
-      "item": "palamod:amethyst_ingot"
-    }
+    "a": "minecraft:diamond_sword",
+    "b": "palamod:amethyst_ingot"
   },
   "result": {
     "id": "palamod:amethyst_spike",

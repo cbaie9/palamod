@@ -3,9 +3,7 @@
   "group": "endium_craft_group",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "palamod:endium_block"
-    }
+    "palamod:endium_block"
   ],
   "result": {
     "id": "palamod:endium_ingot",

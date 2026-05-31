@@ -6,6 +6,7 @@ import palamod.PalamodMod;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -43,7 +44,7 @@ public class GetnextlevelxpProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					lvl = main.get(("lvl_" + jobs_str)).getAsDouble() + 1;
-					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.JOBS_LEVEL_BASE)) {/*true=lv sur 100*/
+					if (world instanceof ServerLevel _serverLevelGR2 && _serverLevelGR2.getGameRules().getBoolean(PalamodModGameRules.JOBS_LEVEL_BASE)) {/*true=lv sur 100*/
 						if (0 <= main.get(("lvl_" + jobs_str)).getAsDouble() && 9 >= main.get(("lvl_" + jobs_str)).getAsDouble()) {
 							output = Math.pow(435.6292733199 * lvl, 1.30951646);
 						} else if (10 <= main.get(("lvl_" + jobs_str)).getAsDouble() && 14 >= main.get(("lvl_" + jobs_str)).getAsDouble()) {
@@ -68,6 +69,6 @@ public class GetnextlevelxpProcedure {
 				}
 			}
 		}
-		return output * ((world.getLevelData().getGameRules().getInt(PalamodModGameRules.BASE_JOB_LEVEL_MULTIPLIER)) / 1000d);
+		return output * ((world instanceof ServerLevel _serverLevelGR18 ? _serverLevelGR18.getGameRules().getInt(PalamodModGameRules.BASE_JOB_LEVEL_MULTIPLIER) : 0) / 1000d);
 	}
 }

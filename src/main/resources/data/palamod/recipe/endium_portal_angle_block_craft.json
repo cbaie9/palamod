@@ -7,18 +7,10 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_pollen"
-    },
-    "b": {
-      "item": "palamod:paladium_block"
-    },
-    "c": {
-      "item": "palamod:findium_block"
-    },
-    "d": {
-      "item": "palamod:endium_heart"
-    }
+    "a": "palamod:endium_pollen",
+    "b": "palamod:paladium_block",
+    "c": "palamod:findium_block",
+    "d": "palamod:endium_heart"
   },
   "result": {
     "id": "palamod:endium_portal_angle_block",

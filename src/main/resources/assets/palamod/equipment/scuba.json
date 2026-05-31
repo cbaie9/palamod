@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "palamod:scuba"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "palamod:scuba"
+      }
+    ]
+  }
+}

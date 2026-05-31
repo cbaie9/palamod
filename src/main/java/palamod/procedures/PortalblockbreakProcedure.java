@@ -14,6 +14,8 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.nbt.NbtOps;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 
@@ -60,7 +62,7 @@ public class PortalblockbreakProcedure {
 							y_core = y + i;
 							z_core = z + zi;
 							pass = true;
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+							if (world instanceof ServerLevel _serverLevelGR9 && _serverLevelGR9.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 								PalamodMod.LOGGER.info(("Core :  x : " + x_core + " y : " + y_core + " z : " + z_core + "\n" + "pass mode : " + active));
 							}
 						}
@@ -152,7 +154,7 @@ public class PortalblockbreakProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().put("key", new ItemStack(Blocks.AIR).saveOptional(world.registryAccess()));
+					_blockEntity.getPersistentData().put("key", (CompoundTag) ItemStack.OPTIONAL_CODEC.encode(new ItemStack(Blocks.AIR), NbtOps.INSTANCE, new CompoundTag()).result().orElseGet(CompoundTag::new));
 					_blockEntity.getPersistentData().putString("position", "None");
 				}
 				if (world instanceof Level _level)
@@ -164,28 +166,28 @@ public class PortalblockbreakProcedure {
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static ItemStack getBlockNBTItemStack(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return ItemStack.parseOptional(world.registryAccess(), blockEntity.getPersistentData().getCompound(tag));
+			return ItemStack.OPTIONAL_CODEC.parse(NbtOps.INSTANCE, blockEntity.getPersistentData().getCompoundOrEmpty(tag)).result().orElse(ItemStack.EMPTY);
 		return ItemStack.EMPTY;
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

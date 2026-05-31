@@ -8,12 +8,8 @@
     " b"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_ingot"
-    },
-    "b": {
-      "tag": "neoforge:stick"
-    }
+    "a": "palamod:endium_ingot",
+    "b": "#neoforge:stick"
   },
   "result": {
     "id": "palamod:endium_axe",

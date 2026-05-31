@@ -11,7 +11,7 @@ public class Paladiumpickaxehaste3Procedure {
 			return;
 		if (0 > entity.getY() && -64 < entity.getY()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 30, 3, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.HASTE, 30, 3, false, false));
 		}
 	}
 }

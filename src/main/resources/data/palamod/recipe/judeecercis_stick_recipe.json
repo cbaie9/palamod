@@ -7,9 +7,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "palamod:judeecercis_planks"
-    }
+    "a": "palamod:judeecercis_planks"
   },
   "result": {
     "id": "minecraft:stick",

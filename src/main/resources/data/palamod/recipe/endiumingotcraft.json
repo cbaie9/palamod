@@ -8,9 +8,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_nugget"
-    }
+    "a": "palamod:endium_nugget"
   },
   "result": {
     "id": "palamod:endium_ingot",

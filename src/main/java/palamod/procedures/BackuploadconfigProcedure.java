@@ -25,7 +25,7 @@ public class BackuploadconfigProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double lvl = 0;
 		File jobs = new File("");
-		if (entity.hasPermissions(4)) {
+		if (entity instanceof Player _playerCmd0 && _playerCmd0.hasPermissions(4)) {
 			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\backup\\palamod\\config\\backup-" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + ".zip"));
 			try {
 				new Object() {

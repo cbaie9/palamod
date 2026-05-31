@@ -13,10 +13,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PaladumfurnaceScreen extends AbstractContainerScreen<PaladumfurnaceMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -53,14 +52,10 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 180, 166, 180, 166);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 14, this.topPos + 41, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(SPRITE_0, this.leftPos + 60, this.topPos + 41, Mth.clamp((int) ReturnfuelspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
-		guiGraphics.blit(SPRITE_1, this.leftPos + 87, this.topPos + 42, Mth.clamp((int) ReturntimerspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 180, 166, 180, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 14, this.topPos + 41, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 60, this.topPos + 41, Mth.clamp((int) ReturnfuelspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 87, this.topPos + 42, Mth.clamp((int) ReturntimerspritepaladiumfurnaceProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
 	}
 
 	@Override

@@ -29,15 +29,7 @@ public class AdminshoppreviewProcedure {
 		String output = "";
 		fac_v = StockedbaseadminshopbuyProcedure.execute(AdminshopgetitemProcedure.execute(entity));
 		n2 = StockedbaseadminshopsellProcedure.execute(AdminshopgetitemProcedure.execute(entity));
-		n = Math.round(Math.abs(new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
+		n = Math.round(Math.abs(parseDouble((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		buy = n * fac_v;
 		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		if (money.exists()) {
@@ -67,5 +59,13 @@ public class AdminshoppreviewProcedure {
 			output = Component.translatable("palamod.adminshop.preview_base").getString();
 		}
 		return output;
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
+		}
 	}
 }

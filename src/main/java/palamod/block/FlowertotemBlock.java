@@ -31,8 +31,8 @@ public class FlowertotemBlock extends Block implements EntityBlock {
 	private static final VoxelShape SHAPE = Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(12, 14, 7, 16, 19, 9), box(0, 14, 7, 4, 19, 9), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11),
 			box(4, 23, 4, 12, 32, 12), box(3, 19, 4, 4, 20, 5));
 
-	public FlowertotemBlock() {
-		super(BlockBehaviour.Properties.of().strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
+	public FlowertotemBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
@@ -91,15 +91,8 @@ public class FlowertotemBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
-		if (state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof FlowertotemBlockEntity be) {
-				Containers.dropContents(world, pos, be);
-				world.updateNeighbourForOutputSignal(pos, this);
-			}
-			super.onRemove(state, world, pos, newState, isMoving);
-		}
+	protected void affectNeighborsAfterRemoval(BlockState blockstate, ServerLevel world, BlockPos blockpos, boolean flag) {
+		Containers.updateNeighboursAfterDestroy(blockstate, world, blockpos);
 	}
 
 	@Override

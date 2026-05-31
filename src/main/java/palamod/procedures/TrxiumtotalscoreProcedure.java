@@ -11,7 +11,7 @@ public class TrxiumtotalscoreProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getPersistentData().getString("language")).equals("french")) {
+		if ((entity.getPersistentData().getStringOr("language", "")).equals("french")) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("le nombre de trixium accumul\u00E9e global sur ce serveur est de  " + getBlockNBTNumber(world, new BlockPos(0, 11, 0), "trixium_totalscore"))), false);
 		} else {
@@ -23,7 +23,7 @@ public class TrxiumtotalscoreProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 }

@@ -9,17 +9,14 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.LivingEntity;
 
 public class SpacefoodItem extends Item {
-	public SpacefoodItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationModifier(1f).alwaysEdible().build()));
+	public SpacefoodItem(Item.Properties properties) {
+		super(properties.food((new FoodProperties.Builder()).nutrition(7).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
 		ItemStack retval = super.finishUsingItem(itemstack, world, entity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		Spacefood_processProcedure.execute(world, x, y, z, entity);
+		Spacefood_processProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return retval;
 	}
 }

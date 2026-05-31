@@ -6,6 +6,7 @@ import palamod.PalamodMod;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -20,7 +21,7 @@ public class CreateMoneyFileProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		money = ReadMoneyFileProcedure.execute(entity);
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE) && !money.exists()) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) && !money.exists()) {
 			try {
 				money.getParentFile().mkdirs();
 				money.createNewFile();

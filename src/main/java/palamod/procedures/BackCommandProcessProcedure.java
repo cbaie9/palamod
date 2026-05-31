@@ -5,6 +5,7 @@ import palamod.PalamodMod;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
@@ -25,7 +26,7 @@ public class BackCommandProcessProcedure {
 		double ypos = 0;
 		double zpos = 0;
 		double xpos = 0;
-		if (entity.hasPermissions(2)) {
+		if (entity instanceof Player _playerCmd0 && _playerCmd0.hasPermissions(2)) {
 			xpos = x;
 			ypos = y;
 			zpos = z;

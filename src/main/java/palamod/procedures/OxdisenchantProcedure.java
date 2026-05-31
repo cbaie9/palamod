@@ -14,9 +14,8 @@ public class OxdisenchantProcedure {
 			return;
 		ItemStack item_dis = ItemStack.EMPTY;
 		double dis_num = 0;
-		item_dis = new ItemStack(
-				BuiltInRegistries.ITEM.get(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))))
-				.copy();
+		item_dis = new ItemStack(BuiltInRegistries.ITEM
+				.getValue(ResourceLocation.parse(((BuiltInRegistries.ITEM.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()).toString())).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 		dis_num = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
 		if (entity instanceof Player _player) {
 			ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);

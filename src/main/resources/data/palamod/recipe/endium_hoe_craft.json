@@ -8,12 +8,8 @@
     " b"
   ],
   "key": {
-    "a": {
-      "item": "palamod:endium_nugget"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "palamod:endium_nugget",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "palamod:endium_hoe",

@@ -8,7 +8,7 @@ import palamod.network.GrinderguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -16,12 +16,11 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> implements PalamodModScreens.ScreenAccessor {
 	private final Level world;
@@ -64,25 +63,21 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
-		RenderSystem.enableBlend();
-		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 215, 163, 215, 163);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 160, this.topPos + 63, 0, 0, 37, 7, 37, 7);
 		if (LightbluegrinderonProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_2, this.leftPos + 190, this.topPos + 63, 0, 0, 7, 7, 7, 7);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 190, this.topPos + 63, 0, 0, 7, 7, 7, 7);
 		}
 		if (LightredgrinderonProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_3, this.leftPos + 160, this.topPos + 63, 0, 0, 7, 7, 7, 7);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 160, this.topPos + 63, 0, 0, 7, 7, 7, 7);
 		}
 		if (LightgreengrinderonProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(IMAGE_4, this.leftPos + 175, this.topPos + 63, 0, 0, 7, 7, 7, 7);
+			guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 175, this.topPos + 63, 0, 0, 7, 7, 7, 7);
 		}
-		guiGraphics.blit(SPRITE_0, this.leftPos + 152, this.topPos + 9, Mth.clamp((int) ProgressbargrinderspritereturnProcedure.execute(world, x, y, z) * 51, 0, 2550), 0, 51, 50, 2601, 50);
-		guiGraphics.blit(SPRITE_1, this.leftPos + 126, this.topPos + 25, Mth.clamp((int) ReturntimerinputgrinderProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
-		guiGraphics.blit(SPRITE_2, this.leftPos + 49, this.topPos + 13, Mth.clamp((int) GrindergettimercraftProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
-		guiGraphics.blit(SPRITE_3, this.leftPos + 48, this.topPos + 60, Mth.clamp((int) GrindergettimerfusionProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
-		RenderSystem.disableBlend();
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 152, this.topPos + 9, Mth.clamp((int) ProgressbargrinderspritereturnProcedure.execute(world, x, y, z) * 51, 0, 2550), 0, 51, 50, 2601, 50);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 126, this.topPos + 25, Mth.clamp((int) ReturntimerinputgrinderProcedure.execute(world, x, y, z) * 16, 0, 224), 0, 16, 16, 240, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_2, this.leftPos + 49, this.topPos + 13, Mth.clamp((int) GrindergettimercraftProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_3, this.leftPos + 48, this.topPos + 60, Mth.clamp((int) GrindergettimerfusionProcedure.execute(world, x, y, z) * 22, 0, 484), 0, 22, 15, 506, 15);
 	}
 
 	@Override
@@ -107,13 +102,13 @@ public class GrinderguiScreen extends AbstractContainerScreen<GrinderguiMenu> im
 					int x = GrinderguiScreen.this.x;
 					int y = GrinderguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new GrinderguiButtonMessage(0, x, y, z));
+						ClientPacketDistributor.sendToServer(new GrinderguiButtonMessage(0, x, y, z));
 						GrinderguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(RenderPipelines.GUI_TEXTURED, sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_help_button);

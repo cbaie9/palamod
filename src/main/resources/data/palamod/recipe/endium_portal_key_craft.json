@@ -7,18 +7,10 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "palamod:lightning_potion"
-    },
-    "b": {
-      "item": "palamod:findium"
-    },
-    "c": {
-      "item": "palamod:findium_block"
-    },
-    "d": {
-      "item": "palamod:endium_pollen"
-    }
+    "a": "palamod:lightning_potion",
+    "b": "palamod:findium",
+    "c": "palamod:findium_block",
+    "d": "palamod:endium_pollen"
   },
   "result": {
     "id": "palamod:endium_portal_key",

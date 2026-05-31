@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import java.io.IOException;
@@ -64,7 +65,7 @@ public class Crusherv2amecustomProcedure {
 							if (world instanceof Level _level)
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+						if (world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 							PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( amethyst ) ( custom on )"));
 						}
 					} else {
@@ -84,7 +85,7 @@ public class Crusherv2amecustomProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+							if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 								PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( sucess ) ( amethyst ) ( custom on )"));
 							}
 						} else {
@@ -104,7 +105,7 @@ public class Crusherv2amecustomProcedure {
 									if (world instanceof Level _level)
 										_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 								}
-								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
+								if (world instanceof ServerLevel _serverLevelGR25 && _serverLevelGR25.getGameRules().getBoolean(PalamodModGameRules.LOGSALL)) {
 									PalamodMod.LOGGER.info((("X : " + x + "Y : " + y + "Z : " + z) + "use the Palamachine ( random ) ( failed ) ( amethyst )  ( custom on )"));
 								}
 							}
@@ -120,7 +121,7 @@ public class Crusherv2amecustomProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 

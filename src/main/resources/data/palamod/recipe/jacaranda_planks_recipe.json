@@ -3,9 +3,7 @@
   "group": "jacaranda_craft_group",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "forge:jacaranda__log"
-    }
+    "#forge:jacaranda__log"
   ],
   "result": {
     "id": "palamod:jacaranda_planks",

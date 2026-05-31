@@ -60,7 +60,7 @@ public class CauldroncraftprocessProcedure {
 		double nb_items = 0;
 		double random = 0;
 		double jobs_alchi = 0;
-		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+		if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 			PalamodMod.LOGGER.info("drop");
 			PalamodMod.LOGGER.info(("drop        :" + itemstack));
 		}
@@ -82,7 +82,7 @@ public class CauldroncraftprocessProcedure {
 								y_core = y + i;
 								z_core = z + zi;
 								pass = getBlockNBTLogic(world, BlockPos.containing(x + xi, y + i, z_core), "cauldron_open");
-								if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+								if (world instanceof ServerLevel _serverLevelGR19 && _serverLevelGR19.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 									PalamodMod.LOGGER.info(("Core :  x : " + x_core + " y : " + y_core + " z : " + z_core));
 								}
 							}
@@ -93,7 +93,7 @@ public class CauldroncraftprocessProcedure {
 			if (pass) {
 				tank1_type = "None";
 				tank2_type = "None";
-				if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
+				if (world instanceof ServerLevel _serverLevelGR22 && _serverLevelGR22.getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
 					PalamodMod.LOGGER.info("core found");
 					PalamodMod.LOGGER.info(("core found" + itemstack + "\n" + "setup : " + getBlockNBTLogic(world, BlockPos.containing(x_core, y_core, z_core), "cauldron_open") + "\n"
 							+ itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:modded_flowers"))) + itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:vanilla_flowers")))));
@@ -148,7 +148,7 @@ public class CauldroncraftprocessProcedure {
 					}
 					jobs_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
 					PalamodMod.LOGGER.info(("jobs acr for player : " + entity.getDisplayName().getString() + ", level alchi : " + jobs_alchi));
-					if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)) {
+					if (!(world instanceof ServerLevel _serverLevelGR72 && _serverLevelGR72.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						jobs_alchi = 9999;
 					}
 					if (!("None").equals(tank1_type) || !("None").equals(tank2_type)) {
@@ -440,7 +440,7 @@ public class CauldroncraftprocessProcedure {
 					}
 				} else if (PalamodModBlocks.ENDIUM_FLOWER.get().asItem() == itemstack.getItem() || PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem() == itemstack.getItem()) {
 					jobs_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
-					if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT)) {
+					if (!(world instanceof ServerLevel _serverLevelGR121 && _serverLevelGR121.getGameRules().getBoolean(PalamodModGameRules.LOCKEDCRAFT))) {
 						jobs_alchi = 9999;
 					}
 					if (jobs_alchi >= 20) {
@@ -473,21 +473,21 @@ public class CauldroncraftprocessProcedure {
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 }

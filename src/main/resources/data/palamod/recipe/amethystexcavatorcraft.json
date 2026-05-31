@@ -8,12 +8,8 @@
     " b "
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst_shovel"
-    },
-    "b": {
-      "item": "palamod:amethyst_stick"
-    }
+    "a": "palamod:amethyst_shovel",
+    "b": "palamod:amethyst_stick"
   },
   "result": {
     "id": "palamod:amethyst_excavator",

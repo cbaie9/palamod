@@ -4,6 +4,7 @@ import palamod.init.PalamodModGameRules;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -18,7 +19,7 @@ public class GetleveljobsProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		jobs = GetjobsfileProcedure.execute(entity);
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
 			if (jobs.exists() && ((jobs_name).equals("miner") || (jobs_name).equals("farmer") || (jobs_name).equals("hunter") || (jobs_name).equals("alchi"))) {
 				{
 					try {

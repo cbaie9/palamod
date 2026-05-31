@@ -7,18 +7,10 @@
     "ccc"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:blaze_powder"
-    },
-    "b": {
-      "item": "palamod:compressed_paladium"
-    },
-    "c": {
-      "item": "palamod:titane_ingot"
-    },
-    "d": {
-      "item": "palamod:paladium_core"
-    }
+    "a": "minecraft:blaze_powder",
+    "b": "palamod:compressed_paladium",
+    "c": "palamod:titane_ingot",
+    "d": "palamod:paladium_core"
   },
   "result": {
     "id": "palamod:alchimet_1",

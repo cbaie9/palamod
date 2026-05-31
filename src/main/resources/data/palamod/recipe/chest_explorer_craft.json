@@ -7,15 +7,9 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:findium"
-    },
-    "b": {
-      "item": "palamod:paladium_ingot"
-    },
-    "c": {
-      "item": "palamod:compressed_paladium"
-    }
+    "a": "palamod:findium",
+    "b": "palamod:paladium_ingot",
+    "c": "palamod:compressed_paladium"
   },
   "result": {
     "id": "palamod:chest_explorer",

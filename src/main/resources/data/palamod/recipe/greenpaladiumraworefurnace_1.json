@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 2,
   "cookingtime": 200,
-  "ingredient": {
-    "item": "palamod:green_paladium_raw_ore"
-  },
+  "ingredient": "palamod:green_paladium_raw_ore",
   "result": {
     "id": "palamod:green_paladium_ingot"
   }

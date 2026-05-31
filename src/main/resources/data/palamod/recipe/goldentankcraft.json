@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:gold_ingot"
-    },
-    "b": {
-      "tag": "c:glass_blocks/cheap"
-    }
+    "a": "minecraft:gold_ingot",
+    "b": "#c:glass_blocks/cheap"
   },
   "result": {
     "id": "palamod:golden_tank",

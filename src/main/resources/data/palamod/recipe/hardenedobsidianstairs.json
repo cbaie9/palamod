@@ -5,9 +5,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:renforced_obsidian"
-    }
+    "a": "palamod:renforced_obsidian"
   },
   "result": {
     "id": "palamod:hardened_obsidian_slab",

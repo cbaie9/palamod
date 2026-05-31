@@ -8,12 +8,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:titane_ingot"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:titane_ingot"
   },
   "result": {
     "id": "palamod:grinder_frame",

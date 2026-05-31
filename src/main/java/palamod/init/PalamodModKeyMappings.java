@@ -10,7 +10,7 @@ import palamod.network.AdminshopkeyblindingMessage;
 
 import org.lwjgl.glfw.GLFW;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -29,7 +29,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.sendToServer(new AdminshopkeyblindingMessage(0, 0));
+				ClientPacketDistributor.sendToServer(new AdminshopkeyblindingMessage(0, 0));
 				AdminshopkeyblindingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -42,7 +42,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.sendToServer(new FactionblindingMessage(0, 0));
+				ClientPacketDistributor.sendToServer(new FactionblindingMessage(0, 0));
 				FactionblindingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -55,7 +55,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.sendToServer(new JobskeybindingMessage(0, 0));
+				ClientPacketDistributor.sendToServer(new JobskeybindingMessage(0, 0));
 				JobskeybindingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -68,7 +68,7 @@ public class PalamodModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.sendToServer(new OpenclickerMessage(0, 0));
+				ClientPacketDistributor.sendToServer(new OpenclickerMessage(0, 0));
 				OpenclickerMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;

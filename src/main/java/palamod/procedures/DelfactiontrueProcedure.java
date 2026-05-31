@@ -24,8 +24,8 @@ public class DelfactiontrueProcedure {
 		double get_id = 0;
 		String get_name = "";
 		boolean fget_id = false;
-		if (entity.getPersistentData().getBoolean(("faction-warning_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))))) {
-			if (entity.getPersistentData().getDouble("faction-code") == DoubleArgumentType.getDouble(arguments, "code")) {
+		if (entity.getPersistentData().getBooleanOr(("faction-warning_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))), false)) {
+			if (entity.getPersistentData().getDoubleOr("faction-code", 0) == DoubleArgumentType.getDouble(arguments, "code")) {
 				if ((getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_leader_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()))))).equals(entity.getStringUUID())) {
 					get_id = getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + entity.getStringUUID()));
 					get_name = getBlockNBTString(world, new BlockPos(0, 9, 0), ("Faction_name_" + get_id));
@@ -76,14 +76,14 @@ public class DelfactiontrueProcedure {
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getDouble(tag);
+			return blockEntity.getPersistentData().getDoubleOr(tag, 0);
 		return -1;
 	}
 
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 }

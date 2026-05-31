@@ -32,8 +32,8 @@ import net.minecraft.core.BlockPos;
 import io.netty.buffer.Unpooled;
 
 public class OnlinedetectoronBlock extends Block implements EntityBlock {
-	public OnlinedetectoronBlock() {
-		super(BlockBehaviour.Properties.of().strength(1.5f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+	public OnlinedetectoronBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1.5f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override

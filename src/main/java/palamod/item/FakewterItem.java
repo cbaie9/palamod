@@ -7,8 +7,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BucketItem;
 
 public class FakewterItem extends BucketItem {
-	public FakewterItem() {
-		super(PalamodModFluids.FAKE_WATER.get(), new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)
+	public FakewterItem(Item.Properties properties) {
+		super(PalamodModFluids.FAKE_WATER.get(), properties.craftRemainder(Items.BUCKET).stacksTo(1)
 
 		);
 	}

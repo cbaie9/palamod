@@ -27,7 +27,7 @@ public class BalltopShowProcedure {
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		balltop = ReadBalltopProcedure.execute();
 		money = ReadMoneyFileProcedure.execute(entity);
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE) || balltop.exists() || money.exists()) {
+		if (!(world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) || balltop.exists() || money.exists()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));

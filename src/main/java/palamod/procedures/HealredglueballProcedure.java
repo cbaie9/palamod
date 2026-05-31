@@ -14,7 +14,7 @@ public class HealredglueballProcedure {
 		if (PalamodModVariables.cooltick_spike == 0) {
 			PalamodModVariables.cooltick_spike = 20;
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 20, 1));
+				_entity.addEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 20, 1));
 		} else {
 			PalamodModVariables.cooltick_spike = PalamodModVariables.cooltick_spike - 1;
 		}

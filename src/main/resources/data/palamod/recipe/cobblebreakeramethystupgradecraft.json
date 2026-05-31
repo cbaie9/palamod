@@ -8,15 +8,9 @@
     "aca"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst_ingot"
-    },
-    "b": {
-      "item": "palamod:cobblebreaker"
-    },
-    "c": {
-      "item": "palamod:speed_modifier"
-    }
+    "a": "palamod:amethyst_ingot",
+    "b": "palamod:cobblebreaker",
+    "c": "palamod:speed_modifier"
   },
   "result": {
     "id": "palamod:cobblebreaker_amethyst_upgrade",

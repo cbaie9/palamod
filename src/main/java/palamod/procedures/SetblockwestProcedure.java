@@ -1,8 +1,6 @@
 package palamod.procedures;
 
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.Direction;
@@ -14,13 +12,10 @@ public class SetblockwestProcedure {
 			Direction _dir = Direction.WEST;
 			BlockPos _pos = BlockPos.containing(x, y, z);
 			BlockState _bs = world.getBlockState(_pos);
-			Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-			if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+			if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 				world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-			} else {
-				_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-				if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-					world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+			} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+				world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 			}
 		}
 	}

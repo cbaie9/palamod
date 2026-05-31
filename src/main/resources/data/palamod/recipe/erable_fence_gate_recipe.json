@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:stick"
-    },
-    "b": {
-      "item": "palamod:erable_planks"
-    }
+    "a": "minecraft:stick",
+    "b": "palamod:erable_planks"
   },
   "result": {
     "id": "palamod:erable_fence_gate",

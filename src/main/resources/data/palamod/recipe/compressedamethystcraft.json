@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:amethyst_block"
-    },
-    "b": {
-      "item": "palamod:amethyst_ingot"
-    }
+    "a": "palamod:amethyst_block",
+    "b": "palamod:amethyst_ingot"
   },
   "result": {
     "id": "palamod:compressed_amethyst",

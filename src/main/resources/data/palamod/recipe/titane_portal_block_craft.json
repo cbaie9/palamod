@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "palamod:shiny_judeecercis_wood"
-    },
-    "b": {
-      "item": "palamod:titane_block"
-    }
+    "a": "palamod:shiny_judeecercis_wood",
+    "b": "palamod:titane_block"
   },
   "result": {
     "id": "palamod:titane_portal_block",

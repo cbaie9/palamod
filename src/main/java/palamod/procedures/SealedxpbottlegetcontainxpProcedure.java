@@ -12,7 +12,9 @@ public class SealedxpbottlegetcontainxpProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.sealed_xp_bottle_get_amount").getString() + " "
-					+ Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("levels_stock")) + " " + Component.translatable("palamod.procedure.sealed_xp_bottle_get_amount2").getString())), true);
+			_player.displayClientMessage(
+					Component.literal((Component.translatable("palamod.procedure.sealed_xp_bottle_get_amount").getString() + " "
+							+ Math.round(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("levels_stock", 0)) + " " + Component.translatable("palamod.procedure.sealed_xp_bottle_get_amount2").getString())),
+					true);
 	}
 }

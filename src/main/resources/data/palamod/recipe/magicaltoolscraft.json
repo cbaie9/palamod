@@ -7,15 +7,9 @@
     " c "
   ],
   "key": {
-    "a": {
-      "item": "palamod:paladium_ingot"
-    },
-    "b": {
-      "item": "palamod:paladium_block"
-    },
-    "c": {
-      "item": "palamod:paladium_stick"
-    }
+    "a": "palamod:paladium_ingot",
+    "b": "palamod:paladium_block",
+    "c": "palamod:paladium_stick"
   },
   "result": {
     "id": "palamod:magical_tool",

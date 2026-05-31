@@ -9,7 +9,6 @@ import palamod.PalamodMod;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +20,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.nbt.NbtOps;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
@@ -64,17 +66,19 @@ public class PortalprocessProcedure {
 		PalamodMod.LOGGER.debug(("Portal dump :" + "\n" + "angle block :" + angle_block + "\n" + "shiny wood :" + shiny_wood + "\n" + "key : " + key + "\n" + getBlockNBTString(world, BlockPos.containing(x, y, z), "position") + "\n" + "powered : "
 				+ getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")));
 		if (CheckportalstructureProcedure.execute(world, x, y, z, angle_block, shiny_wood) && key.getItem() == (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()
-				&& (level_alchi >= level_required || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) && !getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")) {
+				&& (level_alchi >= level_required || !(world instanceof ServerLevel _serverLevelGR17 && _serverLevelGR17.getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)))
+				&& !getBlockNBTLogic(world, BlockPos.containing(x, y, z), "portal_powered")) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(x, y, z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().put("key", (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).saveOptional(world.registryAccess()));
+					_blockEntity.getPersistentData().put("key",
+							(CompoundTag) ItemStack.OPTIONAL_CODEC.encode((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), NbtOps.INSTANCE, new CompoundTag()).result().orElseGet(CompoundTag::new));
 					_blockEntity.getPersistentData().putDouble("key_stock",
-							((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("key_stock")));
+							((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("key_stock", 0)));
 					_blockEntity.getPersistentData().putString("key_type",
-							((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("key_type")));
+							((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getStringOr("key_type", "")));
 				}
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
@@ -102,13 +106,10 @@ public class PortalprocessProcedure {
 					Direction _dir = Direction.WEST;
 					BlockPos _pos = BlockPos.containing(x, y + 1, z);
 					BlockState _bs = world.getBlockState(_pos);
-					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+					if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-					} else {
-						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+					} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
 				world.setBlock(BlockPos.containing(x - 1, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
@@ -125,13 +126,10 @@ public class PortalprocessProcedure {
 					Direction _dir = Direction.EAST;
 					BlockPos _pos = BlockPos.containing(x, y + 1, z);
 					BlockState _bs = world.getBlockState(_pos);
-					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+					if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-					} else {
-						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+					} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
 				world.setBlock(BlockPos.containing(x + 1, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
@@ -148,13 +146,10 @@ public class PortalprocessProcedure {
 					Direction _dir = Direction.NORTH;
 					BlockPos _pos = BlockPos.containing(x, y + 1, z);
 					BlockState _bs = world.getBlockState(_pos);
-					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+					if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-					} else {
-						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+					} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
 				world.setBlock(BlockPos.containing(x + 1, y, z - 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
@@ -171,13 +166,10 @@ public class PortalprocessProcedure {
 					Direction _dir = Direction.SOUTH;
 					BlockPos _pos = BlockPos.containing(x, y + 1, z);
 					BlockState _bs = world.getBlockState(_pos);
-					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+					if (_bs.getBlock().getStateDefinition().getProperty("facing") instanceof EnumProperty _dp && _dp.getPossibleValues().contains(_dir)) {
 						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
-					} else {
-						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
-						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
-							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+					} else if (_bs.getBlock().getStateDefinition().getProperty("axis") instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis())) {
+						world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
 					}
 				}
 				world.setBlock(BlockPos.containing(x + 1, y, z + 1), PalamodModBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
@@ -201,14 +193,14 @@ public class PortalprocessProcedure {
 	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getString(tag);
+			return blockEntity.getPersistentData().getStringOr(tag, "");
 		return "";
 	}
 
 	private static boolean getBlockNBTLogic(LevelAccessor world, BlockPos pos, String tag) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		if (blockEntity != null)
-			return blockEntity.getPersistentData().getBoolean(tag);
+			return blockEntity.getPersistentData().getBooleanOr(tag, false);
 		return false;
 	}
 }

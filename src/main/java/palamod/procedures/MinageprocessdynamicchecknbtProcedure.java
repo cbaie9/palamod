@@ -6,6 +6,6 @@ public class MinageprocessdynamicchecknbtProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return entity.getPersistentData().getBoolean("Minage_setlayer_dynamic");
+		return entity.getPersistentData().getBooleanOr("Minage_setlayer_dynamic", false);
 	}
 }

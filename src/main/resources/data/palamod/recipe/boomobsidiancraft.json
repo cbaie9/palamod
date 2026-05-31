@@ -5,12 +5,8 @@
     "ab"
   ],
   "key": {
-    "a": {
-      "tag": "neoforge:obsidian"
-    },
-    "b": {
-      "item": "minecraft:gunpowder"
-    }
+    "a": "#neoforge:obsidian",
+    "b": "minecraft:gunpowder"
   },
   "result": {
     "id": "palamod:boom_obsidian",

@@ -34,15 +34,7 @@ public class NewadminshopsellProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		item = AdminshopgetitemProcedure.execute(entity).copy();
 		fac_v = StockedbaseadminshopsellProcedure.execute(item);
-		n = Math.round(Math.abs(new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
+		n = Math.round(Math.abs(parseDouble((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {
@@ -113,6 +105,14 @@ public class NewadminshopsellProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
+		}
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
 		}
 	}
 }

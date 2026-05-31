@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SlabBlock;
 
 public class TitaneslabBlock extends SlabBlock {
-	public TitaneslabBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2f, 10f).requiresCorrectToolForDrops());
+	public TitaneslabBlock(BlockBehaviour.Properties properties) {
+		super(properties.sound(SoundType.METAL).strength(2f, 10f).requiresCorrectToolForDrops());
 	}
 }

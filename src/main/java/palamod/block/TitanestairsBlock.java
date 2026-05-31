@@ -5,8 +5,8 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.Blocks;
 
 public class TitanestairsBlock extends StairBlock {
-	public TitanestairsBlock() {
-		super(Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().strength(2f, 10f).requiresCorrectToolForDrops());
+	public TitanestairsBlock(BlockBehaviour.Properties properties) {
+		super(Blocks.AIR.defaultBlockState(), properties.strength(2f, 10f).requiresCorrectToolForDrops());
 	}
 
 	@Override

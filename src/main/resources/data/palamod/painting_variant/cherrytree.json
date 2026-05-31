@@ -1,5 +1,13 @@
 {
   "asset_id": "palamod:cherrytree",
   "height": 3,
-  "width": 4
+  "width": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.palamod.cherrytree.title"
+  },
+  "author": {
+    "color": "gray",
+    "translate": "painting.palamod.cherrytree.author"
+  }
 }
