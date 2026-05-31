@@ -309,7 +309,23 @@ public class PalamodModBlocks {
 	public static final DeferredBlock<Block> TITANE_ANVIL;
 	public static final DeferredBlock<Block> PALADIUM_ANVIL;
 	public static final DeferredBlock<Block> MONEY_ANVIL;
-	public static final DeferredBlock<Block> AMETHYSTANVIL_2;
+	public static final DeferredBlock<Block> AMETHYST_TANK;
+	public static final DeferredBlock<Block> GOLDEN_TANK;
+	public static final DeferredBlock<Block> TITANE_TANK;
+	public static final DeferredBlock<Block> PALADIUM_TANK;
+	public static final DeferredBlock<Block> CAULDRON;
+	public static final DeferredBlock<Block> CAULDRON_CORE;
+	public static final DeferredBlock<Block> SHINY_JACARANDA_WOOD;
+	public static final DeferredBlock<Block> SHINY_JUDEECERCIS_WOOD;
+	public static final DeferredBlock<Block> SHINY_ERABLE_WOOD;
+	public static final DeferredBlock<Block> SHINY_OSTRYA_WOOD;
+	public static final DeferredBlock<Block> AMETHYST_PORTALBLOCK;
+	public static final DeferredBlock<Block> TITANE_PORTAL_BLOCK;
+	public static final DeferredBlock<Block> PALADIUM_PORTAL_BLOCK;
+	public static final DeferredBlock<Block> ENDIUM_PORTAL_BLOCK;
+	public static final DeferredBlock<Block> ENDIUM_PORTAL_ANGLE_BLOCK;
+	public static final DeferredBlock<Block> PORTAL_BLOCK;
+	public static final DeferredBlock<Block> KEY_PORTAL_BLOCK;
 	static {
 		PALADIUM_ORE = register("paladium_ore", PaladiumOreBlock::new);
 		PALADIUM_BLOCK = register("paladium_block", PaladiumBlockBlock::new);
@@ -603,7 +619,23 @@ public class PalamodModBlocks {
 		TITANE_ANVIL = register("titane_anvil", TitaneanvilBlock::new);
 		PALADIUM_ANVIL = register("paladium_anvil", PaladiumanvilBlock::new);
 		MONEY_ANVIL = register("money_anvil", MoneyanvilBlock::new);
-		AMETHYSTANVIL_2 = register("amethystanvil_2", Amethystanvil2Block::new);
+		AMETHYST_TANK = register("amethyst_tank", AmethysttankBlock::new);
+		GOLDEN_TANK = register("golden_tank", GoldentankBlock::new);
+		TITANE_TANK = register("titane_tank", TitanetankBlock::new);
+		PALADIUM_TANK = register("paladium_tank", PaladiumTankBlock::new);
+		CAULDRON = register("cauldron", CauldronBlock::new);
+		CAULDRON_CORE = register("cauldron_core", CauldronCoreBlock::new);
+		SHINY_JACARANDA_WOOD = register("shiny_jacaranda_wood", ShinyjacarandawoodBlock::new);
+		SHINY_JUDEECERCIS_WOOD = register("shiny_judeecercis_wood", ShinyjudeecerciswoodBlock::new);
+		SHINY_ERABLE_WOOD = register("shiny_erable_wood", ShinyErablewoodBlock::new);
+		SHINY_OSTRYA_WOOD = register("shiny_ostrya_wood", ShinyOstryaWoodBlock::new);
+		AMETHYST_PORTALBLOCK = register("amethyst_portalblock", AmethystPortalblockBlock::new);
+		TITANE_PORTAL_BLOCK = register("titane_portal_block", TitanePortalBlockBlock::new);
+		PALADIUM_PORTAL_BLOCK = register("paladium_portal_block", PaladiumPortalBlockBlock::new);
+		ENDIUM_PORTAL_BLOCK = register("endium_portal_block", EndiumPortalBlockBlock::new);
+		ENDIUM_PORTAL_ANGLE_BLOCK = register("endium_portal_angle_block", EndiumPortalAngleBlockBlock::new);
+		PORTAL_BLOCK = register("portal_block", PortalblockBlock::new);
+		KEY_PORTAL_BLOCK = register("key_portal_block", KeyportalblockBlock::new);
 	}
 
 	// Start of user code block custom blocks

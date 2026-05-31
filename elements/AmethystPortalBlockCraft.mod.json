@@ -1,0 +1,53 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:AmethysteBlock"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      },
+      {
+        "value": "CUSTOM:Shinyjacarandawood"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AmethystPortalblock"
+    },
+    "name": "amethyst_portal_block_craft",
+    "namespace": "mod"
+  }
+}

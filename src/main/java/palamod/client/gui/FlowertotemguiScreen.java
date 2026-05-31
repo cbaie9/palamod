@@ -29,6 +29,10 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private ImageButton imagebutton_close_gui_nohover;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/flowertotemgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/bone_meal.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png");
 
 	public FlowertotemguiScreen(FlowertotemguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -55,11 +59,10 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/flowertotemgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png"), this.leftPos + 74, this.topPos + 36, 0, 0, 16, 14, 16, 14);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/bone_meal.png"), this.leftPos + 26, this.topPos + 34, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/pgbar_jobs.png"), this.leftPos + 15, this.topPos + 69,
-				Mth.clamp((int) GetspritetimerflowermachineProcedure.execute(world, x, y, z) * 145, 0, 14355), 0, 145, 10, 14500, 10);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 74, this.topPos + 36, 0, 0, 16, 14, 16, 14);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 26, this.topPos + 34, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 15, this.topPos + 69, Mth.clamp((int) GetspritetimerflowermachineProcedure.execute(world, x, y, z) * 145, 0, 14355), 0, 145, 10, 14500, 10);
 	}
 
 	@Override

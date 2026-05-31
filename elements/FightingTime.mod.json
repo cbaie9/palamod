@@ -1,0 +1,14 @@
+{
+  "_fv": 85,
+  "_type": "attribute",
+  "definition": {
+    "name": "Fighting Time",
+    "minValue": 0.0,
+    "maxValue": 300.0,
+    "defaultValue": 0.0,
+    "sentiment": "NEGATIVE",
+    "addToAllEntities": false,
+    "addToPlayers": true,
+    "entities": []
+  }
+}

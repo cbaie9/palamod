@@ -2,6 +2,8 @@ package palamod.network;
 
 import palamod.procedures.ConnectjobsminerguiProcedure;
 import palamod.procedures.ConnectfarmerguiProcedure;
+import palamod.procedures.ConnectJobsHunterGuiProcedure;
+import palamod.procedures.ConnectJobsAlchimistGuiProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -19,11 +21,10 @@ import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
+import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
 public record JobsguiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-
 	public static final Type<JobsguiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "jobsgui_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, JobsguiButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, JobsguiButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
@@ -31,6 +32,7 @@ public record JobsguiButtonMessage(int buttonID, int x, int y, int z) implements
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}, (RegistryFriendlyByteBuf buffer) -> new JobsguiButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+
 	@Override
 	public Type<JobsguiButtonMessage> type() {
 		return TYPE;
@@ -48,7 +50,7 @@ public record JobsguiButtonMessage(int buttonID, int x, int y, int z) implements
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		// security measure to prevent arbitrary chunk generation
-		if (!world.hasChunkAt(new BlockPos(x, y, z)))
+		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
 		if (buttonID == 0) {
 
@@ -57,6 +59,14 @@ public record JobsguiButtonMessage(int buttonID, int x, int y, int z) implements
 		if (buttonID == 1) {
 
 			ConnectjobsminerguiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			ConnectJobsHunterGuiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 3) {
+
+			ConnectJobsAlchimistGuiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 

@@ -28,15 +28,7 @@ public class AdshoppreviewamountbaseProcedure {
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		fac_v = 1;
 		n2 = 1;
-		n = Math.round(Math.abs(new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
+		n = Math.round(Math.abs(parseDouble((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		main = new Object() {
 			public com.google.gson.JsonObject parse(String rawJson) {
 				try {
@@ -52,6 +44,14 @@ public class AdshoppreviewamountbaseProcedure {
 					+ getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString())) * n2;
 		}
 		return "Amount : insert number in the bar";
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
+		}
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

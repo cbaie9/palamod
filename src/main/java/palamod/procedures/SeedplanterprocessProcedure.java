@@ -19,7 +19,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -28,8 +27,6 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.client.Minecraft;
 
 public class SeedplanterprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -178,7 +175,7 @@ public class SeedplanterprocessProcedure {
 							if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("forge:farmland")))
 									&& (world.getBlockState(BlockPos.containing(x + xi, y + i + 1, z + zi))).getBlock() == Blocks.AIR) {
 								if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 1
-										&& (hasEntityInInventory(entity, new ItemStack(Items.WHEAT_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(Items.WHEAT_SEEDS)) || entity instanceof Player _plr100 && _plr100.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);
@@ -199,7 +196,7 @@ public class SeedplanterprocessProcedure {
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 2
-										&& (hasEntityInInventory(entity, new ItemStack(Items.CARROT)) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(Items.CARROT)) || entity instanceof Player _plr109 && _plr109.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(Items.CARROT);
@@ -220,7 +217,7 @@ public class SeedplanterprocessProcedure {
 										world.setBlock(_bp, _bs, 3);
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 3
-										&& (hasEntityInInventory(entity, new ItemStack(Items.POTATO)) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(Items.POTATO)) || entity instanceof Player _plr118 && _plr118.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);
@@ -241,7 +238,7 @@ public class SeedplanterprocessProcedure {
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 4
-										&& (hasEntityInInventory(entity, new ItemStack(Items.MELON_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(Items.MELON_SEEDS)) || entity instanceof Player _plr127 && _plr127.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);
@@ -262,7 +259,7 @@ public class SeedplanterprocessProcedure {
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 5
-										&& (hasEntityInInventory(entity, new ItemStack(Items.PUMPKIN_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(Items.PUMPKIN_SEEDS)) || entity instanceof Player _plr136 && _plr136.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(Items.PUMPKIN_SEEDS);
@@ -283,7 +280,7 @@ public class SeedplanterprocessProcedure {
 										world.setBlock(_bp, _bs, 3);
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 6
-										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.EGGPLANT_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.EGGPLANT_SEED.get())) || entity instanceof Player _plr145 && _plr145.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(PalamodModItems.EGGPLANT_SEED.get());
@@ -304,7 +301,7 @@ public class SeedplanterprocessProcedure {
 										world.setBlock(_bp, _bs, 3);
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 7
-										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.CHERVIL_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.CHERVIL_SEED.get())) || entity instanceof Player _plr154 && _plr154.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);
@@ -325,7 +322,7 @@ public class SeedplanterprocessProcedure {
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 8
-										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.KIWANO_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.KIWANO_SEED.get())) || entity instanceof Player _plr163 && _plr163.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(PalamodModItems.KIWANO_SEED.get());
@@ -346,7 +343,7 @@ public class SeedplanterprocessProcedure {
 										world.setBlock(_bp, _bs, 3);
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 9
-										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get())) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(PalamodModItems.ORANGEBLUE_SEED.get())) || entity instanceof Player _plr172 && _plr172.gameMode() == GameType.CREATIVE)) {
 									act = true;
 									{
 										BlockPos _bp = BlockPos.containing(x + xi, y + i + 1, z + zi);
@@ -367,7 +364,7 @@ public class SeedplanterprocessProcedure {
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 									}
 								} else if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDoubleOr("mode", 0) == 10
-										&& (hasEntityInInventory(entity, new ItemStack(Items.BEETROOT_SEEDS)) || getEntityGameType(entity) == GameType.CREATIVE)) {
+										&& (hasEntityInInventory(entity, new ItemStack(Items.BEETROOT_SEEDS)) || entity instanceof Player _plr181 && _plr181.gameMode() == GameType.CREATIVE)) {
 									if (entity instanceof Player _player) {
 										ItemStack _stktoremove = new ItemStack(Items.BEETROOT_SEEDS);
 										_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
@@ -408,16 +405,5 @@ public class SeedplanterprocessProcedure {
 		if (entity instanceof Player player)
 			return player.getInventory().contains(stack -> !stack.isEmpty() && ItemStack.isSameItem(stack, itemstack));
 		return false;
-	}
-
-	private static GameType getEntityGameType(Entity entity) {
-		if (entity instanceof ServerPlayer serverPlayer) {
-			return serverPlayer.gameMode.getGameModeForPlayer();
-		} else if (entity instanceof Player player && player.level().isClientSide()) {
-			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
-			if (playerInfo != null)
-				return playerInfo.getGameMode();
-		}
-		return null;
 	}
 }

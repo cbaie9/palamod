@@ -27,6 +27,7 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_transfert;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/potgtranfert.png");
 
 	public PotgtranfertScreen(PotgtranfertMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -53,7 +54,7 @@ public class PotgtranfertScreen extends AbstractContainerScreen<PotgtranfertMenu
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/potgtranfert.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 	}
 
 	@Override

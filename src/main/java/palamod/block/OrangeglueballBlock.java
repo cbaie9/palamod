@@ -22,37 +22,36 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import java.util.function.Function;
+
 public class OrangeglueballBlock extends Block {
 	public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
+	private final Function<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public OrangeglueballBlock(BlockBehaviour.Properties properties) {
 		super(properties.sound(SoundType.SLIME_BLOCK).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
-	@Override
-	public boolean propagatesSkylightDown(BlockState state) {
-		return true;
+	private Function<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				default -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 3, 15, 1, 5), box(1, 0, 11, 15, 1, 13), box(3, 0, 1, 13, 1, 3), box(3, 0, 13, 13, 1, 15), box(5, 0, 0, 11, 1, 1), box(5, 0, 15, 11, 1, 16));
+				case NORTH -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 11, 15, 1, 13), box(1, 0, 3, 15, 1, 5), box(3, 0, 13, 13, 1, 15), box(3, 0, 1, 13, 1, 3), box(5, 0, 15, 11, 1, 16), box(5, 0, 0, 11, 1, 1));
+				case EAST -> Shapes.or(box(5, 0, 0, 11, 1, 16), box(3, 0, 1, 5, 1, 15), box(11, 0, 1, 13, 1, 15), box(1, 0, 3, 3, 1, 13), box(13, 0, 3, 15, 1, 13), box(0, 0, 5, 1, 1, 11), box(15, 0, 5, 16, 1, 11));
+				case WEST -> Shapes.or(box(5, 0, 0, 11, 1, 16), box(11, 0, 1, 13, 1, 15), box(3, 0, 1, 5, 1, 15), box(13, 0, 3, 15, 1, 13), box(1, 0, 3, 3, 1, 13), box(15, 0, 5, 16, 1, 11), box(0, 0, 5, 1, 1, 11));
+			};
+		});
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
-		return 0;
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return shapes.apply(state);
 	}
 
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 3, 15, 1, 5), box(1, 0, 11, 15, 1, 13), box(3, 0, 1, 13, 1, 3), box(3, 0, 13, 13, 1, 15), box(5, 0, 0, 11, 1, 1), box(5, 0, 15, 11, 1, 16));
-			case NORTH -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 11, 15, 1, 13), box(1, 0, 3, 15, 1, 5), box(3, 0, 13, 13, 1, 15), box(3, 0, 1, 13, 1, 3), box(5, 0, 15, 11, 1, 16), box(5, 0, 0, 11, 1, 1));
-			case EAST -> Shapes.or(box(5, 0, 0, 11, 1, 16), box(3, 0, 1, 5, 1, 15), box(11, 0, 1, 13, 1, 15), box(1, 0, 3, 3, 1, 13), box(13, 0, 3, 15, 1, 13), box(0, 0, 5, 1, 1, 11), box(15, 0, 5, 16, 1, 11));
-			case WEST -> Shapes.or(box(5, 0, 0, 11, 1, 16), box(11, 0, 1, 13, 1, 15), box(3, 0, 1, 5, 1, 15), box(13, 0, 3, 15, 1, 13), box(1, 0, 3, 3, 1, 13), box(15, 0, 5, 16, 1, 11), box(0, 0, 5, 1, 1, 11));
-		};
 	}
 
 	@Override

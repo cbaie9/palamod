@@ -28,6 +28,7 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_gui_example_wip;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/uploaderguipalahelp.png");
 
 	public UploaderguipalahelpScreen(UploaderguipalahelpMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,7 +55,7 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/uploaderguipalahelp.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 319, 200, 319, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 319, 200, 319, 200);
 	}
 
 	@Override

@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/tank1.21.1",
+  "textures": {
+    "all": "palamod:block/paladium_tank",
+    "particle": "palamod:block/paladium_block",
+    "top-giga": "palamod:block/l2_ostrya",
+    "side": "palamod:block/fluid_2_ostrya",
+    "cadre": "palamod:block/paladium_tank"
+  },
+  "render_type": "translucent"
+}

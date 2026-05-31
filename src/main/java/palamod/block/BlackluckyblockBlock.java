@@ -3,7 +3,6 @@ package palamod.block;
 import palamod.init.PalamodModBlocks;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.component.TooltipDisplay;
@@ -18,11 +17,6 @@ import java.util.function.Consumer;
 public class BlackluckyblockBlock extends Block {
 	public BlackluckyblockBlock(BlockBehaviour.Properties properties) {
 		super(properties.strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
 	}
 
 	public static class Item extends BlockItem {

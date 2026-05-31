@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/tank1.21.1",
+  "textures": {
+    "all": "palamod:block/titane_tank",
+    "particle": "palamod:block/spike_titane_1",
+    "top-giga": "palamod:block/l6_jacaranda",
+    "side": "palamod:block/fluid_6_jacaranda",
+    "cadre": "palamod:block/titane_tank"
+  },
+  "render_type": "translucent"
+}

@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -9,6 +9,7 @@
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "Green Paladium Sword",
+    "rarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
     },
@@ -30,6 +31,7 @@
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
+    "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

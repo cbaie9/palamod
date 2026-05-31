@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    " b "
+  ],
+  "key": {
+    "a": "palamod:lightning_potion",
+    "b": "palamod:titane_stick",
+    "c": "palamod:titane_sword",
+    "d": "palamod:compressed_titane"
+  },
+  "result": {
+    "id": "palamod:titane_portal_key",
+    "count": 1
+  }
+}

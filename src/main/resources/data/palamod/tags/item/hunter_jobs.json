@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#palamod:smeltable_corpse_fish",
+      "required": false
+    },
+    {
+      "id": "#palamod:smeltable_corpse_xp",
+      "required": false
+    }
+  ]
+}

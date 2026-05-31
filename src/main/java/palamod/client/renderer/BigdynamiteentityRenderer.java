@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class BigdynamiteentityRenderer extends MobRenderer<BigdynamiteentityEntity, LivingEntityRenderState, ModelBIG_dynamite2> {
 	private BigdynamiteentityEntity entity = null;
+	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/pala_dyna.png");
 
 	public BigdynamiteentityRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelBIG_dynamite2(context.bakeLayer(ModelBIG_dynamite2.LAYER_LOCATION)), 0.5f);
@@ -29,6 +30,6 @@ public class BigdynamiteentityRenderer extends MobRenderer<BigdynamiteentityEnti
 
 	@Override
 	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
-		return ResourceLocation.parse("palamod:textures/entities/pala_dyna.png");
+		return entityTexture;
 	}
 }

@@ -18,6 +18,8 @@ import net.minecraft.client.Minecraft;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class TunnelvisionoverlayOverlay {
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/pastouche_flou.png");
+
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getGuiGraphics().guiWidth();
@@ -34,7 +36,7 @@ public class TunnelvisionoverlayOverlay {
 			z = entity.getZ();
 		}
 		if (TunnelvisionoverlayDisplayOverlayIngameProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/pastouche_flou.png"), 0, 0, 0, 0, w, h, w, h);
+			event.getGuiGraphics().blit(RenderPipelines.GUI_TEXTURED, BACKGROUND, 0, 0, 0, 0, w, h, w, h);
 		}
 	}
 }

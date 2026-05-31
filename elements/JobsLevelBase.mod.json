@@ -1,0 +1,12 @@
+{
+  "_fv": 85,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Jobs Level Base",
+    "description": "the normal 'maximun' for unlocking item is 20, putting true will revert to old system who is 100",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

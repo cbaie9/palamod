@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class Dankaroctest1Renderer extends MobRenderer<Dankaroctest1Entity, LivingEntityRenderState, ModelDancarok_V1_Converted> {
 	private Dankaroctest1Entity entity = null;
+	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/danka2.png");
 
 	public Dankaroctest1Renderer(EntityRendererProvider.Context context) {
 		super(context, new ModelDancarok_V1_Converted(context.bakeLayer(ModelDancarok_V1_Converted.LAYER_LOCATION)), 0.5f);
@@ -29,6 +30,6 @@ public class Dankaroctest1Renderer extends MobRenderer<Dankaroctest1Entity, Livi
 
 	@Override
 	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
-		return ResourceLocation.parse("palamod:textures/entities/danka2.png");
+		return entityTexture;
 	}
 }

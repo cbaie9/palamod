@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "palamod:block/cauldron_core"
+    }
+  }
+}

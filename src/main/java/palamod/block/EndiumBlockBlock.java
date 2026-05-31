@@ -2,7 +2,6 @@ package palamod.block;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
@@ -18,11 +17,6 @@ import java.util.function.Consumer;
 public class EndiumBlockBlock extends Block {
 	public EndiumBlockBlock(BlockBehaviour.Properties properties) {
 		super(properties.sound(SoundType.METAL).strength(5f, 10f).requiresCorrectToolForDrops());
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
 	}
 
 	public static class Item extends BlockItem {

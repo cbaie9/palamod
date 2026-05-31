@@ -40,7 +40,7 @@ public class CreativehammerItem extends Item {
 	}
 
 	@SubscribeEvent
-	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
+	public static void modifyDefaultComponents(ModifyDefaultComponentsEvent event) {
 		event.modify(PalamodModItems.CREATIVE_HAMMER.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 

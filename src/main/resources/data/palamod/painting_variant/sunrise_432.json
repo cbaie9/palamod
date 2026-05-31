@@ -3,9 +3,11 @@
   "height": 1,
   "width": 2,
   "title": {
+    "color": "yellow",
     "translate": "painting.palamod.sunrise_432.title"
   },
   "author": {
+    "color": "gray",
     "translate": "painting.palamod.sunrise_432.author"
   }
 }

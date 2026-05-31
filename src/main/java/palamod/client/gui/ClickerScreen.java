@@ -34,6 +34,18 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 	private ImageButton imagebutton_clicker_potato_btn_v11;
 	private ImageButton imagebutton_page_up_clicker;
 	private ImageButton imagebutton_page_down;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/clicker_v1.11.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/page_btn_off.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/page_btn_off.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/numbers.png");
+	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/numbers_mc_dungeons.png");
+	private static final ResourceLocation SPRITE_2 = ResourceLocation.parse("palamod:textures/screens/numbers_mc_dungeons.png");
 
 	public ClickerScreen(ClickerMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -60,21 +72,18 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_v1.11.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 360, 210, 360, 210);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 38, 0, 0, 88, 21, 88, 21);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 61, 0, 0, 88, 21, 88, 21);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 83, 0, 0, 88, 21, 88, 21);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 106, 0, 0, 88, 21, 88, 21);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 128, 0, 0, 88, 21, 88, 21);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/clicker_button_noclick.png"), this.leftPos + 260, this.topPos + 151, 0, 0, 88, 21, 88, 21);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/page_btn_off.png"), this.leftPos + 260, this.topPos + 181, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/page_btn_off.png"), this.leftPos + 332, this.topPos + 181, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/numbers.png"), this.leftPos + 296, this.topPos + 181, Mth.clamp((int) ClickergetpageforspriteProcedure.execute(world) * 16, 0, 128), 0, 16, 16,
-				144, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/numbers_mc_dungeons.png"), this.leftPos + 325, this.topPos + 41, Mth.clamp((int) Clickergetdizp1Procedure.execute(world, entity) * 16, 0, 160), 0,
-				16, 16, 176, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/numbers_mc_dungeons.png"), this.leftPos + 334, this.topPos + 41, Mth.clamp((int) Clickergetnump1Procedure.execute(world, entity) * 16, 0, 160), 0,
-				16, 16, 176, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 360, 210, 360, 210);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 260, this.topPos + 38, 0, 0, 88, 21, 88, 21);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 260, this.topPos + 61, 0, 0, 88, 21, 88, 21);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 260, this.topPos + 83, 0, 0, 88, 21, 88, 21);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 260, this.topPos + 106, 0, 0, 88, 21, 88, 21);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 260, this.topPos + 128, 0, 0, 88, 21, 88, 21);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 260, this.topPos + 151, 0, 0, 88, 21, 88, 21);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_7, this.leftPos + 260, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_8, this.leftPos + 332, this.topPos + 181, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 296, this.topPos + 181, Mth.clamp((int) ClickergetpageforspriteProcedure.execute(world) * 16, 0, 128), 0, 16, 16, 144, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 325, this.topPos + 41, Mth.clamp((int) Clickergetdizp1Procedure.execute(world, entity) * 16, 0, 160), 0, 16, 16, 176, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_2, this.leftPos + 334, this.topPos + 41, Mth.clamp((int) Clickergetnump1Procedure.execute(world, entity) * 16, 0, 160), 0, 16, 16, 176, 16);
 	}
 
 	@Override

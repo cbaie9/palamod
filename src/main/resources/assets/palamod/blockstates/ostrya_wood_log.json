@@ -1,195 +1,195 @@
 {
   "variants": {
+    "axis=x,blockstate=1": {
+      "model": "palamod:block/ostrya_wood_log_0",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=2": {
+      "model": "palamod:block/ostrya_wood_log_1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=3": {
+      "model": "palamod:block/ostrya_wood_log_2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=4": {
+      "model": "palamod:block/ostrya_wood_log_3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=5": {
+      "model": "palamod:block/ostrya_wood_log_4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=6": {
+      "model": "palamod:block/ostrya_wood_log_5",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=7": {
+      "model": "palamod:block/ostrya_wood_log_6",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=8": {
+      "model": "palamod:block/ostrya_wood_log_7",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=9": {
+      "model": "palamod:block/ostrya_wood_log_8",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=10": {
+      "model": "palamod:block/ostrya_wood_log_9",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=11": {
+      "model": "palamod:block/ostrya_wood_log_10",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=12": {
+      "model": "palamod:block/ostrya_wood_log_11",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=13": {
+      "model": "palamod:block/ostrya_wood_log_12",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=14": {
+      "model": "palamod:block/ostrya_wood_log_13",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=15": {
+      "model": "palamod:block/ostrya_wood_log_14",
+      "x": 90,
+      "y": 90
+    },
     "axis=x,blockstate=0": {
       "model": "palamod:block/ostrya_wood_log",
       "x": 90,
       "y": 90
     },
+    "axis=y,blockstate=1": {
+      "model": "palamod:block/ostrya_wood_log_0"
+    },
+    "axis=y,blockstate=2": {
+      "model": "palamod:block/ostrya_wood_log_1"
+    },
+    "axis=y,blockstate=3": {
+      "model": "palamod:block/ostrya_wood_log_2"
+    },
+    "axis=y,blockstate=4": {
+      "model": "palamod:block/ostrya_wood_log_3"
+    },
+    "axis=y,blockstate=5": {
+      "model": "palamod:block/ostrya_wood_log_4"
+    },
+    "axis=y,blockstate=6": {
+      "model": "palamod:block/ostrya_wood_log_5"
+    },
+    "axis=y,blockstate=7": {
+      "model": "palamod:block/ostrya_wood_log_6"
+    },
+    "axis=y,blockstate=8": {
+      "model": "palamod:block/ostrya_wood_log_7"
+    },
+    "axis=y,blockstate=9": {
+      "model": "palamod:block/ostrya_wood_log_8"
+    },
+    "axis=y,blockstate=10": {
+      "model": "palamod:block/ostrya_wood_log_9"
+    },
+    "axis=y,blockstate=11": {
+      "model": "palamod:block/ostrya_wood_log_10"
+    },
+    "axis=y,blockstate=12": {
+      "model": "palamod:block/ostrya_wood_log_11"
+    },
+    "axis=y,blockstate=13": {
+      "model": "palamod:block/ostrya_wood_log_12"
+    },
+    "axis=y,blockstate=14": {
+      "model": "palamod:block/ostrya_wood_log_13"
+    },
+    "axis=y,blockstate=15": {
+      "model": "palamod:block/ostrya_wood_log_14"
+    },
     "axis=y,blockstate=0": {
       "model": "palamod:block/ostrya_wood_log"
     },
-    "axis=z,blockstate=0": {
-      "model": "palamod:block/ostrya_wood_log",
-      "x": 90
-    },
-    "axis=x,blockstate=1": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_0",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=1": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_0"
-    },
     "axis=z,blockstate=1": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_0",
+      "model": "palamod:block/ostrya_wood_log_0",
       "x": 90
-    },
-    "axis=x,blockstate=2": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_1",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=2": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_1"
     },
     "axis=z,blockstate=2": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_1",
+      "model": "palamod:block/ostrya_wood_log_1",
       "x": 90
-    },
-    "axis=x,blockstate=3": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_2",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=3": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_2"
     },
     "axis=z,blockstate=3": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_2",
+      "model": "palamod:block/ostrya_wood_log_2",
       "x": 90
-    },
-    "axis=x,blockstate=4": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_3",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=4": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_3"
     },
     "axis=z,blockstate=4": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_3",
+      "model": "palamod:block/ostrya_wood_log_3",
       "x": 90
-    },
-    "axis=x,blockstate=5": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_4",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=5": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_4"
     },
     "axis=z,blockstate=5": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_4",
+      "model": "palamod:block/ostrya_wood_log_4",
       "x": 90
-    },
-    "axis=x,blockstate=6": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_5",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=6": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_5"
     },
     "axis=z,blockstate=6": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_5",
+      "model": "palamod:block/ostrya_wood_log_5",
       "x": 90
-    },
-    "axis=x,blockstate=7": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_6",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=7": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_6"
     },
     "axis=z,blockstate=7": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_6",
+      "model": "palamod:block/ostrya_wood_log_6",
       "x": 90
-    },
-    "axis=x,blockstate=8": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_7",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=8": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_7"
     },
     "axis=z,blockstate=8": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_7",
+      "model": "palamod:block/ostrya_wood_log_7",
       "x": 90
-    },
-    "axis=x,blockstate=9": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_8",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=9": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_8"
     },
     "axis=z,blockstate=9": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_8",
+      "model": "palamod:block/ostrya_wood_log_8",
       "x": 90
-    },
-    "axis=x,blockstate=10": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_9",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=10": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_9"
     },
     "axis=z,blockstate=10": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_9",
+      "model": "palamod:block/ostrya_wood_log_9",
       "x": 90
-    },
-    "axis=x,blockstate=11": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_10",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=11": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_10"
     },
     "axis=z,blockstate=11": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_10",
+      "model": "palamod:block/ostrya_wood_log_10",
       "x": 90
-    },
-    "axis=x,blockstate=12": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_11",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=12": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_11"
     },
     "axis=z,blockstate=12": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_11",
+      "model": "palamod:block/ostrya_wood_log_11",
       "x": 90
-    },
-    "axis=x,blockstate=13": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_12",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=13": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_12"
     },
     "axis=z,blockstate=13": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_12",
+      "model": "palamod:block/ostrya_wood_log_12",
       "x": 90
-    },
-    "axis=x,blockstate=14": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_13",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=14": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_13"
     },
     "axis=z,blockstate=14": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_13",
+      "model": "palamod:block/ostrya_wood_log_13",
       "x": 90
     },
-    "axis=x,blockstate=15": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_14",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,blockstate=15": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_14"
-    },
     "axis=z,blockstate=15": {
-      "model": "palamod:block/ostryawoodblockstate_blockstate_14",
+      "model": "palamod:block/ostrya_wood_log_14",
+      "x": 90
+    },
+    "axis=z,blockstate=0": {
+      "model": "palamod:block/ostrya_wood_log",
       "x": 90
     }
   }

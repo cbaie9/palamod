@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "b b",
+    "aba"
+  ],
+  "key": {
+    "a": "palamod:titane_ingot",
+    "b": "#c:glass_blocks/cheap"
+  },
+  "result": {
+    "id": "palamod:titane_tank",
+    "count": 1
+  }
+}

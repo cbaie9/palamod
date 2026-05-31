@@ -1,0 +1,11 @@
+{
+  "parent": "palamod:custom/tank1.21.1",
+  "textures": {
+    "all": "palamod:block/amethyste_tank",
+    "particle": "palamod:block/amethyst_block",
+    "top-giga": "palamod:block/l14_judeecercis",
+    "side": "palamod:block/fluid_14_judeecercis",
+    "cadre": "palamod:block/amethyste_tank"
+  },
+  "render_type": "translucent"
+}

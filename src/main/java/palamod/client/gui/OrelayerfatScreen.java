@@ -18,6 +18,7 @@ public class OrelayerfatScreen extends AbstractContainerScreen<OrelayerfatMenu> 
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/orelayerfat.png");
 
 	public OrelayerfatScreen(OrelayerfatMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,7 +45,7 @@ public class OrelayerfatScreen extends AbstractContainerScreen<OrelayerfatMenu> 
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/orelayerfat.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 250, 100, 250, 100);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 250, 100, 250, 100);
 	}
 
 	@Override

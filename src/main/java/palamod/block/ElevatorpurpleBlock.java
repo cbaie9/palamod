@@ -30,11 +30,6 @@ public class ElevatorpurpleBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
-	}
-
-	@Override
 	public void stepOn(Level world, BlockPos pos, BlockState blockstate, Entity entity) {
 		super.stepOn(world, pos, blockstate, entity);
 		Elevator_processProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);

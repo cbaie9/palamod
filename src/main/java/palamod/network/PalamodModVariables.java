@@ -138,8 +138,8 @@ public class PalamodModVariables {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player) {
-			SavedData mapdata = MapVariables.get(event.getEntity().level());
-			SavedData worlddata = WorldVariables.get(event.getEntity().level());
+			SavedData mapdata = MapVariables.get(player.level());
+			SavedData worlddata = WorldVariables.get(player.level());
 			if (mapdata != null)
 				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(0, mapdata));
 			if (worlddata != null)
@@ -150,7 +150,7 @@ public class PalamodModVariables {
 	@SubscribeEvent
 	public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player) {
-			SavedData worlddata = WorldVariables.get(event.getEntity().level());
+			SavedData worlddata = WorldVariables.get(player.level());
 			if (worlddata != null)
 				PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
 		}

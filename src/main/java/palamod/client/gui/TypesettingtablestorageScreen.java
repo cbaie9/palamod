@@ -18,6 +18,7 @@ public class TypesettingtablestorageScreen extends AbstractContainerScreen<Types
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/typesettingtablestorage.png");
 
 	public TypesettingtablestorageScreen(TypesettingtablestorageMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -36,8 +37,6 @@ public class TypesettingtablestorageScreen extends AbstractContainerScreen<Types
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/typesettingtablestorage.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -46,7 +45,7 @@ public class TypesettingtablestorageScreen extends AbstractContainerScreen<Types
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 	}
 
 	@Override

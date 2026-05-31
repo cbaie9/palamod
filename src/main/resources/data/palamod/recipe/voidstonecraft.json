@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": "palamod:amethyst_ingot",
-    "b": "#c:chests"
+    "b": "#neoforge:chest"
   },
   "result": {
     "id": "palamod:voidstone",

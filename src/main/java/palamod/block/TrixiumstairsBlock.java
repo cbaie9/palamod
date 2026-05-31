@@ -1,6 +1,5 @@
 package palamod.block;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -14,10 +13,5 @@ public class TrixiumstairsBlock extends StairBlock {
 	@Override
 	public float getExplosionResistance() {
 		return 10f;
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 0;
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -35,7 +35,7 @@
         "value": "CUSTOM:Amethyste"
       },
       {
-        "value": "TAG:c:chests"
+        "value": "TAG:neoforge:chest"
       },
       {
         "value": "CUSTOM:Amethyste"

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "palamod:shiny_erable_wood",
+    "b": "palamod:paladium_block"
+  },
+  "result": {
+    "id": "palamod:paladium_portal_block",
+    "count": 1
+  }
+}

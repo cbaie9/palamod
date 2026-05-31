@@ -3,9 +3,11 @@
   "height": 1,
   "width": 1,
   "title": {
+    "color": "yellow",
     "translate": "painting.palamod.plains_16.title"
   },
   "author": {
+    "color": "gray",
     "translate": "painting.palamod.plains_16.author"
   }
 }

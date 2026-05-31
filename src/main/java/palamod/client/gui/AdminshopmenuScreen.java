@@ -54,6 +54,28 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 	private ImageButton imagebutton_adminshop_new_placeholder19;
 	private ImageButton imagebutton_adminshop_new_placeholder20;
 	private ExtendedSlider slider;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/adminshopmenu.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_2 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_3 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_4 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_5 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_6 = ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png");
+	private static final ResourceLocation SPRITE_7 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_8 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_9 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_10 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_11 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_12 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_13 = ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png");
+	private static final ResourceLocation SPRITE_14 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final ResourceLocation SPRITE_15 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final ResourceLocation SPRITE_16 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final ResourceLocation SPRITE_17 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final ResourceLocation SPRITE_18 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final ResourceLocation SPRITE_19 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
+	private static final ResourceLocation SPRITE_20 = ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png");
 
 	public AdminshopmenuScreen(AdminshopmenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -93,49 +115,28 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/adminshopmenu.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 20, this.topPos + 42, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256),
-				0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 56, this.topPos + 42, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256),
-				0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 92, this.topPos + 42, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256),
-				0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 128, this.topPos + 42,
-				Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 164, this.topPos + 42,
-				Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 200, this.topPos + 42,
-				Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row1_v1.png"), this.leftPos + 236, this.topPos + 42,
-				Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 20, this.topPos + 90, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256),
-				0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 56, this.topPos + 90, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256),
-				0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 92, this.topPos + 90, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256),
-				0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 128, this.topPos + 90,
-				Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 164, this.topPos + 90,
-				Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 200, this.topPos + 90,
-				Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row2_v1.png"), this.leftPos + 236, this.topPos + 90,
-				Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 20, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 56, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 92, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 128, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 164, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 200, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/sprite_row3_v1.png"), this.leftPos + 236, this.topPos + 138,
-				Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_0, this.leftPos + 20, this.topPos + 42, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_1, this.leftPos + 56, this.topPos + 42, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_2, this.leftPos + 92, this.topPos + 42, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_3, this.leftPos + 128, this.topPos + 42, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_4, this.leftPos + 164, this.topPos + 42, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_5, this.leftPos + 200, this.topPos + 42, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_6, this.leftPos + 236, this.topPos + 42, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_7, this.leftPos + 20, this.topPos + 90, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_8, this.leftPos + 56, this.topPos + 90, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_9, this.leftPos + 92, this.topPos + 90, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_10, this.leftPos + 128, this.topPos + 90, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_11, this.leftPos + 164, this.topPos + 90, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_12, this.leftPos + 200, this.topPos + 90, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_13, this.leftPos + 236, this.topPos + 90, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_14, this.leftPos + 20, this.topPos + 138, Mth.clamp((int) Adminshopcol1adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_15, this.leftPos + 56, this.topPos + 138, Mth.clamp((int) Adminshopcol2adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_16, this.leftPos + 92, this.topPos + 138, Mth.clamp((int) Adminshopcol3adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_17, this.leftPos + 128, this.topPos + 138, Mth.clamp((int) Adminshopcol4adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_18, this.leftPos + 164, this.topPos + 138, Mth.clamp((int) Adminshopcol5adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_19, this.leftPos + 200, this.topPos + 138, Mth.clamp((int) Adminshopcol6adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, SPRITE_20, this.leftPos + 236, this.topPos + 138, Mth.clamp((int) Adminshopcol7adminshopgetspriteProcedure.execute(entity) * 16, 0, 256), 0, 16, 16, 272, 16);
 	}
 
 	@Override

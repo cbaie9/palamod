@@ -205,7 +205,63 @@ public class OxmodsCommand {
 
 					TestcopyProcedure.execute(entity);
 					return 0;
-				})));
+				})).then(Commands.literal("flask").then(Commands.literal("judeecercis").then(Commands.argument("stock", DoubleArgumentType.doubleArg(0, 15)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					OxlibflaskluncherviajudeecercisProcedure.execute(arguments, entity);
+					return 0;
+				}))).then(Commands.literal("jacaranda").then(Commands.argument("stock", DoubleArgumentType.doubleArg(0, 15)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					OxlibflaskluncherviajacarandaProcedure.execute(arguments, entity);
+					return 0;
+				}))).then(Commands.literal("erable").then(Commands.argument("stock", DoubleArgumentType.doubleArg(0, 15)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					OxlibflaskluncherviaerableProcedure.execute(arguments, entity);
+					return 0;
+				}))).then(Commands.literal("ostrya").then(Commands.argument("stock", DoubleArgumentType.doubleArg(0, 15)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					OxlibflaskluncherviaostryaProcedure.execute(arguments, entity);
+					return 0;
+				})))));
 	}
 
 }

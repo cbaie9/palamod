@@ -40,7 +40,7 @@ public class EndiumAxeItem extends AxeItem {
 	}
 
 	@SubscribeEvent
-	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
+	public static void modifyDefaultComponents(ModifyDefaultComponentsEvent event) {
 		event.modify(PalamodModItems.ENDIUM_AXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 

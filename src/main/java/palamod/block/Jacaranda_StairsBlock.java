@@ -12,17 +12,12 @@ import net.minecraft.core.BlockPos;
 
 public class Jacaranda_StairsBlock extends StairBlock {
 	public Jacaranda_StairsBlock(BlockBehaviour.Properties properties) {
-		super(Blocks.AIR.defaultBlockState(), properties.sound(SoundType.WOOD).strength(3f, 2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		super(Blocks.AIR.defaultBlockState(), properties.sound(SoundType.WOOD).strength(3f, 2f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override
 	public float getExplosionResistance() {
 		return 2f;
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 0;
 	}
 
 	@Override

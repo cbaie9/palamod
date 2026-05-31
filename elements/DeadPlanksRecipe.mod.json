@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -7,7 +7,7 @@
     "group": "planks",
     "unlockingItems": [
       {
-        "value": "TAG:mod:dead_logs"
+        "value": "TAG:palamod:dead_logs"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -29,7 +29,7 @@
         "value": ""
       },
       {
-        "value": "TAG:mod:dead_logs"
+        "value": "TAG:palamod:dead_logs"
       },
       {
         "value": ""

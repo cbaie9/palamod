@@ -1,6 +1,6 @@
 package palamod.command;
 
-import palamod.procedures.PayprocessProcedure;
+import palamod.procedures.PaycommandprocessProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -24,7 +24,7 @@ public class PayCommand {
 		if (event.getCommandSelection() == Commands.CommandSelection.DEDICATED)
 			event.getDispatcher().register(Commands.literal("pay")
 
-					.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("money", DoubleArgumentType.doubleArg()).then(Commands.argument("reason", StringArgumentType.word()).executes(arguments -> {
+					.then(Commands.argument("player2", EntityArgument.player()).then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("reason", StringArgumentType.word()).executes(arguments -> {
 						Level world = arguments.getSource().getUnsidedLevel();
 						double x = arguments.getSource().getPosition().x();
 						double y = arguments.getSource().getPosition().y();
@@ -36,7 +36,7 @@ public class PayCommand {
 						if (entity != null)
 							direction = entity.getDirection();
 
-						PayprocessProcedure.execute(world, x, y, z, arguments, entity);
+						PaycommandprocessProcedure.execute(world, x, y, z, arguments, entity);
 						return 0;
 					})))));
 	}

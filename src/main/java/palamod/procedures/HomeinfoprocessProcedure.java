@@ -1,6 +1,5 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
@@ -11,7 +10,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -27,16 +25,8 @@ public class HomeinfoprocessProcedure {
 			return;
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double cycle_loop = 0;
-		double lvl = 0;
 		File home = new File("");
-		File jobs = new File("");
-		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			home = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\home\\" + entity.getUUID().toString()),
-					File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		} else if (IsgameserversideProcedure.execute()) {
-			home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		}
+		home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
 		if (home.exists()) {
 			{
 				try {

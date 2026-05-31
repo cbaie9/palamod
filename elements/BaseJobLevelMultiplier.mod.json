@@ -1,0 +1,12 @@
+{
+  "_fv": 85,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Base Job Level Mutliplier",
+    "description": "Change how job's levels are from apart | Default Value is 1000 and the game divide that value by 1000 to obtain the actual mutliplier, so 1200 is actually 1.2x",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1000
+  }
+}

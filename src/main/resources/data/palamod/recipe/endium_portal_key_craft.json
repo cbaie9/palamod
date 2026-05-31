@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    " b "
+  ],
+  "key": {
+    "a": "palamod:lightning_potion",
+    "b": "palamod:findium",
+    "c": "palamod:findium_block",
+    "d": "palamod:endium_pollen"
+  },
+  "result": {
+    "id": "palamod:endium_portal_key",
+    "count": 1
+  }
+}

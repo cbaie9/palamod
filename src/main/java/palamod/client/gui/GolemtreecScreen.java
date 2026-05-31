@@ -28,6 +28,11 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 	private Checkbox golem_v_farmer1;
 	private Button button_see_ultilitary_branch;
 	private Button button_buy_selected_upgrade;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/golemtreec.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/golem_llh.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/golem_llh.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/golem_ltf.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/golem_ltf.png");
 
 	public GolemtreecScreen(GolemtreecMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -58,8 +63,6 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/golemtreec.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -68,11 +71,11 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 66, this.topPos + 156, 0, 0, 64, 64, 64, 64);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_llh.png"), this.leftPos + 125, this.topPos + 119, 0, 0, 64, 64, 64, 64);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 192, this.topPos + 119, 0, 0, 64, 64, 64, 64);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/golem_ltf.png"), this.leftPos + 255, this.topPos + 156, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 66, this.topPos + 156, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 125, this.topPos + 119, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 192, this.topPos + 119, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 255, this.topPos + 156, 0, 0, 64, 64, 64, 64);
 	}
 
 	@Override

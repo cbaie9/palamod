@@ -25,6 +25,9 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 	private boolean menuStateUpdateActive = false;
 	private Button button_franais;
 	private Button button_english;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/gui176_166.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/english_lang.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/french_lang.png");
 
 	public LanguageselectionScreen(LanguageselectionMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -51,9 +54,9 @@ public class LanguageselectionScreen extends AbstractContainerScreen<Languagesel
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/english_lang.png"), this.leftPos + 7, this.topPos + 31, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/french_lang.png"), this.leftPos + 6, this.topPos + 66, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 7, this.topPos + 31, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 6, this.topPos + 66, 0, 0, 16, 16, 16, 16);
 	}
 
 	@Override

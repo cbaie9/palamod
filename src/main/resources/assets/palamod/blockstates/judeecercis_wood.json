@@ -1,52 +1,52 @@
 {
   "variants": {
-    "blockstate=0": {
-      "model": "palamod:block/judeecercis_wood"
-    },
     "blockstate=1": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_0"
+      "model": "palamod:block/judeecercis_wood_0"
     },
     "blockstate=2": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_1"
+      "model": "palamod:block/judeecercis_wood_1"
     },
     "blockstate=3": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_2"
+      "model": "palamod:block/judeecercis_wood_2"
     },
     "blockstate=4": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_3"
+      "model": "palamod:block/judeecercis_wood_3"
     },
     "blockstate=5": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_4"
+      "model": "palamod:block/judeecercis_wood_4"
     },
     "blockstate=6": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_5"
+      "model": "palamod:block/judeecercis_wood_5"
     },
     "blockstate=7": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_6"
+      "model": "palamod:block/judeecercis_wood_6"
     },
     "blockstate=8": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_7"
+      "model": "palamod:block/judeecercis_wood_7"
     },
     "blockstate=9": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_8"
+      "model": "palamod:block/judeecercis_wood_8"
     },
     "blockstate=10": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_9"
+      "model": "palamod:block/judeecercis_wood_9"
     },
     "blockstate=11": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_10"
+      "model": "palamod:block/judeecercis_wood_10"
     },
     "blockstate=12": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_11"
+      "model": "palamod:block/judeecercis_wood_11"
     },
     "blockstate=13": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_12"
+      "model": "palamod:block/judeecercis_wood_12"
     },
     "blockstate=14": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_13"
+      "model": "palamod:block/judeecercis_wood_13"
     },
     "blockstate=15": {
-      "model": "palamod:block/judeecercisblockstate_blockstate_14"
+      "model": "palamod:block/judeecercis_wood_14"
+    },
+    "blockstate=0": {
+      "model": "palamod:block/judeecercis_wood"
     }
   }
 }

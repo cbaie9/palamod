@@ -1,0 +1,67 @@
+{
+  "model": {
+    "type": "palamod:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:tankitem/tank_type"
+            },
+            "value": 1
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/tankitem_0"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:tankitem/tank_type"
+            },
+            "value": 2
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/tankitem_1"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:tankitem/tank_type"
+            },
+            "value": 3
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/tankitem_2"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "palamod:tankitem/tank_type"
+            },
+            "value": 4
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "palamod:item/tankitem_3"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "palamod:item/tankitem"
+    }
+  }
+}

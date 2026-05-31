@@ -5,22 +5,19 @@ import palamod.procedures.JudeecerissapdropProcedure;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.TintedParticleLeavesBlock;
+import net.minecraft.world.level.block.UntintedParticleLeavesBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.ColorParticleOption;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-public class Judeecercis_LeavesBlock extends TintedParticleLeavesBlock {
+public class Judeecercis_LeavesBlock extends UntintedParticleLeavesBlock {
 	public Judeecercis_LeavesBlock(BlockBehaviour.Properties properties) {
-		super(0.01f, properties.sound(SoundType.GRASS).strength(0.2f).noOcclusion().ignitedByLava().isSuffocating((bs, br, bp) -> false).isViewBlocking((bs, br, bp) -> false));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 1;
+		super(0f, ColorParticleOption.create(ParticleTypes.TINTED_LEAVES, -86826), properties.sound(SoundType.GRASS).strength(0.2f).noOcclusion().ignitedByLava().isSuffocating((bs, br, bp) -> false).isViewBlocking((bs, br, bp) -> false));
 	}
 
 	@Override

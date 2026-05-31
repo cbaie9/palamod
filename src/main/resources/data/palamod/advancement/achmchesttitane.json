@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "palamod:titane_chest"
-            ],
+            "items": "palamod:titane_chest",
             "count": {
               "min": 1,
               "max": 1

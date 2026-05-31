@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -44,6 +44,9 @@
           "name": "imagebutton_screen_beta2_template_jobs1",
           "image": "screen_beta3_jobs_hunter.png",
           "hoveredImage": "screen_beta3_jobs_hunter2.png",
+          "onClick": {
+            "name": "ConnectJobsHunterGui"
+          },
           "x": 240,
           "y": 77,
           "locked": true
@@ -55,6 +58,9 @@
           "name": "imagebutton_screen_beta2_template_jobs2",
           "image": "screen_beta3_jobs_alchi.png",
           "hoveredImage": "screen_beta3_jobs_alchi2.png",
+          "onClick": {
+            "name": "ConnectJobsAlchimistGui"
+          },
           "x": 311,
           "y": 77,
           "locked": true
@@ -71,6 +77,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 199,
           "y": 25,
           "locked": true
@@ -87,6 +94,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 47,
           "y": 140,
           "locked": false
@@ -103,6 +111,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 87,
           "y": 65,
           "locked": true
@@ -119,6 +128,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 162,
           "y": 65,
           "locked": true
@@ -135,6 +145,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 246,
           "y": 65,
           "locked": true
@@ -151,6 +162,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 308,
           "y": 65,
           "locked": true
@@ -192,6 +204,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 83,
           "y": 119,
           "locked": true
@@ -209,6 +222,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 158,
           "y": 119,
           "locked": true
@@ -226,6 +240,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 240,
           "y": 119,
           "locked": true
@@ -243,6 +258,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 311,
           "y": 119,
           "locked": true
@@ -260,6 +276,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Isgameclientside"
           },
@@ -282,6 +299,23 @@
           },
           "x": 49,
           "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_beta",
+          "text": {
+            "fixedValue": "Beta"
+          },
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 47,
+          "y": 25,
           "locked": false
         }
       }

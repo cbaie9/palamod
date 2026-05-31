@@ -2,7 +2,14 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
+
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -14,8 +21,20 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
+import javax.annotation.Nullable;
+
+@EventBusSubscriber
 public class FullendiuminvisibleProcedure {
+	@SubscribeEvent
+	public static void whenEntityChangeEquipment(LivingEquipmentChangeEvent event) {
+		execute(event, event.getEntity());
+	}
+
 	public static void execute(Entity entity) {
+		execute(null, entity);
+	}
+
+	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_ARMOR_BOOTS.get()
@@ -53,6 +72,20 @@ public class FullendiuminvisibleProcedure {
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == PalamodModItems.ENDIUM_ARMOR_CHESTPLATE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.STRENGTH, 900, 1, false, false));
+		}
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PalamodModItems.TRAVEL_ARMOR_HELMET.get()) {
+			if (entity instanceof LivingEntity _livingEntity25 && _livingEntity25.getAttributes().hasAttribute(Attributes.SAFE_FALL_DISTANCE))
+				_livingEntity25.getAttribute(Attributes.SAFE_FALL_DISTANCE).setBaseValue(1000000);
+		} else {
+			if (entity instanceof LivingEntity _livingEntity26 && _livingEntity26.getAttributes().hasAttribute(Attributes.SAFE_FALL_DISTANCE))
+				_livingEntity26.getAttribute(Attributes.SAFE_FALL_DISTANCE).setBaseValue(3);
+		}
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PalamodModItems.HOOD_HELMET_ARMOR_HELMET.get()) {
+			if (entity instanceof LivingEntity _livingEntity29 && _livingEntity29.getAttributes().hasAttribute(NeoForgeMod.NAMETAG_DISTANCE))
+				_livingEntity29.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).setBaseValue(0);
+		} else {
+			if (entity instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(NeoForgeMod.NAMETAG_DISTANCE))
+				_livingEntity30.getAttribute(NeoForgeMod.NAMETAG_DISTANCE).setBaseValue(64);
 		}
 	}
 }

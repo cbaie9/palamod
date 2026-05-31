@@ -3,9 +3,11 @@
   "height": 2,
   "width": 2,
   "title": {
+    "color": "yellow",
     "translate": "painting.palamod.fish_32.title"
   },
   "author": {
+    "color": "gray",
     "translate": "painting.palamod.fish_32.author"
   }
 }

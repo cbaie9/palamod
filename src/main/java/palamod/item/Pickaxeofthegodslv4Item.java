@@ -52,7 +52,7 @@ public class Pickaxeofthegodslv4Item extends Item {
 	}
 
 	@SubscribeEvent
-	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
+	public static void modifyDefaultComponents(ModifyDefaultComponentsEvent event) {
 		event.modify(PalamodModItems.PICKAXE_OF_THE_GODS_LV4.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 

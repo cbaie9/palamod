@@ -11,12 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodSlabBlock extends SlabBlock {
 	public Ostrya_woodSlabBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.WOOD).strength(2f, 3f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 0;
+		super(properties.sound(SoundType.WOOD).strength(2f, 3f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

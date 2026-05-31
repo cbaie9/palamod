@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    " b "
+  ],
+  "key": {
+    "a": "palamod:lightning_potion",
+    "b": "palamod:amethyst_stick",
+    "c": "palamod:amethyst_sword",
+    "d": "palamod:compressed_amethyst"
+  },
+  "result": {
+    "id": "palamod:amethyst_portal_key",
+    "count": 1
+  }
+}

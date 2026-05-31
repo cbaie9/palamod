@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -31,6 +31,7 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 135,
           "y": 87,
           "locked": false
@@ -62,22 +63,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "x": 139,
           "y": 118,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_help_button",
-          "image": "button_helpjobs_v1.png",
-          "hoveredImage": "button_helpjobs_poi_v1.png",
-          "displayCondition": {
-            "name": "Returnfalse"
-          },
-          "x": 140,
-          "y": 133,
           "locked": false
         }
       },
@@ -141,6 +129,24 @@
           },
           "x": 140,
           "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_getlevelminer",
+          "text": {
+            "fixedValue": "",
+            "name": "Getlevelminer"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 131,
+          "y": 143,
           "locked": false
         }
       }

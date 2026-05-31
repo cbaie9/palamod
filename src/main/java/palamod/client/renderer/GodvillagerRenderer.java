@@ -16,6 +16,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class GodvillagerRenderer extends MobRenderer<GodvillagerEntity, VillagerRenderState, VillagerModel> {
 	private GodvillagerEntity entity = null;
+	private final ResourceLocation entityTexture = ResourceLocation.parse("palamod:textures/entities/santa-villager.png");
 
 	public GodvillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new VillagerModel(context.bakeLayer(ModelLayers.VILLAGER)), 0.5f);
@@ -38,7 +39,7 @@ public class GodvillagerRenderer extends MobRenderer<GodvillagerEntity, Villager
 
 	@Override
 	public ResourceLocation getTextureLocation(VillagerRenderState state) {
-		return ResourceLocation.parse("palamod:textures/entities/santa-villager.png");
+		return entityTexture;
 	}
 
 	@Override

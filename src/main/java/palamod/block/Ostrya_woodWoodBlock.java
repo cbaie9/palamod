@@ -12,12 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Ostrya_woodWoodBlock extends Block {
 	public Ostrya_woodWoodBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
+		super(properties.sound(SoundType.WOOD).strength(2f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
 	}
 
 	@Override

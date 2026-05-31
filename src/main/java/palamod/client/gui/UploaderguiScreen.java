@@ -33,6 +33,13 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 	private boolean menuStateUpdateActive = false;
 	private ImageButton imagebutton_cross_no_button;
 	private ImageButton imagebutton_help_img;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/uploadergui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png");
 
 	public UploaderguiScreen(UploaderguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -80,13 +87,13 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/uploadergui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 220, 180, 220, 180);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 28, this.topPos + 72, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 43, this.topPos + 72, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 130, this.topPos + 71, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 141, this.topPos + 71, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_left.png"), this.leftPos + 85, this.topPos + 6, 0, 0, 50, 16, 50, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/text_red_background_right.png"), this.leftPos + 86, this.topPos + 6, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 220, 180, 220, 180);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 28, this.topPos + 72, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 43, this.topPos + 72, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 130, this.topPos + 71, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 141, this.topPos + 71, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 85, this.topPos + 6, 0, 0, 50, 16, 50, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 86, this.topPos + 6, 0, 0, 50, 16, 50, 16);
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -68,6 +68,10 @@
     "leggingsItemCustomModelName": "Normal",
     "bootsItemRenderType": 0,
     "bootsItemCustomModelName": "Normal",
+    "helmetTranslucency": false,
+    "bodyTranslucency": false,
+    "leggingsTranslucency": false,
+    "bootsTranslucency": false,
     "helmetImmuneToFire": false,
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,
@@ -99,6 +103,7 @@
       {
         "value": "CUSTOM:PaladiumIngot"
       }
-    ]
+    ],
+    "rarity": "COMMON"
   }
 }

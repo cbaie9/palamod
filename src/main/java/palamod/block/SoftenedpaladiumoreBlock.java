@@ -20,11 +20,6 @@ public class SoftenedpaladiumoreBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
-	}
-
-	@Override
 	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
 		super.attack(blockstate, world, pos, entity);
 		SetblockstateincacheProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);

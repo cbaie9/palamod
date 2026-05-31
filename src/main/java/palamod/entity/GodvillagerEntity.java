@@ -2,6 +2,8 @@ package palamod.entity;
 
 import palamod.world.inventory.GodvillagerguiMenu;
 
+import palamod.init.PalamodModEntities;
+
 import net.neoforged.neoforge.items.wrapper.EntityHandsInvWrapper;
 import net.neoforged.neoforge.items.wrapper.EntityArmorInvWrapper;
 import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
@@ -29,10 +31,7 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.MenuProvider;
@@ -198,6 +197,13 @@ public class GodvillagerEntity extends Villager {
 			});
 		}
 		super.mobInteract(sourceentity, hand);
+		return retval;
+	}
+
+	@Override
+	public Villager getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
+		GodvillagerEntity retval = PalamodModEntities.GODVILLAGER.get().create(serverWorld, EntitySpawnReason.BREEDING);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), EntitySpawnReason.BREEDING, null);
 		return retval;
 	}
 

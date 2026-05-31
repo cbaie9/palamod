@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "palamod:shiny_jacaranda_wood",
+    "b": "palamod:amethyst_block"
+  },
+  "result": {
+    "id": "palamod:amethyst_portalblock",
+    "count": 1
+  }
+}

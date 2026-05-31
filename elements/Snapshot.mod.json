@@ -1,5 +1,5 @@
 {
-  "_fv": 79,
+  "_fv": 85,
   "_type": "overlay",
   "definition": {
     "priority": "LOWEST",
@@ -15,6 +15,7 @@
             "value": -26368,
             "falpha": 0.0
           },
+          "hasShadow": false,
           "displayCondition": {
             "name": "Devchecksnap"
           },

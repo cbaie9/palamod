@@ -18,6 +18,7 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> impl
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/notyetgui.png");
 
 	public NotyetguiScreen(NotyetguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,7 +45,7 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> impl
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/notyetgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 210, 50, 210, 50);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 210, 50, 210, 50);
 	}
 
 	@Override

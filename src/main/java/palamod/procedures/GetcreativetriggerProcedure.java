@@ -16,8 +16,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.client.Minecraft;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -37,7 +35,7 @@ public class GetcreativetriggerProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (getEntityGameType(entity) == GameType.CREATIVE && !(entity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel _serverLevel1
+		if (entity instanceof Player _plr0 && _plr0.gameMode() == GameType.CREATIVE && !(entity instanceof ServerPlayer _plr1 && _plr1.level() instanceof ServerLevel _serverLevel1
 				&& _plr1.getAdvancements().getOrStartProgress(_serverLevel1.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"))).isDone())) {
 			if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
 				AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("palamod:advinvicrea"));
@@ -53,16 +51,5 @@ public class GetcreativetriggerProcedure {
 				PalamodMod.LOGGER.info((entity.getDisplayName().getString() + " get creative trigger"));
 			}
 		}
-	}
-
-	private static GameType getEntityGameType(Entity entity) {
-		if (entity instanceof ServerPlayer serverPlayer) {
-			return serverPlayer.gameMode.getGameModeForPlayer();
-		} else if (entity instanceof Player player && player.level().isClientSide()) {
-			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
-			if (playerInfo != null)
-				return playerInfo.getGameMode();
-		}
-		return null;
 	}
 }

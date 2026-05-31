@@ -74,6 +74,26 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 	private ImageButton imagebutton_beta_block5;
 	private ImageButton imagebutton_withered_obsidian_0;
 	private ImageButton imagebutton_green_paladium_excavator;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/jobsminercraftgui.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
+	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_9 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_10 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_11 = ResourceLocation.parse("palamod:textures/screens/line_ver.png");
+	private static final ResourceLocation IMAGE_12 = ResourceLocation.parse("palamod:textures/screens/line_ver.png");
+	private static final ResourceLocation IMAGE_13 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_14 = ResourceLocation.parse("palamod:textures/screens/line_ver.png");
+	private static final ResourceLocation IMAGE_15 = ResourceLocation.parse("palamod:textures/screens/line_ver.png");
+	private static final ResourceLocation IMAGE_16 = ResourceLocation.parse("palamod:textures/screens/line_ver.png");
+	private static final ResourceLocation IMAGE_17 = ResourceLocation.parse("palamod:textures/screens/line_hor.png");
+	private static final ResourceLocation IMAGE_18 = ResourceLocation.parse("palamod:textures/screens/line_ver.png");
+	private static final ResourceLocation IMAGE_19 = ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png");
 
 	public JobsminercraftguiScreen(JobsminercraftguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -285,26 +305,26 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/jobsminercraftgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 210, 300, 210);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/left_gray_line.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png"), this.leftPos + 190, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/right_gray_line.png"), this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 281, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 265, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 249, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 233, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 217, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 201, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 191, 0, 0, 3, 16, 3, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 175, 0, 0, 3, 16, 3, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 185, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 159, 0, 0, 3, 16, 3, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 143, 0, 0, 3, 16, 3, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 127, 0, 0, 3, 16, 3, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_hor.png"), this.leftPos + 171, this.topPos + 112, 0, 0, 16, 3, 16, 3);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/line_ver.png"), this.leftPos + 171, this.topPos + 113, 0, 0, 3, 16, 3, 16);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/arrow_right_full.png"), this.leftPos + 241, this.topPos + 56, 0, 0, 16, 14, 16, 14);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 210, 300, 210);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 0, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_2, this.leftPos + 100, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_3, this.leftPos + 190, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_4, this.leftPos + 200, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_5, this.leftPos + 281, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_6, this.leftPos + 265, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_7, this.leftPos + 249, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_8, this.leftPos + 233, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_9, this.leftPos + 217, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_10, this.leftPos + 201, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_11, this.leftPos + 171, this.topPos + 191, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_12, this.leftPos + 171, this.topPos + 175, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_13, this.leftPos + 185, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_14, this.leftPos + 171, this.topPos + 159, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_15, this.leftPos + 171, this.topPos + 143, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_16, this.leftPos + 171, this.topPos + 127, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_17, this.leftPos + 171, this.topPos + 112, 0, 0, 16, 3, 16, 3);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_18, this.leftPos + 171, this.topPos + 113, 0, 0, 3, 16, 3, 16);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_19, this.leftPos + 241, this.topPos + 56, 0, 0, 16, 14, 16, 14);
 	}
 
 	@Override

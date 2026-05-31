@@ -25,26 +25,22 @@ import net.minecraft.core.BlockPos;
 public class Judeecercis_LogBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 	public static final IntegerProperty SAP = IntegerProperty.create("sap", 0, 96);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 15);
 
 	public Judeecercis_LogBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.WOOD).strength(2f).requiresCorrectToolForDrops().ignitedByLava().instrument(NoteBlockInstrument.BASS));
-		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(SAP, 96));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
+		super(properties.sound(SoundType.WOOD).strength(2f).ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y).setValue(SAP, 96).setValue(BLOCKSTATE, 0));
 	}
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		super.createBlockStateDefinition(builder);
-		builder.add(AXIS, SAP);
+		builder.add(AXIS, SAP, BLOCKSTATE);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis()).setValue(SAP, 96);
+		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis()).setValue(SAP, 96).setValue(BLOCKSTATE, 0);
 	}
 
 	@Override

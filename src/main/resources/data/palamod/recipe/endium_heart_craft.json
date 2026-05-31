@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": "palamod:findium_block",
+    "b": "palamod:endium_flower",
+    "c": "palamod:paladium_block"
+  },
+  "result": {
+    "id": "palamod:endium_heart",
+    "count": 1
+  }
+}

@@ -23,15 +23,7 @@ public class AdshoppreviewamountemeraldProcedure {
 		String buy_out = "";
 		fac_v = 55;
 		n2 = 10.75;
-		n = Math.round(Math.abs(new Object() {
-			double convert(String s) {
-				try {
-					return Double.parseDouble(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
+		n = Math.round(Math.abs(parseDouble((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		buy = n * fac_v;
 		if (buy > getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("money_" + entity.getDisplayName().getString()))) {
 			buy_out = "{Not enough money}";
@@ -42,6 +34,14 @@ public class AdshoppreviewamountemeraldProcedure {
 			return "Buy :" + buy_out + " / sell : " + Math.round(n2 * n);
 		}
 		return "Amount : insert number in the bar";
+	}
+
+	private static double parseDouble(String s) {
+		try {
+			return Double.parseDouble(s.trim());
+		} catch (Exception e) {
+			return 0;
+		}
 	}
 
 	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {

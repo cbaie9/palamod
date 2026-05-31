@@ -18,6 +18,7 @@ public class BackpackpaladiumScreen extends AbstractContainerScreen<Backpackpala
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/backpackpaladium.png");
 
 	public BackpackpaladiumScreen(BackpackpaladiumMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,7 +45,7 @@ public class BackpackpaladiumScreen extends AbstractContainerScreen<Backpackpala
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/backpackpaladium.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 215, 200, 215, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 215, 200, 215, 200);
 	}
 
 	@Override

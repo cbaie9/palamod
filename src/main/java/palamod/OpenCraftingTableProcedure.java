@@ -5,6 +5,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.CraftingMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
@@ -21,9 +22,18 @@ public class OpenCraftingTableProcedure {
             BlockPos pos = BlockPos.containing(x, y, z);
 
             MenuProvider provider = new SimpleMenuProvider(
-                (id, inventory, p) -> new CraftingMenu(id, inventory),
-                Component.translatable("container.crafting")
-            );
+    (id, inventory, p) -> new CraftingMenu(
+        id,
+        inventory,
+        ContainerLevelAccess.create(serverPlayer.level(), pos)
+    ) {
+        @Override
+        public boolean stillValid(Player player) {
+            return true; // 🔥 empêche la fermeture
+        }
+    },
+    Component.translatable("container.crafting")
+);
 
             serverPlayer.openMenu(provider);
         }

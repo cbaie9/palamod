@@ -29,6 +29,7 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_cross_no_button;
 	private ImageButton imagebutton_home_pixel_adminshop;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/armorpalahelpgui.png");
 
 	public ArmorpalahelpguiScreen(ArmorpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -169,7 +170,7 @@ public class ArmorpalahelpguiScreen extends AbstractContainerScreen<Armorpalahel
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/armorpalahelpgui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 200, 300, 200);
 	}
 
 	@Override

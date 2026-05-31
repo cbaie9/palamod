@@ -1,17 +1,32 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,powered=true": {
+      "model": "palamod:block/paladium_furnace_0"
+    },
+    "facing=north,powered=false": {
       "model": "palamod:block/paladium_furnace"
     },
-    "facing=east": {
+    "facing=east,powered=true": {
+      "model": "palamod:block/paladium_furnace_0",
+      "y": 90
+    },
+    "facing=east,powered=false": {
       "model": "palamod:block/paladium_furnace",
       "y": 90
     },
-    "facing=south": {
+    "facing=south,powered=true": {
+      "model": "palamod:block/paladium_furnace_0",
+      "y": 180
+    },
+    "facing=south,powered=false": {
       "model": "palamod:block/paladium_furnace",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,powered=true": {
+      "model": "palamod:block/paladium_furnace_0",
+      "y": 270
+    },
+    "facing=west,powered=false": {
       "model": "palamod:block/paladium_furnace",
       "y": 270
     }

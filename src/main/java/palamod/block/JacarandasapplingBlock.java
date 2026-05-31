@@ -25,7 +25,7 @@ import net.minecraft.core.BlockPos;
 
 public class JacarandasapplingBlock extends Block {
 	public JacarandasapplingBlock(BlockBehaviour.Properties properties) {
-		super(properties.sound(SoundType.GRASS).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(properties.sound(SoundType.GRASS).strength(1f, 10f).noCollission().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

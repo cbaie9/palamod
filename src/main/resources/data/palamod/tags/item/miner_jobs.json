@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:titane_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:iron_ingot",
+    "palamod:amethyst_ingot",
+    "palamod:paladium_ingot",
+    "palamod:green_paladium_ingot"
+  ]
+}

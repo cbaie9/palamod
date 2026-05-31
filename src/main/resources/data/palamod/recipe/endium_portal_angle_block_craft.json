@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aba"
+  ],
+  "key": {
+    "a": "palamod:endium_pollen",
+    "b": "palamod:paladium_block",
+    "c": "palamod:findium_block",
+    "d": "palamod:endium_heart"
+  },
+  "result": {
+    "id": "palamod:endium_portal_angle_block",
+    "count": 1
+  }
+}

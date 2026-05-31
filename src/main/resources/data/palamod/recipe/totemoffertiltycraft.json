@@ -7,7 +7,7 @@
     "ada"
   ],
   "key": {
-    "a": "#minecraft:logs",
+    "a": "#c:logs",
     "b": "minecraft:creeper_head",
     "c": "palamod:compressed_paladium",
     "d": "minecraft:bone_meal"

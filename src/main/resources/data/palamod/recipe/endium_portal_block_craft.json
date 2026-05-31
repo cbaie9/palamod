@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "palamod:shiny_ostrya_wood",
+    "b": "palamod:endium_heart"
+  },
+  "result": {
+    "id": "palamod:endium_portal_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "Blocks.STAINED_GLASS"
+      },
+      {
+        "value": "Blocks.GLASS"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:c:glass"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:c:glass"
+      },
+      {
+        "value": "TAG:c:glass"
+      },
+      {
+        "value": "TAG:c:glass"
+      },
+      {
+        "value": "TAG:c:glass"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Flask"
+    },
+    "name": "flask_craft",
+    "namespace": "mod"
+  }
+}

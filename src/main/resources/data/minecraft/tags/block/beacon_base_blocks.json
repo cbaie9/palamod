@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "palamod:amethyst_block",
+    "palamod:titane_block",
+    "palamod:endium_block",
+    "palamod:paladium_block"
+  ]
+}

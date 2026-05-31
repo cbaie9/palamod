@@ -1,0 +1,932 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "top-giga": "empty_texture",
+        "side": "empty_texture",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_jacaranda": {
+      "name": "ame_l2_jacaranda",
+      "map": {
+        "top-giga": "l2_jacaranda",
+        "side": "fluid_2_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_jacaranda": {
+      "name": "ame_l4_jacaranda",
+      "map": {
+        "top-giga": "l4_jacaranda",
+        "side": "fluid_4_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_jacaranda": {
+      "name": "ame_l6_jacaranda",
+      "map": {
+        "top-giga": "l6_jacaranda",
+        "side": "fluid_6_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_jacaranda": {
+      "name": "ame_l8_jacaranda",
+      "map": {
+        "top-giga": "l8_jacaranda",
+        "side": "fluid_8_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_jacaranda": {
+      "name": "ame_l10_jacaranda",
+      "map": {
+        "top-giga": "l10_jacaranda",
+        "side": "fluid_10_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_jacaranda": {
+      "name": "ame_l12_jacaranda",
+      "map": {
+        "top-giga": "l12_jacaranda",
+        "side": "fluid_12_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_jacaranda": {
+      "name": "ame_l14_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_erable": {
+      "name": "ame_l2_erable",
+      "map": {
+        "top-giga": "l2_erable",
+        "side": "fluid_2_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_erable": {
+      "name": "ame_l4_erable",
+      "map": {
+        "top-giga": "l4_erable",
+        "side": "fluid_4_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_erable": {
+      "name": "ame_l6_erable",
+      "map": {
+        "top-giga": "l6_erable",
+        "side": "fluid_6_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_erable": {
+      "name": "ame_l8_erable",
+      "map": {
+        "top-giga": "l8_erable",
+        "side": "fluid_8_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_erable": {
+      "name": "ame_l10_erable",
+      "map": {
+        "top-giga": "l10_erable",
+        "side": "fluid_10_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_erable": {
+      "name": "ame_l12_erable",
+      "map": {
+        "top-giga": "l12_erable",
+        "side": "fluid_12_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_erable": {
+      "name": "ame_l14_erable",
+      "map": {
+        "top-giga": "l14_erable",
+        "side": "fluid_14_erable",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_judeecercis": {
+      "name": "ame_l2_judeecercis",
+      "map": {
+        "top-giga": "l2_judeecercis",
+        "side": "fluid_2_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_judeecercis": {
+      "name": "ame_l4_judeecercis",
+      "map": {
+        "top-giga": "l4_judeecercis",
+        "side": "fluid_4_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_judeecercis": {
+      "name": "ame_l6_judeecercis",
+      "map": {
+        "top-giga": "l6_judeecercis",
+        "side": "fluid_6_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_judeecercis": {
+      "name": "ame_l8_judeecercis",
+      "map": {
+        "top-giga": "l8_judeecercis",
+        "side": "fluid_8_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_judeecercis": {
+      "name": "ame_l12_judeecercis",
+      "map": {
+        "top-giga": "l12_judeecercis",
+        "side": "fluid_12_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_judeecercis": {
+      "name": "ame_l14_judeecercis",
+      "map": {
+        "top-giga": "l14_judeecercis",
+        "side": "fluid_14_judeecercis",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l2_ostrya": {
+      "name": "ame_l2_ostrya",
+      "map": {
+        "top-giga": "l2_ostrya",
+        "side": "fluid_2_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l4_ostrya": {
+      "name": "ame_l4_ostrya",
+      "map": {
+        "top-giga": "l4_ostrya",
+        "side": "fluid_4_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l6_ostrya": {
+      "name": "ame_l6_ostrya",
+      "map": {
+        "top-giga": "l6_ostrya",
+        "side": "fluid_6_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l8_ostrya": {
+      "name": "ame_l8_ostrya",
+      "map": {
+        "top-giga": "l8_ostrya",
+        "side": "fluid_8_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_ostrya": {
+      "name": "ame_l10_ostrya",
+      "map": {
+        "top-giga": "l10_ostrya",
+        "side": "fluid_10_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l12_ostrya": {
+      "name": "ame_l12_ostrya",
+      "map": {
+        "top-giga": "l12_ostrya",
+        "side": "fluid_12_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l14_ostrya": {
+      "name": "ame_l14_ostrya",
+      "map": {
+        "top-giga": "l14_ostrya",
+        "side": "fluid_14_ostrya",
+        "cadre": "amethyste_tank"
+      }
+    },
+    "ame_l10_judeecercis": {
+      "name": "ame_l10_judeecercis",
+      "map": {
+        "top-giga": "l10_judeecercis",
+        "side": "fluid_10_judeecercis",
+        "cadre": "cadre"
+      }
+    },
+    "gold_l2_jacaranda": {
+      "name": "gold_l2_jacaranda",
+      "map": {
+        "top-giga": "l2_jacaranda",
+        "side": "fluid_2_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l4_jacaranda": {
+      "name": "gold_l4_jacaranda",
+      "map": {
+        "top-giga": "l4_jacaranda",
+        "side": "fluid_4_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l6_jacaranda": {
+      "name": "gold_l6_jacaranda",
+      "map": {
+        "top-giga": "l6_jacaranda",
+        "side": "fluid_6_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l8_jacaranda": {
+      "name": "gold_l8_jacaranda",
+      "map": {
+        "top-giga": "l8_jacaranda",
+        "side": "fluid_8_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l10_jacaranda": {
+      "name": "gold_l10_jacaranda",
+      "map": {
+        "top-giga": "l10_jacaranda",
+        "side": "fluid_10_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l14_jacaranda": {
+      "name": "gold_l14_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_basic": {
+      "name": "gold_basic",
+      "map": {
+        "top-giga": "empty_texture",
+        "side": "empty_texture",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l2_judeecercis": {
+      "name": "gold_l2_judeecercis",
+      "map": {
+        "top-giga": "l2_judeecercis",
+        "side": "fluid_2_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l4_judeecercis": {
+      "name": "gold_l4_judeecercis",
+      "map": {
+        "top-giga": "l4_judeecercis",
+        "side": "fluid_4_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l6_judeecercis": {
+      "name": "gold_l6_judeecercis",
+      "map": {
+        "top-giga": "l6_judeecercis",
+        "side": "fluid_6_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l8_judeecercis": {
+      "name": "gold_l8_judeecercis",
+      "map": {
+        "top-giga": "l8_judeecercis",
+        "side": "fluid_8_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l10_judeecercis": {
+      "name": "gold_l10_judeecercis",
+      "map": {
+        "top-giga": "l10_judeecercis",
+        "side": "fluid_10_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l12_judeecercis": {
+      "name": "gold_l12_judeecercis",
+      "map": {
+        "top-giga": "l12_judeecercis",
+        "side": "fluid_12_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l14_judeecercis": {
+      "name": "gold_l14_judeecercis",
+      "map": {
+        "top-giga": "l14_judeecercis",
+        "side": "fluid_14_judeecercis",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l2_erable": {
+      "name": "gold_l2_erable",
+      "map": {
+        "top-giga": "l2_erable",
+        "side": "fluid_2_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l4_erable": {
+      "name": "gold_l4_erable",
+      "map": {
+        "top-giga": "l4_erable",
+        "side": "fluid_4_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l6_erable": {
+      "name": "gold_l6_erable",
+      "map": {
+        "top-giga": "l6_erable",
+        "side": "fluid_6_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l8_erable": {
+      "name": "gold_l8_erable",
+      "map": {
+        "top-giga": "l8_erable",
+        "side": "fluid_8_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l10_erable": {
+      "name": "gold_l10_erable",
+      "map": {
+        "top-giga": "l10_erable",
+        "side": "fluid_10_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l12_erable": {
+      "name": "gold_l12_erable",
+      "map": {
+        "top-giga": "l12_erable",
+        "side": "fluid_12_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l14_erable": {
+      "name": "gold_l14_erable",
+      "map": {
+        "top-giga": "l14_erable",
+        "side": "fluid_14_erable",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l2_ostrya": {
+      "name": "gold_l2_ostrya",
+      "map": {
+        "top-giga": "l2_ostrya",
+        "side": "fluid_2_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l4_ostrya": {
+      "name": "gold_l4_ostrya",
+      "map": {
+        "top-giga": "l4_ostrya",
+        "side": "fluid_4_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l6_ostrya": {
+      "name": "gold_l6_ostrya",
+      "map": {
+        "top-giga": "l6_ostrya",
+        "side": "fluid_6_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l8_ostrya": {
+      "name": "gold_l8_ostrya",
+      "map": {
+        "top-giga": "l8_ostrya",
+        "side": "fluid_8_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l10_ostrya": {
+      "name": "gold_l10_ostrya",
+      "map": {
+        "top-giga": "l10_ostrya",
+        "side": "fluid_10_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l12_ostrya": {
+      "name": "gold_l12_ostrya",
+      "map": {
+        "top-giga": "l12_ostrya",
+        "side": "fluid_12_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l14_ostrya": {
+      "name": "gold_l14_ostrya",
+      "map": {
+        "top-giga": "l14_ostrya",
+        "side": "fluid_14_ostrya",
+        "cadre": "gold_tank"
+      }
+    },
+    "gold_l12_jacaranda": {
+      "name": "gold_l12_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "gold_tank"
+      }
+    },
+    "titane_l2_jacaranda": {
+      "name": "titane_l2_jacaranda",
+      "map": {
+        "top-giga": "l2_jacaranda",
+        "side": "fluid_2_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_jacaranda": {
+      "name": "titane_l4_jacaranda",
+      "map": {
+        "top-giga": "l4_jacaranda",
+        "side": "fluid_4_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_basic": {
+      "name": "titane_basic",
+      "map": {
+        "top-giga": "empty_texture",
+        "side": "empty_texture",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_jacaranda": {
+      "name": "titane_l6_jacaranda",
+      "map": {
+        "top-giga": "l6_jacaranda",
+        "side": "fluid_6_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_jacaranda": {
+      "name": "titane_l8_jacaranda",
+      "map": {
+        "top-giga": "l8_jacaranda",
+        "side": "fluid_8_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l10_jacaranda": {
+      "name": "titane_l10_jacaranda",
+      "map": {
+        "top-giga": "l10_jacaranda",
+        "side": "fluid_10_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_jacaranda": {
+      "name": "titane_l14_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l2_judeecercis": {
+      "name": "titane_l2_judeecercis",
+      "map": {
+        "top-giga": "l2_judeecercis",
+        "side": "fluid_2_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_judeecercis": {
+      "name": "titane_l4_judeecercis",
+      "map": {
+        "top-giga": "l4_judeecercis",
+        "side": "fluid_4_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_judeecercis": {
+      "name": "titane_l8_judeecercis",
+      "map": {
+        "top-giga": "l8_judeecercis",
+        "side": "fluid_8_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l10_judeecercis": {
+      "name": "titane_l10_judeecercis",
+      "map": {
+        "top-giga": "l10_judeecercis",
+        "side": "fluid_10_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_judeecercis": {
+      "name": "titane_l14_judeecercis",
+      "map": {
+        "top-giga": "l14_judeecercis",
+        "side": "fluid_14_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_jacaranda": {
+      "name": "titane_l12_jacaranda",
+      "map": {
+        "top-giga": "l12_jacaranda",
+        "side": "fluid_12_jacaranda",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_judeecercis": {
+      "name": "titane_l6_judeecercis",
+      "map": {
+        "top-giga": "l6_judeecercis",
+        "side": "fluid_6_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_judeecercis": {
+      "name": "titane_l12_judeecercis",
+      "map": {
+        "top-giga": "l12_judeecercis",
+        "side": "fluid_12_judeecercis",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l2_erable": {
+      "name": "titane_l2_erable",
+      "map": {
+        "top-giga": "l2_erable",
+        "side": "fluid_2_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_erable": {
+      "name": "titane_l4_erable",
+      "map": {
+        "top-giga": "l4_erable",
+        "side": "fluid_4_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_erable": {
+      "name": "titane_l6_erable",
+      "map": {
+        "top-giga": "l6_erable",
+        "side": "fluid_6_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_erable": {
+      "name": "titane_l8_erable",
+      "map": {
+        "top-giga": "l8_erable",
+        "side": "fluid_8_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_erable": {
+      "name": "titane_l12_erable",
+      "map": {
+        "top-giga": "l12_erable",
+        "side": "fluid_12_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_erable": {
+      "name": "titane_l14_erable",
+      "map": {
+        "top-giga": "l14_erable",
+        "side": "fluid_14_erable",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l2_ostrya": {
+      "name": "titane_l2_ostrya",
+      "map": {
+        "top-giga": "l2_ostrya",
+        "side": "fluid_2_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l4_ostrya": {
+      "name": "titane_l4_ostrya",
+      "map": {
+        "top-giga": "l4_ostrya",
+        "side": "fluid_4_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l6_ostrya": {
+      "name": "titane_l6_ostrya",
+      "map": {
+        "top-giga": "l6_ostrya",
+        "side": "fluid_6_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l10_ostrya": {
+      "name": "titane_l10_ostrya",
+      "map": {
+        "top-giga": "l10_ostrya",
+        "side": "fluid_10_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l12_ostrya": {
+      "name": "titane_l12_ostrya",
+      "map": {
+        "top-giga": "l12_ostrya",
+        "side": "fluid_12_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l14_ostrya": {
+      "name": "titane_l14_ostrya",
+      "map": {
+        "top-giga": "l14_ostrya",
+        "side": "fluid_14_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "titane_l8_ostrya": {
+      "name": "titane_l8_ostrya",
+      "map": {
+        "top-giga": "l8_ostrya",
+        "side": "fluid_8_ostrya",
+        "cadre": "titane_tank"
+      }
+    },
+    "pala_l2_jacaranda": {
+      "name": "pala_l2_jacaranda",
+      "map": {
+        "top-giga": "l2_jacaranda",
+        "side": "fluid_2_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l4_jacaranda": {
+      "name": "pala_l4_jacaranda",
+      "map": {
+        "top-giga": "l4_jacaranda",
+        "side": "fluid_4_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l6_jacaranda": {
+      "name": "pala_l6_jacaranda",
+      "map": {
+        "top-giga": "l6_jacaranda",
+        "side": "fluid_6_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l8_jacaranda": {
+      "name": "pala_l8_jacaranda",
+      "map": {
+        "top-giga": "l8_jacaranda",
+        "side": "fluid_8_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l10_jacaranda": {
+      "name": "pala_l10_jacaranda",
+      "map": {
+        "top-giga": "l10_jacaranda",
+        "side": "fluid_10_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l12_jacaranda": {
+      "name": "pala_l12_jacaranda",
+      "map": {
+        "top-giga": "l12_jacaranda",
+        "side": "fluid_12_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l14_jacaranda": {
+      "name": "pala_l14_jacaranda",
+      "map": {
+        "top-giga": "l14_jacaranda",
+        "side": "fluid_14_jacaranda",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_basic": {
+      "name": "pala_basic",
+      "map": {
+        "top-giga": "empty_texture",
+        "side": "empty_texture",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l4_judeecercis": {
+      "name": "pala_l4_judeecercis",
+      "map": {
+        "top-giga": "l4_judeecercis",
+        "side": "fluid_4_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l2_judeecercis": {
+      "name": "pala_l2_judeecercis",
+      "map": {
+        "top-giga": "l2_judeecercis",
+        "side": "l2_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l6_judeecercis": {
+      "name": "pala_l6_judeecercis",
+      "map": {
+        "top-giga": "l6_judeecercis",
+        "side": "fluid_6_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l8_judeecercis": {
+      "name": "pala_l8_judeecercis",
+      "map": {
+        "top-giga": "l8_judeecercis",
+        "side": "fluid_8_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l10_judeecercis": {
+      "name": "pala_l10_judeecercis",
+      "map": {
+        "top-giga": "l10_judeecercis",
+        "side": "fluid_10_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l12_judeecercis": {
+      "name": "pala_l12_judeecercis",
+      "map": {
+        "top-giga": "l12_judeecercis",
+        "side": "fluid_12_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l14_judeecercis": {
+      "name": "pala_l14_judeecercis",
+      "map": {
+        "top-giga": "l14_judeecercis",
+        "side": "fluid_14_judeecercis",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l2_ostrya": {
+      "name": "pala_l2_ostrya",
+      "map": {
+        "top-giga": "l2_ostrya",
+        "side": "fluid_2_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l4_ostrya": {
+      "name": "pala_l4_ostrya",
+      "map": {
+        "top-giga": "l4_ostrya",
+        "side": "fluid_4_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l6_ostrya": {
+      "name": "pala_l6_ostrya",
+      "map": {
+        "top-giga": "l6_ostrya",
+        "side": "fluid_6_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l8_ostrya": {
+      "name": "pala_l8_ostrya",
+      "map": {
+        "top-giga": "l8_ostrya",
+        "side": "fluid_8_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l10_ostrya": {
+      "name": "pala_l10_ostrya",
+      "map": {
+        "top-giga": "l10_ostrya",
+        "side": "fluid_10_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l12_ostrya": {
+      "name": "pala_l12_ostrya",
+      "map": {
+        "top-giga": "l12_ostrya",
+        "side": "fluid_12_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l14_ostrya": {
+      "name": "pala_l14_ostrya",
+      "map": {
+        "top-giga": "l14_ostrya",
+        "side": "fluid_14_ostrya",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l2_erable": {
+      "name": "pala_l2_erable",
+      "map": {
+        "top-giga": "l2_erable",
+        "side": "fluid_2_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l4_erable": {
+      "name": "pala_l4_erable",
+      "map": {
+        "top-giga": "l4_erable",
+        "side": "fluid_4_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l6_erable": {
+      "name": "pala_l6_erable",
+      "map": {
+        "top-giga": "l6_erable",
+        "side": "fluid_6_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l8_erable": {
+      "name": "pala_l8_erable",
+      "map": {
+        "top-giga": "l8_erable",
+        "side": "fluid_8_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l10_erable": {
+      "name": "pala_l10_erable",
+      "map": {
+        "top-giga": "l10_erable",
+        "side": "fluid_10_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l12_erable": {
+      "name": "pala_l12_erable",
+      "map": {
+        "top-giga": "l12_erable",
+        "side": "fluid_12_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "pala_l14_erable": {
+      "name": "pala_l14_erable",
+      "map": {
+        "top-giga": "l14_erable",
+        "side": "fluid_14_erable",
+        "cadre": "paladium_tank"
+      }
+    },
+    "titane_l10_erable": {
+      "name": "titane_l10_erable",
+      "map": {
+        "top-giga": "l10_erable",
+        "side": "fluid_10_erable",
+        "cadre": "titane_tank"
+      }
+    }
+  }
+}

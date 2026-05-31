@@ -15,29 +15,23 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
 import java.io.IOException;
 import java.io.FileWriter;
-import java.io.FileReader;
 import java.io.File;
-import java.io.BufferedReader;
 
 @EventBusSubscriber
 public class OpenpalamodgameProcedure {
@@ -68,7 +62,7 @@ public class OpenpalamodgameProcedure {
 		double i = 0;
 		double page_clicker = 0;
 		double page_building = 0;
-		if (getEntityGameType(entity) == GameType.CREATIVE) {
+		if (entity instanceof Player _plr0 && _plr0.gameMode() == GameType.CREATIVE) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"tellraw @s [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" Certain jobs feature are not available in creative due to json structure\",\"color\":\"gold\"}]");
@@ -101,13 +95,6 @@ public class OpenpalamodgameProcedure {
 		if (!(world instanceof ServerLevel _serverLevelGR11 && _serverLevelGR11.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE))) {
 			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
 		}
-		if (IsgameclientsideProcedure.execute(world, x, y, z)) {
-			jobs = ReadjobsclientProcedure.execute(world, entity);
-		} else if (IsgameserversideProcedure.execute()) {
-			jobs = ReadjobsserverProcedure.execute(entity);
-		}
-		cache = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
 		clicker = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
 				File.separator + "clicker_info.json");
@@ -117,115 +104,8 @@ public class OpenpalamodgameProcedure {
 		clicker_ame = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
 				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
 				File.separator + "clicker_upgrade.json");
-		if (!(world instanceof ServerLevel _serverLevelGR31 && _serverLevelGR31.getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) && !money.exists()) {
-			try {
-				money.getParentFile().mkdirs();
-				money.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			money_main.addProperty("money", 0);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(money);
-					fileWriter.write(mainGSONBuilderVariable.toJson(money_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		}
-		if (!(!cache.exists() && !(world instanceof ServerLevel _serverLevelGR37 && _serverLevelGR37.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)))) {
-			try {
-				cache.getParentFile().mkdirs();
-				cache.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			cache_main.addProperty("last_block_state", (-1));
-			cache_main.addProperty("block", (BuiltInRegistries.BLOCK.getKey(Blocks.AIR).toString()));
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(cache);
-					fileWriter.write(mainGSONBuilderVariable.toJson(cache_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		}
-		if (!jobs.exists() && !(world instanceof ServerLevel _serverLevelGR44 && _serverLevelGR44.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))) {
-			try {
-				jobs.getParentFile().mkdirs();
-				jobs.createNewFile();
-			} catch (IOException exception) {
-				exception.printStackTrace();
-			}
-			jobs_main.addProperty("multi_exp", 1);
-			jobs_main.addProperty("next_level_miner", 50);
-			jobs_main.addProperty("next_level_farmer", 480);
-			jobs_main.addProperty("next_level_hunter", 480);
-			jobs_main.addProperty("next_level_alchi", 480);
-			jobs_main.addProperty("lvl_miner", 0);
-			jobs_main.addProperty("lvl_farmer", 0);
-			jobs_main.addProperty("lvl_hunter", 0);
-			jobs_main.addProperty("lvl_alchi", 0);
-			jobs_main.addProperty("xp_miner", 0);
-			jobs_main.addProperty("xp_farmer", 0);
-			jobs_main.addProperty("xp_hunter", 0);
-			jobs_main.addProperty("xp_alchi", 0);
-			jobs_main.addProperty("xpstreak_miner", 0);
-			jobs_main.addProperty("xpstreak_time_miner", 0);
-			jobs_main.addProperty("xpstreak_time_farmer", 0);
-			jobs_main.addProperty("xpstreak_farmer", 0);
-			jobs_main.addProperty("xpstreak_time_hunter", 0);
-			jobs_main.addProperty("xpstreak_hunter", 0);
-			jobs_main.addProperty("xpstreak_time_alchi", 0);
-			jobs_main.addProperty("xpstreak_alchi", 0);
-			jobs_main.addProperty("last_unlocked_lvl", 0);
-			jobs_main.addProperty("last_unlocked_type", 0);
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(jobs);
-					fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-		} else {
-			if (!(money_main.has("last_unlocked_lvl") && money_main.has("last_unlocked_type"))) {
-				{
-					try {
-						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-						StringBuilder jsonstringbuilder = new StringBuilder();
-						String line;
-						while ((line = bufferedReader.readLine()) != null) {
-							jsonstringbuilder.append(line);
-						}
-						bufferedReader.close();
-						jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-						jobs_main.addProperty("last_unlocked_lvl", 0);
-						jobs_main.addProperty("last_unlocked_type", 0);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				{
-					com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-					try {
-						FileWriter fileWriter = new FileWriter(jobs);
-						fileWriter.write(mainGSONBuilderVariable.toJson(jobs_main));
-						fileWriter.close();
-					} catch (IOException exception) {
-						exception.printStackTrace();
-					}
-				}
-			}
-		}
+		JobsfilecreateautorepairProcedure.execute(world, entity);
+		CreateMoneyFileProcedure.execute(world, entity);
 		if (!clicker.exists()) {
 			try {
 				clicker.getParentFile().mkdirs();
@@ -276,16 +156,5 @@ public class OpenpalamodgameProcedure {
 			}
 		}
 		OpenModProcedure.execute();
-	}
-
-	private static GameType getEntityGameType(Entity entity) {
-		if (entity instanceof ServerPlayer serverPlayer) {
-			return serverPlayer.gameMode.getGameModeForPlayer();
-		} else if (entity instanceof Player player && player.level().isClientSide()) {
-			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
-			if (playerInfo != null)
-				return playerInfo.getGameMode();
-		}
-		return null;
 	}
 }

@@ -1,7 +1,6 @@
 package palamod.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SlabBlock;
@@ -9,10 +8,5 @@ import net.minecraft.world.level.block.SlabBlock;
 public class AmethystslabBlock extends SlabBlock {
 	public AmethystslabBlock(BlockBehaviour.Properties properties) {
 		super(properties.sound(SoundType.AMETHYST).strength(1.1f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 0;
 	}
 }

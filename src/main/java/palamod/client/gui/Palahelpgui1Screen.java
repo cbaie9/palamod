@@ -28,6 +28,8 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 	private Button button_gui;
 	private Button button_lucky_blocks;
 	private Button button_metiers_soon;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/gui176_166.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/paladium_block_photo.png");
 
 	public Palahelpgui1Screen(Palahelpgui1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,8 +56,8 @@ public class Palahelpgui1Screen extends AbstractContainerScreen<Palahelpgui1Menu
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/gui176_166.png"), this.leftPos + 0, this.topPos + 1, 0, 0, 176, 166, 176, 166);
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/paladium_block_photo.png"), this.leftPos + 3, this.topPos + 20, 0, 0, 85, 84, 85, 84);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + 0, this.topPos + 1, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_1, this.leftPos + 3, this.topPos + 20, 0, 0, 85, 84, 85, 84);
 	}
 
 	@Override

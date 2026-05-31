@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "b b",
+    "aba"
+  ],
+  "key": {
+    "a": "palamod:paladium_ingot",
+    "b": "#c:glass_blocks/cheap"
+  },
+  "result": {
+    "id": "palamod:paladium_tank",
+    "count": 1
+  }
+}

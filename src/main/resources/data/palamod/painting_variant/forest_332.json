@@ -3,9 +3,11 @@
   "height": 2,
   "width": 1,
   "title": {
+    "color": "yellow",
     "translate": "painting.palamod.forest_332.title"
   },
   "author": {
+    "color": "gray",
     "translate": "painting.palamod.forest_332.author"
   }
 }

@@ -38,11 +38,6 @@ public class CompactedobsidianBlock extends Block {
 	}
 
 	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
-	}
-
-	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		CompactedobsidianOnBlockRightClickedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);

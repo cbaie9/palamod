@@ -2,7 +2,6 @@ package palamod.block;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.component.TooltipDisplay;
@@ -17,11 +16,6 @@ import java.util.function.Consumer;
 public class KnockbackobsidianBlock extends Block {
 	public KnockbackobsidianBlock(BlockBehaviour.Properties properties) {
 		super(properties.strength(10f, 100f).requiresCorrectToolForDrops());
-	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
 	}
 
 	public static class Item extends BlockItem {

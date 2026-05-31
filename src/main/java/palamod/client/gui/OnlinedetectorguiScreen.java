@@ -29,6 +29,7 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	private boolean menuStateUpdateActive = false;
 	private EditBox player_name;
 	private Button button_detect;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/onlinedetectorgui.png");
 
 	public OnlinedetectorguiScreen(OnlinedetectorguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -60,7 +61,7 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/onlinedetectorgui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 150, 60, 150, 60);
 	}
 
 	@Override

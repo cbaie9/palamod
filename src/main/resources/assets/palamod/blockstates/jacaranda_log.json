@@ -1,14 +1,194 @@
 {
   "variants": {
-    "axis=x": {
+    "axis=x,blockstate=1": {
+      "model": "palamod:block/jacaranda_log_0",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=2": {
+      "model": "palamod:block/jacaranda_log_1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=3": {
+      "model": "palamod:block/jacaranda_log_2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=4": {
+      "model": "palamod:block/jacaranda_log_3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=5": {
+      "model": "palamod:block/jacaranda_log_4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=6": {
+      "model": "palamod:block/jacaranda_log_5",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=7": {
+      "model": "palamod:block/jacaranda_log_6",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=8": {
+      "model": "palamod:block/jacaranda_log_7",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=9": {
+      "model": "palamod:block/jacaranda_log_8",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=10": {
+      "model": "palamod:block/jacaranda_log_9",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=11": {
+      "model": "palamod:block/jacaranda_log_10",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=12": {
+      "model": "palamod:block/jacaranda_log_11",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=13": {
+      "model": "palamod:block/jacaranda_log_12",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=14": {
+      "model": "palamod:block/jacaranda_log_13",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=15": {
+      "model": "palamod:block/jacaranda_log_14",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,blockstate=0": {
       "model": "palamod:block/jacaranda_log",
       "x": 90,
       "y": 90
     },
-    "axis=y": {
+    "axis=y,blockstate=1": {
+      "model": "palamod:block/jacaranda_log_0"
+    },
+    "axis=y,blockstate=2": {
+      "model": "palamod:block/jacaranda_log_1"
+    },
+    "axis=y,blockstate=3": {
+      "model": "palamod:block/jacaranda_log_2"
+    },
+    "axis=y,blockstate=4": {
+      "model": "palamod:block/jacaranda_log_3"
+    },
+    "axis=y,blockstate=5": {
+      "model": "palamod:block/jacaranda_log_4"
+    },
+    "axis=y,blockstate=6": {
+      "model": "palamod:block/jacaranda_log_5"
+    },
+    "axis=y,blockstate=7": {
+      "model": "palamod:block/jacaranda_log_6"
+    },
+    "axis=y,blockstate=8": {
+      "model": "palamod:block/jacaranda_log_7"
+    },
+    "axis=y,blockstate=9": {
+      "model": "palamod:block/jacaranda_log_8"
+    },
+    "axis=y,blockstate=10": {
+      "model": "palamod:block/jacaranda_log_9"
+    },
+    "axis=y,blockstate=11": {
+      "model": "palamod:block/jacaranda_log_10"
+    },
+    "axis=y,blockstate=12": {
+      "model": "palamod:block/jacaranda_log_11"
+    },
+    "axis=y,blockstate=13": {
+      "model": "palamod:block/jacaranda_log_12"
+    },
+    "axis=y,blockstate=14": {
+      "model": "palamod:block/jacaranda_log_13"
+    },
+    "axis=y,blockstate=15": {
+      "model": "palamod:block/jacaranda_log_14"
+    },
+    "axis=y,blockstate=0": {
       "model": "palamod:block/jacaranda_log"
     },
-    "axis=z": {
+    "axis=z,blockstate=1": {
+      "model": "palamod:block/jacaranda_log_0",
+      "x": 90
+    },
+    "axis=z,blockstate=2": {
+      "model": "palamod:block/jacaranda_log_1",
+      "x": 90
+    },
+    "axis=z,blockstate=3": {
+      "model": "palamod:block/jacaranda_log_2",
+      "x": 90
+    },
+    "axis=z,blockstate=4": {
+      "model": "palamod:block/jacaranda_log_3",
+      "x": 90
+    },
+    "axis=z,blockstate=5": {
+      "model": "palamod:block/jacaranda_log_4",
+      "x": 90
+    },
+    "axis=z,blockstate=6": {
+      "model": "palamod:block/jacaranda_log_5",
+      "x": 90
+    },
+    "axis=z,blockstate=7": {
+      "model": "palamod:block/jacaranda_log_6",
+      "x": 90
+    },
+    "axis=z,blockstate=8": {
+      "model": "palamod:block/jacaranda_log_7",
+      "x": 90
+    },
+    "axis=z,blockstate=9": {
+      "model": "palamod:block/jacaranda_log_8",
+      "x": 90
+    },
+    "axis=z,blockstate=10": {
+      "model": "palamod:block/jacaranda_log_9",
+      "x": 90
+    },
+    "axis=z,blockstate=11": {
+      "model": "palamod:block/jacaranda_log_10",
+      "x": 90
+    },
+    "axis=z,blockstate=12": {
+      "model": "palamod:block/jacaranda_log_11",
+      "x": 90
+    },
+    "axis=z,blockstate=13": {
+      "model": "palamod:block/jacaranda_log_12",
+      "x": 90
+    },
+    "axis=z,blockstate=14": {
+      "model": "palamod:block/jacaranda_log_13",
+      "x": 90
+    },
+    "axis=z,blockstate=15": {
+      "model": "palamod:block/jacaranda_log_14",
+      "x": 90
+    },
+    "axis=z,blockstate=0": {
       "model": "palamod:block/jacaranda_log",
       "x": 90
     }

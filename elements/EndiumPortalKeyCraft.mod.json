@@ -1,0 +1,62 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Lightningpotion"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumpollen"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Lightningpotion"
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": "CUSTOM:Lightningpotion"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": "CUSTOM:Endiumpollen"
+      },
+      {
+        "value": "CUSTOM:FindiumBlock"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Findium"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:EndiumPortalKey"
+    },
+    "name": "endium_portal_key_craft",
+    "namespace": "mod"
+  }
+}

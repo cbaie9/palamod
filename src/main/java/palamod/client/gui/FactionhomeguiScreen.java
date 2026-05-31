@@ -22,6 +22,7 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_invite;
+	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/factionhomegui.png");
 
 	public FactionhomeguiScreen(FactionhomeguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -40,8 +41,6 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 		menuStateUpdateActive = false;
 	}
 
-	private static final ResourceLocation texture = ResourceLocation.parse("palamod:textures/screens/factionhomegui.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -50,7 +49,7 @@ public class FactionhomeguiScreen extends AbstractContainerScreen<Factionhomegui
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 	}
 
 	@Override

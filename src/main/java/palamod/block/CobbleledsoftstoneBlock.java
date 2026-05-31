@@ -17,9 +17,4 @@ public class CobbleledsoftstoneBlock extends Block {
 	public Integer getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
 		return ARGB.opaque(-8620714);
 	}
-
-	@Override
-	public int getLightBlock(BlockState state) {
-		return 15;
-	}
 }

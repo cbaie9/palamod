@@ -26,6 +26,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
@@ -669,7 +670,32 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> TITANE_ANVIL;
 	public static final DeferredItem<Item> PALADIUM_ANVIL;
 	public static final DeferredItem<Item> MONEY_ANVIL;
-	public static final DeferredItem<Item> AMETHYSTANVIL_2;
+	public static final DeferredItem<Item> FLASK;
+	public static final DeferredItem<Item> AMETHYST_TANK;
+	public static final DeferredItem<Item> GOLDEN_TANK;
+	public static final DeferredItem<Item> TITANE_TANK;
+	public static final DeferredItem<Item> PALADIUM_TANK;
+	public static final DeferredItem<Item> CAULDRON;
+	public static final DeferredItem<Item> CAULDRON_CORE;
+	public static final DeferredItem<Item> LIGHTNING_POTION;
+	public static final DeferredItem<Item> SHINY_JACARANDA_WOOD;
+	public static final DeferredItem<Item> SHINY_JUDEECERCIS_WOOD;
+	public static final DeferredItem<Item> SHINY_ERABLE_WOOD;
+	public static final DeferredItem<Item> SHINY_OSTRYA_WOOD;
+	public static final DeferredItem<Item> TANKITEM;
+	public static final DeferredItem<Item> AMETHYST_PORTAL_KEY;
+	public static final DeferredItem<Item> TITANE_PORTAL_KEY;
+	public static final DeferredItem<Item> PALADIUM_PORTAL_KEY;
+	public static final DeferredItem<Item> ENDIUM_PORTAL_KEY;
+	public static final DeferredItem<Item> AMETHYST_PORTALBLOCK;
+	public static final DeferredItem<Item> TITANE_PORTAL_BLOCK;
+	public static final DeferredItem<Item> PALADIUM_PORTAL_BLOCK;
+	public static final DeferredItem<Item> ENDIUM_PORTAL_BLOCK;
+	public static final DeferredItem<Item> ENDIUM_HEART;
+	public static final DeferredItem<Item> ENDIUM_PORTAL_ANGLE_BLOCK;
+	public static final DeferredItem<Item> PORTAL_BLOCK;
+	public static final DeferredItem<Item> KEY_PORTAL_BLOCK;
+	public static final DeferredItem<Item> HOOD_HELMET_ARMOR_HELMET;
 	static {
 		PALADIUM_INGOT = register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1304,7 +1330,32 @@ public class PalamodModItems {
 		TITANE_ANVIL = block(PalamodModBlocks.TITANE_ANVIL);
 		PALADIUM_ANVIL = block(PalamodModBlocks.PALADIUM_ANVIL);
 		MONEY_ANVIL = block(PalamodModBlocks.MONEY_ANVIL);
-		AMETHYSTANVIL_2 = block(PalamodModBlocks.AMETHYSTANVIL_2);
+		FLASK = register("flask", FlaskItem::new);
+		AMETHYST_TANK = block(PalamodModBlocks.AMETHYST_TANK);
+		GOLDEN_TANK = block(PalamodModBlocks.GOLDEN_TANK);
+		TITANE_TANK = block(PalamodModBlocks.TITANE_TANK);
+		PALADIUM_TANK = block(PalamodModBlocks.PALADIUM_TANK);
+		CAULDRON = block(PalamodModBlocks.CAULDRON);
+		CAULDRON_CORE = block(PalamodModBlocks.CAULDRON_CORE);
+		LIGHTNING_POTION = register("lightning_potion", LightningpotionItem::new);
+		SHINY_JACARANDA_WOOD = block(PalamodModBlocks.SHINY_JACARANDA_WOOD);
+		SHINY_JUDEECERCIS_WOOD = block(PalamodModBlocks.SHINY_JUDEECERCIS_WOOD);
+		SHINY_ERABLE_WOOD = block(PalamodModBlocks.SHINY_ERABLE_WOOD);
+		SHINY_OSTRYA_WOOD = block(PalamodModBlocks.SHINY_OSTRYA_WOOD);
+		TANKITEM = register("tankitem", TankitemItem::new);
+		AMETHYST_PORTAL_KEY = register("amethyst_portal_key", AmethystportalkeyItem::new);
+		TITANE_PORTAL_KEY = register("titane_portal_key", TitanePortalKeyItem::new);
+		PALADIUM_PORTAL_KEY = register("paladium_portal_key", PaladiumPortalKeyItem::new);
+		ENDIUM_PORTAL_KEY = register("endium_portal_key", EndiumPortalKeyItem::new);
+		AMETHYST_PORTALBLOCK = block(PalamodModBlocks.AMETHYST_PORTALBLOCK);
+		TITANE_PORTAL_BLOCK = block(PalamodModBlocks.TITANE_PORTAL_BLOCK);
+		PALADIUM_PORTAL_BLOCK = block(PalamodModBlocks.PALADIUM_PORTAL_BLOCK);
+		ENDIUM_PORTAL_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_BLOCK, new Item.Properties().rarity(Rarity.RARE));
+		ENDIUM_HEART = register("endium_heart", EndiumheartItem::new);
+		ENDIUM_PORTAL_ANGLE_BLOCK = block(PalamodModBlocks.ENDIUM_PORTAL_ANGLE_BLOCK, new Item.Properties().rarity(Rarity.RARE));
+		PORTAL_BLOCK = block(PalamodModBlocks.PORTAL_BLOCK, new Item.Properties().stacksTo(1));
+		KEY_PORTAL_BLOCK = block(PalamodModBlocks.KEY_PORTAL_BLOCK, new Item.Properties().stacksTo(1));
+		HOOD_HELMET_ARMOR_HELMET = register("hood_helmet_armor_helmet", HoodHelmetArmorItem.Helmet::new);
 	}
 
 	// Start of user code block custom items
@@ -1345,6 +1396,9 @@ public class PalamodModItems {
 		public static void registerItemModelProperties(RegisterRangeSelectItemModelPropertyEvent event) {
 			event.register(ResourceLocation.parse("palamod:xp_bottle/xp"), XpbottleItem.XpProperty.MAP_CODEC);
 			event.register(ResourceLocation.parse("palamod:xp_bottle/jobs_type"), XpbottleItem.JobsTypeProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("palamod:flask/seve"), FlaskItem.SeveProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("palamod:flask/type"), FlaskItem.TypeProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("palamod:tankitem/tank_type"), TankitemItem.TankTypeProperty.MAP_CODEC);
 		}
 	}
 }

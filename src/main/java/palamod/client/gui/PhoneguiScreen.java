@@ -27,6 +27,7 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implem
 	private boolean menuStateUpdateActive = false;
 	private EditBox cheat_code_secret;
 	private Button button_test_code;
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/phonegui.png");
 
 	public PhoneguiScreen(PhoneguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -58,7 +59,7 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implem
 
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
-		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("palamod:textures/screens/phonegui.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, IMAGE_0, this.leftPos + -1, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 	}
 
 	@Override

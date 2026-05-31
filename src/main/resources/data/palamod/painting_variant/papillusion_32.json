@@ -3,9 +3,11 @@
   "height": 1,
   "width": 2,
   "title": {
+    "color": "yellow",
     "translate": "painting.palamod.papillusion_32.title"
   },
   "author": {
+    "color": "gray",
     "translate": "painting.palamod.papillusion_32.author"
   }
 }

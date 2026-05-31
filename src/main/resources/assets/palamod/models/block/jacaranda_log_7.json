@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "palamod:block/jacaranda_top",
+    "up": "palamod:block/dead_wood_top",
+    "north": "palamod:block/jacaranda_sap8",
+    "east": "palamod:block/jacaranda_sap8",
+    "south": "palamod:block/jacaranda_sap8",
+    "west": "palamod:block/jacaranda_sap8",
+    "particle": "palamod:block/jacaranda_top"
+  },
+  "render_type": "solid"
+}
