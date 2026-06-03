@@ -5,7 +5,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import palamod.init.PalamodModGameRules;
@@ -19,6 +18,7 @@ import java.util.Map;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
 
 public class JobCraftRestrictionManagerProcedure {
 
@@ -191,8 +191,7 @@ public class JobCraftRestrictionManagerProcedure {
 
         // ✅ Correction : getRule().get() au lieu de getBoolean()
         if (world instanceof ServerLevel serverLevel) {
-            GameRules gameRules = serverLevel.getGameRules();
-            if (gameRules.getRule(PalamodModGameRules.DISABLEJOBSGAMERULE).get()) {
+            if (serverLevel.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get())) {
                 return true;
             }
         }

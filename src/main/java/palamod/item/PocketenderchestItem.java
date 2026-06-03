@@ -10,6 +10,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.neoforged.fml.loading.FMLEnvironment;
+
+
 
 public class PocketenderchestItem extends Item {
 
@@ -25,7 +28,7 @@ public class PocketenderchestItem extends Item {
     @Override
     public InteractionResult use(Level world, Player player, InteractionHand hand) {
 
-        if (level.isClientSide) {
+        if (!FMLEnvironment.getDist().isDedicatedServer()) {
             return InteractionResult.SUCCESS;
         }
 

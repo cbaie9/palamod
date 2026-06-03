@@ -36643,7 +36643,7 @@
     {
       "name": "Isgameserverside",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "isgameserverside",
       "metadata": {
@@ -36705,7 +36705,7 @@
     {
       "name": "Isgameclientside",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "isgameclientside",
       "metadata": {
@@ -40198,7 +40198,7 @@
     {
       "name": "Pocketenderchest",
       "type": "item",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "pocketenderchest",
       "metadata": {
@@ -43510,8 +43510,8 @@
     {
       "name": "Amethystanvil",
       "type": "block",
-      "compiles": false,
-      "locked_code": true,
+      "compiles": true,
+      "locked_code": false,
       "registry_name": "amethyst_anvil",
       "metadata": {
         "files": [
@@ -43519,6 +43519,7 @@
           "src/main/resources/data/palamod/loot_table/blocks/amethyst_anvil.json",
           "src/main/resources/assets/palamod/models/item/amethyst_anvil.json",
           "src/main/resources/assets/palamod/blockstates/amethyst_anvil.json",
+          "src/main/resources/assets/palamod/items/amethyst_anvil.json",
           "src/main/resources/assets/palamod/models/block/amethyst_anvil.json"
         ]
       }
@@ -43526,14 +43527,15 @@
     {
       "name": "Titaneanvil",
       "type": "block",
-      "compiles": false,
-      "locked_code": true,
+      "compiles": true,
+      "locked_code": false,
       "registry_name": "titane_anvil",
       "metadata": {
         "files": [
           "src/main/resources/assets/palamod/models/block/titane_anvil.json",
           "src/main/resources/assets/palamod/blockstates/titane_anvil.json",
           "src/main/resources/data/palamod/loot_table/blocks/titane_anvil.json",
+          "src/main/resources/assets/palamod/items/titane_anvil.json",
           "src/main/java/palamod/block/TitaneanvilBlock.java",
           "src/main/resources/assets/palamod/models/item/titane_anvil.json"
         ]
@@ -43542,8 +43544,8 @@
     {
       "name": "Paladiumanvil",
       "type": "block",
-      "compiles": false,
-      "locked_code": true,
+      "compiles": true,
+      "locked_code": false,
       "registry_name": "paladium_anvil",
       "metadata": {
         "files": [
@@ -43551,7 +43553,8 @@
           "src/main/resources/assets/palamod/models/block/paladium_anvil.json",
           "src/main/resources/assets/palamod/blockstates/paladium_anvil.json",
           "src/main/resources/assets/palamod/models/item/paladium_anvil.json",
-          "src/main/resources/data/palamod/loot_table/blocks/paladium_anvil.json"
+          "src/main/resources/data/palamod/loot_table/blocks/paladium_anvil.json",
+          "src/main/resources/assets/palamod/items/paladium_anvil.json"
         ]
       }
     },
@@ -43665,7 +43668,7 @@
     {
       "name": "JobCraftRestrictionManagerProcedure",
       "type": "code",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "job_craft_restriction_manager_procedure",
       "metadata": {
@@ -43689,7 +43692,7 @@
     {
       "name": "Reloadcommandaddon",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "reloadcommandaddon",
       "metadata": {
@@ -44070,7 +44073,7 @@
     {
       "name": "Craft",
       "type": "command",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "craft",
       "metadata": {
@@ -49287,6 +49290,9 @@
       "~Goldentank@CUSTOM:Goldentank",
       "~Amethysttank@CUSTOM:Amethysttank",
       "~Moneyanvil@CUSTOM:Moneyanvil",
+      "~Paladiumanvil@CUSTOM:Paladiumanvil",
+      "~Titaneanvil@CUSTOM:Titaneanvil",
+      "~Amethystanvil@CUSTOM:Amethystanvil",
       "~Knockbackobsidian@CUSTOM:Knockbackobsidian",
       "~Frozenobsidian@CUSTOM:Frozenobsidian",
       "~Paladiuminfusedobsidian@CUSTOM:Paladiuminfusedobsidian",
@@ -49808,6 +49814,9 @@
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
       "~Moneyanvil@CUSTOM:Moneyanvil",
+      "~Paladiumanvil@CUSTOM:Paladiumanvil",
+      "~Titaneanvil@CUSTOM:Titaneanvil",
+      "~Amethystanvil@CUSTOM:Amethystanvil",
       "~Softeneddiamondore@CUSTOM:Softeneddiamondore",
       "~Softenedgoldore@CUSTOM:Softenedgoldore",
       "~Softenedfindiumore@CUSTOM:Softenedfindiumore",
@@ -49830,9 +49839,9 @@
       "~AmethysteOre@CUSTOM:AmethysteOre"
     ],
     "BLOCKS:minecraft:mineable/axe": [
-      "~TitanePortalBlock@CUSTOM:TitanePortalBlock",
       "~EndiumPortalBlock@CUSTOM:EndiumPortalBlock",
       "~PaladiumPortalBlock@CUSTOM:PaladiumPortalBlock",
+      "~TitanePortalBlock@CUSTOM:TitanePortalBlock",
       "~AmethystPortalblock@CUSTOM:AmethystPortalblock",
       "~ShinyOstryaWood@CUSTOM:ShinyOstryaWood",
       "~ShinyErablewood@CUSTOM:ShinyErablewood",
@@ -49931,13 +49940,13 @@
       "~Ostrya_woodFence@CUSTOM:Ostrya_woodFence"
     ],
     "ITEMS:minecraft:enchantable/durability": [
-      "~Xpbottle@CUSTOM:Xpbottle",
       "~Cavernehammer@CUSTOM:Cavernehammer",
       "~Unclaimfinderblue@CUSTOM:Unclaimfinderblue",
       "~Unclaimfinderred@CUSTOM:Unclaimfinderred",
       "~Unclaimfinderorange@CUSTOM:Unclaimfinderorange",
       "~Unclaimfinder@CUSTOM:Unclaimfinder",
       "~Extractor@CUSTOM:Extractor",
+      "~Xpbottle@CUSTOM:Xpbottle",
       "~Flatchestupgrade@CUSTOM:Flatchestupgrade",
       "~Pesyblpotion@CUSTOM:Pesyblpotion",
       "~Bigringgreenpaladium@CUSTOM:Bigringgreenpaladium",

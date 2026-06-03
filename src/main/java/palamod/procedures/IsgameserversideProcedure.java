@@ -6,6 +6,6 @@ public class IsgameserversideProcedure {
 	public static boolean execute() {
 		boolean exit = false;
 		boolean debug = false;
-		return !FMLEnvironment.dist.isDedicatedServer();
+		return FMLEnvironment.getDist().isDedicatedServer();
 	}
 }

@@ -33,7 +33,7 @@ public class ReloadcommandaddonProcedure {
 		if (command == null)
 			return;
 		if (command.startsWith("reload")) {
-			if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE))
+			if (world instanceof ServerLevel _serverLevelGR0 && _serverLevelGR0.getGameRules().get(PalamodModGameRules.DISABLEJOBSGAMERULE.get()))
 {
 			JobCraftRestrictionManagerProcedure.reload();
 			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.reload_craft_config").getString());

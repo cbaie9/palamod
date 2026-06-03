@@ -12,6 +12,7 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.players.NameAndId;
 
 @EventBusSubscriber
 public class CraftCommand {
@@ -31,12 +32,14 @@ public class CraftCommand {
                     } catch (Exception e) {
                         return 0; // Empêche la console d'utiliser la commande
                     }
-
+					 NameAndId nameAndId = new NameAndId(player.getUUID(), player.getName().getString());
                     boolean gameruleAccess = player.level()
                             .getGameRules()
-                            .getBoolean(PalamodModGameRules.COMMAND_CRAFT_NO_PERM_ACCESS);
+                            .get(PalamodModGameRules.COMMAND_CRAFT_NO_PERM_ACCESS.get());
 
-                    boolean isOp = source.hasPermission(2);
+                    boolean isOp = source.getServer()
+   					 						.getPlayerList()
+    										.isOp(nameAndId);
 
                     if (gameruleAccess || isOp) {
 

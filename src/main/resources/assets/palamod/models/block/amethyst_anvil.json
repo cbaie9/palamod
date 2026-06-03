@@ -5,6 +5,5 @@
     "particle": "palamod:block/anvil_amethyst_tool_base",
     "top": "palamod:block/anvil_amethyst_tool_top",
     "body": "palamod:block/anvil_amethyst_tool_base"
-  },
-  "render_type": "solid"
+  }
 }
