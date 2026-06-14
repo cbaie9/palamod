@@ -1,0 +1,264 @@
+{
+  "_fv": 85,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 300,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "template_livre.png",
+          "use1Xscale": true,
+          "x": 499,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp",
+          "text": {
+            "fixedValue": "Welcome to Palamod Renew"
+          },
+          "color": {
+            "value": -52480,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 72,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_thanks_for_install_my_mod",
+          "text": {
+            "fixedValue": "Thanks for install my mod"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 70,
+          "y": 68,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_this_is_an_intern_wiki_for_the_m",
+          "text": {
+            "fixedValue": "This is an intern wiki "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 73,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_for_the_mod",
+          "text": {
+            "fixedValue": "for the mod"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 74,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_summary",
+          "text": {
+            "fixedValue": "Summary"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 272,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_ores",
+          "text": "Ores",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 242,
+          "y": 60,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_trees",
+          "text": "Trees",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 242,
+          "y": 84,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_armors",
+          "text": "Armors",
+          "isUndecorated": false,
+          "width": 61,
+          "height": 20,
+          "x": 296,
+          "y": 60,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_liquids",
+          "text": "Liquids",
+          "isUndecorated": false,
+          "width": 61,
+          "height": 20,
+          "x": 296,
+          "y": 84,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_commands",
+          "text": "Commands",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 242,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_jobs",
+          "text": "Jobs",
+          "isUndecorated": false,
+          "width": 61,
+          "height": 20,
+          "x": 296,
+          "y": 106,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_machines",
+          "text": {
+            "fixedValue": "Machines"
+          },
+          "color": {
+            "value": -16777063,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 241,
+          "y": 129,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_grinder",
+          "text": "Grinder",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 242,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_palamachine",
+          "text": "PalaMachine",
+          "isUndecorated": false,
+          "width": 61,
+          "height": 20,
+          "x": 296,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_crusher",
+          "text": "Crusher",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 242,
+          "y": 165,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_more",
+          "text": "More",
+          "isUndecorated": false,
+          "width": 61,
+          "height": 20,
+          "x": 296,
+          "y": 164,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -108,6 +108,7 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<CrushercraftpalahelpguiMenu>> CRUSHERCRAFTPALAHELPGUI = REGISTRY.register("crushercraftpalahelpgui", () -> IMenuTypeExtension.create(CrushercraftpalahelpguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobshunterguiMenu>> JOBSHUNTERGUI = REGISTRY.register("jobshuntergui", () -> IMenuTypeExtension.create(JobshunterguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<JobsalchiguiMenu>> JOBSALCHIGUI = REGISTRY.register("jobsalchigui", () -> IMenuTypeExtension.create(JobsalchiguiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<NewPalahelpGuiIntroMenu>> NEW_PALAHELP_GUI_INTRO = REGISTRY.register("new_palahelp_gui_intro", () -> IMenuTypeExtension.create(NewPalahelpGuiIntroMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

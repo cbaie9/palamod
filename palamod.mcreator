@@ -46431,6 +46431,33 @@
         ]
       },
       "path": "~/oxylib"
+    },
+    {
+      "name": "Palamodonboardingbook",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palamodonboardingbook",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/palamod/models/item/palamodonboardingbook.json",
+          "src/main/java/palamod/item/PalamodonboardingbookItem.java",
+          "src/main/java/palamod/item/inventory/PalamodonboardingbookInventoryCapability.java"
+        ]
+      }
+    },
+    {
+      "name": "NewPalahelpGuiIntro",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "new_palahelp_gui_intro",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/gui/NewPalahelpGuiIntroScreen.java",
+          "src/main/java/palamod/world/inventory/NewPalahelpGuiIntroMenu.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49494,7 +49521,8 @@
       "EndiumPortalAngleBlock",
       "Endiumheart",
       "Amethystportalkey",
-      "HoodHelmetArmor"
+      "HoodHelmetArmor",
+      "Palamodonboardingbook"
     ],
     "CUSTOM:Grindercreativetab": [
       "Eggplant",
@@ -51508,7 +51536,24 @@
       "palamod.procedure.balltop.2nd": "2nd",
       "palamod.procedure.balltop.3rd": "3rd",
       "palamod.procedure.balltop.4rd": "4rd",
-      "palamod.procedure.balltop.5rd": "5rd"
+      "palamod.procedure.balltop.5rd": "5rd",
+      "item.palamod.palamodonboardingbook": "Palamod onboarding book",
+      "gui.palamod.new_palahelp_gui_intro.label_summary": "Summary",
+      "gui.palamod.new_palahelp_gui_intro.label_palahelp": "Welcome to Palamod Renew",
+      "gui.palamod.new_palahelp_gui_intro.button_ores": "Ores",
+      "gui.palamod.new_palahelp_gui_intro.button_trees": "Trees",
+      "gui.palamod.new_palahelp_gui_intro.button_crusher": "Crusher",
+      "gui.palamod.new_palahelp_gui_intro.button_palamachine": "PalaMachine",
+      "gui.palamod.new_palahelp_gui_intro.button_more": "More",
+      "gui.palamod.new_palahelp_gui_intro.button_armors": "Armors",
+      "gui.palamod.new_palahelp_gui_intro.label_for_the_mod": "for the mod",
+      "gui.palamod.new_palahelp_gui_intro.button_grinder": "Grinder",
+      "gui.palamod.new_palahelp_gui_intro.button_liquids": "Liquids",
+      "gui.palamod.new_palahelp_gui_intro.button_jobs": "Jobs",
+      "gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m": "This is an intern wiki ",
+      "gui.palamod.new_palahelp_gui_intro.button_commands": "Commands",
+      "gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod": "Thanks for install my mod",
+      "gui.palamod.new_palahelp_gui_intro.label_machines": "Machines"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53203,7 +53248,29 @@
       "palamod.procedure.balltop.2nd": "",
       "palamod.procedure.balltop.3rd": "",
       "palamod.procedure.balltop.4rd": "",
-      "palamod.procedure.balltop.5rd": ""
+      "palamod.procedure.balltop.5rd": "",
+      "item.palamod.palamodonboardingbook": "Palamod onboarding book",
+      "gui.palamod.grinderpalahelpgui.label_empty": "",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gui.palamod.golemtreec.golem_v_farmer1": "",
+      "gui.palamod.factionhomegui.label_empty": "",
+      "gui.palamod.new_palahelp_gui_intro.label_summary": "Summary",
+      "gui.palamod.new_palahelp_gui_intro.label_palahelp": "Welcome to Palamod Renew",
+      "gui.palamod.new_palahelp_gui_intro.button_ores": "Ores",
+      "gui.palamod.new_palahelp_gui_intro.button_trees": "Trees",
+      "gui.palamod.new_palahelp_gui_intro.button_crusher": "Crusher",
+      "gui.palamod.new_palahelp_gui_intro.button_palamachine": "PalaMachine",
+      "gui.palamod.new_palahelp_gui_intro.button_more": "More",
+      "gui.palamod.new_palahelp_gui_intro.button_armors": "Armors",
+      "gui.palamod.new_palahelp_gui_intro.label_for_the_mod": "for the mod",
+      "gui.palamod.new_palahelp_gui_intro.button_grinder": "Grinder",
+      "gui.palamod.new_palahelp_gui_intro.button_liquids": "Liquids",
+      "gui.palamod.new_palahelp_gui_intro.button_jobs": "Jobs",
+      "gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m": "This is an intern wiki ",
+      "gui.palamod.new_palahelp_gui_intro.button_commands": "Commands",
+      "gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod": "Thanks for install my mod",
+      "gui.palamod.new_palahelp_gui_intro.label_machines": "Machines"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54898,7 +54965,29 @@
       "palamod.procedure.balltop.2nd": "",
       "palamod.procedure.balltop.3rd": "",
       "palamod.procedure.balltop.4rd": "",
-      "palamod.procedure.balltop.5rd": ""
+      "palamod.procedure.balltop.5rd": "",
+      "item.palamod.palamodonboardingbook": "Palamod onboarding book",
+      "gui.palamod.grinderpalahelpgui.label_empty": "",
+      "gui.palamod.authsafegui.code_check": "",
+      "gui.palamod.adminshopmenu.slider_suffix": "",
+      "gui.palamod.golemtreec.golem_v_farmer1": "",
+      "gui.palamod.factionhomegui.label_empty": "",
+      "gui.palamod.new_palahelp_gui_intro.label_summary": "Summary",
+      "gui.palamod.new_palahelp_gui_intro.label_palahelp": "Welcome to Palamod Renew",
+      "gui.palamod.new_palahelp_gui_intro.button_ores": "Ores",
+      "gui.palamod.new_palahelp_gui_intro.button_trees": "Trees",
+      "gui.palamod.new_palahelp_gui_intro.button_crusher": "Crusher",
+      "gui.palamod.new_palahelp_gui_intro.button_palamachine": "PalaMachine",
+      "gui.palamod.new_palahelp_gui_intro.button_more": "More",
+      "gui.palamod.new_palahelp_gui_intro.button_armors": "Armors",
+      "gui.palamod.new_palahelp_gui_intro.label_for_the_mod": "for the mod",
+      "gui.palamod.new_palahelp_gui_intro.button_grinder": "Grinder",
+      "gui.palamod.new_palahelp_gui_intro.button_liquids": "Liquids",
+      "gui.palamod.new_palahelp_gui_intro.button_jobs": "Jobs",
+      "gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m": "This is an intern wiki ",
+      "gui.palamod.new_palahelp_gui_intro.button_commands": "Commands",
+      "gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod": "Thanks for install my mod",
+      "gui.palamod.new_palahelp_gui_intro.label_machines": "Machines"
     }
   },
   "metadata": {
