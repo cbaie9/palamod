@@ -701,7 +701,7 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> PORTAL_BLOCK;
 	public static final DeferredItem<Item> KEY_PORTAL_BLOCK;
 	public static final DeferredItem<Item> HOOD_HELMET_ARMOR_HELMET;
-	public static final DeferredItem<Item> PALAMODONBOARDINGBOOK;
+	public static final DeferredItem<Item> PALAMOD_ONBOARDING_BOOK;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1362,7 +1362,7 @@ public class PalamodModItems {
 		PORTAL_BLOCK = block(PalamodModBlocks.PORTAL_BLOCK, new Item.Properties().stacksTo(1));
 		KEY_PORTAL_BLOCK = block(PalamodModBlocks.KEY_PORTAL_BLOCK, new Item.Properties().stacksTo(1));
 		HOOD_HELMET_ARMOR_HELMET = REGISTRY.register("hood_helmet_armor_helmet", HoodHelmetArmorItem.Helmet::new);
-		PALAMODONBOARDINGBOOK = REGISTRY.register("palamodonboardingbook", PalamodonboardingbookItem::new);
+		PALAMOD_ONBOARDING_BOOK = REGISTRY.register("palamod_onboarding_book", PalamodonboardingbookItem::new);
 	}
 
 	// Start of user code block custom items
@@ -1373,7 +1373,7 @@ public class PalamodModItems {
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidstoneInventoryCapability(stack), VOIDSTONE.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new MinerjobsitemInventoryCapability(stack), JOBS_ITEM_MINER.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new FarmerjobsitemInventoryCapability(stack), JOBS_ITEM_FARMER.get());
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PalamodonboardingbookInventoryCapability(stack), PALAMODONBOARDINGBOOK.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PalamodonboardingbookInventoryCapability(stack), PALAMOD_ONBOARDING_BOOK.get());
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), FAKE_WATER_BUCKET.get());
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), ANGELIC_WATER_BUCKET.get());
 	}

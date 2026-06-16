@@ -19,5 +19,9 @@
     "palamodavancement_0": {
       "trigger": "minecraft:tick"
     }
+  },
+  "rewards": {
+    "experience": 0,
+    "function": "palamod:give_wiki"
   }
 }

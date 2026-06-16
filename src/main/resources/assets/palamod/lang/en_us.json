@@ -1698,7 +1698,6 @@
   "palamod.procedure.balltop.3rd": "3rd",
   "palamod.procedure.balltop.4rd": "4rd",
   "palamod.procedure.balltop.5rd": "5rd",
-  "item.palamod.palamodonboardingbook": "Palamod onboarding book",
   "gui.palamod.new_palahelp_gui_intro.label_summary": "Summary",
   "gui.palamod.new_palahelp_gui_intro.label_palahelp": "Welcome to Palamod Renew",
   "gui.palamod.new_palahelp_gui_intro.button_ores": "Ores",
@@ -1724,5 +1723,6 @@
   "gui.palamod.palahelptree.button_show_tree1": "Show tree",
   "gui.palamod.palahelptree.tooltip_erable": "Can be extracted to make erable seve and be used to craft erable portal",
   "gui.palamod.palahelptree.button_show_tree2": "Show tree",
-  "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary"
+  "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary",
+  "item.palamod.palamod_onboarding_book": "Palamod onboarding book"
 }

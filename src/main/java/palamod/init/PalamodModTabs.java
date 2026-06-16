@@ -340,7 +340,7 @@ public class PalamodModTabs {
 				tabData.accept(PalamodModItems.ENDIUM_HEART.get());
 				tabData.accept(PalamodModItems.AMETHYST_PORTAL_KEY.get());
 				tabData.accept(PalamodModItems.HOOD_HELMET_ARMOR_HELMET.get());
-				tabData.accept(PalamodModItems.PALAMODONBOARDINGBOOK.get());
+				tabData.accept(PalamodModItems.PALAMOD_ONBOARDING_BOOK.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GRINDERCREATIVETAB = REGISTRY.register("grindercreativetab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.palamod.grindercreativetab")).icon(() -> new ItemStack(PalamodModBlocks.TCV_2.get())).displayItems((parameters, tabData) -> {

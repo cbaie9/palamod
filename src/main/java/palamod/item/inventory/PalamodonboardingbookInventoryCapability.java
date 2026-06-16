@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 public class PalamodonboardingbookInventoryCapability extends ComponentItemHandler {
 	@SubscribeEvent
 	public static void onItemDropped(ItemTossEvent event) {
-		if (event.getEntity().getItem().getItem() == PalamodModItems.PALAMODONBOARDINGBOOK.get()) {
+		if (event.getEntity().getItem().getItem() == PalamodModItems.PALAMOD_ONBOARDING_BOOK.get()) {
 			Player player = event.getPlayer();
 			if (player.containerMenu instanceof NewPalahelpGuiIntroMenu)
 				player.closeContainer();
@@ -33,7 +33,7 @@ public class PalamodonboardingbookInventoryCapability extends ComponentItemHandl
 
 	@Override
 	public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-		return stack.getItem() != PalamodModItems.PALAMODONBOARDINGBOOK.get();
+		return stack.getItem() != PalamodModItems.PALAMOD_ONBOARDING_BOOK.get();
 	}
 
 	@Override

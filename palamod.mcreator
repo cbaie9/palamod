@@ -46437,10 +46437,10 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "palamodonboardingbook",
+      "registry_name": "palamod_onboarding_book",
       "metadata": {
         "files": [
-          "src/main/resources/assets/palamod/models/item/palamodonboardingbook.json",
+          "src/main/resources/assets/palamod/models/item/palamod_onboarding_book.json",
           "src/main/java/palamod/item/PalamodonboardingbookItem.java",
           "src/main/java/palamod/item/inventory/PalamodonboardingbookInventoryCapability.java"
         ]
@@ -46491,6 +46491,18 @@
         ],
         "files": [
           "src/main/java/palamod/procedures/ConnectPalahelpTreeProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GiveWiki",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_wiki",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/function/give_wiki.mcfunction"
         ]
       }
     }
@@ -51572,7 +51584,6 @@
       "palamod.procedure.balltop.3rd": "3rd",
       "palamod.procedure.balltop.4rd": "4rd",
       "palamod.procedure.balltop.5rd": "5rd",
-      "item.palamod.palamodonboardingbook": "Palamod onboarding book",
       "gui.palamod.new_palahelp_gui_intro.label_summary": "Summary",
       "gui.palamod.new_palahelp_gui_intro.label_palahelp": "Welcome to Palamod Renew",
       "gui.palamod.new_palahelp_gui_intro.button_ores": "Ores",
@@ -51598,7 +51609,8 @@
       "gui.palamod.palahelptree.button_show_tree1": "Show tree",
       "gui.palamod.palahelptree.tooltip_erable": "Can be extracted to make erable seve and be used to craft erable portal",
       "gui.palamod.palahelptree.button_show_tree2": "Show tree",
-      "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary"
+      "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary",
+      "item.palamod.palamod_onboarding_book": "Palamod onboarding book"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53294,7 +53306,6 @@
       "palamod.procedure.balltop.3rd": "",
       "palamod.procedure.balltop.4rd": "",
       "palamod.procedure.balltop.5rd": "",
-      "item.palamod.palamodonboardingbook": "Palamod onboarding book",
       "gui.palamod.grinderpalahelpgui.label_empty": "",
       "gui.palamod.authsafegui.code_check": "",
       "gui.palamod.adminshopmenu.slider_suffix": "",
@@ -53325,7 +53336,8 @@
       "gui.palamod.palahelptree.button_show_tree1": "Show tree",
       "gui.palamod.palahelptree.tooltip_erable": "Can be extracted to make erable seve and be used to craft erable portal",
       "gui.palamod.palahelptree.button_show_tree2": "Show tree",
-      "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary"
+      "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary",
+      "item.palamod.palamod_onboarding_book": "Palamod onboarding book"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -55021,7 +55033,6 @@
       "palamod.procedure.balltop.3rd": "",
       "palamod.procedure.balltop.4rd": "",
       "palamod.procedure.balltop.5rd": "",
-      "item.palamod.palamodonboardingbook": "Palamod onboarding book",
       "gui.palamod.grinderpalahelpgui.label_empty": "",
       "gui.palamod.authsafegui.code_check": "",
       "gui.palamod.adminshopmenu.slider_suffix": "",
@@ -55052,7 +55063,8 @@
       "gui.palamod.palahelptree.button_show_tree1": "Show tree",
       "gui.palamod.palahelptree.tooltip_erable": "Can be extracted to make erable seve and be used to craft erable portal",
       "gui.palamod.palahelptree.button_show_tree2": "Show tree",
-      "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary"
+      "gui.palamod.palahelptree.tooltip_return_to_summary": "Return to summary",
+      "item.palamod.palamod_onboarding_book": "Palamod onboarding book"
     }
   },
   "metadata": {

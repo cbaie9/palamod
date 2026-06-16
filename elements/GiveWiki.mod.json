@@ -1,0 +1,9 @@
+{
+  "_fv": 85,
+  "_type": "function",
+  "definition": {
+    "code": "# Enter the function code here\ngive @s palamod:palamod_onboarding_book",
+    "name": "give_wiki",
+    "namespace": "mod"
+  }
+}
