@@ -2,7 +2,11 @@ package palamod.client.gui;
 
 import palamod.world.inventory.NewPalahelpGuiIntroMenu;
 
+import palamod.network.NewPalahelpGuiIntroButtonMessage;
+
 import palamod.init.PalamodModScreens;
+
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -53,7 +57,13 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 78 && mouseX < leftPos + 128 && mouseY > topPos + 148 && mouseY < topPos + 160) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_can_also_be_accessible_by_the_co"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -62,7 +72,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(IMAGE_0, this.leftPos + 435, this.topPos + 43, 0, 0, 288, 180, 288, 180);
+		guiGraphics.blit(IMAGE_0, this.leftPos + -9, this.topPos + -9, 0, 0, 320, 180, 320, 180);
 		RenderSystem.disableBlend();
 	}
 
@@ -77,10 +87,10 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_palahelp"), 8, 21, -52480, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod"), 6, 31, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m"), 9, 100, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_for_the_mod"), 10, 112, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_palahelp"), 7, 3, -52480, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod"), 5, 14, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m"), 7, 135, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_for_the_mod"), 6, 148, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_summary"), 208, 7, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_machines"), 177, 92, -16777063, false);
 	}
@@ -89,12 +99,30 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 	public void init() {
 		super.init();
 		button_ores = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_ores"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(0, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 178, this.topPos + 23, 50, 20).build();
 		this.addRenderableWidget(button_ores);
 		button_trees = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_trees"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(1, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}).bounds(this.leftPos + 178, this.topPos + 47, 50, 20).build();
 		this.addRenderableWidget(button_trees);
 		button_armors = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_armors"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(2, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + 232, this.topPos + 23, 61, 20).build();
 		this.addRenderableWidget(button_armors);
 		button_liquids = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_liquids"), e -> {

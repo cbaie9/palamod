@@ -11,240 +11,16 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "palahelptree.png",
-          "use1Xscale": false,
-          "x": 103,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "erable_log.png",
-          "use1Xscale": false,
-          "x": 114,
-          "y": 139,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_erable_permet_de_crafter_le",
-          "text": {
-            "fixedValue": "Erable : permet de crafter le",
-            "name": "Palahelptree0"
-          },
-          "color": {
-            "value": -52480,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 142,
-          "y": 133,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_portail_en_paladium",
-          "text": {
-            "fixedValue": "portail en paladium",
-            "name": "Palahelptree1"
-          },
-          "color": {
-            "value": -52480,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 142,
-          "y": 145,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "jacaranda_log.png",
-          "use1Xscale": false,
-          "x": 114,
-          "y": 71,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_jacaranda_permet_de_crafter",
-          "text": {
-            "fixedValue": "Jacaranda : permet de crafter",
-            "name": "Palahelptree2"
-          },
-          "color": {
-            "value": -6750055,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 139,
-          "y": 67,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_le_portail_en_amthyste",
-          "text": {
-            "fixedValue": "le portail en am�thyste",
-            "name": "Palahelptree3"
-          },
-          "color": {
-            "value": -6750055,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 139,
-          "y": 81,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "judeecercis_log.png",
-          "use1Xscale": false,
-          "x": 114,
-          "y": 104,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_judeecercis_permet_de",
-          "text": {
-            "fixedValue": "Judeecercis : permet de",
-            "name": "Palahelptree4"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 139,
-          "y": 102,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_crafter_le_portail_en_titane",
-          "text": {
-            "fixedValue": "Crafter le portail en titane",
-            "name": "Palahelptree5"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 139,
-          "y": 114,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "ostrya_log.png",
-          "use1Xscale": false,
-          "x": 114,
-          "y": 170,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ostrya_permet_de_crafter_le",
-          "text": {
-            "fixedValue": "Ostrya : permet de crafter le",
-            "name": "Palahelptree6"
-          },
-          "color": {
-            "value": -13434727,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 142,
-          "y": 168,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_portail_en_endium",
-          "text": {
-            "fixedValue": "portail en endium",
-            "name": "Palahelptree7"
-          },
-          "color": {
-            "value": -13434727,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 142,
-          "y": 181,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 103,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 181,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 223,
-          "y": 37,
-          "locked": false
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_home_pixel_adminshop",
-          "image": "home_pixel_adminshop.png",
-          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "image": "sommaire_btn.png",
+          "hoveredImage": "sommaire_btn.png",
           "onClick": {
             "name": "Backpalahelp"
           },
-          "x": 257,
-          "y": 41,
+          "x": 76,
+          "y": 27,
           "locked": false
         }
       },
@@ -252,13 +28,13 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_adminshop.png",
-          "hoveredImage": "arrow_adminshop_poi.png",
+          "image": "arrow_palahelp_left_off.png",
+          "hoveredImage": "arrow_palahelp_left_on.png",
           "onClick": {
             "name": "Blockback"
           },
-          "x": 277,
-          "y": 41,
+          "x": 73,
+          "y": 177,
           "locked": false
         }
       },
@@ -271,9 +47,9 @@
           "onClick": {
             "name": "Closegui"
           },
-          "x": 299,
-          "y": 41,
-          "locked": false
+          "x": 359,
+          "y": 27,
+          "locked": true
         }
       },
       {
@@ -284,12 +60,195 @@
             "fixedValue": "Palahelp : Trees"
           },
           "color": {
-            "value": -1,
+            "value": -13421773,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 163,
+          "x": 102,
           "y": 44,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "template_livre.png",
+          "use1Xscale": false,
+          "x": 55,
+          "y": 27,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "jacaranda_log.png",
+          "use1Xscale": false,
+          "x": 76,
+          "y": 64,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "judeecercis_log.png",
+          "use1Xscale": false,
+          "x": 76,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "erable_log.png",
+          "use1Xscale": false,
+          "x": 76,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ostrya_log.png",
+          "use1Xscale": false,
+          "x": 76,
+          "y": 154,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_can_be_extracted_to_make_jacaran",
+          "text": {
+            "fixedValue": "Can be extracted to make jacaranda seve and to be used to craft the jacaranda portal"
+          },
+          "width": 53,
+          "height": 22,
+          "x": 73,
+          "y": 61,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_show_tree",
+          "text": "Show tree",
+          "isUndecorated": false,
+          "width": 70,
+          "height": 20,
+          "x": 129,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_judeecercis",
+          "text": {
+            "fixedValue": "Can be extracted to make jacaranda seve and use to make craft jacaranda portal."
+          },
+          "width": 53,
+          "height": 22,
+          "x": 73,
+          "y": 86,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_erable",
+          "text": {
+            "fixedValue": "Can be extracted to make erable seve and be used to craft erable portal"
+          },
+          "width": 53,
+          "height": 24,
+          "x": 73,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_show_tree1",
+          "text": "Show tree",
+          "isUndecorated": false,
+          "width": 70,
+          "height": 20,
+          "x": 129,
+          "y": 87,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_show_tree2",
+          "text": "Show tree",
+          "isUndecorated": false,
+          "width": 70,
+          "height": 20,
+          "x": 129,
+          "y": 117,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_show_tree3",
+          "text": "Show tree",
+          "isUndecorated": false,
+          "width": 70,
+          "height": 20,
+          "x": 129,
+          "y": 151,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ostrya",
+          "text": {
+            "fixedValue": "Can extracted to make ostrya seve and be used to craft ostrya portal to make endium"
+          },
+          "width": 53,
+          "height": 25,
+          "x": 73,
+          "y": 148,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_summary",
+          "text": {
+            "fixedValue": "Return to summary"
+          },
+          "width": 22,
+          "height": 20,
+          "x": 72,
+          "y": 27,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_right_off",
+          "image": "arrow_palahelp_right_off.png",
+          "hoveredImage": "arrow_palahelp_right_on.png",
+          "x": 319,
+          "y": 175,
           "locked": false
         }
       }

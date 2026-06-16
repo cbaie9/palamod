@@ -69,6 +69,9 @@
           "name": "button_trees",
           "text": "trees",
           "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectPalahelpTree"
+          },
           "width": 50,
           "height": 20,
           "x": 222,

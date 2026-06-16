@@ -50,15 +50,15 @@ public record PalahelptreeButtonMessage(int buttonID, int x, int y, int z) imple
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
-		if (buttonID == 0) {
+		if (buttonID == 4) {
 
 			BackpalahelpProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 1) {
+		if (buttonID == 5) {
 
 			BlockbackProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 6) {
 
 			CloseguiProcedure.execute(entity);
 		}

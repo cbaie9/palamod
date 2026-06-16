@@ -1,10 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.MachineconnectpalahelpProcedure;
-import palamod.procedures.ConnectpalahelporeProcedure;
-import palamod.procedures.ConnectfluidpalahelpProcedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -55,6 +51,10 @@ public record PalahelpblockButtonMessage(int buttonID, int x, int y, int z) impl
 		if (buttonID == 0) {
 
 			ConnectpalahelporeProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
+
+			ConnectPalahelpTreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 

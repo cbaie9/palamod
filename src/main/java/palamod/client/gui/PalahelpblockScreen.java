@@ -119,6 +119,12 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 		}).bounds(this.leftPos + 96, this.topPos + 31, 40, 20).build();
 		this.addRenderableWidget(button_ore);
 		button_trees = Button.builder(Component.translatable("gui.palamod.palahelpblock.button_trees"), e -> {
+			int x = PalahelpblockScreen.this.x;
+			int y = PalahelpblockScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpblockButtonMessage(1, x, y, z));
+				PalahelpblockButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}).bounds(this.leftPos + 96, this.topPos + 56, 50, 20).build();
 		this.addRenderableWidget(button_trees);
 		button_machine = Button.builder(Component.translatable("gui.palamod.palahelpblock.button_machine"), e -> {

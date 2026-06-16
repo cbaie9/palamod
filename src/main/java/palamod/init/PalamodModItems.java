@@ -10,6 +10,7 @@ import palamod.procedures.FlaskPropertyValueProvider_type_of_woodProcedure;
 import palamod.procedures.FlaskPropertyValueProviderProcedure;
 
 import palamod.item.inventory.VoidstoneInventoryCapability;
+import palamod.item.inventory.PalamodonboardingbookInventoryCapability;
 import palamod.item.inventory.PaladiumphoneInventoryCapability;
 import palamod.item.inventory.MinerjobsitemInventoryCapability;
 import palamod.item.inventory.FarmerjobsitemInventoryCapability;

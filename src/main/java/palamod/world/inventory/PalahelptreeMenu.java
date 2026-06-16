@@ -26,7 +26,7 @@ public class PalahelptreeMenu extends AbstractContainerMenu implements PalamodMo
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 20)
+			if (!this.containsKey(key) && this.size() >= 19)
 				return null;
 			return super.put(key, value);
 		}

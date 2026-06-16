@@ -11,16 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "template_livre.png",
-          "use1Xscale": true,
-          "x": 499,
-          "y": 80,
-          "locked": false
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_palahelp",
@@ -32,8 +22,8 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 72,
-          "y": 58,
+          "x": 71,
+          "y": 40,
           "locked": false
         }
       },
@@ -49,8 +39,8 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 70,
-          "y": 68,
+          "x": 69,
+          "y": 51,
           "locked": false
         }
       },
@@ -66,8 +56,8 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 73,
-          "y": 137,
+          "x": 71,
+          "y": 172,
           "locked": false
         }
       },
@@ -76,15 +66,15 @@
         "data": {
           "name": "label_for_the_mod",
           "text": {
-            "fixedValue": "for the mod"
+            "fixedValue": "for the mod : Palahelp"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 74,
-          "y": 149,
+          "x": 70,
+          "y": 185,
           "locked": false
         }
       },
@@ -111,6 +101,9 @@
           "name": "button_ores",
           "text": "Ores",
           "isUndecorated": false,
+          "onClick": {
+            "name": "Connectpalahelpore"
+          },
           "width": 50,
           "height": 20,
           "x": 242,
@@ -124,6 +117,9 @@
           "name": "button_trees",
           "text": "Trees",
           "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectPalahelpTree"
+          },
           "width": 50,
           "height": 20,
           "x": 242,
@@ -137,6 +133,9 @@
           "name": "button_armors",
           "text": "Armors",
           "isUndecorated": false,
+          "onClick": {
+            "name": "Connectarmorpalahelp"
+          },
           "width": 61,
           "height": 20,
           "x": 296,
@@ -249,6 +248,30 @@
           "height": 20,
           "x": 296,
           "y": 164,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "template_livre.png",
+          "use1Xscale": false,
+          "x": 55,
+          "y": 28,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_can_also_be_accessible_by_the_co",
+          "text": {
+            "fixedValue": "Can also be accessible by the command /palahelp"
+          },
+          "width": 50,
+          "height": 12,
+          "x": 142,
+          "y": 185,
           "locked": false
         }
       }
