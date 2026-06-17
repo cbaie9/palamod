@@ -31,7 +31,7 @@
           "image": "arrow_palahelp_left_off.png",
           "hoveredImage": "arrow_palahelp_left_on.png",
           "onClick": {
-            "name": "Blockback"
+            "name": "ConnectNewPalahelp"
           },
           "x": 73,
           "y": 177,

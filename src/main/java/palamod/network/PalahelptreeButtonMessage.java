@@ -54,7 +54,7 @@ public record PalahelptreeButtonMessage(int buttonID, int x, int y, int z) imple
 		}
 		if (buttonID == 1) {
 
-			BlockbackProcedure.execute(world, x, y, z, entity);
+			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
