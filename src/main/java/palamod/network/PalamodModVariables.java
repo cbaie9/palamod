@@ -122,6 +122,7 @@ public class PalamodModVariables {
 		clone.last_unlocked_miner = original.last_unlocked_miner;
 		clone.last_unlocked_farmer = original.last_unlocked_farmer;
 		clone.last_unlocked_hunter = original.last_unlocked_hunter;
+		clone.id_img_palahelp_tree = original.id_img_palahelp_tree;
 		if (!event.isWasDeath()) {
 			clone.buyslot = original.buyslot;
 			clone.last_unlocked_alchi = original.last_unlocked_alchi;
@@ -312,6 +313,7 @@ public class PalamodModVariables {
 		public String last_unlocked_farmer = "\"go farm something\"";
 		public String last_unlocked_hunter = "\"go farm something\"";
 		public String last_unlocked_alchi = "\"go farm something\"";
+		public double id_img_palahelp_tree = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -331,6 +333,7 @@ public class PalamodModVariables {
 			nbt.putString("last_unlocked_farmer", last_unlocked_farmer);
 			nbt.putString("last_unlocked_hunter", last_unlocked_hunter);
 			nbt.putString("last_unlocked_alchi", last_unlocked_alchi);
+			nbt.putDouble("id_img_palahelp_tree", id_img_palahelp_tree);
 			return nbt;
 		}
 
@@ -351,6 +354,7 @@ public class PalamodModVariables {
 			last_unlocked_farmer = nbt.getString("last_unlocked_farmer");
 			last_unlocked_hunter = nbt.getString("last_unlocked_hunter");
 			last_unlocked_alchi = nbt.getString("last_unlocked_alchi");
+			id_img_palahelp_tree = nbt.getDouble("id_img_palahelp_tree");
 		}
 
 		public void markSyncDirty() {

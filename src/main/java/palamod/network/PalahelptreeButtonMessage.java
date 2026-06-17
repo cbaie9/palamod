@@ -1,8 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.BlockbackProcedure;
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -50,17 +48,33 @@ public record PalahelptreeButtonMessage(int buttonID, int x, int y, int z) imple
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
-		if (buttonID == 4) {
+		if (buttonID == 0) {
 
-			BackpalahelpProcedure.execute(world, x, y, z, entity);
+			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 5) {
+		if (buttonID == 1) {
 
 			BlockbackProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 6) {
+		if (buttonID == 2) {
 
 			CloseguiProcedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			SetImageJudeecercisProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			SetImagejacarandaProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			SetImageErableProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			SetImageOstryaProcedure.execute(entity);
 		}
 	}
 

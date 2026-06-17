@@ -18148,158 +18148,6 @@
       }
     },
     {
-      "name": "Palahelptree0",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_0",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree0Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree1",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_1",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_2",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree3",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_3",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree4",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_4",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree5",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_5",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree6",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_6",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelptree7",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelptree_7",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelptree7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Palahelpgrinder10",
       "type": "procedure",
       "compiles": true,
@@ -46505,6 +46353,131 @@
           "src/main/resources/data/palamod/function/give_wiki.mcfunction"
         ]
       }
+    },
+    {
+      "name": "ConnectNewPalahelp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connect_new_palahelp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ConnectNewPalahelpProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetImagePalahelpTree",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_image_palahelp_tree",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetImagePalahelpTreeProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetImagejacaranda",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_imagejacaranda",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetImagejacarandaProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetImageJudeecercis",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_image_judeecercis",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetImageJudeecercisProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetImageErable",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_image_erable",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetImageErableProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetImageOstrya",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_image_ostrya",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetImageOstryaProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -46843,6 +46816,12 @@
       "type": "number",
       "scope": "map",
       "value": "20.0"
+    },
+    {
+      "name": "id_img_palahelp_tree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -51603,7 +51582,7 @@
       "gui.palamod.new_palahelp_gui_intro.tooltip_can_also_be_accessible_by_the_co": "Can also be accessible by the command /palahelp",
       "gui.palamod.palahelptree.tooltip_can_be_extracted_to_make_jacaran": "Can be extracted to make jacaranda seve and to be used to craft the jacaranda portal",
       "gui.palamod.palahelptree.button_show_tree": "Show tree",
-      "gui.palamod.palahelptree.tooltip_judeecercis": "Can be extracted to make jacaranda seve and use to make craft jacaranda portal.",
+      "gui.palamod.palahelptree.tooltip_judeecercis": "Can be extracted to make jacaranda seve and use to make craft judeeceris portal.",
       "gui.palamod.palahelptree.button_show_tree3": "Show tree",
       "gui.palamod.palahelptree.tooltip_ostrya": "Can extracted to make ostrya seve and be used to craft ostrya portal to make endium",
       "gui.palamod.palahelptree.button_show_tree1": "Show tree",

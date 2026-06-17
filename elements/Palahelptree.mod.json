@@ -17,7 +17,7 @@
           "image": "sommaire_btn.png",
           "hoveredImage": "sommaire_btn.png",
           "onClick": {
-            "name": "Backpalahelp"
+            "name": "ConnectNewPalahelp"
           },
           "x": 76,
           "y": 27,
@@ -134,24 +134,11 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_show_tree",
-          "text": "Show tree",
-          "isUndecorated": false,
-          "width": 70,
-          "height": 20,
-          "x": 129,
-          "y": 62,
-          "locked": false
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_judeecercis",
           "text": {
-            "fixedValue": "Can be extracted to make jacaranda seve and use to make craft jacaranda portal."
+            "fixedValue": "Can be extracted to make jacaranda seve and use to make craft judeeceris portal."
           },
           "width": 53,
           "height": 22,
@@ -171,45 +158,6 @@
           "height": 24,
           "x": 73,
           "y": 116,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_show_tree1",
-          "text": "Show tree",
-          "isUndecorated": false,
-          "width": 70,
-          "height": 20,
-          "x": 129,
-          "y": 87,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_show_tree2",
-          "text": "Show tree",
-          "isUndecorated": false,
-          "width": 70,
-          "height": 20,
-          "x": 129,
-          "y": 117,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_show_tree3",
-          "text": "Show tree",
-          "isUndecorated": false,
-          "width": 70,
-          "height": 20,
-          "x": 129,
-          "y": 151,
           "locked": false
         }
       },
@@ -249,6 +197,76 @@
           "hoveredImage": "arrow_palahelp_right_on.png",
           "x": 319,
           "y": 175,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_judeecercis_sapling",
+          "image": "judeecercis_sapling.png",
+          "hoveredImage": "judeecercis_sappling_on.png",
+          "onClick": {
+            "name": "SetImageJudeecercis"
+          },
+          "x": 103,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sapjacaranda",
+          "image": "sap.jacaranda.png",
+          "hoveredImage": "jacaranda_sappling_on.png",
+          "onClick": {
+            "name": "SetImagejacaranda"
+          },
+          "x": 105,
+          "y": 64,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_saperable",
+          "image": "sap.erable.png",
+          "hoveredImage": "erable_sappling_on.png",
+          "onClick": {
+            "name": "SetImageErable"
+          },
+          "x": 104,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sapostrya",
+          "image": "sap.ostrya.png",
+          "hoveredImage": "ostrya_sappling.png",
+          "onClick": {
+            "name": "SetImageOstrya"
+          },
+          "x": 102,
+          "y": 154,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "palahelp_tree.png",
+          "spritesCount": 4,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetImagePalahelpTree"
+          },
+          "x": 235,
+          "y": 49,
           "locked": false
         }
       }

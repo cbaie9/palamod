@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelptreeMenu;
 
+import palamod.procedures.GetImagePalahelpTreeProcedure;
+
 import palamod.network.PalahelptreeButtonMessage;
 
 import palamod.init.PalamodModScreens;
@@ -11,12 +13,12 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -26,19 +28,20 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
-	private Button button_show_tree;
-	private Button button_show_tree1;
-	private Button button_show_tree2;
-	private Button button_show_tree3;
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_cross_no_button;
 	private ImageButton imagebutton_arrow_palahelp_right_off;
+	private ImageButton imagebutton_judeecercis_sapling;
+	private ImageButton imagebutton_sapjacaranda;
+	private ImageButton imagebutton_saperable;
+	private ImageButton imagebutton_sapostrya;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
 	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/jacaranda_log.png");
 	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/judeecercis_log.png");
 	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/erable_log.png");
 	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/ostrya_log.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/palahelp_tree.png");
 
 	public PalahelptreeScreen(PalahelptreeMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -95,6 +98,7 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 		guiGraphics.blit(IMAGE_2, this.leftPos + -28, this.topPos + 53, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(IMAGE_3, this.leftPos + -28, this.topPos + 85, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(IMAGE_4, this.leftPos + -28, this.topPos + 117, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(SPRITE_0, this.leftPos + 131, this.topPos + 12, Mth.clamp((int) GetImagePalahelpTreeProcedure.execute(entity) * 115, 0, 345), 0, 115, 115, 460, 115);
 		RenderSystem.disableBlend();
 	}
 
@@ -115,25 +119,13 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 	@Override
 	public void init() {
 		super.init();
-		button_show_tree = Button.builder(Component.translatable("gui.palamod.palahelptree.button_show_tree"), e -> {
-		}).bounds(this.leftPos + 25, this.topPos + 25, 70, 20).build();
-		this.addRenderableWidget(button_show_tree);
-		button_show_tree1 = Button.builder(Component.translatable("gui.palamod.palahelptree.button_show_tree1"), e -> {
-		}).bounds(this.leftPos + 25, this.topPos + 50, 70, 20).build();
-		this.addRenderableWidget(button_show_tree1);
-		button_show_tree2 = Button.builder(Component.translatable("gui.palamod.palahelptree.button_show_tree2"), e -> {
-		}).bounds(this.leftPos + 25, this.topPos + 80, 70, 20).build();
-		this.addRenderableWidget(button_show_tree2);
-		button_show_tree3 = Button.builder(Component.translatable("gui.palamod.palahelptree.button_show_tree3"), e -> {
-		}).bounds(this.leftPos + 25, this.topPos + 114, 70, 20).build();
-		this.addRenderableWidget(button_show_tree3);
 		imagebutton_home_pixel_adminshop = new ImageButton(this.leftPos + -28, this.topPos + -10, 14, 18,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sommaire_btn.png"), ResourceLocation.parse("palamod:textures/screens/sommaire_btn.png")), e -> {
 					int x = PalahelptreeScreen.this.x;
 					int y = PalahelptreeScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(4, x, y, z));
-						PalahelptreeButtonMessage.handleButtonAction(entity, 4, x, y, z);
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(0, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
@@ -147,8 +139,8 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					int x = PalahelptreeScreen.this.x;
 					int y = PalahelptreeScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(5, x, y, z));
-						PalahelptreeButtonMessage.handleButtonAction(entity, 5, x, y, z);
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(1, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -162,8 +154,8 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 					int x = PalahelptreeScreen.this.x;
 					int y = PalahelptreeScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(6, x, y, z));
-						PalahelptreeButtonMessage.handleButtonAction(entity, 6, x, y, z);
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(2, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -181,5 +173,65 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 			}
 		};
 		this.addRenderableWidget(imagebutton_arrow_palahelp_right_off);
+		imagebutton_judeecercis_sapling = new ImageButton(this.leftPos + -1, this.topPos + 53, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/judeecercis_sapling.png"), ResourceLocation.parse("palamod:textures/screens/judeecercis_sappling_on.png")), e -> {
+					int x = PalahelptreeScreen.this.x;
+					int y = PalahelptreeScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(4, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_judeecercis_sapling);
+		imagebutton_sapjacaranda = new ImageButton(this.leftPos + 1, this.topPos + 27, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sap.jacaranda.png"), ResourceLocation.parse("palamod:textures/screens/jacaranda_sappling_on.png")), e -> {
+					int x = PalahelptreeScreen.this.x;
+					int y = PalahelptreeScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(5, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_sapjacaranda);
+		imagebutton_saperable = new ImageButton(this.leftPos + 0, this.topPos + 85, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sap.erable.png"), ResourceLocation.parse("palamod:textures/screens/erable_sappling_on.png")), e -> {
+					int x = PalahelptreeScreen.this.x;
+					int y = PalahelptreeScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(6, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 6, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_saperable);
+		imagebutton_sapostrya = new ImageButton(this.leftPos + -2, this.topPos + 117, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sap.ostrya.png"), ResourceLocation.parse("palamod:textures/screens/ostrya_sappling.png")), e -> {
+					int x = PalahelptreeScreen.this.x;
+					int y = PalahelptreeScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(7, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 7, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_sapostrya);
 	}
 }
