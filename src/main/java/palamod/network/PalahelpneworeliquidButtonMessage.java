@@ -1,8 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectnewOreLiquidsPalahelpProcedure;
-import palamod.procedures.ConnectarmorpalahelpProcedure;
-import palamod.procedures.ConnectPalahelpTreeProcedure;
+import palamod.procedures.ConnectNewPalahelpProcedure;
 
 import palamod.PalamodMod;
 
@@ -22,21 +20,21 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.SectionPos;
 
 @EventBusSubscriber
-public record NewPalahelpGuiIntroButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
-	public static final Type<NewPalahelpGuiIntroButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "new_palahelp_gui_intro_buttons"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, NewPalahelpGuiIntroButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, NewPalahelpGuiIntroButtonMessage message) -> {
+public record PalahelpneworeliquidButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+	public static final Type<PalahelpneworeliquidButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PalamodMod.MODID, "palahelpneworeliquid_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, PalahelpneworeliquidButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PalahelpneworeliquidButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
-	}, (RegistryFriendlyByteBuf buffer) -> new NewPalahelpGuiIntroButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
+	}, (RegistryFriendlyByteBuf buffer) -> new PalahelpneworeliquidButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 
 	@Override
-	public Type<NewPalahelpGuiIntroButtonMessage> type() {
+	public Type<PalahelpneworeliquidButtonMessage> type() {
 		return TYPE;
 	}
 
-	public static void handleData(final NewPalahelpGuiIntroButtonMessage message, final IPayloadContext context) {
+	public static void handleData(final PalahelpneworeliquidButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
 			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
@@ -52,24 +50,12 @@ public record NewPalahelpGuiIntroButtonMessage(int buttonID, int x, int y, int z
 			return;
 		if (buttonID == 0) {
 
-			ConnectnewOreLiquidsPalahelpProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
-
-			ConnectPalahelpTreeProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
-
-			ConnectarmorpalahelpProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
-			ConnectnewOreLiquidsPalahelpProcedure.execute(world, x, y, z, entity);
+			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PalamodMod.addNetworkMessage(NewPalahelpGuiIntroButtonMessage.TYPE, NewPalahelpGuiIntroButtonMessage.STREAM_CODEC, NewPalahelpGuiIntroButtonMessage::handleData);
+		PalamodMod.addNetworkMessage(PalahelpneworeliquidButtonMessage.TYPE, PalahelpneworeliquidButtonMessage.STREAM_CODEC, PalahelpneworeliquidButtonMessage::handleData);
 	}
 }

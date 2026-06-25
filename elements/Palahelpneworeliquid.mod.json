@@ -1,0 +1,413 @@
+{
+  "_fv": 85,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 318,
+    "height": 176,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "template_livre.png",
+          "use1Xscale": false,
+          "x": 53,
+          "y": 32,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_ingot.png",
+          "use1Xscale": false,
+          "x": 77,
+          "y": 63,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_amethyst",
+          "text": {
+            "fixedValue": "Amethyst"
+          },
+          "color": {
+            "value": -6750055,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 92,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_titane",
+          "text": {
+            "fixedValue": "Titane"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 100,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_ingot.png",
+          "use1Xscale": false,
+          "x": 73,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_paladium",
+          "text": {
+            "fixedValue": "Paladium"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 100,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ingot.png",
+          "use1Xscale": false,
+          "x": 72,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_ore.png",
+          "use1Xscale": false,
+          "x": 93,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_green_paladium",
+          "text": {
+            "fixedValue": "Green Paladium"
+          },
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 71,
+          "y": 139,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_ingot.png",
+          "use1Xscale": false,
+          "x": 73,
+          "y": 151,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_endium",
+          "text": {
+            "fixedValue": "Endium"
+          },
+          "color": {
+            "value": -16777012,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 96,
+          "y": 167,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_nugets_vfufu.png",
+          "use1Xscale": false,
+          "x": 74,
+          "y": 181,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ores_and_materials",
+          "text": {
+            "fixedValue": "Ores and materials"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 76,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_liquids",
+          "text": {
+            "fixedValue": "Liquids"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 277,
+          "y": 43,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "7angel.png",
+          "use1Xscale": false,
+          "x": 238,
+          "y": 66,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "6_fluid.png",
+          "use1Xscale": false,
+          "x": 237,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fake_water",
+          "text": {
+            "fixedValue": "Fake Water"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 291,
+          "y": 144,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_angelic_water",
+          "text": {
+            "fixedValue": "Angelic Water"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 290,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sommaire_btn",
+          "image": "sommaire_btn.png",
+          "hoveredImage": "sommaire_btn.png",
+          "onClick": {
+            "name": "ConnectNewPalahelp"
+          },
+          "x": 176,
+          "y": 31,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amethyst_ore.png",
+          "use1Xscale": false,
+          "x": 94,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "titane_ore.png",
+          "use1Xscale": false,
+          "x": 92,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_green_ore.png",
+          "use1Xscale": false,
+          "x": 94,
+          "y": 150,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endium_nugget_ore.png",
+          "use1Xscale": false,
+          "x": 95,
+          "y": 180,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_the_ultimate_ore_craftable_tho",
+          "text": {
+            "fixedValue": "The ultimate ore | Craftable though the crusher ( look the crusher page in the book )"
+          },
+          "width": 75,
+          "height": 27,
+          "x": 70,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_low_level_ore_easily_available",
+          "text": {
+            "fixedValue": "Low level ore, easily available in cave "
+          },
+          "width": 75,
+          "height": 30,
+          "x": 70,
+          "y": 52,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_durable_a_very_good_start_for_f",
+          "text": {
+            "fixedValue": "Durable, a very good start for first tools"
+          },
+          "width": 75,
+          "height": 29,
+          "x": 70,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_the_most_powerful_minable_ore_t",
+          "text": {
+            "fixedValue": "The most powerful minable ore, the standard for a good armor and for sets of tools"
+          },
+          "width": 75,
+          "height": 29,
+          "x": 70,
+          "y": 111,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_equivalent_to_paladium_but_more",
+          "text": {
+            "fixedValue": "Equivalent to paladium but more rare, stylish and GREEN"
+          },
+          "width": 75,
+          "height": 29,
+          "x": 70,
+          "y": 140,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "legend_power.png",
+          "use1Xscale": true,
+          "x": 278,
+          "y": 128,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_to_nullify_its_damage_you_can_u",
+          "text": {
+            "fixedValue": "To nullify its damage, you can use method like adding the enchanment fake water protection to your armor or using a legendary stone of power"
+          },
+          "width": 14,
+          "height": 13,
+          "x": 275,
+          "y": 125,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

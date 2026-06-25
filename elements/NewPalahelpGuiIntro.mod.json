@@ -102,7 +102,7 @@
           "text": "Ores",
           "isUndecorated": false,
           "onClick": {
-            "name": "Connectpalahelpore"
+            "name": "ConnectnewOreLiquidsPalahelp"
           },
           "width": 50,
           "height": 20,
@@ -149,6 +149,9 @@
           "name": "button_liquids",
           "text": "Liquids",
           "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectnewOreLiquidsPalahelp"
+          },
           "width": 61,
           "height": 20,
           "x": 296,

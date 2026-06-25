@@ -126,6 +126,12 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		}).bounds(this.leftPos + 232, this.topPos + 23, 61, 20).build();
 		this.addRenderableWidget(button_armors);
 		button_liquids = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_liquids"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(3, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}).bounds(this.leftPos + 232, this.topPos + 47, 61, 20).build();
 		this.addRenderableWidget(button_liquids);
 		button_commands = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_commands"), e -> {
