@@ -111,6 +111,7 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 		if (mouseX > leftPos + 103 && mouseX < leftPos + 142 && mouseY > topPos + 142 && mouseY < topPos + 167) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_trees"), mouseX, mouseY);
 			customTooltipShown = true;
+		}
 		if (!customTooltipShown)
 			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
