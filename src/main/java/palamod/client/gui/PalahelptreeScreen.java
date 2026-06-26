@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelptreeMenu;
 
+import palamod.procedures.TRADreturntosumarryProcedure;
 import palamod.procedures.GetImagePalahelpTreeProcedure;
 
 import palamod.network.PalahelptreeButtonMessage;
@@ -20,6 +21,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
+
+import java.util.stream.Collectors;
+import java.util.Arrays;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
@@ -81,7 +85,21 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + -32 && mouseX < leftPos + -10 && mouseY > topPos + -10 && mouseY < topPos + 10) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_return_to_summary"), mouseX, mouseY);
+			String hoverText = TRADreturntosumarryProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 213 && mouseX < leftPos + 253 && mouseY > topPos + 136 && mouseY < topPos + 159) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_go_to_palahelp_ore_and_liquids"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + -32 && mouseX < leftPos + 12 && mouseY > topPos + 138 && mouseY < topPos + 161) {
+			String hoverText = TRADreturntosumarryProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -166,6 +184,12 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 		this.addRenderableWidget(imagebutton_cross_no_button);
 		imagebutton_arrow_palahelp_right_off = new ImageButton(this.leftPos + 215, this.topPos + 138, 41, 20,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_on.png")), e -> {
+					int x = PalahelptreeScreen.this.x;
+					int y = PalahelptreeScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelptreeButtonMessage(3, x, y, z));
+						PalahelptreeButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

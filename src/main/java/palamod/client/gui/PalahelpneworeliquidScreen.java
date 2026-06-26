@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelpneworeliquidMenu;
 
+import palamod.procedures.TRADreturntosumarryProcedure;
+
 import palamod.network.PalahelpneworeliquidButtonMessage;
 
 import palamod.init.PalamodModScreens;
@@ -18,6 +20,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PalahelpneworeliquidScreen extends AbstractContainerScreen<PalahelpneworeliquidMenu> implements PalamodModScreens.ScreenAccessor {
@@ -26,6 +31,8 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private ImageButton imagebutton_sommaire_btn;
+	private ImageButton imagebutton_arrow_palahelp_left_off;
+	private ImageButton imagebutton_arrow_palahelp_right_off;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
 	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/amethyst_ingot.png");
 	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/titane_ingot.png");
@@ -86,6 +93,24 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_to_nullify_its_damage_you_can_u"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
+		if (mouseX > leftPos + 182 && mouseX < leftPos + 306 && mouseY > topPos + 106 && mouseY < topPos + 144) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_deals_dama"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 181 && mouseX < leftPos + 305 && mouseY > topPos + 33 && mouseY < topPos + 80) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_heals_when"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 119 && mouseX < leftPos + 138 && mouseY > topPos + -4 && mouseY < topPos + 18) {
+			String hoverText = TRADreturntosumarryProcedure.execute();
+			if (hoverText != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 103 && mouseX < leftPos + 142 && mouseY > topPos + 142 && mouseY < topPos + 167) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_trees"), mouseX, mouseY);
+			customTooltipShown = true;
 		if (!customTooltipShown)
 			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -152,5 +177,29 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 			}
 		};
 		this.addRenderableWidget(imagebutton_sommaire_btn);
+		imagebutton_arrow_palahelp_left_off = new ImageButton(this.leftPos + 104, this.topPos + 146, 41, 20,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_left_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_left_on.png")), e -> {
+					int x = PalahelpneworeliquidScreen.this.x;
+					int y = PalahelpneworeliquidScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpneworeliquidButtonMessage(1, x, y, z));
+						PalahelpneworeliquidButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_arrow_palahelp_left_off);
+		imagebutton_arrow_palahelp_right_off = new ImageButton(this.leftPos + 262, this.topPos + 146, 41, 20,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_on.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_arrow_palahelp_right_off);
 	}
 }

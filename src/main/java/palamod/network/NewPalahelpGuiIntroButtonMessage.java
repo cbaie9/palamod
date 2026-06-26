@@ -3,6 +3,7 @@ package palamod.network;
 import palamod.procedures.ConnectnewOreLiquidsPalahelpProcedure;
 import palamod.procedures.ConnectarmorpalahelpProcedure;
 import palamod.procedures.ConnectPalahelpTreeProcedure;
+import palamod.procedures.ConnectNewPalahelpCommandProcedure;
 
 import palamod.PalamodMod;
 
@@ -65,6 +66,10 @@ public record NewPalahelpGuiIntroButtonMessage(int buttonID, int x, int y, int z
 		if (buttonID == 3) {
 
 			ConnectnewOreLiquidsPalahelpProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			ConnectNewPalahelpCommandProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

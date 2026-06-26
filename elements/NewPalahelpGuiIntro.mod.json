@@ -3,11 +3,11 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 300,
-    "height": 166,
+    "width": 320,
+    "height": 180,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
@@ -32,7 +32,7 @@
         "data": {
           "name": "label_thanks_for_install_my_mod",
           "text": {
-            "fixedValue": "Thanks for install my mod"
+            "fixedValue": "Thanks for installing"
           },
           "color": {
             "value": -12829636,
@@ -165,6 +165,9 @@
           "name": "button_commands",
           "text": "Commands",
           "isUndecorated": false,
+          "onClick": {
+            "name": "ConnectNewPalahelpCommand"
+          },
           "width": 50,
           "height": 20,
           "x": 242,
@@ -275,6 +278,23 @@
           "height": 12,
           "x": 142,
           "y": 185,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_my_mod",
+          "text": {
+            "fixedValue": "my mod"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 71,
+          "y": 60,
           "locked": false
         }
       }

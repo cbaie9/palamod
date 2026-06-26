@@ -1,0 +1,585 @@
+{
+  "_fv": 85,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 320,
+    "height": 182,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "template_livre.png",
+          "use1Xscale": false,
+          "x": 54,
+          "y": 30,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_command",
+          "text": {
+            "fixedValue": "Palahelp Command"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 89,
+          "y": 42,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spawn",
+          "text": {
+            "fixedValue": "/spawn"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 75,
+          "y": 59,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_setspawn",
+          "text": {
+            "fixedValue": "/setspawn"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 75,
+          "y": 70,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_sethome_name",
+          "text": {
+            "fixedValue": "/sethome [name]"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 75,
+          "y": 92,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_feed",
+          "text": {
+            "fixedValue": "/feed"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 73,
+          "y": 131,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palakit",
+          "text": {
+            "fixedValue": "/kit"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 73,
+          "y": 121,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_home_nameinfo",
+          "text": {
+            "fixedValue": "/home [name|Info|list]"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 74,
+          "y": 101,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_delhome",
+          "text": {
+            "fixedValue": "/delhome"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 74,
+          "y": 113,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_adminshop",
+          "text": {
+            "fixedValue": "/adminshop [item]"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 75,
+          "y": 141,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_gm_0123",
+          "text": {
+            "fixedValue": "/gm [0|1|2|3]"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 72,
+          "y": 150,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palalag_force_admin",
+          "text": {
+            "fixedValue": "/palalag force"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 73,
+          "y": 159,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rtp",
+          "text": {
+            "fixedValue": "/rtp"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 71,
+          "y": 169,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_left_off",
+          "image": "arrow_palahelp_left_off.png",
+          "hoveredImage": "arrow_palahelp_left_on.png",
+          "x": 71,
+          "y": 179,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sommaire_btn",
+          "image": "sommaire_btn.png",
+          "hoveredImage": "sommaire_btn.png",
+          "onClick": {
+            "name": "ConnectNewPalahelp"
+          },
+          "x": 183,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tra_dreturntosumarry",
+          "text": {
+            "fixedValue": "",
+            "name": "TRADreturntosumarry"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 181,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_money",
+          "text": {
+            "fixedValue": "/money"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 232,
+          "y": 42,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_pay",
+          "text": {
+            "fixedValue": "/pay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 231,
+          "y": 51,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_back",
+          "text": {
+            "fixedValue": "/back"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 230,
+          "y": 61,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_nether",
+          "text": {
+            "fixedValue": "/nether"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 229,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_jobs",
+          "text": {
+            "fixedValue": "/jobs"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 73,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleport_you_to_the_spawn_the_ad",
+          "text": {
+            "fixedValue": "Teleport you to the spawn the administrator has setup | If the spawn has not been setup the command will not work"
+          },
+          "width": 38,
+          "height": 13,
+          "x": 74,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_administrators_only_setup_at",
+          "text": {
+            "fixedValue": "[ Administrators only ] Setup at you position the spawn the players can teleport using /spawn"
+          },
+          "width": 53,
+          "height": 11,
+          "x": 74,
+          "y": 71,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleport_to_the_home_named_in_th",
+          "text": {
+            "fixedValue": "Teleport to the home named in the argument You can also consult with the list argument a list of your home or consult with the argument info the infomation of the named home"
+          },
+          "width": 124,
+          "height": 13,
+          "x": 74,
+          "y": 102,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_open_the_jobs_interface",
+          "text": {
+            "fixedValue": "Open the jobs interface"
+          },
+          "width": 29,
+          "height": 11,
+          "x": 74,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_create_a_home_with_given_name_in",
+          "text": {
+            "fixedValue": "Create a home with given name in the 1st argument"
+          },
+          "width": 82,
+          "height": 9,
+          "x": 74,
+          "y": 93,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_delete_the_given_home_in_the_1st",
+          "text": {
+            "fixedValue": "Delete the given home in the 1st argument"
+          },
+          "width": 45,
+          "height": 8,
+          "x": 74,
+          "y": 115,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_give_the_player_a_starting_kit",
+          "text": {
+            "fixedValue": "Give the player a starting kit ( the command be used only 1 time by normal players but a infinite amount of time for op players )"
+          },
+          "width": 28,
+          "height": 10,
+          "x": 74,
+          "y": 123,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_give_saturation_2_to_the_player",
+          "text": {
+            "fixedValue": "Give saturation 2 to the player who execute the command to feed him. This command can disabled for non op players using gamerule. This potential restriction does not apply to administrators"
+          },
+          "width": 27,
+          "height": 9,
+          "x": 74,
+          "y": 133,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_open_the_adminshop_where_you_can",
+          "text": {
+            "fixedValue": "Open the Adminshop where you can buy items using Palamod money system. The argument is to directly open a item page"
+          },
+          "width": 90,
+          "height": 10,
+          "x": 74,
+          "y": 142,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_administrators_only_the_old_ga",
+          "text": {
+            "fixedValue": "[Administrators only] The old Gamemode command re-added"
+          },
+          "width": 69,
+          "height": 9,
+          "x": 74,
+          "y": 152,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_administrators_only_execute",
+          "text": {
+            "fixedValue": "[ Administrators only ] Execute a clearlag where all entity are killed except players Be careful with this command"
+          },
+          "width": 77,
+          "height": 9,
+          "x": 74,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleport_at_a_random_location_on",
+          "text": {
+            "fixedValue": "Teleport at a random location on the map. Can be used only three time per player. This restriction does not apply to administrators"
+          },
+          "width": 31,
+          "height": 10,
+          "x": 73,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_show_the_current_player_money_f",
+          "text": {
+            "fixedValue": "Show the current player Money. For Admin it can modify or show any player balance."
+          },
+          "width": 34,
+          "height": 12,
+          "x": 231,
+          "y": 42,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_pay_the_given_player_the_given_a",
+          "text": {
+            "fixedValue": "Pay the given player the given amount of money if the current players have enough money."
+          },
+          "width": 34,
+          "height": 8,
+          "x": 231,
+          "y": 54,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleport_at_the_position_where_y",
+          "text": {
+            "fixedValue": "Teleport at the position where you were before the last teleportation. Each /tp, /spawn and /home count as a new 'checkpoint'"
+          },
+          "width": 27,
+          "height": 10,
+          "x": 231,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleport_at_random_location_in_t",
+          "text": {
+            "fixedValue": "Teleport at random location in the nether. Need to have more than 12 in miner level or be a administrators to use the command."
+          },
+          "width": 38,
+          "height": 9,
+          "x": 231,
+          "y": 72,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -34,7 +34,6 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 	private Button button_palamachine;
 	private Button button_crusher;
 	private Button button_more;
-	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/new_palahelp_gui_intro.png");
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
 
 	public NewPalahelpGuiIntroScreen(NewPalahelpGuiIntroMenu container, Inventory inventory, Component text) {
@@ -44,8 +43,8 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 300;
-		this.imageHeight = 166;
+		this.imageWidth = 320;
+		this.imageHeight = 180;
 	}
 
 	@Override
@@ -58,7 +57,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 78 && mouseX < leftPos + 128 && mouseY > topPos + 148 && mouseY < topPos + 160) {
+		if (mouseX > leftPos + 88 && mouseX < leftPos + 138 && mouseY > topPos + 155 && mouseY < topPos + 167) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_can_also_be_accessible_by_the_co"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
@@ -71,8 +70,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(IMAGE_0, this.leftPos + -9, this.topPos + -9, 0, 0, 320, 180, 320, 180);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 1, this.topPos + -2, 0, 0, 320, 180, 320, 180);
 		RenderSystem.disableBlend();
 	}
 
@@ -87,12 +85,13 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_palahelp"), 7, 3, -52480, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod"), 5, 14, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m"), 7, 135, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_for_the_mod"), 6, 148, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_summary"), 208, 7, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_machines"), 177, 92, -16777063, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_palahelp"), 17, 10, -52480, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod"), 15, 21, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m"), 17, 142, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_for_the_mod"), 16, 155, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_summary"), 218, 14, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_machines"), 187, 99, -16777063, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_my_mod"), 17, 30, -12829636, false);
 	}
 
 	@Override
@@ -105,7 +104,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(0, x, y, z));
 				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 178, this.topPos + 23, 50, 20).build();
+		}).bounds(this.leftPos + 188, this.topPos + 30, 50, 20).build();
 		this.addRenderableWidget(button_ores);
 		button_trees = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_trees"), e -> {
 			int x = NewPalahelpGuiIntroScreen.this.x;
@@ -114,7 +113,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(1, x, y, z));
 				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 178, this.topPos + 47, 50, 20).build();
+		}).bounds(this.leftPos + 188, this.topPos + 54, 50, 20).build();
 		this.addRenderableWidget(button_trees);
 		button_armors = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_armors"), e -> {
 			int x = NewPalahelpGuiIntroScreen.this.x;
@@ -123,7 +122,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(2, x, y, z));
 				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 232, this.topPos + 23, 61, 20).build();
+		}).bounds(this.leftPos + 242, this.topPos + 30, 61, 20).build();
 		this.addRenderableWidget(button_armors);
 		button_liquids = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_liquids"), e -> {
 			int x = NewPalahelpGuiIntroScreen.this.x;
@@ -132,25 +131,31 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(3, x, y, z));
 				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}).bounds(this.leftPos + 232, this.topPos + 47, 61, 20).build();
+		}).bounds(this.leftPos + 242, this.topPos + 54, 61, 20).build();
 		this.addRenderableWidget(button_liquids);
 		button_commands = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_commands"), e -> {
-		}).bounds(this.leftPos + 178, this.topPos + 69, 50, 20).build();
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(4, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}).bounds(this.leftPos + 188, this.topPos + 76, 50, 20).build();
 		this.addRenderableWidget(button_commands);
 		button_jobs = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_jobs"), e -> {
-		}).bounds(this.leftPos + 232, this.topPos + 69, 61, 20).build();
+		}).bounds(this.leftPos + 242, this.topPos + 76, 61, 20).build();
 		this.addRenderableWidget(button_jobs);
 		button_grinder = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_grinder"), e -> {
-		}).bounds(this.leftPos + 178, this.topPos + 106, 50, 20).build();
+		}).bounds(this.leftPos + 188, this.topPos + 113, 50, 20).build();
 		this.addRenderableWidget(button_grinder);
 		button_palamachine = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_palamachine"), e -> {
-		}).bounds(this.leftPos + 232, this.topPos + 106, 61, 20).build();
+		}).bounds(this.leftPos + 242, this.topPos + 113, 61, 20).build();
 		this.addRenderableWidget(button_palamachine);
 		button_crusher = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_crusher"), e -> {
-		}).bounds(this.leftPos + 178, this.topPos + 128, 50, 20).build();
+		}).bounds(this.leftPos + 188, this.topPos + 135, 50, 20).build();
 		this.addRenderableWidget(button_crusher);
 		button_more = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_more"), e -> {
-		}).bounds(this.leftPos + 232, this.topPos + 127, 61, 20).build();
+		}).bounds(this.leftPos + 242, this.topPos + 134, 61, 20).build();
 		this.addRenderableWidget(button_more);
 	}
 }

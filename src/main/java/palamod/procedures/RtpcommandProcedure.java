@@ -31,7 +31,7 @@ public class RtpcommandProcedure {
 		double yrandom = 0;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			if ((world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == PalamodModBlocks.NBT_BLOCK.get()) {
-				if (!(3 <= getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID())))) {
+				if (!(3 <= getBlockNBTNumber(world, new BlockPos(0, 10, 0), ("use_trp_overworld_" + entity.getStringUUID()))) || entity.hasPermissions(2)) {
 					while (!(1 < xrandom && 1000000 >= xrandom && 1 < zrandom && 1000000 >= xrandom)) {
 						xrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 						zrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));

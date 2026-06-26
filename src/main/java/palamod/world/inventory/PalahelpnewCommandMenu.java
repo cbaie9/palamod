@@ -22,11 +22,11 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-public class NewPalahelpGuiIntroMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
+public class PalahelpnewCommandMenu extends AbstractContainerMenu implements PalamodModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 19)
+			if (!this.containsKey(key) && this.size() >= 37)
 				return null;
 			return super.put(key, value);
 		}
@@ -42,8 +42,8 @@ public class NewPalahelpGuiIntroMenu extends AbstractContainerMenu implements Pa
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public NewPalahelpGuiIntroMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PalamodModMenus.NEW_PALAHELP_GUI_INTRO.get(), id);
+	public PalahelpnewCommandMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(PalamodModMenus.PALAHELPNEW_COMMAND.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);

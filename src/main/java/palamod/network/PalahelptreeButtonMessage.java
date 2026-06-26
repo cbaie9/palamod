@@ -60,6 +60,10 @@ public record PalahelptreeButtonMessage(int buttonID, int x, int y, int z) imple
 
 			CloseguiProcedure.execute(entity);
 		}
+		if (buttonID == 3) {
+
+			ConnectnewOreLiquidsPalahelpProcedure.execute(world, x, y, z, entity);
+		}
 		if (buttonID == 4) {
 
 			SetImageJudeecercisProcedure.execute(entity);

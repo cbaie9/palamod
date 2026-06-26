@@ -180,7 +180,8 @@
         "data": {
           "name": "tooltip_return_to_summary",
           "text": {
-            "fixedValue": "Return to summary"
+            "fixedValue": "Return to summary",
+            "name": "TRADreturntosumarry"
           },
           "width": 22,
           "height": 20,
@@ -195,6 +196,9 @@
           "name": "imagebutton_arrow_palahelp_right_off",
           "image": "arrow_palahelp_right_off.png",
           "hoveredImage": "arrow_palahelp_right_on.png",
+          "onClick": {
+            "name": "ConnectnewOreLiquidsPalahelp"
+          },
           "x": 319,
           "y": 175,
           "locked": false
@@ -267,6 +271,35 @@
           },
           "x": 235,
           "y": 49,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_ore_and_liquids",
+          "text": {
+            "fixedValue": "Go to Palahelp Ore and Liquids"
+          },
+          "width": 40,
+          "height": 23,
+          "x": 317,
+          "y": 173,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tra_dreturntosumarry",
+          "text": {
+            "fixedValue": "",
+            "name": "TRADreturntosumarry"
+          },
+          "width": 44,
+          "height": 23,
+          "x": 72,
+          "y": 175,
           "locked": false
         }
       }

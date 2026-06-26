@@ -106,6 +106,7 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.JOBSALCHIGUI.get(), JobsalchiguiScreen::new);
 		event.register(PalamodModMenus.NEW_PALAHELP_GUI_INTRO.get(), NewPalahelpGuiIntroScreen::new);
 		event.register(PalamodModMenus.PALAHELPNEWORELIQUID.get(), PalahelpneworeliquidScreen::new);
+		event.register(PalamodModMenus.PALAHELPNEW_COMMAND.get(), PalahelpnewCommandScreen::new);
 	}
 
 	public interface ScreenAccessor {
