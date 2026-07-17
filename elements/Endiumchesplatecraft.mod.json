@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "CUSTOM:EndiumIngot",
+      "",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumArmor.body"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumArmor.body",
     "name": "endiumchesplatecraft",
     "namespace": "mod"
   }

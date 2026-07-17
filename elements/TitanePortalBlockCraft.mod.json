@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      }
+      "CUSTOM:Shinyjudeecerciswood"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      },
-      {
-        "value": "CUSTOM:Shinyjudeecerciswood"
-      }
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:Shinyjudeecerciswood",
+      "CUSTOM:Shinyjudeecerciswood"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:TitanePortalBlock"
-    },
+    "recipeReturnStack": "CUSTOM:TitanePortalBlock",
     "name": "titane_portal_block_craft",
     "namespace": "mod"
   }

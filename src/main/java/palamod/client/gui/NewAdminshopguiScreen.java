@@ -124,7 +124,7 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 	@Override
 	public void init() {
 		super.init();
-		number_buy = new EditBox(this.font, this.leftPos + 27, this.topPos + 88, 118, 18, Component.translatable("gui.palamod.new_adminshopgui.number_buy"));
+		number_buy = new EditBox(this.font, this.leftPos + 26, this.topPos + 87, 120, 20, Component.translatable("gui.palamod.new_adminshopgui.number_buy"));
 		number_buy.setMaxLength(8192);
 		number_buy.setResponder(content -> {
 			if (!menuStateUpdateActive)

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.WOODEN_SWORD"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.WOODEN_SWORD"
-      },
-      {
-        "value": "Blocks.PLANKS"
-      },
-      {
-        "value": "Items.WOODEN_SWORD"
-      },
-      {
-        "value": "Blocks.PLANKS"
-      },
-      {
-        "value": "Blocks.PLANKS"
-      },
-      {
-        "value": "Blocks.PLANKS"
-      }
+      "",
+      "Items.WOODEN_SWORD",
+      "",
+      "Items.WOODEN_SWORD",
+      "Blocks.PLANKS",
+      "Items.WOODEN_SWORD",
+      "Blocks.PLANKS",
+      "Blocks.PLANKS",
+      "Blocks.PLANKS"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Woddenspike"
-    },
+    "recipeReturnStack": "CUSTOM:Woddenspike",
     "name": "woodenspikecraft",
     "namespace": "mod"
   }

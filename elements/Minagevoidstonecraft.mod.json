@@ -1,26 +1,16 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Voidstone"
-      },
-      {
-        "value": "Items.ENDER_PEARL"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanechestv2"
-      },
-      {
-        "value": "CUSTOM:Minagevoidstone"
-      }
+      "CUSTOM:Voidstone",
+      "Items.ENDER_PEARL",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanechestv2",
+      "CUSTOM:Minagevoidstone"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -28,37 +18,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.ENDER_PEARL"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Voidstone"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titanechestv2"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "Items.ENDER_PEARL",
+      "",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Voidstone",
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:Titanechestv2",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Minagevoidstone"
-    },
+    "recipeReturnStack": "CUSTOM:Minagevoidstone",
     "name": "minagevoidstonecraft",
     "namespace": "mod"
   }

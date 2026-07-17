@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -46,9 +46,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "hardness": 0.0,
     "resistance": 0.0,
@@ -60,29 +58,15 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
+    "soundOnStep": "PLANT",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "PLANT"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "stepSound": "",
+    "placeSound": "",
+    "hitSound": "",
+    "fallSound": "",
     "useLootTableForDrops": false,
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -91,9 +75,7 @@
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
     "ignitedByLava": false,

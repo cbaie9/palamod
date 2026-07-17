@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "grinder_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": "CUSTOM:Swordpatern"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneSword",
+      "CUSTOM:Swordpatern"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneSword",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Swordpatern"
-    },
+    "recipeReturnStack": "CUSTOM:Swordpatern",
     "name": "swordpaterncraft",
     "namespace": "mod"
   }

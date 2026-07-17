@@ -4,8 +4,6 @@ import palamod.procedures.FightingTimeOverlayGetLogicProcedure;
 import palamod.procedures.FightingTimeOverlayGetLabelProcedure;
 import palamod.procedures.FightimeOverlayGetindexProcedure;
 
-import org.checkerframework.checker.units.qual.h;
-
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;

@@ -41,9 +41,12 @@ public class BackCommandProcessProcedure {
 						readmain = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 						{
 							Entity _ent = entity;
-							_ent.teleportTo(readmain.get("x_pos").getAsDouble(), readmain.get("y_pos").getAsDouble(), readmain.get("z_pos").getAsDouble());
+							double _tx = readmain.get("x_pos").getAsDouble();
+							double _ty = readmain.get("y_pos").getAsDouble();
+							double _tz = readmain.get("z_pos").getAsDouble();
+							_ent.teleportTo(_tx, _ty, _tz);
 							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(readmain.get("x_pos").getAsDouble(), readmain.get("y_pos").getAsDouble(), readmain.get("z_pos").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 						}
 					} catch (IOException e) {
 						e.printStackTrace();

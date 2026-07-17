@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:PaladiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiumcore"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiumcore",
     "name": "paladium_core_craft",
     "namespace": "mod"
   }

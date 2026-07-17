@@ -111,9 +111,12 @@ public class HomeprocessProcedure {
 									BacklogOnCustomTpProcedure.execute(x, y, z, entity);
 									{
 										Entity _ent = entity;
-										_ent.teleportTo(main.get("home_x").getAsDouble(), main.get("home_y").getAsDouble(), main.get("home_z").getAsDouble());
+										double _tx = main.get("home_x").getAsDouble();
+										double _ty = main.get("home_y").getAsDouble();
+										double _tz = main.get("home_z").getAsDouble();
+										_ent.teleportTo(_tx, _ty, _tz);
 										if (_ent instanceof ServerPlayer _serverPlayer)
-											_serverPlayer.connection.teleport(main.get("home_x").getAsDouble(), main.get("home_y").getAsDouble(), main.get("home_z").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+											_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 									}
 									if (world instanceof ServerLevel _level)
 										_level.getServer().getCommands().performPrefixedCommand(

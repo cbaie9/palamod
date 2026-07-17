@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Spade",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 36.0,
     "attackSpeed": 0.5,
@@ -27,9 +25,7 @@
       "fixedValue": false
     },
     "repairItems": [
-      {
-        "value": "CUSTOM:Endiumnugget"
-      }
+      "CUSTOM:Endiumnugget"
     ],
     "immuneToFire": true,
     "blockDropsTier": "NETHERITE",
@@ -37,8 +33,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onBlockDestroyedWithTool": {
-      "name": "Excavatorprocessamethyst"
-    }
+    "onBlockDestroyedWithTool": "Excavatorprocessamethyst"
   }
 }

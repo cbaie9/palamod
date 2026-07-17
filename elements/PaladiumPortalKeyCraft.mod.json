@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumSword"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      }
+      "CUSTOM:PaladiumSword",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Lightningpotion"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:PaladiumSword"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:PaladiumSword"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:PaladiumSword",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:PaladiumSword",
+      "",
+      "CUSTOM:Paladiumstick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:PaladiumPortalKey"
-    },
+    "recipeReturnStack": "CUSTOM:PaladiumPortalKey",
     "name": "paladium_portal_key_craft",
     "namespace": "mod"
   }

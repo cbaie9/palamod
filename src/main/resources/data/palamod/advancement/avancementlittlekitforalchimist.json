@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "avancementlittlekitforalchimist_0": {
+    "avancementlittlekitforalchimist_1": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

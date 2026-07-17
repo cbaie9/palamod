@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "MultiTool",
@@ -17,9 +17,7 @@
       ]
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Pickaxeofgodstab"
-      }
+      "CUSTOM:Pickaxeofgodstab"
     ],
     "efficiency": 11050.0,
     "attackSpeed": 1.5,
@@ -36,8 +34,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onBlockDestroyedWithTool": {
-      "name": "Potgenchant"
-    }
+    "onBlockDestroyedWithTool": "Potgenchant"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:TitaneShovel",
+      "CUSTOM:TitaneShovel",
+      "CUSTOM:TitaneShovel",
+      "",
+      "CUSTOM:Titanestick",
+      "",
+      "",
+      "CUSTOM:Titanestick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titaneexcavator"
-    },
+    "recipeReturnStack": "CUSTOM:Titaneexcavator",
     "name": "excavatortitanecraft",
     "namespace": "mod"
   }

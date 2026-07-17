@@ -17,13 +17,16 @@ public class Elevator_processProcedure {
 			entity.getPersistentData().putBoolean("player.jumping", false);
 			y_pos = y;
 			add_num = 1;
-			for (int index0 = 0; index0 < 320; index0++) {
+			for (int index18 = 0; index18 < 320; index18++) {
 				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo((x + 0.5), (y_pos - add_num + 1), (z + 0.5));
+						double _tx = (x + 0.5);
+						double _ty = (y_pos - add_num + 1);
+						double _tz = (z + 0.5);
+						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((x + 0.5), (y_pos - add_num + 1), (z + 0.5), _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
 					break;
 				} else {
@@ -35,13 +38,16 @@ public class Elevator_processProcedure {
 			entity.getPersistentData().putBoolean("player.jumping", false);
 			y_pos = y;
 			add_num = 1;
-			for (int index1 = 0; index1 < 320; index1++) {
+			for (int index19 = 0; index19 < 320; index19++) {
 				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
-						_ent.teleportTo((x + 0.5), (y_pos + add_num + 1), (z + 0.5));
+						double _tx = (x + 0.5);
+						double _ty = (y_pos + add_num + 1);
+						double _tz = (z + 0.5);
+						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((x + 0.5), (y_pos + add_num + 1), (z + 0.5), _ent.getYRot(), _ent.getXRot());
+							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
 					break;
 				} else {

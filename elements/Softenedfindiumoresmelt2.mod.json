@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Blasting",
@@ -11,12 +11,8 @@
     "cookingTime": 100,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "blastingInputStack": {
-      "value": "CUSTOM:Softenedfindiumore"
-    },
-    "blastingReturnStack": {
-      "value": "CUSTOM:Findium"
-    },
+    "blastingInputStack": "CUSTOM:Softenedfindiumore",
+    "blastingReturnStack": "CUSTOM:Findium",
     "name": "softenedfindiumoresmelt_2",
     "namespace": "mod"
   }

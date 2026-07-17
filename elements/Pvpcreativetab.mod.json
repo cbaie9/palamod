@@ -1,11 +1,9 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tab",
   "definition": {
     "name": "Palamod : Pvp tab",
-    "icon": {
-      "value": "CUSTOM:Stickofgods"
-    },
+    "icon": "CUSTOM:Stickofgods",
     "showSearch": false
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks",
+      "",
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks",
+      "",
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Jacarandadoor"
-    },
+    "recipeReturnStack": "CUSTOM:Jacarandadoor",
     "name": "jacarandadoorcraft",
     "namespace": "mod"
   }

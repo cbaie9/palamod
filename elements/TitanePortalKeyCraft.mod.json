@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      }
+      "CUSTOM:TitaneSword",
+      "CUSTOM:Titanestick",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Compressedtitane"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": "CUSTOM:Lightningpotion"
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:Titanestick",
+      "CUSTOM:Lightningpotion",
+      "CUSTOM:TitaneSword",
+      "CUSTOM:Compressedtitane",
+      "CUSTOM:TitaneSword",
+      "",
+      "CUSTOM:Titanestick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:TitanePortalKey"
-    },
+    "recipeReturnStack": "CUSTOM:TitanePortalKey",
     "name": "titane_portal_key_craft",
     "namespace": "mod"
   }

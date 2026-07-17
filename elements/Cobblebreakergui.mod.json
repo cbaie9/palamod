@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -47,12 +47,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexpiron"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexpiron"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexpiron",
+          "onStackTransfer": "Cobblebreakergivexpiron",
           "x": 143,
           "y": 99,
           "locked": false
@@ -66,12 +62,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexpgold"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexpgold"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexpgold",
+          "onStackTransfer": "Cobblebreakergivexpgold",
           "x": 164,
           "y": 99,
           "locked": false
@@ -85,12 +77,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexpdiamond"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexpdiamond"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexpdiamond",
+          "onStackTransfer": "Cobblebreakergivexpdiamond",
           "x": 185,
           "y": 99,
           "locked": false
@@ -104,12 +92,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexpamethyst"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexpamethyst"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexpamethyst",
+          "onStackTransfer": "Cobblebreakergivexpamethyst",
           "x": 206,
           "y": 99,
           "locked": false
@@ -123,12 +107,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexptitane"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexptitane"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexptitane",
+          "onStackTransfer": "Cobblebreakergivexptitane",
           "x": 227,
           "y": 99,
           "locked": false
@@ -142,12 +122,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexppaladium"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexppaladium"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexppaladium",
+          "onStackTransfer": "Cobblebreakergivexppaladium",
           "x": 248,
           "y": 99,
           "locked": false
@@ -161,12 +137,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Cobblebreakergivexpgreenpaladium"
-          },
-          "onStackTransfer": {
-            "name": "Cobblebreakergivexpgreenpaladium"
-          },
+          "onTakenFromSlot": "Cobblebreakergivexpgreenpaladium",
+          "onStackTransfer": "Cobblebreakergivexpgreenpaladium",
           "x": 269,
           "y": 99,
           "locked": false

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumchestv2"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Blocks.HOPPER"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": "Items.LEATHER"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumchestv2",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "Blocks.HOPPER",
+      "CUSTOM:PaladiumIngot",
+      "Items.LEATHER",
+      "CUSTOM:Endiumnugget",
+      "Items.LEATHER"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumbackpack"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumbackpack",
     "name": "backpackendiumcraft",
     "namespace": "mod"
   }

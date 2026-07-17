@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -16,9 +16,7 @@
       "name": "CraftableToolTipText"
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 50.0,
     "attackSpeed": 1.0,
@@ -29,9 +27,7 @@
       "fixedValue": false
     },
     "repairItems": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "CUSTOM:EndiumIngot"
     ],
     "immuneToFire": true,
     "blockDropsTier": "NETHERITE",
@@ -39,11 +35,7 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onItemInUseTick": {
-      "name": "Paladiumpickaxehaste3"
-    },
-    "onBlockDestroyedWithTool": {
-      "name": "Hammernormal"
-    }
+    "onItemInUseTick": "Paladiumpickaxehaste3",
+    "onBlockDestroyedWithTool": "Hammernormal"
   }
 }

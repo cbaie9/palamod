@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumslab"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumslab",
     "name": "endiumslabcraft",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "potion",
   "definition": {
     "potionName": "Potion of Antifake",
@@ -8,9 +8,7 @@
     "arrowName": "Arrow of Antifake",
     "effects": [
       {
-        "effect": {
-          "value": "CUSTOM:Antifake"
-        },
+        "effect": "CUSTOM:Antifake",
         "duration": 3600,
         "infinite": false,
         "amplifier": 0,
@@ -18,9 +16,7 @@
         "showParticles": true
       },
       {
-        "effect": {
-          "value": "WATER_BREATHING"
-        },
+        "effect": "WATER_BREATHING",
         "duration": 3600,
         "infinite": false,
         "amplifier": 0,

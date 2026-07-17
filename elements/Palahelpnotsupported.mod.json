@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -137,9 +137,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 280,
           "y": 41,
           "locked": false
@@ -151,9 +149,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 259,
           "y": 40,
           "locked": false
@@ -165,9 +161,7 @@
           "name": "imagebutton_language_btte",
           "image": "language_btte.png",
           "hoveredImage": "language_btte_poi.png",
-          "onClick": {
-            "name": "Forcechlanguage"
-          },
+          "onClick": "Forcechlanguage",
           "x": 202,
           "y": 178,
           "locked": false

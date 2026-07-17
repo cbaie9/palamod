@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "wooden_pressure_plate",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:DeadPlanks"
-      }
+      "CUSTOM:DeadPlanks"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "REDSTONE",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:DeadPlanks"
-      },
-      {
-        "value": "CUSTOM:DeadPlanks"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:DeadPlanks",
+      "CUSTOM:DeadPlanks",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:DeadPressurePlate"
-    },
+    "recipeReturnStack": "CUSTOM:DeadPressurePlate",
     "name": "dead_pressure_plate_recipe",
     "namespace": "mod"
   }

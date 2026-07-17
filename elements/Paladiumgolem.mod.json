@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "livingentity",
   "definition": {
     "mobName": "Paladium golem",
@@ -25,31 +25,17 @@
       "falpha": 0.0
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "isBoss": true,
     "bossBarColor": "RED",
     "bossBarType": "PROGRESS",
-    "equipmentMainHand": {
-      "value": ""
-    },
-    "equipmentOffHand": {
-      "value": ""
-    },
-    "equipmentHelmet": {
-      "value": ""
-    },
-    "equipmentBody": {
-      "value": ""
-    },
-    "equipmentLeggings": {
-      "value": ""
-    },
-    "equipmentBoots": {
-      "value": ""
-    },
+    "equipmentMainHand": "",
+    "equipmentOffHand": "",
+    "equipmentHelmet": "",
+    "equipmentBody": "",
+    "equipmentLeggings": "",
+    "equipmentBoots": "",
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 3,
@@ -87,21 +73,11 @@
     "immuneToAnvil": false,
     "immuneToWither": true,
     "immuneToDragonBreath": true,
-    "mobDrop": {
-      "value": ""
-    },
-    "livingSound": {
-      "value": ""
-    },
-    "hurtSound": {
-      "value": "entity.generic.hurt"
-    },
-    "deathSound": {
-      "value": "entity.generic.death"
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "mobDrop": "",
+    "livingSound": "",
+    "hurtSound": "entity.generic.hurt",
+    "deathSound": "entity.generic.death",
+    "stepSound": "",
     "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "IronGolem",
@@ -109,14 +85,10 @@
     "breedable": false,
     "tameable": true,
     "breedTriggerItems": [
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      }
+      "CUSTOM:PaladiumBlock"
     ],
     "ranged": false,
-    "rangedAttackItem": {
-      "value": ""
-    },
+    "rangedAttackItem": "",
     "rangedItemType": "Default item",
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,

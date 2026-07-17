@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "amethyst_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": "CUSTOM:AmethysteShovel"
-      },
-      {
-        "value": "CUSTOM:Amethystexacvator"
-      }
+      "CUSTOM:Amethytestick",
+      "CUSTOM:AmethysteShovel",
+      "CUSTOM:Amethystexacvator"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:AmethysteShovel"
-      },
-      {
-        "value": "CUSTOM:AmethysteShovel"
-      },
-      {
-        "value": "CUSTOM:AmethysteShovel"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:AmethysteShovel",
+      "CUSTOM:AmethysteShovel",
+      "CUSTOM:AmethysteShovel",
+      "",
+      "CUSTOM:Amethytestick",
+      "",
+      "",
+      "CUSTOM:Amethytestick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystexacvator"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystexacvator",
     "name": "amethystexcavatorcraft",
     "namespace": "mod"
   }

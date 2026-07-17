@@ -26,7 +26,7 @@ public class FactionhomelistProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					("/tellraw @p [\"\",{\"text\":\"[ Palamod ] :\",\"color\":\"dark_red\"},{\"text\":\" Home list\",\"color\":\"dark_green\"},{\"text\":\"\\n\"},{\"text\":\"" + ""
 							+ Math.round(getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + get_id + "number_home"))) + "\",\"color\":\"dark_green\"},{\"text\":\" were home found\",\"color\":\"aqua\"},{\"text\":\"\\n \"}]"));
-		for (int index0 = 0; index0 < (int) entity.getPersistentData().getDouble("number_home"); index0++) {
+		for (int index48 = 0; index48 < (int) entity.getPersistentData().getDouble("number_home"); index48++) {
 			if (("Faction_home_name_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + cycle_loop + "number_home"))).equals("[deleted_home_open]")
 					|| ("Faction_home_name_" + getBlockNBTNumber(world, new BlockPos(0, 9, 0), ("Faction_" + cycle_loop + "number_home"))).equals("[deleted_home_request]")) {
 				cycle_loop = cycle_loop + 1;

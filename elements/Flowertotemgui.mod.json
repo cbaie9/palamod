@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -213,9 +213,7 @@
           "name": "imagebutton_close_gui_nohover",
           "image": "close_gui_nohover.png",
           "hoveredImage": "close_gui_hover.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 280,
           "y": 42,
           "locked": false

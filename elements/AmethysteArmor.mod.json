@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,9 +11,7 @@
     "enableBoots": true,
     "textureBoots": "amethyst_boots",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "amethyst_.png",
     "helmetName": "Amethyst Helmet",
@@ -84,14 +82,11 @@
     "enchantability": 30,
     "toughness": 3.0,
     "knockbackResistance": 0.1,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:Amethyste"
     ],
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "attributeModifiers": []
   }
 }

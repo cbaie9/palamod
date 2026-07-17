@@ -32,7 +32,7 @@ public class GetxpminerbreakblocklogicProcedure {
 		if (jobs.exists() && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0) {
-			for (int index0 = 0; index0 < 9; index0++) {
+			for (int index59 = 0; index59 < 9; index59++) {
 				{
 					try {
 						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

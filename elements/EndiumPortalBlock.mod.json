@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "endium_portal_block",
@@ -51,20 +51,12 @@
     "rarity": "RARE",
     "immuneToFire": false,
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      },
-      {
-        "value": "CUSTOM:Decorationcreativetab"
-      },
-      {
-        "value": "CUSTOM:Jobscreativetabs"
-      }
+      "CUSTOM:Palamod",
+      "CUSTOM:Decorationcreativetab",
+      "CUSTOM:Jobscreativetabs"
     ],
     "destroyTool": "axe",
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -84,14 +76,10 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "harp",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "strippingResult": {
-      "value": ""
-    },
+    "strippingResult": "",
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -101,25 +89,13 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
+    "soundOnStep": "WOOD",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "WOOD"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -147,21 +123,13 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "Portalprocess"
-    },
-    "onDestroyedByPlayer": {
-      "name": "Portalblockbreakviaportal"
-    },
-    "onDestroyedByExplosion": {
-      "name": "Portalblockbreakviaportal"
-    },
+    "onRightClicked": "Portalprocess",
+    "onDestroyedByPlayer": "Portalblockbreakviaportal",
+    "onDestroyedByExplosion": "Portalblockbreakviaportal",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
-      {
-        "value": "TAG:stone_ore_replaceables"
-      }
+      "TAG:stone_ore_replaceables"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,

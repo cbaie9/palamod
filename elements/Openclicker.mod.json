@@ -1,12 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "keybind",
   "definition": {
     "triggerKey": "K",
     "keyBindingName": "Open Clicker",
     "keyBindingCategoryKey": "ui",
-    "onKeyPressed": {
-      "name": "Clickeropenproc"
-    }
+    "onKeyPressed": "Clickeropenproc"
   }
 }

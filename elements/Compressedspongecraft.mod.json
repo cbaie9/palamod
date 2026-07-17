@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.SPONGE"
-      },
-      {
-        "value": "Blocks.SPONGE"
-      },
-      {
-        "value": "Blocks.SPONGE"
-      },
-      {
-        "value": "Blocks.SPONGE"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "Blocks.SPONGE#0"
-      },
-      {
-        "value": "Blocks.SPONGE#0"
-      },
-      {
-        "value": "Blocks.SPONGE#0"
-      },
-      {
-        "value": "Blocks.SPONGE#0"
-      }
+      "Blocks.SPONGE",
+      "Blocks.SPONGE",
+      "Blocks.SPONGE",
+      "Blocks.SPONGE",
+      "CUSTOM:Paladiumcore",
+      "Blocks.SPONGE#0",
+      "Blocks.SPONGE#0",
+      "Blocks.SPONGE#0",
+      "Blocks.SPONGE#0"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Compressedsponge"
-    },
+    "recipeReturnStack": "CUSTOM:Compressedsponge",
     "name": "compressed_sponge_craft",
     "namespace": "mod"
   }

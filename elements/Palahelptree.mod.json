@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,9 +16,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "sommaire_btn.png",
           "hoveredImage": "sommaire_btn.png",
-          "onClick": {
-            "name": "ConnectNewPalahelp"
-          },
+          "onClick": "ConnectNewPalahelp",
           "x": 76,
           "y": 27,
           "locked": false
@@ -30,9 +28,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_palahelp_left_off.png",
           "hoveredImage": "arrow_palahelp_left_on.png",
-          "onClick": {
-            "name": "ConnectNewPalahelp"
-          },
+          "onClick": "ConnectNewPalahelp",
           "x": 73,
           "y": 177,
           "locked": false
@@ -44,9 +40,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 359,
           "y": 27,
           "locked": true
@@ -196,9 +190,7 @@
           "name": "imagebutton_arrow_palahelp_right_off",
           "image": "arrow_palahelp_right_off.png",
           "hoveredImage": "arrow_palahelp_right_on.png",
-          "onClick": {
-            "name": "ConnectnewOreLiquidsPalahelp"
-          },
+          "onClick": "ConnectnewOreLiquidsPalahelp",
           "x": 319,
           "y": 175,
           "locked": false
@@ -210,9 +202,7 @@
           "name": "imagebutton_judeecercis_sapling",
           "image": "judeecercis_sapling.png",
           "hoveredImage": "judeecercis_sappling_on.png",
-          "onClick": {
-            "name": "SetImageJudeecercis"
-          },
+          "onClick": "SetImageJudeecercis",
           "x": 103,
           "y": 90,
           "locked": false
@@ -224,9 +214,7 @@
           "name": "imagebutton_sapjacaranda",
           "image": "sap.jacaranda.png",
           "hoveredImage": "jacaranda_sappling_on.png",
-          "onClick": {
-            "name": "SetImagejacaranda"
-          },
+          "onClick": "SetImagejacaranda",
           "x": 105,
           "y": 64,
           "locked": false
@@ -238,9 +226,7 @@
           "name": "imagebutton_saperable",
           "image": "sap.erable.png",
           "hoveredImage": "erable_sappling_on.png",
-          "onClick": {
-            "name": "SetImageErable"
-          },
+          "onClick": "SetImageErable",
           "x": 104,
           "y": 122,
           "locked": false
@@ -252,9 +238,7 @@
           "name": "imagebutton_sapostrya",
           "image": "sap.ostrya.png",
           "hoveredImage": "ostrya_sappling.png",
-          "onClick": {
-            "name": "SetImageOstrya"
-          },
+          "onClick": "SetImageOstrya",
           "x": 102,
           "y": 154,
           "locked": false

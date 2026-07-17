@@ -25,15 +25,15 @@ import net.minecraft.core.registries.Registries;
 @EventBusSubscriber
 public class PalamodModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(Registries.MOB_EFFECT, PalamodMod.MODID);
-	public static final DeferredHolder<MobEffect, MobEffect> ANTIFAKE = REGISTRY.register("antifake", () -> new AntifakeMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> FIREIMBUE = REGISTRY.register("fireimbue", () -> new FireimbueMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> WITHERIMBU = REGISTRY.register("witherimbu", () -> new WitherimbuMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> POISONIMBUE = REGISTRY.register("poisonimbue", () -> new PoisonimbueMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> FSEFFECT = REGISTRY.register("fseffect", () -> new FseffectMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> MULTIEXP_2 = REGISTRY.register("multiexp_2", () -> new Multiexp2MobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> MULTIEXP_10 = REGISTRY.register("multiexp_10", () -> new Multiexp10MobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> MINEUR_FOU = REGISTRY.register("mineur_fou", () -> new MineurFouMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> TUNNELVISION = REGISTRY.register("tunnelvision", () -> new TunnelvisionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> ANTIFAKE = REGISTRY.register("antifake", AntifakeMobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> FIREIMBUE = REGISTRY.register("fireimbue", FireimbueMobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> WITHERIMBU = REGISTRY.register("witherimbu", WitherimbuMobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> POISONIMBUE = REGISTRY.register("poisonimbue", PoisonimbueMobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> FSEFFECT = REGISTRY.register("fseffect", FseffectMobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> MULTIEXP_2 = REGISTRY.register("multiexp_2", Multiexp2MobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> MULTIEXP_10 = REGISTRY.register("multiexp_10", Multiexp10MobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> MINEUR_FOU = REGISTRY.register("mineur_fou", MineurFouMobEffect::new);
+	public static final DeferredHolder<MobEffect, MobEffect> TUNNELVISION = REGISTRY.register("tunnelvision", TunnelvisionMobEffect::new);
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

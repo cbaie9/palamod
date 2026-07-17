@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -43,9 +43,7 @@
           "name": "button_hdv_stocks_panel",
           "text": "Admin storage",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Hdvstocksopen"
-          },
+          "onClick": "Hdvstocksopen",
           "width": 108,
           "height": 20,
           "x": 156,
@@ -59,9 +57,7 @@
           "name": "button_spawn_panel",
           "text": "Spawn Panel",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Spawnpanelconnect"
-          },
+          "onClick": "Spawnpanelconnect",
           "width": 82,
           "height": 20,
           "x": 169,
@@ -75,9 +71,7 @@
           "name": "button_trixium_panel",
           "text": "Trixium Panel",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Palaerror6connect"
-          },
+          "onClick": "Palaerror6connect",
           "width": 93,
           "height": 20,
           "x": 164,
@@ -91,9 +85,7 @@
           "name": "button_jobs_panel",
           "text": "Jobs Panel",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Palaerror6connect"
-          },
+          "onClick": "Palaerror6connect",
           "width": 77,
           "height": 20,
           "x": 174,

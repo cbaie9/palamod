@@ -31,9 +31,12 @@ public class LegendarystonetpprocessProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(PalamodModItems.LEGENDARY_STONE_TELEPORTATION.get()));
 			{
 				Entity _ent = entity;
-				_ent.teleportTo(x, 255, z);
+				double _tx = x;
+				double _ty = 255;
+				double _tz = z;
+				_ent.teleportTo(_tx, _ty, _tz);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(x, 255, z, _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 9000, 1, false, true));

@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Blocks.CHEST"
-      },
-      {
-        "value": "CUSTOM:Voidstone"
-      }
+      "CUSTOM:Amethyste",
+      "Blocks.CHEST",
+      "CUSTOM:Voidstone"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "TAG:neoforge:chest"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:Amethyste",
+      "",
+      "CUSTOM:Amethyste",
+      "TAG:neoforge:chest",
+      "CUSTOM:Amethyste",
+      "",
+      "CUSTOM:Amethyste",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Voidstone"
-    },
+    "recipeReturnStack": "CUSTOM:Voidstone",
     "name": "voidstonecraft",
     "namespace": "mod"
   }

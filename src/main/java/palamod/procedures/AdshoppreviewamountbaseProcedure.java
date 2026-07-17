@@ -4,8 +4,6 @@ import palamod.init.PalamodModMenus;
 
 import palamod.PalamodMod;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;

@@ -41,12 +41,12 @@ public class RedslimepadBlock extends Block implements SimpleWaterloggedBlock {
 	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				default -> box(1, 1, 1, 15, 9, 15);
 				case NORTH -> box(1, 1, 1, 15, 9, 15);
 				case EAST -> box(1, 1, 1, 15, 9, 15);
 				case WEST -> box(1, 1, 1, 15, 9, 15);
 				case UP -> box(1, 1, 1, 15, 15, 9);
 				case DOWN -> box(1, 1, 7, 15, 15, 15);
+				default -> box(1, 1, 1, 15, 9, 15);
 			};
 		});
 	}
@@ -79,8 +79,11 @@ public class RedslimepadBlock extends Block implements SimpleWaterloggedBlock {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return super.getStateForPlacement(context).setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
+		return state.setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

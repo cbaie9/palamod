@@ -2,8 +2,6 @@ package palamod.command;
 
 import palamod.procedures.*;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -22,7 +20,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class JobscommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("jobs").requires(s -> s.hasPermission(2)).then(
+		event.getDispatcher().register(Commands.literal("jobs").requires(source -> source.hasPermission(2)).then(
 				Commands.literal("miner").then(Commands.argument("player", EntityArgument.player()).then(Commands.literal("set").then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("levels").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();

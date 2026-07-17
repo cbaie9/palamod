@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -46,15 +46,9 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "DECORATIONS"
-      },
-      {
-        "value": "CUSTOM:Palamod"
-      },
-      {
-        "value": "CUSTOM:Decorationcreativetab"
-      }
+      "DECORATIONS",
+      "CUSTOM:Palamod",
+      "CUSTOM:Decorationcreativetab"
     ],
     "hardness": 0.0,
     "resistance": 0.0,
@@ -66,29 +60,15 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
+    "soundOnStep": "PLANT",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "PLANT"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "stepSound": "",
+    "placeSound": "",
+    "hitSound": "",
+    "fallSound": "",
     "useLootTableForDrops": false,
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -97,9 +77,7 @@
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
     "ignitedByLava": false,
@@ -112,24 +90,12 @@
     "frequencyOnChunks": 1,
     "generateFeature": true,
     "restrictionBiomes": [
-      {
-        "value": "badlands"
-      },
-      {
-        "value": "savanna_rock"
-      },
-      {
-        "value": "mutated_savanna"
-      },
-      {
-        "value": "savanna"
-      },
-      {
-        "value": "jungle"
-      },
-      {
-        "value": "bamboo_jungle"
-      }
+      "badlands",
+      "savanna_rock",
+      "mutated_savanna",
+      "savanna",
+      "jungle",
+      "bamboo_jungle"
     ],
     "generationType": "Flower",
     "patchSize": 2,

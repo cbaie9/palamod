@@ -15,7 +15,7 @@
     "hidden": true
   },
   "criteria": {
-    "achmchestgreenpaladium_0": {
+    "achmchestgreenpaladium_1": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

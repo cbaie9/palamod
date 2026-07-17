@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -11,9 +11,7 @@
     "enableBoots": true,
     "textureBoots": "titane_boots",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "titane_.png",
     "helmetName": "Titane Helmet",
@@ -84,14 +82,11 @@
     "enchantability": 45,
     "toughness": 3.0,
     "knockbackResistance": 0.1,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot"
     ],
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "attributeModifiers": []
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -83,9 +83,7 @@
           "name": "imagebutton_arrow_down0001",
           "image": "arrow_down_empty.png",
           "hoveredImage": "arrow_down_full.png",
-          "onClick": {
-            "name": "Setblocksouth"
-          },
+          "onClick": "Setblocksouth",
           "x": 298,
           "y": 156,
           "locked": false
@@ -97,9 +95,7 @@
           "name": "imagebutton_arrow_right01",
           "image": "arrow_right_empty.png",
           "hoveredImage": "arrow_right_full.png",
-          "onClick": {
-            "name": "Setblockeast"
-          },
+          "onClick": "Setblockeast",
           "x": 311,
           "y": 142,
           "locked": false
@@ -111,9 +107,7 @@
           "name": "imagebutton_arrow_up01",
           "image": "arrow_up_empty.png",
           "hoveredImage": "arrow_up_full.png",
-          "onClick": {
-            "name": "Setblocknorth"
-          },
+          "onClick": "Setblocknorth",
           "x": 297,
           "y": 126,
           "locked": false
@@ -532,9 +526,7 @@
           "name": "imagebutton_arrow_left01",
           "image": "arrow_left_empty.png",
           "hoveredImage": "arrow_left_full.png",
-          "onClick": {
-            "name": "Setblockwest"
-          },
+          "onClick": "Setblockwest",
           "x": 282,
           "y": 142,
           "locked": false

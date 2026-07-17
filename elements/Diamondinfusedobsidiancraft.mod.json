@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "Items.DIAMOND"
-      }
+      "Items.DIAMOND",
+      "TAG:neoforge:obsidian",
+      "Items.DIAMOND",
+      "TAG:neoforge:obsidian",
+      "CUSTOM:PaladiumBlock",
+      "TAG:neoforge:obsidian",
+      "Items.DIAMOND",
+      "TAG:neoforge:obsidian",
+      "Items.DIAMOND"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Diamondinfusedobsidian"
-    },
+    "recipeReturnStack": "CUSTOM:Diamondinfusedobsidian",
     "name": "diamond_infused_obsidian_craft",
     "namespace": "mod"
   }

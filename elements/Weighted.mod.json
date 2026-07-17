@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "armor",
   "definition": {
     "enableHelmet": false,
@@ -11,9 +11,7 @@
     "enableBoots": true,
     "textureBoots": "weighted_boots",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Luckyblockcreativetab"
-      }
+      "CUSTOM:Luckyblockcreativetab"
     ],
     "armorTextureFile": "weighted_",
     "helmetName": "Weighted Helmet",
@@ -72,10 +70,9 @@
     "enchantability": 9,
     "toughness": 0.0,
     "knockbackResistance": 0.0,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [],
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "attributeModifiers": []
   }
 }

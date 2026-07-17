@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,9 +16,7 @@
           "name": "imagebutton_screen_beta_template_jobs",
           "image": "screen_beta3_famer_jobs.png",
           "hoveredImage": "screen_beta3_farm2.png",
-          "onClick": {
-            "name": "Connectfarmergui"
-          },
+          "onClick": "Connectfarmergui",
           "x": 158,
           "y": 77,
           "locked": true
@@ -30,9 +28,7 @@
           "name": "imagebutton_screen_beta2_template_jobs",
           "image": "screen_beta3_jobs_miner.png",
           "hoveredImage": "screen_beta3_jobs_miner2.png",
-          "onClick": {
-            "name": "Connectjobsminergui"
-          },
+          "onClick": "Connectjobsminergui",
           "x": 80,
           "y": 77,
           "locked": true
@@ -44,9 +40,7 @@
           "name": "imagebutton_screen_beta2_template_jobs1",
           "image": "screen_beta3_jobs_hunter.png",
           "hoveredImage": "screen_beta3_jobs_hunter2.png",
-          "onClick": {
-            "name": "ConnectJobsHunterGui"
-          },
+          "onClick": "ConnectJobsHunterGui",
           "x": 240,
           "y": 77,
           "locked": true
@@ -58,9 +52,7 @@
           "name": "imagebutton_screen_beta2_template_jobs2",
           "image": "screen_beta3_jobs_alchi.png",
           "hoveredImage": "screen_beta3_jobs_alchi2.png",
-          "onClick": {
-            "name": "ConnectJobsAlchimistGui"
-          },
+          "onClick": "ConnectJobsAlchimistGui",
           "x": 311,
           "y": 77,
           "locked": true
@@ -184,9 +176,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 367,
           "y": 24,
           "locked": true
@@ -277,9 +267,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "displayCondition": {
-            "name": "Isgameclientside"
-          },
+          "displayCondition": "Isgameclientside",
           "x": 47,
           "y": 154,
           "locked": false
@@ -290,9 +278,7 @@
         "data": {
           "sprite": "sprite_last_unlocked_miner.png",
           "spritesCount": 25,
-          "displayCondition": {
-            "name": "Isgameclientside"
-          },
+          "displayCondition": "Isgameclientside",
           "spriteIndex": {
             "fixedValue": 0.0,
             "name": "Lastunlockedgetsprite"

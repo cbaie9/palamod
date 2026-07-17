@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "enchantment",
   "definition": {
     "name": "Big hole ",
@@ -10,25 +10,16 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "CUSTOM:Pickaxeofthegodslv18"
-      },
-      {
-        "value": "CUSTOM:Pickaxeofthegodslv19"
-      },
-      {
-        "value": "CUSTOM:Pickaxeofthegodslv20"
-      },
-      {
-        "value": "CUSTOM:Pickaxeofthegodslv17"
-      },
-      {
-        "value": "CUSTOM:Creativepotg"
-      }
+      "CUSTOM:Pickaxeofthegodslv18",
+      "CUSTOM:Pickaxeofthegodslv19",
+      "CUSTOM:Pickaxeofthegodslv20",
+      "CUSTOM:Pickaxeofthegodslv17",
+      "CUSTOM:Creativepotg"
     ],
     "isTreasureEnchantment": true,
     "isCurse": true,
     "canGenerateInLootTables": false,
-    "canVillagerTrade": false
+    "canVillagerTrade": false,
+    "effectsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"enchantment_effects_start\" deletable=\"false\" x=\"40\" y=\"80\"></block></xml>"
   }
 }

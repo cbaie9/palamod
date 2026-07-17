@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodPlanks",
+      "",
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodPlanks",
+      "",
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodPlanks",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Ostryadoor"
-    },
+    "recipeReturnStack": "CUSTOM:Ostryadoor",
     "name": "ostryadoorcraft",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      },
-      {
-        "value": "CUSTOM:Diamondparticle"
-      }
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle",
+      "CUSTOM:Diamondparticle"
     ],
-    "recipeReturnStack": {
-      "value": "Items.DIAMOND"
-    },
+    "recipeReturnStack": "Items.DIAMOND",
     "name": "diamondcraftpalamod",
     "namespace": "mod"
   }

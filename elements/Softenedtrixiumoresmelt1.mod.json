@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:Softenedtrixiumore"
-    },
-    "smeltingReturnStack": {
-      "value": "CUSTOM:Trixium"
-    },
+    "smeltingInputStack": "CUSTOM:Softenedtrixiumore",
+    "smeltingReturnStack": "CUSTOM:Trixium",
     "name": "softenedtrixiumoresmelt_1",
     "namespace": "mod"
   }

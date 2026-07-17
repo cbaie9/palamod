@@ -4,8 +4,6 @@ import palamod.init.PalamodModMenus;
 
 import palamod.PalamodMod;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.capabilities.Capabilities;
 

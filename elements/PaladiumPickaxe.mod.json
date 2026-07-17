@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -15,9 +15,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 30.0,
     "attackSpeed": 1.5,
@@ -28,9 +26,7 @@
       "fixedValue": false
     },
     "repairItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot"
     ],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",
@@ -38,8 +34,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onItemInUseTick": {
-      "name": "Paladiumpickaxehaste3"
-    }
+    "onItemInUseTick": "Paladiumpickaxehaste3"
   }
 }

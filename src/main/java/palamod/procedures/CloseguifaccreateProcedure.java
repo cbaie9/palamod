@@ -4,8 +4,6 @@ import palamod.network.PalamodModVariables;
 
 import palamod.init.PalamodModItems;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.item.ItemStack;

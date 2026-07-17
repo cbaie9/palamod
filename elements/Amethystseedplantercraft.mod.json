@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "amethyst_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethystseedplanter"
-      }
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethystseedplanter"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      },
-      {
-        "value": "CUSTOM:Amethytestick"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Amethytestick",
+      "CUSTOM:Amethytestick"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystseedplanter"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystseedplanter",
     "name": "amethyst_seedplanter_craft",
     "namespace": "mod"
   }

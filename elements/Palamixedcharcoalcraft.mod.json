@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Goldmixedcoal"
-      }
+      "CUSTOM:Goldmixedcoal"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Paladiumstick"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Goldmixedcoal"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Paladiumstick",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Goldmixedcoal",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Palamixedcharoal"
-    },
+    "recipeReturnStack": "CUSTOM:Palamixedcharoal",
     "name": "palamixedcharcoalcraft",
     "namespace": "mod"
   }

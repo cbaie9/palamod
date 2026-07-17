@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": "CUSTOM:Luckyblock"
-      },
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": "CUSTOM:Luckyblock"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Luckyblock"
-      },
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": "CUSTOM:Luckyblock"
-      },
-      {
-        "value": "CUSTOM:Endiumnugget"
-      }
+      "CUSTOM:Endiumnugget",
+      "CUSTOM:Luckyblock",
+      "CUSTOM:Endiumnugget",
+      "CUSTOM:Luckyblock",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Luckyblock",
+      "CUSTOM:Endiumnugget",
+      "CUSTOM:Luckyblock",
+      "CUSTOM:Endiumnugget"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumluckyblock"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumluckyblock",
     "name": "endiumluckyblockcraft",
     "namespace": "mod"
   }

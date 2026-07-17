@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 12.0,
     "attackSpeed": 10.0,
@@ -27,9 +25,7 @@
       "fixedValue": false
     },
     "repairItems": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot"
     ],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",

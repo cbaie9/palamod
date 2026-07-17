@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Paladiumcore"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:Paladiumcore",
+      "CUSTOM:Findium",
+      "CUSTOM:Paladiumcore",
+      "",
+      "CUSTOM:PaladiumIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Unclaimfinder"
-    },
+    "recipeReturnStack": "CUSTOM:Unclaimfinder",
     "name": "unclaimfindercraft",
     "namespace": "mod"
   }

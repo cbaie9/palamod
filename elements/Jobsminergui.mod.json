@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -43,9 +43,7 @@
           "name": "imagebutton_button_gray",
           "image": "craft_button_v2.png",
           "hoveredImage": "craft_button_hover_v3.png",
-          "onClick": {
-            "name": "Connectminercraft"
-          },
+          "onClick": "Connectminercraft",
           "x": 230,
           "y": 133,
           "locked": false
@@ -110,9 +108,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 280,
           "y": 85,
           "locked": false

@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "jacaranda_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_FenceGate"
-      }
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Judeecercis_FenceGate"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "Items.STICK"
-      }
+      "",
+      "",
+      "",
+      "Items.STICK",
+      "CUSTOM:Judeecercis_Planks",
+      "Items.STICK",
+      "Items.STICK",
+      "CUSTOM:Judeecercis_Planks",
+      "Items.STICK"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Judeecercis_FenceGate"
-    },
+    "recipeReturnStack": "CUSTOM:Judeecercis_FenceGate",
     "name": "judeecercis_fence_gate_recipe",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "jacaranda_top",
@@ -577,14 +577,10 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Decorationcreativetab"
-      }
+      "CUSTOM:Decorationcreativetab"
     ],
     "destroyTool": "axe",
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -604,14 +600,10 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "bass",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "strippingResult": {
-      "value": ""
-    },
+    "strippingResult": "",
     "ignitedByLava": true,
     "flammability": 5,
     "fireSpreadSpeed": 0,
@@ -621,25 +613,13 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
+    "soundOnStep": "WOOD",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "WOOD"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -667,24 +647,14 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "Setsapblockstatevisual"
-    },
+    "onTickUpdate": "Setsapblockstatevisual",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "Blocks.STONE#1"
-      },
-      {
-        "value": "Blocks.STONE#3"
-      },
-      {
-        "value": "Blocks.STONE#5"
-      }
+      "Blocks.STONE#0",
+      "Blocks.STONE#1",
+      "Blocks.STONE#3",
+      "Blocks.STONE#5"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,

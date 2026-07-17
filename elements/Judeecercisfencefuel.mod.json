@@ -1,10 +1,8 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "itemextension",
   "definition": {
-    "item": {
-      "value": "CUSTOM:Judeecercis_Fence"
-    },
+    "item": "CUSTOM:Judeecercis_Fence",
     "enableFuel": true,
     "fuelPower": {
       "fixedValue": 400.0

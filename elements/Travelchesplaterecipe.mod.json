@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.FEATHER"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.FEATHER"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "Items.LEATHER"
-      }
+      "Items.FEATHER",
+      "",
+      "Items.FEATHER",
+      "Items.LEATHER",
+      "Items.IRON_INGOT",
+      "Items.LEATHER",
+      "Items.LEATHER",
+      "Items.IRON_INGOT",
+      "Items.LEATHER"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Travelarmor.body"
-    },
+    "recipeReturnStack": "CUSTOM:Travelarmor.body",
     "name": "travelchesplaterecipe",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Blocks.GOLD_BLOCK"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      "Blocks.GOLD_BLOCK",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Forturnemodifier"
-    },
+    "recipeReturnStack": "CUSTOM:Forturnemodifier",
     "name": "fortunemodifiercraft",
     "namespace": "mod"
   }

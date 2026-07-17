@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -45,15 +45,9 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "DECORATIONS"
-      },
-      {
-        "value": "CUSTOM:Palamod"
-      },
-      {
-        "value": "CUSTOM:Decorationcreativetab"
-      }
+      "DECORATIONS",
+      "CUSTOM:Palamod",
+      "CUSTOM:Decorationcreativetab"
     ],
     "hardness": 0.0,
     "resistance": 0.0,
@@ -65,29 +59,15 @@
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
+    "soundOnStep": "PLANT",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "PLANT"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "stepSound": "",
+    "placeSound": "",
+    "hitSound": "",
+    "fallSound": "",
     "useLootTableForDrops": false,
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -96,14 +76,10 @@
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "GRASS",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "XZ",
     "aiPathNodeType": "DEFAULT",
-    "strippingResult": {
-      "value": ""
-    },
+    "strippingResult": "",
     "ignitedByLava": false,
     "flammability": 100,
     "fireSpreadSpeed": 60,
@@ -114,21 +90,13 @@
     "frequencyOnChunks": 1,
     "generateFeature": true,
     "restrictionBiomes": [
-      {
-        "value": "mutated_forest"
-      },
-      {
-        "value": "plains"
-      }
+      "mutated_forest",
+      "plains"
     ],
     "generationType": "Flower",
     "patchSize": 1,
     "generateAtAnyHeight": false,
-    "onBlockAdded": {
-      "name": "Tickadded"
-    },
-    "onTickUpdate": {
-      "name": "EndiumflowerOnTickUpdate"
-    }
+    "onBlockAdded": "Tickadded",
+    "onTickUpdate": "EndiumflowerOnTickUpdate"
   }
 }

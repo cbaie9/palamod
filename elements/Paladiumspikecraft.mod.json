@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneSword"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "",
+      "CUSTOM:TitaneSword",
+      "",
+      "CUSTOM:TitaneSword",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:TitaneSword",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiumspike"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiumspike",
     "name": "paladiumspikecraft",
     "namespace": "mod"
   }

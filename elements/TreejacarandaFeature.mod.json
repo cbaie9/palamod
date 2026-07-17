@@ -1,40 +1,20 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "feature",
   "definition": {
     "skipPlacement": false,
     "generationStep": "SURFACE_STRUCTURES",
     "restrictionBiomes": [
-      {
-        "value": "plains"
-      },
-      {
-        "value": "jungle"
-      },
-      {
-        "value": "birch_forest"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "forest_hills"
-      },
-      {
-        "value": "taiga"
-      },
-      {
-        "value": "snowy_mountains"
-      },
-      {
-        "value": "savanna_rock"
-      },
-      {
-        "value": "mutated_redwood_taiga"
-      },
-      {
-        "value": "snowy_tundra"
-      }
+      "plains",
+      "jungle",
+      "birch_forest",
+      "forest",
+      "forest_hills",
+      "taiga",
+      "snowy_mountains",
+      "savanna_rock",
+      "mutated_redwood_taiga",
+      "snowy_tundra"
     ],
     "featurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml><block deletable=\"false\" type=\"feature_container\" x=\"40\" y=\"40\">\r\n<value name=\"feature\"><block type=\"feature_custom_structure\">\r\n\t<field name=\"structure\">jacaranda</field>\r\n\t<field name=\"x\">0</field>\r\n\t<field name=\"y\">0</field>\r\n\t<field name=\"z\">0</field>\r\n\t<field name=\"random_rotation\">TRUE</field>\r\n\t<field name=\"random_mirror\">TRUE</field>\r\n\t<value name=\"ignored_blocks\">\r\n\t\t<block type=\"block_holderset_list\"><mutation inputs=\"1\"/><field name=\"block0\">Blocks.STRUCTURE_BLOCK</field></block>\r\n\t</value>\r\n</block>\r\n</value>\r\n<next><block type=\"placement_rarity\">\r\n\t<field name=\"rarity\">100</field>\r\n\t<next><block type=\"placement_count\">\r\n\t<value name=\"count\">\r\n\t\t<block type=\"int_provider_uniform\">\r\n\t\t\t<field name=\"min\">1</field>\r\n\t\t\t<field name=\"max\">4</field>\r\n\t\t</block>\r\n\t</value>\r\n\t<next><block type=\"placement_in_square\"><next><block type=\"placement_heightmap\">\r\n\t<field name=\"heightmap\">OCEAN_FLOOR_WG</field>\r\n\t<next><block type=\"placement_block_predicate_filter\">\r\n\t<value name=\"condition\">\r\n\t\t<block type=\"block_predicate_matching_blocks\">\r\n\t\t\t<field name=\"x\">0</field>\r\n\t\t\t<field name=\"y\">-1</field>\r\n\t\t\t<field name=\"z\">0</field>\r\n\t\t\t<value name=\"blockSet\">\r\n\t\t\t\t<block type=\"block_holderset_list\">\r\n\t\t\t\t\t<mutation inputs=\"1\"/>\r\n\t\t\t\t\t<field name=\"block0\">Blocks.GRASS</field>\r\n\t\t\t\t</block>\r\n\t\t\t</value>\r\n\t\t</block>\r\n\t</value>\r\n\t<next><block type=\"placement_biome_filter\"/></next></block></next></block></next></block></next></block></next></block></next></block></xml>"
   }

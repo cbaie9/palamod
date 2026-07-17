@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Blasting",
@@ -11,12 +11,8 @@
     "cookingTime": 100,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "blastingInputStack": {
-      "value": "CUSTOM:Trixiumoredeepslate"
-    },
-    "blastingReturnStack": {
-      "value": "CUSTOM:Trixium"
-    },
+    "blastingInputStack": "CUSTOM:Trixiumoredeepslate",
+    "blastingReturnStack": "CUSTOM:Trixium",
     "name": "trixiumoredblast",
     "namespace": "mod"
   }

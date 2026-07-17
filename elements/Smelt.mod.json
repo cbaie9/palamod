@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "enchantment",
   "definition": {
     "name": "Smelt",
@@ -10,22 +10,15 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "CUSTOM:Paladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Creativehammer"
-      },
-      {
-        "value": "CUSTOM:Greenpaladiumhammer"
-      },
-      {
-        "value": "CUSTOM:Endiumhammer"
-      }
+      "CUSTOM:Paladiumhammer",
+      "CUSTOM:Creativehammer",
+      "CUSTOM:Greenpaladiumhammer",
+      "CUSTOM:Endiumhammer"
     ],
     "isTreasureEnchantment": false,
     "isCurse": false,
     "canGenerateInLootTables": true,
-    "canVillagerTrade": true
+    "canVillagerTrade": true,
+    "effectsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"enchantment_effects_start\" deletable=\"false\" x=\"40\" y=\"80\"></block></xml>"
   }
 }

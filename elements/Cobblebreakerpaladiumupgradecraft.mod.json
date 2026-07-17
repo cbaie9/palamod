@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "cobblebreaker_upgrades",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakertitaneupgrade"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakerpaladiumupgrade"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Cobblebreakertitaneupgrade",
+      "CUSTOM:Cobblebreakerpaladiumupgrade"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakertitaneupgrade"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Cobblebreakertitaneupgrade",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Cobblebreakerpaladiumupgrade"
-    },
+    "recipeReturnStack": "CUSTOM:Cobblebreakerpaladiumupgrade",
     "name": "cobblebreakerpaladiumupgradecraft",
     "namespace": "mod"
   }

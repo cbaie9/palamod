@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Endiumchest"
-      },
-      {
-        "value": "CUSTOM:Endiumchestv2"
-      },
-      {
-        "value": "CUSTOM:Flatchestupgrade"
-      }
+      "CUSTOM:Endiumchest",
+      "CUSTOM:Endiumchestv2",
+      "CUSTOM:Flatchestupgrade"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Endiumchestv2"
-      },
-      {
-        "value": "CUSTOM:Flatchestupgrade"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Endiumchestv2",
+      "CUSTOM:Flatchestupgrade",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumchest"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumchest",
     "name": "flattenendiumchestcraft",
     "namespace": "mod"
   }

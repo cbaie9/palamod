@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "Blocks.COBBLESTONE"
-      },
-      {
-        "value": "CUSTOM:Voidstone"
-      },
-      {
-        "value": "CUSTOM:Forturnemodifier"
-      },
-      {
-        "value": "CUSTOM:Cobblebreaker"
-      }
+      "Blocks.COBBLESTONE",
+      "CUSTOM:Voidstone",
+      "CUSTOM:Forturnemodifier",
+      "CUSTOM:Cobblebreaker"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "TAG:neoforge:cobblestone"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "TAG:neoforge:cobblestone"
-      },
-      {
-        "value": "TAG:neoforge:cobblestone"
-      },
-      {
-        "value": "CUSTOM:Voidstone"
-      },
-      {
-        "value": "TAG:neoforge:cobblestone"
-      },
-      {
-        "value": "TAG:neoforge:cobblestone"
-      },
-      {
-        "value": "CUSTOM:Forturnemodifier"
-      },
-      {
-        "value": "TAG:neoforge:cobblestone"
-      }
+      "TAG:neoforge:cobblestone",
+      "",
+      "TAG:neoforge:cobblestone",
+      "TAG:neoforge:cobblestone",
+      "CUSTOM:Voidstone",
+      "TAG:neoforge:cobblestone",
+      "TAG:neoforge:cobblestone",
+      "CUSTOM:Forturnemodifier",
+      "TAG:neoforge:cobblestone"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Cobblebreaker"
-    },
+    "recipeReturnStack": "CUSTOM:Cobblebreaker",
     "name": "cobblebreakercraft",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "CUSTOM:Ironspike"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "TAG:neoforge:obsidian",
+      "CUSTOM:Ironspike",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Ironobsidianspike"
-    },
+    "recipeReturnStack": "CUSTOM:Ironobsidianspike",
     "name": "ironobsidianspikecraft",
     "namespace": "mod"
   }

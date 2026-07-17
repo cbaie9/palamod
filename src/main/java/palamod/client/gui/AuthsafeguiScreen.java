@@ -93,7 +93,7 @@ public class AuthsafeguiScreen extends AbstractContainerScreen<AuthsafeguiMenu> 
 	@Override
 	public void init() {
 		super.init();
-		code_check = new EditBox(this.font, this.leftPos + 4, this.topPos + 16, 118, 18, Component.translatable("gui.palamod.authsafegui.code_check"));
+		code_check = new EditBox(this.font, this.leftPos + 3, this.topPos + 15, 120, 20, Component.translatable("gui.palamod.authsafegui.code_check"));
 		code_check.setMaxLength(8192);
 		code_check.setResponder(content -> {
 			if (!menuStateUpdateActive)

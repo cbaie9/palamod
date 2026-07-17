@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      }
+      "Items.GOLD_INGOT",
+      "Blocks.STAINED_GLASS",
+      "Items.GOLD_INGOT",
+      "Blocks.STAINED_GLASS",
+      "",
+      "Blocks.STAINED_GLASS",
+      "Items.GOLD_INGOT",
+      "Blocks.STAINED_GLASS",
+      "Items.GOLD_INGOT"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Goldentank"
-    },
+    "recipeReturnStack": "CUSTOM:Goldentank",
     "name": "goldentankcraft",
     "namespace": "mod"
   }

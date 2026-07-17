@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,22 +10,12 @@
     "textureLeggings": "mixed_endium_leggings",
     "enableBoots": true,
     "textureBoots": "mixed_endium_boots",
-    "onHelmetTick": {
-      "name": "MixedendiumarmorHelmetTickEvent"
-    },
-    "onBodyTick": {
-      "name": "MixedendiumarmorChestplateTickEvent"
-    },
-    "onLeggingsTick": {
-      "name": "MixedendiumarmorLeggingsTickEvent"
-    },
-    "onBootsTick": {
-      "name": "MixedendiumarmorBootsTickEvent"
-    },
+    "onHelmetTick": "MixedendiumarmorHelmetTickEvent",
+    "onBodyTick": "MixedendiumarmorChestplateTickEvent",
+    "onLeggingsTick": "MixedendiumarmorLeggingsTickEvent",
+    "onBootsTick": "MixedendiumarmorBootsTickEvent",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "mixed_endium_armor_",
     "helmetName": "Mixed Endium Helmet",
@@ -96,14 +86,11 @@
     "enchantability": 65,
     "toughness": 4.5,
     "knockbackResistance": 0.25,
-    "equipSound": {
-      "value": "item.armor.equip_diamond"
-    },
+    "equipSound": "item.armor.equip_diamond",
     "repairItems": [
-      {
-        "value": "CUSTOM:Mixedendiumingot"
-      }
+      "CUSTOM:Mixedendiumingot"
     ],
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "attributeModifiers": []
   }
 }

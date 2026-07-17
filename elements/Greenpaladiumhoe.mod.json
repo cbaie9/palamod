@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Hoe",
@@ -16,9 +16,7 @@
       "name": "CraftableToolTipText"
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Jobscreativetabs"
-      }
+      "CUSTOM:Jobscreativetabs"
     ],
     "efficiency": 4.0,
     "attackSpeed": 1.0,
@@ -29,9 +27,7 @@
       "fixedValue": false
     },
     "repairItems": [
-      {
-        "value": "CUSTOM:PaladiumGreeningot"
-      }
+      "CUSTOM:PaladiumGreeningot"
     ],
     "immuneToFire": false,
     "blockDropsTier": "DIAMOND",
@@ -39,8 +35,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedOnBlock": {
-      "name": "Bighoeprocess"
-    }
+    "onRightClickedOnBlock": "Bighoeprocess"
   }
 }

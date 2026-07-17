@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "purple_glueball_block",
@@ -105,17 +105,11 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Pvpcreativetab"
-      },
-      {
-        "value": "CUSTOM:Jobscreativetabs"
-      }
+      "CUSTOM:Pvpcreativetab",
+      "CUSTOM:Jobscreativetabs"
     ],
     "destroyTool": "Not specified",
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -135,9 +129,7 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "harp",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
     "ignitedByLava": true,
@@ -149,25 +141,13 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
+    "soundOnStep": "SLIME",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "SLIME"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -192,15 +172,11 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onEntityCollides": {
-      "name": "Regenpurpleglueball"
-    },
+    "onEntityCollides": "Regenpurpleglueball",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
-      {
-        "value": "TAG:stone_ore_replaceables"
-      }
+      "TAG:stone_ore_replaceables"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,

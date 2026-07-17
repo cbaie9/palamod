@@ -22,7 +22,7 @@ import net.minecraft.client.KeyMapping;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class PalamodModKeyMappings {
-	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, "key.categories.palamod") {
+	public static final KeyMapping ADMINSHOPKEYBLINDING = new KeyMapping("key.palamod.adminshopkeyblinding", GLFW.GLFW_KEY_O, "key.category.palamod.palamod") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -35,7 +35,7 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping FACTIONBLINDING = new KeyMapping("key.palamod.factionblinding", GLFW.GLFW_KEY_F, "key.categories.palamod") {
+	public static final KeyMapping FACTIONBLINDING = new KeyMapping("key.palamod.factionblinding", GLFW.GLFW_KEY_F, "key.category.palamod.palamod") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -48,7 +48,7 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping JOBSKEYBINDING = new KeyMapping("key.palamod.jobskeybinding", GLFW.GLFW_KEY_J, "key.categories.palamod") {
+	public static final KeyMapping JOBSKEYBINDING = new KeyMapping("key.palamod.jobskeybinding", GLFW.GLFW_KEY_J, "key.category.palamod.palamod") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -61,7 +61,7 @@ public class PalamodModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping OPENCLICKER = new KeyMapping("key.palamod.openclicker", GLFW.GLFW_KEY_K, "key.categories.ui") {
+	public static final KeyMapping OPENCLICKER = new KeyMapping("key.palamod.openclicker", GLFW.GLFW_KEY_K, "key.category.palamod.ui") {
 		private boolean isDownOld = false;
 
 		@Override

@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 6,
     "group": "ostrya_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodSlab"
-      }
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodSlab"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      },
-      {
-        "value": "CUSTOM:Ostrya_woodPlanks"
-      }
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodPlanks",
+      "CUSTOM:Ostrya_woodPlanks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Ostrya_woodSlab"
-    },
+    "recipeReturnStack": "CUSTOM:Ostrya_woodSlab",
     "name": "ostrya_wood_slab_recipe",
     "namespace": "mod"
   }

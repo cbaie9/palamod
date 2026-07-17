@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethystchestv2"
-      },
-      {
-        "value": "CUSTOM:Amethystchest"
-      },
-      {
-        "value": "CUSTOM:Flatchestupgrade"
-      }
+      "CUSTOM:Amethystchestv2",
+      "CUSTOM:Amethystchest",
+      "CUSTOM:Flatchestupgrade"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethystchestv2"
-      },
-      {
-        "value": "CUSTOM:Flatchestupgrade"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Amethystchestv2",
+      "CUSTOM:Flatchestupgrade",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystchest"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystchest",
     "name": "flattenamethystchest",
     "namespace": "mod"
   }

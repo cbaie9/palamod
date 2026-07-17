@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.NETHER_WART"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      "Items.NETHER_WART",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Jumporb"
-    },
+    "recipeReturnStack": "CUSTOM:Jumporb",
     "name": "jumporbcraft",
     "namespace": "mod"
   }

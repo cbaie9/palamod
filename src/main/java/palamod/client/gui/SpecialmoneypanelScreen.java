@@ -111,7 +111,7 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 	@Override
 	public void init() {
 		super.init();
-		player_name = new EditBox(this.font, this.leftPos + 8, this.topPos + 19, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.player_name"));
+		player_name = new EditBox(this.font, this.leftPos + 7, this.topPos + 18, 120, 20, Component.translatable("gui.palamod.specialmoneypanel.player_name"));
 		player_name.setMaxLength(8192);
 		player_name.setResponder(content -> {
 			if (!menuStateUpdateActive)
@@ -119,7 +119,7 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 		});
 		player_name.setHint(Component.translatable("gui.palamod.specialmoneypanel.player_name"));
 		this.addWidget(this.player_name);
-		money = new EditBox(this.font, this.leftPos + 8, this.topPos + 51, 118, 18, Component.translatable("gui.palamod.specialmoneypanel.money"));
+		money = new EditBox(this.font, this.leftPos + 7, this.topPos + 50, 120, 20, Component.translatable("gui.palamod.specialmoneypanel.money"));
 		money.setMaxLength(8192);
 		money.setResponder(content -> {
 			if (!menuStateUpdateActive)

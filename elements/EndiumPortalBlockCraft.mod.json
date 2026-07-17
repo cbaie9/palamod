@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:Endiumheart"
-      }
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:Endiumheart"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:Endiumheart"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      },
-      {
-        "value": "CUSTOM:ShinyOstryaWood"
-      }
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:Endiumheart",
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:ShinyOstryaWood",
+      "CUSTOM:ShinyOstryaWood"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumPortalBlock"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumPortalBlock",
     "name": "endium_portal_block_craft",
     "namespace": "mod"
   }

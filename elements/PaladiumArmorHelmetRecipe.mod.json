@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumArmor.helmet"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumArmor.helmet"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:PaladiumArmor.helmet"
-    },
+    "recipeReturnStack": "CUSTOM:PaladiumArmor.helmet",
     "name": "paladium_armor_helmet_recipe",
     "namespace": "mod"
   }

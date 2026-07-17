@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "amethyst_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:AmethystePickaxe"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:AmethystePickaxe"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "",
+      "Items.STICK",
+      "",
+      "",
+      "Items.STICK",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:AmethystePickaxe"
-    },
+    "recipeReturnStack": "CUSTOM:AmethystePickaxe",
     "name": "amethyste_pickaxe_recipe",
     "namespace": "mod"
   }

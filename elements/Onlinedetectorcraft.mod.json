@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Items.DYE#0"
-      },
-      {
-        "value": "Items.DYE#0"
-      },
-      {
-        "value": "Items.DYE#0"
-      },
-      {
-        "value": "Items.DYE#0"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.DYE#0"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "Items.DYE#0",
+      "Items.DYE#0",
+      "Items.DYE#0",
+      "Items.DYE#0",
+      "CUSTOM:PaladiumIngot",
+      "Items.DYE#0",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Onlinedetector"
-    },
+    "recipeReturnStack": "CUSTOM:Onlinedetector",
     "name": "onlinedetectorcraft",
     "namespace": "mod"
   }

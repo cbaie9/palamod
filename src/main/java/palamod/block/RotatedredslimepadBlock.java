@@ -41,12 +41,12 @@ public class RotatedredslimepadBlock extends Block implements SimpleWaterloggedB
 	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				default -> box(1, 1, 4, 15, 15, 12);
 				case NORTH -> box(1, 1, 4, 15, 15, 12);
 				case EAST -> box(4, 1, 1, 12, 15, 15);
 				case WEST -> box(4, 1, 1, 12, 15, 15);
 				case UP -> box(1, 4, 1, 15, 12, 15);
 				case DOWN -> box(1, 4, 1, 15, 12, 15);
+				default -> box(1, 1, 4, 15, 15, 12);
 			};
 		});
 	}
@@ -79,8 +79,11 @@ public class RotatedredslimepadBlock extends Block implements SimpleWaterloggedB
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return super.getStateForPlacement(context).setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
+		return state.setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      },
-      {
-        "value": "CUSTOM:Paladiumparticle"
-      }
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle",
+      "CUSTOM:Paladiumparticle"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:PaladiumIngot"
-    },
+    "recipeReturnStack": "CUSTOM:PaladiumIngot",
     "name": "paladiumparticlecraft_2",
     "namespace": "mod"
   }

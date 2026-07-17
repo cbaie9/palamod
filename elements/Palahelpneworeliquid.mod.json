@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -259,9 +259,7 @@
           "name": "imagebutton_sommaire_btn",
           "image": "sommaire_btn.png",
           "hoveredImage": "sommaire_btn.png",
-          "onClick": {
-            "name": "ConnectNewPalahelp"
-          },
+          "onClick": "ConnectNewPalahelp",
           "x": 176,
           "y": 31,
           "locked": false
@@ -450,9 +448,7 @@
           "name": "imagebutton_arrow_palahelp_left_off",
           "image": "arrow_palahelp_left_off.png",
           "hoveredImage": "arrow_palahelp_left_on.png",
-          "onClick": {
-            "name": "ConnectPalahelpTree"
-          },
+          "onClick": "ConnectPalahelpTree",
           "x": 159,
           "y": 178,
           "locked": false

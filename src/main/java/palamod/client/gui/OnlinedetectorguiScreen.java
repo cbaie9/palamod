@@ -97,7 +97,7 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 	@Override
 	public void init() {
 		super.init();
-		player_name = new EditBox(this.font, this.leftPos + 5, this.topPos + 17, 135, 18, Component.translatable("gui.palamod.onlinedetectorgui.player_name"));
+		player_name = new EditBox(this.font, this.leftPos + 4, this.topPos + 16, 137, 20, Component.translatable("gui.palamod.onlinedetectorgui.player_name"));
 		player_name.setMaxLength(8192);
 		player_name.setResponder(content -> {
 			if (!menuStateUpdateActive)

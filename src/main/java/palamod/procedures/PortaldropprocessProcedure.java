@@ -74,7 +74,7 @@ public class PortaldropprocessProcedure {
 					type_input = "erable";
 				}
 			}
-			for (int index0 = 0; index0 < 4; index0++) {
+			for (int index119 = 0; index119 < 4; index119++) {
 				if (loop == 0) {
 					active = PalamodModBlocks.AMETHYST_PORTALBLOCK.get().defaultBlockState();
 					type = "jacaranda";

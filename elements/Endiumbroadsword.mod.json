@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Grindercreativetab"
-      }
+      "CUSTOM:Grindercreativetab"
     ],
     "efficiency": 4.0,
     "attackSpeed": 0.5,

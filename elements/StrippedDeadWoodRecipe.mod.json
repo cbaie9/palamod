@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "bark",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:StrippedDeadLog"
-      }
+      "CUSTOM:StrippedDeadLog"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:StrippedDeadLog"
-      },
-      {
-        "value": "CUSTOM:StrippedDeadLog"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:StrippedDeadLog"
-      },
-      {
-        "value": "CUSTOM:StrippedDeadLog"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:StrippedDeadLog",
+      "CUSTOM:StrippedDeadLog",
+      "",
+      "CUSTOM:StrippedDeadLog",
+      "CUSTOM:StrippedDeadLog",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:StrippedDeadWood"
-    },
+    "recipeReturnStack": "CUSTOM:StrippedDeadWood",
     "name": "stripped_dead_wood_recipe",
     "namespace": "mod"
   }

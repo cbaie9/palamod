@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,9 +11,7 @@
     "name": "Clash kumiz disc",
     "rarity": "RARE",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "stackSize": 1,
     "enchantability": 0,
@@ -48,9 +46,7 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": true,
-    "musicDiscMusic": {
-      "value": "CUSTOM:clash_kumiz"
-    },
+    "musicDiscMusic": "CUSTOM:clash_kumiz",
     "musicDiscDescription": "Kumiz - Clash fuze III",
     "musicDiscLengthInTicks": 1800,
     "musicDiscAnalogOutput": 6,

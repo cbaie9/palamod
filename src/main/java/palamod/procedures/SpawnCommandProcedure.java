@@ -112,9 +112,12 @@ public class SpawnCommandProcedure {
 								BacklogOnCustomTpProcedure.execute(x, y, z, entity);
 								{
 									Entity _ent = entity;
-									_ent.teleportTo(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble());
+									double _tx = main.get("spawn_x").getAsDouble();
+									double _ty = main.get("spawn_y").getAsDouble();
+									double _tz = main.get("spawn_z").getAsDouble();
+									_ent.teleportTo(_tx, _ty, _tz);
 									if (_ent instanceof ServerPlayer _serverPlayer)
-										_serverPlayer.connection.teleport(main.get("spawn_x").getAsDouble(), main.get("spawn_y").getAsDouble(), main.get("spawn_z").getAsDouble(), _ent.getYRot(), _ent.getXRot());
+										_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 								}
 							} else {
 								MsgtellrawautosendProcedure.execute(world, x, y, z, "You can't teleport if you are in a fight");

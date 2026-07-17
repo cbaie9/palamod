@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -287,9 +287,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 357,
           "y": 32,
           "locked": false
@@ -301,9 +299,7 @@
           "name": "imagebutton_revert_adminshop_arrow",
           "image": "revert_adminshop_arrow.png",
           "hoveredImage": "pointed_revert_adminshop_arrow.png",
-          "onClick": {
-            "name": "Connectgrinderpag2"
-          },
+          "onClick": "Connectgrinderpag2",
           "x": 319,
           "y": 32,
           "locked": false
@@ -315,9 +311,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_adminshop.png",
           "hoveredImage": "arrow_adminshop_poi.png",
-          "onClick": {
-            "name": "Machineconnectpalahelp"
-          },
+          "onClick": "Machineconnectpalahelp",
           "x": 299,
           "y": 32,
           "locked": false
@@ -329,9 +323,7 @@
           "name": "imagebutton_home_pixel_adminshop",
           "image": "home_pixel_adminshop.png",
           "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": {
-            "name": "Backpalahelp"
-          },
+          "onClick": "Backpalahelp",
           "x": 279,
           "y": 32,
           "locked": false
@@ -363,9 +355,7 @@
           "name": "imagebutton_example_gui_button",
           "image": "example_gui_button.png",
           "hoveredImage": "example_gui_button_poi.png",
-          "onClick": {
-            "name": "Openexamplegrinder"
-          },
+          "onClick": "Openexamplegrinder",
           "x": 337,
           "y": 32,
           "locked": false

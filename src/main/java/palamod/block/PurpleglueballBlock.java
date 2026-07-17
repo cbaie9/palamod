@@ -35,10 +35,10 @@ public class PurpleglueballBlock extends Block {
 	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
 		return this.getShapeForEachState(state -> {
 			return switch (state.getValue(FACING)) {
-				default -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 3, 15, 1, 5), box(1, 0, 11, 15, 1, 13), box(3, 0, 1, 13, 1, 3), box(3, 0, 13, 13, 1, 15), box(5, 0, 0, 11, 1, 1), box(5, 0, 15, 11, 1, 16));
 				case NORTH -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 11, 15, 1, 13), box(1, 0, 3, 15, 1, 5), box(3, 0, 13, 13, 1, 15), box(3, 0, 1, 13, 1, 3), box(5, 0, 15, 11, 1, 16), box(5, 0, 0, 11, 1, 1));
 				case EAST -> Shapes.or(box(5, 0, 0, 11, 1, 16), box(3, 0, 1, 5, 1, 15), box(11, 0, 1, 13, 1, 15), box(1, 0, 3, 3, 1, 13), box(13, 0, 3, 15, 1, 13), box(0, 0, 5, 1, 1, 11), box(15, 0, 5, 16, 1, 11));
 				case WEST -> Shapes.or(box(5, 0, 0, 11, 1, 16), box(11, 0, 1, 13, 1, 15), box(3, 0, 1, 5, 1, 15), box(13, 0, 3, 15, 1, 13), box(1, 0, 3, 3, 1, 13), box(15, 0, 5, 16, 1, 11), box(0, 0, 5, 1, 1, 11));
+				default -> Shapes.or(box(0, 0, 5, 16, 1, 11), box(1, 0, 3, 15, 1, 5), box(1, 0, 11, 15, 1, 13), box(3, 0, 1, 13, 1, 3), box(3, 0, 13, 13, 1, 15), box(5, 0, 0, 11, 1, 1), box(5, 0, 15, 11, 1, 16));
 			};
 		});
 	}
@@ -61,9 +61,12 @@ public class PurpleglueballBlock extends Block {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
 		if (context.getClickedFace().getAxis() == Direction.Axis.Y)
-			return super.getStateForPlacement(context).setValue(FACING, Direction.NORTH);
-		return super.getStateForPlacement(context).setValue(FACING, context.getClickedFace());
+			return state.setValue(FACING, Direction.NORTH);
+		return state.setValue(FACING, context.getClickedFace());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {

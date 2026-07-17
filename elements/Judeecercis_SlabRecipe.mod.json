@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 6,
     "group": "jacaranda_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Judeecercis_Slab"
-      }
+      "CUSTOM:Judeecercis_Slab"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Planks"
-      }
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Judeecercis_Planks",
+      "CUSTOM:Judeecercis_Planks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Judeecercis_Slab"
-    },
+    "recipeReturnStack": "CUSTOM:Judeecercis_Slab",
     "name": "judeecercis_slab_recipe",
     "namespace": "mod"
   }

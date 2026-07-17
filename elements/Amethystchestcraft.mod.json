@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "Blocks.CHEST"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Compressedamethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Compressedamethyste",
+      "Blocks.CHEST",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Compressedamethyste",
+      "CUSTOM:Amethyste"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystchestv2"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystchestv2",
     "name": "amethystchestcraft",
     "namespace": "mod"
   }

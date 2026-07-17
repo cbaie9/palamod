@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethystchestv2"
-      },
-      {
-        "value": "Blocks.HOPPER"
-      },
-      {
-        "value": "Items.LEATHER"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethystchestv2",
+      "Blocks.HOPPER",
+      "Items.LEATHER"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethystchestv2"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Blocks.HOPPER"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Items.LEATHER"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Items.LEATHER"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethystchestv2",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "Blocks.HOPPER",
+      "CUSTOM:Amethyste",
+      "Items.LEATHER",
+      "CUSTOM:Amethyste",
+      "Items.LEATHER"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystbackpack"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystbackpack",
     "name": "amethystbackpackcraft",
     "namespace": "mod"
   }

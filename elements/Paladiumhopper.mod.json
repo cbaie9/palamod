@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "paladium_hopper_outside",
@@ -19,9 +19,7 @@
     "itemTexture": "paladium_hopper",
     "particleTexture": "",
     "blockSetType": "OAK",
-    "pottedPlant": {
-      "value": ""
-    },
+    "pottedPlant": "",
     "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
@@ -57,9 +55,7 @@
     "immuneToFire": false,
     "creativeTabs": [],
     "destroyTool": "pickaxe",
-    "customDrop": {
-      "value": "CUSTOM:Paladiumhoppersouth"
-    },
+    "customDrop": "CUSTOM:Paladiumhoppersouth",
     "dropAmount": 1,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -79,14 +75,10 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "harp",
-    "creativePickItem": {
-      "value": "CUSTOM:Paladiumhoppersouth"
-    },
+    "creativePickItem": "CUSTOM:Paladiumhoppersouth",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "strippingResult": {
-      "value": ""
-    },
+    "strippingResult": "",
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -96,25 +88,13 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
+    "soundOnStep": "METAL",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "METAL"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -142,15 +122,11 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "Palahopperswapprocess"
-    },
+    "onBlockAdded": "Palahopperswapprocess",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
-      {
-        "value": "TAG:stone_ore_replaceables"
-      }
+      "TAG:stone_ore_replaceables"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,

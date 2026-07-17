@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 4,
     "group": "erable_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Erable_Planks"
-      },
-      {
-        "value": "Items.STICK"
-      }
+      "CUSTOM:Erable_Planks",
+      "Items.STICK"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Erable_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Erable_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Erable_Planks",
+      "",
+      "",
+      "CUSTOM:Erable_Planks",
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "Items.STICK"
-    },
+    "recipeReturnStack": "Items.STICK",
     "name": "erable_stick_recipe",
     "namespace": "mod"
   }

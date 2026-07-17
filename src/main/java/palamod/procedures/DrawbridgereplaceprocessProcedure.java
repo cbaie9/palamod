@@ -23,7 +23,7 @@ public class DrawbridgereplaceprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double Numvar = 0;
 		if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
-			for (int index0 = 0; index0 < 16; index0++) {
+			for (int index53 = 0; index53 < 16; index53++) {
 				if (!(world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() == 0
 						&& !((world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock() == Blocks.AIR)) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
@@ -46,7 +46,7 @@ public class DrawbridgereplaceprocessProcedure {
 				Numvar = Numvar + 1;
 			}
 		} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
-			for (int index1 = 0; index1 < 16; index1++) {
+			for (int index54 = 0; index54 < 16; index54++) {
 				if (!(world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() == 0
 						&& !((world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock() == Blocks.AIR)) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
@@ -69,7 +69,7 @@ public class DrawbridgereplaceprocessProcedure {
 				Numvar = Numvar + 1;
 			}
 		} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
-			for (int index2 = 0; index2 < 16; index2++) {
+			for (int index55 = 0; index55 < 16; index55++) {
 				if (!(world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() == 0
 						&& !((world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock() == Blocks.AIR)) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
@@ -92,7 +92,7 @@ public class DrawbridgereplaceprocessProcedure {
 				Numvar = Numvar + 1;
 			}
 		} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
-			for (int index3 = 0; index3 < 16; index3++) {
+			for (int index56 = 0; index56 < 16; index56++) {
 				if (!(world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("forge:unbreakable"))) && itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() == 0
 						&& !((world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock() == Blocks.AIR)) {
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {

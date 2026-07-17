@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,18 +11,14 @@
     "name": "Double xp potion",
     "rarity": "COMMON",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Jobscreativetabs"
-      }
+      "CUSTOM:Jobscreativetabs"
     ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 32,
     "toolType": 1.0,
     "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
-    },
+    "recipeRemainder": "",
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "isPiglinCurrency": false,
@@ -43,31 +39,23 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
-      "name": "Givepotionx2exp"
-    },
+    "onFinishUsingItem": "Givepotionx2exp",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
-    "projectile": {
-      "value": "Arrow"
-    },
+    "projectile": "Arrow",
     "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 0,
     "saturation": 1.0,
-    "eatResultItem": {
-      "value": ""
-    },
+    "eatResultItem": "",
     "isMeat": false,
     "isAlwaysEdible": true,
     "animation": "drink",
     "isMusicDisc": false,
-    "musicDiscMusic": {
-      "value": ""
-    },
+    "musicDiscMusic": "",
     "musicDiscDescription": "",
-    "musicDiscLengthInTicks": 0,
+    "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": [],
     "attributeModifiers": []

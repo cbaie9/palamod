@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Titaneexcavator"
-      },
-      {
-        "value": "CUSTOM:Paladiumexcavator"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Titaneexcavator",
+      "CUSTOM:Paladiumexcavator"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Titaneexcavator"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Titaneexcavator"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titaneexcavator"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "CUSTOM:Titaneexcavator"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Titaneexcavator",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Titaneexcavator",
+      "",
+      "CUSTOM:Titaneexcavator",
+      "CUSTOM:PaladiumIngot",
+      "CUSTOM:Titaneexcavator",
+      "CUSTOM:PaladiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiumexcavator"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiumexcavator",
     "name": "paladiumexcavatorcraft",
     "namespace": "mod"
   }

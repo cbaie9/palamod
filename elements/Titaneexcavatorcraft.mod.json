@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "titane_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": "CUSTOM:Titaneexcavator"
-      }
+      "CUSTOM:TitaneShovel",
+      "CUSTOM:Titanestick",
+      "CUSTOM:Titaneexcavator"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": "CUSTOM:TitaneShovel"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:TitaneShovel",
+      "CUSTOM:TitaneShovel",
+      "CUSTOM:TitaneShovel",
+      "",
+      "CUSTOM:Titanestick",
+      "",
+      "",
+      "CUSTOM:Titanestick",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titaneexcavator"
-    },
+    "recipeReturnStack": "CUSTOM:Titaneexcavator",
     "name": "titaneexcavatorcraft",
     "namespace": "mod"
   }

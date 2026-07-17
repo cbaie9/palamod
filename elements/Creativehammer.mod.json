@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "MultiTool",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 99999.0,
     "attackSpeed": 1.0,
@@ -30,11 +28,7 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedOnBlock": {
-      "name": "Smeltplus"
-    },
-    "onBlockDestroyedWithTool": {
-      "name": "Smeltplus"
-    }
+    "onRightClickedOnBlock": "Smeltplus",
+    "onBlockDestroyedWithTool": "Smeltplus"
   }
 }

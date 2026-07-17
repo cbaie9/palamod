@@ -1,12 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "achievement",
   "definition": {
     "achievementName": "Creative_avancement",
     "achievementDescription": "Use in trigger for potg",
-    "achievementIcon": {
-      "value": "CUSTOM:Creativepotg"
-    },
+    "achievementIcon": "CUSTOM:Creativepotg",
     "background": "Default",
     "disableDisplay": true,
     "showPopup": false,
@@ -16,9 +14,7 @@
     "rewardRecipes": [],
     "rewardXP": 0,
     "achievementType": "task",
-    "parent": {
-      "value": "CUSTOM:Palamodavancement"
-    },
+    "parent": "CUSTOM:Palamodavancement",
     "triggerxml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"advancement_trigger\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\" x=\"40\" y=\"45\"/></next></block></xml>"
   }
 }

@@ -93,7 +93,7 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implem
 	@Override
 	public void init() {
 		super.init();
-		cheat_code_secret = new EditBox(this.font, this.leftPos + 5, this.topPos + 21, 118, 18, Component.translatable("gui.palamod.phonegui.cheat_code_secret"));
+		cheat_code_secret = new EditBox(this.font, this.leftPos + 4, this.topPos + 20, 120, 20, Component.translatable("gui.palamod.phonegui.cheat_code_secret"));
 		cheat_code_secret.setMaxLength(8192);
 		cheat_code_secret.setResponder(content -> {
 			if (!menuStateUpdateActive)

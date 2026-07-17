@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModMenus;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;

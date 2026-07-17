@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 2,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "TAG:mod:slimepad"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      }
+      "TAG:mod:slimepad",
+      "TAG:neoforge:obsidian"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "TAG:mod:slimepad"
-      },
-      {
-        "value": "TAG:mod:slimepad"
-      },
-      {
-        "value": "TAG:mod:slimepad"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      },
-      {
-        "value": "TAG:neoforge:obsidian"
-      }
+      "TAG:neoforge:obsidian",
+      "TAG:neoforge:obsidian",
+      "TAG:neoforge:obsidian",
+      "TAG:mod:slimepad",
+      "TAG:mod:slimepad",
+      "TAG:mod:slimepad",
+      "TAG:neoforge:obsidian",
+      "TAG:neoforge:obsidian",
+      "TAG:neoforge:obsidian"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Slimeobsidian"
-    },
+    "recipeReturnStack": "CUSTOM:Slimeobsidian",
     "name": "slimeobsidiancraft",
     "namespace": "mod"
   }

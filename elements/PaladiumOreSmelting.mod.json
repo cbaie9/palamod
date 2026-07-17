@@ -1,29 +1,21 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
     "recipeRetstackSize": 1,
     "group": "paladium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumOre"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumOre",
+      "CUSTOM:PaladiumIngot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.7,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:PaladiumOre"
-    },
-    "smeltingReturnStack": {
-      "value": "CUSTOM:PaladiumIngot"
-    },
+    "smeltingInputStack": "CUSTOM:PaladiumOre",
+    "smeltingReturnStack": "CUSTOM:PaladiumIngot",
     "name": "paladium_ore_smelting",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -121,9 +121,7 @@
           "name": "button_gui_example_wip",
           "text": "gui example ( wip )",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectexampleuploadergui"
-          },
+          "onClick": "Connectexampleuploadergui",
           "width": 123,
           "height": 20,
           "x": 60,

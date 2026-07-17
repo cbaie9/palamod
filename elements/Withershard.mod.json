@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,18 +11,14 @@
     "name": "Wither shard",
     "rarity": "COMMON",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
-    },
+    "recipeRemainder": "",
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "isPiglinCurrency": false,
@@ -51,7 +47,7 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
-    "musicDiscLengthInTicks": 0,
+    "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": [],
     "attributeModifiers": []

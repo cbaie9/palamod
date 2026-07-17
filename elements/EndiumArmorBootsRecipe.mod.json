@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "endium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumArmor.boots"
-      }
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumArmor.boots"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:EndiumIngot"
-      }
+      "",
+      "",
+      "",
+      "CUSTOM:EndiumIngot",
+      "",
+      "CUSTOM:EndiumIngot",
+      "CUSTOM:EndiumIngot",
+      "",
+      "CUSTOM:EndiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:EndiumArmor.boots"
-    },
+    "recipeReturnStack": "CUSTOM:EndiumArmor.boots",
     "name": "endium_armor_boots_recipe",
     "namespace": "mod"
   }

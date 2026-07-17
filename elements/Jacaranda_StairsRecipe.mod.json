@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 4,
     "group": "jacaranda_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Stairs"
-      }
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Stairs"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      },
-      {
-        "value": "CUSTOM:Jacaranda_Planks"
-      }
+      "CUSTOM:Jacaranda_Planks",
+      "",
+      "",
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks",
+      "",
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks",
+      "CUSTOM:Jacaranda_Planks"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Jacaranda_Stairs"
-    },
+    "recipeReturnStack": "CUSTOM:Jacaranda_Stairs",
     "name": "jacaranda_stairs_recipe",
     "namespace": "mod"
   }

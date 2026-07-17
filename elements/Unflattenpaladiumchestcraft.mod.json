@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Paladiumchestv2"
-      },
-      {
-        "value": "CUSTOM:Paladiumchest"
-      }
+      "CUSTOM:Paladiumchestv2",
+      "CUSTOM:Paladiumchest"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Paladiumchest"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Paladiumchest",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Paladiumchestv2"
-    },
+    "recipeReturnStack": "CUSTOM:Paladiumchestv2",
     "name": "unflattenpaladiumchestcraft",
     "namespace": "mod"
   }

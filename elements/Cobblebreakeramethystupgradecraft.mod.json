@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "cobblebreaker_upgrades",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Speedmodifier"
-      },
-      {
-        "value": "CUSTOM:Cobblebreaker"
-      },
-      {
-        "value": "CUSTOM:Cobblebreakeramethystupgrade"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Speedmodifier",
+      "CUSTOM:Cobblebreaker",
+      "CUSTOM:Cobblebreakeramethystupgrade"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Cobblebreaker"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Speedmodifier"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Cobblebreaker",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Speedmodifier",
+      "CUSTOM:Amethyste"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Cobblebreakeramethystupgrade"
-    },
+    "recipeReturnStack": "CUSTOM:Cobblebreakeramethystupgrade",
     "name": "cobblebreakeramethystupgradecraft",
     "namespace": "mod"
   }

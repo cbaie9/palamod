@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "endium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumnugget"
-      }
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumnugget"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      }
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:Endiumfragment"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumnugget"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumnugget",
     "name": "endiumnuggetcraft_2",
     "namespace": "mod"
   }

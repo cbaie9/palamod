@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Diamondinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Diamondinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Diamondinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Diamondinfusedobsidian"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Diamondinfusedobsidian",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Diamondinfusedobsidian",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Diamondinfusedobsidian",
+      "CUSTOM:Amethyste",
+      "CUSTOM:Diamondinfusedobsidian",
+      "CUSTOM:Amethyste"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethystinfusedobsidian"
-    },
+    "recipeReturnStack": "CUSTOM:Amethystinfusedobsidian",
     "name": "amethystinfusedobsidiancraft",
     "namespace": "mod"
   }

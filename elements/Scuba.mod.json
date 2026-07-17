@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,13 +10,9 @@
     "textureLeggings": "",
     "enableBoots": false,
     "textureBoots": "",
-    "onHelmetTick": {
-      "name": "ScubaHelmetTickEvent"
-    },
+    "onHelmetTick": "ScubaHelmetTickEvent",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "armorTextureFile": "scubaarmor_",
     "helmetName": "Scuba Helmet",
@@ -75,10 +71,9 @@
     "enchantability": 9,
     "toughness": 1.0,
     "knockbackResistance": 0.0,
-    "equipSound": {
-      "value": ""
-    },
+    "equipSound": "",
     "repairItems": [],
-    "rarity": "COMMON"
+    "rarity": "COMMON",
+    "attributeModifiers": []
   }
 }

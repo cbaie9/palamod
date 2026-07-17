@@ -107,7 +107,7 @@ public class TrixiumdepositMenu extends AbstractContainerMenu implements Palamod
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return stack.is(ItemTags.create(ResourceLocation.parse("palapalamod:trixium_depo")));
+				return stack.is(ItemTags.create(ResourceLocation.parse("palamod:trixium_depo")));
 			}
 		}));
 		for (int si = 0; si < 3; ++si)

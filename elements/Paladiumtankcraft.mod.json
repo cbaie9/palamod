@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Blocks.STAINED_GLASS"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      }
+      "CUSTOM:PaladiumIngot",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:PaladiumIngot",
+      "Blocks.STAINED_GLASS",
+      "",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:PaladiumIngot",
+      "Blocks.STAINED_GLASS",
+      "CUSTOM:PaladiumIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:PaladiumTank"
-    },
+    "recipeReturnStack": "CUSTOM:PaladiumTank",
     "name": "paladiumtankcraft",
     "namespace": "mod"
   }

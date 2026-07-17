@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "titane_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneIngot"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      },
-      {
-        "value": "CUSTOM:TitaneBlock"
-      }
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneBlock",
+      "CUSTOM:TitaneBlock"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Compressedtitane"
-    },
+    "recipeReturnStack": "CUSTOM:Compressedtitane",
     "name": "compressed_titane_craft",
     "namespace": "mod"
   }

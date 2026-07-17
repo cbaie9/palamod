@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      }
+      "",
+      "",
+      "Blocks.OBSIDIAN",
+      "",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Obsidianstairs"
-    },
+    "recipeReturnStack": "CUSTOM:Obsidianstairs",
     "name": "obsidianstairscraft",
     "namespace": "mod"
   }

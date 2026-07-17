@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "Blocks.SKULL#0"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "CUSTOM:Brokenspawner"
-      },
-      {
-        "value": "CUSTOM:Guardianstone"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      },
-      {
-        "value": "CUSTOM:Paladiumcrusher"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      }
+      "CUSTOM:Findium",
+      "Blocks.SKULL#0",
+      "CUSTOM:Findium",
+      "CUSTOM:Compressedpaladium",
+      "CUSTOM:Brokenspawner",
+      "CUSTOM:Guardianstone",
+      "CUSTOM:Findium",
+      "CUSTOM:Paladiumcrusher",
+      "CUSTOM:Findium"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Emptyspawner"
-    },
+    "recipeReturnStack": "CUSTOM:Emptyspawner",
     "name": "emptyspawnercraft",
     "namespace": "mod"
   }

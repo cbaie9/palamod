@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Stone cutting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "stoneCuttingInputStack": {
-      "value": "CUSTOM:Softstone"
-    },
-    "stoneCuttingReturnStack": {
-      "value": "CUSTOM:Softstonestairs"
-    },
+    "stoneCuttingInputStack": "CUSTOM:Softstone",
+    "stoneCuttingReturnStack": "CUSTOM:Softstonestairs",
     "name": "softstonestairscraft_2",
     "namespace": "mod"
   }

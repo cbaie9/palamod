@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -45,9 +45,7 @@
           "name": "button_open",
           "text": "open",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Safecodecheck"
-          },
+          "onClick": "Safecodecheck",
           "width": 46,
           "height": 20,
           "x": 142,

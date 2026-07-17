@@ -31,7 +31,10 @@ public class StrippedDeadLogBlock extends Block {
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return super.getStateForPlacement(context).setValue(AXIS, context.getClickedFace().getAxis());
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
+		return state.setValue(AXIS, context.getClickedFace().getAxis());
 	}
 
 	@Override

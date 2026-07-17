@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 9,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:FindiumBlock"
-      },
-      {
-        "value": "CUSTOM:Findium"
-      }
+      "CUSTOM:FindiumBlock",
+      "CUSTOM:Findium"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:FindiumBlock"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:FindiumBlock",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Findium"
-    },
+    "recipeReturnStack": "CUSTOM:Findium",
     "name": "findium_block_ore_recipe",
     "namespace": "mod"
   }

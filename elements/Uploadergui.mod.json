@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -41,9 +41,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Uploaderprocess"
-          },
+          "onSlotChanged": "Uploaderprocess",
           "x": 203,
           "y": 98,
           "locked": true
@@ -75,9 +73,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Uploaderprocess"
-          },
+          "onSlotChanged": "Uploaderprocess",
           "x": 203,
           "y": 64,
           "locked": true
@@ -121,9 +117,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 304,
           "y": 34,
           "locked": true

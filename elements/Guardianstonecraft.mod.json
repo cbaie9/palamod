@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "Blocks.STONE#0",
+      "",
+      "Blocks.STONE#0",
+      "CUSTOM:Compressedpaladium",
+      "Blocks.STONE#0",
+      "",
+      "Blocks.STONE#0",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Guardianstone"
-    },
+    "recipeReturnStack": "CUSTOM:Guardianstone",
     "name": "guardianstonecraft",
     "namespace": "mod"
   }

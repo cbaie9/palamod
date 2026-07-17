@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 4,
     "group": "titane_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanestick"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanestick"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:TitaneIngot",
+      "",
+      "",
+      "CUSTOM:TitaneIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanestick"
-    },
+    "recipeReturnStack": "CUSTOM:Titanestick",
     "name": "titanestickcraft",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      },
-      {
-        "value": "CUSTOM:Amethystchestv2"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Compressedtitane"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Compressedtitane",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Compressedtitane",
+      "CUSTOM:Amethystchestv2",
+      "CUSTOM:Compressedtitane",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Compressedtitane",
+      "CUSTOM:TitaneIngot"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanechestv2"
-    },
+    "recipeReturnStack": "CUSTOM:Titanechestv2",
     "name": "titanechestcraft",
     "namespace": "mod"
   }

@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "Blocks.SKULL#4"
-      },
-      {
-        "value": "CUSTOM:Totemfertility"
-      },
-      {
-        "value": "CUSTOM:Fertilseddirt"
-      },
-      {
-        "value": "Items.DYE#15"
-      }
+      "Blocks.SKULL#4",
+      "CUSTOM:Totemfertility",
+      "CUSTOM:Fertilseddirt",
+      "Items.DYE#15"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "TAG:c:logs"
-      },
-      {
-        "value": "Blocks.SKULL#4"
-      },
-      {
-        "value": "TAG:c:logs"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "TAG:c:logs"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "TAG:c:logs"
-      },
-      {
-        "value": "Items.DYE#15"
-      },
-      {
-        "value": "TAG:c:logs"
-      }
+      "TAG:c:logs",
+      "Blocks.SKULL#4",
+      "TAG:c:logs",
+      "CUSTOM:Compressedpaladium",
+      "TAG:c:logs",
+      "CUSTOM:Compressedpaladium",
+      "TAG:c:logs",
+      "Items.DYE#15",
+      "TAG:c:logs"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Totemfertility"
-    },
+    "recipeReturnStack": "CUSTOM:Totemfertility",
     "name": "totemoffertiltycraft",
     "namespace": "mod"
   }

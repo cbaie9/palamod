@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "potioneffect",
   "definition": {
     "effectName": "antifake",
@@ -14,11 +14,7 @@
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [],
-    "onStarted": {
-      "name": "AntifakeEffect_add_nbt"
-    },
-    "onActiveTick": {
-      "name": "AntifakeOnEffect_delete_nbt"
-    }
+    "onStarted": "AntifakeEffect_add_nbt",
+    "onActiveTick": "AntifakeOnEffect_delete_nbt"
   }
 }

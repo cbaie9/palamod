@@ -19,8 +19,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 @EventBusSubscriber
 public class PalamodModAttributes {
 	public static final DeferredRegister<Attribute> REGISTRY = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, PalamodMod.MODID);
-	public static final DeferredHolder<Attribute, Attribute> IS_FIGHTING = REGISTRY.register("is_fighting", () -> new RangedAttribute("attribute.palamod.is_fighting", 0, 0, 1).setSyncable(true).setSentiment(Attribute.Sentiment.NEUTRAL));
-	public static final DeferredHolder<Attribute, Attribute> FIGHTING_TIME = REGISTRY.register("fighting_time", () -> new RangedAttribute("attribute.palamod.fighting_time", 0, 0, 300).setSyncable(true).setSentiment(Attribute.Sentiment.NEGATIVE));
+	public static final DeferredHolder<Attribute, Attribute> IS_FIGHTING = REGISTRY.register("is_fighting", () -> new RangedAttribute("attribute.palamod.is_fighting", 0d, 0d, 1d).setSyncable(true).setSentiment(Attribute.Sentiment.NEUTRAL));
+	public static final DeferredHolder<Attribute, Attribute> FIGHTING_TIME = REGISTRY.register("fighting_time", () -> new RangedAttribute("attribute.palamod.fighting_time", 0d, 0d, 300d).setSyncable(true).setSentiment(Attribute.Sentiment.NEGATIVE));
 
 	@SubscribeEvent
 	public static void addAttributes(EntityAttributeModificationEvent event) {

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,9 +11,7 @@
     "name": "Antifuzedisc",
     "rarity": "RARE",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "stackSize": 1,
     "enchantability": 0,
@@ -50,9 +48,7 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": true,
-    "musicDiscMusic": {
-      "value": "CUSTOM:anti_fuze_clash"
-    },
+    "musicDiscMusic": "CUSTOM:anti_fuze_clash",
     "musicDiscDescription": "Fuze III - Anti Anti fuze ",
     "musicDiscLengthInTicks": 2100,
     "musicDiscAnalogOutput": 0,

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -88,9 +88,7 @@
           "name": "button_transfert",
           "text": "transfert",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Potgtransfert"
-          },
+          "onClick": "Potgtransfert",
           "width": 72,
           "height": 20,
           "x": 219,

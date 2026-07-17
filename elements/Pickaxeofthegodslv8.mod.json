@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "MultiTool",
@@ -18,9 +18,7 @@
       "name": "Titlepog"
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Pickaxeofgodstab"
-      }
+      "CUSTOM:Pickaxeofgodstab"
     ],
     "efficiency": 30.0,
     "attackSpeed": 1.5,
@@ -37,11 +35,7 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onItemInUseTick": {
-      "name": "Moucepotg"
-    },
-    "onBlockDestroyedWithTool": {
-      "name": "Upgradepotgv2"
-    }
+    "onItemInUseTick": "Moucepotg",
+    "onBlockDestroyedWithTool": "Upgradepotgv2"
   }
 }

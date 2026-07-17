@@ -1,17 +1,11 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "biome",
   "definition": {
     "name": "Alternate plaines",
-    "groundBlock": {
-      "value": "CUSTOM:Softstone"
-    },
-    "undergroundBlock": {
-      "value": "CUSTOM:Softstone"
-    },
-    "underwaterBlock": {
-      "value": "Blocks.AIR"
-    },
+    "groundBlock": "CUSTOM:Softstone",
+    "undergroundBlock": "CUSTOM:Softstone",
+    "underwaterBlock": "Blocks.AIR",
     "grassColor": {
       "value": -15833288,
       "falpha": 0.0
@@ -24,23 +18,13 @@
       "value": -15317380,
       "falpha": 0.0
     },
-    "ambientSound": {
-      "value": ""
-    },
-    "additionsSound": {
-      "value": ""
-    },
-    "music": {
-      "value": "music.overworld.flower_forest"
-    },
-    "moodSound": {
-      "value": "ambient.cave"
-    },
+    "ambientSound": "",
+    "additionsSound": "",
+    "music": "music.overworld.flower_forest",
+    "moodSound": "ambient.cave",
     "moodSoundDelay": 6000,
     "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "CUSTOM:Flyparticle"
-    },
+    "particleToSpawn": "CUSTOM:Flyparticle",
     "particlesProbability": 0.5,
     "rainingPossibility": 0.0,
     "temperature": 0.5,
@@ -75,18 +59,10 @@
     "vanillaTreeType": "Default",
     "treeType": 0,
     "minHeight": 7,
-    "treeStem": {
-      "value": ""
-    },
-    "treeBranch": {
-      "value": ""
-    },
-    "treeVines": {
-      "value": ""
-    },
-    "treeFruits": {
-      "value": ""
-    },
+    "treeStem": "",
+    "treeBranch": "",
+    "treeVines": "",
+    "treeFruits": "",
     "defaultFeatures": [
       "Caves",
       "Ores"

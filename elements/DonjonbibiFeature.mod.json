@@ -1,13 +1,11 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "feature",
   "definition": {
     "skipPlacement": false,
     "generationStep": "UNDERGROUND_STRUCTURES",
     "restrictionBiomes": [
-      {
-        "value": "#is_overworld"
-      }
+      "#is_overworld"
     ],
     "featurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml><block deletable=\"false\" type=\"feature_container\" x=\"40\" y=\"40\">\r\n<value name=\"feature\"><block type=\"feature_custom_structure\">\r\n\t<field name=\"structure\">bibi2</field>\r\n\t<field name=\"x\">0</field>\r\n\t<field name=\"y\">-20</field>\r\n\t<field name=\"z\">0</field>\r\n\t<field name=\"random_rotation\">TRUE</field>\r\n\t<field name=\"random_mirror\">TRUE</field>\r\n\t<value name=\"ignored_blocks\">\r\n\t\t<block type=\"block_holderset_list\"><mutation inputs=\"1\"/><field name=\"block0\">Blocks.STRUCTURE_BLOCK</field></block>\r\n\t</value>\r\n</block>\r\n</value>\r\n<next><block type=\"placement_rarity\">\r\n\t<field name=\"rarity\">133</field>\r\n\t<next><block type=\"placement_in_square\"><next><block type=\"placement_height_uniform\">\r\n\t<value name=\"min\">\r\n\t\t<block type=\"vertical_anchor_above_bottom\">\r\n\t\t\t<field name=\"value\">8</field>\r\n\t\t</block>\r\n\t</value>\r\n\t<value name=\"max\">\r\n\t\t<block type=\"vertical_anchor_absolute\">\r\n\t\t\t<field name=\"value\">128</field>\r\n\t\t</block>\r\n\t</value>\r\n\t<next>\r\n\t\t<block type=\"placement_surface_relative_threshold\">\r\n\t\t\t<field name=\"heightmap\">OCEAN_FLOOR_WG</field>\r\n\t\t\t<field name=\"min\">-192</field>\r\n\t\t\t<field name=\"max\">-8</field>\r\n\t<next><block type=\"placement_biome_filter\"/></next></block></next></block></next></block></next></block></next></block></xml>"
   }

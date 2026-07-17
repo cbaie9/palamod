@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      }
+      "CUSTOM:ShinyErablewood"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      },
-      {
-        "value": "CUSTOM:ShinyErablewood"
-      }
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:ShinyErablewood",
+      "CUSTOM:ShinyErablewood"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:PaladiumPortalBlock"
-    },
+    "recipeReturnStack": "CUSTOM:PaladiumPortalBlock",
     "name": "paladium_portal_block_craft",
     "namespace": "mod"
   }

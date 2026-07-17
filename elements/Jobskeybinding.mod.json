@@ -1,12 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "keybind",
   "definition": {
     "triggerKey": "J",
     "keyBindingName": "Jobs key binding",
     "keyBindingCategoryKey": "palamod",
-    "onKeyPressed": {
-      "name": "ConnectOpenjobsgui"
-    }
+    "onKeyPressed": "ConnectOpenjobsgui"
   }
 }

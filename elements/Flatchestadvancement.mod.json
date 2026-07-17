@@ -1,12 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "achievement",
   "definition": {
     "achievementName": "Invisible chest !!?",
     "achievementDescription": "Use the flat modifier to flatten a chest",
-    "achievementIcon": {
-      "value": "CUSTOM:Flatchestupgrade"
-    },
+    "achievementIcon": "CUSTOM:Flatchestupgrade",
     "background": "Default",
     "disableDisplay": false,
     "showPopup": true,
@@ -16,9 +14,7 @@
     "rewardRecipes": [],
     "rewardXP": 10,
     "achievementType": "challenge",
-    "parent": {
-      "value": "CUSTOM:Achmchestamethyst"
-    },
+    "parent": "CUSTOM:Achmchestamethyst",
     "triggerxml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"advancement_trigger\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\" x=\"41\" y=\"40\"/></next></block></xml>"
   }
 }

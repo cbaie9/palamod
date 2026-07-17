@@ -1,11 +1,9 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tab",
   "definition": {
     "name": "Palamod : Pickaxe of gods",
-    "icon": {
-      "value": "CUSTOM:Pickaxeofthegodslv1"
-    },
+    "icon": "CUSTOM:Pickaxeofthegodslv1",
     "showSearch": false
   }
 }

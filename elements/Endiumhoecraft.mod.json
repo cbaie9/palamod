@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "endium_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": "CUSTOM:Endiumhoe"
-      }
+      "CUSTOM:Endiumnugget",
+      "CUSTOM:Endiumhoe"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": "CUSTOM:Endiumnugget"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Endiumnugget",
+      "CUSTOM:Endiumnugget",
+      "",
+      "",
+      "Items.STICK",
+      "",
+      "",
+      "Items.STICK",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Endiumhoe"
-    },
+    "recipeReturnStack": "CUSTOM:Endiumhoe",
     "name": "endium_hoe_craft",
     "namespace": "mod"
   }

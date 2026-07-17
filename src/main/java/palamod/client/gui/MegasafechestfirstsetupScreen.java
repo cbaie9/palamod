@@ -106,7 +106,7 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 	@Override
 	public void init() {
 		super.init();
-		safe_code = new EditBox(this.font, this.leftPos + 9, this.topPos + 43, 118, 18, Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code"));
+		safe_code = new EditBox(this.font, this.leftPos + 8, this.topPos + 42, 120, 20, Component.translatable("gui.palamod.megasafechestfirstsetup.safe_code"));
 		safe_code.setMaxLength(8192);
 		safe_code.setResponder(content -> {
 			if (!menuStateUpdateActive)

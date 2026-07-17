@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
@@ -11,12 +11,8 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": {
-      "value": "CUSTOM:Softenedendiumnuggetore"
-    },
-    "smeltingReturnStack": {
-      "value": "CUSTOM:Endiumnugget"
-    },
+    "smeltingInputStack": "CUSTOM:Softenedendiumnuggetore",
+    "smeltingReturnStack": "CUSTOM:Endiumnugget",
     "name": "softenedendiumoresmelt_1",
     "namespace": "mod"
   }

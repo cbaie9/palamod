@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "block",
   "definition": {
     "texture": "spike_titane_1",
@@ -732,17 +732,11 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Jobscreativetabs"
-      },
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Jobscreativetabs",
+      "CUSTOM:Palamod"
     ],
     "destroyTool": "pickaxe",
-    "customDrop": {
-      "value": ""
-    },
+    "customDrop": "",
     "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
@@ -762,14 +756,10 @@
     },
     "colorOnMap": "DEFAULT",
     "noteBlockInstrument": "iron_xylophone",
-    "creativePickItem": {
-      "value": ""
-    },
+    "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "strippingResult": {
-      "value": ""
-    },
+    "strippingResult": "",
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -779,25 +769,13 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
+    "soundOnStep": "STONE",
     "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "STONE"
-    },
-    "breakSound": {
-      "value": ""
-    },
-    "fallSound": {
-      "value": ""
-    },
-    "hitSound": {
-      "value": ""
-    },
-    "placeSound": {
-      "value": ""
-    },
-    "stepSound": {
-      "value": ""
-    },
+    "breakSound": "",
+    "fallSound": "",
+    "hitSound": "",
+    "placeSound": "",
+    "stepSound": "",
     "luminance": {
       "fixedValue": 0.0
     },
@@ -825,24 +803,14 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "Tankprocess"
-    },
-    "onBlockAdded": {
-      "name": "Tanksetup"
-    },
-    "onDestroyedByPlayer": {
-      "name": "Tankbreaktransfert"
-    },
-    "onStartToDestroy": {
-      "name": "Tankbreakpreloaddata"
-    },
+    "onRightClicked": "Tankprocess",
+    "onBlockAdded": "Tanksetup",
+    "onDestroyedByPlayer": "Tankbreaktransfert",
+    "onStartToDestroy": "Tankbreakpreloaddata",
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
-      {
-        "value": "TAG:stone_ore_replaceables"
-      }
+      "TAG:stone_ore_replaceables"
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,

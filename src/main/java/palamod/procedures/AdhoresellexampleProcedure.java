@@ -6,8 +6,6 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;

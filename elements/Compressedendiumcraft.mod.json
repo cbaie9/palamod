@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      },
-      {
-        "value": "CUSTOM:PaladiumBlock"
-      },
-      {
-        "value": "CUSTOM:Endiumfragment"
-      }
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Endiumfragment",
+      "CUSTOM:PaladiumBlock",
+      "CUSTOM:Endiumfragment"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Compressedendium"
-    },
+    "recipeReturnStack": "CUSTOM:Compressedendium",
     "name": "compressedendiumcraft",
     "namespace": "mod"
   }

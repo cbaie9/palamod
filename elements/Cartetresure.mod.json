@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "loottable",
   "definition": {
     "type": "Block",
@@ -13,9 +13,7 @@
         "entries": [
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:PaladiumBlock"
-            },
+            "item": "CUSTOM:PaladiumBlock",
             "weight": 60,
             "minCount": 0,
             "maxCount": 16,
@@ -27,9 +25,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:PaladiumArmor.helmet"
-            },
+            "item": "CUSTOM:PaladiumArmor.helmet",
             "weight": 50,
             "minCount": 1,
             "maxCount": 1,
@@ -41,9 +37,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:PaladiumArmor.body"
-            },
+            "item": "CUSTOM:PaladiumArmor.body",
             "weight": 50,
             "minCount": 1,
             "maxCount": 1,
@@ -55,9 +49,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:PaladiumArmor.legs"
-            },
+            "item": "CUSTOM:PaladiumArmor.legs",
             "weight": 50,
             "minCount": 1,
             "maxCount": 1,
@@ -69,9 +61,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:PaladiumArmor.boots"
-            },
+            "item": "CUSTOM:PaladiumArmor.boots",
             "weight": 50,
             "minCount": 1,
             "maxCount": 1,
@@ -83,9 +73,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Endiumnugget"
-            },
+            "item": "CUSTOM:Endiumnugget",
             "weight": 5,
             "minCount": 0,
             "maxCount": 2,
@@ -97,9 +85,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Luckyblock"
-            },
+            "item": "CUSTOM:Luckyblock",
             "weight": 70,
             "minCount": 0,
             "maxCount": 64,
@@ -111,9 +97,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:AmethysteBlock"
-            },
+            "item": "CUSTOM:AmethysteBlock",
             "weight": 100,
             "minCount": 0,
             "maxCount": 64,
@@ -125,9 +109,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Paladiummachine"
-            },
+            "item": "CUSTOM:Paladiummachine",
             "weight": 20,
             "minCount": 1,
             "maxCount": 1,
@@ -139,9 +121,7 @@
           },
           {
             "type": "item",
-            "item": {
-              "value": "CUSTOM:Jumpstick"
-            },
+            "item": "CUSTOM:Jumpstick",
             "weight": 30,
             "minCount": 1,
             "maxCount": 1,

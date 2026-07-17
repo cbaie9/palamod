@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 9,
     "group": "amethyst_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:AmethysteBlock",
+      "CUSTOM:Amethyste"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:AmethysteBlock"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:AmethysteBlock",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Amethyste"
-    },
+    "recipeReturnStack": "CUSTOM:Amethyste",
     "name": "amethyste_block_ore_recipe",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -241,9 +241,7 @@
           "name": "imagebutton_sommaire_btn",
           "image": "sommaire_btn.png",
           "hoveredImage": "sommaire_btn.png",
-          "onClick": {
-            "name": "ConnectNewPalahelp"
-          },
+          "onClick": "ConnectNewPalahelp",
           "x": 183,
           "y": 29,
           "locked": false

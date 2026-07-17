@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -47,12 +47,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 143,
           "y": 99,
           "locked": false
@@ -66,12 +62,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 164,
           "y": 99,
           "locked": false
@@ -85,12 +77,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 185,
           "y": 99,
           "locked": false
@@ -104,12 +92,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 206,
           "y": 99,
           "locked": false
@@ -123,12 +107,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 227,
           "y": 99,
           "locked": false
@@ -142,12 +122,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 248,
           "y": 99,
           "locked": false
@@ -161,12 +137,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Givexpcobblebreakerserver"
-          },
-          "onStackTransfer": {
-            "name": "Givexpcobblebreakerserver"
-          },
+          "onTakenFromSlot": "Givexpcobblebreakerserver",
+          "onStackTransfer": "Givexpcobblebreakerserver",
           "x": 269,
           "y": 99,
           "locked": false

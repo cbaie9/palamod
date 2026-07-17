@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -26,9 +26,7 @@
           "name": "imagebutton_paladium_ingot",
           "image": "paladium_ingot.png",
           "hoveredImage": "paladium_ingot.png",
-          "onClick": {
-            "name": "Crushercraftpaladium"
-          },
+          "onClick": "Crushercraftpaladium",
           "x": 204,
           "y": 57,
           "locked": false
@@ -40,9 +38,7 @@
           "name": "imagebutton_amethyst_ingot",
           "image": "amethyst_ingot.png",
           "hoveredImage": "amethyst_ingot.png",
-          "onClick": {
-            "name": "Crushercraftamethyst"
-          },
+          "onClick": "Crushercraftamethyst",
           "x": 148,
           "y": 57,
           "locked": false
@@ -54,9 +50,7 @@
           "name": "imagebutton_titane_ingot",
           "image": "titane_ingot.png",
           "hoveredImage": "",
-          "onClick": {
-            "name": "Crushercrafttitane"
-          },
+          "onClick": "Crushercrafttitane",
           "x": 177,
           "y": 57,
           "locked": false
@@ -68,9 +62,7 @@
           "name": "imagebutton_endium_nugets_vfufu",
           "image": "endium_nugets_vfufu.png",
           "hoveredImage": "endium_nugets_vfufu.png",
-          "onClick": {
-            "name": "Crushercraftendium"
-          },
+          "onClick": "Crushercraftendium",
           "x": 232,
           "y": 57,
           "locked": false
@@ -124,9 +116,7 @@
           "name": "imagebutton_help_button",
           "image": "help_button.png",
           "hoveredImage": "help_button_poi.png",
-          "onClick": {
-            "name": "Connectpalahelpcrusher"
-          },
+          "onClick": "Connectpalahelpcrusher",
           "x": 265,
           "y": 55,
           "locked": false
@@ -138,9 +128,7 @@
           "name": "imagebutton_close_gui_nohover",
           "image": "close_gui_nohover.png",
           "hoveredImage": "close_gui_hover.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 283,
           "y": 55,
           "locked": false
@@ -331,9 +319,7 @@
         }
       }
     ],
-    "onOpen": {
-      "name": "Crushercraftamethyst"
-    },
+    "onOpen": "Crushercraftamethyst",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

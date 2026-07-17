@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "enchantment",
   "definition": {
     "name": "Botteled",
@@ -10,13 +10,12 @@
     "damageModifier": 0,
     "incompatibleEnchantments": [],
     "supportedItems": [
-      {
-        "value": "TAG:forge:pickaxe"
-      }
+      "TAG:forge:pickaxe"
     ],
     "isTreasureEnchantment": true,
     "isCurse": false,
     "canGenerateInLootTables": false,
-    "canVillagerTrade": false
+    "canVillagerTrade": false,
+    "effectsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"enchantment_effects_start\" deletable=\"false\" x=\"40\" y=\"80\"></block></xml>"
   }
 }

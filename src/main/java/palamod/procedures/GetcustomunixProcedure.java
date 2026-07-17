@@ -1,7 +1,5 @@
 package palamod.procedures;
 
-import org.checkerframework.checker.units.qual.s;
-
 import java.util.Calendar;
 
 public class GetcustomunixProcedure {

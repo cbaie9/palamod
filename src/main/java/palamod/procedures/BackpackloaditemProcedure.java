@@ -68,7 +68,7 @@ public class BackpackloaditemProcedure {
 							}
 							bufferedReader.close();
 							main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							for (int index0 = 0; index0 < 9; index0++) {
+							for (int index64 = 0; index64 < 9; index64++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 									ItemStack _setstack27 = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 									_setstack27.setCount((int) (64 < main.get(("backpack_num_" + i)).getAsDouble() ? 64 : main.get(("backpack_num_" + i)).getAsDouble()));
@@ -93,7 +93,7 @@ public class BackpackloaditemProcedure {
 							}
 							bufferedReader.close();
 							main_backpack_titane = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							for (int index1 = 0; index1 < 18; index1++) {
+							for (int index65 = 0; index65 < 18; index65++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 									ItemStack _setstack33 = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_titane.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 									_setstack33.setCount((int) (64 < main_backpack_titane.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_titane.get(("backpack_num_" + i)).getAsDouble()));
@@ -118,7 +118,7 @@ public class BackpackloaditemProcedure {
 							}
 							bufferedReader.close();
 							main_backpack_paladium = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							for (int index2 = 0; index2 < 27; index2++) {
+							for (int index66 = 0; index66 < 27; index66++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 									ItemStack _setstack39 = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_paladium.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 									_setstack39.setCount((int) (64 < main_backpack_paladium.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_paladium.get(("backpack_num_" + i)).getAsDouble()));
@@ -143,7 +143,7 @@ public class BackpackloaditemProcedure {
 							}
 							bufferedReader.close();
 							main_backpack_endium = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-							for (int index3 = 0; index3 < 27; index3++) {
+							for (int index67 = 0; index67 < 27; index67++) {
 								if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 									ItemStack _setstack45 = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((main_backpack_endium.get(("backpack_inv_" + i)).getAsString()).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 									_setstack45.setCount((int) (64 < main_backpack_endium.get(("backpack_num_" + i)).getAsDouble() ? 64 : main_backpack_endium.get(("backpack_num_" + i)).getAsDouble()));

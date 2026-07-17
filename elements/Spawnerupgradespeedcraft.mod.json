@@ -1,23 +1,15 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "Items.SUGAR"
-      },
-      {
-        "value": "CUSTOM:Spawnerupgradespeed"
-      }
+      "Blocks.OBSIDIAN",
+      "CUSTOM:Compressedpaladium",
+      "Items.SUGAR",
+      "CUSTOM:Spawnerupgradespeed"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -25,37 +17,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "Items.SUGAR"
-      },
-      {
-        "value": "CUSTOM:Compressedpaladium"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      },
-      {
-        "value": "Blocks.OBSIDIAN"
-      }
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "CUSTOM:Compressedpaladium",
+      "Items.SUGAR",
+      "CUSTOM:Compressedpaladium",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN",
+      "Blocks.OBSIDIAN"
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Spawnerupgradespeed"
-    },
+    "recipeReturnStack": "CUSTOM:Spawnerupgradespeed",
     "name": "spawnerupgradespeedcraft",
     "namespace": "mod"
   }

@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -101,9 +101,7 @@
           "name": "button_ores",
           "text": "Ores",
           "isUndecorated": false,
-          "onClick": {
-            "name": "ConnectnewOreLiquidsPalahelp"
-          },
+          "onClick": "ConnectnewOreLiquidsPalahelp",
           "width": 50,
           "height": 20,
           "x": 242,
@@ -117,9 +115,7 @@
           "name": "button_trees",
           "text": "Trees",
           "isUndecorated": false,
-          "onClick": {
-            "name": "ConnectPalahelpTree"
-          },
+          "onClick": "ConnectPalahelpTree",
           "width": 50,
           "height": 20,
           "x": 242,
@@ -133,9 +129,7 @@
           "name": "button_armors",
           "text": "Armors",
           "isUndecorated": false,
-          "onClick": {
-            "name": "Connectarmorpalahelp"
-          },
+          "onClick": "Connectarmorpalahelp",
           "width": 61,
           "height": 20,
           "x": 296,
@@ -149,9 +143,7 @@
           "name": "button_liquids",
           "text": "Liquids",
           "isUndecorated": false,
-          "onClick": {
-            "name": "ConnectnewOreLiquidsPalahelp"
-          },
+          "onClick": "ConnectnewOreLiquidsPalahelp",
           "width": 61,
           "height": 20,
           "x": 296,
@@ -165,9 +157,7 @@
           "name": "button_commands",
           "text": "Commands",
           "isUndecorated": false,
-          "onClick": {
-            "name": "ConnectNewPalahelpCommand"
-          },
+          "onClick": "ConnectNewPalahelpCommand",
           "width": 50,
           "height": 20,
           "x": 242,

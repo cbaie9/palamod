@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tool",
   "definition": {
     "toolType": "Spade",
@@ -14,9 +14,7 @@
       "fixedValue": []
     },
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "efficiency": 14.0,
     "attackSpeed": 1.0,
@@ -24,9 +22,7 @@
     "damageVsEntity": 3.0,
     "usageCount": 2999,
     "repairItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      }
+      "CUSTOM:Amethyste"
     ],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",

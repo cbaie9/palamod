@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -7,12 +7,8 @@
     "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {
-      "seve": {
-        "name": "FlaskPropertyValueProvider"
-      },
-      "type": {
-        "name": "FlaskPropertyValueProvider_type_of_wood"
-      }
+      "seve": "FlaskPropertyValueProvider",
+      "type": "FlaskPropertyValueProvider_type_of_wood"
     },
     "states": [
       {
@@ -116,21 +112,15 @@
     "name": "Flask",
     "rarity": "COMMON",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      },
-      {
-        "value": "CUSTOM:Jobscreativetabs"
-      }
+      "CUSTOM:Palamod",
+      "CUSTOM:Jobscreativetabs"
     ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
-    "recipeRemainder": {
-      "value": ""
-    },
+    "recipeRemainder": "",
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "isPiglinCurrency": false,
@@ -155,23 +145,17 @@
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
-    "projectile": {
-      "value": "CUSTOM:Switcharrow"
-    },
+    "projectile": "CUSTOM:Switcharrow",
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
-    "eatResultItem": {
-      "value": ""
-    },
+    "eatResultItem": "",
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
-    "musicDiscMusic": {
-      "value": ""
-    },
+    "musicDiscMusic": "",
     "musicDiscDescription": "",
     "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,

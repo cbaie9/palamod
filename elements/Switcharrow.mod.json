@@ -1,14 +1,10 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "projectile",
   "definition": {
-    "projectileItem": {
-      "value": "CUSTOM:Switcharrowitem"
-    },
+    "projectileItem": "CUSTOM:Switcharrowitem",
     "showParticles": false,
-    "actionSound": {
-      "value": "entity.arrow.shoot"
-    },
+    "actionSound": "entity.arrow.shoot",
     "igniteFire": false,
     "disableGravity": false,
     "disableDiscarding": false,
@@ -19,11 +15,7 @@
     "customModelTexture": "arrow.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
-    "onHitsPlayer": {
-      "name": "Switch_arrow_process"
-    },
-    "onHitsEntity": {
-      "name": "Switch_arrow_process"
-    }
+    "onHitsPlayer": "Switch_arrow_process",
+    "onHitsEntity": "Switch_arrow_process"
   }
 }

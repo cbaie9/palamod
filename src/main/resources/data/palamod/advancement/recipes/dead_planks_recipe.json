@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#palapalamod:dead_logs"
+            "items": "#palamod:dead_logs"
           }
         ]
       },

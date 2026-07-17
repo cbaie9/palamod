@@ -1369,9 +1369,9 @@ public class PalamodModItems {
 	// End of user code block custom items
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PaladiumphoneInventoryCapability(stack), PALADIUM_PHONE.get());
-		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidstoneInventoryCapability(stack), VOIDSTONE.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new MinerjobsitemInventoryCapability(stack), JOBS_ITEM_MINER.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new VoidstoneInventoryCapability(stack), VOIDSTONE.get());
+		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PaladiumphoneInventoryCapability(stack), PALADIUM_PHONE.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new FarmerjobsitemInventoryCapability(stack), JOBS_ITEM_FARMER.get());
 		event.registerItem(Capabilities.ItemHandler.ITEM, (stack, context) -> new PalamodonboardingbookInventoryCapability(stack), PALAMOD_ONBOARDING_BOOK.get());
 		event.registerItem(Capabilities.FluidHandler.ITEM, (stack, context) -> new FluidBucketWrapper(stack), FAKE_WATER_BUCKET.get());

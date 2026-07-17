@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Goldmixedcoal"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Goldmixedcoal",
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:TitaneIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanemixedcoal"
-    },
+    "recipeReturnStack": "CUSTOM:Titanemixedcoal",
     "name": "titanemixedcoalcraft",
     "namespace": "mod"
   }

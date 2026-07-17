@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "amethyst_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:AmethysteAxe"
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:AmethysteAxe"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Amethyste"
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Amethyste",
+      "CUSTOM:Amethyste",
+      "",
+      "CUSTOM:Amethyste",
+      "Items.STICK",
+      "",
+      "",
+      "Items.STICK",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:AmethysteAxe"
-    },
+    "recipeReturnStack": "CUSTOM:AmethysteAxe",
     "name": "amethyste_axe_recipe",
     "namespace": "mod"
   }

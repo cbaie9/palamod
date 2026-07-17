@@ -229,9 +229,12 @@ public class RtpnetherProcedure {
 						}
 						{
 							Entity _ent = entity;
-							_ent.teleportTo(xrandom, 70, zrandom);
+							double _tx = xrandom;
+							double _ty = 70;
+							double _tz = zrandom;
+							_ent.teleportTo(_tx, _ty, _tz);
 							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(xrandom, 70, zrandom, _ent.getYRot(), _ent.getXRot());
+								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 						}
 					} else {
 						if (world instanceof ServerLevel _level)

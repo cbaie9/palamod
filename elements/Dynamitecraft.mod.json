@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -12,37 +12,17 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Diamondstring"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.TNT"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.TNT"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Diamondstring",
+      "",
+      "",
+      "Blocks.TNT",
+      "",
+      "",
+      "Blocks.TNT",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Dynamite"
-    },
+    "recipeReturnStack": "CUSTOM:Dynamite",
     "name": "dynamitecraft",
     "namespace": "mod"
   }

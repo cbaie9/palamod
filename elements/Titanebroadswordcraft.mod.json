@@ -1,17 +1,13 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "titane_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:Titanebroadsword"
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:Titanebroadsword"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -19,37 +15,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": true,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": "CUSTOM:TitaneIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Items.STICK"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "",
+      "CUSTOM:TitaneIngot",
+      "CUSTOM:TitaneIngot",
+      "",
+      "Items.STICK",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Titanebroadsword"
-    },
+    "recipeReturnStack": "CUSTOM:Titanebroadsword",
     "name": "titanebroadswordcraft",
     "namespace": "mod"
   }

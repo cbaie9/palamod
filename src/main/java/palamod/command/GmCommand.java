@@ -2,8 +2,6 @@ package palamod.command;
 
 import palamod.procedures.Gamechangev2Procedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -21,7 +19,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class GmCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("gm").requires(s -> s.hasPermission(1)).then(Commands.argument("gamenumber", DoubleArgumentType.doubleArg(0, 3)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("gm").requires(source -> source.hasPermission(1)).then(Commands.argument("gamenumber", DoubleArgumentType.doubleArg(0, 3)).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

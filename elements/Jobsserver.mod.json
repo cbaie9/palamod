@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,9 +16,7 @@
           "name": "imagebutton_screen_beta_template_jobs",
           "image": "screen_beta3_famer_jobs.png",
           "hoveredImage": "screen_beta3_farm2.png",
-          "onClick": {
-            "name": "Connectfarmergui"
-          },
+          "onClick": "Connectfarmergui",
           "x": 157,
           "y": 108,
           "locked": true
@@ -30,9 +28,7 @@
           "name": "imagebutton_screen_beta2_template_jobs",
           "image": "screen_beta3_jobs_miner.png",
           "hoveredImage": "screen_beta3_jobs_miner2.png",
-          "onClick": {
-            "name": "Connectjobsminergui"
-          },
+          "onClick": "Connectjobsminergui",
           "x": 79,
           "y": 108,
           "locked": true
@@ -161,9 +157,7 @@
           "name": "imagebutton_cross_no_button",
           "image": "cross_no_button.png",
           "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": {
-            "name": "Closegui"
-          },
+          "onClick": "Closegui",
           "x": 366,
           "y": 76,
           "locked": true

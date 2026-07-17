@@ -2,8 +2,6 @@ package palamod.command;
 
 import palamod.procedures.AdminpanelCommandExecutedProcedure;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -23,7 +21,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 public class AdminpanelCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("pap").requires(s -> s.hasPermission(4)).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("pap").requires(source -> source.hasPermission(4)).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

@@ -75,8 +75,11 @@ public class Alchimet1Block extends Block implements SimpleWaterloggedBlock, Ent
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
 		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-		return super.getStateForPlacement(context).setValue(WATERLOGGED, flag);
+		return state.setValue(WATERLOGGED, flag);
 	}
 
 	@Override

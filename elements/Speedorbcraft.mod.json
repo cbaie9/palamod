@@ -1,20 +1,14 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
     "group": "obrs_craft_group",
     "unlockingItems": [
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.SUGAR"
-      },
-      {
-        "value": "CUSTOM:Speedorb"
-      }
+      "CUSTOM:PaladiumIngot",
+      "Items.SUGAR",
+      "CUSTOM:Speedorb"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -22,37 +16,17 @@
     "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": "Items.SUGAR"
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:PaladiumIngot"
-      },
-      {
-        "value": ""
-      }
+      "",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      "Items.SUGAR",
+      "CUSTOM:PaladiumIngot",
+      "",
+      "CUSTOM:PaladiumIngot",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Speedorb"
-    },
+    "recipeReturnStack": "CUSTOM:Speedorb",
     "name": "speedorbcraft",
     "namespace": "mod"
   }

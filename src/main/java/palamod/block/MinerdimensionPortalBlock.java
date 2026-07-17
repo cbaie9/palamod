@@ -5,8 +5,6 @@ import palamod.world.teleporter.MinerdimensionPortalShape;
 
 import org.slf4j.Logger;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
@@ -55,7 +53,7 @@ public class MinerdimensionPortalBlock extends NetherPortalBlock {
 	}
 
 	public MinerdimensionPortalBlock() {
-		super(BlockBehaviour.Properties.of().noCollission().randomTicks().pushReaction(PushReaction.BLOCK).strength(-1.0F).sound(SoundType.GLASS).lightLevel(s -> 7).noLootTable());
+		super(BlockBehaviour.Properties.of().noCollission().randomTicks().pushReaction(PushReaction.BLOCK).strength(-1.0F).sound(SoundType.GLASS).lightLevel(state -> 7).noLootTable());
 	}
 
 	private MinerdimensionTeleporter getTeleporter(ServerLevel level) {

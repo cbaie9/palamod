@@ -1,14 +1,12 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 3,
     "group": "judeecercis_craft_group",
     "unlockingItems": [
-      {
-        "value": "TAG:forge:judeecercis__log"
-      }
+      "TAG:forge:judeecercis__log"
     ],
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -16,37 +14,17 @@
     "craftingBookCategory": "BUILDING",
     "recipeShapeless": false,
     "recipeSlots": [
-      {
-        "value": "CUSTOM:Judeecercis_Log"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Log"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Log"
-      },
-      {
-        "value": "CUSTOM:Judeecercis_Log"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      }
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Judeecercis_Log",
+      "",
+      "CUSTOM:Judeecercis_Log",
+      "CUSTOM:Judeecercis_Log",
+      "",
+      "",
+      "",
+      ""
     ],
-    "recipeReturnStack": {
-      "value": "CUSTOM:Judeecercis_Wood"
-    },
+    "recipeReturnStack": "CUSTOM:Judeecercis_Wood",
     "name": "judeecercis_wood_recipe",
     "namespace": "mod"
   }

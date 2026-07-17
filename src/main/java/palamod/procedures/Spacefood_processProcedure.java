@@ -19,7 +19,7 @@ public class Spacefood_processProcedure {
 			return;
 		double yval = 0;
 		yval = y;
-		for (int index0 = 0; index0 < 900; index0++) {
+		for (int index22 = 0; index22 < 900; index22++) {
 			world.setBlock(BlockPos.containing(x, yval + 1, z), Blocks.AIR.defaultBlockState(), 3);
 			world.setBlock(BlockPos.containing(x, yval + 2, z), Blocks.AIR.defaultBlockState(), 3);
 			world.setBlock(BlockPos.containing(x, yval, z), Blocks.AIR.defaultBlockState(), 3);
@@ -27,9 +27,12 @@ public class Spacefood_processProcedure {
 				_level.sendParticles((SimpleParticleType) (PalamodModParticleTypes.FLYPARTICLE.get()), x, y, z, 2, 3, 3, 3, 1);
 			{
 				Entity _ent = entity;
-				_ent.teleportTo(x, yval, z);
+				double _tx = x;
+				double _ty = yval;
+				double _tz = z;
+				_ent.teleportTo(_tx, _ty, _tz);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(x, yval, z, _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 			}
 			yval = yval + 1;
 		}

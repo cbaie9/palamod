@@ -1,11 +1,9 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "tab",
   "definition": {
     "name": "Project Palamod Renew",
-    "icon": {
-      "value": "CUSTOM:PaladiumIngot"
-    },
+    "icon": "CUSTOM:PaladiumIngot",
     "showSearch": true
   }
 }

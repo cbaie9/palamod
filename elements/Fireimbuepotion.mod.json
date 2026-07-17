@@ -1,5 +1,5 @@
 {
-  "_fv": 85,
+  "_fv": 89,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -11,9 +11,7 @@
     "name": "Fire imbue potion",
     "rarity": "COMMON",
     "creativeTabs": [
-      {
-        "value": "CUSTOM:Palamod"
-      }
+      "CUSTOM:Palamod"
     ],
     "stackSize": 1,
     "enchantability": 0,
@@ -37,9 +35,7 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
-      "name": "Addfireimbue"
-    },
+    "onFinishUsingItem": "Addfireimbue",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -47,14 +43,12 @@
     "isFood": true,
     "nutritionalValue": 0,
     "saturation": 0.3,
-    "eatResultItem": {
-      "value": ""
-    },
+    "eatResultItem": "",
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "drink",
     "isMusicDisc": false,
-    "musicDiscLengthInTicks": 0,
+    "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": [],
     "attributeModifiers": []

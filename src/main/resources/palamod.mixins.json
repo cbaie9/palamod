@@ -3,7 +3,8 @@
   "package": "palamod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "NoiseGeneratorSettingsMixin"
+    "NoiseGeneratorSettingsMixin",
+    "BiomeSourcePresetMixin"
   ],
   "client": [],
   "injectors": {
