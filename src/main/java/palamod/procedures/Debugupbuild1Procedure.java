@@ -20,7 +20,7 @@ public class Debugupbuild1Procedure {
 		File clicker_buildings = new File("");
 		com.google.gson.JsonObject main_building = new com.google.gson.JsonObject();
 		clicker_buildings = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getStringUUID()),
 				File.separator + "clicker_build.json");
 		if (clicker_buildings.exists()) {
 			{

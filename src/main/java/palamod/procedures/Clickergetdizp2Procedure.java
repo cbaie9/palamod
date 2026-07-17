@@ -23,7 +23,7 @@ public class Clickergetdizp2Procedure {
 		double exit = 0;
 		double input = 0;
 		clicker_buildings = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getUUID().toString()),
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\clicker\\" + entity.getStringUUID()),
 				File.separator + "clicker_build.json");
 		if (clicker_buildings.exists()) {
 			{

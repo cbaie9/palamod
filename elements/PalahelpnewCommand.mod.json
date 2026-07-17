@@ -354,7 +354,7 @@
         "data": {
           "name": "tooltip_teleport_you_to_the_spawn_the_ad",
           "text": {
-            "fixedValue": "Teleport you to the spawn the administrator has setup | If the spawn has not been setup the command will not work"
+            "fixedValue": "Teleport you to the spawn the administrator has setup \n If the spawn has not been setup the command will not work"
           },
           "width": 38,
           "height": 13,
@@ -570,6 +570,20 @@
           "height": 9,
           "x": 231,
           "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_test2",
+          "text": {
+            "fixedValue": "test2"
+          },
+          "width": 19,
+          "height": 9,
+          "x": 90,
+          "y": 58,
           "locked": false
         }
       }

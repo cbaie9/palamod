@@ -4,7 +4,6 @@ import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
 import net.neoforged.neoforge.event.entity.item.ItemTossEvent;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -47,7 +46,7 @@ public class MoneyitemuseProcedure {
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
 		File money = new File("");
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
-			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+			money = ReadMoneyFileProcedure.execute(entity);
 			if (money.exists()) {
 				if (PalamodModItems.MONEY_ITEM.get() == itemstack.getItem() || PalamodModItems.MONEY_1K.get() == itemstack.getItem()) {
 					if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("Is_pname")) {

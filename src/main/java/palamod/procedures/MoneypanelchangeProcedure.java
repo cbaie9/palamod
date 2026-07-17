@@ -36,7 +36,7 @@ public class MoneypanelchangeProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main_money = new com.google.gson.JsonObject();
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
-			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getStringUUID() + ".json"));
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			if (entity.hasPermissions(4)) {
@@ -73,6 +73,7 @@ public class MoneypanelchangeProcedure {
 				}
 			}
 		} else {
+			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_money").getString());
 		}
 	}
 

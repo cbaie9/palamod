@@ -8,7 +8,6 @@ import org.checkerframework.checker.units.qual.s;
 
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -53,7 +52,7 @@ public class NewadminshopsellProcedure {
 				}
 			}
 		}.parse("{}");
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = ReadMoneyFileProcedure.execute(entity);
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(money));
@@ -78,7 +77,7 @@ public class NewadminshopsellProcedure {
 						}
 					}
 				}
-				if (((entity instanceof Player _entity13 && _entity13.containerMenu instanceof PalamodModMenus.MenuAccessor _menu13) ? _menu13.getMenuState(0, "number_buy", "") : "").toLowerCase().contains("max")) {
+				if (((entity instanceof Player _entity10 && _entity10.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10) ? _menu10.getMenuState(0, "number_buy", "") : "").toLowerCase().contains("max")) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = item;
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) n2, _player.inventoryMenu.getCraftSlots());

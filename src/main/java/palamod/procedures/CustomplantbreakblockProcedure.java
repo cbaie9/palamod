@@ -4,9 +4,7 @@ import palamod.init.PalamodModGameRules;
 
 import palamod.PalamodMod;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.level.BlockEvent;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
@@ -17,7 +15,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
@@ -45,9 +42,7 @@ public class CustomplantbreakblockProcedure {
 		double lvl = 0;
 		double lvlmin = 0;
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
-					File.separator + "jobs.json");
+			jobs = GetjobsfileProcedure.execute(entity);
 			if (jobs.exists()) {
 				{
 					try {

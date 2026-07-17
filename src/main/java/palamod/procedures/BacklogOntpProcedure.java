@@ -3,7 +3,6 @@ package palamod.procedures;
 import palamod.PalamodMod;
 
 import net.neoforged.neoforge.event.CommandEvent;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -43,7 +42,7 @@ public class BacklogOntpProcedure {
 			xpos = x;
 			ypos = y;
 			zpos = z;
-			backfile = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/back/"), File.separator + (entity.getUUID().toString() + ".json"));
+			backfile = GetBackLogFileProcedure.execute(entity);
 			if (!backfile.exists()) {
 				try {
 					backfile.getParentFile().mkdirs();

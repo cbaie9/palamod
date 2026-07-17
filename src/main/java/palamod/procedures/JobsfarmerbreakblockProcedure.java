@@ -3,9 +3,7 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.neoforge.event.level.BlockEvent;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -58,10 +56,8 @@ public class JobsfarmerbreakblockProcedure {
 		double money_add = 0;
 		boolean money_getadd = false;
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
-					File.separator + "jobs.json");
-			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+			jobs = GetjobsfileProcedure.execute(entity);
+			money = ReadMoneyFileProcedure.execute(entity);
 			if (jobs.exists() && money.exists() && !(getEntityGameType(entity) == GameType.CREATIVE)) {
 				{
 					try {

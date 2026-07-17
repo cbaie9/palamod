@@ -3,7 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.Items;
@@ -24,7 +23,7 @@ public class PalakitprocessProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		boolean write = false;
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = ReadMoneyFileProcedure.execute(entity);
 		if (money.isFile()) {
 			{
 				try {

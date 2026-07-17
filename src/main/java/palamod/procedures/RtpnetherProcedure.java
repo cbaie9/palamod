@@ -1,8 +1,5 @@
 package palamod.procedures;
 
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.state.properties.Property;
@@ -26,7 +23,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -47,9 +43,7 @@ public class RtpnetherProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		if (BoolArgumentType.getBool(arguments, "true")) {
-			jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
-					File.separator + "jobs.json");
+			jobs = GetjobsfileProcedure.execute(entity);
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

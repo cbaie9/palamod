@@ -1,7 +1,5 @@
 package palamod.procedures;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
@@ -24,7 +22,7 @@ public class Bighole2Procedure {
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {

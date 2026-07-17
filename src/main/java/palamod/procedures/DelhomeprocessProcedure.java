@@ -1,7 +1,5 @@
 package palamod.procedures;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -26,7 +24,7 @@ public class DelhomeprocessProcedure {
 			return;
 		File home = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
+		home = ReadHomeFolderProcedure.execute(entity, StringArgumentType.getString(arguments, "home_name"));
 		if (home.exists()) {
 			{
 				try {

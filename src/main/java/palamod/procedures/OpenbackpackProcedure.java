@@ -51,10 +51,9 @@ public class OpenbackpackProcedure {
 		double checksum_now = 0;
 		double lvl = 0;
 		backpack_backup = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getUUID().toString()),
+				+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\backpack\\" + entity.getStringUUID()),
 				File.separator + "backup.json");
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\jobs\\" + entity.getUUID().toString()), File.separator + "jobs.json");
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (jobs.exists()) {
 			{
 				try {

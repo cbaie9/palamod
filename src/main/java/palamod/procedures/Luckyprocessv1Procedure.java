@@ -27,6 +27,8 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -55,7 +57,7 @@ public class Luckyprocessv1Procedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			Random = new Random().nextInt(198300 + 1);
+			Random = Mth.nextInt(RandomSource.create(), 1, 198300);
 			if (Random >= 1 && Random <= 11600) {
 				PalamodModVariables.lucky_name = "0 + 0 = La tete a Toto";
 				PalamodMod.queueServerWork(100, () -> {

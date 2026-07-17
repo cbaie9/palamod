@@ -33,8 +33,8 @@ public class PayprocessProcedure {
 		com.google.gson.JsonObject main_player2 = new com.google.gson.JsonObject();
 		double money_pl1 = 0;
 		double money_player2 = 0;
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
-		file_player2 = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getStringUUID() + ".json"));
+		file_player2 = GetjobsfileProcedure.execute(entity);
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(money));

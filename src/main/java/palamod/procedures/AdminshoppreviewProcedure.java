@@ -4,8 +4,6 @@ import palamod.init.PalamodModMenus;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
@@ -39,7 +37,7 @@ public class AdminshoppreviewProcedure {
 			}
 		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "number_buy", "") : "")));
 		buy = n * fac_v;
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = ReadMoneyFileProcedure.execute(entity);
 		if (money.exists()) {
 			{
 				try {

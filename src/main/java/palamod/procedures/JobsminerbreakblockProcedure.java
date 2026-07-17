@@ -60,7 +60,7 @@ public class JobsminerbreakblockProcedure {
 		double money_add = 0;
 		double xp_bloc = 0;
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
-			jobs = ReadjobsserverProcedure.execute(entity);
+			jobs = GetjobsfileProcedure.execute(entity);
 			money = ReadMoneyFileProcedure.execute(entity);
 			cache = ReadcacheProcedure.execute(entity);
 			RecalcJobsXpBaseMultiplierProcedure.execute(world, entity);

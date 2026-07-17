@@ -3,7 +3,6 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -46,7 +45,7 @@ public class ChecklvlhunterProcedure {
 		} else if (IsgameserversideProcedure.execute()) {
 			jobs = ReadjobsserverProcedure.execute(entity);
 		}
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = ReadMoneyFileProcedure.execute(entity);
 		if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
 			{
 				try {

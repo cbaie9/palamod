@@ -17,7 +17,7 @@ public class ReadjobsclientProcedure {
 		File jobs = new File("");
 		if (world.isClientSide()) {
 			return new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\"
-					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getUUID().toString()),
+					+ (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName()) + "\\jobs\\" + entity.getStringUUID()),
 					File.separator + "jobs.json");
 		}
 		return ReadjobsserverProcedure.execute(entity);

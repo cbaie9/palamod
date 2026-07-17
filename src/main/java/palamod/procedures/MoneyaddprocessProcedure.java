@@ -42,7 +42,7 @@ public class MoneyaddprocessProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
-			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getUUID().toString() + ".json"));
+			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + ((commandParameterEntity(arguments, "player")).getStringUUID() + ".json"));
 			if (entity.hasPermissions(4)) {
 				{
 					try {

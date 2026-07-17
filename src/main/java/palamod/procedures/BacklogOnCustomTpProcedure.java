@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.PalamodMod;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
@@ -23,7 +21,7 @@ public class BacklogOnCustomTpProcedure {
 		xpos = x;
 		ypos = y;
 		zpos = z;
-		backfile = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/back/"), File.separator + (entity.getUUID().toString() + ".json"));
+		backfile = GetBackLogFileProcedure.execute(entity);
 		if (!backfile.exists()) {
 			try {
 				backfile.getParentFile().mkdirs();

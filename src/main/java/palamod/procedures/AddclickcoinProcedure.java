@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import net.neoforged.fml.loading.FMLPaths;
 
@@ -23,7 +25,8 @@ public class AddclickcoinProcedure {
 		double coin = 0;
 		double active_cps = 0;
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\clicker\\" + entity.getUUID().toString()), File.separator + "clicker_info.json");
+				+ "\\clicker\\" + entity.getStringUUID()), File.separator + "clicker_info.json");
+		PalamodMod.LOGGER.info("CLICKER ");
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

@@ -8,7 +8,6 @@ import palamod.PalamodMod;
 import org.checkerframework.checker.units.qual.s;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -52,7 +51,7 @@ public class NewadminshopbuyprocessProcedure {
 				}
 			}
 		}.parse("{}");
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = ReadMoneyFileProcedure.execute(entity);
 		{
 			try {
 				BufferedReader bufferedReader = new BufferedReader(new FileReader(money));

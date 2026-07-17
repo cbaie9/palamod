@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.PalamodMod;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -29,7 +27,7 @@ public class BackCommandProcessProcedure {
 			xpos = x;
 			ypos = y;
 			zpos = z;
-			backfile = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/back/"), File.separator + (entity.getUUID().toString() + ".json"));
+			backfile = GetBackLogFileProcedure.execute(entity);
 			if (backfile.exists()) {
 				{
 					try {

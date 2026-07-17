@@ -126,6 +126,10 @@ public class PalahelpnewCommandScreen extends AbstractContainerScreen<Palahelpne
 			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpnew_command.tooltip_teleport_at_random_location_in_t"), mouseX, mouseY);
 			customTooltipShown = true;
 		}
+		if (mouseX > leftPos + 36 && mouseX < leftPos + 55 && mouseY > topPos + 29 && mouseY < topPos + 38) {
+			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpnew_command.tooltip_test2"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
 		if (!customTooltipShown)
 			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}

@@ -6,11 +6,11 @@ import net.minecraft.world.entity.Entity;
 
 import java.io.File;
 
-public class GetclickerfileProcedure {
+public class GetBackLogFileProcedure {
 	public static File execute(Entity entity) {
 		if (entity == null)
 			return new File("");
-		File output = new File("");
-		return new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/" + entity.getStringUUID()), File.separator + "clicker_info.json");
+		File backfile = new File("");
+		return new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/back/"), File.separator + (entity.getStringUUID() + ".json"));
 	}
 }

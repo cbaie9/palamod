@@ -20,7 +20,7 @@ public class ClickerprintcoinsProcedure {
 		File jobs = new File("");
 		double lvl = 0;
 		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "\\saves\\" + (world.isClientSide() ? Minecraft.getInstance().getSingleplayerServer().getWorldData().getLevelName() : ServerLifecycleHooks.getCurrentServer().getWorldData().getLevelName())
-				+ "\\clicker\\" + entity.getUUID().toString()), File.separator + "clicker_info.json");
+				+ "\\clicker\\" + entity.getStringUUID()), File.separator + "clicker_info.json");
 		if (jobs.exists()) {
 			{
 				try {

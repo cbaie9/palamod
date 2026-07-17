@@ -1778,5 +1778,6 @@
   "gui.palamod.palahelpnew_command.tooltip_teleport_at_the_position_where_y": "Teleport at the position where you were before the last teleportation. Each /tp, /spawn and /home count as a new \u0027checkpoint\u0027",
   "gui.palamod.palahelpnew_command.tooltip_administrators_only_setup_at": "[ Administrators only ] Setup at you position the spawn the players can teleport using /spawn",
   "gui.palamod.palahelpnew_command.tooltip_show_the_current_player_money_f": "Show the current player Money. For Admin it can modify or show any player balance.",
-  "gui.palamod.new_palahelp_gui_intro.label_my_mod": "my mod"
+  "gui.palamod.new_palahelp_gui_intro.label_my_mod": "my mod",
+  "gui.palamod.palahelpnew_command.tooltip_test2": "test2"
 }

@@ -11,6 +11,6 @@ public class ReadcacheProcedure {
 		if (entity == null)
 			return new File("");
 		File cache = new File("");
-		return new File((FMLPaths.GAMEDIR.get().toString() + "\\caches\\jobs\\" + entity.getUUID().toString()), File.separator + "cache_jobs.json");
+		return new File((FMLPaths.GAMEDIR.get().toString() + "\\caches\\jobs\\" + entity.getStringUUID()), File.separator + "cache_jobs.json");
 	}
 }

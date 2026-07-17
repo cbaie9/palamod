@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModGameRules;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -25,7 +23,7 @@ public class MoneyprocessProcedure {
 		File money = new File("");
 		com.google.gson.JsonObject money_main = new com.google.gson.JsonObject();
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
-			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+			money = ReadMoneyFileProcedure.execute(entity);
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(money));

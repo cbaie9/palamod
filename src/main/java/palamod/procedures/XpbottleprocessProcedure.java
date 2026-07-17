@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
@@ -41,7 +39,7 @@ public class XpbottleprocessProcedure {
 				jobs_text = "alchi";
 			}
 			jobs = GetjobsfileProcedure.execute(entity);
-			money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+			money = ReadMoneyFileProcedure.execute(entity);
 			if (jobs.exists() && money.exists()) {
 				{
 					try {

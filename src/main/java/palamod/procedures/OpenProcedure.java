@@ -1,7 +1,5 @@
 package palamod.procedures;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.entity.Entity;
 
 import java.io.IOException;
@@ -15,7 +13,7 @@ public class OpenProcedure {
 		File money = new File("");
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/jobs/"), File.separator + (entity.getUUID().toString() + ".json"));
+		jobs = GetjobsfileProcedure.execute(entity);
 		if (!jobs.exists()) {
 			try {
 				jobs.getParentFile().mkdirs();

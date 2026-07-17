@@ -2,8 +2,6 @@ package palamod.procedures;
 
 import palamod.init.PalamodModAttributes;
 
-import net.neoforged.fml.loading.FMLPaths;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
@@ -39,8 +37,8 @@ public class HomeprocessProcedure {
 		double cycle_loop = 0;
 		File home = new File("");
 		boolean dim_check = false;
-		home = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/home/" + entity.getUUID().toString()), File.separator + (StringArgumentType.getString(arguments, "home_name") + ".json"));
-		if (0 == (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING) ? _livingEntity4.getAttribute(PalamodModAttributes.IS_FIGHTING).getBaseValue() : 0)) {
+		home = ReadHomeFolderProcedure.execute(entity, StringArgumentType.getString(arguments, "home_name"));
+		if (0 == (entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING) ? _livingEntity1.getAttribute(PalamodModAttributes.IS_FIGHTING).getBaseValue() : 0)) {
 			if (home.exists()) {
 				{
 					try {

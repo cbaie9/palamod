@@ -12,6 +12,6 @@ public class ReadjobsserverProcedure {
 			return new File("");
 		File money = new File("");
 		File jobs = new File("");
-		return new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/" + entity.getUUID().toString()), File.separator + "jobs.json");
+		return new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/" + entity.getStringUUID()), File.separator + "jobs.json");
 	}
 }

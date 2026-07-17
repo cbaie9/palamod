@@ -2,7 +2,6 @@ package palamod.procedures;
 
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -30,7 +29,7 @@ public class MoulastoneprocessProcedure {
 		double count = 0;
 		double lvl = 0;
 		double money_old = 0;
-		money = new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/money/"), File.separator + (entity.getUUID().toString() + ".json"));
+		money = ReadMoneyFileProcedure.execute(entity);
 		if (money.exists()) {
 			{
 				try {
