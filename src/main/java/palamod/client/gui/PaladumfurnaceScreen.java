@@ -16,6 +16,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PaladumfurnaceScreen extends AbstractContainerScreen<PaladumfurnaceMenu> implements PalamodModScreens.ScreenAccessor {
@@ -74,8 +77,20 @@ public class PaladumfurnaceScreen extends AbstractContainerScreen<Paladumfurnace
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace"), 46, 4, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.paladumfurnace.label_inventory"), 7, 73, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.paladumfurnace.label_paladium_furnace").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 46, 4 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.paladumfurnace.label_inventory").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 7, 73 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

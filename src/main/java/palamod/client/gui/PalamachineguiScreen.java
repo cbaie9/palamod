@@ -16,6 +16,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PalamachineguiScreen extends AbstractContainerScreen<PalamachineguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -70,8 +73,20 @@ public class PalamachineguiScreen extends AbstractContainerScreen<Palamachinegui
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palamachinegui.label_palamachine"), 3, 3, -3407872, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 4, 84, -4671036, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palamachinegui.label_palamachine").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 3 + yOffset, -3407872, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Grindertrans0Procedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 84 + yOffset, -4671036, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

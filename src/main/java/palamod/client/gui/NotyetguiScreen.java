@@ -12,6 +12,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -64,9 +67,26 @@ public class NotyetguiScreen extends AbstractContainerScreen<NotyetguiMenu> impl
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.notyetgui.label_this_feature_hasnt_been_develop"), 3, 4, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.notyetgui.label_please_wait_or_check_on_the_disc"), 3, 13, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.notyetgui.label_if_there_is_updated_version_of_t"), 2, 22, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.notyetgui.label_this_feature_hasnt_been_develop").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 4 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.notyetgui.label_please_wait_or_check_on_the_disc").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 13 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.notyetgui.label_if_there_is_updated_version_of_t").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 22 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

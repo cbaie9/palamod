@@ -21,6 +21,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class UploaderguipalahelpScreen extends AbstractContainerScreen<UploaderguipalahelpMenu> implements PalamodModScreens.ScreenAccessor {
@@ -74,12 +77,44 @@ public class UploaderguipalahelpScreen extends AbstractContainerScreen<Uploaderg
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploaderguipalahelp.label_page_en_cours_de_redaction"), 21, 24, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploaderguipalahelp.label_this_page_is_working_in_progress"), 20, 11, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploaderguipalahelp.label_uploader"), 125, 46, -65536, false);
-		guiGraphics.drawString(this.font, Palahelpuploader0Procedure.execute(entity), 4, 60, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpuploader1Procedure.execute(entity), 4, 71, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpuploader2Procedure.execute(entity), 4, 82, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.uploaderguipalahelp.label_page_en_cours_de_redaction").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 21, 24 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.uploaderguipalahelp.label_this_page_is_working_in_progress").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 20, 11 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.uploaderguipalahelp.label_uploader").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 125, 46 + yOffset, -65536, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpuploader0Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 60 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpuploader1Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 71 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpuploader2Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 82 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

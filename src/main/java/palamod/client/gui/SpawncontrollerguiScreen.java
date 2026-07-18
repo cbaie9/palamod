@@ -15,6 +15,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class SpawncontrollerguiScreen extends AbstractContainerScreen<SpawncontrollerguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -75,7 +78,14 @@ public class SpawncontrollerguiScreen extends AbstractContainerScreen<Spawncontr
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, SpawnercontrollerguitexttierProcedure.execute(world, x, y, z), 7, 7, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(SpawnercontrollerguitexttierProcedure.execute(world, x, y, z).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 7, 7 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

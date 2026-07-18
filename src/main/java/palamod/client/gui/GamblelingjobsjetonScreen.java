@@ -51,14 +51,16 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 379 && mouseX < leftPos + 396 && mouseY > topPos + 4 && mouseY < topPos + 21) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 78 && mouseX < leftPos + 161 && mouseY > topPos + 96 && mouseY < topPos + 179) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.gamblelingjobsjeton.tooltip_hgyhugyuigyuigyi"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.gamblelingjobsjeton.tooltip_hgyhugyuigyuigyi").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.gamblelingjobsjeton.tooltip_hgyhugyuigyuigyi").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -84,8 +86,20 @@ public class GamblelingjobsjetonScreen extends AbstractContainerScreen<Gamblelin
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.gamblelingjobsjeton.label_jobs"), 15, 14, -3394816, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.gamblelingjobsjeton.label_jetons_de_recompenses"), 15, 32, -3355444, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.gamblelingjobsjeton.label_jobs").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 15, 14 + yOffset, -3394816, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.gamblelingjobsjeton.label_jetons_de_recompenses").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 15, 32 + yOffset, -3355444, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

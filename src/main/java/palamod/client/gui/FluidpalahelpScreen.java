@@ -18,6 +18,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMenu> implements PalamodModScreens.ScreenAccessor {
@@ -81,13 +84,50 @@ public class FluidpalahelpScreen extends AbstractContainerScreen<FluidpalahelpMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_fluid"), 49, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi"), 2, 63, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut"), 3, 73, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p"), 4, 83, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui"), 3, 133, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_soigne"), 3, 143, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg"), 4, 94, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_fluid").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 49, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_fake_water_un_type_deau_invisi").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 63 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_vous_fait_des_dgats_peut_peut").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 73 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_mpecher_la_legendary_stone_de_p").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 83 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_angelique_water_type_deau_qui").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 133 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_soigne").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 143 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.fluidpalahelp.label_an_enchantment_who_nullfy_dmg").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 94 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

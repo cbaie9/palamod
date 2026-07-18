@@ -18,6 +18,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> implements PalamodModScreens.ScreenAccessor {
@@ -91,16 +94,68 @@ public class PalahelporeScreen extends AbstractContainerScreen<PalahelporeMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_paladium_le_minerais_le_plus_pu"), 28, 81, -52480, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_tres_rare_sert_a_quelque_craft"), 27, 103, -205, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_resitanttres_bon_pour_ses_premi"), 28, 126, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_amthyste"), 27, 166, -6750055, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_paladium_vert_equivalent_en_pl"), 28, 59, -10027213, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_endium_le_materiau_ultime_obte"), 28, 27, -13434727, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_via_le_paladium_crusher_voir_m"), 28, 38, -13434727, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_tools"), 29, 136, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_assez_facilement"), 27, 177, -6750055, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpore.label_palahelp_ore"), 95, 4, -131587, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_paladium_le_minerais_le_plus_pu").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 28, 81 + yOffset, -52480, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_tres_rare_sert_a_quelque_craft").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 27, 103 + yOffset, -205, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_resitanttres_bon_pour_ses_premi").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 28, 126 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_amthyste").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 27, 166 + yOffset, -6750055, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_paladium_vert_equivalent_en_pl").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 28, 59 + yOffset, -10027213, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_endium_le_materiau_ultime_obte").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 28, 27 + yOffset, -13434727, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_via_le_paladium_crusher_voir_m").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 28, 38 + yOffset, -13434727, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_tools").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 29, 136 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_assez_facilement").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 27, 177 + yOffset, -6750055, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpore.label_palahelp_ore").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 95, 4 + yOffset, -131587, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

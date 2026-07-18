@@ -20,6 +20,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class GrinderpalahelpguiScreen extends AbstractContainerScreen<GrinderpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -87,19 +90,86 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelpgui.label_grinder"), 98, 7, -1, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder10Procedure.execute(entity), 3, 40, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder11Procedure.execute(entity), 3, 53, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder12Procedure.execute(entity), 3, 66, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder13Procedure.execute(entity), 2, 78, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder14Procedure.execute(entity), 3, 90, -256, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder15Procedure.execute(entity), 2, 99, -256, false);
-		guiGraphics.drawString(this.font, Palahelpgrindet16Procedure.execute(entity), 3, 110, -8504309, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder17Procedure.execute(entity), 3, 120, -816878, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelpgui.label_empty"), 54, 71, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder18Procedure.execute(entity), 4, 132, -3335911, false);
-		guiGraphics.drawString(this.font, Palahelpgrinder19Procedure.execute(entity), 4, 145, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.grinderpalahelpgui.label_2_min_12"), 20, 14, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_grinder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 98, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder10Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 40 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder11Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 53 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder12Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 66 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder13Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 78 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder14Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 90 + yOffset, -256, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder15Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 99 + yOffset, -256, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrindet16Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 110 + yOffset, -8504309, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder17Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 120 + yOffset, -816878, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_empty").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 54, 71 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder18Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 132 + yOffset, -3335911, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpgrinder19Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 145 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_2_min_12").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 20, 14 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

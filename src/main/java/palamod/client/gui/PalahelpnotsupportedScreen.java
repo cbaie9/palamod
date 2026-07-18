@@ -18,6 +18,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PalahelpnotsupportedScreen extends AbstractContainerScreen<PalahelpnotsupportedMenu> implements PalamodModScreens.ScreenAccessor {
@@ -85,10 +88,32 @@ public class PalahelpnotsupportedScreen extends AbstractContainerScreen<Palahelp
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred"), 10, 62, -6750055, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpnotsupported.label_palahelp_error"), 46, 6, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpnotsupported.label_your_language_is_not_supported"), 5, 75, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpnotsupported.label_change_language"), 47, 128, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnotsupported.label_an_error_has_been_encountred").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 10, 62 + yOffset, -6750055, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnotsupported.label_palahelp_error").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 46, 6 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnotsupported.label_your_language_is_not_supported").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 75 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnotsupported.label_change_language").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 47, 128 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

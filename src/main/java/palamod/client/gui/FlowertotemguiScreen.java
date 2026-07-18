@@ -22,6 +22,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class FlowertotemguiScreen extends AbstractContainerScreen<FlowertotemguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -81,8 +84,20 @@ public class FlowertotemguiScreen extends AbstractContainerScreen<Flowertotemgui
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.flowertotemgui.label_flower_totem"), 3, 3, -65536, false);
-		guiGraphics.drawString(this.font, GetstringtotemnumProcedure.execute(world, x, y, z), 69, 70, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.flowertotemgui.label_flower_totem").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 3 + yOffset, -65536, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetstringtotemnumProcedure.execute(world, x, y, z).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 69, 70 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

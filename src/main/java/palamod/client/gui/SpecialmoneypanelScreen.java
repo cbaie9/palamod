@@ -20,6 +20,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class SpecialmoneypanelScreen extends AbstractContainerScreen<SpecialmoneypanelMenu> implements PalamodModScreens.ScreenAccessor {
@@ -103,9 +106,26 @@ public class SpecialmoneypanelScreen extends AbstractContainerScreen<Specialmone
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_specific_player"), 26, 8, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_amount_of_money"), 26, 40, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.specialmoneypanel.label_item_default_money_item"), 7, 74, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.specialmoneypanel.label_specific_player").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 8 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.specialmoneypanel.label_amount_of_money").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 40 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.specialmoneypanel.label_item_default_money_item").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 7, 74 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

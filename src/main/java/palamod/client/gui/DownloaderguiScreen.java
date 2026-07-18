@@ -21,6 +21,9 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -62,19 +65,31 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 113 && mouseX < leftPos + 169 && mouseY > topPos + 60 && mouseY < topPos + 80) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.downloadergui.tooltip_reboot_the_downloader_change_t"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.downloadergui.tooltip_reboot_the_downloader_change_t").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.downloadergui.tooltip_reboot_the_downloader_change_t").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 3 && mouseX < leftPos + 49 && mouseY > topPos + 48 && mouseY < topPos + 67) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.downloadergui.tooltip_link_a_bank_account_who_will_be"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.downloadergui.tooltip_link_a_bank_account_who_will_be").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.downloadergui.tooltip_link_a_bank_account_who_will_be").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 4 && mouseX < leftPos + 24 && mouseY > topPos + 4 && mouseY < topPos + 24) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.downloadergui.tooltip_turn_onoff_the_machine"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.downloadergui.tooltip_turn_onoff_the_machine").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.downloadergui.tooltip_turn_onoff_the_machine").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 138 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 34) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.downloadergui.tooltip_what_you_will_buy_with_the_machi"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.downloadergui.tooltip_what_you_will_buy_with_the_machi").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.downloadergui.tooltip_what_you_will_buy_with_the_machi").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -102,9 +117,26 @@ public class DownloaderguiScreen extends AbstractContainerScreen<DownloaderguiMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloadergui.label_filter"), 138, 3, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloadergui.label_output"), 71, 31, -12829636, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 6, 71, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloadergui.label_filter").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 138, 3 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloadergui.label_output").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 71, 31 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Grindertrans0Procedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 71 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

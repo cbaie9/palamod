@@ -21,6 +21,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class OnlinedetectorguiScreen extends AbstractContainerScreen<OnlinedetectorguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -89,9 +92,26 @@ public class OnlinedetectorguiScreen extends AbstractContainerScreen<Onlinedetec
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.onlinedetectorgui.label_insert_player_to_detect"), 6, 4, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.onlinedetectorgui.label_status"), 63, 37, -12829636, false);
-		guiGraphics.drawString(this.font, OnlinedetectorgetplayerProcedure.execute(world, x, y, z), 63, 47, -12828690, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.onlinedetectorgui.label_insert_player_to_detect").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 4 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.onlinedetectorgui.label_status").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 63, 37 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(OnlinedetectorgetplayerProcedure.execute(world, x, y, z).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 63, 47 + yOffset, -12828690, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

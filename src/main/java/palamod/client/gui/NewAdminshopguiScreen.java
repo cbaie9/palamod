@@ -68,16 +68,14 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 		number_buy.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 136 && mouseX < leftPos + 151 && mouseY > topPos + 4 && mouseY < topPos + 19) {
-			String hoverText = ReturnadminshoporemenuProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ReturnadminshoporemenuProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ReturnadminshoporemenuProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 154 && mouseX < leftPos + 170 && mouseY > topPos + 3 && mouseY < topPos + 19) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -115,10 +113,32 @@ public class NewAdminshopguiScreen extends AbstractContainerScreen<NewAdminshopg
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, NewadminshopguigettitleProcedure.execute(entity), 37, 9, -1, false);
-		guiGraphics.drawString(this.font, AdminshoppreviewProcedure.execute(entity), 29, 74, -4671036, false);
-		guiGraphics.drawString(this.font, GetsellpricetextProcedure.execute(entity), 25, 30, -4671036, false);
-		guiGraphics.drawString(this.font, GetbuypricetextProcedure.execute(entity), 25, 44, -4671036, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(NewadminshopguigettitleProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 37, 9 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AdminshoppreviewProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 29, 74 + yOffset, -4671036, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetsellpricetextProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 25, 30 + yOffset, -4671036, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetbuypricetextProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 25, 44 + yOffset, -4671036, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

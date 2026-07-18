@@ -70,46 +70,72 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 15 && mouseX < leftPos + 90 && mouseY > topPos + 137 && mouseY < topPos + 164) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_the_ultimate_ore_craftable_tho"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_the_ultimate_ore_craftable_tho").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_the_ultimate_ore_craftable_tho").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 15 && mouseX < leftPos + 90 && mouseY > topPos + 20 && mouseY < topPos + 50) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_low_level_ore_easily_available"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_low_level_ore_easily_available").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_low_level_ore_easily_available").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 15 && mouseX < leftPos + 90 && mouseY > topPos + 50 && mouseY < topPos + 79) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_durable_a_very_good_start_for_f"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_durable_a_very_good_start_for_f").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_durable_a_very_good_start_for_f").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 15 && mouseX < leftPos + 90 && mouseY > topPos + 79 && mouseY < topPos + 108) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_the_most_powerful_minable_ore_t"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_the_most_powerful_minable_ore_t").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_the_most_powerful_minable_ore_t").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 15 && mouseX < leftPos + 90 && mouseY > topPos + 108 && mouseY < topPos + 137) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_equivalent_to_paladium_but_more"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_equivalent_to_paladium_but_more").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_equivalent_to_paladium_but_more").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 220 && mouseX < leftPos + 234 && mouseY > topPos + 93 && mouseY < topPos + 106) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_to_nullify_its_damage_you_can_u"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_to_nullify_its_damage_you_can_u").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_to_nullify_its_damage_you_can_u").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 182 && mouseX < leftPos + 306 && mouseY > topPos + 106 && mouseY < topPos + 144) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_deals_dama"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_deals_dama").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_deals_dama").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 181 && mouseX < leftPos + 305 && mouseY > topPos + 33 && mouseY < topPos + 80) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_heals_when"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_heals_when").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_a_type_of_water_which_heals_when").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 119 && mouseX < leftPos + 138 && mouseY > topPos + -4 && mouseY < topPos + 18) {
-			String hoverText = TRADreturntosumarryProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (TRADreturntosumarryProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(TRADreturntosumarryProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 103 && mouseX < leftPos + 142 && mouseY > topPos + 142 && mouseY < topPos + 167) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_trees"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_trees").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_trees").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -149,15 +175,62 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_amethyst"), 37, 19, -6750055, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_titane"), 45, 48, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_paladium"), 45, 77, -65536, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_green_paladium"), 16, 107, -16724992, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_endium"), 41, 135, -16777012, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_ores_and_materials"), 21, 7, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_liquids"), 222, 11, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_fake_water"), 236, 112, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpneworeliquid.label_angelic_water"), 235, 46, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_amethyst").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 37, 19 + yOffset, -6750055, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_titane").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 45, 48 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_paladium").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 45, 77 + yOffset, -65536, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_green_paladium").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 16, 107 + yOffset, -16724992, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_endium").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 41, 135 + yOffset, -16777012, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_ores_and_materials").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 21, 7 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_liquids").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 222, 11 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_fake_water").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 236, 112 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.label_angelic_water").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 235, 46 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

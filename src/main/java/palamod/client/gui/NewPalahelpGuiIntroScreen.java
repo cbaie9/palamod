@@ -17,6 +17,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahelpGuiIntroMenu> implements PalamodModScreens.ScreenAccessor {
@@ -58,7 +61,10 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 88 && mouseX < leftPos + 138 && mouseY > topPos + 155 && mouseY < topPos + 167) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_can_also_be_accessible_by_the_co"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_can_also_be_accessible_by_the_co").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_can_also_be_accessible_by_the_co").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -85,13 +91,50 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_palahelp"), 17, 10, -52480, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod"), 15, 21, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m"), 17, 142, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_for_the_mod"), 16, 155, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_summary"), 218, 14, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_machines"), 187, 99, -16777063, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.new_palahelp_gui_intro.label_my_mod"), 17, 30, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_palahelp").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 17, 10 + yOffset, -52480, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_thanks_for_install_my_mod").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 15, 21 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_this_is_an_intern_wiki_for_the_m").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 17, 142 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_for_the_mod").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 16, 155 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_summary").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 218, 14 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_machines").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 187, 99 + yOffset, -16777063, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.label_my_mod").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 17, 30 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

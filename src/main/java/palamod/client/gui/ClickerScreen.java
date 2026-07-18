@@ -22,6 +22,9 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implements PalamodModScreens.ScreenAccessor {
@@ -102,7 +105,14 @@ public class ClickerScreen extends AbstractContainerScreen<ClickerMenu> implemen
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, ClickerprintcoinsProcedure.execute(world, entity), 12, 44, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(ClickerprintcoinsProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 12, 44 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

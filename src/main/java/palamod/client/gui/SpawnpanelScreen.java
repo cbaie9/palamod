@@ -19,6 +19,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> implements PalamodModScreens.ScreenAccessor {
@@ -72,8 +75,20 @@ public class SpawnpanelScreen extends AbstractContainerScreen<SpawnpanelMenu> im
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Spawnpanel_get_spawnProcedure.execute(world), 5, 56, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.spawnpanel.label_spawn_panel"), 46, 2, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Spawnpanel_get_spawnProcedure.execute(world).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 56 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.spawnpanel.label_spawn_panel").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 46, 2 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

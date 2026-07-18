@@ -12,6 +12,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class AnalyserloadingScreen extends AbstractContainerScreen<AnalyserloadingMenu> implements PalamodModScreens.ScreenAccessor {
@@ -64,10 +67,32 @@ public class AnalyserloadingScreen extends AbstractContainerScreen<Analyserloadi
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserloading.label_the_analyser_is_loader"), 13, 6, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserloading.label_lanalyseur_charge"), 13, 17, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserloading.label_please_wait"), 43, 53, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserloading.label_veuiller_attendre"), 26, 64, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserloading.label_the_analyser_is_loader").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 13, 6 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserloading.label_lanalyseur_charge").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 13, 17 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserloading.label_please_wait").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 43, 53 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserloading.label_veuiller_attendre").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 64 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

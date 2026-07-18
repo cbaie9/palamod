@@ -71,9 +71,8 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 379 && mouseX < leftPos + 395 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -107,11 +106,38 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_palahelp_stick"), 158, 8, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_effect_of_the_stick"), 4, 26, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_palamachine"), 61, 106, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.sticknewhelp.label_craft"), 3, 83, -12829636, false);
-		guiGraphics.drawString(this.font, Getlabelnewstick1Procedure.execute(world, entity), 5, 39, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.sticknewhelp.label_palahelp_stick").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 158, 8 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.sticknewhelp.label_effect_of_the_stick").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 26 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.sticknewhelp.label_palamachine").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 61, 106 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.sticknewhelp.label_craft").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 83 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Getlabelnewstick1Procedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 39 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

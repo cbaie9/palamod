@@ -23,6 +23,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ForgepalahelpguiScreen extends AbstractContainerScreen<ForgepalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -87,12 +90,44 @@ public class ForgepalahelpguiScreen extends AbstractContainerScreen<Forgepalahel
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.forgepalahelpgui.label_paladium_forge"), 76, 7, -1, false);
-		guiGraphics.drawString(this.font, Palahelpforge0Procedure.execute(entity), 3, 55, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpforge1Procedure.execute(entity), 4, 68, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpforge2Procedure.execute(entity), 3, 81, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpforge3Procedure.execute(entity), 3, 94, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.forgepalahelpgui.label_an_example_gui_is_available_next"), 4, 157, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.forgepalahelpgui.label_paladium_forge").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 76, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpforge0Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 55 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpforge1Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 68 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpforge2Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 81 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpforge3Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 94 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.forgepalahelpgui.label_an_example_gui_is_available_next").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 157 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

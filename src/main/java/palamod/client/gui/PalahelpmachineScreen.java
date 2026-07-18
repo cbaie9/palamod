@@ -68,9 +68,8 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 155 && mouseX < leftPos + 171 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -101,7 +100,14 @@ public class PalahelpmachineScreen extends AbstractContainerScreen<Palahelpmachi
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpmachine.label_palahelp_machine_menu"), 2, 6, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpmachine.label_palahelp_machine_menu").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 6 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

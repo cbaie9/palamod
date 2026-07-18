@@ -17,6 +17,9 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> implements PalamodModScreens.ScreenAccessor {
@@ -94,8 +97,20 @@ public class GolemtreecScreen extends AbstractContainerScreen<GolemtreecMenu> im
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, GetgolempvleveltreeProcedure.execute(), 6, 7, -52429, false);
-		guiGraphics.drawString(this.font, GetgolemusablepointProcedure.execute(), 6, 18, -16777012, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetgolempvleveltreeProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 7 + yOffset, -52429, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetgolemusablepointProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 18 + yOffset, -16777012, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

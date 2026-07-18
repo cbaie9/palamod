@@ -18,6 +18,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class XpbushpalahelpguiScreen extends AbstractContainerScreen<XpbushpalahelpguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -81,14 +84,56 @@ public class XpbushpalahelpguiScreen extends AbstractContainerScreen<Xpbushpalah
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush"), 4, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush_est_une_plant_qui_fait_p"), 2, 25, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_des_xp_berries_qui_vous_donne_de"), 2, 35, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_quand_vous_faites_clique_droit_d"), 2, 46, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_vous_pouvez_les_compresser_en"), 2, 56, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_compressed_xp_berries"), 2, 67, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_berry"), 38, 92, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush1"), 43, 134, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush_est_une_plant_qui_fait_p").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 25 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_des_xp_berries_qui_vous_donne_de").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 35 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_quand_vous_faites_clique_droit_d").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 46 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_vous_pouvez_les_compresser_en").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 56 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_compressed_xp_berries").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 67 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_berry").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 38, 92 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.xpbushpalahelpgui.label_xp_bush1").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 43, 134 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

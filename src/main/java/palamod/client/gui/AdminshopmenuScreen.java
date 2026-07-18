@@ -104,9 +104,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 280 && mouseX < leftPos + 296 && mouseY > topPos + 17 && mouseY < topPos + 33) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -160,6 +159,8 @@ public class AdminshopmenuScreen extends AbstractContainerScreen<AdminshopmenuMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		int heightPadding = 0;
+		int yOffset = 0;
 	}
 
 	@Override

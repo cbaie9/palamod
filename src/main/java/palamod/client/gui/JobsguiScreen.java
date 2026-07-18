@@ -21,6 +21,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -82,19 +85,81 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_jobs"), 160, 5, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items"), 8, 120, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_miner"), 48, 45, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_farmer"), 123, 45, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_le_hunter"), 207, 45, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_alchimist"), 269, 45, -1, false);
-		guiGraphics.drawString(this.font, GetlevelminerProcedure.execute(entity), 44, 99, -1, false);
-		guiGraphics.drawString(this.font, GetlevelfarmerProcedure.execute(entity), 119, 99, -1, false);
-		guiGraphics.drawString(this.font, GetlevelhunterProcedure.execute(entity), 201, 99, -1, false);
-		guiGraphics.drawString(this.font, GetlevelalchiProcedure.execute(entity), 272, 99, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_jobs").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 160, 5 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_last_unlocked_items").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 8, 120 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_miner").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 48, 45 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_farmer").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 123, 45 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_le_hunter").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 207, 45 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_alchimist").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 269, 45 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetlevelminerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 44, 99 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetlevelfarmerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 119, 99 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetlevelhunterProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 201, 99 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetlevelalchiProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 272, 99 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 		if (IsgameclientsideProcedure.execute(world, x, y, z))
-			guiGraphics.drawString(this.font, LastunlockedminerProcedure.execute(entity), 8, 134, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsgui.label_beta"), 8, 5, -3407872, false);
+			yOffset = 0;
+		for (Component actualComponent : Arrays.stream(LastunlockedminerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 8, 134 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsgui.label_beta").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 8, 5 + yOffset, -3407872, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

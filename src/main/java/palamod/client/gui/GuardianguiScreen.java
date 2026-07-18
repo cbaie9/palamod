@@ -18,6 +18,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -76,14 +79,56 @@ public class GuardianguiScreen extends AbstractContainerScreen<GuardianguiMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_degats"), 215, 67, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_pv"), 273, 67, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_golem"), 140, 8, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_level"), 125, 29, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_renommer"), 112, 69, -256, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.guardiangui.label_whitelist"), 158, 70, -65536, false);
-		guiGraphics.drawString(this.font, GetguardianlevelProcedure.execute(), 156, 29, -65485, false);
-		guiGraphics.drawString(this.font, GetguardianpvProcedure.execute(), 260, 85, -65434, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.guardiangui.label_degats").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 215, 67 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.guardiangui.label_pv").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 273, 67 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.guardiangui.label_golem").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 140, 8 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.guardiangui.label_level").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 125, 29 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.guardiangui.label_renommer").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 112, 69 + yOffset, -256, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.guardiangui.label_whitelist").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 158, 70 + yOffset, -65536, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetguardianlevelProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 156, 29 + yOffset, -65485, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetguardianpvProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 260, 85 + yOffset, -65434, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

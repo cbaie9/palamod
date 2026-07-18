@@ -20,6 +20,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<MegasafechestfirstsetupMenu> implements PalamodModScreens.ScreenAccessor {
@@ -95,12 +98,44 @@ public class MegasafechestfirstsetupScreen extends AbstractContainerScreen<Megas
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.megasafechestfirstsetup.label_safe_setup"), 55, 6, -13434625, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.megasafechestfirstsetup.label_1_enter_future_code_of_the_safe"), 4, 25, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.megasafechestfirstsetup.label_2do_you_want_link_safe_with"), 3, 64, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code"), 2, 75, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.megasafechestfirstsetup.label_it_you"), 3, 85, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.megasafechestfirstsetup.label_3_save"), 5, 122, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.megasafechestfirstsetup.label_safe_setup").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 55, 6 + yOffset, -13434625, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.megasafechestfirstsetup.label_1_enter_future_code_of_the_safe").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 25 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.megasafechestfirstsetup.label_2do_you_want_link_safe_with").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 64 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 75 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.megasafechestfirstsetup.label_it_you").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 85 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.megasafechestfirstsetup.label_3_save").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 122 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

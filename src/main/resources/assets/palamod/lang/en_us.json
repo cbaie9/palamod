@@ -1771,7 +1771,7 @@
   "gui.palamod.palahelpnew_command.tooltip_delete_the_given_home_in_the_1st": "Delete the given home in the 1st argument",
   "gui.palamod.palahelpnew_command.tooltip_pay_the_given_player_the_given_a": "Pay the given player the given amount of money if the current players have enough money.",
   "gui.palamod.palahelpnew_command.tooltip_teleport_to_the_home_named_in_th": "Teleport to the home named in the argument You can also consult with the list argument a list of your home or consult with the argument info the infomation of the named home",
-  "gui.palamod.palahelpnew_command.tooltip_teleport_you_to_the_spawn_the_ad": "Teleport you to the spawn the administrator has setup \n If the spawn has not been setup the command will not work",
+  "gui.palamod.palahelpnew_command.tooltip_teleport_you_to_the_spawn_the_ad": "Teleport you to the spawn the administrator has setup \\nIf the spawn has not been setup the command will not work",
   "gui.palamod.palahelpnew_command.tooltip_open_the_jobs_interface": "Open the jobs interface",
   "gui.palamod.palahelpnew_command.tooltip_teleport_at_a_random_location_on": "Teleport at a random location on the map. Can be used only three time per player. This restriction does not apply to administrators",
   "gui.palamod.palahelpnew_command.tooltip_give_saturation_2_to_the_player": "Give saturation 2 to the player who execute the command to feed him. This command can disabled for non op players using gamerule. This potential restriction does not apply to administrators",

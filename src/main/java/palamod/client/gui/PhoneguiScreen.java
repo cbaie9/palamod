@@ -19,6 +19,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -87,7 +90,14 @@ public class PhoneguiScreen extends AbstractContainerScreen<PhoneguiMenu> implem
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.phonegui.label_enter_your_secret_code"), 4, 7, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.phonegui.label_enter_your_secret_code").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 7 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

@@ -65,13 +65,15 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 301 && mouseX < leftPos + 321 && mouseY > topPos + 3 && mouseY < topPos + 21) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 395 && mouseX < leftPos + 411 && mouseY > topPos + 3 && mouseY < topPos + 19) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -105,19 +107,86 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki"), 134, 4, -1, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher0Procedure.execute(entity), 4, 28, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher1Procedure.execute(entity), 4, 40, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher2Procedure.execute(entity), 3, 52, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher3Procedure.execute(entity), 4, 64, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher4Procedure.execute(entity), 4, 75, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher6Procedure.execute(entity), 3, 88, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher7Procedure.execute(entity), 3, 101, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher8Procedure.execute(entity), 3, 113, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher9Procedure.execute(entity), 4, 127, -12829636, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher12Procedure.execute(entity), 5, 150, -26368, false);
-		guiGraphics.drawString(this.font, Palahelpcrusher13Procedure.execute(entity), 4, 161, -26368, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.crusherpalahelpgui.label_11_v1"), 374, 184, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 134, 4 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher0Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 28 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher1Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 40 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher2Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 52 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher3Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 64 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher4Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 75 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher6Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 88 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher7Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 101 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher8Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 113 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher9Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 127 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher12Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 150 + yOffset, -26368, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Palahelpcrusher13Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 161 + yOffset, -26368, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_11_v1").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 374, 184 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

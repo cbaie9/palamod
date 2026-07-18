@@ -65,14 +65,16 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 153 && mouseX < leftPos + 170 && mouseY > topPos + 4 && mouseY < topPos + 21) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 134 && mouseX < leftPos + 149 && mouseY > topPos + 5 && mouseY < topPos + 20) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelpblock.tooltip_back_to_palahelp_menu"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelpblock.tooltip_back_to_palahelp_menu").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpblock.tooltip_back_to_palahelp_menu").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -103,7 +105,14 @@ public class PalahelpblockScreen extends AbstractContainerScreen<PalahelpblockMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelpblock.label_palahelp_block_menu"), 6, 7, -1250068, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpblock.label_palahelp_block_menu").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 7 + yOffset, -1250068, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

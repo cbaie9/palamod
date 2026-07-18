@@ -64,6 +64,8 @@ public class InventorybackupScreen extends AbstractContainerScreen<Inventoryback
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		int heightPadding = 0;
+		int yOffset = 0;
 	}
 
 	@Override

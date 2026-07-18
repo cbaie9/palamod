@@ -64,22 +64,29 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 117 && mouseY > topPos + 34 && mouseY < topPos + 52) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_money_output"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.uploadergui.tooltip_money_output").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.uploadergui.tooltip_money_output").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 99 && mouseX < leftPos + 117 && mouseY > topPos + 68 && mouseY < topPos + 86) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.uploadergui.tooltip_items_you_want_to_sell_must_be").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 200 && mouseX < leftPos + 216 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 181 && mouseX < leftPos + 197 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.uploadergui.tooltip_this_machine_is_to_sell_thing_to").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -112,9 +119,26 @@ public class UploaderguiScreen extends AbstractContainerScreen<UploaderguiMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.uploadergui.label_uploader"), 89, 8, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 30, 76, -1, false);
-		guiGraphics.drawString(this.font, UploaderdebugProcedure.execute(world, x, y, z), 133, 73, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.uploadergui.label_uploader").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 89, 8 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Grindertrans0Procedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 30, 76 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(UploaderdebugProcedure.execute(world, x, y, z).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 133, 73 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

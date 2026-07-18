@@ -63,9 +63,8 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 14 && mouseX < leftPos + 159 && mouseY > topPos + 26 && mouseY < topPos + 36) {
-			String hoverText = GetxpfarmertextProcedure.execute(entity);
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (GetxpfarmertextProcedure.execute(entity) != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(GetxpfarmertextProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -96,9 +95,26 @@ public class JobsfarmerguiScreen extends AbstractContainerScreen<JobsfarmerguiMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsfarmergui.label_jobs_miner"), 9, 7, -1, false);
-		guiGraphics.drawString(this.font, GetxpfarmerProcedure.execute(entity), 13, 38, -1, false);
-		guiGraphics.drawString(this.font, GetlevelfarmerProcedure.execute(entity), 5, 63, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsfarmergui.label_jobs_miner").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 9, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetxpfarmerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 13, 38 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(GetlevelfarmerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 63 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

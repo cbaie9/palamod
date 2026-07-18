@@ -17,6 +17,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class DownloaderlinkScreen extends AbstractContainerScreen<DownloaderlinkMenu> implements PalamodModScreens.ScreenAccessor {
@@ -71,11 +74,38 @@ public class DownloaderlinkScreen extends AbstractContainerScreen<Downloaderlink
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_this_will_link_your_palamod"), 11, 6, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_money_account_to_this_block"), 14, 18, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_are_your_sure"), 36, 51, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_you_can_unlink_the_account_at"), 9, 121, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.downloaderlink.label_any_time"), 10, 131, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloaderlink.label_this_will_link_your_palamod").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 11, 6 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloaderlink.label_money_account_to_this_block").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 14, 18 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloaderlink.label_are_your_sure").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 36, 51 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloaderlink.label_you_can_unlink_the_account_at").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 9, 121 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.downloaderlink.label_any_time").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 10, 131 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

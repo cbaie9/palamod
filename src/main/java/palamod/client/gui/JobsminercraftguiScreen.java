@@ -118,186 +118,296 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 277 && mouseX < leftPos + 293 && mouseY > topPos + 4 && mouseY < topPos + 20) {
-			String hoverText = ClosetheguitransProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (ClosetheguitransProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_pickaxe").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 30 && mouseX < leftPos + 45 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_pickaxe_of_the_gods"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_pickaxe_of_the_gods").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_pickaxe_of_the_gods").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_excavator"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_excavator").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_excavator").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_excavator"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_excavator").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_excavator").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_excavator"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_excavator").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_excavator").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_magical_tool"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_magical_tool").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_magical_tool").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_voidstone"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_voidstone").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_voidstone").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_obsidian_pickaxe"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_obsidian_pickaxe").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_obsidian_pickaxe").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 29 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_obsidian_tnt"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_obsidian_tnt").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_obsidian_tnt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compressed_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compressed_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compressed_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_mega_boom_tnt_soon"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_mega_boom_tnt_soon").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_mega_boom_tnt_soon").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_wodden_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_wodden_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_wodden_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_iron_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_iron_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_iron_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_golden_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_golden_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_golden_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_diamond_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_diamond_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_diamond_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 48 && mouseY < topPos + 64) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_spike_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_lava_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_lava_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_lava_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_fake_water_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_fake_water_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_fake_water_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_slime_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_slime_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_slime_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_poison_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_poison_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_poison_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cave_block"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cave_block").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cave_block").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compact_tnt"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compact_tnt").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compact_tnt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_magic_tnt"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_magic_tnt").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_magic_tnt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_wither_tnt"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_wither_tnt").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_wither_tnt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 67 && mouseY < topPos + 83) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_sponge_tnt"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_sponge_tnt").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_sponge_tnt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 10 && mouseX < leftPos + 26 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compressed_sponge"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compressed_sponge").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_compressed_sponge").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 29 && mouseX < leftPos + 45 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_tnt"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_tnt").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_tnt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_builder_wand"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_builder_wand").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_amethyst_builder_wand").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_builder_wand"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_builder_wand").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_titane_builder_wand").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_builder_wand"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_builder_wand").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_paladium_builder_wand").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_builder_wand"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_builder_wand").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_endium_builder_wand").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreaker"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreaker").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreaker").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreaker_amethyst_upgrade"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreaker_amethyst_upgrade").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreaker_amethyst_upgrade").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 162 && mouseX < leftPos + 178 && mouseY > topPos + 86 && mouseY < topPos + 102) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_titane_upgrade"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_titane_upgrade").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_titane_upgrade").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 11 && mouseX < leftPos + 26 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_paladium_upgrade"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_paladium_upgrade").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_cobblebreakers_paladium_upgrade").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 30 && mouseX < leftPos + 45 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_minage_voidstone"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_minage_voidstone").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_minage_voidstone").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 48 && mouseX < leftPos + 64 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_dollard_stone"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_dollard_stone").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_dollard_stone").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 67 && mouseX < leftPos + 83 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_sealed_xp_bottle"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_sealed_xp_bottle").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_sealed_xp_bottle").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 86 && mouseX < leftPos + 102 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_palaforge"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_palaforge").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_palaforge").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 105 && mouseX < leftPos + 121 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_autocrafter"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_autocrafter").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_autocrafter").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 124 && mouseX < leftPos + 140 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_withered_obsidian"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_withered_obsidian").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_withered_obsidian").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 159 && mouseY > topPos + 105 && mouseY < topPos + 121) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -343,15 +453,62 @@ public class JobsminercraftguiScreen extends AbstractContainerScreen<Jobsminercr
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminercraftgui.label_jobs_miner_crafts"), 106, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.jobsminercraftgui.label_information"), 174, 115, -1, false);
-		guiGraphics.drawString(this.font, JobsgetinfotextProcedure.execute(entity), 175, 128, -1, false);
-		guiGraphics.drawString(this.font, JobsgetlvlrequiredProcedure.execute(entity), 177, 193, -16738048, false);
-		guiGraphics.drawString(this.font, Jobsgetinfotext2Procedure.execute(entity), 175, 139, -1, false);
-		guiGraphics.drawString(this.font, Jobsgetinfotext3Procedure.execute(entity), 175, 149, -1, false);
-		guiGraphics.drawString(this.font, JobsgetdurabilityProcedure.execute(entity), 177, 183, -16737895, false);
-		guiGraphics.drawString(this.font, Jobsgetinfotext4Procedure.execute(entity), 175, 158, -1, false);
-		guiGraphics.drawString(this.font, Jobsgetinfotext5Procedure.execute(entity), 175, 167, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.label_jobs_miner_crafts").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 106, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.jobsminercraftgui.label_information").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 174, 115 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(JobsgetinfotextProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 175, 128 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(JobsgetlvlrequiredProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 177, 193 + yOffset, -16738048, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Jobsgetinfotext2Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 175, 139 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Jobsgetinfotext3Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 175, 149 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(JobsgetdurabilityProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 177, 183 + yOffset, -16737895, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Jobsgetinfotext4Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 175, 158 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Jobsgetinfotext5Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 175, 167 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

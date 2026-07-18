@@ -12,6 +12,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class OrelayerfatScreen extends AbstractContainerScreen<OrelayerfatMenu> implements PalamodModScreens.ScreenAccessor {
@@ -64,12 +67,44 @@ public class OrelayerfatScreen extends AbstractContainerScreen<OrelayerfatMenu> 
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_paladium_64_15"), 4, 57, -3407872, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_titane_64_32"), 5, 69, -10066330, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_amethyst_64_80"), 7, 80, -6750055, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_findium_64_150"), 5, 42, -13312, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_green_paladium_64_128"), 6, 28, -16738048, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.orelayerfat.label_endium_64_128_customs_p"), 5, 15, -16777114, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.orelayerfat.label_paladium_64_15").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 57 + yOffset, -3407872, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.orelayerfat.label_titane_64_32").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 69 + yOffset, -10066330, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.orelayerfat.label_amethyst_64_80").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 7, 80 + yOffset, -6750055, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.orelayerfat.label_findium_64_150").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 42 + yOffset, -13312, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.orelayerfat.label_green_paladium_64_128").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 28 + yOffset, -16738048, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.orelayerfat.label_endium_64_128_customs_p").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 15 + yOffset, -16777114, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

@@ -17,6 +17,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Menu> implements PalamodModScreens.ScreenAccessor {
@@ -70,9 +73,26 @@ public class Palaerror0005Screen extends AbstractContainerScreen<Palaerror0005Me
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0005.label_pala_err0r_0005"), 47, 4, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0005.label_you_dont_have_the_permission_to"), 5, 26, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palaerror_0005.label_do_that_action"), 5, 36, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palaerror_0005.label_pala_err0r_0005").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 47, 4 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palaerror_0005.label_you_dont_have_the_permission_to").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 26 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palaerror_0005.label_do_that_action").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 36 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

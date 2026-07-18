@@ -14,6 +14,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class AnalyserresultScreen extends AbstractContainerScreen<AnalyserresultMenu> implements PalamodModScreens.ScreenAccessor {
@@ -92,32 +95,164 @@ public class AnalyserresultScreen extends AbstractContainerScreen<Analyserresult
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_ores"), 40, 40, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_endstone"), 39, 7, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_planks"), 38, 73, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_clay"), 153, 6, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_cobblestone"), 37, 99, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_chests"), 35, 137, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_dirt"), 37, 166, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_logs"), 151, 39, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_wool"), 153, 71, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_bedrock"), 151, 101, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnoresProcedure.execute(), 39, 59, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturndirtProcedure.execute(), 37, 187, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnstoneProcedure.execute(), 268, 22, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnendstoneProcedure.execute(), 40, 19, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnairProcedure.execute(), 152, 148, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnshulkerProcedure.execute(), 152, 178, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnchestProcedure.execute(), 34, 148, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnwoolProcedure.execute(), 153, 84, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnbedrockProcedure.execute(), 152, 112, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturncobbleProcedure.execute(), 25, 111, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnlogsProcedure.execute(), 153, 51, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnplanksProcedure.execute(), 38, 84, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_air"), 151, 130, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_stone"), 267, 9, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.analyserresult.label_shulker"), 151, 165, -12829636, false);
-		guiGraphics.drawString(this.font, AnalyreturnclayProcedure.execute(), 151, 22, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_ores").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 40, 40 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_endstone").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 39, 7 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_planks").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 38, 73 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_clay").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 153, 6 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_cobblestone").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 37, 99 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_chests").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 35, 137 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_dirt").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 37, 166 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_logs").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 151, 39 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_wool").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 153, 71 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_bedrock").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 151, 101 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnoresProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 39, 59 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturndirtProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 37, 187 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnstoneProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 268, 22 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnendstoneProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 40, 19 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnairProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 152, 148 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnshulkerProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 152, 178 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnchestProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 34, 148 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnwoolProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 153, 84 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnbedrockProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 152, 112 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturncobbleProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 25, 111 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnlogsProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 153, 51 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnplanksProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 38, 84 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_air").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 151, 130 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_stone").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 267, 9 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.analyserresult.label_shulker").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 151, 165 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(AnalyreturnclayProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 151, 22 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

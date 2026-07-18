@@ -18,6 +18,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class LegendarystonepalahelpScreen extends AbstractContainerScreen<LegendarystonepalahelpMenu> implements PalamodModScreens.ScreenAccessor {
@@ -91,18 +94,80 @@ public class LegendarystonepalahelpScreen extends AbstractContainerScreen<Legend
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_legendary_stone_wiki"), 3, 7, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_forturne_permet_de_vous_give"), 26, 54, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_note_utilisable_une_fois_tous_l"), 3, 24, -16777012, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_invisible_vous_rend_invisible"), 26, 76, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_jobs_vous_donne_de_lxp"), 25, 98, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_power_vous_permet_detre_prote"), 26, 119, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_contre_la_fake_water"), 14, 130, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_teleportation_vous_tp_aletorem"), 27, 144, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_sur_la_map"), 13, 157, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_random_vous_donne_une_des_5_pi"), 26, 173, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_au_dessus"), 12, 183, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.legendarystonepalahelp.label_effect"), 27, 85, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_legendary_stone_wiki").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_forturne_permet_de_vous_give").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 54 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_note_utilisable_une_fois_tous_l").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 24 + yOffset, -16777012, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_invisible_vous_rend_invisible").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 76 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_jobs_vous_donne_de_lxp").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 25, 98 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_power_vous_permet_detre_prote").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 119 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_contre_la_fake_water").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 14, 130 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_teleportation_vous_tp_aletorem").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 27, 144 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_sur_la_map").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 13, 157 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_random_vous_donne_une_des_5_pi").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 173 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_au_dessus").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 12, 183 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.legendarystonepalahelp.label_effect").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 27, 85 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

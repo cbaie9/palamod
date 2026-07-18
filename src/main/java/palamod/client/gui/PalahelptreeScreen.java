@@ -69,36 +69,46 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + -31 && mouseX < leftPos + 22 && mouseY > topPos + 24 && mouseY < topPos + 46) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_can_be_extracted_to_make_jacaran"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelptree.tooltip_can_be_extracted_to_make_jacaran").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelptree.tooltip_can_be_extracted_to_make_jacaran").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + -31 && mouseX < leftPos + 22 && mouseY > topPos + 49 && mouseY < topPos + 71) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_judeecercis"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelptree.tooltip_judeecercis").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelptree.tooltip_judeecercis").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + -31 && mouseX < leftPos + 22 && mouseY > topPos + 79 && mouseY < topPos + 103) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_erable"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelptree.tooltip_erable").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelptree.tooltip_erable").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + -31 && mouseX < leftPos + 22 && mouseY > topPos + 111 && mouseY < topPos + 136) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_ostrya"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelptree.tooltip_ostrya").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelptree.tooltip_ostrya").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + -32 && mouseX < leftPos + -10 && mouseY > topPos + -10 && mouseY < topPos + 10) {
-			String hoverText = TRADreturntosumarryProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (TRADreturntosumarryProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(TRADreturntosumarryProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 213 && mouseX < leftPos + 253 && mouseY > topPos + 136 && mouseY < topPos + 159) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.palahelptree.tooltip_go_to_palahelp_ore_and_liquids"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.palahelptree.tooltip_go_to_palahelp_ore_and_liquids").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelptree.tooltip_go_to_palahelp_ore_and_liquids").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + -32 && mouseX < leftPos + 12 && mouseY > topPos + 138 && mouseY < topPos + 161) {
-			String hoverText = TRADreturntosumarryProcedure.execute();
-			if (hoverText != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(hoverText.split("\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			if (TRADreturntosumarryProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(TRADreturntosumarryProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -131,7 +141,14 @@ public class PalahelptreeScreen extends AbstractContainerScreen<PalahelptreeMenu
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.palahelptree.label_palahelp_trees"), -2, 7, -13421773, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelptree.label_palahelp_trees").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, -2, 7 + yOffset, -13421773, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

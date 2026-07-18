@@ -21,6 +21,9 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class TrixiumdepositScreen extends AbstractContainerScreen<TrixiumdepositMenu> implements PalamodModScreens.ScreenAccessor {
@@ -57,7 +60,9 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 78 && mouseX < leftPos + 96 && mouseY > topPos + 41 && mouseY < topPos + 59) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.trixiumdeposit.tooltip_put_trixium_here"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.trixiumdeposit.tooltip_put_trixium_here").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.trixiumdeposit.tooltip_put_trixium_here").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -87,8 +92,20 @@ public class TrixiumdepositScreen extends AbstractContainerScreen<Trixiumdeposit
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.trixiumdeposit.label_trixium_deposit_menu"), 35, 7, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 5, 71, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.trixiumdeposit.label_trixium_deposit_menu").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 35, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Grindertrans0Procedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 71 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

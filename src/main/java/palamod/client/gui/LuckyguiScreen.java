@@ -21,6 +21,9 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -79,8 +82,20 @@ public class LuckyguiScreen extends AbstractContainerScreen<LuckyguiMenu> implem
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.luckygui.label_lucky_block"), 55, 6, -1, false);
-		guiGraphics.drawString(this.font, LuckyblockgetnameProcedure.execute(world, x, y, z), 26, 84, -3407821, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.luckygui.label_lucky_block").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 55, 6 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(LuckyblockgetnameProcedure.execute(world, x, y, z).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 26, 84 + yOffset, -3407821, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

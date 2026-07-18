@@ -20,6 +20,9 @@ import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ExampleuploaderguiScreen extends AbstractContainerScreen<ExampleuploaderguiMenu> implements PalamodModScreens.ScreenAccessor {
@@ -55,15 +58,23 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
 		if (mouseX > leftPos + 63 && mouseX < leftPos + 109 && mouseY > topPos + 5 && mouseY < topPos + 18) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_this_interface_need_an_upgrade"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.exampleuploadergui.tooltip_this_interface_need_an_upgrade").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.exampleuploadergui.tooltip_this_interface_need_an_upgrade").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 61 && mouseY < topPos + 79) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_money_output"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.exampleuploadergui.tooltip_money_output").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.exampleuploadergui.tooltip_money_output").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (mouseX > leftPos + 77 && mouseX < leftPos + 95 && mouseY > topPos + 27 && mouseY < topPos + 45) {
-			guiGraphics.renderTooltip(font, Component.translatable("gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be"), mouseX, mouseY);
+			if (Component.translatable("gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.exampleuploadergui.tooltip_thing_you_want_to_sell_must_be").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
 			customTooltipShown = true;
 		}
 		if (!customTooltipShown)
@@ -93,8 +104,20 @@ public class ExampleuploaderguiScreen extends AbstractContainerScreen<Exampleupl
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.exampleuploadergui.label_uploader"), 65, 8, -1, false);
-		guiGraphics.drawString(this.font, Grindertrans0Procedure.execute(), 3, 71, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.exampleuploadergui.label_uploader").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 65, 8 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Grindertrans0Procedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 71 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

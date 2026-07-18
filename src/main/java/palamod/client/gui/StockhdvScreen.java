@@ -13,6 +13,9 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> implements PalamodModScreens.ScreenAccessor {
@@ -67,12 +70,44 @@ public class StockhdvScreen extends AbstractContainerScreen<StockhdvMenu> implem
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.stockhdv.label_0_1_2_3_4_5_6_7_8"), 4, 4, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.stockhdv.label_23_24_25_26_27_28_29_30_31"), 4, 32, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.stockhdv.label_46_47_48_49_50_51_52_53_54"), 8, 59, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.stockhdv.label_inventory"), 246, 142, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.stockhdv.label_stocks_hdv_items_0_10_0"), 248, 131, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.stockhdv.label_69_70_71_72_73_74_75_76_77_7"), 7, 87, -12829636, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.stockhdv.label_0_1_2_3_4_5_6_7_8").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 4 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.stockhdv.label_23_24_25_26_27_28_29_30_31").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 32 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.stockhdv.label_46_47_48_49_50_51_52_53_54").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 8, 59 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.stockhdv.label_inventory").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 246, 142 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.stockhdv.label_stocks_hdv_items_0_10_0").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 248, 131 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.stockhdv.label_69_70_71_72_73_74_75_76_77_7").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 7, 87 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

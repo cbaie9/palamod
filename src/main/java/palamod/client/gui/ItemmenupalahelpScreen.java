@@ -19,6 +19,9 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.util.stream.Collectors;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ItemmenupalahelpScreen extends AbstractContainerScreen<ItemmenupalahelpMenu> implements PalamodModScreens.ScreenAccessor {
@@ -94,7 +97,14 @@ public class ItemmenupalahelpScreen extends AbstractContainerScreen<Itemmenupala
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.palamod.itemmenupalahelp.label_item_menu"), 3, 7, -1, false);
+		int heightPadding = 0;
+		int yOffset = 0;
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.itemmenupalahelp.label_item_menu").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 3, 7 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override
