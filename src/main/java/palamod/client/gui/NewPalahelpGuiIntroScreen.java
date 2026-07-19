@@ -189,12 +189,30 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		}).bounds(this.leftPos + 242, this.topPos + 76, 61, 20).build();
 		this.addRenderableWidget(button_jobs);
 		button_grinder = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_grinder"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(6, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
 		}).bounds(this.leftPos + 188, this.topPos + 113, 50, 20).build();
 		this.addRenderableWidget(button_grinder);
 		button_palamachine = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_palamachine"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(7, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
 		}).bounds(this.leftPos + 242, this.topPos + 113, 61, 20).build();
 		this.addRenderableWidget(button_palamachine);
 		button_crusher = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_crusher"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(8, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
 		}).bounds(this.leftPos + 188, this.topPos + 135, 50, 20).build();
 		this.addRenderableWidget(button_crusher);
 		button_more = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_more"), e -> {

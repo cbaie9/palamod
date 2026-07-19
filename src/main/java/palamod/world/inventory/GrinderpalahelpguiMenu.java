@@ -26,7 +26,7 @@ public class GrinderpalahelpguiMenu extends AbstractContainerMenu implements Pal
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 24)
+			if (!this.containsKey(key) && this.size() >= 22)
 				return null;
 			return super.put(key, value);
 		}

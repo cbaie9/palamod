@@ -2,8 +2,6 @@ package palamod.client.gui;
 
 import palamod.world.inventory.GrinderpalahelpguiMenu;
 
-import palamod.procedures.*;
-
 import palamod.network.GrinderpalahelpguiButtonMessage;
 
 import palamod.init.PalamodModScreens;
@@ -41,6 +39,10 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
 	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/grinder_block_front16.png");
 	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/underline_48px.png");
+	private static final ResourceLocation IMAGE_7 = ResourceLocation.parse("palamod:textures/screens/underline_48px.png");
+	private static final ResourceLocation IMAGE_8 = ResourceLocation.parse("palamod:textures/screens/underline_48px.png");
+	private static final ResourceLocation IMAGE_9 = ResourceLocation.parse("palamod:textures/screens/underline_48px.png");
 
 	public GrinderpalahelpguiScreen(GrinderpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -60,9 +62,30 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 	}
 
 	@Override
+	public boolean isPauseScreen() {
+		return true;
+	}
+
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 106 && mouseX < leftPos + 251 && mouseY > topPos + 52 && mouseY < topPos + 66) {
+			if (Component.translatable("gui.palamod.grinderpalahelpgui.tooltip_list_of_upgrades_that_the_mod_ha").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.tooltip_list_of_upgrades_that_the_mod_ha").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 5 && mouseX < leftPos + 66 && mouseY > topPos + 92 && mouseY < topPos + 104) {
+			if (Component.translatable("gui.palamod.grinderpalahelpgui.tooltip_materials_needed_for_the_grinder").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.tooltip_materials_needed_for_the_grinder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -76,6 +99,10 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 		guiGraphics.blit(IMAGE_3, this.leftPos + 229, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(IMAGE_4, this.leftPos + 3, this.topPos + 4, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(IMAGE_5, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_6, this.leftPos + 154, this.topPos + 50, 0, 0, 48, 16, 48, 16);
+		guiGraphics.blit(IMAGE_7, this.leftPos + 106, this.topPos + 50, 0, 0, 48, 16, 48, 16);
+		guiGraphics.blit(IMAGE_8, this.leftPos + 202, this.topPos + 50, 0, 0, 48, 16, 48, 16);
+		guiGraphics.blit(IMAGE_9, this.leftPos + 5, this.topPos + 87, 0, 0, 48, 16, 48, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -99,74 +126,26 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder10Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 40 + yOffset, -12829636, false);
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_the_grinder_is_a_machine_that_cr").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 7, 27 + yOffset, -3355444, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder11Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 53 + yOffset, -12829636, false);
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_you_can_also_apply_special_craft").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 6, 54 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder12Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 66 + yOffset, -12829636, false);
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_requirement").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 5, 90 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder13Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 2, 78 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder14Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 90 + yOffset, -256, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder15Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 2, 99 + yOffset, -256, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrindet16Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 110 + yOffset, -8504309, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder17Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 120 + yOffset, -816878, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_empty").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 54, 71 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder18Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 132 + yOffset, -3335911, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpgrinder19Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 145 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_2_min_12").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 20, 14 + yOffset, -1, false);
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.label_beta4test_v2001").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 237, 168 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
@@ -205,8 +184,8 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 			}
 		};
 		this.addRenderableWidget(imagebutton_revert_adminshop_arrow);
-		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 250, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_adminshop.png"), ResourceLocation.parse("palamod:textures/screens/arrow_adminshop_poi.png")), e -> {
+		imagebutton_arrow_adminshop = new ImageButton(this.leftPos + 250, this.topPos + 4, 17, 17,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_back_true_1.png"), ResourceLocation.parse("palamod:textures/screens/arrow_back_true2.png")), e -> {
 					int x = GrinderpalahelpguiScreen.this.x;
 					int y = GrinderpalahelpguiScreen.this.y;
 					if (true) {

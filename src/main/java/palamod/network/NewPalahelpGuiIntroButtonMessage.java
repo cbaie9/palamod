@@ -1,9 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.ConnectnewOreLiquidsPalahelpProcedure;
-import palamod.procedures.ConnectarmorpalahelpProcedure;
-import palamod.procedures.ConnectPalahelpTreeProcedure;
-import palamod.procedures.ConnectNewPalahelpCommandProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -70,6 +67,18 @@ public record NewPalahelpGuiIntroButtonMessage(int buttonID, int x, int y, int z
 		if (buttonID == 4) {
 
 			ConnectNewPalahelpCommandProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 6) {
+
+			Connectgrinderpag1Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 7) {
+
+			ConnectpalamachinepalahelpProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 8) {
+
+			ConnectpalahelpcrusherProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

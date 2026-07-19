@@ -8,7 +8,7 @@
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
-    "doesPauseGame": false,
+    "doesPauseGame": true,
     "components": [
       {
         "type": "image",
@@ -58,220 +58,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_le_grinder_est_une_machine_perme",
-          "text": {
-            "fixedValue": "Le grinder est une machine permettant de",
-            "name": "Palahelpgrinder10"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 52,
-          "y": 68,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_certain_outil_dont_le_hammerla",
-          "text": {
-            "fixedValue": "Certain outil dont le hammer,la fastsword",
-            "name": "Palahelpgrinder11"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 52,
-          "y": 81,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_et_la_broadsword_vous_pouvez_y_a",
-          "text": {
-            "fixedValue": "et la broadsword Vous pouvez y ajouter",
-            "name": "Palahelpgrinder12"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 52,
-          "y": 94,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_des_upgrade_amliorent_les_outil",
-          "text": {
-            "fixedValue": "des upgrade am�liorent les outils",
-            "name": "Palahelpgrinder13"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 51,
-          "y": 106,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_fortune_permet_de_dupliquer_le",
-          "text": {
-            "fixedValue": "Fortune : permet de dupliquer les objet ",
-            "name": "Palahelpgrinder14"
-          },
-          "color": {
-            "value": -256,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 52,
-          "y": 118,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_mins_hammer",
-          "text": {
-            "fixedValue": "min�s -) hammer",
-            "name": "Palahelpgrinder15"
-          },
-          "color": {
-            "value": -256,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 51,
-          "y": 127,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_smelt_cuit_les_minerais_mins",
-          "text": {
-            "fixedValue": "Smelt : cuit les minerais min�s -) hammer",
-            "name": "Palahelpgrindet16"
-          },
-          "color": {
-            "value": -8504309,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 52,
-          "y": 138,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_speed_augmante_la_vitesse_h",
-          "text": {
-            "fixedValue": "Speed : augmante la vitesse -) hammer",
-            "name": "Palahelpgrinder17"
-          },
-          "color": {
-            "value": -816878,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 52,
-          "y": 148,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty",
-          "text": {
-            "fixedValue": ""
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 103,
-          "y": 99,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_flame_fire_aspect_pour_fast",
-          "text": {
-            "fixedValue": "Flame : -) fire aspect pour fastsword et",
-            "name": "Palahelpgrinder18"
-          },
-          "color": {
-            "value": -3335911,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 53,
-          "y": 160,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_damage_augmante_les_dgats",
-          "text": {
-            "fixedValue": "Damage : augmante les d�gats -) fastsword",
-            "name": "Palahelpgrinder19"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 53,
-          "y": 173,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_2_min_12",
-          "text": {
-            "fixedValue": "2 min 1/2"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 69,
-          "y": 42,
-          "locked": false
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "right_gray_line.png",
@@ -309,8 +95,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_adminshop.png",
-          "hoveredImage": "arrow_adminshop_poi.png",
+          "image": "arrow_back_true_1.png",
+          "hoveredImage": "arrow_back_true2.png",
           "onClick": "Machineconnectpalahelp",
           "x": 299,
           "y": 32,
@@ -358,6 +144,142 @@
           "onClick": "Openexamplegrinder",
           "x": 337,
           "y": 32,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_grinder_is_a_machine_that_cr",
+          "text": {
+            "fixedValue": "The grinder is a machine that create \\nspecial tools (like hammer, fastsword, broadsword) "
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 56,
+          "y": 55,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_you_can_also_apply_special_craft",
+          "text": {
+            "fixedValue": "You can also apply special craftable enchants up \\nto 3 upgrades per item"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 55,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "underline_48px.png",
+          "use1Xscale": false,
+          "x": 203,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "underline_48px.png",
+          "use1Xscale": false,
+          "x": 155,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "underline_48px.png",
+          "use1Xscale": false,
+          "x": 251,
+          "y": 78,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_list_of_upgrades_that_the_mod_ha",
+          "text": {
+            "fixedValue": "List of upgrades that the mod has\\nFortune : Multiply the amount of ores that you gain ( Usable on hammers ) \\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\nSmelt : smelt any block you break ( Usable on hammer ) \\nFlame : Fire Aspect on fastsword and broadsword\\nDamage : Sharpness on fastsword and broadsword\\nOne More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool "
+          },
+          "width": 145,
+          "height": 14,
+          "x": 155,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_requirement",
+          "text": {
+            "fixedValue": "Requirement (hover for info)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 54,
+          "y": 118,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "underline_48px.png",
+          "use1Xscale": false,
+          "x": 54,
+          "y": 115,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_materials_needed_for_the_grinder",
+          "text": {
+            "fixedValue": "Materials needed for the grinder\\n \\n-126 ingot of Paladium\\n-40 ingot of Titane\\n \\nWith all these base materials you will need to craft :\\n \\n -20 Grinder frame\\n-5 grinder casing\\n-1 Grinder furnace"
+          },
+          "width": 61,
+          "height": 12,
+          "x": 54,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_beta4test_v2001",
+          "text": {
+            "fixedValue": "Beta4text v2.001"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 286,
+          "y": 196,
           "locked": false
         }
       }

@@ -82,13 +82,6 @@ public class PalahelpnewCommandScreen extends AbstractContainerScreen<Palahelpne
 			}
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 20 && mouseX < leftPos + 49 && mouseY > topPos + 53 && mouseY < topPos + 64) {
-			if (Component.translatable("gui.palamod.palahelpnew_command.tooltip_open_the_jobs_interface").getString() != null) {
-				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.tooltip_open_the_jobs_interface").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
-						mouseY);
-			}
-			customTooltipShown = true;
-		}
 		if (mouseX > leftPos + 20 && mouseX < leftPos + 102 && mouseY > topPos + 64 && mouseY < topPos + 73) {
 			if (Component.translatable("gui.palamod.palahelpnew_command.tooltip_create_a_home_with_given_name_in").getString() != null) {
 				guiGraphics.renderComponentTooltip(font,
@@ -170,6 +163,27 @@ public class PalahelpnewCommandScreen extends AbstractContainerScreen<Palahelpne
 			if (Component.translatable("gui.palamod.palahelpnew_command.tooltip_teleport_at_random_location_in_t").getString() != null) {
 				guiGraphics.renderComponentTooltip(font,
 						Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.tooltip_teleport_at_random_location_in_t").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 20 && mouseX < leftPos + 54 && mouseY > topPos + 53 && mouseY < topPos + 64) {
+			if (Component.translatable("gui.palamod.palahelpnew_command.tooltip_open_the_job_system_interface_n").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.tooltip_open_the_job_system_interface_n").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 176 && mouseX < leftPos + 220 && mouseY > topPos + 52 && mouseY < topPos + 62) {
+			if (Component.translatable("gui.palamod.palahelpnew_command.tooltip_a_command_to_teleport_at_a_rando").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.tooltip_a_command_to_teleport_at_a_rando").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 176 && mouseX < leftPos + 211 && mouseY > topPos + 62 && mouseY < topPos + 73) {
+			if (Component.translatable("gui.palamod.palahelpnew_command.tooltip_open_the_craft_table_interface").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.tooltip_open_the_craft_table_interface").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -298,6 +312,24 @@ public class PalahelpnewCommandScreen extends AbstractContainerScreen<Palahelpne
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.label_jobs").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 19, 53 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.label_rtp1").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 176, 52 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.label_craft").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 177, 62 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_command.label_here_all_the_main_commandnthe_m").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 170, 74 + yOffset, -16777063, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}

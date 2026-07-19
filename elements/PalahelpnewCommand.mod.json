@@ -392,20 +392,6 @@
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_open_the_jobs_interface",
-          "text": {
-            "fixedValue": "Open the jobs interface"
-          },
-          "width": 29,
-          "height": 11,
-          "x": 74,
-          "y": 82,
-          "locked": false
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
           "name": "tooltip_create_a_home_with_given_name_in",
           "text": {
             "fixedValue": "Create a home with given name in the 1st argument"
@@ -568,6 +554,99 @@
           "height": 9,
           "x": 231,
           "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_open_the_job_system_interface_n",
+          "text": {
+            "fixedValue": "Open the Job system interface\\nThe Job System is a level based system where you can\\nupgrade your skill in 4 categories of Jobs\\n \\nMiner - Mine ore and smelt them to level up\\nFarmer - Cultivate crop and use them to level up\\nHunter - Kill mobs and entity\\nAlchimist - Extract seve from tree and flower to make nice items\\n\\nEach Jobs have unlockable useful items for your base and for you of course"
+          },
+          "width": 34,
+          "height": 11,
+          "x": 74,
+          "y": 82,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rtp1",
+          "text": {
+            "fixedValue": "/furnace"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 230,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_a_command_to_teleport_at_a_rando",
+          "text": {
+            "fixedValue": "Smelt any smeltable that is in your main hand"
+          },
+          "width": 44,
+          "height": 10,
+          "x": 230,
+          "y": 81,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craft",
+          "text": {
+            "fixedValue": "/craft"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 231,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_open_the_craft_table_interface",
+          "text": {
+            "fixedValue": "Open the craft table interface ( from anywhere )"
+          },
+          "width": 35,
+          "height": 11,
+          "x": 230,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_here_all_the_main_commandnthe_m",
+          "text": {
+            "fixedValue": "Here all the main command\\nthe mod has. Hover the command \\nto know what they does."
+          },
+          "color": {
+            "value": -16777063,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 224,
+          "y": 103,
           "locked": false
         }
       }

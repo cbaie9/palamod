@@ -51802,7 +51802,20 @@
       "gui.palamod.palahelpnew_command.tooltip_administrators_only_setup_at": "[ Administrators only ] Setup at you position the spawn the players can teleport using /spawn",
       "gui.palamod.palahelpnew_command.tooltip_show_the_current_player_money_f": "Show the current player Money. For Admin it can modify or show any player balance.",
       "gui.palamod.new_palahelp_gui_intro.label_my_mod": "my mod",
-      "gui.palamod.palahelpnew_command.tooltip_test2": "test2"
+      "gui.palamod.palahelpnew_command.tooltip_test2": "test2",
+      "gui.palamod.palahelpnew_command.label_jobs1": "/Jobs",
+      "gui.palamod.palahelpnew_command.tooltip_open_the_job_system_interface_n": "Open the Job system interface\\nThe Job System is a level based system where you can\\nupgrade your skill in 4 categories of Jobs\\n \\nMiner - Mine ore and smelt them to level up\\nFarmer - Cultivate crop and use them to level up\\nHunter - Kill mobs and entity\\nAlchimist - Extract seve from tree and flower to make nice items\\n\\nEach Jobs have unlockable useful items for your base and for you of course",
+      "gui.palamod.palahelpnew_command.label_here_all_the_main_commandnthe_m": "Here all the main command\\nthe mod has. Hover the command \\nto know what they does.",
+      "gui.palamod.palahelpnew_command.tooltip_open_the_craft_table_interface": "Open the craft table interface ( from anywhere )",
+      "gui.palamod.palahelpnew_command.tooltip_a_command_to_teleport_at_a_rando": "Smelt any smeltable that is in your main hand",
+      "gui.palamod.palahelpnew_command.label_rtp1": "/furnace",
+      "gui.palamod.palahelpnew_command.label_craft": "/craft",
+      "gui.palamod.grinderpalahelpgui.label_the_grinder_is_a_machine_that_cr": "The grinder is a machine that create \\nspecial tools (like hammer, fastsword, broadsword) ",
+      "gui.palamod.grinderpalahelpgui.label_you_can_also_apply_special_craft": "You can also apply special craftable enchants up \\nto 3 upgrades per item",
+      "gui.palamod.grinderpalahelpgui.tooltip_list_of_upgrades_that_the_mod_ha": "List of upgrades that the mod has\\nFortune : Multiply the amount of ores that you gain ( Usable on hammers ) \\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\nSmelt : smelt any block you break ( Usable on hammer ) \\nFlame : Fire Aspect on fastsword and broadsword\\nDamage : Sharpness on fastsword and broadsword\\nOne More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool ",
+      "gui.palamod.grinderpalahelpgui.label_requirement": "Requirement (hover for info)",
+      "gui.palamod.grinderpalahelpgui.tooltip_materials_needed_for_the_grinder": "Materials needed for the grinder\\n \\n-126 ingot of Paladium\\n-40 ingot of Titane\\n \\nWith all these base materials you will need to craft :\\n \\n -20 Grinder frame\\n-5 grinder casing\\n-1 Grinder furnace",
+      "gui.palamod.grinderpalahelpgui.label_beta4test_v2001": "Beta4text v2.001"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53585,7 +53598,20 @@
       "gui.palamod.palahelpnew_command.tooltip_administrators_only_setup_at": "[ Administrators only ] Setup at you position the spawn the players can teleport using /spawn",
       "gui.palamod.palahelpnew_command.tooltip_show_the_current_player_money_f": "Show the current player Money. For Admin it can modify or show any player balance.",
       "gui.palamod.new_palahelp_gui_intro.label_my_mod": "my mod",
-      "gui.palamod.palahelpnew_command.tooltip_test2": "test2"
+      "gui.palamod.palahelpnew_command.tooltip_test2": "test2",
+      "gui.palamod.palahelpnew_command.label_jobs1": "/Jobs",
+      "gui.palamod.palahelpnew_command.tooltip_open_the_job_system_interface_n": "Open the Job system interface \\n The Job System is a level based system where you can\\nupgrade your skill in 4 categories of Jobs \\n \\n Miner - Mine ore and smelt them to level up \\nFarmer - Cultivate crop and use them to level up\\nHunter - Kill mobs and entity\\nAlchimist - Extract seve from tree and flower to make nice items\\n\\nEach Jobs have unlockable useful items for your base and for you of course",
+      "gui.palamod.palahelpnew_command.label_here_all_the_main_commandnthe_m": "Here all the main command\\nthe mod has.\\nHover the command to know\\nwhat they does.",
+      "gui.palamod.palahelpnew_command.tooltip_open_the_craft_table_interface": "Open the craft table interface ( from anywhere )",
+      "gui.palamod.palahelpnew_command.tooltip_a_command_to_teleport_at_a_rando": "Smelt any smeltable that is in your main hand",
+      "gui.palamod.palahelpnew_command.label_rtp1": "/furnace",
+      "gui.palamod.palahelpnew_command.label_craft": "/craft",
+      "gui.palamod.grinderpalahelpgui.label_the_grinder_is_a_machine_that_cr": "The grinder is a machine that create \\nspecial tools (like hammer, fastsword, broadsword) ",
+      "gui.palamod.grinderpalahelpgui.label_you_can_also_apply_special_craft": "You can also apply special craftable enchants up \\nto 3 upgrades per item",
+      "gui.palamod.grinderpalahelpgui.tooltip_list_of_upgrades_that_the_mod_ha": "List of upgrades that the mod has\\nFortune : Multiply the amount of ores that you gain ( Usable on hammers ) \\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\nSmelt : smelt any block you break ( Usable on hammer ) \\nFlame : Fire Aspect on fastsword and broadsword\\nDamage : Sharpness on fastsword and broadsword\\nOne More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool ",
+      "gui.palamod.grinderpalahelpgui.label_requirement": "Requirement (hover for info)",
+      "gui.palamod.grinderpalahelpgui.tooltip_materials_needed_for_the_grinder": "Materials needed for the grinder\\n \\n-126 ingot of Paladium\\n-40 ingot of Titane\\n \\nWith all these base materials you will need to craft :\\n \\n -20 Grinder frame\\n-5 grinder casing\\n-1 Grinder furnace",
+      "gui.palamod.grinderpalahelpgui.label_beta4test_v2001": "Beta4text v2.001"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -55368,7 +55394,20 @@
       "gui.palamod.palahelpnew_command.tooltip_administrators_only_setup_at": "[ Administrators only ] Setup at you position the spawn the players can teleport using /spawn",
       "gui.palamod.palahelpnew_command.tooltip_show_the_current_player_money_f": "Show the current player Money. For Admin it can modify or show any player balance.",
       "gui.palamod.new_palahelp_gui_intro.label_my_mod": "my mod",
-      "gui.palamod.palahelpnew_command.tooltip_test2": "test2"
+      "gui.palamod.palahelpnew_command.tooltip_test2": "test2",
+      "gui.palamod.palahelpnew_command.label_jobs1": "/Jobs",
+      "gui.palamod.palahelpnew_command.tooltip_open_the_job_system_interface_n": "Open the Job system interface \\n The Job System is a level based system where you can\\nupgrade your skill in 4 categories of Jobs \\n \\n Miner - Mine ore and smelt them to level up \\nFarmer - Cultivate crop and use them to level up\\nHunter - Kill mobs and entity\\nAlchimist - Extract seve from tree and flower to make nice items\\n\\nEach Jobs have unlockable useful items for your base and for you of course",
+      "gui.palamod.palahelpnew_command.label_here_all_the_main_commandnthe_m": "Here all the main command\\nthe mod has.\\nHover the command to know\\nwhat they does.",
+      "gui.palamod.palahelpnew_command.tooltip_open_the_craft_table_interface": "Open the craft table interface ( from anywhere )",
+      "gui.palamod.palahelpnew_command.tooltip_a_command_to_teleport_at_a_rando": "Smelt any smeltable that is in your main hand",
+      "gui.palamod.palahelpnew_command.label_rtp1": "/furnace",
+      "gui.palamod.palahelpnew_command.label_craft": "/craft",
+      "gui.palamod.grinderpalahelpgui.label_the_grinder_is_a_machine_that_cr": "The grinder is a machine that create \\nspecial tools (like hammer, fastsword, broadsword) ",
+      "gui.palamod.grinderpalahelpgui.label_you_can_also_apply_special_craft": "You can also apply special craftable enchants up \\nto 3 upgrades per item",
+      "gui.palamod.grinderpalahelpgui.tooltip_list_of_upgrades_that_the_mod_ha": "List of upgrades that the mod has\\nFortune : Multiply the amount of ores that you gain ( Usable on hammers ) \\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\nSmelt : smelt any block you break ( Usable on hammer ) \\nFlame : Fire Aspect on fastsword and broadsword\\nDamage : Sharpness on fastsword and broadsword\\nOne More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool ",
+      "gui.palamod.grinderpalahelpgui.label_requirement": "Requirement (hover for info)",
+      "gui.palamod.grinderpalahelpgui.tooltip_materials_needed_for_the_grinder": "Materials needed for the grinder\\n \\n-126 ingot of Paladium\\n-40 ingot of Titane\\n \\nWith all these base materials you will need to craft :\\n \\n -20 Grinder frame\\n-5 grinder casing\\n-1 Grinder furnace",
+      "gui.palamod.grinderpalahelpgui.label_beta4test_v2001": "Beta4text v2.001"
     }
   },
   "metadata": {
@@ -55438,7 +55477,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.21.1.02",
+    "version": "1.21.1.03",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1 ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
@@ -55451,7 +55490,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
-    "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games ",
+    "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games/Recube ",
     "modElementsPackage": "palamod"
   },
   "mcreatorVersion": 202600229418
