@@ -1,10 +1,8 @@
 package palamod.network;
 
 import palamod.procedures.OpenexamplegrinderProcedure;
-import palamod.procedures.MachineconnectpalahelpProcedure;
-import palamod.procedures.Connectgrinderpag2Procedure;
-import palamod.procedures.CloseguiProcedure;
-import palamod.procedures.BackpalahelpProcedure;
+import palamod.procedures.ConnectNewPalahelpProcedure;
+import palamod.procedures.ConnectNewPalahelpCommandProcedure;
 
 import palamod.PalamodMod;
 
@@ -54,23 +52,15 @@ public record GrinderpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 			return;
 		if (buttonID == 0) {
 
-			CloseguiProcedure.execute(entity);
+			ConnectNewPalahelpCommandProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Connectgrinderpag2Procedure.execute(world, x, y, z, entity);
+			OpenexamplegrinderProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			MachineconnectpalahelpProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
-			BackpalahelpProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			OpenexamplegrinderProcedure.execute(world, x, y, z, entity);
+			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

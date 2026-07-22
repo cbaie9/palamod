@@ -1792,5 +1792,9 @@
   "gui.palamod.grinderpalahelpgui.tooltip_list_of_upgrades_that_the_mod_ha": "List of upgrades that the mod has\\nFortune : Multiply the amount of ores that you gain ( Usable on hammers ) \\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\nSmelt : smelt any block you break ( Usable on hammer ) \\nFlame : Fire Aspect on fastsword and broadsword\\nDamage : Sharpness on fastsword and broadsword\\nOne More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool ",
   "gui.palamod.grinderpalahelpgui.label_requirement": "Requirement (hover for info)",
   "gui.palamod.grinderpalahelpgui.tooltip_materials_needed_for_the_grinder": "Materials needed for the grinder\\n \\n-126 ingot of Paladium\\n-40 ingot of Titane\\n \\nWith all these base materials you will need to craft :\\n \\n -20 Grinder frame\\n-5 grinder casing\\n-1 Grinder furnace",
-  "gui.palamod.grinderpalahelpgui.label_beta4test_v2001": "Beta4text v2.001"
+  "gui.palamod.grinderpalahelpgui.label_beta4test_v2001": "Beta4text v2.001",
+  "gui.palamod.grinderpalahelpgui.label_the_grinder_is_a_structurenso_y": "The grinder is a structure\\nso you will need\\nto build it as a structure",
+  "gui.palamod.grinderpalahelpgui.label_here_the_3_layer_ofn_the_grinde": "Here the 3 layer of\\n the grinder\\(Hover the images)",
+  "gui.palamod.grinderpalahelpgui.tooltip_layer_1_and_3_of_the_grinder": "Layer 1 and 3 of the grinder",
+  "gui.palamod.grinderpalahelpgui.tooltip_layer_2_of_the_grinder": "Layer 2 of the grinder"
 }

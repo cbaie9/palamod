@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 330,
-    "height": 185,
+    "width": 319,
+    "height": 180,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
@@ -13,31 +13,11 @@
       {
         "type": "image",
         "data": {
-          "image": "grinderpalahelpgui.png",
+          "image": "template_livre.png",
           "use1Xscale": false,
-          "x": 48,
-          "y": 28,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 248,
-          "y": 28,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 48,
-          "y": 28,
-          "locked": false
+          "x": 54,
+          "y": 30,
+          "locked": true
         }
       },
       {
@@ -48,46 +28,12 @@
             "fixedValue": "Palahelp : Grinder"
           },
           "color": {
-            "value": -1,
+            "value": -6750208,
             "falpha": 0.0
           },
-          "hasShadow": false,
-          "x": 147,
-          "y": 35,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 278,
-          "y": 28,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_cross_no_button",
-          "image": "cross_no_button.png",
-          "hoveredImage": "pointed_cross_no_button.png",
-          "onClick": "Closegui",
-          "x": 357,
-          "y": 32,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_revert_adminshop_arrow",
-          "image": "revert_adminshop_arrow.png",
-          "hoveredImage": "pointed_revert_adminshop_arrow.png",
-          "onClick": "Connectgrinderpag2",
-          "x": 319,
-          "y": 32,
+          "hasShadow": true,
+          "x": 81,
+          "y": 42,
           "locked": false
         }
       },
@@ -95,43 +41,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_arrow_adminshop",
-          "image": "arrow_back_true_1.png",
-          "hoveredImage": "arrow_back_true2.png",
-          "onClick": "Machineconnectpalahelp",
-          "x": 299,
-          "y": 32,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_home_pixel_adminshop",
-          "image": "home_pixel_adminshop.png",
-          "hoveredImage": "pointec_home_pixel_adminshop.png",
-          "onClick": "Backpalahelp",
-          "x": 279,
-          "y": 32,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "grinder_block_front16.png",
-          "use1Xscale": false,
-          "x": 52,
-          "y": 32,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 148,
-          "y": 28,
+          "image": "arrow_palahelp_left_off.png",
+          "hoveredImage": "arrow_palahelp_left_on.png",
+          "onClick": "ConnectNewPalahelpCommand",
+          "x": 69,
+          "y": 175,
           "locked": false
         }
       },
@@ -142,8 +56,8 @@
           "image": "example_gui_button.png",
           "hoveredImage": "example_gui_button_poi.png",
           "onClick": "Openexamplegrinder",
-          "x": 337,
-          "y": 32,
+          "x": 338,
+          "y": 146,
           "locked": false
         }
       },
@@ -152,14 +66,14 @@
         "data": {
           "name": "label_the_grinder_is_a_machine_that_cr",
           "text": {
-            "fixedValue": "The grinder is a machine that create \\nspecial tools (like hammer, fastsword, broadsword) "
+            "fixedValue": "The grinder is a machine \\nthat create special tools \\n(like hammer, fastsword,\\nbroadsword) "
           },
           "color": {
-            "value": -3355444,
+            "value": -13421773,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 56,
+          "x": 69,
           "y": 55,
           "locked": false
         }
@@ -169,15 +83,15 @@
         "data": {
           "name": "label_you_can_also_apply_special_craft",
           "text": {
-            "fixedValue": "You can also apply special craftable enchants up \\nto 3 upgrades per item"
+            "fixedValue": "You can also apply special\\ncraftable enchants up \\nto 3 upgrades per item"
           },
           "color": {
-            "value": -12829636,
+            "value": -10066330,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 55,
-          "y": 82,
+          "x": 67,
+          "y": 100,
           "locked": false
         }
       },
@@ -186,8 +100,8 @@
         "data": {
           "image": "underline_48px.png",
           "use1Xscale": false,
-          "x": 203,
-          "y": 78,
+          "x": 64,
+          "y": 69,
           "locked": false
         }
       },
@@ -196,8 +110,8 @@
         "data": {
           "image": "underline_48px.png",
           "use1Xscale": false,
-          "x": 155,
-          "y": 78,
+          "x": 112,
+          "y": 69,
           "locked": false
         }
       },
@@ -206,8 +120,8 @@
         "data": {
           "image": "underline_48px.png",
           "use1Xscale": false,
-          "x": 251,
-          "y": 78,
+          "x": 159,
+          "y": 69,
           "locked": false
         }
       },
@@ -216,12 +130,12 @@
         "data": {
           "name": "tooltip_list_of_upgrades_that_the_mod_ha",
           "text": {
-            "fixedValue": "List of upgrades that the mod has\\nFortune : Multiply the amount of ores that you gain ( Usable on hammers ) \\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\nSmelt : smelt any block you break ( Usable on hammer ) \\nFlame : Fire Aspect on fastsword and broadsword\\nDamage : Sharpness on fastsword and broadsword\\nOne More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool "
+            "fixedValue": "List of upgrades that the mod has :\\n\\n- Fortune : Multiply the amount of ores that you gain ( Usable on hammers )\\nPS: Must be used with smelt in order to work with ingot based materials like iron, gold or amethyst for exemple\\n- Smelt : smelt any block you break ( Usable on hammer ) \\n- Flame : Fire Aspect on fastsword and broadsword\\n- Damage : Sharpness on fastsword and broadsword\\n- One More Upgrade : An upgrade to add one more upgrade on special tools to make four upgrade on one single tool "
           },
-          "width": 145,
-          "height": 14,
-          "x": 155,
-          "y": 80,
+          "width": 146,
+          "height": 29,
+          "x": 64,
+          "y": 65,
           "locked": false
         }
       },
@@ -237,8 +151,8 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 54,
-          "y": 118,
+          "x": 68,
+          "y": 141,
           "locked": false
         }
       },
@@ -247,8 +161,8 @@
         "data": {
           "image": "underline_48px.png",
           "use1Xscale": false,
-          "x": 54,
-          "y": 115,
+          "x": 69,
+          "y": 135,
           "locked": false
         }
       },
@@ -261,8 +175,8 @@
           },
           "width": 61,
           "height": 12,
-          "x": 54,
-          "y": 120,
+          "x": 68,
+          "y": 139,
           "locked": false
         }
       },
@@ -271,15 +185,163 @@
         "data": {
           "name": "label_beta4test_v2001",
           "text": {
-            "fixedValue": "Beta4text v2.001"
+            "fixedValue": "v2.1"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 286,
-          "y": 196,
+          "x": 230,
+          "y": 189,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_grinder_is_a_structurenso_y",
+          "text": {
+            "fixedValue": "The grinder is a structure\\nso you will need to build it\\nThe structure is a cube\\nwith 3 layers"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 227,
+          "y": 56,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_palahelp_layer1.png",
+          "use1Xscale": true,
+          "x": 229,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "grinder_palahelp_layer2.png",
+          "use1Xscale": true,
+          "x": 279,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_layer_1_and_3_of_the_grinder",
+          "text": {
+            "fixedValue": "Layer 1 and 3 of the grinder"
+          },
+          "width": 50,
+          "height": 50,
+          "x": 229,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_layer_2_of_the_grinder",
+          "text": {
+            "fixedValue": "Layer 2 of the grinder"
+          },
+          "width": 50,
+          "height": 50,
+          "x": 279,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_here_the_3_layer_ofn_the_grinde",
+          "text": {
+            "fixedValue": "Here the 3 layer of\\n the grinder\\n(Hover the images)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 225,
+          "y": 101,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sommaire_btn",
+          "image": "sommaire_btn.png",
+          "hoveredImage": "sommaire_btn.png",
+          "onClick": "ConnectNewPalahelp",
+          "x": 185,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tra_dreturntosumarry",
+          "text": {
+            "fixedValue": "",
+            "name": "TRADreturntosumarry"
+          },
+          "width": 18,
+          "height": 20,
+          "x": 183,
+          "y": 28,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_return_to_previous_page_palahe",
+          "text": {
+            "fixedValue": "Return to Previous Page : Palahelp Command"
+          },
+          "width": 41,
+          "height": 21,
+          "x": 68,
+          "y": 174,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_example_graphical_user_interface",
+          "text": {
+            "fixedValue": "Example Graphical User Interface of the Grinder"
+          },
+          "width": 26,
+          "height": 30,
+          "x": 332,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_right_off",
+          "image": "arrow_palahelp_right_off.png",
+          "hoveredImage": "arrow_palahelp_right_on.png",
+          "x": 316,
+          "y": 176,
           "locked": false
         }
       }
