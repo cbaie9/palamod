@@ -54,6 +54,7 @@ public class JobsfarmerbreakblockProcedure {
 		File jobs = new File("");
 		File money = new File("");
 		double money_add = 0;
+		double xpGain = 0;
 		boolean money_getadd = false;
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 			jobs = GetjobsfileProcedure.execute(entity);
@@ -73,6 +74,7 @@ public class JobsfarmerbreakblockProcedure {
 							main.addProperty("xpstreak_farmer", 0);
 						}
 						if (GetxpfarmerlogicProcedure.execute(world, x, y, z, entity)) {
+							xpGain = GetxpfarmerbreakblockProcedure.execute(world.getBlockState(BlockPos.containing(x, y, z)), main.get("lvl_farmer").getAsDouble());
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
@@ -80,7 +82,7 @@ public class JobsfarmerbreakblockProcedure {
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
 								{
 									final String _tagName = "xp_jobs";
-									final double _tagValue = (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble()
+									final double _tagValue = (xpGain * main.get("multi_exp").getAsDouble()
 											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
 									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 								}
@@ -90,13 +92,12 @@ public class JobsfarmerbreakblockProcedure {
 									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 								}
 							} else {
-								main.addProperty("xp_farmer", (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xp_farmer").getAsDouble()));
+								main.addProperty("xp_farmer", (xpGain * main.get("multi_exp").getAsDouble() + main.get("xp_farmer").getAsDouble()));
 							}
-							main.addProperty("xpstreak_farmer", (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble()));
+							main.addProperty("xpstreak_farmer", (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble()));
 							main.addProperty("xpstreak_time_farmer", (world.dayTime() + 80));
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
-										+ (GetxpfarmerbreakblockProcedure.execute(world, x, y, z, entity) * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
+								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
 										+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
 												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
 										true);

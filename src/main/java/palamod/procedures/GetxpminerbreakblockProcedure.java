@@ -1,5 +1,7 @@
 package palamod.procedures;
 
+import palamod.init.PalamodModBlocks;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +17,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetxpminerbreakblockProcedure {
-	public static double execute(Entity entity) {
+	public static double execute(BlockState palahelpBlock, Entity entity, boolean palahelpOverride, double level_miner) {
 		if (entity == null)
 			return 0;
 		double output = 0;
@@ -28,23 +30,8 @@ public class GetxpminerbreakblockProcedure {
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
 		cache = ReadcacheProcedure.execute(entity);
-		jobs = GetjobsfileProcedure.execute(entity);
-		if (cache.exists() && jobs.exists()) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
-					}
-					bufferedReader.close();
-					jobs_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					lvl = jobs_main.get("lvl_miner").getAsDouble();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
+		lvl = level_miner;
+		if (cache.exists()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(cache));
@@ -55,8 +42,8 @@ public class GetxpminerbreakblockProcedure {
 					}
 					bufferedReader.close();
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
-						for (int index58 = 0; index58 < 9; index58++) {
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt"))) && !palahelpOverride) {
+						for (int index284 = 0; index284 < 9; index284++) {
 							block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 							if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
 								output = output + 0.5;
@@ -72,7 +59,7 @@ public class GetxpminerbreakblockProcedure {
 								output = output + 6;
 							} else if (block.getBlock() == Blocks.OBSIDIAN) {
 								output = output + 6;
-							} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == Blocks.AIR || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
+							} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == PalamodModBlocks.SOFTENED_REDSTONE_ORE.get() || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
 								output = output + 15;
 							} else if (block.getBlock() == Blocks.EMERALD_ORE || block.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE) {
 								output = output + 50;
@@ -88,7 +75,7 @@ public class GetxpminerbreakblockProcedure {
 							}
 						}
 					} else {
-						block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get("block").getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+						block = (palahelpOverride ? palahelpBlock : BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get("block").getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState());
 						if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
 							output = output + 0.5;
 						} else if (block.getBlock() == Blocks.DIORITE) {
@@ -103,7 +90,7 @@ public class GetxpminerbreakblockProcedure {
 							output = output + 6;
 						} else if (block.getBlock() == Blocks.OBSIDIAN) {
 							output = output + 6;
-						} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == Blocks.AIR || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
+						} else if (block.getBlock() == Blocks.REDSTONE_ORE || block.getBlock() == PalamodModBlocks.SOFTENED_REDSTONE_ORE.get() || block.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE) {
 							output = output + 15;
 						} else if (block.getBlock() == Blocks.EMERALD_ORE || block.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE) {
 							output = output + 50;

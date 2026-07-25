@@ -32,7 +32,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.PALAHELPTREE.get(), PalahelptreeScreen::new);
 		event.register(PalamodModMenus.PALAHELPMACHINE.get(), PalahelpmachineScreen::new);
 		event.register(PalamodModMenus.GRINDERPALAHELPGUI.get(), GrinderpalahelpguiScreen::new);
-		event.register(PalamodModMenus.GRINDERPALAHELP_2GUI.get(), Grinderpalahelp2guiScreen::new);
 		event.register(PalamodModMenus.PALAMACHINEPALAHELPGUI.get(), PalamachinepalahelpguiScreen::new);
 		event.register(PalamodModMenus.CRUSHERPALAHELPGUI.get(), CrusherpalahelpguiScreen::new);
 		event.register(PalamodModMenus.FORGEPALAHELPGUI.get(), ForgepalahelpguiScreen::new);
@@ -107,6 +106,8 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.NEW_PALAHELP_GUI_INTRO.get(), NewPalahelpGuiIntroScreen::new);
 		event.register(PalamodModMenus.PALAHELPNEWORELIQUID.get(), PalahelpneworeliquidScreen::new);
 		event.register(PalamodModMenus.PALAHELPNEW_COMMAND.get(), PalahelpnewCommandScreen::new);
+		event.register(PalamodModMenus.PALAHELP_JOBS.get(), PalahelpJobsScreen::new);
+		event.register(PalamodModMenus.PALAHELP_JOBSXPGAIN.get(), PalahelpJobsxpgainScreen::new);
 	}
 
 	public interface ScreenAccessor {

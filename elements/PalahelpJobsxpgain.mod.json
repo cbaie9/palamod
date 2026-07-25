@@ -1,0 +1,436 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 300,
+    "height": 180,
+    "inventoryOffsetX": 300,
+    "inventoryOffsetY": 1800,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_farmer",
+          "text": "Farmer",
+          "isUndecorated": false,
+          "width": 55,
+          "height": 20,
+          "x": 127,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_miner",
+          "text": "Miner",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 182,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hunyer",
+          "text": "Hunter",
+          "isUndecorated": false,
+          "width": 55,
+          "height": 20,
+          "x": 232,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_alchimist",
+          "text": "Alchimist",
+          "isUndecorated": false,
+          "width": 70,
+          "height": 20,
+          "x": 287,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_grow",
+          "text": "Grow",
+          "isUndecorated": false,
+          "width": 45,
+          "height": 20,
+          "x": 74,
+          "y": 45,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_craft",
+          "text": "Craft",
+          "isUndecorated": false,
+          "width": 50,
+          "height": 20,
+          "x": 74,
+          "y": 65,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_item",
+          "text": {
+            "fixedValue": "Item / Gain "
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 209,
+          "y": 55,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name_item0",
+          "text": {
+            "fixedValue": "Name_item0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 75,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 92,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name_item1",
+          "text": {
+            "fixedValue": "Name_item1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 93,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 113,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name_item2",
+          "text": {
+            "fixedValue": "Name_item2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 116,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_up",
+          "text": "Up",
+          "isUndecorated": false,
+          "width": 35,
+          "height": 20,
+          "x": 117,
+          "y": 160,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_down",
+          "text": "Down",
+          "isUndecorated": false,
+          "width": 35,
+          "height": 20,
+          "x": 117,
+          "y": 181,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 134,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name_item3",
+          "text": {
+            "fixedValue": "Name_item3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 137,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 156,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name_item4",
+          "text": {
+            "fixedValue": "Name_item4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 159,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 177,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name_item5",
+          "text": {
+            "fixedValue": "Name_item5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 212,
+          "y": 180,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_can_gain_xp_now",
+          "text": {
+            "fixedValue": "Can Gain xp now"
+          },
+          "color": {
+            "value": -13261,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 276,
+          "y": 55,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pointed_cross_no_button.png",
+          "use1Xscale": false,
+          "x": 311,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pointed_cross_no_button.png",
+          "use1Xscale": false,
+          "x": 311,
+          "y": 93,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pointed_cross_no_button.png",
+          "use1Xscale": false,
+          "x": 311,
+          "y": 114,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pointed_cross_no_button.png",
+          "use1Xscale": false,
+          "x": 311,
+          "y": 135,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pointed_cross_no_button.png",
+          "use1Xscale": false,
+          "x": 311,
+          "y": 157,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pointed_cross_no_button.png",
+          "use1Xscale": false,
+          "x": 311,
+          "y": 178,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -7159,20 +7159,6 @@
       }
     },
     {
-      "name": "Grinderpalahelp2gui",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grinderpalahelp_2gui",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/client/gui/Grinderpalahelp2guiScreen.java",
-          "src/main/java/palamod/network/Grinderpalahelp2guiButtonMessage.java",
-          "src/main/java/palamod/world/inventory/Grinderpalahelp2guiMenu.java"
-        ]
-      }
-    },
-    {
       "name": "Palamachinepalahelpgui",
       "type": "gui",
       "compiles": true,
@@ -18151,120 +18137,6 @@
       }
     },
     {
-      "name": "Palahelpgrinder10",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_10",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder10Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder11",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_11",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder11Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder12",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_12",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder12Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder13",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_13",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder13Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder14",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_14",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder14Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder15",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_15",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder15Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Palahelpgrindet16",
       "type": "procedure",
       "compiles": true,
@@ -18274,234 +18146,6 @@
         "return_type": "string",
         "files": [
           "src/main/java/palamod/procedures/Palahelpgrindet16Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder17",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_17",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder17Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder18",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_18",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder18Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder19",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_19",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder19Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder20",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_20",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder20Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder21",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_21",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder21Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder22",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_22",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder22Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder23",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_23",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder23Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder24",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_24",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder24Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder25",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_25",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder25Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder26",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_26",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder26Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder27",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_27",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder27Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder28",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_28",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder28Procedure.java"
         ],
         "dependencies": [
           {
@@ -18541,78 +18185,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Connectgrinderpag2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "connectgrinderpag_2",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/Connectgrinderpag2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder32",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_32",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder32Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Palahelpgrinder202",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "palahelpgrinder_202",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/Palahelpgrinder202Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       }
@@ -29794,8 +29366,20 @@
         ],
         "dependencies": [
           {
+            "name": "palahelpBlock",
+            "type": "blockstate"
+          },
+          {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "palahelpOverride",
+            "type": "logic"
+          },
+          {
+            "name": "level_miner",
+            "type": "number"
           }
         ]
       }
@@ -30282,24 +29866,12 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "blockDep",
+            "type": "blockstate"
           },
           {
-            "name": "x",
+            "name": "farmerLevel",
             "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -43794,12 +43366,24 @@
         "return_type": "number",
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "item_craft",
             "type": "itemstack"
+          },
+          {
+            "name": "level_alchimist",
+            "type": "number"
+          },
+          {
+            "name": "level_farmer",
+            "type": "number"
+          },
+          {
+            "name": "level_hunter",
+            "type": "number"
+          },
+          {
+            "name": "level_miner",
+            "type": "number"
           },
           {
             "name": "recipe",
@@ -44330,8 +43914,20 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
+            "name": "level_alchimist",
+            "type": "number"
+          },
+          {
+            "name": "level_farmer",
+            "type": "number"
+          },
+          {
+            "name": "level_hunter",
+            "type": "number"
+          },
+          {
+            "name": "level_miner",
+            "type": "number"
           }
         ],
         "files": [
@@ -46620,6 +46216,123 @@
         "return_type": "file",
         "files": [
           "src/main/java/palamod/procedures/GetBackLogFileProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpJobs",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_jobs",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/world/inventory/PalahelpJobsMenu.java",
+          "src/main/java/palamod/client/gui/PalahelpJobsScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "ConnectPalahelpJobs",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connect_palahelp_jobs",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ConnectPalahelpJobsProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpJobsxpgain",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_jobsxpgain",
+      "metadata": {
+        "files": [
+          "src/main/java/palamod/client/gui/PalahelpJobsxpgainScreen.java",
+          "src/main/java/palamod/world/inventory/PalahelpJobsxpgainMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "ConnectPalahelpJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "connect_palahelp_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ConnectPalahelpJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextNameGainJobsPalahelp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_name_gain_jobs_palahelp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "slotNum",
+            "type": "number"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextNameGainJobsPalahelpProcedure.java"
         ]
       }
     }
@@ -50921,7 +50634,6 @@
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "show debug variable",
       "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Green Paladium Excavator",
       "gui.palamod.palamachinepalahelpgui.label_batn_qui_vous_permeteront_davo": "Bat�n qui vous permeteront d\u0027avoir des",
-      "gui.palamod.grinderpalahelp_2gui.label_22": "2/2",
       "gui.palamod.grinderpalahelpgui.button_back": "back",
       "gui.palamod.armorpalahelpgui.label_palahelp_armor": "Palahelp : Armor",
       "gui.palamod.grinderpalahelp_2gui.label_et_fini": "Et fini",
@@ -51222,7 +50934,6 @@
       "gui.palamod.stockhdv.label_23_24_25_26_27_28_29_30_31": "23 24  25  26 27  28  29 30 31  32  33 34 35  36 37  38 39  40 41  42  43 44 45",
       "gui.palamod.onlinedetectorgui.label_status": "Actual player :",
       "advancements.avancementendiumingot.descr": "Obtain a Endium Nugget",
-      "gui.palamod.grinderpalahelp_2gui.label_grinder_wiki": "Palahelp : Grinder ",
       "gui.palamod.luckygui.label_lucky_block": "Lucky block",
       "gui.palamod.palamachinepalahelpgui.label_la_palamachine_permet_de_crafter": "La palamachine permet de crafter",
       "gui.palamod.palahelpmachine.button_forge": "forge",
@@ -51821,7 +51532,26 @@
       "gui.palamod.grinderpalahelpgui.tooltip_layer_1_and_3_of_the_grinder": "Layer 1 and 3 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_layer_2_of_the_grinder": "Layer 2 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_return_to_previous_page_palahe": "Return to Previous Page : Palahelp Command",
-      "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder"
+      "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder",
+      "gui.palamod.palahelp_jobs.label_the_jobs": "The Jobs system",
+      "gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste": "The jobs is a level based\\nsystem to unlock item and\\nfeature in the mod.\\nWays to gain experience\\nare available in the jobs\\nInterface.\\nThe jobs G.U.I can be opened\\nwith /jobs gui or with [J] ",
+      "gui.palamod.palahelp_jobsxpgain.button_farmer": "Farmer",
+      "gui.palamod.palahelp_jobsxpgain.button_grow": "Grow",
+      "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now",
+      "gui.palamod.palahelp_jobsxpgain.button_hunyer": "Hunter",
+      "gui.palamod.palahelp_jobsxpgain.label_item": "Item / Gain ",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item2": "Name_item2",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item3": "Name_item3",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item4": "Name_item4",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item5": "Name_item5",
+      "gui.palamod.palahelp_jobsxpgain.button_alchimist": "Alchimist",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item0": "Name_item0",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item1": "Name_item1",
+      "gui.palamod.palahelp_jobsxpgain.button_craft": "Craft",
+      "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
+      "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
+      "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
+      "palamod.procedure.palahelp.jobs.gain": "Gain : %1"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -52721,7 +52451,6 @@
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "afficher la variable de débogage",
       "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Excavateur en Paladium vert",
       "gui.palamod.palamachinepalahelpgui.label_batn_qui_vous_permeteront_davo": "Bâton qui vous permettront d\u0027avoir des",
-      "gui.palamod.grinderpalahelp_2gui.label_22": "2/2",
       "gui.palamod.grinderpalahelpgui.button_back": "retour en arrière",
       "gui.palamod.armorpalahelpgui.label_palahelp_armor": "Palahelp - Armure",
       "gui.palamod.grinderpalahelp_2gui.label_et_fini": "Et fini",
@@ -53021,7 +52750,6 @@
       "gui.palamod.stockhdv.label_23_24_25_26_27_28_29_30_31": "23 24  25  26 27  28  29 30 31  32  33 34 35  36 37  38 39  40 41  42  43 44 45",
       "gui.palamod.onlinedetectorgui.label_status": "Joueur actuel :",
       "advancements.avancementendiumingot.descr": "Obtenir un lingot en Endium",
-      "gui.palamod.grinderpalahelp_2gui.label_grinder_wiki": "Palahelp : Grinder",
       "gui.palamod.luckygui.label_lucky_block": "Bloc chanceux",
       "gui.palamod.palamachinepalahelpgui.label_la_palamachine_permet_de_crafter": "La palamachine permet de fabriquer",
       "gui.palamod.palahelpmachine.button_forge": "forge",
@@ -53623,7 +53351,26 @@
       "gui.palamod.grinderpalahelpgui.tooltip_layer_1_and_3_of_the_grinder": "Layer 1 and 3 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_layer_2_of_the_grinder": "Layer 2 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_return_to_previous_page_palahe": "Return to Previous Page : Palahelp Command",
-      "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder"
+      "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder",
+      "gui.palamod.palahelp_jobs.label_the_jobs": "The Jobs system",
+      "gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste": "The jobs is a level based\\nsystem to unlock item and\\nfeature in the mod.",
+      "gui.palamod.palahelp_jobsxpgain.button_farmer": "Farmer",
+      "gui.palamod.palahelp_jobsxpgain.button_grow": "Grow",
+      "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now",
+      "gui.palamod.palahelp_jobsxpgain.button_hunyer": "Hunter",
+      "gui.palamod.palahelp_jobsxpgain.label_item": "Item / Gain ",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item2": "Name_item2",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item3": "Name_item3",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item4": "Name_item4",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item5": "Name_item5",
+      "gui.palamod.palahelp_jobsxpgain.button_alchimist": "Alchimist",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item0": "Name_item0",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item1": "Name_item1",
+      "gui.palamod.palahelp_jobsxpgain.button_craft": "Craft",
+      "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
+      "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
+      "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
+      "palamod.procedure.palahelp.jobs.gain": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54523,7 +54270,6 @@
       "gui.palamod.examplecrusherv_2.button_show_debug_variable": "afficher la variable de débogage",
       "gui.palamod.jobsminercraftgui.tooltip_green_paladium_excavator": "Excavateur en Paladium vert",
       "gui.palamod.palamachinepalahelpgui.label_batn_qui_vous_permeteront_davo": "Bâton qui vous permettront d\u0027avoir des",
-      "gui.palamod.grinderpalahelp_2gui.label_22": "2/2",
       "gui.palamod.grinderpalahelpgui.button_back": "retour en arrière",
       "gui.palamod.armorpalahelpgui.label_palahelp_armor": "Palahelp - Armure",
       "gui.palamod.grinderpalahelp_2gui.label_et_fini": "Et fini",
@@ -54823,7 +54569,6 @@
       "gui.palamod.stockhdv.label_23_24_25_26_27_28_29_30_31": "23 24  25  26 27  28  29 30 31  32  33 34 35  36 37  38 39  40 41  42  43 44 45",
       "gui.palamod.onlinedetectorgui.label_status": "Joueur actuel :",
       "advancements.avancementendiumingot.descr": "Obtenir un lingot en Endium",
-      "gui.palamod.grinderpalahelp_2gui.label_grinder_wiki": "Palahelp : Grinder",
       "gui.palamod.luckygui.label_lucky_block": "Bloc chanceux",
       "gui.palamod.palamachinepalahelpgui.label_la_palamachine_permet_de_crafter": "La palamachine permet de fabriquer",
       "gui.palamod.palahelpmachine.button_forge": "forge",
@@ -55425,7 +55170,26 @@
       "gui.palamod.grinderpalahelpgui.tooltip_layer_1_and_3_of_the_grinder": "Layer 1 and 3 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_layer_2_of_the_grinder": "Layer 2 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_return_to_previous_page_palahe": "Return to Previous Page : Palahelp Command",
-      "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder"
+      "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder",
+      "gui.palamod.palahelp_jobs.label_the_jobs": "The Jobs system",
+      "gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste": "The jobs is a level based\\nsystem to unlock item and\\nfeature in the mod.",
+      "gui.palamod.palahelp_jobsxpgain.button_farmer": "Farmer",
+      "gui.palamod.palahelp_jobsxpgain.button_grow": "Grow",
+      "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now",
+      "gui.palamod.palahelp_jobsxpgain.button_hunyer": "Hunter",
+      "gui.palamod.palahelp_jobsxpgain.label_item": "Item / Gain ",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item2": "Name_item2",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item3": "Name_item3",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item4": "Name_item4",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item5": "Name_item5",
+      "gui.palamod.palahelp_jobsxpgain.button_alchimist": "Alchimist",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item0": "Name_item0",
+      "gui.palamod.palahelp_jobsxpgain.label_name_item1": "Name_item1",
+      "gui.palamod.palahelp_jobsxpgain.button_craft": "Craft",
+      "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
+      "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
+      "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
+      "palamod.procedure.palahelp.jobs.gain": ""
     }
   },
   "metadata": {

@@ -8,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.component.CustomData;
@@ -79,7 +80,7 @@ public class JobsminerbreakblockProcedure {
 							main.addProperty("xpstreak_miner", 0);
 						}
 						if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z, entity)) {
-							xp_bloc = GetxpminerbreakblockProcedure.execute(entity);
+							xp_bloc = GetxpminerbreakblockProcedure.execute(Blocks.AIR.defaultBlockState(), entity, false, main.get("lvl_miner").getAsDouble());
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")

@@ -171,6 +171,7 @@
           "name": "button_jobs",
           "text": "Jobs",
           "isUndecorated": false,
+          "onClick": "ConnectPalahelpJobs",
           "width": 61,
           "height": 20,
           "x": 296,

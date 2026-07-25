@@ -6,22 +6,18 @@ import palamod.init.PalamodModGameRules;
 import palamod.PalamodMod;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.client.Minecraft;
 
 import java.io.IOException;
 import java.io.FileWriter;
@@ -47,7 +43,7 @@ public class CraftGiveXpJobsProcedure {
 			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 				jobs = ReadjobsserverProcedure.execute(entity);
 				money = ReadMoneyFileProcedure.execute(entity);
-				if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists()) {
+				if (jobs.exists() && money.exists()) {
 					{
 						try {
 							BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
@@ -70,7 +66,8 @@ public class CraftGiveXpJobsProcedure {
 							if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 								main.addProperty("xpstreak_alchi", 0);
 							}
-							xp_receive = GetXpcraftjobsProcedure.execute(entity, item, type_of_recipe);
+							xp_receive = GetXpcraftjobsProcedure.execute(item, main.get("lvl_alchi").getAsDouble(), main.get("lvl_miner").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_farmer").getAsDouble(), type_of_recipe);
+							PalamodMod.LOGGER.info("xp receive - " + xp_receive);
 							if (0 < xp_receive) {
 								if (item.is(ItemTags.create(ResourceLocation.parse("palamod:farmer_jobs")))) {
 									jobs_string = "farmer";
@@ -132,16 +129,5 @@ public class CraftGiveXpJobsProcedure {
 				}
 			}
 		}
-	}
-
-	private static GameType getEntityGameType(Entity entity) {
-		if (entity instanceof ServerPlayer serverPlayer) {
-			return serverPlayer.gameMode.getGameModeForPlayer();
-		} else if (entity instanceof Player player && player.level().isClientSide()) {
-			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
-			if (playerInfo != null)
-				return playerInfo.getGameMode();
-		}
-		return null;
 	}
 }

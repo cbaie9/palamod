@@ -68,6 +68,10 @@ public record NewPalahelpGuiIntroButtonMessage(int buttonID, int x, int y, int z
 
 			ConnectNewPalahelpCommandProcedure.execute(world, x, y, z, entity);
 		}
+		if (buttonID == 5) {
+
+			ConnectPalahelpJobsProcedure.execute(world, x, y, z, entity);
+		}
 		if (buttonID == 6) {
 
 			Connectgrinderpag1Procedure.execute(world, x, y, z, entity);

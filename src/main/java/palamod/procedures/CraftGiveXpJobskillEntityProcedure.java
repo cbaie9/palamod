@@ -86,7 +86,7 @@ public class CraftGiveXpJobskillEntityProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 							main.addProperty("xpstreak_alchi", 0);
 						}
-						xp_receive = GetXpcraftjobsentityProcedure.execute(entity, sourceentity);
+						xp_receive = GetXpcraftjobsentityProcedure.execute(entity, main.get("lvl_alchi").getAsDouble(), main.get("lvl_farmer").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_miner").getAsDouble());
 						if (0 < xp_receive) {
 							if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:farmer_jobs")))) {
 								jobs_string = "farmer";
