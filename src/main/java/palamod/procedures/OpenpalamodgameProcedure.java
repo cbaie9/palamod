@@ -138,9 +138,9 @@ public class OpenpalamodgameProcedure {
 				exception.printStackTrace();
 			}
 			page_clicker = 1;
-			for (int index23 = 0; index23 < 6; index23++) {
+			for (int index54 = 0; index54 < 6; index54++) {
 				page_building = 1;
-				for (int index24 = 0; index24 < 6; index24++) {
+				for (int index55 = 0; index55 < 6; index55++) {
 					clicker_buidings.addProperty(("building_p" + Math.round(page_clicker) + "_n" + Math.round(page_building)), 0);
 					page_building = page_building + 1;
 				}
@@ -158,6 +158,7 @@ public class OpenpalamodgameProcedure {
 			}
 		}
 		OpenModProcedure.execute();
+		ResetXpStreakProcedure.execute(world, entity);
 	}
 
 	private static GameType getEntityGameType(Entity entity) {

@@ -199,7 +199,7 @@ public class PaladiumfurnaceprocessProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					PalamodMod.LOGGER.info(("" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer")));
+					PalamodMod.LOGGER.debug(("[PaladiumFurnaceProcess] Furnace Timer of the block at  " + world.getBlockState(BlockPos.containing(x, y, z)) + " : " + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer")));
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);

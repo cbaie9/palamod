@@ -66,8 +66,8 @@ public class GetXpcraftjobsProcedure {
 				output = 15;
 			}
 		}
-		PalamodMod.LOGGER.info(("[Palamod] [GetXpCraftJobs] return : " + output + " | " + item + " | mode : " + recipe));
-		PalamodMod.LOGGER.info((lvl + " | " + lvl_farmer + " | " + lvl_hunter + " | " + lvl_alchi));
+		PalamodMod.LOGGER.debug(("[Palamod] [GetXpCraftJobs] return : " + output + " | " + item + " | mode : " + recipe));
+		PalamodMod.LOGGER.debug(("[Palamod] [GetXpCraftJobs] jobs info : [miner]:" + lvl + " | [farmer]: " + lvl_farmer + " | [hunter]: " + lvl_hunter + " | [alchimist]: " + lvl_alchi));
 		return output;
 	}
 }

@@ -38,7 +38,7 @@ public class CraftGiveXpJobsProcedure {
 		String jobs_string = "";
 		String type_of_recipe = "";
 		type_of_recipe = recipe;
-		if ((type_of_recipe).equals("craft") || (type_of_recipe).equals("smelt")) {
+		if (((type_of_recipe).equals("craft") || (type_of_recipe).equals("smelt")) && !world.isClientSide()) {
 			item = item_craft.copy();
 			if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 				jobs = ReadjobsserverProcedure.execute(entity);
@@ -66,8 +66,7 @@ public class CraftGiveXpJobsProcedure {
 							if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 								main.addProperty("xpstreak_alchi", 0);
 							}
-							xp_receive = GetXpcraftjobsProcedure.execute(item, main.get("lvl_alchi").getAsDouble(), main.get("lvl_miner").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_farmer").getAsDouble(), type_of_recipe);
-							PalamodMod.LOGGER.info("xp receive - " + xp_receive);
+							xp_receive = GetXpcraftjobsProcedure.execute(item, main.get("lvl_alchi").getAsDouble(), main.get("lvl_farmer").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_miner").getAsDouble(), type_of_recipe);
 							if (0 < xp_receive) {
 								if (item.is(ItemTags.create(ResourceLocation.parse("palamod:farmer_jobs")))) {
 									jobs_string = "farmer";
@@ -85,7 +84,6 @@ public class CraftGiveXpJobsProcedure {
 									jobs_string = "alchi";
 									PalamodMod.LOGGER.error(("[ Palamod ][ from craftgivejobs.java] : error -> Craft with approved xp amount but no attribued jobs | item :  '" + item + "' , fallback to alchimist"));
 								}
-								PalamodMod.LOGGER.debug(jobs_string);
 								if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 										.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 										&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
@@ -107,11 +105,18 @@ public class CraftGiveXpJobsProcedure {
 								}
 								main.addProperty(("xpstreak_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
 								main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
-											+ (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable("palamod.procedure.jobswin2craft").getString() + " "
-											+ Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())), true);
 							}
+							PalamodMod.LOGGER.debug(
+									((((("[PalaMod] [CraftGiveXp] Giving %1 Xp In %2 to %3, source %4 %5".replace("%4", "" + item.getCount())).replace("%5", item.getDisplayName().getString())).replace("%3", entity.getDisplayName().getString()))
+											.replace("%2", jobs_string)).replace("%1", "" + (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()))));
+							PalamodMod.LOGGER.debug(((((("[Palamod] [CraftGiveXp:details] : xp receive base %1 | multi experience : %2 | num item : %3 | xpstreak_%4 : %5".replace("%5", "" + main.get(("xpstreak_" + jobs_string)).getAsDouble()))
+									.replace("%4", jobs_string)).replace("%3", "" + item.getCount())).replace("%2", "" + main.get("multi_exp").getAsDouble())).replace("%1", "" + xp_receive)));
+							if (entity instanceof Player _player && !_player.level().isClientSide())
+								_player.displayClientMessage(
+										Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
+												+ (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable(("palamod.procedure.jobswin2" + recipe)).getString()
+												+ " " + Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())),
+										true);
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
