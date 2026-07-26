@@ -28,7 +28,8 @@
           "src/main/resources/data/palamod/worldgen/placed_feature/paladium_ore.json",
           "src/main/resources/assets/palamod/blockstates/paladium_ore.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/paladium_ore_biome_modifier.json",
-          "src/main/resources/assets/palamod/models/block/paladium_ore.json"
+          "src/main/resources/assets/palamod/models/block/paladium_ore.json",
+          "src/main/resources/assets/palamod/models/block/paladium_ore_0.json"
         ]
       }
     },
@@ -291,7 +292,8 @@
           "src/main/resources/assets/palamod/blockstates/titane_ore.json",
           "src/main/resources/assets/palamod/models/block/titane_ore.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/titane_ore_biome_modifier.json",
-          "src/main/resources/data/palamod/worldgen/placed_feature/titane_ore.json"
+          "src/main/resources/data/palamod/worldgen/placed_feature/titane_ore.json",
+          "src/main/resources/assets/palamod/models/block/titane_ore_0.json"
         ]
       }
     },
@@ -554,7 +556,8 @@
           "src/main/resources/assets/palamod/models/block/amethyst_ore.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/amethyst_ore.json",
           "src/main/java/palamod/block/AmethysteOreBlock.java",
-          "src/main/resources/assets/palamod/blockstates/amethyst_ore.json"
+          "src/main/resources/assets/palamod/blockstates/amethyst_ore.json",
+          "src/main/resources/assets/palamod/models/block/amethyst_ore_0.json"
         ]
       }
     },
@@ -1254,6 +1257,7 @@
         "files": [
           "src/main/resources/data/palamod/worldgen/configured_feature/findium_ore.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/findium_ore.json",
+          "src/main/resources/assets/palamod/models/block/findium_ore_0.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/findium_ore_biome_modifier.json",
           "src/main/resources/assets/palamod/models/block/findium_ore.json",
           "src/main/resources/assets/palamod/models/item/findium_ore.json",
@@ -1569,10 +1573,25 @@
       "registry_name": "jacaranda_wood",
       "metadata": {
         "files": [
-          "src/main/java/palamod/block/Jacaranda_WoodBlock.java",
-          "src/main/resources/assets/palamod/models/block/jacaranda_wood.json",
-          "src/main/resources/assets/palamod/models/item/jacaranda_wood.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_6.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_0.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_14.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_3.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_11.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_9.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_2.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_4.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_7.json",
           "src/main/resources/assets/palamod/blockstates/jacaranda_wood.json",
+          "src/main/java/palamod/block/Jacaranda_WoodBlock.java",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_8.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_12.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_1.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_5.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_13.json",
+          "src/main/resources/assets/palamod/models/item/jacaranda_wood.json",
+          "src/main/resources/assets/palamod/models/block/jacaranda_wood_10.json",
           "src/main/resources/data/palamod/loot_table/blocks/jacaranda_wood.json"
         ]
       }
@@ -1875,11 +1894,26 @@
       "registry_name": "judeecercis_wood",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_5.json",
           "src/main/resources/assets/palamod/models/item/judeecercis_wood.json",
           "src/main/resources/assets/palamod/models/block/judeecercis_wood.json",
-          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_wood.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_2.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_8.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_9.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_1.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_3.json",
           "src/main/resources/assets/palamod/blockstates/judeecercis_wood.json",
-          "src/main/java/palamod/block/Judeecercis_WoodBlock.java"
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_6.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_13.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_10.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_7.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_11.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_4.json",
+          "src/main/resources/data/palamod/loot_table/blocks/judeecercis_wood.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_0.json",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_12.json",
+          "src/main/java/palamod/block/Judeecercis_WoodBlock.java",
+          "src/main/resources/assets/palamod/models/block/judeecercis_wood_14.json"
         ]
       }
     },
@@ -2118,11 +2152,26 @@
       "registry_name": "erable_wood",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/erable_wood_7.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_11.json",
           "src/main/java/palamod/block/Erable_WoodBlock.java",
-          "src/main/resources/assets/palamod/blockstates/erable_wood.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_10.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_14.json",
           "src/main/resources/data/palamod/loot_table/blocks/erable_wood.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_1.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_9.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_4.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_12.json",
+          "src/main/resources/assets/palamod/models/item/erable_wood.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_5.json",
+          "src/main/resources/assets/palamod/blockstates/erable_wood.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_6.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_2.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_3.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_13.json",
           "src/main/resources/assets/palamod/models/block/erable_wood.json",
-          "src/main/resources/assets/palamod/models/item/erable_wood.json"
+          "src/main/resources/assets/palamod/models/block/erable_wood_8.json",
+          "src/main/resources/assets/palamod/models/block/erable_wood_0.json"
         ]
       }
     },
@@ -4471,6 +4520,7 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/block/PaladiumGreenoreBlock.java",
+          "src/main/resources/assets/palamod/models/block/paladium_green_ore_0.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/paladium_green_ore.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/paladium_green_ore.json",
           "src/main/resources/data/palamod/loot_table/blocks/paladium_green_ore.json",
@@ -19004,6 +19054,7 @@
       "registry_name": "deepslate_amethyst_ore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/deepslate_amethyst_ore_0.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_amethyst_ore.json",
           "src/main/resources/assets/palamod/blockstates/deepslate_amethyst_ore.json",
           "src/main/resources/assets/palamod/models/item/deepslate_amethyst_ore.json",
@@ -19023,6 +19074,7 @@
       "registry_name": "deepslate_titane_ore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/palamod/models/block/deepslate_titane_ore_0.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_titane_ore_biome_modifier.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_titane_ore.json",
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_titane_ore.json",
@@ -19049,7 +19101,8 @@
           "src/main/resources/assets/palamod/blockstates/deepslate_paladium_ore.json",
           "src/main/resources/assets/palamod/models/block/deepslate_paladium_ore.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_paladium_ore.json",
-          "src/main/resources/assets/palamod/models/item/deepslate_paladium_ore.json"
+          "src/main/resources/assets/palamod/models/item/deepslate_paladium_ore.json",
+          "src/main/resources/assets/palamod/models/block/deepslate_paladium_ore_0.json"
         ]
       }
     },
@@ -19082,6 +19135,7 @@
         "files": [
           "src/main/java/palamod/block/PaladiumgreenoredeepslateBlock.java",
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_green_paladium_ore.json",
+          "src/main/resources/assets/palamod/models/block/deepslate_green_paladium_ore_0.json",
           "src/main/resources/data/palamod/neoforge/biome_modifier/deepslate_green_paladium_ore_biome_modifier.json",
           "src/main/resources/assets/palamod/models/block/deepslate_green_paladium_ore.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_green_paladium_ore.json",
@@ -19419,6 +19473,7 @@
           "src/main/resources/data/palamod/worldgen/placed_feature/deepslate_findium_ore.json",
           "src/main/resources/assets/palamod/blockstates/deepslate_findium_ore.json",
           "src/main/resources/data/palamod/loot_table/blocks/deepslate_findium_ore.json",
+          "src/main/resources/assets/palamod/models/block/deepslate_findium_ore_0.json",
           "src/main/resources/data/palamod/worldgen/configured_feature/deepslate_findium_ore.json",
           "src/main/java/palamod/block/FindiumoredeepslateBlock.java",
           "src/main/resources/assets/palamod/models/item/deepslate_findium_ore.json"
@@ -48300,6 +48355,16 @@
       "Blocks.TRAPPED_CHEST"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~Titaneoredeepslate@CUSTOM:Titaneoredeepslate",
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
+      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
+      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
+      "~Amethystoredeepslate@CUSTOM:Amethystoredeepslate",
+      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~AmethysteOre@CUSTOM:AmethysteOre",
+      "~PaladiumOre@CUSTOM:PaladiumOre",
+      "~TitaneOre@CUSTOM:TitaneOre",
       "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
@@ -48396,13 +48461,8 @@
       "~Caveblock@CUSTOM:Caveblock",
       "~Trixiumblock@CUSTOM:Trixiumblock",
       "~Trixiumore@CUSTOM:Trixiumore",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Endiumnuggetoredeepslate@CUSTOM:Endiumnuggetoredeepslate",
-      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
       "~Trixiumoredeepslate@CUSTOM:Trixiumoredeepslate",
-      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
-      "~Titaneoredeepslate@CUSTOM:Titaneoredeepslate",
-      "~Amethystoredeepslate@CUSTOM:Amethystoredeepslate",
       "~Alarmon@CUSTOM:Alarmon",
       "~Downloader@CUSTOM:Downloader",
       "~Endiumchest@CUSTOM:Endiumchest",
@@ -48466,22 +48526,22 @@
       "~Grindercasing@CUSTOM:Grindercasing",
       "~Alchimet1@CUSTOM:Alchimet1",
       "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
-      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
       "~Slimepad@CUSTOM:Slimepad",
       "~Findiumslab@CUSTOM:Findiumslab",
       "~Findiumstairs@CUSTOM:Findiumstairs",
       "~FindiumBlock@CUSTOM:FindiumBlock",
-      "~FindiumOre@CUSTOM:FindiumOre",
       "~EndiumBlock@CUSTOM:EndiumBlock",
       "~Paladiumcrusher@CUSTOM:Paladiumcrusher",
       "~AmethysteBlock@CUSTOM:AmethysteBlock",
-      "~AmethysteOre@CUSTOM:AmethysteOre",
       "~TitaneBlock@CUSTOM:TitaneBlock",
-      "~TitaneOre@CUSTOM:TitaneOre",
-      "~PaladiumBlock@CUSTOM:PaladiumBlock",
-      "~PaladiumOre@CUSTOM:PaladiumOre"
+      "~PaladiumBlock@CUSTOM:PaladiumBlock"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
+      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
+      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
+      "~PaladiumOre@CUSTOM:PaladiumOre",
+      "~TitaneOre@CUSTOM:TitaneOre",
       "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
       "~PaladiumTank@CUSTOM:PaladiumTank",
       "~Titanetank@CUSTOM:Titanetank",
@@ -48520,18 +48580,13 @@
       "~Goldenobsidianspike@CUSTOM:Goldenobsidianspike",
       "~Ironobsidianspike@CUSTOM:Ironobsidianspike",
       "~Spikeobsidianwood@CUSTOM:Spikeobsidianwood",
-      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
-      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
       "~Trixiumnbtblock@CUSTOM:Trixiumnbtblock",
       "~Lavaobsidian@CUSTOM:Lavaobsidian",
       "~Fakewaterobsidian@CUSTOM:Fakewaterobsidian",
       "~Compactedobsidian@CUSTOM:Compactedobsidian",
       "~Obsidiandoor@CUSTOM:Obsidiandoor",
       "~Obsidiantrapdoor@CUSTOM:Obsidiantrapdoor",
-      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
-      "~Findiumstairs@CUSTOM:Findiumstairs",
-      "~TitaneOre@CUSTOM:TitaneOre",
-      "~PaladiumOre@CUSTOM:PaladiumOre"
+      "~Findiumstairs@CUSTOM:Findiumstairs"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
       "~Shinyjacarandawood@CUSTOM:Shinyjacarandawood",
@@ -48826,6 +48881,9 @@
       "~PaladiumArmor@CUSTOM:PaladiumArmor.boots"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~AmethysteOre@CUSTOM:AmethysteOre",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
       "~Moneyanvil@CUSTOM:Moneyanvil",
@@ -48836,7 +48894,6 @@
       "~Softenedamethystore@CUSTOM:Softenedamethystore",
       "~Exctractor@CUSTOM:Exctractor",
       "~Trixiumore@CUSTOM:Trixiumore",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Amethystslab@CUSTOM:Amethystslab",
       "~Amethyststairs@CUSTOM:Amethyststairs",
       "~Paladiumforge@CUSTOM:Paladiumforge",
@@ -48846,11 +48903,13 @@
       "~Ironspike@CUSTOM:Ironspike",
       "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
       "~FindiumBlock@CUSTOM:FindiumBlock",
-      "~FindiumOre@CUSTOM:FindiumOre",
-      "~AmethysteBlock@CUSTOM:AmethysteBlock",
-      "~AmethysteOre@CUSTOM:AmethysteOre"
+      "~AmethysteBlock@CUSTOM:AmethysteBlock"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~Erable_Wood@CUSTOM:Erable_Wood",
+      "~Judeecercis_Wood@CUSTOM:Judeecercis_Wood",
+      "~Jacaranda_Wood@CUSTOM:Jacaranda_Wood",
+      "~Ostrya_woodWood@CUSTOM:Ostrya_woodWood",
       "~EndiumPortalBlock@CUSTOM:EndiumPortalBlock",
       "~PaladiumPortalBlock@CUSTOM:PaladiumPortalBlock",
       "~TitanePortalBlock@CUSTOM:TitanePortalBlock",
@@ -48885,28 +48944,24 @@
       "~Erable_Stairs@CUSTOM:Erable_Stairs",
       "~Erable_Planks@CUSTOM:Erable_Planks",
       "~Erable_Log@CUSTOM:Erable_Log",
-      "~Erable_Wood@CUSTOM:Erable_Wood",
       "~Judeecercis_FenceGate@CUSTOM:Judeecercis_FenceGate",
       "~Judeecercis_Fence@CUSTOM:Judeecercis_Fence",
       "~Judeecercis_Slab@CUSTOM:Judeecercis_Slab",
       "~Judeecercis_Stairs@CUSTOM:Judeecercis_Stairs",
       "~Judeecercis_Planks@CUSTOM:Judeecercis_Planks",
       "~Judeecercis_Log@CUSTOM:Judeecercis_Log",
-      "~Judeecercis_Wood@CUSTOM:Judeecercis_Wood",
       "~Jacaranda_FenceGate@CUSTOM:Jacaranda_FenceGate",
       "~Jacaranda_Fence@CUSTOM:Jacaranda_Fence",
       "~Jacaranda_Slab@CUSTOM:Jacaranda_Slab",
       "~Jacaranda_Stairs@CUSTOM:Jacaranda_Stairs",
       "~Jacaranda_Planks@CUSTOM:Jacaranda_Planks",
       "~Jacaranda_Log@CUSTOM:Jacaranda_Log",
-      "~Jacaranda_Wood@CUSTOM:Jacaranda_Wood",
       "~Ostrya_woodFenceGate@CUSTOM:Ostrya_woodFenceGate",
       "~Ostrya_woodFence@CUSTOM:Ostrya_woodFence",
       "~Ostrya_woodSlab@CUSTOM:Ostrya_woodSlab",
       "~Ostrya_woodStairs@CUSTOM:Ostrya_woodStairs",
       "~Ostrya_woodPlanks@CUSTOM:Ostrya_woodPlanks",
-      "~Ostrya_woodLog@CUSTOM:Ostrya_woodLog",
-      "~Ostrya_woodWood@CUSTOM:Ostrya_woodWood"
+      "~Ostrya_woodLog@CUSTOM:Ostrya_woodLog"
     ],
     "BLOCKS:minecraft:stairs": [
       "~DeadStairs@CUSTOM:DeadStairs",

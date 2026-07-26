@@ -22,8 +22,8 @@
         "textureFront": "amethyst_ore_deepslate",
         "textureRight": "amethyst_ore_deepslate",
         "textureBack": "amethyst_ore_deepslate",
-        "renderType": 0,
-        "customModelName": "Normal",
+        "renderType": 11,
+        "customModelName": "Single texture",
         "particleTexture": "",
         "hasCustomBoundingBox": false,
         "boundingBoxes": [],
@@ -110,6 +110,7 @@
     "creativePickItem": "",
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "strippingResult": "",
     "ignitedByLava": false,
     "flammability": 0,
     "fireSpreadSpeed": 0,
@@ -134,6 +135,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

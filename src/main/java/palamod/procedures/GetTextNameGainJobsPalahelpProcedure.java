@@ -32,6 +32,10 @@ public class GetTextNameGainJobsPalahelpProcedure {
 			if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
 				xpGain = GetXpcraftjobsentityProcedure.execute(entity, 199, 199, 199, 199);
 			}
+		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("alchi")) {
+			if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
+				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "craft");
+			}
 		}
 		return item.getDisplayName().getString() + "\n" + (Component.translatable("palamod.procedure.palahelp.jobs.gain").getString()).replace("%1", "" + Math.round(xpGain));
 	}
