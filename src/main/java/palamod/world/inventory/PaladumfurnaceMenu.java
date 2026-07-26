@@ -1,7 +1,10 @@
 package palamod.world.inventory;
 
+import palamod.network.PaladumfurnaceSlotMessage;
+
 import palamod.init.PalamodModMenus;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -103,6 +106,12 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Palamod
 			private final int slot = 2;
 			private int x = PaladumfurnaceMenu.this.x;
 			private int y = PaladumfurnaceMenu.this.y;
+
+			@Override
+			public void onTake(Player entity, ItemStack stack) {
+				super.onTake(entity, stack);
+				slotChanged(2, 1, stack.getCount());
+			}
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
@@ -248,6 +257,13 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Palamod
 						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
+		}
+	}
+
+	private void slotChanged(int slotid, int ctype, int meta) {
+		if (this.world != null && this.world.isClientSide()) {
+			PacketDistributor.sendToServer(new PaladumfurnaceSlotMessage(slotid, x, y, z, ctype, meta));
+			PaladumfurnaceSlotMessage.handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 		}
 	}
 

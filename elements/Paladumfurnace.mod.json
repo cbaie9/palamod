@@ -90,6 +90,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": "PaladiumFurnacetakeitem",
           "x": 244,
           "y": 77,
           "locked": false
