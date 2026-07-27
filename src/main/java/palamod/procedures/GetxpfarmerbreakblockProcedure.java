@@ -18,11 +18,11 @@ public class GetxpfarmerbreakblockProcedure {
 		BlockState block = Blocks.AIR.defaultBlockState();
 		block = blockDep;
 		lvl = farmerLevel;
-		if (7 == (getPropertyByName(block, "blockstate") instanceof IntegerProperty _getip0 ? block.getValue(_getip0) : -1) && block.getBlock() == Blocks.WHEAT) {
+		if (7 == (getPropertyByName(block, "age") instanceof IntegerProperty _getip0 ? block.getValue(_getip0) : -1) && block.getBlock() == Blocks.WHEAT) {
 			output = 2;
-		} else if (7 == (getPropertyByName(block, "blockstate") instanceof IntegerProperty _getip2 ? block.getValue(_getip2) : -1) && block.getBlock() == Blocks.POTATOES && 5 <= lvl) {
+		} else if (7 == (getPropertyByName(block, "age") instanceof IntegerProperty _getip2 ? block.getValue(_getip2) : -1) && block.getBlock() == Blocks.POTATOES && 5 <= lvl) {
 			output = 3;
-		} else if (7 == (getPropertyByName(block, "blockstate") instanceof IntegerProperty _getip4 ? block.getValue(_getip4) : -1) && block.getBlock() == Blocks.CARROTS && 10 <= lvl) {
+		} else if (7 == (getPropertyByName(block, "age") instanceof IntegerProperty _getip4 ? block.getValue(_getip4) : -1) && block.getBlock() == Blocks.CARROTS && 10 <= lvl) {
 			output = 2.5;
 		} else if (block.getBlock() == Blocks.MELON && 15 <= lvl) {
 			output = 4;

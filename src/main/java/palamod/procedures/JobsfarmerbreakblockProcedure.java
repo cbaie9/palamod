@@ -3,6 +3,8 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,7 +17,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -73,8 +74,9 @@ public class JobsfarmerbreakblockProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_farmer").getAsDouble()) {
 							main.addProperty("xpstreak_farmer", 0);
 						}
-						if (GetxpfarmerlogicProcedure.execute(world, x, y, z, entity)) {
-							xpGain = GetxpfarmerbreakblockProcedure.execute(world.getBlockState(BlockPos.containing(x, y, z)), main.get("lvl_farmer").getAsDouble());
+						xpGain = GetxpfarmerbreakblockProcedure.execute(world.getBlockState(BlockPos.containing(x, y, z)), main.get("lvl_farmer").getAsDouble());
+						PalamodMod.LOGGER.debug(("[Jobsfarlerbreakblock] xp gain --" + xpGain));
+						if (xpGain > 0) {
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
@@ -96,10 +98,14 @@ public class JobsfarmerbreakblockProcedure {
 							}
 							main.addProperty("xpstreak_farmer", (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble()));
 							main.addProperty("xpstreak_time_farmer", (world.dayTime() + 80));
+							PalamodMod.LOGGER.info("Message");
 							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
-										+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
-												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
+								_player.displayClientMessage(
+										Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
+												+ Component.translatable("palamod.procedure.jobswin2").getString() + " "
+												+ Component.translatable(
+														(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:", "block.minecraft.")).replace("minecraft:", "block.palamod.")))
+														.getString())),
 										true);
 						}
 					} catch (IOException e) {
